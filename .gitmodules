@@ -1,0 +1,4 @@
+[submodule "docs shared themes"]
+	path = ATADocs/_themes
+	url = https://github.com/JialinXin/DocsThemes
+	branch = master
