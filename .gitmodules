@@ -1,4 +1,4 @@
 [submodule "docs shared themes"]
-	path = ATADocs/_themes
+	path = Azure-RMSDocs/_themes
 	url = https://github.com/JialinXin/DocsThemes
 	branch = master
