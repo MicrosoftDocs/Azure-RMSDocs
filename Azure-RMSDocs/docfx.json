@@ -32,7 +32,7 @@
       "layout": "Conceptual",
       "breadcrumb_path": "",
       "ms.locale": "en-us",
-      "ROBOTS": "INDEX, FOLLOW"
+      "robots": "INDEX, FOLLOW"
     }
   },
   "render": {
