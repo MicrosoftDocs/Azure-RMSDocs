@@ -1,7 +1,7 @@
 # AADRightsMgmt
 ## [Azure Rights Management](Azure-Rights-Management.md)
 ### [Getting Started with Azure Rights Management](Getting-Started-with-Azure-Rights-Management.md)
-#### [What is Azure Rights Management?](What-is-Azure-Rights-Management-.md)
+#### [What is Azure Rights Management?](what-is-azure-rights-management.md)
 #### [RMS for Individuals and Azure Rights Management](RMS-for-Individuals-and-Azure-Rights-Management.md)
 #### [How Applications Support Azure Rights Management](How-Applications-Support-Azure-Rights-Management.md)
 #### [Comparing Azure Rights Management and AD RMS](Comparing-Azure-Rights-Management-and-AD-RMS.md)
