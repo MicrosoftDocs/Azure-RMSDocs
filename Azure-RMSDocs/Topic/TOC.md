@@ -1,7 +1,7 @@
 # AADRightsMgmt
 ## [Azure Rights Management](Azure-Rights-Management.md)
 ### [Getting Started with Azure Rights Management](Getting-Started-with-Azure-Rights-Management.md)
-#### [What is Azure Rights Management?](What-is-Azure-Rights-Management-.md)
+#### [What is Azure Rights Management?](what-is-azure-rights-management.md)
 #### [RMS for Individuals and Azure Rights Management](RMS-for-Individuals-and-Azure-Rights-Management.md)
 #### [How Applications Support Azure Rights Management](How-Applications-Support-Azure-Rights-Management.md)
 #### [Comparing Azure Rights Management and AD RMS](Comparing-Azure-Rights-Management-and-AD-RMS.md)
@@ -27,7 +27,7 @@
 #### [Helping Users to Protect Files by Using Azure Rights Management](Helping-Users-to-Protect-Files-by-Using-Azure-Rights-Management.md)
 #### [Logging and Analyzing Azure Rights Management Usage](Logging-and-Analyzing-Azure-Rights-Management-Usage.md)
 #### [Operations for Your Azure Rights Management Tenant Key](Operations-for-Your-Azure-Rights-Management-Tenant-Key.md)
-### [Administering Azure Rights Management by Using Windows PowerShell](Administering-Azure-Rights-Management-by-Using-Windows-PowerShell.md)
+### [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md)
 #### [Installing Windows PowerShell for Azure Rights Management](Installing-Windows-PowerShell-for-Azure-Rights-Management.md)
 ### [Rapid Deployment Guide for Azure Rights Management](Rapid-Deployment-Guide-for-Azure-Rights-Management.md)
 # AzureRMS_RapidDeploy
