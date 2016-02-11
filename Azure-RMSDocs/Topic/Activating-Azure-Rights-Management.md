@@ -29,6 +29,8 @@ Use one of the following procedures to activate [!INCLUDE[aad_rightsmanagement_2
 
 #### To activate Rights Management from the Office 365 admin center
 
+Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
+
 1.  After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.
 
 2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
