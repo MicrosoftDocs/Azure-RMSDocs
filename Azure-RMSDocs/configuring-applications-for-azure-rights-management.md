@@ -15,44 +15,44 @@ author: Cabailey
 > 
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the RMS sharing application for Windows, see the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
-After you have deployed Azure Rights Management (Azure RMS) for your organization, use the following information to configure applications and services to support Azure RMS. These include Office applications such as Word 2013 and Word 2010, and services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). For information about how these applications and services support Rights Management, see [How Applications Support Azure Rights Management](../Topic/How-Applications-Support-Azure-Rights-Management.md).
+After you have deployed Azure Rights Management (Azure RMS) for your organization, use the following information to configure applications and services to support Azure RMS. These include Office applications such as Word 2013 and Word 2010, and services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). For information about how these applications and services support Rights Management, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
 > [!IMPORTANT]
-> For information about supported versions and other requirements, see [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md).
+> For information about supported versions and other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
 
--   [Office 365: Configuration for clients and online services](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_O365)
+-   [Office 365: Configuration for clients and online services](configuring-applications-for-azure-rights-management.md#BKMK_O365)
 
-    -   [Exchange Online: IRM Configuration](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_ExchangeOnline)
+    -   [Exchange Online: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_ExchangeOnline)
 
     -   [SharePoint Online and OneDrive for Business: IRM Configuration](#BKMK_SharePointOnline)
 
 -   [Office 2016 and Office 2013: Configuration for clients](#BKMK_Office2013Configuration)
 
--   [Office 2010: Configuration for clients](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_Office2010Configuration)
+-   [Office 2010: Configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_Office2010Configuration)
 
--   [Rights Management sharing application: Installation and configuration for clients](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingApp)
+-   [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp)
 
-    -   [The RMS sharing application for Windows: Installation and configuration](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingAppforWindows)
+    -   [The RMS sharing application for Windows: Installation and configuration](configuring-applications-for-azure-rights-management.md#BKMK_SharingAppforWindows)
 
-    -   [The RMS sharing application for mobile platforms: Installation and management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingAppMovileDevices)
+    -   [The RMS sharing application for mobile platforms: Installation and management](configuring-applications-for-azure-rights-management.md#BKMK_SharingAppMovileDevices)
 
--   [Other applications that support the RMS APIs: Installation and configuration](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_RMSAPIs)
+-   [Other applications that support the RMS APIs: Installation and configuration](configuring-applications-for-azure-rights-management.md#BKMK_RMSAPIs)
 
-To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management Connector](../Topic/Deploying-the-Azure-Rights-Management-Connector.md).
+To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
 > [!TIP]
-> For high-level examples and screenshots of applications configured to use Azure RMS, see the [Azure RMS in action: What administrators and users see](../Topic/What-is-Azure-Rights-Management-.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](../Topic/What-is-Azure-Rights-Management-.md) topic.
+> For high-level examples and screenshots of applications configured to use Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management-.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
 
 ## <a name="BKMK_O365"></a>Office 365: Configuration for clients and online services
-Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../Token/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
+Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](/Token/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
 
-However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingApp) section in this topic.
+However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
 ### <a name="BKMK_ExchangeOnline"></a>Exchange Online: IRM Configuration
 To configure Exchange Online to support Azure RMS, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
-> You cannot currently configure Exchange Online to support Azure RMS if you are using a customer-managed tenant key (BYOK) for Azure RMS, rather than the default configuration of a Microsoft-managed tenant key. For more information, see the [BYOK pricing and restrictions](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md#BKMK_Pricing) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md) topic.
+> You cannot currently configure Exchange Online to support Azure RMS if you are using a customer-managed tenant key (BYOK) for Azure RMS, rather than the default configuration of a Microsoft-managed tenant key. For more information, see the [BYOK pricing and restrictions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Pricing) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic.
 > 
 > If you try to configure Exchange Online when Azure RMS is using BYOK, the command to import the key (step 5,  in the following procedure) fails with the error message **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
@@ -1125,14 +1125,14 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
 ## <a name="BKMK_Office2013Configuration"></a>Office 2016 and Office 2013: Configuration for clients
-Because these later versions of Office  natively support Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../Token/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
+Because these later versions of Office  natively support Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](/Token/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
 
-However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingApp) section in this topic.
+However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
 ## <a name="BKMK_Office2010Configuration"></a>Office 2010: Configuration for clients
-For client computers to use Azure RMS with Office 2010, they must have installed the Rights Management sharing application for Windows. No further configuration is required other than users must sign in with their [!INCLUDE[o365_1](../Token/o365_1_md.md)] credentials and they can then protect files and use files that have been protected by others.
+For client computers to use Azure RMS with Office 2010, they must have installed the Rights Management sharing application for Windows. No further configuration is required other than users must sign in with their [!INCLUDE[o365_1](/Token/o365_1_md.md)] credentials and they can then protect files and use files that have been protected by others.
 
-For more information about the Rights Management sharing application, see the [Rights Management sharing application: Installation and configuration for clients](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharingApp) section in this topic.
+For more information about the Rights Management sharing application, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
 ## <a name="BKMK_SharingApp"></a>Rights Management sharing application: Installation and configuration for clients
 The Rights Management (RMS) sharing application is required for client computers to use Azure RMS with Office 2010, and recommended for all computers and mobile devices that support Azure RMS. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files and emails directly from the ribbon. It also offers generic protection for files types that are not natively supported by Azure RMS, and a document tracking site for users to track and revoke files that they have protected.
@@ -1156,8 +1156,8 @@ To install the RMS sharing application for mobile platforms, you can download th
 This category includes line-of-business applications that are written in-house by using the RMS SDK, and applications from software vendors that are written by using the RMS SDK. For these applications, follow the instructions that are provided with the application.
 
 ## Next steps
-After you’ve configured your applications to support Azure Rights Management, use the [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../Token/aad_rightsmanagement_1_md.md)] to users and administrators. If not, see [Using Azure Rights Management](../Topic/Using-Azure-Rights-Management.md) for your next steps.
+After you’ve configured your applications to support Azure Rights Management, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] to users and administrators. If not, see [Using Azure Rights Management](using-azure-rights-management.md) for your next steps.
 
 ## See Also
-[Configuring Azure Rights Management](../Topic/Configuring-Azure-Rights-Management.md)
+[Configuring Azure Rights Management](configuring-azure-rights-management.md)
 

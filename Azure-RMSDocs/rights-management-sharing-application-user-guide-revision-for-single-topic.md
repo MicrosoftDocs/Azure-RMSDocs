@@ -19,10 +19,10 @@ Here are just some examples of how you might use the sharing application, to hel
 
 |I want to …|How to do this|
 |---------------|------------------|
-|**… safely share financial information with somebody I trust who is outside my organization**<br /><br />You work with a partner company and want to email them an Excel spreadsheet that contains projected sales figures. You want them to be able to view the figures but not change them.|You use the Share Protected button on the ribbon in Excel, type the email addresses of the two people that you work with in the partner company, select Viewer on the slider, and click Send.<br /><br />When the email arrives at the partner company, only the recipients in the email can view the spreadsheet and they cannot save, edit, print, or forward it.<br /><br />Details: See **Protect a file that you share by email** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
-|**… safely send a document by email to somebody who uses an iOS device**<br /><br />You want to email a highly confidential Word document to a coworker, who you know, regularly checks email on their iOS device.|You use File Explorer to right-click the file, and select Share Protected. In the RMS sharing application, you select the Allow consumption on all devices option, and send the file as an attachment to your coworker.<br /><br />The recipient receives the email on their iOS device, clicks the link in the email that tells them how to download the sharing application, installs the version for iOS devices, and then views the document.<br /><br />Details: See **Protect a file that you share by email** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
-|**… read an attachment I’ve received in an email message that has a securely shared file attachment but I can’t read it because my company doesn’t use Rights Management**<br /><br />The email sender is somebody who you trust because you’ve done business with them in the past and you suspect that they might be sending you information about a potential new business opportunity.|You follow the instructions in the email and click the link to sign up for Microsoft Rights Management. Microsoft confirms that your organization does not have a subscription to Office 365, sends you an email to complete the free signup process, and you sign in with your new account. You click the second link in the email to install the Rights Management sharing app and can then open the email attachment to read about the new business opportunity.<br /><br />Details: See **View and use files that have been protected by Rights Management** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
-|**… protect company-confidential files on my laptop so they can’t be accessed by people outside my company**<br /><br />You travel a lot and use your laptop to access and update files in a folder that must be secured against unauthorized access.|You have the RMS sharing application installed on your laptop. You use File Explorer to protect the files by using a template, which quickly protects the files. If your laptop is stolen, you have peace of mind that nobody outside your company can access these documents.<br /><br />Details: See **Protect a file on a device (protect in-place)** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
+|**… safely share financial information with somebody I trust who is outside my organization**<br /><br />You work with a partner company and want to email them an Excel spreadsheet that contains projected sales figures. You want them to be able to view the figures but not change them.|You use the Share Protected button on the ribbon in Excel, type the email addresses of the two people that you work with in the partner company, select Viewer on the slider, and click Send.<br /><br />When the email arrives at the partner company, only the recipients in the email can view the spreadsheet and they cannot save, edit, print, or forward it.<br /><br />Details: See **Protect a file that you share by email** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
+|**… safely send a document by email to somebody who uses an iOS device**<br /><br />You want to email a highly confidential Word document to a coworker, who you know, regularly checks email on their iOS device.|You use File Explorer to right-click the file, and select Share Protected. In the RMS sharing application, you select the Allow consumption on all devices option, and send the file as an attachment to your coworker.<br /><br />The recipient receives the email on their iOS device, clicks the link in the email that tells them how to download the sharing application, installs the version for iOS devices, and then views the document.<br /><br />Details: See **Protect a file that you share by email** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
+|**… read an attachment I’ve received in an email message that has a securely shared file attachment but I can’t read it because my company doesn’t use Rights Management**<br /><br />The email sender is somebody who you trust because you’ve done business with them in the past and you suspect that they might be sending you information about a potential new business opportunity.|You follow the instructions in the email and click the link to sign up for Microsoft Rights Management. Microsoft confirms that your organization does not have a subscription to Office 365, sends you an email to complete the free signup process, and you sign in with your new account. You click the second link in the email to install the Rights Management sharing app and can then open the email attachment to read about the new business opportunity.<br /><br />Details: See **View and use files that have been protected by Rights Management** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
+|**… protect company-confidential files on my laptop so they can’t be accessed by people outside my company**<br /><br />You travel a lot and use your laptop to access and update files in a folder that must be secured against unauthorized access.|You have the RMS sharing application installed on your laptop. You use File Explorer to protect the files by using a template, which quickly protects the files. If your laptop is stolen, you have peace of mind that nobody outside your company can access these documents.<br /><br />Details: See **Protect a file on a device (protect in-place)** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.|
 
 ## <a name="BKMK_UsingMSRMSApp"></a>What do you want to do?
 Use the following instructions to help you work with protected files.
@@ -51,10 +51,10 @@ You must have a local administrator account to install the sharing application. 
 
 1.  In File Explorer, select a file, a folder, or multiple files to protect. Right-click, and then select **Protect in-place**. For example:
 
-    ![](../Image/ADRMS_MSRMSApp_SP_CompanyDefined.png)
+    ![](/Image/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
-    > If you do not see the **Protect in-place** option, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+    > If you do not see the **Protect in-place** option, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 2.  Do one of the following:
 
@@ -63,16 +63,16 @@ You must have a local administrator account to install the sharing application. 
     -   Select **Custom permissions**: Choose this option if the templates don’t provide the level of protection that you need. For example, you want to grant access to people outside your organization, or you want to explicitly set the protection options yourself. Specify the options that you want for this file in the **add protection** dialog box, and then click **Apply**.
 
         > [!NOTE]
-        > For more information about the options in this dialog box, see the **Specify options in the Rights Management dialog box** instructions in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+        > For more information about the options in this dialog box, see the **Specify options in the Rights Management dialog box** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 3.  You might quickly see a dialog box to tell you that the file is being protected, and the focus then returns to File Explorer. The selected file or files are now protected. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Rights Management protection lock icon. For example:
 
-    ![](../Image/ADRMS_MSRMSApp_Pfile.png)
+    ![](/Image/ADRMS_MSRMSApp_Pfile.png)
 
-If you later need to remove protection from a file, see the **Remove protection from a file** instructions in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+If you later need to remove protection from a file, see the **Remove protection from a file** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 #### More information
-When you protect a file in-place, it replaces the original, unprotected file. You can then leave the file where it is, copy it to another folder or device, or share the folder that it is in and the file will remain protected. You could also attach the protected file to an email message, although the recommended way to share a protected file by email is directly from File Explorer or an Office application (see **Protect a file that you share by email** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide).
+When you protect a file in-place, it replaces the original, unprotected file. You can then leave the file where it is, copy it to another folder or device, or share the folder that it is in and the file will remain protected. You could also attach the protected file to an email message, although the recommended way to share a protected file by email is directly from File Explorer or an Office application (see **Protect a file that you share by email** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide).
 
 You can use the same technique to protect multiple files at the same time, or a folder. When you protect a folder, all the files in that folder are automatically selected for protection but new files that you create in that folder will not be automatically protected.
 
@@ -84,21 +84,21 @@ If you see any errors when you try to protect files, refer to [FAQ for Microsoft
 
     -   For File Explorer: Right-click the file and select **Share Protected**:
 
-        ![](../Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![](/Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   For Office application: Make sure that you have first saved the file. Then, on the **Protection** group, click **Share Protected**.
 
-        ![](../Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
     > [!NOTE]
-    > If you do not see these options for sharing protection, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+    > If you do not see these options for sharing protection, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 2.  Specify the options that you want for this file in the **share protected** dialog box, and then click **Send**.
 
-    ![](../Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
+    ![](/Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
 
     > [!NOTE]
-    > For more information about the options in this dialog box, see the **Specify options in the Rights Management dialog box** instructions in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+    > For more information about the options in this dialog box, see the **Specify options in the Rights Management dialog box** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 3.  You might quickly see a dialog box to tell you that the file is being protected, and then you see an email message created for you that has the subject **I have securely shared file(s) with you**. In this email message, the file that you selected is attached and protected, and the text in the email contains links for the following:
 
@@ -110,7 +110,7 @@ If you see any errors when you try to protect files, refer to [FAQ for Microsoft
 
     Example:
 
-    ![](../Image/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![](/Image/ADRMS_MSRMSApp_EmailMessage.PNG)
 
 4.  Optional: You can change anything that you want in this email message. For example, you can add to or change the subject or text in the message.
 
@@ -142,7 +142,7 @@ By using File Explorer or the email message that contains the attachment, double
 
     You see a **protected file** dialog box from the sharing application that tells you who protected the file and that you are expected to honor the co-owner permissions. You are informed that when you open the file, this action is audited.
 
-    ![](../Image/ADRMS_MSRMSApp_PfilePermission.png)
+    ![](/Image/ADRMS_MSRMSApp_PfilePermission.png)
 
     Click **Open** to read the file.
 
@@ -150,7 +150,7 @@ By using File Explorer or the email message that contains the attachment, double
 
     The file opens by using the application that is associated with the original file name extension, and a restriction banner is displayed at the top of the file. The banner might display the permissions that are applied to the file, or it might provide a link to display them. For example, you might see the following where you must click **Permission is currently restricted** to see the actual permissions that are applied to the file and the people that can access it:
 
-    ![](../Image/ADRMS_MSRMSApp_RestrictedAccess.png)
+    ![](/Image/ADRMS_MSRMSApp_RestrictedAccess.png)
 
     This file is also audited and remains audited as long as it is protected.
 
@@ -166,7 +166,7 @@ If the protected file has a .pfile file extension:
 
     For example, if a file was protected by using the file name document.vsdx.pfile, view the file and in File Explorer, save the file as document.vsdx.
 
-    The new file is no longer protected. If you want to protect it, you must do this manually. For instructions, see **How to protect a file on a device (protect in-place) by using the Rights Management sharing application** in the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+    The new file is no longer protected. If you want to protect it, you must do this manually. For instructions, see **How to protect a file on a device (protect in-place) by using the Rights Management sharing application** in the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 If the originally protected file did not have a .pfile extension:
 
@@ -177,7 +177,7 @@ If the originally protected file did not have a .pfile extension:
 ### <a name="BKMK_RemoveProtection"></a>Remove protection from a file
 From File Explorer, right-click the file (for example, Sample.ptxt), click **Protect in-place**, and then click **Remove Protection**:
 
-![](../Image/ADRMS_MSRMSApp_RemoveProtection.png)
+![](/Image/ADRMS_MSRMSApp_RemoveProtection.png)
 
 You might be prompted for credentials.
 
@@ -195,7 +195,7 @@ Press the **Alt** key to see the available access keys, and then press **Alt** +
 #### More information
 As an example, in the **share protected** dialog box, press **Alt** to see the access keys, and then press **Alt + u** to select the **Users must login every time they open this file** check box.
 
-![](../Image/ADRMS_MSRMSApp_AccessKeys.png)
+![](/Image/ADRMS_MSRMSApp_AccessKeys.png)
 
 ### <a name="BKMK_SpecifyDialogOptions"></a>Specify options in the Rights Management dialog box
 
@@ -210,10 +210,10 @@ As an example, in the **share protected** dialog box, press **Alt** to see the a
 #### More information
 Use the table to help you specify the options in the sharing application **add protection** dialog box or the **share protected** dialog box. You will see this dialog box when you protect a file in place and choose custom permissions, or you protect a file to share.
 
-For more information about protecting a file in place and protecting a file to share, see the [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
+For more information about protecting a file in place and protecting a file to share, see the [What do you want to do?](rights-management-sharing-application-user-guide---revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 ## See Also
-[Rights Management sharing application administrator guide](../Topic/Rights-Management-sharing-application-administrator-guide.md)
+[Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md)
  [Microsoft Rights Management sharing application download](http://go.microsoft.com/fwlink/?LinkId=303970)
  [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971)
 

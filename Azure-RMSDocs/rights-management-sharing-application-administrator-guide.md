@@ -10,27 +10,27 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 author: Cabailey
 ---
 # Rights Management sharing application administrator guide
-Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](../Topic/Rights-Management-sharing-application-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971):
+Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971):
 
--   [Automatic deployment for the Microsoft Rights Management sharing application](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_ScriptedInstall)
+-   [Automatic deployment for the Microsoft Rights Management sharing application](rights-management-sharing-application-administrator-guide.md#BKMK_ScriptedInstall)
 
-    -   [Verifying installation success](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_verifyscripted)
+    -   [Verifying installation success](rights-management-sharing-application-administrator-guide.md#BKMK_verifyscripted)
 
-    -   [Uninstall commands](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_uninstallscripted)
+    -   [Uninstall commands](rights-management-sharing-application-administrator-guide.md#BKMK_uninstallscripted)
 
-    -   [Suppressing automatic updates](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_SuppressAutomaticUpdates)
+    -   [Suppressing automatic updates](rights-management-sharing-application-administrator-guide.md#BKMK_SuppressAutomaticUpdates)
 
     -   [Azure RMS only: Configuring document tracking](#BKMK_DocumentTracking)
 
-    -   [AD RMS only: Support for multiple email domains within your organization](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_FederatedDomains)
+    -   [AD RMS only: Support for multiple email domains within your organization](rights-management-sharing-application-administrator-guide.md#BKMK_FederatedDomains)
 
--   [Technical overview for the Microsoft Rights Management sharing application](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_AdminOverview)
+-   [Technical overview for the Microsoft Rights Management sharing application](rights-management-sharing-application-administrator-guide.md#BKMK_AdminOverview)
 
-    -   [Levels of protection – native and generic](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_LevelsofProtection)
+    -   [Levels of protection – native and generic](rights-management-sharing-application-administrator-guide.md#BKMK_LevelsofProtection)
 
-    -   [Supported file types and file name extensions](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_SupportFileTypes)
+    -   [Supported file types and file name extensions](rights-management-sharing-application-administrator-guide.md#BKMK_SupportFileTypes)
 
-    -   [Changing the default protection level of files](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_ChangeDefaultProtection)
+    -   [Changing the default protection level of files](rights-management-sharing-application-administrator-guide.md#BKMK_ChangeDefaultProtection)
 
 > [!TIP]
 > If you are new to the RMS sharing app, or looking for more information, see [How RMS protects all file types – by using the RMS sharing app](https://curah.microsoft.com/191031/how-rms-protects-all-file-types-by-using-the-rms-sharing-app).
@@ -91,7 +91,7 @@ To complete the installation for each procedure, the computer must restart. You 
     setup.exe /s
     ```
 
-To verify success, see the [Verifying installation success](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
+To verify success, see the [Verifying installation success](rights-management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
 
 #### To deploy the RMS sharing application for Office 2010 and Azure RMS
 
@@ -136,7 +136,7 @@ To verify success, see the [Verifying installation success](../Topic/Rights-Mana
     bin\RMSSetup.exe /configureO2010Only
     ```
 
-To verify success, see the [Verifying installation success](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
+To verify success, see the [Verifying installation success](rights-management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
 
 #### To deploy the RMS sharing application for Office 2010 and Active Directory RMS
 
@@ -166,7 +166,7 @@ To verify success, see the [Verifying installation success](../Topic/Rights-Mana
         x64\win7\aadrmpep.exe /configureO2010
         ```
 
-To verify success, see the [Verifying installation success](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
+To verify success, see the [Verifying installation success](rights-management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
 
 #### To install the RMS sharing application and Office add-in only
 
@@ -202,7 +202,7 @@ To verify success, see the [Verifying installation success](../Topic/Rights-Mana
 
     For example: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
 
-To verify success, see the [Verifying installation success](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
+To verify success, see the [Verifying installation success](rights-management-sharing-application-administrator-guide.md#BKMK_verifyscripted) section in this topic.
 
 ### <a name="BKMK_verifyscripted"></a>Verifying installation success
 You can use the installation log files to verify a successful installation.
@@ -392,8 +392,8 @@ Microsoft Rights Management sharing application supports protection at two diffe
 |----------------------|----------|-----------|
 |Description|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support AD RMS, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For all other applications and file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
 |Protection|Files are fully encrypted and protection is enforced in the following ways:<br /><br />Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />Additionally, usage rights and policy set by the content owner when files are protected are fully enforced when the content is rendered in either IP Viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />Before protected content is rendered, successful authentication must occur for those who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />Audit logging of authorized users opening and accessing files occurs, however, no usage rights are enforced by non-supporting applications.|
-|Default for file types|This is the default level of protection for the following file types:<br /><br />Text and image files<br /><br />Microsoft Office (Word, Excel, PowerPoint) files<br /><br />Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types and file name extensions](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_SupportFileTypes).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by full protection.|
-You can change the default protection level that the RMS sharing application applies. You can change the default level of native to generic, from generic to native, and even prevent the RMS sharing application from applying protection. For more information, see the [Changing the default protection level of files](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_ChangeDefaultProtection) section in this topic.
+|Default for file types|This is the default level of protection for the following file types:<br /><br />Text and image files<br /><br />Microsoft Office (Word, Excel, PowerPoint) files<br /><br />Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types and file name extensions](rights-management-sharing-application-administrator-guide.md#BKMK_SupportFileTypes).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by full protection.|
+You can change the default protection level that the RMS sharing application applies. You can change the default level of native to generic, from generic to native, and even prevent the RMS sharing application from applying protection. For more information, see the [Changing the default protection level of files](rights-management-sharing-application-administrator-guide.md#BKMK_ChangeDefaultProtection) section in this topic.
 
 ### <a name="BKMK_SupportFileTypes"></a>Supported file types and file name extensions
 The following table lists file types that are natively supported by Microsoft Rights Management sharing application. For these file types, the original file name extension is changed when native protected is applied, and these files become read-only.
@@ -478,5 +478,5 @@ You can make similar registry edits for other scenarios by changing the value of
 -   **Off**: Block protection
 
 ## See Also
-[Rights Management sharing application user guide](../Topic/Rights-Management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
 

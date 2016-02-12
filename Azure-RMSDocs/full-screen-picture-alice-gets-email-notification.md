@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Alice gets email notification
-![](../Image/AzRMS_StoryboardEmaill4.PNG)
+![](/Image/AzRMS_StoryboardEmaill4.PNG)
 
 Back to [Azure RMS in action: Safely share attachments with mobile users](http://technet.microsoft.com/library/jj585026.aspx).
 

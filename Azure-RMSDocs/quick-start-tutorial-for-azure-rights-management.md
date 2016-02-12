@@ -12,13 +12,13 @@ author: Cabailey
 # Quick Start Tutorial for Azure Rights Management
 Use this tutorial to quickly try out Microsoft Azure Rights Management (also known as Azure RMS) for your organization with just 5 steps that should take you less than 15 minutes. You’ll activate the service, securely send a confidential document by email to somebody in another organization, and then be able to track when that document is opened. When the confidential document is emailed, it is encrypted while in transit and can be read only by the person it is sent to, using the permissions that are set by the sender.
 
-![](../Image/AzRMS_QuickStartStepsAll.PNG)
+![](/Image/AzRMS_QuickStartStepsAll.PNG)
 
 This tutorial is aimed at IT administrators and consultants, to help them evaluate Azure Rights Management as an information protection solution for an organization. In a production environment, the instructions to activate the service would be done by an administrator and the instructions to send the document would be done by end users. Both sets of instructions are included in this tutorial, to demonstrate the end-to-end scenario of securely sending a confidential document to somebody in another organization. If you have any problems completing this tutorial, send an email message to [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) and we will help you out.
 
 To complete this tutorial, you will need the following:
 
--   A subscription that supports Azure Rights Management . This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see the [Cloud subscriptions that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md) topic.
+-   A subscription that supports Azure Rights Management . This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.
 
     Tip: If you need to get a subscription, do this in advance because this process can sometimes take a while to complete.
 
@@ -29,7 +29,7 @@ To complete this tutorial, you will need the following:
 Let’s get started.
 
 ## Step 1: Activate the Rights Management service
-![](../Image/AzRMS_QuickStartSteps1.PNG)
+![](/Image/AzRMS_QuickStartSteps1.PNG)
 
 Even though you might have a subscription that supports Azure Rights Management, the service is disabled by default. To activate it, you can use either the Office 365 admin center, or the Azure classic portal:
 
@@ -37,7 +37,7 @@ Even though you might have a subscription that supports Azure Rights Management,
 
 -   If you do not have an Office 365 subscription: **Use the Azure classic portal**.
 
-![](../Image/AzRMS_Tutorial_1_Screenshots.png)
+![](/Image/AzRMS_Tutorial_1_Screenshots.png)
 
 #### To activate Rights Management from the Office 365 admin center
 
@@ -70,7 +70,7 @@ At this time, do not click **advanced features**. This takes you to the Azure cl
 
 3.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
 
-4.  Select the directory to manage for [!INCLUDE[aad_rightsmanagement_2](../Token/aad_rightsmanagement_2_md.md)], click **ACTIVATE**, and then confirm your action.
+4.  Select the directory to manage for [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)], click **ACTIVATE**, and then confirm your action.
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
 
@@ -82,17 +82,17 @@ Although not included here, for a production deployment, you probably will also 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating Rights Management and controlling who can protect files and email when the service is activated   →|[Activating Azure Rights Management](../Topic/Activating-Azure-Rights-Management.md)|
-|About the default templates and how to create new, custom templates   →|[Configuring Custom Templates for Azure Rights Management](../Topic/Configuring-Custom-Templates-for-Azure-Rights-Management.md)|
+|About activating Rights Management and controlling who can protect files and email when the service is activated   →|[Activating Azure Rights Management](activating-azure-rights-management.md)|
+|About the default templates and how to create new, custom templates   →|[Configuring Custom Templates for Azure Rights Management](configuring-custom-templates-for-azure-rights-management.md)|
 
 ## Step 2: Install the Rights Management sharing application
-![](../Image/AzRMS_QuickStartSteps2.PNG)
+![](/Image/AzRMS_QuickStartSteps2.PNG)
 
 The Rights Management sharing application (also known as the “RMS sharing app”) isn’t a requirement for Azure Rights Management, but we recommend it for all computers and mobile devices that support Azure Rights Management. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files directly from the ribbon. It also makes it possible to protect all files types by applying generic protection for files that are not natively supported by Azure Rights Management, and a document tracking site for users to track and revoke files that they have protected. We’ll be using the document tracking site later in this tutorial.
 
 This application is free to download and offers a scripted install for production environments. But for this tutorial, we’ll install it locally.
 
-![](../Image/AzRMS_Tutorial_2_Screenshots.png)
+![](/Image/AzRMS_Tutorial_2_Screenshots.png)
 
 #### To download and install the Rights Management sharing application
 
@@ -115,13 +115,13 @@ You’re now ready to start protecting files that contain information that you w
 |To understand the difference between native protection and generic protection   →|[What’s the difference between generic protection and built-in (native) protection?](https://technet.microsoft.com/library/dn574738.aspx)|
 
 ## Step 3: Email your document that you want to protect
-![](../Image/AzRMS_QuickStartSteps3.PNG)
+![](/Image/AzRMS_QuickStartSteps3.PNG)
 
 For this step, first create and save a document using Word that will represent your document that you want to protect, and name it **Confidential.docx**. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it. For example, you might type: **If you can read this from your email attachment, the sender has successfully shared a file that was protected with Azure RMS.**
 
 You’re then ready to safely share this document by email.
 
-![](../Image/AzRMS_Tutorial_3_Screenshots.png)
+![](/Image/AzRMS_Tutorial_3_Screenshots.png)
 
 #### To safely share your document by email
 
@@ -159,7 +159,7 @@ Now you’ve sent your protected document, you’re ready to ask your recipients
 |About the options in the **share protected** dialog box   →|[Dialog box options for the Rights Management sharing application](https://technet.microsoft.com/library/dn574738.aspx)|
 
 ## Step 4: Ask your recipients to open the emailed document
-![](../Image/AzRMS_QuickStartSteps4.PNG)
+![](/Image/AzRMS_QuickStartSteps4.PNG)
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
@@ -170,7 +170,7 @@ Ask them to read the email message that you sent. They will see your email messa
 
 When they click the link, it takes them to instructions to install the RMS sharing app and if necessary, sign up for a free account. The free account grants them a subscription for RMS for individuals, which ensures that authorized users can always read a protected document, even if their organization does not have Azure RMS. They are then ready to read the protected attachment by using the following instructions.
 
-![](../Image/AzRMS_Tutorial_4_Screenshots.png)
+![](/Image/AzRMS_Tutorial_4_Screenshots.png)
 
 #### To view the protected document attachment
 
@@ -189,11 +189,11 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |Full instructions for viewing files that are protected by Azure Rights Management   →|[View and use files that have been protected by Rights Management](https://technet.microsoft.com/library/dn574741.aspx)|
-|About the free subscription, RMS for individuals   →|[RMS for Individuals and Azure Rights Management](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md)|
+|About the free subscription, RMS for individuals   →|[RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)|
 |About the two versions of the file that you see attached to the email message   →|[What’s the .ppdf file that’s automatically created?](https://technet.microsoft.com/library/dn574738.aspx)|
 
 ## Step 5: Track your protected document
-![](../Image/AzRMS_QuickStartSteps5.PNG)
+![](/Image/AzRMS_QuickStartSteps5.PNG)
 
 > [!NOTE]
 > For this step, you must have a subscription that supports document tracking. To check whether your subscription includes document tracking, see [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608.aspx).
@@ -204,7 +204,7 @@ This step is optional, but most people like to know if the attachment they sent 
 
 -   After seeing that somebody has opened the document, you follow up to ask her if she has any questions or requires additional information.
 
-![](../Image/AzRMS_Tutorial_5_Screenshots.png)
+![](/Image/AzRMS_Tutorial_5_Screenshots.png)
 
 #### To track your protected document
 
@@ -229,10 +229,10 @@ You can return to this site to track further activity for your protected documen
 |For troubleshooting and customer questions   →|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
 
 ## Next Steps
-This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see the [Azure RMS in action](https://technet.microsoft.com/library/jj585026.aspx) section from the [What is Azure Rights Management?](../Topic/What-is-Azure-Rights-Management-.md) article. There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
+This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see the [Azure RMS in action](https://technet.microsoft.com/library/jj585026.aspx) section from the [What is Azure Rights Management?](what-is-azure-rights-management-.md) article. There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
 
-If you’re ready to start deploying Azure RMS, use the [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md) for your deployment steps and links for how-to instructions.
+If you’re ready to start deploying Azure RMS, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 ## See Also
-[Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md)
+[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 

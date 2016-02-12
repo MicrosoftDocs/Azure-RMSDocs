@@ -10,30 +10,30 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 author: Cabailey
 ---
 # Frequently Asked Questions for Azure Rights Management
-Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](../Token/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
+Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
 
 ## What do I need to deploy Azure RMS and how do I get going?
-First, check [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md), which has information about the cloud subscription options, how you can use your on-premises servers with Azure RMS, which deployment scenarios are not currently supported, which devices and applications support Azure RMS, and a link if you need a list of IP addresses and domain names for firewalls or proxy servers. You might also want to check the other topics in the [Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md) section, to get a basic understanding of how [!INCLUDE[aad_rightsmanagement_1](../Token/aad_rightsmanagement_1_md.md)] can help protect your organization’s data, how it works with applications, how it compares with the on-premises version of Active Directory Rights Management, and understand the terms and abbreviations that are specific to [!INCLUDE[aad_rightsmanagement_1](../Token/aad_rightsmanagement_1_md.md)].
+First, check [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md), which has information about the cloud subscription options, how you can use your on-premises servers with Azure RMS, which deployment scenarios are not currently supported, which devices and applications support Azure RMS, and a link if you need a list of IP addresses and domain names for firewalls or proxy servers. You might also want to check the other topics in the [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md) section, to get a basic understanding of how [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] can help protect your organization’s data, how it works with applications, how it compares with the on-premises version of Active Directory Rights Management, and understand the terms and abbreviations that are specific to [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)].
 
-Then when you’re ready to test Azure RMS for yourself, or deploy it for your organization, use the [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md) for a list of steps with links for more information and how-to instructions.
+Then when you’re ready to test Azure RMS for yourself, or deploy it for your organization, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for a list of steps with links for more information and how-to instructions.
 
-If you need additional information, resources, and support options, see [Information and Support for Azure Rights Management](../Topic/Information-and-Support-for-Azure-Rights-Management.md).
+If you need additional information, resources, and support options, see [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md).
 
 ## Can I integrate Azure RMS with my on-premises servers?
 Yes. Azure RMS can be integrated with your on-premises servers, such as Exchange Server, SharePoint, and Windows file servers. To do this, you use the [Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx). Or, if you're just interested in using File Classification Infrastructure (FC) with Windows Server, you can use the [RMS Protection cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
-Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../Topic/What-is-Azure-Rights-Management-.md#BKMK_Walthrough) section in the [What is Azure Rights Management?](../Topic/What-is-Azure-Rights-Management-.md) topic.
+Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management-.md#BKMK_Walthrough) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](https://technet.microsoft.com/library/jj658941.aspx) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](https://technet.microsoft.com/library/dn375964.aspx) for Exchange Server.
 
 ## If I deploy Azure RMS in production, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
-No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and Deactivating Azure Rights Management](../Topic/Decommissioning-and-Deactivating-Azure-Rights-Management.md).
+No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
 
 However, before you decommission your Azure RMS deployment, we would like to hear from you and understand why you made this decision. If Azure RMS does not fulfil your business requirements, check with us in case new functionality is planned for the near-future or if there are alternatives. Send an email message to [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) and we’ll be happy to discuss your technical and business requirements.
 
 ## Can I control which of my users can use Azure RMS to protect content?
-Yes, Azure RMS has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](../Topic/Activating-Azure-Rights-Management.md#BKMK_OnboardingControls) section in the [Activating Azure Rights Management](../Topic/Activating-Azure-Rights-Management.md) topic.
+Yes, Azure RMS has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](activating-azure-rights-management.md#BKMK_OnboardingControls) section in the [Activating Azure Rights Management](activating-azure-rights-management.md) topic.
 
 ## Can I prevent users from sharing protected documents with specific organizations?
 One of the biggest benefits of Azure RMS is that it supports business-to-business collaboration without you having to configure explicit trusts for each partner organization, because Azure AD takes care of the authentication for you.
@@ -52,10 +52,10 @@ To specify users from outside your organization, use [Windows PowerShell module 
 
 -   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) cmdlet (for a new template) or [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
 
-For more information about custom templates, see [Configuring Custom Templates for Azure Rights Management](../Topic/Configuring-Custom-Templates-for-Azure-Rights-Management.md).
+For more information about custom templates, see [Configuring Custom Templates for Azure Rights Management](configuring-custom-templates-for-azure-rights-management.md).
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of supported devices, see the [Client devices that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedDevices) section in the [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md) topic. Because not all supported devices can currently support all RMS capabilities, be sure to also check the [Client device capabilities](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_ClientCapabilities) table in the same topic.
+For a list of supported devices, see the [Client devices that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedDevices) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic. Because not all supported devices can currently support all RMS capabilities, be sure to also check the [Client device capabilities](requirements-for-azure-rights-management.md#BKMK_ClientCapabilities) table in the same topic.
 
 Azure RMS can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure RMS provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
@@ -64,22 +64,22 @@ For a list of file name extensions that are natively supported by Azure RMS, see
 ## When will you support migration from AD RMS?
 Initially, Azure RMS didn’t support migration from an on-premises deployment of Rights Management, such as AD RMS. But it’s supported now.
 
-For more information, see [Migrating from AD RMS to Azure Rights Management](../Topic/Migrating-from-AD-RMS-to-Azure-Rights-Management.md).
+For more information, see [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md).
 
 ## We really want to use BYOK with Azure RMS but learned that this isn’t compatible with Exchange Online—what’s your advice?
 Don’t let this current limitation delay your Azure RMS deployment. If you have Exchange Online and want to use bring your own key (BYOK), we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. That way, you get all the benefits of protecting your important files and emails now, with the option to move to BYOK later (for example, when Exchange Online does support BYOK).
 
-However, if your company policies require you to use a hardware security module (HSM) and this would otherwise block your Azure RMS deployment, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange. For more information, see the [BYOK pricing and restrictions](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md#BKMK_Pricing) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md) topic.
+However, if your company policies require you to use a hardware security module (HSM) and this would otherwise block your Azure RMS deployment, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange. For more information, see the [BYOK pricing and restrictions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Pricing) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic.
 
 ## A feature I am looking for doesn’t seem to work with SharePoint protected libraries—is support for my feature planned?
-Currently, SharePoint supports RMS protected documents by using IRM protected libraries, which do not support custom templates, document tracking, and some other capabilities.  For more information, expand the   [SharePoint Online and OneDrive for Business: IRM Configuration](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharePointOnline) section in the [How Applications Support Azure Rights Management](../Topic/How-Applications-Support-Azure-Rights-Management.md) topic .
+Currently, SharePoint supports RMS protected documents by using IRM protected libraries, which do not support custom templates, document tracking, and some other capabilities.  For more information, expand the   [SharePoint Online and OneDrive for Business: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_SharePointOnline) section in the [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) topic .
 
 If you are interested in a specific  capability that isn't yet supported,  be sure to keep an eye on announcements on the [RMS team blog](http://blogs.technet.com/b/rms/).
 
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library.  However, by using PowerShell, you can do this for them. For instructions, expand the [SharePoint Online and OneDrive for Business: IRM Configuration](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_SharePointOnline)  section in the [Configuring Applications for Azure Rights Management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md) article.
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library.  However, by using PowerShell, you can do this for them. For instructions, expand the [SharePoint Online and OneDrive for Business: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_SharePointOnline)  section in the [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md) article.
 
 ## Do you have any tips or tricks for a successful RMS deployment?
 After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple rights policies**.
@@ -89,15 +89,15 @@ Because Azure RMS supports sharing securely with anyone, you can afford to be a
 ## What features can or can’t be used with the different subscriptions for Azure RMS?
 For the paid subscriptions that support Azure RMS (Office 365, Azure RMS Premium, and Enterprise Mobility Suite), there are some differences in the RMS features that are supported. For a list of these, see [Comparison of Rights Management Services (RMS) Offerings](http://technet.microsoft.com/dn858608).
 
-The free subscription that supports Azure RMS (RMS for individuals) supports consuming content that has been protected by Azure RMS. For more information, see [RMS for Individuals and Azure Rights Management](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md).
+The free subscription that supports Azure RMS (RMS for individuals) supports consuming content that has been protected by Azure RMS. For more information, see [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md).
 
 ## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how it really works, how to take control of the accounts, and which domains can’t be used?
-You’ll find answers to these questions in the [RMS for Individuals and Azure Rights Management](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md) topic.
+You’ll find answers to these questions in the [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md) topic.
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
 Use the super user feature of Azure RMS, which lets authorized users have full owner rights for all use licenses that were granted by your organization’s RMS tenant. This same feature lets authorized services index and inspect files, as needed.
 
-For more information, see [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](../Topic/Configuring-Super-Users-for-Azure-Rights-Management-and-Discovery-Services-or-Data-Recovery.md).
+For more information, see [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md).
 
 ## Can Rights Management prevent screen captures?
 Rights Management does block screen captures from most of the commonly used screen capture tools, which can help to avoid accidental or negligent disclosure of confidential or sensitive information. However, there are many ways that a user can share data that is displayed on a screen, and taking a screen shot is only one method. For example, a user intent on sharing displayed information can take a picture of it using their camera phone, retype the data, or simply verbally relay it to somebody.
@@ -115,7 +115,7 @@ Azure RMS supports other services and also relies on other services. If you’r
 
 **Security, compliance, and auditing:**
 
-See the [Security, compliance, and regulatory requirements](../Topic/What-is-Azure-Rights-Management-.md#BKMK_RMScompliance) section in the [What is Azure Rights Management?](../Topic/What-is-Azure-Rights-Management-.md) topic. In addition:
+See the [Security, compliance, and regulatory requirements](what-is-azure-rights-management-.md#BKMK_RMScompliance) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic. In addition:
 
 -   For external certifications for Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
@@ -136,7 +136,7 @@ See the [Security, compliance, and regulatory requirements](../Topic/What-is-Azu
 -   Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
 ## What do I do if my question isn’t here?
-Use the links and resources listed in [Information and Support for Azure Rights Management](../Topic/Information-and-Support-for-Azure-Rights-Management.md).
+Use the links and resources listed in [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md).
 
 In addition, there are FAQs designed for end-users:
 
@@ -152,5 +152,5 @@ This FAQ page will be updated regularly, with new additions listed in the monthl
 > You can use the [docs tag](http://blogs.technet.com/b/rms/archive/tags/docs/) on the blog, to more easily find these documentation announcements.
 
 ## See Also
-[Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md)
+[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 

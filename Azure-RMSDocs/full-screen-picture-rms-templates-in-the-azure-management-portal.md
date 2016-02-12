@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: RMS templates in the Azure Management Portal
-![](../Image/AzRMS_TemplatesPortal.png)
+![](/Image/AzRMS_TemplatesPortal.png)
 
 Back to [Azure RMS in action: Activating Rights Management](http://technet.microsoft.com/library/jj585026.aspx).
 

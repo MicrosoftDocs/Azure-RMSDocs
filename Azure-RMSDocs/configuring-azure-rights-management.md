@@ -15,32 +15,32 @@ author: Cabailey
 > 
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the RMS sharing application for Windows, see the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
-This section contains information to help you deploy and configure Microsoft Azure Rights Management (Azure RMS) for your organization. If you’re not sure which configuration steps you need to do, start with [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md), because this lists deployment steps in a logical order, with links to the relevant configuration topics and how-to instructions.
+This section contains information to help you deploy and configure Microsoft Azure Rights Management (Azure RMS) for your organization. If you’re not sure which configuration steps you need to do, start with [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md), because this lists deployment steps in a logical order, with links to the relevant configuration topics and how-to instructions.
 
--   [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md)
+-   [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md)
 
--   [Migrating from AD RMS to Azure Rights Management](../Topic/Migrating-from-AD-RMS-to-Azure-Rights-Management.md)
+-   [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md)
 
--   [Preparing for Azure Rights Management](../Topic/Preparing-for-Azure-Rights-Management.md)
+-   [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md)
 
--   [Planning and Implementing Your Azure Rights Management Tenant Key](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md)
+-   [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 
--   [Activating Azure Rights Management](../Topic/Activating-Azure-Rights-Management.md)
+-   [Activating Azure Rights Management](activating-azure-rights-management.md)
 
--   [Configuring Custom Templates for Azure Rights Management](../Topic/Configuring-Custom-Templates-for-Azure-Rights-Management.md)
+-   [Configuring Custom Templates for Azure Rights Management](configuring-custom-templates-for-azure-rights-management.md)
 
--   [Configuring Applications for Azure Rights Management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md)
+-   [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md)
 
--   [Configuring Usage Rights for Azure Rights Management](../Topic/Configuring-Usage-Rights-for-Azure-Rights-Management.md)
+-   [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md)
 
--   [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](../Topic/Configuring-Super-Users-for-Azure-Rights-Management-and-Discovery-Services-or-Data-Recovery.md)
+-   [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md)
 
--   [Deploying the Azure Rights Management Connector](../Topic/Deploying-the-Azure-Rights-Management-Connector.md)
+-   [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md)
 
--   [Decommissioning and Deactivating Azure Rights Management](../Topic/Decommissioning-and-Deactivating-Azure-Rights-Management.md)
+-   [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md)
 
 > [!TIP]
-> If you’re new to Azure RMS, you might find the [Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md) section useful, because it contains information to help you learn more about Azure RMS and how it can help you to protect information in your organization.
+> If you’re new to Azure RMS, you might find the [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md) section useful, because it contains information to help you learn more about Azure RMS and how it can help you to protect information in your organization.
 > 
-> If you’ve already deployed Azure RMS, see [Using Azure Rights Management](../Topic/Using-Azure-Rights-Management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](../Topic/Administering-Azure-Rights-Management-by-Using-Windows-PowerShell.md).
+> If you’ve already deployed Azure RMS, see [Using Azure Rights Management](using-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
 
