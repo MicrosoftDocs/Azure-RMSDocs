@@ -31,29 +31,29 @@ The following picture shows how Azure RMS works as a Rights Management solution 
 
 Use the following sections to learn more about Azure RMS:
 
--   [What problems does Azure RMS solve?](what-is-azure-rights-management-.md#BKMK_RMSrequirements)
+-   [What problems does Azure RMS solve?](what-is-azure-rights-management.md#BKMK_RMSrequirements)
 
-    -   [Security, compliance, and regulatory requirements](what-is-azure-rights-management-.md#BKMK_RMScompliance)
+    -   [Security, compliance, and regulatory requirements](what-is-azure-rights-management.md#BKMK_RMScompliance)
 
--   [Azure RMS in action: What administrators and users see](what-is-azure-rights-management-.md#BKMK_RMSpictures)
+-   [Azure RMS in action: What administrators and users see](what-is-azure-rights-management.md#BKMK_RMSpictures)
 
-    -   [Activating and configuring Rights Management](what-is-azure-rights-management-.md#BKMK_Example_ManagementPortal)
+    -   [Activating and configuring Rights Management](what-is-azure-rights-management.md#BKMK_Example_ManagementPortal)
 
-    -   [Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](what-is-azure-rights-management-.md#BKMK_Example_FCI)
+    -   [Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](what-is-azure-rights-management.md#BKMK_Example_FCI)
 
-    -   [Automatically protecting emails with Exchange Online and data loss prevention policies](what-is-azure-rights-management-.md#BKMK_Example_DLP)
+    -   [Automatically protecting emails with Exchange Online and data loss prevention policies](what-is-azure-rights-management.md#BKMK_Example_DLP)
 
-    -   [Automatically protecting files with SharePoint Online and protected libraries](what-is-azure-rights-management-.md#BKMK_Example_SharePoint)
+    -   [Automatically protecting files with SharePoint Online and protected libraries](what-is-azure-rights-management.md#BKMK_Example_SharePoint)
 
-    -   [Users safely share attachments with mobile users](what-is-azure-rights-management-.md#BKMK_Example_SharingApp)
+    -   [Users safely share attachments with mobile users](what-is-azure-rights-management.md#BKMK_Example_SharingApp)
 
--   [How does Azure RMS work? Under the hood](what-is-azure-rights-management-.md#BKMK_HowRMSworks)
+-   [How does Azure RMS work? Under the hood](what-is-azure-rights-management.md#BKMK_HowRMSworks)
 
-    -   [Cryptographic controls used by Azure RMS: Algorithms and key lengths](what-is-azure-rights-management-.md#BKMK_RMScrytographics)
+    -   [Cryptographic controls used by Azure RMS: Algorithms and key lengths](what-is-azure-rights-management.md#BKMK_RMScrytographics)
 
-    -   [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management-.md#BKMK_Walthrough)
+    -   [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management.md#BKMK_Walthrough)
 
--   [Next steps](what-is-azure-rights-management-.md#BKMK_NextSteps)
+-   [Next steps](what-is-azure-rights-management.md#BKMK_NextSteps)
 
 ## <a name="BKMK_RMSrequirements"></a>What problems does Azure RMS solve?
 Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
@@ -78,7 +78,7 @@ Use the following table to identify business requirements or problems that your 
 ### <a name="BKMK_RMScompliance"></a>Security, compliance, and regulatory requirements
 Azure RMS supports the following security, compliance and regulatory requirements:
 
-√ Use of industry-standard cryptography and supports FIPS 140-2. For more information, see the [Cryptographic controls used by Azure RMS: Algorithms and key lengths](what-is-azure-rights-management-.md#BKMK_RMScrytographics) section in this topic.
+√ Use of industry-standard cryptography and supports FIPS 140-2. For more information, see the [Cryptographic controls used by Azure RMS: Algorithms and key lengths](what-is-azure-rights-management.md#BKMK_RMScrytographics) section in this topic.
 
 √ Support for Thales Hardware Security Modules (HSMs) to store your tenant key in Microsoft Azure data centers. Azure RMS uses separate security worlds for its data centers in North America, EMEA (Europe, Middle East and Africa), and Asia, so your keys can be used only in your region.
 
@@ -199,7 +199,7 @@ Throughout the protection process when Azure RMS is encrypting and decrypting, 
 
 ![](/Image/AzRMS_SecretColaFormula_final.png)
 
-For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management-.md#BKMK_Walthrough) section in this topic.
+For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management.md#BKMK_Walthrough) section in this topic.
 
 For technical details about the algorithms and key lengths that Azure RMS uses, see the next section.
 
