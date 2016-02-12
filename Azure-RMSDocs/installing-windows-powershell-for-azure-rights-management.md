@@ -54,5 +54,4 @@ Before you can run any commands that configure the [!INCLUDE[aad_rightsmanagemen
 > If you have not yet activated [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)], you can do this after you have connected to the service, by using the [Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) cmdlet.
 
 ## See Also
-[Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md)
-
+[Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md)
