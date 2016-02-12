@@ -36,7 +36,7 @@ For the cases where users must apply information protection themselves, be sure 
 For information about how to configure these applications for Azure RMS, see [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 > [!TIP]
-> For examples and screenshots of applications using Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management-.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
+> For examples and screenshots of applications using Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
 ## <a name="BKMK_SharingAppIntro"></a>RMS sharing application for Windows and mobile platforms
 The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](http://technet.microsoft.com/library/dn339003.aspx) section from the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
@@ -116,7 +116,7 @@ The classification policies are fully configurable and highly extensible so that
 
 For instructions to deploy and configure the RMS connector for Office files, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
-For instructions to use the Windows PowerShell script for all file types, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](rms-protection-with-windows-server-file-classification-infrastructure--fci-.md).
+For instructions to use the Windows PowerShell script for all file types, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](rms-protection-with-windows-server-file-classification-infrastructure-fci.md).
 
 ## <a name="BKMK_APIAppsIntro"></a>Other applications that support the RMS APIs
 By using the RMS SDK, your internal developers can write line-of-business applications to natively support [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)]. How information protection is integrated with these applications depends on how they are written. For example, the integration might be automatically applied with minimal user interaction required, or for a more customized experience, users might be prompted to configure settings to apply information protection to files. For more information about the SDK, see the [Microsoft Rights Management SDK](http://msdn.microsoft.com/library/hh552972%28v=vs.85%29.aspx).

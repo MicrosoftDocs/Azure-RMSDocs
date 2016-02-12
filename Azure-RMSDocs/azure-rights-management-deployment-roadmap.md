@@ -50,8 +50,7 @@ If you have on-premises services that you want to use with Azure Rights Manageme
 You’re now ready to publish and consume protected content, and log how your company is using Rights Management. For more information, see [Using Azure Rights Management](using-azure-rights-management.md).
 
 ## Step 5: Administer Rights Management for your tenant account as needed
-As you begin to use [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)], you might find the [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] module for Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
+As you begin to use [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)], you might find the [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] module for Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
 ## See Also
 [Configuring Azure Rights Management](configuring-azure-rights-management.md)
-

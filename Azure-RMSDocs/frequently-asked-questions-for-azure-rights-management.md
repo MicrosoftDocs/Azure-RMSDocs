@@ -22,7 +22,7 @@ If you need additional information, resources, and support options, see [Informa
 ## Can I integrate Azure RMS with my on-premises servers?
 Yes. Azure RMS can be integrated with your on-premises servers, such as Exchange Server, SharePoint, and Windows file servers. To do this, you use the [Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx). Or, if you're just interested in using File Classification Infrastructure (FC) with Windows Server, you can use the [RMS Protection cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
-Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management-.md#BKMK_Walthrough) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
+Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](what-is-azure-rights-management.md#BKMK_Walthrough) section in the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](https://technet.microsoft.com/library/jj658941.aspx) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](https://technet.microsoft.com/library/dn375964.aspx) for Exchange Server.
@@ -115,7 +115,7 @@ Azure RMS supports other services and also relies on other services. If you’r
 
 **Security, compliance, and auditing:**
 
-See the [Security, compliance, and regulatory requirements](what-is-azure-rights-management-.md#BKMK_RMScompliance) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic. In addition:
+See the [Security, compliance, and regulatory requirements](what-is-azure-rights-management.md#BKMK_RMScompliance) section in the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic. In addition:
 
 -   For external certifications for Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
@@ -153,4 +153,3 @@ This FAQ page will be updated regularly, with new additions listed in the monthl
 
 ## See Also
 [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
-

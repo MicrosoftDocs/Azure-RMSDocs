@@ -12,7 +12,7 @@ author: Cabailey
 # Configuring Azure Rights Management
 > [!NOTE]
 > This information is for IT administrators and consultants who are deploying Microsoft Azure Rights Management for an organization. If you are looking for user help and information about how to use Rights Management with a specific application, use the help and guidance that accompanies your application.
-> 
+>
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the RMS sharing application for Windows, see the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
 This section contains information to help you deploy and configure Microsoft Azure Rights Management (Azure RMS) for your organization. If you’re not sure which configuration steps you need to do, start with [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md), because this lists deployment steps in a logical order, with links to the relevant configuration topics and how-to instructions.
@@ -41,6 +41,5 @@ This section contains information to help you deploy and configure Microsoft Azu
 
 > [!TIP]
 > If you’re new to Azure RMS, you might find the [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md) section useful, because it contains information to help you learn more about Azure RMS and how it can help you to protect information in your organization.
-> 
-> If you’ve already deployed Azure RMS, see [Using Azure Rights Management](using-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
-
+>
+> If you’ve already deployed Azure RMS, see [Using Azure Rights Management](using-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).

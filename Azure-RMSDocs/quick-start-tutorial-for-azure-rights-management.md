@@ -229,7 +229,7 @@ You can return to this site to track further activity for your protected documen
 |For troubleshooting and customer questions   →|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
 
 ## Next Steps
-This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see the [Azure RMS in action](https://technet.microsoft.com/library/jj585026.aspx) section from the [What is Azure Rights Management?](what-is-azure-rights-management-.md) article. There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
+This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see the [Azure RMS in action](https://technet.microsoft.com/library/jj585026.aspx) section from the [What is Azure Rights Management?](what-is-azure-rights-management.md) article. There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
 
 If you’re ready to start deploying Azure RMS, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 

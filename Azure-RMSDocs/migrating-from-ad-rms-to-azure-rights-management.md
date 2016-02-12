@@ -14,7 +14,7 @@ Use the following set of instructions to  migrate your Active Directory Rights M
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](what-is-azure-rights-management-.md)
+-   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](what-is-azure-rights-management.md)
 
 -   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md).
 

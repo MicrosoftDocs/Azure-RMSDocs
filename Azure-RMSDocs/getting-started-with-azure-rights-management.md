@@ -14,11 +14,11 @@ This section contains information for IT administrators and consultants, to help
 
 When you’re ready to start deploying Azure RMS, see [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for deployment steps and links for how-to instructions.
 
-If you’ve already deployed Azure RMS, see [Using Azure Rights Management](using-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
+If you’ve already deployed Azure RMS, see [Using Azure Rights Management](using-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
 |||
 |-|-|
-|[What is Azure Rights Management?](what-is-azure-rights-management-.md)|An overview of [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)], the business benefits and problems that it solves for organizations that are looking to safeguard and protect their data, some typical examples with screenshots, and a detailed explanation of how this technology works.|
+|[What is Azure Rights Management?](what-is-azure-rights-management.md)|An overview of [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)], the business benefits and problems that it solves for organizations that are looking to safeguard and protect their data, some typical examples with screenshots, and a detailed explanation of how this technology works.|
 |[RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)|Explains the free subscription named RMS for individuals that lets anybody in an organization read protected files, even if their company doesn’t have [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] or AD RMS.|
 |[How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md)|Describes how applications such as Microsoft Word and Outlook, and services such as Exchange Online and SharePoint Online, support [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] to help protect your organization’s sensitive data.|
 |[Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md)|If you are familiar with Active Directory Rights Management Services (AD RMS), you might find this topic and table comparison useful to help you identify the similarities and differences between Azure Rights Management and AD RMS.|
@@ -30,4 +30,3 @@ If you’ve already deployed Azure RMS, see [Using Azure Rights Management](usi
 
 ## See Also
 [Azure Rights Management](azure-rights-management.md)
-
