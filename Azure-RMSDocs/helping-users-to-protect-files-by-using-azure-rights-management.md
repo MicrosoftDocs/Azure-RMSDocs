@@ -24,7 +24,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
 -   **Administrator information:**
 
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How Applications Support Azure Rights Management](../Topic/How-Applications-Support-Azure-Rights-Management.md) and [Configuring Applications for Azure Rights Management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md).
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) and [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 -   **Help desk information:**
 
@@ -40,7 +40,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
     -   **Problems protecting or consuming content:**
 
-        Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by Azure RMS. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by Azure RMS. For more information about supported applications and devices, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
 
         If users see an error when trying to protect or consume content, ask them to run the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) as an Azure RMS user.
 
@@ -58,7 +58,7 @@ For instructions to use this application for Windows computers, see the [Rights 
 For mobile devices, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248).
 
 > [!TIP]
-> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](../Topic/What-is-Azure-Rights-Management-.md#BKMK_Example_SharingApp) section in the [What is Azure Rights Management?](../Topic/What-is-Azure-Rights-Management-.md) topic.
+> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](what-is-azure-rights-management-.md#BKMK_Example_SharingApp) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
 If you are using Azure RMS and have not installed the Rights Management sharing application, users will not see the **Share Protected** button on the ribbon or **Protect in-place** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to these.
@@ -73,7 +73,7 @@ If you are using Azure RMS and have not installed the Rights Management sharing
 2.  From the **File** menu, click **Info**, click **Protect Document**, click **Restrict Access**, and then choose a template to quickly apply the appropriate usage rights, or select **Restrict Access** and select the usage rights yourself.
 
     > [!NOTE]
-    > If this is the first time that you have used Rights Management, you will contact the [!INCLUDE[aad_rightsmanagement_1](../Token/aad_rightsmanagement_1_md.md)] service and will be prompted for credentials to configure the Office IRM client.
+    > If this is the first time that you have used Rights Management, you will contact the [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] service and will be prompted for credentials to configure the Office IRM client.
 
 3.  Save the document.
 
@@ -100,5 +100,5 @@ Similarly to viewing a protected document, when the recipients receive the email
 Similarly to viewing a protected document, when the recipients receive the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted usage rights that were specified for that user. For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
 
 ## See Also
-[Using Azure Rights Management](../Topic/Using-Azure-Rights-Management.md)
+[Using Azure Rights Management](using-azure-rights-management.md)
 

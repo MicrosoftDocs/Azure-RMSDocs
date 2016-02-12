@@ -34,7 +34,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for non-administrator installation, so that standard users can install the RMS sharing application.
 
-    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](../Topic/Download-and-install-the-Rights-Management-sharing-application.md#BKMK_SetupOffice2010) section in the [Download and install the Rights Management sharing application](../Topic/Download-and-install-the-Rights-Management-sharing-application.md)  user instructions.
+    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](download-and-install-the-rights-management-sharing-application.md#BKMK_SetupOffice2010) section in the [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md)  user instructions.
 
 ## Version 1.0.1908.0
 **Released**: 9/16/2015
@@ -43,7 +43,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for multi-factor authentication (MFA) for Azure RMS, which also removes the dependency on the Microsoft Sign-in Assistant for applications that use modern authentication.
 
-    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_MFA)   section in  [Requirements for Azure Rights Management](../Topic/Requirements-for-Azure-Rights-Management.md).
+    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](requirements-for-azure-rights-management.md#BKMK_MFA)   section in  [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
 
 ## Version 1.0.1784.0
 **Released**: 7/30/2015
@@ -65,7 +65,7 @@ Versions before January 1, 2015 are not listed.
 
 **New features**:
 
--   Support for document tracking and revocation. For more information, see [Track and revoke your documents when you use the RMS sharing application](../Topic/Track-and-revoke-your-documents-when-you-use-the-RMS-sharing-application.md).
+-   Support for document tracking and revocation. For more information, see [Track and revoke your documents when you use the RMS sharing application](track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md).
 
 -   Template support when you choose **Share Protected**:
 
@@ -75,7 +75,7 @@ Versions before January 1, 2015 are not listed.
 
     -   You no longer see options for **Allow consumption on all devices** and **Enforce usage restrictions**. Instead, **Generic Protection** is automatically selected, depending on the file type.
 
-    For more information, see [Dialog box options for the Rights Management sharing application](../Topic/Dialog-box-options-for-the-Rights-Management-sharing-application.md).
+    For more information, see [Dialog box options for the Rights Management sharing application](dialog-box-options-for-the-rights-management-sharing-application.md).
 
 ## Version 1.0.1667.0
 **Released**: 1/19/2015
@@ -90,5 +90,5 @@ Versions before January 1, 2015 are not listed.
 
 **New features**:
 
--   **Support for multiple email domains within your organization**: If you use AD RMS and users in your organization have multiple email domains, this update lets your users consume content that has been protected by users in your organization in other domains. For more information, see the [AD RMS only: Support for multiple email domains within your organization](../Topic/Rights-Management-sharing-application-administrator-guide.md#BKMK_FederatedDomains) section in the [Rights Management sharing application administrator guide](../Topic/Rights-Management-sharing-application-administrator-guide.md).
+-   **Support for multiple email domains within your organization**: If you use AD RMS and users in your organization have multiple email domains, this update lets your users consume content that has been protected by users in your organization in other domains. For more information, see the [AD RMS only: Support for multiple email domains within your organization](rights-management-sharing-application-administrator-guide.md#BKMK_FederatedDomains) section in the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
 

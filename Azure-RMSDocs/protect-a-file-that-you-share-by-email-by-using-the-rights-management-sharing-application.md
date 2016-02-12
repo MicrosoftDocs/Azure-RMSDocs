@@ -18,15 +18,15 @@ If your organization uses Azure RMS, you can keep track of the files that you pr
 
 -   Select an option to receive emails when somebody tries to open these protected attachments. Each time the file is accessed, you will be notified who tried to open the file and when, and whether they were successful (they were successfully authenticated) or not.
 
--   Use the documentation tracking site. You can even stop sharing the file, by revoking access to it in the document tracking site. For more information, see [Track and revoke your documents when you use the RMS sharing application](../Topic/Track-and-revoke-your-documents-when-you-use-the-RMS-sharing-application.md).
+-   Use the documentation tracking site. You can even stop sharing the file, by revoking access to it in the document tracking site. For more information, see [Track and revoke your documents when you use the RMS sharing application](track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md).
 
 ## Using Outlook: To protect a file that you share by email
 
 1.  Create your email message and attach the file. Then, on the **Message** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](../Image/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
+    ![](/Image/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    If you do not see this button, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](../Topic/Download-and-install-the-Rights-Management-sharing-application.md).
+    If you do not see this button, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
 
 2.  Specify the options that you want for this file in the [share protected dialog box](http://technet.microsoft.com/library/dn574738.aspx), and then click **Send Now**.
 
@@ -43,13 +43,13 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     -   For File Explorer: Right-click the file, select **Protect with RMS**, and then select **Share Protected**:
 
-        ![](../Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![](/Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   For the Office applications, Word, Excel, and PowerPoint: Make sure that you have saved the file first. Then, on the **Home** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-        ![](../Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    If you do not see these options for protection, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](../Topic/Download-and-install-the-Rights-Management-sharing-application.md).
+    If you do not see these options for protection, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
 
 2.  Specify the options that you want for this file in the [share protected dialog box](http://technet.microsoft.com/library/dn574738.aspx), and then click **Send**.
 
@@ -57,9 +57,9 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     Example:
 
-    ![](../Image/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![](/Image/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Are you wondering: [What’s the .ppdf file that’s automatically created?](../Topic/Dialog-box-options-for-the-Rights-Management-sharing-application.md#BKMK_PPDF)
+    Are you wondering: [What’s the .ppdf file that’s automatically created?](dialog-box-options-for-the-rights-management-sharing-application.md#BKMK_PPDF)
 
 4.  Optional: You can change anything that you want in this email message. For example, you can add to or change the subject or text in the message.
 
@@ -71,10 +71,10 @@ In addition to sharing a protected file by using Outlook, you can also use these
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](../Topic/Rights-Management-sharing-application-user-guide.md#BKMK_SharingExamples)
+-   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#BKMK_SharingExamples)
 
--   [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide.md#BKMK_SharingInstructions)
+-   [What do you want to do?](rights-management-sharing-application-user-guide.md#BKMK_SharingInstructions)
 
 ## See Also
-[Rights Management sharing application user guide](../Topic/Rights-Management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
 

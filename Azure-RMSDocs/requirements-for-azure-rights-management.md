@@ -10,14 +10,14 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 author: Cabailey
 ---
 # Requirements for Azure Rights Management
-To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management Deployment Roadmap](../Topic/Azure-Rights-Management-Deployment-Roadmap.md) to deploy Rights Management for your organization.
+To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to deploy Rights Management for your organization.
 
 |Requirement|More information|
 |---------------|--------------------|
-|A cloud subscription for RMS|Your organization must have a cloud subscription that supports RMS.<br /><br />For licensing information, see the [Cloud subscriptions that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedSubscriptions) section in this topic.|
-|Azure AD directory|Your organization must have an Azure AD directory to support user authentication for RMS. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.<br /><br />Multi-factor authentication (MFA) is supported with Azure RMS when you have the required client software and correctly configured     MFA supporting infrastructure.<br /><br />For more information, see the [Azure AD directory](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_AzureADTenant) section in this topic.|
-|Client devices|Users must have a client devices (computer or mobile device) that run an operating system that supports RMS.<br /><br />For more information, see the [Client devices that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedDevices) section in this topic.|
-|Applications|Users must run applications that support RMS.<br /><br />For more information, see the [Applications that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedApplications) section in this topic.|
+|A cloud subscription for RMS|Your organization must have a cloud subscription that supports RMS.<br /><br />For licensing information, see the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in this topic.|
+|Azure AD directory|Your organization must have an Azure AD directory to support user authentication for RMS. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.<br /><br />Multi-factor authentication (MFA) is supported with Azure RMS when you have the required client software and correctly configured     MFA supporting infrastructure.<br /><br />For more information, see the [Azure AD directory](requirements-for-azure-rights-management.md#BKMK_AzureADTenant) section in this topic.|
+|Client devices|Users must have a client devices (computer or mobile device) that run an operating system that supports RMS.<br /><br />For more information, see the [Client devices that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedDevices) section in this topic.|
+|Applications|Users must run applications that support RMS.<br /><br />For more information, see the [Applications that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedApplications) section in this topic.|
 |Infrastructure that supports connectivity to the Internet and dependent cloud services|If you have a firewall or similar intervening network devices that must be configured to allow specific connections, see [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).<br /><br />The list of URLs and IP addresses in the **Office 365 portal and identity** section apply to the Office 365 portal, Azure Active Directory resources, and Azure Rights Management. Use the instructions in this article to keep up-to-date with changes to this information, by subscribing to an RSS feed.<br /><br />In addition to the information in the Office article, specific to Azure RMS:<br /><br />Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with Azure RMS.<br /><br />Do not use a web proxy configuration that authenticates on behalf of a user.|
 
 If you want to use Azure RMS with on-premises servers, the following products are supported:
@@ -28,14 +28,14 @@ If you want to use Azure RMS with on-premises servers, the following products ar
 
 -   Windows Server file servers that support File Classification Infrastructure
 
-For information about the additional Azure RMS requirements for this scenario, see the [On-premises servers that support Azure RMS](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_SupportedServers) section in this topic.
+For information about the additional Azure RMS requirements for this scenario, see the [On-premises servers that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedServers) section in this topic.
 
 > [!IMPORTANT]
 > The following deployment scenario is not supported:
 > 
-> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Rights Management](../Topic/Migrating-from-AD-RMS-to-Azure-Rights-Management.md).
+> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md).
 > 
-> There is a supported migration path [from AD RMS to Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure RMS to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure RMS and then decide that you no longer want to use this cloud service, see [Decommissioning and Deactivating Azure Rights Management](../Topic/Decommissioning-and-Deactivating-Azure-Rights-Management.md).
+> There is a supported migration path [from AD RMS to Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure RMS to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure RMS and then decide that you no longer want to use this cloud service, see [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
 
 Use the following sections to learn more about the Azure RMS requirements.
 
@@ -97,7 +97,7 @@ Footnote 1:  For Business Premium, there are some client restrictions: You can p
 ### RMS for individuals subscription
 This subscription is designed for individuals in an organization that hasn’t deployed Azure RMS or AD RMS. It lets these people read content that has been protected by an organization that is using Azure RMS, and they can also protect their own content.
 
-For more information, see [RMS for Individuals and Azure Rights Management](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md).
+For more information, see [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md).
 
 ## <a name="BKMK_AzureADTenant"></a>Azure AD directory
 You must have an Azure AD directory to use Azure RMS. You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
@@ -126,7 +126,7 @@ To use multi-factor authentication (MFA) with Azure RMS requires at least one of
 
 -   Rights Management sharing application for Windows:
 
-    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management Sharing Application for Windows](../Topic/Rights-Management-Sharing-Application-for-Windows.md).
+    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management Sharing Application for Windows](rights-management-sharing-application-for-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
@@ -149,11 +149,11 @@ Then, configure your MFA solution:
 ## <a name="BKMK_SupportedDevices"></a>Client devices that support Azure RMS
 Use the following sections to identify which devices support Azure Rights Management (RMS), and which RMS capabilities they support:
 
--   [Computers](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_RMSSupportedComputers)
+-   [Computers](requirements-for-azure-rights-management.md#BKMK_RMSSupportedComputers)
 
--   [Mobile devices](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_RMSSupportedMobileDevices)
+-   [Mobile devices](requirements-for-azure-rights-management.md#BKMK_RMSSupportedMobileDevices)
 
--   [Client device capabilities](../Topic/Requirements-for-Azure-Rights-Management.md#BKMK_ClientCapabilities)
+-   [Client device capabilities](requirements-for-azure-rights-management.md#BKMK_ClientCapabilities)
 
 ### <a name="BKMK_RMSSupportedComputers"></a>Computers
 The following computer operating systems support Azure Rights Management:
@@ -280,9 +280,9 @@ The following applications natively support Azure RMS, which means that RMS is 
 > 
 > -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
-For more information about how these applications support Azure RMS, see [How Applications Support Azure Rights Management](../Topic/How-Applications-Support-Azure-Rights-Management.md).
+For more information about how these applications support Azure RMS, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
-For information about how to configure them, see [Configuring Applications for Azure Rights Management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md).
+For information about how to configure them, see [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 ## <a name="BKMK_SupportedServers"></a>On-premises servers that support Azure RMS
 The following on-premises server products are supported with Azure RMS when you use the Azure RMS connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS. In addition, this configuration requires that you configure directory synchronization between your Active Directory forests and Azure Active Directory.
@@ -310,12 +310,12 @@ The following on-premises server products are supported with Azure RMS when you 
     > [!NOTE]
     > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply RMS protection, you cannot use the RMS connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
     > 
-    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](../Topic/RMS-Protection-with-Windows-Server-File-Classification-Infrastructure--FCI-.md).
+    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](rms-protection-with-windows-server-file-classification-infrastructure--fci-.md).
 
 The RMS connector is supported on Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
 
-For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management Connector](../Topic/Deploying-the-Azure-Rights-Management-Connector.md).
+For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
 ## See Also
-[Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md)
+[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 

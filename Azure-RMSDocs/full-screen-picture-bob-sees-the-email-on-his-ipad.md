@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Bob sees the email on his iPad
-![](../Image/AzRMS_StoryboardEmaill2.PNG)
+![](/Image/AzRMS_StoryboardEmaill2.PNG)
 
 Back to [Azure RMS in action: Safely share attachments with mobile users](http://technet.microsoft.com/library/jj585026.aspx).
 

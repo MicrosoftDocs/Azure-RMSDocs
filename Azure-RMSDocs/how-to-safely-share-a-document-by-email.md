@@ -30,12 +30,12 @@ For the user instructions to work, the following must be in place:
 
 |Check|Requirement|If you need more information|
 |---------|---------------|--------------------------------|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|If you’re using Exchange Server rather than Exchange Online:<br /><br />-   The RMS connector is deployed and Exchange Server roles are configured to use it|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Users use Outlook from Office 2010.|If users have Office 2013, replace the screenshots with equivalent versions so that they match what users see.|
-|![](../Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have configured custom templates as described next|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|If you’re using Exchange Server rather than Exchange Online:<br /><br />-   The RMS connector is deployed and Exchange Server roles are configured to use it|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Users use Outlook from Office 2010.|If users have Office 2013, replace the screenshots with equivalent versions so that they match what users see.|
+|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have configured custom templates as described next|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 
 #### To configure the custom templates:
 
@@ -56,7 +56,7 @@ From now on, whenever you send an important document to somebody by email, use t
 
 1.  Create your email message by specifying the email address or addresses, type your message, and attach the file that you want to safely share. Then, on the **Message** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](../Image/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
+    ![](/Image/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
 2.  In the **share protected** dialog box, specify the following:
 
@@ -64,29 +64,29 @@ From now on, whenever you send an important document to somebody by email, use t
 
     |If this applies …|Do this:|
     |---------------------|------------|
-    |**Generic Protection** is automatically selected for you    →|Keep this selection:<br /><br />![](../Image/AzRMS_SharedProtected_GenericProtection.PNG)|
-    |Information in the document should not be changed    →|Select **Viewer – View Only**:<br /><br />![](../Image/AzRMS_SharedProtected_ViewerOnly.PNG)|
-    |Information in the document can be changed    →|Select **Co-Author – View, Edit, Copy and Print**:<br /><br />![](../Image/AzRMS_SharedProtected_CoAuthor.PNG)|
+    |**Generic Protection** is automatically selected for you    →|Keep this selection:<br /><br />![](/Image/AzRMS_SharedProtected_GenericProtection.PNG)|
+    |Information in the document should not be changed    →|Select **Viewer – View Only**:<br /><br />![](/Image/AzRMS_SharedProtected_ViewerOnly.PNG)|
+    |Information in the document can be changed    →|Select **Co-Author – View, Edit, Copy and Print**:<br /><br />![](/Image/AzRMS_SharedProtected_CoAuthor.PNG)|
     When you send a document to people inside your organization:
 
     |If this applies …|Do this:|
     |---------------------|------------|
-    |**Generic Protection** is automatically selected for you    →|Keep this selection:<br /><br />![](../Image/AzRMS_SharedProtected_GenericProtection.PNG)|
-    |Information in the document is very sensitive and would cause exceptionally high damage to the organization or to its employees if publicly available    →|Select **Highly Confidential - VanArsdel, Ltd**:<br /><br />![](../Image/AzRMS_SharedProtected_HighlyConfidental.PNG)|
-    |Information in the document is  sensitive and would cause damage to the organization or to its employees if publicly available    →|Select **Confidential - VanArsdel, Ltd**:<br /><br />![](../Image/AzRMS_SharedProtected_Confidential.PNG)|
-    |Information in the document should not be shared with people outside your organization but does not contain sensitive information about the organization or its employees    →|Select **Internal – VanArsdel, Ltd**:<br /><br />![](../Image/AzRMS_SharedProtected_Internal.PNG)|
+    |**Generic Protection** is automatically selected for you    →|Keep this selection:<br /><br />![](/Image/AzRMS_SharedProtected_GenericProtection.PNG)|
+    |Information in the document is very sensitive and would cause exceptionally high damage to the organization or to its employees if publicly available    →|Select **Highly Confidential - VanArsdel, Ltd**:<br /><br />![](/Image/AzRMS_SharedProtected_HighlyConfidental.PNG)|
+    |Information in the document is  sensitive and would cause damage to the organization or to its employees if publicly available    →|Select **Confidential - VanArsdel, Ltd**:<br /><br />![](/Image/AzRMS_SharedProtected_Confidential.PNG)|
+    |Information in the document should not be shared with people outside your organization but does not contain sensitive information about the organization or its employees    →|Select **Internal – VanArsdel, Ltd**:<br /><br />![](/Image/AzRMS_SharedProtected_Internal.PNG)|
 
 3.  If you selected **Viewer – View Only**: Select **Allow me to instantly revoke access to these documents**:
 
-    ![](../Image/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![](/Image/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Select **Email me when somebody tries to open these documents**:
 
-    ![](../Image/AzRMS_SharedProtected_EmailMe.PNG)
+    ![](/Image/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Click **Send Now**:
 
-    ![](../Image/AzRMS_ShareProtected_SendNow.PNG)
+    ![](/Image/AzRMS_ShareProtected_SendNow.PNG)
 
 When somebody you’ve sent a protected document to receives the email, they see a message that gives them instructions how to read it. They can read it on many devices, including iPads, iPhones, Android tablets and phones, Mac computers, and Windows computers.
 

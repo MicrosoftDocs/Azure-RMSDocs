@@ -34,15 +34,15 @@ You don’t need the mobile device extension to consume or author protected emai
 
 Use the following sections to deploy the Active Directory Rights Management Services (AD RMS) mobile device extension:
 
--   [Prerequisites for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_Preqs)
+-   [Prerequisites for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_Preqs)
 
-    -   [Configuring AD FS for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_ADFS)
+    -   [Configuring AD FS for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_ADFS)
 
-    -   [Configuring AD FS for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_ADFS)
+    -   [Configuring AD FS for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_ADFS)
 
--   [Specifying the DNS SRV records for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_SRV)
+-   [Specifying the DNS SRV records for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_SRV)
 
--   [Deploying the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_Deploy)
+-   [Deploying the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_Deploy)
 
 ## <a name="BKMK_Preqs"></a>Prerequisites for the AD RMS mobile device extension
 Before you install the AD RMS mobile device extension, make sure that these dependencies are in place.
@@ -50,8 +50,8 @@ Before you install the AD RMS mobile device extension, make sure that these dep
 |Requirement|More information|
 |---------------|--------------------|
 |An existing AD RMS deployment on Windows Server 2012 R2 or Windows Server 2012. **Note:** AD RMS must be using a full Microsoft SQL Server-based database on a separate server and not the Windows Internal Database that is often used for testing on the same server.|For documentation about AD RMS, see [Active Directory Rights Management Services](http://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library.|
-|AD FS deployed on Windows Server 2012 R2|For documentation about AD FS, see [Windows Server 2012 R2 AD FS Deployment Guide](http://technet.microsoft.com/library/dn486820.aspx) in the Windows Server library.<br /><br />AD FS must be configured for the mobile device extension. For instructions, see the [Configuring AD FS for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_ADFS) section in this topic.|
-|SRV records in DNS|Create one or more SRV records in your company domain or domains:<br /><br />-   One record for each email domain suffix that users will use<br />-   One record for every FQDN used by your RMS clusters to protect content<br /><br />When users supply their email address from their mobile device, the domain suffix is used to identify whether they should use an AD RMS infrastructure or Azure RMS. When the SRV record is found, clients are redirected to the AD RMS server that responds to that URL.<br /><br />When users consume protected content with a mobile device, the client application looks in DNS for a record that matches the FQDN in the URL of the cluster that protected the content. The device is then directed to the AD RMS cluster specified in the DNS record and acquires a license to open the content. In most cases, the RMS cluster will be the same RMS cluster that protected the content.<br /><br />For information about how to specify the SRV records, see the [Specifying the DNS SRV records for the AD RMS mobile device extension](../Topic/Active-Directory-Rights-Management-Services-Mobile-Device-Extension.md#BKMK_SRV) section in this topic.|
+|AD FS deployed on Windows Server 2012 R2|For documentation about AD FS, see [Windows Server 2012 R2 AD FS Deployment Guide](http://technet.microsoft.com/library/dn486820.aspx) in the Windows Server library.<br /><br />AD FS must be configured for the mobile device extension. For instructions, see the [Configuring AD FS for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_ADFS) section in this topic.|
+|SRV records in DNS|Create one or more SRV records in your company domain or domains:<br /><br />-   One record for each email domain suffix that users will use<br />-   One record for every FQDN used by your RMS clusters to protect content<br /><br />When users supply their email address from their mobile device, the domain suffix is used to identify whether they should use an AD RMS infrastructure or Azure RMS. When the SRV record is found, clients are redirected to the AD RMS server that responds to that URL.<br /><br />When users consume protected content with a mobile device, the client application looks in DNS for a record that matches the FQDN in the URL of the cluster that protected the content. The device is then directed to the AD RMS cluster specified in the DNS record and acquires a license to open the content. In most cases, the RMS cluster will be the same RMS cluster that protected the content.<br /><br />For information about how to specify the SRV records, see the [Specifying the DNS SRV records for the AD RMS mobile device extension](active-directory-rights-management-services-mobile-device-extension.md#BKMK_SRV) section in this topic.|
 |Currently supported clients:<br /><br />-   Android devices using the latest version of the RMS sharing app for Android|Minimum version of Android 4.0.3.<br /><br />Download the RMS sharing app for Android from the [Microsoft Connect site](https://connect.microsoft.com/site1170/Downloads) and sideload it onto the device.|
 
 ### <a name="BKMK_ADFS"></a>Configuring AD FS for the AD RMS mobile device extension

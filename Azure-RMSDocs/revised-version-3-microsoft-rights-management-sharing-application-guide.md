@@ -131,7 +131,7 @@ The easiest way to protect a file is to use templates but you can also specify y
 
 To protect a file with user-authored permissions, right-click the file, click **Protect in-place**, and then click **Custom Permissions**. You will see the following screen:
 
-![](../Image/ADRMS_MSRMSApp_ProtectCustom.gif)
+![](/Image/ADRMS_MSRMSApp_ProtectCustom.gif)
 
 Type the email addresses of the users, use the slider to select permissions for the file, and then click **Apply**.
 
@@ -144,12 +144,12 @@ When you view a protected text file that has user-authored protection, you will 
 
 For files that are protected by using the generic protection (.pfile) file format, the specific rights or permissions that were specified by the user appears in the confirmation screen instead of the name of the template that was used to protect the file, as shown in the following picture.
 
-![](../Image/ADRMS_MSRMSApp_SP_ConsumePfile.gif)
+![](/Image/ADRMS_MSRMSApp_SP_ConsumePfile.gif)
 
 ### <a name="BKMK_ShareProtected"></a>Protect content to share by email
 To protect content that you want to share by using an email message, right-click the file, and click **Share Protected**. You will see the following screen:
 
-![](../Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
+![](/Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
 
 Type the email addresses of the list of users, use the slider to select permissions for the file, and click **Send**. Outlook then creates an email message for the recipients with a short message that you can change, and attaches the protected file attached. The original file is not protected.
 
@@ -174,14 +174,14 @@ You can protect and share files in Word, PowerPoint, and Excel  directly from wi
 
 In the **Protection** group, click **Share Protected** to start the Microsoft Rights Management sharing application.
 
-![](../Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
 ### <a name="BKMK_AccessKeys"></a>Use keyboard shortcuts
 Press the **Alt** key to see the available access keys, and then press **Alt** + the access key to select an option.
 
 For example, in the **share protected** dialog box, press **Alt** to see the access keys, and then press **Alt + u** to select the **Users must login every time they open this file** check box.
 
-![](../Image/ADRMS_MSRMSApp_AccessKeys.png)
+![](/Image/ADRMS_MSRMSApp_AccessKeys.png)
 
 ## See Also
 [Microsoft Rights Management sharing application download](http://go.microsoft.com/fwlink/?LinkId=303970)

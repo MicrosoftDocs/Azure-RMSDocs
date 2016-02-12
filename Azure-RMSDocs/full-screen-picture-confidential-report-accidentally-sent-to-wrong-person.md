@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Confidential report accidentally sent to wrong person
-![](../Image/AzRMS_FCI_Email.png)
+![](/Image/AzRMS_FCI_Email.png)
 
 Back to [Azure RMS in action: Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](http://technet.microsoft.com/library/jj585026.aspx).
 

@@ -47,10 +47,10 @@ You can continue the installation with these known limitations. Or you can stop 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](../Topic/Rights-Management-sharing-application-user-guide.md#BKMK_SharingExamples)
+-   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#BKMK_SharingExamples)
 
--   [What do you want to do?](../Topic/Rights-Management-sharing-application-user-guide.md#BKMK_SharingInstructions)
+-   [What do you want to do?](rights-management-sharing-application-user-guide.md#BKMK_SharingInstructions)
 
 ## See Also
-[Rights Management sharing application user guide](../Topic/Rights-Management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
 

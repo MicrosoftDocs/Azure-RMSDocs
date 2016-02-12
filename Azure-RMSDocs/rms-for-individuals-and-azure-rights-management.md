@@ -23,11 +23,11 @@ For more information about how you can protect files by using the free Rights Ma
 
 RMS for individuals is an example of a self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/) in the Microsoft Azure documentation. Use the following sections for more information that is  specific to RMS for individuals:
 
--   [How users sign up for RMS for individuals](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md#BKMK_SignUp)
+-   [How users sign up for RMS for individuals](rms-for-individuals-and-azure-rights-management.md#BKMK_SignUp)
 
-    -   [Technical overview](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md#BKMK_TechnicalOverview)
+    -   [Technical overview](rms-for-individuals-and-azure-rights-management.md#BKMK_TechnicalOverview)
 
--   [How administrators can control the accounts created for RMS for individuals](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md#BKMK_TakeControlofAccounts)
+-   [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-and-azure-rights-management.md#BKMK_TakeControlofAccounts)
 
 -   [How to find out if your users have signed up for RMS for individuals](#BKMK_Detect)
 
@@ -81,7 +81,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
 -   **Manage the accounts and sign-up process**: IT administrators can take ownership of the automatically created directory and accounts in Azure. They can then manage the accounts by implementing directory integration solutions such as password synchronization and single sign-on. Or, they can prevent users from creating accounts or signing up for RMS for individuals.
 
-    For more information, see the following section, [How administrators can control the accounts created for RMS for individuals](../Topic/RMS-for-Individuals-and-Azure-Rights-Management.md#BKMK_TakeControlofAccounts).
+    For more information, see the following section, [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-and-azure-rights-management.md#BKMK_TakeControlofAccounts).
 
 -   **Manage Rights Management**: IT administrators can convert the RMS for individuals subscription for the organization to a paid subscription that includes Azure Rights Management. When they do this, the existing Azure directory and accounts are preserved for a seamless transition for existing users who were using RMS for individuals. Any files that users protected previously will still be protected with the same policies and the people that they granted permissions to use the files will still be able to use the files in the same way.
 
@@ -89,17 +89,17 @@ Throughout this process, there is no charge to the organization and no work requ
 
     -   Configure Exchange and SharePoint to support Azure Rights Management, even if these are running on-premises. Exchange and SharePoint are natively supported for the online services, and they are supported by a connector for the on-premises servers. For more information, see the following:
 
-        -   The Exchange Online and SharePoint Online sections from [Office 365: Configuration for clients and online services](../Topic/Configuring-Applications-for-Azure-Rights-Management.md#BKMK_O365) in the [Configuring Applications for Azure Rights Management](../Topic/Configuring-Applications-for-Azure-Rights-Management.md) topic
+        -   The Exchange Online and SharePoint Online sections from [Office 365: Configuration for clients and online services](configuring-applications-for-azure-rights-management.md#BKMK_O365) in the [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md) topic
 
-        -   [Deploying the Azure Rights Management Connector](../Topic/Deploying-the-Azure-Rights-Management-Connector.md)
+        -   [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md)
 
-    -   Perform e-discovery on company-owned data so that you can, if required, decrypt files that were protected by using Rights Management. For more information, see [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](../Topic/Configuring-Super-Users-for-Azure-Rights-Management-and-Discovery-Services-or-Data-Recovery.md).
+    -   Perform e-discovery on company-owned data so that you can, if required, decrypt files that were protected by using Rights Management. For more information, see [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md).
 
-    -   Log all activity for Rights Management as used in your organization. This is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and Analyzing Azure Rights Management Usage](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md).
+    -   Log all activity for Rights Management as used in your organization. This is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
 
     -   Provide users with the ability to track and revoke their protected documents, if these features are supported by your [Azure RMS subscription](https://technet.microsoft.com/dn858608). For more information, see  [Track and revoke your files](https://technet.microsoft.com/library/dn986611.aspx) from the [RMS sharing application user guide](https://technet.microsoft.com/library/dn339006.aspx).
 
-    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a Hardware Security Module (HSM). For more information, see [Planning and Implementing Your Azure Rights Management Tenant Key](../Topic/Planning-and-Implementing-Your-Azure-Rights-Management-Tenant-Key.md).
+    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a Hardware Security Module (HSM). For more information, see [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md).
 
 ## <a name="BKMK_TakeControlofAccounts"></a>How administrators can control the accounts created for RMS for individuals
 If you do not want to convert your organization’s RMS for individuals subscription to a paid subscription, you can still control the user accounts in the Azure directory that was created for your organization in the following ways:
@@ -128,5 +128,5 @@ As an administrator, how do you know if your users have signed up for RMS for in
 -   Be on the lookout for file name extensions that are created by the Rights Management sharing application. The .pfile and .ppdf file name extensions are the most obvious examples, but there are other files that change their file name extension when they are natively protected by Rights Management. For more information, see the [Supported file types and file name extensions](http://technet.microsoft.com/library/dn339003.aspx) section in the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
 
 ## See Also
-[Getting Started with Azure Rights Management](../Topic/Getting-Started-with-Azure-Rights-Management.md)
+[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 

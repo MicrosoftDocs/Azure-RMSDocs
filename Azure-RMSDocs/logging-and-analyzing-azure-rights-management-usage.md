@@ -35,13 +35,13 @@ You can then use these Azure Rights Management logs to support the following bu
 
 Use the following sections for more information about Azure Rights Management usage logging.
 
--   [How to enable Azure Rights Management usage logging](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md#BKMK_EnableRMSLogging)
+-   [How to enable Azure Rights Management usage logging](logging-and-analyzing-azure-rights-management-usage.md#BKMK_EnableRMSLogging)
 
--   [How to access and use your Azure Rights Management usage logs](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md#BKMK_AccesAndUseLogs)
+-   [How to access and use your Azure Rights Management usage logs](logging-and-analyzing-azure-rights-management-usage.md#BKMK_AccesAndUseLogs)
 
--   [How to interpret your Azure Rights Management usage logs](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md#BKMK_Interpret)
+-   [How to interpret your Azure Rights Management usage logs](logging-and-analyzing-azure-rights-management-usage.md#BKMK_Interpret)
 
--   [Windows PowerShell reference](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md#BKMK_PowerShell)
+-   [Windows PowerShell reference](logging-and-analyzing-azure-rights-management-usage.md#BKMK_PowerShell)
 
 ## <a name="BKMK_EnableRMSLogging"></a>How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure RMS service before February 2016 and to customers who activate the service after February 2016. 
@@ -54,11 +54,11 @@ Starting February 2016, Azure Rights Management usage logging is enabled by def
 
 
 ## <a name="BKMK_AccesAndUseLogs"></a>How to access and use your Azure Rights Management usage logs
-Azure Rights Management writes logs to your Azure storage account as a series of blobs. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](../Topic/Logging-and-Analyzing-Azure-Rights-Management-Usage.md#BKMK_Interpret) section later in this document contains more information about the log contents and their creation.
+Azure Rights Management writes logs to your Azure storage account as a series of blobs. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](logging-and-analyzing-azure-rights-management-usage.md#BKMK_Interpret) section later in this document contains more information about the log contents and their creation.
 
 It can take a while for logs to appear in your storage account after an Azure Rights Management action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 
-To download your usage logs, you will use the Azure RMS administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](Installing-Windows-PowerShell-for-Azure-Rights-Management.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+To download your usage logs, you will use the Azure RMS administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
 #### To download your usage logs by using PowerShell
 
@@ -212,8 +212,8 @@ Before this change, the following cmdlets were needed for Azure RMS usage logs, 
 
 If you have logs in your own Azure storage from before the Azure RMS logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
 
-For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](../Topic/Administering-Azure-Rights-Management-by-Using-Windows-PowerShell.md).
+For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
 
 ## See Also
-[Using Azure Rights Management](../Topic/Using-Azure-Rights-Management.md)
+[Using Azure Rights Management](using-azure-rights-management.md)
 
