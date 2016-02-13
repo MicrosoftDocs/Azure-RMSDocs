@@ -11,24 +11,16 @@ Example:
    git clone https://github.com/Microsoft/EMDocs-pr.git
    ```
 
-2. Edit the Markdown files using your favorite Markdown editor.
-3. Commit and push your changes:
+2. Create a branch to work on locally
+3. Edit the Markdown files using your favorite Markdown editor.
+4. Validate and preview your content locally, to discover and fix problems early, before pushing your changes to the GitHub repo:
+   * Run `git submodule update --init` to download the themes to your local machine.
+   * Follow the instructions in [Local builds and preview page](https://ppe.msdn.microsoft.com/en-us/openpublishing/docs/partnerdocs/local-build-and-preview)
+5. Commit and push your changes:
    ```
    git add -u
    git commit -m "update doc"
    git push
    ```
-
-4. Wait for a moment and your changes will be automatically published.
-
-
-> If you don't have the permission to push to this repo, fork it to your own account and use pull request to submit your changes back.
-
-Validation and Preview
-----------------------
-
-You can build and preview your content in local to discover and fix problems early, before pushing your changes to the GitHub repo. 
-
-
-1. Run `git submodule update --init` to download the themes to your local machine.
-2. Follow the instructions in [Local builds and preview page](https://ppe.msdn.microsoft.com/en-us/openpublishing/docs/partnerdocs/local-build-and-preview)
+6. Create a pull request to master branch.
+7. Your content will be automatically published once the pull request is accepted.
