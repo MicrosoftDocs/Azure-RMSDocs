@@ -12,7 +12,7 @@ author: Cabailey
 # Configuring Applications for Azure Rights Management
 > [!NOTE]
 > This information is for IT administrators and consultants who have deployed Azure Rights Management. If you are looking for user help and information about how to use Rights Management for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.
-> 
+>
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the RMS sharing application for Windows, see the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
 After you have deployed Azure Rights Management (Azure RMS) for your organization, use the following information to configure applications and services to support Azure RMS. These include Office applications such as Word 2013 and Word 2010, and services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). For information about how these applications and services support Rights Management, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md).
@@ -41,7 +41,7 @@ After you have deployed Azure Rights Management (Azure RMS) for your organizatio
 To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
 > [!TIP]
-> For high-level examples and screenshots of applications configured to use Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management-.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
+> For high-level examples and screenshots of applications configured to use Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
 ## <a name="BKMK_O365"></a>Office 365: Configuration for clients and online services
 Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](/Token/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
@@ -53,7 +53,7 @@ To configure Exchange Online to support Azure RMS, you must configure the inform
 
 > [!NOTE]
 > You cannot currently configure Exchange Online to support Azure RMS if you are using a customer-managed tenant key (BYOK) for Azure RMS, rather than the default configuration of a Microsoft-managed tenant key. For more information, see the [BYOK pricing and restrictions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Pricing) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic.
-> 
+>
 > If you try to configure Exchange Online when Azure RMS is using BYOK, the command to import the key (step 5,  in the following procedure) fails with the error message **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
 The following steps provide a typical set of commands that you would run to enable Exchange Online to use Azure RMS:
@@ -211,7 +211,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
         Configures IRM policy settings for OneDrive for Business and can also be used for SharePoint Online libraries and lists
 
-     Script Installation Requirements: 
+     Script Installation Requirements:
 
        SharePoint Online Client Components SDK
        http://www.microsoft.com/en-us/download/details.aspx?id=42038
@@ -231,7 +231,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
                  "https://contoso-my.sharepoint.com/personal/user2_contoso_com",
                  "https://contoso-my.sharepoint.com/personal/user3_contoso_com")
 
-    <# As an alternative to specifying the URLs as an array, you can import them from a CSV file (no header, single value per row). 
+    <# As an alternative to specifying the URLs as an array, you can import them from a CSV file (no header, single value per row).
        Then, use: $webUrls = Get-Content -Path "File_path_and_name.csv"
 
     #>
@@ -245,7 +245,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
         process
         {
-            # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI 
+            # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI
             try
             {
                 Write-Verbose "Loading Assembly: Microsoft.Office.Client.Policy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
@@ -386,7 +386,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
             # Configure document access rights
 
-                # Allow viewers to print 
+                # Allow viewers to print
                 $list.InformationRightsManagementSettings.AllowPrint = $AllowPrint.IsPresent
 
                 # Allow viewers to run script and screen reader to function on downloaded documents
@@ -470,7 +470,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
     # Add the credentials to the client context and SharePoint Online service connection
 
-        # check for cached credentials to use 
+        # check for cached credentials to use
         $o365TenantAdminCredential = Get-CredentialFromCredentialCache -CredentialName $tenantAdmin
 
         if(-not $o365TenantAdminCredential)
@@ -479,9 +479,9 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
             $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
 
             if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
-            { 
+            {
                 Write-Error -Message "Could not validate the supplied tenant admin credentials"
-                return 
+                return
             }
 
             # add the credentials to the cache
@@ -515,7 +515,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
                 $script:clientContext.ExecuteQuery()
 
                 # check if the tenant admin is a site admin
-                if( -not $tenantAdminUser.IsSiteAdmin ) 
+                if( -not $tenantAdminUser.IsSiteAdmin )
                 {
                     try
                     {
@@ -540,7 +540,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
                     $script:clientContext.ExecuteQuery()
 
                     # **************  ADMIN INSTRUCTIONS  **************
-                    # If necessary, modify the following Set-IrmConfiguration parameters to match your required values 
+                    # If necessary, modify the following Set-IrmConfiguration parameters to match your required values
                     # The supplied options and values are for example only
                     # Example that shows the Set-IrmConfiguration command with all parameters: Set-IrmConfiguration -List $list -PolicyTitle "Protected Files" -PolicyDescription "This policy restricts access to authorized users" -IrmReject -ProtectionExpirationDate $(Get-Date).AddDays(180) -DisableDocumentBrowserView -AllowPrint -AllowScript -AllowWriteCopy -LicenseCacheExpireDays 25 -DocumentAccessExpireDays 90
 
@@ -598,7 +598,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
 > [!TIP]
 > You can also use this script to configure IRM for a SharePoint Online library. For this configuration, you will likely want to enable the additional option **Do not allow users to upload documents that do not support IRM**, to ensure that the library contains only protected documents.    To do that, add the `-IrmReject` parameter to the Set-IrmConfiguration command in the script.
-> 
+>
 > You would also need to modify the `$webUrls` variable (for example, **https://contoso.sharepoint.com**) and  `$listTitle` variable (for example, **$Reports**).
 
 If you need to disable IRM for user's OneDrive for Business libraries, expand the [Script to disable IRM for OneDrive for Business](#BKMK_Script_OD4B_DisableIRM) section.
@@ -619,7 +619,7 @@ This script also requires the [SharePoint Online Client Components SDK](http://w
     Queries the search service of an Office 365 tenant to retrieve all OneDrive for Business sites.  
     Details of the discovered sites are written to a .CSV file (by default,"OneDriveForBusinessSiteInfo_<date>.csv").
 
- Script Installation Requirements: 
+ Script Installation Requirements:
 
    SharePoint Online Client Components SDK
    http://www.microsoft.com/en-us/download/details.aspx?id=42038
@@ -647,7 +647,7 @@ function Load-SharePointOnlineClientComponentAssemblies
 
     process
     {
-        # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI 
+        # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI
         try
         {
             Write-Verbose "Loading Assembly: Microsoft.Office.Client.Policy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
@@ -777,7 +777,7 @@ function Add-CredentialToCredentialCache
 
 # Add the credentials to the client context and SharePoint Online service connection
 
-    # check for cached credentials to use 
+    # check for cached credentials to use
     $o365TenantAdminCredential = Get-CredentialFromCredentialCache -CredentialName $tenantAdmin
 
     if(-not $o365TenantAdminCredential)
@@ -786,9 +786,9 @@ function Add-CredentialToCredentialCache
         $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
 
         if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
-        { 
+        {
             Write-Error -Message "Could not validate the supplied tenant admin credentials"
-            return 
+            return
         }
 
         # add the credentials to the cache
@@ -812,7 +812,7 @@ function Add-CredentialToCredentialCache
 	    $query.StartRow              = $resultsProcessed
 	    $query.TotalRowsExactMinimum = 500000
 
-        # run the query 
+        # run the query
 	    $searchExecutor = New-Object Microsoft.SharePoint.Client.Search.Query.SearchExecutor($clientContext)
 	    $queryResults = $searchExecutor.ExecuteQuery($query)
 	    $clientContext.ExecuteQuery()
@@ -843,7 +843,7 @@ This script also requires the [SharePoint Online Client Components SDK](http://w
 
     Disables IRM for OneDrive for Business and can also be used for SharePoint Online libraries and lists
 
- Script Installation Requirements: 
+ Script Installation Requirements:
 
    SharePoint Online Client Components SDK
    http://www.microsoft.com/en-us/download/details.aspx?id=42038
@@ -862,7 +862,7 @@ $webUrls = @("https://contoso-my.sharepoint.com/personal/user1_contoso_com",
              "https://contoso-my.sharepoint.com/personal/user2_contoso_com",
              "https://contoso-my.sharepoint.com/personal/person3_contoso_com")
 
-<# As an alternative to specifying the URLs as an array, you can import them from a CSV file (no header, single value per row). 
+<# As an alternative to specifying the URLs as an array, you can import them from a CSV file (no header, single value per row).
    Then, use: $webUrls = Get-Content -Path "File_path_and_name.csv"
 
 #>
@@ -876,7 +876,7 @@ function Load-SharePointOnlineClientComponentAssemblies
 
     process
     {
-        # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI 
+        # assembly location: C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI
         try
         {
             Write-Verbose "Loading Assembly: Microsoft.Office.Client.Policy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
@@ -1035,7 +1035,7 @@ function Add-CredentialToCredentialCache
 
 # Add the credentials to the client context and SharePoint Online service connection
 
-    # check for cached credentials to use 
+    # check for cached credentials to use
     $o365TenantAdminCredential = Get-CredentialFromCredentialCache -CredentialName $tenantAdmin
 
     if(-not $o365TenantAdminCredential)
@@ -1044,9 +1044,9 @@ function Add-CredentialToCredentialCache
         $o365TenantAdminCredential = Get-Credential -UserName $tenantAdmin -Message "Enter the password for the Office 365 admin"
 
         if(-not $o365TenantAdminCredential -or -not $o365TenantAdminCredential.UserName -or $o365TenantAdminCredential.Password.Length -eq 0 )
-        { 
+        {
             Write-Error -Message "Could not validate the supplied tenant admin credentials"
-            return 
+            return
         }
 
         # add the credentials to the cache
@@ -1080,7 +1080,7 @@ function Add-CredentialToCredentialCache
             $script:clientContext.ExecuteQuery()
 
             # check if the tenant admin is a site admin
-            if( -not $tenantAdminUser.IsSiteAdmin ) 
+            if( -not $tenantAdminUser.IsSiteAdmin )
             {
                 try
                 {
@@ -1160,4 +1160,3 @@ After you’ve configured your applications to support Azure Rights Management, 
 
 ## See Also
 [Configuring Azure Rights Management](configuring-azure-rights-management.md)
-

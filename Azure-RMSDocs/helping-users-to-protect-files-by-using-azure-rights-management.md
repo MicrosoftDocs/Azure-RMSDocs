@@ -18,7 +18,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
     > [!TIP]
     > Example videos for end users:
-    > 
+    >
     > -   [Azure RMS user experience](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
@@ -58,7 +58,7 @@ For instructions to use this application for Windows computers, see the [Rights 
 For mobile devices, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248).
 
 > [!TIP]
-> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](what-is-azure-rights-management-.md#BKMK_Example_SharingApp) section in the [What is Azure Rights Management?](what-is-azure-rights-management-.md) topic.
+> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](what-is-azure-rights-management.md#BKMK_Example_SharingApp) section in the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
 If you are using Azure RMS and have not installed the Rights Management sharing application, users will not see the **Share Protected** button on the ribbon or **Protect in-place** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to these.
@@ -101,4 +101,3 @@ Similarly to viewing a protected document, when the recipients receive the email
 
 ## See Also
 [Using Azure Rights Management](using-azure-rights-management.md)
-

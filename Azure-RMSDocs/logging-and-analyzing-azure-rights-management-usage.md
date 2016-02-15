@@ -212,7 +212,7 @@ Before this change, the following cmdlets were needed for Azure RMS usage logs, 
 
 If you have logs in your own Azure storage from before the Azure RMS logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
 
-For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
+For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
 ## See Also
 [Using Azure Rights Management](using-azure-rights-management.md)

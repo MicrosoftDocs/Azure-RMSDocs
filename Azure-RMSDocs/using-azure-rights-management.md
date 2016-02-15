@@ -28,7 +28,7 @@ This section contains operations information for after you have configured   [!I
 > [!TIP]
 > If you’re new to Azure RMS, you might find the [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md) section useful, because it contains information to help you learn more about Azure RMS and how it can help you to protect information in your organization.
 > 
-> If you’re looking for deployment instructions for Azure RMS, see [Configuring Azure Rights Management](configuring-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-by-using-windows-powershell.md).
+> If you’re looking for deployment instructions for Azure RMS, see [Configuring Azure Rights Management](configuring-azure-rights-management.md). And if you’re a Windows PowerShell user, or just want to see how you can administer Azure RMS from the command line, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
 ## See Also
 [Azure Rights Management](azure-rights-management.md)
