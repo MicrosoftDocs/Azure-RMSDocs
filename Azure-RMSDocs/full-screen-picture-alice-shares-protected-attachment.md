@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Alice shares protected attachment
-![](/Image/AzRMS_StoryboardEmaill1.PNG)
+![](./media/AzRMS_StoryboardEmaill1.PNG)
 
 Back to [Azure RMS in action: Safely share attachments with mobile users](http://technet.microsoft.com/library/jj585026.aspx).
 

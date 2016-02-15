@@ -15,7 +15,7 @@ author: Cabailey
 > 
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the RMS sharing application for Windows, see the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
-This section contains operations information for after you have configured   [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)]:
+This section contains operations information for after you have configured   [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)]:
 
 -   [Verifying Azure Rights Management](verifying-azure-rights-management.md)
 

@@ -22,7 +22,7 @@ The instructions are suitable for the following set of circumstances:
 -   All files have protection reapplied on a schedule, to ensure that any changes to the rights policy templates are applied to the protected files.
 
 ## Deployment Instructions
-![](/Image/AzRMS_AdminBanner.png)
+![](./media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
@@ -31,11 +31,11 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Check|Requirement|If you need more information|
 |---------|---------------|--------------------------------|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|One of the following:<br /><br />To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />To use a custom template for specific users: You have created and published this custom template|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|One of the following:<br /><br />To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />To use a custom template for specific users: You have created and published this custom template|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 #### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with file classification infrastructure
 
@@ -82,7 +82,7 @@ Using the following template, copy and paste the instructions for your end users
 
 The example documentation shows how these instructions might look for users, after your customizations.
 
-![](/Image/AzRMS_UsersBanner.png)
+![](./media/AzRMS_UsersBanner.png)
 
 #### How to edit &lt;type of file&gt; from the &lt;file server share&gt;
 
@@ -111,7 +111,7 @@ Periodically, the file will be protected again, which again adds the .pfile file
     -   *&lt;contact details&gt;*
 
 ### Example Customized User Documentation
-![](/Image/AzRMS_ExampleBanner.png)
+![](./media/AzRMS_ExampleBanner.png)
 
 ##### How to edit CAD drawings from the ProjectNextGen share
 

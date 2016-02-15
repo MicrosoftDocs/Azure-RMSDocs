@@ -10,7 +10,7 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 author: Cabailey
 ---
 # Preparing for Azure Rights Management
-After you have signed up for a cloud subscription and established your organization with an account for [!INCLUDE[o365_1](/Token/o365_1_md.md)] or Azure Active Directory, you’re ready to enable the [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] service.
+After you have signed up for a cloud subscription and established your organization with an account for [!INCLUDE[o365_1](./includes/o365_1_md.md)] or Azure Active Directory, you’re ready to enable the [!INCLUDE[aad_rightsmanagement_2](./includes/aad_rightsmanagement_2_md.md)] service.
 
 However, before you do so, make sure that the following are in place:
 
@@ -23,7 +23,7 @@ However, before you do so, make sure that the following are in place:
     If you have Exchange Online, you can create and use mail-enabled groups by using the Exchange admin center. If you have AD DS and are synchronizing to Azure AD, you can create and use mail-enabled groups that are either security groups or distribution groups.
 
 ## Enable Rights Management
-By default, [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] is disabled when you sign up for your [!INCLUDE[o365_2](/Token/o365_2_md.md)] or Azure AD account. To enable [!INCLUDE[aad_rightsmanagement_2](/Token/aad_rightsmanagement_2_md.md)] for your organization, you must activate the service. For more information, see [Activating Azure Rights Management](activating-azure-rights-management.md).
+By default, [!INCLUDE[aad_rightsmanagement_2](./includes/aad_rightsmanagement_2_md.md)] is disabled when you sign up for your [!INCLUDE[o365_2](./includes/o365_2_md.md)] or Azure AD account. To enable [!INCLUDE[aad_rightsmanagement_2](./includes/aad_rightsmanagement_2_md.md)] for your organization, you must activate the service. For more information, see [Activating Azure Rights Management](activating-azure-rights-management.md).
 
 ## See Also
 [Configuring Azure Rights Management](configuring-azure-rights-management.md)

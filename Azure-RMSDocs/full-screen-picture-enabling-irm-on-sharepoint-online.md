@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Enabling IRM on SharePoint Online
-![](/Image/AzRMS_StoryboardSPO_1.png)
+![](./media/AzRMS_StoryboardSPO_1.png)
 
 Back to [Azure RMS in action: Protected libraries with SharePoint Online](http://technet.microsoft.com/library/jj585026.aspx).
 

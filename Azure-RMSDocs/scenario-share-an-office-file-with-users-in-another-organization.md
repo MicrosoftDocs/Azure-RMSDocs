@@ -23,7 +23,7 @@ This scenario is suitable for the following set of circumstances:
 -   The employee is potentially interested in knowing when this document is opened by the external user.
 
 ## Deployment Instructions
-![](/Image/AzRMS_AdminBanner.png)
+![](./media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place before going on to the user documentation.
 
@@ -32,11 +32,11 @@ For the user instructions for this scenario to work, the following must be in pl
 
 |Check|Requirement|If you need more information|
 |---------|---------------|--------------------------------|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Users have Outlook from Office 2013|If users have Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Users have Outlook from Office 2013|If users have Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
 
 ## User Documentation Instructions
 Using the following template, copy and paste the user instructions into a communication for your end users, and make these modifications to reflect your environment:
@@ -62,25 +62,25 @@ Using the following template, copy and paste the user instructions into a commun
 
 The example documentation shows how these instructions might look for users, after your customizations.
 
-![](/Image/AzRMS_UsersBanner.png)
+![](./media/AzRMS_UsersBanner.png)
 
 #### How to share a &lt;name of Office document type&gt;
 
 1.  Create your email message by specifying the email address or addresses, type your message, and attach the *&lt;name of Office document type&gt;* to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](/Image/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![](./media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  In the **share protected** dialog box, Select **Viewer – View Only**:
 
-    ![](/Image/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![](./media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Select **Allow me to instantly revoke access to these documents**:
 
-    ![](/Image/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![](./media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Select **Email me when somebody tries to open these documents**:
 
-    ![](/Image/AzRMS_SharedProtected_EmailMe.PNG)
+    ![](./media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Click **Send Now**.
 
@@ -101,25 +101,25 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
     -   *&lt;contact details&gt;*
 
 ### Example Customized User Documentation
-![](/Image/AzRMS_ExampleBanner.png)
+![](./media/AzRMS_ExampleBanner.png)
 
 ##### How to share a price list with your customer
 
 1.  Create your email message by specifying the email address or addresses of your customer, type your message, and attach the latest price list to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](/Image/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![](./media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  In the **share protected** dialog box, Select **Viewer – View Only**:
 
-    ![](/Image/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![](./media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Select **Allow me to instantly revoke access to these documents**:
 
-    ![](/Image/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![](./media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Select **Email me when somebody tries to open these documents**:
 
-    ![](/Image/AzRMS_SharedProtected_EmailMe.PNG)
+    ![](./media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Click **Send Now**.
 

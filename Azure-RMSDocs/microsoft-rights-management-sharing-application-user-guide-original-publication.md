@@ -161,7 +161,7 @@ User-authored protection can be used to achieve the following:
 
 To protect a file with user-authored permissions, right-click the file, click **Protect in-place** and click **Custom Permissions**. The following screen will launch:
 
-![](/Image/ADRMS_MSRMSApp_ProtectCustom.gif)
+![](./media/ADRMS_MSRMSApp_ProtectCustom.gif)
 
 Type the email addresses of the list of users, use the slider to select permissions for the file, and click **Apply**.
 
@@ -180,12 +180,12 @@ When viewing a protected text file that has had user- protection applied to it, 
 
 For files that are protected using the generic protection (.pfile) file format, the specific rights or permissions that were  by the user appear in the confirmation screen instead of the name of the template that was used to protect the file, as shown in the following figure.
 
-![](/Image/ADRMS_MSRMSApp_SP_ConsumePfile.gif)
+![](./media/ADRMS_MSRMSApp_SP_ConsumePfile.gif)
 
 ### <a name="BKMK_ShareProtected"></a>Sharing protected content
 To protect and share content, right-click the file, and click **Share Protected**. The following screen will launch:
 
-![](/Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
+![](./media/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
 
 Type the email addresses of the list of users, use the slider to select permissions for the file, and click **Send**. The application will launch Outlook with a pre- email, with the protected file attached. The original file will not be protected.
 
@@ -194,7 +194,7 @@ To enable users to view protected files on non-Windows devices, click **Allow co
 ### <a name="BKMK_AccessKeys"></a>Using keyboard shortcuts
 Press the **Alt** key to see the available access keys. Press **Alt** + the access key to select an option. For example, on the **Share Protected** dialog, press **Alt** to see the access keys and press **Alt + u** to select **Users must login every time they open this file**.
 
-![](/Image/ADRMS_MSRMSApp_AccessKeys.png)
+![](./media/ADRMS_MSRMSApp_AccessKeys.png)
 
 ### <a name="BKMK_Multiple"></a>Applying protection to multiple files and folders
 Microsoft Rights Management sharing application can also be used to apply protection to more than a single file, such as by selecting multiple files or a folder that contains unprotected files in File Explorer.
@@ -212,7 +212,7 @@ If you have errors, refer to [FAQ for Microsoft Rights Management Sharing Applic
 ## <a name="BKMK_OfficeToolbar"></a>Using the Office Toolbar Add-in
 You can protect and share Word, PowerPoint, Excel files right from within Microsoft Office by using the Office ribbon add-in for Microsoft Rights Management sharing application. Click **Share Protected** on the ribbon to start the Microsoft Rights Management sharing application.
 
-![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+![](./media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
 ## <a name="BKMK_AdminGuide"></a>Administrator’s guidance for Microsoft Rights Management sharing application
 The Administrator's Guide for Microsoft Rights Management sharing application includes the following sections:
