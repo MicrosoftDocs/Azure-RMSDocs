@@ -19,7 +19,7 @@ When you protect a file in-place, it replaces the original, unprotected file. Yo
 
 1.  In File Explorer, select a file to protect. Right-click, select **Protect with RMS**, and then select **Protect in-place**. For example:
 
-    ![](/Image/ADRMS_MSRMSApp_SP_CompanyDefined.png)
+    ![](./media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
     > If you do not see the **Protect with RMS** option, it’s likely that either the RMS sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the RMS sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
@@ -36,7 +36,7 @@ When you protect a file in-place, it replaces the original, unprotected file. Yo
 
 3.  You might quickly see a dialog box to tell you that the file is being protected, and the focus then returns to File Explorer. The selected file or files are now protected. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Rights Management protection lock icon. For example:
 
-    ![](/Image/ADRMS_MSRMSApp_Pfile.png)
+    ![](./media/ADRMS_MSRMSApp_Pfile.png)
 
 If you later need to remove protection from a file, see [Remove protection from a file by using the Rights Management sharing application](remove-protection-from-a-file-by-using-the-rights-management-sharing-application.md).
 

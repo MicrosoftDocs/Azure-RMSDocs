@@ -29,7 +29,7 @@ The instructions are suitable for the following set of circumstances:
 -   For files that must be shared with people that are not specified in the rights policy template (for example, users in another organization), users must apply a new rights policy to replace the original rights policy protection.
 
 ## Deployment Instructions
-![](/Image/AzRMS_AdminBanner.png)
+![](./media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
@@ -38,11 +38,11 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Check|Requirement|If you need more information|
 |---------|---------------|--------------------------------|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that use Work Folders.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|One of the following:<br /><br />To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management connector is installed, authorized for the Windows Server computer, and configured for the **FCI Server** role.|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|![](/Image/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that use Work Folders.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|One of the following:<br /><br />To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management connector is installed, authorized for the Windows Server computer, and configured for the **FCI Server** role.|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
 #### Configuring the custom rights policy template so that users can share Work Folders files outside the organization
 

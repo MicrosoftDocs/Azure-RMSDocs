@@ -24,7 +24,7 @@ If your organization uses Azure RMS, you can keep track of the files that you pr
 
 1.  Create your email message and attach the file. Then, on the **Message** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](/Image/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
+    ![](./media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
     If you do not see this button, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
 
@@ -43,11 +43,11 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     -   For File Explorer: Right-click the file, select **Protect with RMS**, and then select **Share Protected**:
 
-        ![](/Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![](./media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   For the Office applications, Word, Excel, and PowerPoint: Make sure that you have saved the file first. Then, on the **Home** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-        ![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![](./media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
     If you do not see these options for protection, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
 
@@ -57,7 +57,7 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     Example:
 
-    ![](/Image/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![](./media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Are you wondering: [What’s the .ppdf file that’s automatically created?](dialog-box-options-for-the-rights-management-sharing-application.md#BKMK_PPDF)
 

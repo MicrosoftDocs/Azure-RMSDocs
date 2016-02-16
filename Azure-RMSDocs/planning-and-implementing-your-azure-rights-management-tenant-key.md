@@ -55,11 +55,11 @@ If you decide that Microsoft should manage your tenant key, Microsoft handles mo
 
 The following diagrams show and compares these two options. The first diagram shows how little administrator overheads there are for you in the default configuration when Microsoft manages the tenant key.
 
-![](/Image/RMS_BYOK_cloud.png)
+![](./media/RMS_BYOK_cloud.png)
 
 The second diagram shows the additional steps required when you manage your own tenant key.
 
-![](/Image/RMS_BYOK_onprem.png)
+![](./media/RMS_BYOK_onprem.png)
 
 If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can skip the following sections and go straight to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps).
 
@@ -80,7 +80,7 @@ Organization that have an IT-managed Azure subscription can use BYOK and log its
 > [!NOTE]
 > For more information about RMS for individuals, see [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md).
 
-![](/Image/RMS_BYOK_noExchange.png)
+![](./media/RMS_BYOK_noExchange.png)
 
 BYOK and logging work seamlessly with every application that integrates with Azure RMS. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that work with Azure RMS by using the RMS connector, and client applications such as Office 2013. You will get key usage logs regardless of which application makes requests of Azure RMS.
 
@@ -112,7 +112,7 @@ Use the information and procedures in this section if you have decided to genera
 -   [Generate and transfer your tenant key – in person](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_BYOK_InPerson)
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Customer Support Services (CSS) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Customer Support Services (CSS) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
 > Also contact CSS if your organization has specific policies for handling keys.
 
@@ -185,7 +185,7 @@ Start Windows PowerShell with the **Run as administrator** option, and then run
     ```
     Connect-AadrmService
     ```
-    When prompted, enter your [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
+    When prompted, enter your [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
 -   Use the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet to display the configuration of your tenant:
 
@@ -464,7 +464,7 @@ On the Internet-connected workstation,  follow these 3 steps To transfer your ne
 ##### <a name="BKMK_InternetTransfer1"></a>Step 1: Connect to Azure RMS
 Return to the Windows PowerShell window and type the following:
 
-1.  Reconnect to the [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] service:
+1.  Reconnect to the [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] service:
 
     ```
     Connect-AadrmService
@@ -487,7 +487,7 @@ Add-AadrmKey –KeyFile <PathToPackageFile> -Verbose
 
 If the upload is successful, you will see the following message: **The Rights management service successfully added the key.**
 
-Expect a replication delay for the change to propagate to all [!INCLUDE[aad_rightsmanagement_1](/Token/aad_rightsmanagement_1_md.md)] data centers.
+Expect a replication delay for the change to propagate to all [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] data centers.
 
 ##### <a name="BKMK_InternetTransfer3"></a>Step 3: Enumerate your tenant keys – as needed
 Use the Get-AadrmKeys cmdlet again to see the change in your tenant key, and whenever you want to see a list of your tenant keys. The tenant keys displayed include the initial tenant key that Microsoft generated for you, and any tenant keys that you added:
@@ -635,7 +635,7 @@ You have now completed all the steps required for bring your own key in person a
 
     If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following example of a log file displayed in Excel where the **Decrypt** and **SignDigest** Request Types show that the tenant key is being used.
 
-    ![](/Image/RMS_Logging.gif)
+    ![](./media/RMS_Logging.gif)
 
     For more information about usage logging, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
 

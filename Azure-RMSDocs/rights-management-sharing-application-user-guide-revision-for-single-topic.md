@@ -51,7 +51,7 @@ You must have a local administrator account to install the sharing application. 
 
 1.  In File Explorer, select a file, a folder, or multiple files to protect. Right-click, and then select **Protect in-place**. For example:
 
-    ![](/Image/ADRMS_MSRMSApp_SP_CompanyDefined.png)
+    ![](./media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
     > If you do not see the **Protect in-place** option, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide-revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
@@ -67,7 +67,7 @@ You must have a local administrator account to install the sharing application. 
 
 3.  You might quickly see a dialog box to tell you that the file is being protected, and the focus then returns to File Explorer. The selected file or files are now protected. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Rights Management protection lock icon. For example:
 
-    ![](/Image/ADRMS_MSRMSApp_Pfile.png)
+    ![](./media/ADRMS_MSRMSApp_Pfile.png)
 
 If you later need to remove protection from a file, see the **Remove protection from a file** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide-revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
@@ -84,18 +84,18 @@ If you see any errors when you try to protect files, refer to [FAQ for Microsoft
 
     -   For File Explorer: Right-click the file and select **Share Protected**:
 
-        ![](/Image/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![](./media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   For Office application: Make sure that you have first saved the file. Then, on the **Protection** group, click **Share Protected**.
 
-        ![](/Image/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![](./media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
     > [!NOTE]
     > If you do not see these options for sharing protection, it’s likely that either the sharing application is not installed on your computer, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see the **Download and install the Rights Management sharing application** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide-revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
 
 2.  Specify the options that you want for this file in the **share protected** dialog box, and then click **Send**.
 
-    ![](/Image/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
+    ![](./media/ADRMS_MSRMSAPP_SP_ShareProtected.gif)
 
     > [!NOTE]
     > For more information about the options in this dialog box, see the **Specify options in the Rights Management dialog box** instructions in the [What do you want to do?](rights-management-sharing-application-user-guide-revision-for-single-topic.md#BKMK_UsingMSRMSApp) section of this guide.
@@ -110,7 +110,7 @@ If you see any errors when you try to protect files, refer to [FAQ for Microsoft
 
     Example:
 
-    ![](/Image/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![](./media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
 4.  Optional: You can change anything that you want in this email message. For example, you can add to or change the subject or text in the message.
 
@@ -142,7 +142,7 @@ By using File Explorer or the email message that contains the attachment, double
 
     You see a **protected file** dialog box from the sharing application that tells you who protected the file and that you are expected to honor the co-owner permissions. You are informed that when you open the file, this action is audited.
 
-    ![](/Image/ADRMS_MSRMSApp_PfilePermission.png)
+    ![](./media/ADRMS_MSRMSApp_PfilePermission.png)
 
     Click **Open** to read the file.
 
@@ -150,7 +150,7 @@ By using File Explorer or the email message that contains the attachment, double
 
     The file opens by using the application that is associated with the original file name extension, and a restriction banner is displayed at the top of the file. The banner might display the permissions that are applied to the file, or it might provide a link to display them. For example, you might see the following where you must click **Permission is currently restricted** to see the actual permissions that are applied to the file and the people that can access it:
 
-    ![](/Image/ADRMS_MSRMSApp_RestrictedAccess.png)
+    ![](./media/ADRMS_MSRMSApp_RestrictedAccess.png)
 
     This file is also audited and remains audited as long as it is protected.
 
@@ -177,7 +177,7 @@ If the originally protected file did not have a .pfile extension:
 ### <a name="BKMK_RemoveProtection"></a>Remove protection from a file
 From File Explorer, right-click the file (for example, Sample.ptxt), click **Protect in-place**, and then click **Remove Protection**:
 
-![](/Image/ADRMS_MSRMSApp_RemoveProtection.png)
+![](./media/ADRMS_MSRMSApp_RemoveProtection.png)
 
 You might be prompted for credentials.
 
@@ -195,7 +195,7 @@ Press the **Alt** key to see the available access keys, and then press **Alt** +
 #### More information
 As an example, in the **share protected** dialog box, press **Alt** to see the access keys, and then press **Alt + u** to select the **Users must login every time they open this file** check box.
 
-![](/Image/ADRMS_MSRMSApp_AccessKeys.png)
+![](./media/ADRMS_MSRMSApp_AccessKeys.png)
 
 ### <a name="BKMK_SpecifyDialogOptions"></a>Specify options in the Rights Management dialog box
 

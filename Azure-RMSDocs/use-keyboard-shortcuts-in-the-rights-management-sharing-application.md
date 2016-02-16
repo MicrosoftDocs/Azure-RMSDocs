@@ -14,7 +14,7 @@ When you use the RMS sharing application, press the **Alt** key to see the avail
 
 For example, in the **share protected** dialog box, press **Alt** to see the access keys, and then press **Alt + m** to select the **Email me when somebody tries to open these documents** check box.
 
-![](/Image/ADRMS_MSRMSApp_AccessKeys.png)
+![](./media/ADRMS_MSRMSApp_AccessKeys.png)
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:

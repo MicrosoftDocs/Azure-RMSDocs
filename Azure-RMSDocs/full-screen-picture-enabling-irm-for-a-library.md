@@ -9,7 +9,7 @@ ms.assetid: a18f2e99-5ac4-4103-a88c-527846374091
 author: Cabailey
 ---
 # Full screen picture: Enabling IRM for a library
-![](/Image/AzRMS_StoryboardSPO_2.PNG)
+![](./media/AzRMS_StoryboardSPO_2.PNG)
 
 Back to [Azure RMS in action: Protected libraries with SharePoint Online](http://technet.microsoft.com/library/jj585026.aspx).
 

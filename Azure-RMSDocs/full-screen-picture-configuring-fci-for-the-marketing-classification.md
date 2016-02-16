@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Configuring FCI for the Marketing classification
-![](/Image/AzRMS_ExampleFCI_Configuration.png)
+![](./media/AzRMS_ExampleFCI_Configuration.png)
 
 Back to [Azure RMS in action: Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](http://technet.microsoft.com/library/jj585026.aspx).
 

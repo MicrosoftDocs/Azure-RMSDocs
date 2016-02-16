@@ -10,7 +10,7 @@ author: Cabailey
 robots: nofollow
 ---
 # Full screen picture: Available settings for RMS templates
-![](/Image/AzRMS_TemplatesSettings.png)
+![](./media/AzRMS_TemplatesSettings.png)
 
 Back to [Azure RMS in action: Activating and configuring Rights Management](http://technet.microsoft.com/library/jj585026.aspx)
 
