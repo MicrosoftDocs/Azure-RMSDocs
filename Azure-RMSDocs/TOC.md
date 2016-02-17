@@ -1,11 +1,7 @@
 # Understand & Explore
 
 ## [Overview of Azure Rights Management](azure-rights-management.md)
-### [Also Known As ...](azure-rms-aka.md)
 ## [What is Azure Rights Management](what-is-azure-rights-management.md)
-### [What problems does it solve?](azure-rms-problems-it-solves.md)
-### [What do administrators and users see?](what-do-admins-users-see.md)
-### [How does it work?](how-does-it-work.md)
 ## [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)
 ## [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md)
 ### [RMS sharing application for Windows and mobile platforms](rights-management-sharing-application-for-windows.md)
@@ -17,10 +13,6 @@
 # Get started
 
 ## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
-### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
-### [Azure AD directory](rms-requirements-aad-directory.md)
-### [Client devices](rms-requirements-client-devices.md)
-### [Applications](rms-requirements-applications.md)
 ## [Frequently Asked Questions for Azure Rights Management](frequently-asked-questions-for-azure-rights-management.md)
 ## [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md)
 ## [Terminology for Azure Rights Management](terminology-for-azure-rights-management.md)
@@ -38,26 +30,13 @@
 
 ## [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md)
 ## [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md)
-### [Software-protected key to software-protected key migration](software-protected-key-to-software-protected-key.md)
-### [HSM-protected key to HSM-protected key migration](hsm-protected-key-to-hsm-protected-key.md)
-### [Software-protected key to HSM-protected key migration](software-protected-key-to-hsm-protected-key.md)
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
-### [Thales HSMs and Microsoft additions](thales-hsms-and-ms-additions.md)
-### [BYOK pricing and restrictions](byok-pricing-and-restrictions.md)
-### [Generate and transfer your tenant key – over the Internet](generate-transfer-tenant-key-internet.md)
-### [Generate and transfer your tenant key – in person](generate-transfer-tenant-key-in-person.md)
 ## [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md)
 
 # Deploy and Use
 
 ## [Activating Azure Rights Management](activating-azure-rights-management.md)
-### [Configuring onboarding controls for a phased deployment](configure-onboarding-controls.md)
 ## [Configuring Custom Templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
-### [How to create, configure, and publish a custom template](how-to-create-configure-publish-custom-template.md)
-### [How to copy a template](how-to-copy-a-template.md)
-### [How to remove (archive) templates](how-to-remove-templates.md)
-### [Refreshing templates for users](refreshing-templates-for-users.md)
-### [Windows PowerShell reference](powershell-reference.md)
 ## [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md)
 ### [Office 365: Configuration for clients and online services](0365-configure-for-clients-online-services.md)
 ### [Office 2016 and Office 2013: Configuration for clients](office-2016-2013-configure-for-clients.md)
@@ -65,26 +44,12 @@
 ### [Rights Management sharing application: Installation and configuration for clients](sharing-app-install-configure.md)
 ### [Other applications that support the RMS APIs: Installation and configuration](other-apps-support-apis.md)
 ## [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md)
-### [Usage Rights and Descriptions](usage-rights-descriptions.md)
-### [Rights included in permissions levels](rights-in-permissions-levels.md)
-### [Rights included in the default templates](rights-in-default-templates.md)
 ## [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md)
-### [Scripting options for super users](scripting-options-for-superusers.md)
 ## [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md)
-### [Table for Exchange 2013 registry settings](exchange-2013-registry-settings.md)
-### [Table for Exchange 2010 registry settings](exchange-2010-registry-settings.md)
-### [Table for SharePoint 2013 registry settings](sharepoint-2013-registry-settings.md)
-### [Table for file server and File Classification Infrastructure registry settings](fs-fci-registry-settings.md)
 ## [Verifying Azure Rights Management](verifying-azure-rights-management.md)
 ## [Helping Users to Protect Files by Using Azure Rights Management](helping-users-to-protect-files-by-using-azure-rights-management.md)
 ## [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md)
-### [How to enable usage logging](how-to-enable-logging.md)
-### [How to access and use your usage logs](how-to-access-usage-logs.md)
-### [How to interpret your usage logs](how-to-interpret-usage-logs.md)
-### [Windows PowerShell reference](powershell-reference.md)
 ## [Operations for Your Azure Rights Management Tenant Key](operations-for-your-azure-rights-management-tenant-key.md)
-### [Microsoft-managed: Tenant key lifecycle operations](ms-managed-tenant-key-lifecycle-operations.md)
-### [Customer-managed: Tenant key lifecycle operations](customer-managed-tenant-key-lifecycle-operations.md)
 ## [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md)
 
 # Develop & Customize Apps
@@ -102,7 +67,7 @@
 
 # Administer 
 ## [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md)
-## [Installing Windows PowerShell for Azure Rights Management(installing-windows-powershell-for-azure-rights-management.md)
+## [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md)
 
 # Use the RMS Client
 
@@ -122,4 +87,3 @@
 ##### [Use keyboard shortcuts in the Rights Management sharing application](use-keyboard-shortcuts-in-the-rights-management-sharing-application.md)
 ##### [Dialog box options for the Rights Management sharing application](dialog-box-options-for-the-rights-management-sharing-application.md)
 ### [Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications](privacy-statement-for-microsoft-rights-management-in-rms-enlightened-applications.md)
-
