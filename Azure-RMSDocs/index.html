@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Microsoft Right Management Services</title>
-    <link rel="stylesheet" href="/Azure-RMS/Azure-RMS/_themes/css/hub.css" />
+    <title>Azure Rights Management</title>
+    <link rel="stylesheet" href="./_themes/css/hub.css" />
+    <script type="text/javascript" src="./_themes/javascript/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./_themes/javascript/slick.min.js"></script>
   </head>
   <body>
 
@@ -19,7 +21,7 @@
         <ul class="breadcrumbs">
           <li><a href="#">Documentation</a></li>
           <li><a href="https://docsmsftstage.azurewebsites.net/EM/index.html">Enterprise Mobility</a></li>
-          <li>Right Management Services</li>
+          <li>Azure Rights Management</li>
         </ul>      
       </div>
     </header>
@@ -27,14 +29,35 @@
     <div class="container">
       <article id="main">
         <header class="header">
-          <h1>Right Management Services</h1>
+          <h1>Azure Rights Management</h1>
           <section class="description">
-            <p>An information protection solution for organizations that want to protect their data in today's challenging working environment.</p>
+            <p>Azure Rights Management is a cloud service that helps you protect your organization's sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is a cloud service, and is integrated into other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. However, it can also be used with your on-premises applications and services.</p>
+	    <p>Rights Management uses encryption, identity, and authorization policies to help secure your files and email. In comparison to standard access controls, such as NTFS permissions, protection that is applied by using Rights Management stays with the files and emails, independently of the location - inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.</p>
+                <div class="dropdown-container">
+                  <label for="dropdown">Select an Azure RMS feature to learn more</label>
+                  <div class="dropdown">
+                    <select>
+                      <option value="option-a">Microsoft Intune (you're already here)</option>
+                      <option value="option-a">Microsoft Office 365 MDM</option>
+                      <option value="option-b">Configuration Manager with Intune integrated</option>  
+                      <option value="option-b">Configuration Manager on-premises MDM</option>  
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="button-small">Go</button>
+
+
           </section>
           <aside class="more-info">
             <div class="alert">
-              <p>Want to learn more about the Rights Management Services? <a href="https://www.microsoft.com/en-us/server-cloud/solutions/information-protection.aspx" title="">Visit our marketing site</a></p>
+              <p>Want to learn more about Azure RMS? <a href="https://www.microsoft.com/en-us/server-cloud/solutions/information-protection.aspx" title="">Visit our marketing site</a></p>
             </div>
+            <div class="alert alert-important">
+              <h5><span class="icon icon-important"></span> <mark>Important</mark></h5>
+              <p>Wondering what the best way to manage mobility in your enterprise is?</p>
+              <p><a href="./Ways-to-do-enterprise-mobility.html" title="">Learn about the <strong>different ways to do enteprise mobility</strong> and choose the one that is right for you.</a></p>
+            </div>
+            
           </aside>
         </header>
 
@@ -42,19 +65,28 @@
           <header>
             <h2>Featured<span class="more"></h2>
           </header>
-          <ol class="row">
+          <ol class="carousel">
             <li class="column column-third">
               <a href="/Azure-RMS/what-is-azure-rights-management.html">
-                <img src="./Image/150x150.png" alt="" />
+                <img src="./media/150x150.png" alt="" />
                 <div class="content">
                   <h4>What is Azure Rights Management?</h4>
-                  <p>Learn about Azure Rights Management (Azure RMS), an information protection solution for organizations that want to protect their data in today's challenging working environment</p>
+                  <p>Learn about Azure Rights Management, an information protection solution for organizations.</p>
+                </div>
+              </a>
+            </li>
+            <li class="column column-third">
+              <a href="/Azure-RMS/quick-start-tutorial-for-azure-rights-management.html">
+                <img src="./media/150x150.png" alt="" />
+                <div class="content">
+                  <h4>Quickstart Guide for Azure RMS</h4>
+                  <p>Quickly try  Microsoft Azure RMS for your organization with just 5 steps that should take you less than 15 minutes</p>
                 </div>
               </a>
             </li>
             <li class="column column-third">
               <a href="/Azure-RMS/azure-rights-management-deployment-roadmap.html">
-                <img src="./Image/150x150.png" alt="" />
+                <img src="./media/150x150.png" alt="" />
                 <div class="content">
                   <h4>Rights Management Deployment Roadmap</h4>
                   <p>Learn how to deploy and configure Microsoft Azure RMS for your organization.</p>
@@ -62,14 +94,14 @@
               </a>
             </li>
             <li class="column column-third">
-              <a href="/Azure-RMS/quick-start-tutorial-for-azure-rights-management.html">
-                <img src="./Image/150x150.png" alt="" />
+              <a href="./migrating-from-ad-rms-to-azure-rights-management.html">
+                <img src="./media/150x150.png" alt="Migrating from AD RMS to Azure Rights Management" />
                 <div class="content">
-                  <h4>Quickstart Guide for Azure RMS</h4>
-                  <p>Quickly try  Microsoft Azure RMS for your organization with just 5 steps that should take you less than 15 minutes</p>
+                  <h4>Migrating from AD RMS to Azure Rights Management</h4>
+		  <p>Use this article to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS).</p>
                 </div>
               </a>
-            </li>
+            </li>          
           </ol>
         </section>
 
@@ -81,7 +113,7 @@
             <li class="column column-third">
               <a href="/Azure-RMS/azure-rights-management.html">
                 <h4>Overview of Azure Rights Management</h4>
-                <p>Learn about Azure RMS, which helps you protect your organization’s sensitive information from unauthorized access, and control how this information is used.</p>
+                <p>Learn about Azure RMS, which helps you protect your organization's sensitive information from unauthorized access, and control how this information is used.</p>
               </a>
             </li>
             <li class="column column-third">
@@ -124,7 +156,7 @@
             </li>
           </ol>
         </section>
-        
+
         <section class="docset">
           <header>
             <h2>Plan and Design<span class="more"><a href="">see more</a></span></h2>
@@ -145,7 +177,7 @@
             <li class="column column-third">
               <a href="/Azure-RMS/planning-and-implementing-your-azure-rights-management-tenant-key.html">
                 <h4>Planning and Implementing your Azure Rights Management Tenant Key</h4>
-                <p> Plan for and manage your Rights Management service (RMS) tenant key for Azure RMS</p>
+                <p>Plan for and manage your Rights Management service (RMS) tenant key for Azure RMS</p>
               </a>
             </li>
           </ol>
@@ -157,7 +189,7 @@
           </header>
           <ol class="row">
             <li class="column column-third">
-              <a href="/Azure-RMS/activating-azure-rights-management.html">
+             <a href="/Azure-RMS/activating-azure-rights-management.html">
                 <h4>Activating Azure Rights Management</h4>
                 <p>Start protecting important data by using applications and services that support this information protection solution</p>
               </a>
@@ -179,7 +211,7 @@
 
         <section class="docset">
           <header>
-            <h2>Develop and Customize Apps<span class="more"><a href="">see more</a></span></h2>
+            <h2>Develop & Customize Apps<span class="more"><a href="">see more</a></span></h2>
           </header>
           <ol class="row">
             <li class="column column-third">
@@ -217,12 +249,11 @@
             <li class="column column-third">
               <a href="/Azure-RMS/installing-windows-powershell-for-azure-rights-management.html">
                 <h4>Installing Windows PowerShell for Azure Rights Management</h4>
-                <p>Install Windows PowerShell for Microsoft Azure Rights Management</p>
+                <p>Install Windows�PowerShell for Microsoft Azure Rights Management</p>
               </a>
             </li>
           </ol>
         </section>
-        
         <aside class="callout">
           <p><a href="https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/ems-trial.aspx" class="button">Sign Up <span class="icon icon-next"></span></a>Sign up for a free 30-day trial</p>
 
@@ -241,7 +272,18 @@
         </ul>
       </div>
     </footer>
-
+   
+   <script>
+        $(document).ready(function() {
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+        });
+    </script> 
 
   </body>
 </html>
