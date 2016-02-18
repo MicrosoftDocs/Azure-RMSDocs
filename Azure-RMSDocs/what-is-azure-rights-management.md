@@ -33,11 +33,11 @@ To supplement this quick introduction, you might find this video useful:
 
 To learn more about Azure RMS:
 
--   [What problems does Azure RMS solve?](what-is-azure-rights-management.md#BKMK_RMSrequirements)
+-   [What problems does Azure RMS solve?](azure-rms-problems-it-solves.md)
 
--   [Azure RMS in action: What administrators and users see](what-is-azure-rights-management.md#BKMK_RMSpictures)
+-   [Azure RMS in action: What administrators and users see](what-do-admins-users-see.md)
 
--   [How does Azure RMS work? Under the hood](what-is-azure-rights-management.md#BKMK_HowRMSworks)
+-   [How does Azure RMS work? Under the hood](how-does-it-work.md)
 
 
 
