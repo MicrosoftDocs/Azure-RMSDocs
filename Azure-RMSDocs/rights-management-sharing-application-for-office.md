@@ -10,7 +10,7 @@ ms.assetid: TBD
 author: Cabailey
 ---
 
-Use the following information to help you understand how your end-user applications (such as the Office applications, Word, Excel, PowerPoint, and Outlook) and services (such as Exchange and SharePoint) can use Microsoft Azure Rights Management to help protect your organization’s data.
+Use the following information to help you understand how your end-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) and Office services (such as Exchange and SharePoint) can use Microsoft Azure Rights Management to help protect your organization’s data.
 
 ## <a name="BKMK_OfficeAppsIntro"></a>Office applications: Word, Excel, PowerPoint, Outlook
 These applications natively support Rights Management by using information rights management (IRM) and let users apply protection to a saved document or to an email message to be sent. Users can apply templates or choose very customized settings for access, rights, and usage restrictions. 
