@@ -17,7 +17,7 @@ These applications natively support Rights Management by using information right
 
 For example, users can configure a file so that it can be accessed only by people in your organization, or control whether the file can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured (directly by users or by applying a template) for when the file can no longer be accessed. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
-### <a name="BKMK_ExchangeIntro"></a>Exchange Online and Exchange Server
+## <a name="BKMK_ExchangeIntro"></a>Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can use information rights management (IRM) integration, which provides additional information protection solutions:
 
 -   **Exchange ActiveSync IRM** so that mobile devices can protect and consume protected email messages.
@@ -34,7 +34,7 @@ When you use Exchange Online or Exchange Server, you can use information rights 
 
 If you use Exchange Server, you can use the information protection features with [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] by deploying the RMS connector, which acts as a relay between your on-premises servers and the RMS cloud service. For more information, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
-### <a name="BKMK_SharePointIntro"></a>SharePoint Online and SharePoint Server
+## <a name="BKMK_SharePointIntro"></a>SharePoint Online and SharePoint Server
 When you use SharePoint Online or SharePoint Server, you can use information rights management (IRM) integration, which lets administrators protect lists or libraries so that when a user checks-out a document, the file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
 For lists and libraries,  information protection is always applied by an administrator, never an end user. And it is applied at the list or library level for all documents in that container, rather than on individual files.  If you use SharePoint Online, users can also apply IRM to their OneDrive for Business library.

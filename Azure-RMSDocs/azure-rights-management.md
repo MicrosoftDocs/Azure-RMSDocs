@@ -16,6 +16,8 @@ Rights Management uses encryption, identity, and authorization policies to help 
 
 For example, you can configure a file so that it can be accessed only by people in your organization, or control whether the file can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and in addition, prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using standardized policy templates.
 
+Know Azure Rights Management by another name?  [See Also Known As ...](azure-rms-aka.md).
+
 # Next steps
 For a deeper understanding and some examples, see [What is Azure Rights Management?](what-is-azure-rights-management.md)
 
