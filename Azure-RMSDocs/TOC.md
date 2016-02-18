@@ -2,6 +2,9 @@
 
 ## [Overview of Azure Rights Management](azure-rights-management.md)
 ## [What is Azure Rights Management](what-is-azure-rights-management.md)
+### [What problems does it solve?](azure-rms-problems-it-solves.md)
+### [What do administrators and users see?](what-do-admins-users-see.md)
+### [How does it work?](how-does-it-work.md)
 ## [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)
 ## [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md)
 ### [RMS sharing application for Windows and mobile platforms](rights-management-sharing-application-for-windows.md)
