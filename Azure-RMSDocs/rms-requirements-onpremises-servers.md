@@ -28,7 +28,7 @@ If you want to use Azure RMS with on-premises servers, the following products ar
 
 -   Windows Server file servers that support File Classification Infrastructure
 
-For information about the additional Azure RMS requirements for this scenario, see [On-premises servers that support Azure RMS](rms-requirements-onpremises-servers.md).
+For information about the additional Azure RMS requirements for this scenario, see the [On-premises servers that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedServers) section in this topic.
 
 > [!IMPORTANT]
 > The following deployment scenario is not supported:
@@ -37,6 +37,39 @@ For information about the additional Azure RMS requirements for this scenario, s
 > 
 > There is a supported migration path [from AD RMS to Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure RMS to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure RMS and then decide that you no longer want to use this cloud service, see [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
 
+
+
+## <a name="BKMK_SupportedServers"></a>On-premises servers that support Azure RMS
+The following on-premises server products are supported with Azure RMS when you use the Azure RMS connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS. In addition, this configuration requires that you configure directory synchronization between your Active Directory forests and Azure Active Directory.
+
+-   **Exchange Server**:
+
+    -   Exchange Server 2016
+
+    -   Exchange Server 2013
+
+    -   Exchange Server 2010
+
+-   **Office SharePoint Server**:
+
+    -   Office SharePoint Server 2013
+
+    -   Office SharePoint Server 2010
+
+-   **File servers that run Windows Server and use File Classification Infrastructure (FCI)**:
+
+    -   Windows Server 2012 R2
+
+    -   Windows Server 2012
+
+    > [!NOTE]
+    > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply RMS protection, you cannot use the RMS connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > 
+    > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](rms-protection-with-windows-server-file-classification-infrastructure-fci.md).
+
+The RMS connector is supported on Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
+
+For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
 ## See Also
 [Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)

@@ -7,9 +7,9 @@
 ### [How does it work?](how-does-it-work.md)
 ## [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)
 ## [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md)
-### [RMS sharing application for Windows and mobile platforms](rights-management-sharing-application-for-windows.md)
-### [Office applications: Word, Excel, PowerPoint, Outlook](rights-management-sharing-application-for-office.md)
-### [File servers that run Windows Server and use File Classification Infrastructure (FCI)](rms-protection-with-windows-server-file-classification-infrastructure-fci.md)
+### [RMS sharing application for Windows and mobile platforms](sharing-application-for-windows-and-mobile-platforms.md)
+### [Office Applications and Services](rights-management-sharing-application-for-office.md)
+### [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management.md)
 ### [Other applications that support the RMS APIs](other-apps-support-apis.md)
 ## [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md)
 
