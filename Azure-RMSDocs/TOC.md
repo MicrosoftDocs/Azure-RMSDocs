@@ -60,12 +60,13 @@
 ## [Azure RMS Developer's Guide](developers-guide.md)
 ## [Microsoft Rights Management SDK 4.2](developers-guide.md)
 ### [Overview](developers-guide.md)
-### [Windows API Reference](developers-guide.md)
-### [iOS API Reference](developers-guide.md)
-### [Andoid Api Reference](developers-guide.md)
-### [Linux API Reference](developers-guide.md)
+### [Get Started](developers-guide.md)
+### [Developer guidance](developers-guide.md)
+### [API Reference](developers-guide.md)
 ## [Microsoft Rights Management SDK 2.1](developers-guide.md)
 ### [Overview](developers-guide.md)
+### [Get Started](developers-guide.md)
+### [Developer guidance](developers-guide.md)
 ### [API Reference](developers-guide.md)
 
 # Administer 
