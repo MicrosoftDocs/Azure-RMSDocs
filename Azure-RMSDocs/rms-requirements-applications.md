@@ -1,5 +1,5 @@
 ---
-title: Azure RMS Requirements: Applications
+title: Azure RMS Requirements&#58; Applications
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -10,7 +10,8 @@ ms.assetid: TBD
 author: Cabailey
 ---
 
-# <a name="BKMK_SupportedApplications"></a>Applications that support Azure RMS
+# Azure RMS Requirements: Applications
+
 The following applications natively support Azure Rights Management (Azure RMS), which means that Rights Management is tightly integrated into these applications by using RMS APIs to support usage restrictions. These applications are also known as RMS-enlightened:
 
 -   **Microsoft Office applications** (Word, Excel, PowerPoint, and Outlook) from the following suites can protect content by using Azure RMS:
@@ -41,9 +42,9 @@ The following applications natively support Azure Rights Management (Azure RMS)
 
     For more information about the Rights Management sharing application for Windows, see the following resources:
 
-    -   [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx)
+    -   [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md)
 
-    -   [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx)
+    -   [Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
 
 -   **The Rights Management sharing application for mobile platforms**
 
@@ -51,7 +52,7 @@ The following applications natively support Azure Rights Management (Azure RMS)
 
     -   Download the relevant app by using the links on the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970)
  
-    -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248)
+    -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](frequently-asked-questions-for-azure-rights-management.md)
 
 -   **Other applications that support the RMS APIs**:
 
@@ -59,7 +60,7 @@ The following applications natively support Azure Rights Management (Azure RMS)
 
     -   Applications from software vendors that are written by using the RMS SDK
 
-    For more information about the SDK, see the [Microsoft Rights Management SDK](http://msdn.microsoft.com/library/hh552972%28v=vs.85%29.aspx).
+    For more information about the SDK, see the [Microsoft Rights Management SDK](developers-guide.md).
 
 > [!IMPORTANT]
 > The following applications are not currently supported by Azure RMS:

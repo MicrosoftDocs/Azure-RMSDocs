@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: TBD
 author: Cabailey
 ---
+# Azure RMS Requirements: Azure AD Directory
 
-# <a name="BKMK_AzureADTenant"></a>Azure AD directory
 You must have an Azure AD directory to use Azure Rights Management (Azure RMS). You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 
 If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
 For more information, see the following resources in the Azure Active Directory documentation:
 
--   [What is an Azure AD directory?](http://msdn.microsoft.com/library/185da266-58a9-43e6-9c66-2c8f702545c6)
+-   [What is an Azure AD directory?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis)
 
--   [How Azure subscriptions are associated with Azure AD](http://msdn.microsoft.com/library/edf05c2e-944a-4da5-a330-dc9dc479f127)
+-   [How Azure subscriptions are associated with Azure AD]( https://azure.microsoft.com/en-us/documentation/articles/active-directory-how-subscriptions-associated-directory/)
 
-If you want to integrate your Azure AD directory with your on-premises AD forests, see [Directory integration](http://msdn.microsoft.com/library/bf82bdff-2467-403b-8c1a-0e9eebcf31e8).
+If you want to integrate your Azure AD directory with your on-premises AD forests, see [Directory integration](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/).
 
 > [!NOTE]
 > If you have mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:

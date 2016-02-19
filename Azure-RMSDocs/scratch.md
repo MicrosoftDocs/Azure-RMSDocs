@@ -1,0 +1,42 @@
+---
+title: Scratch
+ms.custom: na
+ms.reviewer: na
+ms.service: rights-management
+ms.suite: EMS
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: TBD
+author: msmbaldwin
+---
+# First level heading
+## second level heading
+### Third level heading
+#### Fourth level heading
+##### Fifth level heading
+###### Sixth level heading
+
+*Bold*  **italics** ~~strikethrough~~
+
+[regular link](/azure-rms/index.html) 
+
+>[!div class="button"]
+[button links](/azure-rms/index.html)
+
+>[!div class="Seletor"]
+[C#](https://www.example.com)
+[JavaScript](https://www.example.com)
+
+![animated gif](./media/hololens.gif)
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+
+>[!div class="step-by-step"]
+[Pre](https://www.example.com)
+[Next](https://www.example.com)
+
+
+
+
+
+
