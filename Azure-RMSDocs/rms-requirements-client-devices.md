@@ -1,5 +1,5 @@
 ---
-title: Azure RMS Requirements: Client device
+title: Azure RMS Requirements&#58; Client device
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management

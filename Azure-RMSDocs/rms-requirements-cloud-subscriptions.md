@@ -1,5 +1,5 @@
 ---
-title: Azure RMS Requirements: Cloud Subscriptions
+title: Azure RMS Requirements&#58; Cloud Subscriptions
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management

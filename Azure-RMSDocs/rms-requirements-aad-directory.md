@@ -1,5 +1,5 @@
 ---
-title: Azure RMS Requirements: Azure AD Directory
+title: Azure RMS Requirements&#58; Azure AD Directory
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
