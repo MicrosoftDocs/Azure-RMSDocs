@@ -1,5 +1,5 @@
 ---
-title: Azure Rights Management Also Known As
+title: Azure Rights Management also known as
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -10,7 +10,7 @@ ms.assetid: TBD
 author: Cabailey
 ---
 
-# Azure Rights Management Also Known As
+# Azure Rights Management - also known as ...
 
 Azure Rights Management is also known as *Azure Rights Management service*, but because it runs as a service in Azure, the "service" is often omitted from its name. It is the cloud version of *Active Directory Rights Management Services* (AD RMS), which was first released as *Windows Rights Management Services* (Windows RMS).
 

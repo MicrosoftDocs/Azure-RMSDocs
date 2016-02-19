@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions for Azure Rights Management
+title: Frequently asked questions for Azure Rights Management
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 author: Cabailey
 ---
-# Frequently Asked Questions for Azure Rights Management
+# Frequently asked questions for Azure Rights Management
 Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
 
 ## What do I need to deploy Azure RMS and how do I get going?

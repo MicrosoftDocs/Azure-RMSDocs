@@ -1,5 +1,5 @@
 ---
-title: Scenario - Retain Control of Documents Stored in SharePoint
+title: Scenario - Retain control of documents stored in SharePoint
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 author: Cabailey
 ---
-# Scenario - Retain Control of Documents Stored in SharePoint
+# Scenario - Retain control of documents stored in SharePoint
 This scenario and supporting user documentation uses Azure Rights Management to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. For example, the documents are automatically protected from accidental or intended leakage by users and you can block access to content even after it is downloaded or synchronized. The files you want to protect might be for internal collaborating on design documents or plans, or for other deliverables. When you configure protected libraries for SharePoint, the Office files stored in them will be protected by Azure Rights Management.
 
 The instructions are suitable for the following set of circumstances:
