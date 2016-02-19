@@ -1,5 +1,5 @@
 ---
-title: RMS for Individuals and Azure Rights Management
+title: How administrators can control the accounts created for RMS for individuals
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management

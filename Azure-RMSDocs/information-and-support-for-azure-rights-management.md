@@ -1,5 +1,5 @@
 ---
-title: Information and Support for Azure Rights Management
+title: Information and support for Azure Rights Management
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 author: Cabailey
 ---
-# Information and Support for Azure Rights Management
+# Information and support for Azure Rights Management
 Use the following resources for additional information about Microsoft [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] (Azure RMS).
 
 |To do this …|.. do this:|

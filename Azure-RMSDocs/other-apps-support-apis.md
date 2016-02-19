@@ -1,5 +1,5 @@
 ---
-title: Other applications that support the RMS APIs: Installation and configuration
+title: Other applications that support the RMS APIs - Installation and configuration
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management

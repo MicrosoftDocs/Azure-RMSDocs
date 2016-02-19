@@ -1,5 +1,5 @@
 ---
-title: How Applications Support Azure Rights Management
+title: How applications support Azure Rights Management
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 author: Cabailey
 ---
-# How Applications Support Azure Rights Management
+# How applications support Azure Rights Management
 Use the following information to help you understand how your end-user applications (such as the Office applications, Word, Excel, PowerPoint, and Outlook) and services (such as Exchange and SharePoint) can use Microsoft [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] to help protect your organization’s data. 
 > [!NOTE]
 > To verify the applications and versions that [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] (Azure RMS) supports, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).

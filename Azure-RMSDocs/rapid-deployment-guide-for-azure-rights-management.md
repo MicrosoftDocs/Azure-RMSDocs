@@ -1,5 +1,5 @@
 ---
-title: Rapid Deployment Guide for Azure Rights Management
+title: Rapid deployment guide for Azure Rights Management
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 author: Cabailey
 ---
-# Rapid Deployment Guide for Azure Rights Management
+# Rapid deployment guide for Azure Rights Management
 Use this guide in addition to the [technical documentation for Azure Rights Management](https://technet.microsoft.com/library/jj585024.aspx), to help you deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
 
 These scenarios contain both administrator instructions and accompanying end user documentation. Before you give the documentation (instructions or announcements) to your end users, you will need to first customize this documentation for your business requirements and existing work flows. An example set of instructions or an announcement show how the final end user documentation might look.
