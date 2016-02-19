@@ -20,6 +20,11 @@
 # Get started
 
 ## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
+### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
+### [Azure Active Directory](rms-requirements-aad-directory.md)
+### [Client devices](rms-requirements-client-devices.md)
+### [Applications](rms-requirements-applications.md)
+### [On-premises servers ](rms-requirements-onpremises-servers.md)
 ## [Frequently asked questions for Azure Rights Management](frequently-asked-questions-for-azure-rights-management.md)
 ## [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md)
 ## [Terminology for Azure Rights Management](terminology-for-azure-rights-management.md)
