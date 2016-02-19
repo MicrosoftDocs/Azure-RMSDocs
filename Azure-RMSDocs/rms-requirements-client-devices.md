@@ -1,5 +1,5 @@
 ---
-title: Azure RMS Requirements: Client device
+title: Azure RMS Requirements&#58; Client device
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -40,7 +40,7 @@ The following mobile device operating systems support Azure Rights Management:
 ## <a name="BKMK_ClientCapabilities"></a>Client device capabilities
 Not all supported client devices currently support all RMS capabilities. Use the following table to identify which applications support the RMS capabilities, and the exceptions.
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](http://technet.microsoft.com/library/a69ead9d-7dd3-4b38-9830-4728e9757341).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](active-directory-rights-management-services-mobile-device-extension.md).
 
 Information about the table columns:
 
@@ -48,7 +48,7 @@ Information about the table columns:
 
 -   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached files. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
 
--   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by RMS, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by RMS. For more information, see the [Levels of protection – native and generic](https://technet.microsoft.com/library/dn339003.aspx) and [Supported file types and file name extensions](https://technet.microsoft.com/library/dn339003.aspx) sections from the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx).
+-   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by RMS, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by RMS. For more information, see the [Levels of protection – native and generic](rights-management-sharing-application-administrator-guide.md) and [Supported file types and file name extensions](https://technet.microsoft.com/library/dn339003.aspx) sections from the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
