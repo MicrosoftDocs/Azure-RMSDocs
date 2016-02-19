@@ -1,5 +1,5 @@
 ---
-title: Scenario - Send a Company-Confidential Email
+title: Scenario - Send a company-confidential email
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 author: Cabailey
 ---
-# Scenario - Send a Company-Confidential Email
+# Scenario - Send a company-confidential email
 This scenario and supporting user documentation uses Azure Rights Management so that any user in the organization can safely send email communications that cannot be read outside the organization. For example, if somebody forwards the email message to somebody in another organization or to a personal email account. The emails and any attachments will be protected by Azure Rights Management and a template that users select from the email client.
 
 The simplest way to enable this scenario is to use one of the built-in, default templates that automatically restrict access to all users in your organization. But if required, you can make this more restrictive by creating a custom template that for example, restricts access to a subset of users, or has other restrictions such as read-only or an expiration date, or disables the Forward button in the email client.

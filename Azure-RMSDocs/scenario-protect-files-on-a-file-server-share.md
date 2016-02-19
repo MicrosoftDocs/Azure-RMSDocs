@@ -1,5 +1,5 @@
 ---
-title: Scenario - Protect Files on a File Server Share
+title: Scenario - Protect files on a file server share
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 author: Cabailey
 ---
-# Scenario - Protect Files on a File Server Share
+# Scenario - Protect files on a file server share
 This scenario and supporting user documentation uses Azure Rights Management to bulk-protect all files that you want to protect on a file server to ensure that only employees from your organization can access them, even if they are copied and saved to storage that is not under the control of your IT department, or emailed to others.
 
 These instructions use one of the default templates, which restricts access to all employees with all usage rights. But if required, you can further restrict access and usage rights by configuring a custom template instead of using a default template.
