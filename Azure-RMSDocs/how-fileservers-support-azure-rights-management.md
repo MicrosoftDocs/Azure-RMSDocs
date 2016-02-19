@@ -12,8 +12,6 @@ author: Cabailey
 
 # <a name="BKMK_FCIIntro"></a>File servers that run Windows Server and use File Classification Infrastructure (FCI)
 
-Use the following information to help you understand how Azure Rights Management (Azure RMS) can support on-premises file servers to help protect your organization’s data.
-
 When you configure Windows Server to use File Classification Infrastructure, this File Server Resource Manager feature can scan local files and determine whether they contain sensitive data. For files that meet this criteria, they are tagged with classification properties that an administrator defines. The File Classification Infrastructure can then take automatic action, according to the classification. One of these actions include applying information protection by using [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] and the deployment of the Rights Management connector (also known as the RMS connector). Office files are then automatically protected by Azure RMS.
 
 To protect all file types, you would not use the RMS connector, but instead, run a Windows PowerShell script, using cmdlets from the [RMS Protection tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256).
@@ -27,6 +25,6 @@ For instructions to use the Windows PowerShell script for all file types, see [R
 
 
 ## Next steps
-For more information about how other applications support Azure RMS, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md).
+Now you understand how applications and services support Azure RMS, you might be interested in comparing Azure RMS with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS). For a comparison of features, requirements, and security controls, see [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md).
 
 
