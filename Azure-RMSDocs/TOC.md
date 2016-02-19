@@ -1,7 +1,7 @@
 # Understand & Explore
 
 ## [Overview of Azure Rights Management](azure-rights-management.md)
-### [Also known as ...](azure-rms-aka)
+### [Also known as ...](azure-rms-aka.md)
 ## [What is Azure Rights Management?](what-is-azure-rights-management.md)
 ### [What problems does it solve?](azure-rms-problems-it-solves.md)
 ### [What do admins and users see?](what-do-admins-users-see.md)
