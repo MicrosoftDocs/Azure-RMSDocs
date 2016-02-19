@@ -40,6 +40,18 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 Footnote 1:
              256 bits is used by the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
 
+How the cryptographic keys are stored and secured:
+
+- For each document or email that is protected by Azure RMS, Azure RMS creates a single AES key (the "content key"), and that key is embedded to the document, and persists through editions of the document. 
+
+- The content key is protected with the organization’s RSA key (the "Azure RMS tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by Azure RMS for the organization and this key can only be changed by an Azure RMS administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
+
+	This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md).
+
+- Licenses and certificates that are sent to a Windows device are protected with the client’s device private key, which is created the first time a user on the device uses Azure RMS. This private key, in turn, is protected with the DPAPI on the client, which protects these secrets by using a key derived from the user’s password. On mobile devices, the keys are used only one time, so because they are not stored on the clients, these keys don’t need to be protected on the device. 
+
+
+
 ## <a name="BKMK_Walthrough"></a>Walkthrough of how Azure RMS works: First use, content protection, content consumption
 To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](activating-azure-rights-management.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
