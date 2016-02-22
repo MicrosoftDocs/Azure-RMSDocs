@@ -36,7 +36,3 @@ author: msmbaldwin
 [Next](https://www.example.com)
 
 
-
-
-
-
