@@ -23,7 +23,7 @@ author: msmbaldwin
 > [!div class="button"]
 [button links](/azure-rms/index.html)
 
-> [!div class="op_single_seletor"]
+> [!div class="op_single_selector"]
 - [C#](developers-guide.md)
 - [JavaScript](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
 
