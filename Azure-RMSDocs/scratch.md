@@ -24,12 +24,12 @@ author: msmbaldwin
 [button links](/azure-rms/index.html)
 
 > [!div class="op_single_seletor"]
-- [C#](https://www.example.com)
-- [JavaScript](https://www.example.com)
+- [C#](developers-guide.md)
+- [JavaScript](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
 
 > [AZURE.SELECTOR]
-- [Link #1 Label](https://www.example.com)
-- [Link #2 Label](https://www.example.com)
+- [Link #1 Label](developers-guide.md)
+- [Link #2 Label](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
 
 
 ![animated gif](./media/hololens.gif)
