@@ -40,4 +40,16 @@ author: msmbaldwin
 [Pre](https://www.example.com)
 [Next](https://www.example.com)
 
+## Azure.VIDEO videos
 
+<iframe src="https://channel9.msdn.com/Series/azure-active-directory-connect-express-settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/azure-ad-connect-health--monitor-you-identity-bridge/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/microsoft-ignite-2015-extending-on-premises-directories-to-the-cloud-made-easy-with-azure-active-directory-connect/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/azure-ad--introduction-to-dynamic-memberships-for-groups/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/enable-single-sign-on-to-google-apps-in-2-minutes-with-azure-ad/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/integrating-salesforce-with-azure-ad-how-to-enable-single-sign-on/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/integrating-salesforce-with-azure-ad-how-to-automate-user-provisioning/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-deep-dive-securing-access-on-premises/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-overview/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/windows-azure-multi-factor-authentication/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-deep-dive-securing-access-on-premises/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
