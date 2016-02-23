@@ -548,6 +548,8 @@ generatekey --generate simple type=RSA size=2048 protect=module ident=contosokey
 ```
 When you run this command, use these instructions:
 
+-   The parameter **protect** must be set to the value **module**, as shown. This creates a module-protected key. The BYOK toolset does not support OCS-protected keys.
+
 -   For the key size, we recommend 2048 but also support 1024-bit RSA keys for existing AD RMS customers who have such keys and are migrating to Azure RMS.
 
 -   Replace the value of *contosokey* for the **ident** and **plainname** with any string value. To minimize administrative overheads and reduce the risk of errors, we recommend that you use the same value for both, and use all lower case characters.
