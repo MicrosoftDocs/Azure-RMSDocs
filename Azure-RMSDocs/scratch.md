@@ -20,12 +20,17 @@ author: msmbaldwin
 
 [regular link](/azure-rms/index.html) 
 
->[!div class="button"]
+> [!div class="button"]
 [button links](/azure-rms/index.html)
 
->[!div class="Seletor"]
-[C#](https://www.example.com)
-[JavaScript](https://www.example.com)
+> [!div class="op_single_seletor"]
+- [C#](https://www.example.com)
+- [JavaScript](https://www.example.com)
+
+> [AZURE.SELECTOR]
+- [Link #1 Label](https://www.example.com)
+- [Link #2 Label](https://www.example.com)
+
 
 ![animated gif](./media/hololens.gif)
 
