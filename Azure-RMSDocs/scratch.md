@@ -42,14 +42,14 @@ author: msmbaldwin
 
 ## Azure.VIDEO videos
 
-<iframe src="https://channel9.msdn.com/Series/azure-active-directory-connect-express-settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/azure-ad-connect-health--monitor-you-identity-bridge/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/microsoft-ignite-2015-extending-on-premises-directories-to-the-cloud-made-easy-with-azure-active-directory-connect/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/azure-ad--introduction-to-dynamic-memberships-for-groups/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/enable-single-sign-on-to-google-apps-in-2-minutes-with-azure-ad/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/integrating-salesforce-with-azure-ad-how-to-enable-single-sign-on/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/integrating-salesforce-with-azure-ad-how-to-automate-user-provisioning/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-deep-dive-securing-access-on-premises/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-overview/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/windows-azure-multi-factor-authentication/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-<iframe src="https://channel9.msdn.com/Series/multi-factor-authentication-deep-dive-securing-access-on-premises/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-AD-Connect-Health--Monitor-you-identity-bridge/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Shows/Mechanics/Azure-AD-B2C-How-to-enable-consumer-logins-and-access-management-for-your-B2C-apps/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-AD--Introduction-to-Dynamic-Memberships-for-Groups/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Enable-single-sign-on-to-Google-Apps-in-2-minutes-with-Azure-AD/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Integrating-Salesforce-with-Azure-AD-How-to-enable-Single-Sign-On-12/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Integrating-Salesforce-with-Azure-AD-How-to-automate-User-Provisioning-22/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Blogs/Windows-Azure/WA-Multi-Factor-Authentication-for-Azure-AD/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Blogs/Windows-Azure/WA-MFA-Overview/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Blogs/Windows-Azure/Windows-Azure-Multi-Factor-Authentication/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
+<iframe src="https://channel9.msdn.com/Events/TechEd/Europe/2014/EM-B313/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
