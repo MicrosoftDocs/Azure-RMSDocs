@@ -6,7 +6,12 @@
           "**/*.md"
         ],
         "exclude": [
-          "**/obj/**"
+          "**/obj/**",
+          "Understand/**",
+          "GetStarted/**",
+          "DeployUser/**",
+          "PlanDesign/**",
+          "Troubleshoot/**"  
         ]
       }
     ],
@@ -23,7 +28,12 @@
           ],
         "exclude": [
           "**/obj/**",
-          "_themes/DocPacker/**"
+          "_themes/DocPacker/**",
+          "Understand/**",
+          "GetStarted/**",
+          "DeployUser/**",
+          "PlanDesign/**",
+          "Troubleshoot/**"  
         ]
       }
     ],
