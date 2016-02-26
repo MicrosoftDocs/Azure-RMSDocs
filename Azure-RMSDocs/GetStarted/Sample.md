@@ -11,11 +11,6 @@ title: This is page title
 
 This is include text: [!INCLUDE [Introduction md](introduction.md)] hello world
 
-## <a id="Swagger"> </a> Swagger
-
-
-[!code-REST-i[calendar_api_get_calendar_by_id](trydata/calendar_api_get_calendar_by_id.json)]
-
 ## <a id="Code_table"> </a>Code table
 
 ## <a id="ABCCodefasdfasdf_table" />ABCCode table
