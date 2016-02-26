@@ -101,7 +101,7 @@ Use the super user feature of Azure RMS, which lets authorized users have full o
 For more information, see [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md).
 
 ## Can Rights Management prevent screen captures?
-By not granting the **Copy** [usage righ](configuring-usage-rights-for-azure-rights-managementt.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows Phone) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures, and browsers (for example, when used with Outlook Web App and Office Online) also cannot prevent screen captures.
+By not granting the **Copy** [usage righ](configuring-usage-rights-for-azure-rights-management.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows Phone) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures, and browsers (for example, when used with Outlook Web App and Office Online) also cannot prevent screen captures.
 
 Preventing screen captures can help to avoid accidental or negligent disclosure of confidential or sensitive information. But there are many ways that a user can share data that is displayed on a screen, and taking a screen shot is only one method. For example, a user intent on sharing displayed information can take a picture of it using their camera phone, retype the data, or simply verbally relay it to somebody.
 
