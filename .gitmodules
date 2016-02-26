@@ -1,7 +1,3 @@
-[submodule "docs shared themes"]
-	path = Azure-RMSDocs/_themes
-	url = https://github.com/JialinXin/DocsThemes
-	branch = master
 [submodule "ThemeRMSUnderstand"]
 	path = Azure-RMSDocs/Understand/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
