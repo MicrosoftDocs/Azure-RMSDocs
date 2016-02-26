@@ -1,6 +1,5 @@
-# [Understand and explore](/understand/azure-rights-management.md)
-# [Get started](requirements-for-azure-rights-management.md)
-
+# [Understand and explore](./understand/azure-rights-management.md)
+# [Get started](./GetStarted/requirements-for-azure-rights-management.md)
 
 # Plan and design
 

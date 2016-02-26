@@ -1,4 +1,4 @@
-# [Understand and explore](../understand/azure-rights-management.md)
+# [Understand and explore](../Understand/azure-rights-management.md)
 # Get started
 ## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
 ### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
@@ -18,7 +18,6 @@
 ### [Secure your most (few) valuable files](scenario-secure-your-most-few-valuable-files.md)
 ### [Send a company-confidential email](scenario-send-a-company-confidential-email.md)
 ### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
-
 # [Plan and design](../scratch.md)
 # [Deploy and Use](../scratch.md)
 # [Develop & Customize Apps](../scratch.md)
