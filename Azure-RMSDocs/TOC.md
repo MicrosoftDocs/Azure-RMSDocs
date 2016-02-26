@@ -17,7 +17,6 @@
 ### [Office 2016 and Office 2013: Configuration for clients](office-2016-2013-configure-for-clients.md)
 ### [Office 2010: Configuration for clients](office-2010-configure-for-clients.md)
 ### [Rights Management sharing application: Installation and configuration for clients](sharing-app-install-configure.md)
-### [Other applications that support the RMS APIs: Installation and configuration](other-apps-support-apis.md)
 ## [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md)
 ## [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md)
 ## [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md)
