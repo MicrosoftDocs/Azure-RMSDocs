@@ -25,6 +25,6 @@ To get learn more about Azure Rights Management and deploy it for your organizat
 
 - [Getting started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 
-- [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap)
+- [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md)
 
 

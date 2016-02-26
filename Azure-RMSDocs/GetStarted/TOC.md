@@ -1,2 +1,25 @@
-#Sample
-## [Sample](Sample.md)
+# Understand and explore
+# Get started
+## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
+### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
+### [Azure Active Directory](rms-requirements-aad-directory.md)
+### [Client devices](rms-requirements-client-devices.md)
+### [Applications](rms-requirements-applications.md)
+### [On-premises servers ](rms-requirements-onpremises-servers.md)
+## [Frequently asked questions for Azure Rights Management](frequently-asked-questions-for-azure-rights-management.md)
+## [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md)
+## [Terminology for Azure Rights Management](terminology-for-azure-rights-management.md)
+## [Quick start tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md)
+## [Rapid deployment guide for Azure Rights Management](rapid-deployment-guide-for-azure-rights-management.md)
+### [Share an Office file with users in another organization](scenario-share-an-office-file-with-users-in-another-organization.md)
+### [Retain control of documents stored in SharePoint](scenario-retain-control-of-documents-stored-in-sharepoint.md)
+### [Executives securely exchange privileged information](scenario-executives-securely-exchange-privileged-information.md)
+### [Protect files on a file server share](scenario-protect-files-on-a-file-server-share.md)
+### [Secure your most (few) valuable files](scenario-secure-your-most-few-valuable-files.md)
+### [Send a company-confidential email](scenario-send-a-company-confidential-email.md)
+### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
+# Plan and design
+# Deploy and Use
+# Develop & Customize Apps
+# Administer
+# RMS Client

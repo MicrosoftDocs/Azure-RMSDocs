@@ -1,42 +1,5 @@
-# Understand & Explore
-
-## [Overview of Azure Rights Management](azure-rights-management.md)
-### [Also known as ...](azure-rms-aka.md)
-## [What is Azure Rights Management?](what-is-azure-rights-management.md)
-### [What problems does it solve?](azure-rms-problems-it-solves.md)
-### [What do admins and users see?](what-do-admins-users-see.md)
-### [How does it work?](how-does-it-work.md)
-## [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md)
-### [How users sign up for RMS for individuals](rms-for-individuals-user-signup.md)
-### [How admins can control the accounts created for RMS for individuals](rms-for-individuals-admins-take-control.md)
-### [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-find-if-users-have-signed-up.md)
-## [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md)
-### [RMS sharing application for Windows and mobile platforms](sharing-application-for-windows-and-mobile-platforms.md)
-### [Office applications and services](rights-management-sharing-application-for-office.md)
-### [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management.md)
-### [Other applications that support the RMS APIs](other-apps-support-apis.md)
-## [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md)
-
+# Understand and explore
 # Get started
-
-## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
-### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
-### [Azure Active Directory](rms-requirements-aad-directory.md)
-### [Client devices](rms-requirements-client-devices.md)
-### [Applications](rms-requirements-applications.md)
-### [On-premises servers ](rms-requirements-onpremises-servers.md)
-## [Frequently asked questions for Azure Rights Management](frequently-asked-questions-for-azure-rights-management.md)
-## [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md)
-## [Terminology for Azure Rights Management](terminology-for-azure-rights-management.md)
-## [Quick start tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md)
-## [Rapid deployment guide for Azure Rights Management](rapid-deployment-guide-for-azure-rights-management.md)
-### [Share an Office file with users in another organization](scenario-share-an-office-file-with-users-in-another-organization.md)
-### [Retain control of documents stored in SharePoint](scenario-retain-control-of-documents-stored-in-sharepoint.md)
-### [Executives securely exchange privileged information](scenario-executives-securely-exchange-privileged-information.md)
-### [Protect files on a file server share](scenario-protect-files-on-a-file-server-share.md)
-### [Secure your most (few) valuable files](scenario-secure-your-most-few-valuable-files.md)
-### [Send a company-confidential email](scenario-send-a-company-confidential-email.md)
-### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
 
 # Plan and design
 
@@ -54,7 +17,6 @@
 ### [Office 2016 and Office 2013: Configuration for clients](office-2016-2013-configure-for-clients.md)
 ### [Office 2010: Configuration for clients](office-2010-configure-for-clients.md)
 ### [Rights Management sharing application: Installation and configuration for clients](sharing-app-install-configure.md)
-### [Other applications that support the RMS APIs: Installation and configuration](other-apps-support-apis.md)
 ## [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md)
 ## [Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md)
 ## [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md)

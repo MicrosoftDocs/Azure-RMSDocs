@@ -11,7 +11,7 @@ author: Cabailey
 ---
 
 
-# <a name="BKMK_TakeControlofAccounts"></a>How administrators can control the accounts created for RMS for individuals
+>How administrators can control the accounts created for RMS for individuals
 If you do not want to convert your organization’s RMS for individuals subscription to a paid subscription, you can still control the user accounts in the Azure directory that was created for your organization in the following ways:
 
 -   Implement directory integration solutions for Azure Active Directory and your Active Directory Domain Services infrastructure. You can synchronize accounts and passwords so that users will not have to create new accounts to use Rights Management and your on-premises password policies will apply to the new Azure user accounts. You can also synchronize passwords so that users do not have to remember a different password to use Rights Management.
@@ -25,7 +25,4 @@ If you do not want to convert your organization’s RMS for individuals subscrip
     -   Synchronize your Active Directory Domain Services infrastructure with Azure Active Directory. This action prevents new accounts from being created when users sign up for self-service subscriptions such as RMS for individuals, and you can delete or disable accounts that were previously created in the Azure directory.
 
 To control the user accounts in the Azure directory, or to prevent users from signing up for RMS for individuals, you must have an Azure subscription and own the directory. If you don't already have an Azure subscription, you can obtain one without charge. If a directory was automatically created for you during the self-service process, take ownership of the domain that was used to create it. If you already own a directory in Azure but users specified a new domain that you use in your organization, merge that domain into your existing directory. For more information, see the instructions in [What is Self-Service Signup for Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
-
-## Next steps
-See [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-find-if-users-have-signed-up.md.)
 

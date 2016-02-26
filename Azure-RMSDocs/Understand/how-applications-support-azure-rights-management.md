@@ -34,7 +34,7 @@ Learn more about how each of the following supports Azure RMS:
 
 -   [Office applications and services](rights-management-sharing-application-for-office.md)
 
--   [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management)
+-   [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management.md)
 
 -   [Other applications that support the RMS APIs](other-apps-support-apis.md)
 
