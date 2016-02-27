@@ -21,7 +21,7 @@ At a high level, you can see how this process works in the following picture. A 
 
 Throughout the protection process when Azure RMS is encrypting and decrypting, authorizing, and enforcing restrictions, the secret formula is never sent to Azure.
 
-![](./media/AzRMS_SecretColaFormula_final.png)
+![](../media/AzRMS_SecretColaFormula_final.png)
 
 For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](#BKMK_Walthrough) section in this topic.
 
@@ -63,13 +63,13 @@ After the user environment is initialized, that user can then protect documents 
 ### Initializing the user environment
 Before a user can protect content or consume protected content on a Windows computer, the user environment must be prepared on the device. This is a one-time process and happens automatically without user intervention when a user tries to protect or consume protected content:
 
-![](./media/AzRMS.png)
+![](../media/AzRMS.png)
 
 **What's happening in step 1**: The RMS client on the computer first connects to Azure RMS, and authenticates the user by using their Azure Active Directory account.
 
 When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.|
 
-![](./media/AzRMS_useractivation2.png)
+![](../media/AzRMS_useractivation2.png)
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s RMS tenant, which issues certificates that let the user authenticate to Azure RMS in order to consume protected content and to protect content offline.
 
@@ -78,17 +78,17 @@ A copy of the user’s certificate is stored in Azure RMS so that if the user mo
 ### Content protection
 When a user protects a document, the RMS client takes the following actions on an unprotected document:
 
-![](./media/AzRMS_documentprotection1.png)
+![](../media/AzRMS_documentprotection1.png)
 
 **What's happening in step 1**: The RMS client creates a random key (the content key) and encrypts the document using this key with the AES symmetric encryption algorithm.
 
-![](./media/AzRMS_documentprotection2.png)
+![](../media/AzRMS_documentprotection2.png)
 
 **What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document, either based on a template or by specifying specific rights for the document. This policy includes the rights for different users or groups and other restrictions, such as an expiration date.
 
 The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.|
 
-![](./media/AzRMS_documentprotection3.png)
+![](../media/AzRMS_documentprotection3.png)
 
 **What's happening in step 3**: Finally, the RMs client embeds the policy into a file with the body of the document encrypted previously, which together comprise a protected document.
 
@@ -97,17 +97,17 @@ This document can be stored anywhere or shared by using any method, and the poli
 ### Content consumption
 When a user wants to consume a protected document, the RMS client starts by requesting access to the Azure RMS service:
 
-![](./media/AzRMS_documentconsumption1.png)
+![](../media/AzRMS_documentconsumption1.png)
 
 **What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to Azure RMS. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document.
 
-![](./media/AzRMS_documentconsumption2.png)
+![](../media/AzRMS_documentconsumption2.png)
 
 **What's happening in step 2**: The service then extracts the AES content key from the decrypted policy. This key is then encrypted with the user’s public RSA key that was obtained with the request.
 
 The re-encrypted content key is then embedded into an encrypted use license with the list of user rights, which is then returned to the RMS client.
 
-![](./media/AzRMS_documentconsumption3.png)
+![](../media/AzRMS_documentconsumption3.png)
 
 **What's happening in step 3**: Finally, the RMS client takes the encrypted use license and decrypts it with its own user private key. This lets the RMS client decrypt the document’s body as it is needed and render it on the screen.
 
