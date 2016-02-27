@@ -21,7 +21,7 @@ The instructions are suitable for the following set of circumstances:
 -   Employees do not need to share these documents with people outside your organization.
 
 ## Deployment Instructions
-![](./media/AzRMS_AdminBanner.png)
+![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements and the supporting procedures are in place before you go on to the user documentation.
 
@@ -30,11 +30,11 @@ For this scenario to work, the following must be in place:
 
 |Check|Requirement|If you need more information|
 |---------|---------------|--------------------------------|
-|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
-|![](./media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure SharePoint for IRM and protected libraries|[Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure SharePoint for IRM and protected libraries|[Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
 #### To configure the SharePoint library for IRM settings
 
@@ -63,7 +63,7 @@ Using the following template, copy and paste the announcement into a communicati
 
 The example documentation shows how this announcement might look for users, after your customizations.
 
-![](./media/AzRMS_UsersBanner.png)
+![](../media/AzRMS_UsersBanner.png)
 
 ### IT Announcement: Changes to the &lt;name of SharePoint library&gt; site
 The SharePoint site, **&lt;name of SharePoint library&gt;**, is now configured for secure collaboration. Now, only members of the &lt;group name&gt; can open these documents from this site, even if you save them locally or email them to somebody else. The exception is that you can share them with members of the &lt;group name&gt; after you have downloaded the documents, so that &lt;reason why this group has access permissions to collaborate on the files but not by using the SharePoint library&gt;. When you edit the files, you see a yellow information banner at the top of the document, to let you know that it has this protection and who can access them.
@@ -77,7 +77,7 @@ You will not be able to upload documents to the &lt;name of SharePoint site&gt; 
 -   Contact the help desk: &lt;contact details&gt;
 
 ### Example User Documentation
-![](./media/AzRMS_ExampleBanner.png)
+![](../media/AzRMS_ExampleBanner.png)
 
 #### IT Announcement: Changes to the Sales Forecasts and Reports site
 The SharePoint site, **Sales Forecasts and Reports**, is now configured for secure collaboration. Now, only members of our Sales and Marketing team can open these documents from this site, even if you save them locally or email them to somebody else. The exception is that you can share them with members of the Finance team after you have downloaded the documents, so that they can extract the monthly forecast figures. When you edit the files, you see a yellow information banner at the top of the document, to let you know that it has this protection and who can access them.
