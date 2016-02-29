@@ -11,7 +11,7 @@ author: Cabailey
 ---
 
 # <a name="BKMK_SharingAppIntro"></a>RMS sharing application for Windows and mobile platforms
-The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](./includes/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](http://technet.microsoft.com/library/dn339003.aspx) section from the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
+The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](http://technet.microsoft.com/library/dn339003.aspx) section from the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
 
 When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -21,9 +21,9 @@ For Windows computers, the RMS sharing application unobtrusively integrates with
 
 -   A new right-click option for File Explorer. This provides users with a **Protect in-place** option, which invokes an easy-to-use dialog box of settings that are most commonly used to protect files stored on a disk.
 
--   A viewer to open files that have been protected by [!INCLUDE[aad_rightsmanagement_2](./includes/aad_rightsmanagement_2_md.md)]. This viewer is automatically invoked when there is no other application installed that could open the protected file.
+-   A viewer to open files that have been protected by [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. This viewer is automatically invoked when there is no other application installed that could open the protected file.
 
--   Backend configuration for Office 2010 that lets Word, Excel, PowerPoint, and Outlook from this suite work seamlessly with [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)].
+-   Backend configuration for Office 2010 that lets Word, Excel, PowerPoint, and Outlook from this suite work seamlessly with [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 Although the RMS sharing application for Windows can be downloaded and installed for a single computer by using the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970), it also supports an enterprise deployment for silent installation and custom configuration. For more information, see the following resources:
 
