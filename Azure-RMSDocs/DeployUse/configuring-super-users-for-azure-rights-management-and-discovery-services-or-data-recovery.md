@@ -10,7 +10,7 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 author: Cabailey
 ---
 # Configuring Super Users for Azure Rights Management and Discovery Services or Data Recovery
-The super user feature of Microsoft [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] (Azure RMS) ensures that authorized people and services can always read and inspect the data that Azure RMS protects for your organization. And if necessary, remove the protection or change the protection that was previously applied. A super user always has full owner rights for all use licenses that was granted by the organization’s RMS tenant. This ability is sometimes referred to as “reasoning over data” and is a crucial element in maintaining control of your organization’s data. For example, you would use this feature for any of the following scenarios:
+The super user feature of Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) ensures that authorized people and services can always read and inspect the data that Azure RMS protects for your organization. And if necessary, remove the protection or change the protection that was previously applied. A super user always has full owner rights for all use licenses that was granted by the organization’s RMS tenant. This ability is sometimes referred to as “reasoning over data” and is a crucial element in maintaining control of your organization’s data. For example, you would use this feature for any of the following scenarios:
 
 -   An employee leaves the organization and you need to read the files that they protected.
 
@@ -27,7 +27,7 @@ By default, the super user feature is not enabled, and no users are assigned thi
 If you need to manually enable the super user feature, use the Windows PowerShell cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), and then assign users (or service accounts) as needed by using the [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) cmdlet or the (Set-AadrmSuperUserGroup)[https://msdn.microsoft.com/library/azure/mt653943.aspx] cmdlet and add users (or other groups) as needed to this group. 
 
 > [!NOTE]
-> If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)], see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+> If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
 
 Security best practices for the super user feature:
 
@@ -45,7 +45,7 @@ The following log extract shows some example entries from using the Get-AadrmAdm
 `2015-08-01T19:01:45	admin@contoso.com	SetSuperUserFeatureState -state Enabled	Passed	True`
 
 ## <a name="BKMK_RMSProtectionModule"></a>Scripting options for super users
-Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](./includes/aad_rightsmanagement_1_md.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, [download the RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Then, use the  [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) cmdlet, and [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx)   cmdlet as required.
+Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, [download the RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Then, use the  [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) cmdlet, and [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx)   cmdlet as required.
 
 > [!IMPORTANT]
 > Although the RMS Protection tool is designed for super users to bulk unprotect files for recovery purposes, the current version of the tool does not support user authentication for Azure RMS. Until this limitation is resolved, you must use a service principal account to authenticate with Azure RMS before you can remove protection from files. For more information and instructions, see [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/azure/mt433202.aspx).
