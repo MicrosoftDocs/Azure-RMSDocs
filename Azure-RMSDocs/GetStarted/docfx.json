@@ -40,5 +40,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/Azure-RMS/get-started"
+  "basepath": "/rights-management/get-started"
 }
