@@ -40,5 +40,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/Azure-RMS/DeployUse"
+  "basepath": "/rights-management/deploy-use"
 }

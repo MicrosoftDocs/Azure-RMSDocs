@@ -40,5 +40,6 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/Azure-RMS/fubar"
+  "basepath": "/rights-management/get-started"
+
 }
