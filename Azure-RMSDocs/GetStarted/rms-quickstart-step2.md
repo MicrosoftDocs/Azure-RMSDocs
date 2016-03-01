@@ -39,3 +39,7 @@ You’re now ready to start protecting files that contain information that you w
 |About a local installation of the Rights Management sharing application for Windows and user instructions   →|[Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx)|
 |About the scripted installation of the Rights Management sharing application for Windows and more technical information   →|[Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx)|
 |To understand the difference between native protection and generic protection   →|[What’s the difference between generic protection and built-in (native) protection?](https://technet.microsoft.com/library/dn574738.aspx)|
+
+>[!div class="step-by-step"]
+[Pre](rms-quickstart-step1.md)
+[Next](rms-quickstart-step3.md)
