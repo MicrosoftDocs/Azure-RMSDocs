@@ -65,7 +65,7 @@ To download your usage logs, you will use the Azure RMS administration module fo
 1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure Rights Management service:
 
     ```
-    Connect-Aadrm
+    Connect-AadrmService
     ```
     
 2.  Run the following command to download the logs for a specific date: 
@@ -80,6 +80,8 @@ To download your usage logs, you will use the Azure RMS administration module fo
     
     * To download logs for a date range (such as from 2/1/2016 through 2/14/2016), run the following command: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
+When you specify the day only, as in our examples, the time is assumed to be 00:00:00 in your local time, and then converted to UTC. When you specify a time with your -fromdate or -todate parameters (for example, -fordate "2/1/2016 15:00:00"), that date and time is converted to UTC. The Get-AadrmUserLog command then gets the logs for that UTC time period.
+
 You cannot specify less than a whole day to download.
 
 By default, this cmdlet uses three threads to download the logs. If you have sufficient network bandwidth and want to decrease the time required to download the logs, use the -NumberOfThreads parameter, which supports a value from 1 through 32. For example, if you run the following command, the cmdlet spawns 10 threads to download the logs: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
@@ -90,7 +92,7 @@ By default, this cmdlet uses three threads to download the logs. If you have suf
 >
 > For example, you might run the following command to import all information into a .log file format: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### If you manually enabled Azure RMS usage logging before the logging change February xx, 2016
+#### If you manually enabled Azure RMS usage logging before the logging change February 22, 2016
 
 
 If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure RMS managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) cmdlet to download your old logs. For example:
@@ -101,9 +103,9 @@ If you used usage logging prior to the logging change, you will have usage logs 
 
 Note that you do not have to download logs using the Get-AadrmUsageLog cmdlet if either of the following applies:
 
--  You activated Azure Rights Management before February xx, 2016 but did not enable the usage logging feature.
+-  You activated Azure Rights Management on or before February 22, 2016 but did not enable the usage logging feature.
 
-- You activated Azure Rights Management after February xx+1, 2016.
+- You activated Azure Rights Management after February 22, 2016.
 
 ## <a name="BKMK_Interpret"></a>How to interpret your Azure Rights Management usage logs
 Use the following information to help you interpret the Azure Rights Management usage logs.
