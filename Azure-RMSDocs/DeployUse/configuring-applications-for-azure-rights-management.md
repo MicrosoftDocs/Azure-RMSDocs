@@ -83,7 +83,7 @@ The following steps provide a typical set of commands that you would run to enab
     Import-PSSession $Session
     ```
 
-4.  Specify the location of the Azure RMS tenant key, according to your region:
+4.  Specify the location of the Azure RMS tenant key, according to according to where your organization's tenant was created:
 
     For North America (and government subscriptions):
 

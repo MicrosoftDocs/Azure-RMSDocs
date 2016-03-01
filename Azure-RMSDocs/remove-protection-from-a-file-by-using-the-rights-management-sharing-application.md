@@ -23,6 +23,8 @@ To remove protection from a file (that is, unprotect a file) that was previously
 
     You might be prompted for credentials.
 
+Note: If you do not see these options, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
+
 The original protected file is deleted (for example, Sample.ptxt) and replaced with a file that has the same name but with the unprotected file name extension (for example, Sample.txt).
 
 ## Examples and other instructions
