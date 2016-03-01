@@ -27,3 +27,9 @@ To complete this tutorial, you will need the following:
 -   A computer running Windows (minimum of Windows 7 SP1), and which has installed either Office 2016, Office 2013, or Office 2010.
 
 Let’s get started!
+
+> [!div class="button"]
+[button links](/azure-rms/index.html)
+
+>[!div class="step-by-step"]
+[Next](rms-quickstart-step1.md)
