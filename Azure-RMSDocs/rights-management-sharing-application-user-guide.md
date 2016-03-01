@@ -14,7 +14,7 @@ The Microsoft Rights Management (RMS) sharing application for Windows helps you 
 
 All you need is a computer that runs at least Windows 7 with Service Pack 1. Then [download and install](http://go.microsoft.com/fwlink/?LinkId=303970) this free application from Microsoft.
 
-If you have questions that are not answered by this guide, see [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
+If you have questions that are not answered by this guide, see [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971). This page also has some troubleshooting information, if you run into problems.
 
 ## <a name="BKMK_SharingExamples"></a>Examples for using the RMS sharing application
 Here are just some examples of how you might use the RMS sharing application, to help protect your files.

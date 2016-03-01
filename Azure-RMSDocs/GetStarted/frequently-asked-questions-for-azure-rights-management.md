@@ -28,6 +28,10 @@ Azure RMS automatically generates and manages XrML certificates as required, so
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](https://technet.microsoft.com/library/jj658941.aspx) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](https://technet.microsoft.com/library/dn375964.aspx) for Exchange Server.
 
+## Are there step-by-step instructions to configure Exchange Online to use Azure RMS?
+
+Yes. Expand the Exchange Online: IRM Configuration section in [Configuring Applications for Azure Rights Management](..\DeployUse\configuring-applications-for-azure-rights-management.md) to see a typical set of commands that enables Exchange Online to use Azure RMS, why the Outlook Web App doesn't immediately show the **Set permissions** menu options, and the command to run if you change or update the Azure RMS templates. 
+
 ## If I deploy Azure RMS in production, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
 No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
 
@@ -54,6 +58,12 @@ To specify users from outside your organization, use [Windows PowerShell module 
 -   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) cmdlet (for a new template) or [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
 
 For more information about custom templates, see [Configuring Custom Templates for Azure Rights Management](configuring-custom-templates-for-azure-rights-management.md).
+
+## Does Azure RMS work with dynamic groups in Azure AD?
+An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with Azure RMS. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure RMS.
+
+As the option name clearly shows, this new group type is still in preview, with additional functionality expected and new documentation to follow. In the meantime, we wanted to confirm that you can use this new group type with Azure RMS.
+
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of supported devices, see the [Client devices that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedDevices) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic. Because not all supported devices can currently support all RMS capabilities, be sure to also check the [Client device capabilities](requirements-for-azure-rights-management.md#BKMK_ClientCapabilities) table in the same topic.

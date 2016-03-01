@@ -17,7 +17,7 @@ After you have protected your documents by using the RMS sharing application, if
 
 When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://technet.microsoft.com/dn858608.aspx) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
 
--   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message.
+-   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
 
 -   If you want to export to Excel: Click **Open in Excel**, so that you can then modify the data, and create your own views and graphs.
 
