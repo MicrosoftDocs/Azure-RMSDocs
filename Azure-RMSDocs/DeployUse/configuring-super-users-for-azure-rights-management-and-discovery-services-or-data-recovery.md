@@ -24,7 +24,7 @@ The super user feature of Microsoft [!INCLUDE[aad_rightsmanagement_1](../include
 
 By default, the super user feature is not enabled, and no users are assigned this role. It is enabled for you automatically if you configure the Rights Management connector for Exchange, and it is not required for standard services that run Exchange Online, SharePoint Online, or SharePoint Server.
 
-If you need to manually enable the super user feature, use the Windows PowerShell cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), and then assign users (or service accounts) as needed by using the [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) cmdlet or the (Set-AadrmSuperUserGroup)[https://msdn.microsoft.com/library/azure/mt653943.aspx] cmdlet and add users (or other groups) as needed to this group. 
+If you need to manually enable the super user feature, use the Windows PowerShell cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), and then assign users (or service accounts) as needed by using the [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) cmdlet or the [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) cmdlet and add users (or other groups) as needed to this group. 
 
 > [!NOTE]
 > If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
