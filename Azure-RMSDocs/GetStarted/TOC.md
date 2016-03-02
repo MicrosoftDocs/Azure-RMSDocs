@@ -20,4 +20,4 @@
 ### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
 # [Plan & design](../plan-design/azure-rights-management-deployment-roadmap.html)
 # [Deploy & use](../deploy-use/activating-azure-rights-management.html)
-# [Develop & customize apps](../sdk/4.2/api/winrt/Microsoft.RightsManagement.html)
+# [Develop & customize apps](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement.html)

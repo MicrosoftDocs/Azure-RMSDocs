@@ -17,4 +17,4 @@
 ## [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md)
 ## [Operations for Your Azure Rights Management Tenant Key](operations-for-your-azure-rights-management-tenant-key.md)
 ## [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md)
-# [Develop & customize apps](../sdk/4.2/api/winrt/Microsoft.RightsManagement.html)
+# [Develop & customize apps](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement.html)

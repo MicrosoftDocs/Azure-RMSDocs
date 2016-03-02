@@ -6,4 +6,4 @@
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 ## [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md)
 # [Deploy & use](../deploy-use/activating-azure-rights-management.html)
-# [Develop & customize apps](../sdk/4.2/api/winrt/Microsoft.RightsManagement.html)
+# [Develop & customize apps](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement.html)
