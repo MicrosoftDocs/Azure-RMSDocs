@@ -1,11 +1,9 @@
-# Understand & Explore
-# Get Started
-# Plan and design
+# [Understand & explore](/rights-management/understand-explore/azure-rights-management.html)
+# [Get started](/rights-management/get-started/requirements-for-azure-rights-management.html)
+# [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap.html)
 ## [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md)
 ## [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md)
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 ## [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md)
-# Deploy and Use
-# Develop & Customize Apps
-# Administer
-# RMS Client
+# [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
+# [Develop & customize apps](https://docsmsftstage.azurewebsites.net/rights-management/sdk/api/winrt/Microsoft.RightsManagement.html)
