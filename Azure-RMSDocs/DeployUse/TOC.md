@@ -1,7 +1,7 @@
-# Understand & Explore
-# Get Started
-# Plan and design
-# Deploy and Use
+# [Understand & explore](./understand-explore/azure-rights-management.html)
+# [Get started](./get-started/requirements-for-azure-rights-management.html)
+# [Plan & design](./plan-design/azure-rights-management-deployment-roadmap.html)
+# [Deploy & use](./deploy-use/activating-azure-rights-management.html)
 ## [Activating Azure Rights Management](activating-azure-rights-management.md)
 ## [Configuring Custom Templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
 ## [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md)
@@ -17,6 +17,4 @@
 ## [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md)
 ## [Operations for Your Azure Rights Management Tenant Key](operations-for-your-azure-rights-management-tenant-key.md)
 ## [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md)
-# Develop & Customize Apps
-# Administer
-# RMS Client
+# [Develop & customize apps](./sdk/4.2/api/winrt/Microsoft.RightsManagement.html)

@@ -1,41 +1,5 @@
-# Understand and explore
-# Get started
-# Plan and design
-# Deploy and Use
-
-# Develop & Customize Apps
-
-## [Azure RMS Developer's Guide](developers-guide.md)
-## [Microsoft Rights Management SDK 4.2](developers-guide.md)
-### [Overview](developers-guide.md)
-### [Get Started](developers-guide.md)
-### [Developer guidance](developers-guide.md)
-### [API Reference](developers-guide.md)
-## [Microsoft Rights Management SDK 2.1](developers-guide.md)
-### [Overview](developers-guide.md)
-### [Get Started](developers-guide.md)
-### [Developer guidance](developers-guide.md)
-### [API Reference](developers-guide.md)
-
-# Administer 
-## [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md)
-## [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md)
-
-# Use the RMS Client
-
-## [Rights Management (RMS) Client](rights-management-rms-client.md)
-### [RMS Client Deployment Notes](rms-client-deployment-notes.md)
-### [RMS Protection with Windows Server File Classification Infrastructure (FCI)](rms-protection-with-windows-server-file-classification-infrastructure-fci.md)
-### [Rights Management Sharing Application for Windows](rights-management-sharing-application-for-windows.md)
-#### [Rights Management sharing application: Version release history](rights-management-sharing-application-version-release-history.md)
-#### [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md)
-#### [Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
-##### [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md)
-##### [Protect a file on a device (protect in-place) by using the Rights Management sharing application](protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md)
-##### [Protect a file that you share by email by using the Rights Management sharing application](protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md)
-##### [Track and revoke your documents when you use the RMS sharing application](track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md)
-##### [View and use files that have been protected by Rights Management](view-and-use-files-that-have-been-protected-by-rights-management.md)
-##### [Remove protection from a file by using the Rights Management sharing application](remove-protection-from-a-file-by-using-the-rights-management-sharing-application.md)
-##### [Use keyboard shortcuts in the Rights Management sharing application](use-keyboard-shortcuts-in-the-rights-management-sharing-application.md)
-##### [Dialog box options for the Rights Management sharing application](dialog-box-options-for-the-rights-management-sharing-application.md)
-### [Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications](privacy-statement-for-microsoft-rights-management-in-rms-enlightened-applications.md)
+# [Understand & explore](./understand-explore/azure-rights-management.html)
+# [Get started](./get-started/requirements-for-azure-rights-management.html)
+# [Plan & design](./plan-design/azure-rights-management-deployment-roadmap.html)
+# [Deploy & use](./deploy-use/activating-azure-rights-management.html)
+# [Develop & customize apps](./sdk/4.2/api/winrt/Microsoft.RightsManagement.html)

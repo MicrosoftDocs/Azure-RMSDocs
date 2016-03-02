@@ -1,5 +1,5 @@
-# Understand and explore
-# Get started
+# [Understand & explore](./understand-explore/azure-rights-management.html)
+# [Get started](./get-started/requirements-for-azure-rights-management.html)
 ## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
 ### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
 ### [Azure Active Directory](rms-requirements-aad-directory.md)
@@ -18,8 +18,6 @@
 ### [Secure your most (few) valuable files](scenario-secure-your-most-few-valuable-files.md)
 ### [Send a company-confidential email](scenario-send-a-company-confidential-email.md)
 ### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
-# Plan and design
-# Deploy and Use
-# Develop & Customize Apps
-# Administer
-# RMS Client
+# [Plan & design](./plan-design/azure-rights-management-deployment-roadmap.html)
+# [Deploy & use](./deploy-use/activating-azure-rights-management.html)
+# [Develop & customize apps](./sdk/4.2/api/winrt/Microsoft.RightsManagement.html)

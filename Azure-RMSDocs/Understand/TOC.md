@@ -1,4 +1,4 @@
-# Understand & Explore
+# [Understand & explore](./understand-explore/azure-rights-management.html)
 ## [Overview of Azure Rights Management](azure-rights-management.md)
 ### [Also known as ...](azure-rms-aka.md)
 ## [What is Azure Rights Management?](what-is-azure-rights-management.md)
@@ -15,9 +15,7 @@
 ### [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management.md)
 ### [Other applications that support the RMS APIs](other-apps-support-apis.md)
 ## [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md)
-# Get Started
-# Plan and design
-# Deploy and Use
-# Develop & Customize Apps
-# Administer
-# RMS Client
+# [Get started](./get-started/requirements-for-azure-rights-management.html)
+# [Plan & design](./plan-design/azure-rights-management-deployment-roadmap.html)
+# [Deploy & use](./deploy-use/activating-azure-rights-management.html)
+# [Develop & customize apps](./sdk/4.2/api/winrt/Microsoft.RightsManagement.html)
