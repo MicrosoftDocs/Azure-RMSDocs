@@ -1,4 +1,4 @@
-# [Understand & explore/rights-management/rights-manageme/rights-management/understand-explo/rights-management/azure-rights-management.html)
+# [Understand & explore](/rights-management/understand-explore/azure-rights-management.html)
 ## [Overview of Azure Rights Management](azure-rights-management.md)
 ### [Also known as ...](azure-rms-aka.md)
 ## [What is Azure Rights Management?](what-is-azure-rights-management.md)
