@@ -61,6 +61,36 @@
             "type_mapping": {
                 "Conceptual": "Content"
             }
+        },
+                        {
+            "docset_name": "Develop",
+            "build_output_subfolder": "Azure-RMSDocs/Develop",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                        {
+            "docset_name": "Administer",
+            "build_output_subfolder": "Azure-RMSDocs/Administer",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                        {
+            "docset_name": "RMSClient",
+            "build_output_subfolder": "Azure-RMSDocs/RMSClient",
+            "locale": "en-us",
+            "version": 0,
+      "open_to_public_contributors": true,
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
         }
     ],
     "notification_subscribers": [""],
