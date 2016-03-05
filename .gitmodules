@@ -1,5 +1,5 @@
 [submodule "ThemeRMSUnderstand"]
-	path = Azure-RMSDocs/Understand/_themes
+	path = Azure-RMSDocs/RMSClient/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
 [submodule "ThemeRMSGetStarted"]
