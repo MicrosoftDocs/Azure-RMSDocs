@@ -1,5 +1,5 @@
 # [Understand & explore](/rights-management/understand-explore/azure-rights-management.html)
-# [Get started](/rights-management/get-started/requirements-for-azure-rights-management.html)
+# Get started
 ## [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md)
 ### [Cloud subscriptions](rms-requirements-cloud-subscriptions.md)
 ### [Azure Active Directory](rms-requirements-aad-directory.md)
@@ -20,4 +20,6 @@
 ### [Configure work folders for persistent protection](scenario-configure-work-folders-for-persistent-protection.md)
 # [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap.html)
 # [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
-# [Develop & customize apps](https://docsmsftstage.azurewebsites.net/rights-management/sdk/api/winrt/Microsoft.RightsManagement.html)
+# [Develop & customize apps](/rights-management/develop/developers-guide.html)
+# [Administer](/rights-management/administer/administering-azure-rights-management-with-powershell.html)
+# [Use the RMS Client](/rights-management/rms-client/rights-management-rms-client.md)

@@ -2,5 +2,6 @@
 # [Get started](/rights-management/get-started/requirements-for-azure-rights-management.html)
 # [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap.html)
 # [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
-# [Develop & customize apps](https://docsmsftstage.azurewebsites.net/rights-management/sdk/api/winrt/Microsoft.RightsManagement.html)
+# [Develop & customize apps](/rights-management/develop/developers-guide.html)
 # [Administer](/rights-management/administer/administering-azure-rights-management-with-powershell.html)
+# [Use the RMS Client](/rights-management/rms-client/rights-management-rms-client.md)
