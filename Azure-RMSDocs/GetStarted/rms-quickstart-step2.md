@@ -12,6 +12,14 @@ author: Cabailey
 
 # Azure RMS Quickstart Step 2: Install the Rights Management sharing application
 
+Jump to: 
+> [AZURE.SELECTOR]
+- [Introduction](rms-quickstart-intro.md)
+- [Step 1](rms-quickstart-step1.md)
+- [Step 3](rms-quickstart-step3.md)
+- [Step 4](rms-quickstart-step4.md)
+- [Step 5](rms-quickstart-step5.md)
+
 ![](../media/AzRMS_QuickStartSteps2.PNG)
 
 The Rights Management sharing application (also known as the “RMS sharing app”) isn’t a requirement for Azure Rights Management, but we recommend it for all computers and mobile devices that support Azure Rights Management. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files directly from the ribbon. It also makes it possible to protect all files types by applying generic protection for files that are not natively supported by Azure Rights Management, and a document tracking site for users to track and revoke files that they have protected. We’ll be using the document tracking site later in this tutorial.
@@ -41,5 +49,5 @@ You’re now ready to start protecting files that contain information that you w
 |To understand the difference between native protection and generic protection   →|[What’s the difference between generic protection and built-in (native) protection?](https://technet.microsoft.com/library/dn574738.aspx)|
 
 >[!div class="step-by-step"]
-[Pre](rms-quickstart-step1.md)
-[Next](rms-quickstart-step3.md)
+[Step 1](rms-quickstart-step1.md)
+[Step 3](rms-quickstart-step3.md)

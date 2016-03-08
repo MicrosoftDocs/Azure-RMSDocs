@@ -10,6 +10,15 @@ ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
 author: Cabailey
 ---
 ## Azure RMS Quickstart Step 5: Track your protected document
+
+Jump to: 
+> [AZURE.SELECTOR]
+- [Introduction](rms-quickstart-intro.md)
+- [Step 1](rms-quickstart-step1.md)
+- [Step 2](rms-quickstart-step2.md)
+- [Step 3](rms-quickstart-step3.md)
+- [Step 4](rms-quickstart-step4.md)
+
 ![](../media/AzRMS_QuickStartSteps5.PNG)
 
 > [!NOTE]
@@ -51,4 +60,4 @@ This tutorial stepped you through just one scenario for how Azure RMS can help p
 If you’re ready to start deploying Azure RMS, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 >[!div class="step-by-step"]
-[Pre](rms-quickstart-step4.md)
+[Step 4](rms-quickstart-step4.md)
