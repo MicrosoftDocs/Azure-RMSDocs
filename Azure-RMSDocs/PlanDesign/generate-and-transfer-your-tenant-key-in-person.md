@@ -17,7 +17,7 @@ Use the following procedures if you want to manage your own tenant key and do no
 
 -   [Transfer your tenant key to Azure RMS](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Transfer)
 
-#### <a name="BKMK_GenerateKey"></a>Generate your tenant key
+## <a name="BKMK_GenerateKey"></a>Generate your tenant key
 To generate your own tenant key, follow these 3 steps:
 
 -   [Step 1: Prepare a workstation with Thales HSM](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_GenerateYourKey1)
@@ -26,10 +26,10 @@ To generate your own tenant key, follow these 3 steps:
 
 -   [Step 3: Create a new key](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_GenerateYourKey3)
 
-##### <a name="BKMK_GenerateYourKey1"></a>Step 1: Prepare a workstation with Thales HSM
+### <a name="BKMK_GenerateYourKey1"></a>Step 1: Prepare a workstation with Thales HSM
 Install the nCipher (Thales) support software on a Windows computer. Attach a Thales HSM to that computer. Ensure the Thales tools are in your path. For more information, see the user guide included with the Thales HSM, or visit the Thales website for Azure RMS at [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
-##### <a name="BKMK_GenerateYourKey2"></a>Step 2: Create a security world
+### <a name="BKMK_GenerateYourKey2"></a>Step 2: Create a security world
 Start a command prompt and run the Thales new-world program.
 
 ```
@@ -45,7 +45,7 @@ Then do the following:
 
 You’re now ready to create a new key that will be your RMS tenant key.
 
-##### <a name="BKMK_GenerateYourKey3"></a>Step 3: Create a new key
+### <a name="BKMK_GenerateYourKey3"></a>Step 3: Create a new key
 Generate a CNG key by using the Thales **generatekey** and **cngimport** programs.
 
 Run the following command to generate the key:
@@ -83,7 +83,7 @@ Back up this Tokenized Key File in a safe location.
 
 You are now ready to transfer your tenant key to Azure RMS.
 
-#### <a name="BKMK_Transfer"></a>Transfer your tenant key to Azure RMS
+## <a name="BKMK_Transfer"></a>Transfer your tenant key to Azure RMS
 After you have generated your own key, you must transfer it to Azure RMS before you use it. For the highest level of security, this transfer is a manual process that requires you to fly to the Microsoft office in Redmond, Washington, United States of America. To complete this process, follow these 3 steps:
 
 -   [Step 1: Bring your key to Microsoft](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_TransferYourKey1)
@@ -92,7 +92,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 
 -   [Step 3: Closing procedures](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_TransferYourKey3)
 
-###### Step 1: Bring your key to Microsoft
+### Step 1: Bring your key to Microsoft
 
 -   Contact Microsoft Customer Support Services (CSS) to schedule a key transfer appointment for Azure RMS. Bring the following to Microsoft in Redmond:
 
@@ -104,7 +104,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 
     -   Your Tokenized Key File on a USB drive.
 
-###### Step 2: Transfer your key to the Window Azure RMS security world
+### Step 2: Transfer your key to the Window Azure RMS security world
 
 1.  When you arrive at Microsoft to transfer your key, the following happens:
 
@@ -122,7 +122,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 
 2.  Mk-reprogram will ask you and the Azure RMS operators to plug in their respective Administrator cards and pins. These commands output a Tokenized Key File in C:\Temp\Destination that contains your key protected by Azure RMS security world.
 
-###### Step 3: Closing procedures
+### Step 3: Closing procedures
 
 -   In your presence, Azure RMS operators do the following:
 

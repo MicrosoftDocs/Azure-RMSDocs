@@ -56,14 +56,56 @@ If you decide to let Microsoft manage your tenant key, no further action is requ
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
+## Implementing your Azure Rights Management tenant key
+
+Use the information and procedures in this section if you have decided to generate and manage your tenant key; the bring your own key (BYOK) scenario:
+
+
+> [!IMPORTANT]
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Customer Support Services (CSS) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> 
+> Also contact CSS if your organization has specific policies for handling keys.
+
+### <a name="BKMK_Preqs"></a>Prerequisites for BYOK
+See the following table for a list of prerequisites for bring your own key (BYOK).
+
+|Requirement|More information|
+|---------------|--------------------|
+|A subscription that supports Azure RMS.|For more information about the available subscriptions, see the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.|
+|You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see the [BYOK pricing and restrictions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Pricing) section in this topic.<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
+|Thales HSM, smartcards, and support software.<br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|You must have access to a Thales Hardware Security Module and basic operational knowledge of Thales HSMs. See [Thales Hardware Security Module](http://www.thales-esecurity.com/msrms/buy) for the list of compatible models, or to purchase an HSM if you do not have one.|
+|If you want to transfer your tenant key over the Internet rather than physically be present in Redmond, USA. there are 3 requirements:<br /><br />Requirement 1: An offline x64 workstation with a minimum Windows operation system of Windows 7 and Thales nShield software that is at least version 11.62.<br /><br />If this workstation runs Windows 7, you must [install Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Requirement 2: A workstation that is connected to the Internet and has a minimum Windows operation system of Windows 7.<br /><br />Requirement 2: A USB drive or other portable storage device that has at least 16 MB free space.|These prerequisites are not required if you travel to Redmond and transfer your tenant key in person.<br /><br />For security reasons, we recommend that the first workstation is not connected to a network. However, this is not programmatically enforced.<br /><br />Note: In the instructions that follow, this first workstation is referred to as the **disconnected workstation**.<br /><br />In addition, if your tenant key is for a production network, we recommend that you use a second, separate workstation to download the toolset and upload the tenant key. But for testing purposes, you can use the same workstation as the first one.<br /><br />Note: In the instructions that follow, this second workstation is referred to as the **Internet-connected workstation**.|
+
+The procedures to generate and use your own tenant key depend on whether you want to do this over the Internet or in person:
+
+-   **Over the Internet:** This requires some extra configuration steps, such as downloading and using a toolset and Windows PowerShell cmdlets. However, you do not have to physically be in a Microsoft facility to transfer your tenant key. Security is maintained by the following methods:
+
+    -   You generate the tenant key from an offline workstation, which reduces the attack surface.
+
+    -   The tenant key is encrypted with a Key Exchange Key (KEK), which stays encrypted until it is transferred to the Azure RMS HSMs. Only the encrypted version of your tenant key leaves the original workstation.
+
+    -   A tool sets properties on your tenant key that binds your tenant key to the Azure RMS security world. So after the Azure RMS HSMs receive and decrypt your tenant key, only these HSMs can use it. Your tenant key cannot be exported. This binding is enforced by the Thales HSMs.
+
+    -   The Key Exchange Key (KEK) that is used to encrypt your tenant key is generated inside the Azure RMS HSMs and is not exportable. The HSMs enforce that there can be no clear version of the KEK outside the HSMs. In addition, the toolset includes attestation from Thales that the KEK is not exportable and was generated inside a genuine HSM that was manufactured by Thales.
+
+    -   The toolset includes attestation from Thales that the Azure RMS security world was also generated on a genuine HSM manufactured by Thales. This proves to you that Microsoft is using genuine hardware.
+
+    -   Microsoft uses separate KEKs as well as separate Security Worlds in each geographical region, which ensures that your tenant key can be used only in data centers in the region in which you encrypted it. For example, a tenant key from a European customer cannot be used in data centers in North American or Asia.
+
+    > [!NOTE]
+    > Your tenant key can safely move through untrusted computers and networks because it is encrypted and secured with access control level permissions, which makes it usable only within your HSMs and Microsoft’s HSMs for Azure RMS. You can use the scripts that are provided in the toolset to verify the security measures and read more information about how this works from Thales: [Hardware Key management in the RMS Cloud](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
+
+-   **In person:** This requires that you contact Microsoft Customer Support Services (CSS) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
+
+For how-to instructions, see one of the following:
+
+[Generate and transfer your tenant key - over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md).
+
+[Generate and transfer your tenant key - in person](generate-and-transfer-your-tenant-key-in-person.md).
+
+
 
 ## <a name="BKMK_NextSteps"></a>Next steps
-
-If you decide to manage your tenant key yourself, use the how-to instructions in [Implementing your Azure Rights management tenant key](implementing-your-azure-rights-management-tenant-key.md).
-
-If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key.
-
-Then, do the following:
 
 1.  Start to use your tenant key:
 
