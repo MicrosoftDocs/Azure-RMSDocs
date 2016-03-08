@@ -5,6 +5,7 @@
 ## [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md)
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 ## [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md)
+# [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
 # [Develop & customize apps](/rights-management/develop/developers-guide.html)
 # [Administer](/rights-management/administer/administering-azure-rights-management-with-powershell.html)
 # [Use the RMS Client](/rights-management/rms-client/rights-management-rms-client.md)
