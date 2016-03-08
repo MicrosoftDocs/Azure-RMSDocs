@@ -27,6 +27,13 @@ author: msmbaldwin
 - [C#](developers-guide.md)
 - [JavaScript](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
 
+*Icons?*
+<li><span class="icon icon-feedback"></span> <mark>Feedback</mark></li>
+
+*Captions?*
+
+
+
 > [AZURE.SELECTOR]
 - [Link #1 Label](developers-guide.md)
 - [Link #2 Label](end-user-license-agreement-for-microsoft-rms-sharing-application.md)

@@ -3,5 +3,7 @@
 # [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap.html)
 # [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
 # [Develop & customize apps](/rights-management/develop/developers-guide.html)
-# [Administer](/rights-management/administer/administering-azure-rights-management-with-powershell.html)
+# [Administer](/rights-management/administering-azure-rights-management-with-powershell.html)
+## [Administering Azure Rights Management with Powershell](/rights-management/administering-azure-rights-management-with-powershell.html)
+## [Installing Windows Powershell for Azure Rights Management](/rights-management/installing-windows-powershell-for-azure-rights-management.html)
 # [Use the RMS Client](/rights-management/rms-client/rights-management-rms-client.md)
