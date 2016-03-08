@@ -1,6 +1,6 @@
 {
 	"locales": ["de-de", "es-es", "fr-fr", "it-it", "ja-jp", "ko-kr", "pt-br", "ru-ru", "zh-cn", "zh-tw", "cs-cs", "da-dk", "hu-hu", "nb-no", "nl-nl", "pt-pt", "sv-se", "pl-pl", "fi-fi"],
-	"files": ["**/**/*.md", "**/*.md"],
+	"files": ["**/**/*.md", "**/*.md", "**/index.html"],
 	"includeDependencies": true,
 	"autoPush": true,
 	"useJavascriptMarkdownTransformer": true
