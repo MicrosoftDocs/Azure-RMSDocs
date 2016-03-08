@@ -12,15 +12,16 @@ author: Cabailey
 
 # Azure RMS Quickstart Step 1: Activate the Rights Management service
 
+![](../media/AzRMS_QuickStartSteps1.PNG)
+
 Jump to: 
-> [AZURE.SELECTOR]
+> [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
 - [Step 2](rms-quickstart-step2.md)
 - [Step 3](rms-quickstart-step3.md)
 - [Step 4](rms-quickstart-step4.md)
 - [Step 5](rms-quickstart-step5.md)
 
-![](../media/AzRMS_QuickStartSteps1.PNG)
 
 Even though you might have a subscription that supports Azure Rights Management, the service is disabled by default. To activate it, you can use either the Office 365 admin center, or the Azure classic portal:
 

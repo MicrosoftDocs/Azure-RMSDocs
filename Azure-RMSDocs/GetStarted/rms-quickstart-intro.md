@@ -12,7 +12,7 @@ author: Cabailey
 # Quick start tutorial for Azure Rights Management
 
 Jump to: 
-> [AZURE.SELECTOR]
+> [!div class="op_single_selector"]
 - [Step 1](rms-quickstart-step1.md)
 - [Step 2](rms-quickstart-step2.md)
 - [Step 3](rms-quickstart-step3.md)

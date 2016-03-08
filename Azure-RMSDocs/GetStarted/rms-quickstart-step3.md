@@ -11,15 +11,15 @@ author: Cabailey
 ---
 # Azure RMS Quickstart Step 3: Email your document that you want to protect
 
+![](../media/AzRMS_QuickStartSteps3.PNG)
+
 Jump to: 
-> [AZURE.SELECTOR]
+> [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
 - [Step 1](rms-quickstart-step1.md)
-- [Step 3](rms-quickstart-step2.md)
+- [Step 2](rms-quickstart-step2.md)
 - [Step 4](rms-quickstart-step4.md)
 - [Step 5](rms-quickstart-step5.md)
-
-![](../media/AzRMS_QuickStartSteps3.PNG)
 
 For this step, first create and save a document using Word that will represent your document that you want to protect, and name it **Confidential.docx**. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it. For example, you might type: **If you can read this from your email attachment, the sender has successfully shared a file that was protected with Azure RMS.**
 
