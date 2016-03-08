@@ -11,15 +11,15 @@ author: Cabailey
 ---
 ## Azure RMS Quickstart Step 5: Track your protected document
 
+![](../media/AzRMS_QuickStartSteps5.PNG)
+
 Jump to: 
-> [AZURE.SELECTOR]
+> [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
 - [Step 1](rms-quickstart-step1.md)
 - [Step 2](rms-quickstart-step2.md)
 - [Step 3](rms-quickstart-step3.md)
 - [Step 4](rms-quickstart-step4.md)
-
-![](../media/AzRMS_QuickStartSteps5.PNG)
 
 > [!NOTE]
 > For this step, you must have a subscription that supports document tracking. To check whether your subscription includes document tracking, see [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608.aspx).

@@ -11,15 +11,16 @@ author: Cabailey
 ---
 # Azure RMS Quickstart Step 4: Ask your recipients to open the emailed document
 
+![](../media/AzRMS_QuickStartSteps4.PNG)
+
 Jump to: 
-> [AZURE.SELECTOR]
+> [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
 - [Step 1](rms-quickstart-step1.md)
 - [Step 2](rms-quickstart-step2.md)
 - [Step 3](rms-quickstart-step3.md)
 - [Step 5](rms-quickstart-step5.md)
 
-![](../media/AzRMS_QuickStartSteps4.PNG)
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
