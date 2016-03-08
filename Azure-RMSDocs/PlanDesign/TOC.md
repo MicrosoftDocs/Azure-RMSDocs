@@ -4,7 +4,7 @@
 ## [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md)
 ## [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md)
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
-#### [Information about Thales HSMs and Microsoft additions](information-about-thales-hms-and-microsoft-additions.md)
+### [Information about Thales HSMs and Microsoft additions](information-about-thales-hms-and-microsoft-additions.md)
 ### [BYOK pricing and restrictions](information-about-thales-hms-and-microsoft-additions.md)
 #### [Implementing bring your own key (BYOK)](implementing-your-azure-rights-management-tenant-key.md)
 ### [Generate and transfer your tenant key - in person](generate-and-transfer-your-tenant-key-in-person.md)
