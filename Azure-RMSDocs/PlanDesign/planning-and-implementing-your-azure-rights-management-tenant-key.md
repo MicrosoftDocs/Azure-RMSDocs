@@ -46,11 +46,11 @@ If you decide that Microsoft should manage your tenant key, Microsoft handles mo
 
 The following diagrams show and compares these two options. The first diagram shows how little administrator overheads there are for you in the default configuration when Microsoft manages the tenant key.
 
-![](./media/RMS_BYOK_cloud.png)
+![](../media/RMS_BYOK_cloud.png)
 
 The second diagram shows the additional steps required when you manage your own tenant key.
 
-![](./media/RMS_BYOK_onprem.png)
+![](../media/RMS_BYOK_onprem.png)
 
 If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps).
 
@@ -98,10 +98,6 @@ The procedures to generate and use your own tenant key depend on whether you wan
 -   **In person:** This requires that you contact Microsoft Customer Support Services (CSS) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
 
 For how-to instructions, select whether you will generate and transfer your tenant key over the Internet or in person: 
-
-[Generate and transfer your tenant key - over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md).
-
-[Generate and transfer your tenant key - in person](generate-and-transfer-your-tenant-key-in-person.md).
 
 > [!div class="op_single_selector"]
 - [Over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md)
