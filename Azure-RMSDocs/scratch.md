@@ -20,28 +20,28 @@ author: msmbaldwin
 
 [regular link](/azure-rms/index.html) 
 
-> [!div class="button"]
-[button links](/azure-rms/index.html)
+- This
+- is
+- a
+- bulleted
+- list
 
-> [!div class="op_single_selector"]
-- [C#](developers-guide.md)
-- [JavaScript](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
-
-*Icons?*
-<li><span class="icon icon-feedback"></span> <mark>Feedback</mark></li>
-
-*Captions?*
-
-
-
-> [AZURE.SELECTOR]
-- [Link #1 Label](developers-guide.md)
-- [Link #2 Label](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
-
+1 This
+1 is
+1 a
+1 numbered
+1 list
 
 ![animated gif](./media/hololens.gif)
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+
+> [!div class="button"]
+[button links](/azure-rms/index.html)
+
+> [!div class="op_single_selector"]
+- [foo](developers-guide.md)
+- [bar](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
 
 >[!div class="step-by-step"]
 [Pre](https://www.example.com)
