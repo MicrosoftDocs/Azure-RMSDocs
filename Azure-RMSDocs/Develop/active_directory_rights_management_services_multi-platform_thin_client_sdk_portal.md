@@ -1,0 +1,65 @@
+Microsoft Rights Management SDK 4.2
+==================================================================================================================================================
+
+<span id="purpose"></span>Purpose
+---------------------------------
+
+Microsoft Rights Management SDK 4.2 is a simplified, next-generation API that enables a lightweight development experience in upgrading your device apps with information protection via Microsoft Rights Management Services. Developers can build apps that leverage Active Directory Rights Management Services (AD RMS) or Azure Rights Management to provide information protection and can easily protect or consume information, while transparently handling complex security practices such as key management, encryption and decryption, policy and permissions creation, secure caching, and communication with AD RMS and Azure RMS services.
+
+<span id="developer_audience_heading"></span>Developer audience
+---------------------------------------------------------------
+
+The MS RMS SDK 4.2 APIs uses standard programming languages and models for each operating system so, they are easy and familiar to work with.
+
+**Supported Operating Systems**
+
+This release, MS RMS SDK 4.2, is available for the following operating systems:
+
+Google Android
+Apple iOS and Mac OS X
+Windows Phone
+Windows Store
+Portable C++ for Linux flavored operating systems
+**Get started**
+
+Use the [Get started](get_started.md) topic to begin your protected information device app project.
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Topic</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Overview](overview.md)</p></td>
+<td align="left"><p>Microsoft Rights Management Services (AD RMS and Azure RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled applications, content owners will be able to define who can open, modify, print, forward, or take other actions with their content.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Get started](get_started.md)</p></td>
+<td align="left"><p>For this release of the MS RMS SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Developer guidance and terms](core_concepts.md)</p></td>
+<td align="left"><p>The focus of MS RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[API reference](api_reference-new.md)</p></td>
+<td align="left"><p>The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.</p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+ 
+
+ 
+
+
+
