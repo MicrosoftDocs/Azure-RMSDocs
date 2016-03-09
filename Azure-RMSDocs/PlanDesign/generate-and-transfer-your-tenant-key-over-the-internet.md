@@ -359,9 +359,6 @@ You have now completed all the steps required for bring your own key over the In
 
 
 > [!div class="button"]
-[Next](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps)
+[Next Steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps)
 
-## <a name="BKMK_NextSteps"></a>Next steps
-
-See the [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps) section from the **Planning and implementing your Azure Rights Management tenant key** article.
 
