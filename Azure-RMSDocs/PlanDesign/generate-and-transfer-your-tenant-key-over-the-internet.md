@@ -13,15 +13,6 @@ author: Cabailey
 # Generate and transfer your tenant key – over the Internet
 Use the following procedures if you want to transfer your tenant key over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
 
--   [Prepare your Internet-connected workstation](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareWorkstation)
-
--   [Prepare your disconnected workstation](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_DisconnectedPrepareWorkstation)
-
--   [Generate your tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate)
-
--   [Prepare your tenant key for transfer](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareTransfer)
-
--   [Transfer your tenant key to Azure RMS](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetTransfer)
 
 ## <a name="BKMK_InternetPrepareWorkstation"></a>Prepare your Internet-connected workstation
 To prepare your workstation that is connected to the Internet, follow these 3 steps:
@@ -366,6 +357,9 @@ The tenant key that is marked **Active** is the one that your organization is cu
 
 You have now completed all the steps required for bring your own key over the Internet and can go to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps).
 
+
+> [!div class="button"]
+[Next](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps)
 
 ## <a name="BKMK_NextSteps"></a>Next steps
 
