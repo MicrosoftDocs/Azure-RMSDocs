@@ -10,7 +10,7 @@ ms.assetid: TBD
 author: msmbaldwin
 ---
 # First level heading
-## second level heading
+### second level heading
 ### Third level heading
 #### Fourth level heading
 ##### Fifth level heading
@@ -26,11 +26,11 @@ author: msmbaldwin
 - bulleted
 - list
 
-1 This
-1 is
-1 a
-1 numbered
-1 list
+1. This
+1. is
+1. a
+1. numbered
+1. list
 
 ![animated gif](./media/hololens.gif)
 
@@ -47,7 +47,7 @@ author: msmbaldwin
 [Pre](https://www.example.com)
 [Next](https://www.example.com)
 
-## Azure.VIDEO videos
+### Azure.VIDEO videos
 
 <iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
 <iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-AD-Connect-Health--Monitor-you-identity-bridge/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe><br><br>
