@@ -14,7 +14,7 @@ author: Cabailey
 Use the following procedures if you want to manage your own tenant key and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
 
 > [!div class="button"]
-[Back to Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
+[Back to: Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 
 ## <a name="BKMK_GenerateKey"></a>Generate your tenant key
 To generate your own tenant key, follow these 3 steps:
