@@ -13,6 +13,8 @@ author: Cabailey
 
 Use the following procedures if you want to manage your own tenant key and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
 
+> [!div class="button"]
+[Back to Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 
 ## <a name="BKMK_GenerateKey"></a>Generate your tenant key
 To generate your own tenant key, follow these 3 steps:
@@ -129,7 +131,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 
     -   Factory-reset the HSM, and wipe the workstation clean.
 
-You have now completed the instructions required for bring your own key in person and can return to your organization for the next steps.
+You have now completed the instructions required for bring your own key in person and can return to your organization for the next steps in planning and implementing your tenant key.
 
 > [!div class="button"]
 [Next Steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps)

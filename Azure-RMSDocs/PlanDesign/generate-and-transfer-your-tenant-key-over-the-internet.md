@@ -13,6 +13,8 @@ author: Cabailey
 # Generate and transfer your tenant key – over the Internet
 Use the following procedures if you want to transfer your tenant key over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
 
+> [!div class="button"]
+[Back to Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
 
 ## <a name="BKMK_InternetPrepareWorkstation"></a>Prepare your Internet-connected workstation
 To prepare your workstation that is connected to the Internet, follow these 3 steps:
@@ -355,7 +357,7 @@ Get-AadrmKeys
 ```
 The tenant key that is marked **Active** is the one that your organization is currently using to protect documents and files.
 
-You have now completed all the steps required for bring your own key over the Internet and can go to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps).
+You have now completed all the steps required for bring your own key over the Internet and can go to the next steps for planning and implementing your tenant key.
 
 
 > [!div class="button"]

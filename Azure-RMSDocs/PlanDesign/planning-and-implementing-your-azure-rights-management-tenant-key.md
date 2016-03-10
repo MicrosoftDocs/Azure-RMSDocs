@@ -106,6 +106,8 @@ For how-to instructions, select whether you will generate and transfer your tena
 
 ## <a name="BKMK_NextSteps"></a>Next steps
 
+Now that you've planned for and if necessary, generated your tenant key, do the following:
+
 1.  Start to use your tenant key:
 
     -   If you haven’t already done so, you must now activate Rights Management so that your organization can start to use RMS. Users immediately start to use your tenant key (managed by Microsoft or managed by you).
@@ -118,7 +120,7 @@ For how-to instructions, select whether you will generate and transfer your tena
 
     If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following example of a log file displayed in Excel where the **Decrypt** and **SignDigest** Request Types show that the tenant key is being used.
 
-    ![](./media/RMS_Logging.gif)
+    ![](../media/RMS_Logging.gif)
 
     For more information about usage logging, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
 
