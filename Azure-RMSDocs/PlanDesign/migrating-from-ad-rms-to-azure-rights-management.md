@@ -294,7 +294,7 @@ If your Azure RMS tenant is already activated and you can identify these comput
 ### <a name="BKMK_Step4Migration"></a>Step 4. Configure imported templates
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with Azure RMS.
 
-In addition, if your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure RMS; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure RMS is named **AllStaff-&lt;tenant_GUID&gt;@&lt;tenant_name&gt;.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a@contoso.onmicrosoft.com**.
+In addition, if your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure RMS; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure RMS is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
 If  you're not sure whether your AD RMS templates include the ANYONE group, expand the  [Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group](#BKMK_ScriptForANYONE) section in this step to copy and use the sample PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
@@ -317,7 +317,7 @@ Templates that you import from AD RMS look and behave just like custom templates
 #### <a name="BKMK_ScriptForANYONE"></a>Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
-***Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.*
+**Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.*
 
 ```
 import-module adrmsadmin 
