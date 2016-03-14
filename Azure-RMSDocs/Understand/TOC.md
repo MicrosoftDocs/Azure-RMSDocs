@@ -15,7 +15,7 @@
 ### [File servers that run Windows Server and use File Classification Infrastructure (FCI)](how-fileservers-support-azure-rights-management.md)
 ### [Other applications that support the RMS APIs](other-apps-support-apis.md)
 ## [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md)
-# [Get started](/rights-management/get-start/requirements-for-azure-rights-management.html)
+# [Get started](/rights-management/get-started/requirements-for-azure-rights-management.html)
 # [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap.html)
 # [Deploy & use](/rights-management/deploy-use/activating-azure-rights-management.html)
 # [Develop & customize apps](/rights-management/develop/developers-guide.html)
