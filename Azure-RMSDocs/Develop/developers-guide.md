@@ -10,3 +10,5 @@ ms.assetid: TBD
 author: bruceperlerms
 ---
 
+
+Placeholder page for eventual "Azure RMS > Develop" landging page.  
