@@ -1,7 +1,6 @@
 ---
 title: Full screen picture: Bob opens the attachment on his iPad
-ms.custom: 
-  - test
+ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

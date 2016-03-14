@@ -1,7 +1,6 @@
 ---
 title: Full screen picture: Activating Rights Management
-ms.custom: 
-  - test
+ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
