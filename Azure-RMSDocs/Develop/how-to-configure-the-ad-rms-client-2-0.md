@@ -68,42 +68,11 @@ The following steps describe how to install the developer runtime, configure the
 
     To configure client-side discovery, you can set the following registry keys to point to your pre-production RMS server. For information about how to configure service-side discovery, see [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx).
 
-    <table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th align="left">Key</th>
-    <th align="left">Value</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td align="left"><p></p>
-    <pre space="preserve"><code>HKEY_LOCAL_MACHINE
-       SOFTWARE
-          Microsoft
-             MSIPC
-                ServiceLocation
-                   EnterpriseCertification</code></pre></td>
-    <td align="left"><p>(Default):</p>
-    <p>[<strong>http</strong>|<strong>https</strong>]<strong>://</strong><em>RMSClusterName</em><strong>/_wmcs/Certification</strong></p></td>
-    </tr>
-    <tr class="even">
-    <td align="left"><p></p>
-    <pre space="preserve"><code>HKEY_LOCAL_MACHINE
-       SOFTWARE
-          Microsoft
-             MSIPC
-                ServiceLocation
-                   EnterprisePublishing</code></pre></td>
-    <td align="left"><p>(Default):</p>
-    <p>[<strong>http</strong>|<strong>https</strong>]<strong>://</strong><em>RMSClusterName</em><strong>/_wmcs/Licensing</strong></p></td>
-    </tr>
-    </tbody>
-    </table>
+|Key|Value|
+|---|-----|
+|`HKEY_LOCAL_MACHINE\`<br>`SOFTWARE\`<br>`Microsoft\`<br>`MSIPC\`<br>`ServiceLocation\`<br>`EnterpriseCertification`|(Default):<br><br> [**http**&#124;**https**]**://** *RMSClusterName* **/_wmcs/Certification**|
+|`HKEY_LOCAL_MACHINE\`<br>`SOFTWARE\`<br>`Microsoft\`<br>`MSIPC\`<br>`ServiceLocation\`<br>`EnterprisePublishing`|(Default):<br><br> [**http**&#124;**https**]**://** *RMSClusterName* **/_wmcs/Licensing**|
+
 
     **Note**   By default, these keys do not exist in the registry and must be created.
      
@@ -135,6 +104,3 @@ The guidance in this topic is not comprehensive. For detailed information about 
  
 
  
-
-
-
