@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Azure RMS Quick start tutorial: Introduction | Azure RMS
+title: Azure RMS quick start tutorial - introduction | Azure RMS
 description:
 keywords:
 author: Cabailey
 manager: mbaldwin
 ms.date: 04/07/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
+ms.assetid: 
 
 # optional metadata
 
