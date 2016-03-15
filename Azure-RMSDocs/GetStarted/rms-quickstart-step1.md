@@ -42,4 +42,4 @@ Jump to:
 
 >[!div class="step-by-step"]
 [« Intro](rms-quickstart-intro.md)
-[Step 2 »](rms-quickstart-step1.md)
+[Step 2 »](rms-quickstart-step2.md)
