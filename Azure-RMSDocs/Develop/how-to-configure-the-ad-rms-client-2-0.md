@@ -74,18 +74,18 @@ The following steps describe how to install the developer runtime, configure the
 |`HKEY_LOCAL_MACHINE\`<br>`SOFTWARE\`<br>`Microsoft\`<br>`MSIPC\`<br>`ServiceLocation\`<br>`EnterprisePublishing`|(Default):<br><br> [**http**&#124;**https**]**://** *RMSClusterName* **/_wmcs/Licensing**|
 
 
-    **Note**   By default, these keys do not exist in the registry and must be created.
+**Note**   By default, these keys do not exist in the registry and must be created.
      
-    **Important**  
+**Important**  
     If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:
 
-    ```
+
     HKEY_LOCAL_MACHINE
         SOFTWARE
            Wow6432Node
               Microsoft
-                  MSIPC
-    ```     
+                MSIPC
+    
 
 Remarks
 -------

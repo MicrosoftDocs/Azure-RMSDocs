@@ -9,7 +9,7 @@ This topic lists a set of samples using the Rights Management Services SDK 2
 
   **Note** This sample also works with subsequent versions of the RMS SDK, beyond 2.1 RC.
 
-- [Data Loss Prevention](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Data Loss Prevention](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 
   IpcDlp is a sample rights-enabled Data Loss Prevention (DLP) application utilizing RMS SDK 2.1 RC. This sample code takes the user through the basic steps that a DLP rights-enabled application should perform by using RMS FileAPI for protecting and consuming restricted content.
 

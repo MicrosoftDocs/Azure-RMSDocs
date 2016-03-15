@@ -17,7 +17,6 @@ Begin creating your rights enabled application:
 |[Windows Store Applications](http://go.microsoft.com/fwlink/p/?LinkID=526163)|
 
  
-
 2. **Proceed to the setup guide** for your operating system.
 
 The setup guides walk you through configuring up your development environment for creating your own based apps.
@@ -30,7 +29,6 @@ The setup guides walk you through configuring up your development environment fo
 | [Windows Phone](windows_phone_apps.md)     |
 | [Windows Store Applications](winrt_sdk.md) |
 
- 
 
 3. Check out the [SDK overview map](api_reference-new.md).
 4. For important **release notes** and **developer guidance**, see the [What's new](release_notes.md) topic.
