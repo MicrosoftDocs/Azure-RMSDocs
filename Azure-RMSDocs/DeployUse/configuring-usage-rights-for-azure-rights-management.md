@@ -47,7 +47,7 @@ The following sections list and describes the usage rights that Rights Managemen
 
 - In Office applications, this right also allows the user to save the document.
 
-___
+---
 
 ### Common name: Save
 
@@ -79,7 +79,7 @@ ___
 
 - In Office applications, this right also allows the user to modify the document.
 
-___
+---
 
 ### Common name: Comment
 
@@ -111,7 +111,7 @@ ___
 
 - This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.
 
-___
+---
 
 ### Common name: Save As, Export
 
@@ -143,7 +143,7 @@ ___
 
 - This right also allows the user to perform other export options in applications, such as **Send to OneNote**.
 
-___
+---
 
 ### Common name: Forward
 
@@ -175,7 +175,7 @@ ___
 
 - Does not allow the forwarder to grant rights to other users as part of the forward action.
 
-___
+---
 
 ### Common name: Full Control
 
@@ -207,7 +207,7 @@ ___
 
 - Includes the ability to remove protection.
 
-___
+---
 
 ### Common name: Print
 
@@ -235,7 +235,7 @@ ___
 
 - IPC_GENERIC_PRINTL"PRINT
 
-___
+---
 
 ### Common name: Reply
 
@@ -263,7 +263,7 @@ ___
 
 - IPC_EMAIL_REPLY
 
-___
+---
 
 ### Common name: Reply All
 
@@ -291,7 +291,7 @@ ___
 
 - IPC_EMAIL_REPLYALLL"REPLYALL"
 
-___
+---
 
 ### Common name: View, Open, Read
 
@@ -319,7 +319,7 @@ ___
 
 - IPC_GENERIC_READL"VIEW"
 
-___
+---
 
 ### Common name: View Rights
 
@@ -347,7 +347,7 @@ ___
 
 - IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
 
-___
+---
 
 ### Common name: View Rights
 
@@ -379,7 +379,7 @@ ___
 
 - Ignored by some applications.
 
-___
+---
 
 ### Common name: Change Rights
 
@@ -407,7 +407,7 @@ ___
 
 - IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
 
-___
+---
 
 ### Common name: Allow Macros
 
@@ -435,7 +435,7 @@ ___
 
 - Not applicable
 
-___
+---
 
 
 |Common name|Encoding in policy|Description|Implementation in Office custom rights|Name in the Azure  classic portal|Name in AD RMS templates|API constant or value|Additional information|
