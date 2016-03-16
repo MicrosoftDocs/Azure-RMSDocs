@@ -349,82 +349,106 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
 
-**For Exchange 2013:**
+For Exchange 2013 - registry edit 1:
 
-Registry edit 1 for Exchange 2013:
 
 **Registry path:**
+
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Type:**
+
 Reg_SZ
 
 **Value:**
+
 https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
 
 **Data:**
+
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-	- http://<connectorFQDN>/_wmcs/licensing
-	- https://<connectorName>/_wmcs/licensing
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorName>/_wmcs/licensing
 
 
-Registry edit 2 for Exchange 2013:
+
+For Exchange 2013 - registry edit 2:
 
 **Registry path:**
+
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
 
 **Type:**
+
 Reg_SZ
 
 **Value:**
+
 https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
 
 
 **Data:**
+
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-	- http://<connectorFQDN>/_wmcs/licensing
-	- https://<connectorFQDN>/_wmcs/licensing
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorFQDN>/_wmcs/licensing
 
 
 
-**For Exchange 2010:**
+For Exchange 2010 - registry edit 1:
 
-Registry edit 1 for Exchange 2010:
+
 
 **Registry path:**
+
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Type:**
+
 Reg_SZ
 
 **Value:**
+
 https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
 
 **Data:**
+
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-	- http://<connectorFQDN>/_wmcs/licensing
-	- https://<connectorName>/_wmcs/licensing
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorName>/_wmcs/licensing
 
 
-Registry edit 2 for Exchange 2010:
+For Exchange 2010 - registry edit 2:
+
 
 **Registry path:**
+
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
  
 
-
 **Type:**
+
 Reg_SZ
 
 **Value:**
+
 https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
 
 
 **Data:**
+
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-	- http://<connectorFQDN>/_wmcs/licensing
-	- https://<connectorFQDN>/_wmcs/licensing
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorFQDN>/_wmcs/licensing
 
 
 
