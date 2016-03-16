@@ -46,5 +46,5 @@ Jump to:
 [Step 2](rms-quickstart-step2.md)
 [Step 3](rms-quickstart-step3.md)
 [Step 4](rms-quickstart-step4.md)
-[Step 5]()
+*Step 5*
 [Full Article](rms-quickstart.md)
