@@ -40,6 +40,6 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/rights-management/get-started"
+  "basepath": "/rights-management"
 
 }
