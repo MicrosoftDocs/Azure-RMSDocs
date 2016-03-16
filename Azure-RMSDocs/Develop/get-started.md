@@ -1,4 +1,4 @@
-# Get started #
+﻿# Get started #
 
 For this release of the Microsoft Rights Management SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms. Begin creating your rights enabled application by:
 
@@ -13,7 +13,7 @@ For this release of the Microsoft Rights Management SDK 4.2, your quick start a
 |[Windows Phone](http://go.microsoft.com/fwlink/p/?LinkId=524758)|
 |[Windows Store Applications](http://go.microsoft.com/fwlink/p/?LinkID=526163)|
 
- 2. **Proceed to the setup guide** for your operating system.
+2. **Proceed to the setup guide** for your operating system.
 
 The setup guides walk you through configuring up your development environment for creating your own based apps.
 - [Android setup](android_sdk.md)
