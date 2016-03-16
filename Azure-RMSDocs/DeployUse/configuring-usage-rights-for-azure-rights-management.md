@@ -78,7 +78,8 @@ ___
 **Additional information:**
 
 - In Office applications, this right also allows the user to modify the document.
-______
+
+___
 
 ### Common name: Comment
 
@@ -110,7 +111,7 @@ ______
 
 - This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.
 
-__________
+___
 
 ### Common name: Save As, Export
 
@@ -142,7 +143,7 @@ __________
 
 - This right also allows the user to perform other export options in applications, such as **Send to OneNote**.
 
-_________
+___
 
 ### Common name: Forward
 
@@ -174,7 +175,7 @@ _________
 
 - Does not allow the forwarder to grant rights to other users as part of the forward action.
 
-_____________________
+___
 
 ### Common name: Full Control
 
@@ -206,7 +207,7 @@ _____________________
 
 - Includes the ability to remove protection.
 
-_____________________
+___
 
 ### Common name: Print
 
@@ -234,7 +235,7 @@ _____________________
 
 - IPC_GENERIC_PRINTL"PRINT
 
-_____________________
+___
 
 ### Common name: Reply
 
@@ -262,7 +263,7 @@ _____________________
 
 - IPC_EMAIL_REPLY
 
-_____________________
+___
 
 ### Common name: Reply All
 
@@ -290,7 +291,7 @@ _____________________
 
 - IPC_EMAIL_REPLYALLL"REPLYALL"
 
-_____________________
+___
 
 ### Common name: View, Open, Read
 
@@ -318,7 +319,7 @@ _____________________
 
 - IPC_GENERIC_READL"VIEW"
 
-_____________________
+___
 
 ### Common name: View Rights
 
@@ -346,7 +347,7 @@ _____________________
 
 - IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
 
-_____
+___
 
 ### Common name: View Rights
 
@@ -378,7 +379,7 @@ _____
 
 - Ignored by some applications.
 
-_____
+___
 
 ### Common name: Change Rights
 
@@ -406,7 +407,7 @@ _____
 
 - IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
 
-_____
+___
 
 ### Common name: Allow Macros
 
@@ -434,7 +435,7 @@ _____
 
 - Not applicable
 
-_____
+___
 
 
 |Common name|Encoding in policy|Description|Implementation in Office custom rights|Name in the Azure  classic portal|Name in AD RMS templates|API constant or value|Additional information|
