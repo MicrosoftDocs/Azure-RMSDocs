@@ -31,7 +31,7 @@ Limitations:
 
 -   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](http://technet.microsoft.com/library/dn440580.aspx). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](#BKMK_Step6Migration) in these instructions.
 
--   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.
+-   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) article.
 
 -   If you import your on-premises key to Azure RMS as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
 
@@ -349,18 +349,84 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
 
-    **For Exchange 2013:**
+**For Exchange 2013:**
 
-    |Registry path|Type|Value|Data|
-    |-----------------|--------|---------|--------|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Intranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorFQDN&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Extranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorFQDN&gt;/_wmcs/licensing<br /><br />https://&lt;connectorFQDN&gt;/_wmcs/licensing|
-    **For Exchange Server 2010:**
+Registry edit 1 for Exchange 2013:
 
-    |Registry path|Type|Value|Data|
-    |-----------------|--------|---------|--------|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Intranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorName&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Extranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorName&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
+**Registry path:**
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+**Type:**
+Reg_SZ
+
+**Value:**
+https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+
+**Data:**
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+	- http://<connectorFQDN>/_wmcs/licensing
+	- https://<connectorName>/_wmcs/licensing
+
+
+Registry edit 2 for Exchange 2013:
+
+**Registry path:**
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
+
+
+**Type:**
+Reg_SZ
+
+**Value:**
+https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+
+
+**Data:**
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+	- http://<connectorFQDN>/_wmcs/licensing
+	- https://<connectorFQDN>/_wmcs/licensing
+
+
+
+**For Exchange 2010:**
+
+Registry edit 1 for Exchange 2010:
+
+**Registry path:**
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Type:**
+Reg_SZ
+
+**Value:**
+https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+
+**Data:**
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+	- http://<connectorFQDN>/_wmcs/licensing
+	- https://<connectorName>/_wmcs/licensing
+
+
+Registry edit 2 for Exchange 2010:
+
+**Registry path:**
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+ 
+
+
+**Type:**
+Reg_SZ
+
+**Value:**
+https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+
+
+**Data:**
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+	- http://<connectorFQDN>/_wmcs/licensing
+	- https://<connectorFQDN>/_wmcs/licensing
+
+
 
 After you have completed these procedures, be sure to read the **Next steps** section in the [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md) topic.
 

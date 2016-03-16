@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure RMS Quick start tutorial - Step 1 | Azure RMS
-description:
+description: The first step of a tutorial to quickly try out Microsoft Azure Rights Management for your organization with just 5 steps that should take you less than 15 minutes.
 keywords:
 author: Cabailey
 manager: mbaldwin
@@ -10,14 +10,14 @@ ms.date: 04/07/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.assetid: 
+ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 
 # optional metadata
 
 ROBOTS: 
 audience:
 ms.devlang:
-ms.reviewer:
+ms.reviewer: gagang
 ms.suite: ems
 ms.tgt_pltfrm:
 ms.technology:
@@ -42,4 +42,4 @@ Jump to:
 
 >[!div class="step-by-step"]
 [« Intro](rms-quickstart-intro.md)
-[Step 2 »](rms-quickstart-step1.md)
+[Step 2 »](rms-quickstart-step2.md)
