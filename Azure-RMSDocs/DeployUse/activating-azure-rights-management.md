@@ -29,8 +29,6 @@ Use one of the following procedures to activate [!INCLUDE[aad_rightsmanagement_2
 
 #### To activate Rights Management from the Office 365 admin center
 
-Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
-
 1.  After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.
 
 2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
@@ -56,6 +54,8 @@ Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-
 You should now see **Rights management is activated** and the option to deactivate.
 
 #### To activate Rights Management from the Azure classic portal
+
+Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
 
 1.  After you have signed up for your Azure account, [sign in to the Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081).
 
@@ -105,9 +105,13 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office clients the default templates that are automatically published when Azure RMS is activated, or custom templates that you might configure.  Server-side applications, such as Exchange, can implement their own per-user controls for RMS-integration to achieve the same result.
 
 ## Next steps
-Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. For example, you might want to use [custom templates](http://technet.microsoft.com/library/dn642472.aspx) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [RMS connector](http://technet.microsoft.com/library/dn375964.aspx), and deploy the [Rights Management sharing application](http://technet.microsoft.com/library/jj585031.aspx) that supports protecting all file types on all devices. Office services,  such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. However, if there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
+Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
+
+For example, you might want to use [custom templates](http://technet.microsoft.com/library/dn642472.aspx) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [RMS connector](http://technet.microsoft.com/library/dn375964.aspx), and deploy the [Rights Management sharing application](http://technet.microsoft.com/library/jj585031.aspx) that supports protecting all file types on all devices. 
+
+Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. 
+
+However, if there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
 
 For information about how your applications work with [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
-## See Also
-[Configuring Azure Rights Management](configuring-azure-rights-management.md)
