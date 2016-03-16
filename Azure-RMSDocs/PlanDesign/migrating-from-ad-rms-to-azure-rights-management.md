@@ -31,7 +31,7 @@ Limitations:
 
 -   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](http://technet.microsoft.com/library/dn440580.aspx). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](#BKMK_Step6Migration) in these instructions.
 
--   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.
+-   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) article.
 
 -   If you import your on-premises key to Azure RMS as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
 
@@ -105,181 +105,33 @@ Your current AD RMS deployment will be using one of the following configuration
 > [!NOTE]
 > For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](http://technet.microsoft.com/library/jj651024.aspx).
 
-The two Azure RMS tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**). When you manage your own Azure RMS tenant key, it’s sometimes referred to as “bring your own key” (BYOK) and requires a hardware security module (HSM) from Thales. For more information, see the [Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ChooseTenantKey) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic.
+The two Azure RMS tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**). When you manage your own Azure RMS tenant key, it’s sometimes referred to as “bring your own key” (BYOK) and requires a hardware security module (HSM) from Thales. For more information, see the [Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ChooseTenantKey) section in the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) article.
 
 > [!IMPORTANT]
-> Exchange Online is not currently  compatible with Azure RMS BYOK.  If you want to use BYOK after your migration and plan to use Exchange Online, make sure that you understand how this configuration reduces IRM functionality for Exchange Online. Review  the information in the [BYOK pricing and restrictions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_Pricing) section in the  [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic to help you choose the best Azure RMS tenant key topology for your migration.
+> Exchange Online is not currently  compatible with Azure RMS BYOK.  If you want to use BYOK after your migration and plan to use Exchange Online, make sure that you understand how this configuration reduces IRM functionality for Exchange Online. Review  the information in [BYOK pricing and restrictions](byok-pricing-and-restrictions.md) to help you choose the best Azure RMS tenant key topology for your migration.
 
 Use the following table to identify which procedure to use for your migration. Combinations that are not listed are not supported.
 
 |Current AD RMS deployment|Chosen Azure RMS tenant key topology|Migration instructions|
 |-----------------------------|----------------------------------------|--------------------------|
-|Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key migration** procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure RMS.|
-|HSM protection by using a Thales nShield hardware security module (HSM)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key migration** procedure after this table.<br /><br />This requires the BYOK toolset and two set of steps to transfer the key from your on-premises HSM to the Azure RMS HSMs and then transfer your configuration data to Azure RMS.|
-|Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key migration** procedure after this table.<br /><br />This requires the BYOK toolset and three sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure RMS HSMs, and finally transfer your configuration data to Azure RMS.|
-|HSM protection by using a hardware security module (HSM) from a supplier other than Thales|Customer-managed (BYOK)|Contact the supplier for you HSM for instructions how to transfer your key from this HSM to a Thales nShield Hardware Security Module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key migration** procedure after this table.|
-|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for you cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key migration** procedure after this table.|
+|Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key ** migration procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure RMS.|
+|HSM protection by using a Thales nShield hardware security module (HSM)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key ** migration procedure after this table.<br /><br />This requires the BYOK toolset and two set of steps to transfer the key from your on-premises HSM to the Azure RMS HSMs and then transfer your configuration data to Azure RMS.|
+|Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the BYOK toolset and three sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure RMS HSMs, and finally transfer your configuration data to Azure RMS.|
+|HSM protection by using a hardware security module (HSM) from a supplier other than Thales|Customer-managed (BYOK)|Contact the supplier for you HSM for instructions how to transfer your key from this HSM to a Thales nShield Hardware Security Module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key ** migration procedure after this table.|
+|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for you cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 Before you start these procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the Internet-connected workstation.
 
 > [!NOTE]
 > However you store these files, use security best practices to protect them because this data includes your private key.
 
-##### Software-protected key to software-protected key migration
-Use this procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by Microsoft.
 
-###### To import the configuration data to Azure RMS
+To complete Step 2, follow the instructions for your migration path: 
 
-1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure RMS (minimum version 2.1.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet.
+> [!div class="op_single_selector"]
+- [Software key to software key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-softwarekey.md)
+- [HSM key to HSM key](migrating-from-ad-rms-to-azure-rights-management-hsmkey-to-hsmkey.md)
+- [Software key to HSM key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-hsmkey.md)
 
-    > [!TIP]
-    > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm -ListAvailable).Version`
-
-    For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
-
-2.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure RMS service:
-
-    ```
-    Connect-AadrmService
-    ```
-    When prompted, enter your [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
-
-3.  Use the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use in Azure RMS to protect content after the migration. Use the following command:
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -Active $True -Verbose
-    ```
-    For example: **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword -Active $true -Verbose**
-
-    When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
-
-4.  When the command completes, repeat step 3 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
-
-5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
-
-    ```
-    Disconnect-AadrmService
-    ```
-
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step3Migration).
-
-##### HSM-protected key to HSM-protected key migration
-
-> [!NOTE]
-> These instructions assume your AD RMS key is module-protected. This is the common case. If your AD RMS key is OCS-protected, please contact [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) before you do these instructions.
-
-It’s a two-part procedure to import your HSM key and AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK).
-
-You must first package your HSM key so it's ready to transfer to Azure RMS, and then import it with the configuration data.
-
-###### Part 1: Package your HSM key so it's ready to transfer to Azure RMS
-
-1.  Follow the steps in the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
-
-    -   Do not follow the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. You must identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key_(keyAppName)_(keyIdentifier)** locally on the server.
-
-    -   Do not follow the steps for **Transfer your tenant key to Azure RMS**, which uses the  Add-AadrmKey command.  Instead, you will transfer your prepared HSM key when you upload your exported trusted publishing domain, by using the Import-AadrmTpd command.
-
-2.  On the Internet-connected workstation, in Windows PowerShell session, reconnect to the Azure RMS service.
-
-Now that you’ve prepared your HSM key for Azure RMS, you’re ready to import your HSM key file and AD RMS configuration data.
-
-###### Part 2: Import the HSM key and configuration data to Azure RMS
-
-1.  Still on the Internet-connect workstation and in the Windows PowerShell session, upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. Use the following command:
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -HsmKeyFile <PathToBYOKPackage> -Active $True -Verbose
-    ```
-    For example: **Import -TpdFile E:\no_key_tpd_contosokey1.xml  -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $true -Verbose**
-
-    When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
-
-2.  When the command completes, repeat step 1 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command.  For example: **Import -TpdFile E:\contosokey2.xml -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $false -Verbose**
-
-3.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
-
-    ```
-    Disconnect-AadrmService
-    ```
-
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step3Migration).
-
-##### Software-protected key to HSM-protected key migration
-It’s a three-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK).
-
-You must first extract your server licensor certificate (SLC) key from the configuration data and transfer the key to an on-premises Thales HSM, then package and transfer your HSM key to Azure RMS, and then import the configuration data.
-
-###### Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
-
-1.  Use the following steps in the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic:
-
-    -   **Generate and transfer your tenant key – over the Internet**: **Prepare your Internet-connected workstation**
-
-    -   **Generate and transfer your tenant key – over the Internet**: **Prepare your disconnected workstation**
-
-    Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a command to extract this key from the file and import it to your on-premises HSM.
-
-2.  On the disconnected workstation, run the following command:
-
-    ```
-    KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath <TPD> -ProtectionPassword -KeyIdentifier <KeyID> -ExchangeKeyPackage <BYOK-KEK-pka-Region> -NewSecurityWorldPackage <BYOK-SecurityWorld-pkg-Region>
-    ```
-    For example, for North America: **KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath E:\contosokey1.xml -ProtectionPassword -KeyIdentifier contosorms1key –- -ExchangeKeyPackage &lt;BYOK-KEK-pka-NA-1&gt; -NewSecurityWorldPackage &lt;BYOK-SecurityWorld-pkg-NA-1&gt;**
-
-    Additional information:
-
-    -   The ImportRmsCentrallyManagedKey parameter indicates that the operation is to import the SLC key.
-
-    -   If you don’t specify the password in the command, you will be prompted to specify it.
-
-    -   The KeyIdentifier parameter is for a key friendly name that creates the key file name. You must use only lower-case ASCII characters.
-
-    -   The ExchangeKeyPackage parameter specifies a region-specific key exchange key (KEK) package that has a name beginning with BYOK-KEK-pkg-.
-
-    -   The NewSecurityWorldPackage parameter specifies a region-specific security world package that has a name beginning with BYOK-SecurityWorld-pkg-.
-
-    This command results in the following:
-
-    -   An HSM key file: %NFAST_KMDATA%\local\key_mscapi_&lt;KeyID&gt;
-
-    -   RMS configuration data file with the SLC removed: %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml
-
-3.  If you have more than one RMS configuration data files, repeat step 2 for the remainder of these files.
-
-Now that your SLC has been extracted so that it’s an HSM-based key, you’re ready to package and transfer it to Azure RMS.
-
-###### Part 2: Package and transfer your HSM key to Azure RMS
-
-1.  Use the following steps from the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md):
-
-    -   **Generate and transfer your tenant key – over the Internet**: **Prepare your tenant key for transfer**
-
-    -   **Generate and transfer your tenant key – over the Internet**: **Transfer your tenant key to Azure RMS**
-
-Now that you’ve transferred your HSM key to Azure RMS, you’re ready to import your AD RMS configuration data, which contains only a pointer to the newly transferred tenant key.
-
-###### Part 3: Import the configuration data to Azure RMS
-
-1.  Still on the Internet-connected workstation and in the Windows PowerShell session, copy over the RMS configuration files with the SLC removed (from the disconnected workstation, %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml)
-
-2.  Upload the first file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. Use the following command:
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToNoKeyTpdPackageFile> -ProtectionPassword -HsmKeyFile <PathToKeyTransferPackage> -Active $true -Verbose
-    ```
-    For example: **Import -TpdFile E:\no_key_tpd_contosorms1key.xml -ProtectionPassword -HsmKeyFile E:\KeyTransferPackage-contosorms1key.byok -Active $true -Verbose**
-
-    When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
-
-3.  When the command completes, repeat step 2 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import -TpdFile E:\no_key_tpd_contosorms2key.xml -ProtectionPassword -HsmKeyFile E:\KeyTransferPackage-contosorms1key.byok -Active $false -Verbose**
-
-4.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
-
-    ```
-    Disconnect-AadrmService
-    ```
-
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step3Migration).
 
 ### <a name="BKMK_Step3Migration"></a>Step 3. Activate your RMS tenant
 Instructions  for this step are fully covered in the [Activating Azure Rights Management](activating-azure-rights-management.md) topic.
@@ -296,7 +148,7 @@ Because the templates that you imported have a default state of **Archived**, yo
 
 In addition, if your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure RMS; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure RMS is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
-If  you're not sure whether your AD RMS templates include the ANYONE group, expand the  [Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group](#BKMK_ScriptForANYONE) section in this step to copy and use the sample PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+If  you're not sure whether your AD RMS templates include the ANYONE group, you can use the [Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group](#BKMK_ScriptForANYONE) at the end of this step to copy and use the sample PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
 You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
 
@@ -379,39 +231,39 @@ CleanUpRMS_RUN_Elevated.cmd:
 
 -   Delete the contents of the following registry keys:
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+    -   `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM`
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+    -   `HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM`
 
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+    -   `HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM`
 
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+    -   `HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM`
 
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation
+    -   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`
 
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\WoW6432Node\Microsoft\MSIPC\ServiceLocation
+    -   `HKEY_LOCAL_MACHINE\SOFTWARE\WoW6432Node\Microsoft\MSIPC\ServiceLocation`
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
+    -   `HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation`
 
 -   Delete the following registry values:
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
+    -   `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL`
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServer
+    -   `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServer`
 
 Redirect_OnPrem.cmd:
 
 -   Create the following registry values for each URL supplied as a parameter under each of the following locations:
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+    -   `HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection`
 
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+    -   `HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection`
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+    -   `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection`
 
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
+    -   `HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection`
 
-    -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
+    -   `HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection`
 
     Each entry has a REG_SZ value of **https://OldRMSserverURL/_wmcs/licensing** with the data in the following format: **https://&lt;YourTenantURL&gt;/_wmcs/licensing**.
 
@@ -497,18 +349,108 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
 
-    **For Exchange 2013:**
+For Exchange 2013 - registry edit 1:
 
-    |Registry path|Type|Value|Data|
-    |-----------------|--------|---------|--------|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Intranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorFQDN&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Extranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorFQDN&gt;/_wmcs/licensing<br /><br />https://&lt;connectorFQDN&gt;/_wmcs/licensing|
-    **For Exchange Server 2010:**
 
-    |Registry path|Type|Value|Data|
-    |-----------------|--------|---------|--------|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Intranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorName&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
-    |HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://&lt;AD RMS Extranet Licensing URL&gt;/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://&lt;connectorName&gt;/_wmcs/licensing<br /><br />https://&lt;connectorName&gt;/_wmcs/licensing|
+**Registry path:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+**Type:**
+
+Reg_SZ
+
+**Value:**
+
+https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+
+**Data:**
+
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorName>/_wmcs/licensing
+
+
+
+For Exchange 2013 - registry edit 2:
+
+**Registry path:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
+
+
+**Type:**
+
+Reg_SZ
+
+**Value:**
+
+https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+
+
+**Data:**
+
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorFQDN>/_wmcs/licensing
+
+
+
+For Exchange 2010 - registry edit 1:
+
+
+
+**Registry path:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Type:**
+
+Reg_SZ
+
+**Value:**
+
+https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+
+**Data:**
+
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorName>/_wmcs/licensing
+
+
+For Exchange 2010 - registry edit 2:
+
+
+**Registry path:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+ 
+
+**Type:**
+
+Reg_SZ
+
+**Value:**
+
+https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+
+
+**Data:**
+
+One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
+
+- http://<connectorFQDN>/_wmcs/licensing
+
+- https://<connectorFQDN>/_wmcs/licensing
+
+
 
 After you have completed these procedures, be sure to read the **Next steps** section in the [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md) topic.
 
