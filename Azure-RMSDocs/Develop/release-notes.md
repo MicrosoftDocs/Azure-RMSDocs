@@ -149,30 +149,10 @@ This section outlines information about the current and previous releases of the
 
 -   **Solution** - To create a multiple document interface (MDI) application using our OS X SDK, use the following guidance.
 
-    The methods listed in the following table must not be run concurrently. In order to monitor for execution completion; use the approach noted.
+    The following methods must not be run concurrently. In order to monitor for execution completion; use the completion block approach as noted.
 
-    <table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th align="left">Method</th>
-    <th align="left">Execution completion</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td align="left">[<strong>protectedDataWithProtectedFile</strong>](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)</td>
-    <td align="left"><p>completion block</p></td>
-    </tr>
-    <tr class="even">
-    <td align="left">[<strong>customProtectedDataWithPolicy</strong>](xref:msipcthin2.mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)</td>
-    <td align="left"><p>completion block</p></td>
-    </tr>
-    </tbody>
-    </table>
+    - [**protectedDataWithProtectedFile**](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
+    - [**customProtectedDataWithPolicy**](xref:msipcthin2.mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
 
 
 
@@ -227,6 +207,3 @@ This section outlines information about the current and previous releases of the
  
 
  
-
-
-

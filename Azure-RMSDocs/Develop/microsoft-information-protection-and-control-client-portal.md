@@ -20,56 +20,17 @@ Run-time requirements
 
 For information about the run-time requirements for a particular programming element, see the Requirements section of the reference topic for that element.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Topic</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Overview](ad_rms_overview.md)</p></td>
-<td align="left"><p>Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[How this SDK is better](differences_between_ad_rms_and_ad_rms_2_0.md)</p></td>
-<td align="left"><p>RMS SDK 2.1 is a significant improvement over the original Rights Management Services SDK.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Getting started](getting_started_with_ad_rms_2_0.md)</p></td>
-<td align="left"><p>The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Release notes](release_notes__rtm_.md)</p></td>
-<td align="left"><p>This topic contains important information about this and previous releases of the RMS SDK 2.1.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Code samples](samples.md)</p></td>
-<td align="left"><p>This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[How-to use](how_to_use_msipc.md)</p></td>
-<td align="left"><p>Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[Developer notes](developer_notes.md)</p></td>
-<td align="left"><p>This section covers specific guidance for several important development scenarios.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Developer concepts](ad_rms_concepts-nav.md)</p></td>
-<td align="left"><p>The topics in this section cover key concepts in RMS.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>[API reference](xref:msipc.msipc_constants)</p></td>
-<td align="left"><p>This section contains topics covering reference material for all of the API elements.</p></td>
-</tr>
-</tbody>
-</table>
+|Topic|Description|
+|-----|--------|
+|[Overview](ad_rms_overview.md)|Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.|
+|[How this SDK is better](differences_between_ad_rms_and_ad_rms_2_0.md)|RMS SDK 2.1 is a significant improvement over the original Rights Management Services SDK.|
+|[Getting started](getting_started_with_ad_rms_2_0.md)|The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.|
+|[Release notes](release_notes__rtm_.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
+|[Code samples](samples.md)|This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.|
+|[How-to use](how_to_use_msipc.md)|Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.|
+|[Developer notes](developer_notes.md)|This section covers specific guidance for several important development scenarios.|
+|[Developer concepts](ad_rms_concepts-nav.md)|The topics in this section cover key concepts in RMS.|
+|[API reference](xref:msipc.msipc_constants)|This section contains topics covering reference material for all of the API elements.|
 
  
 
@@ -82,6 +43,3 @@ For information about the run-time requirements for a particular programming ele
  
 
  
-
-
-
