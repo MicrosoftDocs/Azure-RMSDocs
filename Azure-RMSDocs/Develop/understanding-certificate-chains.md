@@ -12,32 +12,9 @@ You must switch to a production chain before releasing your application. Content
 
 The public and private keys and the pre-production certificate are included with the SDK in the following files located in the `%MsipcSDKDir%\Bin` folder.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">File Name</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>ISVTier5AppSigningPrivKey.dat</p></td>
-<td align="left"><p>Contains the private key used to sign a manifest for use during application development.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>ISVTier5AppSigningPubKey.dat</p></td>
-<td align="left"><p>Contains the public key signed into the pre-production certificate hierarchy.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>ISVTier5AppSignSDK_Client.xml</p></td>
-<td align="left"><p>Contains the pre-production certificate used to generate a manifest for use during application development.</p></td>
-</tr>
-</tbody>
-</table>
+- **ISVTier5AppSigningPrivKey.dat** contains the private key used to sign a manifest for use during application development.
+- **ISVTier5AppSigningPubKey.dat** contains the public key signed into the pre-production certificate hierarchy.
+- **ISVTier5AppSignSDK_Client.xml** contains the pre-production certificate used to generate a manifest for use during application development.
 
  
 
@@ -55,6 +32,3 @@ For more information on working with certificate chains and application signing,
  
 
  
-
-
-
