@@ -32,7 +32,7 @@ You are responsible for backing up your tenant key. If you generated your tenant
 
 If you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section from the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic, Azure RMS will persist the Tokenized Key File, to protect against failure of any Azure RMS nodes. However, do not consider this to be a full backup. For example, if you ever need a plaintext copy of your key to use outside a Thales HSM, Azure RMS will not be able to retrieve it for you because it only has a non-recoverable copy.
 
-## Export"></a>Export your tenant key
+## Export your tenant key
 If you use BYOK, you cannot export your tenant key from Azure RMS. The copy in Azure RMS is non-recoverable. If you want to delete this key so it can no longer be used, contact Microsoft Customer Service Support (CSS).
 
 ## Respond to a breach
