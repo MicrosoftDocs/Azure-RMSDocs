@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 author: Cabailey
 ---
 # How users sign up for RMS for individuals

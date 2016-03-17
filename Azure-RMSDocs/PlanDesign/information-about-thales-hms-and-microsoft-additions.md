@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 author: Cabailey
 ---
 # More information about Thales HSMs and Microsoft additions
