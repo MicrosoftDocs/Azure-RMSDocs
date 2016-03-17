@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
 author: Cabailey
 ---
 # Generate and transfer your tenant key – in person

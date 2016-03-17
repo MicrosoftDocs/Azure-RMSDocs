@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 author: Cabailey
 ---
 # BYOK pricing and restrictions

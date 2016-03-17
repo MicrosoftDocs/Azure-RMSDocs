@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: EMS
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 author: Cabailey
 ---
 # Azure RMS Requirements: Azure AD Directory
