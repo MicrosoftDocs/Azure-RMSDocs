@@ -34,16 +34,24 @@ author: msmbaldwin
 - list
 
 1. This
-1. is
+2. is
+3. a
+4. numbered
+5. list
+
+
+1. Lists
+1. embedded
   1. embedded
   2. numbered
   3. list
-1. a
-1. numbered
+1. into
+1. other
   - embedded
   - bulleted
   - list
 1. list
+
 
 ## Horizontal rule
 ---
@@ -55,6 +63,17 @@ author: msmbaldwin
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+## Code
+
+### Codeblock
+
+    This is an example of
+    a code block
+
+### In-line code
+
+This is an example of `in-line code`.
 
 ## Blockquote
 

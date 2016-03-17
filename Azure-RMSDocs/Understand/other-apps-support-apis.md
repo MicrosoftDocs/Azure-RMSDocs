@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 author: Cabailey
 ---
 # <a name="BKMK_APIAppsIntro"></a>Other applications that support the RMS APIs

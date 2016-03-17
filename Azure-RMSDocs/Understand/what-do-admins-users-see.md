@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: EMS
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 author: Cabailey
 ---
 
