@@ -10,8 +10,9 @@ Of the many web services installed, the following are important for application 
 
 **Administration** - Hosts the Administration website that enables you to manage RMS. The service runs on root certification servers and on licensing servers. You can use the [Active Directory Rights Management Services Scripting API](https://msdn.microsoft.com/library/Bb968797) to write administration scripts.
 
-**Account Certification** - Creates machine certificates that identify computers in the RMS certificate hierarchy and rights account certificates that associate users with specific computers. For more information, see [Activating a User](https://msdn.microsoft.com/library/Cc530378).</p>
-<p>This service runs on the root certification server.
+**Account Certification** - Creates machine certificates that identify computers in the RMS certificate hierarchy and rights account certificates that associate users with specific computers. For more information, see [Activating a User](https://msdn.microsoft.com/library/Cc530378).
+
+This service runs on the root certification server.
 
 **Licensing** - Issues an [end-user license](rm.e_gly#_rm_end_user_license_gly). The service runs on root certification servers and on licensing servers.
 

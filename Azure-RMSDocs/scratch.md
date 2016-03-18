@@ -9,7 +9,11 @@ ms.topic: article
 ms.assetid: TBD
 author: msmbaldwin
 ---
+
 # First level heading
+
+See the markdown for this file at https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md
+
 ## second level heading
 ### Third level heading
 #### Fourth level heading
@@ -22,7 +26,6 @@ author: msmbaldwin
 
 # Links
 [regular link](/azure-rms/index.html) 
-
 
 
 ## Lists
@@ -80,8 +83,6 @@ This is an example of `in-line code`.
 > Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 
 
-
-
 ## Images
 
 ### Static Image
@@ -93,6 +94,16 @@ This is an example of `in-line code`.
 
 ### Animated gif
 ![animated gif](./media/hololens.gif)
+
+## Alerts
+
+> [AZURE.NOTE] This is a note.
+
+> [AZURE.WARNING] This is a Warning.
+
+> [AZURE.TIP] This is a tip.
+
+> [AZURE.IMPORTANT] This is important.
 
 ## Videos
 
