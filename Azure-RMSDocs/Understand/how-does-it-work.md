@@ -10,7 +10,7 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 author: Cabailey
 ---
 
-# <a name="BKMK_HowRMSworks"></a>How does Azure RMS work? Under the hood
+# How does Azure RMS work? Under the hood
 One important thing to understand about how Azure RMS works is that the Rights Management service (and Microsoft) do not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
 -   The data is encrypted at the application level and includes a policy that defines the authorized use for that document.
@@ -27,7 +27,7 @@ For a detailed description of what’s happening, see the [Walkthrough of how Az
 
 For technical details about the algorithms and key lengths that Azure RMS uses, see the next section.
 
-## <a name="BKMK_RMScrytographics"></a>Cryptographic controls used by Azure RMS: Algorithms and key lengths
+## Cryptographic controls used by Azure RMS: Algorithms and key lengths
 Even if you don't need to know yourself how RMS works, you might be asked about the cryptographic controls that it uses, to make sure that the security protection is industry-standard.
 
 
@@ -52,7 +52,7 @@ How the cryptographic keys are stored and secured:
 
 
 
-## <a name="BKMK_Walthrough"></a>Walkthrough of how Azure RMS works: First use, content protection, content consumption
+## Walkthrough of how Azure RMS works: First use, content protection, content consumption
 To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](activating-azure-rights-management.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.

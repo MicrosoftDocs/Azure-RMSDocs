@@ -22,7 +22,7 @@ When the [Rights Management (RMS) sharing application is installed on your compu
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
 > -   For more information, see [RMS for Individuals and Windows Azure Rights Management](http://technet.microsoft.com/library/dn592127.aspx).
 
-## <a name="BKMK_ViewPFILE"></a>To view a protected file
+## To view a protected file
 By using File Explorer or the email message that contains the attachment, double-click the protected file, and enter your credentials if prompted to do so.
 
 If you see two versions of the file but with different file name extensions, open the file that has a .ppdf file extension only if the other file does not open. If you cannot open the .ppdf version either, first install the [RMS sharing application](http://technet.microsoft.com/library/dn574734.aspx), which knows how to open files that have a .ppdf file name extension.
@@ -42,7 +42,7 @@ For a complete list of file name extensions that Rights Management supports, see
 > [!NOTE]
 > If, after confirming that the file is protected by Rights Management, and the file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
 
-## <a name="BKMK_UserDefined"></a>To use files that have been protected (for example, edit and print the file)
+## To use files that have been protected (for example, edit and print the file)
 If, after opening the protected file,  you want to do more than just read it (for example, edit, copy, and print it):
 
 |File name extension|Instructions|

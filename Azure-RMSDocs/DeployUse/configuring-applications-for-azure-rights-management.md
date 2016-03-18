@@ -43,12 +43,12 @@ To configure on-premises servers such as Exchange Server and SharePoint Server, 
 > [!TIP]
 > For high-level examples and screenshots of applications configured to use Azure RMS, see the [Azure RMS in action: What administrators and users see](what-is-azure-rights-management.md#BKMK_RMSpictures) section from the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
-## <a name="BKMK_O365"></a>Office 365: Configuration for clients and online services
+## Office 365: Configuration for clients and online services
 Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
 
 However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
-### <a name="BKMK_ExchangeOnline"></a>Exchange Online: IRM Configuration
+### Exchange Online: IRM Configuration
 To configure Exchange Online to support Azure RMS, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
@@ -155,7 +155,7 @@ Then, you're ready to configure [transport rules](https://technet.microsoft.com/
 
 For more information about message encryption, see [Encryption in Office 365](https://technet.microsoft.com/library/dn569286.aspx) in the Exchange library.
 
-### <a name="BKMK_SharePointOnline"></a>SharePoint Online and OneDrive for Business: IRM Configuration
+### SharePoint Online and OneDrive for Business: IRM Configuration
 To configure SharePoint Online and OneDrive for Business to support Azure RMS, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by Azure RMS.
 
 To enable the  information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
@@ -171,7 +171,7 @@ After you have enabled the   IRM service for SharePoint, site owners can  IRM-pr
 
 This configuration is done by the SharePoint site administrator.
 
-#### <a name="BKMK_OneDrive"></a>Configuring IRM for OneDrive for Business
+#### Configuring IRM for OneDrive for Business
 After you have enabled the   IRM service for SharePoint Online, users' OneDrive for Business document library can then be configured for  Rights Management protection.  Users can configure this for themselves by using the **Settings** icon in their OneDrive. Although administrators cannot configure Rights Management for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
@@ -603,7 +603,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
 If you need to disable IRM for user's OneDrive for Business libraries, expand the [Script to disable IRM for OneDrive for Business](#BKMK_Script_OD4B_DisableIRM) section.
 
-###### <a name="BKMK_Script_OD4B_URLS"></a>Additional script to output all OneDrive for Business URLs to a .CSV file
+###### Additional script to output all OneDrive for Business URLs to a .CSV file
 For step 4c above, you can use the following Windows PowerShell script to extract the URLs for all users' OneDrive for Business libraries, which you can then check, edit if necessary, and then import into the main script.
 
 This script also requires the [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](http://www.microsoft.com/en-us/download/details.aspx?id=35588). Follow the same instructions to copy and paste it, save the file locally (for example, "Report-OneDriveForBusinessSiteInfo.ps1"), modify the   `$sharepointAdminCenterUrl` and `$tenantAdmin` values as before, and then run the script.
@@ -828,7 +828,7 @@ function Add-CredentialToCredentialCache
 $oneDriveForBusinessSiteUrls | Out-File -FilePath $reportName
 ```
 
-###### <a name="BKMK_Script_OD4B_DisableIRM"></a>Script to disable IRM for OneDrive for Business
+###### Script to disable IRM for OneDrive for Business
 Use the following sample script if you need to disable IRM for users' OneDrive for Business.
 
 This script also requires the [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038) and the [SharePoint Online Management Shell](http://www.microsoft.com/en-us/download/details.aspx?id=35588). Copy and paste the contents, save the file locally (for example, "Disable-IRMOnOneDriveForBusiness.ps1"), and modify the   `$sharepointAdminCenterUrl` and `$tenantAdmin` values. Manually specify the OneDrive for Business URLs or use the script in the previous section so that you can import these, and then run the script.
@@ -1124,26 +1124,26 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
-## <a name="BKMK_Office2013Configuration"></a>Office 2016 and Office 2013: Configuration for clients
+## Office 2016 and Office 2013: Configuration for clients
 Because these later versions of Office  natively support Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
 
 However, we recommend that you supplement these applications with the Rights Management sharing application, so that users get the benefit of the Office add-in. For more information, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
-## <a name="BKMK_Office2010Configuration"></a>Office 2010: Configuration for clients
+## Office 2010: Configuration for clients
 For client computers to use Azure RMS with Office 2010, they must have installed the Rights Management sharing application for Windows. No further configuration is required other than users must sign in with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can then protect files and use files that have been protected by others.
 
 For more information about the Rights Management sharing application, see the [Rights Management sharing application: Installation and configuration for clients](configuring-applications-for-azure-rights-management.md#BKMK_SharingApp) section in this topic.
 
-## <a name="BKMK_SharingApp"></a>Rights Management sharing application: Installation and configuration for clients
+## Rights Management sharing application: Installation and configuration for clients
 The Rights Management (RMS) sharing application is required for client computers to use Azure RMS with Office 2010, and recommended for all computers and mobile devices that support Azure RMS. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files and emails directly from the ribbon. It also offers generic protection for files types that are not natively supported by Azure RMS, and a document tracking site for users to track and revoke files that they have protected.
 
-### <a name="BKMK_SharingAppforWindows"></a>The RMS sharing application for Windows: Installation and configuration
+### The RMS sharing application for Windows: Installation and configuration
 To install and configure the RMS sharing application for Windows for an enterprise deployment, see the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
 
 > [!TIP]
 > If you want to quickly install and test the RMS sharing application for a single computer, see [Download and install the Rights Management sharing application](http://technet.microsoft.com/library/dn574734.aspx) from the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
 
-### <a name="BKMK_SharingAppMovileDevices"></a>The RMS sharing application for mobile platforms: Installation and management
+### The RMS sharing application for mobile platforms: Installation and management
 To install the RMS sharing application for mobile platforms, you can download the relevant app by using the links on the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required to use Azure RMS with this app.
 
 **If you have Microsoft Intune**: Because the RMS sharing app includes the Microsoft Intune App Software Development Kit, you have the following options:
@@ -1152,7 +1152,7 @@ To install the RMS sharing application for mobile platforms, you can download th
 
 -   For devices that are not enrolled by Intune, you can manage the RMS sharing app for devices that run Android. For more information, see [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx).
 
-## <a name="BKMK_RMSAPIs"></a>Other applications that support the RMS APIs: Installation and configuration
+## Other applications that support the RMS APIs: Installation and configuration
 This category includes line-of-business applications that are written in-house by using the RMS SDK, and applications from software vendors that are written by using the RMS SDK. For these applications, follow the instructions that are provided with the application.
 
 ## Next steps

@@ -43,7 +43,7 @@ Use the following sections for more information about Azure Rights Management u
 
 -   [Windows PowerShell reference](logging-and-analyzing-azure-rights-management-usage.md#BKMK_PowerShell)
 
-## <a name="BKMK_EnableRMSLogging"></a>How to enable Azure Rights Management usage logging
+## How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure RMS service before February 2016 and to customers who activate the service after February 2016. 
 
 > [!NOTE]
@@ -53,7 +53,7 @@ Starting February 2016, Azure Rights Management usage logging is enabled by def
 
 
 
-## <a name="BKMK_AccesAndUseLogs"></a>How to access and use your Azure Rights Management usage logs
+## How to access and use your Azure Rights Management usage logs
 Azure Rights Management writes logs to your Azure storage account as a series of blobs. Each blob contains one or more log records, in W3C extended log format. The blob names are numbers, in the order in which they were created. The [How to interpret your Azure Rights Management usage logs](logging-and-analyzing-azure-rights-management-usage.md#BKMK_Interpret) section later in this document contains more information about the log contents and their creation.
 
 It can take a while for logs to appear in your storage account after an Azure Rights Management action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
@@ -107,7 +107,7 @@ Note that you do not have to download logs using the Get-AadrmUsageLog cmdlet if
 
 - You activated Azure Rights Management after February 22, 2016.
 
-## <a name="BKMK_Interpret"></a>How to interpret your Azure Rights Management usage logs
+## How to interpret your Azure Rights Management usage logs
 Use the following information to help you interpret the Azure Rights Management usage logs.
 
 ### The log sequence
@@ -193,7 +193,7 @@ There are many request types for Azure Rights Management but the following table
 |SignDigest|A call is made when a key is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
 |UpdateTemplate|A call is  made from the Azure classic portal to update an existing template.|
 
-## <a name="BKMK_PowerShell"></a>Windows PowerShell reference
+## Windows PowerShell reference
 Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
 
 Before this change, the following cmdlets were needed for Azure RMS usage logs, and are now deprecated:  

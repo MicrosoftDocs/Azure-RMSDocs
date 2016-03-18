@@ -10,7 +10,7 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 author: Cabailey
 ---
 
-# <a name="BKMK_RMSrequirements"></a>What problems does Azure RMS solve?
+# What problems does Azure RMS solve?
 Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
 
 |Requirement or problem|Solved by Azure RMS|
@@ -30,7 +30,7 @@ Use the following table to identify business requirements or problems that your 
 > [!TIP]
 > If you are familiar with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS), you might be interested in the comparison table from [Comparing Azure Rights Management and AD RMS](comparing-azure-rights-management-and-ad-rms.md).
 
-## <a name="BKMK_RMScompliance"></a>Security, compliance, and regulatory requirements
+## Security, compliance, and regulatory requirements
 Azure RMS supports the following security, compliance and regulatory requirements:
 
 √ Use of industry-standard cryptography and supports FIPS 140-2. For more information, see the [Cryptographic controls used by Azure RMS: Algorithms and key lengths](how-does-it-work.md#BKMK_RMScrytographics) information.

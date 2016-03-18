@@ -13,10 +13,10 @@ author: Cabailey
 # Microsoft-managed: Tenant key lifecycle operations
 If Microsoft manages your tenant key for Azure Rights Management (the default), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 
-## <a name="BKMK_MSRevoke"></a>Revoke your tenant key
+## Revoke your tenant key
 When you unsubscribe from Azure RMS, Azure RMS stops using your tenant key and no action is needed from you.
 
-## <a name="BKMK_MSRekey"></a>Re-key your tenant key
+## >Re-key your tenant key
 Re-keying is also known as rolling your key. Do not re-key your tenant key unless it’s really necessary. Older clients, such as Office 2010, were not designed to handle key changes gracefully. In this scenario, you must clear the RMS state on computers by using Group Policy or an equivalent mechanism. However, there are some legitimate events that may force you to re-key your tenant key. For example:
 
 -   Your company has split into two or more companies. When you re-key your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
@@ -27,10 +27,10 @@ You can re-key your tenant key by calling Microsoft Customer Support Services (C
 
 When you re-key your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure RMS retains your old tenant key so that it can issue licenses for old content.
 
-## <a name="BKMK_MSBackup"></a>Backup and recover your tenant key
+## Backup and recover your tenant key
 Microsoft is responsible for backing up your tenant key and no action is required from you.
 
-## <a name="BKMK_MSExport"></a>Export your tenant key
+## Export your tenant key
 You can export your Azure RMS configuration and tenant key by following the instructions in these three steps:
 
 #### Step 1: Initiate export
@@ -69,7 +69,7 @@ You can export your Azure RMS configuration and tenant key by following the inst
 
     If the reason for exporting your tenant key is because you no longer want to use Azure RMS, as a best practice, now deactivate your RMS tenant. Do not delay doing this after you receive your tenant key because this precaution will help to minimize the consequences if your tenant key is accessed by somebody who should not have it. For instructions, see [Decommissioning and Deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
 
-## <a name="BKMK_MSBreach"></a>Respond to a breach
+## Respond to a breach
 No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s well protected well, vulnerabilities might be found in current generation HSM technology or current key lengths and algorithms.
 
 Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, then Microsoft will notify your Azure RMS tenant administrators by email by using the address that you supplied when you subscribed.

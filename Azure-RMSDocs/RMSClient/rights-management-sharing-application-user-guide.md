@@ -16,7 +16,7 @@ All you need is a computer that runs at least Windows 7 with Service Pack 1. 
 
 If you have questions that are not answered by this guide, see [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971). This page also has some troubleshooting information, if you run into problems.
 
-## <a name="BKMK_SharingExamples"></a>Examples for using the RMS sharing application
+## Examples for using the RMS sharing application
 Here are just some examples of how you might use the RMS sharing application, to help protect your files.
 
 |I want to ….|How to do this|
@@ -28,7 +28,7 @@ Here are just some examples of how you might use the RMS sharing application, to
 |**… protect company-confidential files on my laptop so they can’t be accessed by people outside my company**<br /><br />You travel a lot and use your laptop to access and update files in a folder that must be secured against unauthorized access.|You have the RMS sharing application installed on your laptop. You use File Explorer to protect the files by using a template, which quickly protects the files. If your laptop is stolen, you have peace of mind that nobody outside your company can access these documents.<br /><br />Step-by-step: [Protect a file on a device &#40;protect in-place&#41; by using the Rights Management sharing application](protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md).|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 
-## <a name="BKMK_SharingInstructions"></a>What do you want to do?
+## What do you want to do?
 > [!NOTE]
 > For more technical information, such as supported file types and how to install this application on an enterprise network, see the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
 
