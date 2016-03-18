@@ -15,12 +15,6 @@
 ### [File servers that run Windows Server and use File Classification Infrastructure (./Understand/FCI)](./Understand/how-fileservers-support-azure-rights-management.md)
 ### [Other applications that support the RMS APIs](./Understand/other-apps-support-apis.md)
 ## [Comparing Azure Rights Management and AD RMS](./Understand/comparing-azure-rights-management-and-ad-rms.md)
-# [Get started](./Understand//rights-management/GetStarted/requirements-for-azure-rights-management.html)
-# [Plan & design](./Understand//rights-management/PlanDesign/azure-rights-management-deployment-roadmap.html)
-# [Deploy & use](./Understand//rights-management/DeployUse/activating-azure-rights-management.html)
-# [Develop & customize apps](./Understand//rights-management/Develop/Developers-guide.html)
-# [Administer](./Understand//rights-management/administer/administering-azure-rights-management-with-powershell.html)
-# [Use the RMS Client](./Understand//rights-management/rms-client/rights-management-rms-client.md)
 # [Get started](./GetStarted/requirements-for-azure-rights-management.md
 ## [Requirements for Azure Rights Management](./GetStarted/requirements-for-azure-rights-management.md)
 ### [Cloud subscriptions](./GetStarted/rms-requirements-cloud-subscriptions.md)
@@ -150,4 +144,3 @@
 ##### [Use keyboard shortcuts in the Rights Management sharing application](./rms-client/use-keyboard-shortcuts-in-the-rights-management-sharing-application.md)
 ##### [Dialog box options for the Rights Management sharing application](./rms-client/dialog-box-options-for-the-rights-management-sharing-application.md)
 ### [Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications](./rms-client/privacy-statement-for-microsoft-rights-management-in-rms-enlightened-applications.md)
-
