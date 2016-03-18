@@ -26,14 +26,14 @@ This topic includes the following sections:
 
 -   [RMS Service Discovery](#BKMK_ServiceDiscovery)
 
-## <a name="BKMK_RedistributeInstaller"></a>Redistributing the RMS Client
+## Redistributing the RMS Client
 The RMS client can be freely redistributed and bundled with other applications and IT solutions. If you are an application developer or solution provider and want to redistribute the  RMS client, you have two options:
 
 -   Recommended: Embed the RMS client installer in your application installation and run it in silent mode (the **/quiet** switch, detailed in the next section).
 
 -   Make the RMS client a prerequisite for your application. With this option, you might need to provide users with additional instructions for them to obtain, install, and update their computers with the client before they can use your application.
 
-## <a name="BKMK_InstallClient"></a>Installing the RMS Client
+## Installing the RMS Client
 The RMS client is contained in an installer executable file named **setup_msipc_***&lt;arch&gt;***.exe**, where *&lt;arch&gt;* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer will not run on a 64-bit Windows installation.
 
 > [!NOTE]
@@ -49,7 +49,7 @@ You can install the  RMS client by using either of the following installation m
 
 -   **Interactive mode.** Alternately, you can install the  RMS client by using the GUI-based setup program that's provided by the  RMS Client  Installation Wizard. To do this, double-click the  RMS client installer package (**setup_msipc_***&lt;arch&gt;***.exe**) in the folder to which it was copied or downloaded on your local computer.
 
-## <a name="BKMK_QA"></a>Questions and Answers About the RMS Client
+## Questions and Answers About the RMS Client
 The following section contains frequently asked questions about the RMS client and the answers to them.
 
 ### Which operating systems support the RMS client?
@@ -87,7 +87,7 @@ No. This version of the  RMS client ships as an optional download that can be in
 ### Is the RMS client automatically updated by Microsoft Update?
 If you installed this RMS client by using the silent installation option, the RMS client  inherits your current Microsoft Update settings. If you installed the RMS client by using the GUI-based setup program, the RMS client installation wizard  prompts you to enable Microsoft Update.
 
-## <a name="BKMK_Settings"></a>RMS Client Settings
+## RMS Client Settings
 The following section contains settings information about the RMS client. This information might be helpful if you have problems with applications or services that use the RMS client.
 
 > [!NOTE]
@@ -127,7 +127,7 @@ Templates make it easy for users and administrators to quickly apply Rights Mana
 
 When you use this folder, there is no special naming convention required except that the templates should be issued by the RMS server or service and they must have the  .xml file name extension. For example, Contoso-Confidential.xml or Contoso-ReadOnly.xml are valid names.
 
-## <a name="BKMK_UsingTrustedServers"></a>AD RMS Only: Limiting the RMS Client to Use Trusted AD RMS Servers
+## AD RMS Only: Limiting the RMS Client to Use Trusted AD RMS Servers
 The RMS client can be limited to using only specific trusted AD RMS servers by making the following changes to the Windows registry on local computers.
 
 **To enable limiting RMS client to use only trusted AD RMS servers**
@@ -144,7 +144,7 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
 
     **Value:** The string values added in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**,  the RMS client will use SSL or TLS to contact   the specified AD RMS server.
 
-## <a name="BKMK_ServiceDiscovery"></a>RMS Service Discovery
+## RMS Service Discovery
 RMS service discovery lets the RMS client check which RMS server or service to communicate with before  protecting content. Service discovery might also happen when the RMS client consumes protected content, but this is less likely to happen because   the policy attached to the content  contains   the preferred RMS server or service and only if that is unsuccessful does the client then run service discovery.
 
 Service discovery first looks for an on-premises version of Rights Management (AD RMS). If that is unsuccessful, service discovery automatically looks for the cloud version of Rights Management (Azure RMS).

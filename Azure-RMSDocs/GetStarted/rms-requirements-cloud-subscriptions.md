@@ -10,7 +10,7 @@ ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 author: Cabailey
 ---
 
-# <a name="BKMK_SupportedSubscriptions"></a>Cloud subscriptions that support Azure RMS
+# Cloud subscriptions that support Azure RMS
 To use Azure Rights Management (Azure RMS), your organization must have at least one of the following subscriptions with a sufficient number of licenses for users and services that will protect files and email messages. If you have a service that will apply protection for users (owners of the files or email messages), those users require one of these licenses. Users who will only consume (for example, read and edit) this protected data do not need a license.
 
 -   Office 365
@@ -50,7 +50,7 @@ This subscription also offers a trial period for you to try out Azure RMS for 2
 |Information Rights Protection (IRM)|Yes|Yes [footnote 1]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 Footnote 1:  For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
-### <a name="BKMK_TrialExpiryBehavior"></a>What happens when the trial subscription expires?
+### What happens when the trial subscription expires?
 If your trial subscription expires, you will lose access to content that was protected by using your trial subscription for Azure RMS. However, if you then purchase a subscription that supports Azure RMS, access is automatically restored.
 
 An exception to losing access upon expiry is if your organization used Azure RMS with the RMS for individuals subscription before you obtained the trial subscription. Then, access to previously protected content remains, even after the trial subscription expires.

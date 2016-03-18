@@ -82,7 +82,7 @@ In addition to the **Active** status, which indicates that the Rights Management
 |**Unavailable**|The [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service is down. Try again later.|
 |**Unauthorized**|You do not have permissions to view the status of the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service. For example, your account is locked out or you are not the global administrator for the selected tenant.|
 
-## <a name="BKMK_OnboardingControls"></a>Configuring onboarding controls for a phased deployment
+## Configuring onboarding controls for a phased deployment
 If you don’t want all users to be able to protect files immediately by using Azure RMS, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Windows PowerShell command. You can run this command before or after you activate Azure RMS.
 
 > [!IMPORTANT]

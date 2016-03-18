@@ -15,7 +15,7 @@ Use this information to learn about the Microsoft Rights Management (RMS) connec
 > [!TIP]
 > For a high-level example scenario with screenshots, see the [Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](what-is-azure-rights-management.md#BKMK_Example_FCI) section in the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
 
-## <a name="OverviewConnector"></a>Overview of the Microsoft Rights Management connector
+## Overview of the Microsoft Rights Management connector
 The Microsoft Rights Management (RMS) connector lets you quickly enable existing on-premises servers to use their Information Rights Management (IRM) functionality with the cloud-based Microsoft Rights Management service (Azure RMS). With this functionality, IT and users can easily protect documents and pictures both inside your organization and outside, without having to install additional infrastructure or establish trust relationships with other organizations. You can use this connector even if some of your users are connecting to online services, in a hybrid scenario. For example, some users' mailboxes use Exchange Online and some users' mailboxes use Exchange Server. After you install the RMS connector, all users can protect and consume emails and attachments by using Azure RMS, and information protection works seamlessly between the two deployment configurations.
 
 The RMS connector is a small-footprint service that you install on-premises, on servers that run Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. In addition to running the connector on physical computers, you can also run it on virtual machines, including Azure IaaS VMs. After you install and configure the connector, it acts as a communications interface (a relay) between the on-premises servers and the cloud service.
@@ -57,7 +57,7 @@ Use the following sections to help you plan for, install, and configure the RMS 
 
 -   [Next steps](deploying-the-azure-rights-management-connector.md#BKMK_NextSteps)
 
-## <a name="BKMK_Prereqs"></a>Prerequisites for the RMS connector
+## Prerequisites for the RMS connector
 Before you install the RMS connector, make sure that the following requirements are in place.
 
 |Requirement|More information|
@@ -67,7 +67,7 @@ Before you install the RMS connector, make sure that the following requirements 
 |Optional but recommended:<br /><br />Enable federation between your on-premises Active Directory and Azure Active Directory|You can enable identity federation between your on-premises directory and Azure Active Directory. This configuration enables a more seamless user experience by using single sign-on to the RMS service. Without single sign on, users are prompted for their credentials before they can use rights-protected content.<br /><br />For instructions to configure federation by using Active Directory Federation Services (AD FS) between Active Directory Domain Services and Azure Active Directory, see the [Checklist: Use AD FS to implement and manage single sign-on](http://technet.microsoft.com/library/jj205462.aspx) in the Windows Server library.|
 |A minimum of two member computers on which to install the RMS connector:<br /><br />A 64-bit physical or virtual computer running one of the following operating systems:  Windows Server 2012 R2,  Windows Server 2012, or Windows Server 2008 R2.<br /><br />At least 1 GB of RAM.<br /><br />A minimum of 64 GB of disk space<br /><br />At least one network interface.<br /><br />Access to the Internet via a firewall (or web proxy) that does not require authentication.<br /><br />Must be in a forest or domain that trusts other forests in the organization that contain installations of Exchange or SharePoint servers that you want to use with the RMS connector.|For fault tolerance and high availability, you must install the RMS connector on a minimum of two computers.<br /><br />**Tip**: If you are using Outlook Web Access or mobile devices that use Exchange ActiveSync IRM and it is critical that you maintain access to emails and attachments that are protected by Azure RMS, we recommend that you deploy a load-balanced group of connector servers to ensure high availability.<br /><br />You do not need dedicated servers to run the connector but you must install it on a separate computer from the servers that will use the connector.<br /><br />**Important**: Do not install the connector on a computer that runs Exchange Server, SharePoint Server, or a file server that is configured for file classification infrastructure if you want to use the functionality from these services with Azure RMS. Also, do not install this connector on a domain controller.|
 
-## <a name="BKMK_InstallingConnector"></a>Installing the RMS connector
+## Installing the RMS connector
 After you have confirmed the prerequisites in the preceding section, use the following instructions to install the RMS connector:
 
 1.  Identify the computers (minimum of two) that will run the RMS connector. They must meet the minimum specification listed in the preceding section.
@@ -93,7 +93,7 @@ After you have confirmed the prerequisites in the preceding section, use the fol
 
 To continue, enter an account and password to configure the RMS connector.
 
-## <a name="EnteringCredentials"></a>Entering credentials
+## Entering credentials
 Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type **admin@contoso.com** and then specify the password for this account.
 
 There are some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication will fail for the RMS connector and you will see the error message That user name and password combination is not correct, even though you can successfully sign in using this account and password for other scenarios. If this applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
@@ -154,7 +154,7 @@ On the final page of the wizard, do the following, and then click **Finish**:
 
 If you need to uninstall the RMS connector, run the wizard again and select the uninstall option.
 
-## <a name="AuthorizingServers"></a>Authorizing servers to use the RMS connector
+## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
 
 To define these servers, run the RMS connector administration tool and add entries to the list of allowed servers. You can run this tool when you select **Launch connector administration console to authorize servers** at the end of the Microsoft Rights Management connector Setup wizard, or you can run it separately from the wizard.
@@ -167,7 +167,7 @@ When you authorize these servers, be aware of the following considerations:
 
 On the **Servers allowed to utilize the connector** page, click **Add**.
 
-### <a name="BKMK_AddServer"></a>Add a server to the list of allowed servers
+### Add a server to the list of allowed servers
 On the **Allow a server to utilize the connector** page, enter the name of the object, or browse to identify the object to authorize.
 
 It is important that you authorize the correct object. For a server to use the connector, the account that runs the on-premises service (for example, Exchange or SharePoint) must be selected for authorization. For example, if the service is running as a configured service account, add the name of that service account to the list. If the service is running as Local System, add the name of the computer object (for example, SERVERNAME$). As a best practice, create a group that contains these accounts and specify the group instead of individual server names.
@@ -195,7 +195,7 @@ When you have finished adding servers to the list, click **Close**.
 
 If you haven’t already done so, you must now configure load balancing for the servers that have the RMS connector installed, and consider whether to use HTTPS for the connections between these servers and the servers that you have just authorized.
 
-## <a name="ConfiguringConnector"></a>Configuring load balancing and high availability
+## Configuring load balancing and high availability
 After you have installed the second or final instance of the RMS connector, define a connector URL server name and configure a load balancing system.
 
 The connector URL server name can be any name under a namespace that you control. For example, you could create an entry in your DNS system for **rmsconnector.contoso.com** and configure this entry to use an IP address in your load balancing system. There are no special requirements for this name and it doesn’t need to be configured on the connector servers themselves. Unless your Exchange and SharePoint servers are going to be communicating with the connector over the Internet, this name doesn’t have to resolve on the Internet.
@@ -217,7 +217,7 @@ Use the following settings to configure the NLB cluster:
 
 This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you will use later, when you configure the on-premises servers to use Azure RMS.
 
-## <a name="BKMK_ConfiguringHTTPS"></a>Configuring the RMS connector to use HTTPS
+## Configuring the RMS connector to use HTTPS
 > [!NOTE]
 > This configuration step is optional, but recommended for additional security.
 
@@ -234,7 +234,7 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 > -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 > -   To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) in the in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 
-## <a name="BKMK_ConfiguringWebProxy"></a>Configuring the RMS connector for a web proxy server
+## Configuring the RMS connector for a web proxy server
 If your connector servers are installed in a network that does not have direct Internet connectivity and requires manual configuration of a web proxy server for outbound Internet access, you must configure the registry on these servers for the RMS connector.
 
 #### To configure the RMS connector to use a web proxy server
@@ -249,7 +249,7 @@ If your connector servers are installed in a network that does not have direct I
 
 4.  Close the registry editor, and then restart the server or perform an IISReset command to restart IIS.
 
-## <a name="BKMK_InstallingStandaloneTool"></a>Installing the RMS connector administration tool on administrative computers
+## Installing the RMS connector administration tool on administrative computers
 You can run the RMS connector administration tool from a computer that does not have the RMS connector installed, if that computer meets the following requirements:
 
 -   A physical or virtual computer running Windows Server 2012 or Windows Server 2012 R2 (all editions), Windows Server 2008 R2 or Windows Server 2008 R2 Service Pack 1 (all editions), Windows 8.1, Windows 8, or Windows 7.
@@ -270,7 +270,7 @@ To install the RMS connector administration tool, run the following files:
 
 If you haven’t already downloaded these files, you can do so from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
 
-## <a name="ConfiguringServers"></a>Configuring servers to use the RMS connector
+## Configuring servers to use the RMS connector
 After you have installed and configured the RMS connector, you are ready to configure your on-premises servers that will use Rights Management and connect to Azure RMS by using the connector. This means configuring the following servers:
 
 -   For Exchange 2013: Client access servers and mailbox servers
@@ -337,7 +337,7 @@ Use the following sections for specific information for each service type:
 >
 > In both scenarios, you must install the client applications on separate computers that are not configured to use the connector. They will then correctly use RMS directly.
 
-### <a name="BKMK_ExchangeServer"></a>Configuring an Exchange server to use the connector
+### Configuring an Exchange server to use the connector
 The following Exchange roles communicate with the RMS connector:
 
 -   For Exchange 2013: Client access server and mailbox server
@@ -407,7 +407,7 @@ Use the tables in the following sections only if you want to manually add or che
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
 
-### <a name="BKMK_ConfiguringSharePoint"></a>Configuring a SharePoint server to use the connector
+### Configuring a SharePoint server to use the connector
 The following SharePoint roles communicate with the RMS connector:
 
 -   Front-end SharePoint webservers, including those hosting the Central Administration server
@@ -479,7 +479,7 @@ Instructions for when you use this table:
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification|Reg_SZ|Default|One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:<br /><br />http://*ConnectorFQDN*/_wmcs/certification<br /><br />https://*ConnectorFQDN*/_wmcs/certification|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:<br /><br />http://*ConnectorFQDN*/_wmcs/licensing<br /><br />https://*ConnectorFQDN*/_wmcs/licensing|
 
-### <a name="BKMK_FileServer"></a>Configuring a file server for File Classification Infrastructure to use the connector
+### Configuring a file server for File Classification Infrastructure to use the connector
 To use the RMS connector and File Classification Infrastructure to protect Office documents, the file server must be running one of the following operating systems:
 
 -   Windows Server 2012 R2
@@ -516,7 +516,7 @@ Instructions for when you use this table:
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|http://*ConnectorFQDN*/_wmcs/licensing|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation|Reg_SZ|Default|http://*ConnectorFQDN*/_wmcs/certification|
 
-## <a name="BKMK_NextSteps"></a>Next steps
+## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email message and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/%20dn339003%28v=ws.10%29.aspx).
 
 In addition, you might consider the following to help you monitor the RMS connector and your organization’s usage of Azure RMS:

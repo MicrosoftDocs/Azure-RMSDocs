@@ -25,7 +25,7 @@ If you deploy Azure RMS by using a tenant key that is managed by Microsoft, you 
 |Need full IRM functionality in Exchange Online with Azure RMS|Managed by Microsoft|
 |Your keys are created by you and protected in a hardware security module (HSM)|BYOK<br /><br />Currently, this configuration will result in reduced IRM functionality in Exchange Online. For more information, see [BYOK pricing and restrictions](byok-pricing-and-restrictions.md).|
 
-## <a name="BKMK_ChooseTenantKey"></a>Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
+## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
 Decide which tenant key topology is best for your organization. By default, Azure RMS generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure RMS and the rest of the key management process is handled by Microsoft.
 
 Alternatively, you might want complete control over your tenant key, which involves creating your tenant key and keeping the master copy on your premises. This scenario is often referred to as bring your own key (BYOK). With this option, the following happens:
@@ -41,7 +41,7 @@ Although it’s optional, you will also probably want to use the near real-time 
 > [!NOTE]
 > As an additional protection measure, Azure RMS uses separate security worlds for its data centers in North America, EMEA (Europe, Middle East and Africa), and Asia. When you manage your own tenant key, it is tied to the security world of the region in which your RMS tenant is registered. For example, a tenant key from a European customer cannot be used in data centers in North America or Asia.
 
-## <a name="BKMK_OverviewLifecycle"></a>The tenant key lifecycle
+## The tenant key lifecycle
 If you decide that Microsoft should manage your tenant key, Microsoft handles most of the key lifecycle operations. However, if you decide to manage your tenant key, you are responsible for many of the key lifecycle operations and some additional procedures.
 
 The following diagrams show and compares these two options. The first diagram shows how little administrator overheads there are for you in the default configuration when Microsoft manages the tenant key.
@@ -66,7 +66,7 @@ Use the information and procedures in this section if you have decided to genera
 > 
 > Also contact CSS if your organization has specific policies for handling keys.
 
-### <a name="BKMK_Preqs"></a>Prerequisites for BYOK
+### Prerequisites for BYOK
 See the following table for a list of prerequisites for bring your own key (BYOK).
 
 |Requirement|More information|
@@ -104,7 +104,7 @@ For how-to instructions, select whether you will generate and transfer your tena
 - [In person](generate-and-transfer-your-tenant-key-in-person.md)
 
 
-## <a name="BKMK_NextSteps"></a>Next steps
+## Next steps
 
 Now that you've planned for and if necessary, generated your tenant key, do the following:
 

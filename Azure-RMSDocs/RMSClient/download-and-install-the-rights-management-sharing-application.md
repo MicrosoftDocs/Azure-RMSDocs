@@ -29,7 +29,7 @@ You do not have to be a local administrator to install the RMS sharing applicati
 
 You’re now ready to start protecting your files or read files that others have protected.
 
-## <a name="BKMK_SetupOffice2010"></a>If you are not a local administrator and use Office 2010
+## If you are not a local administrator and use Office 2010
 If you sign in to your computer and do not have local administrative rights, and Setup detects that you have Office 2010 installed, you will see a warning message that some scenarios will not work with this configuration. The scenarios are:
 
 -   If your organization uses Azure RMS rather than an on-premises version of RMS:
