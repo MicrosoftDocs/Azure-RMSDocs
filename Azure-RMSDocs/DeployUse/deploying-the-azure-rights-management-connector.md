@@ -1,5 +1,5 @@
 ---
-title: Deploying the Azure Rights Management Connector
+title: Deploying the Azure Rights Management connector
 ms.custom: na
 ms.reviewer: na
 ms.service: rights-management
@@ -9,8 +9,8 @@ ms.topic: article
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 author: Cabailey
 ---
-# Deploying the Azure Rights Management Connector
-Use this information to learn about the Microsoft Rights Management (RMS) connector and how you can use it to provide information protection with existing on-premises deployments that use Microsoft Exchange Server, Microsoft SharePoint Server, or file servers that run Windows Server and use the File Classification Infrastructure (FCI) capability of File Server Resource Manager.
+# Deploying the Azure Rights Management connector
+Use this information to learn about the Azure Rights Management (RMS) connector and how you can use it to provide information protection with existing on-premises deployments that use Microsoft Exchange Server, Microsoft SharePoint Server, or file servers that run Windows Server and use the File Classification Infrastructure (FCI) capability of File Server Resource Manager.
 
 > [!TIP]
 > For a high-level example scenario with screenshots, see the [Automatically protecting files on file servers running Windows Server and File Classification Infrastructure](what-is-azure-rights-management.md#BKMK_Example_FCI) section in the [What is Azure Rights Management?](what-is-azure-rights-management.md) topic.
@@ -22,7 +22,7 @@ The RMS connector is a small-footprint service that you install on-premises, on 
 
 If you manage your own tenant key for Azure RMS (the bring you own key, or BYOK scenario), the RMS connector and the on-premises servers that use it do not access the hardware security module (HSM) that contains your tenant key. This is because all cryptographic operations that use the tenant key are performed in Azure RMS, and not on-premises.
 
-![](./media/RMS_connector.png)
+![](../media/RMS_connector.png)
 
 The RMS connector supports the following on-premises servers: Exchange Server, SharePoint Server, and file servers that run Windows Server and use File Classification Infrastructure to classify and apply policies to Office documents in a folder. If you want to protect all files types using File Classification, do not use the RMS connector, but instead, use the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
@@ -367,45 +367,9 @@ You will also need to install on these servers, a version of the RMS client that
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
         ```
 
-    -   Make manual registry edits by using the tables in the following sections to manually add registry settings on the servers.
+    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md.md) to manually add registry settings on the servers. 
 
 2.  Enable IRM functionality in Exchange. For more information, see [Information Rights Management Procedures](https://technet.microsoft.com/library/dd351212%28v=exchg.150%29.aspx) in the Exchange library.
-
-Use the tables in the following sections only if you want to manually add or check registry settings on these servers, which configures the servers to use the RMS connector. Instructions for when you use these tables:
-
--   *MicrosoftRMSURL* is your organization’s Microsoft RMS service URL. To find this value:
-
-    1.  Run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
-
-    2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
-
-        For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-
-    3.  From the value, remove **/_wmcs/licensing** from this string. The remaining string is your Microsoft RMS URL. In our example, the Microsoft RMS URL would be the following value:
-
-        **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
-
--   *ConnectorFQDN* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
-
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringHTTPS) section in this topic. The Microsoft RMS URLs always use HTTPS.
-
-#### Table for Exchange 2013 registry settings
-
-|Registry path|Type|Value|Data|
-|-----------------|--------|---------|--------|
-|HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation|Reg_SZ|Default|https://*MicrosoftRMSURL/_wmcs/certification*|
-|HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|https://MicrosoftRMSURL/_wmcs/Licensing|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\CertificationServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
-
-#### Table for Exchange 2010 registry settings
-
-|Registry path|Type|Value|Data|
-|-----------------|--------|---------|--------|
-|HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation|Reg_SZ|Default|https://*MicrosoftRMSURL*/_wmcs/certification|
-|HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|https://*MicrosoftRMSURL*/_wmcs/Licensing|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\CertificationServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection|Reg_SZ|https://*MicrosoftRMSURL*|One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:<br /><br />http://*ConnectorFQDN*<br /><br />https://*ConnectorFQDN*|
 
 ### Configuring a SharePoint server to use the connector
 The following SharePoint roles communicate with the RMS connector:
@@ -439,7 +403,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDR
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   If you are using SharePoint 2013, make manual registry edits by using the table in the following section to manually add registry settings on the servers.
+    -   If you are using SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md.md) to manually add registry settings on the servers. 
 
 2.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
 
@@ -452,32 +416,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDR
     > [!IMPORTANT]
     > For SharePoint to access RMS by using the connector, you must authorize the corresponding accounts in the RMS connector administration tool. If you haven’t already done this, see [Authorizing servers to use the RMS connector](deploying-the-azure-rights-management-connector.md#AuthorizingServers) in this topic.
 
-Use the table in the following section only if you want to manually add or check registry settings on a server that runs SharePoint 2013.
 
-#### Table for SharePoint 2013 registry settings
-Instructions for when you use this table:
-
--   *MicrosoftRMSURL* is your organization’s Microsoft RMS service URL. To find this value:
-
-    1.  Run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
-
-    2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
-
-        For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-
-    3.  From the value, remove **/_wmcs/licensing** from this string. The remaining string is your Microsoft RMS URL. In our example, the Microsoft RMS URL would be the following value:
-
-        **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
-
--   *ConnectorFQDN* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
-
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringHTTPS) section in this topic. The Microsoft RMS URLs always use HTTPS.
-
-|Registry path|Type|Value|Data|
-|-----------------|--------|---------|--------|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection|Reg_SZ|https://*MicrosoftRMSURL*/_wmcs/licensing|One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:<br /><br />http://*ConnectorFQDN*/_wmcs/licensing<br /><br />https://*ConnectorFQDN*/_wmcs/licensing|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification|Reg_SZ|Default|One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:<br /><br />http://*ConnectorFQDN*/_wmcs/certification<br /><br />https://*ConnectorFQDN*/_wmcs/certification|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|One of the following, depending on whether you are using HTTP or HTTPS from your SharePoint server to the RMS connector:<br /><br />http://*ConnectorFQDN*/_wmcs/licensing<br /><br />https://*ConnectorFQDN*/_wmcs/licensing|
 
 ### Configuring a file server for File Classification Infrastructure to use the connector
 To use the RMS connector and File Classification Infrastructure to protect Office documents, the file server must be running one of the following operating systems:
@@ -498,23 +437,9 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetFCI2012
         ```
 
-    -   Make manual registry edits by using the table in the following section to manually add registry settings on the servers.
+    - Make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md.md) to manually add registry settings on the servers. 
 
 2.  Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
-
-Use the table in the following section only if you want to manually add or check registry settings on a file server that uses the File Classification Infrastructure to protect documents.
-
-#### Table for file server and File Classification Infrastructure registry settings
-Instructions for when you use this table:
-
--   *ConnectorFQDN* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
-
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringHTTPS) section in this topic. The Microsoft RMS URLs always use HTTPS.
-
-|Registry path|Type|Value|Data|
-|-----------------|--------|---------|--------|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing|Reg_SZ|Default|http://*ConnectorFQDN*/_wmcs/licensing|
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation|Reg_SZ|Default|http://*ConnectorFQDN*/_wmcs/certification|
 
 ## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email message and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/%20dn339003%28v=ws.10%29.aspx).
