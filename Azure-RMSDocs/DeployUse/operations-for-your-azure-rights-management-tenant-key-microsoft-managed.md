@@ -16,7 +16,7 @@ If Microsoft manages your tenant key for Azure Rights Management (the default), 
 ## Revoke your tenant key
 When you unsubscribe from Azure RMS, Azure RMS stops using your tenant key and no action is needed from you.
 
-## >Re-key your tenant key
+## Re-key your tenant key
 Re-keying is also known as rolling your key. Do not re-key your tenant key unless it’s really necessary. Older clients, such as Office 2010, were not designed to handle key changes gracefully. In this scenario, you must clear the RMS state on computers by using Group Policy or an equivalent mechanism. However, there are some legitimate events that may force you to re-key your tenant key. For example:
 
 -   Your company has split into two or more companies. When you re-key your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
