@@ -116,19 +116,18 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 ### To force an immediate refresh
 
-1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following table to locate the registry path to delete this registry value data.
+1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
 
-	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<MicrosoftRMS_FQDN>\Template
-
+	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\`<MicrosoftRMS_FQDN`>\Template
 
 	**Type:** REG_SZ
 
 	**Value:** LastUpdatedTime
 
-    > [!TIP]
-    > In the registry path, *&lt;MicrosoftRMS_FQDN&gt;* refers to your Microsoft RMS service FQDN. If you want to verify this value:
-    > 
-    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+	> [!TIP]
+	    > In the registry path, `<MicrosoftRMS_FQDN`> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+
+    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](..\administer\installing-windows-powershell-for-azure-rights-management.md).
     > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
     > 
     >     For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
