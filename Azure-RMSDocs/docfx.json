@@ -7,7 +7,6 @@
         ],
         "exclude": [
           "**/obj/**",
-          "GetStarted/**",
           "DeployUser/**",
           "PlanDesign/**",
           "Troubleshoot/**"  
@@ -28,7 +27,6 @@
         "exclude": [
           "**/obj/**",
           "_themes/DocPacker/**",
-          "GetStarted/**",
           "DeployUser/**",
           "PlanDesign/**",
           "Troubleshoot/**"  
