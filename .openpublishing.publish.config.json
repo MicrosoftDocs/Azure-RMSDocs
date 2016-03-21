@@ -12,27 +12,7 @@
                 "Conceptual": "Content"
             }
         },
-         {
-            "docset_name": "RMSUnderstand",
-            "build_output_subfolder": "Azure-RMSDocs/Understand",
-            "locale": "en-us",
-            "version": 0,
-      "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
-            "docset_name": "RMSGetStarted",
-            "build_output_subfolder": "Azure-RMSDocs/GetStarted",
-            "locale": "en-us",
-            "version": 0,
-      "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
+        {
             "docset_name": "RMSPlanDesign",
             "build_output_subfolder": "Azure-RMSDocs/PlanDesign",
             "locale": "en-us",
