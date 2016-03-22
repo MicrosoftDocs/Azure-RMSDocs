@@ -180,7 +180,7 @@ Instructions for when you use these settings:
 
 
 
-#### File server and File Classification Infrastructure registry settings
+## File server and File Classification Infrastructure registry settings
 
 **Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
