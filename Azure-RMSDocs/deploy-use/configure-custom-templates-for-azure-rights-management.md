@@ -1,0 +1,56 @@
+---
+title: Configuring Custom Templates for Azure Rights Management
+ms.custom: na
+ms.reviewer: na
+ms.service: rights-management
+ms.suite: na
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
+author: Cabailey
+---
+# Configuring Custom Templates for Azure Rights Management
+After you have [activated Azure Rights Management](activating-azure-rights-management.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
+
+-   Read-only viewing for the protected content
+
+    -   Display name: **&lt;organization name&gt; - Confidential View Only**
+
+    -   Specific permission: View Content
+
+-   Read or Modify permissions for the protected content
+
+    -   Display name: **&lt;organization name&gt; - Confidential**
+
+    -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
+
+In addition, the [RMS sharing application](http://technet.microsoft.com/library/dn339006.aspx) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the **Do Not Forward** option for email messages.
+
+For many organizations, the default templates might be sufficient. But if you want to create your own custom rights policy templates, you can do so. Reasons for creating a custom template include the following:
+
+-   You want a template to grant rights to a subset of users in the organization rather than all users.
+
+-   You want only a subset of users to be able to see and select a template (departmental template) from applications, rather than all users in the organization see and can select the template.
+
+-   You want to define a custom right for a template, such as View and Edit, but not Copy and Print.
+
+-   You want to configure additional options in a template that include an expiration date and whether the content can be accessed without an Internet connection.
+
+For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it.
+
+Use the following information to help you configure and use custom templates:
+
+-   [How to create, configure, and publish a custom template](configure-custom-templates-for-azure-rights-management-create-template.md)
+
+-   [How to copy a template](configure-custom-templates-for-azure-rights-management-copy-template.md)
+
+-   [How to remove (archive) templates](configure-custom-templates-for-azure-rights-management-remove-template.md)
+
+-   [How to refresh templates for users](configure-custom-templates-for-azure-rights-management-refresh-templates.md)
+
+-   [Use PowerShell to manage templates](configure-custom-templates-for-azure-rights-management-powershell.md)
+
+
+
+## See Also
+[Configuring Azure Rights Management](configuring-azure-rights-management.md)
