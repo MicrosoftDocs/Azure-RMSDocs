@@ -49,13 +49,12 @@ Use the following sections to help you plan for, install, and configure the RMS 
 
 -   **Step 5:**  [Configuring servers to use the RMS connector](deploying-the-azure-rights-management-connector.md#configuring-servers-to-use-the-rms-connector)
 
-    -   [Configuring an Exchange server to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_ExchangeServer)
+    -   [Configuring an Exchange server to use the connector](deploying-the-azure-rights-management-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
-    -   [Configuring a SharePoint server to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringSharePoint)
+    -   [Configuring a SharePoint server to use the connector](deploying-the-azure-rights-management-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
-    -   [Configuring a file server for File Classification Infrastructure to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_FileServer)
+    -   [Configuring a file server for File Classification Infrastructure to use the connector](deploying-the-azure-rights-management-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
--   [Next steps](deploying-the-azure-rights-management-connector.md#BKMK_NextSteps)
 
 ## Prerequisites for the RMS connector
 Before you install the RMS connector, make sure that the following requirements are in place.
@@ -273,13 +272,13 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 ## Configuring servers to use the RMS connector
 After you have installed and configured the RMS connector, you are ready to configure your on-premises servers that will use Rights Management and connect to Azure RMS by using the connector. This means configuring the following servers:
 
--   For Exchange 2013: Client access servers and mailbox servers
+-   **For Exchange 2016 and Exchange 2013**: Client access servers and mailbox servers
 
--   For Exchange 2010: Client access servers and hub transport servers
+-   **For Exchange 2010**: Client access servers and hub transport servers
 
--   For SharePoint: Front-end SharePoint webservers, including those hosting the Central Administration server
+-   **For SharePoint**: Front-end SharePoint webservers, including those hosting the Central Administration server
 
--   For File Classification Infrastructure: Windows Server computers that have installed File Resource Manager
+-   **For File Classification Infrastructure**: Windows Server computers that have installed File Resource Manager
 
 This configuration requires registry settings. To do this, you have two options:
 
@@ -324,11 +323,11 @@ To run the script, you must enter the URL of the RMS connector for your organiza
 
 Use the following sections for specific information for each service type:
 
--   [Configuring an Exchange server to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_ExchangeServer)
+-   [Configuring an Exchange server to use the connector](deploying-the-azure-rights-management-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
--   [Configuring a SharePoint server to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringSharePoint)
+-   [Configuring a SharePoint server to use the connector](deploying-the-azure-rights-management-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
--   [Configuring a file server for File Classification Infrastructure to use the connector](deploying-the-azure-rights-management-connector.md#BKMK_FileServer)
+-   [Configuring a file server for File Classification Infrastructure to use the connector](deploying-the-azure-rights-management-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 > [!NOTE]
 > After these servers are configured to use the connector, client applications that are installed locally on these servers might not work with RMS. When this happens, it is because the applications try to use the connector rather than use RMS directly, which is not supported.
@@ -361,7 +360,7 @@ You will also need to install on these servers, a version of the RMS client that
 
 1.  On the Exchange server roles that communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#BKMK_HowToRunTheTool) in this topic.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a server running Exchange 2016 or Exchange 2013:
 
@@ -397,7 +396,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDR
 
 1.  On the SharePoint servers that communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#BKMK_HowToRunTheTool) in this topic.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a server running SharePoint 2013:
 
@@ -431,7 +430,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
 1.  On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#BKMK_HowToRunTheTool) in this topic.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a file server running FCI:
 
@@ -456,13 +455,3 @@ In addition, you might consider the following to help you monitor the RMS connec
 
 You can use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
 
-
----
-
-[Test](deploying-the-azure-rights-management-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector)
-
----
-
-
-## See Also
-[Configuring Azure Rights Management](configuring-azure-rights-management.md)
