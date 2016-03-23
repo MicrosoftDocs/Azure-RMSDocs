@@ -12,7 +12,7 @@ author: msmbaldwin
 
 # First level heading
 
-See the markdown for this file at https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md
+See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md); see the markdown reference in [the EM Pilot style guide](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931). 
 
 ## second level heading
 ### Third level heading
@@ -22,10 +22,16 @@ See the markdown for this file at https://github.com/Microsoft/Azure-RMSDocs-pr/
 
 ## Text styling
 
-*Bold*  **italics** ~~strikethrough~~
+*Bold*  
+
+**italics** 
+
+~~strikethrough~~
 
 # Links
-[regular link](/azure-rms/index.html) 
+
+[link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
+[link to external website](https://azure.microsoft.com)
 
 
 ## Lists
@@ -90,20 +96,24 @@ This is an example of `in-line code`.
 
 ### Linked Image
 
-[![alt text for linked image](./media/AzRMS_elements.png)](/azure-rms/index.html) 
+[![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
 
 ### Animated gif
 ![animated gif](./media/hololens.gif)
 
 ## Alerts
 
-> [AZURE.NOTE] This is a note.
+> [!NOTE]
+> This is NOTE
 
-> [AZURE.WARNING] This is a Warning.
+> [!WARNING]
+> This is WARNING
 
-> [AZURE.TIP] This is a tip.
+> [!TIP]
+> This is TIP
 
-> [AZURE.IMPORTANT] This is important.
+> [!IMPORTANT]
+> This is IMPORTANT
 
 ## Videos
 
