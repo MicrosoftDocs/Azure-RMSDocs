@@ -78,7 +78,7 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Re-key your tenant key. See the [Re-key your tenant key](operations-for-your-azure-rights-management-tenant-key.md#BKMK_MSRekey) section in this topic.|
+|Your tenant key is leaked.|Re-key your tenant key. See the [Re-key your tenant key](operations-for-your-azure-rights-management-tenant-key.md#re-key-your-tenant-key) section in this topic.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Re-keying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update the Azure RMS to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
