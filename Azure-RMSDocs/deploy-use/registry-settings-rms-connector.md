@@ -30,7 +30,7 @@ Instructions for when you use these settings:
 
 -   *ConnectorFQDN* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringHTTPS) section in this topic. The Microsoft RMS URLs always use HTTPS.
+-   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#configuring-the-rms-connector-to-use-https) section in this topic. The Microsoft RMS URLs always use HTTPS.
 
 
 ## Exchange 2016 or Exchange 2013 registry settings
@@ -180,7 +180,7 @@ Instructions for when you use these settings:
 
 
 
-## File server and File Classification Infrastructure registry settings
+#### File server and File Classification Infrastructure registry settings
 
 **Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
