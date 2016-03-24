@@ -40,5 +40,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/rights-management/deploy-use"
+  "basepath": "/rights-management/deploy-use-old"
 }
