@@ -17,9 +17,9 @@ If you want to learn more about Azure Rights Management before you activate the 
 > [!IMPORTANT]
 > Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] services. If not, you will not be able to activate Azure RMS.
 >
-> For more information, see the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.
+> For more information, see the [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).
 
-After you have activated Azure RMS, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by Azure RMS. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](activating-azure-rights-management.md#BKMK_OnboardingControls) section in this topic.
+After you have activated Azure RMS, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by Azure RMS. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this topic.
 
 ## Activating Rights Management
 Use one of the following procedures to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
@@ -43,7 +43,7 @@ Use one of the following procedures to activate [!INCLUDE[aad_rightsmanagement_2
     > [!NOTE]
     > If you do not see this option, it might be because your service plan or product version cannot support Rights Management, or it has not yet been upgraded to support Rights Management.
     >
-    > Use the information in the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic to confirm support. If your service plan or product version is supported but you do not see the Rights Management option, it might be because the service is not yet upgraded. For help with this issue, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
+    > Use the information in the [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic to confirm support. If your service plan or product version is supported but you do not see the Rights Management option, it might be because the service is not yet upgraded. For help with this issue, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
 
 5.  On the **RIGHTS MANAGEMENT** page, click **Manage**.
 
@@ -68,7 +68,7 @@ Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-
     > [!NOTE]
     > If you see an activation error, it might be because your service plan or product version cannot support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
     >
-    > Use the information in the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    > Use the information in the [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
 

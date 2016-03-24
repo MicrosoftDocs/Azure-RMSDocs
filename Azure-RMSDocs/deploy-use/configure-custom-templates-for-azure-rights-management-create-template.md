@@ -69,7 +69,7 @@ From the **Get started with Rights Management** quick start page, now click **Ma
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
 
-    As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](configuring-custom-templates-for-azure-rights-management.md#BKMK_HowToCopyTemplates) section in this topic.
+    As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](configure-custom-templates-for-azure-rights-management-copy-template.md).
 
     > [!TIP]
     > You can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](https://technet.microsoft.com/library/jj585012.aspx) and using one of the following methods:
@@ -144,7 +144,7 @@ To make any changes to your template, select it, and then use the quick start st
 -   To make other configuration changes: Click **CONFIGURE**, make your changes, and then click **SAVE**.
 
 > [!WARNING]
-> When you make changes to a template that was previously saved, clients will not see those changes to the template until templates are refreshed on their computers. For more information, see the [Refreshing templates for users](configuring-custom-templates-for-azure-rights-management.md#BKMK_RefreshingTemplates) section in this topic.
+> When you make changes to a template that was previously saved, clients will not see those changes to the template until templates are refreshed on their computers. For more information, see the [Refreshing templates for users](configure-custom-templates-for-azure-rights-management-refresh-templates.md).
 
 
 ## See Also
