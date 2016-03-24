@@ -15,7 +15,7 @@ When you use Azure RMS, templates are automatically downloaded to client compute
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
-|Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](configuring-custom-templates-for-azure-rights-management.md#BKMK_ExchangeOnlineTemplatesUpdate).|
 |Office 365|Automatically refreshed - no additional steps required.|
 |Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than this schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#BKMK_Office2013ForceUpdate).|
 |Office 2010|Refreshed when users log on.<br /><br />To force a refresh, ask or force users to log off and log back on again. Or, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#BKMK_Office2010ForceUpdate).|
@@ -108,9 +108,9 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 		**Type:** REG_DWORD
 
 		**Value:** TemplateUpdateFrequencyInSeconds
-
-
-    Make sure that you create and set one of these registry values, not both. If both are present, **TemplateUpdateFrequency** is ignored.
+>
+>
+> Make sure that you create and set one of these registry values, not both. If both are present, **TemplateUpdateFrequency** is ignored.
 
 2.  If you want to force an immediate refresh of the templates, go to the next procedure. Otherwise, restart your Office applications and instances of File Explorer now.
 
@@ -118,14 +118,14 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
 
-	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\`<MicrosoftRMS_FQDN`>\Template
+	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<*MicrosoftRMS_FQDN*>\Template
 
 	**Type:** REG_SZ
 
 	**Value:** LastUpdatedTime
 
 	> [!TIP]
-	    > In the registry path, `<MicrosoftRMS_FQDN`> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+	    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
 
     > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](..\administer\installing-windows-powershell-for-azure-rights-management.md).
     > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
