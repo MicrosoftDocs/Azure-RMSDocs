@@ -18,11 +18,11 @@ Instructions for when you use these settings:
 
 -   *MicrosoftRMSURL* is your organization’s Microsoft RMS service URL. To find this value:
 
-    1.  Run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+    1.  Run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
 
     2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
-        For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  From the value, remove **/_wmcs/licensing** from this string. The remaining string is your Microsoft RMS URL. In our example, the Microsoft RMS URL would be the following value:
 
@@ -30,7 +30,7 @@ Instructions for when you use these settings:
 
 -   *ConnectorFQDN* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#configuring-the-rms-connector-to-use-https) section in this topic. The Microsoft RMS URLs always use HTTPS.
+-   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](deploying-the-azure-rights-management-connector.md#BKMK_ConfiguringHTTPS) section in this topic. The Microsoft RMS URLs always use HTTPS.
 
 
 ## Exchange 2016 or Exchange 2013 registry settings
@@ -133,7 +133,7 @@ Instructions for when you use these settings:
 - https://*ConnectorFQDN*
 
 
-## SharePoint 2013 registry settings
+## SharePoint 2013 registry settings
 
 **Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -180,7 +180,7 @@ Instructions for when you use these settings:
 
 
 
-#### File server and File Classification Infrastructure registry settings
+## File server and File Classification Infrastructure registry settings
 
 **Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
