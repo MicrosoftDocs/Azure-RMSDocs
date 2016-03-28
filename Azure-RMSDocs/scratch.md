@@ -58,12 +58,6 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 - bulleted
 - list
 
-1. This
-2. Is
-3. Liza's
-4. New
-5. List
-
 1. Lists
 1. embedded
   1. embedded
@@ -76,6 +70,19 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
   - list
 1. list
 
+1. Numbered
+2. List
+3. That
+4. Is
+5. Pissing
+6. Me
+7. Off.
+8. 
+
+1. Trying
+1. Another 
+1. Approach
+1. To the numbered list.
 
 ## Horizontal rule
 ---
