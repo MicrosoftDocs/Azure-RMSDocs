@@ -1,14 +1,30 @@
 ---
-title: How users sign up for RMS for individuals
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: How users sign up for RMS for individuals | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # How users sign up for RMS for individuals
 To sign up for this free account, users request it by visiting the [Microsoft Rights Management page](https://portal.aadrm.com/), and provide their work or school email address. 
 

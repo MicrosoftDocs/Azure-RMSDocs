@@ -1,14 +1,30 @@
 ---
-title: Implementing your Azure Rights management tenant key
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Implementing your Azure Rights management tenant key | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Implementing your Azure Rights Management tenant key
 
 Use the information and procedures in this section if you have decided to generate and manage your tenant key; the bring your own key (BYOK) scenario:

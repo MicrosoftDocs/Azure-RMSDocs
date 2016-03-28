@@ -1,14 +1,30 @@
 ---
-title: Configuring Applications for Azure Rights Management
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Configuring Applications for Azure Rights Management | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Configuring Applications for Azure Rights Management
 > [!NOTE]
 > This information is for IT administrators and consultants who have deployed Azure Rights Management. If you are looking for user help and information about how to use Rights Management for a specific application or how to open a file that is rights-protected, use the help and guidance that accompanies your application.

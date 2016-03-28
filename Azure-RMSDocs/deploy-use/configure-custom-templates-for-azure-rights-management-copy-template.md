@@ -1,14 +1,30 @@
 ---
-title: Copy a template
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Copy a template | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # Copy a template
 If you want to create a new template that has very similar settings to an existing template, select the original template on the **TEMPLATES** page, click **COPY**, specify a unique name, and make the changes that you need.

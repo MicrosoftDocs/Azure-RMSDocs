@@ -1,14 +1,30 @@
 ---
-title: Microsoft-managed - tenant key lifecycle operations
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Microsoft-managed - tenant key lifecycle operations | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # Microsoft-managed: Tenant key lifecycle operations
 If Microsoft manages your tenant key for Azure Rights Management (the default), use the following sections for more information about the lifecycle operations that are relevant to this topology.

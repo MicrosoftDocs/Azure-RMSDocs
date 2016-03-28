@@ -1,14 +1,30 @@
 ---
-title: Generate and transfer your tenant key – over the Internet
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Generate and transfer your tenant key – over the Internet | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # Generate and transfer your tenant key – over the Internet
 Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:

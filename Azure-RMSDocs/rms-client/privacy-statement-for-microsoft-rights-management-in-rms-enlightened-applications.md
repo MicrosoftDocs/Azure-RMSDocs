@@ -1,14 +1,30 @@
 ---
-title: Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications | Azure RMS
+description:
+keywords:
+author: 
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 751e5e05-fbe2-4769-a5df-1362c0db2108
-author: Msmbaldwin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications
 Applies To: Microsoft Rights Management functionality which is embedded in applications
 

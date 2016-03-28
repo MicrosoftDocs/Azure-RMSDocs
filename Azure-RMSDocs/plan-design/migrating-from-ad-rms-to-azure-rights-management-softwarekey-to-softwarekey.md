@@ -1,14 +1,30 @@
 ---
-title: Step 2: Software-protected key to software-protected key migration
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Step 2&colon; Software-protected key to software-protected key migration | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
-ms.assetid: TBD
-author: Cabailey
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # Step 2: Software-protected key to software-protected key migration
 

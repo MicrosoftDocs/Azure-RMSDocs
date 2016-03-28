@@ -1,14 +1,30 @@
 ---
-title: Azure Rights Management
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: EMS
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Azure Rights Management | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Azure Rights Management
 This page introduces the technical documentation set for Microsoft Azure Rights Management (Azure RMS), to help you protect your organization’s sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is a cloud service, and is integrated into other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. However, it can also be used with your on-premises applications and services.
 

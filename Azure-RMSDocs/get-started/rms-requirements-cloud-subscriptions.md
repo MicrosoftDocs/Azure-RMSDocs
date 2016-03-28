@@ -1,14 +1,30 @@
 ---
-title: Azure RMS Requirements&#58; Cloud Subscriptions
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: EMS
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Azure RMS Requirements&#58; Cloud Subscriptions | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # Cloud subscriptions that support Azure RMS
 To use Azure Rights Management (Azure RMS), your organization must have at least one of the following subscriptions with a sufficient number of licenses for users and services that will protect files and email messages. If you have a service that will apply protection for users (owners of the files or email messages), those users require one of these licenses. Users who will only consume (for example, read and edit) this protected data do not need a license.

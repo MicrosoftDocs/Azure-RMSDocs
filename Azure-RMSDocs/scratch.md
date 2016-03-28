@@ -1,14 +1,30 @@
 ---
-title: Scratch
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: EMS
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Scratch | Azure RMS
+description:
+keywords:
+author: 
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
-ms.assetid: TBD
-author: msmbaldwin
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: ffaf0e97-1399-461b-851f-865ed04eda3b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 
 # First level heading
 

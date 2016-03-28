@@ -1,14 +1,30 @@
 ---
-title: Use keyboard shortcuts in the Rights Management sharing application
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Use keyboard shortcuts in the Rights Management sharing application | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Use keyboard shortcuts in the Rights Management sharing application
 When you use the RMS sharing application, press the **Alt** key to see the available access keys, and then press **Alt** + the access key to select an option.
 
