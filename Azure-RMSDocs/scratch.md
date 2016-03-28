@@ -59,7 +59,7 @@ These are some lists that are pissing me off.
 2. Is
 3. An
 4. Ordered
-5. List that I created by hand-numbering in VSCode.
+5. List that I created by hand-numbering in VSCode.  
 
 
 1. This
@@ -67,7 +67,15 @@ These are some lists that are pissing me off.
 1. An
 1. Ordered
 1. List
-1. That I just used 1. 1. 1. 1.
+1. That I just used 1. 1. 1. 1.  
+
+Trying adding double spaces at the end of the list to break it.
+
+1. This is an embedded list.
+    1. SubStep1.
+    2. SubStep2.
+    3. Substep3.
+2. Back to main list.
 
 ## Unordered Lists
 
