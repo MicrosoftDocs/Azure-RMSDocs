@@ -49,8 +49,27 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 [link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
 [link to external website](https://azure.microsoft.com)
 
+# Lists
 
-## Lists
+These are some lists that are pissing me off.
+
+## Ordered lists
+
+1. This 
+2. Is
+3. An
+4. Ordered
+5. List that I created by hand-numbering in VSCode.
+
+
+1. This
+1. Is
+1. An
+1. Ordered
+1. List
+1. That I just used 1. 1. 1. 1.
+
+## Unordered Lists
 
 - This
 - is
@@ -58,31 +77,7 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 - bulleted
 - list
 
-1. Lists
-1. embedded
-  1. embedded
-  2. numbered
-  3. list
-1. into
-1. other
-  - embedded
-  - bulleted
-  - list
-1. list
 
-1. Numbered
-2. List
-3. That
-4. Is
-5. Pissing
-6. Me
-7. Off.
-8. 
-
-1. Trying
-1. Another 
-1. Approach
-1. To the numbered list.
 
 ## Horizontal rule
 ---
