@@ -1,14 +1,30 @@
 ---
-title: Full screen picture: RMS templates in the Azure Management Portal
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Full screen picture&colon; RMS templates in the Azure Management Portal | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 596e4fec-124c-41b1-8efd-63d5179193fb
-author: Cabailey
-robots: nofollow
+
+# optional metadata
+
+ROBOTS: nofollow
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Full screen picture: RMS templates in the Azure Management Portal
 ![](./media/AzRMS_TemplatesPortal.png)
 

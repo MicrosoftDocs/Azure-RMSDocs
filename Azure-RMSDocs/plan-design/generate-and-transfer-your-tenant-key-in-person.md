@@ -1,14 +1,30 @@
 ---
-title: Generate and transfer your tenant key – in person
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: na
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Generate and transfer your tenant key – in person | Azure RMS
+description:
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
-author: Cabailey
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Generate and transfer your tenant key – in person
 
 Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md) and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
