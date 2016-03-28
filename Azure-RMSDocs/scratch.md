@@ -58,6 +58,7 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 - bulleted
 - list
 
+
 1. This
 2. is
 3. a
