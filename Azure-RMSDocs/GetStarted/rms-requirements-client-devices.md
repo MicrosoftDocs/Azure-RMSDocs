@@ -6,14 +6,14 @@ ms.service: rights-management
 ms.suite: EMS
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 author: Cabailey
 ---
 
-# <a name="BKMK_SupportedDevices"></a>Client devices that support Azure RMS
+# Client devices that support Azure RMS
 Use the following sections to identify which devices support Azure Rights Management (Azure RMS), and which Rights Management capabilities they support.
 
-## <a name="BKMK_RMSSupportedComputers"></a>Computers
+## Computers
 The following computer operating systems support Azure Rights Management:
 
 -   **Windows 7** (x86, x64)
@@ -26,7 +26,7 @@ The following computer operating systems support Azure Rights Management:
 
 -   **Mac OS X**: Minimum version of Mac OS X 10.8 (Mountain Lion)
 
-## <a name="BKMK_RMSSupportedMobileDevices"></a>Mobile devices
+## Mobile devices
 The following mobile device operating systems support Azure Rights Management:
 
 -   **Windows Phone**: Windows Phone 8.1
@@ -37,7 +37,7 @@ The following mobile device operating systems support Azure Rights Management:
 
 -   **Windows RT tablets**: Windows 8.1 RT
 
-## <a name="BKMK_ClientCapabilities"></a>Client device capabilities
+## Client device capabilities
 Not all supported client devices currently support all RMS capabilities. Use the following table to identify which applications support the RMS capabilities, and the exceptions.
 
 Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](active-directory-rights-management-services-mobile-device-extension.md).

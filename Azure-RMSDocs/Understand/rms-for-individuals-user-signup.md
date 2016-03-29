@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 author: Cabailey
 ---
 # How users sign up for RMS for individuals
@@ -39,7 +39,7 @@ The most typical way that users will be directed to this sign-up page is if they
 
 Now your account is created, you’re ready to start protecting files and read files that others have protected. When prompted to sign in to protect or read protected files, enter your email address and password that you used to create the account for RMS for the individuals.
 
-## <a name="BKMK_TechnicalOverview"></a>Technical overview of the sign-up process
+## Technical overview of the sign-up process
 RMS for individuals uses a self-service sign up process that is also used by other services that use Microsoft cloud-based technology to authenticate users.
 
 This is what happens in the background when a user signs up for RMS for individuals and their organization does not have an Office 365 subscription or Azure subscription, and therefore, no directory in Azure to authenticate users:

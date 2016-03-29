@@ -1,15 +1,35 @@
 ---
-title: Scratch
-ms.custom: na
-ms.reviewer: na
-ms.service: rights-management
-ms.suite: EMS
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Scratch | Azure RMS
+description:
+keywords:
+author: 
+manager: mbaldwin
+ms.date: 04/28/2016
 ms.topic: article
-ms.assetid: TBD
-author: msmbaldwin
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: ffaf0e97-1399-461b-851f-865ed04eda3b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
+
 # First level heading
+
+See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md); see the markdown reference in [the EM Pilot style guide](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931). 
+
 ## second level heading
 ### Third level heading
 #### Fourth level heading
@@ -18,14 +38,46 @@ author: msmbaldwin
 
 ## Text styling
 
-*Bold*  **italics** ~~strikethrough~~
+*Bold*  
+
+**italics** 
+
+~~strikethrough~~
 
 # Links
-[regular link](/azure-rms/index.html) 
+
+[link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
+[link to external website](https://azure.microsoft.com)
+
+# Lists
+
+These are some lists that are pissing me off.
+
+## Ordered lists
+
+1. This 
+2. Is
+3. An
+4. Ordered
+5. List that I created by hand-numbering in VSCode.  
 
 
+1. This
+1. Is
+1. An
+1. Ordered
+1. List
+1. That I just used 1. 1. 1. 1.  
 
-## Lists
+Trying adding double spaces at the end of the list to break it.
+
+1. This is an embedded list.
+    1. SubStep1.
+    2. SubStep2.
+    3. Substep3.
+2. Back to main list.
+
+## Unordered Lists
 
 - This
 - is
@@ -33,17 +85,7 @@ author: msmbaldwin
 - bulleted
 - list
 
-1. This
-1. is
-  1. embedded
-  2. numbered
-  3. list
-1. a
-1. numbered
-  - embedded
-  - bulleted
-  - list
-1. list
+
 
 ## Horizontal rule
 ---
@@ -56,11 +98,20 @@ author: msmbaldwin
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
+## Code
+
+### Codeblock
+
+    This is an example of
+    a code block
+
+### In-line code
+
+This is an example of `in-line code`.
+
 ## Blockquote
 
 > Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
-
-
 
 
 ## Images
@@ -70,10 +121,24 @@ author: msmbaldwin
 
 ### Linked Image
 
-[![alt text for linked image](./media/AzRMS_elements.png)](/azure-rms/index.html) 
+[![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
 
 ### Animated gif
 ![animated gif](./media/hololens.gif)
+
+## Alerts
+
+> [!NOTE]
+> This is NOTE
+
+> [!WARNING]
+> This is WARNING
+
+> [!TIP]
+> This is TIP
+
+> [!IMPORTANT]
+> This is IMPORTANT
 
 ## Videos
 

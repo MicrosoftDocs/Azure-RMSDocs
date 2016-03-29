@@ -6,11 +6,11 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 author: Cabailey
 ---
 
-# <a name="BKMK_FCIIntro"></a>File servers that run Windows Server and use File Classification Infrastructure (FCI)
+# File servers that run Windows Server and use File Classification Infrastructure (FCI)
 
 When you configure Windows Server to use File Classification Infrastructure, this File Server Resource Manager feature can scan local files and determine whether they contain sensitive data. For files that meet this criteria, they are tagged with classification properties that an administrator defines. The File Classification Infrastructure can then take automatic action, according to the classification. One of these actions include applying information protection by using [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] and the deployment of the Rights Management connector (also known as the RMS connector). Office files are then automatically protected by Azure RMS.
 

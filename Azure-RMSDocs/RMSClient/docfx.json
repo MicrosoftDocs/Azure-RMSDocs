@@ -40,5 +40,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/rights-management/rms-client"
+  "basepath": "/rights-management/rms-client-old"
 }

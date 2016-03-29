@@ -6,11 +6,11 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 author: Cabailey
 ---
 
-# <a name="BKMK_SharingAppIntro"></a>RMS sharing application for Windows and mobile platforms
+# RMS sharing application for Windows and mobile platforms
 The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](http://technet.microsoft.com/library/dn339003.aspx) section from the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
 
 When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).

@@ -279,7 +279,7 @@ Now you've completed the classification configuration, you're ready to configure
 
 When you have confirmed that these tasks run successfully, you can close File Resource Manager. New files will be automatically protected and all files will be protected again when the schedules run. Re-protecting files ensures that any changes to the template are applied to the files.
 
-### <a name="BKMK_RMSProtection_Script"></a>Windows PowerShell Script for Azure RMS protection by using File Server Resource Manager FCI
+### Windows PowerShell Script for Azure RMS protection by using File Server Resource Manager FCI
 This section contains the sample script to copy and edit, as described in the preceding section.
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*

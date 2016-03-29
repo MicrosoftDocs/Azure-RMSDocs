@@ -6,11 +6,11 @@ ms.service: rights-management
 ms.suite: EMS
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 author: Cabailey
 ---
 
-# <a name="BKMK_RMSpictures"></a>Azure RMS in action: What administrators and users see
+# Azure RMS in action: What administrators and users see
 The pictures in this article show some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) to help protect sensitive or confidential information.
 
 > [!NOTE]
@@ -20,7 +20,7 @@ The pictures in this article show some typical examples of how administrators an
 
 For other screenshots and videos that show RMS in action, check the [Microsoft Rights Management services portal](http://www.microsoft.com/rms) and the [Microsoft Rights Management (RMS) Team Blog](http://blogs.technet.com/b/rms).
 
-## <a name="BKMK_Example_ManagementPortal"></a>Activating and configuring Rights Management
+## Activating and configuring Rights Management
 Although you can use Windows PowerShell to activate and configure Azure RMS, it’s easiest from the management portal. As soon as the service is activated, you have two default templates that administrators and users can select to quickly and easily apply information protection to files. But you can also create your own custom templates for additional options and settings.
 
 ![](../media/AzRMS_StoryboardActivate_small1.png)
@@ -59,7 +59,7 @@ If you do not want users to see these templates or if you want to create your ow
 
 Next, see some examples of how administrators can apply the templates to automatically configure information protection for files and emails.
 
-## <a name="BKMK_Example_FCI"></a>Automatically protecting files on file servers running Windows Server and File Classification Infrastructure
+## Automatically protecting files on file servers running Windows Server and File Classification Infrastructure
 
 This example shows how you can use Azure RMS to automatically protect files on file servers that run at least Windows Server 2012 and are configured to use File Classification Infrastructure.
 
@@ -88,7 +88,7 @@ The recipient cannot read the confidential report because he is not a member of 
 
 - For step-by-step instructions, see [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md).
 
-## <a name="BKMK_Example_DLP"></a>Automatically protecting emails with Exchange Online and data loss prevention policies
+## Automatically protecting emails with Exchange Online and data loss prevention policies
 
 The previous example showed how you could automatically protect files that contain sensitive or confidential information, but what if the information is not in a file, but in an email message? This is where Exchange Online data loss prevention (DLP) policies comes in, either prompting users to apply information protection (by using Policy Tips) or automatically applying it for them (by using transport rules).
 
@@ -118,7 +118,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 -   For step-by-step instructions to configure Exchange Online for Azure RMS, see [Exchange Online: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_ExchangeOnline) in the [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md) topic.
 
-## <a name="BKMK_Example_SharePoint"></a>Automatically protecting files with SharePoint Online and protected libraries
+## Automatically protecting files with SharePoint Online and protected libraries
 
 This shows how you can easily protect documents when you use SharePoint Online and protected libraries.
 
@@ -146,7 +146,7 @@ The document remains protected even if the user renames it, saves it to another 
 
 -   For step-by-step instructions to configure SharePoint for Azure RMS, see [SharePoint Online and OneDrive for Business: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_SharePointOnline) in the [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md) topic.
 
-## <a name="BKMK_Example_SharingApp"></a>Users safely share attachments with mobile users
+## Users safely share attachments with mobile users
 
 The previous examples showed how administrators can automatically apply information protection to sensitive and confidential data. But there will be some occasions when users might need to apply this protection themselves. For example, they are collaborating with partners in another organization, they need custom permissions or settings that are not defined in templates, for or ad-hoc situations that are not covered by the previous examples. In these situations, users can apply the RMS templates themselves or configure custom permissions.
 

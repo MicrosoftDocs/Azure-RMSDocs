@@ -6,11 +6,11 @@ ms.service: rights-management
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 author: Cabailey
 ---
 
-# <a name="BKMK_Detect"></a>How to find out if your users have signed up for RMS for individuals
+# How to find out if your users have signed up for RMS for individuals
 As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of the following methods:
 
 -   Ask users how they protect highly confidential files, especially when collaborating with others outside the organization.

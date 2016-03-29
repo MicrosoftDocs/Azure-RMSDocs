@@ -6,7 +6,7 @@ ms.service: rights-management
 ms.suite: EMS
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: TBD
+ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 author: Cabailey
 ---
 # Azure RMS Requirements: Azure AD Directory
@@ -28,7 +28,7 @@ If you want to integrate your Azure AD directory with your on-premises AD forest
 > 
 > -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
 
-## <a name="BKMK_MFA"></a>Multi-factor authentication (MFA) and Azure RMS
+## Multi-factor authentication (MFA) and Azure RMS
 To use multi-factor authentication (MFA) with Azure RMS requires at least one of the following:
 
 -   Office 2013 (minimum version):

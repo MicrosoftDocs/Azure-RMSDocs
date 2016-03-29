@@ -17,7 +17,7 @@ To do this testing, you can use the information in [Helping Users to Protect Fil
 If your testing is unsuccessful, review the configuration steps in [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md), and use the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) to help identify and fix potential problems. You can also run this tool periodically, as a general health check.
 
 > [!TIP]
-> If you need additional help, see the [Support options and community resources](information-and-support-for-azure-rights-management.md#BKMK_SupportOptions) section in the [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md) topic.
+> If you need additional help, see the [Support options and community resources](../get-started/information-and-support-for-azure-rights-management.md##support-options-and-community-resources) section in the [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md) topic.
 
 You can monitor how your organization is using information protection by using usage logging. For more information, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
 

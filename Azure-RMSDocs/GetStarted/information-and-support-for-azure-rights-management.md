@@ -26,7 +26,7 @@ The following sections provide additional information about [!INCLUDE[aad_rights
 -   [Support options and community resources](information-and-support-for-azure-rights-management.md#BKMK_SupportOptions)
 
 
-## <a name="BKMK_ProductGroupBlog"></a>The Rights Management product group blog
+## The Rights Management product group blog
 The Rights Management product group uses the [Microsoft Rights Management (RMS) Team Blog](http://blogs.technet.com/b/rms/) to provide you with technical information and other news about [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], AD RMS, and related technologies. These blog posts supplement the product documentation and support information.
 
 You can use the [docs tag](http://blogs.technet.com/b/rms/archive/tags/docs/) and the monthly documentation announcements to check for new articles and whether existing articles have been recently revised.
@@ -34,7 +34,7 @@ You can use the [docs tag](http://blogs.technet.com/b/rms/archive/tags/docs/) an
 > [!TIP]
 > If you are developing applications for Azure RMS or AD RMS, you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner Blog](http://blogs.msdn.com/b/rms/).
 
-## <a name="BKMK_SupportOptions"></a>Support options and community resources
+## Support options and community resources
 The following links provide information about support and troubleshooting options, and community resources:
 
 -   [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437)
