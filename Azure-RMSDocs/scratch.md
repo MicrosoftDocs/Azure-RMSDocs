@@ -49,35 +49,8 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 [link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
 [link to external website](https://azure.microsoft.com)
 
-# Lists
 
-These are some lists that are pissing me off.
-
-## Ordered lists
-
-1. This 
-2. Is
-3. An
-4. Ordered
-5. List that I created by hand-numbering in VSCode.  
-
-
-1. This
-1. Is
-1. An
-1. Ordered
-1. List
-1. That I just used 1. 1. 1. 1.  
-
-Trying adding double spaces at the end of the list to break it.
-
-1. This is an embedded list.
-    1. SubStep1.
-    2. SubStep2.
-    3. Substep3.
-2. Back to main list.
-
-## Unordered Lists
+## Lists
 
 - This
 - is
@@ -85,6 +58,32 @@ Trying adding double spaces at the end of the list to break it.
 - bulleted
 - list
 
+1. This
+2. is
+3. a
+4. numbered
+5. list
+
+
+1. Lists
+1. embedded
+  1. embedded
+  2. numbered
+  3. list
+1. into
+1. other
+  - embedded
+  - bulleted
+  - list
+1. list
+
+## Checklists ??
+
+Is this a real thing? 
+- [x] This is GFM but does it work on docs.ms
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
 
 
 ## Horizontal rule
@@ -102,8 +101,11 @@ Trying adding double spaces at the end of the list to break it.
 
 ### Codeblock
 
-    This is an example of
-    a code block
+    function fancyAlert(arg) {
+      if(arg) {
+        $.docs({div:'#foo'})
+      }
+    }
 
 ### In-line code
 
@@ -111,8 +113,7 @@ This is an example of `in-line code`.
 
 ## Blockquote
 
-> Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
-
+> The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
 
 ## Images
 
