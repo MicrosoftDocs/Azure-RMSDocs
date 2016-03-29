@@ -5,24 +5,24 @@
 
 # required metadata
 
-title: Article Title | Service Name
+title: [ARTICLE TITLE | SERVICE NAME]
 description:
 keywords:
-author:
-manager:
+author: [GITHUB USERNAME]
+manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid:
+ms.assetid: [GET ONE FROM https://www.guidgenerator.com]
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer:
+#ms.reviewer: [ALIAS]
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:

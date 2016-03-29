@@ -42,7 +42,9 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 
 **italics** 
 
-~~strikethrough~~
+~~strikethrough~~ (Doesn't work)
+
+Do URLs become clickable? http://www.github.com/
 
 # Links
 
