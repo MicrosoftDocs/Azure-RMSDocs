@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Rights Management Deployment Roadmap | Azure RMS
+title: Azure Rights Management deployment roadmap | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Azure Rights Management Deployment Roadmap
+# Azure Rights Management deployment roadmap
 Use the following steps to prepare for, implement, and manage Azure Rights Management (Azure RMS) for your organization.
 
 However, if you just want to quickly try Azure RMS for yourself, rather than roll it out in a production environment, see [Quick Start Tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md).
@@ -68,5 +68,4 @@ You’re now ready to publish and consume protected content, and log how your co
 ## Step 5: Administer Rights Management for your tenant account as needed
 As you begin to use [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], you might find the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] module for Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
-## See Also
-[Configuring Azure Rights Management](configuring-azure-rights-management.md)
+
