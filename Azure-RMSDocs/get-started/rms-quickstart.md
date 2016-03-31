@@ -10,7 +10,7 @@ ms.date: 04/07/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
+ms.assetid: a57d0364-b370-434b-9199-05ee8b584692
 
 # optional metadata
 
