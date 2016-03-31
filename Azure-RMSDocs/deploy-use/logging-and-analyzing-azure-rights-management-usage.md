@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Logging and Analyzing Azure Rights Management Usage | Azure RMS
+title: Logging and analyzing Azure Rights Management usage | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Logging and Analyzing Azure Rights Management Usage
+# Logging and analyzing Azure Rights Management usage
 Use the information in this topic to help you understand how you can use usage logging with Azure Rights Management (Azure RMS). The Azure Rights Management service can log every request that it makes for your organization, which includes requests from users, actions performed by Rights Management administrators in your organization, and actions performed by Microsoft operators to support your Azure Rights Management deployment.
 
 You can then use these Azure Rights Management logs to support the following business scenarios:
@@ -50,14 +50,6 @@ You can then use these Azure Rights Management logs to support the following bu
 > You can also use the Azure classic portal for high-level usage reports that include **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**,
 
 Use the following sections for more information about Azure Rights Management usage logging.
-
--   [How to enable Azure Rights Management usage logging](#how-to-enable-azure-rights-management-usage-logging)
-
--   [How to access and use your Azure Rights Management usage logs](#how-to-access-and-use-your-azure-rights-management-usage-logs)
-
--   [How to interpret your Azure Rights Management usage logs](#how-to-interpret-your-azure-rights-management-usage-logs)
-
--   [Windows PowerShell reference](#windows-powershell-reference)
 
 ## How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure RMS service before February 2016 and to customers who activate the service after February 2016. 
@@ -232,6 +224,5 @@ If you have logs in your own Azure storage from before the Azure RMS logging cha
 
 For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
 
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
+
 

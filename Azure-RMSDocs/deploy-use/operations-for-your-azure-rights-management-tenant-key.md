@@ -47,6 +47,4 @@ After you have identified which topology you have implemented, select one of the
 - [Customer-managed tenant key](operations-for-your-azure-rights-management-tenant-key-customer-managed.md)
 
 
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
 

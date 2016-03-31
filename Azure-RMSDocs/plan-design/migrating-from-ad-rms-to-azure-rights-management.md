@@ -389,6 +389,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 - https://<connectorName>/_wmcs/licensing
 
 
+---
 
 For Exchange 2013 - registry edit 2:
 
@@ -414,7 +415,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 - https://<connectorFQDN>/_wmcs/licensing
 
-
+---
 
 For Exchange 2010 - registry edit 1:
 
@@ -441,6 +442,8 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 - https://<connectorName>/_wmcs/licensing
 
 
+---
+
 For Exchange 2010 - registry edit 2:
 
 
@@ -466,7 +469,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 - https://<connectorFQDN>/_wmcs/licensing
 
-
+---
 
 After you have completed these procedures, be sure to read the **Next steps** section in the [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md) topic.
 
