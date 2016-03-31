@@ -12,7 +12,7 @@
 ## [How applications support Azure Rights Management](./how-applications-support-azure-rights-management.md)
 ### [RMS sharing application for Windows and mobile platforms](./sharing-application-for-windows-and-mobile-platforms.md)
 ### [Office applications and services](./rights-management-sharing-application-for-office.md)
-### [File servers that run Windows Server and use File Classification Infrastructure (./FCI)](./how-fileservers-support-azure-rights-management.md)
+### [File servers that run Windows Server and use File Classification Infrastructure](./how-fileservers-support-azure-rights-management.md)
 ### [Other applications that support the RMS APIs](./other-apps-support-apis.md)
 ## [Comparing Azure Rights Management and AD RMS](./comparing-azure-rights-management-and-ad-rms.md)
 # [Get started](/rights-management/get-started/requirements-for-azure-rights-management)
