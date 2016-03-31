@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Helping Users to Protect Files by Using Azure Rights Management | Azure RMS
+title: Helping users to protect files by Using Azure Rights Management | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,12 +25,12 @@ ms.suite: ems
 
 ---
 
-# Helping Users to Protect Files by Using Azure Rights Management
+# Helping users to protect files by using Azure Rights Management
 After you have deployed and configured Azure Rights Management (Azure RMS) for your organization, provide help and guidance for users, administrators, and your help desk:
 
 -   **End-user information:**
 
-    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for  their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing completely new processes . Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [custom templates](http://technet.microsoft.com/library/dn642472.aspx), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
+    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for  their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing completely new processes . Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [custom templates](configure-custom-templates-for-azure-rights-management.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
 
     > [!TIP]
     > Example videos for end users:
@@ -40,11 +40,11 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
 -   **Administrator information:**
 
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) and [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md) and [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 -   **Help desk information:**
 
-    One of the most useful tools for the help desk is the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   Help desk operators can run it with the Azure RMS administrator option, and they can ask users to run it with the Azure RMS user option. This tool can not only help identify problems, but also fix problems that it finds, and if still not fixed, record trace logs.
+    One of the most useful tools for the help desk is the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Help desk operators can run it with the Azure RMS administrator option, and they can ask users to run it with the Azure RMS user option. This tool can not only help identify problems, but also fix problems that it finds, and if still not fixed, record trace logs.
 
     If there are legitimate requests to have full rights access to protected documents, for example a request by the legal department or a manager after an employee has left the organization, make sure the help desk has processes to request this by using the Azure RMS [super user feature](https://technet.microsoft.com/en-us/library/mt147272.aspx).
 
@@ -115,5 +115,4 @@ Similarly to viewing a protected document, when the recipients receive the email
 
 Similarly to viewing a protected document, when the recipients receive the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted usage rights that were specified for that user. For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
 
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
+
