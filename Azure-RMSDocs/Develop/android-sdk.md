@@ -10,16 +10,14 @@ This topic will guide you through setting up your environment for creating your 
 -   [Configuring your development environment](#configuring_your_development_environment_)
 -   [See Also](#see_also)
 
-<span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
--------------------------------------------------------------------------------------------------------------
+## Prerequisites
 
 We recommend the following software on your development system:
 
 -   Windows or OS X operating system to run the [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) development environment.
 -   This guide assumes that you are using the Eclipse SDK beginning with Eclipse Juno 4.2 and using a default installation.
 -   Java starting with Java 1.6.
--   [Android Developer Tools (ADT) Plugin](http://developer.android.com/sdk/installing/index.html).
-    **Note**  You might be asked to restart Eclipse to complete the installation.
+-   [Android Developer Tools (ADT) Plugin](http://developer.android.com/sdk/installing/index.html). NOTE - You might be asked to restart Eclipse to complete the installation.
 
      
 
@@ -37,18 +35,15 @@ We recommend the following software on your development system:
 
 Read the [What's new](release_notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
 
-<span id="Optional"></span><span id="optional"></span><span id="OPTIONAL"></span>Optional
------------------------------------------------------------------------------------------
+## Optional
 
 Our UI library provides re-usable UI for consumption and protection operations for developers who don’t want to create their own custom UI - [UI Library and Sample app for Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-<span id="Configuring_your_development_environment_"></span><span id="configuring_your_development_environment_"></span><span id="CONFIGURING_YOUR_DEVELOPMENT_ENVIRONMENT_"></span>Configuring your development environment
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Configuring your development environment
 
 **Note**  MS RMS SDK 4.2 Preview Release: In this preview release, the screen shots have not been updated to show the change in name of the pathes from com/microsoft/protection to com/microsoft/rightsmanagment. The text though, has been updated.
 
  
-
 -   Open the Eclipse development environment.
 -   To create a new Android Application project, on the **File** menu, click **New**, click **Project**, and then select **Android Application Project**.
 
@@ -79,7 +74,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 **Referencing the SDK**
 
--   Navigate to the folder in which you extracted the *adrms\_android\_sdk.zip*. In the "SDK &gt; com &gt; microsoft &gt; rightsmanagement" folder, make sure the files *.classpath*, *.project*, and *project.properties* are not marked as read-only.
+-   Navigate to the folder in which you extracted the *adrms\_android\_sdk.zip*. In the "SDK > com > microsoft > rightsmanagement" folder, make sure the files *.classpath*, *.project*, and *project.properties* are not marked as read-only.
 -   To reference the SDK, you must import it to the workspace.
 
     In Eclipse, click **File**. On the **File** menu, click **Import**. In the **Import** dialog box, select **Android / Existing Android Code into Workspace**.
@@ -109,31 +104,22 @@ Our UI library provides re-usable UI for consumption and protection operations f
     ![](images/Android-setup-11d.jpg)
 
 -   You can verify the manifest step by viewing the manifest in the text editor view. Make sure the following lines appear:
-    <span codelanguage=""></span>
-    <table>
-    <colgroup>
-    <col width="100%" />
-    </colgroup>
-    <tbody>
-    <tr class="odd">
-    <td align="left"><pre><code>&lt;uses-sdk
-         android:minSdkVersion=&quot;15&quot;
-         android:targetSdkVersion=&quot;19&quot;/&gt;
-    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
-    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;
-    &lt;uses-permission/&gt;</code></pre></td>
-    </tr>
-    </tbody>
-    </table>
 
-    **Note**  The SDK uses the *android.support.v4*
+...
 
-     
+    <uses-sdk
+         android:minSdkVersion="15"
+         android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission/>
+...
+
+**Note**  The SDK uses the *android.support.v4*
 
 -   You are now ready to create your own new Android apps.
 
-<span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
------------------------------------------------------------------------------------------
+### See Also
 
 [Get started](get_started.md)
 
@@ -146,6 +132,3 @@ Our UI library provides re-usable UI for consumption and protection operations f
  
 
  
-
-
-
