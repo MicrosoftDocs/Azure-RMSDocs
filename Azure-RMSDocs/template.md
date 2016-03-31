@@ -143,7 +143,7 @@ If a URL appears in a markdown file, pit will be transformed into a clickable li
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
-| col 1 is default (left-aligned) | t      |    $1 |
+| col 1 is default | left-aligned     |    $1 |
 
 ### Code
 
