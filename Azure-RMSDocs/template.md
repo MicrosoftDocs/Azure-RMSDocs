@@ -1,28 +1,24 @@
 ---
-# IMPORTANT: 
-# ensure you have at least one space after the colon (:) when you provide value(s) for a metadata below
-# remove the comment prefix (#) from the optional metadata name when you add a non empty value to it.
-
 # required metadata
 
-title: Article Title | Service Name
+title: [ARTICLE TITLE | SERVICE NAME]
 description:
 keywords:
-author:
-manager:
+author: [GITHUB USERNAME]
+manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid:
+ms.assetid: [GET ONE FROM guidgenerator.com]
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer:
+#ms.reviewer: [ALIAS]
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -35,13 +31,13 @@ ms.assetid:
 
 The full metadata block is above, divided into required fields and optional fields; see the [OPS metadata cheatsheet](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data) for more details. Some key notes:
 
-- You *must* have a space between the colon (:) and the value for a metadata element.
-- If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na")
-- Colons in a value (e.g., a title) break the metadata parser. Instead use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS")
-- *title*: The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading.
-- *author*, *manager*, *reviewer*: The author field should contain the *Github username* of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. Reviewer should be the name of the PM associated with the article.
-- *ms.assetid*: This is a GUID. For now you can get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com). 
-- *ms.prod*, *ms.servic*, *ms.technology*, *ms.devlang*, *ms.topic*, *ms.tgt_pltfrm*: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default)
+- You **must** have a space between the colon (:) and the value for a metadata element.
+- If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na"); if you are adding a value to an element that was commnted out, be sure to remove the #.
+- Colons in a value (e.g., a title) break the metadata parser. In their place, use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS").
+- **title**: The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading.
+- **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
+- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## Markdown
 
@@ -62,14 +58,35 @@ Examples of first-, second-, and third-level headings are above.
 
 ### Text styling
 
-*Bold*  
+*Italics* 
 
-**italics** 
+**Bold** 
+
+~~Strikethrough~~
+
+
 
 # Links
 
-[link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
-[link to external website](https://azure.microsoft.com)
+To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
+
+- Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
+
+To link to a header in the same markdown file, view the source of the published article, find the id of the head (e.g. `id="blockquote"`, and link using # + id (e.g. `#blockquote`).
+
+- Example: [Blockquotes](#blockquote)
+
+To link to a header in a markdown file in the same repo, use relative linking + hashtag linking.
+
+- Example: [technical overiew of the sign-up process](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
+
+To link to an external file, use the full URL as the link.
+
+- Example: [Github](http://www.github.com)
+
+If a URL appears in a markdown file, pit will be transformed into a clickable link.
+
+- Example: http://www.github.com
 
 ### Lists
 
@@ -82,12 +99,14 @@ Examples of first-, second-, and third-level headings are above.
 1. List  
 
 
+##### Ordered list with an embedded list
+
 1. Here
 1. comes
 1. an
 1. embedded
     1. Miss Scarlett
-    2. Professor Plum
+    1. Professor Plum
 1. ordered
 1. list
 
@@ -101,6 +120,8 @@ Examples of first-, second-, and third-level headings are above.
 - list
 
 
+##### Unordered list with an embedded lists
+
 - This 
 - bulleted 
 - list
@@ -113,7 +134,6 @@ Examples of first-, second-, and third-level headings are above.
 - lists
 
 
-
 ### Horizontal rule
 ---
 
@@ -123,7 +143,7 @@ Examples of first-, second-, and third-level headings are above.
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
-| col 1 is | t      |    $1 |
+| col 1 is default | left-aligned     |    $1 |
 
 ### Code
 
@@ -146,6 +166,7 @@ This is an example of `in-line code`.
 ### Images
 
 #### Static Image
+
 ![this is the alt text](./media/AzRMS_elements.png)
 
 #### Linked Image
@@ -153,6 +174,7 @@ This is an example of `in-line code`.
 [![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com) 
 
 #### Animated gif
+
 ![animated gif](./media/hololens.gif)
 
 ### Alerts
@@ -162,12 +184,12 @@ This is an example of `in-line code`.
 > [!NOTE]
 > This is NOTE
 
-#### Warnings
+#### Warning
 
 > [!WARNING]
 > This is WARNING
 
-#### Tips
+#### Tip
 
 > [!TIP]
 > This is TIP

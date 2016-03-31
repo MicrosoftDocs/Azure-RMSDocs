@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring Custom Templates for Azure Rights Management | Azure RMS
+title: Configuring custom templates for Azure Rights Management | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Configuring Custom Templates for Azure Rights Management
+# Configuring custom templates for Azure Rights Management
 After you have [activated Azure Rights Management](activating-azure-rights-management.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
 
 -   Read-only viewing for the protected content
@@ -52,7 +52,7 @@ For many organizations, the default templates might be sufficient. But if you wa
 
 -   You want to configure additional options in a template that include an expiration date and whether the content can be accessed without an Internet connection.
 
-For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it.
+For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it. Although you will probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure. 
 
 Use the following information to help you configure and use custom templates:
 
@@ -67,6 +67,3 @@ Use the following information to help you configure and use custom templates:
 -   [Use PowerShell to manage templates](configure-custom-templates-for-azure-rights-management-powershell.md)
 
 
-
-## See Also
-[Configuring Azure Rights Management](configuring-azure-rights-management.md)
