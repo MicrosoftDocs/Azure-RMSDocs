@@ -3,9 +3,7 @@ How to: Add authentication to your app
 
 This topic describes the basics of user authentication for your RMS-enabled app.
 
-<span id="What_is_user_authentication"></span><span id="what_is_user_authentication"></span><span id="WHAT_IS_USER_AUTHENTICATION"></span>What is user authentication
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+## What is user authentication
 User authentication is an essential step to establish communication between your device app and the RMS infrastructure. This authentication process uses the standard OAuth 2.0 protocol which requires the following pieces of information about the current user and his/her authentication request; **authority**, **resource** and **userId**.
 
 **Note**  Scope is not currently used but may be and is therefore reserved for future use.
@@ -21,8 +19,7 @@ Each of the platform's RMS APIs has a callback that must implement in order to e
 -   The WinPhone API uses [**IAuthenticationCallback**](xref:msipcthin2.iauthenticationcallback) interface.
 -   The Linux API uses [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
-<span id="What_library_to_use_for_authentication"></span><span id="what_library_to_use_for_authentication"></span><span id="WHAT_LIBRARY_TO_USE_FOR_AUTHENTICATION"></span>What library to use for authentication
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## What library to use for authentication
 
 In order to implement your authentication callback you will need to download an appropriate library and configure your development environment to use it. You will find the ADAL libraries on GitHub for these platforms. Each of the following resources contains guidance to setup your environment and use the library.
 
@@ -34,10 +31,7 @@ In order to implement your authentication callback you will need to download an 
 
 **Note**  We recommend that you use one of the above Active Directory Authentication Libraries (ADAL) although you may use other authentication libraries.
 
- 
-
-<span id="Inputs_for_authentication_with_Azure_Active_Director_Authentication_Library__ADAL_"></span><span id="inputs_for_authentication_with_azure_active_director_authentication_library__adal_"></span><span id="INPUTS_FOR_AUTHENTICATION_WITH_AZURE_ACTIVE_DIRECTOR_AUTHENTICATION_LIBRARY__ADAL_"></span>Inputs for authentication with Azure Active Director Authentication Library (ADAL)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Inputs for authentication with Azure Active Director Authentication Library (ADAL)
 
 The ADAL requires several parameters to successfully authenticate a user to Azure RMS (or AD RMS). These are the standard OAuth 2.0 parameters that are generally required of any Azure AD app, as with RMS-enabled apps. You can find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
 
@@ -55,36 +49,28 @@ These parameters and guidelines are required for RMS work-flows:
 
 **Note**  If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
 
- 
-
-<span id="What_should_an_authentication_callback_implementation_look_like"></span><span id="what_should_an_authentication_callback_implementation_look_like"></span><span id="WHAT_SHOULD_AN_AUTHENTICATION_CALLBACK_IMPLEMENTATION_LOOK_LIKE"></span>What should an authentication callback implementation look like
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## What should an authentication callback implementation look like
 
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.
 
 **Android user authentication** - for more information, see [Android code examples](android_code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
 
-<span codelanguage=""></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>class MsipcAuthenticationCallback implements AuthenticationRequestCallback
-{
+...
+
+    class MsipcAuthenticationCallback implements AuthenticationRequestCallback
+    {
     ...
 
     @Override
-    public void getToken(Map&lt;String, String&gt; authenticationParametersMap,
+    public void getToken(Map<String, String> authenticationParametersMap,
                          final AuthenticationCompletionCallback authenticationCompletionCallbackToMsipc)
     {
-        String authority = authenticationParametersMap.get(&quot;oauth2.authority&quot;);
-        String resource = authenticationParametersMap.get(&quot;oauth2.resource&quot;);
-        String userId = authenticationParametersMap.get(&quot;userId&quot;);
+        String authority = authenticationParametersMap.get("oauth2.authority");
+        String resource = authenticationParametersMap.get("oauth2.resource");
+        String userId = authenticationParametersMap.get("userId");
         mClientId = “12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”; // get your registered Azure AD application ID here
         mRedirectUri = “urn:ietf:wg:oauth:2.0:oob”;
-        final String userHint = (userId == null)? &quot;&quot; : userId; 
+        final String userHint = (userId == null)? "" : userId;
         AuthenticationContext authenticationContext = App.getInstance().getAuthenticationContext();
         if (authenticationContext == null || !authenticationContext.getAuthority().equalsIgnoreCase(authority))
         {
@@ -105,7 +91,7 @@ These parameters and guidelines are required for RMS work-flows:
             }
        }
         App.getInstance().getAuthenticationContext().acquireToken(mParentActivity, resource, mClientId, mRedirectURI, userId, mPromptBehavior,
-                       &quot;&amp;USERNAME=&quot; + userHint, new AuthenticationCallback&lt;AuthenticationResult&gt;()
+                       "&USERNAME=" + userHint, new AuthenticationCallback<AuthenticationResult>()
                         {
                             @Override
                             public void onError(Exception exc)
@@ -140,141 +126,128 @@ These parameters and guidelines are required for RMS work-flows:
                                 }
                             }
                         });
-                         }</code></pre></td>
-</tr>
-</tbody>
-</table>
+                         }
+...
 
-**iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios_os_x_code_examples.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
+**iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios_os_x_code_examples.md),
 
-<span codelanguage=""></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>// AuthenticationCallback holds the necessary information to retrieve an access token.
-@interface MsipcAuthenticationCallback : NSObject&lt;MSAuthenticationCallback&gt;
- 
-@end
- 
-@implementation MsipcAuthenticationCallback
- 
+**Step 2** of the first scenario, "Consuming an RMS protected file".
+
+...
+
+    // AuthenticationCallback holds the necessary information to retrieve an access token.
+    @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
+
+    @end
+
+    @implementation MsipcAuthenticationCallback
+
 - (void)accessTokenWithAuthenticationParameters:
-         (MSAuthenticationParameters *)authenticationParameters 
+         (MSAuthenticationParameters *)authenticationParameters
                                 completionBlock:
          (void(^)(NSString *accessToken, NSError *error))completionBlock
 {
     ADAuthenticationError *error;
-    ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&amp;error];
+    ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&error];
 
-    NSString *appClientId = @”12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”; // get your registered Azure AD application ID here
+    NSString *appClientId = @”12345678-ABCD-ABCD-ABCD-ABCDEFGHIJ”;
 
-    NSURL *redirectURI = [NSURL URLWithString:@”ms-sample://com.microsoft.sampleapp”]; // get your &lt;app-scheme&gt;://&lt;bundle-id&gt; here
+    // get your registered Azure AD application ID here
+
+    NSURL *redirectURI = [NSURL URLWithString:@”ms-sample://com.microsoft.sampleapp”];
+
+    // get your <app-scheme>://<bundle-id> here
     // Retrieve token using ADAL
     [context acquireTokenWithResource:authenticationParameters.resource
                              clientId:appClientId
                           redirectUri:redirectURI
                                userId:authenticationParameters.userId
-                      completionBlock:^(ADAuthenticationResult *result) {
+                      completionBlock:^(ADAuthenticationResult *result)
+                      {
                           if (result.status != AD_SUCCEEDED)
                           {
-                              NSLog(@&quot;Auth Failed&quot;);
+                              NSLog(@"Auth Failed");
                               completionBlock(nil, result.error);
                           }
                           else
                           {
                               completionBlock(result.accessToken, result.error);
                           }
-                      }];
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+                      }
+
+        ];
+    }
+
+...
 
 **Linux / C++ user authentication** - for more information, see [Linux code examples](linux___c___code_examples.md).
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>// Class Header
+...
 
-class AuthCallback : public IAuthenticationCallback {
+    // Class Header
+
+    class AuthCallback : public IAuthenticationCallback {
 private:
 
-  std::shared_ptr&lt;rmsauth::FileCache&gt; FileCachePtr;
+  std::shared_ptr<rmsauth::FileCache> FileCachePtr;
   std::string clientId_;
   std::string redirectUrl_;
 
 public:
 
-  AuthCallback(const std::string&amp; clientId,
-               const std::string&amp; redirectUrl);
-  virtual std::string GetToken(shared_ptr&lt;AuthenticationParameters&gt;&amp; ap) override;
+  AuthCallback(const std::string& clientId,
+               const std::string& redirectUrl);
+  virtual std::string GetToken(shared_ptr<AuthenticationParameters>& ap) override;
 };
 
 class ConsentCallback : public IConsentCallback {
 public:
 
-  virtual ConsentList Consents(ConsentList&amp; consents) override;
+  virtual ConsentList Consents(ConsentList& consents) override;
 };
 
 // Class Implementation
 
-AuthCallback::AuthCallback(const string&amp; clientId, const string&amp; redirectUrl)
+AuthCallback::AuthCallback(const string& clientId, const string& redirectUrl)
   : clientId_(clientId)
   , redirectUrl_(redirectUrl)
 {
-  FileCachePtr = std::make_shared&lt;FileCache&gt;();
+  FileCachePtr = std::make_shared<FileCache>();
 }
 
-string AuthCallback::GetToken(shared_ptr&lt;AuthenticationParameters&gt;&amp; ap) {
+string AuthCallback::GetToken(shared_ptr<AuthenticationParameters>& ap) {
   string redirect =
-    ap-&gt;Scope().empty() ? redirectUrl_ : ap-&gt;Scope();
+    ap->Scope().empty() ? redirectUrl_ : ap->Scope();
 
   try
   {
     if (redirect.empty()) {
       throw rmscore::exceptions::RMSInvalidArgumentException(
-              &quot;redirect Url is empty&quot;);
+              "redirect Url is empty");
     }
 
     if (clientId_.empty()) {
-      throw rmscore::exceptions::RMSInvalidArgumentException(&quot;client Id is empty&quot;);
+      throw rmscore::exceptions::RMSInvalidArgumentException("client Id is empty");
     }
 
     AuthenticationContext authContext(
-      ap-&gt;Authority(), AuthorityValidationType::False, FileCachePtr);
+      ap->Authority(), AuthorityValidationType::False, FileCachePtr);
 
-    auto result = authContext.acquireToken(ap-&gt;Resource(),
+    auto result = authContext.acquireToken(ap->Resource(),
                                            clientId_, redirect,
                                            PromptBehavior::Auto,
-                                           ap-&gt;UserId());
-    return result-&gt;accessToken();
+                                           ap->UserId());
+    return result->accessToken();
   }
-  catch (const rmsauth::Exception&amp; ex)
+  catch (const rmsauth::Exception& ex)
   {
     // out logs
     throw;
   }
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+}
+
+...
 
  
 
  
-
-
-
