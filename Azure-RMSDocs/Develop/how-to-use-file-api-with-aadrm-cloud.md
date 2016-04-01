@@ -49,6 +49,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 -   After it generates a symmetric key, it will output information about key including the key itself and **AppPrincipalId**.
 
 
+
     The following symmetric key was created as one was not supplied
     ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
 
@@ -58,23 +59,28 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
     AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
+
 ### Instructions to find out **TenantBposId** and **Urls**
 
 -   Install [Azure RMS powershell module](https://technet.microsoft.com/en-us/library/jj585012.aspx).
 -   Start Powershell and run the following commands to get the RMS configuration of the tenant.
-            `Import-Module aadrm`
-            `Connect-AadrmService` (type-in your admin credentials)
-            `Get-AadrmConfiguration`
 
+    `Import-Module aadrm`
+
+    `Connect-AadrmService` (type-in your admin credentials)
+
+    `Get-AadrmConfiguration`
+
+
+-   Create an instance of an  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key) and set a few members.
 
     // Create a key structure.
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
 
     // Set each member with information from service creation.
-    symKey.wszBase64Key = &quot;your service principal key&quot;;
-    symKey.wszAppPrincipalId = &quot;your app principal identifier&quot;;
-    symKey.wszBposTenantId = &quot;your tenent identifier&quot;;
-
+    symKey.wszBase64Key = "your service principal key";
+    symKey.wszAppPrincipalId = "your app principal identifier";
+    symKey.wszBposTenantId = "your tenent identifier";
 
 
 For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key).
