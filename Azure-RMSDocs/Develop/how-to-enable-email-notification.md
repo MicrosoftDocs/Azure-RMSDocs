@@ -1,5 +1,5 @@
-Enabling email notification
-=====================================================================================
+# Enabling email notification
+
 
 \[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
@@ -7,7 +7,7 @@ Email notification allows for a protected content owner to be notified when his 
 
 To setup your email notification for a given license, use [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](xref:msipc.license_property_types) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](xref:msipc.ipc_name_value_list).
 
-**C++**
+## C++
 
     ...
     int numDataPairs = 3;
@@ -38,7 +38,7 @@ The following table contains the application data fields, property name and valu
 |MS.Notify.TZSN|string|“Pacific Standard Time”|**Source:** TimeZoneInfo.Local.StandardName - Standard Time Zone name.<br><br>This should the localized name of the time zone’s standard time zone name.|
 |MS.Notify.TZDN|string|“Pacific Daylight Time”|**Source:** TimeZoneInfo.Local.DaylightName - Daylight Time Zone name.<br><br>This should be the localized name of the time zone’s daylight savings name. It can be the same as the standard name if the time zone does not support daylight savings.|
 
-<span id="related_topics"></span>Related topics
+## Related topics
 -----------------------------------------------
 
 * [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty)

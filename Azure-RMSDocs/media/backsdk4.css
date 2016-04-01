@@ -1,0 +1,1059 @@
+/* Devdoc-specific defs */
+
+.os_icon_block {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+ul.os_icon_images {
+    position: absolute;
+    padding: 0;
+    margin: 0 10px 0 0;
+    width: 46px;
+    list-style: none;
+}
+
+.os_icon_content_block { 
+    position: relative;
+    left: 56px;
+    width: 92%;
+}
+
+.classDescriptionTD {
+	width:70%;
+}
+
+.lang, .ilang
+{
+	color: #0000ff;
+	font: normal 7pt Arial, Helvetica, sans-serif;
+}
+
+div.conditionalSection
+{
+	margin: 4pt 0 8pt 0;
+	padding: 4px 4px 8px 26px;
+	width: 100%;
+	border: none;
+	background: #ffffff;
+}
+
+div.filtered
+{
+	margin: 4pt 0 8pt 0;
+	padding: 4px 4px 8px 26px;
+	width: 100%;
+	border: 2px solid #aaaacc;
+	background: #ffffff;
+}
+
+div.buttonBlue
+{
+  background-color: #0066ff;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 5px;
+}
+
+.buttonBlue A:link {color: white; text-decoration: none;}
+.buttonBlue A:visited {color: white; text-decoration: none;}
+.buttonBlue A:active {color: white; text-decoration: none;}
+
+div.buttonGray
+{
+  background-color: #4d4d4d;
+  text-decoration: none;
+  text-align: center;
+  width: 150px;
+  height: 5px;
+}
+
+.buttonGray A:link {color: white; text-decoration: none;}
+.buttonGray A:visited {color: white; text-decoration: none;}
+.buttonGray A:active {color: white; text-decoration: none;}
+
+p.sdk_review
+{
+     background-color:#FFAA00;  
+}
+
+@media screen {
+
+	div.codeSnippet {
+	font-size: 110%;
+		border: none;
+		overflow-x: auto;
+		width: 97%;
+		word-wrap: normal;
+		background: #F0F0F0;
+		padding-left: 8;
+		padding-right: 8;
+		padding-top: 5;
+		padding-bottom: 5;
+		margin-bottom: .6em; 
+	}
+}
+
+@media print {
+
+div.codeSnippet {
+	font-size: 110%;
+	border: none;
+	width: 97%;
+	word-wrap: break-word;
+	background: #F0F0F0;
+	padding: 0px 0px 0px 0px;
+	}
+}
+
+pre.syntax
+{
+	font-family:	Consolas,Courier,monospace;
+	color:	#000000;
+	font-size: 105%;
+	background: #F0F0F0;
+	padding: 4px,8px;
+	cursor: text;
+	color: #000000;
+	width: 97%;
+}
+
+pre {
+	font-family:	Consolas,Courier,monospace;
+	color:	#000000;
+	font-size: 100%;	
+}
+
+H1 
+{
+  font-weight:700;
+  margin-top:10px;
+  margin-bottom:10px
+}
+
+/* End devdoc-specific defs */
+
+
+/* 9/29/08: from live CSS files - global-bn1945, library-bn1945, mtps-bn1945*/
+
+/* ---------------- CONTENT PRESENTATION STYLES ------------------- */
+/* ---------------------------------------------------------------- */
+
+body
+{
+	background:	#FFFFFF;
+	color: #2A2A2A;
+	font-family:	'Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 90%; 
+	font-style: normal;
+	font-weight: normal;
+	margin-top:	10;
+	margin-bottom:	10;
+	margin-left:	15;
+	margin-right:	15;
+	width:	95%;
+
+}
+
+a
+{
+	text-decoration:none;
+	color:#0099CC
+}
+a:link{color:#0099CC}
+a:visited{color:#0099CC}
+a:hover{color:#666}
+a:active{color:#0099CC}
+a img{border:none}
+
+H1{/*font-size:210%;*/
+	font-weight:normal;
+	font-family: 'Segoe UI Light','Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+	color: #333;
+	margin-top:		15;
+	margin-bottom:	15;
+}
+H1.heading{
+	font-size:130%;
+	font-weight:normal;
+	line-height:130%;	
+	color: #333;
+}
+H2{
+	font-size:125%;
+	font-weight:normal;
+	margin-top: 20;
+	margin-bottom:	0;
+	color: #333;
+
+}
+H2.subtitle{
+	color: #333;
+	font-weight:	normal;
+	margin-top: 6;
+	margin-bottom:	0;
+}
+H3{
+	font-size:115%;	
+	font-weight:normal;
+	margin-top: 13;
+	margin-bottom:	0;
+	color: #333;
+}
+H4,H5,H6{
+	font-size:105%;
+	font-weight:normal;
+	margin-top: 4;
+}
+h4.subHeading{font-size:100%}
+
+dl
+{
+	margin-top:	15;
+	margin-bottom:5;
+	padding-left:	1;
+}
+
+dt
+{
+	font-style:	bold;
+	margin-top: 2;
+}
+
+dd{
+	margin-left: 20px;
+}
+
+.li
+{
+	margin-top: 5;
+	margin-bottom: 5;
+}
+.ol{/*line-height:140%;list-style-type:decimal;margin-bottom:15px;margin-left:24px*/
+	margin-top:2;
+	margin-bottom: 15;
+	margin-left: 20;
+	list-style-type: decimal;
+}
+.ol ol{/*line-height:140%;list-style-type:lower-alpha;margin-bottom:4px;margin-left:24px;margin-top:3px*/
+	margin-bottom: 4;
+	margin-left: 24;
+	margin-top: 3;
+	list-style-type: lower-alpha;
+}
+.ol ul, .ul ol{
+	line-height:140%;
+	margin-bottom:10px;
+	margin-top:10px;
+	margin-left: 24px;
+}
+p{/*margin:0 0 10px;padding:0*/
+	color: #2A2A2A;
+	margin-top: 7;
+	margin-bottom: 7;
+}
+div.section p{
+	margin-bottom: 8px;
+	margin-top:0
+}
+.ul{/*line-height:140%;list-style-position:outside;list-style-type:disc;margin-bottom:15px*/
+	margin-left: 0px;
+	list-style-type: disc;
+}
+.ul ul{/*line-height:140%;list-style-type:disc;margin-bottom:4px;margin-left:17px;margin-top:3px*/
+	margin-bottom: 4px;
+	margin-left: 24px;
+	margin-top: 3px;
+	list-style-type: disc;
+}
+.heading{
+	font-family: 'Segoe UI Light','Segoe UI','Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+	font-weight:	normal;
+	color: #333;
+	margin-top:		18;
+	margin-bottom:	8;
+}
+.subHeading{
+	color: #333;
+	font-weight:	normal;
+	margin-bottom:	4;
+}
+
+.note, div.alert{
+	background:	#FFFFC6;
+	text-align: left;
+	color: #2A2A2A;
+	padding: 10;
+	margin: 10;
+	width: 95%
+
+}
+
+
+/*------------------------------ Begin General Table Styles -------------------------------*/
+/* Applies to regular tables */
+
+div#mainSection table
+{
+	border: 0;
+	border-collapse: collapse;  /* Removes column separations in multiple column tables */
+	border-top: 1px solid #D5D5D3;
+	font-size: 100%;
+	width:	98.9%;
+	margin-top: 8;
+	margin-bottom: 8;
+}
+
+div#mainSection table tr
+{
+	vertical-align: top;
+}
+
+/* Formats the table header */
+div#mainSection table th
+{
+	background-color: #EDEDED;
+	/* Removed the following line 
+	border-left: 1px none #D5D5D3; 
+	*/
+	border-collapse: collapse;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #D5D5D3;  
+	color: #2A2A2A;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	text-align: left;
+}
+
+div#mainSection table td
+{
+	background-color: #FFFFFF;       /* Changed the background to white */
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #D5D5D3;  
+	padding: 4px 8px 4px 8px;
+}
+
+/* Formats the first column--the one that displays icons--in mref list tables (such as Public Constructors, 
+   Protected Constructors, Public Properties, Protected Properties, and so on). */
+div#mainSection table td.imageCell
+{
+	white-space: nowrap;
+}
+
+
+/*------------------------------ End General Table Styles -------------------------------*/
+
+
+/*------------------------------ Begin Note Styles -------------------------------*/
+/* - Changes the style for the Note */
+
+div#mainSection div.note table
+{
+	border: 0;
+	border-collapse: none;
+	font-size: 100%;
+	width:	90%;
+}
+
+div#mainSection div.note table th
+{
+	background:	#FFFFC6;
+	/* Removing the bottom border
+	border-bottom-width: 0;
+	*/
+	border-bottom:  1px solid #FFFFC6;
+	text-align: left;
+	color: #707070;
+	padding-top: 3;
+	padding-bottom: 3;
+	padding-left: 8;
+	padding-right: 8;
+}
+
+div#mainSection div.note table td
+{
+	background:	#FFFFC6;
+	/*
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1;
+	*/
+	border-bottom: 1px solid #FFFFFF;  
+	color: #777;
+	padding-left: 8;
+	padding-right: 5;
+	padding-bottom: 3;
+}
+
+/*------------------------------ End Note Styles -------------------------------*/
+
+
+
+/*
+div.code{width:98.9%}
+*/
+/*------------------------------ Begin Syntax and Snipper Code Block Styles -------------------------------*/
+/* Changes synxtax blocks and code blocks */
+
+div#mainSection
+div.code table
+{
+	border: 0;
+	border-collapse: collapse;
+	font-size: 95%;
+	margin: 5;
+	width: 99%;
+}
+
+div#mainSection
+div.code table th
+{	
+	background:	#F0F0F0;  
+	border-bottom: 1px solid #F0F0F0; 
+	color: #000066;
+	font-weight: normal;
+	padding-left: 8;
+	padding-right: 8;
+	padding-top: 7;
+	padding-bottom: 7;
+}
+
+div#mainSection
+div.code table td
+{
+	background:	#F0F0F0;
+	border-bottom: 1px solid #FFFFFF;  
+	padding-left: 8;
+	padding-right: 8;
+	padding-top: 8;
+	padding-bottom: 8;
+}
+/*------------------------------ End Syntax and Snipper Code Block Styles -------------------------------*/
+
+/*------------------------------ Begin Note Styles -------------------------------*/
+/* - Changes the style for the Note */
+
+div#mainSection
+div.alert table
+{
+	border: 0;
+	border-collapse: none;
+	font-size: 100%;
+	width:	100%;
+}
+
+div#mainSection
+div.alert table th
+{
+	background:	#FFFFC6;
+	
+	border-bottom-width: 0;
+	
+	border-bottom:  1px solid #FFFFC6;
+	text-align: left;
+	color: #707070;
+	padding-top: 2;
+	padding-bottom: 1;
+	padding-left: 8;
+	padding-right: 8;
+}
+
+div#mainSection
+div.alert table td
+{
+	background:	#FFFFC6;
+	border-bottom: 1px solid #FFFFFF;  
+	color: #777;
+	padding-left: 8;
+	padding-right: 5;
+	padding-bottom: 3;
+}
+
+/*------------------------------ End Note Styles -------------------------------*/
+
+
+
+span.code{
+	font-family:	Consolas,Courier,monospace;
+	font-size: 105%;
+	color:	#666; 
+}
+span.ui {
+	font-weight: bold;
+}
+span.math {
+	font-style: italic;
+}
+span.input {
+	font-weight: bold;
+}
+span.term {
+	font-style: italic;
+}
+span.foreignPhrase {
+	font-style: italic;
+}
+span.placeholder {
+	font-style: italic;
+}
+span.keyword 
+{
+	font-weight: bold;
+}
+span.typeparameter
+{
+	font-style:italic;
+}
+
+span.label{font-weight:bold}
+div.caption{
+	font-weight: bold;
+	font-size:100%;
+	color:#003399;
+}
+.procedureSubHeading{
+	color: #333;
+	font-weight: normal;
+	margin-bottom: 4;
+}
+
+span.sub{vertical-align:sub}
+span.sup{vertical-align:super}
+span.big{font-size:larger}
+span.small{font-size:smaller}
+span.tt{font-family:Courier,"Courier New",Consolas,monospace}
+
+.WarningMessage{color:Red}
+
+.CCE_Message{color:Red;font-size:10pt}
+
+/* add ERRor checking span class */
+span.ERR{background-color: red;}
+
+/* 9/29/08: replaced by the live CSS section above 
+
+body {
+	padding: 0px 0px 0px 0px;
+	background: #ffffff; 
+	color: #000000;
+}
+
+
+
+div {
+	width: 100%;
+	border: 2px solid #999999;
+	padding: 4px 8px;
+	background: #cccccc;
+}
+
+th
+{ 
+	padding: 4px 8px;
+	background: #cccccc;
+	text-align: left;
+	vertical-align: center;
+}
+
+table.clsStd tbody tr td
+{
+	background-color:#F7F7FF;
+	border-top:solid 1px #E0DFE3;
+	border-left:solid 1px #E0DFE3;
+	border-right:solid 1px #E0DFE3;
+	border-bottom:solid 1px #D5D5D3;
+}
+
+ul p, ol p, dl p
+{
+	margin-left: 0em;
+}
+
+p
+{
+	padding-top:0px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+	margin-top: 0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom: 10px;
+}
+
+div.section
+{
+	padding-left: 20px;
+}
+
+dl
+{
+	margin-top: 0em; 
+}
+
+dd
+{
+	margin-bottom: 0em;  
+	margin-left: 1.9em; 
+}
+
+dt
+{
+	margin-top: .6em; 
+}
+
+ul, ol
+{
+	margin-top: .6em;
+	margin-bottom: 0em;
+}
+
+ol
+{
+	margin-left: 3.6em; 
+}
+
+ul
+{
+	list-style-type: disc; 
+	margin-left: 3.6em;
+}
+
+li
+{
+	margin-bottom: .6em;
+}
+
+ul ol, ol ol
+{
+	list-style-type: lower-alpha;
+}
+
+code
+{
+	cursor: text;
+	color: #660000;
+	font-size: 100%;
+	font-family: "Lucida Sans Typewriter", Consolas, "Courier New", Courier, monospace; 
+}
+
+pre
+{
+	margin-top: .6em;
+	margin-bottom: .6em; 
+	font-size: 100%;
+	font-family: "Lucida Sans Typewriter", Consolas, "Courier New", Courier, monospace; 
+	color: black;
+	background: #dddddd;
+	padding: 2pt,4pt;
+	cursor: text;
+}
+
+table
+{
+	width: 90%;
+	background: #999999;
+	margin-top: .6em;
+	margin-bottom: .3em;
+}
+
+th
+{ 
+	padding: 4px 8px;
+	background: #cccccc;
+	text-align: left;
+	font-size: 70%;
+	vertical-align: center;
+}
+
+td
+{ 
+	padding: 4px 8px;
+	background: #ffffff;
+	vertical-align: center;
+	font-size: 70%;
+}
+
+td p 
+{
+	margin-top: 0.6em;
+	margin-bottom:0em;
+}
+
+table.clsStd tbody tr td
+{
+	background-color:#F7F7FF;
+	border-top:solid 1px #E0DFE3;
+	border-left:solid 1px #E0DFE3;
+	border-right:solid 1px #E0DFE3;
+	border-bottom:solid 1px #D5D5D3;
+}
+
+blockquote {
+	margin-left: 3.8em;
+	margin-right: 3.8em;
+	margin-top: .6em;
+	margin-bottom: .6em;
+	}
+
+sub {
+	text-decoration: none;
+	vertical-align: sub;
+	font-family: "Small Fonts", Sans-Serif;
+}
+
+sup {
+	text-decoration: none;
+	vertical-align: super;
+	font-family: "Small Fonts", Sans-Serif;
+}
+
+a:link
+{
+	color: #0066ff;
+}
+
+a:visited
+{
+	color: #996600; 
+}
+
+a:hover
+{
+	color: #cc9900;
+}
+
+.label
+{
+	font-weight: bold; 
+	margin-top: 1em;
+	margin-left: -26px;
+}
+
+.tl
+{
+	margin-bottom: .75em; 
+}
+
+.atl
+{
+	padding-left: 1.5em;
+	padding-bottom: .75em; 
+}
+
+.cfe
+{
+	font-weight: bold; 
+}
+
+.mini
+{
+	font-size: smaller;
+}
+
+.dt
+{
+	margin-bottom: -.6em; 
+}
+
+.indent
+{
+	margin-left: 1.9em; 
+	margin-right: 1.9em;
+}
+
+.product
+{
+	text-align: right;
+	color: #333333;
+	font-size: smaller;
+	font-style: italic;
+}
+
+.buttonbarshade
+{
+	position: relative;
+	margin: 0;
+	left: 10px;
+	top: 2;
+	width: 100%;
+	height: 21px;
+}
+
+.buttonbartable
+{
+	position: relative;
+	margin: 0;
+	left: 0;
+	top: 2;
+	width: 100%;
+	height: 21px;
+	align: left;
+}
+
+table.buttonbarshade td
+{
+	background:  #99ccff;
+	border-left: 2px solid #ffffff;
+	margin: 0;
+	padding: 3px 0px 4px 0px;
+	font-family: Verdana, sans-serif;
+	font-size: 9pt;
+}
+
+table.buttonbartable td.button1
+{
+	background: #6699ff;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+	cursor: hand;
+}
+
+table.buttonbartable td.button2
+{
+	background: #99cc66;
+	font-weight: bold;
+	text-align: center;
+}
+
+table.buttonbartable td.button3
+{
+	background: #cc9966;
+	font-weight: bold;
+	text-align: center;
+}
+
+table.buttonbartable td.runninghead
+{
+	padding-left: 4px;
+	font-style: italic;
+	text-align: left;
+}
+
+.version
+{
+	text-align: left;
+	color: #000000;
+	margin-top: 3em;
+	margin-left: -26px;
+	font-size: smaller;
+	font-style: italic;
+}
+
+
+.lang, .ilang, .devlangLabel
+{
+	color: #0000ff;
+	font: normal 7pt Arial, Helvetica, sans-serif;
+}
+
+div.conditionalSection
+{
+	margin: 4pt 0 8pt -26px;
+	padding: 4px 4px 8px 26px;
+	width: 100%;
+	border: none;
+	background: #ffffff;
+}
+
+div.langMenu
+{
+	position: absolute;
+	z-index: 1;
+	width: 96pt;
+	padding: 8pt;
+	visibility: hidden;
+	border: 1px solid #000000;
+	background: #ffffd0;
+}
+
+div.langMenu ul
+{
+	padding-left: 2em;
+	margin-left: 0;
+}
+
+div.filtered
+{
+	margin: 4pt 0 8pt -26px;
+	padding: 4px 4px 8px 26px;
+	width: 100%;
+	border: 2px solid #aaaacc;
+	background: #ffffff;
+}
+
+div.filtered2
+{
+	margin: 4pt 0 8pt -26px;
+	padding: 4px 4px 8px 26px;
+	width: 100%;
+	border: none;
+	background: #ffffff;
+}
+
+div.filtered h1, div.filtered h2, div.filtered h3, div.filtered h4
+{
+	margin-left: -22px;
+}
+
+div.filtered span.lang
+{
+	position: relative;
+	left: -22px;
+}
+
+div.classNewTip
+{
+	position: absolute;
+	z-index: 1;
+	padding: 8pt;
+	visibility: hidden;
+	border: 1px solid #000000;
+	width: 260px;
+	height: 24px;
+	overflow: visible;
+	display: none;
+	background: #ffffd0;
+}
+
+div.reftip
+{
+	position: absolute;
+	z-index: 1;
+	padding: 8pt;
+	visibility: hidden;
+	border: 1px solid #000000;
+	background: #ffffd0;
+}
+
+pre.syntax
+{
+	background: #dddddd;
+	padding: 2pt,4pt;
+	cursor: text;
+	color: #000000;
+}
+
+pre.syntaxNew
+{
+	background: #dddddd;
+	padding: 2pt,4pt;
+	cursor: text;
+	color: #000000;
+}
+
+ pre.syntaxNew span
+{
+}
+
+a.synParam
+{
+	color: #0040ff;
+	text-decoration: none;
+}
+
+a.synParam:hover
+{
+	text-decoration: underline;
+}
+
+div.sapop
+{
+	position: absolute;
+	z-index: 1;
+	left: 26px;
+	width: 100%;
+	padding: 10px 10px 10px 36px;
+	visibility: hidden;
+	border: 1px solid #000000;
+	background: #ffffd0;
+}
+
+div.footer
+{
+	width: 100%;
+	border: none;
+	background: #ffffff;
+	margin-top: 18pt;
+	padding-bottom: 12pt;
+	color: #228B22;
+	text-align: center;
+	font-size: 76%;
+}
+
+.note
+{
+	margin-left: 14pt;
+	margin-right: 12pt;
+}
+
+.indent1
+{
+	margin-left: 12pt;
+}
+
+.indent2
+{
+	margin-left: 24pt;
+}
+
+.indent3
+{
+	margin-left: 36pt;
+}
+
+p.proch
+{
+	padding-left: 16px;
+}
+
+p.proch img
+{
+	position: relative; 
+	vertical-align: top;
+	left: -18px; 
+	margin-right: -14px; 
+	margin-bottom: -18px;
+}
+
+table.inthissection
+{
+	width: 90%;
+	background: #999999;
+	margin-top: .6em;
+	margin-bottom: .3em;
+	vertical-align: bottom;
+}
+
+th.inthissection
+{ 
+	padding: 4px 8px;
+	background: #cccccc;
+	text-align: left;
+	font-size: 70%;
+	vertical-align: center;
+}
+
+td.inthissection
+{ 
+	padding: 4px 8px;
+	background: #ffffff;
+	font-size: 70%;
+	vertical-align: bottom;
+}
+
+ul.inthissection
+{
+	list-style: none;
+}
+
+li.inthissection
+{
+	list-style:none;
+}
+*/
