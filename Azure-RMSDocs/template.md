@@ -84,7 +84,7 @@ To link to an external file, use the full URL as the link.
 
 - Example: [Github](http://www.github.com)
 
-If a URL appears in a markdown file, pit will be transformed into a clickable link.
+If a URL appears in a markdown file, it will be transformed into a clickable link.
 
 - Example: http://www.github.com
 
