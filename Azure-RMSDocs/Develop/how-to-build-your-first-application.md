@@ -16,7 +16,7 @@ The following sections cover the key application steps and understandings needed
 
 Before you can call any RMS SDK 2.1 functions, you need to first call [**IpcInitialize**](xref:msipc.ipcinitialize) function to load the MSIPC.dll.
 
-...
+
 
     hr = IpcInitialize();
 
@@ -26,7 +26,7 @@ Before you can call any RMS SDK 2.1 functions, you need to first call [**IpcIn
       goto exit;
     }
 
-...
+
 
 ## Enumerating templates
 
@@ -34,7 +34,7 @@ An RMS template defines the policy used to protect the data, i.e. defines the us
 
 The following code snip enumerates the available RMS templates from the default RMS server.
 
-...
+
 
     hr = IpcGetTemplateList(NULL, 0, 0, NULL, NULL, &pcTil);
 
@@ -43,12 +43,12 @@ The following code snip enumerates the available RMS templates from the default 
       DisplayError(L"IpcGetTemplateList failed", hr);
       goto exit;
     }
-...
+
 
 
 This call will retrieve RMS templates installed on the default server and load the results in the [**IPC\_TIL**](xref:msipc.ipcinitialize) structure pointed by the *pcTil* variable, then display the templates.
 
-...
+
 
     if (0 == pcTil->cTi)
     {
@@ -66,7 +66,7 @@ This call will retrieve RMS templates installed on the default server and load t
       wprintf(L"\n");
     }
 
-...
+
 
 ## Serializing a License
 
@@ -76,7 +76,7 @@ For the sake of simplicity use the first RMS template returned by [**IpcGetTempl
 
 Normally, you would use a user interface dialog to allow the user to select the desired template.
 
-...
+
 
     hr = IpcSerializeLicense((LPCVOID)pcTil->aTi[0].wszID, IPC_SL_TEMPLATE_ID,
     0, NULL, &hContentKey, &pSerializedLicense);
@@ -86,7 +86,7 @@ Normally, you would use a user interface dialog to allow the user to select the 
       DisplayError(L"IpcSerializeLicense failed", hr);
       goto exit;
     }
-...
+
 
 
 After doing this you have the content key, *hContentKey*, and the serialized license, *pSerializedLicense*, that you need to attach to the protected data.
@@ -95,7 +95,7 @@ After doing this you have the content key, *hContentKey*, and the serialized lic
 
 Now you are ready to encrypt the sensitive data using the [**IpcEncrypt**](xref:msipc.ipcencrypt) function. First, you need to ask the **IpcEncrypt** function how big the encrypted data is going to be.
 
-...
+
 
     cbText = (DWORD)(sizeof(WCHAR)*(wcslen(wszText)+1));
     hr = IpcEncrypt(hContentKey, 0, TRUE, (PBYTE)wszText, cbText,
@@ -105,14 +105,14 @@ Now you are ready to encrypt the sensitive data using the [**IpcEncrypt**](xref:
       DisplayError(L"IpcEncrypt failed", hr);
       goto exit;
     }
-...
+
 
 
 Here *wszText* contains the plain text that you are going to protect. The [**IpcEncrypt**](xref:msipc.ipcencrypt) function returns the size of the encrypted data in the *cbEncrypted* parameter.
 
 Now allocate memory for the encrypted data.
 
-...
+
 
     pbEncrypted = (PBYTE)LocalAlloc(LPTR, cbEncrypted);
 
@@ -120,11 +120,11 @@ Now allocate memory for the encrypted data.
       wprintf(L"Out of memory\n");
       goto exit;
     }
-...
+
 
 Finally, you can do the actual encryption.
 
-...
+
 
     hr = IpcEncrypt(hContentKey, 0, TRUE, (PBYTE)wszText, cbText,
     pbEncrypted, cbEncrypted, &cbEncrypted);
@@ -133,7 +133,7 @@ Finally, you can do the actual encryption.
       DisplayError(L"IpcEncrypt failed", hr);
       goto exit;
     }
-...
+
 
 After this step you have the encrypted data, *pbEncrypted*, and the serialized license, *pSerializedLicense*, that will be used by consumers to decrypt the data.
 
@@ -141,7 +141,7 @@ After this step you have the encrypted data, *pbEncrypted*, and the serialized l
 
 Throughout this example application the **DisplayError** function is being used to handle errors.
 
-...
+
 
     void DisplayError(LPCWSTR wszErrorInfo, HRESULT hrError)
     {
@@ -154,7 +154,7 @@ Throughout this example application the **DisplayError** function is being used 
           wprintf(L"%s: 0x%08X\n", wszErrorInfo, hrError);
         }
     }   
-...
+
 
 The **DisplayError** function uses the [**IpcGetErrorMessageText**](xref:msipc.ipcgeterrormessagetext) function to get the error message from the corresponding error code and prints it to the standard output.
 
@@ -162,7 +162,7 @@ The **DisplayError** function uses the [**IpcGetErrorMessageText**](xref:msipc.i
 
 Before you are done, you also need to release all the allocated resources.
 
-...
+
 
     if (NULL != pbEncrypted) {
       LocalFree((HLOCAL)pbEncrypted);
@@ -179,7 +179,7 @@ Before you are done, you also need to release all the allocated resources.
     if (NULL != pcTil) {
       IpcFreeMemory((LPVOID)pcTil);
     }
-...
+
 
 ## Related topics
 
