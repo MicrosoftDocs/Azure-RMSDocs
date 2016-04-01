@@ -55,7 +55,6 @@ These parameters and guidelines are required for RMS work-flows:
 
 **Android user authentication** - for more information, see [Android code examples](android_code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
 
-...
 
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
@@ -127,13 +126,12 @@ These parameters and guidelines are required for RMS work-flows:
                             }
                         });
                          }
-...
+
 
 **iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios_os_x_code_examples.md),
 
 **Step 2** of the first scenario, "Consuming an RMS protected file".
 
-...
 
     // AuthenticationCallback holds the necessary information to retrieve an access token.
     @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>
@@ -142,11 +140,11 @@ These parameters and guidelines are required for RMS work-flows:
 
     @implementation MsipcAuthenticationCallback
 
-- (void)accessTokenWithAuthenticationParameters:
+    - (void)accessTokenWithAuthenticationParameters:
          (MSAuthenticationParameters *)authenticationParameters
                                 completionBlock:
          (void(^)(NSString *accessToken, NSError *error))completionBlock
-{
+    {
     ADAuthenticationError *error;
     ADAuthenticationContext* context = [ADAuthenticationContext authenticationContextWithAuthority:authenticationParameters.authority error:&error];
 
@@ -178,75 +176,73 @@ These parameters and guidelines are required for RMS work-flows:
         ];
     }
 
-...
+
 
 **Linux / C++ user authentication** - for more information, see [Linux code examples](linux___c___code_examples.md).
 
-...
+
 
     // Class Header
-
     class AuthCallback : public IAuthenticationCallback {
-private:
+    private:
 
-  std::shared_ptr<rmsauth::FileCache> FileCachePtr;
-  std::string clientId_;
-  std::string redirectUrl_;
+      std::shared_ptr<rmsauth::FileCache> FileCachePtr;
+      std::string clientId_;
+      std::string redirectUrl_;
 
-public:
+      public:
 
-  AuthCallback(const std::string& clientId,
+      AuthCallback(const std::string& clientId,
                const std::string& redirectUrl);
-  virtual std::string GetToken(shared_ptr<AuthenticationParameters>& ap) override;
-};
+      virtual std::string GetToken(shared_ptr<AuthenticationParameters>& ap) override;
+    };
 
-class ConsentCallback : public IConsentCallback {
-public:
+    class ConsentCallback : public IConsentCallback {
+      public:
 
-  virtual ConsentList Consents(ConsentList& consents) override;
-};
+      virtual ConsentList Consents(ConsentList& consents) override;
+    };
 
-// Class Implementation
+    // Class Implementation
+    AuthCallback::AuthCallback(const string& clientId, const string& redirectUrl)
+    : clientId_(clientId), redirectUrl_(redirectUrl) {
+      FileCachePtr = std::make_shared<FileCache>();
+    }
 
-AuthCallback::AuthCallback(const string& clientId, const string& redirectUrl)
-  : clientId_(clientId)
-  , redirectUrl_(redirectUrl)
-{
-  FileCachePtr = std::make_shared<FileCache>();
-}
+    string AuthCallback::GetToken(shared_ptr<AuthenticationParameters>& ap)
+    {
+      string redirect =
+      ap->Scope().empty() ? redirectUrl_ : ap->Scope();
 
-string AuthCallback::GetToken(shared_ptr<AuthenticationParameters>& ap) {
-  string redirect =
-    ap->Scope().empty() ? redirectUrl_ : ap->Scope();
-
-  try
-  {
-    if (redirect.empty()) {
-      throw rmscore::exceptions::RMSInvalidArgumentException(
+      try
+      {
+        if (redirect.empty()) {
+        throw rmscore::exceptions::RMSInvalidArgumentException(
               "redirect Url is empty");
-    }
+      }
 
-    if (clientId_.empty()) {
+      if (clientId_.empty()) {
       throw rmscore::exceptions::RMSInvalidArgumentException("client Id is empty");
-    }
+      }
 
-    AuthenticationContext authContext(
-      ap->Authority(), AuthorityValidationType::False, FileCachePtr);
+      AuthenticationContext authContext(
+        ap->Authority(), AuthorityValidationType::False, FileCachePtr);
 
-    auto result = authContext.acquireToken(ap->Resource(),
+      auto result = authContext.acquireToken(ap->Resource(),
                                            clientId_, redirect,
                                            PromptBehavior::Auto,
                                            ap->UserId());
-    return result->accessToken();
-  }
-  catch (const rmsauth::Exception& ex)
-  {
-    // out logs
-    throw;
-  }
-}
+      return result->accessToken();
+      }
 
-...
+      catch (const rmsauth::Exception& ex)
+      {
+        // out logs
+        throw;
+      }
+    }
+
+
 
  
 
