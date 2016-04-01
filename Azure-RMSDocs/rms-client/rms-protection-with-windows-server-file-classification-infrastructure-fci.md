@@ -83,7 +83,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
 ### Save the Windows PowerShell script
 
-1.  Copy the contents of the [Windows PowerShell Script for Azure RMS protection by using File Server Resource Manager FCI](#BKMK_RMSProtection_Script). Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
+1.  Copy the contents of the [Windows PowerShell script](rms-protection-script-fci.md) for Azure RMS protection by using File Server Resource Manager. Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
 
 2.  Review the script and make the following changes:
 
