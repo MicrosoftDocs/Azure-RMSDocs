@@ -7,6 +7,7 @@
 ## [Rights Management (RMS) Client](./rights-management-rms-client.md)
 ### [RMS Client Deployment Notes](./rms-client-deployment-notes.md)
 ### [RMS Protection with Windows Server File Classification Infrastructure (./FCI)](./rms-protection-with-windows-server-file-classification-infrastructure-fci.md)
+#### [Script](./rms-protection-script-fci.md)
 ### [Rights Management Sharing Application for Windows](./rights-management-sharing-application-for-windows.md)
 #### [Rights Management sharing application: Version release history](./rights-management-sharing-application-version-release-history.md)
 #### [Rights Management sharing application administrator guide](./rights-management-sharing-application-administrator-guide.md)
