@@ -11,42 +11,30 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 -   [WorkerThread - a supporting method](#workerthread_-_a_supporting_method)
 -   [**Scenario**: RMS authentication](#scenario__rms_authentication)
 
-<span id="Scenario__Access_protection_policy_information_from_a___protected_file"></span><span id="scenario__access_protection_policy_information_from_a___protected_file"></span><span id="SCENARIO__ACCESS_PROTECTION_POLICY_INFORMATION_FROM_A___PROTECTED_FILE"></span>**Scenario**: Access protection policy information from a protected file
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Scenario: Access protection policy information from a protected file
+
 
 **Opens and reads an RMS protected file**
 **Source**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: After getting a file name from the user, reading the certificates (see *MainWindow::addCertificates*), setting up the authorization callback with Client ID and Redirect URL, calling *ConvertFromPFile* (see following code example), then reading out the protection policy name, description and content validity date.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void MainWindow::ConvertFromPFILE(const string&amp; fileIn,
-                                  const string&amp; clientId,
-                                  const string&amp; redirectUrl,
-                                  const string&amp; clientEmail) 
-{
-  // add trusted certificates using HttpHelpers of RMS and Auth SDKs
-  addCertificates();
+    void MainWindow::ConvertFromPFILE(const string& fileIn,
+                                  const string& clientId,
+                                  const string& redirectUrl,
+                                  const string& clientEmail)
+    {
+      // add trusted certificates using HttpHelpers of RMS and Auth SDKs
+      addCertificates();
 
-  // create shared in/out streams
-  auto inFile = make_shared&lt;ifstream&gt;(
-    fileIn, ios_base::in | ios_base::binary);
+      // create shared in/out streams
+      auto inFile = make_shared<ifstream>(
+         fileIn, ios_base::in | ios_base::binary);
 
-  if (!inFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+       if (!inFile->is_open()) {
+         AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
-  }
+    }
 
   string fileOut;
 
@@ -58,11 +46,11 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
   }
 
   // create streams
-  auto outFile = make_shared&lt;fstream&gt;(
+  auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
 
-  if (!outFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+  if (!outFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileOut.c_str());
     return;
   }
 
@@ -77,47 +65,32 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
       inFile,
       outFile,
       auth,
-      this-&gt;consent);
+      this->consent);
 
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
   }
-  catch (const rmsauth::Exception&amp; e)
+  catch (const rmsauth::Exception& e)
   {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
+    AddLog("ERROR: ", e.error().c_str());
   }
-  catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+  catch (const rmscore::exceptions::RMSException& e) {
+    AddLog("ERROR: ", e.what());
   }
-  inFile-&gt;close();
-  outFile-&gt;close();
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+  inFile->close();
+  outFile->close();
+}
 
 **Create a protected file stream**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: This method creates a protected file stream from the passed in backing stream through the SDK method, *ProtectedFileStream::Aquire*, which is then returned to the caller.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>shared_ptr&lt;GetProtectedFileStreamResult&gt;PFileConverter::ConvertFromPFile(
-  const string           &amp; userId,
-  shared_ptr&lt;istream&gt;      inStream,
-  shared_ptr&lt;iostream&gt;     outStream,
-  IAuthenticationCallback&amp; auth,
-  IConsentCallback       &amp; consent)
+    shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
+  const string           & userId,
+  shared_ptr<istream>      inStream,
+  shared_ptr<iostream>     outStream,
+  IAuthenticationCallback& auth,
+  IConsentCallback       & consent)
 {
   auto inIStream = rmscrypto::api::CreateStreamFromStdStream(inStream);
 
@@ -127,81 +100,67 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     auth,
     consent,
     POL_None,
-    static_cast&lt;ResponseCacheFlags&gt;(RESPONSE_CACHE_INMEMORY
+    static_cast<ResponseCacheFlags>(RESPONSE_CACHE_INMEMORY
                                     | RESPONSE_CACHE_ONDISK));
 
-  if ((fsResult.get() != nullptr) &amp;&amp; (fsResult-&gt;m_status == Success) &amp;&amp;
-      (fsResult-&gt;m_stream != nullptr)) {
-    auto pfs = fsResult-&gt;m_stream;
+  if ((fsResult.get() != nullptr) && (fsResult->m_status == Success) &&
+      (fsResult->m_stream != nullptr)) {
+    auto pfs = fsResult->m_stream;
 
     // preparing
     readPosition  = 0;
     writePosition = 0;
-    totalSize     = pfs-&gt;Size();
+    totalSize     = pfs->Size();
 
     // start threads
-    for (size_t i = 0; i &lt; THREADS_NUM; ++i) {
+    for (size_t i = 0; i < THREADS_NUM; ++i) {
       threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(outStream), pfs,
+                                  static_pointer_cast<iostream>(outStream), pfs,
                                   false));
     }
 
-    for (thread&amp; t: threadPool) {
+    for (thread& t: threadPool) {
       if (t.joinable()) {
         t.join();
       }
     }
   }
   return fsResult;
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+}
 
-<span id="Scenario__Create_a_new_protected_file_using_a_template"></span><span id="scenario__create_a_new_protected_file_using_a_template"></span><span id="SCENARIO__CREATE_A_NEW_PROTECTED_FILE_USING_A_TEMPLATE"></span>**Scenario**: Create a new protected file using a template
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Scenario: Create a new protected file using a template
+
 
 **Protects a file with a user selected template**
 **Source**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: After getting a file name from the user, reading the certificates (see *MainWindow::addCertificates*) and setting up the authorization callback with Client ID and Redirect URL, the selected file is protected by calling *ConvertToPFileTemplates* (see following code example).
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void MainWindow::ConvertToPFILEUsingTemplates(const string&amp; fileIn,
-                                              const string&amp; clientId,
-                                              const string&amp; redirectUrl,
-                                              const string&amp; clientEmail) 
+
+    void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
+                                              const string& clientId,
+                                              const string& redirectUrl,
+                                              const string& clientEmail)
 {
   // generate output filename
-  string fileOut = fileIn + &quot;.pfile&quot;;
+  string fileOut = fileIn + ".pfile";
 
   // add trusted certificates using HttpHelpers of RMS and Auth SDKs
   addCertificates();
 
   // create shared in/out streams
-  auto inFile = make_shared&lt;ifstream&gt;(
+  auto inFile = make_shared<ifstream>(
     fileIn, ios_base::in | ios_base::binary);
-  auto outFile = make_shared&lt;fstream&gt;(
+  auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
 
-  if (!inFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+  if (!inFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
   }
 
-  if (!outFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+  if (!outFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileOut.c_str());
     return;
   }
 
@@ -220,52 +179,39 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
     // process convertion
     PFileConverter::ConvertToPFileTemplates(
       clientEmail, inFile, fileExt, outFile, auth,
-      this-&gt;consent, this-&gt;templates);
+      this->consent, this->templates);
 
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
   }
-  catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
-    outFile-&gt;close();
+  catch (const rmsauth::Exception& e) {
+    AddLog("ERROR: ", e.error().c_str());
+    outFile->close();
     remove(fileOut.c_str());
   }
-  catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+  catch (const rmscore::exceptions::RMSException& e) {
+    AddLog("ERROR: ", e.what());
 
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
   }
-  inFile-&gt;close();
-  outFile-&gt;close();
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+  inFile->close();
+  outFile->close();
+}
+
 
 **Protects a file using a policy created from a template**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: A list of templates associated with the user is fetched and selected template is then used to create a policy which in turn is used to protect the file.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void PFileConverter::ConvertToPFileTemplates(const string           &amp; userId,
-                                             shared_ptr&lt;istream&gt;      inStream,
-                                             const string           &amp; fileExt,
-                                             std::shared_ptr&lt;iostream&gt;outStream,
-                                             IAuthenticationCallback&amp; auth,
-                                             IConsentCallback&amp; /*consent*/,
-                                             ITemplatesCallback     &amp; templ)
+
+    void PFileConverter::ConvertToPFileTemplates(const string           & userId,
+                                             shared_ptr<istream>      inStream,
+                                             const string           & fileExt,
+                                             std::shared_ptr<iostream>outStream,
+                                             IAuthenticationCallback& auth,
+                                             IConsentCallback& /*consent*/,
+                                             ITemplatesCallback     & templ)
 {
   auto templates = TemplateDescriptor::GetTemplateList(userId, auth);
 
@@ -273,7 +219,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
   size_t pos = templ.SelectTemplate(templates);
 
-  if (pos &lt; templates.size()) {
+  if (pos < templates.size()) {
     auto policy = UserPolicy::CreateFromTemplateDescriptor(
       templates[pos],
       userId,
@@ -283,32 +229,19 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
   }
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+}
+
 
 **Protects a file given a policy**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: Create a protected file stream using the given policy then protect that file.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr&lt;UserPolicy&gt;   policy,
-                                               shared_ptr&lt;istream&gt;      inStream,
-                                               const string           &amp; fileExt,
-                                               std::shared_ptr&lt;iostream&gt;outStream)
+
+    void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
+                                               shared_ptr<istream>      inStream,
+                                               const string           & fileExt,
+                                               std::shared_ptr<iostream>outStream)
 {
   if (policy.get() != nullptr) {
     auto outIStream = rmscrypto::api::CreateStreamFromStdStream(outStream);
@@ -316,77 +249,63 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
     // preparing
     readPosition  = 0;
-    writePosition = pStream-&gt;Size();
+    writePosition = pStream->Size();
 
-    inStream-&gt;seekg(0, ios::end);
-    totalSize = inStream-&gt;tellg();
+    inStream->seekg(0, ios::end);
+    totalSize = inStream->tellg();
 
     // start threads
-    for (size_t i = 0; i &lt; THREADS_NUM; ++i) {
+    for (size_t i = 0; i < THREADS_NUM; ++i) {
       threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(inStream),
+                                  static_pointer_cast<iostream>(inStream),
                                   pStream,
                                   true));
     }
 
-    for (thread&amp; t: threadPool) {
+    for (thread& t: threadPool) {
       if (t.joinable()) {
         t.join();
       }
     }
 
-    pStream-&gt;Flush();
+    pStream->Flush();
   }
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+}
 
-<span id="Scenario__Protect_a_file_using_custom_protection"></span><span id="scenario__protect_a_file_using_custom_protection"></span><span id="SCENARIO__PROTECT_A_FILE_USING_CUSTOM_PROTECTION"></span>**Scenario**: Protect a file using custom protection
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Scenario: Protect a file using custom protection
+
 
 **Protects a file using custom protection**
 **Source**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: After getting a file name from the user, reading the certificates (see *MainWindow::addCertificates*), collecting rights information from the user, and setting up the authorization callback with Client ID and Redirect URL, the selected file is projected by calling *ConvertToPFilePredefinedRights* (see following code example).
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void MainWindow::ConvertToPFILEUsingRights(const string            &amp; fileIn,
-                                           const vector&lt;UserRights&gt;&amp; userRights,
-                                           const string            &amp; clientId,
-                                           const string            &amp; redirectUrl,
-                                           const string            &amp; clientEmail)
+
+    void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
+                                           const vector<UserRights>& userRights,
+                                           const string            & clientId,
+                                           const string            & redirectUrl,
+                                           const string            & clientEmail)
 {
   // generate output filename
-  string fileOut = fileIn + &quot;.pfile&quot;;
+  string fileOut = fileIn + ".pfile";
 
   // add trusted certificates using HttpHelpers of RMS and Auth SDKs
   addCertificates();
 
   // create shared in/out streams
-  auto inFile = make_shared&lt;ifstream&gt;(
+  auto inFile = make_shared<ifstream>(
     fileIn, ios_base::in | ios_base::binary);
-  auto outFile = make_shared&lt;fstream&gt;(
+  auto outFile = make_shared<fstream>(
     fileOut, ios_base::in | ios_base::out | ios_base::trunc | ios_base::binary);
 
-  if (!inFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileIn.c_str());
+  if (!inFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileIn.c_str());
     return;
   }
 
-  if (!outFile-&gt;is_open()) {
-    AddLog(&quot;ERROR: Failed to open &quot;, fileOut.c_str());
+  if (!outFile->is_open()) {
+    AddLog("ERROR: Failed to open ", fileOut.c_str());
     return;
   }
 
@@ -400,7 +319,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
   // is anything to add
   if (userRights.size() == 0) {
-    AddLog(&quot;ERROR: &quot;, &quot;Please fill email and check rights&quot;);
+    AddLog("ERROR: ", "Please fill email and check rights");
     return;
   }
 
@@ -416,197 +335,150 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
       fileExt,
       outFile,
       auth,
-      this-&gt;consent,
+      this->consent,
       userRights);
 
-    AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
+    AddLog("Successfully converted to ", fileOut.c_str());
   }
-  catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
+  catch (const rmsauth::Exception& e) {
+    AddLog("ERROR: ", e.error().c_str());
 
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
   }
-  catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+  catch (const rmscore::exceptions::RMSException& e) {
+    AddLog("ERROR: ", e.what());
 
-    outFile-&gt;close();
+    outFile->close();
     remove(fileOut.c_str());
   }
-  inFile-&gt;close();
-  outFile-&gt;close();
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+  inFile->close();
+  outFile->close();
+}
+
 
 **Creates a protection policy give user selected rights**
 **Source**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: Create a policy descriptor and fill it with the user's rights information then, use the policy descriptor to create a user policy. This policy is used to protect the selected file via a call to *ConvertToPFileUsingPolicy* (see this described in a previous section of this topic).
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>void PFileConverter::ConvertToPFilePredefinedRights(
-  const string            &amp; userId,
-  shared_ptr&lt;istream&gt;       inStream,
-  const string            &amp; fileExt,
-  shared_ptr&lt;iostream&gt;      outStream,
-  IAuthenticationCallback &amp; auth,
-  IConsentCallback&amp; /*consent*/,
-  const vector&lt;UserRights&gt;&amp; userRights)
+    void PFileConverter::ConvertToPFilePredefinedRights(
+  const string            & userId,
+  shared_ptr<istream>       inStream,
+  const string            & fileExt,
+  shared_ptr<iostream>      outStream,
+  IAuthenticationCallback & auth,
+  IConsentCallback& /*consent*/,
+  const vector<UserRights>& userRights)
 {
   auto endValidation = chrono::system_clock::now() + chrono::hours(48);
 
 
   PolicyDescriptor desc(userRights);
 
-  desc.Referrer(make_shared&lt;string&gt;(&quot;https://client.test.app&quot;));
+  desc.Referrer(make_shared<string>("https://client.test.app"));
   desc.ContentValidUntil(endValidation);
   desc.AllowOfflineAccess(false);
-  desc.Name(&quot;Test Name&quot;);
-  desc.Description(&quot;Test Description&quot;);
+  desc.Name("Test Name");
+  desc.Description("Test Description");
 
   auto policy = UserPolicy::Create(desc, userId, auth,
                                    USER_AllowAuditedExtraction);
   ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
 }
- </code></pre></td>
-</tr>
-</tbody>
-</table>
 
-<span id="WorkerThread_-_a_supporting_method"></span><span id="workerthread_-_a_supporting_method"></span><span id="WORKERTHREAD_-_A_SUPPORTING_METHOD"></span>WorkerThread - a supporting method
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### WorkerThread - a supporting method
+
 
 The *WorkerThread()* method is called by two of the previous example scenarios; **Create a protected file stream** and **Protects a file given a policy** in the following manner:
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>threadPool.push_back(thread(WorkerThread,
-                                  static_pointer_cast&lt;iostream&gt;(outStream), pfs,
-                                  false));</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+    threadPool.push_back(thread(WorkerThread,
+                                  static_pointer_cast<iostream>(outStream), pfs,
+                                  false));
 
 **Supporting method, WorkerThread()**
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>static mutex   threadLocker;
-static int64_t totalSize     = 0;
-static int64_t readPosition  = 0;
-static int64_t writePosition = 0;
-static vector&lt;thread&gt; threadPool;
 
-static void WorkerThread(shared_ptr&lt;iostream&gt;           stdStream,
-                         shared_ptr&lt;ProtectedFileStream&gt;pStream,
+    static mutex   threadLocker;
+    static int64_t totalSize     = 0;
+    static int64_t readPosition  = 0;
+    static int64_t writePosition = 0;
+    static vector<thread> threadPool;
+
+    static void WorkerThread(shared_ptr<iostream>           stdStream,
+                         shared_ptr<ProtectedFileStream>pStream,
                          bool                           modeWrite) {
-  vector&lt;uint8_t&gt; buffer(4096);
-  int64_t bufferSize = static_cast&lt;int64_t&gt;(buffer.size());
+      vector<uint8_t> buffer(4096);
+      int64_t bufferSize = static_cast<int64_t>(buffer.size());
 
-  while (totalSize - readPosition &gt; 0) {
-    // lock
-    threadLocker.lock();
+      while (totalSize - readPosition > 0) {
+      // lock
+      threadLocker.lock();
 
-    // check remain
-    if (totalSize - readPosition &lt;= 0) {
-      threadLocker.unlock();
-      return;
-    }
-
-    // get read/write offset
-    int64_t offsetRead  = readPosition;
-    int64_t offsetWrite = writePosition;
-    int64_t toProcess   = min(bufferSize, totalSize - readPosition);
-    readPosition  += toProcess;
-    writePosition += toProcess;
-
-    // no need to lock more
-    threadLocker.unlock();
-
-    if (modeWrite) {
-      // stdStream is not thread safe!!!
-      try {
-        threadLocker.lock();
-
-        stdStream-&gt;seekg(offsetRead);
-        stdStream-&gt;read(reinterpret_cast&lt;char *&gt;(&amp;buffer[0]), toProcess);
+      // check remain
+      if (totalSize - readPosition <= 0) {
         threadLocker.unlock();
-        auto written =
-          pStream-&gt;WriteAsync(
-            buffer.data(), toProcess, offsetWrite, std::launch::deferred).get();
+        return;
+      }
 
-        if (written != toProcess) {
-          throw rmscore::exceptions::RMSStreamException(&quot;Error while writing data&quot;);
+      // get read/write offset
+      int64_t offsetRead  = readPosition;
+      int64_t offsetWrite = writePosition;
+      int64_t toProcess   = min(bufferSize, totalSize - readPosition);
+      readPosition  += toProcess;
+      writePosition += toProcess;
+
+      // no need to lock more
+      threadLocker.unlock();
+
+      if (modeWrite) {
+        // stdStream is not thread safe!!!
+        try {
+          threadLocker.lock();
+
+          stdStream->seekg(offsetRead);
+          stdStream->read(reinterpret_cast<char *>(&buffer[0]), toProcess);
+          threadLocker.unlock();
+          auto written =
+            pStream->WriteAsync(
+              buffer.data(), toProcess, offsetWrite, std::launch::deferred).get();
+
+          if (written != toProcess) {
+            throw rmscore::exceptions::RMSStreamException("Error while writing data");
+          }
         }
-      }
-      catch (exception&amp; e) {
-        qDebug() &lt;&lt; &quot;Exception: &quot; &lt;&lt; e.what();
-      }
-    } else {
-      auto read =
-        pStream-&gt;ReadAsync(&amp;buffer[0],
+        catch (exception& e) {
+          qDebug() << "Exception: " << e.what();
+        }
+      } else {
+        auto read =
+          pStream->ReadAsync(&buffer[0],
                            toProcess,
                            offsetRead,
                            std::launch::deferred).get();
 
-      if (read == 0) {
-        break;
-      }
+        if (read == 0) {
+          break;
+        }
 
-      try {
-        // stdStream is not thread safe!!!
-        threadLocker.lock();
+        try {
+          // stdStream is not thread safe!!!
+          threadLocker.lock();
 
-        // seek to write
-        stdStream-&gt;seekp(offsetWrite);
-        stdStream-&gt;write(reinterpret_cast&lt;const char *&gt;(buffer.data()), read);
-        threadLocker.unlock();
-      }
-      catch (exception&amp; e) {
-        qDebug() &lt;&lt; &quot;Exception: &quot; &lt;&lt; e.what();
+          // seek to write
+          stdStream->seekp(offsetWrite);
+          stdStream->write(reinterpret_cast<const char *>(buffer.data()), read);
+          threadLocker.unlock();
+        }
+        catch (exception& e) {
+          qDebug() << "Exception: " << e.what();
+        }
       }
     }
   }
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
 
-<span id="Scenario__RMS_authentication"></span><span id="scenario__rms_authentication"></span><span id="SCENARIO__RMS_AUTHENTICATION"></span>**Scenario**: RMS authentication
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Scenario: RMS authentication
 
 The following examples show two different authentication approaches; obtaining Azure Authentication oAuth2 token using UI and without UI.
 **Acquiring oAuth2 Authentication Token with UI**
@@ -615,46 +487,19 @@ The following examples show two different authentication approaches; obtaining A
 **Step 1**: Create a shared point of **rmsauth::FileCache** object.
 Description: You can set cache path or use default.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+    auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
+
 
 **Step 2**: Create **rmsauth::AuthenticationContext** object
 Description: Specify Azure *authority URI* and *FileCache* object.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>AuthenticationContext authContext(
+
+    AuthenticationContext authContext(
                               std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
                               AuthorityValidationType::False,
                               FileCachePtr);
-</code></pre></td>
-</tr>
-</tbody>
-</table>
+
 
 **Step 3**: Call **aquireToken** method of **authContext** object and specify next parameters:
 Description:
@@ -665,31 +510,17 @@ Description:
 -   *Authentication prompt behavior* - if you set **PromptBehavior::Auto** the library tries to use cache and refresh token if necessary
 -   *User ID* - User name displayed in the prompt window
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>auto result = authContext.acquireToken(
+
+    auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),
                 std::string(“4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7”),
                 std::string(“https://client.test.app”),
                 PromptBehavior::Auto,
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
-</code></pre></td>
-</tr>
-</tbody>
-</table>
+
 
 **Step 4**: Get access token from result
-Description: Call **result-&gt; accessToken()** method
+Description: Call **result-> accessToken()** method
 
 **Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
@@ -701,94 +532,43 @@ Description: Call **result-&gt; accessToken()** method
 **Step 1**: Create a shared point of **rmsauth::FileCache** object
 Description: You can set cache path or use default
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+    auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
+
 
 **Step 2**:Create **UserCredential** object
 Description: Specify *user login* and *password*
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>auto userCred = std::make_shared&lt;UserCredential&gt;(&quot;john.smith@msopentechtest01.onmicrosoft.com&quot;,
-                                                 &quot;SomePass&quot;);</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+    auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
+                                                 "SomePass");
+
+
 
 **Step 3**:Create **rmsauth::AuthenticationContext** object
 Description: Specify Azure authority *URI* and *FileCache* object
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>AuthenticationContext authContext(
+
+    AuthenticationContext authContext(
                         std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
                         AuthorityValidationType::False,
-                        FileCachePtr);</code></pre></td>
-</tr>
-</tbody>
-</table>
+                        FileCachePtr);
+
 
 **Step 4**: Call the **aquireToken** method of **authContext** and specify parameters:
 -   *Requested resource* - protected resource you want to access
 -   *Client unique ID* - usually a GUID
 -   *User credentials* - pass the created object
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>auto result = authContext.acquireToken(
+
+     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),
                 std::string(“4a63455a-cfa1-4ac6-bd2e-0d046cf1c3f7”),
-                userCred);</code></pre></td>
-</tr>
-</tbody>
-</table>
+                userCred);
+
 
 **Step 5**: Get access token from result
-Description: Call **result-&gt; accessToken()** method
+Description: Call **result-> accessToken()** method
 
 **Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
@@ -797,6 +577,3 @@ Description: Call **result-&gt; accessToken()** method
  
 
  
-
-
-
