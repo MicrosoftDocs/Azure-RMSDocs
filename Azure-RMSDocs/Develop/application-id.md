@@ -18,7 +18,6 @@ Use the following steps to create your app Id and sign your usage agreement with
 
     This is what the authentication call looks like in our [iOS/OS X code examples](ios_os_x_code_examples.md) topic.
 
-...
 
     // Retrieve token using ADAL
         [context acquireTokenWithResource:authenticationParameters.resource
@@ -26,8 +25,8 @@ Use the following steps to create your app Id and sign your usage agreement with
                               redirectUri:redirectURI
                                    userId:authenticationParameters.userId
                           completionBlock:^(ADAuthenticationResult *result)
-                          
-...
+
+
 
 **Note**  If the RMS Team does not receive your signed RMLA within 60 days, your app will be blocked from authenticating with the Azure Authentication System.
 
