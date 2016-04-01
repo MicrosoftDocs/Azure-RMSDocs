@@ -6,7 +6,7 @@
 ## [Developer's Guide](./developers-guide.md)
 ## [Microsoft Rights Management SDK 4.2](./active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 ### [Overview](./overview.md)
-### [Get started](./GetStarted.md)
+### [Get started](./get-started.md)
 #### [What's new](./release-notes.md)
 #### [Setup Developer environment](./setup-Developer-environment.md)
 #### [Android setup](./android-sdk.md)
