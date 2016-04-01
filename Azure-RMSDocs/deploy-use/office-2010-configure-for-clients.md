@@ -28,4 +28,4 @@ ms.suite: ems
 # Office 2010: Configuration for clients
 For client computers to use Azure RMS with Office 2010, they must have installed the Rights Management sharing application for Windows. No further configuration is required other than users must sign in with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can then protect files and use files that have been protected by others.
 
-For more information about the Rights Management sharing application, see the [Rights Management sharing application: Installation and configuration for clients](#rights-management-sharing-application-installation-and-configuration-for-clients) section in this topic.
+For more information about the Rights Management sharing application, see the [Rights Management sharing application: Installation and configuration for clients](sharing-app-install-configure.md).
