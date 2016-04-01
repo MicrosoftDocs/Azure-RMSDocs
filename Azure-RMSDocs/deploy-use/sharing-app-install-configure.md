@@ -25,4 +25,21 @@ ms.suite: ems
 
 ---
 
+# Rights Management sharing application: Installation and configuration for clients
+The Rights Management (RMS) sharing application is required for client computers to use Azure RMS with Office 2010, and recommended for all computers and mobile devices that support Azure RMS. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files and emails directly from the ribbon. It also offers generic protection for files types that are not natively supported by Azure RMS, and a document tracking site for users to track and revoke files that they have protected.
+
+## The RMS sharing application for Windows: Installation and configuration
+To install and configure the RMS sharing application for Windows for an enterprise deployment, see the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
+
+> [!TIP]
+> If you want to quickly install and test the RMS sharing application for a single computer, see [Download and install the Rights Management sharing application](http://technet.microsoft.com/library/dn574734.aspx) from the [Rights Management sharing application user guide](http://technet.microsoft.com/library/dn339006.aspx).
+
+## The RMS sharing application for mobile platforms: Installation and management
+To install the RMS sharing application for mobile platforms, you can download the relevant app by using the links on the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required to use Azure RMS with this app.
+
+**If you have Microsoft Intune**: Because the RMS sharing app includes the Microsoft Intune App Software Development Kit, you have the following options:
+
+-   For devices that are enrolled by Intune, you can  deploy and manage the RMS sharing app for devices that run iOS and Android.  For more information,  see [Control apps using mobile application management policies with Microsoft Intune](https://technet.microsoft.com/library/dn878026.aspx) in the Microsoft Intune TechNet library. For Step 2, use the instructions to publish a policy managed app.
+
+-   For devices that are not enrolled by Intune, you can manage the RMS sharing app for devices that run Android. For more information, see [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx).
 
