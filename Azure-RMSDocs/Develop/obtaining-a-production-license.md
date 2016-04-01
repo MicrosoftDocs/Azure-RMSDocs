@@ -1,14 +1,12 @@
-Obtaining a production license
-=====================================================================================
+# Obtaining a production license
 
 Before you can release an application developed using the Rights Management Services SDK 2.1, you must apply for a Production License Agreement to obtain a production certificate.
 
-**Important**  
-If you will be running your client application with Azure based RMS, you will need to request an Azure RMS Tenant. Send mail to <rmcstbeta@microsoft.com> with your tenant request.
+> [!IMPORTANT]
+> If you will be running your client application with Azure based RMS, you will need to request an Azure RMS Tenant. Send mail to <rmcstbeta@microsoft.com> with your tenant request.
 
 For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
 
- 
 
 The production certificate and the pre-production certificate perform a similar function but are intended for use in different environments. Both contain a certificate chain with a Microsoft certification authority (CA) certificate at the root of trust, but the pre-production certificate is used only when developing an RMS application. The production certificate is used in post-release environments. The production certificate and the associated private key are used to create and sign a manifest that identifies the files that can or must be loaded into the process space of your application and those that must not be loaded.
 
@@ -16,7 +14,9 @@ For more information on keys, see [Testing your rights-enabled application](runn
 
 You can obtain the certificate by applying for a Production License Agreement.
 
-![](common/wedge.gif)**Request a Production License Agreement**
+## Request a Production License Agreement
+
+![](../media.wedge.gif)
 
 -   Send an email message to [RMLA@microsoft.com](mailto:rmla@microsoft.com) and include the following information:
 
@@ -53,7 +53,7 @@ You can obtain the certificate by applying for a Production License Agreement.
 
     The ADRMLA team will forward your production certificate to you after it is created. The certificate is created based on the license agreement and digital information (including a public key) you provide. Please note that it may take up to 15 business days for the ADRMLA team to reply with your certificate by email, longer if communication is by postal service.
 
-<span id="related_topics"></span>Related topics
+## Related topics
 -----------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)

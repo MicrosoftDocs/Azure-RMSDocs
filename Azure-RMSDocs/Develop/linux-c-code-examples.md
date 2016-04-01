@@ -1,5 +1,4 @@
-Linux code examples
-==========================================================================
+# Linux code examples
 
 This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 
@@ -11,7 +10,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 -   [WorkerThread - a supporting method](#workerthread_-_a_supporting_method)
 -   [**Scenario**: RMS authentication](#scenario__rms_authentication)
 
-<span id="Scenario__Access_protection_policy_information_from_a___protected_file"></span><span id="scenario__access_protection_policy_information_from_a___protected_file"></span><span id="SCENARIO__ACCESS_PROTECTION_POLICY_INFORMATION_FROM_A___PROTECTED_FILE"></span>**Scenario**: Access protection policy information from a protected file
+## Scenario: Access protection policy information from a protected file
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Opens and reads an RMS protected file**
@@ -158,7 +157,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 </tbody>
 </table>
 
-<span id="Scenario__Create_a_new_protected_file_using_a_template"></span><span id="scenario__create_a_new_protected_file_using_a_template"></span><span id="SCENARIO__CREATE_A_NEW_PROTECTED_FILE_USING_A_TEMPLATE"></span>**Scenario**: Create a new protected file using a template
+## Scenario: Create a new protected file using a template
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Protects a file with a user selected template**
@@ -342,7 +341,7 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 </tbody>
 </table>
 
-<span id="Scenario__Protect_a_file_using_custom_protection"></span><span id="scenario__protect_a_file_using_custom_protection"></span><span id="SCENARIO__PROTECT_A_FILE_USING_CUSTOM_PROTECTION"></span>**Scenario**: Protect a file using custom protection
+## Scenario: Protect a file using custom protection
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Protects a file using custom protection**
@@ -486,8 +485,8 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 </tbody>
 </table>
 
-<span id="WorkerThread_-_a_supporting_method"></span><span id="workerthread_-_a_supporting_method"></span><span id="WORKERTHREAD_-_A_SUPPORTING_METHOD"></span>WorkerThread - a supporting method
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## >WorkerThread - a supporting method
+
 
 The *WorkerThread()* method is called by two of the previous example scenarios; **Create a protected file stream** and **Protects a file given a policy** in the following manner:
 
@@ -605,7 +604,7 @@ static void WorkerThread(shared_ptr&lt;iostream&gt;           stdStream,
 </tbody>
 </table>
 
-<span id="Scenario__RMS_authentication"></span><span id="scenario__rms_authentication"></span><span id="SCENARIO__RMS_AUTHENTICATION"></span>**Scenario**: RMS authentication
+## Scenario: RMS authentication
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following examples show two different authentication approaches; obtaining Azure Authentication oAuth2 token using UI and without UI.

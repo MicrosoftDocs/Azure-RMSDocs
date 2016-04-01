@@ -1,21 +1,17 @@
-Working with encryption
-=======================================================================
-
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
+# Working with encryption
 
 This topic orients you to our encryption packages and shows some code snips for their use.
 
-<span id="Support_for_AES_256__the_new_default"></span><span id="support_for_aes_256__the_new_default"></span><span id="SUPPORT_FOR_AES_256__THE_NEW_DEFAULT"></span>Support for AES 256, the new default
+## Support for AES 256, the new default
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 No additional code is required to use *AES 256* based encryption as it is the new default, assuming you build against the RMS SDK 2.1 March 2015 update or later. We encourage you to seriously consider updating your applications with this release for the additional security benefits of *AES 256*.
 
-**Important**  
-Support for consumption of *AES 256* protected files has existed since the [October 2014 release](release_notes__rtm_.md). If you are running applications built with a version of the SDK from before October 2014, this update will break your application. Please make sure that customers of the applications you are building, are either using the updated SDK, or are willing to immediately update to the most recent version of your application.
+> [!IMPORTANT]
+> Support for consumption of *AES 256* protected files has existed since the [October 2014 release](release_notes__rtm_.md). If you are running applications built with a version of the SDK from before October 2014, this update will break your application. Please make sure that customers of the applications you are building, are either using the updated SDK, or are willing to immediately update to the most recent version of your application.
 
  
-
-<span id="API_encryption_support"></span><span id="api_encryption_support"></span><span id="API_ENCRYPTION_SUPPORT"></span>API encryption support
+## API encryption support
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 Beginning with the [March 2015 update](release_notes__rtm_.md), we have incorporated the following three flags into our API and their associated encryption packages:
@@ -28,7 +24,7 @@ The encryption package flags, see [**Preferred encryption**](xref:msipc.preferre
 
 Following are some simple code snippets that demonstrates how to use the new license property.
 
-<span id="Deprecated_Algorithms"></span><span id="deprecated_algorithms"></span><span id="DEPRECATED_ALGORITHMS"></span>Deprecated Algorithms
+## Deprecated Algorithms
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 We are no longer exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future applications will no longer compile if they reference this flag, but applications already built using it will continue to work since we honor the flag privately in the API code.
