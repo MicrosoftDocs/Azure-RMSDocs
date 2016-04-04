@@ -10,19 +10,17 @@ When your application is creating a license handle using [**IpcCreateLicenseFrom
 **Note**  Setting a user as "owner" using [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
  
-## Example scenario
+## Scenario - assigning rights to a license
 
 In this C++ example, needed rights are added to a license created with [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch). The example shows the creation and assignment of the rights to the license through a rights list.
-
-The following example code only represents the steps involved in creating and adding the specific rights to a given license.
 
 The following two rights are added to these users:
 
 -   *Read* permissions assigned to joe@contoso.com
 -   *Full* permissions assigned to mary\_kay@contoso.com
 
+**NOTE** - This code example only shows the steps involved in creating and adding specific rights to a given license.
 
-    ...
     // Create User Rights structure
     IPC_USER_RIGHTS ownerRightForOwner = {0};
 
@@ -51,14 +49,14 @@ The following two rights are added to these users:
 
     // Assign values to members of Rights structure for Mary Kay
     mary_kayFullRight.User.dwType = IPC_USER_TYPE_EMAIL;
-    mary_kayFullRight.User.wszID = L&quot;mary_kay@contoso.com&quot;;
+    mary_kayFullRight.User.wszID = L"mary_kay@contoso.com";
     mary_kayFullRight.rgwszRights = rgwszFullRights;
     mary_kayFullRight.cRights = 1;
 
     // Create User Rights List and assign the above rights
     size_t uNoOfUserRights = 3;
     PIPC_USER_RIGHTS_LIST pUserRightsList = NULL;
-    pUserRightsList = reinterpret_cast&lt;PIPC_USER_RIGHTS_LIST&gt;
+    pUserRightsList = reinterpret_cast<PIPC_USER_RIGHTS_LIST>
     (new BYTE[ sizeof(IPC_USER_RIGHTS_LIST) + uNoOfUserRights * sizeof(IPC_USER_RIGHTS)]);
 
     if(pUserRightsList == NULL)
@@ -81,10 +79,10 @@ The following two rights are added to these users:
     {
       // Handle the error
     }
-    ...
 
 
-## Related topics ##
+
+## Related topics
 
 * [Developer notes](developer_notes.md)
 * [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)

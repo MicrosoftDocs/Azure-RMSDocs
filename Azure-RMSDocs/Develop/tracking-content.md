@@ -53,29 +53,18 @@ Lastly, use this API to register your tracked document with the tracking system.
 
 Here's a code snippet showing an example of setting document tracking metadata and the call to register with the tracking system.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>    
+
+
     HRESULT hr = S_OK;
     LPCWSTR wszOutputFile = NULL;
     wstring wszWorkingFile;
     IPC_LICENSE_METADATA md = {0};
-   
+
     md.cbSize = sizeof(IPC_LICENSE_METADATA);
     md.dwNotificationType = IPCD_CT_NOTIFICATION_TYPE_ENABLED;
     md.dwNotificationPreference = IPCD_CT_NOTIFICATION_PREF_DIGEST;
     //file origination date, current time for this example
-    md.ftDateCreated = GetCurrentTime(); 
+    md.ftDateCreated = GetCurrentTime();
     md.ftDateModified = GetCurrentTime();
 
     LOGSTATUS_EX(L&quot;Encrypt file with official template...&quot;);
@@ -90,26 +79,23 @@ Here's a code snippet showing an example of setting document tracking metadata a
                                        &amp;wszOutputFile);
 
     /* This will contain the serialized license */
-    PIPC_BUFFER pSerializedLicense; 
-    
+    PIPC_BUFFER pSerializedLicense;
+
     /* the context to use for the call */
-    PCIPC_PROMPT_CTX pContext; 
- 
+    PCIPC_PROMPT_CTX pContext;
+
     wstring wstrContentName(“MyDocument.txt”);
     bool sendLicenseRegistrationNotificationEmail = FALSE;
 
-    hr = IpcRegisterLicense( pSerializedLicense, 
-                              0, 
-                              pContext, 
-                              wstrContentName.c_str(), 
+    hr = IpcRegisterLicense( pSerializedLicense,
+                              0,
+                              pContext,
+                              wstrContentName.c_str(),
                               sendLicenseRegistrationNotificationEmail);
-</code></pre></td>
-</tr>
-</tbody>
-</table>
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+
+### Related topics
+
 
 * [**License metadata property types**](xref:msipc.license_metadata_property_types)
 * [**Notification preference**](xref:msipc.notification_preference)
@@ -123,6 +109,3 @@ Here's a code snippet showing an example of setting document tracking metadata a
  
 
  
-
-
-

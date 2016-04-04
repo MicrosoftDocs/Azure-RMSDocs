@@ -3,11 +3,11 @@ iOS/OS X code examples
 
 This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 
-**Note**  In the example code and descriptions that follow, we use the term MSIPC (Microsoft Information Protection and Control) to reference the client process.
+**Note**  In the example code and descriptions that follow, we use the term MSIPC (Microsoft Information Protection and Control) to reference the client process.
 
- 
+ 
 
-##Using the Microsoft Rights Management SDK 4.2 - key scenarios
+##Using the Microsoft Rights Management SDK 4.2 - key scenarios
 
 
 Following are **Objective C** code examples from a larger sample application representing development scenarios important to your orientation to this SDK. These demonstrate; use of Microsoft Protected File format referred to as protected file , use of custom protected file formats, and use of custom UI controls.
@@ -259,6 +259,6 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
           }
 
 
- 
+ 
 
- 
+ 
