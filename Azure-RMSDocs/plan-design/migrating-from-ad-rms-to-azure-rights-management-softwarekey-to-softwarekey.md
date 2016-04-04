@@ -28,7 +28,11 @@ ms.suite: ems
 
 # Step 2: Software-protected key to software-protected key migration
 
-Use this procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by Microsoft.
+These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a software-protected tenant key. 
+
+If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrating-from-ad-rms-to-azure-rights-management.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
+
+Use the following procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by Microsoft.
 
 ## To import the configuration data to Azure RMS
 
