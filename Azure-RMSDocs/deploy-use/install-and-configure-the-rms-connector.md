@@ -28,7 +28,7 @@ ms.suite: ems
 # Installing and configuring the Azure Rights Management connector
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploying-the-azure-rights-management-connector.md).
 
-Before you begin, make sure that you have reviewed and checked the [prerequisites](deploying-the-azure-rights-management-connector#prerequisites-for-the-rms-connector) for this deployment.
+Before you begin, make sure that you have reviewed and checked the [prerequisites](deploying-the-azure-rights-management-connector.md#prerequisites-for-the-rms-connector) for this deployment.
 
 
 ## Installing the RMS connector
@@ -235,4 +235,4 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 
 
 ## Next steps
-Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. 
+Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Azure Rights Management connector](configure-servers-for-the-rms-connector.md).

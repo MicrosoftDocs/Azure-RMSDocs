@@ -42,9 +42,11 @@ After you have deployed Azure Rights Management (Azure RMS) for your organizatio
 
     -   [SharePoint Online and OneDrive for Business: IRM Configuration](0365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
--   [Office 2016 and Office 2013: Configuration for clients](office-2016-2013-configure-for-clients.md)
+- [Office applications: Configuration for clients](office-2016-2013-configure-for-clients.md)
 
--   [Office 2010: Configuration for clients](office-2010-configure-for-clients.md)
+	-   [Office 2016 and Office 2013](office-2016-2013-configure-for-clients.md#office-2016-and-office-2013)
+
+	-   [Office 2010](office-2016-2013-configure-for-clients.md#office-2010)
 
 -   [Rights Management sharing application: Installation and configuration for clients](sharing-app-install-configure.md)
 
