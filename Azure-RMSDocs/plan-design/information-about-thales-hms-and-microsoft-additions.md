@@ -36,5 +36,5 @@ For more information, see [Thales HSMs and Azure RMS](http://www.thales-esecurit
 
 ## Next steps
 
-Read about BYOK pricing and restrictions, or for how-to instructions, go direct to Implementing bring your own key (BYOK).
-
+> [!div class="button"]
+[Back to: Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)
