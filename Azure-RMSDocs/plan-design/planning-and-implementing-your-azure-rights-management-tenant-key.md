@@ -68,7 +68,7 @@ The second diagram shows the additional steps required when you manage your own 
 
 ![](../media/RMS_BYOK_onprem.png)
 
-If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps).
+If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps).
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
@@ -113,7 +113,7 @@ The procedures to generate and use your own tenant key depend on whether you wan
 
 -   **In person:** This requires that you contact Microsoft Customer Support Services (CSS) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
 
-For how-to instructions, select whether you will generate and transfer your tenant key over the Internet or in person: 
+For how-to instructions, use the following drop-down to select whether you will generate and transfer your tenant key over the Internet or in person: 
 
 > [!div class="op_single_selector"]
 - [Over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md)
@@ -128,7 +128,7 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     -   If you haven’t already done so, you must now activate Rights Management so that your organization can start to use RMS. Users immediately start to use your tenant key (managed by Microsoft or managed by you).
 
-        For more information about activation, see [Activating Azure Rights Management](activating-azure-rights-management.md).
+        For more information about activation, see [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md).
 
     -   If you had already activated Rights Management and then decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
 
@@ -138,9 +138,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     ![](../media/RMS_Logging.gif)
 
-    For more information about usage logging, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
+    For more information about usage logging, see [Logging and Analyzing Azure Rights Management Usage](../deploy-use/logging-and-analyzing-azure-rights-management-usage.md).
 
 3.  Maintain your tenant key.
 
-    For more information, see [Operations for Your Azure Rights Management Tenant Key](operations-for-your-azure-rights-management-tenant-key.md).
+    For more information, see [Operations for Your Azure Rights Management Tenant Key](../deploy-use/operations-for-your-azure-rights-management-tenant-key.md).
 
