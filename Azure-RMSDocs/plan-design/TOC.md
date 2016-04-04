@@ -7,7 +7,7 @@
 ### [HSM key to HSM key](migrating-from-ad-rms-to-azure-rights-management-hsmkey-to-hsmkey.md)
 ### [Software key to HSM key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-hsmkey.md)
 ## [Planning and Implementing Your Azure Rights Management Tenant Key](./planning-and-implementing-your-azure-rights-management-tenant-key.md)
-### [Thales](information-about-thales-hms-and-microsoft-additions.md)
+### [About Thales HSMs](information-about-thales-hms-and-microsoft-additions.md)
 ### [Over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md)
 ### [In person](generate-and-transfer-your-tenant-key-in-person.md)
 ## [Preparing for Azure Rights Management](./preparing-for-azure-rights-management.md)
