@@ -1,5 +1,4 @@
-﻿
-# Getting started
+﻿# Getting started
 
 The Rights Management Services SDK 2.1 platform enables developers to build applications that leverage RMS information protection. The platform handles complex security practices such as key management, encryption and decryption processing and, offers a simplified API for easy application development.
 
@@ -30,8 +29,7 @@ For developers who want to add RMS support to their new and existing application
 
 The RMS SDK 2.1 supports a range of important client and server platforms. For more information see, [Supported platforms](supported_platforms.md).
 
-<span id="core"></span><span id="CORE"></span>Core principles
--------------------------------------------------------------
+## Core principles
 
 **Simplicity**—Feedback and usage patterns for the AD RMS SDK 1.0 were analyzed, and that data used to simplify or automate the most difficult programming tasks. RMS applications authored using the RMS SDK 2.1 typically require 5–10 times fewer lines of RMS code than RMS applications written using AD RMS SDK 1.0.
 **Write once**—RMS SDK 2.1 applications do not need a code change or a recompile to work with the newest RMS features. New RMS features will become available in your existing application as they get added to the RMS server.

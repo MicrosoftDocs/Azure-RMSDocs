@@ -40,7 +40,6 @@ The following table contains the application data fields, property name and valu
 |MS.Notify.TZDN|string|“Pacific Daylight Time”|**Source:** TimeZoneInfo.Local.DaylightName - Daylight Time Zone name.<br><br>This should be the localized name of the time zone’s daylight savings name. It can be the same as the standard name if the time zone does not support daylight savings.|
 
 ## Related topics
------------------------------------------------
 
 * [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty)
 * [**IPC\_LI\_APP\_SPECIFIC\_DATA**](xref:msipc.license_property_types)

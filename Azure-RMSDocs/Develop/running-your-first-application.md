@@ -20,13 +20,12 @@ We recommend that you use the Pre-production hierarchy when developing an applic
 -   For an example application, see [IPCHelloWorld - an example application](how_to_build_your_first_application.md).
 
 Instructions
-------------
 
 ### Step 1:
 
 Create and build a rights-enabled application. See the above Prerequisites section for options.
 
-### <span id="Generate_an_application_manifest_using_the_pre-production_certificate_chain"></span><span id="generate_an_application_manifest_using_the_pre-production_certificate_chain"></span><span id="GENERATE_AN_APPLICATION_MANIFEST_USING_THE_PRE-PRODUCTION_CERTIFICATE_CHAIN"></span>Step 2: Generate an application manifest using the pre-production certificate chain
+### Step 2: Generate an application manifest using the pre-production certificate chain
 
 You must generate a manifest for your application before running it.
 
@@ -81,7 +80,6 @@ You can run your application from any directory, but the application manifest (M
     For information about how to configure the client on your computer, see [Configure the client](how_to_configure_the_ad_rms_client_2_0.md). For information about installing an RMS server, see [Install and configure the server](how_to_install_and_configure_an_rms_server.md).
 
 ### Related topics
------------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)
 * [Configure the client](how_to_configure_the_ad_rms_client_2_0.md)

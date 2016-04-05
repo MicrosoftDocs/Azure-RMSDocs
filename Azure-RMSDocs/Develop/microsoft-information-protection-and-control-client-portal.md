@@ -3,12 +3,10 @@
 
 
 ## Purpose
----------------------------------
 
 The Rights Management Services SDK 2.1 platform enables developers to build applications that leverage Rights Management Services (RMS) or Azure Rights Management to provide information protection. The RMS SDK 2.1 handles complex security practices such as key management, encryption and decryption processing and offers a simplified API for easy application development.
 
 ### Developer audience
----------------------------------------------------------------
 
 The RMS SDK 2.1, available from the [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397) on the Microsoft download center, is used to create custom applications that enable rights management on digital assets and enforce terms-of-use for those assets. Knowledge of the C++ programming language is required.
 
@@ -17,7 +15,6 @@ For more information about this technology see our [RMS Developer's Corner](http
 For answers to frequently asked questions, see the developers section of our [RMS FAQ](http://aka.ms/adrmsfaq )
 
 ### Run-time requirements
----------------------
 
 For information about the run-time requirements for a particular programming element, see the Requirements section of the reference topic for that element.
 
@@ -36,7 +33,6 @@ For information about the run-time requirements for a particular programming ele
  
 
 ### Related topics
------------------------------------------------
 
 * [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)

@@ -15,7 +15,6 @@ This section will guide you through the process of setting up for and running yo
 
 
 ### Related topics
------------------------------------------------
 
 * [Overview](ad_rms_overview.md)
 * [How-to use](how_to_use_msipc.md)

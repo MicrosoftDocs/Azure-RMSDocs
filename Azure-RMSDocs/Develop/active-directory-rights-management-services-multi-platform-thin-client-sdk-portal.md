@@ -1,12 +1,10 @@
 # Microsoft Rights Management SDK 4.2 #
 
 ## Purpose ##
----------------------------------
 
 Microsoft Rights Management SDK 4.2 is a simplified, next-generation API that enables a lightweight development experience in upgrading your device apps with information protection via Microsoft Rights Management Services. Developers can build apps that leverage Active Directory Rights Management Services (AD RMS) or Azure Rights Management to provide information protection and can easily protect or consume information, while transparently handling complex security practices such as key management, encryption and decryption, policy and permissions creation, secure caching, and communication with AD RMS and Azure RMS services.
 
 ## Developer audience ##
----------------------------------------------------------------
 
 The MS RMS SDK 4.2 APIs uses standard programming languages and models for each operating system so, they are easy and familiar to work with.
 
