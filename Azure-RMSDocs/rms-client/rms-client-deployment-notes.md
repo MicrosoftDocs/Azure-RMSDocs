@@ -28,19 +28,6 @@ ms.suite: ems
 # RMS Client Deployment Notes
 The  Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. In addition to shipping with the [Rights Management sharing application for Windows](https://technet.microsoft.com/library/dn919648.aspx), the RMS client is  available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can  protect and consume content that has been  protected by Rights Management services.
 
-This topic includes the following sections:
-
--   [Redistributing the RMS Client](#BKMK_RedistributeInstaller)
-
--   [Installing the RMS Client](#BKMK_InstallClient)
-
--   [Questions and Answers About the RMS Client](#BKMK_QA)
-
--   [RMS Client Settings](#BKMK_Settings)
-
--   [AD RMS Only: Limiting the RMS Client to Use Trusted AD RMS Servers](#BKMK_UsingTrustedServers)
-
--   [RMS Service Discovery](#BKMK_ServiceDiscovery)
 
 ## Redistributing the RMS Client
 The RMS client can be freely redistributed and bundled with other applications and IT solutions. If you are an application developer or solution provider and want to redistribute the  RMS client, you have two options:
@@ -242,9 +229,9 @@ In some cases, you might need to redirect traffic during service discovery, for 
 
     For example, to redirect licensing from a server at Contoso.com to one at Fabrikam.com, you might enter the following values:
 
-    **Name:**`https://contoso.com/_wmcs/licensing`
+    **Name:** https://contoso.com/_wmcs/licensing
 
-    **Value:**`https://fabrikam.com/_wmcs/licensing`
+    **Value:** https://fabrikam.com/_wmcs/licensing
 
     > [!NOTE]
     > If the old licensing server has both intranet and extranet URLs specified then a new name and value mapping has to be set for both of these URLs under the LicensingRedirection key.

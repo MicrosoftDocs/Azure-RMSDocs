@@ -64,6 +64,5 @@ Here are just some examples of how you might use the RMS sharing application, to
 
 -   [Specify settings in the dialog box](https://technet.microsoft.com/library/dn574738.aspx)
 
-## See Also
-[Protect your docs!](http://curah.microsoft.com/60308/protect-your-docs)
+
 
