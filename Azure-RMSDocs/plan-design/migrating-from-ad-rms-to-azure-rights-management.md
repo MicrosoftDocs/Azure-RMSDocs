@@ -103,7 +103,7 @@ Limitations:
 ## Steps for migrating AD RMS to Azure RMS
 
 
-The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators:
+The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
 [**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrating-from-ad-rms-to-azure-rights-management-phase1.md)
 
@@ -117,15 +117,15 @@ You export the configuration data (keys, templates, URLs) from AD RMS to an XML 
 
 - **Software-protected key to software-protected key migration**:
 
-	> Centrally managed, password-based keys in AD RMS to Microsoft-managed Azure RMS tenant key. This is the simplest migration path and no additional steps are required.
+    Centrally managed, password-based keys in AD RMS to Microsoft-managed Azure RMS tenant key. This is the simplest migration path and no additional steps are required.
 
 - **HSM-protected  key to HSM-protected key migration**:
 
-	> Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by the BYOK toolset.
+    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by the BYOK toolset.
 
 - **Software-protected key to HSM-protected key migration**:
 
-	> Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
+    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
 
 For instructions, see [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step2Migration).
 
