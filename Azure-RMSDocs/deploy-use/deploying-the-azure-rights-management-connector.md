@@ -51,7 +51,7 @@ Use the following information to help you plan for, install, and configure the R
 
 -   **Step 1:**  [Installing the RMS connector](install-and-configure-the-rms-connector.md#installing-the-rms-connector)
 
--   **Step 2:**  [Entering credentials](install-and-configure-the-rms-connector#entering-credentials)
+-   **Step 2:**  [Entering credentials](install-and-configure-the-rms-connector.md#entering-credentials)
 
 -   **Step 3:**  [Authorizing servers to use the RMS connector](install-and-configure-the-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
 
@@ -63,13 +63,13 @@ Use the following information to help you plan for, install, and configure the R
 
 -   Optional: [Installing the RMS connector administration tool on administrative computers](install-and-configure-the-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
 
--   **Step 5:**  [Configuring servers to use the RMS connector](configure-the-rms-connector.md#configuring-servers-to-use-the-rms-connector)
+-   **Step 5:**  [Configuring servers to use the RMS connector](configure-servers-for-the-rms-connector.md)
 
-    -   [Configuring an Exchange server to use the connector](configure-the-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
+    -   [Configuring an Exchange server to use the connector](configure-servers-for-the-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
 
-    -   [Configuring a SharePoint server to use the connector](configure-the-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
+    -   [Configuring a SharePoint server to use the connector](configure-servers-for-the-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
 
-    -   [Configuring a file server for File Classification Infrastructure to use the connector](configure-the-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
+    -   [Configuring a file server for File Classification Infrastructure to use the connector](configure-servers-for-the-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
 
 ## Prerequisites for the RMS connector
