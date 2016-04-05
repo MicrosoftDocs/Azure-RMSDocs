@@ -30,9 +30,9 @@ Use the following set of instructions to  migrate your Active Directory Rights M
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-compare/what-is-azure-rights-management.md)
+-   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rights-management.md)
 
--   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-compare/comparing-azure-rights-management-and-ad-rms.md).
+-   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/comparing-azure-rights-management-and-ad-rms.md).
 
 ## Prerequisites for migrating AD RMS to Azure RMS
 Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
@@ -63,7 +63,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 - **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
 
-	See [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+	See [Requirements for Azure Rights Management](../understand-explore/requirements-for-azure-rights-management.md).
 
 	Although you must have an Azure RMS tenant before you can migrate from AD RMS, we recommend that you do not activate the Rights Management service before the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure RMS. However, if Azure RMS is already activated, you can still migrate from AD RMS.
 
@@ -88,9 +88,9 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 Limitations:
 
--   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](http://technet.microsoft.com/library/dn440580.aspx). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](#BKMK_Step6Migration) in these instructions.
+-   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](http://technet.microsoft.com/library/dn440580.aspx). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](migrating-from-ad-rms-to-azure-rights-management-phase3#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
 
--   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) article.
+-   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md) article.
 
 -   If you import your on-premises key to Azure RMS as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
 
@@ -109,7 +109,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 **Step 1: Download the Azure RMS Management Administration Tools**
 
-For instructions, see [Step 1: Download the Azure Rights Management Administration Tool](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step1Migration).
+For instructions, see [Step 1: Download the Azure Rights Management Administration Tool](migrating-from-ad-rms-to-azure-rights-management-phase1.md#step-1-download-the-azure-rights-management-administration-tool).
 
 **Step 2. Export configuration data from AD RMS and import it to Azure RMS**
 
@@ -127,20 +127,20 @@ You export the configuration data (keys, templates, URLs) from AD RMS to an XML 
 
     Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
 
-For instructions, see [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step2Migration).
+For instructions, see [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrating-from-ad-rms-to-azure-rights-management-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms).
 
 
 **Step 3. Activate your RMS tenant**
 
 If possible, do this step after the import process and not before.
 
-For more information and instructions, see [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step3Migration).
+For more information and instructions, see [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management-phase1.md#step-3-activate-your-rms-tenant).
 
 **Step 4. Configure imported templates**
 
 When you import your rights policy templates, their status is archived. If you want users to be able to see and use them, you must change the template status to published in the Azure classic portal.
 
-For instructions, see [Step 4. Configure imported templates](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step4Migration).
+For instructions, see [Step 4. Configure imported templates](migrating-from-ad-rms-to-azure-rights-management-phase1.md#step-4-configure-imported-templates).
 
 
 [**PHASE 2: CLIENT-SIDE CONFIGURATION**](migrating-from-ad-rms-to-azure-rights-management-phase2.md)
@@ -152,7 +152,7 @@ Existing Windows computers must be reconfigured to use the Azure RMS service in
 
 In addition, if you have deployed the [mobile device extensions](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS
 
-For instructions, see [Step 5. Reconfigure clients to use Azure RMS](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step5Migration).
+For instructions, see [Step 5. Reconfigure clients to use Azure RMS](migrating-from-ad-rms-to-azure-rights-management-phase2.md#step-5-reconfigure-clients-to-use-azure-rms).
 
 [**PHASE 3: SUPPORTING SERVICES CONFIGURATION**](migrating-from-ad-rms-to-azure-rights-management-phase3.md)
 
@@ -161,7 +161,7 @@ For instructions, see [Step 5. Reconfigure clients to use Azure RMS](migrating-f
 
 This step is required if you want to use Exchange Online with Azure RMS.
 
-For instructions, see [Step 6. Configure IRM integration for Exchange Online](#BKMK_Step6Migration).
+For instructions, see [Step 6. Configure IRM integration for Exchange Online](migrating-from-ad-rms-to-azure-rights-management-phase3.md#step-6-configure-irm-integration-for-exchange-online).
 
 **Step 7: Deploy the RMS connector**
 
@@ -173,7 +173,7 @@ This step is required if you want to use any of the following on-premises servic
 
 - Windows Server that runs File Classification Infrastructure (FCI)
 
-For instructions, see [Step 7. Deploy the RMS connector](#BKMK_Step7Migration).
+For instructions, see [Step 7. Deploy the RMS connector](migrating-from-ad-rms-to-azure-rights-management-phase3.md#step-7-deploy-the-rms-connector).
 
 
 [**PHASE 4: POST MIGRATION TASKS**](migrating-from-ad-rms-to-azure-rights-management-phase4.md )
@@ -182,13 +182,13 @@ For instructions, see [Step 7. Deploy the RMS connector](#BKMK_Step7Migration).
 
 When you have confirmed that all clients are using Azure RMS and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
 
-For instructions, see [Step 8. Decommission AD RMS](#BKMK_Step8Migration).
+For instructions, see [Step 8. Decommission AD RMS](migrating-from-ad-rms-to-azure-rights-management-phase4.md#step-8-decommission-ad-rms).
 
 **Step 9: Re-key your Azure RMS tenant key**
 
 This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure RMS tenant key.
 
-For instructions, see [Step 9. Re-key your Azure RMS tenant key](#BKMK_Step9Migration).
+For instructions, see [Step 9. Re-key your Azure RMS tenant key](migrating-from-ad-rms-to-azure-rights-management-phase4.md#step-9-re-key-your-azure-rms-tenant-key).
 
 
 

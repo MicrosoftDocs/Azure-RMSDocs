@@ -37,7 +37,7 @@ Optional: Remove the Service Connection Point (SCP) from Active Directory to pre
 
 Monitor your AD RMS servers for activity, for example, by checking the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [auditing of user access to protected content](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure RMS, you can remove the AD RMS server role from these server. If you’re using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time to make sure that there are no reported problems that might require restarting these servers to ensure service continuity while you investigate why clients are not using Azure RMS.
 
-After decommissioning your AD RMS servers, you might want to take the opportunity to review your templates in the Azure classic portal and consolidate them so that users have fewer to choose between, or reconfigure them, or even add new templates. This would be also a good time to publish the default templates. For more information, see [Configuring Custom Templates for Azure Rights Management](configuring-custom-templates-for-azure-rights-management.md).
+After decommissioning your AD RMS servers, you might want to take the opportunity to review your templates in the Azure classic portal and consolidate them so that users have fewer to choose between, or reconfigure them, or even add new templates. This would be also a good time to publish the default templates. For more information, see [Configuring Custom Templates for Azure Rights Management](../deploy-use/configuring-custom-templates-for-azure-rights-management.md).
 
 ## Step 9. Re-key your Azure RMS tenant key
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
@@ -50,7 +50,7 @@ To re-key your Azure RMS tenant key:
 
 -   If your RMS tenant key is managed by you (BYOK): Repeat the BYOK procedure to generate and create a new key over the Internet or in person.
 
-For more information about managing your RMS tenant key, see [Operations for Your Azure Rights Management Tenant Key](operations-for-your-azure-rights-management-tenant-key.md).
+For more information about managing your RMS tenant key, see [Operations for Your Azure Rights Management Tenant Key](../deploy-use/operations-for-your-azure-rights-management-tenant-key.md).
 
 ## Next steps
 
