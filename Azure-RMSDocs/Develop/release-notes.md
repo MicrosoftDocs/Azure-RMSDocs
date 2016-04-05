@@ -1,5 +1,5 @@
-What's new
-=====================================================
+﻿
+# What's new
 
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 

@@ -1,3 +1,4 @@
+﻿
 # Deploying your application
 
 
@@ -9,7 +10,6 @@ This topic outlines and guides you through deployment options for your rights-en
  
 
 ## Installation options for Active Directory Rights Management Services Client 2.1
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you create your manifest file using a production certificate, your application is ready to be deployed. Given that you utilized RMS SDK 2.1, you will need Active Directory Rights Management Services Client 2.1 to be deployed on the end-user machine.
 
@@ -65,7 +65,6 @@ The AD RMS Client 2.1 is not a Windows operating system component. The AD RM
 For more on enabling your application to use RMS for Azure Rights Management services see, [Enable your application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud.md).
 
 ## Related topics
------------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)
 * [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/en-us/download/details.aspx?id=28177)

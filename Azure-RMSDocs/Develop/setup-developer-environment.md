@@ -1,5 +1,5 @@
-Setup developer environment
-====================================================================================
+﻿
+# Setup developer environment
 
 The following topics show you have to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 

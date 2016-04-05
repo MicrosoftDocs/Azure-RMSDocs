@@ -1,11 +1,11 @@
-Understanding usage restrictions
-=========================================================================================
+﻿
+# Understanding usage restrictions
 
 All RMS enabled applications must enforce usage restrictions. A usage restriction is a condition that results when a user tries to take an action (ex. printing a document), but the RMS policy for that document does not grant them permission or right to perform that action (ex. the PRINT right).
 
 A user's permissions for a document can be queried by using the [**IpcAccessCheck**](xref:msipc.ipcaccesscheck) function.
 
-<span id="Understanding_usage_restrictions"></span><span id="understanding_usage_restrictions"></span><span id="UNDERSTANDING_USAGE_RESTRICTIONS"></span>Understanding usage restrictions
+## Understanding usage restrictions
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   Familiarize yourself with standard RMS rights
@@ -26,7 +26,7 @@ A user's permissions for a document can be queried by using the [**IpcAccessChec
 
     For guidance about how to enforce specific rights, see [Usage restriction reference](usage_restriction_reference.md).
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Developer concepts](ad_rms_concepts-nav.md)

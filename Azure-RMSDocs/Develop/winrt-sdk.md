@@ -1,5 +1,5 @@
-Windows Store setup
-==========================================================
+﻿
+# Windows Store setup
 
 Windows Store applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
@@ -10,8 +10,8 @@ This topic will guide you through setting up your environment for creating your 
 -   [Configuring your development environment](#configuring_your_development_environment)
 -   [See Also](#see_also)
 
-<span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
--------------------------------------------------------------------------------------------------------------
+## Prerequisites
+
 
 You must have the following software on your development system:
 
@@ -23,13 +23,13 @@ You must have the following software on your development system:
 
 Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
-<span id="Optional"></span><span id="optional"></span><span id="OPTIONAL"></span>Optional
+## Optional
 -----------------------------------------------------------------------------------------
 
 Our UI library provides re-usable UI for consumption and protection operations for developers who don’t want to create their own custom UI - [UI Library for Windows Store apps](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). We also provide a Windows Store app sample application - [RMS Sample application for Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-<span id="Configuring_your_development_environment"></span><span id="configuring_your_development_environment"></span><span id="CONFIGURING_YOUR_DEVELOPMENT_ENVIRONMENT"></span>Configuring your development environment
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Configuring your development environment
+
 
 -   Open Visual Studio.
 -   Click **File**, click **New**, and then click **Project**.
@@ -50,7 +50,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 You are now ready to create your own new Windows Store apps.
 
-<span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
+### See Also
 -----------------------------------------------------------------------------------------
 
 [Get started](get_started.md)

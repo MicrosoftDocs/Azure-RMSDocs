@@ -1,5 +1,5 @@
-Setting the API security mode
-==============================================================================================
+﻿
+# Setting the API security mode
 
 You can choose which security mode your File API application runs in by using the [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty) function.
 
@@ -11,7 +11,7 @@ For more information on *server mode*, see [Application types](application_types
 
  
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Application types](application_types.md)

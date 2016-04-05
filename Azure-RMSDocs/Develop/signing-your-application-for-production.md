@@ -1,9 +1,9 @@
-Signing your application for production
-=======================================================================================================
+﻿
+# Signing your application for production
 
 This topic leads you through the process of signing your application for production mode.
 
-<span id="Sign_your_rights-enabled_application"></span><span id="sign_your_rights-enabled_application"></span><span id="SIGN_YOUR_RIGHTS-ENABLED_APPLICATION"></span>Sign your rights-enabled application
+## Sign your rights-enabled application
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 These steps assume that you have already signed your application for a pre-production hierarchy. If you have not already done so, go through the process described in [Testing your rights-enabled application](running_your_first_application.md).
@@ -41,7 +41,7 @@ Place them in the same directory with *GenManifest.exe* and your application bin
 
     -   Your *YourAppName*.exe.man should always be placed in the same directory as *YourAppName*.exe.
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)

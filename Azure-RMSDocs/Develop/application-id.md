@@ -1,5 +1,5 @@
-How to: Get an Azure Application ID
-===============================================================================
+﻿
+# How to: Get an Azure Application ID
 
 Creating an RMS-enabled app with the Microsoft Rights Management SDK 4.2 requires you to create an agreement with the RMS Team.
 

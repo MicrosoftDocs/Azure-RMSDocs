@@ -1,5 +1,5 @@
-Add explicit owner rights
-===========================================================================
+﻿
+# Add explicit owner rights #
 
 Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)).
 

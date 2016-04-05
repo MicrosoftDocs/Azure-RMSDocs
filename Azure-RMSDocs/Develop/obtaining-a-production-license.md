@@ -1,3 +1,4 @@
+﻿
 # Obtaining a production license
 
 Before you can release an application developed using the Rights Management Services SDK 2.1, you must apply for a Production License Agreement to obtain a production certificate.
@@ -53,7 +54,7 @@ You can obtain the certificate by applying for a Production License Agreement.
 
     The ADRMLA team will forward your production certificate to you after it is created. The certificate is created based on the license agreement and digital information (including a public key) you provide. Please note that it may take up to 15 business days for the ADRMLA team to reply with your certificate by email, longer if communication is by postal service.
 
-## Related topics
+### Related topics
 -----------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)

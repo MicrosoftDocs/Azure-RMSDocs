@@ -1,5 +1,5 @@
-Install and configure the server
-===================================================================================================
+﻿
+# Install and configure the server
 
 This topic covers the steps to install and configure and RMS Sever for testing your rights-enabled application.
 
@@ -8,10 +8,9 @@ For more information about the 1-box AD RMS ISV environment, see [Set up the tes
 
  
 
-Instructions
-------------
+## Instructions
 
-### <span id="Setup_your_RMS_server"></span><span id="setup_your_rms_server"></span><span id="SETUP_YOUR_RMS_SERVER"></span>Step 1: Setup your RMS server
+### Step 1: Setup your RMS server
 
 The following steps guide you in setting up your RMS server and include:
 
@@ -67,8 +66,7 @@ The following steps guide you in setting up your RMS server and include:
 
         **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+### Related topics
 
 * [How-to use](how_to_use_msipc.md)
  

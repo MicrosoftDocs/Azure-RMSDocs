@@ -1,10 +1,9 @@
-Overview
-================================================
+﻿
+# Overview
 
 Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled application, content owners will be able to define who can open, modify, print, forward, or take other actions with the content.
 
-<span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>Overview
------------------------------------------------------------------------------------------
+## Overview
 
 AD RMS consists of both [server](ad_rms_server.md) and [client](ad_rms_client.md) components. The server components include multiple web services that run on a Windows Server such as Windows Server 2008 R2 or via the cloud through RMS web services in Azure. The client component can be run on either a client or server operating system and contains functions that enable an application to encrypt and decrypt content, retrieve templates and revocation lists, acquire licenses and certificates from a server, and other related rights management tasks.
 
@@ -22,8 +21,7 @@ For more information on AD RMS server, AD RMS client and their functionality, se
 
 To get started see, [Getting started](getting_started_with_ad_rms_2_0.md).
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+## Related topics
 
 * [AD RMS Concepts](application_types.md)
 * [Differences between AD RMS and AD RMS 2.1](differences_between_ad_rms_and_ad_rms_2_0.md)
