@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Usage restriction reference | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 5c1b0de6-e6d6-4ec9-b810-017fd606866e
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Usage restriction reference
 
 Usage restrictions are defined by the constants listed in this topic.

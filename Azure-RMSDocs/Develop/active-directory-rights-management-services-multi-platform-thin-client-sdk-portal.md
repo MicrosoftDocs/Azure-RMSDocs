@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Microsoft Rights Management SDK 4.2 | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 1a8d12e9-fbb9-4800-980f-37a60b956262
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 # Microsoft Rights Management SDK 4.2
 
 ## Purpose ##

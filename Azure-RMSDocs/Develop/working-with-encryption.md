@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Working with encryption | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 088c98f9-f06e-4aae-8fac-bc7605e545f5
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Working with encryption
 
 This topic orients you to our encryption packages and shows some code snips for their use.

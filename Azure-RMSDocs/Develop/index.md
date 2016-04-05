@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: RMS Developer's Guide | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 # RMS Developer's Guide
 
 ## Overview ##

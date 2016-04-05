@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Configure Visual Studio | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 8581e996-79b4-4ffc-a63e-2236c83dc954
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Configure Visual Studio
 
 This topic contains instructions about how to configure a Visual Studio project to use the Rights Management Services SDK 2.1.
