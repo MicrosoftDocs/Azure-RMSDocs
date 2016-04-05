@@ -1,6 +1,7 @@
 ﻿
-# What's new
+# What's new and release notes
 
+## What's new
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 
 -   [New for our December 2015 Update](#new_for_our_december_2015_update)
@@ -12,7 +13,7 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release_notes)
 -   [Frequently asked questions](#frequently_asked_questions)
 
-<span id="New_for_our_December_2015_Update"></span><span id="new_for_our_december_2015_update"></span><span id="NEW_FOR_OUR_DECEMBER_2015_UPDATE"></span>New for our December 2015 Update
+### New for our December 2015 Update
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 With this release, the RMS SDK for devices is now at version 4.2 and adds:
@@ -45,7 +46,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 -   Updates to improve error messaging and troubleshooting experience.
 -   Significant performance improvements for cryptographic operations.
 
-<span id="July_2015_Update_-_Adds_support_for_Linux___C___development"></span><span id="july_2015_update_-_adds_support_for_linux___c___development"></span><span id="JULY_2015_UPDATE_-_ADDS_SUPPORT_FOR_LINUX___C___DEVELOPMENT"></span>July 2015 Update - Adds support for Linux / C++ development
+### July 2015 Update - Adds support for Linux / C++ development
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds the following:
@@ -54,7 +55,7 @@ This release adds the following:
 
     For more information, see [Get started](get_started.md).
 
-<span id="May_2015_Update_-_Adds_logging_control"></span><span id="may_2015_update_-_adds_logging_control"></span><span id="MAY_2015_UPDATE_-_ADDS_LOGGING_CONTROL"></span>May 2015 Update - Adds logging control
+### May 2015 Update - Adds logging control
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for the following:
@@ -73,17 +74,17 @@ This release adds support for the following:
 
     For more information, see [**MSProtection:resetStateWithCompletionBlock**](xref:msipcthin2.msprotection_resetstatewithcompletionblock_method_objc).
 
-<span id="February_2015_Update_-_Adds_Windows_Store_application_support"></span><span id="february_2015_update_-_adds_windows_store_application_support"></span><span id="FEBRUARY_2015_UPDATE_-_ADDS_WINDOWS_STORE_APPLICATION_SUPPORT"></span>February 2015 Update - Adds Windows Store application support
+### February 2015 Update - Adds Windows Store application support
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for Windows Store applications and provides functional parity with the Windows Phone, Android and iOS/OS X release of the RMS SDK 4.1.
 
-<span id="January_2015_Update_-_Adds_WinPhone_platform_support"></span><span id="january_2015_update_-_adds_winphone_platform_support"></span><span id="JANUARY_2015_UPDATE_-_ADDS_WINPHONE_PLATFORM_SUPPORT"></span>January 2015 Update - Adds WinPhone platform support
+### January 2015 Update - Adds WinPhone platform support
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for the Windows Phone operating system and provides functional parity with the Android and iOS/OS X release of the RMS SDK 4.1.
 
-<span id="October_2014_Update_-_Upgrade_to_Microsoft_RMS_SDK_4.1"></span><span id="october_2014_update_-_upgrade_to_microsoft_rms_sdk_4.1"></span><span id="OCTOBER_2014_UPDATE_-_UPGRADE_TO_MICROSOFT_RMS_SDK_4.1"></span>October 2014 Update - Upgrade to Microsoft RMS SDK 4.1
+## October 2014 Update - Upgrade to Microsoft RMS SDK 4.1
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The version 4.1 release of the RMS SDK adds the following new features to the Google Android and Apple iOS / OS X.
@@ -96,7 +97,7 @@ The version 4.1 release of the RMS SDK adds the following new features to the Go
 
     Example; MSUserPolicy.name changed to [**MSUserPolicy.policyName**](xref:msipcthin2.mspolicydescriptor_name_property_objc).
 
-<span id="Release_notes"></span><span id="release_notes"></span><span id="RELEASE_NOTES"></span>Release notes
+## Release notes
 -------------------------------------------------------------------------------------------------------------
 
 This section outlines information about the current and previous releases of the Microsoft Rights Management SDK 4.x APIs that you, as a developer, want to be aware of.
@@ -158,7 +159,7 @@ This section outlines information about the current and previous releases of the
 
 **Note**  MDI applications are not supported by our iOS API.
 
-<span id="Frequently_asked_questions"></span><span id="frequently_asked_questions"></span><span id="FREQUENTLY_ASKED_QUESTIONS"></span>Frequently asked questions
+## Frequently asked questions
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **All platforms**
