@@ -1,10 +1,9 @@
-Debug a rights-enabled application
-=================================================================================================
+﻿
+# Debug a rights-enabled application
 
 The following topic shows how to debug your application and use the Windows Event Log.
 
-<span id="Debugging_your_application"></span><span id="debugging_your_application"></span><span id="DEBUGGING_YOUR_APPLICATION"></span>Debugging your application
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Debugging your application
 
 In Rights Management Services SDK 2.1, the anti-debugging checks in the developer version of our runtime are disabled.
 
@@ -20,8 +19,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-<span id="Application_logging_by_using_the_Windows_Event_Log_"></span><span id="application_logging_by_using_the_windows_event_log_"></span><span id="APPLICATION_LOGGING_BY_USING_THE_WINDOWS_EVENT_LOG_"></span>Application logging by using the Windows Event Log
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Application logging by using the Windows Event Log
 
 The name of the event log is "Microsoft-RMS-MSIPC/Debug". This means that in the Windows Event Viewer, your log appears as "Application and Services Logs\\Microsoft\\RMS\\MSIPC\\Debug".
 
@@ -47,8 +45,7 @@ For example, the following command will enable the MSIPC event log and set the l
 
  
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+### Related topics
 
 * [How-to use](how_to_use_msipc.md)
  

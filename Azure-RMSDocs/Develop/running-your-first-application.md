@@ -1,5 +1,5 @@
-Testing your rights-enabled application
-==============================================================================================
+﻿
+# Testing your rights-enabled application
 
 This topic describes the steps you need to complete to test your Rights Management Services SDK 2.1 rights-enabled application.
 
@@ -14,7 +14,7 @@ We recommend that you use the Pre-production hierarchy when developing an applic
 
  
 
-### <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+### Prerequisites
 
 -   An RMS SDK 2.1 development environment setup. For more information, see [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md).
 -   For an example application, see [IPCHelloWorld - an example application](how_to_build_your_first_application.md).
@@ -22,7 +22,7 @@ We recommend that you use the Pre-production hierarchy when developing an applic
 Instructions
 ------------
 
-### <span></span>Step 1:
+### Step 1:
 
 Create and build a rights-enabled application. See the above Prerequisites section for options.
 
@@ -64,7 +64,7 @@ To generate the application manifest using the pre-production certificate chain,
 
     **genmanifest.exe -chain isvtier5appsignsdk\_client.xml MyApp.exe.mcf MyApp.exe.man**
 
-### <span id="Run_your_application"></span><span id="run_your_application"></span><span id="RUN_YOUR_APPLICATION"></span>Step 3: Run your application
+### Step 3: Run your application
 
 You can run your application from any directory, but the application manifest (MyApp.exe.man) must be in the same directory as the executable (MyApp.exe).
 
@@ -80,7 +80,7 @@ You can run your application from any directory, but the application manifest (M
 
     For information about how to configure the client on your computer, see [Configure the client](how_to_configure_the_ad_rms_client_2_0.md). For information about installing an RMS server, see [Install and configure the server](how_to_install_and_configure_an_rms_server.md).
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)

@@ -1,5 +1,5 @@
-Code samples
-============================================
+﻿
+# Code samples
 
 This topic lists a set of samples using the Rights Management Services SDK 2.1, available at the MSDN Download Center.
 
@@ -21,8 +21,7 @@ This topic lists a set of samples using the Rights Management Services SDK 2
 
   **Note**  This sample also works with subsequent versions of the RMS SDK, beyond 2.0.
  
-
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Overview](ad_rms_overview.md)

@@ -1,5 +1,5 @@
-iOS and OS X setup
-=======================================================
+﻿
+# iOS and OS X setup
 
 iOS and OS X applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
@@ -83,16 +83,16 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 -   You are now ready to create your own new iOS/OS X apps.
 
-<span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
+### See Also
 -----------------------------------------------------------------------------------------
 
-[Get started](get_started.md)
+* [Get started](get_started.md)
 
-[What's new](release_notes.md)
+* [What's new](release_notes.md)
 
-[Developer terms and concepts](core_concepts.md)
+* [Developer terms and concepts](core_concepts.md)
 
-[iOS / OS X API Reference](xref:iOS)
+* [iOS / OS X API Reference](xref:iOS)
 
  
 

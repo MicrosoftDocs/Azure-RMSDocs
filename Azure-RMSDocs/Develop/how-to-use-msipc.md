@@ -1,5 +1,5 @@
-How-to use
-===================================================
+﻿
+# How-to use
 
 The following topics will guide you through the key tasks for using the Rights Management Services SDK 2.1 to implement information protection for your application.
 
@@ -11,7 +11,7 @@ The following topics will guide you through the key tasks for using the Rights 
   This section will guide you through the process of releasing your tested application to a production environment.
  
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Overview](ad_rms_overview.md)

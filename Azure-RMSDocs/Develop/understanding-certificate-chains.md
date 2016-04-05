@@ -1,10 +1,9 @@
-Understanding certificate chains
-=========================================================================================
+﻿
+# Understanding certificate chains
 
 Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.
 
-<span id="Certificate_Types"></span><span id="certificate_types"></span><span id="CERTIFICATE_TYPES"></span>Certificate Types
------------------------------------------------------------------------------------------------------------------------------
+## Certificate Types
 
 Every license and certificate used in an Rights Management Services (RMS) environment consists of a chain of certificates that leads back to a Microsoft certification authority (CA) certificate. Microsoft provides two chains into which a license or certificate can be nested, a pre-production certificate chain and a production chain. We recommend that you use the pre-production hierarchy when developing an application so that you can work without signing a *Production License Agreement* with Microsoft. Note that the RMS server must also be configured for pre-production.
 
@@ -24,7 +23,7 @@ Whether or not you have used a pre-production certificate during application dev
 
 For more information on working with certificate chains and application signing, see [Switching to the production environment](switching_to_the_production_environment.md).
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Developer concepts](ad_rms_concepts-nav.md)

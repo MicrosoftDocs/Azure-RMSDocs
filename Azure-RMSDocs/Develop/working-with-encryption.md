@@ -1,3 +1,4 @@
+﻿
 # Working with encryption
 
 This topic orients you to our encryption packages and shows some code snips for their use.
@@ -31,47 +32,23 @@ We are no longer exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** fl
 
 Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing one flag. See the following code snippets for an examples.
 
-<span id="Protect_Files_with_AES_256_CBC4K"></span><span id="protect_files_with_aes_256_cbc4k"></span><span id="PROTECT_FILES_WITH_AES_256_CBC4K"></span>Protect Files with AES 256 CBC4K
+## Protect Files with AES 256 CBC4K
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 No change in code needed, *AES 256* CBC4K is the default.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
-                                    &amp;pLicenseHandle);</code></pre></td>
-</tr>
-</tbody>
-</table>
+                                    &amp;pLicenseHandle);
+    
 
-<span id="Protect_Files_with_AES-128_CBC4K"></span><span id="protect_files_with_aes-128_cbc4k"></span><span id="PROTECT_FILES_WITH_AES-128_CBC4K"></span>Protect Files with AES-128 CBC4K
+## Protect Files with AES-128 CBC4K
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
                                     &amp;pLicenseHandle);
@@ -81,29 +58,16 @@ DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
 hr = IpcSetLicenseProperty(pLicenseHandle, 
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
-                           &amp;dwEncryptionMode);</code></pre></td>
-</tr>
-</tbody>
-</table>
+                           &amp;dwEncryptionMode);
+    
 
-<span id="Protect_Files_with_AES-128_ECB__Deprecated_Algorithms_"></span><span id="protect_files_with_aes-128_ecb__deprecated_algorithms_"></span><span id="PROTECT_FILES_WITH_AES-128_ECB__DEPRECATED_ALGORITHMS_"></span>Protect Files with AES-128 ECB (Deprecated Algorithms)
+## Protect Files with AES-128 ECB (Deprecated Algorithms)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This sample also shows the new way of supporting *deprecated algorithms*.
 
-<span codelanguage="ManagedCPlusPlus"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    
+hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
                                     &amp;pLicenseHandle);
@@ -113,11 +77,8 @@ DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
 hr = IpcSetLicenseProperty(pLicenseHandle, 
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE, 
-                           &amp;dwEncryptionMode);</code></pre></td>
-</tr>
-</tbody>
-</table>
-
+                           &amp;dwEncryptionMode);
+    
  
 
  

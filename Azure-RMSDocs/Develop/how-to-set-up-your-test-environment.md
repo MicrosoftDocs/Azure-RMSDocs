@@ -1,5 +1,5 @@
-Set up the test environment
-=======================================================================================
+﻿
+# Set up the test environment
 
 Your rights-enabled application can be tested with different server options.
 
@@ -7,14 +7,14 @@ Your rights-enabled application can be tested with different server options.
 
  
 
-### <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+### Prerequisites
 
 -   [Install the SDK](create_your_first_rights_aware_application.md)
 
 Instructions
 ------------
 
-### <span id="Set_up_your_test_environment"></span><span id="set_up_your_test_environment"></span><span id="SET_UP_YOUR_TEST_ENVIRONMENT"></span>Step 1: Set up your test environment
+### Step 1: Set up your test environment
 
 To test your rights-enabled application, you must run it against an RMS server that is configured for pre-production. A pre-production RMS server uses the pre-production/ISV certificate hierarchy to encrypt and decrypt files.
 
@@ -25,7 +25,7 @@ There are two options available for testing your application against an RMS serv
 -   **You can run your application on the 1-box AD RMS ISV environment**. If you are running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 and have Hyper-V installed, you can deploy the 1-box AD RMS ISV environment by building a virtual machine using the AD RMS 1-box VHD. The 1-box AD RMS ISV environment provides an RMS server configured for pre-production and also has the Active Directory Rights Management Services Client 2.1 installed. Registry settings for the RMS server and client are already configured. To test your application, you run it on the virtual machine on which the 1-box environment is deployed.
 -   **You can run your application against an RMS server that is configured for pre-production and that is deployed on your network**. In this case, you must also install and configure the AD RMS Client 2.1 on the computer where your application will be running. For information about how to do this, see [Configure client](how_to_configure_the_ad_rms_client_2_0.md). For information about how to deploy an RMS server and configure it for pre-production, see [Install and configure the server](how_to_install_and_configure_an_rms_server.md).
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)

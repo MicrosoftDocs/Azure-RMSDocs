@@ -1,5 +1,6 @@
-Windows Phone setup
-===================================================================
+﻿
+# Windows Phone setup
+
 
 Windows Phone applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).
 
@@ -9,8 +10,8 @@ This topic will guide you through setting up your environment for creating your 
 -   [Configuring your development environment](#configuring_your_development_environment)
 -   [See Also](#see_also)
 
-<span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
--------------------------------------------------------------------------------------------------------------
+## Prerequisites
+
 
 You must have the following software on your development system:
 
@@ -24,8 +25,8 @@ Read the [What's new](release_notes.md) topic for information on API updates, de
 
 Review the information in the [Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) guide at the Windows Phone Dev Center.
 
-<span id="Configuring_your_development_environment"></span><span id="configuring_your_development_environment"></span><span id="CONFIGURING_YOUR_DEVELOPMENT_ENVIRONMENT"></span>Configuring your development environment
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Configuring your development environment
+
 
 -   Open *Visual Studio*.
 -   Click **File**. On the **File** menu, click **New**, and then click **Project**.
@@ -46,7 +47,7 @@ Review the information in the [Windows Phone development](https://msdn.microsoft
 
 You are now ready to create your own new Windows Phone apps.
 
-<span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
+### See Also
 -----------------------------------------------------------------------------------------
 
 [Get started](get_started.md)
