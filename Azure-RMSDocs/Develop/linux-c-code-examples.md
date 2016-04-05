@@ -690,9 +690,9 @@ Description:
 **Step 4**: Get access token from result
 Description: Call **result-&gt; accessToken()** method
 
-**Note**  Any of the authentication library methods may raise **rmsauth::Exception**
+**Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
- 
+ 
 
 **Acquiring oAuth2 Authentication Token without UI**
 **Source**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
@@ -789,13 +789,12 @@ Description: Specify Azure authority *URI* and *FileCache* object
 **Step 5**: Get access token from result
 Description: Call **result-&gt; accessToken()** method
 
-**Note**  Any of the authentication library methods may raise **rmsauth::Exception**
+**Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
- 
+ 
 
- 
+ 
 
- 
-
+ 
 
 
