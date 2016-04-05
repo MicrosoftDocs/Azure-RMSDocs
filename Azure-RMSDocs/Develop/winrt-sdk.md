@@ -24,7 +24,6 @@ You must have the following software on your development system:
 Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
 ## Optional
------------------------------------------------------------------------------------------
 
 Our UI library provides re-usable UI for consumption and protection operations for developers who don’t want to create their own custom UI - [UI Library for Windows Store apps](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). We also provide a Windows Store app sample application - [RMS Sample application for Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
@@ -51,7 +50,6 @@ Our UI library provides re-usable UI for consumption and protection operations f
 You are now ready to create your own new Windows Store apps.
 
 ### See Also
------------------------------------------------------------------------------------------
 
 [Get started](get_started.md)
 

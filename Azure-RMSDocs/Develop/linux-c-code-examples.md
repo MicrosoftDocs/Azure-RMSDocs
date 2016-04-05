@@ -277,7 +277,6 @@ The code snippets below are from the sample applications, *rms\_sample* and *rms
 
 
 ## Scenario: Protect a file using custom protection
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Protects a file using custom protection**
 **Source**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -490,7 +489,6 @@ The *WorkerThread()* method is called by two of the previous example scenarios; 
 
 
 ## Scenario: RMS authentication
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following examples show two different authentication approaches; obtaining Azure Authentication oAuth2 token using UI and without UI.
 **Acquiring oAuth2 Authentication Token with UI**

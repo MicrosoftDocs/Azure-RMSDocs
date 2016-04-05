@@ -4,7 +4,6 @@
 This topic orients you to our encryption packages and shows some code snips for their use.
 
 ## Support for AES 256, the new default
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 No additional code is required to use *AES 256* based encryption as it is the new default, assuming you build against the RMS SDK 2.1 March 2015 update or later. We encourage you to seriously consider updating your applications with this release for the additional security benefits of *AES 256*.
 
@@ -13,7 +12,6 @@ No additional code is required to use *AES 256* based encryption as it is the ne
 
  
 ## API encryption support
--------------------------------------------------------------------------------------------------------------------------------------------------
 
 Beginning with the [March 2015 update](release_notes__rtm_.md), we have incorporated the following three flags into our API and their associated encryption packages:
 
@@ -26,14 +24,12 @@ The encryption package flags, see [**Preferred encryption**](xref:msipc.preferre
 Following are some simple code snippets that demonstrates how to use the new license property.
 
 ## Deprecated Algorithms
----------------------------------------------------------------------------------------------------------------------------------------------
 
 We are no longer exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future applications will no longer compile if they reference this flag, but applications already built using it will continue to work since we honor the flag privately in the API code.
 
 Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing one flag. See the following code snippets for an examples.
 
 ## Protect Files with AES 256 CBC4K
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 No change in code needed, *AES 256* CBC4K is the default.
 
@@ -45,7 +41,6 @@ hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
     
 
 ## Protect Files with AES-128 CBC4K
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     
 hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
@@ -62,7 +57,6 @@ hr = IpcSetLicenseProperty(pLicenseHandle,
     
 
 ## Protect Files with AES-128 ECB (Deprecated Algorithms)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This sample also shows the new way of supporting *deprecated algorithms*.
 

@@ -12,8 +12,7 @@ This topic will guide you through setting up your environment for creating your 
 -   [Configuring your development environment](#configuring_your_development_environment)
 -   [See Also](#see_also)
 
-<span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
--------------------------------------------------------------------------------------------------------------
+## Prerequisites
 
 We recommend the following software on your development system:
 
@@ -33,12 +32,10 @@ We recommend the following software on your development system:
 Read the [What's new](release_notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
 
 ## Optional
------------------------------------------------------------------------------------------
 
 Our UI library provides re-usable UI for consumption and protection operations for developers who don’t want to create their own custom UI - [UI Library and Sample app for iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
 ## Configuring your development environment
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   To create a new project, on the **File** menu, click **New**, and then click **Project**.
 -   Select **Single View Application**.
@@ -82,7 +79,6 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   You are now ready to create your own new iOS/OS X apps.
 
 ### See Also
------------------------------------------------------------------------------------------
 
 * [Get started](get_started.md)
 

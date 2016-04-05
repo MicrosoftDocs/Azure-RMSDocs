@@ -19,7 +19,6 @@ CentOS 7
  
 
 ## How to build and use
------------------------------------------------------------------------------------------------------------------------------------------
 
 Two guidance topis for this SDK are hosted on Github for basic SDK build and usage guidance.
 
@@ -27,7 +26,6 @@ Two guidance topis for this SDK are hosted on Github for basic SDK build and usa
 -   [How to install and use app on user systems](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
 ### See Also
------------------------------------------------------------------------------------------
 
 * [Get started](get_started.md)
 

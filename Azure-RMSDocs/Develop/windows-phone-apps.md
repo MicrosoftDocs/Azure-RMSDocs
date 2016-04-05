@@ -48,7 +48,6 @@ Review the information in the [Windows Phone development](https://msdn.microsoft
 You are now ready to create your own new Windows Phone apps.
 
 ### See Also
------------------------------------------------------------------------------------------
 
 [Get started](get_started.md)
 

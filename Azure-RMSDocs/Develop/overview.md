@@ -32,7 +32,6 @@ MS RMS SDK 4.2 offers some new cool features that include the following:
 Use the [Get started](get_started.md) guide to begin your protected information device app project.
 
 ### Related topics
------------------------------------------------
 
 * [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md)
 * [Get started](get_started.md)

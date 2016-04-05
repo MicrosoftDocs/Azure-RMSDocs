@@ -14,7 +14,6 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Frequently asked questions](#frequently_asked_questions)
 
 ### New for our December 2015 Update
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
@@ -47,7 +46,6 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 -   Significant performance improvements for cryptographic operations.
 
 ### July 2015 Update - Adds support for Linux / C++ development
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds the following:
 
@@ -56,7 +54,6 @@ This release adds the following:
     For more information, see [Get started](get_started.md).
 
 ### May 2015 Update - Adds logging control
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for the following:
 
@@ -75,17 +72,14 @@ This release adds support for the following:
     For more information, see [**MSProtection:resetStateWithCompletionBlock**](xref:msipcthin2.msprotection_resetstatewithcompletionblock_method_objc).
 
 ### February 2015 Update - Adds Windows Store application support
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for Windows Store applications and provides functional parity with the Windows Phone, Android and iOS/OS X release of the RMS SDK 4.1.
 
 ### January 2015 Update - Adds WinPhone platform support
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This release adds support for the Windows Phone operating system and provides functional parity with the Android and iOS/OS X release of the RMS SDK 4.1.
 
 ## October 2014 Update - Upgrade to Microsoft RMS SDK 4.1
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The version 4.1 release of the RMS SDK adds the following new features to the Google Android and Apple iOS / OS X.
 
@@ -98,7 +92,6 @@ The version 4.1 release of the RMS SDK adds the following new features to the Go
     Example; MSUserPolicy.name changed to [**MSUserPolicy.policyName**](xref:msipcthin2.mspolicydescriptor_name_property_objc).
 
 ## Release notes
--------------------------------------------------------------------------------------------------------------
 
 This section outlines information about the current and previous releases of the Microsoft Rights Management SDK 4.x APIs that you, as a developer, want to be aware of.
 
@@ -160,7 +153,6 @@ This section outlines information about the current and previous releases of the
 **Note**  MDI applications are not supported by our iOS API.
 
 ## Frequently asked questions
------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **All platforms**
 

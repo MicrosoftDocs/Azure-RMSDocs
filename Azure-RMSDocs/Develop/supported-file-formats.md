@@ -13,7 +13,6 @@ The current version of the File API supports native protection for Microsoft Off
 Administrators can set registry keys to configure whether and how files should be protected based on their file name extension. For more information about how to configure file protection when using File API, see [File API configuration](file_api_configuration.md).
 
 ### Related topics
------------------------------------------------
 
 * [Developer notes](developer_notes.md)
 * [File API configuration](file_api_configuration.md)

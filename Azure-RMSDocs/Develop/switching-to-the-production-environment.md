@@ -27,7 +27,6 @@ The following topics will guide you through the process.
  
 
 ### Related topics
------------------------------------------------
 
 * [Overview](ad_rms_overview.md)
 * [How-to use](how_to_use_msipc.md)
