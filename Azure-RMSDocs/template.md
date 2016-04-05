@@ -25,9 +25,13 @@ ms.assetid: [GET ONE FROM guidgenerator.com]
 
 ---
 
-# Markdown Template
+# Metadata and Markdown Template
 
-This docs.ms markdown template contains examples of markdown syntax, as well as guidance on setting the metadata.
+This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
+/template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
+
+When creating a markdown file you shluld copy the template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content. 
+
 
 ## Metadata 
 
@@ -36,8 +40,7 @@ The full metadata block is above, divided into required fields and optional fiel
 - You **must** have a space between the colon (:) and the value for a metadata element.
 - If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na"); if you are adding a value to an element that was commnted out, be sure to remove the #.
 - Colons in a value (e.g., a title) break the metadata parser. In their place, use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS").
-- **title**: The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading.
-- **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
+- **title**: This title will appear in search engine results. The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading. It should be - **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
 - **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com). 
 - **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
@@ -50,7 +53,11 @@ All basic and Github-flavored markdown is supported. For more information on the
 
 ## Headings
 
-Examples of first- and second-level headings are above.
+Examples of first- and second-level headings are above. 
+
+There **must** be only one first-level heading in your topic, which will be displayed as the on-page title.  
+
+Second-level headings will generate the on-page TOC that appears in the "In this article" section underneath the on-page title.
 
 ### Third-level heading
 #### Fourth-level heading
