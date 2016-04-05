@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: How to&#58; Use built-in rights | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 2410090f-d4a6-420b-a504-00a0236fcefb
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# How to: Use built-in rights #
+# How to: Use built-in rights
 
 This topic outlines the built-in rights that the Microsoft Rights Management SDK 4.2 provides and usage restrictions that an app should enforce in honoring those restrictions. The following shows the built-in rights; common rights, editable document rights and email rights follwed by a description and their values by operating system.
 

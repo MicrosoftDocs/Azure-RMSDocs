@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Getting started | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 23e80932-9883-41f3-833d-b263fb419a62
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Getting started
 
 The Rights Management Services SDK 2.1 platform enables developers to build applications that leverage RMS information protection. The platform handles complex security practices such as key management, encryption and decryption processing and, offers a simplified API for easy application development.

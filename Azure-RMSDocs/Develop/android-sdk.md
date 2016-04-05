@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Android setup | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 9728c135-0e7f-4f5c-95ba-1db79e418080
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Android setup
 
 Android applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their applications by using Azure Active Directory Rights Management (AAD RM ).

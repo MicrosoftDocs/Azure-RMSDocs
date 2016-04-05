@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Client | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 8116fe81-16db-45fe-96a7-d53f2914a2e9
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# Client
 
 This topic describes the purpose and function of the Active Directory Rights Management Services Client 2.1.

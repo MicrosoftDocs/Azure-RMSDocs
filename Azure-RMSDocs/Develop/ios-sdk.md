@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: iOS and OS X setup | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 23f64fc8-d0f3-49ee-8d8a-b34ef26878a7
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿# iOS and OS X setup
 
 iOS and OS X applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).

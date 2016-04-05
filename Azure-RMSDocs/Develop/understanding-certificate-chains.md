@@ -1,5 +1,31 @@
-﻿
-# Understanding certificate chains
+---
+# required metadata
+
+title: Understanding certificate chains | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 14694cb0-adc4-4c2f-aff5-22aa132777df
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+﻿# Understanding certificate chains
 
 Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.
 

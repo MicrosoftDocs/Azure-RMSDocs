@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: How this SDK is better | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: ee4989d6-3903-4ed2-ac62-d5692e2ef494
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# How this SDK is better #
+# How this SDK is better
 This topic describes how Rights Management Services SDK 2.1 is a significant improvement over the original [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379) in terms of required developer effort to create a rights-enabled application.
 
 **API surface** - The API surface has been reduced significantly through abstraction, freeing you from many of the details of back-end implementation. From an API surface of 84 functions for RMS SDK, the RMS SDK 2.1 includes only 20 API functions. Most applications will need to use only a small subset of this API surface.

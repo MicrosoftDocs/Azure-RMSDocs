@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Linux setup | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: ff448158-2826-49e7-ae7f-ca0d8bd2e554
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
 # Linux setup
 
@@ -25,7 +52,7 @@ Two guidance topis for this SDK are hosted on Github for basic SDK build and usa
 -   [How to build libs and sample apps](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
 -   [How to install and use app on user systems](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
-### See Also
+## See Also
 
 * [Get started](get_started.md)
 

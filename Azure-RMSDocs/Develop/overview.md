@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Overview | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: a1da2517-c50f-4e02-bec7-92836bbd4007
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
 # Overview
 
@@ -31,7 +58,7 @@ MS RMS SDK 4.2 offers some new cool features that include the following:
 
 Use the [Get started](get_started.md) guide to begin your protected information device app project.
 
-### Related topics
+## Related topics
 
 * [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md)
 * [Get started](get_started.md)

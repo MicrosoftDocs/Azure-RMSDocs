@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Enable your service application to work with cloud based RMS | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 1f726c6a-68a5-421f-8ed9-9cbb051c205b
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
 # Enable your service application to work with cloud based RMS
 

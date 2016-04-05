@@ -1,6 +1,32 @@
+---
+# required metadata
+
+title: Release notes | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 84a93d5b-37e9-4d9c-9b7c-ad00963a68d7
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
 # Release notes
-=========================================================
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 

@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: Developer guidance and terms | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 10e3bee0-aaa4-4cbc-912f-f1ac50e117d5
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# Developer guidance and terms #
+# Developer guidance and terms
 The focus of Microsoft Rights Management SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.
 
 The following topics are intended to support your design process for developing RMS-enabled applications.

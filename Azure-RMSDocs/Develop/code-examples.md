@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: Code examples | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: b2fce5e9-0b71-40c9-a325-1ff8afef9252
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# Code examples #
+# Code examples
 
 Microsoft Rights Management SDK 4.2 includes example code and working projects for some supported operating systems.
 

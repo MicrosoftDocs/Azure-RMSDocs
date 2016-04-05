@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: Get started | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 1a2ae9f2-709f-47fe-b16c-76140dd27740
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# Get started #
+# Get started
 
 For this release of the Microsoft Rights Management SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms. Begin creating your rights enabled application by:
 

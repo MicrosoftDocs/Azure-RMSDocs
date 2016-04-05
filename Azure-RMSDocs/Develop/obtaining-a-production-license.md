@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Obtaining a production license | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 013f9d75-0b66-44a8-9b01-d05b44a5ea0c
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
 # Obtaining a production license
 
@@ -54,7 +81,7 @@ You can obtain the certificate by applying for a Production License Agreement.
 
     The ADRMLA team will forward your production certificate to you after it is created. The certificate is created based on the license agreement and digital information (including a public key) you provide. Please note that it may take up to 15 business days for the ADRMLA team to reply with your certificate by email, longer if communication is by postal service.
 
-### Related topics
+## Related topics
 
 * [How-to use](how_to_use_msipc.md)
 * [Testing your rights-enabled application](running_your_first_application.md)

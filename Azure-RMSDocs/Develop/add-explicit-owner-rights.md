@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: Add explicit owner rights | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: b2cd9dd4-6590-488e-9efb-27bdab41eff6
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# Add explicit owner rights #
+# Add explicit owner rights
 
 Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)).
 

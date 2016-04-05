@@ -1,5 +1,32 @@
+---
+# required metadata
+
+title: Common error conditions and solutions | Azure RMS
+description:
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: ac6453e1-e24f-480e-99bd-02ba9a49f468
+
+# optional metadata
+
+#ROBOTS:
+audience: developer
+#ms.devlang:
+ms.reviewer: shubhamp
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
 ﻿
-# Common error conditions and solutions #
+# Common error conditions and solutions
 This topic includes the most common error messages that you might encounter when using the Rights Management Services SDK 2.1 developer tools. It also provides a recommended action to fix the error, where applicable.
 
 **Important** - For error condition processing, always use a call to [IpcGetErrorMessageText](xref:msipc.ipcgeterrormessagetext) right after an SDK API call fails, so you get complete information about the nature of the error.
