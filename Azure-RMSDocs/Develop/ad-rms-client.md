@@ -1,5 +1,4 @@
-﻿
-# Client
+﻿# Client
 
 This topic describes the purpose and function of the Active Directory Rights Management Services Client 2.1.
 
@@ -13,8 +12,7 @@ The Rights Management Services SDK 2.1 works with AD RMS Client 2.1. Righ
 
 For more information, see the [TechNet documentation on the RMS Client 2.0](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx).
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+## Related topics
 
 * [Overview](ad_rms_overview.md)
 * [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md)

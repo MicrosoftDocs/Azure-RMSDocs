@@ -12,7 +12,6 @@ Your rights-enabled application can be tested with different server options.
 -   [Install the SDK](create_your_first_rights_aware_application.md)
 
 Instructions
-------------
 
 ### Step 1: Set up your test environment
 
@@ -26,7 +25,6 @@ There are two options available for testing your application against an RMS serv
 -   **You can run your application against an RMS server that is configured for pre-production and that is deployed on your network**. In this case, you must also install and configure the AD RMS Client 2.1 on the computer where your application will be running. For information about how to do this, see [Configure client](how_to_configure_the_ad_rms_client_2_0.md). For information about how to deploy an RMS server and configure it for pre-production, see [Install and configure the server](how_to_install_and_configure_an_rms_server.md).
 
 ### Related topics
------------------------------------------------
 
 * [How-to use](how_to_use_msipc.md)
 * [AD RMS SDK Webinar collateral download page](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)

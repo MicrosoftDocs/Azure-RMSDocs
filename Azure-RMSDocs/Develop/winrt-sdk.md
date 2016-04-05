@@ -24,7 +24,6 @@ You must have the following software on your development system:
 Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
 ## Optional
------------------------------------------------------------------------------------------
 
 Our UI library provides re-usable UI for consumption and protection operations for developers who don’t want to create their own custom UI - [UI Library for Windows Store apps](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). We also provide a Windows Store app sample application - [RMS Sample application for Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
@@ -35,23 +34,22 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   Click **File**, click **New**, and then click **Project**.
 -   In the **New Project** dialog box, click **Visual C\#** and select **Blank App (Windows)** then click **OK**.
 
-    ![](IMAGES/WINRTSETUP-NEWPROJ.png)
+    ![](../media/WINRTSETUP-NEWPROJ.png)
 
 -   In **Solution Explorer**, right-click your project, and select **Add Reference** to open the **Add Reference** dialog box.
 
-    ![](IMAGES/WINRTSETUP-ADDREF.png)
+    ![](../media/WINRTSETUP-ADDREF.png)
 
 -   In the **Add Reference** dialog box, click **Browse** and select the *Microsoft.RightsManagement.dll* file that is located in the folder you extracted the SDK package in.
 -   **Managed Apps** - For building a managed app, you will have to add this reference; select **Windows 8.1**-&gt;**Extensions** and check the box for **Windows Visual C++ Runtime Package for Windows**
 
-    ![](IMAGES/WINRTSETUP-REFMNGR.png)
+    ![](../media/WINRTSETUP-REFMNGR.png)
 
 -   **Adding Capabilities** - Your application will need "Internet (Client & Server)" capability to use the SDK. To add this capability to your app, open the *Package.appxmanifest* file in the project and navigate to the **Capabilities** tab to add.
 
 You are now ready to create your own new Windows Store apps.
 
 ### See Also
------------------------------------------------------------------------------------------
 
 [Get started](get_started.md)
 

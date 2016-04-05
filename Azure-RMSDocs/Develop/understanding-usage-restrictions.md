@@ -6,7 +6,6 @@ All RMS enabled applications must enforce usage restrictions. A usage restrictio
 A user's permissions for a document can be queried by using the [**IpcAccessCheck**](xref:msipc.ipcaccesscheck) function.
 
 ## Understanding usage restrictions
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   Familiarize yourself with standard RMS rights
 
@@ -27,7 +26,6 @@ A user's permissions for a document can be queried by using the [**IpcAccessChec
     For guidance about how to enforce specific rights, see [Usage restriction reference](usage_restriction_reference.md).
 
 ### Related topics
------------------------------------------------
 
 * [Developer concepts](ad_rms_concepts-nav.md)
 * [**IpcAccessCheck**](xref:msipc.ipcaccesscheck)

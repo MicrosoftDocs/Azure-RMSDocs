@@ -5,7 +5,6 @@
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 
 ## New for the December 2015 update
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   Performance improvements have been implemented in several areas including:
 
@@ -17,12 +16,10 @@ This topic contains important information about this and previous releases of th
 -   Note also that the [Supported platforms](supported_platforms.md) listing is also updated.
 
 ## May 2015 update
----------------------------------------------------------------------------------------------------------------------
 
 -   **Service apps and cloud based RMS** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key) needs three pieces of information; symmetric key, **AppPrincipalId** and **TenantBposId**. The topic for this has been updated to provide guidance on processing this acquiring information. For this update, see the updated version of [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
 
 ## April 2015 update
----------------------------------------------------------------------------------------------------------------------------------------------
 
 -   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](tracking_content.md).
 -   **Encryption type** - We now support API level control for selection of the encryption package. For more information, see [Working with encryption](working_with_encryption.md).
@@ -36,7 +33,6 @@ This topic contains important information about this and previous releases of th
 -   If you're running on a **Windows 7 SP1 or Windows Server 2008 R2 machine**, see the note following under "Important developer notes".
 
 ## January 2015 update
--------------------------------------------------------------------------------------------------------------------------------------
 
 -   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Support File Formats](supported_file_formats.md).
 -   **Improved logging for better diagnostics** - Logging levels will show **ERROR** or **WARNING** for messages that should be reviewed. All other messages, including exceptions which are still displayed, will be logged as **INFO**.
@@ -47,13 +43,11 @@ This topic contains important information about this and previous releases of th
 -   Improved localization consistency
 
 ## October 2014 update
--------------------------------------------------------------------------------------------------------------------------------------
 
 -   Default behaviors for the File API component of SDK have been updated. For more information, see [File API configuration](file_api_configuration.md).
 -   Email notification, a new feature, is described in the Developer notes topic, [Enabling email notification](how-to__enable_email_notification.md).
 
 ## July 2014 update
--------------------------------------------------------------------------------------------------------------------------
 
 The File API components of SDK has been extended and offers the following features:
 
@@ -86,7 +80,6 @@ The File API components of SDK has been extended and offers the following featur
     **Testing best practice** - guidance added for use of on-premise server before testing with Azure RMS. For more information, see [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
 
 ## Important developer notes
--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -   **Native support for all file types**
 
@@ -123,7 +116,6 @@ The File API components of SDK has been extended and offers the following featur
     **Solution**: If you want to use the Ipcsecproc\*isv.dll for a different architecture (for example, you have installed the 64-bit SDK on a 64-bit computer but now want to deploy on a 32-bit computer that requires Ipcsecproc\*isv.dll), you must install the 32-bit SDK on a different computer and copy the Ipcsecproc\*isv.dll files to there from the "%PROGRAMFILES%\\Microsoft Information Protection And Control" folder (the default location or wherever you chose to install the SDK).
 
 ## Frequently asked questions
-------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Q**: How does the default language behavior work with functions that take an LCID parameter?
 
@@ -135,7 +127,6 @@ The File API components of SDK has been extended and offers the following featur
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.
 
 ## Related topics
------------------------------------------------
 
 * [Overview](ad_rms_overview.md)
 * [Add explicit owner rights](add_explicit_owner_rights.md)

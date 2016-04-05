@@ -23,9 +23,8 @@ This topic contains instructions about how to configure the Active Directory R
 -   You must have an RMS server installed and configured for working in the pre-production environment. For more information, see [Install and configure the Server](how_to_install_and_configure_an_rms_server.md).
 
 Instructions
-------------
 
-### <span id="How_to_set_up_the_RMS_Client_2.1_for_the_pre-production_certificate_hierarchy"></span><span id="how_to_set_up_the_rms_client_2.1_for_the_pre-production_certificate_hierarchy"></span><span id="HOW_TO_SET_UP_THE_RMS_CLIENT_2.1_FOR_THE_PRE-PRODUCTION_CERTIFICATE_HIERARCHY"></span>Step 1: How to set up the RMS Client 2.1 for the pre-production certificate hierarchy
+### Step 1: How to set up the RMS Client 2.1 for the pre-production certificate hierarchy
 
 The following steps describe how to install the developer runtime, configure the client to use the ISV certificate (pre-production) hierarchy, and set up service discovery on the client.
 
