@@ -1,5 +1,5 @@
-Configure the client
-===================================================================================
+﻿
+# Configure the client
 
 This topic contains instructions about how to configure the Active Directory Rights Management Services Client 2.1.
 
@@ -7,7 +7,7 @@ This topic contains instructions about how to configure the Active Directory R
 
  
 
-### <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+### Prerequisites
 
 -   You must have the AD RMS Client 2.1 installed on the computer on which you will be testing your application.
 
@@ -87,13 +87,12 @@ The following steps describe how to install the developer runtime, configure the
                 MSIPC
     
 
-Remarks
--------
+### Remarks
 
 The guidance in this topic is not comprehensive. For detailed information about how to configure the AD RMS Client 2.1, see [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx).
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+### Related topics
+
 
 * [How-to use](how_to_use_msipc.md)
 * [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)

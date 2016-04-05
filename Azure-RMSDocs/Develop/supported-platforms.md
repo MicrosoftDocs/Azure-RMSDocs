@@ -1,10 +1,9 @@
-Supported platforms
-===============================================================
+﻿
+# Supported platforms
 
 This topic identifies the Rights Management Services SDK 2.1 supported client and server platforms.
 
-<span id="Supported_platforms"></span><span id="supported_platforms"></span><span id="SUPPORTED_PLATFORMS"></span>Supported platforms
--------------------------------------------------------------------------------------------------------------------------------------
+## Supported platforms
 
 -   Windows 10
 -   Windows Server 2012 R2

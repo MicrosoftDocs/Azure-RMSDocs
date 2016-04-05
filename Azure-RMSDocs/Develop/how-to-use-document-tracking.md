@@ -1,12 +1,11 @@
-How to: Use document tracking
-========================================================================================
+﻿
+# How to: Use document tracking
 
 \[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
 Using the document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
 
-<span id="Managing_document_tracking_metadata"></span><span id="managing_document_tracking_metadata"></span><span id="MANAGING_DOCUMENT_TRACKING_METADATA"></span>Managing document tracking metadata
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Managing document tracking metadata
 
 Each of the operating systems supporting document tracking have similar implementations. These include as set of properties that represent the metadata, a new parameter added to the user policy creation methods and a method for registering the policy to be tracked with the document tracking service.
 

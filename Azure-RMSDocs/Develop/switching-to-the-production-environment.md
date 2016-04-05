@@ -1,5 +1,5 @@
-Switching to the production environment
-=======================================================================================================
+﻿
+# Switching to the production environment
 
 This section will guide you through the process of releasing your tested application to a production environment.
 
@@ -26,7 +26,7 @@ The following topics will guide you through the process.
   This topic outlines and guides you through deployment options for your rights-enabled application.
  
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Overview](ad_rms_overview.md)

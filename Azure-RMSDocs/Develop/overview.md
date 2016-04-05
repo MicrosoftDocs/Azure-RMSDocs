@@ -1,5 +1,6 @@
-Overview
-==============================================
+﻿
+# Overview
+
 
 Microsoft Rights Management Services (AD RMS and Azure RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled applications, content owners will be able to define who can open, modify, print, forward, or take other actions with their content.
 
@@ -17,8 +18,8 @@ The following are just a few of the scenarios possible:
 
 MS RMS SDK 4.2 can be downloaded, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access to content that has been rights-protected by use and deployment of AD RMS servers in your environment or Azure RMS services. For more information, see [Get started](get_started.md).
 
-<span id="SDK_Highlights"></span><span id="sdk_highlights"></span><span id="SDK_HIGHLIGHTS"></span>SDK Highlights
------------------------------------------------------------------------------------------------------------------
+## SDK Highlights
+
 
 MS RMS SDK 4.2 offers some new cool features that include the following:
 
@@ -30,7 +31,7 @@ MS RMS SDK 4.2 offers some new cool features that include the following:
 
 Use the [Get started](get_started.md) guide to begin your protected information device app project.
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md)

@@ -1,10 +1,9 @@
-Supported file formats
-=====================================================================
+﻿
+# Supported file formats
 
 The File API supports native and Pfile formats.
 
-<span id="Supported_File_Formats"></span><span id="supported_file_formats"></span><span id="SUPPORTED_FILE_FORMATS"></span>Supported File Formats
--------------------------------------------------------------------------------------------------------------------------------------------------
+## Supported File Formats
 
 The current version of the File API supports native protection for Microsoft Office files, Portable Document Files (PDF) and PFile protection for all other file formats. PDF files can optionally have PFile protection applied.
 
@@ -13,7 +12,7 @@ The current version of the File API supports native protection for Microsoft Off
 
 Administrators can set registry keys to configure whether and how files should be protected based on their file name extension. For more information about how to configure file protection when using File API, see [File API configuration](file_api_configuration.md).
 
-<span id="related_topics"></span>Related topics
+### Related topics
 -----------------------------------------------
 
 * [Developer notes](developer_notes.md)

@@ -1,5 +1,5 @@
-Development environment files
-==================================================================
+﻿
+# Development environment files
 
 This topic shows the development environment files and their relative installation locations on your computer.
 

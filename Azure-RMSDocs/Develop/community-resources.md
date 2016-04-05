@@ -1,10 +1,9 @@
-Community resources
-====================================================================
+﻿
+# Community resources
 
 Active Directory Rights Management Services is well supported by a growing community of developers on multiple platforms.
 
-<span id="AD_RMS_Community_Resources"></span><span id="ad_rms_community_resources"></span><span id="AD_RMS_COMMUNITY_RESOURCES"></span>AD RMS Community Resources
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## AD RMS Community Resources
 
 The [RMS Developer's Corner (blog)](http://blogs.msdn.com/b/rms/) is the active hub for the information protection developer.
 

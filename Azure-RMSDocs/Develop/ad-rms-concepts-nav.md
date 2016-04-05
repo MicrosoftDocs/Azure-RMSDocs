@@ -1,4 +1,6 @@
+﻿
 # Developer concepts #
+
 The topics in this section cover key concepts in RMS.
 
 [Application types](application_types.md) - This topic covers types of applications that you might choose to create as rights-enabled.

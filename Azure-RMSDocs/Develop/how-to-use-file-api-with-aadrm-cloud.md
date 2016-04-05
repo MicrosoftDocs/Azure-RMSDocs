@@ -1,5 +1,5 @@
-Enable your service application to work with cloud based RMS
-===========================================================================================================================
+﻿
+# Enable your service application to work with cloud based RMS
 
 This topic outlines steps for setting up your service application to use Azure Rights Management. For more information, see [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
 

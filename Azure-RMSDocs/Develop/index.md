@@ -10,6 +10,7 @@ ms.assetid: TBD
 author: bruceperlerms
 ---
 
+# RMS Developer's Guide
 
 ## Overview ##
 Three generations of the Rights Management SDK are now available: **Microsoft Rights Management SDK 4.2** for Android, iOS/OS X, Windows devices and Linux, **Microsoft Rights Management SDK 2.1** for Windows Desktop Client and the superseded **AD RMS SDK**.

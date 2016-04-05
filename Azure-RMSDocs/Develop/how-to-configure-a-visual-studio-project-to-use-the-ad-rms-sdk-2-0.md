@@ -1,16 +1,15 @@
-Configure Visual Studio
-==================================================================================================================
+﻿
+# Configure Visual Studio
 
 This topic contains instructions about how to configure a Visual Studio project to use the Rights Management Services SDK 2.1.
 
-### <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## Prerequisites
 
 -   [Install the SDK](create_your_first_rights_aware_application.md)
 
-Instructions
-------------
+**Instructions**
 
-### <span id="Configure_a_Visual_Studio_project_to_use_RMS_SDK_2.1"></span><span id="configure_a_visual_studio_project_to_use_rms_sdk_2.1"></span><span id="CONFIGURE_A_VISUAL_STUDIO_PROJECT_TO_USE_RMS_SDK_2.1"></span>Step 1: Configure a Visual Studio project to use RMS SDK 2.1
+### Step 1: Configure a Visual Studio project to use RMS SDK 2.1
 
 These instructions are specific to Microsoft Visual Studio 2010. If you are using a different version of Microsoft Visual Studio, your settings dialog boxes may appear slightly different.
 
@@ -49,8 +48,7 @@ These instructions apply to building a native 32-bit application.
 
     ![Solution explorer resource files field](IMAGES/ORIGINAL_FILE_NAME.png)
 
-<span id="related_topics"></span>Related topics
------------------------------------------------
+### Related topics
 
 * [How-to use](how_to_use_msipc.md)
 * [Install the SDK](create_your_first_rights_aware_application.md)

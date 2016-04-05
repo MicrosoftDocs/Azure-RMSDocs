@@ -1,3 +1,4 @@
+﻿
 # File API configuration
 
 
@@ -123,8 +124,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-Related topics
------------------------------------------------
+### Related topics
 
 * [Developer notes](developer_notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](xref:msipc.error_codes)

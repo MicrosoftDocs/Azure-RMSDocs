@@ -1,5 +1,5 @@
-Android code examples
-===============================================================
+﻿
+# Android code examples
 
 This topic will introduce you to important code elements for the Android version of the RMS SDK.
 
