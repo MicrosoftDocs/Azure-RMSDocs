@@ -1,5 +1,4 @@
-﻿
-# Usage restriction reference
+﻿# Usage restriction reference
 
 Usage restrictions are defined by the constants listed in this topic.
 

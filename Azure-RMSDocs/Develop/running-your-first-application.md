@@ -10,7 +10,8 @@ To publish and consume protected content, an Rights Management Services (RMS) ap
 
 We recommend that you use the Pre-production hierarchy when developing an application. By doing so, you can work without signing a Production License Agreement with Microsoft.
 
-**Important**  It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+> [!IMPORTANT]
+> It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
 
  
 

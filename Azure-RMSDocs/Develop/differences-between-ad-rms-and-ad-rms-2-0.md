@@ -1,5 +1,5 @@
 ﻿
-# How this SDK is better #
+# How this SDK is better
 This topic describes how Rights Management Services SDK 2.1 is a significant improvement over the original [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379) in terms of required developer effort to create a rights-enabled application.
 
 **API surface** - The API surface has been reduced significantly through abstraction, freeing you from many of the details of back-end implementation. From an API surface of 84 functions for RMS SDK, the RMS SDK 2.1 includes only 20 API functions. Most applications will need to use only a small subset of this API surface.

@@ -1,5 +1,5 @@
 ﻿
-# Developer guidance and terms #
+# Developer guidance and terms
 The focus of Microsoft Rights Management SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.
 
 The following topics are intended to support your design process for developing RMS-enabled applications.

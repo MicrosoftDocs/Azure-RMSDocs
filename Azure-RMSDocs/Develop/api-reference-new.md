@@ -1,4 +1,4 @@
-# API reference #
+# API reference
 
 The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release_notes.md).
 

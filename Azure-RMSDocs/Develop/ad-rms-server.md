@@ -1,4 +1,4 @@
-# AD RMS Server #
+# AD RMS Server
 
 This topic describes the purpose and functions of the RMS Server.
 

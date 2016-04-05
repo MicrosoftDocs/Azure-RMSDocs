@@ -25,7 +25,7 @@ Two guidance topis for this SDK are hosted on Github for basic SDK build and usa
 -   [How to build libs and sample apps](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
 -   [How to install and use app on user systems](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
-### See Also
+## See Also
 
 * [Get started](get_started.md)
 

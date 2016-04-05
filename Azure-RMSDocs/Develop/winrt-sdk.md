@@ -62,10 +62,3 @@ You are now ready to create your own new Windows Store apps.
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows API Reference](xref:Microsoft.RightsManagement)
-
- 
-
- 
-
-
-

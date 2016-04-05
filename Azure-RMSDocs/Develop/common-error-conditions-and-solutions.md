@@ -1,5 +1,5 @@
 ﻿
-# Common error conditions and solutions #
+# Common error conditions and solutions
 This topic includes the most common error messages that you might encounter when using the Rights Management Services SDK 2.1 developer tools. It also provides a recommended action to fix the error, where applicable.
 
 **Important** - For error condition processing, always use a call to [IpcGetErrorMessageText](xref:msipc.ipcgeterrormessagetext) right after an SDK API call fails, so you get complete information about the nature of the error.

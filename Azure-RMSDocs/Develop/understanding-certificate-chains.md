@@ -1,5 +1,4 @@
-﻿
-# Understanding certificate chains
+﻿# Understanding certificate chains
 
 Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.
 

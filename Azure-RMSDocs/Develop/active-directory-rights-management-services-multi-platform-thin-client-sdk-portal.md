@@ -1,4 +1,4 @@
-# Microsoft Rights Management SDK 4.2 #
+# Microsoft Rights Management SDK 4.2
 
 ## Purpose ##
 

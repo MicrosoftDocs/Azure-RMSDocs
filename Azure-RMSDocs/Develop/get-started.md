@@ -1,5 +1,5 @@
 ﻿
-# Get started #
+# Get started
 
 For this release of the Microsoft Rights Management SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms. Begin creating your rights enabled application by:
 

@@ -1,5 +1,4 @@
-﻿
-# Working with encryption
+﻿# Working with encryption
 
 This topic orients you to our encryption packages and shows some code snips for their use.
 
@@ -34,7 +33,7 @@ Getting the benefit of the old deprecated encryption algorithms flag can still b
 No change in code needed, *AES 256* CBC4K is the default.
 
     
-hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
                                     &amp;pLicenseHandle);
@@ -43,14 +42,14 @@ hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
 ## Protect Files with AES-128 CBC4K
 
     
-hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
                                     &amp;pLicenseHandle);
-
-DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K; 
-
-hr = IpcSetLicenseProperty(pLicenseHandle, 
+    
+    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K; 
+    
+    hr = IpcSetLicenseProperty(pLicenseHandle, 
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
@@ -61,14 +60,14 @@ hr = IpcSetLicenseProperty(pLicenseHandle,
 This sample also shows the new way of supporting *deprecated algorithms*.
 
     
-hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
                                     0, 
                                     NULL, 
                                     &amp;pLicenseHandle);
-
-DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-
-hr = IpcSetLicenseProperty(pLicenseHandle, 
+    
+    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
+    
+    hr = IpcSetLicenseProperty(pLicenseHandle, 
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE, 
                            &amp;dwEncryptionMode);

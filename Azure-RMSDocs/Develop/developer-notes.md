@@ -1,5 +1,5 @@
-﻿
-# Developer notes #
+﻿# Developer notes
+
 This section covers specific guidance for several important development scenarios. The scenarios in this section are specific to this release of the Rights Management Services SDK 2.1 and may be altered in subsequent releases.
 
 - [Add explicit owner rights](add_explicit_owner_rights.md) - Your application should explicitly add &quot;Owner&quot; rights when creating a license from scratch ([IpcCreateLicenseFromScratch](xref:msipc.ipccreatelicensefromscratch)).
