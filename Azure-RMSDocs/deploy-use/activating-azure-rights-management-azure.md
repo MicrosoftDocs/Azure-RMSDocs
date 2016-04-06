@@ -29,10 +29,7 @@ ms.suite: ems
 
 Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite.
 
-Watch a video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
-
-
-<iframe src="https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms" allowFullScreen frameBorder="0"></iframe>
 
 
 1.  After you have signed up for your Azure account, [sign in to the Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081).
