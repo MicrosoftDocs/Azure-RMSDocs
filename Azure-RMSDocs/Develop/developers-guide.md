@@ -35,10 +35,10 @@ Three generations of the Rights Management SDK are now available: **Microsoft Ri
 |------|---------|
 | [MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | A simplified, next-generation tool set that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services |
 | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | A powerful SDK offering for Windows desktop application developers and server based solution providers to enable their products with rights management|
-|[AD RMS SDK]()|** NOTE ** - AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista. It may be altered or unavailable in subsequent versions. Instead, use Microsoft Rights Management Services SDK 2.1, which leverages functionality exposed by the client in Msipc.dll.|
-|[AD RMS Scripting API]()| Used to create scripts to administer an AD RMS installation|
+|[AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379(v=vs.85).aspx)|** NOTE ** - AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista. It may be altered or unavailable in subsequent versions. Instead, use Microsoft Rights Management Services SDK 2.1, which leverages functionality exposed by the client in Msipc.dll.|
+|[AD RMS Scripting API](https://msdn.microsoft.com/en-us/library/bb968797(v=vs.85).aspx)| Used to create scripts to administer an AD RMS installation|
 
-## Code Samples and Tools ##
+## Code Samples and Tools
 This collection of Microsoft supplied RMS code samples and developer support tools spans all supported operating systems; Android, iOS/OS X, Windows Phone and Windows Desktop and is updated periodically to maintained compatibility with its supported SDK.
 
 ### Windows SDK
