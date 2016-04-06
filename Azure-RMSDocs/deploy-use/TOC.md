@@ -3,6 +3,9 @@
 # [Plan & design](/rights-management/plan-design/azure-rights-management-deployment-roadmap)
 # [Deploy & use](./activating-azure-rights-management)
 ## [Activating Azure Rights Management](./activating-azure-rights-management.md)
+### [Office 365 admin center preview](activating-azure-rights-management-0365preview.md
+### [Office 365 classic admin center](activating-azure-rights-management-0365classic.md
+### [Azure classic portal](activating-azure-rights-management-azure.md)
 ## [Configuring Custom Templates for Azure Rights Management](./configure-custom-templates-for-azure-rights-management.md)
 ### [Create, configure, and publish a custom template](configure-custom-templates-for-azure-rights-management-create-template.md) 
 ### [Copy a template](/configure-custom-templates-for-azure-rights-management-copy-template.md)
