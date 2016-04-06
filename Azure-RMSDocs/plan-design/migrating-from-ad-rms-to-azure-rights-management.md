@@ -193,5 +193,5 @@ For instructions, see [Step 9. Re-key your Azure RMS tenant key](migrating-from-
 
 
 ## Next steps
-To start the migration, go to [Phase 1 - client-side configuration](migrating-from-ad-rms-to-azure-rights-management-phase1.md).
+To start the migration, go to [Phase 1 - server-side configuration](migrating-from-ad-rms-to-azure-rights-management-phase1.md).
 
