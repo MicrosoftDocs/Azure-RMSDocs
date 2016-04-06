@@ -41,16 +41,29 @@ Three generations of the Rights Management SDK are now available: **Microsoft Ri
 ## Code Samples and Tools ##
 This collection of Microsoft supplied RMS code samples and developer support tools spans all supported operating systems; Android, iOS/OS X, Windows Phone and Windows Desktop and is updated periodically to maintained compatibility with its supported SDK.
 
-| Item | Operating System | Supporting SDK Version | Description |
-|------|------------------|------------------------|-------------|
-| [Read PFILE protected PDF](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) | Windows Desktop| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK | **Read PFILE protected PDF** is a simple code example on our RMS Developer's Corner blog that uses the MSIPC File API to decrypt and open a PFILE protected PDF document.|
-| [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK | **IpcManagedAPI** is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.|
-| [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) | Windows Desktop | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK| **IPCNotepad** is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.|
-| [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms)|Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK|**IpcDlp** is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.|
-| [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK|**IpcAzureApp** is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.|
-| [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK|**RmsDocumentInspector** is a tool can give information about any RMS protected file such as content-id or user rights.|
-| [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK|**RmsFileWatcher** is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.|
-| [iOS/OS X usage scenarios](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) |iOS / OS X|[MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**Objective C**  code examples representing important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.|
-| [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**UI libraries and sample app for iOS** at GitHub, so you can get started quickly and re-use our standard UI in your apps.|
-| [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**UI libraries and sample app for Android** at GitHub, so you can get started quickly and re-use our standard UI in your apps.|
-| [Android usage scenarios](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**Java code examples** representing important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.|
+### Windows SDK
+
+The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK.
+
+- [Read PFILE protected PDF](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) is a simple code example on our RMS Developer's Corner blog that uses the MSIPC File API to decrypt and open a PFILE protected PDF document.
+- [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.
+- [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.
+- [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
+- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms)* is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
+- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
+- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
+
+### Apple SDKs
+
+The following run on iOS / OS X supported by [MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK.
+
+- [iOS/OS X usage scenarios](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) in Objective C  represent important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.
+- [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-ios) at GitHub, so you can get started quickly and re-use our standard UI in your apps. Supported on **iOS only**.
+
+
+### Google SDKs
+
+The following run on Android supported by [MS RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK.
+
+- [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-android) at GitHub, so you can get started quickly and re-use our standard UI in your apps.
+- [Android usage scenarios](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) in Java represent important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.
