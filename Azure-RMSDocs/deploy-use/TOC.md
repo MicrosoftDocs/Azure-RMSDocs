@@ -22,6 +22,8 @@
 ### [Install and configure the connector](install-and-configure-the-rms-connector.md)
 ### [Configure servers](configure-servers-for-the-rms-connector.md)
 #### [Registry settings](registry-settings-rms-connector.md)
+## [Administering Azure Rights Management with Powershell](./administering-azure-rights-management-with-powershell)
+### [Installing Windows Powershell for Azure Rights Management](./installing-windows-powershell-for-azure-rights-management)
 ## [Verifying Azure Rights Management](./verifying-azure-rights-management.md)
 ## [Helping users to protect files by using Azure Rights Management](./helping-users-to-protect-files-by-using-azure-rights-management.md)
 ## [Logging and analyzing Azure Rights Management usage](./logging-and-analyzing-azure-rights-management-usage.md)
