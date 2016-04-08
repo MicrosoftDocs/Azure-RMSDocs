@@ -99,6 +99,13 @@ Is this a real thing?
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
+## Do you head a header row??
+
+| Do you      | really need |
+| to have a      | header row??      |
+
+
+
 ## Code
 
 ### Codeblock
