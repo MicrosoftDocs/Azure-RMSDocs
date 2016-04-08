@@ -42,9 +42,10 @@ The following table identifies which operations you can do, depending on the top
 
 After you have identified which topology you have implemented, select one of the following  for more information about these operations for your Azure RMS tenant key.
 
-> [!div class="op_single_selector"]
-- [Microsoft-managed tenant key](operations-for-your-azure-rights-management-tenant-key-microsoft-managed.md)
-- [Customer-managed tenant key](operations-for-your-azure-rights-management-tenant-key-customer-managed.md)
+>[!div class="step-by-step"]
+[Microsoft-managed tenant key](operations-for-your-azure-rights-management-tenant-key-microsoft-managed.md)
+[Customer-managed tenant key](Customer-managed tenant key](operations-for-your-azure-rights-management-tenant-key-customer-managed.md)
 
+---
 
 
