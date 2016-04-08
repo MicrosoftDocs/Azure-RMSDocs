@@ -55,7 +55,7 @@ The following run on iOS / OS X supported by [MS RMS SDK 4.2](active-directory-r
 - [iOS/OS X usage scenarios](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) in Objective C  represent important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.
 - [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-ios) at GitHub, so you can get started quickly and re-use our standard UI in your apps. Supported on **iOS only**.
 
-### Windows
+### Windows Desktop
 
 The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK.
 
@@ -66,3 +66,10 @@ The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-inform
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms)* is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
+
+### Windows Store 
+
+- [UI Library] - The UI Library for Microsoft RMS SDK v4.1 for Windows Store Applications provides a windows store flyout that implement the UI required for the SDK functionality. This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.1
+
+- [Sample application](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) - The Sample for Microsoft RMS SDK v4.1 for Windows Store Applications provides a basic document consumption example for the platform. 
+
