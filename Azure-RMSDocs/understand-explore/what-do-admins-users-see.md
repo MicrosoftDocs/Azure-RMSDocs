@@ -130,7 +130,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 **More information for this scenario:**
 
--   For more information how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](how-applications-support-azure-rights-management.md#BKMK_ExchangeIntro) in the [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) topic.
+-   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](how-applications-support-azure-rights-management.md#BKMK_ExchangeIntro) in the [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) topic.
 
 -   For step-by-step instructions to configure Exchange Online for Azure RMS, see [Exchange Online: IRM Configuration](configuring-applications-for-azure-rights-management.md#BKMK_ExchangeOnline) in the [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md) topic.
 
@@ -166,7 +166,7 @@ The document remains protected even if the user renames it, saves it to another 
 
 The previous examples showed how administrators can automatically apply information protection to sensitive and confidential data. But there will be some occasions when users might need to apply this protection themselves. For example, they are collaborating with partners in another organization, they need custom permissions or settings that are not defined in templates, for or ad-hoc situations that are not covered by the previous examples. In these situations, users can apply the RMS templates themselves or configure custom permissions.
 
-This example shows how users can easily share a document with somebody they’re collaborating with from another company, but still be able to protect the document and be confident that the recipient can read it, even from a popular mobile device. This scenario uses the Rights Management sharing application, which you can automatically deploy to Windows computers in your organization. Or, users can install it themselves.
+This example shows how users can easily share a document with somebody they’re collaborating with from another company, but are still able to protect the document and are confident that the recipient can read it, even from a popular mobile device. This scenario uses the Rights Management sharing application, which you can automatically deploy to Windows computers in your organization. Or, users can install it themselves.
 
 In this example, Alice from Contoso, emails a confidential Word document that she sends to Bob, at Fabrikam. He reads the document on his iPad, but he could just as easily read it on an iPhone, an Android tablet or phone, a Mac computer, or a Windows phone or computer.
 

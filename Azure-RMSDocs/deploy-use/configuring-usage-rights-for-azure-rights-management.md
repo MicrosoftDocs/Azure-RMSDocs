@@ -38,23 +38,15 @@ The following sections list and describes the usage rights that Rights Managemen
 
 Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.
 
-**Encoding in policy:** DOCEDIT
+Encoding in policy: **DOCEDIT**
 
-**Implementation in Office custom rights:**
+Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.
 
-- As part of the **Change** and **Full Control** options.
+Name in the Azure classic portal: **Edit Content**
 
-**Name in the Azure classic portal:**
+Name in AD RMS templates: **Edit**
 
-- **Edit Content**
-
-**Name in AD RMS templates:**
-
-- **Edit**
-
-**API constant or value:**
-
-- Not applicable
+API constant or value: **Not applicable**
 
 In Office applications, this right also allows the user to save the document.
 
@@ -64,25 +56,15 @@ In Office applications, this right also allows the user to save the document.
 
 Allows the user to save the document in its current location.
 
-**Encoding in policy:**
+Encoding in policy: **EDIT**
 
-- EDIT
+Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.**
 
-**Implementation in Office custom rights:**
+Name in the Azure classic portal: **Save File**
 
-- As part of the **Change** and **Full Control** options.
+Name in AD RMS templates: **Save**
 
-**Name in the Azure classic portal:**
-
-- **Save File**
-
-**Name in AD RMS templates:**
-
-- Save
-
-**API constant or value:**
-
-- IPC_GENERIC_WRITEL"EDIT"
+API constant or value: **IPC_GENERIC_WRITEL"EDIT"**
 
 In Office applications, this right also allows the user to modify the document.
 
@@ -418,9 +400,9 @@ Use the following table for a list of these permissions levels and a complete li
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read<br /><br />Reply<br /><br />Reply All|
-|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read<br /><br />Save<br /><br />Edit Content, Edit<br /><br />Reply [footnote 1]<br /><br />Reply All [footnote 1]<br /><br />Forward [footnote 1]|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read<br /><br />Save<br /><br />Edit Content, Edit<br /><br />Copy<br /><br />View Rights<br /><br />Change Rights<br /><br />Allow Macros<br /><br />Save As, Export<br /><br />Print<br /><br />Reply [footnote 1]<br /><br />Reply All [footnote 1]<br /><br />Forward [footnote 1]|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read<br /><br />Save<br /><br />Edit Content, Edit<br /><br />Copy<br /><br />View Rights<br /><br />Change Rights<br /><br />Allow Macros<br /><br />Save As, Export<br /><br />Print<br /><br />Reply [footnote 1]<br /><br />Reply All [footnote 1]<br /><br />Forward [footnote 1]<br /><br />Full Control|
+|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]; Full Control|
 Footnote 1: Not applicable to the Rights Management sharing application for Windows
 
 ## Rights included in the default templates
@@ -429,7 +411,7 @@ The rights that are included with the default templates are as follows:
 |Display Name|Rights included (common name)|
 |----------------|---------------------------------|
 |&lt;organization name&gt; - Confidential View Only|View, Open, Read|
-|&lt;organization name&gt; - Confidential|View, Open, Read<br /><br />Save<br /><br />Edit Content, Edit<br /><br />View Rights<br /><br />Allow Macros<br /><br />Forward<br /><br />Reply<br /><br />Reply All|
+|&lt;organization name&gt; - Confidential|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## See Also
 [Configuring custom templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
