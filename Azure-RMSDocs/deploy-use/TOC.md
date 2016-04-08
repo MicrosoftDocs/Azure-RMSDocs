@@ -29,6 +29,8 @@
 ### [Microsoft-managed](operations-for-your-azure-rights-management-tenant-key-microsoft-managed.md)
 ### [Customer-managed](operations-for-your-azure-rights-management-tenant-key-customer-managed.md)
 ## [Decommissioning and deactivating Azure Rights Management](./decommissioning-and-deactivating-azure-rights-management.md)
+## [Administering Azure Rights Management with Powershell](./administering-azure-rights-management-with-powershell)
+### [Installing Windows Powershell for Azure Rights Management](./installing-windows-powershell-for-azure-rights-management)
 # [Develop & customize apps](/rights-management/develop/developers-guide)
 # [Administer](/rights-management/administer/administering-azure-rights-management-with-powershell)
 # [Use the RMS Client](/rights-management/rms-client/rights-management-rms-client)
