@@ -40,7 +40,7 @@ Allows the user to modify, rearrange, format or filter the content inside the ap
 
 Encoding in policy: **DOCEDIT**
 
-Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.
+Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.**
 
 Name in the Azure classic portal: **Edit Content**
 
@@ -60,9 +60,9 @@ Encoding in policy: **EDIT**
 
 Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.**
 
-Name in the Azure classic portal: **Save File**
+Name in the Azure classic portal: *Save File*
 
-Name in AD RMS templates: **Save**
+Name in AD RMS templates: *Save*
 
 API constant or value: **IPC_GENERIC_WRITEL"EDIT"**
 
@@ -74,25 +74,15 @@ In Office applications, this right also allows the user to modify the document.
 
 Enables the option to add annotations or comments to the content.
 
-**Encoding in policy:**
+**Encoding in policy**: COMMENT
 
-- COMMENT
+**Implementation in Office custom rights**: Not implemented.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal**:Not implemented.
 
-- Not implemented.
+**Name in AD RMS templates:** Not implemented.
 
-**Name in the Azure classic portal:**
-
-- Not implemented.
-
-**Name in AD RMS templates:**
-
-- Not implemented.
-
-**API constant or value:**
-
-- IPC_GENERIC_COMMENTL"COMMENT
+**API constant or value:** IPC_GENERIC_COMMENTL"COMMENT
 
 This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.
 
@@ -102,25 +92,15 @@ This right is available in the SDK, is available as an ad-hoc policy in the RMS 
 
 Enables the option to save the content to a different file name (Save As). Depending on the application, the file might be saved without protection.
 
-**Encoding in policy:** 
+**Encoding in policy:** EXPORT
 
-- EXPORT
+**Implementation in Office custom rights:** As part of the *Change* and *Full Control* options.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Export Content (Save As)*
 
-- As part of the **Change** and **Full Control** options.
+**Name in AD RMS templates:** *Export (Save As)*
 
-**Name in the Azure classic portal:**
-
-- **Export Content (Save As)**
-
-**Name in AD RMS templates:**
-
-- **Export (Save As)**
-
-**API constant or value:**
-
-- IPC_GENERIC_EXPORTL"EXPORT"
+**API constant or value:** IPC_GENERIC_EXPORTL"EXPORT"
 
 This right also allows the user to perform other export options in applications, such as **Send to OneNote**.
 
@@ -128,27 +108,17 @@ This right also allows the user to perform other export options in applications,
 
 ### Forward
 
-**Encoding in policy:**
+Enables the option to forward an email message and to add recipients to the *To* and *Cc* lines.
 
-Enables the option to forward an email message and to add recipients to the **To** and **Cc** lines.
+**Encoding in policy:** FORWARD
 
-- FORWARD
+**Implementation in Office custom rights:** Denied when using the *Do Not Forward* standard policy.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Forward*
 
-- Denied when using the **Do Not Forward** standard policy.
+**Name in AD RMS templates:** *Forward*
 
-**Name in the Azure classic portal:**
-
-- **Forward**
-
-**Name in AD RMS templates:**
-
-- **Forward**
-
-**API constant or value:**
-
-- IPC_EMAIL_FORWARDL"FORWARD"
+**API constant or value:** IPC_EMAIL_FORWARDL"FORWARD"
 
 Does not allow the forwarder to grant rights to other users as part of the forward action.
 
@@ -158,25 +128,15 @@ Does not allow the forwarder to grant rights to other users as part of the forwa
 
 Grants all rights to the document and all available actions can be performed.
 
-**Encoding in policy:**
+**Encoding in policy:** OWNER
 
-- OWNER
+**Implementation in Office custom rights:** As the *Full Control* custom option.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Full Control*
 
-- As the **Full Control** custom option.
+**Name in AD RMS templates:** *Full Control*
 
-**Name in the Azure classic portal:**
-
-- **Full Control**
-
-**Name in AD RMS templates:**
-
-- **Full Control**
-
-**API constant or value:**
-
-- IPC_GENERIC_ALLL"OWNER"
+**API constant or value:** IPC_GENERIC_ALLL"OWNER"
 
 Includes the ability to remove protection.
 
@@ -186,25 +146,15 @@ Includes the ability to remove protection.
 
 Enables the options to print the content.
 
-**Encoding in policy:**
+**Encoding in policy:** PRINT
 
-- PRINT
+**Implementation in Office custom rights:** As the *Print Content* option in custom permissions. Not a per-recipient setting.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Print*
 
-- As the **Print Content** option in custom permissions. Not a per-recipient setting.
+**Name in AD RMS templates:** *Print*
 
-**Name in the Azure classic portal:**
-
-- **Print**
-
-**Name in AD RMS templates:**
-
-- **Print**
-
-**API constant or value:**
-
-- IPC_GENERIC_PRINTL"PRINT
+**API constant or value:** IPC_GENERIC_PRINTL"PRINT
 
 ---
 
@@ -212,25 +162,15 @@ Enables the options to print the content.
 
 Enables the Reply option in an email client, without allowing changes in the **To** or **Cc** lines.
 
-**Encoding in policy:**
+**Encoding in policy:** REPLY
 
-- REPLY
+**Implementation in Office custom rights:** Not applicable
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Reply*
 
-- Not applicable
+**Name in AD RMS templates:** *Reply*
 
-**Name in the Azure classic portal:**
-
-- **Reply**
-
-**Name in AD RMS templates:**
-
-- **Reply**
-
-**API constant or value:**
-
-- IPC_EMAIL_REPLY
+**API constant or value:** IPC_EMAIL_REPLY
 
 ---
 
@@ -238,25 +178,15 @@ Enables the Reply option in an email client, without allowing changes in the **T
 
 Enables the **Reply All** option in an email client, but doesn’t allow the user to add recipients to the **To** or **Cc** lines.
 
-**Encoding in policy:**
+**Encoding in policy:** REPLYALL
 
-- REPLYALL
+**Implementation in Office custom rights:** Not applicable
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Reply All*
 
-- Not applicable
+**Name in AD RMS templates:** *Reply All*
 
-**Name in the Azure classic portal:**
-
-- **Reply All**
-
-**Name in AD RMS templates:**
-
-- **Reply All**
-
-**API constant or value:**
-
-- IPC_EMAIL_REPLYALLL"REPLYALL"
+**API constant or value:** IPC_EMAIL_REPLYALLL"REPLYALL"
 
 ---
 
@@ -264,25 +194,15 @@ Enables the **Reply All** option in an email client, but doesn’t allow the use
 
 Allows the user to open the document and see the content.
 
-**Encoding in policy:**
+**Encoding in policy:** VIEW
 
-- VIEW
+**Implementation in Office custom rights:** As the *Read* custom policy, *View* option.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *View Content*
 
-- As the **Read** custom policy, **View** option.
+**Name in AD RMS templates:** *View*
 
-**Name in the Azure classic portal:**
-
-- **View Content**
-
-**Name in AD RMS templates:**
-
-- **View**
-
-**API constant or value:**
-
-- IPC_GENERIC_READL"VIEW"
+**API constant or value:** IPC_GENERIC_READL"VIEW"
 
 ---
 
@@ -290,25 +210,15 @@ Allows the user to open the document and see the content.
 
 Allows the user to see the policy that is applied to the document.
 
-**Encoding in policy:**
+**Encoding in policy:** VIEWRIGHTSDATA
 
-- VIEWRIGHTSDATA
+**Implementation in Office custom rights:** Not implemented.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *View Assigned Rights*
 
-- Not implemented.
+**Name in AD RMS templates:** *View Rights*
 
-**Name in the Azure classic portal:**
-
-- **View Assigned Rights**
-
-**Name in AD RMS templates:**
-
-- **View Rights**
-
-**API constant or value:**
-
-- IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**API constant or value:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
 
 ---
 
@@ -316,25 +226,15 @@ Allows the user to see the policy that is applied to the document.
 
 Allows the user to see the policy that is applied to the document.
 
-**Encoding in policy:**
+**Encoding in policy:** VIEWRIGHTSDATA
 
-- VIEWRIGHTSDATA
+**Implementation in Office custom rights:** Not implemented.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *View Assigned Rights*
 
-- Not implemented.
+**Name in AD RMS templates:** *View Rights*
 
-**Name in the Azure classic portal:**
-
-- **View Assigned Rights**
-
-**Name in AD RMS templates:**
-
-- **View Rights**
-
-**API constant or value:**
-
-- IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**API constant or value:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
 
 Ignored by some applications.
 
@@ -344,25 +244,15 @@ Ignored by some applications.
 
 Allows the user to change the policy that is applied to the document. Includes including removing protection.
 
-**Encoding in policy:**
+**Encoding in policy:** EDITRIGHTSDATA
 
-- EDITRIGHTSDATA
+**Implementation in Office custom rights:** Not implemented.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Change Rights*
 
-- Not implemented.
+**Name in AD RMS templates:** *Edit Rights*
 
-**Name in the Azure classic portal:**
-
-- **Change Rights**
-
-**Name in AD RMS templates:**
-
-- **Edit Rights**
-
-**API constant or value:**
-
-- IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
+**API constant or value:** IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
 
 ---
 
@@ -370,25 +260,15 @@ Allows the user to change the policy that is applied to the document. Includes i
 
 Enables the option to run macros or perform other programmatic or remote access to the content in a document.
 
-**Encoding in policy:**
+**Encoding in policy:** OBJMODEL
 
-- OBJMODEL
+**Implementation in Office custom rights:** As the *Allow Programmatic Access* custom policy option. Not a per-recipient setting.
 
-**Implementation in Office custom rights:**
+**Name in the Azure classic portal:** *Allow Macros*
 
-- As the **Allow Programmatic Access** custom policy option. Not a per-recipient setting.
+**Name in AD RMS templates:** *Allow Macros*
 
-**Name in the Azure classic portal:**
-
-- **Allow Macros**
-
-**Name in AD RMS templates:**
-
-- **Allow Macros**
-
-**API constant or value:**
-
-- Not applicable
+**API constant or value:** Not applicable
 
 
 ## Rights included in permissions levels
@@ -399,7 +279,7 @@ Use the following table for a list of these permissions levels and a complete li
 
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
-|Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read<br /><br />Reply<br /><br />Reply All|
+|Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
 |Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
 |Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
 |Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]; Full Control|
