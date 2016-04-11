@@ -38,15 +38,15 @@ The following sections list and describes the usage rights that Rights Managemen
 
 Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.
 
-Encoding in policy: **DOCEDIT**
+**Encoding in policy**: DOCEDIT
 
-Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.**
+**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.**
 
-Name in the Azure classic portal: **Edit Content**
+**Name in the Azure classic portal**: *Edit Content*
 
-Name in AD RMS templates: **Edit**
+**Name in AD RMS templates**: *Edit*
 
-API constant or value: **Not applicable**
+**API constant or value**: *Not applicable*
 
 In Office applications, this right also allows the user to save the document.
 
@@ -56,15 +56,15 @@ In Office applications, this right also allows the user to save the document.
 
 Allows the user to save the document in its current location.
 
-Encoding in policy: **EDIT**
+**Encoding in policy**: EDIT
 
-Implementation in Office custom rights: **As part of the *Change* and *Full Control* options.**
+**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.
 
-Name in the Azure classic portal: *Save File*
+**Name in the Azure classic portal**: *Save File*
 
-Name in AD RMS templates: *Save*
+**Name in AD RMS templates**: *Save*
 
-API constant or value: **IPC_GENERIC_WRITEL"EDIT"**
+**API constant or value**: IPC_GENERIC_WRITEL"EDIT"
 
 In Office applications, this right also allows the user to modify the document.
 
@@ -78,7 +78,7 @@ Enables the option to add annotations or comments to the content.
 
 **Implementation in Office custom rights**: Not implemented.
 
-**Name in the Azure classic portal**:Not implemented.
+**Name in the Azure classic portal**: Not implemented.
 
 **Name in AD RMS templates:** Not implemented.
 
@@ -102,7 +102,7 @@ Enables the option to save the content to a different file name (Save As). Depen
 
 **API constant or value:** IPC_GENERIC_EXPORTL"EXPORT"
 
-This right also allows the user to perform other export options in applications, such as **Send to OneNote**.
+This right also allows the user to perform other export options in applications, such as *Send to OneNote*.
 
 ---
 
@@ -160,7 +160,7 @@ Enables the options to print the content.
 
 ### Reply
 
-Enables the Reply option in an email client, without allowing changes in the **To** or **Cc** lines.
+Enables the Reply option in an email client, without allowing changes in the *To* or *Cc* lines.
 
 **Encoding in policy:** REPLY
 
@@ -176,7 +176,7 @@ Enables the Reply option in an email client, without allowing changes in the **T
 
 ### Reply All
 
-Enables the **Reply All** option in an email client, but doesn’t allow the user to add recipients to the **To** or **Cc** lines.
+Enables the *Reply All* option in an email client, but doesn’t allow the user to add recipients to the *To* or *Cc* lines.
 
 **Encoding in policy:** REPLYALL
 
@@ -280,18 +280,18 @@ Use the following table for a list of these permissions levels and a complete li
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
-|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [footnote 1]; Reply All [footnote 1]; Forward [footnote 1]; Full Control|
-Footnote 1: Not applicable to the Rights Management sharing application for Windows
+|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply *; Reply All *; Forward *|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply *; Reply All *; Forward *|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply *; Reply All *; Forward *; Full Control|
+Footnote *: Not applicable to the Rights Management sharing application for Windows
 
 ## Rights included in the default templates
 The rights that are included with the default templates are as follows:
 
 |Display Name|Rights included (common name)|
 |----------------|---------------------------------|
-|&lt;organization name&gt; - Confidential View Only|View, Open, Read|
-|&lt;organization name&gt; - Confidential|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+|&lt;*organization name*&gt; *- Confidential View Only*|View, Open, Read|
+|&lt;*organization name*&gt; *- Confidential*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## See Also
 [Configuring custom templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
