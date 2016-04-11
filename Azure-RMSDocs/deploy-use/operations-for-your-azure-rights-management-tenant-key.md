@@ -40,7 +40,7 @@ The following table identifies which operations you can do, depending on the top
 |Export your tenant key|Yes|No|
 |Respond to a breach|Yes|Yes|
 
-After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure RMS tenant key.
+After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure RMS tenant key:
 
 
 - [Microsoft-managed tenant key](operations-for-your-azure-rights-management-tenant-key-microsoft-managed.md)
