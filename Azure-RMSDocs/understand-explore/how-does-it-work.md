@@ -55,7 +55,7 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 |Algorithm: RSA<br /><br />Key length: 2048 bits|Key protection|
 |SHA-256|Certificate signing|
 
-####### Footnote 
+###### Footnote
 256 bits is used by the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
 
 ---
