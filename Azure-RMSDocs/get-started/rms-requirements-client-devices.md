@@ -144,7 +144,7 @@ TEST 2 - START
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2](#footnote-2)]|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Windows Mail [[4](#footnote-4)]|Siemens JT2Go: JT files|
 |**Windows Phone 8.1**|Office Mobile (AD RMS only)|RMS sharing app [[1](#footnote-1)]|Outlook Mobile [[4](#footnote-4)]|RMS sharing app [[1](#footnote-1)]: Text, images, pfile|
 |**Blackberry 10**|Not supported|Not supported|Blackberry email [[4](#footnote-4)]|Not supported|
-[1](#footnote-1): Supports viewing protected content.
+
 
 ###### Footnote 1
 Supports viewing protected content.
