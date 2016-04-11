@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Obtaining a production license | Azure RMS
-description:
+description: Releasing an application developed using the RMS SDK 2.1, reqires a Production License Agreement.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

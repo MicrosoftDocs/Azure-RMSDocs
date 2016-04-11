@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: What's new and release notes | Azure RMS
-description:
+description: Outlines important changes and features in this new version of the RMS SDK.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

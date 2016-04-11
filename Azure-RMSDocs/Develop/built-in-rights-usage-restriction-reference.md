@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How to&#58; Use built-in rights | Azure RMS
-description:
+description: Outlines the built-in rights that the RMS SDK 4.2 provides and usage restrictions that an app should enforce in honoring those restrictions.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

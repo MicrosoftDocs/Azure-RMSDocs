@@ -2,7 +2,7 @@
 # required metadata
 
 title: Developer's Guide | Azure RMS
-description:
+description: Overview of developer tools use; SDKs, additional libraries, and code examples. 
 keywords:
 author: bruceperlerms
 manager: mbaldwin

@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How this SDK is better | Azure RMS
-description:
+description: This topic describes how RMS SDK 2.1 is a significant improvement over the original Active Directory Rights Management Services SDK.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

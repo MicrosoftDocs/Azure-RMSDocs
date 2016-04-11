@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Setting the API security mode | Azure RMS
-description:
+description: Choose which security mode your File API application runs.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

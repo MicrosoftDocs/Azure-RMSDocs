@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Terms | Azure RMS
-description:
+description: A collection of terminology definitions specific to Rights Management Services.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

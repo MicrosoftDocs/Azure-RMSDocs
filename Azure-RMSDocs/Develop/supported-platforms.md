@@ -1,8 +1,9 @@
----
+﻿---
 # required metadata
 
 title: Supported platforms | Azure RMS
-description:
+description: This topic identifies the Rights Management Services SDK 2.1 supported client and server platforms.
+
 keywords:
 author: bruceperlerms
 manager: mbaldwin

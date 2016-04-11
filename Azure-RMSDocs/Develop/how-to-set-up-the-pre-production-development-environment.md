@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Setting up the pre-production development environment | Azure RMS
-description:
+description: This topic guides you through the process of setting up for and running your rights-enabled application in a testing / pre-production environment.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

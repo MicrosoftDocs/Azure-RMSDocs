@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Debug a rights-enabled application | Azure RMS
-description:
+description: The following topic shows how to debug your application and use the Windows Event Log.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

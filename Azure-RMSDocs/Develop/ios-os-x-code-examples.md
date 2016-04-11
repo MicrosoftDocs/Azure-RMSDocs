@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: iOS/OS X code examples | Azure RMS
-description:
+description: This topic will introduce you to important code elements for the iOS/OS X version of the RMS SDK.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

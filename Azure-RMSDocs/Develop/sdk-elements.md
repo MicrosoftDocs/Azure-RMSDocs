@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Development environment files | Azure RMS
-description:
+description: This topic shows the development environment files and their relative installation locations on your computer.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

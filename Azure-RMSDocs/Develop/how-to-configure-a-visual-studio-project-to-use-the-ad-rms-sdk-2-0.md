@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Configure Visual Studio | Azure RMS
-description:
+description: Instructions about how to configure a Visual Studio project to use the RMS SDK 2.1.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

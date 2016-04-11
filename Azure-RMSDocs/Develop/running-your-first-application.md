@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Testing your rights-enabled application | Azure RMS
-description:
+description: Describes the steps you need to complete to test your RMS SDK 2.1 rights-enabled application.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

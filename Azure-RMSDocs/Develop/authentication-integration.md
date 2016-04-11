@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How to&#58; Add authentication to your app | Azure RMS
-description:
+description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

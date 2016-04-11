@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Developer notes | Azure RMS
-description:
+description: This topic covers specific guidance for several important development scenarios. 
 keywords:
 author: bruceperlerms
 manager: mbaldwin

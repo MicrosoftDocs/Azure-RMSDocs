@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: File API configuration | Azure RMS
-description:
+description: The File API's behavior can be configured through settings in the registry.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

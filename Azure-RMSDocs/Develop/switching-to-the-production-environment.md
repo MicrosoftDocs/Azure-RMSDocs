@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Switching to the production environment | Azure RMS
-description:
+description: This topic will guide you through the process of releasing your tested application to a production environment.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

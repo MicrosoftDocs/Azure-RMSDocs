@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Install the SDK | Azure RMS
-description:
+description: This topic guides you through installing the developer tools.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

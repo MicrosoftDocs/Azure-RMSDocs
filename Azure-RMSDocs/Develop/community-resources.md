@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Community resources | Azure RMS
-description:
+description: AD RMS is well supported by a growing community of developers on multiple platforms.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
