@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Common error conditions and solutions | Azure RMS
-description:
+description: This topic includes the most common error messages that you might encounter when using the RMS SDK 2.1 developer tools.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

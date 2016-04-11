@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Application types | Azure RMS
-description:
+description: This topic covers types of applications that you might choose to create as rights-enabled.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

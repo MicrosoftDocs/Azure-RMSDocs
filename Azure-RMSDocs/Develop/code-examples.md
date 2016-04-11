@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Code examples | Azure RMS
-description:
+description: RMS SDK 4.2 includes example code and working projects for some supported operating systems.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

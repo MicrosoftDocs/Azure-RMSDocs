@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Deploying your application | Azure RMS
-description:
+description: This topic outlines and guides you through deployment options for your rights-enabled application
 keywords:
 author: bruceperlerms
 manager: mbaldwin

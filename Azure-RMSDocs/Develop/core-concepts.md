@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Developer guidance and terms | Azure RMS
-description:
+description: The focus of RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage AD RMS Information Protection as simply as possible.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

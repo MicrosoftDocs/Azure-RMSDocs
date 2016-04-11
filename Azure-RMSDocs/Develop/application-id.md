@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How to&#58; Get an Azure Application ID | Azure RMS
-description:
+description: Creating an RMS-enabled app with the Microsoft Rights Management SDK 4.2 requires you to create an agreement with the RMS Team.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

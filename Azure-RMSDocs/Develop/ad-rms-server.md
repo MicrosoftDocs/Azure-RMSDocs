@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: AD RMS Server | Azure RMS
-description:
+description: The server component of Rights Management Services (RMS) is implemented by a set of web services that run on Microsoft Internet Information Services.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

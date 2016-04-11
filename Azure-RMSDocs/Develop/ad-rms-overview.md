@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Overview | Azure RMS
-description:
+description: Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

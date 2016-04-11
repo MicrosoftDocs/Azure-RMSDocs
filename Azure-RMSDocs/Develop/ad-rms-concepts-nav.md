@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Developer concepts | Azure RMS
-description:
+description: The topics in this section cover key concepts in RMS.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

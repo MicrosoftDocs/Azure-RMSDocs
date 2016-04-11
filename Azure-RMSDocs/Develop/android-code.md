@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Android code examples | Azure RMS
-description:
+description: This topic will introduce you to important code elements for the Android version of the RMS SDK.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
