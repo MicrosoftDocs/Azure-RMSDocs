@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Set up the test environment | Azure RMS
-description:
+description: Your rights-enabled application can be tested with different server options.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

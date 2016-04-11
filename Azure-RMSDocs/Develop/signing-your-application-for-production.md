@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Signing your application for production | Azure RMS
-description:
+description: This topic leads you through the process of signing your application for production mode.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

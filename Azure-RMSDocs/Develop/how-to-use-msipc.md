@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How-to use | Azure RMS
-description:
+description: The following topics will guide you through the key tasks for using the RMS SDK 2.1 to implement information protection for your application.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

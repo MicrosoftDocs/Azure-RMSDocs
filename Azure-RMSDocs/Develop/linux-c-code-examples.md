@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Linux code examples | Azure RMS
-description:
+description: This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

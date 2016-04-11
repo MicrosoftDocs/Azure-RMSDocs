@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Code samples | Azure RMS
-description:
+description: Lists a set of samples using the RMS SDK 2.1.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

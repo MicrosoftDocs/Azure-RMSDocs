@@ -2,7 +2,7 @@
 # required metadata
 
 title: RMS Developer's Guide | Azure RMS
-description:
+description: Three generations of the Rights Management SDK are now available.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

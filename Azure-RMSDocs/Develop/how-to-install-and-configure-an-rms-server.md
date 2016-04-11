@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Install and configure the server | Azure RMS
-description:
+description: Install and configure and RMS Sever for testing your rights-enabled application.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

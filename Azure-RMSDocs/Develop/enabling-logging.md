@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: How to&#58; Enable error and performance logging | Azure RMS
-description:
+description: The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

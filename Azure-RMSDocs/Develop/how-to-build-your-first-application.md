@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: IPCHelloWorld - an example application | Azure RMS
-description:
+description: This topic contains instructions to create an example rights-enabled application.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

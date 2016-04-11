@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Enabling email notification | Azure RMS
-description:
+description: Email notification allows for a protected content owner to be notified when his or her content is accessed.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -27,9 +27,6 @@ ms.suite: ems
 
 ﻿
 # Enabling email notification
-
-
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 

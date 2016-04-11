@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Linux setup | Azure RMS
-description:
+description: Several flavors of Linux operating systems can now make use of the Microsoft Rights Management SDK 4.2.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

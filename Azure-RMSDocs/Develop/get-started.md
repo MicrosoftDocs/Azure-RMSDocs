@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Get started | Azure RMS
-description:
+description: Quick start guide to a first application is through the development environment setup guides for each of the operating systems / platforms.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

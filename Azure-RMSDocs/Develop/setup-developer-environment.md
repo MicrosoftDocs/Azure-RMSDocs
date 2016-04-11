@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Setup developer environment | Azure RMS
-description:
+description: Show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -28,7 +28,7 @@ ms.suite: ems
 ﻿
 # Setup developer environment
 
-The following topics show you have to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
+The following topics show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 
 |Platform | Description|
 |------|------------|

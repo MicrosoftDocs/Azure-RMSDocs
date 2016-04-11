@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Linux API reference | Azure RMS
-description:
+description: API reference for our Linux flavored operating system support is hosted on Github.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

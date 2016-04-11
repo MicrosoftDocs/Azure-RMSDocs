@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Configure the client | Azure RMS
-description:
+description: Instructions about how to configure the Active Directory Rights Management Services Client 2.1.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

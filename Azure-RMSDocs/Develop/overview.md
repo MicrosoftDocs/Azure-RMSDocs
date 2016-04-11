@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Overview | Azure RMS
-description:
+description: AD RMS and Azure RMS is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
