@@ -52,6 +52,30 @@ This subscription is designed for organizations who want to use the Office onlin
 |--------------------|----------------------------------|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------|
 |Information Rights Protection (IRM)|No|No|No|Yes|Yes|Yes|No|No|No|
 
+
+---
+
+
+Subscription  |Information Rights Protection (IRM) 
+------------- | ------------- |
+Office 365 Business Essentials|No|
+Office 365 Business Premium|No|
+Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|No|
+Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes|
+Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes|
+Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes|
+Office 365 Enterprise K1|No|
+SharePoint Plan 1 <br /><br /> SharePoint Plan 2|No|
+Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|No|
+
+
+---
+
+
+
+
+
+
 ## Azure Rights Management Premium subscription
 [Free 30-day trial](https://portal.microsoftonline.com/Signup/MainSignUp15.aspx?&amp;OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&amp;dl=RIGHTSMANAGEMENT&amp;ali=1)
 
@@ -65,6 +89,32 @@ This subscription also offers a trial period for you to try out Azure RMS for 2
 |--------------------|----------------------------------|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------|
 |Information Rights Protection (IRM)|Yes|Yes [footnote 1]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 Footnote 1:  For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
+
+
+---
+
+
+Subscription  |Information Rights Protection (IRM) 
+------------- | ------------- |
+Office 365 Business Essentials|Yes|
+Office 365 Business Premium|Yes [*]|
+Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes|
+Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes|
+Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes|
+Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes|
+Office 365 Enterprise K1|Yes|
+SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes|
+Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes|
+
+
+Footnote *
+For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
+
+---
+
+
+
+
 
 ### What happens when the trial subscription expires?
 If your trial subscription expires, you will lose access to content that was protected by using your trial subscription for Azure RMS. However, if you then purchase a subscription that supports Azure RMS, access is automatically restored.
@@ -80,6 +130,30 @@ This subscription is designed for organizations who want to use a combination of
 |--------------------|----------------------------------|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------|
 |Information Rights Protection (IRM)|Yes|Yes [footnote 1]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 Footnote 1:  For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
+
+
+---
+
+
+Subscription  |Information Rights Protection (IRM) 
+------------- | ------------- |
+Office 365 Business Essentials|Yes|
+Office 365 Business Premium|Yes [*]|
+Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes|
+Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes|
+Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes|
+Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes|
+Office 365 Enterprise K1|Yes|
+SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes|
+Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes|
+
+
+Footnote *
+For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
+
+---
+
+
 
 ## RMS for individuals subscription
 This subscription is designed for individuals in an organization that hasn’t deployed Azure RMS or AD RMS. It lets these people read content that has been protected by an organization that is using Azure RMS, and they can also protect their own content.
