@@ -95,7 +95,7 @@ Footnote 6:  For more information, see the following post on the Office blog: [O
 
 ---
 
-TEST - START
+TEST 1 - START
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
@@ -129,11 +129,47 @@ Supports viewing and editing protected documents. For more information, see the 
 For more information, see the following post on the Office blog: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 
-TEST - END
+TEST 1- END
 
 ---
 
+TEST 2 - START
 
+|**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
+|-------------------------------|---------------------------|-----------------|---------|--------------------|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office Mobile apps (Azure RMS only) [[1](#footnote-1)]<br /><br />Office Online [[2](#footnote-2)]|Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook Web App (OWA) [[3](#footnote-3)]<br /><br />Windows Mail [[4](#footnote-4)]|RMS sharing application for Windows: Text, images, pfile<br /><br />Siemens JT2Go: JT files (Windows 10 only)|
+|**iOS**|Office for iPad and iPhone [[5](#footnote-5)]<br /><br />Office Online [[2](#footnote-2)]<br /><br />TITUS Docs|Foxit Reader<br /><br />RMS sharing app [[1](#footnote-1)]<br /><br />TITUS Docs|NitroDesk [[4](#footnote-4)]<br /><br />Outlook for iPad and iPhone [[4](#footnote-4)]<br /><br />OWA for iOS [[3](#footnote-3)]<br /><br />TITUS Mail|RMS sharing app [[1](#footnote-1)]: Text, images, pfile<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[2](#footnote-2)]|GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS sharing app [[1](#footnote-1)]|9Folders [[4](#footnote-4)]<br /><br />GigaTrust App for Android [[4](#footnote-4)]<br /><br />NitroDesk [[4](#footnote-4)]<br /><br />OWA for Android [[3](#footnote-3) and 6]<br /><br />Samsung Email (S3 and later) [[6](#footnote-6)]<br /><br />TITUS Classification for Mobile|RMS sharing app [[1](#footnote-1)]: Text, images, pfile|
+|**OS X**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2](#footnote-2)]|Foxit Reader<br /><br />RMS sharing app [[1](#footnote-1)]|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS sharing app [[1](#footnote-1)]: Text, images, pfile|
+|**Windows RT**|Office 2013 RT<br /><br />Office Online [[2](#footnote-2)]|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Windows Mail [[4](#footnote-4)]|Siemens JT2Go: JT files|
+|**Windows Phone 8.1**|Office Mobile (AD RMS only)|RMS sharing app [[1](#footnote-1)]|Outlook Mobile [[4](#footnote-4)]|RMS sharing app [[1](#footnote-1)]: Text, images, pfile|
+|**Blackberry 10**|Not supported|Not supported|Blackberry email [[4](#footnote-4)]|Not supported|
+[1](#footnote-1): Supports viewing protected content.
+
+###### Footnote 1
+Supports viewing protected content.
+
+###### Footnote 2 
+Supports viewing protected content in SharePoint Online, OneDrive for Business, and Outlook Web Access.
+
+###### Footnote 3
+If a recipient has a mailbox in Exchange on-premises, and receives a protected email, this content can be opened only in a rich email client, such as Outlook.  This content cannot be opened from Outlook Web Access.
+
+###### Footnote 4
+Uses Exchange ActiveSync IRM, which must be enabled by the Exchange administrator. Users can view, reply, and reply all for protected email messages but users cannot protect new email messages themselves.
+
+If a recipient has a mailbox in Exchange on-premises, and receives a protected email from another organization who is using Exchange, this content can be opened only in a rich email client, such as Outlook.  This content cannot be opened from a device that uses Exchange Active Sync IRM.
+
+###### Footnote 5
+Supports viewing and editing protected documents. For more information, see the following post on the Office blog: [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
+
+###### Footnote 6
+For more information, see the following post on the Office blog: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
+
+
+TEST 2 - END
+
+---
 
 
 ## Next steps
