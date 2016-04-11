@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Microsoft Rights Management SDK 4.2 | Azure RMS
-description:
+description: RMS SDK 4.2 is a simplified, next-generation API that enables a lightweight development experience in upgrading your device apps with info protection.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
