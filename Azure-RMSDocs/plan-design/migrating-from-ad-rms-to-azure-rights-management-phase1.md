@@ -99,9 +99,9 @@ Before you start these procedures, make sure that you can access the .xml files 
 > However you store these files, use security best practices to protect them because this data includes your private key.
 
 
-To complete Step 2, follow the instructions for your migration path: 
+To complete Step 2, choose and select the instructions for your migration path: 
 
-> [!div class="op_single_selector"]
+
 - [Software key to software key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-softwarekey.md)
 - [HSM key to HSM key](migrating-from-ad-rms-to-azure-rights-management-hsmkey-to-hsmkey.md)
 - [Software key to HSM key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-hsmkey.md)
