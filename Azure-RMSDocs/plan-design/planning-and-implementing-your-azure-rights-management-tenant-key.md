@@ -113,7 +113,7 @@ The procedures to generate and use your own tenant key depend on whether you wan
 
 -   **In person:** This requires that you contact Microsoft Customer Support Services (CSS) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
 
-For how-to instructions, choose and click whether you will generate and transfer your tenant key over the Internet or in person: 
+For how-to instructions, select whether you will generate and transfer your tenant key over the Internet or in person: 
 
 - [Over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md)
 - [In person](generate-and-transfer-your-tenant-key-in-person.md)
