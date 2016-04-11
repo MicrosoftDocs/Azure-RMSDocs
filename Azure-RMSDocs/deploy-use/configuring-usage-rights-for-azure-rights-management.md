@@ -280,10 +280,12 @@ Use the following table for a list of these permissions levels and a complete li
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
-|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply *; Reply All *; Forward *|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply *; Reply All *; Forward *|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply *; Reply All *; Forward *; Full Control|
-Footnote *: Not applicable to the Rights Management sharing application for Windows
+|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote)|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote)|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote); Full Control|
+
+###### Footnote
+Not applicable to the Rights Management sharing application for Windows
 
 ## Rights included in the default templates
 The rights that are included with the default templates are as follows:

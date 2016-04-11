@@ -51,7 +51,7 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 |Cryptographic controls|Use in Azure RMS|
 |-|-|
-|Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [*](#footnote-*)|Documentation protection|
+|Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [*](#footnote-)|Documentation protection|
 |Algorithm: RSA<br /><br />Key length: 2048 bits|Key protection|
 |SHA-256|Certificate signing|
 
