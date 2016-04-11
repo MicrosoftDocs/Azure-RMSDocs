@@ -108,6 +108,7 @@ Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes|
 
 
 Footnote *
+
 For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
 ---
@@ -129,6 +130,7 @@ This subscription is designed for organizations who want to use a combination of
 |Licensing option|Office 365 Business Essentials|Office 365 Business Premium|Office 365 Enterprise E1<br /><br />Office 365 Education A1|Office 365 Enterprise E3<br /><br />Office 365 Education A3<br /><br />Office 365 Government G3|Office 365 Enterprise E4<br /><br />Office 365 Education A4<br /><br />Office 365 Government G4|Office 365 Enterprise E5<br /><br />Office 365 Education A5<br /><br />Office 365 Government G5|Office 365 Enterprise K1|SharePoint Plan 1<br />SharePoint Plan 2|Exchange Online Plan 1<br />Exchange Online Plan 2|
 |--------------------|----------------------------------|-------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------|----------------------------------------|--------------------------------------------------|
 |Information Rights Protection (IRM)|Yes|Yes [footnote 1]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+
 Footnote 1:  For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
 
@@ -138,17 +140,18 @@ Footnote 1:  For Business Premium, there are some client restrictions: You can p
 Subscription  |Information Rights Protection (IRM) 
 ------------- | ------------- |
 Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes [*]|
-Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes|
-Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes|
-Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes|
-Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes|
+Office 365 Business Premium|Yes *|
+Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes <br /><br /> Yes|
+Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes <br /><br />  Yes <br /><br />  Yes|
+Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes <br /><br />  Yes <br /><br />  Yes|
+Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes <br /><br />  Yes|
 Office 365 Enterprise K1|Yes|
-SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes|
-Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes|
+SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes <br /><br /> Yes|
+Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes <br /><br />  Yes|
 
 
 Footnote *
+
 For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
 ---
