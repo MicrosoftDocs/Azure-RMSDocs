@@ -63,13 +63,15 @@ The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-inform
 - [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.
 - [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
-- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms)* is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
+- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
 
-### Windows Store 
+### Windows Store and Phone
 
-- [UI Library] - The UI Library for Microsoft RMS SDK v4.1 for Windows Store Applications provides a windows store flyout that implement the UI required for the SDK functionality. This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.1
+- [UI Library for Windows Store](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore) - A UI Library for Microsoft RMS SDK v4.1 for Windows Store Applications. This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.1
+
+- [UI Library for Windows Phone](https://github.com/AzureAD/rms-sdk-ui-for-winphone) - A UI Library for Microsoft RMS SDK v4.1 for Windows Phone Applications. This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.1
 
 - [Sample application](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) - The Sample for Microsoft RMS SDK v4.1 for Windows Store Applications provides a basic document consumption example for the platform. 
 
