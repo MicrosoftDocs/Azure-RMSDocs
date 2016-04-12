@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Client devices that support Azure RMS
+# Azure RMS Requirements: Client devices that support Azure RMS
 Use the following sections to identify which devices support Azure Rights Management (Azure RMS), and which Rights Management capabilities they support.
 
 ## Computers
@@ -56,7 +56,7 @@ The following mobile device operating systems support Azure Rights Management:
 ## Client device capabilities
 Not all supported client devices currently support all RMS capabilities. Use the following table to identify which applications support the RMS capabilities, and the exceptions.
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](active-directory-rights-management-services-mobile-device-extension.md).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
 Information about the table columns:
 
