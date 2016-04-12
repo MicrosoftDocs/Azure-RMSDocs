@@ -37,10 +37,9 @@ If you want to learn more about Azure Rights Management before you activate the 
 
 After you have activated Azure RMS, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by Azure RMS. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
-For instructions how to activate Rights Management, use the drop-down box to select whether you will use the Office 365 admin center (preview or classic), or the Azure classic management portal:
+For instructions how to activate Rights Management, select whether you will use the Office 365 admin center (preview or classic), or the Azure classic management portal:
 
 
-> [!div class="op_single_selector"]
 - [Office 365 admin center - preview](activating-azure-rights-management-o365preview.md)
 - [Office 365 admin center - classic](activating-azure-rights-management-0365classic.md)
 - [Azure classic portal](activating-azure-rights-management-azure.md)

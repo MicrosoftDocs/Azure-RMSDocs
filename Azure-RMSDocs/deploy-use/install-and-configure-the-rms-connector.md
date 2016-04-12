@@ -130,6 +130,10 @@ When you authorize these servers, be aware of the following considerations:
 
 On the **Servers allowed to utilize the connector** page, click **Add**.
 
+> [!NOTE]
+> Authorizing servers is the equivalent configuration in Azure RMS to the AD RMS configuration of manually applying NTFS rights to ServerCertification.asmx for the service or server computer accounts, and manually granting user super rights to the Exchange accounts. Applying NTFS rights to ServerCertification.asmx is not required on the connector.
+
+
 ### Add a server to the list of allowed servers
 On the **Allow a server to utilize the connector** page, enter the name of the object, or browse to identify the object to authorize.
 

@@ -47,14 +47,15 @@ For technical details about the algorithms and key lengths that Azure RMS uses, 
 Even if you don't need to know yourself how RMS works, you might be asked about the cryptographic controls that it uses, to make sure that the security protection is industry-standard.
 
 
-|Azure RMS protection|Cryptographic controls|
+|Cryptographic controls|Use in Azure RMS|
 |-|-|
-|Documentation protection method:|Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [footnote 1]|
-|Key protection method:|Algorithm: RSA<br /><br />Key length: 2048 bits|
-|Certificate signing:|Algorithm: SHA-256|
+|Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [[1]](#footnote-1)|Documentation protection|
+|Algorithm: RSA<br /><br />Key length: 2048 bits|Key protection|
+|SHA-256|Certificate signing|
 
-Footnote 1:
-             256 bits is used by the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
+###### Footnote 1 
+
+256 bits is used by the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
 
 How the cryptographic keys are stored and secured:
 
