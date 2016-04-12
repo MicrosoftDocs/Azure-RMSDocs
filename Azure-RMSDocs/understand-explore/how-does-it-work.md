@@ -39,7 +39,7 @@ Throughout the protection process when Azure RMS is encrypting and decrypting, 
 
 ![](../media/AzRMS_SecretColaFormula_final.png)
 
-For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](#BKMK_Walthrough) section in this topic.
+For a detailed description of what’s happening, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in this article.
 
 For technical details about the algorithms and key lengths that Azure RMS uses, see the next section.
 
@@ -70,7 +70,7 @@ How the cryptographic keys are stored and secured:
 
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
-To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](activating-azure-rights-management.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
+To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](../deploy-use/activating-azure-rights-management.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
 
@@ -143,11 +143,11 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 ## Next steps
 
-To learn more about Azure RMS, use the other topics in the Understand and Explore section, such as [How Applications Support Azure Rights Management](how-applications-support-azure-rights-management.md) to learn how your existing applications can integrate with Azure RMS to provide an information protection solution. 
+To learn more about Azure RMS, use the other articles in the **Understand & Explore** section, such as [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md) to learn how your existing applications can integrate with Azure RMS to provide an information protection solution. 
 
-Review [Terminology for Azure Rights Management](terminology-for-azure-rights-management.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick Start Tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md).
+Review [Terminology for Azure Rights Management](..get-started/terminology-for-azure-rights-management.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](..get-started/requirements-for-azure-rights-management.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Rights Management](..get-started/quick-start-tutorial-for-azure-rights-management.md).
 
-If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../deploy-use/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md).

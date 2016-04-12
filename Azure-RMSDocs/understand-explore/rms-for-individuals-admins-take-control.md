@@ -43,3 +43,7 @@ If you do not want to convert your organization’s RMS for individuals subscrip
 
 To control the user accounts in the Azure directory, or to prevent users from signing up for RMS for individuals, you must have an Azure subscription and own the directory. If you don't already have an Azure subscription, you can obtain one without charge. If a directory was automatically created for you during the self-service process, take ownership of the domain that was used to create it. If you already own a directory in Azure but users specified a new domain that you use in your organization, merge that domain into your existing directory. For more information, see the instructions in [What is Self-Service Signup for Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
+
+## Next steps
+
+If users rather than administrators can create their accounts in Azure Active Directory for RMS for individuals, how can you find out if they have done this?  See  [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-find-if-users-have-signed-up.md).

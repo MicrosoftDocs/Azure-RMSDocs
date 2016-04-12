@@ -35,10 +35,10 @@ Using the Rights Management sharing application on Windows computers, these user
 > [!IMPORTANT]
 > This free subscription ensures that authorized people can always read files that have been protected. Currently, you can also use this free subscription to protect documents and create new protected email messages, but the ability to author new protected content is intended for trial use only and might be removed in the future. For more information and any changes to using RMS for individuals to protect content, see the [Microsoft Rights Management Terms of Service](https://portal.aadrm.com/Legal/Service).
 
-For more information about how you can protect files by using the free Rights Management sharing application, see the [Rights Management sharing application guide for users](http://technet.microsoft.com/library/dn339006.aspx).
+For more information about how you can protect files by using the free Rights Management sharing application, see the [Rights Management sharing application guide for users](..rms-client\rights-management-sharing-application-user-guide.md).
 
 RMS for individuals is an example of a self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/) in the Microsoft Azure documentation. 
 
 ## Next steps
-See [How users sign up for RMS for individuals](rms-for-individuals-user-signup.md), for both step-by-step instructions and a technical overview of what's happening in the background. 
+See [How users sign up for RMS for individuals](rms-for-individuals-user-signup.md), for step-by-step instructions and a technical overview of what's happening in the background. 
 
