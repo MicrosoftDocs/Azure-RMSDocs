@@ -104,7 +104,7 @@ This subscription is designed for organizations who want to use a combination of
 Subscription  |Information Rights Protection (IRM) 
 ------------- | ------------- |
 Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes [1]|
+Office 365 Business Premium|Yes [1](#footnote-1)|
 Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes <br /><br /> Yes|
 Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes <br /><br />  Yes <br /><br />  Yes|
 Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes <br /><br />  Yes <br /><br />  Yes|
