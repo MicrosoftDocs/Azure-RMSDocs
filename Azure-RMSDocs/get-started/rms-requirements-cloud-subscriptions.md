@@ -74,7 +74,7 @@ This subscription also offers a trial period for you to try out Azure RMS for 2
 Subscription  |Information Rights Protection (IRM) 
 ------------- | ------------- |
 Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes *|
+Office 365 Business Premium|Yes [[1]](#footnote-1)|
 Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes  <br /><br /> Yes|
 Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes  <br /><br /> Yes  <br /><br /> Yes|
 Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes  <br /><br /> Yes  <br /><br /> Yes|
@@ -85,7 +85,7 @@ Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes  <br /><br /> Yes
 
 ---
 
-Footnote *
+###### Footnote 1
 
 For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
@@ -104,7 +104,7 @@ This subscription is designed for organizations who want to use a combination of
 Subscription  |Information Rights Protection (IRM) 
 ------------- | ------------- |
 Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes *|
+Office 365 Business Premium|Yes [1]|
 Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes <br /><br /> Yes|
 Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes <br /><br />  Yes <br /><br />  Yes|
 Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes <br /><br />  Yes <br /><br />  Yes|
@@ -115,7 +115,7 @@ Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes <br /><br />  Yes
 
 ---
 
-Footnote *
+###### Footnote 1
 
 For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 

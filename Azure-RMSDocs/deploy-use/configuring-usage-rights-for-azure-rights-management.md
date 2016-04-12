@@ -280,12 +280,12 @@ Use the following table for a list of these permissions levels and a complete li
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
-|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote)|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote)|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [*](#footnote); Reply All [*](#footnote); Forward [*](#footnote); Full Control|
+|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
 
-###### Footnote
-Not applicable to the Rights Management sharing application for Windows
+###### Footnote 1
+Not applicable to the Rights Management sharing application for Windows.
 
 ## Rights included in the default templates
 The rights that are included with the default templates are as follows:
