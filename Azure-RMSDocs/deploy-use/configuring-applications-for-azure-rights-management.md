@@ -64,7 +64,7 @@ To configure on-premises servers such as Exchange Server and SharePoint Server, 
 In addition to these applications and services, there are other applications that support the RMS APIs. This category includes line-of-business applications that are written in-house by using the RMS SDK, and applications from software vendors that are written by using the RMS SDK. For these applications, follow the instructions that are provided with the application.
 
 ## Next steps
-After you’ve configured your applications to support Azure Rights Management, use the [Azure Rights Management Deployment Roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If not, you might find the following operational information useful:
+After you’ve configured your applications to support Azure Rights Management, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If not, you might find the following operational information useful:
 
 - [Verifying Azure Rights Management](verifying-azure-rights-management.md)
 

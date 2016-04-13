@@ -88,14 +88,14 @@ From the **Get started with Rights Management** quick start page, now click **Ma
     As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](configure-custom-templates-for-azure-rights-management-copy-template.md).
 
     > [!TIP]
-    > You can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](https://technet.microsoft.com/library/jj585012.aspx) and using one of the following methods:
+    > You can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md) and using one of the following methods:
     > 
     > -   **Use a rights definition object to update a template**:    Specify the external email addresses and their rights in a rights definition object, which you then use to update your template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet to modify an existing template. However, if you're adding these users to an existing template, you will also need to define rights definition objects for the existing groups in the templates and not just the new, external users.
     > -   **Export, edit, and import the updated template**:Use the [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) cmdlet to export the template to a file that you can edit to add the external email addresses of these users and their rights to the existing groups and rights. Then use the [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) cmdlet to import this change back into Azure RMS.
 
 3.  Click the Next button, and then assign one of the listed rights to your selected users and groups.
 
-    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
+    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring usage rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
 
 4.  If you selected **Custom**, click the Next button, and then select those custom rights.
 
@@ -120,7 +120,7 @@ From the **Get started with Rights Management** quick start page, now click **Ma
 
     For example, if you do not configure application compatibility for the departmental template in our Human Resources example, only users in the Human Resources department see the departmental template when they use the RMS sharing application, but no users see the departmental template when they use Outlook Web Access (OWA) from Exchange Server 2013 because Exchange OWA and Exchange ActiveSync do not currently support departmental templates. If you override this default behavior by configuring application compatibility, only users in the Human Resources department see the departmental template when they use the RMS sharing application, but all users see the departmental template when they use Outlook Web Access (OWA). If users use OWA or Exchange ActiveSync from Exchange Online, either all users will see the departmental templates or no users will see the department templates, based on the template status (archival or published) in Exchange Online.
 
-    Office 2016 natively supports departmental templates, and so does Office 2013 with the latest  Office updates ([KB 3054853](https://support.microsoft.com/kb/3054853)).
+    Office 2016 natively supports departmental templates, and so does Office 2013 starting with version 15.0.4727.1000, released in June 2015 as part of ([KB 3054853](https://support.microsoft.com/kb/3054853)).
 
     > [!NOTE]
     > If you have applications that don't yet natively support departmental templates, you can use a custom RMS template download script or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates to only the users and groups that you selected for the template scope:
@@ -161,7 +161,6 @@ To make any changes to your template, select it, and then use the quick start st
 
 > [!WARNING]
 > When you make changes to a template that was previously saved, clients will not see those changes to the template until templates are refreshed on their computers. For more information, see the [Refreshing templates for users](configure-custom-templates-for-azure-rights-management-refresh-templates.md).
-
 
 ## See Also
 [Configure Custom Templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
