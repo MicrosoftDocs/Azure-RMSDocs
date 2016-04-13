@@ -39,7 +39,7 @@ The following sections provide additional information about [!INCLUDE[aad_rights
 
 -   [The Rights Management product group blog](information-and-support-for-azure-rights-management.md#BKMK_ProductGroupBlog)
 
--   [Support options and community resources](information-and-support-for-azure-rights-management.md#BKMK_SupportOptions)
+-   [Support options and community resources](#support-options-and-community-resources)
 
 
 ## The Rights Management product group blog
@@ -65,6 +65,5 @@ The following links provide information about support and troubleshooting option
 
 In addition, visit the [Microsoft Rights Management services portal](http://www.microsoft.com/rms) to find other supporting resources for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
-## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
+
 

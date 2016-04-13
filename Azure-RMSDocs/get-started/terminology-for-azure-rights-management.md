@@ -69,6 +69,5 @@ Confused by a word, phrase, or acronym that’s related to Microsoft [!INCLUDE[a
 |unprotect|Remove Rights Management controls from files or email messages, which used encryption, identity, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
-## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
+
 

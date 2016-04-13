@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Requirements for Azure Rights Management
-To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to deploy Rights Management for your organization.
+To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management deployment roadmap](..deploy-use/azure-rights-management-deployment-roadmap.md) to deploy Rights Management for your organization.
 
 |Requirement|More information|
 |---------------|--------------------|
@@ -49,11 +49,9 @@ For information about the additional Azure RMS requirements for this scenario, s
 > [!IMPORTANT]
 > The following deployment scenario is not supported:
 > 
-> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md).
+> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Rights Management](../plan-design/migrating-from-ad-rms-to-azure-rights-management.md).
 > 
-> There is a supported migration path [from AD RMS to Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure RMS to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure RMS and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Rights Management](decommissioning-and-deactivating-azure-rights-management.md).
+> There is a supported migration path [from AD RMS to Azure RMS](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure RMS to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure RMS and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommissioning-and-deactivating-azure-rights-management.md).
 
 
-## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
 
