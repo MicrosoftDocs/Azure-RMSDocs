@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 
 # Download and install the Rights Management sharing application
-You do not have to be a local administrator to install the RMS sharing application. However, if you are not and you use Office 2010, there are some limitations. For more information, see the [If you are not a local administrator and use Office 2010](#BKMK_SetupOffice2010) section in this topic.
+You do not have to be a local administrator to install the RMS sharing application. However, if you are not and you use Office 2010, there are some limitations. For more information, see the [If you are not a local administrator and use Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) section on this page.
 
-### To download and install the Rights Management sharing application
+## To download and install the Rights Management sharing application
 
 1.  Go to the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
@@ -58,14 +58,14 @@ If you sign in to your computer and do not have local administrative rights, and
 
 If you are not a local administrator and use Office 365 or Office 2013, you do not see this message and these scenarios are supported.
 
-You can continue the installation with these known limitations. Or you can stop the installation and either rerun it with the **Run as administrator** option when you run Setup.exe in step 3, or ask an administrator to install it for you. Administrators can [script this installation](https://technet.microsoft.com/library/dn339003.aspx) for you so that it installs automatically.
+You can continue the installation with these known limitations. Or you can stop the installation and either rerun it with the **Run as administrator** option when you run Setup.exe in step 3, or ask an administrator to install it for you. Administrators can [script this installation](rights-management-sharing-application-administrator-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) for you so that it installs automatically.
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#BKMK_SharingExamples)
+-   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md#BKMK_SharingInstructions)
+-   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
 [Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
