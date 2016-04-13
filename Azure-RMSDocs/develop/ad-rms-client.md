@@ -41,8 +41,8 @@ For more information, see the [TechNet documentation on the RMS Client 2.0](http
 
 ## Related topics
 
-* [Overview](ad_rms_overview.md)
-* [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md)
+* [Overview](ad-rms-overview.md)
+* [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 * [TechNet documentation on the RMS Client 2.0](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
  
 

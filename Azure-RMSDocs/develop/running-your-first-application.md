@@ -38,14 +38,14 @@ To publish and consume protected content, an Rights Management Services (RMS) ap
 We recommend that you use the Pre-production hierarchy when developing an application. By doing so, you can work without signing a Production License Agreement with Microsoft.
 
 > [!IMPORTANT]
-> It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+> It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
  
 
 ### Prerequisites
 
 -   An RMS SDK 2.1 development environment setup. For more information, see [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md).
--   For an example application, see [IPCHelloWorld - an example application](how_to_build_your_first_application.md).
+-   For an example application, see [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
 
 Instructions
 
@@ -109,10 +109,10 @@ You can run your application from any directory, but the application manifest (M
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
+* [How-to use](how-to-use-msipc.md)
 * [Configure the client](how_to_configure_the_ad_rms_client_2_0.md)
 * [Install and configure the server](how_to_install_and_configure_an_rms_server.md)
-* [IPCHelloWorld - an example application](how_to_build_your_first_application.md)
+* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md)
 * [Switching to the production environment](switching_to_the_production_environment.md)
 * [Set up the test environment](how_to_set_up_your_test_environment.md)

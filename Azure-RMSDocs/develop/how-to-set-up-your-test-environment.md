@@ -30,13 +30,13 @@ ms.suite: ems
 
 Your rights-enabled application can be tested with different server options.
 
-**Important**  It is a recommended best practice to test your Rights Management Services SDK 2.1 application first with the AD RMS pre-production environment against an AD RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+**Important**  It is a recommended best practice to test your Rights Management Services SDK 2.1 application first with the AD RMS pre-production environment against an AD RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
  
 
 ### Prerequisites
 
--   [Install the SDK](create_your_first_rights_aware_application.md)
+-   [Install the SDK](create-your-first-rights-aware-application.md)
 
 Instructions
 
@@ -53,10 +53,10 @@ There are two options available for testing your application against an RMS serv
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
+* [How-to use](how-to-use-msipc.md)
 * [AD RMS SDK Webinar collateral download page](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 * [Configure client](how_to_configure_the_ad_rms_client_2_0.md)
-* [Install the SDK](create_your_first_rights_aware_application.md)
+* [Install the SDK](create-your-first-rights-aware-application.md)
 * [Install and configure the server](how_to_install_and_configure_an_rms_server.md)
 * [Understanding certificate chains](understanding_certificate_chains.md)
  

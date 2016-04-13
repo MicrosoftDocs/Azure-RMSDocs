@@ -50,7 +50,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
     IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-**Note**  For more information, see [Setting the API security mode](setting_the_api_security_mode__api_mode_.md)
+**Note**  For more information, see [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 
      
 

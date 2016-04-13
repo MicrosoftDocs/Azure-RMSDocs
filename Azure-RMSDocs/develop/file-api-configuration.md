@@ -153,7 +153,7 @@ HKEY_LOCAL_MACHINE
 
 ### Related topics
 
-* [Developer notes](developer_notes.md)
+* [Developer notes](developer-notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](xref:msipc.error_codes)
  
 

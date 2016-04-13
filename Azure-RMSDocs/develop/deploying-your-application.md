@@ -32,7 +32,7 @@ ms.suite: ems
 This topic outlines and guides you through deployment options for your rights-enabled application.
 
 > [!IMPORTANT]
-> It is a recommended best practice to test your Rights Management Services SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+> It is a recommended best practice to test your Rights Management Services SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
  
 
@@ -89,14 +89,14 @@ The AD RMS Client 2.1 is not a Windows operating system component. The AD RM
 -   Ensure that your deployment of a rights-enabled application includes a pre-requisites check for this service selection.
 -   For your own testing and for your end-users use of the on-line service see the TechNet topic, [Configuring Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
 
-For more on enabling your application to use RMS for Azure Rights Management services see, [Enable your application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud.md).
+For more on enabling your application to use RMS for Azure Rights Management services see, [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Related topics
 
-* [How-to use](how_to_use_msipc.md)
+* [How-to use](how-to-use-msipc.md)
 * [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Configuring Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
-* [Enable your application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_md)
+* [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloudmd)
  
 
  

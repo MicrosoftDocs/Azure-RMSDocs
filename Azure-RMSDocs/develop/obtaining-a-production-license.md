@@ -33,12 +33,12 @@ Before you can release an application developed using the Rights Management Se
 > [!IMPORTANT]
 > If you will be running your client application with Azure based RMS, you will need to request an Azure RMS Tenant. Send mail to <rmcstbeta@microsoft.com> with your tenant request.
 
-For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 
 The production certificate and the pre-production certificate perform a similar function but are intended for use in different environments. Both contain a certificate chain with a Microsoft certification authority (CA) certificate at the root of trust, but the pre-production certificate is used only when developing an RMS application. The production certificate is used in post-release environments. The production certificate and the associated private key are used to create and sign a manifest that identifies the files that can or must be loaded into the process space of your application and those that must not be loaded.
 
-For more information on keys, see [Testing your rights-enabled application](running_your_first_application.md).
+For more information on keys, see [Testing your rights-enabled application](running-your-first-application.md).
 
 You can obtain the certificate by applying for a Production License Agreement.
 
@@ -83,8 +83,8 @@ You can obtain the certificate by applying for a Production License Agreement.
 
 ## Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Testing your rights-enabled application](running_your_first_application.md)
+* [How-to use](how-to-use-msipc.md)
+* [Testing your rights-enabled application](running-your-first-application.md)
  
 
  

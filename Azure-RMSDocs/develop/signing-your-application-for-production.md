@@ -32,7 +32,7 @@ This topic leads you through the process of signing your application for product
 
 ## Sign your rights-enabled application
 
-These steps assume that you have already signed your application for a pre-production hierarchy. If you have not already done so, go through the process described in [Testing your rights-enabled application](running_your_first_application.md).
+These steps assume that you have already signed your application for a pre-production hierarchy. If you have not already done so, go through the process described in [Testing your rights-enabled application](running-your-first-application.md).
 
 Once you have received the production certificate from Microsoft, you have the following files with you:
 
@@ -69,8 +69,8 @@ Place them in the same directory with *GenManifest.exe* and your application bin
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Testing your rights-enabled application](running_your_first_application.md)
+* [How-to use](how-to-use-msipc.md)
+* [Testing your rights-enabled application](running-your-first-application.md)
  
 
  

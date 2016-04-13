@@ -31,7 +31,7 @@ This topic contains instructions about how to configure a Visual Studio project 
 
 ## Prerequisites
 
--   [Install the SDK](create_your_first_rights_aware_application.md)
+-   [Install the SDK](create-your-first-rights-aware-application.md)
 
 **Instructions**
 
@@ -76,8 +76,8 @@ These instructions apply to building a native 32-bit application.
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Install the SDK](create_your_first_rights_aware_application.md)
+* [How-to use](how-to-use-msipc.md)
+* [Install the SDK](create-your-first-rights-aware-application.md)
  
 
  
