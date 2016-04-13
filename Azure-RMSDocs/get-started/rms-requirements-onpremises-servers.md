@@ -58,5 +58,5 @@ The RMS connector is supported on Windows Server 2012 R2, Windows Server 2012, a
 
 For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management connector](deploying-the-azure-rights-management-connector.md).
 
-## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
+## Next steps
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
