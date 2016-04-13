@@ -44,12 +44,12 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 
 ~~strikethrough~~ (Doesn't work)
 
-Do URLs become clickable? http://www.github.com/
 
 # Links
 
 [link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
 [link to external website](https://azure.microsoft.com)
+Bare URLS become clickable: http://www.github.com/
 
 
 ## Lists
