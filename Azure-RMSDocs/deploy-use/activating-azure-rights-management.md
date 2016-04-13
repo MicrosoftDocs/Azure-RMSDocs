@@ -33,7 +33,7 @@ If you want to learn more about Azure Rights Management before you activate the 
 > [!IMPORTANT]
 > Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] services. If not, you will not be able to activate Azure RMS.
 >
-> For more information, see the [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).
+> For more information, see [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).
 
 After you have activated Azure RMS, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by Azure RMS. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
