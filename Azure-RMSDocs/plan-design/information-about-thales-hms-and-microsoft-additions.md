@@ -34,7 +34,3 @@ Microsoft has collaborated with Thales to enhance the state of art for HSMs. The
 
 For more information, see [Thales HSMs and Azure RMS](http://www.thales-esecurity.com/msrms/cloud) on the Thales web site.
 
-## Next steps
-
-> [!div class="button"]
-[Back to: Planning and implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md)

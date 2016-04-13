@@ -27,17 +27,17 @@ ms.suite: ems
 
 
 # Generate and transfer your tenant key – over the Internet
-Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
+Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
 
 
 ## Prepare your Internet-connected workstation
 To prepare your workstation that is connected to the Internet, follow these 3 steps:
 
--   [Step 1: Install Windows PowerShell for Azure Rights Management](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareInternetConnectedWorkstation1)
+-   [Step 1: Install Windows PowerShell for Azure Rights Management](#step-1-install-windows-powershell-for-azure-rights-management)
 
--   [Step 2: Get your Azure Active Directory tenant ID](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareInternetConnectedWorkstation2)
+-   [Step 2: Get your Azure Active Directory tenant ID](#step-2-get-your-azure-active-directory-tenant-id)
 
--   [Step 3: Download the BYOK toolset](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareInternetConnectedWorkstation3)
+-   [Step 3: Download the BYOK toolset](#step-3-download-the-byok-toolset)
 
 ### Step 1: Install Windows PowerShell for Azure Rights Management
 From the Internet-connected workstation, download and install the Windows PowerShell module for Azure Rights Management.
@@ -45,7 +45,7 @@ From the Internet-connected workstation, download and install the Windows Power
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least 2.1.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
-For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/installing-windows-powershell-for-azure-rights-management.md).
 
 ### Step 2: Get your Azure Active Directory tenant ID
 Start Windows PowerShell with the **Run as administrator** option, and then run the following commands:
@@ -97,9 +97,9 @@ Copy the package to a USB drive or other portable storage.
 ## Prepare your disconnected workstation
 To prepare your workstation that is not connected to a network (either the Internet or your internal network), follow these 2 steps:
 
--   [Step 1: Prepare the disconnected workstation with Thales HSM](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareDisconnectedWorkstation1)
+-   [Step 1: Prepare the disconnected workstation with Thales HSM](#step-1-prepare-the-disconnected-workstation-with-thales-hsm)
 
--   [Step 2: Install the BYOK toolset on the disconnected workstation](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareDisconnectedWorkstation2)
+-   [Step 2: Install the BYOK toolset on the disconnected workstation](#step-2-install-the-byok-toolset-on-the-disconnected-workstation)
 
 ### Step 1: Prepare the disconnected workstation with Thales HSM
 On the disconnected workstation, install the nCipher (Thales) support software on a Windows computer, and then attach a Thales HSM to that computer.
@@ -123,11 +123,11 @@ Copy the BYOK toolset package from the USB drive or other portable storage, and 
 ## Generate your tenant key
 On the disconnected workstation, following these 3 steps to generate your own tenant key:
 
--   [Step 1: Create a security world](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate1)
+-   [Step 1: Create a security world](#step-1-create-a-security-world)
 
--   [Step 2: Validate the downloaded package](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate2)
+-   [Step 2: Validate the downloaded package](#step-2-validate-the-downloaded-package)
 
--   [Step 3: Create a new key](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate3)
+-   [Step 3: Create a new key](#step-3-create-a-new-key)
 
 ### Step 1: Create a security world
 Start a command prompt and run the Thales new-world program.
@@ -214,13 +214,13 @@ cngimport --import -M --key=contosokey --appname=simple contosokey
 ```
 When you run this command, use these instructions:
 
--   Replace *contosokey* with the same value that you specified in [Step 1: Create a security world](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate1) from the *Generate your tenant key* section.
+-   Replace *contosokey* with the same value that you specified in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 -   Use the **-M** option so that the key is suitable for this scenario. Without this, the resultant key will be a user-specific key for the current user.
 
 -   The **appname** option is the App Name reported in the key file. If you used these instructions to create a new key, we used the value of simple as shown in the command. However, if you are migrating an existing HSM-protected key for an AD RMS migration to Azure RMS, specify your existing name in this command and the commands that follow when they also use the appname option.
 
-This command creates a Tokenized Key file in your %NFAST_KMDATA%\local folder with a name starting with **key_caping_** followed by a SID. For example: **key_caping_machine--801c1a878c925fd9df4d62ba001b94701c039e2fb**. This file contains an encrypted key.
+This command creates a Tokenized Key file in your %NFAST_KMDATA%\local folder with a name starting with **key_caping`_`** followed by a SID. For example: **key_caping_machine--801c1a878c925fd9df4d62ba001b94701c039e2fb**. This file contains an encrypted key.
 
 > [!TIP]
 > You can see the current configuration status of your keys by using the `nkminfo –k` command.
@@ -235,13 +235,13 @@ You are now ready to transfer your tenant key to Azure RMS.
 ## Prepare your tenant key for transfer
 On the disconnected workstation, following these 4 steps to prepare your own tenant key:
 
--   [Step 1: Create a copy of your key with reduced permissions](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareTransfer1)
+-   [Step 1: Create a copy of your key with reduced permissions](#step-1-create-a-copy-of-your-key-with-reduced-permissions)
 
--   [Step 2: Inspect the new copy of the key](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareTransfer2)
+-   [Step 2: Inspect the new copy of the key](#step-2-inspect-the-new-copy-of-the-key)
 
--   [Step 3: Encrypt your key by using Microsoft’s Key Exchange Key](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareTransfer3)
+-   [Step 3: Encrypt your key by using Microsoft’s Key Exchange Key](#step-3-encrypt-your-key-by-using-microsoft-s-key-exchange-key)
 
--   [Step 4: Copy your key transfer package to the Internet-connected workstation](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetPrepareTransfer4)
+-   [Step 4: Copy your key transfer package to the Internet-connected workstation](#step-4-copy-your-key-transfer-package-to-the-internet-connected-workstation)
 
 ### Step 1: Create a copy of your key with reduced permissions
 To reduce the permissions on your tenant key, do the following:
@@ -266,7 +266,7 @@ To reduce the permissions on your tenant key, do the following:
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-When you run this command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate1) from the *Generate your tenant key* section.
+When you run this command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 You will be asked to plug in your security world ACS cards, and if specified, their password or PIN..
 
@@ -287,7 +287,7 @@ Optionally, run the Thales utilities to confirm the minimal permissions on the n
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-When you run these command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate1) from the *Generate your tenant key* section.
+When you run these command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 ### Step 3: Encrypt your key by using Microsoft’s Key Exchange Key
 Run one of the following commands, depending on your region:
@@ -312,9 +312,9 @@ Run one of the following commands, depending on your region:
 
 When you run this command, use these instructions:
 
--   Replace *contosokey* with the identifier that you used to generate the key in [Step 1: Create a security world](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetGenerate1) from the *Generate your tenant key* section.
+-   Replace *contosokey* with the identifier that you used to generate the key in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
 
--   Replace *GUID* with your Azure Active Directory tenant ID that you retrieved in [Step 2: Get your Azure Active Directory tenant ID](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_PrepareInternetConnectedWorkstation2) from the *Prepare your Internet-connected workstation* section.
+-   Replace *GUID* with your Azure Active Directory tenant ID that you retrieved in [Step 2: Get your Azure Active Directory tenant ID](#step-2-get-your-azure-active-directory-tenant-id) from the *Prepare your Internet-connected workstation* section.
 
 -   Replace *ContosoFirstKey* with a label that will be used for your output file name.
 
@@ -329,11 +329,11 @@ Use a USB drive or other portable storage to copy the output file from the previ
 ## Transfer your tenant key to Azure RMS
 On the Internet-connected workstation,  follow these 3 steps To transfer your new tenant key to Azure RMS, :
 
--   [Step 1: Connect to Azure RMS](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetTransfer1)
+-   [Step 1: Connect to Azure RMS](#step-1-connect-to-azure-rms)
 
--   [Step 2: Upload the key package](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetTransfer2)
+-   [Step 2: Upload the key package](#step-2-upload-the-key-package)
 
--   [Step 3: Enumerate your tenant keys – as needed](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_InternetTransfer3)
+-   [Step 3: Enumerate your tenant keys – as needed](#step-3-enumerate-your-tenant-keys-as-needed)
 
 ### Step 1: Connect to Azure RMS
 Return to the Windows PowerShell window and type the following:
@@ -375,6 +375,6 @@ You have now completed all the steps required for bring your own key over the In
 
 
 > [!div class="button"]
-[Next Steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_NextSteps)
+[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key#next-steps)
 
 

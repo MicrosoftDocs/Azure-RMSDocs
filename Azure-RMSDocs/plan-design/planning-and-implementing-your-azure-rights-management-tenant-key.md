@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Planning and Implementing Your Azure Rights Management Tenant Key
+# Planning and implementing your Azure Rights Management tenant key
 Use the information in this article to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization.  Managing your own tenant key is also referred to as bring your own key, or BYOK.
 
 > [!NOTE]
@@ -87,7 +87,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 
 |Requirement|More information|
 |---------------|--------------------|
-|A subscription that supports Azure RMS.|For more information about the available subscriptions, see the [Cloud subscriptions that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedSubscriptions) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.|
+|A subscription that supports Azure RMS.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).|
 |You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-pricing-and-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
 |Thales HSM, smartcards, and support software.<br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|You must have access to a Thales Hardware Security Module and basic operational knowledge of Thales HSMs. See [Thales Hardware Security Module](http://www.thales-esecurity.com/msrms/buy) for the list of compatible models, or to purchase an HSM if you do not have one.|
 |If you want to transfer your tenant key over the Internet rather than physically be present in Redmond, USA. there are 3 requirements:<br /><br />Requirement 1: An offline x64 workstation with a minimum Windows operation system of Windows 7 and Thales nShield software that is at least version 11.62.<br /><br />If this workstation runs Windows 7, you must [install Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Requirement 2: A workstation that is connected to the Internet and has a minimum Windows operation system of Windows 7.<br /><br />Requirement 3: A USB drive or other portable storage device that has at least 16 MB free space.|These prerequisites are not required if you travel to Redmond and transfer your tenant key in person.<br /><br />For security reasons, we recommend that the first workstation is not connected to a network. However, this is not programmatically enforced.<br /><br />Note: In the instructions that follow, this first workstation is referred to as the **disconnected workstation**.<br /><br />In addition, if your tenant key is for a production network, we recommend that you use a second, separate workstation to download the toolset and upload the tenant key. But for testing purposes, you can use the same workstation as the first one.<br /><br />Note: In the instructions that follow, this second workstation is referred to as the **Internet-connected workstation**.|
@@ -137,9 +137,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     ![](../media/RMS_Logging.gif)
 
-    For more information about usage logging, see [Logging and Analyzing Azure Rights Management Usage](../deploy-use/logging-and-analyzing-azure-rights-management-usage.md).
+    For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/logging-and-analyzing-azure-rights-management-usage.md).
 
 3.  Maintain your tenant key.
 
-    For more information, see [Operations for Your Azure Rights Management Tenant Key](../deploy-use/operations-for-your-azure-rights-management-tenant-key.md).
+    For more information, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-for-your-azure-rights-management-tenant-key.md).
 

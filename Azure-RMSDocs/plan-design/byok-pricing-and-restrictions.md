@@ -31,7 +31,7 @@ Organization that have an IT-managed Azure subscription can use BYOK and log its
 
 
 > [!NOTE]
-> For more information about RMS for individuals, see [RMS for Individuals and Azure Rights Management](rms-for-individuals-and-azure-rights-management.md).
+> For more information about RMS for individuals, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals-and-azure-rights-management.md).
 
 ![](../media/RMS_BYOK_noExchange.png)
 
@@ -57,7 +57,7 @@ Sometimes, the Azure RMS BYOK  exception for Exchange Online is not a problem in
 
 ## Next steps
 
-If you've made the decision to manage your own key, go to [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
 
 If you've decided to stay with the default configuration where Microsoft manages your tenant key, see the [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps) section of the Planning and implementing your Azure Rights Management tenant key article.
 
