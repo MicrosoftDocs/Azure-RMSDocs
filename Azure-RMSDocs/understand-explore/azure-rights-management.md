@@ -37,6 +37,6 @@ Know Azure Rights Management by another name?  [See also known as ...](azure-rms
 # Next steps
 For a deeper understanding and some examples, see [What is Azure Rights Management?](what-is-azure-rights-management.md)
 
-If you're ready to deploy Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](..deploy-use/azure-rights-management-deployment-roadmap.md).
+If you're ready to deploy Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md).
 
 
