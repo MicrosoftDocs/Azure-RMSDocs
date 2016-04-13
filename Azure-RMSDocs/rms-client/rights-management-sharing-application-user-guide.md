@@ -48,21 +48,21 @@ Here are just some examples of how you might use the RMS sharing application, to
 > [!NOTE]
 > For more technical information, such as supported file types and how to install this application on an enterprise network, see the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
 
--   [Download and install the sharing application](https://technet.microsoft.com/library/dn574734.aspx)
+-   [Download and install the sharing application](download-and-install-the-rights-management-sharing-application.md)
 
--   [Protect a file on a device (protect in-place)](https://technet.microsoft.com/library/dn574733.aspx)
+-   [Protect a file on a device (protect in-place)](protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md)
 
--   [Protect a file that you share by email](https://technet.microsoft.com/library/dn574735.aspx)
+-   [Protect a file that you share by email](protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md)
 
--   [Track and revoke your documents](https://technet.microsoft.com/library/dn986611.aspx)
+-   [Track and revoke your documents](track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md)
 
--   [View and use files that have been protected](https://technet.microsoft.com/library/dn574741.aspx)
+-   [View and use files that have been protected](view-and-use-files-that-have-been-protected-by-rights-management.md)
 
--   [Remove protection from a file](https://technet.microsoft.com/library/dn574739.aspx)
+-   [Remove protection from a file](remove-protection-from-a-file-by-using-the-rights-management-sharing-application.md)
 
--   [Use keyboard shortcuts](https://technet.microsoft.com/library/dn574737.aspx)
+-   [Use keyboard shortcuts](use-keyboard-shortcuts-in-the-rights-management-sharing-application.md)
 
--   [Specify settings in the dialog box](https://technet.microsoft.com/library/dn574738.aspx)
+-   [Specify settings in the dialog box](dialog-box-options-for-the-rights-management-sharing-application.md)
 
 
 

@@ -13,7 +13,7 @@
 ##### [Technical overview](rights-management-sharing-application-administrator-guide-technical-overview.md)
 #### [Rights Management sharing application user guide](./rights-management-sharing-application-user-guide.md)
 ##### [Download and install](./download-and-install-the-rights-management-sharing-application.md)
-##### [Protect a file on a device)](./protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md)
+##### [Protect a file on a device](./protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md)
 ##### [Protect a file that you share by email](./protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md)
 ##### [Track and revoke your documents](./track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md)
 ##### [View and use protected files](./view-and-use-files-that-have-been-protected-by-rights-management.md)
