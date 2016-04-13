@@ -95,4 +95,4 @@ To check for other requirements, see [Requirements for Azure Rights Management](
 
 For more information about how these applications support Azure RMS, see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md).
 
-For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](..deploy-use/configuring-applications-for-azure-rights-management.md).
+For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
