@@ -44,6 +44,8 @@ Although you can use Windows PowerShell to activate and configure Azure RMS, it�
 
 **WHAT ADMINS SEE IN STEP 1:** You can use either the Office 365 admin center (first picture) or the Azure classic portal (second picture) to activate RMS.<br /><br />Just one click to activate and another click to confirm, then information protection is enabled for administrators and users in your organization.
 
+---
+
 ![](../media/AzRMS_TemplatesPortal_small.png)
 
 **WHAT ADMINS SEE IN STEP 2:** After activation, two rights policy templates are automatically available for your organization. One template is for read-only (**Confidential View Only** is included in the name), the other for read and modify access (**Confidential**).
@@ -55,9 +57,13 @@ When these templates are applied to files or emails, they restrict access to use
 
 If you do not want users to see these templates or if you want to create your own templates, you can do this from the Azure classic portal. As this picture shows, a wizard takes you through the custom template creation process.
 
+---
+
 ![](../media/AzRMS_TemplatesSettings3.png)
 
 **WHAT ADMINS SEE IN STEP 3:** Offline access, expiration settings, and whether to publish the template immediately (make it visible in applications that support Rights Management) are some of the configuration settings available if you decide to create your own templates.
+
+---
 
 ![](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
 
@@ -67,9 +73,11 @@ If you do not want users to see these templates or if you want to create your ow
 
 - A user could choose the custom template that the administrator created, **Sales and Marketing – Read and Print Only**. Then, not only is the file protected from people outside the organization, but it’s also restricted to employees from the Sales and Marketing department. Further, these employees do not have full rights to the document, only read and print. For example, they cannot modify it or copy from it.
 
+---
+
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configuring-custom-templates-for-azure-rights-management.md).
+- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates-for-azure-rights-management.md).
 
 - To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/helping-users-to-protect-files-by-using-azure-rights-management.md).
 
@@ -85,6 +93,8 @@ There are many ways to apply classification values to files. For example, you ca
 
 **WHAT ADMINS SEE IN STEP 1:** The administrators installs and configures the Rights Management (RMS) connector, which acts as a relay between on-premises servers and Azure RMS.
 
+---
+
 ![](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
 
 **WHAT ADMINS SEE IN STEP 2:** On the file server, the administrator configures the classification rules and tasks so that all user files in the **Marketing Promotions** folder are automatically classified as **Marketing** and protected with RMS encryption.
@@ -93,12 +103,16 @@ She selects the custom RMS template that was created in our first example, which
 
 As a result, all documents in that folder are automatically configured with the Marketing classification and protected by the Sales and Marketing RMS template.
 
+---
+
 ![](../media/AzRMS_FCI_EmailSmall.png)
 
 **WHAT USERS SEE IN STEP 3:** How RMS helps to prevent data leaking to people who should not have access to sensitive or confidential information:
 
 - Janet, from Marketing, emails a confidential report from the Marketing Promotions folder. This report contains new product features and advertising plans and is requested by a co-worker who is currently traveling on business. However, Janet mistakenly emails it to the wrong person—she didn’t notice that she accidentally selected a recipient with a similar name, in another company.<br><br>
 The recipient cannot read the confidential report because he is not a member of the Sales and Marketing group.
+
+---
 
 **More information for this scenario:**
 
@@ -118,9 +132,13 @@ The rules are configured so that email messages that contain this information an
 
 Here, the rule is configured to use one of the default templates, **VanArsdel, Ltd – Confidential**, from our first example. But you can also see how the choice of templates includes any custom templates you’ve created, and a **No Do Forward** option that is specific to Exchange.
 
+---
+
 ![](../media/AzRMS_DLPUnprotectedEmail_small.png)
 
 **WHAT USERS SEE IN STEP 2:** The hiring manager writes an email message that contains the social security number of a recently hired employee. He sends this email message to Sherrie in the Human Resources department.
+
+---
 
 ![](../media/AzRMS_DLPProtectedEmail_small.png)
 
@@ -128,11 +146,13 @@ Here, the rule is configured to use one of the default templates, **VanArsdel, L
 
 The email is encrypted when it leaves the organization’s infrastructure, so that the social security number in the email message cannot be read while in transit, or in the recipient’s inbox. The recipient will not be able to read the message unless he or she is a VanArsdel employee.
 
+---
+
 **More information for this scenario:**
 
 -   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](rights-management-sharing-application-for-office.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
--   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/0365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring Applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/0365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 ## Automatically protecting files with SharePoint Online and protected libraries
 
@@ -144,17 +164,23 @@ In this example, the SharePoint administrator for Contoso has created a library 
 
 **WHAT ADMINS SEE IN STEP 1:** The administrator enables Information Rights Management for the SharePoint site.
 
+---
+
 ![](../media/AzRMS_StoryboardSPO_small2.png)
 
 **WHAT ADMINS SEE IN STEP 2:** Then, she enables Rights Management for a library. Although there are additional options, this simple setting is often all that’s needed.
 
 When documents are now downloaded from this library, they  are automatically protected by Rights Management, inheriting the protection that’s configured for the library.
 
+---
+
 ![](../media/AzRMS_StoryboardSPO_small3.png)
 
 **WHAT USERS SEE IN STEP 3:** When somebody from the sales department checks out this sales report from the library, they can clearly see from the information banner at the top that it’s a protected document with restricted access.
 
 The document remains protected even if the user renames it, saves it to another location, or shares it by email. No matter what the file is named, where it’s stored, or whether it’s shared by email, only members of the sales department can read it.
+
+---
 
 **More information for this scenario:**
 
@@ -178,11 +204,15 @@ She clicks **Share Protected** on the ribbon, which loads the **share protected*
 
 Alice wants to restrict Bob to viewing and editing the document, and doesn’t want him to copy or print it, so she selects **REVIEWER – View and Edit**. She also wants to be emailed when somebody tries to open the document, and have the ability to revoke the document later if necessary and know that revocation will take effect immediately.
 
+---
+
 ![](../media/AzRMS_StoryboardEmail_small2.png)
 
 **WHAT USERS SEE IN STEP 2:** Bob sees the email on his iPad.
 
 In addition to Alice’s message and attachment, there are instructions that he follows to sign up and install the RMS sharing app on his iPad.
+
+---
 
 ![](../media/AzRMS_StoryboardEmail_small3.png)
 
@@ -190,11 +220,15 @@ In addition to Alice’s message and attachment, there are instructions that he 
 
 When Bob views the document, he also sees the restricted access information that tells him he can view and edit the document, but not copy or print.
 
+---
+
 ![](../media/AzRMS_StoryboardEmail_small4.png)
 
 **WHAT USERS SEE IN STEP 4:** Alice receives an email message that tells her Bob successfully opened the document that she sent, and when he accessed the document.
 
 If Bob forwards his email with the attachment, or saves it where others can access it, or it is intercepted on the network, other people will not be able to read the document.
+
+---
 
 **More information for this scenario:**
 
@@ -204,4 +238,4 @@ If Bob forwards his email with the attachment, or saves it where others can acce
 
 ## Next steps
 
-Now you’ve seen some examples of what Azure RMS can do, you might be interested in how it does it. For technical information about how Azure RMS works, see [How does Azure RMS work?](how-does-it-work.md).
+Now you’ve seen some examples of what Azure RMS can do, you might be interested in how it does it. For technical information about how Azure RMS works, see [How does Azure RMS work?](how-does-it-work.md)
