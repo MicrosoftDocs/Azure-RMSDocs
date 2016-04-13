@@ -156,7 +156,7 @@ You will also need to install on these servers, a version of the RMS client that
 
 2.  On the Exchange server roles that communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](deploying-the-azure-rights-management-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a server running Exchange 2016 or Exchange 2013:
 
@@ -194,7 +194,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
 
 2.  On the SharePoint servers that communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](configure-servers-for-the-rms-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a server running SharePoint 2013:
 
@@ -212,10 +212,6 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
 
     After IRM is enabled on a SharePoint farm, you can enable IRM on individual libraries by using the **Information Rights Management** option on the **Library Settings** page for each of the libraries.
 
-    > [!IMPORTANT]
-    > For SharePoint to access RMS by using the connector, you must authorize the corresponding accounts in the RMS connector administration tool. If you haven’t already done this, see [Authorizing servers to use the RMS connector](deploying-the-azure-rights-management-connector.md#AuthorizingServers) in this topic.
-
-
 
 ## Configuring a file server for File Classification Infrastructure to use the connector
 To use the RMS connector and File Classification Infrastructure to protect Office documents, the file server must be running one of the following operating systems:
@@ -230,7 +226,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
 2.  On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 
-    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](configure-servers-for-the-rms-connector.md#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
+    -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
         For example, to run the tool locally to configure a file server running FCI:
 
@@ -251,6 +247,6 @@ In addition, you might consider the following to help you monitor the RMS connec
 
 -   The [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437), using the RMS connector option to help you monitor the health of the connector and identify any configuration issues.
 
--   [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md)
+-   [Logging and analyzing Azure Rights Management usage](logging-and-analyzing-azure-rights-management-usage.md)
 
-You can use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
+You can use the [Azure Rights Management deployment roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 

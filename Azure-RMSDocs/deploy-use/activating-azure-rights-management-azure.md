@@ -29,8 +29,8 @@ ms.suite: ems
 
 Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite.
 
-<iframe src="https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms" allowFullScreen frameBorder="0"></iframe>
-
+> [!TIP]
+> Watch a 2-minute video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
 
 1.  After you have signed up for your Azure account, [sign in to the Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081).
 
@@ -43,7 +43,7 @@ Use these instructions if you have access to the Azure portal. For example, you 
     > [!NOTE]
     > If you see an activation error, it might be because your service plan or product version cannot support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
     >
-    > Use the information in the [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) section in the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
 

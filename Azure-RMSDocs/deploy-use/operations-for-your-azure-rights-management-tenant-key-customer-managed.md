@@ -46,7 +46,7 @@ To re-key your tenant key, generate and create a new key over the Internet or in
 ## Backup and recover your tenant key
 You are responsible for backing up your tenant key. If you generated your tenant key in a Thales HSM, to back up the key, just back up the Tokenized Key file, the World file, and the Administrator Cards.
 
-If you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](..\plan-design\planning-and-implementing-your-azure-rights-management-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](..\plan-design\planning-and-implementing-your-azure-rights-management-tenant-key.md) topic, Azure RMS will persist the Tokenized Key File, to protect against failure of any Azure RMS nodes. However, do not consider this to be a full backup. For example, if you ever need a plaintext copy of your key to use outside a Thales HSM, Azure RMS will not be able to retrieve it for you because it only has a non-recoverable copy.
+If you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](../plan-design/planning-and-implementing-your-azure-rights-management-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](../plan-design/planning-and-implementing-your-azure-rights-management-tenant-key.md) article, Azure RMS will persist the Tokenized Key File, to protect against failure of any Azure RMS nodes. However, do not consider this to be a full backup. For example, if you ever need a plaintext copy of your key to use outside a Thales HSM, Azure RMS will not be able to retrieve it for you because it only has a non-recoverable copy.
 
 ## Export your tenant key
 If you use BYOK, you cannot export your tenant key from Azure RMS. The copy in Azure RMS is non-recoverable. If you want to delete this key so it can no longer be used, contact Microsoft Customer Service Support (CSS).
@@ -60,11 +60,9 @@ If you have a breach, the best action that you or Microsoft can take  depends on
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Re-key your tenant key. See [Re-key your tenant key](#re-key-your-tenant-key) .|
+|Your tenant key is leaked.|Re-key your tenant key. See [Re-key your tenant key](#re-key-your-tenant-key).|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Re-keying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, then Microsoft will instruct all customers to renew their tenant keys.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update the Azure RMS to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
 

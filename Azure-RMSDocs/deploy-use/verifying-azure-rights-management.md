@@ -28,15 +28,16 @@ ms.suite: ems
 # Verifying Azure Rights Management
 After you have activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) and performed any additional configuration steps that are required for your organization, you can verify that the service is working as expected by protecting a file or email message by using one  user account, and then attempting to open and use that protected content from another user account.
 
-To do this testing, you can use the information in [Helping Users to Protect Files by Using Azure Rights Management](helping-users-to-protect-files-by-using-azure-rights-management.md).
+To do this testing, you can use the information in [Helping users to protect files by Using Azure Rights Management](helping-users-to-protect-files-by-using-azure-rights-management.md).
 
-If your testing is unsuccessful, review the configuration steps in [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md), and use the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) to help identify and fix potential problems. You can also run this tool periodically, as a general health check.
+If your testing is unsuccessful, review the configuration steps in [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md), and use the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) to help identify and fix potential problems. You can also run this tool periodically, as a general health check.
 
 > [!TIP]
-> If you need additional help, see the [Support options and community resources](../get-started/information-and-support-for-azure-rights-management.md##support-options-and-community-resources) section in the [Information and Support for Azure Rights Management](information-and-support-for-azure-rights-management.md) topic.
+> If you need additional help, see the [Support options and community resources](../get-started/information-and-support-for-azure-rights-management.md##support-options-and-community-resources) section in the [Information and support for Azure Rights Management](../get-started/information-and-support-for-azure-rights-management.md) article.
 
-You can monitor how your organization is using information protection by using usage logging. For more information, see [Logging and Analyzing Azure Rights Management Usage](logging-and-analyzing-azure-rights-management-usage.md).
+## Next steps
 
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
+You can monitor how your organization is using information protection by using usage logging. For more information, see [Logging and analyzing Azure Rights Management usage](logging-and-analyzing-azure-rights-management-usage.md).
+
+
 

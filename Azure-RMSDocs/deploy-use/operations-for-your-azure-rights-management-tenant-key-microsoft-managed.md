@@ -49,15 +49,15 @@ Microsoft is responsible for backing up your tenant key and no action is require
 ## Export your tenant key
 You can export your Azure RMS configuration and tenant key by following the instructions in these three steps:
 
-#### Step 1: Initiate export
+### Step 1: Initiate export
 
 -   To do this, contact Microsoft Customer Service Support (CSS). You must prove you are an administrator for your Azure RMS tenant.
 
-#### Step 2: Wait for verification
+### Step 2: Wait for verification
 
 -   Microsoft verifies that your request to release your RMS tenant key is legitimate. This process can take up to 3 weeks.
 
-#### Step 3: Receive key instructions from CSS
+### Step 3: Receive key instructions from CSS
 
 -   Microsoft Customer Support Services (CSS) will send you your Azure RMS configuration and tenant key as encrypted in a password-protected file that has a .tpd file name extension. To do this, CSS first sends you (as the person who initiated the export) a tool by email. You must run the tool from a command prompt as follows:
 
@@ -79,7 +79,7 @@ You can export your Azure RMS configuration and tenant key by following the inst
 
     Backup these files and store them safely to ensure that you can continue to decrypt content that is protected with this tenant key. In addition, if you are migrating to AD RMS, you can import this TPD file (the file that starts with **ExportedTDP**) to your AD RMS server.
 
-#### Step 4: Ongoing: Protect your tenant key
+### Step 4: Ongoing: Protect your tenant key
 
 -   After you receive your tenant key, keep it well-guarded, because if somebody gets access to it, they can decrypt all documents that are protected by using that key.
 
@@ -94,11 +94,8 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Re-key your tenant key. See the [Re-key your tenant key](operations-for-your-azure-rights-management-tenant-key.md#re-key-your-tenant-key) section in this topic.|
+|Your tenant key is leaked.|Re-key your tenant key. See the [Re-key your tenant key](operations-for-your-azure-rights-management-tenant-key.md#re-key-your-tenant-key) section in this article.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Re-keying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update the Azure RMS to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
-
-## See Also
-[Using Azure Rights Management](using-azure-rights-management.md)
 

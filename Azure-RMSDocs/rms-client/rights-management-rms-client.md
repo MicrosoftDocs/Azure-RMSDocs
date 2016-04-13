@@ -26,11 +26,17 @@ ms.suite: ems
 ---
 
 # Rights Management (RMS) Client
-Insert introduction here.
+Use the following documentation for information about the Rights Management (RMS) client, which can be used with Rights Management services on-premises (AD RMS) and in the cloud (Azure RMS) to help protect your organization's data:
 
-## Section Heading
-Insert section body here.
+- [RMS Client deployment notes](rms-client-deployment-notes.md)
 
-### Subsection Heading
-Insert subsection body here.
+- [RMS Protection with Windows Server File Classification Infrastructure (FCI)](rms-protection-with-windows-server-file-classification-infrastructure-fci.md)
+
+- [Rights Management sharing application for Windows](rights-management-sharing-application-for-windows.md)
+
+- [Privacy statement for Microsoft Rights Management in RMS-enlightened applications](privacy-statement-for-microsoft-rights-management-in-rms-enlightened-applications.md)
+
+
+For additional resources, including community and support options, visit the [Microsoft Rights Management services](https://www.microsoft.com/rms) website.
+
 
