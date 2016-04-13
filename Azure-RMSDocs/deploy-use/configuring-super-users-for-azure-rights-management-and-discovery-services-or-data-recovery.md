@@ -69,7 +69,6 @@ Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_
 For more information about these cmdlets, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
-> The RMSProtection Windows PowerShell module that ships with the RMS Protection Tool is different from and supplements the main [Windows PowerShell module for Azure Rights Management](https://technet.microsoft.com/library/jj585027.aspx). It supports both Azure RMS and AD RMS.
+> The RMS Protection PowerShell module that ships with the RMS Protection Tool is different from and supplements the main [Windows PowerShell module for Azure Rights Management](administering-azure-rights-management-with-powershell.md). The RMS Protection module supports both Azure RMS and AD RMS.
 
-## See Also
-[Configuring Azure Rights Management](configuring-azure-rights-management.md)
+
