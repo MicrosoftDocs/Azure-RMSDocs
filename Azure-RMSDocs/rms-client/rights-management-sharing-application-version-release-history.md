@@ -50,7 +50,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for non-administrator installation, so that standard users can install the RMS sharing application.
 
-    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](download-and-install-the-rights-management-sharing-application.md#BKMK_SetupOffice2010) section in the [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md)  user instructions.
+    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](download-and-install-the-rights-management-sharing-application.md#if-you-are-not-a-local-administrator-and-use-office-2010) section in the [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application) user instructions.
 
 ## Version 1.0.1908.0
 **Released**: 9/16/2015
@@ -59,7 +59,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for multi-factor authentication (MFA) for Azure RMS, which also removes the dependency on the Microsoft Sign-in Assistant for applications that use modern authentication.
 
-    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](requirements-for-azure-rights-management.md#BKMK_MFA)   section in  [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../get-started/rms-requirements-aad-directory.md#multi-factor-authentication-mfa-and-azure-rms) section from  [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md).
 
 ## Version 1.0.1784.0
 **Released**: 7/30/2015
@@ -106,5 +106,5 @@ Versions before January 1, 2015 are not listed.
 
 **New features**:
 
--   **Support for multiple email domains within your organization**: If you use AD RMS and users in your organization have multiple email domains, this update lets your users consume content that has been protected by users in your organization in other domains. For more information, see the [AD RMS only: Support for multiple email domains within your organization](rights-management-sharing-application-administrator-guide.md#BKMK_FederatedDomains) section in the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
+-   **Support for multiple email domains within your organization**: If you use AD RMS and users in your organization have multiple email domains, this update lets your users consume content that has been protected by users in your organization in other domains. For more information, see the [AD RMS only: Support for multiple email domains within your organization](rights-management-sharing-application-administrator-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) section in the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
 

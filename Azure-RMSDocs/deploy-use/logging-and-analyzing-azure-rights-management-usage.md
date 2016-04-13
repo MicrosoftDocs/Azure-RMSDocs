@@ -68,7 +68,7 @@ It can take a while for logs to appear in your storage account after an Azure Ri
 
 To download your usage logs, you will use the Azure RMS administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
-#### To download your usage logs by using PowerShell
+### To download your usage logs by using PowerShell
 
 1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure Rights Management service:
 
