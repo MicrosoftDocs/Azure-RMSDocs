@@ -26,7 +26,7 @@
 #### [How to: Use built-in rights](./built-in-rights-usage-restriction-reference.md)
 #### [How to: Use document tracking](./how-to-use-document-tracking.md)
 #### [Terms](./terms.md)
-### [API reference](./api-reference-new.md)
+### [API reference](./api-reference-4-2.md)
 #### [Android API Reference](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
 #### [Linux API reference](./linux-c-api-reference.md)
 #### [iOS / OS X API reference](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/iOS/iOS)
