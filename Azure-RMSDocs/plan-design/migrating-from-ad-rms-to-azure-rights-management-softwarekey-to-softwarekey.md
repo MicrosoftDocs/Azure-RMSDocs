@@ -41,7 +41,7 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     > [!TIP]
     > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm -ListAvailable).Version`
 
-    For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+    For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/installing-windows-powershell-for-azure-rights-management.md).
 
 2.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure RMS service:
 
