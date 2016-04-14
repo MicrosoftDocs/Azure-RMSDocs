@@ -67,41 +67,41 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   To create a new project, on the **File** menu, click **New**, and then click **Project**.
 -   Select **Single View Application**.
 
-    ![](../media/IOS-PROJECT.png)
+    ![](../media/iOS-Project.png)
 
 -   Enter a name and identifier for your new project.
 
-    ![](../media/IOS-PROJECT-OPTIONS.png)
+    ![](../media/iOS-project-options.png)
 
 -   Click **Next** and select the location for your project.
 -   To add the **MSRightsManagement** framework for iOS Frameworks, drag the .framework folder from the SDK installation folder into the **Frameworks** section of your **Project Navigator**.
 
-    ![](../media/IOS-ADD-DEPENDENCIES-01A.png)
+    ![](../media/ios-add-dependencies-01a.png)
 
 -   Select **Create groups for any added folders** option button and clear the **Copy items into destination group's folder (if needed)** check box.
 
     This action maintains the reference to the SDK installation folder instead of creating a copy.
 
-    ![](../media/IOS-CREATE-GROUPS.png)
+    ![](../media/iOS-create-groups.png)
 
 -   To add the MS RMS SDK 4.2 for the resource bundle, drag the MSRightsManagementResources.bundle file from the MSRightsManagement.framework/Resources folder into the **Frameworks** section of your Project Navigator.
 
-    ![](../media/IOS-ADD-RESOURCE-BUNDLE-02A.png)
+    ![](../media/iOS-add-resource-bundle-02a.png)
 
 -   As you did when you copied the Framework, select **Create groups for any added folders** option button and clear the **Copy items into destination group's folder (if needed)** check box.
 -   The SDK relies on other frameworks including: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** and **Security**. To add these frameworks, navigate to the **Linked Frameworks and Libraries** section of the target's **Summary** pane, and expand that section to add them.
 
     The **UIKit** and **Foundation** frameworks are required and generally present by default.
 
-    ![](../media/IOS-ADD-LIBRARIES.png)
+    ![](../media/iOS-add-libraries.png)
 
 -   Add the **-ObjC** flag to **Other Linker Flags** in your target **Build Settings**.
 
-    ![](../media/IOS-LINKER-FLAGS.png)
+    ![](../media/iOS-linker-flags.png)
 
 -   Now your **Project Navigator** should look something like this tree.
 
-    ![](../media/IOS-VERIFY-SETUP-01A.png)
+    ![](../media/iOS-verify-setup-01a.png)
 
 -   You are now ready to create your own new iOS/OS X apps.
 

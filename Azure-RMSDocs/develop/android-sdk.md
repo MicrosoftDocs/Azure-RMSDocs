@@ -73,7 +73,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   Open the Eclipse development environment.
 -   To create a new Android Application project, on the **File** menu, click **New**, click **Project**, and then select **Android Application Project**.
 
-    ![](../media/ANDROID-SETUP-01C.png)
+    ![](../media/Android-setup-01c.png)
 
 -   Enter the application name. The project name and package name is filled based on the application name.
 -   Click **Next** and select where you want to create the workspace.
@@ -82,11 +82,11 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 -   Click **Next** and select an icon for your app.
 
-    ![](../media/ANDROID-SETUP-03.png)
+    ![](../media/Android-setup-03.png)
 
 -   Click **Next** and select **Blank Activity** to create the activity.
 
-    ![](../media/ANDROID-SETUP-04.png)
+    ![](../media/Android-setup-04.png)
 
 -   Click **Next** and provide a name for the activity. You can leave *MainActivity* as the default name with a layout name of *activity\_main*.
 
@@ -105,7 +105,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
     In Eclipse, click **File**. On the **File** menu, click **Import**. In the **Import** dialog box, select **Android / Existing Android Code into Workspace**.
 
-    ![](../media/ANDROID-SETUP-07.png)
+    ![](../media/Android-setup-07.png)
 
 -   Click **Next**. Navigate to select the folder in which you extracted the *adrms\_android\_sdk.zip*. The SDK should appear in the list as **com.microsoft.rightsmanagement**.
 
