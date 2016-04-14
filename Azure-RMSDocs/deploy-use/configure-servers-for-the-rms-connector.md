@@ -249,4 +249,4 @@ In addition, you might consider the following to help you monitor the RMS connec
 
 -   [Logging and analyzing Azure Rights Management usage](logging-and-analyzing-azure-rights-management-usage.md)
 
-You can use the [Azure Rights Management deployment roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
+You can use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
