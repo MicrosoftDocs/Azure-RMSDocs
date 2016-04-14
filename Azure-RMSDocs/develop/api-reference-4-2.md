@@ -31,7 +31,7 @@ The Microsoft Rights Management SDK 4.2 supports several operating systems. For
 
 [Android API Reference](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement) - API reference for the Android operating system.
 
-[Linux API reference](linux___c___api_reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
+[Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 [iOS / OS X API reference](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/iOS/iOS) - API reference for the Apple iOS and OS X operating systems.
 
