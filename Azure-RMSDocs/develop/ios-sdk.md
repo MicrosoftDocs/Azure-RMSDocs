@@ -67,7 +67,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   To create a new project, on the **File** menu, click **New**, and then click **Project**.
 -   Select **Single View Application**.
 
-    ![](../media/iOS-project.png)
+    ![](../media/iOS-Project.png)
 
 -   Enter a name and identifier for your new project.
 
