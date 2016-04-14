@@ -37,7 +37,6 @@ Jump to:
 - [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
 - [Step 5: Track your doc](rms-quickstart-step5.md)
 
-### Step 5: Track your protected document
 ![](../media/AzRMS_QuickStartSteps5.PNG)
 
 > [!NOTE]
