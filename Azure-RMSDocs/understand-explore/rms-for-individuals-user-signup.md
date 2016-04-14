@@ -85,7 +85,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
     -   Configure Exchange and SharePoint to support Azure Rights Management, even if these are running on-premises. Exchange and SharePoint are natively supported for the online services, and they are supported by a connector for the on-premises servers. For more information, see the following:
 
-        -   The Exchange Online and SharePoint Online sections from [Office 365: Configuration for clients and online services](../deploy-use/0365-configure-for-clients-online-services.md)
+        -   The Exchange Online and SharePoint Online sections from [Office 365: Configuration for clients and online services](../deploy-use/o365-configure-for-clients-online-services.md)
 
         -   [Deploying the Azure Rights Management connector](../deploy-use/deploying-the-azure-rights-management-connector.md)
 

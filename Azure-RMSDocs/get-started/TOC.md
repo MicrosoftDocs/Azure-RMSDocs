@@ -1,5 +1,5 @@
 # [Understand & Explore](/rights-management/understand-explore/azure-rights-management)
-# [Get Started](./requirements-for-azure-rights-management)
+# [Get Started](./requirements-for-azure-rights-management.md)
 ## [Requirements](./requirements-for-azure-rights-management.md)
 ### [Cloud subscriptions](./rms-requirements-cloud-subscriptions.md)
 ### [Azure Active Directory](./rms-requirements-aad-directory.md)

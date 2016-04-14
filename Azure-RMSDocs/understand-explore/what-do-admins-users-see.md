@@ -152,7 +152,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 -   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](rights-management-sharing-application-for-office.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
--   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/0365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 ## Automatically protecting files with SharePoint Online and protected libraries
 
@@ -186,7 +186,7 @@ The document remains protected even if the user renames it, saves it to another 
 
 -   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](rights-management-sharing-application-for-office.md#sharepoint-online-and-sharepoint-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
--   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/0365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
 
 ## Users safely share attachments with mobile users
 
