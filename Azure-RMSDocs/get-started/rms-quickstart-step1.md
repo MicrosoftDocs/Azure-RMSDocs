@@ -39,7 +39,6 @@ Jump to:
 - [Step 5: Track your doc](rms-quickstart-step5.md)
 
 
-### Step 1: Activate the Rights Management service
 ![](../media/AzRMS_QuickStartSteps1.PNG)
 
 Even though you might have a subscription that supports Azure Rights Management, the service is disabled by default. To activate it, you can use either the Office 365 admin center, or the Azure classic portal:
@@ -50,7 +49,7 @@ Even though you might have a subscription that supports Azure Rights Management,
 
 ![](../media/AzRMS_Tutorial_1_Screenshots.png)
 
-#### To activate Rights Management from the Office 365 classic admin center
+### To activate Rights Management from the Office 365 classic admin center
 
 1.  Go to the [Office 365 portal](https://portal.office.com/) and sign in with your work or school account.
 
@@ -73,7 +72,7 @@ You should now see **Rights management is activated** and the option to deactiva
 
 At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure templates, which are not needed for this tutorial. Instead, you can close the Office 365 admin center.
 
-#### To activate Rights Management from the Azure classic portal
+### To activate Rights Management from the Azure classic portal
 
 1.  Go to the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081) and sign in.
 

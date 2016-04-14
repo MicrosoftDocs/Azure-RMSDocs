@@ -39,7 +39,6 @@ Jump to:
 - [Step 5: Track your doc](rms-quickstart-step5.md)
 
 
-### Step 2: Install the Rights Management sharing application
 ![](../media/AzRMS_QuickStartSteps2.PNG)
 
 The Rights Management sharing application (also known as the “RMS sharing app”) isn’t a requirement for Azure Rights Management, but we recommend it for all computers and mobile devices that support Azure Rights Management. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files directly from the ribbon. It also makes it possible to protect all files types by applying generic protection for files that are not natively supported by Azure Rights Management, and a document tracking site for users to track and revoke files that they have protected. We’ll be using the document tracking site later in this tutorial.
@@ -48,7 +47,7 @@ This application is free to download and offers a scripted install for productio
 
 ![](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### To download and install the Rights Management sharing application
+### To download and install the Rights Management sharing application
 
 1.  Go to the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
