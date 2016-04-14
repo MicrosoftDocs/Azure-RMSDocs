@@ -145,9 +145,9 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 To learn more about Azure RMS, use the other articles in the **Understand & Explore** section, such as [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md) to learn how your existing applications can integrate with Azure RMS to provide an information protection solution. 
 
-Review [Terminology for Azure Rights Management](..get-started/terminology-for-azure-rights-management.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](..get-started/requirements-for-azure-rights-management.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Rights Management](..get-started/quick-start-tutorial-for-azure-rights-management.md).
+Review [Terminology for Azure Rights Management](../get-started/terminology-for-azure-rights-management.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial-for-azure-rights-management.md).
 
-If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../deploy-use/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md).

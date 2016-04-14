@@ -31,10 +31,11 @@ ms.custom:
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](quick-start-tutorial-for-azure-rights-management.md)
-- [Step 1](rms-quickstart-step1.md)
-- [Step 2](rms-quickstart-step2.md)
-- [Step 3](rms-quickstart-step3.md)
-- [Step 4](rms-quickstart-step4.md)
+- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
+- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
+- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
+- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
+- [Step 5: Track your doc](rms-quickstart-step5.md)
 
 ### Step 5: Track your protected document
 ![](../media/AzRMS_QuickStartSteps5.PNG)
@@ -68,9 +69,9 @@ You can return to this site to track further activity for your protected documen
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for tracking your documents   →|[Track and revoke your documents when you use the RMS sharing application](../rms-client/track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md)|
-|Two minute video that explains and shows document tracking   →|[Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
-|For troubleshooting and customer questions   →|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
+|Full instructions for tracking your documents|[Track and revoke your documents when you use the RMS sharing application](../rms-client/track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md)|
+|Two minute video that explains and shows document tracking|[Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
+|For troubleshooting and customer questions|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
 
 ### Next steps
 This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see [Azure RMS in action](../understand-explore/what-do-admins-users-see.md)  from [What is Azure Rights Management?](../understand-explore/what-is-azure-rights-management.md). There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
