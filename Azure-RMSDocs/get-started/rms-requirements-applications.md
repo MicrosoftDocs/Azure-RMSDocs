@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS Requirements&#58; Applications | Azure RMS
+title: Azure RMS requirements&#58; Applications | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Azure RMS Requirements: Applications
+# Azure RMS requirements: Applications
 
 The following applications natively support Azure Rights Management (Azure RMS), which means that Rights Management is tightly integrated into these applications by using RMS APIs to support usage restrictions. These applications are also known as RMS-enlightened:
 
@@ -95,4 +95,4 @@ To check for other requirements, see [Requirements for Azure Rights Management](
 
 For more information about how these applications support Azure RMS, see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md).
 
-For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](..deploy-use/configuring-applications-for-azure-rights-management.md).
+For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).

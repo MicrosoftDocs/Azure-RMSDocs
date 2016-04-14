@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS Requirements&#58; On-premises servers that support Azure Rights Management | Azure RMS
+title: Azure RMS requirements&#58; On-premises servers that support Azure Rights Management | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Azure RMS Requirements: On-premises servers that support Azure RMS
+# Azure RMS requirements: On-premises servers that support Azure RMS
 The following on-premises server products are supported with Azure RMS when you use the Azure RMS connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS. In addition, this configuration requires that you configure directory synchronization between your Active Directory forests and Azure Active Directory.
 
 -   **Exchange Server**:
@@ -58,5 +58,5 @@ The RMS connector is supported on Windows Server 2012 R2, Windows Server 2012, a
 
 For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management connector](deploying-the-azure-rights-management-connector.md).
 
-## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
+## Next steps
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
