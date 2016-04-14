@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Requirements for Azure Rights Management
-To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management deployment roadmap](..deploy-use/azure-rights-management-deployment-roadmap.md) to deploy Rights Management for your organization.
+To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to deploy Rights Management for your organization.
 
 |Requirement|More information|
 |---------------|--------------------|
