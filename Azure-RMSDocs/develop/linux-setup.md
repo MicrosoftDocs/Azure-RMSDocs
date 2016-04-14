@@ -54,11 +54,11 @@ Two guidance topis for this SDK are hosted on Github for basic SDK build and usa
 
 ## See Also
 
-* [Get started](get_started.md)
+* [Get started](get-started.md)
 
-* [What's new](release_notes.md)
+* [What's new](release-notes.md)
 
-* [Developer terms and concepts](core_concepts.md)
+* [Developer terms and concepts](core-concepts.md)
 
  
 

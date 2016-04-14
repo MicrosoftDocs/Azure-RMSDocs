@@ -50,7 +50,7 @@ This topic lists a set of samples using the Rights Management Services SDK 2
  
 ### Related topics
 
-* [Overview](ad_rms_overview.md)
+* [Overview](ad-rms-overview.md)
 * [Interop Library](https://Code.MSDN.Microsoft.Com/AD-RMS-SDK-20-Interop-eb3fbce7)
 * [Data Loss Prevention](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCNotepad](https://Code.MSDN.Microsoft.Com/IPCNotepad-Sample-f67dae80)

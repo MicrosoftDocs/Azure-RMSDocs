@@ -53,7 +53,7 @@ A user's permissions for a document can be queried by using the [**IpcAccessChec
 
 ### Related topics
 
-* [Developer concepts](ad_rms_concepts-nav.md)
+* [Developer concepts](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](xref:msipc.ipcaccesscheck)
 * [Usage restriction reference](usage_restriction_reference.md)
  

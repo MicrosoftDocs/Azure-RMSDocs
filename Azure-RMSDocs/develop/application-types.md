@@ -35,7 +35,7 @@ The following application types are currently supported by Rights Management S
 
 ## Simple applications
 
-A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see, [IPCHelloWorld - an example application](how_to_build_your_first_application.md).
+A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see, [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
 
 ### Server mode applications
 
@@ -44,7 +44,7 @@ A simple application could be a command line tool built to encrypt a provided fi
 
 If your application uses the *server mode*, it should authenticate to the RMS server silently. Unlike the *client mode*, the RMS SDK 2.1 will not open a credential prompt when it fails to authenticate silently. Also, when running in *server mode*, no application manifest is needed.
 
-For more information on setting the API security mode see, [Setting the API security mode](setting_the_api_security_mode__api_mode_.md).
+For more information on setting the API security mode see, [Setting the API security mode](setting-the-api-security-mode-api-mode.md).
 
 ### Rich client applications
 
@@ -58,15 +58,15 @@ Using RMS SDK 2.1 with rich client applications helps you:
 
 Microsoft Notepad is a simple rich client application. Microsoft Office is a more complex rich client application.
 
-For more information on protecting your application, see [Understanding usage restrictions](understanding_usage_restrictions.md).
+For more information on protecting your application, see [Understanding usage restrictions](understanding-usage-restrictions.md).
 
 ### Related topics
 
-* [Developer concepts](ad_rms_concepts-nav.md)
+* [Developer concepts](ad-rms-concepts-nav.md)
 * [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld - an example application](how_to_build_your_first_application.md)
-* [Setting the API security mode](setting_the_api_security_mode__api_mode_.md)
-* [Understanding usage restrictions](understanding_usage_restrictions.md)
+* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
+* [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
+* [Understanding usage restrictions](understanding-usage-restrictions.md)
  
 
  

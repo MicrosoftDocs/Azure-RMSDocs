@@ -38,14 +38,14 @@ To publish and consume protected content, an Rights Management Services (RMS) ap
 We recommend that you use the Pre-production hierarchy when developing an application. By doing so, you can work without signing a Production License Agreement with Microsoft.
 
 > [!IMPORTANT]
-> It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+> It is a recommended best practice to test your RMS SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment. For more information see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
  
 
 ### Prerequisites
 
 -   An RMS SDK 2.1 development environment setup. For more information, see [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md).
--   For an example application, see [IPCHelloWorld - an example application](how_to_build_your_first_application.md).
+-   For an example application, see [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
 
 Instructions
 
@@ -57,13 +57,13 @@ Create and build a rights-enabled application. See the above Prerequisites secti
 
 You must generate a manifest for your application before running it.
 
-**Note**  If your application uses Server API Mode (**IPC\_API\_MODE\_SERVER**), you are not required to use an application manifest. You can test your application against a production AD RMS server and you are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application_types.md).
+**Note**  If your application uses Server API Mode (**IPC\_API\_MODE\_SERVER**), you are not required to use an application manifest. You can test your application against a production AD RMS server and you are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
 
  
 
 This process is also known as signing your application. You can generate the manifest using either a production certificate chain or the pre-production certificate chain that is installed with the SDK. We recommend that you use the pre-production certificate chain during development.
 
-For more information about keys and certificate chains, see [Understanding certificate chains](understanding_certificate_chains.md).
+For more information about keys and certificate chains, see [Understanding certificate chains](understanding-certificate-chains.md).
 
 For information about how to sign an application with a production certificate chain, see [Switching to the production environment](switching_to_the_production_environment.md).
 
@@ -105,18 +105,18 @@ You can run your application from any directory, but the application manifest (M
 
     If you are testing your application against an RMS server that is configured for pre-production, make sure that you have configured the Active Directory Rights Management Services Client 2.1 on the computer where the application will be running; for example, on your development computer. Then make sure that both the application executable and the application manifest are located in the same directory on that computer and run your application.
 
-    For information about how to configure the client on your computer, see [Configure the client](how_to_configure_the_ad_rms_client_2_0.md). For information about installing an RMS server, see [Install and configure the server](how_to_install_and_configure_an_rms_server.md).
+    For information about how to configure the client on your computer, see [Configure the client](how_to_configure_the_ad-rms-client_2_0.md). For information about installing an RMS server, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Configure the client](how_to_configure_the_ad_rms_client_2_0.md)
-* [Install and configure the server](how_to_install_and_configure_an_rms_server.md)
-* [IPCHelloWorld - an example application](how_to_build_your_first_application.md)
+* [How-to use](how-to-use-msipc.md)
+* [Configure the client](how_to_configure_the_ad-rms-client_2_0.md)
+* [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
+* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md)
 * [Switching to the production environment](switching_to_the_production_environment.md)
 * [Set up the test environment](how_to_set_up_your_test_environment.md)
-* [Understanding certificate chains](understanding_certificate_chains.md)
+* [Understanding certificate chains](understanding-certificate-chains.md)
  
 
  

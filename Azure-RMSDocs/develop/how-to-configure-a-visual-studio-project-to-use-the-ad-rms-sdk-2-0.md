@@ -31,7 +31,7 @@ This topic contains instructions about how to configure a Visual Studio project 
 
 ## Prerequisites
 
--   [Install the SDK](create_your_first_rights_aware_application.md)
+-   [Install the SDK](create-your-first-rights-aware-application.md)
 
 **Instructions**
 
@@ -45,7 +45,7 @@ These instructions apply to building a native 32-bit application.
 
     Under **Configuration Properties** select **VC++ Directories** and add the RMS SDK 2.1 include directory, **$(MSIPCSDKDIR)\\inc**, to the **Include Directories** field.
 
-    ![Configuration properties include directories field](../media/INCLUDE_DIRECTORIES.png)
+    ![Configuration properties include directories field](../media/include_directories.png)
 
 2.  Add the RMS SDK 2.1 library directory to your Visual Studio 2010 project.
 
@@ -54,30 +54,30 @@ These instructions apply to building a native 32-bit application.
     -   For Win32, use **$(MSIPCSDKDIR)\\lib**
     -   For x64, use **$(MSIPCSDKDIR)\\lib\\x64**
 
-    ![Configuration properties library directories field](../media/LIBRARY_DIRECTORIES.png)
+    ![Configuration properties library directories field](../media/library_directories.png)
 
 3.  Add the RMS SDK 2.1 library files as Visual Studio 2010 dependencies.
 
     Under **Linker**, select **Input** and add the RMS SDK 2.1 library files; **Msipc.lib** and **Msipc\_s.lib**, to the **Additional Dependencies** field.
 
-    ![Linker library dependencies field](../media/ADDITIONAL_DEPENDENCIES.png)
+    ![Linker library dependencies field](../media/additional_dependencies.png)
 
 4.  Add the RMS SDK 2.1 Dynamic Link Library (DLL) as a delay-loaded DLL.
 
     Under **Linker**, select **Input**, and add the RMS SDK 2.1 DLL file, **Msipc.dll**, to the **Delay Loaded Dlls** field.
 
-    ![Linker delay-loaded libraries field](../media/DELAY_LOADED.png)
+    ![Linker delay-loaded libraries field](../media/delay_loaded.png)
 
 5.  Create version information for your resulting binary.
 
     Under **Solution Explorer** select **Resource Files** and add your binary name to the **OriginalFileName** field.
 
-    ![Solution explorer resource files field](../media/ORIGINAL_FILE_NAME.png)
+    ![Solution explorer resource files field](../media/original_file_name.png)
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Install the SDK](create_your_first_rights_aware_application.md)
+* [How-to use](how-to-use-msipc.md)
+* [Install the SDK](create-your-first-rights-aware-application.md)
  
 
  

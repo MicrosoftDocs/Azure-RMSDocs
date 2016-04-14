@@ -40,14 +40,14 @@ This topic describes how Rights Management Services SDK 2.1 is a significant
 **Important Notice**  
 All the topics in the original [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379) on MSDN Library now begin with the following support statement:
 
-The AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2008, Windows Vista, Windows Server 2008 R2, Windows 7, Windows Server 2012, and Windows 8. It may be altered or unavailable in subsequent versions. Instead, use [Active Directory Rights Management Services SDK 2.1](microsoft_information_protection_and_control_client_portal.md), which leverages functionality exposed by the client in *Msipc.dll*.
+The AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2008, Windows Vista, Windows Server 2008 R2, Windows 7, Windows Server 2012, and Windows 8. It may be altered or unavailable in subsequent versions. Instead, use [Active Directory Rights Management Services SDK 2.1](microsoft-information-protection-and-control-client-portal.md), which leverages functionality exposed by the client in *Msipc.dll*.
 
  
 
 ## Related topics ##
-* [Overview](ad_rms_overview.md)
+* [Overview](ad-rms-overview.md)
 * [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379)
-* [Rights Management Services SDK 2.1](microsoft_information_protection_and_control_client_portal.md)
+* [Rights Management Services SDK 2.1](microsoft-information-protection-and-control-client-portal.md)
  
 
  

@@ -49,11 +49,11 @@ This release, MS RMS SDK 4.2, is available for the following operating system
 
 [Overview](overview.md) - Microsoft Rights Management Services (AD RMS and Azure RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled applications, content owners will be able to define who can open, modify, print, forward, or take other actions with their content.
 
-[Get started](get_started.md)- For this release of the MS RMS SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms.
+[Get started](get-started.md)- For this release of the MS RMS SDK 4.2, your quick start approach to a first application is through the development environment setup guides for each of the operating systems / platforms.
 
-[Developer guidance and terms](core_concepts.md) - The focus of MS RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.
+[Developer guidance and terms](core-concepts.md) - The focus of MS RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.
 
-[API reference](api_reference-new.md) - The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.
+[API reference](api-reference-new.md) - The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.
 
  
 

@@ -47,14 +47,14 @@ For information about the run-time requirements for a particular programming ele
 
 |Topic|Description|
 |-----|--------|
-|[Overview](ad_rms_overview.md)|Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.|
-|[How this SDK is better](differences_between_ad_rms_and_ad_rms_2_0.md)|RMS SDK 2.1 is a significant improvement over the original Rights Management Services SDK.|
-|[Getting started](getting_started_with_ad_rms_2_0.md)|The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.|
-|[Release notes](release_notes__rtm_.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
+|[Overview](ad-rms-overview.md)|Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.|
+|[How this SDK is better](differences-between-ad-rms-and-ad-rms-2-0.md)|RMS SDK 2.1 is a significant improvement over the original Rights Management Services SDK.|
+|[Getting started](getting-started-with-ad-rms-2-0.md)|The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.|
+|[Release notes](release-notes__rtm_.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
 |[Code samples](samples.md)|This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.|
-|[How-to use](how_to_use_msipc.md)|Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.|
-|[Developer notes](developer_notes.md)|This section covers specific guidance for several important development scenarios.|
-|[Developer concepts](ad_rms_concepts-nav.md)|The topics in this section cover key concepts in RMS.|
+|[How-to use](how-to-use-msipc.md)|Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.|
+|[Developer notes](developer-notes.md)|This section covers specific guidance for several important development scenarios.|
+|[Developer concepts](ad-rms-concepts-nav.md)|The topics in this section cover key concepts in RMS.|
 |[API reference](xref:msipc.msipc_constants)|This section contains topics covering reference material for all of the API elements.|
 
  

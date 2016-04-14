@@ -40,8 +40,8 @@ The following topics will guide you through the key tasks for using the Rights 
 
 ### Related topics
 
-* [Overview](ad_rms_overview.md)
-* [How-to use](how_to_use_msipc.md)
+* [Overview](ad-rms-overview.md)
+* [How-to use](how-to-use-msipc.md)
  
 
  

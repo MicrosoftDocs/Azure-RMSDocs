@@ -43,7 +43,7 @@ Use the following steps to create your app Id and sign your usage agreement with
 -   Sign the RMLA and return it to the RMS Team.
 -   Now that you have a signed RMLA you should pass the Application ID when calling the authentication library through the *clientID* parameter.
 
-    This is what the authentication call looks like in our [iOS/OS X code examples](ios_os_x_code_examples.md) topic.
+    This is what the authentication call looks like in our [iOS/OS X code examples](ios-os-x-code-examples.md) topic.
 
 
     // Retrieve token using ADAL

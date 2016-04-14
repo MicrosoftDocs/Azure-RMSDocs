@@ -41,12 +41,12 @@ This topic guides you through installing the developer tools.
 
     The Setup\_sdk.exe file will install both the RMS SDK 2.1 and Active Directory Rights Management Services Client 2.1.
 
-For more information on the files installed on your system by "setup\_sdk.exe", see [Development environment files](sdk_elements.md)
+For more information on the files installed on your system by "setup\_sdk.exe", see [Development environment files](sdk-elements.md)
 
 ### Related topics
 
-* [How-to use](how_to_use_msipc.md)
-* [Development environment files](sdk_elements.md)
+* [How-to use](how-to-use-msipc.md)
+* [Development environment files](sdk-elements.md)
  
 
  
