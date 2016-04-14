@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: PowerShell reference | Azure RMS
+title: PowerShell reference for custom templates | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 
-# PowerShell reference
+# PowerShell reference for custom templates
 Everything that you can do in the Azure classic portal to create and manage templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 
 You can also use export and import to back up and restore your custom templates, As a best practice, regularly back up your custom templates, so that if you make a change that was not intended, you can easily revert to a previous version.
