@@ -173,7 +173,6 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 	- Windows Server that runs File Classification Infrastructure (FCI)
 
-
     For instructions, see [Step 7. Deploy the RMS connector](migrating-from-ad-rms-to-azure-rights-management-phase3.md#step-7-deploy-the-rms-connector).
 
 
