@@ -28,7 +28,7 @@ ms.suite: ems
 # Track and revoke your documents when you use the RMS sharing application
 After you have protected your documents by using the RMS sharing application, if your organization is using Azure Rights Management rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
-<iframe src="https://www.youtube.com/embed/llexl09mGOg" frameborder="0" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/llexl09mGOg" frameborder="0" allowfullscreen></iframe>
 
 
 When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://technet.microsoft.com/dn858608.aspx) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
