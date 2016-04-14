@@ -38,7 +38,7 @@ The Microsoft Rights Management sharing application is an optional downloadable 
 
 -   Full interoperability with files protected using Office Information Rights Management (IRM).
 
--   Full interoperability with PDF files protected using SharePoint, FCI, and supported PDF authoring tools.
+-   Full interoperability with PDF files protected using File Classification Infrastructure (FCI), and supported PDF authoring tools.
 
 The Microsoft Rights Management sharing application uses the new [AD RMS Client 2.1 runtime](http://www.microsoft.com/download/details.aspx?id=38396). By using the functionality of AD RMS 2.1, the Microsoft Rights Management sharing application provides end users a simple protection and consumption experience.
 
@@ -81,7 +81,6 @@ For files that are generically protected, the original file name extension is al
 |.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
-|.jif|.pjif|
 |.jt|.pjt|
 ¹ PDF Rendering Powered by Foxit. Copyright © 2003–2014 by Foxit Corporation.
 

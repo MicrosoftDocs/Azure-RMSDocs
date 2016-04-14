@@ -100,7 +100,7 @@ Limitations:
 
     Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. For help, contact Microsoft Customer Support Services (CSS).
 
-## Steps for migrating AD RMS to Azure RMS
+## Overview of the steps for migrating AD RMS to Azure RMS
 
 
 The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
