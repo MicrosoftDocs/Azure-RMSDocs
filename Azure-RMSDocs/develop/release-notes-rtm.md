@@ -39,7 +39,7 @@ This topic contains important information about this and previous releases of th
     RMS SDK 2.1 fails faster when there is no network connection.
 
 -   Many updates to improve error messaging and troubleshooting experience.
--   Note also that the [Supported platforms](supported_platforms.md) listing is also updated.
+-   Note also that the [Supported platforms](supported-platforms.md) listing is also updated.
 
 ## May 2015 update
 
@@ -48,19 +48,19 @@ This topic contains important information about this and previous releases of th
 ## April 2015 update
 
 -   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](tracking-content.md).
--   **Encryption type** - We now support API level control for selection of the encryption package. For more information, see [Working with encryption](working_with_encryption.md).
+-   **Encryption type** - We now support API level control for selection of the encryption package. For more information, see [Working with encryption](working-with-encryption.md).
 
-    **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working_with_encryption.md).
+    **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working-with-encryption.md).
 
      
 
--   **Server Mode Applications**, those using an [**API mode value**](xref:msipc.api_mode_values) of **IPC\_API\_MODE\_SERVER**, no longer require an application manifest. You can test your application against a production RMS server and are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application_types.md).
+-   **Server Mode Applications**, those using an [**API mode value**](xref:msipc.api_mode_values) of **IPC\_API\_MODE\_SERVER**, no longer require an application manifest. You can test your application against a production RMS server and are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
 -   **Logging** is now implemented through both file and Event Tracing for Windows methods.
 -   If you're running on a **Windows 7 SP1 or Windows Server 2008 R2 machine**, see the note following under "Important developer notes".
 
 ## January 2015 update
 
--   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Support File Formats](supported_file_formats.md).
+-   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Support File Formats](supported-file-formats.md).
 -   **Improved logging for better diagnostics** - Logging levels will show **ERROR** or **WARNING** for messages that should be reviewed. All other messages, including exceptions which are still displayed, will be logged as **INFO**.
 
     We chose this approach so that you won't lose any details. Now, only the important messages are shown with level as WARNING.
@@ -98,7 +98,7 @@ The File API components of SDK has been extended and offers the following featur
 
 -   **File API memory usage**, especially for large PFiles has been improved significantly.
 -   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [**License property types**](xref:msipc.license_property_types).
--   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application_types.md).
+-   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application-types.md).
 -   **Documentation updates**
 
     **Reorganized** - [How-to use](how-to-use-msipc.md) to clarify the order of steps for environment setup and application testing.

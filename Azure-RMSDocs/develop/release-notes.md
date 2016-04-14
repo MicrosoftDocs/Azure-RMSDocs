@@ -37,7 +37,7 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [February 2015 Update - Adds Windows Store application support](#february_2015_update_-_adds_windows_store_application_support)
 -   [January 2015 Update - Adds WinPhone platform support](#january_2015_update_-_adds_winphone_platform_support)
 -   [October 2014 Update - Upgrade to Microsoft RMS SDK 4.1](#october_2014_update_-_upgrade_to_microsoft_rms_sdk_4.1)
--   [Release notes](#release_notes)
+-   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently_asked_questions)
 
 ### New for our December 2015 Update

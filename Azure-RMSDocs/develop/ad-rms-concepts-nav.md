@@ -30,9 +30,9 @@ ms.suite: ems
 
 The topics in this section cover key concepts in RMS.
 
-[Application types](application_types.md) - This topic covers types of applications that you might choose to create as rights-enabled.
+[Application types](application-types.md) - This topic covers types of applications that you might choose to create as rights-enabled.
 
-[Understanding certificate chains](understanding_certificate_chains.md) - Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.
+[Understanding certificate chains](understanding-certificate-chains.md) - Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.
 
 [Understanding usage restrictions](understanding-usage-restrictions.md) - All RMS enabled applications must enforce usage restrictions.
 

@@ -35,9 +35,9 @@ This section covers specific guidance for several important development scenario
 - [File API configuration](file-api-configuration.md) - The File API's behavior can be configured through settings in the registry.
 - [IPCHelloWorld - an example application](how-to-build-your-first-application.md) - This topic contains instructions to create an example rights-enabled application.
 - [Setting the API security mode](setting-the-api-security-mode-api-mode.md) - You can choose which security mode your File API application runs in by using the [IpcSetGlobalProperty](xref:msipc.ipcsetglobalproperty) function.
-- [Supported file formats](supported_file_formats.md) - The File API supports native and Pfile formats.
+- [Supported file formats](supported-file-formats.md) - The File API supports native and Pfile formats.
 - [Tracking content](tracking-content.md) - This topic covers basic guidance for implementing document tracking of content protected with RMS SDK 2.1.
-- [Working with encryption](working_with_encryption.md) - This topic orients you to our encryption packages and shows some code snips for their use.
+- [Working with encryption](working-with-encryption.md) - This topic orients you to our encryption packages and shows some code snips for their use.
 
  
 

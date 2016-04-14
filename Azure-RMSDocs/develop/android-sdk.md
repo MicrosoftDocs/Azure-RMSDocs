@@ -59,7 +59,7 @@ We recommend the following software on your development system:
 
      
 
-Read the [What's new](release_notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
+Read the [What's new](release-notes.md) topic for information about API updates, release notes, and frequently asked questions (FAQ).
 
 ## Optional
 
@@ -148,9 +148,9 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 [Get started](get-started.md)
 
-[What's new](release_notes.md)
+[What's new](release-notes.md)
 
-[Developer terms and concepts](core_concepts.md)
+[Developer terms and concepts](core-concepts.md)
 
 [Android API Reference](xref:com.microsoft.rightsmanagement)
 

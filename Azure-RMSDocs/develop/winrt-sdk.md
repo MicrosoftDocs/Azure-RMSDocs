@@ -48,7 +48,7 @@ You must have the following software on your development system:
 -   The MS RMS SDK 4.2 package for Windows Store Applications. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) and other authentication libraries can be used.
 
-Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
+Read the [What's new](release-notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
 ## Optional
 
@@ -80,9 +80,9 @@ You are now ready to create your own new Windows Store apps.
 
 [Get started](get-started.md)
 
-[What's new](release_notes.md)
+[What's new](release-notes.md)
 
-[Developer terms and concepts](core_concepts.md)
+[Developer terms and concepts](core-concepts.md)
 
 [Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
 

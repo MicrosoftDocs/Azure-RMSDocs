@@ -27,7 +27,7 @@ ms.suite: ems
 
 # API reference
 
-The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release_notes.md).
+The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release-notes.md).
 
 [Android API Reference](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement) - API reference for the Android operating system.
 

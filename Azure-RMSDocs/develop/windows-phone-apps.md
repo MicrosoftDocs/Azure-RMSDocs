@@ -47,7 +47,7 @@ You must have the following software on your development system:
 -   The MS RMS SDK 4.2 package for Windows Phone. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) and other authentication libraries can be used.
 
-Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
+Read the [What's new](release-notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
 Review the information in the [Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) guide at the Windows Phone Dev Center.
 
@@ -77,9 +77,9 @@ You are now ready to create your own new Windows Phone apps.
 
 [Get started](get-started.md)
 
-[What's new](release_notes.md)
+[What's new](release-notes.md)
 
-[Core concepts](core_concepts.md)
+[Core concepts](core-concepts.md)
 
 [Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 

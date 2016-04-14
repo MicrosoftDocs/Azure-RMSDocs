@@ -34,7 +34,7 @@ The Rights Management Services SDK 2.1 includes the following files, install
 
 |File|Path|Description|
 |----|----|-----------|
-|ReadMe.htm| \ | Contains link to RMS help and [Release notes](release_notes__rtm_.md).|
+|ReadMe.htm| \ | Contains link to RMS help and [Release notes](release-notes__rtm_.md).|
 |Isvtier5appsigningprivkey.dat|\bin|Contains the private key used to generate a manifest for use during development of an RMS–enabled application.|
 |Isvtier5appsigningpubkey.dat|\bin|Contains the public key used to generate a manifest for use during development of an RMS–enabled application.|
 |Isvtier5appsignsdk_client.xml|\bin|Used to generate a manifest for use during development of an RMS–enabled application.|

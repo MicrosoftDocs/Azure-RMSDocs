@@ -37,7 +37,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 
 ## Prerequisites
 
--   RMS SDK 2.1 must be installed and configured. For more information, see [Getting started with RMS SDK 2.1](getting_started_with_ad_rms_2_0.md).
+-   RMS SDK 2.1 must be installed and configured. For more information, see [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   You must [create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) by using the symmetric key option, or through other means, and record the key information from that process.
 
 ## Connecting to the Azure Rights Management Service
@@ -179,9 +179,9 @@ You have now completed the steps needed to enable your application to use Azure 
 
 ### Related topics
 
-* [Developer concepts](ad_rms_concepts-nav.md)
+* [Developer concepts](ad-rms-concepts-nav.md)
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
-* [Getting started with RMS SDK 2.1](getting_started_with_ad_rms_2_0.md)
+* [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
 * [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty)
 * [**IpcInitialize**](xref:msipc.ipcinitialize)
