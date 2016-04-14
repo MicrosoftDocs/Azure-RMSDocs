@@ -42,7 +42,7 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 
 **italics** 
 
-~~strikethrough~~ (Doesn't work)
+~~strikethrough~~ 
 
 
 # Links
