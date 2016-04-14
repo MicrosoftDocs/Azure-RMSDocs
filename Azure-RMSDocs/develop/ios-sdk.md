@@ -67,11 +67,11 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   To create a new project, on the **File** menu, click **New**, and then click **Project**.
 -   Select **Single View Application**.
 
-    ![](../media/IOS-PROJECT.png)
+    ![](../media/iOS-project.png)
 
 -   Enter a name and identifier for your new project.
 
-    ![](../media/IOS-PROJECT-OPTIONS.png)
+    ![](../media/iOS-project-options.png)
 
 -   Click **Next** and select the location for your project.
 -   To add the **MSRightsManagement** framework for iOS Frameworks, drag the .framework folder from the SDK installation folder into the **Frameworks** section of your **Project Navigator**.
@@ -97,11 +97,11 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 -   Add the **-ObjC** flag to **Other Linker Flags** in your target **Build Settings**.
 
-    ![](../media/IOS-LINKER-FLAGS.png)
+    ![](../media/iOS-linker-flags.png)
 
 -   Now your **Project Navigator** should look something like this tree.
 
-    ![](../media/IOS-VERIFY-SETUP-01A.png)
+    ![](../media/iOS-verify-setup-01a.png)
 
 -   You are now ready to create your own new iOS/OS X apps.
 
