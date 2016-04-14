@@ -2,7 +2,7 @@
 # [Get Started](/rights-management/get-started/requirements-for-azure-rights-management)
 # [Plan & Design](/rights-management/plan-design/azure-rights-management-deployment-roadmap)
 # [Deploy & Use](/rights-management/deploy-use/activating-azure-rights-management)
-# [Develop & Customize Apps](./developers-guide)
+# [Develop & Customize Apps](./developers-guide.md)
 ## [Developer's Guide](./developers-guide.md)
 ## [Microsoft Rights Management SDK 4.2](./active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 ### [Overview](./overview.md)
