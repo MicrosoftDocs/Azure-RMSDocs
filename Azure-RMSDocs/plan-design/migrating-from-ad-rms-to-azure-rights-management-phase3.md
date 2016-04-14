@@ -37,7 +37,7 @@ If you have previously imported your TDP from AD RMS to Exchange Online, you mus
 
 If you chose an Azure RMS tenant key topology of **Microsoft managed**:
 
--   See the [Exchange Online: IRM configuration](../deploy-use/0365-configure-for-clients-online-services.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/0365-configure-for-clients-online-services) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure RMS, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full RMS functionality with Exchange Online.
+-   See the [Exchange Online: IRM configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/o365-configure-for-clients-online-services) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure RMS, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full RMS functionality with Exchange Online.
 
 If you chose an Azure RMS tenant key topology of **customer-managed (BYOK)**:
 
