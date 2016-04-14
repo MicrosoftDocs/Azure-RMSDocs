@@ -47,12 +47,12 @@ You use the certificate and the private key to create and sign a manifest that i
 
 Whether or not you have used a pre-production certificate during application development, when you are ready to release the application, you must generate a new key pair, acquire a production certificate from Microsoft and use the new private key and certificate to create and sign an application manifest.
 
-For more information on working with certificate chains and application signing, see [Switching to the production environment](switching_to_the_production_environment.md).
+For more information on working with certificate chains and application signing, see [Switching to the production environment](switching-to-the-production-environment.md).
 
 ### Related topics
 
 * [Developer concepts](ad-rms-concepts-nav.md)
-* [Switching to the production environment](switching_to_the_production_environment.md)
+* [Switching to the production environment](switching-to-the-production-environment.md)
  
 
  

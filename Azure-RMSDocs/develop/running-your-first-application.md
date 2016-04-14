@@ -44,7 +44,7 @@ We recommend that you use the Pre-production hierarchy when developing an applic
 
 ### Prerequisites
 
--   An RMS SDK 2.1 development environment setup. For more information, see [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md).
+-   An RMS SDK 2.1 development environment setup. For more information, see [Setting up the pre-production development environment](how-to-set-up-the-pre-production-development-environment.md).
 -   For an example application, see [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
 
 Instructions
@@ -65,7 +65,7 @@ This process is also known as signing your application. You can generate the man
 
 For more information about keys and certificate chains, see [Understanding certificate chains](understanding-certificate-chains.md).
 
-For information about how to sign an application with a production certificate chain, see [Switching to the production environment](switching_to_the_production_environment.md).
+For information about how to sign an application with a production certificate chain, see [Switching to the production environment](switching-to-the-production-environment.md).
 
 To generate the application manifest using the pre-production certificate chain, perform these steps on your development computer:
 
@@ -99,23 +99,23 @@ You can run your application from any directory, but the application manifest (M
 
     If you are using the RMS 1-box environment to test your application, copy your application executable and the application manifest to any directory on the 1-box environment and then run your application.
 
-    For information about the RMS 1-box environment, see [Set up the test environment](how_to_set_up_your_test_environment.md).
+    For information about the RMS 1-box environment, see [Set up the test environment](how-to-set-up-your-test-environment.md).
 
 -   **Using a pre-production Server configuration**
 
     If you are testing your application against an RMS server that is configured for pre-production, make sure that you have configured the Active Directory Rights Management Services Client 2.1 on the computer where the application will be running; for example, on your development computer. Then make sure that both the application executable and the application manifest are located in the same directory on that computer and run your application.
 
-    For information about how to configure the client on your computer, see [Configure the client](how_to_configure_the_ad-rms-client_2_0.md). For information about installing an RMS server, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
+    For information about how to configure the client on your computer, see [Configure the client](how-to-configure-the-ad-rms-client-2-0.md). For information about installing an RMS server, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
 
 ### Related topics
 
 * [How-to use](how-to-use-msipc.md)
-* [Configure the client](how_to_configure_the_ad-rms-client_2_0.md)
+* [Configure the client](how-to-configure-the-ad-rms-client-2-0.md)
 * [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
 * [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
-* [Setting up the pre-production development environment](how_to_set_up_the_pre-production_development_environment.md)
-* [Switching to the production environment](switching_to_the_production_environment.md)
-* [Set up the test environment](how_to_set_up_your_test_environment.md)
+* [Setting up the pre-production development environment](how-to-set-up-the-pre-production-development-environment.md)
+* [Switching to the production environment](switching-to-the-production-environment.md)
+* [Set up the test environment](how-to-set-up-your-test-environment.md)
 * [Understanding certificate chains](understanding-certificate-chains.md)
  
 

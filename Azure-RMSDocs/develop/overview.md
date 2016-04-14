@@ -33,7 +33,7 @@ Microsoft Rights Management Services (AD RMS and Azure RMS) is an information pr
 
 Microsoft Rights Management SDK 4.2 is available for several platforms and is a software developer kit (SDK) or framework, which is designed for client computers and devices to help protect access to and usage of information flowing through applications that are “rights-enabled”. The SDKs for these platforms provide a simple API for an application developer to protect or consume digital content, retrieve templates and acquire policies from a server, and other related rights management tasks.
 
-For more information on the currently supported platforms, see our developer documentation portal for [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md).
+For more information on the currently supported platforms, see our developer documentation portal for [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md).
 
 The following are just a few of the scenarios possible:
 
@@ -60,7 +60,7 @@ Use the [Get started](get-started.md) guide to begin your protected information 
 
 ## Related topics
 
-* [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md)
+* [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Get started](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
 * [GitHub account](https://github.com/AzureAD/)

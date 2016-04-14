@@ -34,12 +34,12 @@ This topic orients you to our encryption packages and shows some code snips for 
 No additional code is required to use *AES 256* based encryption as it is the new default, assuming you build against the RMS SDK 2.1 March 2015 update or later. We encourage you to seriously consider updating your applications with this release for the additional security benefits of *AES 256*.
 
 > [!IMPORTANT]
-> Support for consumption of *AES 256* protected files has existed since the [October 2014 release](release-notes__rtm_.md). If you are running applications built with a version of the SDK from before October 2014, this update will break your application. Please make sure that customers of the applications you are building, are either using the updated SDK, or are willing to immediately update to the most recent version of your application.
+> Support for consumption of *AES 256* protected files has existed since the [October 2014 release](release-notes-rtm.md). If you are running applications built with a version of the SDK from before October 2014, this update will break your application. Please make sure that customers of the applications you are building, are either using the updated SDK, or are willing to immediately update to the most recent version of your application.
 
  
 ## API encryption support
 
-Beginning with the [March 2015 update](release-notes__rtm_.md), we have incorporated the following three flags into our API and their associated encryption packages:
+Beginning with the [March 2015 update](release-notes-rtm.md), we have incorporated the following three flags into our API and their associated encryption packages:
 
 -   IPC\_ENCRYPTION\_PACKAGE\_AES256\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K

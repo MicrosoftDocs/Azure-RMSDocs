@@ -31,7 +31,7 @@ ms.suite: ems
 This topic covers the steps to install and configure and RMS Sever for testing your rights-enabled application.
 
 **Important**  If you are testing your application by running it on the 1-box RMS ISV environment, you do not need to install an RMS Server because one is already installed and configured on the 1-box environment.
-For more information about the 1-box AD RMS ISV environment, see [Set up the test environment](how_to_set_up_your_test_environment.md).
+For more information about the 1-box AD RMS ISV environment, see [Set up the test environment](how-to-set-up-your-test-environment.md).
 
  
 
