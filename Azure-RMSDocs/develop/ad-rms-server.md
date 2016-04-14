@@ -29,7 +29,7 @@ ms.suite: ems
 
 This topic describes the purpose and functions of the RMS Server.
 
-The server component of Rights Management Services (RMS) is implemented by a set of web services that run on [Microsoft Internet Information Services](http://www.iis.net/overview) (IIS). You can also use the cloud based implementation via RMS on Azure. For more on using the Azure Rights Management service, see [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md).
+The server component of Rights Management Services (RMS) is implemented by a set of web services that run on [Microsoft Internet Information Services](http://www.iis.net/overview) (IIS). You can also use the cloud based implementation via RMS on Azure. For more on using the Azure Rights Management service, see [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 For on premise servers, beginning with Windows Server 2008, you can install and configure the RMS service by adding it as a role. To install the service on prior operating systems, download it from the Microsoft download center at [Microsoft Windows Rights Management Services with Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
 
@@ -52,9 +52,9 @@ This service runs on the root certification server.
  
 
 ## Related topics ##
-* [Overview](ad_rms_overview.md)
+* [Overview](ad-rms-overview.md)
 * [Microsoft Internet Information Services](http://www.iis.net/overview)
-* [Enable your service application to work with cloud based RMS](how_to_use_file_api_with_aadrm__cloud_.md)
+* [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services with Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909)
 * [Active Directory Rights Management Services Scripting API](https://msdn.microsoft.com/library/Bb968797)
 * [Activating a Computer](https://msdn.microsoft.com/library/Cc530377)

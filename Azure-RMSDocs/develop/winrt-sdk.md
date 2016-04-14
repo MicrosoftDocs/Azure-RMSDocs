@@ -45,7 +45,7 @@ You must have the following software on your development system:
 -   The [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) operating system
 -   The [Windows SDK for Windows 8.1](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) or above, or Visual Studio Express 2012, which is included in the Windows SDK for Windows 8.0/8.1.
--   The MS RMS SDK 4.2 package for Windows Store Applications. For more information see, [Get started](get_started.md).
+-   The MS RMS SDK 4.2 package for Windows Store Applications. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) and other authentication libraries can be used.
 
 Read the [What's new](release_notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
@@ -78,7 +78,7 @@ You are now ready to create your own new Windows Store apps.
 
 ### See Also
 
-[Get started](get_started.md)
+[Get started](get-started.md)
 
 [What's new](release_notes.md)
 

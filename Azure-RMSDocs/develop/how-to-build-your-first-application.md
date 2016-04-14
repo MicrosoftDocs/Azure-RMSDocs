@@ -34,7 +34,7 @@ This simple application, IPCHelloWorld, will help orient you to the basic concep
 
 Download the sample application, [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440), from Microsoft Connect. The remaining downloadable items on the site are integrated here for your convenience.
 
-**Note**  The IPCHelloWorld project is already configured for the Rights Management Services SDK 2.1. For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how_to_configure_a_visual_studio_project_to_use_the_ad_rms_sdk_2_0.md).
+**Note**  The IPCHelloWorld project is already configured for the Rights Management Services SDK 2.1. For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
  
 The following sections cover the key application steps and understandings needed.
@@ -210,8 +210,8 @@ Before you are done, you also need to release all the allocated resources.
 
 ## Related topics
 
-* [Developer notes](developer_notes.md)
-* [Configure Visual Studio](how_to_configure_a_visual_studio_project_to_use_the_ad_rms_sdk_2_0.md)
+* [Developer notes](developer-notes.md)
+* [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 * [**IpcEncrypt**](xref:msipc.ipcencrypt)
 * [**IpcGetErrorMessageText**](xref:msipc.ipcgeterrormessagetext)
 * [**IpcGetKey**](xref:msipc.ipcgetkey)

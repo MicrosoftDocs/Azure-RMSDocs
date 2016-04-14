@@ -47,7 +47,7 @@ For this release of the Microsoft Rights Management SDK 4.2, your quick start a
   - [Android setup](android_sdk.md)
   - [iOS and OS X setup](ios_sdk.md)          
   - [Linux setup](linux_setup.md)              
-  - [Windows Phone](windows_phone_apps.md)     
+  - [Windows Phone](windows-phone-apps.md)     
   - [Windows Store Applications](winrt_sdk.md)
 
 3. Check out the [SDK overview map](api_reference-new.md).

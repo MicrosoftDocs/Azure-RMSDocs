@@ -38,9 +38,9 @@ Read these sections (below):
 
 Try using RMS SDK 2.1 by following the guidance in these topics:
 
--   [Install the SDK](create_your_first_rights_aware_application.md)
--   [Testing your rights-enabled application](running_your_first_application.md)
--   [IPCHelloWorld - an example application](how_to_build_your_first_application.md)
+-   [Install the SDK](create-your-first-rights-aware-application.md)
+-   [Testing your rights-enabled application](running-your-first-application.md)
+-   [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 
 Once you've gotten started, check out some of our other [RMS samples](samples.md). Then, stay current through our [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
 
@@ -66,11 +66,11 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 
 * [AD RMS samples](samples.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
-* [Install the SDK](create_your_first_rights_aware_application.md)
-* [IPCHelloWorld - an example application](how_to_build_your_first_application.md)
-* [Overview](ad_rms_overview.md)
+* [Install the SDK](create-your-first-rights-aware-application.md)
+* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
+* [Overview](ad-rms-overview.md)
 * [Supported platforms](supported_platforms.md)
-* [Testing your rights-enabled application](running_your_first_application.md)
+* [Testing your rights-enabled application](running-your-first-application.md)
  
 
  

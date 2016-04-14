@@ -48,7 +48,7 @@ We recommend the following software on your development system:
 
     Xcode is available through the [Mac App Store](https://developer.apple.com/technologies/mac/).
 
--   The MS RMS SDK 4.2 package for iOS and OS X. For more information see, [Get started](get_started.md).
+-   The MS RMS SDK 4.2 package for iOS and OS X. For more information see, [Get started](get-started.md).
 
     This SDK can be used to develop for iOS 7.0 and OS X 10.8 and later.
 
@@ -107,7 +107,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 ### See Also
 
-* [Get started](get_started.md)
+* [Get started](get-started.md)
 
 * [What's new](release_notes.md)
 

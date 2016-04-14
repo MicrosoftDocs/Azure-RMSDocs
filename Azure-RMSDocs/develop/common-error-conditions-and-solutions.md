@@ -66,7 +66,7 @@ These are the signing keys and their associated values (hierarchy **DWORD**):
 **ACTION** - Make sure you regenerate your application manifest every time you rebuild your application.
 
 ## Related topics ##
-* [Developer notes](developer_notes.md)
+* [Developer notes](developer-notes.md)
 * [IpcGetKey](xref:msipc.ipcgetkey)
 * [IpcGetTemplateList](xref:msipc.ipcgettemplatelist)
 * [IpcGetTemplateIssuerList](xref:msipc.ipcgettemplateissuerlist)

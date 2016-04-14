@@ -39,9 +39,9 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 ## Examples ##
 These topics will introduce you to important code elements for the associated version of the RMS SDK.
-- [Android code examples](android_code.md)
-- [Linux code examples](linux___c___code_examples.md)
-- [iOS/OS X code examples](ios_os_x_code_examples.md)
+- [Android code examples](android-code.md)
+- [Linux code examples](linux-c-code-examples.md)
+- [iOS/OS X code examples](ios-os-x-code-examples.md)
 
 
  

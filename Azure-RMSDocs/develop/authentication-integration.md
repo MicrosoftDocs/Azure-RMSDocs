@@ -80,7 +80,7 @@ These parameters and guidelines are required for RMS work-flows:
 
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.
 
-**Android user authentication** - for more information, see [Android code examples](android_code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
+**Android user authentication** - for more information, see [Android code examples](android-code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
 
 
     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
@@ -155,7 +155,7 @@ These parameters and guidelines are required for RMS work-flows:
                          }
 
 
-**iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios_os_x_code_examples.md),
+**iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios-os-x-code-examples.md),
 
 **Step 2** of the first scenario, "Consuming an RMS protected file".
 
@@ -205,7 +205,7 @@ These parameters and guidelines are required for RMS work-flows:
 
 
 
-**Linux / C++ user authentication** - for more information, see [Linux code examples](linux___c___code_examples.md).
+**Linux / C++ user authentication** - for more information, see [Linux code examples](linux-c-code-examples.md).
 
 
 

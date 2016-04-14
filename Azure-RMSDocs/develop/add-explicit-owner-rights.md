@@ -111,7 +111,7 @@ The following two rights are added to these users:
 
 ## Related topics
 
-* [Developer notes](developer_notes.md)
+* [Developer notes](developer-notes.md)
 * [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)
 * [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty)
  

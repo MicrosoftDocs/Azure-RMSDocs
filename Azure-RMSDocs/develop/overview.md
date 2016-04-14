@@ -43,7 +43,7 @@ The following are just a few of the scenarios possible:
 -   The owners of an online document library want to enable rights to view, print, or edit documents based on the identity of the user, when documents are downloaded to a mobile device.
 -   A corporation wants to publish sensitive employee information to an internal website that restricts viewing and editing privileges to certain users.
 
-MS RMS SDK 4.2 can be downloaded, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access to content that has been rights-protected by use and deployment of AD RMS servers in your environment or Azure RMS services. For more information, see [Get started](get_started.md).
+MS RMS SDK 4.2 can be downloaded, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access to content that has been rights-protected by use and deployment of AD RMS servers in your environment or Azure RMS services. For more information, see [Get started](get-started.md).
 
 ## SDK Highlights
 
@@ -56,12 +56,12 @@ MS RMS SDK 4.2 offers some new cool features that include the following:
 -   **Bring your own user interface** - MS RMS SDK 4.2 now allows you to implement your customize user interface. From protecting content and choosing templates to showing and changing permissions while consuming protected content, MS RMS SDK 4.2 does not enforce any built-in UI on your apps. If you would like, however, you can use Microsoft RMS UI libraries for all platforms via our [GitHub account](https://github.com/AzureAD/).
 -   **Access protected content offline** – MS RMS SDK 4.2 allows your app users to access protected content even when there is no internet connectivity. MS RMS SDK 4.2 securely caches the consumption policies of the protected content so your users can access RMS protected data offline.
 
-Use the [Get started](get_started.md) guide to begin your protected information device app project.
+Use the [Get started](get-started.md) guide to begin your protected information device app project.
 
 ## Related topics
 
 * [Microsoft Rights Management SDK](active_directory_rights_management_services_multi-platform_thin_client_sdk_portal.md)
-* [Get started](get_started.md)
+* [Get started](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
 * [GitHub account](https://github.com/AzureAD/)
  

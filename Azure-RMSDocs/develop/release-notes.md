@@ -48,7 +48,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
     For details and usage guidance on iOS/OS X, see the [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc) class which provides tracking information and the additional document tracking registration method on [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc). There are similar additions for Android to [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) and [**UserPolicy**](xref:msipcthin2.userpolicy_class_java).
 
-    For a detailed description of the document tracking feature, see [**How to: Use document tracking**](how_to__use_document_tracking.md).
+    For a detailed description of the document tracking feature, see [**How to: Use document tracking**](how-to-use-document-tracking.md).
 
 -   A set of synchronous methods that parallel the asynchronous versions for the Android API:
 
@@ -78,7 +78,7 @@ This release adds the following:
 
 -   RMS SDK 4.1 for Linux platforms
 
-    For more information, see [Get started](get_started.md).
+    For more information, see [Get started](get-started.md).
 
 ### May 2015 Update - Adds logging control
 
@@ -92,7 +92,7 @@ This release adds support for the following:
 
     Log level control settings enabled.
 
-    For more information, see [How to: Enable error and performance logging](enabling_logging.md)
+    For more information, see [How to: Enable error and performance logging](enabling-logging.md)
 
     Cache clearing support added.
 
