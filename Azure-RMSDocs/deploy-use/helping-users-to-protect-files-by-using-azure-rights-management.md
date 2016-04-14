@@ -40,7 +40,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
 -   **Administrator information:**
 
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md) and [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md) and [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
 
 -   **Help desk information:**
 

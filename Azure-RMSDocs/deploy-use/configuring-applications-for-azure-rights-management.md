@@ -36,11 +36,11 @@ After you have deployed Azure Rights Management (Azure RMS) for your organizatio
 > [!IMPORTANT]
 > For information about supported versions and other requirements, see [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md).
 
--   [Office 365: Configuration for clients and online services](0365-configure-for-clients-online-services.md)
+-   [Office 365: Configuration for clients and online services](o365-configure-for-clients-online-services.md)
 
-    -   [Exchange Online: IRM Configuration](0365-configure-for-clients-online-services.md#exchange-online-irm-configuration)
+    -   [Exchange Online: IRM Configuration](o365-configure-for-clients-online-services.md#exchange-online-irm-configuration)
 
-    -   [SharePoint Online and OneDrive for Business: IRM Configuration](0365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online and OneDrive for Business: IRM Configuration](o365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
 - [Office applications: Configuration for clients](office-2016-2013-configure-for-clients.md)
 
