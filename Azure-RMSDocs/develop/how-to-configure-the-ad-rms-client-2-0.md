@@ -43,11 +43,11 @@ This topic contains instructions about how to configure the Active Directory R
         For information about how to install the RMS SDK 2.1, see [Install the SDK](create-your-first-rights-aware-application.md).
 
     -   If you will be testing your application on a computer other than your development computer, you can install the AD RMS Client 2.1 on that computer from the [AD RMS Client 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
-        **Note**  If your application uses Server API Mode (**IPC\_API\_MODE\_SERVER**), you are not required to use an application manifest. You can test your application against a production RMS server and you are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application_types.md).
+        **Note**  If your application uses Server API Mode (**IPC\_API\_MODE\_SERVER**), you are not required to use an application manifest. You can test your application against a production RMS server and you are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
 
          
 
--   You must have an RMS server installed and configured for working in the pre-production environment. For more information, see [Install and configure the Server](how_to_install_and_configure_an_rms_server.md).
+-   You must have an RMS server installed and configured for working in the pre-production environment. For more information, see [Install and configure the Server](how-to-install-and-configure-an-rms-server.md).
 
 Instructions
 
@@ -73,7 +73,7 @@ The following steps describe how to install the developer runtime, configure the
                 DWORD
     ```
 
-    **Note**  Not having the **Hierarchy** value present in the registry is functionally the same as having its value set to 0 (zero), meaning that RMS SDK 2.1 will operate in production mode. For more information about keys and certificate chains, see [Understanding certificate chains](understanding_certificate_chains.md).
+    **Note**  Not having the **Hierarchy** value present in the registry is functionally the same as having its value set to 0 (zero), meaning that RMS SDK 2.1 will operate in production mode. For more information about keys and certificate chains, see [Understanding certificate chains](understanding-certificate-chains.md).
 
     **Important**  
     If you are running a 32-bit application on a 64-bit version of Windows you must set the **Hierarchy** value in the following key location:
@@ -123,9 +123,9 @@ The guidance in this topic is not comprehensive. For detailed information about 
 * [How-to use](how-to-use-msipc.md)
 * [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
 * [Install the SDK](create-your-first-rights-aware-application.md)
-* [Install and configure the server](how_to_install_and_configure_an_rms_server.md)
+* [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
 * [Testing your rights-enabled applications](running-your-first-application.md)
-* [Understanding certificate chains](understanding_certificate_chains.md)
+* [Understanding certificate chains](understanding-certificate-chains.md)
  
 
  

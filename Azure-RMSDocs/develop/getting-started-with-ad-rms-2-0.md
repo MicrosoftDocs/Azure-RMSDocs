@@ -54,7 +54,7 @@ For developers who want to add RMS support to their new and existing application
 -   Support enterprise-managed protection policies.
 -   Support new authentication mechanisms and encryption algorithms as they become available.
 
-The RMS SDK 2.1 supports a range of important client and server platforms. For more information see, [Supported platforms](supported_platforms.md).
+The RMS SDK 2.1 supports a range of important client and server platforms. For more information see, [Supported platforms](supported-platforms.md).
 
 ## Core principles
 
@@ -69,7 +69,7 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 * [Install the SDK](create-your-first-rights-aware-application.md)
 * [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Overview](ad-rms-overview.md)
-* [Supported platforms](supported_platforms.md)
+* [Supported platforms](supported-platforms.md)
 * [Testing your rights-enabled application](running-your-first-application.md)
  
 

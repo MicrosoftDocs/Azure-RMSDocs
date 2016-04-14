@@ -51,7 +51,7 @@ For more information on working with certificate chains and application signing,
 
 ### Related topics
 
-* [Developer concepts](ad_rms_concepts-nav.md)
+* [Developer concepts](ad-rms-concepts-nav.md)
 * [Switching to the production environment](switching_to_the_production_environment.md)
  
 
