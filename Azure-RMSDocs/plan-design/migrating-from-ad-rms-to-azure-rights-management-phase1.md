@@ -32,6 +32,8 @@ Use the following information for Phase 1 of migrating from AD RMS to Azure Righ
 ## Step 1: Download the Azure Rights Management Administration Tool
 Go to the Microsoft Download Center and download the [Azure Rights Management Administration Tool](http://go.microsoft.com/fwlink/?LinkId=257721), which contains the Azure RMS administration module for Windows PowerShell.
 
+Install the tool. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/installing-windows-powershell-for-azure-rights-management.md).
+
 ## Step 2. Export configuration data from AD RMS and import it to Azure RMS
 This step is a two-part process:
 
@@ -107,8 +109,13 @@ To complete Step 2, choose and select the instructions for your migration path:
 - [Software key to HSM key](migrating-from-ad-rms-to-azure-rights-management-softwarekey-to-hsmkey.md)
 
 
+<<<<<<< HEAD
+## Step 3. Activate your Azure RMS tenant
+Instructions for this step are fully covered in the [Activating Azure Rights Management](activating-azure-rights-management.md) article.
+=======
 ## Step 3. Activate your RMS tenant
 Instructions for this step are fully covered in the [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) article.
+>>>>>>> 32b7eccb741760c33bf45a2ce253454827c6d6ba
 
 > [!TIP]
 > If you have an Office 365 subscription, you can activate Azure RMS from the Office 365 admin center or the Azure classic portal. We recommend that you use the Azure classic portal because you will use this management portal to complete the next step.
