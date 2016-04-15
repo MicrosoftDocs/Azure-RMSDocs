@@ -42,7 +42,7 @@ This tutorial is aimed at IT administrators and consultants, to help them evalua
 
 To complete this tutorial, you will need the following:
 
--   A subscription that supports Azure Rights Management. This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](rms-requirements-cloud-subscriptions).
+-   A subscription that supports Azure Rights Management. This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](rms-requirements-cloud-subscriptions.md).
 
     Tip: If you need to get a subscription, do this in advance because this process can sometimes take a while to complete.
 

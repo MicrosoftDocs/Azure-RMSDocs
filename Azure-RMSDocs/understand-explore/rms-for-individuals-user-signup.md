@@ -95,7 +95,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
     -   Provide users with the ability to track and revoke their protected documents, if these features are supported by your [Azure RMS subscription](https://technet.microsoft.com/dn858608). For more information, see [Track and revoke your files](../rms-client/track-and-revoke-your-documents-when-you-use-the-rms-sharing-application.md) from the [RMS sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md).
 
-    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a Hardware Security Module (HSM). For more information, see [Planning and implementing your Azure Rights Management tenant key](../deploy-use/planning-and-implementing-your-azure-rights-management-tenant-key.md).
+    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a Hardware Security Module (HSM). For more information, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/planning-and-implementing-your-azure-rights-management-tenant-key.md).
 
 
 ## Next steps
