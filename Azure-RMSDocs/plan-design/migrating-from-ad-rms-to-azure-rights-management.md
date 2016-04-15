@@ -107,9 +107,9 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 [**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrating-from-ad-rms-to-azure-rights-management-phase1.md)
 
-- **Step 1: Download the Azure RMS Management Administration Tools**
+- **Step 1: Download the Azure RMS Management Administration Tool**
 
-    For instructions, see [Step 1: Download the Azure Rights Management Administration Tool](migrating-from-ad-rms-to-azure-rights-management-phase1.md#step-1-download-the-azure-rights-management-administration-tool).
+    The migration process requires you to run one or more of the Windows PowerShell cmdlets from the Azure RMS module that is installed with the Azure RMS Management Administration Tool.
 
 - **Step 2. Export configuration data from AD RMS and import it to Azure RMS**
 
@@ -127,7 +127,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
 
-- **Step 3. Activate your RMS tenant**
+- **Step 3. Activate your Azure RMS tenant**
 
     If possible, do this step after the import process and not before.
 
