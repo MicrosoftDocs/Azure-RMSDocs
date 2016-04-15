@@ -92,7 +92,7 @@ Although not included here, for a production deployment, you probably will also 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating Rights Management and controlling who can protect files and email when the service is activated|[Activating Azure Rights Management](../deploy/use/activating-azure-rights-management.md)|
+|About activating Rights Management and controlling who can protect files and email when the service is activated|[Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md)|
 |About the default templates and how to create new, custom templates|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates-for-azure-rights-management.md)|
 
 

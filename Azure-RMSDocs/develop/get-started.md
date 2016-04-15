@@ -50,7 +50,7 @@ For this release of the Microsoft Rights Management SDK 4.2, your quick start a
   - [Windows Phone](windows-phone-apps.md)     
   - [Windows Store Applications](winrt-sdk.md)
 
-3. Check out the [SDK overview map](api-reference.md).
+3. Check out the [SDK overview map](api-reference-4-2.md).
 4. For important **release notes** and **developer guidance**, see the [What's new](release-notes.md) topic.
 
   |Topic|Description|
