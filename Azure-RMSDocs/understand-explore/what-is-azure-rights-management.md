@@ -53,12 +53,12 @@ To learn more about Azure RMS:
 
 
 
-If you want to dive right in and try Azure RMS for yourself, use the [Quick start tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md).
+If you want to dive right in and try Azure RMS for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial-for-azure-rights-management.md).
 
 However, if you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-and-support-for-azure-rights-management.md).
 
 
 

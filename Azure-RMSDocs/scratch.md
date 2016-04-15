@@ -166,8 +166,8 @@ This is an example of `in-line code`.
 
 ### Selector
 > [!div class="op_single_selector"]
-- [foo](developers-guide.md)
-- [bar](end-user-license-agreement-for-microsoft-rms-sharing-application.md)
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
 
 # Step-By-Step
 

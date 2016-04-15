@@ -375,6 +375,6 @@ You have now completed all the steps required for bring your own key over the In
 
 
 > [!div class="button"]
-[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key#next-steps)
+[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps)
 
 

@@ -38,5 +38,5 @@ As an administrator, how do you know if your users have signed up for RMS for in
 -   Be on the lookout for file name extensions that are created by the Rights Management sharing application. The .pfile and .ppdf file name extensions are the most obvious examples, but there are other files that change their file name extension when they are natively protected by Rights Management. For more information, see the [Supported file types and file name extensions](http://technet.microsoft.com/library/dn339003.aspx) section in the [Rights Management sharing application administrator guide](http://technet.microsoft.com/library/dn339003.aspx).
 
 ## See Also
-[Getting Started with Azure Rights Management](getting-started-with-azure-rights-management.md)
+[Getting Started with Azure Rights Management](../get-started/getting-started-with-azure-rights-management.md)
 

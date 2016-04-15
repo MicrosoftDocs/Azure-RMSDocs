@@ -32,9 +32,9 @@ Use the following set of instructions to  migrate your Active Directory Rights M
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-compare/what-is-azure-rights-management.md)
+-   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rights-management.md)
 
--   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-compare/comparing-azure-rights-management-and-ad-rms.md).
+-   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/comparing-azure-rights-management-and-ad-rms.md).
 
 ## Prerequisites for migrating AD RMS to Azure RMS
 Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
@@ -432,7 +432,7 @@ If you have used the Information Rights Management (IRM) functionality of Exchan
 Finally for this step, if you have imported multiple TPDs into Azure RMS that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all TPDs URLs to the RMS connector.
 
 > [!NOTE]
-> Before you start, check the supported versions of the on-premises servers that the RMS connector supports in “On-premises servers that support Azure RMS” in the [Applications that support Azure RMS](requirements-for-azure-rights-management.md#BKMK_SupportedApplications) section of the [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md) topic.
+> Before you start, check the supported versions of the on-premises servers that the RMS connector supports in [On-premises servers that support Azure RMS](../get-started/rms-requirements-onpremises-servers.md).
 
 ##### Disable IRM on Exchange Servers and remove AD RMS configuration
 
@@ -478,7 +478,7 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
 ##### Install and configure the RMS connector
 
--   Use the instructions in the [Deploying the Azure Rights Management Connector](deploying-the-azure-rights-management-connector.md) topic.
+-   Use the instructions in the [Deploying the Azure Rights Management Connector](../deploy-use/deploying-the-azure-rights-management-connector.md) topic.
 
 ##### For Exchange only and multiple TPDs: Edit the registry
 

@@ -50,7 +50,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for non-administrator installation, so that standard users can install the RMS sharing application.
 
-    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](download-and-install-the-rights-management-sharing-application.md#if-you-are-not-a-local-administrator-and-use-office-2010) section in the [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application) user instructions.
+    There are some restrictions for standard users who run Office 2010. For more information, see the  [If you are not a local administrator and use Office 2010](download-and-install-the-rights-management-sharing-application.md#if-you-are-not-a-local-administrator-and-use-office-2010) section in the [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md) user instructions.
 
 ## Version 1.0.1908.0
 **Released**: 9/16/2015

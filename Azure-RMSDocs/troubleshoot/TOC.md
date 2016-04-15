@@ -1,2 +1,0 @@
-#Sample
-## [Sample](Sample.md)
