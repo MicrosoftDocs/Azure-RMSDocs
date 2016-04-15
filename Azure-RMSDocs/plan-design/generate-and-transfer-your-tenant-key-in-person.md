@@ -147,7 +147,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 You have now completed the instructions required for bring your own key in person and can return to your organization for the next steps in planning and implementing your tenant key.
 
 > [!div class="button"]
-[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key#next-steps)
+[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps)
 
 
 

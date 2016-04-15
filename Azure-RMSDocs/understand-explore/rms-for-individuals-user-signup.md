@@ -77,7 +77,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
 -   **Manage the accounts and sign-up process**: IT administrators can take ownership of the automatically created directory and accounts in Azure. They can then manage the accounts by implementing directory integration solutions such as password synchronization and single sign-on. Or, they can prevent users from creating accounts or signing up for RMS for individuals.
 
-    For more information, see [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-admins-take-control).
+    For more information, see [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-admins-take-control.md).
 
 -   **Manage Rights Management**: IT administrators can convert the RMS for individuals subscription for the organization to a paid subscription that includes Azure Rights Management. When they do this, the existing Azure directory and accounts are preserved for a seamless transition for existing users who were using RMS for individuals. Any files that users protected previously will still be protected with the same policies and the people that they granted permissions to use the files will still be able to use the files in the same way.
 

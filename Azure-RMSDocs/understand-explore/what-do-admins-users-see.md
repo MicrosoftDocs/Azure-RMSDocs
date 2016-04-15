@@ -152,7 +152,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 -   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](rights-management-sharing-application-for-office.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
 
--   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
 
 ## Automatically protecting files with SharePoint Online and protected libraries
 
@@ -234,7 +234,7 @@ If Bob forwards his email with the attachment, or saves it where others can acce
 
 - For step-by-step instructions, see [Protect a file that you share by email](../rms-client/protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md) and [View and use files that have been protected](../rms-client/view-and-use-files-that-have-been-protected-by-rights-management.md) from the [Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md).
 
-- The [Quick start tutorial for Azure Rights Management](quick-start-tutorial-for-azure-rights-management.md) includes step-by-step instructions for this scenario.
+- The [Quick start tutorial for Azure Rights Management](..get-started/quick-start-tutorial-for-azure-rights-management.md) includes step-by-step instructions for this scenario.
 
 ## Next steps
 

@@ -13,7 +13,7 @@
 ### [Refresh templates for users](./configure-custom-templates-for-azure-rights-management-refresh-templates.md)
 ### [PowerShell reference](./configure-custom-templates-for-azure-rights-management-powershell.md)
 ## [Configuring applications](./configuring-applications-for-azure-rights-management.md)
-### [Office 365](./0365-configure-for-clients-online-services.md)
+### [Office 365](./o365-configure-for-clients-online-services.md)
 ### [Office apps](./office-2016-2013-configure-for-clients.md)
 ### [RMS sharing app](./sharing-app-install-configure.md)
 ## [Configuring usage rights](./configuring-usage-rights-for-azure-rights-management.md)

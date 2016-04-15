@@ -63,7 +63,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 - **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
 
-	See [Requirements for Azure Rights Management](../understand-explore/requirements-for-azure-rights-management.md).
+	See [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md).
 
 	Although you must have an Azure RMS tenant before you can migrate from AD RMS, we recommend that you do not activate the Rights Management service before the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure RMS. However, if Azure RMS is already activated, you can still migrate from AD RMS.
 

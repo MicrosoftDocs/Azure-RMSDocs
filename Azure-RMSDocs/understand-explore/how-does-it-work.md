@@ -150,4 +150,4 @@ Review [Terminology for Azure Rights Management](../get-started/terminology-for-
 If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](information-and-support-for-azure-rights-management.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-and-support-for-azure-rights-management.md).
