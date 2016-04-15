@@ -108,7 +108,7 @@ To complete Step 2, choose and select the instructions for your migration path:
 
 
 ## Step 3. Activate your RMS tenant
-Instructions for this step are fully covered in the [Activating Azure Rights Management](activating-azure-rights-management.md) article.
+Instructions for this step are fully covered in the [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) article.
 
 > [!TIP]
 > If you have an Office 365 subscription, you can activate Azure RMS from the Office 365 admin center or the Azure classic portal. We recommend that you use the Azure classic portal because you will use this management portal to complete the next step.

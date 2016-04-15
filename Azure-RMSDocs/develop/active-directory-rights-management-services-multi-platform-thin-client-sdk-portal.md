@@ -53,7 +53,7 @@ This release, MS RMS SDK 4.2, is available for the following operating system
 
 [Developer guidance and terms](core-concepts.md) - The focus of MS RMS SDK 4.2 is to help you build AD RMS-enabled applications that leverage Active Directory Right Management Services (AD RMS), as simply as possible.
 
-[API reference](api-reference.md) - The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.
+[API reference](api-reference-4-2.md) - The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.
 
  
 
