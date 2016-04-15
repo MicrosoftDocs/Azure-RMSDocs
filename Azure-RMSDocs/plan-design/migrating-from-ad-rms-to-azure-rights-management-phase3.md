@@ -216,4 +216,4 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 After you have completed these procedures, you are ready to read the **Next steps** section from the [Deploying the Azure Rights Management connector](../deploy-use/deploying-the-azure-rights-management-connector.md) article.
 
 ## Next steps
-Go continue the migration, go to [phase 4 -post migration tasks](migrating-from-ad-rms-to-azure-rights-management-phase4.md).
+To continue the migration, go to [phase 4 -post migration tasks](migrating-from-ad-rms-to-azure-rights-management-phase4.md).

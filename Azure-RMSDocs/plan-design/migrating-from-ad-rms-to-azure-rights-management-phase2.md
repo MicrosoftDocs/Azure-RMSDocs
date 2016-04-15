@@ -102,4 +102,4 @@ Redirect_OnPrem.cmd:
 
 
 ## Next steps
-Go continue the migration, go to [phase 3 -supporting services configuration](migrating-from-ad-rms-to-azure-rights-management-phase3.md).
+To continue the migration, go to [phase 3 -supporting services configuration](migrating-from-ad-rms-to-azure-rights-management-phase3.md).
