@@ -52,23 +52,23 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 -   A set of synchronous methods that parallel the asynchronous versions for the Android API:
 
-    [**CustomProtectedInputStream.create synchronous method**](xref:msipcthin2.customprotectedinputstream_create_synchronous_method_java)
+    [**CustomProtectedInputStream.create synchronous method**](rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
 
-    [**CustomProtectedOutputStream.create synchronous method**](xref:msipcthin2.customprotectedoutputstream_create_synchronous_method)
+    [**CustomProtectedOutputStream.create synchronous method**](rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**ProtectedFileInputStream.create synchronous method**](xref:msipcthin2.protectedfileinputstream_create_synchronous_method)
+    [**ProtectedFileInputStream.create synchronous method**](rights-management/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
 
-    [**ProtectedFileOutputStream.create synchronous method**](xref:msipcthin2.protectedfileoutputstream_create_synchronous_method_java)
+    [**ProtectedFileOutputStream.create synchronous method**](rights-management/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
 
-    [**TemplateDescriptor.getTemplates synchronous method**](xref:msipcthin2.templatedescriptor_gettemplates_synchronous_method_java)
+    [**TemplateDescriptor.getTemplates synchronous method**](rights-management/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
 
-    [**UserPolicy.acquire synchronous method**](xref:msipcthin2.userpolicy_acquire_synchronous_method_java)
+    [**UserPolicy.acquire synchronous method**](rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
 
-    [**UserPolicy.create (PolicyDescriptor…) synchronous method**](xref:msipcthin2.userpolicy_create_policydescriptor_______synchronous_method_java)
+    [**UserPolicy.create (PolicyDescriptor…) synchronous method**](rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
 
-    [**UserPolicy.create (TempalteDescriptor…) synchronous method**](xref:msipcthin2.userpolicy_create_templatedescriptor_______synchronous_method_java)
+    [**UserPolicy.create (TempalteDescriptor…) synchronous method**](rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
 
--   A new [**ProtectedBuffer**](xref:msipcthin2.protectedbuffer_class) class has been added to the Android API.
+-   A new [**ProtectedBuffer**](rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class) class has been added to the Android API.
 -   Updates to improve error messaging and troubleshooting experience.
 -   Significant performance improvements for cryptographic operations.
 
@@ -88,7 +88,7 @@ This release adds support for the following:
 
     App encrypt and decrypt can operate independently and in parallel.
 
-    For more information, see [**MSProtector**](xref:msipcthin2.msprotector_class_objc).
+    For more information, see [**MSProtector**](rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc).
 
     Log level control settings enabled.
 
@@ -96,7 +96,7 @@ This release adds support for the following:
 
     Cache clearing support added.
 
-    For more information, see [**MSProtection:resetStateWithCompletionBlock**](xref:msipcthin2.msprotection_resetstatewithcompletionblock_method_objc).
+    For more information, see [**MSProtection:resetStateWithCompletionBlock**](rights-management/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc).
 
 ### February 2015 Update - Adds Windows Store application support
 
@@ -112,11 +112,11 @@ The version 4.1 release of the RMS SDK adds the following new features to the Go
 
 -   Android and iOS/OS X SDK API extensions for *user consent* processing, allowing user confirmation of SDK behaviors. Currently, document tracking and accessing unknown AD RMS service URLs are the supported consent types.
 
-    For more information, see as example, the Android API version of [**ConsentCallback interface**](xref:msipcthin2.consentcallback_interface_java).
+    For more information, see as example, the Android API version of [**ConsentCallback interface**](rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java).
 
 -   iOS 8 and OS X 10.10 (Yosemite) are now supported. There have also been a few property name changes required by Xcode 6.
 
-    Example; MSUserPolicy.name changed to [**MSUserPolicy.policyName**](xref:msipcthin2.mspolicydescriptor_name_property_objc).
+    Example; MSUserPolicy.name changed to [**MSUserPolicy.policyName**](rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc).
 
 ## Release notes
 
@@ -173,7 +173,7 @@ This section outlines information about the current and previous releases of the
     The following methods must not be run concurrently. In order to monitor for execution completion; use the completion block approach as noted.
 
     - [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
-    - [**customProtectedDataWithPolicy**](xref:msipcthin2.mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
+    - [**customProtectedDataWithPolicy**](rights-management/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
 
 
 

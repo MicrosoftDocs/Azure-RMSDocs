@@ -48,7 +48,7 @@ This topic outlines the built-in rights that the Microsoft Rights Management SDK
 
 **View** - The right to view protected content. Typically, when this right is granted, the application enables the user to open and view protected content; however, additional rights are required to modify, extract, forward, or save the content.
 
-- Android: [CommonRights.View](xref:msipcthin2.commonrights_class_java.View)
+- Android: [CommonRights.View](rights-management/sdk/4.2/api/android/commonrights#msipcthin2_commonrights_class_java_View)
 - iOS and OS X: [MSCommonRights view](/rights-management/sdk/4.2/api/iOS/mscommonrights#msipcthin2_mscommonrights_interface_objc___NSString__owner_)
 - Windows Store and Windows Phone: [CommonRights.View](/rights-management/sdk/4.2/api/android/commonrights#msipcthin2_commonrights_class_java_View)
 - Linux: [CommonRights::View](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)</li>
