@@ -234,7 +234,7 @@ If Bob forwards his email with the attachment, or saves it where others can acce
 
 - For step-by-step instructions, see [Protect a file that you share by email](../rms-client/protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md) and [View and use files that have been protected](../rms-client/view-and-use-files-that-have-been-protected-by-rights-management.md) from the [Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md).
 
-- The [Quick start tutorial for Azure Rights Management](..get-started/quick-start-tutorial-for-azure-rights-management.md) includes step-by-step instructions for this scenario.
+- The [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial-for-azure-rights-management.md) includes step-by-step instructions for this scenario.
 
 ## Next steps
 

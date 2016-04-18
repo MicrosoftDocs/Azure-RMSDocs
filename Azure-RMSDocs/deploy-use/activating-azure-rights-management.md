@@ -41,7 +41,7 @@ For instructions how to activate Rights Management, select whether you will use 
 
 
 - [Office 365 admin center - preview](activating-azure-rights-management-o365preview.md)
-- [Office 365 admin center - classic](activating-azure-rights-management-0365classic.md)
+- [Office 365 admin center - classic](activating-azure-rights-management-o365classic.md)
 - [Azure classic portal](activating-azure-rights-management-azure.md)
 
 > [!TIP]

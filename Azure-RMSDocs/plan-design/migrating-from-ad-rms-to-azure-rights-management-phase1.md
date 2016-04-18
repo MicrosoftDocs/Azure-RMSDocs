@@ -111,7 +111,7 @@ To complete Step 2, choose and select the instructions for your migration path:
 
 <<<<<<< HEAD
 ## Step 3. Activate your Azure RMS tenant
-Instructions for this step are fully covered in the [Activating Azure Rights Management](activating-azure-rights-management.md) article.
+Instructions for this step are fully covered in the [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management-azure.md) article.
 =======
 ## Step 3. Activate your RMS tenant
 Instructions for this step are fully covered in the [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) article.
