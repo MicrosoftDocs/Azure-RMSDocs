@@ -43,7 +43,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 ## Connecting to the Azure Rights Management Service
 
 -   Call [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize).
--   Set [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty).
+-   Set [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
 
     int mode = IPC_API_MODE_SERVER;
@@ -183,7 +183,7 @@ You have now completed the steps needed to enable your application to use Azure 
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
-* [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty)
+* [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
 * [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_PROMPT\_CTX**](xref:msipc.ipc_prompt_ctx)
 * [**IPC\_CREDENTIAL**](xref:msipc.ipc_credential)

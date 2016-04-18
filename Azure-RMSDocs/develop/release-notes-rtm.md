@@ -133,9 +133,9 @@ The File API components of SDK has been extended and offers the following featur
 
     **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
 
--   **Issue**: If an application calls [**IpcProtectWindow**](xref:msipc.ipcprotectwindow) or [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
+-   **Issue**: If an application calls [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) or [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
 
-    **Solution**: For specific guidance on this, see the Remarks section in [**IpcProtectWindow**](xref:msipc.ipcprotectwindow) and [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow).
+    **Solution**: For specific guidance on this, see the Remarks section in [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) and [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow).
 
 -   **Issue**: When building for multiple architectures, you must use this guidance.
 
@@ -162,7 +162,7 @@ If no name and description can be retrieved, an error is returned. There can be 
 * [**IpcfDecryptFile**](xref:msipc.ipcfdecryptfile)
 * [**IpcfIsFileEncrypted**](xref:msipc.ipcfisfileencrypted)
 * [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcProtectWindow**](xref:msipc.ipcprotectwindow)
+* [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow)
 * [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow)
  
 

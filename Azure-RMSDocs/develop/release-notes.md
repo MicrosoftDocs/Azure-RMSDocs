@@ -46,7 +46,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 -   Document tracking, RMS On-line only, for iOS/OS X and Android operating systems.
 
-    For details and usage guidance on iOS/OS X, see the [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc) class which provides tracking information and the additional document tracking registration method on [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc). There are similar additions for Android to [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) and [**UserPolicy**](xref:msipcthin2.userpolicy_class_java).
+    For details and usage guidance on iOS/OS X, see the [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc) class which provides tracking information and the additional document tracking registration method on [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc). There are similar additions for Android to [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) and [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy).
 
     For a detailed description of the document tracking feature, see [**How to: Use document tracking**](how-to-use-document-tracking.md).
 
@@ -144,9 +144,9 @@ This section outlines information about the current and previous releases of the
 
     **Solution** - Make sure the application does not allow multi-instance calls to the Android API.
 
--   When I use the [**ProtectedFileOutputStream**](xref:msipcthin2.protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
+-   When I use the [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
 
-    **Solution** - This is a known issue. To mitigate it, either always pass a **byte \[\]** array with the same length value as the length parameter, or use the [**ProtectedFileOutputStream**](xref:msipcthin2.protectedfileoutputstream_class_java)**.write(byte\[\] array)** method.
+    **Solution** - This is a known issue. To mitigate it, either always pass a **byte \[\]** array with the same length value as the length parameter, or use the [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)** method.
 
 **iOS and OS X**
 

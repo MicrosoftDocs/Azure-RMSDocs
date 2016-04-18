@@ -152,7 +152,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 [Developer terms and concepts](core-concepts.md)
 
-[Android API Reference](xref:com.microsoft.rightsmanagement)
+[Android API Reference](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
 
  
 

@@ -34,7 +34,7 @@ This section covers specific guidance for several important development scenario
 - [Enabling email notification](how-to-enable-email-notification.md) - Email notification allows for a protected content owner to be notified when his or her content is accessed.
 - [File API configuration](file-api-configuration.md) - The File API's behavior can be configured through settings in the registry.
 - [IPCHelloWorld - an example application](how-to-build-your-first-application.md) - This topic contains instructions to create an example rights-enabled application.
-- [Setting the API security mode](setting-the-api-security-mode-api-mode.md) - You can choose which security mode your File API application runs in by using the [IpcSetGlobalProperty](xref:msipc.ipcsetglobalproperty) function.
+- [Setting the API security mode](setting-the-api-security-mode-api-mode.md) - You can choose which security mode your File API application runs in by using the [IpcSetGlobalProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function.
 - [Supported file formats](supported-file-formats.md) - The File API supports native and Pfile formats.
 - [Tracking content](tracking-content.md) - This topic covers basic guidance for implementing document tracking of content protected with RMS SDK 2.1.
 - [Working with encryption](working-with-encryption.md) - This topic orients you to our encryption packages and shows some code snips for their use.

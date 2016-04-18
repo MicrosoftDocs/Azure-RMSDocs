@@ -35,12 +35,12 @@ Document tracking is a feature of the Rights Management system. By adding specif
 
 Use these APIs to add/update a content license with document tracking metadata.
 
--   [**IpcCreateLicenseMetadataHandle**](xref:msipc.ipccreatelicensemetadatahandle)
--   [**IpcSetLicenseMetadataProperty**](xref:msipc.ipcsetlicensemetadataproperty)
+-   [**IpcCreateLicenseMetadataHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+-   [**IpcSetLicenseMetadataProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
 
     We expect that you will set all of the metadata properties. Here they are, listed by type.
 
-    For more information, see [**License metadata property types**](xref:msipc.license_metadata_property_types).
+    For more information, see [**License metadata property types**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types).
 
     -   **IPC\_MD\_CONTENT\_PATH**
 
@@ -52,11 +52,11 @@ Use these APIs to add/update a content license with document tracking metadata.
 
     -   **IPC\_MD\_NOTIFICATION\_TYPE**
 
-        Use to specify when notification will be sent. For more information, see [**Notification type**](xref:msipc.notification_type).
+        Use to specify when notification will be sent. For more information, see [**Notification type**](/rights-management/sdk/2.1/api/win/notification%20type#msipc_notification_type).
 
     -   **IPC\_MD\_NOTIFICATION\_PREFERENCE**
 
-        Use to specify the type of notification. For more information, see [**Notification preference**](xref:msipc.notification_preference).
+        Use to specify the type of notification. For more information, see [**Notification preference**](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference).
 
     -   **IPC\_MD\_DATE\_MODIFIED**
 
@@ -66,16 +66,16 @@ Use these APIs to add/update a content license with document tracking metadata.
 
         The origination date of the file.
 
--   [**IpcSerializeLicenseWithMetadata**](xref:msipc.ipcserializelicensemetadata)
+-   [**IpcSerializeLicenseWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
 
 Use the appropriate one of these APIs to add the metadata to your file or stream.
 
--   [**IpcfEncryptFileWithMetadata**](xref:msipc.ipcfencryptfilewithmetadata)
--   [**IpcfEncryptFileStreamWithMetadata**](xref:msipc.ipcfencryptfilestreamwithmetadata)
+-   [**IpcfEncryptFileWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+-   [**IpcfEncryptFileStreamWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
 
 Lastly, use this API to register your tracked document with the tracking system.
 
--   [**IpcRegisterLicense**](xref:msipc.ipcregisterlicense)
+-   [**IpcRegisterLicense**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 Here's a code snippet showing an example of setting document tracking metadata and the call to register with the tracking system.
 
@@ -123,15 +123,15 @@ Here's a code snippet showing an example of setting document tracking metadata a
 ### Related topics
 
 
-* [**License metadata property types**](xref:msipc.license_metadata_property_types)
-* [**Notification preference**](xref:msipc.notification_preference)
-* [**Notification type**](xref:msipc.notification_type)
-* [**IpcCreateLicenseMetadataHandle**](xref:msipc.ipccreatelicensemetadatahandle)
-* [**IpcSetLicenseMetadataProperty**](xref:msipc.ipcsetlicensemetadataproperty)
-* [**IpcSerializeLicenseWithMetadata**](xref:msipc.ipcserializelicensemetadata)
-* [**IpcfEncryptFileWithMetadata**](xref:msipc.ipcfencryptfilewithmetadata)
-* [**IpcfEncryptFileStreamWithMetadata**](xref:msipc.ipcfencryptfilestreamwithmetadata)
-* [**IpcRegisterLicense**](xref:msipc.ipcregisterlicense)
+* [**License metadata property types**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)
+* [**Notification preference**](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference)
+* [**Notification type**](/rights-management/sdk/2.1/api/win/notification%20type#msipc_notification_type)
+* [**IpcCreateLicenseMetadataHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+* [**IpcSetLicenseMetadataProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+* [**IpcSerializeLicenseWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+* [**IpcfEncryptFileWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+* [**IpcfEncryptFileStreamWithMetadata**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+* [**IpcRegisterLicense**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
  
 
  
