@@ -55,7 +55,7 @@ For information about the run-time requirements for a particular programming ele
 |[How-to use](how-to-use-msipc.md)|Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.|
 |[Developer notes](developer-notes.md)|This section covers specific guidance for several important development scenarios.|
 |[Developer concepts](ad-rms-concepts-nav.md)|The topics in this section cover key concepts in RMS.|
-|[API reference](xref:msipc.msipc_constants)|This section contains topics covering reference material for all of the API elements.|
+|[API reference](/rights-management/sdk/2.1/api/win/constants)|This section contains topics covering reference material for all of the API elements.|
 
  
 

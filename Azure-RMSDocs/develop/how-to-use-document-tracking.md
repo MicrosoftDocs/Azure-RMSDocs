@@ -40,21 +40,21 @@ The sequence of steps you will use to setup document tracking for a given piece 
 
 -   Create a **license metadata** object.
 
-    See [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) or [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc) for more information.
+    See [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) or [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) for more information.
 
 -   Set the **content name** and **notification type**. These are the only required properties.
 
-    For more information, see the property access methods for the platform appropriate license metadata class, either [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) or [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc).
+    For more information, see the property access methods for the platform appropriate license metadata class, either [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) or [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
 
 -   By policy type; template or ad-hoc:
 
     -   For template based document tracking, create a **user policy** object passing the license metadata as a parameter.
 
-        For more information, see [**UserPolicy.create**](xref:msipcthin2.userpolicy_create_TemplateDescriptor_method_java) and [**MSUserPolicy.userPolicyWithTemplateDescriptor**](xref:msipcthin2.msuserpolicy_protectionpolicywithtemplatedescriptor_userid_authenticationcallback_options_completionblock_method_objc).
+        For more information, see [**UserPolicy.create**](/rights-management/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) and [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
 
     -   For ad-hoc based document tracking, set the **license metadata** property on the **policy descriptor** object.
 
-        For more information, see [**PolicyDescriptor.getLicenseMetadata**](xref:msipcthin2.policydescriptor_getlicensemetadata_java), [**PolicyDescriptor.setLicenseMetadata**](xref:msipcthin2.policydescriptor_setlicensemetadata_java) and [**MSPolicyDescriptor.licenseMetadata**](xref:msipcthin2.mspolicydescriptor_licensemetadata_property_objc).
+        For more information, see [**PolicyDescriptor.getLicenseMetadata**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/rights-management/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) and [**MSPolicyDescriptor.licenseMetadata**](/rights-management/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
 
     **Note**  The license metadata object is only directly accessible during the process of setting up document tracking for the given user policy. Once the user policy object is created, the associated license metadata is not accessible i.e. changing the values of licence metadata has no effect.
 
@@ -62,7 +62,7 @@ The sequence of steps you will use to setup document tracking for a given piece 
 
 -   Call the platform registration method for document tracking.
 
-    See [**MSUserPolicy.registerForDocTracking**](xref:msipcthin2.msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) or [**UserPolicy.registerForDocTracking**](xref:msipcthin2.userpolicy_registerfordoctracking_boolean__sting__authenticationcallback__creationcallback__java).
+    See [**MSUserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) or [**UserPolicy.registerForDocTracking**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
 
  
 

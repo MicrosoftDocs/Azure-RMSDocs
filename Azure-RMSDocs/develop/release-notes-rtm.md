@@ -43,7 +43,7 @@ This topic contains important information about this and previous releases of th
 
 ## May 2015 update
 
--   **Service apps and cloud based RMS** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key) needs three pieces of information; symmetric key, **AppPrincipalId** and **TenantBposId**. The topic for this has been updated to provide guidance on processing this acquiring information. For this update, see the updated version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Service apps and cloud based RMS** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) needs three pieces of information; symmetric key, **AppPrincipalId** and **TenantBposId**. The topic for this has been updated to provide guidance on processing this acquiring information. For this update, see the updated version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## April 2015 update
 
@@ -86,13 +86,13 @@ The File API components of SDK has been extended and offers the following featur
 
      
 
-    -   [**IpcfOpenFileOnHandle**](xref:msipc.ipcfopenfileonhandle)
-    -   [**IpcfOpenFileOnILockBytes**](xref:msipc.ipcfopenfileonilockbytes)
-    -   [**IpcfGetFileProperty**](xref:msipc.ipcfgetfileproperty)
-    -   [**IpcfLogicalFileRangeToRawFileRange**](xref:msipc.ipcflogicalfilerangetorawfilerange)
-    -   [**IpcfReadFile**](xref:msipc.ipcfreadfile)
-    -   [**IpcfSetEndOfFile**](xref:msipc.ipcfsetendoffile)
-    -   [**IpcfWriteFile**](xref:msipc.ipcfwritefile)
+    -   [**IpcfOpenFileOnHandle**]()
+    -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
+    -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
+    -   [**IpcfLogicalFileRangeToRawFileRange**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcflogicalfilerangetorawfilerange)
+    -   [**IpcfReadFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfreadfile)
+    -   [**IpcfSetEndOfFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfsetendoffile)
+    -   [**IpcfWriteFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfwritefile)
 
 ## April 2014 update
 
@@ -133,9 +133,9 @@ The File API components of SDK has been extended and offers the following featur
 
     **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
 
--   **Issue**: If an application calls [**IpcProtectWindow**](xref:msipc.ipcprotectwindow) or [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
+-   **Issue**: If an application calls [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) or [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
 
-    **Solution**: For specific guidance on this, see the Remarks section in [**IpcProtectWindow**](xref:msipc.ipcprotectwindow) and [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow).
+    **Solution**: For specific guidance on this, see the Remarks section in [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) and [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow).
 
 -   **Issue**: When building for multiple architectures, you must use this guidance.
 
@@ -157,13 +157,13 @@ If no name and description can be retrieved, an error is returned. There can be 
 * [Overview](ad-rms-overview.md)
 * [Add explicit owner rights](add-explicit-owner-rights.md)
 * [File API configuration](file-api-configuration.md)
-* [**IpcfGetSerializedLicenseFromFile**](xref:msipc.ipcfgetserializedlicensefromfile)
-* [**IpcfEncryptFile**](xref:msipc.ipcfencryptfile)
-* [**IpcfDecryptFile**](xref:msipc.ipcfdecryptfile)
-* [**IpcfIsFileEncrypted**](xref:msipc.ipcfisfileencrypted)
+* [**IpcfGetSerializedLicenseFromFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile)
+* [**IpcfEncryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
+* [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
+* [**IpcfIsFileEncrypted**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted)
 * [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcProtectWindow**](xref:msipc.ipcprotectwindow)
-* [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow)
+* [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow)
+* [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow)
  
 
  
