@@ -30,7 +30,7 @@ ms.suite: ems
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 
-To setup your email notification for a given license, use [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](xref:msipc.license_property_types) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](xref:msipc.ipc_name_value_list).
+To setup your email notification for a given license, use [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](xref:msipc.ipc_name_value_list).
 
 ## C++
 
@@ -65,8 +65,8 @@ The following table contains the application data fields, property name and valu
 
 ## Related topics
 
-* [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty)
-* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](xref:msipc.license_property_types)
+* [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
+* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
 * [**IPC\_NAME\_VALUE\_LIST**](xref:msipc.ipc_name_value_list)
  
 

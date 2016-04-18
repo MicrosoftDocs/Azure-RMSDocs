@@ -192,7 +192,7 @@ You have now completed the steps needed to enable your application to use Azure 
 * [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist)
 * [**IpcfDecryptFile**](xref:msipc.ipcfdecryptfile)
 * [**IpcfEncrcyptFile**](xref:msipc.ipcfencryptfile)
-* [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)
+* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
 * [**IpcCreateLicenseFromTemplateID**](xref:msipc.ipccreatelicensefromtemplateid)
  
 

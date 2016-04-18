@@ -28,18 +28,18 @@ ms.suite: ems
 ﻿
 # Add explicit owner rights
 
-Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)).
+Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
 
 ## Prerequisites
 
-When your application is creating a license handle using [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch), it must also grant the owner full rights (permissions) explicitly.
+When your application is creating a license handle using [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), it must also grant the owner full rights (permissions) explicitly.
 
-**Note**  Setting a user as "owner" using [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
+**Note**  Setting a user as "owner" using [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
  
 ## Scenario - assigning rights to a license
 
-In this C++ example, needed rights are added to a license created with [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch). The example shows the creation and assignment of the rights to the license through a rights list.
+In this C++ example, needed rights are added to a license created with [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). The example shows the creation and assignment of the rights to the license through a rights list.
 
 The following two rights are added to these users:
 
@@ -112,8 +112,8 @@ The following two rights are added to these users:
 ## Related topics
 
 * [Developer notes](developer-notes.md)
-* [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)
-* [**IpcSetLicenseProperty**](xref:msipc.ipcsetlicenseproperty)
+* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
+* [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
  
 
  

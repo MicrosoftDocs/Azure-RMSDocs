@@ -29,7 +29,7 @@ ms.suite: ems
 
 This section covers specific guidance for several important development scenarios. The scenarios in this section are specific to this release of the Rights Management Services SDK 2.1 and may be altered in subsequent releases.
 
-- [Add explicit owner rights](add-explicit-owner-rights.md) - Your application should explicitly add &quot;Owner&quot; rights when creating a license from scratch ([IpcCreateLicenseFromScratch](xref:msipc.ipccreatelicensefromscratch)).
+- [Add explicit owner rights](add-explicit-owner-rights.md) - Your application should explicitly add &quot;Owner&quot; rights when creating a license from scratch ([IpcCreateLicenseFromScratch](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
 - [Common error conditions and solutions](common-error-conditions-and-solutions.md) - The most common error messages that you might encounter when using the RMS SDK 2.1 developer tools.
 - [Enabling email notification](how-to-enable-email-notification.md) - Email notification allows for a protected content owner to be notified when his or her content is accessed.
 - [File API configuration](file-api-configuration.md) - The File API's behavior can be configured through settings in the registry.
