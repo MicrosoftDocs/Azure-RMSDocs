@@ -77,7 +77,7 @@ Now you’ve sent your protected document, you’re ready to ask your recipients
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |Full instructions and alternative methods for protecting files that you share by email|[Protect a file that you share by email by using the Rights Management sharing application](../rms-client/protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md)|
-|About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/dialog-box-options-for-the-rights-management-sharing-application)|
+|About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/dialog-box-options-for-the-rights-management-sharing-application.md)|
 
 
 >[!div class="step-by-step"]

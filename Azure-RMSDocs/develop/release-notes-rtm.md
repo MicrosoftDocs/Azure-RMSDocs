@@ -97,7 +97,7 @@ The File API components of SDK has been extended and offers the following featur
 ## April 2014 update
 
 -   **File API memory usage**, especially for large PFiles has been improved significantly.
--   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [**License property types**](xref:msipc.license_property_types).
+-   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [**License property types**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application-types.md).
 -   **Documentation updates**
 
@@ -131,7 +131,7 @@ The File API components of SDK has been extended and offers the following featur
 
 -   **Issue**: When creating a license from scratch, ownership rights must be granted explicitly.
 
-    **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
+    **Solution**: Your application must explicitly add **Owner** rights to the license owner when creating a license from scratch using [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). For more information, see [Add explicit owner rights](add-explicit-owner-rights.md).
 
 -   **Issue**: If an application calls [**IpcProtectWindow**](xref:msipc.ipcprotectwindow) or [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow) twice for the same window by using its handle, RMS SDK 2.1 will return a failure in the **HRESULT**.
 
@@ -161,7 +161,7 @@ If no name and description can be retrieved, an error is returned. There can be 
 * [**IpcfEncryptFile**](xref:msipc.ipcfencryptfile)
 * [**IpcfDecryptFile**](xref:msipc.ipcfdecryptfile)
 * [**IpcfIsFileEncrypted**](xref:msipc.ipcfisfileencrypted)
-* [**IpcCreateLicenseFromScratch**](xref:msipc.ipccreatelicensefromscratch)
+* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
 * [**IpcProtectWindow**](xref:msipc.ipcprotectwindow)
 * [**IpcUnprotectWindow**](xref:msipc.ipcunprotectwindow)
  
