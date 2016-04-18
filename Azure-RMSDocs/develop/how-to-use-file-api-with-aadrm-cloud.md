@@ -42,7 +42,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 
 ## Connecting to the Azure Rights Management Service
 
--   Call [**IpcInitialize**](xref:msipc.ipcinitialize).
+-   Call [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize).
 -   Set [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty).
 
 
@@ -57,7 +57,7 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 -   The following steps are the setup for creating an instance of an [**IPC\_PROMPT\_CTX**](xref:msipc.ipc_prompt_ctx) structure with the **pcCredential** ([**IPC\_CREDENTIAL**](xref:msipc.ipc_credential)) member populated with connection information from the Azure Rights Management Service.
 -   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the **wszServicePrincipal**, **wszBposTenantId**, and **cbKey** parameters when you create an instance of an [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key) structure.
 
-**Note**   Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](xref:msipc.ipc_connection_info) parameter of [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](xref:msipc.ipcgettemplateissuerlist).
+**Note**   Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](xref:msipc.ipc_connection_info) parameter of [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
 ## Generate a symmetric key and collect the needed information
 
@@ -140,7 +140,7 @@ For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_c
 ### Identify a template and then encrypt
 
 -   Select a template to use for your encryption.
-    Call [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist) passing in the same instance of [**IPC\_PROMPT\_CTX**](xref:msipc.ipc_prompt_ctx).
+    Call [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) passing in the same instance of [**IPC\_PROMPT\_CTX**](xref:msipc.ipc_prompt_ctx).
 
 
     PCIPC_TIL pTemplates = NULL;
@@ -184,12 +184,12 @@ You have now completed the steps needed to enable your application to use Azure 
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
 * [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty)
-* [**IpcInitialize**](xref:msipc.ipcinitialize)
+* [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_PROMPT\_CTX**](xref:msipc.ipc_prompt_ctx)
 * [**IPC\_CREDENTIAL**](xref:msipc.ipc_credential)
 * [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](xref:msipc.ipc_credential_symmetric_key)
-* [**IpcGetTemplateIssuerList**](xref:msipc.ipcgettemplateissuerlist)
-* [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist)
+* [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
+* [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [**IpcfDecryptFile**](xref:msipc.ipcfdecryptfile)
 * [**IpcfEncrcyptFile**](xref:msipc.ipcfencryptfile)
 * [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
