@@ -46,7 +46,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 -   Document tracking, RMS On-line only, for iOS/OS X and Android operating systems.
 
-    For details and usage guidance on iOS/OS X, see the [**MSLicenseMetadata**](xref:msipcthin2.mslicensemetadata_class_objc) class which provides tracking information and the additional document tracking registration method on [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc). There are similar additions for Android to [**LicenseMetadata**](xref:msipcthin2.licensemetadata_interface_java) and [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy).
+    For details and usage guidance on iOS/OS X, see the [**MSLicenseMetadata**](/rights-management/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc) class which provides tracking information and the additional document tracking registration method on [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc). There are similar additions for Android to [**LicenseMetadata**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) and [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy).
 
     For a detailed description of the document tracking feature, see [**How to: Use document tracking**](how-to-use-document-tracking.md).
 
@@ -172,7 +172,7 @@ This section outlines information about the current and previous releases of the
 
     The following methods must not be run concurrently. In order to monitor for execution completion; use the completion block approach as noted.
 
-    - [**protectedDataWithProtectedFile**](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
+    - [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
     - [**customProtectedDataWithPolicy**](xref:msipcthin2.mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
 
 

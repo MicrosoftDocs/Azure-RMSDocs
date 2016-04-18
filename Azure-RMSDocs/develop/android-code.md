@@ -421,7 +421,7 @@ This scenario begins with getting a list of templates, selecting the first one t
 
 
 
--    **Step 2**: Create a [**CustomProtectedInputStream**](xref:msipcthin2.customprotectedinputstream_class_java) using the [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) from **Step 1**.
+-    **Step 2**: Create a [**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) using the [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) from **Step 1**.
 
     **Source**: *MsipcTaskFragment.java*
 
@@ -493,7 +493,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     }
 
 
--    **Step 3**: Read content from the [**CustomProtectedInputStream**](xref:msipcthin2.customprotectedinputstream_class_java) into *mDecryptedContent* then close.
+-    **Step 3**: Read content from the [**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) into *mDecryptedContent* then close.
 
     **Source**: *MsipcTaskFragment.java*
 

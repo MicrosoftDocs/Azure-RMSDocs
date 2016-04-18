@@ -42,9 +42,9 @@ Following are **Objective C** code examples from a larger sample application rep
 ###Scenario: Consume an RMS protected file
 
 
-- **Step 1**: Create an [**MSProtectedData**](xref:msipcthin2.msprotecteddata_interface_objc) object
+- **Step 1**: Create an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object
 
- **Description**: Instantiate an [**MSProtectedData**](xref:msipcthin2.msprotecteddata_interface_objc) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
+ **Description**: Instantiate an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -101,7 +101,7 @@ Following are **Objective C** code examples from a larger sample application rep
                           }];
        }
 
--   **Step 3**: Check if the Edit right exists for this user with this content via the [**accessCheck**](xref:msipcthin2.msuserpolicy_accesscheck_method_objc) method of a [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc) object.
+-   **Step 3**: Check if the Edit right exists for this user with this content via the [**accessCheck**](/rights-management/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_accesscheck_method_objc) method of a [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) object.
 
         - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
         {
@@ -117,7 +117,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 ### Scenario: Create a new protected file using a template
 
-This scenario begins with getting a list of templates, [**MSTemplateDescriptor**](xref:msipcthin2.mstemplatedescriptor_interface_objc), selecting the first one to create a policy, then creating and writing to the new protected file.
+This scenario begins with getting a list of templates, [**MSTemplateDescriptor**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc), selecting the first one to create a policy, then creating and writing to the new protected file.
 
 -   **Step 1**: Get list of templates
 
@@ -131,7 +131,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
                                    }];
         }
 
--   **Step 2**: Create a [**MSUserPolicy**](xref:msipcthin2.msuserpolicy_interface_objc) using the first template in the list.
+-   **Step 2**: Create a [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) using the first template in the list.
 
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -146,7 +146,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
             }];
         }
 
--   **Step 3**: Create a [**MSMutableProtectedData**](xref:msipcthin2.msmutableprotecteddata_interface_objc) and write content to it.
+-   **Step 3**: Create a [**MSMutableProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msmutableprotecteddata_interface_objc) and write content to it.
 
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
@@ -163,7 +163,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
 ### Scenario: Open a custom protected file
 
 
--   **Step 1**: Create a [**MSUserPolicy**](xref:msipcthin2.mspolicydescriptor_interface_objc)from a *serializedContentPolicy*.
+-   **Step 1**: Create a [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc)from a *serializedContentPolicy*.
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -191,7 +191,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
             }];
          }
 
--   **Step 2**: Create a [**MSCustomProtectedData**](xref:msipcthin2.mscustomprotecteddata_interface_objc) using the [**MSUserPolicy**](xref:msipcthin2.mspolicydescriptor_interface_objc) from **Step 1** and read from it.
+-   **Step 2**: Create a [**MSCustomProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mscustomprotecteddata_interface_objc) using the [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) from **Step 1** and read from it.
 
         + (void)customProtectedDataWith:(NSData *)protectedData
         {
@@ -223,7 +223,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
 
 -   **Step 1**: With an email address provided by the user, create a policy descriptor.
 
-    **Description**: In practice the following objects would be created by using user inputs from the device interface; [**MSUserRights**](xref:msipcthin2.msuserrights_interface_objc) and [**MSPolicyDescriptor**](xref:msipcthin2.mspolicydescriptor_interface_objc).
+    **Description**: In practice the following objects would be created by using user inputs from the device interface; [**MSUserRights**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserrights_interface_objc) and [**MSPolicyDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc).
 
         + (void)policyDescriptor
         {
@@ -234,7 +234,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **Step 2**: Create a custom [**MSUserPolicy**](xref:msipcthin2.mspolicydescriptor_interface_objc) from the policy descriptor, *selectedDescriptor*.
+-   **Step 2**: Create a custom [**MSUserPolicy**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc) from the policy descriptor, *selectedDescriptor*.
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
@@ -248,7 +248,7 @@ This scenario begins with getting a list of templates, [**MSTemplateDescriptor**
             }];
         }
 
--   **Step 3**: Create and write content to the [**MSMutableCustomProtectedData**](xref:msipcthin2.msmutablecustomprotecteddata_interface_objc) and then close.
+-   **Step 3**: Create and write content to the [**MSMutableCustomProtectedData**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msmutablecustomprotecteddata_interface_objc) and then close.
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {
