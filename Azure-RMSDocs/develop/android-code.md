@@ -47,7 +47,7 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
 
     **Source**: *MsipcAuthenticationCallback.java*
 
-    **Description**: Instantiate a [**ProtectedFileInputStream**](xref:msipcthin2.protectedfileinputstream_class_java) object, through its create method which implements service authentication using the [**AuthenticationRequestCallback**](xref:msipcthin2.authenticationrequestcallback_interface_java) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [**ProtectedFileInputStream.create**](xref:msipcthin2.protectedfileinputstream_create_method) near the end of the following example code section.
+    **Description**: Instantiate a [**ProtectedFileInputStream**](xref:msipcthin2.protectedfileinputstream_class_java) object, through its create method which implements service authentication using the [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [**ProtectedFileInputStream.create**](xref:msipcthin2.protectedfileinputstream_create_method) near the end of the following example code section.
 
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
         {
@@ -112,7 +112,7 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
 
     **Source**: *MsipcAuthenticationCallback.java*.
 
-    **Description**: In this step you will see ADAL used to implement an [**AuthenticationRequestCallback**](xref:msipcthin2.authenticationrequestcallback_interface_java) with example authentication parameters. For more information on using ADAL, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx).
+    **Description**: In this step you will see ADAL used to implement an [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) with example authentication parameters. For more information on using ADAL, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx).
 
 
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback

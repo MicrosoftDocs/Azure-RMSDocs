@@ -41,9 +41,9 @@ User authentication is an essential step to establish communication between your
 
 Each of the platform's RMS APIs has a callback that must implement in order to enable the user's authentication.
 
--   The Android API uses [**AuthenticationRequestCallback**](xref:msipcthin2.authenticationrequestcallback_interface_java) and [**AuthenticationCompletionCallback**](xref:msipcthin2.authenticationcompletioncallback_interface_java) interfaces.
--   The iOS/OS X API uses [**MSAuthenticationCallback**](xref:msipcthin2.msauthenticationcallback_protocol_objc) protocol.
--   The WinPhone API uses [**IAuthenticationCallback**](xref:msipcthin2.iauthenticationcallback) interface.
+-   The Android API uses [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
+-   The iOS/OS X API uses [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
+-   The WinPhone API uses [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
 -   The Linux API uses [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ## What library to use for authentication
