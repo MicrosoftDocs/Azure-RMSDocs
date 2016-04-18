@@ -41,7 +41,7 @@ The following sections cover the key application steps and understandings needed
 
 ## Loading MSIPC.dll
 
-Before you can call any RMS SDK 2.1 functions, you need to first call [**IpcInitialize**](xref:msipc.ipcinitialize) function to load the MSIPC.dll.
+Before you can call any RMS SDK 2.1 functions, you need to first call [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) function to load the MSIPC.dll.
 
 
 
@@ -73,7 +73,7 @@ The following code snip enumerates the available RMS templates from the default 
 
 
 
-This call will retrieve RMS templates installed on the default server and load the results in the [**IPC\_TIL**](xref:msipc.ipcinitialize) structure pointed by the *pcTil* variable, then display the templates.
+This call will retrieve RMS templates installed on the default server and load the results in the [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) structure pointed by the *pcTil* variable, then display the templates.
 
 
 
@@ -97,9 +97,9 @@ This call will retrieve RMS templates installed on the default server and load t
 
 ## Serializing a License
 
-Before you can protect any data, you need to serialize a license and get a content key. The content key is used to encrypt the sensitive data. The serialized license is usually attached to the encrypted data and is used by the consumer of the protected data. The consumer will need to call the [**IpcGetKey**](xref:msipc.ipcgetkey) function using the serialized license to get the content key for decrypting the content and for getting the policy associated with the content.
+Before you can protect any data, you need to serialize a license and get a content key. The content key is used to encrypt the sensitive data. The serialized license is usually attached to the encrypted data and is used by the consumer of the protected data. The consumer will need to call the [**IpcGetKey**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey) function using the serialized license to get the content key for decrypting the content and for getting the policy associated with the content.
 
-For the sake of simplicity use the first RMS template returned by [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist) to serialize a license.
+For the sake of simplicity use the first RMS template returned by [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) to serialize a license.
 
 Normally, you would use a user interface dialog to allow the user to select the desired template.
 
@@ -120,7 +120,7 @@ After doing this you have the content key, *hContentKey*, and the serialized lic
 
 ## Protecting Data
 
-Now you are ready to encrypt the sensitive data using the [**IpcEncrypt**](xref:msipc.ipcencrypt) function. First, you need to ask the **IpcEncrypt** function how big the encrypted data is going to be.
+Now you are ready to encrypt the sensitive data using the [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt) function. First, you need to ask the **IpcEncrypt** function how big the encrypted data is going to be.
 
 
 
@@ -135,7 +135,7 @@ Now you are ready to encrypt the sensitive data using the [**IpcEncrypt**](xref:
 
 
 
-Here *wszText* contains the plain text that you are going to protect. The [**IpcEncrypt**](xref:msipc.ipcencrypt) function returns the size of the encrypted data in the *cbEncrypted* parameter.
+Here *wszText* contains the plain text that you are going to protect. The [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt) function returns the size of the encrypted data in the *cbEncrypted* parameter.
 
 Now allocate memory for the encrypted data.
 
@@ -183,7 +183,7 @@ Throughout this example application the **DisplayError** function is being used 
     }   
 
 
-The **DisplayError** function uses the [**IpcGetErrorMessageText**](xref:msipc.ipcgeterrormessagetext) function to get the error message from the corresponding error code and prints it to the standard output.
+The **DisplayError** function uses the [**IpcGetErrorMessageText**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext) function to get the error message from the corresponding error code and prints it to the standard output.
 
 ## Cleaning up
 
@@ -212,12 +212,12 @@ Before you are done, you also need to release all the allocated resources.
 
 * [Developer notes](developer-notes.md)
 * [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
-* [**IpcEncrypt**](xref:msipc.ipcencrypt)
-* [**IpcGetErrorMessageText**](xref:msipc.ipcgeterrormessagetext)
-* [**IpcGetKey**](xref:msipc.ipcgetkey)
-* [**IpcGetTemplateList**](xref:msipc.ipcgettemplatelist)
-* [**IpcInitialize**](xref:msipc.ipcinitialize)
-* [**IPC\_TIL**](xref:msipc.ipcinitialize)
+* [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt)
+* [**IpcGetErrorMessageText**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
+* [**IpcGetKey**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+* [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+* [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
  
 

@@ -35,64 +35,64 @@ This topic outlines the built-in rights that the Microsoft Rights Management SDK
 ## Common Rights ##
 
 **All** - A collection of all common rights.
-- Android: [CommonRights.All](xref:msipcthin2.commonrights_class_java.ALL)
-- iOS and OS X: [MSCommonRights owner](xref:msipcthin2.mscommonrights_interface_objc)
-- Windows Store and Windows Phone: [CommonRights.All</strong>](xref:msipcthin2.commonrights_all)
+- Android: [CommonRights.All](/rights-management/sdk/4.2/api/android/commonrights#msipcthin2_commonrights_class_java_ALL)
+- iOS and OS X: [MSCommonRights owner](/rights-management/sdk/4.2/api/iOS/mscommonrights#msipcthin2_mscommonrights_interface_objc___NSString__owner_)
+- Windows Store and Windows Phone: [CommonRights.All</strong>](/rights-management/sdk/4.2/api/winrt/commonrights#msipcthin2_commonrights)
 - Linux: [CommonRights::All](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)
 
 ** Owner** - The Owner right grants full control over the protected content.
-- Android: [<strong>CommonRights.Owner](xref:msipcthin2.commonrights_class_java.Owner)
-- iOS and OS X: [MSCommonRights owner](xref:msipcthin2.mscommonrights_interface_objc)
-- Windows Store and Windows Phone: [CommonRights.Owner](xref:msipcthin2.commonrights_owner)
+- Android: [<strong>CommonRights.Owner](/rights-management/sdk/4.2/api/android/commonrights#msipcthin2_commonrights_class_java_Owner)
+- iOS and OS X: [MSCommonRights owner](/rights-management/sdk/4.2/api/iOS/mscommonrights#msipcthin2_mscommonrights_interface_objc___NSString__owner_)
+- Windows Store and Windows Phone: [CommonRights.Owner](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/winrt/commonrights#msipcthin2_commonrights_owner)
 - Linux: [CommonRights::Owner](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)
 
 **View** - The right to view protected content. Typically, when this right is granted, the application enables the user to open and view protected content; however, additional rights are required to modify, extract, forward, or save the content.
 
 - Android: [CommonRights.View](xref:msipcthin2.commonrights_class_java.View)
-- iOS and OS X: [MSCommonRights view](xref:msipcthin2.mscommonrights_interface_objc)
-- Windows Store and Windows Phone: [CommonRights.View](xref:msipcthin2.commonrights_view)
+- iOS and OS X: [MSCommonRights view](/rights-management/sdk/4.2/api/iOS/mscommonrights#msipcthin2_mscommonrights_interface_objc___NSString__owner_)
+- Windows Store and Windows Phone: [CommonRights.View](/rights-management/sdk/4.2/api/android/commonrights#msipcthin2_commonrights_class_java_View)
 - Linux: [CommonRights::View](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)</li>
 
  
 
 ## Editable Document Rights ##
 **All** - A collection that contains all of the editable document rights.
-- Android:[EditableDocumentRights.All](xref:msipcthin2.editabledocumentrights_class_java.ALL)
-- iOS and OS X: [MSEditableDocumentRights all](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.All](xref:msipcthin2.editabledocumentrights_all)
+- Android:[EditableDocumentRights.All](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_ALL)
+- iOS and OS X: [MSEditableDocumentRights all](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.All](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights_all)
 - Linux: [EditableDocumentRights::All](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Comment** - The right to make comments on the document.
-- Android: [EditableDocumentRights.Comment](xref:msipcthin2.editabledocumentrights_class_java.Comment)
-- iOS and OS X: [MSEditableDocumentRights comment](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.Comment](xref:msipcthin2.editabledocumentrights__comment)
+- Android: [EditableDocumentRights.Comment](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_Comment)
+- iOS and OS X: [MSEditableDocumentRights comment](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.Comment](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights__comment)
 - Linux: [EditableDocumentRights::Comment](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Edit** - The right to edit protected content and save it in the same protected format. Typically, when this right is granted, the app enables the user to change protected content and then save it to the same file.
-- Android: [EditableDocumentRights.Edit](xref:msipcthin2.editabledocumentrights_class_java.Edit)
-- iOS and OS X: [MSEditableDocumentRights edit](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.Edit](xref:msipcthin2.editabledocumentrights_edit)
+- Android: [EditableDocumentRights.Edit](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_Edit)
+- iOS and OS X: [MSEditableDocumentRights edit](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.Edit](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights_edit)
 - Linux: [EditableDocumentRights::Edit](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Export** - The right to extract content from a protected format and place it in a different AD RMS-protected format. Typically, when this right is granted, the app enables the user to save protected content to other AD RMS-protected formats; for example, if the application implements a *Save As* functionality.
 
-- Android: [EditableDocumentRights.Export](xref:msipcthin2.editabledocumentrights_class_java.Export)
-- iOS and OS X: [MSEditableDocumentRights exportable](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.Export](xref:msipcthin2.editabledocumentrights_export)
+- Android: [EditableDocumentRights.Export](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_Export)
+- iOS and OS X: [MSEditableDocumentRights exportable](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.Export](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights_export)
 - Linux: [EditableDocumentRights::Export](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Extract** - The right to extract content from a protected format and place it in an unprotected format. Typically, when this right is granted, the app enables the user to copy and paste information from protected content. If the app implements a <em>Save As</em> functionality, the application might also enable the user to save protected content to unprotected formats and other protected formats. This right has the same value as the Extract right for email.
 
-- Android: [EditableDocumentRights.Extract](xref:msipcthin2.editabledocumentrights_class_java.Extract)
-- iOS and OS X: [MSEditableDocumentRights extract](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.Extract](xref:msipcthin2.editabledocumentrights_extract)
+- Android: [EditableDocumentRights.Extract](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_Extract)
+- iOS and OS X: [MSEditableDocumentRights extract](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.Extract](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights_extract)
 - Linux: [EditableDocumentRights::Extract](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Print** - The right to print protected content. Typically, when this right is granted, the app enables the user to print protected content. This right has the same value as the Print right for email.
 
-- Android: [EditableDocumentRights.Print](xref:msipcthin2.editabledocumentrights_class_java.Print)
-- iOS and OS X: [MSEditableDocumentRights print](xref:msipcthin2.mseditabledocumentrights_interface_objc)
-- Windows Store and Windows Phone: [EditableDocumentRights.Print](xref:msipcthin2.editabledocumentrights_print)
+- Android: [EditableDocumentRights.Print](/rights-management/sdk/4.2/api/android/editabledocumentrights#msipcthin2_editabledocumentrights_class_java_Print)
+- iOS and OS X: [MSEditableDocumentRights print](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/mseditabledocumentrights#msipcthin2_mseditabledocumentrights_interface_objc)
+- Windows Store and Windows Phone: [EditableDocumentRights.Print](/rights-management/sdk/4.2/api/winrt/editabledocumentrights#msipcthin2_editabledocumentrights_print)
 - Linux: [EditableDocumentRights::Print](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
  
@@ -100,43 +100,43 @@ This topic outlines the built-in rights that the Microsoft Rights Management SDK
 ## Email Rights ##
 
 **All** - A collection that contains all of the email rights.
-- Android: [EmailRights.All](xref:msipcthin2.emailrights_class_java.ALL)
-- iOS and OS X: [MSEmailRights all](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.All](xref:msipcthin2.emailrights_all)
+- Android: [EmailRights.All](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_ALL)
+- iOS and OS X: [MSEmailRights all](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.All](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_all)
 - Linux: [EmailRights::All](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 **Extract** - The right to extract content from a protected format and place it in an unprotected format. Typically, when this right is granted, the app enables an email recipient to copy and paste information from a protected message. If the app implements a <em>Save As</em> functionality, the application might also enable the recipient to save protected content to unprotected formats and other protected formats. This right has the same value as the Extract right for editable documents.
 
-- Android: [EmailRights.Extract](xref:msipcthin2.emailrights_class_java.Extract)
-- iOS and OS X: [MSEmailRights extract](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.Extract</strong>](xref:msipcthin2.emailrights_extract)
+- Android: [EmailRights.Extract](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_Extract)
+- iOS and OS X: [MSEmailRights extract](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.Extract</strong>](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_extract)
 - Linux: [EmailRights::Extract](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 **Forward** - The right to forward a protected message. Typically, when this right is granted, the app enables an email recipient to forward a protected message.
-- Android: [<strong>EmailRights.Forward</strong>](xref:msipcthin2.emailrights_class_java.Forward)
-- iOS and OS X: [MSEmailRights forward](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.Forward](xref:msipcthin2.emailrights_forward)
+- Android: [<strong>EmailRights.Forward</strong>](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_Forward)
+- iOS and OS X: [MSEmailRights forward](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.Forward](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_forward)
 - Linux: [EmailRights::Forward](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 **Print** - The right to print protected content. Typically, when this right is granted, the app enables an email recipient to print a protected message. This right has the same value as the Print right for editable documents.
 
-- Android: [EmailRights.Print](xref:msipcthin2.emailrights_class_java.Print)
-- iOS and OS X: [MSEmailRights print](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.Print](xref:msipcthin2.emailrights_print)
+- Android: [EmailRights.Print](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_Print)
+- iOS and OS X: [MSEmailRights print](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.Print](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_print)
 - Linux: [EmailRights::Print](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 **Reply** - Typically, when this right is granted, the app enables an email recipient to reply to a protected message and include a copy of the original message.
 
-- Android: [EmailRights.Reply](xref:msipcthin2.emailrights_class_java.Reply)
-- iOS and OS X: [MSEmailRights reply](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.Reply](xref:msipcthin2.emailrights_reply)
+- Android: [EmailRights.Reply](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_Reply)
+- iOS and OS X: [MSEmailRights reply](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.Reply](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_reply)
 - Linux: [EmailRights::Reply](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 **ReplyAll** - Typically, when this right is granted, the app enables an email recipient to reply to all recipients of a protected message and include a copy of the original message.
 
-- Android: [EmailRights.ReplyAll</strong>](xref:msipcthin2.emailrights_class_java.ReplyAll)
-- iOS and OS X: [MSEmailRights replyAll](xref:msipcthin2.msemailrights_interface_objc)
-- Windows Store and Windows Phone: [EmailRights.ReplyAll](xref:msipcthin2.emailrights_replyall)
+- Android: [EmailRights.ReplyAll</strong>](/rights-management/sdk/4.2/api/android/emailrights#msipcthin2_emailrights_class_java_ReplyAll)
+- iOS and OS X: [MSEmailRights replyAll](/rights-management/sdk/4.2/api/iOS/msemailrights#msipcthin2_msemailrights_interface_objc)
+- Windows Store and Windows Phone: [EmailRights.ReplyAll](/rights-management/sdk/4.2/api/winrt/emailrights#msipcthin2_emailrights_replyall)
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
  

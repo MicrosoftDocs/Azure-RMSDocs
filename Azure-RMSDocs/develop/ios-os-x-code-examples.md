@@ -44,7 +44,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 - **Step 1**: Create an [**MSProtectedData**](xref:msipcthin2.msprotecteddata_interface_objc) object
 
- **Description**: Instantiate an [**MSProtectedData**](xref:msipcthin2.msprotecteddata_interface_objc) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](xref:msipcthin2.msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
+ **Description**: Instantiate an [**MSProtectedData**](xref:msipcthin2.msprotecteddata_interface_objc) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](xref:msipcthin2.msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -62,7 +62,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 - **Step 2**: Setup authentication using the Active Directory Authentication Library (ADAL).
 
-  **Description**: In this step you will see ADAL used to implement an [**MSAuthenticationCallback**](xref:msipcthin2.msauthenticationcallback_protocol_objc) with example authentication parameters. For more information on using ADAL, see the Azure AD Authentication Library (ADAL).
+  **Description**: In this step you will see ADAL used to implement an [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) with example authentication parameters. For more information on using ADAL, see the Azure AD Authentication Library (ADAL).
 
       // AuthenticationCallback holds the necessary information to retrieve an access token.
       @interface MsipcAuthenticationCallback : NSObject<MSAuthenticationCallback>

@@ -87,7 +87,7 @@ Setting any other value or setting no value results in default behavior.
 -   **txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif files** Native encryption is enabled (xxx becomes pxxx)
 -   **All other files** Encryption is protected file (pfile) enabled (xxx become xxx.pfile)
 
-If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](xref:msipc.error_codes) error occurs.
+If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) error occurs.
 
 ### File API - File Support Details
 
@@ -154,7 +154,7 @@ HKEY_LOCAL_MACHINE
 ### Related topics
 
 * [Developer notes](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](xref:msipc.error_codes)
+* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
  
 
  

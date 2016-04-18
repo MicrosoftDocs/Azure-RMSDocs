@@ -67,7 +67,7 @@
 #### [Understanding certificate chains](./understanding-certificate-chains.md)
 #### [Understanding usage restrictions](./understanding-usage-restrictions.md)
 #### [Enable your service application to work with cloud based RMS](./how-to-use-file-api-with-aadrm-cloud.md)
-### [API reference](https://stage.docs.microsoft.com/rights-management/sdk/2.1/api/Win/Constants)
+### [API reference](./api-reference-2-1.md)
 ### [Supported platforms](./supported-platforms.md)
 ### [Usage restriction reference](./usage-restriction-reference.md)
 ### [Development environment files](./sdk-elements.md)

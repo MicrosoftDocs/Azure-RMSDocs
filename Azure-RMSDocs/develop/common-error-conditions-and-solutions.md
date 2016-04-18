@@ -29,7 +29,7 @@ ms.suite: ems
 # Common error conditions and solutions
 This topic includes the most common error messages that you might encounter when using the Rights Management Services SDK 2.1 developer tools. It also provides a recommended action to fix the error, where applicable.
 
-**Important** - For error condition processing, always use a call to [IpcGetErrorMessageText](xref:msipc.ipcgeterrormessagetext) right after an SDK API call fails, so you get complete information about the nature of the error.
+**Important** - For error condition processing, always use a call to [IpcGetErrorMessageText](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext) right after an SDK API call fails, so you get complete information about the nature of the error.
 
  
 
@@ -42,9 +42,9 @@ The list below contains a list of error constants, thier associated description 
 If you must debug the production version of RMS SDK 2.1, use the following guidance.
 
 Some RMS SDK 2.1 functions are designed to fail under a debugger:
-- [IpcGetKey</strong>](xref:msipc.ipcgetkey)
-- [IpcGetTemplateList](xref:msipc.ipcgettemplatelist)
-- [IpcGetTemplateIssuerList](xref:msipc.ipcgettemplateissuerlist)
+- [IpcGetKey</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+- [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+- [IpcGetTemplateIssuerList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 
 To debug code following these function calls, you must break into the process and attach a debugger after the function calls have completed. One way to do this is to use an assert statement to break into the debugger. The ASSERTE macro is included in the *Crtdbg.h* header.
 For more information about \_ASSERTE, see [\_ASSERT, \_ASSERTE Macros](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx)
@@ -67,9 +67,9 @@ These are the signing keys and their associated values (hierarchy **DWORD**):
 
 ## Related topics ##
 * [Developer notes](developer-notes.md)
-* [IpcGetKey](xref:msipc.ipcgetkey)
-* [IpcGetTemplateList](xref:msipc.ipcgettemplatelist)
-* [IpcGetTemplateIssuerList](xref:msipc.ipcgettemplateissuerlist)
+* [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+* [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+* [IpcGetTemplateIssuerList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 * [\_ASSERT, \_ASSERTE Macros](https://msdn.microsoft.com/en-us/library/ezb1wyez.aspx)
  
 

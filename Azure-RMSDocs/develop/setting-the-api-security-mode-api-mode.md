@@ -30,7 +30,7 @@ ms.suite: ems
 
 You can choose which security mode your File API application runs in by using the [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty) function.
 
-To initialize your application to run in *server mode*, call the [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty) function and set the security mode to [**IPC\_API\_MODE\_SERVER**](xref:msipc.api_mode_values). By default, your application will run in *client mode*, **IPC\_API\_MODE\_CLIENT**.
+To initialize your application to run in *server mode*, call the [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty) function and set the security mode to [**IPC\_API\_MODE\_SERVER**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER). By default, your application will run in *client mode*, **IPC\_API\_MODE\_CLIENT**.
 
 For more information on *server mode*, see [Application types](application-types.md).
 
@@ -42,7 +42,7 @@ For more information on *server mode*, see [Application types](application-types
 
 * [Application types](application-types.md)
 * [Developer concepts](ad-rms-concepts-nav.md)
-* [**API mode values**](xref:msipc.api_mode_values)
+* [**API mode values**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
 * [**IpcSetGlobalProperty**](xref:msipc.ipcsetglobalproperty)
  
 
