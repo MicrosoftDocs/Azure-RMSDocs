@@ -28,7 +28,8 @@ ms.suite: ems
 # Track and revoke your documents when you use the RMS sharing application
 After you have protected your documents by using the RMS sharing application, if your organization is using Azure Rights Management rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/llexl09mGOg" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" width="100%" height="540" allowFullScreen frameBorder="0"></iframe>
+
 
 
 When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://technet.microsoft.com/dn858608.aspx) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
@@ -78,13 +79,13 @@ In addition to tracking your documents on Windows computers by using Office appl
 
     -   Google Chrome: At least version 18
 
-##### Using File Explorer to access the doc tracking site
+#### Using File Explorer to access the doc tracking site
 
 -   Right-click the file, select **Protect with RMS**, and then select **Track Usage**:
 
     ![](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
-##### Using an Outlook email message to access the doc tracking site
+#### Using an Outlook email message to access the doc tracking site
 
 -   In an email message, in the **Message** tab, in the  **RMS** group, click **Share Protected**, and then click **Track Usage**:
 
