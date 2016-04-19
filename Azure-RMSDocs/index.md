@@ -14,7 +14,7 @@ layout: HubPage
     <aside class="alert section-border">
       <p>Ready to get hands-on?</p>
       <ol class="action-list">
-        <li><a href="" class="button-bordered button-translucent">Try Now</a></li>
+        <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>
       </ol>
     </aside>
 
@@ -298,24 +298,11 @@ layout: HubPage
       </section>
     </div>
 
-    <div class="section-border">
-      <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> Developer Reference</h2>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="">Privileged Access Management REST API Reference</a></li>
-          </ul>
-          <ul class="column-half">
-            <li><a href="">Certificate Management REST API Reference</a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
     <aside class="alert alert-social">
-      <p>Keep up with MIM support news</p>
+      <p>Keep up-to-date on Azure RMS. 
       <ol class="action-list">
-        <li><a href="" class="button-bordered button-translucent">Blog</a></li>
+        <li><a href="http://blogs.technet.com/b/rms/" class="button-bordered button-translucent">Official RMS Team Blog</a></li>
+        <li><a href="https://twitter.com/TheRMSGuy" class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
       </ol>
     </aside>
 </article>
