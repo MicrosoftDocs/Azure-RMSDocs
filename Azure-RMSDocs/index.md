@@ -24,13 +24,13 @@ layout: HubPage
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/rights-management/understand-explore/what-is-azure-rights-management">What is Azure Rights Management?</a></li>
-          <li><a href="/rights-management/get-started/quick-start-tutorial-for-azure-rights-management">Quickstart guide for Azure RMS</a></li>
-          <li><a href="/rights-management/plan-design/azure-rights-management-deployment-roadmap">Rights Management deployment roadmap</a></li>
+          <li><a href="./understand-explore/what-is-azure-rights-management">What is Azure Rights Management?</a></li>
+          <li><a href="./get-started/quick-start-tutorial-for-azure-rights-management">Quickstart guide for Azure RMS</a></li>
+          <li><a href="./plan-design/azure-rights-management-deployment-roadmap">Rights Management deployment roadmap</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/rights-management/develop/developers-guide">Integrate applications with Azure RMS</a></li>
-          <li><a href="/rights-management//rms-client/rights-management-rms-client">Use the Azure RMS Client</a></li>
+          <li><a href="./develop/developers-guide">Integrate applications with Azure RMS</a></li>
+          <li><a href="./rms-client/rights-management-rms-client">Use the Azure RMS Client</a></li>
         </ul>
       </div>
     </section>
@@ -43,39 +43,36 @@ layout: HubPage
           <li class="journey-step">
 
             <header class="journey-step-header expander row">
-              <a href="">
+              <a href="./understand-explore/azure-rights-management">
                 <div class="title column-third">
                   <span class="step-number">1</span>
                   <p>Understand &amp; Explore</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Microsoft Identity Manager.
+                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Azure RMS.
                 </p>
               </a>
             </header>
 
             <section class="journey-step-elements content">
               <ul class="row">
-                <li class="column-third">
-                  <a href="">
-                    <h3>What is MIM 2016?</h3>
-                    <p>Learn how MIM 2016 provides on-premises &amp; hybrid identity and access management capabilities.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="">
-                    <h3>Hybrid Reporting in Azure</h3>
-                    <p>Create a single report of events that occur on-premises and in the cloud.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="">
-                    <h3>Supported Platforms</h3>
-                    <p>The list of platforms, servers, and applications supported by MIM.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
+            <li class="column-third">
+              <a href="./understand-explore/azure-rights-management">
+                <h4>Overview of Azure Rights Management</h4>
+                <p>Learn about Azure RMS, which protects your organization's sensitive information from unauthorized access and controls how this information is used.</p>
+              </a>
+            </li>
+            <li class="column-third">
+              <a href="./understand-explore/rms-for-individuals-and-azure-rights-management">
+                <h4>RMS for individuals and Azure Rights Management</h4>
+                <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
+              </a>
+            </li>
+            <li class="column-third">
+              <a href="./understand-explore/how-applications-support-azure-rights-management">
+                <h4>How applications support Azure Rights Management</h4>
+                <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data </p>
+              </a>
+            </li>
               </ul>
             </section>
 
