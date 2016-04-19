@@ -7,16 +7,14 @@ layout: HubPage
     <section id="hero-content">
       <h1>Azure Rights Management</h1>
       <h2>Azure Rights Management is a cloud service that helps you protect your organization's sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is integrated into other Microsoft cloud services and applications such as Office 365 and Azure Active Directory, but can also be used with your on-premises applications and services.</h2>
-      <ol id="actions" class="action-list">
-        <li><a href="" class="button button-bordered">Learn More</a></li>
-      </ol>
+
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
 
     <aside class="alert section-border">
       <p>Ready to get hands-on?</p>
       <ol class="action-list">
-        <li><a href="" class="button-bordered button-translucent">Try Now</a></li>
+        <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>
       </ol>
     </aside>
 
@@ -42,7 +40,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./understand-explore/azure-rights-management">
                 <div class="title column-third">
                   <span class="step-number">1</span>
@@ -65,12 +63,15 @@ layout: HubPage
               <a href="./understand-explore/rms-for-individuals-and-azure-rights-management">
                 <h4>RMS for individuals and Azure Rights Management</h4>
                 <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
-              </a>
+                    <h4>Learn More</h4>
+
+	     </a>
             </li>
             <li class="column-third">
               <a href="./understand-explore/how-applications-support-azure-rights-management">
                 <h4>How applications support Azure Rights Management</h4>
                 <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data </p>
+                <h4>Learn More</h4>
               </a>
             </li>
               </ul>
@@ -81,7 +82,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./get-started/requirements-for-azure-rights-management">
                 <div class="title column-third">
                   <span class="step-number">2</span>
@@ -123,7 +124,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./plan-design/azure-rights-management-deployment-roadmap">
                 <div class="title column-third">
                   <span class="step-number"> 3</span>
@@ -165,7 +166,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./deploy-use/activating-azure-rights-management">
                 <div class="title column-third">
                   <span class="step-number"> 5</span>
@@ -208,7 +209,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./develop/developers-guide">
                 <div class="title column-third">
                   <span class="step-number"> 5</span>
@@ -251,7 +252,7 @@ layout: HubPage
 
           <li class="journey-step">
 
-            <header class="journey-step-header expander row">
+            <header class="journey-step-header expander row expanded">
               <a href="./rms-client/rights-management-rms-client">
                 <div class="title column-third">
                   <span class="step-number"> 6</span>
@@ -297,24 +298,11 @@ layout: HubPage
       </section>
     </div>
 
-    <div class="section-border">
-      <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> Developer Reference</h2>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="">Privileged Access Management REST API Reference</a></li>
-          </ul>
-          <ul class="column-half">
-            <li><a href="">Certificate Management REST API Reference</a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
     <aside class="alert alert-social">
-      <p>Keep up with MIM support news</p>
+      <p>Keep up-to-date on Azure RMS. 
       <ol class="action-list">
-        <li><a href="" class="button-bordered button-translucent">Blog</a></li>
+        <li><a href="http://blogs.technet.com/b/rms/" class="button-bordered button-translucent">Official RMS Team Blog</a></li>
+        <li><a href="https://twitter.com/TheRMSGuy" class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
       </ol>
     </aside>
 </article>
