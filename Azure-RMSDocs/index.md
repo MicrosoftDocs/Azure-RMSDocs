@@ -1,8 +1,8 @@
 ---
-asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
+asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
 ---
-# Microsoft Identity Management
+# Azure Rights Management Documentation
 <article id="main">
     <section id="hero-content">
       <h1>Azure Rights Management</h1>
@@ -87,8 +87,7 @@ layout: HubPage
                   <span class="step-number">2</span>
                   <p>Get Started</p>
                 </div>
-                <p class="description column-two-thirds">Start using Azure RMS within minutes.
-                </p>
+                <p class="description column-two-thirds">Start using Azure RMS within minutes.</p>
               </a>
             </header>
 
@@ -97,7 +96,7 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./get-started/requirements-for-azure-rights-management">
                     <h4>Requirements for Azure Rights Management</h4>
-                    <p>Discover the prerequisites for deploying  Azure Azure RMS.</p>
+                    <p>Discover the prerequisites for deploying Azure Azure RMS.</p>
                     <h4>Learn More</h4>
                   </a>
                 </li>
@@ -130,8 +129,7 @@ layout: HubPage
                   <span class="step-number"> 3</span>
                   <p>Plan & Design</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design Azure RMS
-                </p>
+                <p class="description column-two-thirds">Plan and design Azure RMS</p>
               </a>
             </header>
 
@@ -259,7 +257,7 @@ layout: HubPage
                   <span class="step-number"> 6</span>
                   <p>Use the RMS Client</p>
                 </div>
-                <p class="description column-two-thirds">XXX
+                <p class="description column-two-thirds">Learn to use the Azure RMS client
                 </p>
               </a>
             </header>
