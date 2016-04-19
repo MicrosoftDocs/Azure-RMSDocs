@@ -299,7 +299,7 @@ layout: HubPage
     </div>
 
     <aside class="alert alert-social">
-      <p>Keep up-to-date on Azure RMS. 
+      <p>Keep up-to-date on Azure RMS
       <ol class="action-list">
         <li><a href="http://blogs.technet.com/b/rms/" class="button-bordered button-translucent">Official RMS Team Blog</a></li>
         <li><a href="https://twitter.com/TheRMSGuy" class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
