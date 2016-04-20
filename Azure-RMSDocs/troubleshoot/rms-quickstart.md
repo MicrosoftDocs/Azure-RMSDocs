@@ -39,12 +39,12 @@ Jump to:
 
 [!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-intro-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step1-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step1-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step2-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step2-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step3-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step3-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step4-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step4-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step5-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step5-include.md)] 

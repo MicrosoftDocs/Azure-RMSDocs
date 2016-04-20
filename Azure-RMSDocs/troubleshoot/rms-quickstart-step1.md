@@ -38,7 +38,7 @@ Jump to:
 - [Step 5](tutorial-step5.md)
 - [Full article](rms-quickstart.md)
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step1-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step1-include.md)] 
 
 >[!div class="step-by-step"]
 [« Intro](rms-quickstart-intro.md)
