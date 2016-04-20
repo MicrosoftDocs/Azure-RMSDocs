@@ -5,8 +5,8 @@ layout: HubPage
 # Azure Rights Management Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management</h1>
-      <h2>Azure Rights Management is a cloud service that helps you protect your organization's sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is integrated into other Microsoft cloud services and applications such as Office 365 and Azure Active Directory, but can also be used with your on-premises applications and services.</h2>
+      <h1>Azure Rights Management Documentation</h1>
+      <h2>Everything you need to know to deploy and manage Azure Rights Management (Azure RMS) can be found here. We'll help you quickly get started using Azure RMS to apply information protection to email, documents, and other sensitive data.</h2>
 
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
