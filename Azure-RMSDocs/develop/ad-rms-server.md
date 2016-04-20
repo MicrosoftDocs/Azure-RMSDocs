@@ -41,11 +41,11 @@ Of the many web services installed, the following are important for application 
 
 This service runs on the root certification server.
 
-**Licensing** - Issues an [end-user license](rm.e_gly#_rm_end_user_license_gly). The service runs on root certification servers and on licensing servers.
+**Licensing** - Issues an end-user license that enables end users to consume protected content. The service runs on root certification servers and on licensing servers.
 
 **Publishing** - Creates an [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355). The service runs on root certification servers and on licensing servers.
 
-**Pre-certification** - Enables a server to request a [rights account certificate](rm.r_gly#_rm_rights_account_certificate_gly) on behalf of a user. The service runs on root certification servers and on licensing servers.
+**Pre-certification** - Enables a server to request a Rights Account Certificate (RAC) on behalf of a user. A RAC uses the machine certificate from RMS activation to bind user accounts to specific computers or groups of computers and is used to enable consumers to use protected content. The service runs on root certification servers and on licensing servers.
 
 **Service Locator**  - Provides the URL of the account certification, licensing, and publishing services to Active Directory so that they can be discovered by RMS clients. The service runs on root certification servers and on licensing servers.
 
@@ -59,10 +59,8 @@ This service runs on the root certification server.
 * [Active Directory Rights Management Services Scripting API](https://msdn.microsoft.com/library/Bb968797)
 * [Activating a Computer](https://msdn.microsoft.com/library/Cc530377)
 * [Activating a User](https://msdn.microsoft.com/library/Cc530378)
-* [*end-user license*](rm.e_gly#_rm_end_user_license_gly)
 * [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355)
-* [*issuance license*](rm.i_gly#_rm_issuance_license_gly)
-* [*rights account certificate*](rm.r_gly#_rm_rights_account_certificate_gly)
+
  
 
  
