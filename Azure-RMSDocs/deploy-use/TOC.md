@@ -28,7 +28,7 @@
 ## [Operations for your tenant key](./operations-tenant-key.md)
 ### [Microsoft-managed](./operations-microsoft-managed-tenant-key.md)
 ### [Customer-managed](./operations-customer-managed-tenant-key.md)
-## [Decommissioning and deactivating](./decommissioning-and-deactivate-service.md)
+## [Decommissioning and deactivating](./decommission-deactivate.md)
 ## [Administering with PowerShell](./administer-powershell.md)
 ### [Installing Windows PowerShell for Azure RMS](./install-powershell.md)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)

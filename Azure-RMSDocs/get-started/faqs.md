@@ -49,7 +49,7 @@ Absolutely, and the nice thing is, users will be able to seamlessly protect and 
 Yes. See [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration.md ) to see a typical set of commands that enables Exchange Online to use Azure RMS, why the Outlook Web App doesn't immediately show the **Set permissions** menu options, and the command to run if you change or update the Azure RMS templates. 
 
 ## If I deploy Azure RMS in production, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
-No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommissioning-and-deactivate-service.md).
+No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md).
 
 However, before you decommission your Azure RMS deployment, we would like to hear from you and understand why you made this decision. If Azure RMS does not fulfil your business requirements, check with us in case new functionality is planned for the near-future or if there are alternatives. Send an email message to [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) and we’ll be happy to discuss your technical and business requirements.
 

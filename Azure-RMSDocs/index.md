@@ -280,7 +280,7 @@ layout: HubPage
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./administer/administer-powershell">
+                  <a href="./deploy-use/administer-powershell">
                     <h4>Rights Management Sharing Application for Windows</h4>
                     <p>Get the Rights Management Sharing Application for Windows.</p>
                     <h4>Read</h4>
