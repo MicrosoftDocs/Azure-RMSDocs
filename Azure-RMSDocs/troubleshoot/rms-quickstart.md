@@ -31,20 +31,20 @@ ms.custom:
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
-- [Step 1](rms-quickstart-step1.md)
-- [Step 2](rms-quickstart-step2.md)
-- [Step 3](rms-quickstart-step3.md)
-- [Step 4](rms-quickstart-step4.md)
-- [Step 5](rms-quickstart-step5.md)
+- [Step 1](tutorial-step1.md)
+- [Step 2](tutorial-step2.md)
+- [Step 3](tutorial-step3.md)
+- [Step 4](tutorial-step4.md)
+- [Step 5](tutorial-step5.md)
 
 [!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-intro-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step1-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step1-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step2-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step2-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step3-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step3-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step4-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step4-include.md)] 
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step5-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step5-include.md)] 

@@ -79,7 +79,7 @@ Second-level headings will generate the on-page TOC that appears in the "In this
 
 To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
 
-- Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
+- Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rms.md)
 
 To link to a header in the same markdown file, view the source of the published article, find the id of the head (e.g. `id="blockquote"`, and link using # + id (e.g. `#blockquote`).
 
@@ -87,7 +87,7 @@ To link to a header in the same markdown file, view the source of the published 
 
 To link to a header in a markdown file in the same repo, use relative linking + hashtag linking.
 
-- Example: [technical overiew of the sign-up process](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
+- Example: [technical overiew of the sign-up process](./understand-explore/rms-for-individuals-user-sign-up.md#technical-overview-of-the-sign-up-process)
 
 To link to an external file, use the full URL as the link.
 

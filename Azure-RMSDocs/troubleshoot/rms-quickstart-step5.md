@@ -32,19 +32,19 @@ ms.custom:
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](rms-quickstart-intro.md)
-- [Step 1](rms-quickstart-step1.md)
-- [Step 2](rms-quickstart-step2.md)
-- [Step 3](rms-quickstart-step3.md)
-- [Step 4](rms-quickstart-step4.md)
+- [Step 1](tutorial-step1.md)
+- [Step 2](tutorial-step2.md)
+- [Step 3](tutorial-step3.md)
+- [Step 4](tutorial-step4.md)
 - [Full article](rms-quickstart.md)
 
-[!INCLUDE[aad_rightsmanagement_1](../includes/rms-quickstart-step5-include.md)] 
+[!INCLUDE[aad_rightsmanagement_1](../includes/tutorial-step5-include.md)] 
 
 >[!div class="step-by-step"]
 [Intro](rms-quickstart-intro.md)
-[Step 1](rms-quickstart-step1.md)
-[Step 2](rms-quickstart-step2.md)
-[Step 3](rms-quickstart-step3.md)
-[Step 4](rms-quickstart-step4.md)
+[Step 1](tutorial-step1.md)
+[Step 2](tutorial-step2.md)
+[Step 3](tutorial-step3.md)
+[Step 4](tutorial-step4.md)
 *Step 5*
 [Full Article](rms-quickstart.md)

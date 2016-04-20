@@ -47,7 +47,7 @@ See the markdown for this file [in Github](https://github.com/Microsoft/Azure-RM
 
 # Links
 
-[link to markdown file in same repo](./understand-explore/what-is-azure-rights-management.md)
+[link to markdown file in same repo](./understand-explore/what-is-azure-rms.md)
 [link to external website](https://azure.microsoft.com)
 Bare URLS become clickable: http://www.github.com/
 

@@ -63,14 +63,14 @@ How the cryptographic keys are stored and secured:
 
 - The content key is protected with the organization’s RSA key (the "Azure RMS tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by Azure RMS for the organization and this key can only be changed by an Azure RMS administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
 
-	This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/planning-and-implementing-your-azure-rights-management-tenant-key.md).
+	This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
 - Licenses and certificates that are sent to a Windows device are protected with the client’s device private key, which is created the first time a user on the device uses Azure RMS. This private key, in turn, is protected with the DPAPI on the client, which protects these secrets by using a key derived from the user’s password. On mobile devices, the keys are used only one time, so because they are not stored on the clients, these keys don’t need to be protected on the device. 
 
 
 
 ## Walkthrough of how Azure RMS works: First use, content protection, content consumption
-To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](../deploy-use/activating-azure-rights-management.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
+To understand in more detail how Azure RMS works, let's walk through a typical flow after the [Azure RMS service is activated](../deploy-use/activate-service.md) and when a user first uses RMS on their Windows computer (a process sometimes known as **initializing the user environment** or bootstrapping), **protects content** (a document or email), and then **consumes**  (opens and uses) content that has been protected by somebody else.
 
 After the user environment is initialized, that user can then protect documents or consume protected documents on that computer.
 
@@ -143,11 +143,11 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 ## Next steps
 
-To learn more about Azure RMS, use the other articles in the **Understand & Explore** section, such as [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md) to learn how your existing applications can integrate with Azure RMS to provide an information protection solution. 
+To learn more about Azure RMS, use the other articles in the **Understand & Explore** section, such as [How applications support Azure Rights Management](applications-support.md) to learn how your existing applications can integrate with Azure RMS to provide an information protection solution. 
 
-Review [Terminology for Azure Rights Management](../get-started/terminology-for-azure-rights-management.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial-for-azure-rights-management.md).
+Review [Terminology for Azure Rights Management](../get-started/terminology.md) so that you’re familiar with the terms that you might come across as you’re configuring and using Azure RMS, and be sure to also check [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md) before you start your deployment. If you want to dive right in and try it out for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial.md).
 
-If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+If you’re ready to start deploying Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-and-support-for-azure-rights-management.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-support.md).
