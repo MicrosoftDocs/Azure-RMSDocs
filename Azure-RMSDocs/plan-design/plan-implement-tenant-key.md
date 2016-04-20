@@ -39,7 +39,7 @@ If you deploy Azure RMS by using a tenant key that is managed by Microsoft, you 
 |------------------------|-----------------------------------|
 |Deploy Azure RMS quickly and without requiring special hardware|Managed by Microsoft|
 |Need full IRM functionality in Exchange Online with Azure RMS|Managed by Microsoft|
-|Your keys are created by you and protected in a hardware security module (HSM)|BYOK<br /><br />Currently, this configuration will result in reduced IRM functionality in Exchange Online. For more information, see [BYOK pricing and restrictions](byok-pricing-and-restrictions.md).|
+|Your keys are created by you and protected in a hardware security module (HSM)|BYOK<br /><br />Currently, this configuration will result in reduced IRM functionality in Exchange Online. For more information, see [BYOK pricing and restrictions](byok-price-restrictions.md).|
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
 Decide which tenant key topology is best for your organization. By default, Azure RMS generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure RMS and the rest of the key management process is handled by Microsoft.
@@ -68,7 +68,7 @@ The second diagram shows the additional steps required when you manage your own 
 
 ![](../media/RMS_BYOK_onprem.png)
 
-If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps).
+If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
@@ -87,8 +87,8 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 
 |Requirement|More information|
 |---------------|--------------------|
-|A subscription that supports Azure RMS.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).|
-|You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-pricing-and-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
+|A subscription that supports Azure RMS.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).|
+|You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
 |Thales HSM, smartcards, and support software.<br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|You must have access to a Thales Hardware Security Module and basic operational knowledge of Thales HSMs. See [Thales Hardware Security Module](http://www.thales-esecurity.com/msrms/buy) for the list of compatible models, or to purchase an HSM if you do not have one.|
 |If you want to transfer your tenant key over the Internet rather than physically be present in Redmond, USA. there are 3 requirements:<br /><br />Requirement 1: An offline x64 workstation with a minimum Windows operation system of Windows 7 and Thales nShield software that is at least version 11.62.<br /><br />If this workstation runs Windows 7, you must [install Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Requirement 2: A workstation that is connected to the Internet and has a minimum Windows operation system of Windows 7.<br /><br />Requirement 3: A USB drive or other portable storage device that has at least 16 MB free space.|These prerequisites are not required if you travel to Redmond and transfer your tenant key in person.<br /><br />For security reasons, we recommend that the first workstation is not connected to a network. However, this is not programmatically enforced.<br /><br />Note: In the instructions that follow, this first workstation is referred to as the **disconnected workstation**.<br /><br />In addition, if your tenant key is for a production network, we recommend that you use a second, separate workstation to download the toolset and upload the tenant key. But for testing purposes, you can use the same workstation as the first one.<br /><br />Note: In the instructions that follow, this second workstation is referred to as the **Internet-connected workstation**.|
 
@@ -115,8 +115,8 @@ The procedures to generate and use your own tenant key depend on whether you wan
 
 For how-to instructions, select whether you will generate and transfer your tenant key over the Internet or in person: 
 
-- [Over the Internet](generate-and-transfer-your-tenant-key-over-the-internet.md)
-- [In person](generate-and-transfer-your-tenant-key-in-person.md)
+- [Over the Internet](generate-tenant-key-internet.md)
+- [In person](generate-tenant-key-in-person.md)
 
 
 ## Next steps
@@ -127,7 +127,7 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     -   If you haven’t already done so, you must now activate Rights Management so that your organization can start to use RMS. Users immediately start to use your tenant key (managed by Microsoft or managed by you).
 
-        For more information about activation, see [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md).
+        For more information about activation, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
     -   If you had already activated Rights Management and then decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
 
@@ -137,9 +137,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     ![](../media/RMS_Logging.gif)
 
-    For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/logging-and-analyzing-azure-rights-management-usage.md).
+    For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
 
 3.  Maintain your tenant key.
 
-    For more information, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-for-your-azure-rights-management-tenant-key.md).
+    For more information, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 

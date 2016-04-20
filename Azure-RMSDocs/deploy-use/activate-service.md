@@ -28,21 +28,21 @@ ms.suite: ems
 # Activating Azure Rights Management
 When you activate [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), your organization can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected files and emails that your organization owns. You must enable [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] before you can begin to use the information rights management (IRM) features within Office, SharePoint, and Exchange, and protect any sensitive or confidential file.
 
-If you want to learn more about Azure Rights Management before you activate the service—for example, what business problems it solves, some typical use cases, and how it works—see [What is Azure Rights Management?](../understand-explore/what-is-azure-rights-management.md)
+If you want to learn more about Azure Rights Management before you activate the service—for example, what business problems it solves, some typical use cases, and how it works—see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] services. If not, you will not be able to activate Azure RMS.
 >
-> For more information, see [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md).
+> For more information, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
 
 After you have activated Azure RMS, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by Azure RMS. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
 For instructions how to activate Rights Management, select whether you will use the Office 365 admin center (preview or classic), or the Azure classic management portal:
 
 
-- [Office 365 admin center - preview](activating-azure-rights-management-o365preview.md)
-- [Office 365 admin center - classic](activating-azure-rights-management-o365classic.md)
-- [Azure classic portal](activating-azure-rights-management-azure.md)
+- [Office 365 admin center - preview](activate-office365-preview.md)
+- [Office 365 admin center - classic](activate-office365-classic.md)
+- [Azure classic portal](activate-azure-classic.md)
 
 > [!TIP]
 > You can also use the Windows PowerShell cmdlet, [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
@@ -71,10 +71,10 @@ When you use these onboarding controls, all users in the organization can always
 
 
 ## Next steps
-Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
+Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
 
-For example, you might want to use [custom templates](configure-custom-templates-for-azure-rights-management.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [RMS connector](deploying-the-azure-rights-management-connector.md), and deploy the [Rights Management sharing application](../rms-client/rights-management-sharing-application-for-windows.md) that supports protecting all file types on all devices. 
+For example, you might want to use [custom templates](configure-custom-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [RMS connector](deploy-rms-connector.md), and deploy the [Rights Management sharing application](../rms-client/sharing-app-windows.md) that supports protecting all file types on all devices. 
 
 Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. 
-For information about how your applications work with [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md).
+For information about how your applications work with [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [How applications support Azure Rights Management](../understand-explore/applications-support.md).
 

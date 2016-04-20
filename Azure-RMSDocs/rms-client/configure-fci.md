@@ -31,9 +31,9 @@ Use this article for instructions and a script to use the Rights Management (RMS
 This solutions lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution uses Azure Rights Management (Azure RMS) to protect the files, so you must have this technology deployed in your organization.
 
 > [!NOTE]
-> Although Azure RMS includes a [connector](../deploy-use/deploying-the-azure-rights-management-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
+> Although Azure RMS includes a [connector](../deploy-use/deploy-rms-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
 > 
-> To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](rights-management-sharing-application-administrator-guide-technical-overview.md#levels-of-protection-native-and-generic) section in the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md).
+> To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
 The instructions that follow are for Windows Server 2012 R2 or Windows Server 2012. If you run other supported versions of Windows, you might need to adapt some of the steps for differences between your operating system version and the one documented in this article.
 
@@ -60,7 +60,7 @@ Prerequisites for these instructions:
 
     -   Symmetric key
 
--   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure RMS. If you do not  do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for Azure Rights Management](../plan-design/preparing-for-azure-rights-management.md).
+-   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure RMS. If you do not  do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for Azure Rights Management](../plan-design/prepare.md).
 
 -   You have identified the Rights Management template to use, which will protect the files. Make sure that you know the ID for this template by using the [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) cmdlet.
 
@@ -83,7 +83,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
 ### Save the Windows PowerShell script
 
-1.  Copy the contents of the [Windows PowerShell script](rms-protection-script-fci.md) for Azure RMS protection by using File Server Resource Manager. Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
+1.  Copy the contents of the [Windows PowerShell script](fci-script.md) for Azure RMS protection by using File Server Resource Manager. Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
 
 2.  Review the script and make the following changes:
 

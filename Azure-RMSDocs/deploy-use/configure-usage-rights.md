@@ -298,5 +298,5 @@ The rights that are included with the default templates are as follows:
 |&lt;*organization name*&gt; *- Confidential*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## See Also
-[Configuring custom templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
+[Configuring custom templates for Azure Rights Management](configure-custom-templates.md)
 

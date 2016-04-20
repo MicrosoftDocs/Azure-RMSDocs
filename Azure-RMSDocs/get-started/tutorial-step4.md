@@ -30,12 +30,12 @@ ms.custom:
 
 Jump to: 
 > [!div class="op_single_selector"]
-- [Introduction](quick-start-tutorial-for-azure-rights-management.md)
-- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
-- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
-- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
-- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
-- [Step 5: Track your doc](rms-quickstart-step5.md)
+- [Introduction](quick-start-tutorial.md)
+- [Step 1: Activate Azure RMS](tutorial-step1.md)
+- [Step 2: Install RMS sharing app](tutorial-step2.md)
+- [Step 3: Email the confidential doc](tutorial-step3.md)
+- [Step 4: Recipient reads the doc](tutorial-step4.md)
+- [Step 5: Track your doc](tutorial-step5.md)
 
 
 ![](../media/AzRMS_QuickStartSteps4.PNG)
@@ -67,11 +67,11 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for viewing files that are protected by Azure Rights Management|[View and use files that have been protected by Rights Management](../rms-client/view-and-use-files-that-have-been-protected-by-rights-management.md)|
-|About the free subscription, RMS for individuals|[RMS for Individuals and Azure Rights Management](../understand-explore/rms-for-individuals-and-azure-rights-management.md)|
-|About the two versions of the file that you see attached to the email message|[What’s the .ppdf file that’s automatically created?](../rms-client/dialog-box-options-for-the-rights-management-sharing-application.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|Full instructions for viewing files that are protected by Azure Rights Management|[View and use files that have been protected by Rights Management](../rms-client/sharing-app-view-use-files.md)|
+|About the free subscription, RMS for individuals|[RMS for Individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md)|
+|About the two versions of the file that you see attached to the email message|[What’s the .ppdf file that’s automatically created?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
 
 
 >[!div class="step-by-step"]
-[« Step 3](rms-quickstart-step3.md)
-[Step 5 »](rms-quickstart-step5.md)
+[« Step 3](tutorial-step3.md)
+[Step 5 »](tutorial-step5.md)

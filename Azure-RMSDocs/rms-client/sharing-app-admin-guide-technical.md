@@ -44,7 +44,7 @@ The Microsoft Rights Management sharing application uses the new [AD RMS Client 
 
 With the October 2013 release of RMS, you can natively protect documents by using Office 2010 and send them to people in another company, who can then consume them by using Azure RMS. In addition, with this release, if you use AD RMS in Cryptographic Mode 2, you can use RMS for individuals and consume content from people in another company that uses Azure RMS. For more information about Cryptographic Mode 2, see [AD RMS Cryptographic Modes](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
-For deployment information, see [Automatic deployment for the Microsoft Rights Management sharing application](rights-management-sharing-application-administrator-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
+For deployment information, see [Automatic deployment for the Microsoft Rights Management sharing application](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
 ## Levels of protection – native and generic
 Microsoft Rights Management sharing application supports protection at two different levels, as described in the following table.
@@ -138,5 +138,5 @@ You can make similar registry edits for other scenarios by changing the value of
 -   **Off**: Block protection
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

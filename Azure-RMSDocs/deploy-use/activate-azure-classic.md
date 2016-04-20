@@ -43,7 +43,7 @@ Use these instructions if you have access to the Azure portal. For example, you 
     > [!NOTE]
     > If you see an activation error, it might be because your service plan or product version cannot support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
     >
-    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
 
@@ -58,4 +58,4 @@ In addition to the **Active** status, which indicates that the Rights Management
 |**Unauthorized**|You do not have permissions to view the status of the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service. For example, your account is locked out or you are not the global administrator for the selected tenant.|
 
 ## Next steps
-Back to [Activating Azure Rights Management](activating-azure-rights-management.md).
+Back to [Activating Azure Rights Management](activate-service.md).

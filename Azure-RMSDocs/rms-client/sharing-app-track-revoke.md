@@ -52,7 +52,7 @@ When you access this site, sign in to track your documents. Providing your organ
 
     ![](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
+If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 ### Other ways to track and revoke your documents
 In addition to tracking your documents on Windows computers by using Office applications, you can also use these alternatives:
@@ -94,10 +94,10 @@ In addition to tracking your documents on Windows computers by using Office appl
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

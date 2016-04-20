@@ -43,7 +43,7 @@ Use these instructions only if you're using the new, preview version of the Offi
     > [!NOTE]
     > Depending on your display, you might need to scroll to see this option. However, if it is not listed, it might be because your service plan or product version cannot support Rights Management, or it has not yet been upgraded to support Rights Management.
     >
-    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/rms-requirements-cloud-subscriptions.md) to confirm support. If your service plan or product version is supported but you do not see the Rights Management option, it might be because the service is not yet upgraded. For help with this issue, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
+    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm support. If your service plan or product version is supported but you do not see the Rights Management option, it might be because the service is not yet upgraded. For help with this issue, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
 
 5.  On the **Microsoft Azure Rights Management** page, click **Manage Microsoft Azure Rights Management settings**.
 
@@ -55,5 +55,5 @@ You should now see **Rights management is activated** and the option to deactiva
 
 
 ## Next steps
-Back to [Activating Azure Rights Management](activating-azure-rights-management.md).
+Back to [Activating Azure Rights Management](activate-service.md).
 

@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 # Migration phase 2 - client-side configuration
-Use the following information for Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover step 5 from [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md).
+Use the following information for Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover step 5 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Step 5. Reconfigure clients to use Azure RMS
@@ -102,4 +102,4 @@ Redirect_OnPrem.cmd:
 
 
 ## Next steps
-To continue the migration, go to [phase 3 -supporting services configuration](migrating-from-ad-rms-to-azure-rights-management-phase3.md).
+To continue the migration, go to [phase 3 -supporting services configuration](migrate-from-ad-rms-phase3.md).

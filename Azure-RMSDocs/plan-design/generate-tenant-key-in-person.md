@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Generate and transfer your tenant key – in person
 
-Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
+Use the following procedures if you have decided to [manage your own tenant key](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
 
 ## Generate your tenant key
 To generate your own tenant key, follow these 3 steps:
@@ -147,7 +147,7 @@ After you have generated your own key, you must transfer it to Azure RMS before 
 You have now completed the instructions required for bring your own key in person and can return to your organization for the next steps in planning and implementing your tenant key.
 
 > [!div class="button"]
-[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps)
+[Next Steps >>](plan-implement-tenant-key.md#next-steps)
 
 
 

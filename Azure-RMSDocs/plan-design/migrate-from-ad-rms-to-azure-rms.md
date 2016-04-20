@@ -30,9 +30,9 @@ Use the following set of instructions to  migrate your Active Directory Rights M
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rights-management.md)
+-   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
--   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/comparing-azure-rights-management-and-ad-rms.md).
+-   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
 ## Prerequisites for migrating AD RMS to Azure RMS
 Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
@@ -63,7 +63,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 - **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
 
-	See [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md).
+	See [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 	Although you must have an Azure RMS tenant before you can migrate from AD RMS, we recommend that you do not activate the Rights Management service before the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure RMS. However, if Azure RMS is already activated, you can still migrate from AD RMS.
 
@@ -74,7 +74,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	- Mail-enabled groups in Azure Active Directory
 
-	See [Preparing for Azure Rights Management](preparing-for-azure-rights-management.md).
+	See [Preparing for Azure Rights Management](prepare.md).
 
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
@@ -88,9 +88,9 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 Limitations:
 
--   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](../plan-design/planning-and-implementing-your-azure-rights-management-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](migrating-from-ad-rms-to-azure-rights-management-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
+-   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
 
--   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md) article.
+-   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md) article.
 
 -   If you import your on-premises key to Azure RMS as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
 
@@ -105,7 +105,7 @@ Limitations:
 
 The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
-[**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrating-from-ad-rms-to-azure-rights-management-phase1.md)
+[**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase1.md)
 
 - **Step 1: Download the Azure RMS Management Administration Tool**
 
@@ -136,7 +136,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
     When you import your rights policy templates, their status is archived. If you want users to be able to see and use them, you must change the template status to published in the Azure classic portal.
 
 
-[**PHASE 2: CLIENT-SIDE CONFIGURATION**](migrating-from-ad-rms-to-azure-rights-management-phase2.md)
+[**PHASE 2: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase2.md)
 
 
 - **Step 5: Reconfigure clients to use Azure RMS**
@@ -146,7 +146,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
     In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS
 
 
-[**PHASE 3: SUPPORTING SERVICES CONFIGURATION**](migrating-from-ad-rms-to-azure-rights-management-phase3.md)
+[**PHASE 3: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
 
 - **Step 6: Configure IRM integration with Exchange Online**
@@ -165,7 +165,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 	- Windows Server that runs File Classification Infrastructure (FCI)
 
 
-[**PHASE 4: POST MIGRATION TASKS**](migrating-from-ad-rms-to-azure-rights-management-phase4.md )
+[**PHASE 4: POST MIGRATION TASKS**](migrate-from-ad-rms-phase4.md )
 
 - **Step: Decommission AD RMS**
 
@@ -178,5 +178,5 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 
 ## Next steps
-To start the migration, go to [Phase 1 - server-side configuration](migrating-from-ad-rms-to-azure-rights-management-phase1.md).
+To start the migration, go to [Phase 1 - server-side configuration](migrate-from-ad-rms-phase1.md).
 

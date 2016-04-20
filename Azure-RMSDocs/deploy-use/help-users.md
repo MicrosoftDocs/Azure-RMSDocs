@@ -30,7 +30,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
 -   **End-user information:**
 
-    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for  their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing completely new processes . Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [custom templates](configure-custom-templates-for-azure-rights-management.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
+    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for  their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing completely new processes . Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [custom templates](configure-custom-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
 
     > [!TIP]
     > Example videos for end users:
@@ -40,13 +40,13 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
 -   **Administrator information:**
 
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md) and [Configuring applications for Azure Rights Management](configuring-applications-for-azure-rights-management.md).
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support Azure Rights Management](../understand-explore/applications-support.md) and [Configuring applications for Azure Rights Management](configure-applications.md).
 
 -   **Help desk information:**
 
     One of the most useful tools for the help desk is the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Help desk operators can run it with the Azure RMS administrator option, and they can ask users to run it with the Azure RMS user option. This tool can not only help identify problems, but also fix problems that it finds, and if still not fixed, record trace logs.
 
-    If there are legitimate requests to have full rights access to protected documents, for example a request by the legal department or a manager after an employee has left the organization, make sure the help desk has processes to request this by using the Azure RMS [super user feature](configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery.md).
+    If there are legitimate requests to have full rights access to protected documents, for example a request by the legal department or a manager after an employee has left the organization, make sure the help desk has processes to request this by using the Azure RMS [super user feature](configure-super-users.md).
 
     In  addition, these are some of the typical problems that users might report:
 
@@ -56,7 +56,7 @@ After you have deployed and configured Azure Rights Management (Azure RMS) for y
 
     -   **Problems protecting or consuming content:**
 
-        Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by Azure RMS. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-for-azure-rights-management.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by Azure RMS. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
         If users see an error when trying to protect or consume content, ask them to run the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) as an Azure RMS user.
 
@@ -69,12 +69,12 @@ The Rights Management (RMS) sharing application is required for users to protect
 
 In addition to making it easier for users to protect important documents, the RMS sharing application lets users track the documents that they have protected, and if necessary, revoke access to them.
 
-For instructions to use this application for Windows computers, see the [Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md).
+For instructions to use this application for Windows computers, see the [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md).
 
 For mobile devices, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248).
 
 > [!TIP]
-> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](../understand-explore/what-do-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
+> For a high-level example scenario with screenshots, see the [Users safely share attachments with mobile users](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
 If you are using Azure RMS and have not installed the Rights Management sharing application, users will not see the **Share Protected** button on the ribbon or **Protect in-place** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to these.

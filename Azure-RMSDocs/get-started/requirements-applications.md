@@ -58,9 +58,9 @@ The following applications natively support Azure Rights Management (Azure RMS)
 
     For more information about the Rights Management sharing application for Windows, see the following resources:
 
-    -   [Rights Management sharing application administrator guide](../rms-client/rights-management-sharing-application-administrator-guide.md)
+    -   [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md)
 
-    -   [Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md)
+    -   [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md)
 
 -   **The Rights Management sharing application for mobile platforms**
 
@@ -91,8 +91,8 @@ The following applications natively support Azure Rights Management (Azure RMS)
 
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
 
-For more information about how these applications support Azure RMS, see [How applications support Azure Rights Management](../understand-explore/how-applications-support-azure-rights-management.md).
+For more information about how these applications support Azure RMS, see [How applications support Azure Rights Management](../understand-explore/applications-support.md).
 
-For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
+For information about how to configure these applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).

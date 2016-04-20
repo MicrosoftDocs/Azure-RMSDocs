@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Configuring custom templates for Azure Rights Management
-After you have [activated Azure Rights Management](activating-azure-rights-management.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
+After you have [activated Azure Rights Management](activate-service.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
 
 -   Read-only viewing for the protected content
 
@@ -40,7 +40,7 @@ After you have [activated Azure Rights Management](activating-azure-rights-manag
 
     -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
 
-In addition, the [RMS sharing application](../rms-client/rights-management-sharing-application-for-windows.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the **Do Not Forward** option for email messages.
+In addition, the [RMS sharing application](../rms-client/sharing-app-windows.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the **Do Not Forward** option for email messages.
 
 For many organizations, the default templates might be sufficient. But if you want to create your own custom rights policy templates, you can do so. Reasons for creating a custom template include the following:
 
@@ -56,14 +56,14 @@ For users to be able to select a custom template that contains settings such as 
 
 Use the following information to help you configure and use custom templates:
 
--   [How to create, configure, and publish a custom template](configure-custom-templates-for-azure-rights-management-create-template.md)
+-   [How to create, configure, and publish a custom template](create-template.md)
 
--   [How to copy a template](configure-custom-templates-for-azure-rights-management-copy-template.md)
+-   [How to copy a template](copy-template.md)
 
--   [How to remove (archive) templates](configure-custom-templates-for-azure-rights-management-remove-template.md)
+-   [How to remove (archive) templates](remove-template.md)
 
--   [How to refresh templates for users](configure-custom-templates-for-azure-rights-management-refresh-templates.md)
+-   [How to refresh templates for users](refresh-templates.md)
 
--   [Use PowerShell to manage templates](configure-custom-templates-for-azure-rights-management-powershell.md)
+-   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
 
 

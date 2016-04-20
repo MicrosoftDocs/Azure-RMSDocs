@@ -66,7 +66,7 @@ Azure Rights Management writes logs to your Azure storage account as a series of
 
 It can take a while for logs to appear in your storage account after an Azure Rights Management action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 
-To download your usage logs, you will use the Azure RMS administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+To download your usage logs, you will use the Azure RMS administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### To download your usage logs by using PowerShell
 
@@ -222,7 +222,7 @@ Before this change, the following cmdlets were needed for Azure RMS usage logs, 
 
 If you have logs in your own Azure storage from before the Azure RMS logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
 
-For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administering-azure-rights-management-with-powershell.md).
+For more information about using Windows PowerShell for Azure Rights Management, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
 
 
 

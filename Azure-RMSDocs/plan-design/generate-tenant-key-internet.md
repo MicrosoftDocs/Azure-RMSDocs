@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 # Generate and transfer your tenant key – over the Internet
-Use the following procedures if you have decided to [manage your own tenant key](planning-and-implementing-your-azure-rights-management-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
+Use the following procedures if you have decided to [manage your own tenant key](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
 
 
 ## Prepare your Internet-connected workstation
@@ -45,7 +45,7 @@ From the Internet-connected workstation, download and install the Windows Power
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least 2.1.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
-For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/installing-windows-powershell-for-azure-rights-management.md).
+For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Step 2: Get your Azure Active Directory tenant ID
 Start Windows PowerShell with the **Run as administrator** option, and then run the following commands:
@@ -375,6 +375,6 @@ You have now completed all the steps required for bring your own key over the In
 
 
 > [!div class="button"]
-[Next Steps >>](planning-and-implementing-your-azure-rights-management-tenant-key.md#next-steps)
+[Next Steps >>](plan-implement-tenant-key.md#next-steps)
 
 

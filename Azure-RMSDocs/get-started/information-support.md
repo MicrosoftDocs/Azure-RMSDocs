@@ -37,7 +37,7 @@ Use the following resources for additional information about Microsoft [!INCLUDE
 The following sections provide additional information about [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]:
 
 
--   [The Rights Management product group blog](information-and-support-for-azure-rights-management.md#BKMK_ProductGroupBlog)
+-   [The Rights Management product group blog](information-support.md#BKMK_ProductGroupBlog)
 
 -   [Support options and community resources](#support-options-and-community-resources)
 

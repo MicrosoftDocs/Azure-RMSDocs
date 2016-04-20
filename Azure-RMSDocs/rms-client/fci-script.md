@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
-This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](rms-protection-with-windows-server-file-classification-infrastructure-fci.md).
+This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
 *script is provided AS IS without warranty of any kind.*
@@ -174,4 +174,4 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 
 ---
 
-Back to [RMS protection with Windows Server File Classification Infrastructure](rms-protection-with-windows-server-file-classification-infrastructure-fci.md).
+Back to [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).

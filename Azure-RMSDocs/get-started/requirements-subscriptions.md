@@ -123,7 +123,7 @@ For Business Premium, there are some client restrictions: You can protect conten
 ## RMS for individuals subscription
 This subscription is designed for individuals in an organization that hasn’t deployed Azure RMS or AD RMS. It lets these people read content that has been protected by an organization that is using Azure RMS, and they can also protect their own content.
 
-For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals-and-azure-rights-management.md).
+For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).

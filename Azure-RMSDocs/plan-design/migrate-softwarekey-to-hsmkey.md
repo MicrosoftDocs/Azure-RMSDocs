@@ -27,9 +27,9 @@ ms.suite: ems
 
 # Step 2: Software-protected key to HSM-protected key migration
 
-These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key. 
+These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key. 
 
-If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrating-from-ad-rms-to-azure-rights-management.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
+If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
 
 It’s a three-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK).
 
@@ -37,7 +37,7 @@ You must first extract your server licensor certificate (SLC) key from the confi
 
 ## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
 
-1.  Use the following steps in the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md) topic:
+1.  Use the following steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md) topic:
 
     -   **Generate and transfer your tenant key – over the Internet**: **Prepare your Internet-connected workstation**
 
@@ -76,7 +76,7 @@ Now that your SLC has been extracted so that it’s an HSM-based key, you’re r
 
 ## Part 2: Package and transfer your HSM key to Azure RMS
 
-1.  Use the following steps from the [Implementing bring your own key (BYOK)](planning-and-implementing-your-azure-rights-management-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](planning-and-implementing-your-azure-rights-management-tenant-key.md):
+1.  Use the following steps from the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md):
 
     -   **Generate and transfer your tenant key – over the Internet**: **Prepare your tenant key for transfer**
 
@@ -105,6 +105,6 @@ Now that you’ve transferred your HSM key to Azure RMS, you’re ready to impor
     Disconnect-AadrmService
     ```
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrating-from-ad-rms-to-azure-rights-management.md#BKMK_Step3Migration).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
 
 

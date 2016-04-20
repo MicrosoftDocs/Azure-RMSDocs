@@ -27,9 +27,9 @@ ms.suite: ems
 
 # Configuring servers for the Azure Rights Management connector
 
-Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploying-the-azure-rights-management-connector.md).
+Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
-Before you begin, make sure that you have installed and configured the RMS connector and you have checked any [prerequisites](deploying-the-azure-rights-management-connector.md#prerequisites-for-the-rms-connector) that are applicable for the servers that will use the connector.
+Before you begin, make sure that you have installed and configured the RMS connector and you have checked any [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) that are applicable for the servers that will use the connector.
 
 
 ## Configuring servers to use the RMS connector
@@ -152,7 +152,7 @@ You will also need to install on these servers, a version of the RMS client that
 
 ### To configure Exchange servers to use the connector
 
-1. Make sure that the Exchange servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-and-configure-the-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
+1. Make sure that the Exchange servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
 
 2.  On the Exchange server roles that communicate with the RMS connector, do one of the following:
 
@@ -164,7 +164,7 @@ You will also need to install on these servers, a version of the RMS client that
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
         ```
 
-    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md) to manually add registry settings on the servers. 
+    -   Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Enable IRM functionality in Exchange. For more information, see [Information Rights Management Procedures](https://technet.microsoft.com/library/dd351212%28v=exchg.150%29.aspx) in the Exchange library.
 
@@ -190,7 +190,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
 
 ### To configure SharePoint servers to use the connector
 
-1. Make sure that the SharePoint servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-and-configure-the-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
+1. Make sure that the SharePoint servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
 
 2.  On the SharePoint servers that communicate with the RMS connector, do one of the following:
 
@@ -202,7 +202,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   If you are using SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md) to manually add registry settings on the servers. 
+    -   If you are using SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
 
@@ -222,7 +222,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
 ### To configure file servers to use the connector
 
-1.  Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-and-configure-the-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
+1.  Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
 
 2.  On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 
@@ -234,12 +234,12 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetFCI2012
         ```
 
-    - Make manual registry edits by using the information in [Registry settings for the RMS connector](registry-settings-rms-connector.md) to manually add registry settings on the servers. 
+    - Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
 
 ## Next steps
-Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email message and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/rights-management-sharing-application-administrator-guide.md).
+Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email message and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 In addition, you might consider the following to help you monitor the RMS connector and your organization’s usage of Azure RMS:
 
@@ -247,6 +247,6 @@ In addition, you might consider the following to help you monitor the RMS connec
 
 -   The [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437), using the RMS connector option to help you monitor the health of the connector and identify any configuration issues.
 
--   [Logging and analyzing Azure Rights Management usage](logging-and-analyzing-azure-rights-management-usage.md)
+-   [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md)
 
-You can use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
+You can use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 

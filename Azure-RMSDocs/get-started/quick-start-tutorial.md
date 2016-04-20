@@ -28,11 +28,11 @@ ms.suite: ems
 # Quick start tutorial for Azure Rights Management
 Jump to: 
 > [!div class="op_single_selector"]
-- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
-- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
-- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
-- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
-- [Step 5: Track your doc](rms-quickstart-step5.md)
+- [Step 1: Activate Azure RMS](tutorial-step1.md)
+- [Step 2: Install RMS sharing app](tutorial-step2.md)
+- [Step 3: Email the confidential doc](tutorial-step3.md)
+- [Step 4: Recipient reads the doc](tutorial-step4.md)
+- [Step 5: Track your doc](tutorial-step5.md)
 
 Use this tutorial to quickly try out Microsoft Azure Rights Management (also known as Azure RMS) for your organization with just 5 steps that should take you less than 15 minutes. You’ll activate the service, securely send a confidential document by email to somebody in another organization, and then be able to track when that document is opened. When the confidential document is emailed, it is encrypted while in transit and can be read only by the person it is sent to, using the permissions that are set by the sender.
 
@@ -42,7 +42,7 @@ This tutorial is aimed at IT administrators and consultants, to help them evalua
 
 To complete this tutorial, you will need the following:
 
--   A subscription that supports Azure Rights Management. This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](rms-requirements-cloud-subscriptions.md).
+-   A subscription that supports Azure Rights Management. This can be a paid subscription or a trial subscription. If you want to use document tracking, which is required for step 5 in this tutorial, your subscription must support document tracking. For more information about the subscription options and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](requirements-subscriptions.md).
 
     Tip: If you need to get a subscription, do this in advance because this process can sometimes take a while to complete.
 
@@ -53,7 +53,7 @@ To complete this tutorial, you will need the following:
 Let's get started.
 
 >[!div class="step-by-step"]
-[Step 1 »](rms-quickstart-step1.md)
+[Step 1 »](tutorial-step1.md)
 
 
 

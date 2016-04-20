@@ -35,10 +35,10 @@ For example, in the **share protected** dialog box, press **Alt** to see the acc
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

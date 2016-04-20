@@ -64,7 +64,7 @@ Information about the table columns:
 
 -   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached files. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
 
--   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by RMS, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by RMS. For more information, see the [Rights Management sharing application administrator guide](../rms-client/rights-management-sharing-application-administrator-guide.md).
+-   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by RMS, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by RMS. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
@@ -99,5 +99,5 @@ Supports viewing and editing protected documents. For more information, see the 
 For more information, see the following post on the Office blog: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
 

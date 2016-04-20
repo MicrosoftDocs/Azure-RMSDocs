@@ -42,4 +42,4 @@ The status changes from **Published** to **Archived**. If you change your mind, 
 
 
 ## See Also
-[Configure Custom Templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
+[Configure Custom Templates for Azure Rights Management](configure-custom-templates.md)

@@ -142,7 +142,7 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 	> [!TIP]
 	    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
 
-    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
     > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
     > 
     >     For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
@@ -188,4 +188,4 @@ By editing the registry on the computers running Office 2010, you can set a valu
 3.  Restart your Office applications.
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
+[Configure custom templates for Azure Rights Management](configure-custom-templates.md)

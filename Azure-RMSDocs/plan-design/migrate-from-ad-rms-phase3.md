@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Migration phase 3 - supporting services configuration
 
-Use the following information for Phase 3 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover steps 6 through 7 from [Migrating from AD RMS to Azure Rights Management](migrating-from-ad-rms-to-azure-rights-management.md).
+Use the following information for Phase 3 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover steps 6 through 7 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Step 6. Configure IRM integration for Exchange Online
@@ -37,11 +37,11 @@ If you have previously imported your TDP from AD RMS to Exchange Online, you mus
 
 If you chose an Azure RMS tenant key topology of **Microsoft managed**:
 
--   See the [Exchange Online: IRM configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/o365-configure-for-clients-online-services.md) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure RMS, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full RMS functionality with Exchange Online.
+-   See the [Exchange Online: IRM configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure RMS, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full RMS functionality with Exchange Online.
 
 If you chose an Azure RMS tenant key topology of **customer-managed (BYOK)**:
 
--   You will  have reduced RMS functionality with Exchange Online, as described in the [BYOK pricing and restrictions](byok-pricing-and-restrictions.md) article.
+-   You will  have reduced RMS functionality with Exchange Online, as described in the [BYOK pricing and restrictions](byok-price-restrictions.md) article.
 
 ## Step 7. Deploy the RMS connector
 If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you must first disable IRM on these servers and remove AD RMS configuration. Then, deploy the Rights Management (RMS) connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS.
@@ -49,7 +49,7 @@ If you have used the Information Rights Management (IRM) functionality of Exchan
 Finally for this step, if you have imported multiple TPDs into Azure RMS that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all TPDs URLs to the RMS connector.
 
 > [!NOTE]
-> Before you start, check the versions of the on-premises servers that Azure RMS supports, from [On-premises servers that support Azure RMS](../get-started/rms-requirements-onpremises-servers.md).
+> Before you start, check the versions of the on-premises servers that Azure RMS supports, from [On-premises servers that support Azure RMS](../get-started/requirements-servers.md).
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
@@ -95,7 +95,7 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
 #### Install and configure the RMS connector
 
--   Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploying-the-azure-rights-management-connector.md) article.
+-   Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article.
 
 #### For Exchange only and multiple TPDs: Edit the registry
 
@@ -213,7 +213,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ---
 
-After you have completed these procedures, you are ready to read the **Next steps** section from the [Deploying the Azure Rights Management connector](../deploy-use/deploying-the-azure-rights-management-connector.md) article.
+After you have completed these procedures, you are ready to read the **Next steps** section from the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article.
 
 ## Next steps
-To continue the migration, go to [phase 4 -post migration tasks](migrating-from-ad-rms-to-azure-rights-management-phase4.md).
+To continue the migration, go to [phase 4 -post migration tasks](migrate-from-ad-rms-phase4.md).

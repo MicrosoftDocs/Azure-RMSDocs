@@ -39,17 +39,17 @@ To remove protection from a file (that is, unprotect a file) that was previously
 
     You might be prompted for credentials.
 
-Note: If you do not see these options, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](download-and-install-the-rights-management-sharing-application.md).
+Note: If you do not see these options, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 The original protected file is deleted (for example, Sample.ptxt) and replaced with a file that has the same name but with the unprotected file name extension (for example, Sample.txt).
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

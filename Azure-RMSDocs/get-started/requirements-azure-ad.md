@@ -53,7 +53,7 @@ To use multi-factor authentication (MFA) with Azure RMS requires at least one of
 
 -   Rights Management sharing application for Windows:
 
-    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management Sharing Application for Windows](../rms-client/rights-management-sharing-application-for-windows.md).
+    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
@@ -74,5 +74,5 @@ Then, configure your MFA solution:
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-for-azure-rights-management.md).
+To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
 

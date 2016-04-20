@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # View and use files that have been protected by Rights Management
-When the [Rights Management (RMS) sharing application is installed on your computer](download-and-install-the-rights-management-sharing-application.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
+When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 
 > [!NOTE]
 > Before you can view the protected file, RMS must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
@@ -36,15 +36,15 @@ When the [Rights Management (RMS) sharing application is installed on your compu
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 > 
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals-and-azure-rights-management.md).
+> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## To view a protected file
 By using File Explorer or the email message that contains the attachment, double-click the protected file, and enter your credentials if prompted to do so.
 
-If you see two versions of the file but with different file name extensions, open the file that has a .ppdf file extension only if the other file does not open. If you cannot open the .ppdf version either, first install the [RMS sharing application](download-and-install-the-rights-management-sharing-application.md), which knows how to open files that have a .ppdf file name extension.
+If you see two versions of the file but with different file name extensions, open the file that has a .ppdf file extension only if the other file does not open. If you cannot open the .ppdf version either, first install the [RMS sharing application](install-sharing-app.md), which knows how to open files that have a .ppdf file name extension.
 
 > [!NOTE]
-> For more information, see “[What’s the .ppdf file that’s automatically created?](dialog-box-options-for-the-rights-management-sharing-application.md#what-s-the-ppdf-file-that-s-automatically-created-)”.
+> For more information, see “[What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)”.
 
 How the file opens depends on how it was protected, which you can tell by looking at the file name extension. In each case, opening the file might be audited and remains audited as long as it is protected. In addition, if the file was sent as an email attachment, the sender might be notified by email each time you open the file. 
 
@@ -72,7 +72,7 @@ How the file opens depends on how it was protected, which you can tell by lookin
 
 
 
-For a complete list of file name extensions that Rights Management supports, see the [Supported file types and file name extensions](rights-management-sharing-application-administrator-guide-technical-overview.md#supported-file-types-and-file-name-extensions) sections in the [Rights Management sharing application administrator guide](rights-management-sharing-application-administrator-guide.md). If your file name extension is not listed, use a web search to see if it is a file name extension that is supported by another application.
+For a complete list of file name extensions that Rights Management supports, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) sections in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md). If your file name extension is not listed, use a web search to see if it is a file name extension that is supported by another application.
 
 > [!NOTE]
 > If, after confirming that the file is protected by Rights Management, and the file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
@@ -86,7 +86,7 @@ If, after opening the protected file, you want to do more than just read it (for
 
     For example, if a file was protected by using the file name document.vsdx.pfile, view the file and in File Explorer, save the file as document.vsdx.
 
-    The new file is no longer protected. If you want to protect it, you must do this manually. For instructions, see [Protect a file on a device (protect in-place) by using the Rights Management sharing application](protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application.md).
+    The new file is no longer protected. If you want to protect it, you must do this manually. For instructions, see [Protect a file on a device (protect in-place) by using the Rights Management sharing application](sharing-app-protect-in-place.md).
 
 - **The file has a *.ppdf* file name extension or is a protected text or image file (such as *.ptxt* or *.pjpg*)**
 
@@ -102,10 +102,10 @@ If, after opening the protected file, you want to do more than just read it (for
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

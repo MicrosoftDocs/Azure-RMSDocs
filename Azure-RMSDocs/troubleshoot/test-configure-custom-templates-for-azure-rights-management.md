@@ -40,15 +40,15 @@ For users to be able to select a custom template that contains settings such as 
 
 Use the following sections to help you configure and use custom templates:
 
--   [How to create, configure, and publish a custom template](configure-custom-templates-for-azure-rights-management.md#BKMK_HowToConfigureCustomTemplates)
+-   [How to create, configure, and publish a custom template](configure-custom-templates.md#BKMK_HowToConfigureCustomTemplates)
 
--   [How to copy a template](configure-custom-templates-for-azure-rights-management.md#BKMK_HowToCopyTemplates)
+-   [How to copy a template](configure-custom-templates.md#BKMK_HowToCopyTemplates)
 
--   [How to remove (archive) templates](configure-custom-templates-for-azure-rights-management.md#BKMK_HowToArchiveTemplates)
+-   [How to remove (archive) templates](configure-custom-templates.md#BKMK_HowToArchiveTemplates)
 
--   [Refreshing templates for users](configure-custom-templates-for-azure-rights-management.md#BKMK_RefreshingTemplates)
+-   [Refreshing templates for users](configure-custom-templates.md#BKMK_RefreshingTemplates)
 
--   [Windows PowerShell reference](configure-custom-templates-for-azure-rights-management.md#BKMK_PowerShellTemplates)
+-   [Windows PowerShell reference](configure-custom-templates.md#BKMK_PowerShellTemplates)
 
 ## How to create, configure, and publish a custom template
 You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the **advanced features** for Rights Management, which then redirects you to the Azure classic portal.
@@ -70,7 +70,7 @@ Use the following procedures to create, configure, and publish custom templates 
         4.  In the **rights management** section, click **advanced features**.
 
             > [!NOTE]
-            > If you haven’t activated Rights Management, first click **activate** and confirm your action. For more information, see [Activating Azure Rights Management](activating-azure-rights-management.md).
+            > If you haven’t activated Rights Management, first click **activate** and confirm your action. For more information, see [Activating Azure Rights Management](activate-service.md).
             > 
             > If you haven’t clicked **advanced features** before, after Rights Management is activated, follow the on-screen instructions to get a free Azure subscription that’s required to access the Azure classic portal.
 
@@ -87,7 +87,7 @@ Use the following procedures to create, configure, and publish custom templates 
         4.  If you have not already activated Rights Management, click **ACTIVATE** and confirm your action.
 
             > [!NOTE]
-            > For more information, see [Activating Azure Rights Management](activating-azure-rights-management.md).
+            > For more information, see [Activating Azure Rights Management](activate-service.md).
 
 2.  Create a new template:
 
@@ -108,7 +108,7 @@ From the **Get started with Rights Management** quick start page, now click **Ma
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
 
-    As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](configure-custom-templates-for-azure-rights-management.md#BKMK_HowToCopyTemplates) section in this topic.
+    As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](configure-custom-templates.md#BKMK_HowToCopyTemplates) section in this topic.
 
     > [!TIP]
     > You can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](https://technet.microsoft.com/library/jj585012.aspx) and using one of the following methods:
@@ -118,7 +118,7 @@ From the **Get started with Rights Management** quick start page, now click **Ma
 
 3.  Click the Next button, and then assign one of the listed rights to your selected users and groups.
 
-    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring Usage Rights for Azure Rights Management](configuring-usage-rights-for-azure-rights-management.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
+    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring Usage Rights for Azure Rights Management](configure-usage-rights.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
 
 4.  If you selected **Custom**, click the Next button, and then select those custom rights.
 
@@ -183,7 +183,7 @@ To make any changes to your template, select it, and then use the quick start st
 -   To make other configuration changes: Click **CONFIGURE**, make your changes, and then click **SAVE**.
 
 > [!WARNING]
-> When you make changes to a template that was previously saved, clients will not see those changes to the template until templates are refreshed on their computers. For more information, see the [Refreshing templates for users](configure-custom-templates-for-azure-rights-management.md#BKMK_RefreshingTemplates) section in this topic.
+> When you make changes to a template that was previously saved, clients will not see those changes to the template until templates are refreshed on their computers. For more information, see the [Refreshing templates for users](configure-custom-templates.md#BKMK_RefreshingTemplates) section in this topic.
 
 ## How to copy a template
 If you want to create a new template that has very similar settings to an existing template, select the original template on the **TEMPLATES** page, click **COPY**, specify a unique name, and make the changes that you need.
@@ -211,7 +211,7 @@ When you use Azure RMS, templates are automatically downloaded to client compute
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
-|Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, expand the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](configure-custom-templates-for-azure-rights-management.md#BKMK_ExchangeOnlineTemplatesUpdate).|
+|Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, expand the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](configure-custom-templates.md#BKMK_ExchangeOnlineTemplatesUpdate).|
 |Office 365|Automatically refreshed  – no additional steps required.|
 |Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed – on a schedule:<br /><br />For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than this schedule, expand the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#BKMK_Office2013ForceUpdate).|
 |Office 2010|Refreshed when users log on.<br /><br />To force a refresh, ask or force users to log off and log back on again. Or, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#BKMK_Office2010ForceUpdate).|
@@ -314,7 +314,7 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
     > [!TIP]
     > In the registry path, *&lt;MicrosoftRMS_FQDN&gt;* refers to your Microsoft RMS service FQDN. If you want to verify this value:
     > 
-    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven’t already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
     > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
     > 
     >     For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
@@ -364,7 +364,7 @@ You can also use export and import to back up and restore your custom templates,
 > 
 > If you have previously installed this Windows PowerShell module, run the following command in a PowerShell window to check the version number: `(Get-Module aadrm -ListAvailable).Version`
 
-For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](installing-windows-powershell-for-azure-rights-management.md).
+For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
 
 The cmdlets that support creating and managing templates:
 
@@ -385,7 +385,7 @@ The cmdlets that support creating and managing templates:
 -   [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx)
 
 ## Next steps
-After you’ve configured custom templates for Azure Rights Management, use the [Azure Rights Management Deployment Roadmap](azure-rights-management-deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
+After you’ve configured custom templates for Azure Rights Management, use the [Azure Rights Management Deployment Roadmap](deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. If there are no other configuration steps that you need to do, see [Using Azure Rights Management](using-azure-rights-management.md) for operational guidance to support a successful deployment for your organization.
 
 ## See Also
 [Configuring Azure Rights Management](configuring-azure-rights-management.md)

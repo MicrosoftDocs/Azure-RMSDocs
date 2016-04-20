@@ -37,4 +37,4 @@ You can copy custom templates and the default templates. As a best practice, cop
 
 
 ## See Also
-[Configure Custom Templates for Azure Rights Management](configure-custom-templates-for-azure-rights-management.md)
+[Configure Custom Templates for Azure Rights Management](configure-custom-templates.md)

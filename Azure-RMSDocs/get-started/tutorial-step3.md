@@ -30,12 +30,12 @@ ms.custom:
 
 Jump to: 
 > [!div class="op_single_selector"]
-- [Introduction](quick-start-tutorial-for-azure-rights-management.md)
-- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
-- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
-- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
-- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
-- [Step 5: Track your doc](rms-quickstart-step5.md)
+- [Introduction](quick-start-tutorial.md)
+- [Step 1: Activate Azure RMS](tutorial-step1.md)
+- [Step 2: Install RMS sharing app](tutorial-step2.md)
+- [Step 3: Email the confidential doc](tutorial-step3.md)
+- [Step 4: Recipient reads the doc](tutorial-step4.md)
+- [Step 5: Track your doc](tutorial-step5.md)
 
 
 For this step, first create and save a document using Word that will represent your document that you want to protect, and name it **Confidential.docx**. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it. For example, you might type: **If you can read this from your email attachment, the sender has successfully shared a file that was protected with Azure RMS.**
@@ -76,10 +76,10 @@ Now you’ve sent your protected document, you’re ready to ask your recipients
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions and alternative methods for protecting files that you share by email|[Protect a file that you share by email by using the Rights Management sharing application](../rms-client/protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md)|
-|About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/dialog-box-options-for-the-rights-management-sharing-application.md)|
+|Full instructions and alternative methods for protecting files that you share by email|[Protect a file that you share by email by using the Rights Management sharing application](../rms-client/sharing-app-protect-by-email.md)|
+|About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/sharing-app-dialog-box.md)|
 
 
 >[!div class="step-by-step"]
-[« Step 2](rms-quickstart-step2.md)
-[Step 4 »](rms-quickstart-step4.md)
+[« Step 2](tutorial-step2.md)
+[Step 4 »](tutorial-step4.md)

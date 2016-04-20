@@ -46,4 +46,4 @@ To control the user accounts in the Azure directory, or to prevent users from si
 
 ## Next steps
 
-If users rather than administrators can create their accounts in Azure Active Directory for RMS for individuals, how can you find out if they have done this?  See  [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-find-if-users-have-signed-up.md).
+If users rather than administrators can create their accounts in Azure Active Directory for RMS for individuals, how can you find out if they have done this?  See  [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-identify-sign-up.md).

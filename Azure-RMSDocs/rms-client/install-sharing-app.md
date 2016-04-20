@@ -58,15 +58,15 @@ If you sign in to your computer and do not have local administrative rights, and
 
 If you are not a local administrator and use Office 365 or Office 2013, you do not see this message and these scenarios are supported.
 
-You can continue the installation with these known limitations. Or you can stop the installation and either rerun it with the **Run as administrator** option when you run Setup.exe in step 3, or ask an administrator to install it for you. Administrators can [script this installation](rights-management-sharing-application-administrator-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) for you so that it installs automatically.
+You can continue the installation with these known limitations. Or you can stop the installation and either rerun it with the **Run as administrator** option when you run Setup.exe in step 3, or ask an administrator to install it for you. Administrators can [script this installation](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) for you so that it installs automatically.
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
 
--   [Examples for using the RMS sharing application](rights-management-sharing-application-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](rights-management-sharing-application-user-guide.md##what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md##what-do-you-want-to-do-)
 
 ## See Also
-[Rights Management sharing application user guide](rights-management-sharing-application-user-guide.md)
+[Rights Management sharing application user guide](sharing-app-user-guide.md)
 

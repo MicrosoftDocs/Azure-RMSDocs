@@ -31,12 +31,12 @@ ms.custom:
 
 Jump to: 
 > [!div class="op_single_selector"]
-- [Introduction](quick-start-tutorial-for-azure-rights-management.md)
-- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
-- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
-- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
-- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
-- [Step 5: Track your doc](rms-quickstart-step5.md)
+- [Introduction](quick-start-tutorial.md)
+- [Step 1: Activate Azure RMS](tutorial-step1.md)
+- [Step 2: Install RMS sharing app](tutorial-step2.md)
+- [Step 3: Email the confidential doc](tutorial-step3.md)
+- [Step 4: Recipient reads the doc](tutorial-step4.md)
+- [Step 5: Track your doc](tutorial-step5.md)
 
 
 ![](../media/AzRMS_QuickStartSteps2.PNG)
@@ -63,11 +63,11 @@ You’re now ready to start protecting files that contain information that you w
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About a local installation of the Rights Management sharing application for Windows and user instructions|[Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md)|
-|About the scripted installation of the Rights Management sharing application for Windows and more technical information|[Rights Management sharing application administrator guide](../rms-client/rights-management-sharing-application-administrator-guide.md)|
-|To understand the difference between native protection and generic protection|[What’s the difference between generic protection and built-in (native) protection?](../rms-client/dialog-box-options-for-the-rights-management-sharing-application.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
+|About a local installation of the Rights Management sharing application for Windows and user instructions|[Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md)|
+|About the scripted installation of the Rights Management sharing application for Windows and more technical information|[Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md)|
+|To understand the difference between native protection and generic protection|[What’s the difference between generic protection and built-in (native) protection?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
 
 
 >[!div class="step-by-step"]
-[« Step 1](quick-start-tutorial-for-azure-rights-management.md)
-[Step 3 »](rms-quickstart-step3.md)
+[« Step 1](quick-start-tutorial.md)
+[Step 3 »](tutorial-step3.md)

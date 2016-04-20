@@ -77,9 +77,9 @@ If you do not want users to see these templates or if you want to create your ow
 
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates-for-azure-rights-management.md).
+- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-- To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/helping-users-to-protect-files-by-using-azure-rights-management.md).
+- To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md).
 
 Next, see some examples of how administrators can apply the templates to automatically configure information protection for files and emails.
 
@@ -116,7 +116,7 @@ The recipient cannot read the confidential report because he is not a member of 
 
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Deploying the Azure Rights Management connector](../deploy-use/deploying-the-azure-rights-management-connector.md).
+- For step-by-step instructions, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 ## Automatically protecting emails with Exchange Online and data loss prevention policies
 
@@ -150,9 +150,9 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 **More information for this scenario:**
 
--   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](rights-management-sharing-application-for-office.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
+-   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](applications-support.md).
 
--   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Automatically protecting files with SharePoint Online and protected libraries
 
@@ -184,9 +184,9 @@ The document remains protected even if the user renames it, saves it to another 
 
 **More information for this scenario:**
 
--   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](rights-management-sharing-application-for-office.md#sharepoint-online-and-sharepoint-server) section from [How applications support Azure Rights Management](how-applications-support-azure-rights-management.md).
+-   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section from [How applications support Azure Rights Management](applications-support.md).
 
--   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/o365-configure-for-clients-online-services.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configuring-applications-for-azure-rights-management.md).
+-   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Users safely share attachments with mobile users
 
@@ -232,9 +232,9 @@ If Bob forwards his email with the attachment, or saves it where others can acce
 
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Protect a file that you share by email](../rms-client/protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application.md) and [View and use files that have been protected](../rms-client/view-and-use-files-that-have-been-protected-by-rights-management.md) from the [Rights Management sharing application user guide](../rms-client/rights-management-sharing-application-user-guide.md).
+- For step-by-step instructions, see [Protect a file that you share by email](../rms-client/sharing-app-protect-by-email.md) and [View and use files that have been protected](../rms-client/sharing-app-view-use-files.md) from the [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md).
 
-- The [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial-for-azure-rights-management.md) includes step-by-step instructions for this scenario.
+- The [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial.md) includes step-by-step instructions for this scenario.
 
 ## Next steps
 

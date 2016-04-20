@@ -31,12 +31,12 @@ ms.custom:
 
 Jump to: 
 > [!div class="op_single_selector"]
-- [Introduction](quick-start-tutorial-for-azure-rights-management.md)
-- [Step 1: Activate Azure RMS](rms-quickstart-step1.md)
-- [Step 2: Install RMS sharing app](rms-quickstart-step2.md)
-- [Step 3: Email the confidential doc](rms-quickstart-step3.md)
-- [Step 4: Recipient reads the doc](rms-quickstart-step4.md)
-- [Step 5: Track your doc](rms-quickstart-step5.md)
+- [Introduction](quick-start-tutorial.md)
+- [Step 1: Activate Azure RMS](tutorial-step1.md)
+- [Step 2: Install RMS sharing app](tutorial-step2.md)
+- [Step 3: Email the confidential doc](tutorial-step3.md)
+- [Step 4: Recipient reads the doc](tutorial-step4.md)
+- [Step 5: Track your doc](tutorial-step5.md)
 
 
 ![](../media/AzRMS_QuickStartSteps1.PNG)
@@ -92,10 +92,10 @@ Although not included here, for a production deployment, you probably will also 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating Rights Management and controlling who can protect files and email when the service is activated|[Activating Azure Rights Management](../deploy-use/activating-azure-rights-management.md)|
-|About the default templates and how to create new, custom templates|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates-for-azure-rights-management.md)|
+|About activating Rights Management and controlling who can protect files and email when the service is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|About the default templates and how to create new, custom templates|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 
 
 >[!div class="step-by-step"]
-[« Intro](quick-start-tutorial-for-azure-rights-management.md)
-[Step 2 »](rms-quickstart-step2.md)
+[« Intro](quick-start-tutorial.md)
+[Step 2 »](tutorial-step2.md)
