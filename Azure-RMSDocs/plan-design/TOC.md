@@ -12,7 +12,7 @@
 ### [Post migration tasks](./migrate-from-ad-rms-phase4.md)
 ## [Planning and implementing your tenant key](./plan-implement-tenant-key.md)
 ### [BYOK pricing and restrictions](byok-price-restrictions.md)
-### [About Thales HSMs](thales-hms.md)
+### [About Thales HSMs](thales-hsm.md)
 ### [Over the Internet](generate-tenant-key-internet.md)
 ### [In person](generate-tenant-key-in-person.md)
 ## [Preparing for Azure RMS](./prepare.md)
