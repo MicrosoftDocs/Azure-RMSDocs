@@ -5,8 +5,8 @@ layout: HubPage
 # Azure Rights Management Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management</h1>
-      <h2>Azure Rights Management is a cloud service that helps you protect your organization's sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is integrated into other Microsoft cloud services and applications such as Office 365 and Azure Active Directory, but can also be used with your on-premises applications and services.</h2>
+      <h1>Azure Rights Management Documentation</h1>
+      <h2>Everything you need to know to deploy and manage Azure Rights Management (Azure RMS) can be found here. We'll help you quickly get started using Azure RMS to apply information protection to email, documents, and other sensitive data.</h2>
 
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
@@ -35,7 +35,6 @@ layout: HubPage
 
     <div id="journeys">
       <section class="container">
-        <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2>
         <ul class="journeys-list">
 
           <li class="journey-step">
@@ -105,7 +104,7 @@ layout: HubPage
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./get-started/rapid-deployment-guide.md">
+                  <a href="./get-started/quick-start-tutorial.md">
                     <h4>Rapid deployment guide for Azure Rights Mangement</h4>
                     <p>Quickly deploy and use Azure RMS by choosing from a list of specific scenarios to implement.</p>
                   </a>
@@ -214,19 +213,19 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./develop/developers-guide.md">
                     <h4>Azure RMS developer's guide</h4>
-                    <p>Find the resources to develop application that integrate Azure RMS.</p>
+                    <p>See a collection of Microsoft supplied RMS code samples and developer support tools spanning all supported operating systems.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/rights-management/develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md">
                     <h4>Microsoft Rights Management SDK 4.2</h4>
-                    <p>Use the technical reference for the simplified, next-generation API to upgrade your apps with information protection.</p>
+                    <p>Use this next-generation SDK that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/rights-management/develop/microsoft-information-protection-and-control-client-portal.md">
                     <h4>Microsoft Rights Management SDK 2.1</h4>
-                    <p>View the technical reference for leveraging Azure RMS to provide information protection.</p>
+                    <p>Use this powerful SDK for Windows desktop application developers and server based solution providers to enable their products to work with Microsoft Rights Management services.</p>
                   </a>
                 </li>
 
