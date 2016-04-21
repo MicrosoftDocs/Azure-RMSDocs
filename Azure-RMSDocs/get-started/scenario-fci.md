@@ -46,15 +46,15 @@ Make sure that the following requirements are in place, and then follow the inst
 ## Requirements for this Scenario
 For the instructions for this scenario to work, the following must be in place:
 
-|Check|Requirement|If you need more information|
-|---------|---------------|--------------------------------|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|One of the following:<br /><br />To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />To use a custom template for specific users: You have created and published this custom template|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
+|Requirement|If you need more information|
+|---------------|--------------------------------|
+|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|One of the following:<br /><br />To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />To use a custom template for specific users: You have created and published this custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
-#### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with file classification infrastructure
+### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with file classification infrastructure
 
 1.  Start a Windows PowerShell session. You do not have to run this session as an administrator.
 
@@ -76,7 +76,7 @@ For the instructions for this scenario to work, the following must be in place:
 
     These instructions include a Windows PowerShell script that you specify to run as a custom executable in File Server Resource Manager. The instructions also include how to verify that the files are protected by Azure Rights Management.
 
-## User Documentation Instructions
+## User documentation instructions
 If the files you are protecting are Office files only, you might not have to provide users with any instructions about the protected files. When authorized users open these documents, they open as usual in Office, with the only difference being that users might be prompted to authenticate, and they will probably see an information bar at the top of the document that informs them that the document is protected.
 
 If the protected files have a **.ppdf** file name extension or they are a protected text or image file (for example, they have a **.ptxt**  or .**pjpg** file name extension), these files are now read-only and cannot be edited. Users can view them by using the RMS sharing application viewer, which loads automatically for these file types. These files are natively protected by Azure RMS and applies all policy settings from the template that you applied, with the exception of the usage rights, because the file itself is read-only. Unless you know that you will be protecting these file types, it is unlikely that you will need user instructions for this scenario but warn your help desk that they might need to explain to users why these files cannot be edited.
@@ -101,7 +101,7 @@ The example documentation shows how these instructions might look for users, aft
 
 ![](../media/AzRMS_UsersBanner.png)
 
-#### How to edit &lt;type of file&gt; from the &lt;file server share&gt;
+### How to edit &lt;type of file&gt; from the &lt;file server share&gt;
 
 1.  Double-click the file to open it. You might be prompted for your credentials.
 
@@ -127,10 +127,10 @@ Periodically, the file will be protected again, which again adds the .pfile file
 
     -   *&lt;contact details&gt;*
 
-### Example Customized User Documentation
+### Example customized user documentation
 ![](../media/AzRMS_ExampleBanner.png)
 
-##### How to edit CAD drawings from the ProjectNextGen share
+#### How to edit CAD drawings from the ProjectNextGen share
 
 1.  Double-click the file to open it. You might be prompted for your credentials.
 
