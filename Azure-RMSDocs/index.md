@@ -5,43 +5,42 @@ layout: HubPage
 # Azure Rights Management Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management</h1>
-      <h2>Azure Rights Management is a cloud service that helps you protect your organization's sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is integrated into other Microsoft cloud services and applications such as Office 365 and Azure Active Directory, but can also be used with your on-premises applications and services.</h2>
+      <h1>Azure Rights Management Documentation</h1>
+      <h2>Everything you need to know to deploy and manage Azure Rights Management (Azure RMS) can be found here. We'll help you quickly get started using Azure RMS to apply information protection to email, documents, and other sensitive data.</h2>
 
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
 
     <aside class="alert section-border">
-      <p>Ready to get hands-on?</p>
-      <ol class="action-list">
-        <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>
-      </ol>
-    </aside>
+        <p>Ready to get hands-on?
+        <ol class="action-list">
+          <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>
+        </ol>  
+    </aside>  
 
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="./understand-explore/what-is-azure-rights-management">What is Azure Rights Management?</a></li>
-          <li><a href="./get-started/quick-start-tutorial-for-azure-rights-management">Quickstart guide for Azure RMS</a></li>
-          <li><a href="./plan-design/azure-rights-management-deployment-roadmap">Rights Management deployment roadmap</a></li>
+          <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
+          <li><a href="./get-started/quick-start-tutorial.md">Quickstart guide for Azure RMS</a></li>
+          <li><a href="./plan-design/deployment-roadmap.md">Rights Management deployment roadmap</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./develop/developers-guide">Integrate applications with Azure RMS</a></li>
-          <li><a href="./rms-client/rights-management-rms-client">Use the Azure RMS Client</a></li>
+          <li><a href="./develop/developers-guide.md">Integrate applications with Azure RMS</a></li>
+          <li><a href="./rms-client/use-client.md">Use the Azure RMS Client</a></li>
         </ul>
       </div>
     </section>
 
     <div id="journeys">
       <section class="container">
-        <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2>
         <ul class="journeys-list">
 
           <li class="journey-step">
 
             <header class="journey-step-header expander row expanded">
-              <a href="./understand-explore/azure-rights-management">
+              <a href="./understand-explore/azure-rights-management.md">
                 <div class="title column-third">
                   <span class="step-number">1</span>
                   <p>Understand &amp; Explore</p>
@@ -54,28 +53,26 @@ layout: HubPage
             <section class="journey-step-elements content">
               <ul class="row">
             <li class="column-third">
-              <a href="./understand-explore/azure-rights-management">
-                <h4>Overview of Azure Rights Management</h4>
+              <a href="./understand-explore/azure-rights-management.md">
+                <h3>Overview of Azure Rights Management</h3>
                 <p>Learn about Azure RMS, which protects your organization's sensitive information from unauthorized access and controls how this information is used.</p>
               </a>
             </li>
             <li class="column-third">
-              <a href="./understand-explore/rms-for-individuals-and-azure-rights-management">
-                <h4>RMS for individuals and Azure Rights Management</h4>
+              <a href="./understand-explore/rms-for-individuals.md">
+                <h3>RMS for individuals and Azure Rights Management</h3>
                 <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
-                    <h4>Read</h4>
 
 	     </a>
             </li>
             <li class="column-third">
-              <a href="./understand-explore/how-applications-support-azure-rights-management">
-                <h4>How applications support Azure Rights Management</h4>
+              <a href="./understand-explore/applications-support.md">
+                <h3>How applications support Azure Rights Management</h3>
                 <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data </p>
-                <h4>Read</h4>
               </a>
             </li>
               </ul>
-	       <a href="./understand-explore/azure-rights-management" class="see-more">See More</a>
+	       <a href="./understand-explore/azure-rights-management.md" class="see-more">See More</a>
             </section>
 
           </li>
@@ -83,7 +80,7 @@ layout: HubPage
           <li class="journey-step">
 
             <header class="journey-step-header expander row expanded">
-              <a href="./get-started/requirements-for-azure-rights-management">
+              <a href="./get-started/requirements-azure-rms.md">
                 <div class="title column-third">
                   <span class="step-number">2</span>
                   <p>Get Started</p>
@@ -95,29 +92,26 @@ layout: HubPage
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="./get-started/requirements-for-azure-rights-management">
-                    <h4>Requirements for Azure Rights Management</h4>
+                  <a href="./get-started/requirements-azure-rms.md">
+                    <h3>Requirements for Azure Rights Management</h3>
                     <p>Discover the prerequisites for deploying Azure Azure RMS.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./get-started/terminology-for-azure-rights-management">
-                    <h4>Terminology for Azure Rights Management</h4>
+                  <a href="./get-started/terminology.md">
+                    <h3>Terminology for Azure Rights Management</h3>
                     <p>Learn the terms and abbreviations that are used in the context of Rights Management.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./get-started/rapid-deployment-guide-for-azure-rights-management">
-                    <h4>Rapid deployment guide for Azure Rights Mangement</h4>
+                  <a href="./get-started/quick-start-tutorial.md">
+                    <h3>Rapid deployment guide for Azure Rights Mangement</h3>
                     <p>Quickly deploy and use Azure RMS by choosing from a list of specific scenarios to implement.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
               </ul>
 
-              <a href="./get-started/requirements-for-azure-rights-management" class="see-more">See More</a>
+              <a href="./get-started/requirements-azure-rms.md" class="see-more">See More</a>
             </section>
 
           </li>
@@ -125,9 +119,9 @@ layout: HubPage
           <li class="journey-step">
 
             <header class="journey-step-header expander row expanded">
-              <a href="./plan-design/azure-rights-management-deployment-roadmap">
+              <a href="./plan-design/deployment-roadmap.md">
                 <div class="title column-third">
-                  <span class="step-number"> 4</span>
+                  <span class="step-number"> 3</span>
                   <p>Plan & Design</p>
                 </div>
                 <p class="description column-two-thirds">Plan and design Azure RMS</p>
@@ -137,29 +131,26 @@ layout: HubPage
             <section class="journey-step-elements content">
             <ul class="row">
                 <li class="column-third">
-                  <a href="./plan-design/azure-rights-management-deployment-roadmap">
-                    <h4>Azure Rights Management deployment roadmap</h4>
+                  <a href="./plan-design/deployment-roadmap.md">
+                    <h3>Azure Rights Management deployment roadmap</h3>
                     <p>Prepare for, implement, and manage Azure RMS for your organization.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./plan-design/migrating-from-ad-rms-to-azure-rights-management">
-                    <h4>Migrating from AD RMS to Azure Rights Management</h4>
+                  <a href="./plan-design/migrate-from-ad-rms-to-azure-rms.md">
+                    <h3>Migrating from AD RMS to Azure Rights Management</h3>
                     <p>Migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure RMS.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./plan-design/planning-and-implementing-your-azure-rights-management-tenant-key">
-                    <h4>Planning and implementing your Azure Rights Management Tenant Key</h4>
+                  <a href="./plan-design/plan-implement-tenant-key.md">
+                    <h3>Planning and implementing your Azure Rights Management Tenant Key</h3>
                     <p>Plan for and manage your Rights Management service (RMS) tenant key for Azure RMS.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
 
             </ul>
-	       <a href="./plan-design/azure-rights-management-deployment-roadmap" class="see-more">See More</a>
+	       <a href="./plan-design/deployment-roadmap.md" class="see-more">See More</a>
             </section>
 
           </li>
@@ -167,9 +158,9 @@ layout: HubPage
           <li class="journey-step">
 
             <header class="journey-step-header expander row expanded">
-              <a href="./deploy-use/activating-azure-rights-management">
+              <a href="./deploy-use/activate-service.md">
                 <div class="title column-third">
-                  <span class="step-number"> 5</span>
+                  <span class="step-number"> 4</span>
                   <p>Deploy & Use</p>
                 </div>
                 <p class="description column-two-thirds">Deploy and use Azure RMS
@@ -180,29 +171,26 @@ layout: HubPage
             <section class="journey-step-elements content">
             <ul class="row">
                  <li class="column-third">
-                 <a href="./deploy-use/activating-azure-rights-management">
-                    <h4>Activating Azure Rights Management</h4>
+                 <a href="./deploy-use/activate-service.md">
+                    <h3>Activating Azure Rights Management</h3>
                     <p>Start protecting important data by using applications and services that support this information protection solution.</p>
-                    <h4>Read</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./deploy-use/configure-custom-templates-for-azure-rights-management">
-                    <h4>Configuring custom templates for Azure Rights Management</h4>
+                  <a href="./deploy-use/configure-custom-templates.md">
+                    <h3>Configuring custom templates for Azure Rights Management</h3>
                     <p>Use templates to easily apply policies to sensitive files that restrict access to authorized users in your organization.</p>
-                     <h4>Read</h4>
                  </a>
                 </li>
                 <li class="column-third">
-                  <a href="./deploy-use/configuring-applications-for-azure-rights-management">
-                    <h4>Configuring applications for Azure Rights Management</h4>
+                  <a href="./deploy-use/configure-applications.md">
+                    <h3>Configuring applications for Azure Rights Management</h3>
                     <p>Configure applications and services to support Azure RMS.</p>
-                     <h4>Read</h4>
                  </a>
                 </li>
 
             </ul>
-	       <a href="./deploy-use/activating-azure-rights-management" class="see-more">See More</a>
+	       <a href="./deploy-use/activate-service.md" class="see-more">See More</a>
             </section>
 
           </li>
@@ -210,7 +198,7 @@ layout: HubPage
           <li class="journey-step">
 
             <header class="journey-step-header expander row expanded">
-              <a href="./develop/developers-guide">
+              <a href="./develop/developers-guide.md">
                 <div class="title column-third">
                   <span class="step-number"> 5</span>
                   <p>Develop &amp; customize apps</p>
@@ -223,72 +211,26 @@ layout: HubPage
             <section class="journey-step-elements content">
             <ul class="row">
                 <li class="column-third">
-                  <a href="./develop/developers-guide">
-                    <h4>Azure RMS developer's guide</h4>
-                    <p>Find the resources to develop application that integrate Azure RMS.</p>
-                    <h4>Read</h4>
+                  <a href="./develop/developers-guide.md">
+                    <h3>Azure RMS developer's guide</h3>
+                    <p>See a collection of Microsoft supplied RMS code samples and developer support tools spanning all supported operating systems.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/rights-management/develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal">
-                    <h4>Microsoft Rights Management SDK 4.2</h4>
-                    <p>Use the technical reference for the simplified, next-generation API to upgrade your apps with information protection.</p>
-                    <h4>Read</h4>
+                  <a href="/rights-management/develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md">
+                    <h3>Microsoft Rights Management SDK 4.2</h3>
+                    <p>Use this next-generation SDK that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/rights-management/develop/microsoft-information-protection-and-control-client-portal">
-                    <h4>Microsoft Rights Management SDK 2.1</h4>
-                    <p>View the technical reference for leveraging Azure RMS to provide information protection.</p>
-                    <h4>Read</h4>
+                  <a href="/rights-management/develop/microsoft-information-protection-and-control-client-portal.md">
+                    <h3>Microsoft Rights Management SDK 2.1</h3>
+                    <p>Use this powerful SDK for Windows desktop application developers and server based solution providers to enable their products to work with Microsoft Rights Management services.</p>
                   </a>
                 </li>
 
             </ul>
-	       <a href="./develop/developers-guide" class="see-more">See More</a>
-            </section>
-
-          </li>
-
-          <li class="journey-step">
-
-            <header class="journey-step-header expander row expanded">
-              <a href="./rms-client/rights-management-rms-client">
-                <div class="title column-third">
-                  <span class="step-number"> 6</span>
-                  <p>Use the RMS Client</p>
-                </div>
-                <p class="description column-two-thirds">Learn to use the Azure RMS client
-                </p>
-              </a>
-            </header>
-
-            <section class="journey-step-elements content">
-            <ul class="row">
-             <li class="column-third">
-                  <a href="./rms-client/rights-management-rms-client">
-                    <h4>Use the Azure RMS Client</h4>
-                    <p>Learn more about the Azure Rights Management client.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="./rms-client/rms-protection-with-windows-server-file-classification-infrastructure-fci">
-                    <h4>RMS Protection with Windows Server File Classification Infrastructure</h4>
-                    <p>Use the Rights Management client with the RMS Protection.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="./administer/administering-azure-rights-management-with-powershell">
-                    <h4>Rights Management Sharing Application for Windows</h4>
-                    <p>Get the Rights Management Sharing Application for Windows.</p>
-                    <h4>Read</h4>
-                  </a>
-                </li>
-
-            </ul>
-	       <a href="./rms-client/rights-management-rms-client" class="see-more">See More</a>
+	       <a href="./develop/developers-guide.md" class="see-more">See More</a>
             </section>
 
           </li>

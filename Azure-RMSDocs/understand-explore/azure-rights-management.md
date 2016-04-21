@@ -35,8 +35,8 @@ For example, you can configure a file so that it can be accessed only by people 
 Know Azure Rights Management by another name?  [See also known as ...](azure-rms-aka.md).
 
 # Next steps
-For a deeper understanding and some examples, see [What is Azure Rights Management?](what-is-azure-rights-management.md)
+For a deeper understanding and some examples, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
-If you're ready to deploy Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/azure-rights-management-deployment-roadmap.md).
+If you're ready to deploy Azure RMS for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md).
 
 
