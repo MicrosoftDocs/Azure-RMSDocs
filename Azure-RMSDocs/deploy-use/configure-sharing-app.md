@@ -39,7 +39,7 @@ To install the RMS sharing application for mobile platforms, you can download th
 
 **If you have Microsoft Intune**: Because the RMS sharing app includes the Microsoft Intune App Software Development Kit, you have the following options:
 
--   For devices that are enrolled by Intune, you can  deploy and manage the RMS sharing app for devices that run iOS and Android.  For more information,  see [Control apps using mobile application management policies with Microsoft Intune](https://technet.microsoft.com/library/dn878026.aspx) from the Microsoft Intune documentation. For Step 2, use the instructions to publish a policy managed app.
+-   For devices that are enrolled by Intune, you can  deploy and manage the RMS sharing app for devices that run iOS and Android. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2, use the instructions to publish a policy managed app.
 
--   For devices that are not enrolled by Intune, you can manage the RMS sharing app for devices that run Android. For more information, see [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx).
+-   For devices that are not enrolled by Intune, you can manage the RMS sharing app for devices that run Android. For more information, see [Create and deploy mobile app management policies with Microsoft Intune](intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
 
