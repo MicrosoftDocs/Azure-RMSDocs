@@ -67,7 +67,13 @@ The following applications natively support Azure Rights Management (Azure RMS)
     For more information about the Rights Management sharing application for mobile platforms, see the following resources:
 
     -   Download the relevant app by using the links on the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970)
- 
+
+    -   If you have Microsoft Intune, you can deploy and manage the app by using a policy managed app: 
+
+	    -   For iOS and Android devices that are enrolled by Intune: [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)
+
+	    -   For Android devices that are not enrolled by Intune: [Create and deploy mobile app management policies with Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+
     -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
 -   **Other applications that support the RMS APIs**:
