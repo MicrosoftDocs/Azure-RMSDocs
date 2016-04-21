@@ -32,7 +32,7 @@ For this release of the Microsoft Rights Management SDK 4.2, your quick start a
 
 1. **Download the SDK package** for your target operating system using the following table of links.
 
-  |MS RMS SDK 4.2|
+  |RMS SDK 4.2|
   |---------------|
   |[Android SDK](http://Go.Microsoft.Com/FWLink/p/?LinkId=404271)|
   |[iOS SDK](http://Go.Microsoft.Com/FWLink/p/?LinkId=404272)|
