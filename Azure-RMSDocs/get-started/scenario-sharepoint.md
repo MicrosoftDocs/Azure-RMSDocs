@@ -44,15 +44,15 @@ Make sure that the following requirements and the supporting procedures are in p
 ## Requirements for this Scenario
 For this scenario to work, the following must be in place:
 
-|Check|Requirement|If you need more information|
-|---------|---------------|--------------------------------|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management Connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Configure SharePoint for IRM and protected libraries|[Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|Requirement|If you need more information|
+|---------------|--------------------------------|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
+|Configure SharePoint for IRM and protected libraries|[Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
-#### To configure the SharePoint library for IRM settings
+### To configure the SharePoint library for IRM settings
 
 1.  After you have configured SharePoint to use the IRM service, navigate to your SharePoint library to protect with Azure RMS. In the **Settings** &gt; **Information Rights Management (IRM)** page for the site , in addition to selecting **Restrict permissions on this library on download**, and specifying a policy title for administrators and a policy descriptions for users, click **SHOW OPTIONS**.
 
@@ -64,7 +64,7 @@ For this scenario to work, the following must be in place:
 
         Without this option, only users that have access to the SharePoint library will be able to collaborate on these documents, and only by downloading the documents directly from SharePoint. In many cases, this restriction is appropriate.
 
-## User Documentation Instructions
+## User documentation instructions
 There are no procedural instructions to give to users for this scenario because protected libraries require no special action from users. Documents are automatically protected on download, according to the permissions that a SharePoint administrator sets for the site. However, inform users about this change so that they know what to expect, and let your help desk know which libraries are protected and how this can restrict the use of the documents. For example, because of current limitations, these documents can be viewed but not edited with mobile devices. If you configured the group protection, let users know which groups can access and edit documents outside SharePoint.
 
 Using the following template, copy and paste the announcement into a communication for your end users, and make these modifications to reflect your environment:
@@ -92,7 +92,7 @@ You will not be able to upload documents to the &lt;name of SharePoint site&gt; 
 
 -   Contact the help desk: &lt;contact details&gt;
 
-### Example User Documentation
+### Example user documentation
 ![](../media/AzRMS_ExampleBanner.png)
 
 #### IT Announcement: Changes to the Sales Forecasts and Reports site

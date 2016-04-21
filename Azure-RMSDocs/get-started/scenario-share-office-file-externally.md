@@ -46,15 +46,15 @@ Make sure that the following requirements are in place before going on to the us
 ## Requirements for this Scenario
 For the user instructions for this scenario to work, the following must be in place:
 
-|Check|Requirement|If you need more information|
-|---------|---------------|--------------------------------|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Users have Outlook from Office 2013|If users have Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
+|Requirement|If you need more information|
+|---------------|--------------------------------|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Users have Outlook from Office 2013|If users have Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
+|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
 
-## User Documentation Instructions
+## User documentation instructions
 Using the following template, copy and paste the user instructions into a communication for your end users, and make these modifications to reflect your environment:
 
 1.  Replace *&lt;name of Office document type&gt;* with the type of document that your users will be sending. Use wording that is specific and familiar to their work flows, such as "price list", "delivery times", and "bid proposal" rather than "Word document" and "Excel spreadsheet". This more specific wording helps to increases the likelihood that they will follow the instructions when working with those documents.
@@ -80,7 +80,7 @@ The example documentation shows how these instructions might look for users, aft
 
 ![](../media/AzRMS_UsersBanner.png)
 
-#### How to share a &lt;name of Office document type&gt;
+### How to share a &lt;name of Office document type&gt;
 
 1.  Create your email message by specifying the email address or addresses, type your message, and attach the *&lt;name of Office document type&gt;* to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
@@ -116,10 +116,10 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
     -   *&lt;contact details&gt;*
 
-### Example Customized User Documentation
+### Example customized user documentation
 ![](../media/AzRMS_ExampleBanner.png)
 
-##### How to share a price list with your customer
+#### How to share a price list with your customer
 
 1.  Create your email message by specifying the email address or addresses of your customer, type your message, and attach the latest price list to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 

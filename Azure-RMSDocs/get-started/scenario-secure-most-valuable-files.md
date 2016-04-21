@@ -50,16 +50,16 @@ Make sure that the following requirements are in place, and then follow the inst
 ## Requirements for this Scenario
 For this scenario, the following must be in place:
 
-|Check|Requirement|If you need more information|
-|---------|---------------|--------------------------------|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|You have configured a custom template as described next|[Configuring Custom Templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Authorized users have a minimum version of Office 2013|If users have Office 2010, they must also install the Rights Management sharing application.|
-|![](../media/4d269a30-a873-45c5-87de-30ee6558e7b0.gif)|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](https://technet.microsoft.com/library/dn529121.aspx) capabilities of Azure RMS, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
+|Requirement|If you need more information|
+|---------------|--------------------------------|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
+|You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
+|Authorized users have a minimum version of Office 2013|If users have Office 2010, they must also install the Rights Management sharing application.|
+|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](https://technet.microsoft.com/library/dn529121.aspx) capabilities of Azure RMS, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
 
-#### To configure the custom template
+### To configure the custom template
 
 1.  In the Azure classic portal: Create a new custom template for Azure Rights Management, which contains these values and settings:
 
@@ -73,7 +73,7 @@ For this scenario, the following must be in place:
 
 2.  Publish the new template.
 
-#### To protect the files in-place
+### To protect the files in-place
 
 1.  In File Explorer, navigate to the first folder that contains the files to protect:
 
@@ -94,7 +94,7 @@ For more information about protecting files in-place, see [Protect a file on a d
 > [!TIP]
 > If the number of files to protect are too many for this manual process, consider using the [RMS Protection tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) to bulk-protect the files with the template.
 
-#### To monitor and if necessary, revoke access to the files
+### To monitor and if necessary, revoke access to the files
 
 1.  In File Explorer, right-click the protected file, select  **Protect with RMS**, and then select **Track Usage**.
 
@@ -102,7 +102,7 @@ For more information about protecting files in-place, see [Protect a file on a d
 
 3.  Check who has accessed the file and the other files that you protected, paying particular attention to failed attempts in case they indicate suspicious behavior. If deemed appropriate, you can revoke access to each file.
 
-## User Documentation Instructions
+## User documentation instructions
 There are no specific instructions to give to users for this scenario because these files require no special action from users. The files have been protected by you and will be monitored by you. However, you might need to inform these users and your support channels which files are protected and how this can restrict use of the documents. For example, if an authorized user doesn't have an Internet connection, she will not be able to open the file.
 
 Using the following template, copy and paste the announcement into a communication for your end users, and make these modifications:
@@ -130,7 +130,7 @@ The following files now have a very high level of protection applied to them, so
 
 -   If you cannot access these files or if you notice suspicious changes in the files &lt;action and contact details&gt;.
 
-#### Example Customized User Documentation
+#### Example customized user documentation
 ![](../media/AzRMS_ExampleBanner.png)
 
 ##### IT Announcement: Protecting VanArsdel's top secret documents
