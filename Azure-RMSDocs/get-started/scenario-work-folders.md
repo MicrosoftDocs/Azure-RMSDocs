@@ -45,12 +45,12 @@ The instructions are suitable for the following set of circumstances:
 
 -   For files that must be shared with people that are not specified in the rights policy template (for example, users in another organization), users must apply a new rights policy to replace the original rights policy protection.
 
-## Deployment Instructions
+## Deployment instructions
 ![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|

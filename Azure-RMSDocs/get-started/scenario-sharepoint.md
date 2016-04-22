@@ -36,12 +36,12 @@ The instructions are suitable for the following set of circumstances:
 
 -   Employees do not need to share these documents with people outside your organization.
 
-## Deployment Instructions
+## Deployment instructions
 ![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements and the supporting procedures are in place before you go on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
