@@ -37,7 +37,7 @@ Using the Rights Management sharing application on Windows computers, these user
 
 For more information about how you can protect files by using the free Rights Management sharing application, see the [Rights Management sharing application guide for users](../rms-client/sharing-app-user-guide.md).
 
-RMS for individuals is an example of a self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/) in the Microsoft Azure documentation. 
+RMS for individuals is an example of a self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](/active-directory/active-directory-self-service-signup) in the Azure Active Directory documentation. 
 
 ## Next steps
 See [How users sign up for RMS for individuals](rms-for-individuals-user-sign-up.md), for step-by-step instructions and a technical overview of what's happening in the background. 

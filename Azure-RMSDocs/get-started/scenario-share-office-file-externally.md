@@ -38,12 +38,12 @@ This scenario is suitable for the following set of circumstances:
 
 -   The employee is potentially interested in knowing when this document is opened by the external user.
 
-## Deployment Instructions
+## Deployment instructions
 ![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place before going on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For the user instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|

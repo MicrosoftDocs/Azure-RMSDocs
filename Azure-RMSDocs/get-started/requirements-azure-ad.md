@@ -33,11 +33,11 @@ If you do not already have an Azure subscription for your organization, you can
 
 For more information, see the following resources in the Azure Active Directory documentation:
 
--   [What is an Azure AD directory?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis)
+-   [What is an Azure AD directory?](/active-directory/active-directory-whatis)
 
--   [How Azure subscriptions are associated with Azure AD]( https://azure.microsoft.com/en-us/documentation/articles/active-directory-how-subscriptions-associated-directory/)
+-   [How Azure subscriptions are associated with Azure AD](/active-directory/active-directory-how-subscriptions-associated-directory)
 
-If you want to integrate your Azure AD directory with your on-premises AD forests, see [Directory integration](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/).
+If you want to integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 > [!NOTE]
 > If you have mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
@@ -63,9 +63,9 @@ Then, configure your MFA solution:
 
 -   For Microsoft-managed tenants (you have Azure Active Directory or Office 365):
 
-    -   Configure Azure MFA to enforce MFA for users. For instructions, see [Getting started with Azure Multi-Factor Authentication in the cloud](https://azure.microsoft.com/documentation/articles/multi-factor-authentication-get-started-cloud/) from the Azure documentation.
+    -   Configure Azure MFA to enforce MFA for users. For instructions, see [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) from the Multi-factor Authentication documentation.
 
-        For more information about Azure MFA, see [What is Azure Multi-Factor Authentication?](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)
+        For more information about Azure MFA, see [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
 
 -   For federated tenants (you operate federation servers on-premises):
 
