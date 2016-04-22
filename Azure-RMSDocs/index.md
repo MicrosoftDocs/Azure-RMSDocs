@@ -23,12 +23,12 @@ layout: HubPage
       <div class="features row">
         <ul class="column column-half">
           <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
-          <li><a href="./get-started/quick-start-tutorial.md">Quickstart guide for Azure RMS</a></li>
-          <li><a href="./plan-design/deployment-roadmap.md">Rights Management deployment roadmap</a></li>
+          <li><a href="./get-started/quick-start-tutorial.md">Quick start tutorial for Azure RMS</a></li>
+          <li><a href="./get-started/rapid-deployment-guide.md">Rapid deployment guide for Azure RMS</a></li>
         </ul>
         <ul class="column column-half">
+          <li><a href="./plan-design/deployment-roadmap.md">Rapid deployment guide for Azure RMS</a></li>
           <li><a href="./develop/developers-guide.md">Integrate applications with Azure RMS</a></li>
-          <li><a href="./rms-client/use-client.md">Use the Azure RMS Client</a></li>
         </ul>
       </div>
     </section>
@@ -96,7 +96,7 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./get-started/requirements-azure-rms.md">
                     <h3>Requirements for Azure Rights Management</h3>
-                    <p>Discover the prerequisites for deploying Azure Azure RMS.</p>
+                    <p>Identify the prerequisites for deploying Azure Azure RMS.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
@@ -109,8 +109,8 @@ layout: HubPage
                 </li>
                 <li class="column-third">
                   <a href="./get-started/quick-start-tutorial.md">
-                    <h3>Rapid deployment guide for Azure Rights Mangement</h3>
-                    <p>Quickly deploy and use Azure RMS by choosing from a list of specific scenarios to implement.</p>
+                    <h3>Quick start tutorial for Azure RMS</h3>
+                    <p>Quickly try out Microsoft Azure Rights Management (also known as Azure RMS) for your organization with just 5 steps.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
@@ -129,7 +129,7 @@ layout: HubPage
                   <span class="step-number"> 3</span>
                   <p>Plan & Design</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design Azure RMS</p>
+                <p class="description column-two-thirds">Plan and design Azure RMS.</p>
               </a>
             </header>
 
@@ -138,7 +138,7 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./plan-design/deployment-roadmap.md">
                     <h3>Azure Rights Management deployment roadmap</h3>
-                    <p>Prepare for, implement, and manage Azure RMS for your organization.</p>
+                    <p>Identify and follow the steps to implement and manage Azure RMS for your organization.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
@@ -152,7 +152,7 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./plan-design/plan-implement-tenant-key.md">
                     <h3>Planning and implementing your Azure Rights Management Tenant Key</h3>
-                    <p>Plan for and manage your Rights Management service (RMS) tenant key for Azure RMS.</p>
+                    <p>Plan for and manage your tenant key for Azure RMS, which includes the “bring your own key” (BYOK) scenario.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
@@ -171,8 +171,7 @@ layout: HubPage
                   <span class="step-number"> 4</span>
                   <p>Deploy & Use</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use Azure RMS
-                </p>
+                <p class="description column-two-thirds">Deploy and use Azure RMS.</p>
               </a>
             </header>
 
@@ -195,7 +194,7 @@ layout: HubPage
                 <li class="column-third">
                   <a href="./deploy-use/configure-applications.md">
                     <h3>Configuring applications for Azure Rights Management</h3>
-                    <p>Configure applications and services to support Azure RMS.</p>
+                    <p>Configure applications and services to support Azure RMS. For example, the RMS sharing app, Office applications, and Office 365 services.</p>
                 <h4>Learn more</h4>
                  </a>
                 </li>
@@ -212,7 +211,7 @@ layout: HubPage
               <a href="./develop/developers-guide.md">
                 <div class="title column-third">
                   <span class="step-number"> 5</span>
-                  <p>Develop &amp; customize apps</p>
+                  <p>Develop &amp; Customize Apps</p>
                 </div>
                 <p class="description column-two-thirds">Integrate Azure RMS with your applications.
                 </p>
@@ -229,14 +228,14 @@ layout: HubPage
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/rights-management/develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md">
+                  <a href="./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md">
                     <h3>Microsoft Rights Management SDK 4.2</h3>
-                    <p>Use this next-generation SDK that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services.</p>
+                    <p>Use this next-generation SDK for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with Microsoft Rights Management services.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/rights-management/develop/microsoft-information-protection-and-control-client-portal.md">
+                  <a href="./develop/microsoft-information-protection-and-control-client-portal.md">
                     <h3>Microsoft Rights Management SDK 2.1</h3>
                     <p>Use this powerful SDK for Windows desktop application developers and server based solution providers to enable their products to work with Microsoft Rights Management services.</p>
                 <h4>Learn more</h4>
