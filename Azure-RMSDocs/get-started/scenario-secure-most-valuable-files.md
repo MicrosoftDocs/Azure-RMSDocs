@@ -42,12 +42,12 @@ The instructions are suitable for the following set of circumstances:
 
 -   The administrator must be able to track who is accessing the files and when, and revoke access if necessary.
 
-## Deployment Instructions
+## Deployment instructions
 ![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For this scenario, the following must be in place:
 
 |Requirement|If you need more information|

@@ -43,7 +43,7 @@ The instructions are suitable for the following set of circumstances:
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
@@ -70,7 +70,7 @@ For the instructions for this scenario to work, the following must be in place:
 3.  For Exchange Online only: Refresh the templates by using the Windows PowerShell for Exchange Online command:
 
     ```
-    Import-RMSTrustedPublishingDomain -Name "RMS Online -1 " -RefreshTemplates -RMSOnline
+    Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
 ### To configure the transport rule for IRM

@@ -38,12 +38,12 @@ The instructions are suitable for the following set of circumstances:
 
 -   All files have protection reapplied on a schedule, to ensure that any changes to the rights policy templates are applied to the protected files.
 
-## Deployment Instructions
+## Deployment instructions
 ![](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
-## Requirements for this Scenario
+## Requirements for this scenario
 For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
@@ -54,7 +54,7 @@ For the instructions for this scenario to work, the following must be in place:
 |The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
-### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with file classification infrastructure
+### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with File Classification Infrastructure
 
 1.  Start a Windows PowerShell session. You do not have to run this session as an administrator.
 

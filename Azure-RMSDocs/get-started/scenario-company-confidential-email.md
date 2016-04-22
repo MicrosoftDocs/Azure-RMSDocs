@@ -125,7 +125,7 @@ People that you send your email to will be able to forward it to other people, b
 
     -   *&lt;contact details&gt;*
 
-### Example Customized User Documentation
+### Example customized user documentation
 ![](../media/AzRMS_ExampleBanner.png)
 
 #### How to send emails that contain company-confidential information using Outlook
