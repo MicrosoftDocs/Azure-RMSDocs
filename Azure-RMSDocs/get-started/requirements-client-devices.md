@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 # Azure RMS requirements: Client devices that support Azure RMS
-Use the following sections to identify which devices support Azure Rights Management (Azure RMS), and which Rights Management capabilities they support.
+Use the following sections to identify which devices support Azure Rights Management (Azure RMS).
 
 ## Computers
 The following computer operating systems support Azure Rights Management:
