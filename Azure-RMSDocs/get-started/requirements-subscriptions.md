@@ -48,7 +48,7 @@ Have additional questions about licensing for Azure RMS? Download the **Licensin
 
 This subscription is designed for organizations who want to use the Office online services and use their Information Rights Management (IRM) feature, which uses Azure RMS. However, not all Office 365 subscriptions include Azure RMS.
 
-Subscription  |Includes Information Rights Protection (IRM) 
+Subscription  |Includes IRM 
 ------------- | ------------- |
 Office 365 Business Essentials|No|
 Office 365 Business Premium|No|
@@ -83,8 +83,7 @@ An exception to losing access upon expiry is if your organization used Azure RM
 ## Enterprise Mobility Suite subscription
 [Free 30-day trial](http://go.microsoft.com/fwlink/?LinkId=615385)
 
-This subscription is designed for organizations who want to use a combination of Azure Active Directory Premium, Windows Intune, and Azure Rights Management. 
-
+This subscription is designed for organizations who want to use a combination of Azure Active Directory Premium, Windows Intune, and Azure Rights Management. Support for using Azure Rights Management with Office is the same as using the Azure Rights Management Premium subscription. 
 For more information about the Enterprise Mobility Suite subscription, see the [Microsoft Enterprise Mobility Overview](http://go.microsoft.com/fwlink/?LinkId=615386).
 
 ## RMS for individuals subscription
