@@ -32,7 +32,7 @@ However, before you do so, make sure that the following are in place:
 
 -   User accounts and groups in the cloud that you create manually or that are automatically created and synchronized from Active Directory Domain Services (AD DS).
 
-    When you synchronize your on-premises accounts and groups, not all attributes need to be synchronized. For a list of the attributes that must be synchronized for Azure RMS, see this [Azure RMS section](/active-directory-aadconnectsync-attributes-synchronized/#azure-rms) from the Azure Active Directory documentation. For ease of deployment, we recommend that you use [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) to connect your on-premises directories with Azure Active Directory but you can use any directory synchronization method that achieves the same result.
+    When you synchronize your on-premises accounts and groups, not all attributes need to be synchronized. For a list of the attributes that must be synchronized for Azure RMS, see the [Azure RMS section](/active-directory/active-directory-aadconnectsync-attributes-synchronized.md#azure-rms) from the Azure Active Directory documentation. For ease of deployment, we recommend that you use [Azure AD Connect](/active-directory/active-directory-aadconnectsync-whatis) to connect your on-premises directories with Azure Active Directory but you can use any directory synchronization method that achieves the same result.
 
 -   Mail-enabled groups in the cloud that you will use with Rights Management. These can be built-in groups or manually created groups that contain users who will use Rights Management.
 
