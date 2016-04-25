@@ -44,7 +44,7 @@ The instructions are suitable for the following set of circumstances:
 -   Users must manually select the template from within their email client.
 
 ## Deployment instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place before going on to the user documentation.
 
@@ -93,7 +93,7 @@ Using the following template, copy and paste the user instructions into a commun
 
 The example documentation shows how these instructions might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### How to send emails that contain company-confidential information using Outlook
 
@@ -101,7 +101,7 @@ The example documentation shows how these instructions might look for users, aft
 
 2.  From the **OPTIONS** tab, click **Permission**, and then select **&lt;organization name - Confidential&gt;**:
 
-    ![](../media/AzRMS_OutlookTemplate.PNG)
+    ![Screenshot how to send emails that contain company-confidential information using Outlook](../media/AzRMS_OutlookTemplate.PNG)
 
 3.  Send the message.
 
@@ -111,7 +111,7 @@ The example documentation shows how these instructions might look for users, aft
 
 2.  Click **…**, click **Set permissions**, and then select **&lt;organization name - Confidential&gt;**:
 
-    ![](../media/AzRMS_OWATemplate.png)
+    ![Screenshot how to send emails that contain company-confidential information using Outlook Web App](../media/AzRMS_OWATemplate.png)
 
 3.  Send the message.
 
@@ -126,7 +126,7 @@ People that you send your email to will be able to forward it to other people, b
     -   *&lt;contact details&gt;*
 
 ### Example customized user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 #### How to send emails that contain company-confidential information using Outlook
 
@@ -134,7 +134,7 @@ People that you send your email to will be able to forward it to other people, b
 
 2.  From the **OPTIONS** tab, click **Permission**, and then select **VanArsdel, Ltd - Confidential**:
 
-    ![](../media/AzRMS_OutlookTemplate.PNG)
+    ![Screenshot how to send emails that contain company-confidential information using Outlook](../media/AzRMS_OutlookTemplate.PNG)
 
 3.  Send the message.
 
@@ -144,7 +144,7 @@ People that you send your email to will be able to forward it to other people, b
 
 2.  Click **…**, click **Set permissions**, and then select **VanArsdel, Ltd - Confidential**:
 
-    ![](../media/AzRMS_OWATemplate.png)
+    ![Screenshot how to send emails that contain company-confidential information using Outlook Web App](../media/AzRMS_OWATemplate.png)
 
 3.  Send the message.
 

@@ -130,7 +130,7 @@ See: [Scenario - Configure work folders for persistent protection](scenario-work
 ## Announcement for users before rollout
 You can use the following example communication message to let users know that deploying Azure RMS means that some changes are on the way. Copy and paste the following text, to be sent by email to all users from somebody in your organization's leadership team, preferably your Chef Executive Officer. Consider making any changes to this text that will make the message more relevant to users and your organization.
 
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation banner for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 ### Changes we're making to safeguard our data
 Have you ever wanted to block access to that document you sent to your partners by mistake? Have you wondered if there’s a way to know which of your customers have read the latest product news you sent? Do you have a need to share confidential product information without concerns that it might be sent on to people who shouldn't see it?
@@ -139,7 +139,7 @@ You'll soon be able to do these things because the IT Department is rolling out 
 
 For example, to track (and if necessary, revoke) the documents that you share, you'll be using the document tracking site:
 
-![](../media/AzRMS_Tutorial_5_Screenshots.png)
+![Azure RMS document tracking screenshots](../media/AzRMS_Tutorial_5_Screenshots.png)
 
 For a sneak peak at how this works, have a look at this 2-minute video: [Azure RMS Document Tracking and Revocation](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 

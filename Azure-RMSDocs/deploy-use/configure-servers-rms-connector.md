@@ -208,7 +208,7 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
 
     When you follow these instructions, you must configure SharePoint to use the connector by specifying **Use this RMS server**, and then enter the load-balancing connector URL that you configured. Enter the protocol prefix (HTTP:// or HTTPS://) and the name of the connector that you defined in DNS for the load balanced address of your connector. For example, if your connector name is  https://connector.contoso.com, your configuration will look like the following picture:
 
-    ![](../media/AzRMS_SharePointConnector.png)
+    ![Configuring SharePoint Server for the RMS connector](../media/AzRMS_SharePointConnector.png)
 
     After IRM is enabled on a SharePoint farm, you can enable IRM on individual libraries by using the **Information Rights Management** option on the **Library Settings** page for each of the libraries.
 

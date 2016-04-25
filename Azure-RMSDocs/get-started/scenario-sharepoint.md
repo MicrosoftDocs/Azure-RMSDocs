@@ -37,7 +37,7 @@ The instructions are suitable for the following set of circumstances:
 -   Employees do not need to share these documents with people outside your organization.
 
 ## Deployment instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements and the supporting procedures are in place before you go on to the user documentation.
 
@@ -79,7 +79,7 @@ Using the following template, copy and paste the announcement into a communicati
 
 The example documentation shows how this announcement might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### IT Announcement: Changes to the &lt;name of SharePoint library&gt; site
 The SharePoint site, **&lt;name of SharePoint library&gt;**, is now configured for secure collaboration. Now, only members of the &lt;group name&gt; can open these documents from this site, even if you save them locally or email them to somebody else. The exception is that you can share them with members of the &lt;group name&gt; after you have downloaded the documents, so that &lt;reason why this group has access permissions to collaborate on the files but not by using the SharePoint library&gt;. When you edit the files, you see a yellow information banner at the top of the document, to let you know that it has this protection and who can access them.
@@ -93,7 +93,7 @@ You will not be able to upload documents to the &lt;name of SharePoint site&gt; 
 -   Contact the help desk: &lt;contact details&gt;
 
 ### Example user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 #### IT Announcement: Changes to the Sales Forecasts and Reports site
 The SharePoint site, **Sales Forecasts and Reports**, is now configured for secure collaboration. Now, only members of our Sales and Marketing team can open these documents from this site, even if you save them locally or email them to somebody else. The exception is that you can share them with members of the Finance team after you have downloaded the documents, so that they can extract the monthly forecast figures. When you edit the files, you see a yellow information banner at the top of the document, to let you know that it has this protection and who can access them.

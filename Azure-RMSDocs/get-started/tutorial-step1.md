@@ -14,14 +14,13 @@ ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
@@ -39,7 +38,7 @@ Jump to:
 - [Step 5: Track your doc](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps1.PNG)
+![Azure RMS quick start tutorial step 1](../media/AzRMS_QuickStartSteps1.PNG)
 
 Even though you might have a subscription that supports Azure Rights Management, the service is disabled by default. To activate it, you can use either the Office 365 admin center, or the Azure classic portal:
 

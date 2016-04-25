@@ -33,7 +33,7 @@ Organization that have an IT-managed Azure subscription can use BYOK and log its
 > [!NOTE]
 > For more information about RMS for individuals, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-![](../media/RMS_BYOK_noExchange.png)
+![BYOK doesn't support Exchange Online](../media/RMS_BYOK_noExchange.png)
 
 BYOK and logging work seamlessly with every application that integrates with Azure RMS. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that work with Azure RMS by using the RMS connector, and client applications such as Office 2013. You will get key usage logs regardless of which application makes requests of Azure RMS.
 

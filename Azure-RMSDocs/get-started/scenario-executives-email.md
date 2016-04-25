@@ -39,7 +39,7 @@ The instructions are suitable for the following set of circumstances:
 -   Executives have a way to override the rule themselves if they ever need to send an unprotected email message to other executives.
 
 ## Deployment Instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
@@ -106,7 +106,7 @@ Using the following template, copy and paste the announcement into a communicati
 
 The example documentation shows how this announcement might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### IT Announcement: &lt;Organization name&gt; executive emails are now automatically protected
 From now on, whenever you send emails to another &lt;organization name&gt; executive in the company, the contents of the emails and any attachments will be automatically protected such that only another executive in the company can access them to read the information, print it, copy from it, and so on. This restriction applies even if you forward the email message to others, or save the attachments. This protection helps to prevent data loss of confidential and sensitive information.
@@ -120,7 +120,7 @@ When sending company-confidential information to another &lt;organization name&g
 -   Contact the help desk: &lt;contact details&gt;
 
 ### Example user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 #### IT Announcement: VanArsdel executive emails are now automatically protected
 From now on, whenever you send emails to another VanArsdel executive in the company, the contents of the emails and any attachments will be automatically protected such that only another executive in the company can access them to read the information, print it, copy from it, and so on. This restriction applies even if you forward the email message to others, or save the attachments. This protection helps to prevent data loss of confidential and sensitive information.
