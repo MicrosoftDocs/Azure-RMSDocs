@@ -12,7 +12,6 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: A5B95EB8-3528-4CFF-86FC-166613A5F4A3
-
 # optional metadata
 
 #ROBOTS:
