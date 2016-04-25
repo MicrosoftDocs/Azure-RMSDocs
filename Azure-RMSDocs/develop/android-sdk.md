@@ -72,28 +72,28 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   Open the Eclipse development environment.
 -   To create a new Android Application project, on the **File** menu, click **New**, click **Project**, and then select **Android Application Project**.
 
-    ![](../media/Android-setup-01c.png)
+    ![Create a new Android application](../media/Android-setup-01c.png)
 
 -   Enter the application name. The project name and package name is filled based on the application name.
 -   Click **Next** and select where you want to create the workspace.
 
-    ![](../media/Android-setup-02a.jpg)
+    ![Enter the application name](../media/Android-setup-02a.jpg)
 
 -   Click **Next** and select an icon for your app.
 
-    ![](../media/Android-setup-03.png)
+    ![Select an icon for your app](../media/Android-setup-03.png)
 
 -   Click **Next** and select **Blank Activity** to create the activity.
 
-    ![](../media/Android-setup-04.png)
+    ![Create the activity](../media/Android-setup-04.png)
 
 -   Click **Next** and provide a name for the activity. You can leave *MainActivity* as the default name with a layout name of *activity\_main*.
 
-    ![](../media/Android-setup-05a.jpg)
+    ![Provide a name for the activity](../media/Android-setup-05a.jpg)
 
 -   Click **Finish**.
 
-    ![](../media/Android-setup-06.jpg)
+    ![Finish creation](../media/Android-setup-06.jpg)
 
 -   Your project has been created, along with the main activity class *MainActivity.java*.
 
@@ -104,21 +104,21 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
     In Eclipse, click **File**. On the **File** menu, click **Import**. In the **Import** dialog box, select **Android / Existing Android Code into Workspace**.
 
-    ![](../media/Android-setup-07.png)
+    ![Import it to the workspace](../media/Android-setup-07.png)
 
 -   Click **Next**. Navigate to select the folder in which you extracted the *adrms\_android\_sdk.zip*. The SDK should appear in the list as **com.microsoft.rightsmanagement**.
 
-    ![](../media/Android-setup-08c.jpg)
+    ![Navigate to select the folder](../media/Android-setup-08c.jpg)
 
 -   When you click **Finish**, the SDK project appears as a sibling of your previously created application.
 
-    ![](../media/Android-setup-09.jpg)
+    ![The SDK project appears as a sibling of your application](../media/Android-setup-09.jpg)
 
 -   Right-click the **Project** icon and view the properties for the project.
 -   Navigate to the **Android** tab.
 -   Click **Add**, and then select the *com.microsoft.rightsmanagement* library from the workspace.
 
-    ![](../media/Android-setup-10b.jpg)
+    ![Add the library](../media/Android-setup-10b.jpg)
 
 -   Click **OK**.
 
@@ -126,7 +126,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
     To add the permissions, click **Add**, and then select **Uses Permissions**.
 
-    ![](../media/Android-setup-11d.jpg)
+    ![Add permissions](../media/Android-setup-11d.jpg)
 
 -   You can verify the manifest step by viewing the manifest in the text editor view. Make sure the following lines appear:
 

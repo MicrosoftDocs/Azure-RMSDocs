@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Windows Store setup | Azure RMS
@@ -59,16 +59,16 @@ Our UI library provides re-usable UI for consumption and protection operations f
 -   Click **File**, click **New**, and then click **Project**.
 -   In the **New Project** dialog box, click **Visual C\#** and select **Blank App (Windows)** then click **OK**.
 
-    ![](../media/winrtsetup-newproj.png)
+    ![Create new project](../media/winrtsetup-newproj.png)
 
 -   In **Solution Explorer**, right-click your project, and select **Add Reference** to open the **Add Reference** dialog box.
 
-    ![](../media/winrtsetup-addref.png)
+    ![Add reference](../media/winrtsetup-addref.png)
 
 -   In the **Add Reference** dialog box, click **Browse** and select the *Microsoft.RightsManagement.dll* file that is located in the folder you extracted the SDK package in.
 -   **Managed Apps** - For building a managed app, you will have to add this reference; select **Windows 8.1**-&gt;**Extensions** and check the box for **Windows Visual C++ Runtime Package for Windows**
 
-    ![](../media/winrtsetup-refmngr.png)
+    ![Add extensions](../media/winrtsetup-refmngr.png)
 
 -   **Adding Capabilities** - Your application will need "Internet (Client & Server)" capability to use the SDK. To add this capability to your app, open the *Package.appxmanifest* file in the project and navigate to the **Capabilities** tab to add.
 
