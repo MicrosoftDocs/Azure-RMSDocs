@@ -39,7 +39,7 @@ Jump to:
 - [Step 5: Track your doc](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps4.PNG)
+![Azure RMS quick start tutorial step 4](../media/AzRMS_QuickStartSteps4.PNG)
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 

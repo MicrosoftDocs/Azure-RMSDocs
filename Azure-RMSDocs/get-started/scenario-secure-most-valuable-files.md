@@ -43,7 +43,7 @@ The instructions are suitable for the following set of circumstances:
 -   The administrator must be able to track who is accessing the files and when, and revoke access if necessary.
 
 ## Deployment instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
@@ -115,7 +115,7 @@ Using the following template, copy and paste the announcement into a communicati
 
 The example documentation shows how this announcement might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### IT Announcement: Protecting &lt;organization name&gt;'s top secret documents
 The following files now have a very high level of protection applied to them, so that only &lt;restricted users&gt; can access and change these files. To help safeguard them from unauthorized access, your application will automatically request authorization each time you open these files so you must now have an Internet connection to them and you might be prompted for your credentials:
@@ -131,7 +131,7 @@ The following files now have a very high level of protection applied to them, so
 -   If you cannot access these files or if you notice suspicious changes in the files &lt;action and contact details&gt;.
 
 #### Example customized user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 ##### IT Announcement: Protecting VanArsdel's top secret documents
 The following files now have a very high level of protection applied to them, so that only the people on the To line of this email message can access and change these files. To help safeguard them from unauthorized access, your applications will automatically request authorization each time you open these files so you must now have an Internet connection to open them and you might be prompted for your credentials:

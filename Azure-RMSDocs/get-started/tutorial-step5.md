@@ -38,7 +38,7 @@ Jump to:
 - [Step 4: Recipient reads the doc](tutorial-step4.md)
 - [Step 5: Track your doc](tutorial-step5.md)
 
-![](../media/AzRMS_QuickStartSteps5.PNG)
+![Azure RMS quick start tutorial step 5](../media/AzRMS_QuickStartSteps5.PNG)
 
 > [!NOTE]
 > For this step, you must have a subscription that supports document tracking. To check whether your subscription includes document tracking, see [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608.aspx).
