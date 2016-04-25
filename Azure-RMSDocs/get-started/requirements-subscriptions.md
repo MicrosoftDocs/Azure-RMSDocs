@@ -46,9 +46,9 @@ Have additional questions about licensing for Azure RMS? Download the **Licensin
 ## Office 365 subscription
 [Free 30-day trial: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
-This subscription is designed for organizations who want to use the Office online services and use their Information Rights Management feature, which uses Azure RMS. However, not all Office 365 subscriptions include Azure RMS.
+This subscription is designed for organizations who want to use the Office online services and use their Information Rights Management (IRM) feature, which uses Azure RMS. However, not all Office 365 subscriptions include Azure RMS.
 
-Subscription  |Information Rights Protection (IRM) 
+Subscription  |Includes IRM 
 ------------- | ------------- |
 Office 365 Business Essentials|No|
 Office 365 Business Premium|No|
@@ -64,31 +64,16 @@ Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|No <br /><br /> No|
 ## Azure Rights Management Premium subscription
 [Free 30-day trial](https://portal.microsoftonline.com/Signup/MainSignUp15.aspx?&amp;OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&amp;dl=RIGHTSMANAGEMENT&amp;ali=1)
 
-This subscription was formerly known as Azure RMS Standalone and it is designed for organizations that want to use Azure RMS but don’t have subscription that includes Azure RMS. For example, if you have a subscription for Office 365 Business Essentials or Office 365 Enterprise E1, these subscriptions do not include Azure RMS (see the table in the preceding section). To use Azure RMS, you could purchase a subscription for Azure Rights Management Premium (or purchase another subscription, such as Office 365 Enterprise E4, that includes Azure RMS).
+This subscription was formerly known as Azure RMS Standalone and it is designed for organizations that want to use Azure RMS for Office 365 but their Office subscription doesn't include Azure RMS. For example, if you have a subscription for Office 365 Business Essentials or Office 365 Enterprise E1, these subscriptions do not include Azure RMS (see the table in the preceding section). 
 
-For more information, see [Microsoft Azure Rights Management](http://products.office.com/business/microsoft-azure-rights-management).
+To use Azure RMS with any of the Office subscriptions that do not include Azure RMS, you could purchase a Azure Rights Management Premium subscription. Or, purchase another Office subscription that includes Azure RMS, such as Office 365 Enterprise E4.
 
-This subscription also offers a trial period for you to try out Azure RMS for 25 users, at no charge. If the subscription expires before you purchase a replacement subscription, see the following section, “What happens when the trial subscription expires?”
+> [!NOTE]
+> When you use this subscription with Office 365 Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content but not protect content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
 
+For more information about the Azure Rights Management Premium subscription, see [Microsoft Azure Rights Management](http://products.office.com/business/microsoft-azure-rights-management).
 
-Subscription  |Information Rights Protection (IRM) 
-------------- | ------------- |
-Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes [[1]](#footnote-1)|
-Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes  <br /><br /> Yes|
-Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes  <br /><br /> Yes  <br /><br /> Yes|
-Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes  <br /><br /> Yes  <br /><br /> Yes|
-Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes  <br /><br /> Yes|
-Office 365 Enterprise K1|Yes|
-SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes  <br /><br /> Yes|
-Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes  <br /><br /> Yes|
-
----
-
-###### Footnote 1
-
-For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
-
+This subscription also offers a trial period for you to try out Azure RMS for 25 users, at no charge. 
 
 ### What happens when the trial subscription expires?
 If your trial subscription expires, you will lose access to content that was protected by using your trial subscription for Azure RMS. However, if you then purchase a subscription that supports Azure RMS, access is automatically restored.
@@ -98,27 +83,8 @@ An exception to losing access upon expiry is if your organization used Azure RM
 ## Enterprise Mobility Suite subscription
 [Free 30-day trial](http://go.microsoft.com/fwlink/?LinkId=615385)
 
-This subscription is designed for organizations who want to use a combination of Azure Active Directory Premium, Windows Intune, and Azure Rights Management. For more information, see the [Microsoft Enterprise Mobility Overview](http://go.microsoft.com/fwlink/?LinkId=615386).
-
-
-Subscription  |Information Rights Protection (IRM) 
-------------- | ------------- |
-Office 365 Business Essentials|Yes|
-Office 365 Business Premium|Yes [[1]](#footnote-1)|
-Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|Yes <br /><br /> Yes|
-Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Yes <br /><br />  Yes <br /><br />  Yes|
-Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Yes <br /><br />  Yes <br /><br />  Yes|
-Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Yes <br /><br />  Yes|
-Office 365 Enterprise K1|Yes|
-SharePoint Plan 1 <br /><br /> SharePoint Plan 2|Yes <br /><br /> Yes|
-Exchange Online Plan 1 <br /><br /> Exchange Online Plan 2|Yes <br /><br />  Yes|
-
----
-
-###### Footnote 1
-
-For Business Premium, there are some client restrictions: You can protect content and consume protected content with RMS by using the Outlook Web App and the RMS sharing app. You can consume protected content by using all other Office applications, which includes Office Online and the client applications for Office 365 Business Premium.
-
+This subscription is designed for organizations who want to use a combination of Azure Active Directory Premium, Windows Intune, and Azure Rights Management. Support for using Azure Rights Management with Office is the same as using the Azure Rights Management Premium subscription. 
+For more information about the Enterprise Mobility Suite subscription, see the [Microsoft Enterprise Mobility Overview](http://go.microsoft.com/fwlink/?LinkId=615386).
 
 ## RMS for individuals subscription
 This subscription is designed for individuals in an organization that hasn’t deployed Azure RMS or AD RMS. It lets these people read content that has been protected by an organization that is using Azure RMS, and they can also protect their own content.

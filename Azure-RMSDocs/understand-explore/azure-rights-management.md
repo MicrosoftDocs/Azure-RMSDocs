@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Rights Management | Azure RMS
+title: Overview of Azure Rights Management | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -25,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# Azure Rights Management
-This page introduces the technical documentation set for Microsoft Azure Rights Management (Azure RMS), to help you protect your organization’s sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is a cloud service, and is integrated into other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. However, it can also be used with your on-premises applications and services.
+# Overview of Azure Rights Management
+This page introduces the technical documentation for Microsoft Azure Rights Management (Azure RMS), to help you protect your organization’s sensitive information from unauthorized access, and control how this information is used. Azure Rights Management is a cloud service, and is integrated into other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. However, it can also be used with your on-premises applications and services, which can include your own line-of-business applications and information protection solutions from software vendors.
 
 Rights Management uses encryption, identity, and authorization policies to help secure your files and email. In comparison to standard access controls, such as NTFS permissions, protection that is applied by using Rights Management stays with the files and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
 

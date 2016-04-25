@@ -33,9 +33,9 @@ If you do not already have an Azure subscription for your organization, you can
 
 For more information, see the following resources in the Azure Active Directory documentation:
 
--   [What is an Azure AD directory?](/active-directory/active-directory-whatis)
+-   [What is Azure AD Directory?](/active-directory/active-directory-whatis)
 
--   [How Azure subscriptions are associated with Azure AD](/active-directory/active-directory-how-subscriptions-associated-directory)
+-   [How Azure subscriptions are associated with Azure Active Directory](/active-directory/active-directory-how-subscriptions-associated-directory)
 
 If you want to integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
 
@@ -53,7 +53,7 @@ To use multi-factor authentication (MFA) with Azure RMS requires at least one of
 
 -   Rights Management sharing application for Windows:
 
-    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
+    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. For more information about the sharing application, see  [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
@@ -65,7 +65,7 @@ Then, configure your MFA solution:
 
     -   Configure Azure MFA to enforce MFA for users. For instructions, see [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) from the Multi-factor Authentication documentation.
 
-        For more information about Azure MFA, see [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
+        For more information about Azure MFA, see [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
 -   For federated tenants (you operate federation servers on-premises):
 
