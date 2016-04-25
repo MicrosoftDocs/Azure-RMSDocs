@@ -6,7 +6,7 @@ description: The first step of a tutorial to quickly try out Microsoft Azure Rig
 keywords:
 author: Cabailey
 manager: mbaldwin
-ms.date: 04/287/2016
+ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
