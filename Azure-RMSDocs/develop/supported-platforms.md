@@ -25,7 +25,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Supported platforms
 
 This topic identifies the Rights Management Services SDK 2.1 supported client and server platforms.

@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Install and configure the server
 
 This topic covers the steps to install and configure and RMS Sever for testing your rights-enabled application.

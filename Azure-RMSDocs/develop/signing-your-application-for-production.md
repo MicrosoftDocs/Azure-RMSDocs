@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Signing your application for production
 
 This topic leads you through the process of signing your application for production mode.

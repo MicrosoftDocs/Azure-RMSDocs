@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # IPCHelloWorld - an example application
 
 This topic contains instructions to create an example rights-enabled application.

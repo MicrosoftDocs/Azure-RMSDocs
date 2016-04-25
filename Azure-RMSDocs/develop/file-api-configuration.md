@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # File API configuration
 
 

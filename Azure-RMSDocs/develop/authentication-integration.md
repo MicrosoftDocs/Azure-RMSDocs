@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # How to: Add authentication to your app
 
 This topic describes the basics of user authentication for your RMS-enabled app.

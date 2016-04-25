@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Obtaining a production license
 
 Before you can release an application developed using the Rights Management Services SDK 2.1, you must apply for a Production License Agreement to obtain a production certificate.

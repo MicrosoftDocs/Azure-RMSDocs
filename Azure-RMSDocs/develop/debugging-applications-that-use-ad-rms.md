@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Debug a rights-enabled application
 
 The following topic shows how to debug your application and use the Windows Event Log.

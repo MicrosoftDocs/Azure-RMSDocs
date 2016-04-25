@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Linux code examples
+# Linux code examples
 
 This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 

@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Community resources
 
 Active Directory Rights Management Services is well supported by a growing community of developers on multiple platforms.

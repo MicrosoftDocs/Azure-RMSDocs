@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Code samples
 
 This topic lists a set of samples using the Rights Management Services SDK 2.1, available at the MSDN Download Center.

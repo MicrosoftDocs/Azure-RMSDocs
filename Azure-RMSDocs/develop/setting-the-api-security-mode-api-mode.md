@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Setting the API security mode
 
 You can choose which security mode your File API application runs in by using the [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function.

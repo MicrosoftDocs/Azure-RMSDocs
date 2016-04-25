@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Setup developer environment
 
 The following topics show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.

@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # How this SDK is better
 This topic describes how Rights Management Services SDK 2.1 is a significant improvement over the original [Active Directory Rights Management Services SDK](https://msdn.microsoft.com/library/Cc530379) in terms of required developer effort to create a rights-enabled application.
 

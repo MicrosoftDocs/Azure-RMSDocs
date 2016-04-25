@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Developer notes
+# Developer notes
 
 This section covers specific guidance for several important development scenarios. The scenarios in this section are specific to this release of the Rights Management Services SDK 2.1 and may be altered in subsequent releases.
 

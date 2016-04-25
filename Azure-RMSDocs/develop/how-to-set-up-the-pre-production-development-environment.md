@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Setting up the pre-production development environment
 
 This section will guide you through the process of setting up for and running your rights-enabled application in a testing / pre-production environment. The following topics discuss how to set up your pre-production development environment and are listed such that they suggest an order that you could perform the tasks.

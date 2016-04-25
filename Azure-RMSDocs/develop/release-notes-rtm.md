@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Release notes
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.

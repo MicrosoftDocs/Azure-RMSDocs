@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Rights Management Services SDK 2.1
 
 

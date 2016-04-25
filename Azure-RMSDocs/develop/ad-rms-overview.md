@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Overview
 
 Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled application, content owners will be able to define who can open, modify, print, forward, or take other actions with the content.

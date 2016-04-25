@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Linux setup
 
 
