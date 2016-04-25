@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Supported file formats
 
 The File API supports native and Pfile formats.

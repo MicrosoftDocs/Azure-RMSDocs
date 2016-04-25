@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Enabling email notification
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.

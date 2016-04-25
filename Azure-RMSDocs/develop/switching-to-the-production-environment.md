@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Switching to the production environment
 
 This section will guide you through the process of releasing your tested application to a production environment.

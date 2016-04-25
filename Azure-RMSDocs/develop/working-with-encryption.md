@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Working with encryption
+# Working with encryption
 
 This topic orients you to our encryption packages and shows some code snips for their use.
 

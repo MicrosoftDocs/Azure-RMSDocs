@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Testing your rights-enabled application
 
 This topic describes the steps you need to complete to test your Rights Management Services SDK 2.1 rights-enabled application.

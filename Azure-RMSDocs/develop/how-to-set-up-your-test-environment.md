@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Set up the test environment
 
 Your rights-enabled application can be tested with different server options.

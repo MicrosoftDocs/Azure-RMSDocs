@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Android setup
+# Android setup
 
 Android applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their applications by using Azure Active Directory Rights Management (AAD RM ).
 

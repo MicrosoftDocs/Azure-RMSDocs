@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # How-to use
 
 The following topics will guide you through the key tasks for using the Rights Management Services SDK 2.1 to implement information protection for your application.

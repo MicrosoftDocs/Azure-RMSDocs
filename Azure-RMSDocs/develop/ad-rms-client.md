@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Client
+# Client
 
 This topic describes the purpose and function of the Active Directory Rights Management Services Client 2.1.
 

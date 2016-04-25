@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # What's new and release notes
 
 ## What's new

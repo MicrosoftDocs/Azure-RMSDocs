@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # How to: Enable error and performance logging
 The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 

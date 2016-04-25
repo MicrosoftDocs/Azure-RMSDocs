@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Add explicit owner rights
 
 Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).

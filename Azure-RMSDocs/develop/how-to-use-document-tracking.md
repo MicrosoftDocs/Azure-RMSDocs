@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # How to: Use document tracking
 
 Using the document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.

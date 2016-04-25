@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configure the client
 
 This topic contains instructions about how to configure the Active Directory Rights Management Services Client 2.1.

@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Install the SDK
 
 This topic guides you through installing the developer tools.

@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Understanding usage restrictions
+# Understanding usage restrictions
 
 All RMS enabled applications must enforce usage restrictions. A usage restriction is a condition that results when a user tries to take an action (ex. printing a document), but the RMS policy for that document does not grant them permission or right to perform that action (ex. the PRINT right).
 

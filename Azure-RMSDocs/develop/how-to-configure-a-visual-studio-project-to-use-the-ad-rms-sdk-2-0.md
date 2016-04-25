@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Configure Visual Studio
+# Configure Visual Studio
 
 This topic contains instructions about how to configure a Visual Studio project to use the Rights Management Services SDK 2.1.
 

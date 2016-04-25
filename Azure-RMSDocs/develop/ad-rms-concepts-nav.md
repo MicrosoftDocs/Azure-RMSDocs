@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Developer concepts
 
 The topics in this section cover key concepts in RMS.

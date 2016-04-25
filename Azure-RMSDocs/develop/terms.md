@@ -24,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Terms
 
 A collection of terminology definitions specific to Rights Management Services.

@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Getting started
+# Getting started
 
 The Rights Management Services SDK 2.1 platform enables developers to build applications that leverage RMS information protection. The platform handles complex security practices such as key management, encryption and decryption processing and, offers a simplified API for easy application development.
 
