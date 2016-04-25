@@ -42,7 +42,7 @@ For this step, first create and save a document using Word that will represent y
 
 You’re then ready to safely share this document by email.
 
-![](../media/AzRMS_Tutorial_3_Screenshots.png)
+![Azure RMS quick start tutorial step 3](../media/AzRMS_Tutorial_3_Screenshots.png)
 
 ### To safely share your document by email
 
