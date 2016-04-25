@@ -49,7 +49,7 @@ There are two options available for testing your application against an RMS serv
 -   **You can run your application on the 1-box AD RMS ISV environment**. If you are running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 and have Hyper-V installed, you can deploy the 1-box AD RMS ISV environment by building a virtual machine using the AD RMS 1-box VHD. The 1-box AD RMS ISV environment provides an RMS server configured for pre-production and also has the Active Directory Rights Management Services Client 2.1 installed. Registry settings for the RMS server and client are already configured. To test your application, you run it on the virtual machine on which the 1-box environment is deployed.
 -   **You can run your application against an RMS server that is configured for pre-production and that is deployed on your network**. In this case, you must also install and configure the AD RMS Client 2.1 on the computer where your application will be running. For information about how to do this, see [Configure client](how-to-configure-the-ad-rms-client-2-0.md). For information about how to deploy an RMS server and configure it for pre-production, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
 
-### Related topics
+## Related topics
 
 * [How-to use](how-to-use-msipc.md)
 * [AD RMS SDK Webinar collateral download page](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)

@@ -36,7 +36,7 @@ For more information on *server mode*, see [Application types](application-types
 
  
 
-### Related topics
+## Related topics
 
 * [Application types](application-types.md)
 * [Developer concepts](ad-rms-concepts-nav.md)
