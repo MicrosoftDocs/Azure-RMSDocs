@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Windows Phone setup | Azure RMS
@@ -57,16 +57,16 @@ Review the information in the [Windows Phone development](https://msdn.microsoft
 -   Click **File**. On the **File** menu, click **New**, and then click **Project**.
 -   In the **New Project** dialog box, select **Visual C\#**, select **Blank App (Windows Phone)**, and then click **OK**.
 
-    ![](../media/wpsetup-newproj.png)
+    ![Create new project](../media/wpsetup-newproj.png)
 
 -   In Solution Explorer, right-click your project, and then select **Add Reference** to open the **Add Reference** dialog box.
 
-    ![](../media/wpsetup-addref.png)
+    ![Add reference](../media/wpsetup-addref.png)
 
 -   Click **Browse** on the lower left of the **Add Reference** dialog box and select the *Microsoft.RightsManagment.dll* file that is located in the folder you extracted the package in.
 -   **Managed Apps** - For building a managed app, you will have to add this reference; select **Windows 8.1**-&gt;**Extensions** and check the box for **Windows Visual C++ Runtime Package for Windows**
 
-    ![](../media/wpsetup-refmngr.png)
+    ![Add extensions](../media/wpsetup-refmngr.png)
 
 -   **Adding Capabilities** - Your application will need the "Internet (Client & Server)" capability to use the SDK. To add this capability to your app, open the *Package.appxmanifest* file in the project and navigate to the **Capabilities** tab to add.
 

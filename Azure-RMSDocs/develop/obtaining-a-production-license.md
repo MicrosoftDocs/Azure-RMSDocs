@@ -42,8 +42,6 @@ You can obtain the certificate by applying for a Production License Agreement.
 
 ## Request a Production License Agreement
 
-![](../media/wedge.gif)
-
 -   Send an email message to [RMLA@microsoft.com](mailto:rmla@microsoft.com) and include the following information:
 
     -   Full company name
