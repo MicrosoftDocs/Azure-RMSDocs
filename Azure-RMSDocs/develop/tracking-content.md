@@ -119,7 +119,7 @@ Here's a code snippet showing an example of setting document tracking metadata a
                               sendLicenseRegistrationNotificationEmail);
 
 
-### Related topics
+## Related topics
 
 
 * [**License metadata property types**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)

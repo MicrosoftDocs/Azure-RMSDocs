@@ -73,7 +73,7 @@ These instructions apply to building a native 32-bit application.
 
     ![Solution explorer resource files field](../media/original_file_name.png)
 
-### Related topics
+## Related topics
 
 * [How-to use](how-to-use-msipc.md)
 * [Install the SDK](create-your-first-rights-aware-application.md)

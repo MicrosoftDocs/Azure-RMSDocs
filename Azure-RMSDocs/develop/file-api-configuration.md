@@ -149,7 +149,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-### Related topics
+## Related topics
 
 * [Developer notes](developer-notes.md)
 * [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)

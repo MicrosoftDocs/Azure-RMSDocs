@@ -57,7 +57,7 @@ For information about the run-time requirements for a particular programming ele
 
  
 
-### Related topics
+## Related topics
 
 * [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)

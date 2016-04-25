@@ -175,7 +175,7 @@ Example use of [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/function
 
 You have now completed the steps needed to enable your application to use Azure Rights Management.
 
-### Related topics
+## Related topics
 
 * [Developer concepts](ad-rms-concepts-nav.md)
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
