@@ -51,7 +51,7 @@ The following topics will guide you through the process.
   This topic outlines and guides you through deployment options for your rights-enabled application.
  
 
-### Related topics
+## Related topics
 
 * [Overview](ad-rms-overview.md)
 * [How-to use](how-to-use-msipc.md)

@@ -115,7 +115,7 @@ The following steps describe how to install the developer runtime, configure the
 
 The guidance in this topic is not comprehensive. For detailed information about how to configure the AD RMS Client 2.1, see [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx).
 
-### Related topics
+## Related topics
 
 
 * [How-to use](how-to-use-msipc.md)

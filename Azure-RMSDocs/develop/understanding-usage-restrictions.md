@@ -50,7 +50,7 @@ A user's permissions for a document can be queried by using the [**IpcAccessChec
 
     For guidance about how to enforce specific rights, see [Usage restriction reference](usage-restriction-reference.md).
 
-### Related topics
+## Related topics
 
 * [Developer concepts](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)

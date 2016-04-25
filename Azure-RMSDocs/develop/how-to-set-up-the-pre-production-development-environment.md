@@ -39,7 +39,7 @@ This section will guide you through the process of setting up for and running yo
 |[Debug a rights-enabled application](debugging-applications-that-use-ad-rms.md)|The following topic shows how to debug your application and use the Windows Event Log.|
 
 
-### Related topics
+## Related topics
 
 * [Overview](ad-rms-overview.md)
 * [How-to use](how-to-use-msipc.md)

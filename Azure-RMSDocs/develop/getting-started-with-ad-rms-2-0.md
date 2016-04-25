@@ -61,7 +61,7 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 **Write once**—RMS SDK 2.1 applications do not need a code change or a recompile to work with the newest RMS features. New RMS features will become available in your existing application as they get added to the RMS server.
 **Consistency**—RMS SDK 2.1 helps make it easy to write applications that consistently honor different RMS configurations. It also significantly reduces the amount of RMS user interface you, as the application developer, needs to author, encouraging a consistent look and feel and reducing the need for user education.
 
-### Related topics
+## Related topics
 
 * [AD RMS samples](samples.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)

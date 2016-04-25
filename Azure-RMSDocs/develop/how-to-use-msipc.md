@@ -36,7 +36,7 @@ The following topics will guide you through the key tasks for using the Rights 
   This section will guide you through the process of releasing your tested application to a production environment.
  
 
-### Related topics
+## Related topics
 
 * [Overview](ad-rms-overview.md)
 * [How-to use](how-to-use-msipc.md)

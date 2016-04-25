@@ -65,7 +65,7 @@ Place them in the same directory with *GenManifest.exe* and your application bin
 
     -   Your *YourAppName*.exe.man should always be placed in the same directory as *YourAppName*.exe.
 
-### Related topics
+## Related topics
 
 * [How-to use](how-to-use-msipc.md)
 * [Testing your rights-enabled application](running-your-first-application.md)
