@@ -91,7 +91,7 @@ The following steps guide you in setting up your RMS server and include:
 
         **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
 
-### Related topics
+## Related topics
 
 * [How-to use](how-to-use-msipc.md)
  

@@ -58,7 +58,7 @@ Microsoft Notepad is a simple rich client application. Microsoft Office is a mor
 
 For more information on protecting your application, see [Understanding usage restrictions](understanding-usage-restrictions.md).
 
-### Related topics
+## Related topics
 
 * [Developer concepts](ad-rms-concepts-nav.md)
 * [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
