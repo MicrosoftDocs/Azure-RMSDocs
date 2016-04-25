@@ -31,7 +31,7 @@ Azure Rights Management (Azure RMS) is an information protection solution for or
 
 These challenges include the need to be Internet-connected, with users bringing personal devices to work, accessing company data on the road and home, and sharing sensitive information with important business partners. As part of their daily work, users share information by using email, file-sharing sites, and cloud services. In these scenarios, traditional security controls (such as access control lists and NTFS permissions) and firewalls have limited effectiveness if you want to protect your company data while still empowering your users to work efficiently.
 
-In comparison, Azure RMS can protect your company’s sensitive information in all these scenarios. It uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization’s boundaries. 
+In comparison, Azure RMS can protect your company’s sensitive information in all these scenarios. It uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization’s boundaries.
 
 As an example, employees might email a document to a partner company, or save a document to their cloud drive. The persistent protection that Azure RMS provides not only helps to secure your company data, but might also be legally mandated for compliance, legal discovery requirements, or simply good information management practices.
 
@@ -39,7 +39,7 @@ But very importantly, authorized people and services (such as search and indexin
 
 The following picture shows how Azure RMS works as a Rights Management solution for Office 365 as well as for on-premises servers and services. You'll also see that it supports the popular end user devices that run Windows, Mac OS, iOS, Android, and Windows Phone.
 
-![](../media/AzRMS_elements.png)
+![How Azure RMS works](../media/AzRMS_elements.png)
 
 ## Next steps
 
@@ -59,6 +59,3 @@ However, if you’re ready to start deploying Azure RMS for your organization, 
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-support.md).
-
-
-
