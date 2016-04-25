@@ -105,7 +105,7 @@ You can run your application from any directory, but the application manifest (M
 
     For information about how to configure the client on your computer, see [Configure the client](how-to-configure-the-ad-rms-client-2-0.md). For information about installing an RMS server, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
 
-### Related topics
+## Related topics
 
 * [How-to use](how-to-use-msipc.md)
 * [Configure the client](how-to-configure-the-ad-rms-client-2-0.md)

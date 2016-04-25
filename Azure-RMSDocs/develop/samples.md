@@ -46,7 +46,7 @@ This topic lists a set of samples using the Rights Management Services SDK 2
 
   **Note**  This sample also works with subsequent versions of the RMS SDK, beyond 2.0.
  
-### Related topics
+## Related topics
 
 * [Overview](ad-rms-overview.md)
 * [Interop Library](https://Code.MSDN.Microsoft.Com/AD-RMS-SDK-20-Interop-eb3fbce7)

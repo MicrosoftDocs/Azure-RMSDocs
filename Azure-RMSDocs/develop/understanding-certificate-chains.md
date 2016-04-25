@@ -48,7 +48,7 @@ Whether or not you have used a pre-production certificate during application dev
 
 For more information on working with certificate chains and application signing, see [Switching to the production environment](switching-to-the-production-environment.md).
 
-### Related topics
+## Related topics
 
 * [Developer concepts](ad-rms-concepts-nav.md)
 * [Switching to the production environment](switching-to-the-production-environment.md)
