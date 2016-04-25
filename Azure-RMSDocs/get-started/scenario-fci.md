@@ -39,7 +39,7 @@ The instructions are suitable for the following set of circumstances:
 -   All files have protection reapplied on a schedule, to ensure that any changes to the rights policy templates are applied to the protected files.
 
 ## Deployment instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place, and then follow the instructions for the supporting procedures before going on to the user documentation.
 
@@ -99,7 +99,7 @@ Using the following template, copy and paste the instructions for your end users
 
 The example documentation shows how these instructions might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### How to edit &lt;type of file&gt; from the &lt;file server share&gt;
 
@@ -128,7 +128,7 @@ Periodically, the file will be protected again, which again adds the .pfile file
     -   *&lt;contact details&gt;*
 
 ### Example customized user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 #### How to edit CAD drawings from the ProjectNextGen share
 
