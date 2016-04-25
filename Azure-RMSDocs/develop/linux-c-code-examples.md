@@ -30,12 +30,6 @@ This topic introduces you to important scenarios and code elements for the Linux
 
 The code snippets below are from the sample applications, *rms\_sample* and *rmsauth\_sample*. For more information, see [samples](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) at the GitHub repository.
 
--   [**Scenario**: Access protection policy information from a protected file](#scenario__access_protection_policy_information_from_a___protected_file)
--   [**Scenario**: Create a new protected file using a template](#scenario__create_a_new_protected_file_using_a_template)
--   [**Scenario**: Protect a file using custom protection](#scenario__protect_a_file_using_custom_protection)
--   [WorkerThread - a supporting method](#workerthread_-_a_supporting_method)
--   [**Scenario**: RMS authentication](#scenario__rms_authentication)
-
 ## Scenario: Access protection policy information from a protected file
 
 **Opens and reads an RMS protected file**

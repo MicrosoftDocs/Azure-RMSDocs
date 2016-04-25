@@ -32,8 +32,8 @@ This topic will guide you through setting up your environment for creating your 
 
 -   [Prerequisites](#prerequisites)
 -   [Optional](#optional)
--   [Configuring your development environment](#configuring_your_development_environment)
--   [See Also](#see_also)
+-   [Configuring your development environment](#configuring-your-development-environment)
+-   [See Also](#see-also)
 
 ## Prerequisites
 
