@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c1eb27e1-1d58-4899-9c6d-6e53bc92889e
-
+ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
 # optional metadata
 
 #ROBOTS:
