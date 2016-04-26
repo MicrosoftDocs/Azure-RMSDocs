@@ -40,7 +40,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
           <li><a href="./get-started/rapid-deployment-guide.md">Rapid deployment guide for Azure RMS</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./plan-design/deployment-roadmap.md">Deployment roadmap for Azure RMS</a></li>
+          <li><a href="./plan-design/deployment-roadmap.md">Azure RMS deployment roadmap</a></li>
           <li><a href="./develop/developers-guide.md">Integrate applications with Azure RMS</a></li>
         </ul>
       </div>
@@ -165,7 +165,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <li class="column-third">
                   <a href="./plan-design/plan-implement-tenant-key.md">
                     <h3>Planning and implementing your Azure Rights Management Tenant Key</h3>
-                    <p>Plan for and manage your tenant key for Azure RMS, which includes the “bring your own key” (BYOK) scenario.</p>
+                    <p>Plan for and manage your tenant key for Azure RMS, which includes the "bring your own key" (BYOK) scenario.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
