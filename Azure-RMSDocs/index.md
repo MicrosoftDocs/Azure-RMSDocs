@@ -1,6 +1,19 @@
 ---
-asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
-layout: HubPage
+# required metadata
+
+title: Azure Rights Management | Azure RMS
+description:
+keywords:
+author: msmbaldwin
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
+ms.suite: ems
+
 ---
 # Azure Rights Management Documentation
 <article id="main">
