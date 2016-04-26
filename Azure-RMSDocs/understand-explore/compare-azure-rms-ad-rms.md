@@ -26,10 +26,29 @@ ms.suite: ems
 ---
 
 # Comparing Azure Rights Management and AD RMS
-If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) compares in terms of functionality and requirements. Use the following table for a side-by-side comparison of the features and benefits of Azure RMS and AD RMS. If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](compare-azure-rms-ad-rms.md#cryptographic-controls-for-signing-and-encryption) section in this article.
+If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) compares in terms of functionality and requirements. 
+
+Some of the main differences for Azure RMS:
+
+- **No server infrastructure required**: Azure RMS doesn't require the additional servers and PKI certificates that AD RMS needs, because Microsoft Azure takes care of that for you. That makes this cloud solution quicker to deploy and easier to maintain.
+
+- **Cloud-based authentication**: Azure RMS uses Azure AD for authentication - for both internal users and users from other organizations. That means your mobile users can be authenticated even when they are not connected to your internal network and it is easier to share protected content with users from other organizations. Many organizations already have user accounts in Azure AD because they are running Azure services or have Office 365. But if not, RMS for individuals lets users create a free account. To share AD RMS protected content with another organization requires you to configure explicit trusts with each organization.
+
+- **Built-in support for mobile devices**: No deployment changes are needed for Azure RMS to support mobile devices and Mac computers. To support these devices with AD RMS, you must install the mobile device extension, configure AD FS for federation, and create additional records for your public DNS service.
+
+- **Default templates**: Azure RMS creates two default templates as soon as the service is activated, which makes it very easy to start protecting important data immediately. There are no default templates for AD RMS.
+
+- **Departmental templates**: Azure RMS supports departmental templates as a configuration setting for additional templates that you create. This setting lets you specify which users see the template in their client applications (such as Office apps), which makes it easier for them to select the correct policy that you define for different groups of users. AD RMS doesn't support departmental templates.
+
+- **Document tracking, revocation, and email notification**: Azure RMS supports these features with the RMS sharing app, whereas AD RMS does not.
+
+
+In addition, because Azure RMS is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There are no new features planned for AD RMS in Windows Server 2016.
+
+For more details and other differences, use the following table for a side-by-side comparison of the features and benefits of Azure RMS and AD RMS. If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](compare-azure-rms-ad-rms.md#cryptographic-controls-for-signing-and-encryption) section in this article.
 
 > [!NOTE]
-> To make this comparison easier, some information here is repeated from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md). Use that article for more specific support and version information for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+> To make this comparison easier, some information here is repeated from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md). Use that source for more specific support and version information for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 |Azure RMS|AD RMS|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
