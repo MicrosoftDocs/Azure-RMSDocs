@@ -147,7 +147,7 @@ More information about the different server roles:
 
     -   If a SharePoint 2010 server is configured to run as Local System (it's not using a service account), manually create a security group in Active Directory Domain Services, and add the computer name object for the server in this configuration to this group.
 
-    -   If a SharePoint server is configured to use a service account (the recommended practice for SharePoint 2010 and the only option for SharePoint 2013), do the following:
+    -   If a SharePoint server is configured to use a service account (the recommended practice for SharePoint 2010 and the only option for SharePoint 2016 and SharePoint 2013), do the following:
 
         1.  Add the service account that runs the SharePoint Central Administration service to enable SharePoint to be configured from its administrator console.
 

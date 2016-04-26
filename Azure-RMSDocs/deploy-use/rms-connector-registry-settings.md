@@ -149,7 +149,7 @@ Instructions for when you use these settings:
 - https://*ConnectorFQDN*
 
 
-## SharePoint 2013 registry settings
+## SharePoint 2016 or SharePoint 2013 registry settings
 
 **Registry path:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
