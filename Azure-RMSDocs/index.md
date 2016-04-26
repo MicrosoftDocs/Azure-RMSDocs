@@ -14,7 +14,6 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 
-
 ---
 # Azure Rights Management Documentation
 <article id="main">
@@ -27,8 +26,8 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 
     <aside class="alert section-border">  
         <p>Ready to get hands-on?</p>  
-        <ol class="action-list">  
-            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>  
+        <ol class="action-list">
+            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" class="button-bordered button-translucent">Try Now</a></li>
         </ol>  
     </aside>  
 
