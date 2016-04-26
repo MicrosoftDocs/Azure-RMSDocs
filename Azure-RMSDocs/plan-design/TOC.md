@@ -16,6 +16,6 @@
 ### [Over the Internet](generate-tenant-key-internet.md)
 ### [In person](generate-tenant-key-in-person.md)
 ## [Preparing for Azure RMS](./prepare.md)
-# [Deploy & Use](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
-# [Use the RMS Client](/rights-management/rms-client/use-client)

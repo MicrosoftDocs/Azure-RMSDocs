@@ -24,6 +24,6 @@
 ### [Send a company-confidential email](./scenario-company-confidential-email.md)
 ### [Configure work folders for persistent protection](./scenario-work-folders.md)
 # [Plan & Design](/rights-management/plan-design/deployment-roadmap)
-# [Deploy & Use](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
-# [Use the RMS Client](/rights-management/rms-client/use-client)

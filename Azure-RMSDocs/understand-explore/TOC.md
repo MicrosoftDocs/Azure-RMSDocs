@@ -17,6 +17,6 @@
 ## [Comparing Azure RMS and AD RMS](./compare-azure-rms-ad-rms.md)
 # [Get Started](/rights-management/get-started/requirements-azure-rms)
 # [Plan & Design](/rights-management/plan-design/deployment-roadmap)
-# [Deploy & Use](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
+# [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
-# [Use the RMS Client](/rights-management/rms-client/use-client)
