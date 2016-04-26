@@ -40,7 +40,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
           <li><a href="./get-started/rapid-deployment-guide.md">Rapid deployment guide for Azure RMS</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./plan-design/deployment-roadmap.md">Rapid deployment guide for Azure RMS</a></li>
+          <li><a href="./plan-design/deployment-roadmap.md">Deployment roadmap for Azure RMS</a></li>
           <li><a href="./develop/developers-guide.md">Integrate applications with Azure RMS</a></li>
         </ul>
       </div>
@@ -123,7 +123,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <li class="column-third">
                   <a href="./get-started/quick-start-tutorial.md">
                     <h3>Quick start tutorial for Azure RMS</h3>
-                    <p>Quickly try out Microsoft Azure Rights Management (also known as Azure RMS) for your organization with just 5 steps.</p>
+                    <p>Quickly try out Azure Rights Management for your organization with just 5 steps.</p>
                 <h4>Learn more</h4>
                   </a>
                 </li>
