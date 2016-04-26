@@ -39,7 +39,7 @@ This scenario is suitable for the following set of circumstances:
 -   The employee is potentially interested in knowing when this document is opened by the external user.
 
 ## Deployment instructions
-![](../media/AzRMS_AdminBanner.png)
+![Administrator instructions for Azure RMS Rapid Deployment](../media/AzRMS_AdminBanner.png)
 
 Make sure that the following requirements are in place before going on to the user documentation.
 
@@ -78,25 +78,25 @@ Using the following template, copy and paste the user instructions into a commun
 
 The example documentation shows how these instructions might look for users, after your customizations.
 
-![](../media/AzRMS_UsersBanner.png)
+![Template user documentation for Azure RMS Rapid Deployment](../media/AzRMS_UsersBanner.png)
 
 ### How to share a &lt;name of Office document type&gt;
 
 1.  Create your email message by specifying the email address or addresses, type your message, and attach the *&lt;name of Office document type&gt;* to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Screenshot how to share Office document using Outlook](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  In the **share protected** dialog box, Select **Viewer – View Only**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![share protected dialog box - Viewer - View Only](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Select **Allow me to instantly revoke access to these documents**:
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![share protected dialog box - instantly revoke](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Select **Email me when somebody tries to open these documents**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![share protected dialog box - email me](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Click **Send Now**.
 
@@ -117,25 +117,25 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
     -   *&lt;contact details&gt;*
 
 ### Example customized user documentation
-![](../media/AzRMS_ExampleBanner.png)
+![Example user documentation for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 #### How to share a price list with your customer
 
 1.  Create your email message by specifying the email address or addresses of your customer, type your message, and attach the latest price list to the email message. Then, on the **MESSAGE** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Screenshot how to share Office document using Outlook](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  In the **share protected** dialog box, Select **Viewer – View Only**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![share protected dialog box - Viewer - View Only](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Select **Allow me to instantly revoke access to these documents**:
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![share protected dialog box - instantly revoke](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Select **Email me when somebody tries to open these documents**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![share protected dialog box - email me](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Click **Send Now**.
 
