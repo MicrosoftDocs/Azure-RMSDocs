@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What Do Admins and Users See? | Azure RMS
@@ -31,7 +31,7 @@ This article shows some typical examples of how administrators and users see and
 
 > [!NOTE]
 > In all these examples where Azure RMS protects data, the content owner continues to have full access to the data (file or email), even if the applied protection grants permissions to a group that the owner wasn’t a member of, or even if the applied protection includes an expiration date.
-> 
+>
 > Similarly, IT can always access the protected data without restrictions, by using the super user feature of Rights Management that grants delegated access to authorized users or services that you specify. In addition, IT can track and monitor usage for data that has been protected—for example, who is accessing the data and when.
 
 For other screenshots and videos that show RMS in action, check the [Microsoft Rights Management services portal](http://www.microsoft.com/rms) and the [Microsoft Rights Management (RMS) Team Blog](http://blogs.technet.com/b/rms).
@@ -39,14 +39,14 @@ For other screenshots and videos that show RMS in action, check the [Microsoft R
 ## Activating and configuring Rights Management
 Although you can use Windows PowerShell to activate and configure Azure RMS, it’s easiest from the management portal. As soon as the service is activated, you have two default templates that administrators and users can select to quickly and easily apply information protection to files. But you can also create your own custom templates for additional options and settings.
 
-![](../media/AzRMS_StoryboardActivate_small1.png)
+![WHAT ADMINS SEE IN STEP 1](../media/AzRMS_StoryboardActivate_small1.png)
 
 
 **WHAT ADMINS SEE IN STEP 1:** You can use either the Office 365 admin center (first picture) or the Azure classic portal (second picture) to activate RMS.<br /><br />Just one click to activate and another click to confirm, then information protection is enabled for administrators and users in your organization.
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_small.png)
+![WHAT ADMINS SEE IN STEP 2](../media/AzRMS_TemplatesPortal_small.png)
 
 **WHAT ADMINS SEE IN STEP 2:** After activation, two rights policy templates are automatically available for your organization. One template is for read-only (**Confidential View Only** is included in the name), the other for read and modify access (**Confidential**).
 
@@ -59,13 +59,13 @@ If you do not want users to see these templates or if you want to create your ow
 
 ---
 
-![](../media/AzRMS_TemplatesSettings3.png)
+![WHAT ADMINS SEE IN STEP 3](../media/AzRMS_TemplatesSettings3.png)
 
 **WHAT ADMINS SEE IN STEP 3:** Offline access, expiration settings, and whether to publish the template immediately (make it visible in applications that support Rights Management) are some of the configuration settings available if you decide to create your own templates.
 
 ---
 
-![](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
+![WHAT ADMINS SEE IN STEP 4](../media/AzRMS_TemplatesPortal_ExplorerWord3.png)
 
 **WHAT USERS SEE IN STEP 4:** As a result of publishing these templates, users can now select them in applications such as  File Explorer and Microsoft Word:
 
@@ -89,13 +89,13 @@ This example shows how you can use Azure RMS to automatically protect files on f
 
 There are many ways to apply classification values to files. For example, you can inspect the contents of files and accordingly apply built-in classifications such as Confidentiality and Personally Identifiable Information. However, in this example, an administrator creates a custom classification of **Marketing** that is automatically applied to all user documents that are saved in the **Marketing Promotions** folder. Although this folder is protected with NTFS permissions that restricts access to members of the Marketing group, the administrator knows that these permissions can be lost if somebody from that group moves or emails the files. Then, the information in the files could be accessed by unauthorized users.
 
-![](../media/AzRMS_FCI_ConnectorSmall.png)
+![WHAT ADMINS SEE IN STEP 1](../media/AzRMS_FCI_ConnectorSmall.png)
 
 **WHAT ADMINS SEE IN STEP 1:** The administrators installs and configures the Rights Management (RMS) connector, which acts as a relay between on-premises servers and Azure RMS.
 
 ---
 
-![](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
+![WHAT ADMINS SEE IN STEP 2](../media/AzRMS_ExampleFCI_ConfigurationSmall.png)
 
 **WHAT ADMINS SEE IN STEP 2:** On the file server, the administrator configures the classification rules and tasks so that all user files in the **Marketing Promotions** folder are automatically classified as **Marketing** and protected with RMS encryption.
 
@@ -105,7 +105,7 @@ As a result, all documents in that folder are automatically configured with the 
 
 ---
 
-![](../media/AzRMS_FCI_EmailSmall.png)
+![WHAT ADMINS SEE IN STEP 3](../media/AzRMS_FCI_EmailSmall.png)
 
 **WHAT USERS SEE IN STEP 3:** How RMS helps to prevent data leaking to people who should not have access to sensitive or confidential information:
 
@@ -124,7 +124,7 @@ The previous example showed how you could automatically protect files that conta
 
 In this example, the administrator configures a policy to help keep the organization in compliance with US regulations for protecting personally identifiable information data, but rules can also be configured for other compliance regulations, or custom rules that you define.
 
-![](../media/AzRMS_DLPExample1.png)
+![WHAT ADMINS SEE IN STEP 1](../media/AzRMS_DLPExample1.png)
 
 **WHAT ADMINS SEE IN STEP 1:** In the Exchange admin center, the Exchange template named **U.S. Personally Identifiable Information (PII) Data** is used by the administrator to create and configure a new DLP policy. This template looks for information such as social security numbers and driver license numbers in email messages.
 
@@ -134,13 +134,13 @@ Here, the rule is configured to use one of the default templates, **VanArsdel, L
 
 ---
 
-![](../media/AzRMS_DLPUnprotectedEmail_small.png)
+![WHAT ADMINS SEE IN STEP 2](../media/AzRMS_DLPUnprotectedEmail_small.png)
 
 **WHAT USERS SEE IN STEP 2:** The hiring manager writes an email message that contains the social security number of a recently hired employee. He sends this email message to Sherrie in the Human Resources department.
 
 ---
 
-![](../media/AzRMS_DLPProtectedEmail_small.png)
+![WHAT ADMINS SEE IN STEP 3](../media/AzRMS_DLPProtectedEmail_small.png)
 
 **WHAT USERS SEE IN STEP 3:** If this email message is sent or forwarded to somebody outside the organization, the DLP rule automatically applies rights protection.
 
@@ -160,13 +160,13 @@ This shows how you can easily protect documents when you use SharePoint Online a
 
 In this example, the SharePoint administrator for Contoso has created a library for each department that they use to centrally store and check out documents for editing and version control. For example, there is a library for Sales, one for Marketing, one for Human Resources, and so on. When a new document is uploaded or created in one of these protected libraries, that document inherits the protection of the library (no need to select a rights policy template) and that document is automatically protected and remains protected, even if it’s moved outside the SharePoint library.
 
-![](../media/AzRMS_StoryboardSPO_small1.png)
+![WHAT ADMINS SEE IN STEP 1](../media/AzRMS_StoryboardSPO_small1.png)
 
 **WHAT ADMINS SEE IN STEP 1:** The administrator enables Information Rights Management for the SharePoint site.
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small2.png)
+![WHAT ADMINS SEE IN STEP 2](../media/AzRMS_StoryboardSPO_small2.png)
 
 **WHAT ADMINS SEE IN STEP 2:** Then, she enables Rights Management for a library. Although there are additional options, this simple setting is often all that’s needed.
 
@@ -174,7 +174,7 @@ When documents are now downloaded from this library, they  are automatically pro
 
 ---
 
-![](../media/AzRMS_StoryboardSPO_small3.png)
+![WHAT ADMINS SEE IN STEP 3](../media/AzRMS_StoryboardSPO_small3.png)
 
 **WHAT USERS SEE IN STEP 3:** When somebody from the sales department checks out this sales report from the library, they can clearly see from the information banner at the top that it’s a protected document with restricted access.
 
@@ -196,7 +196,7 @@ This example shows how users can easily share a document with somebody they’re
 
 In this example, Alice from Contoso, emails a confidential Word document that she sends to Bob, at Fabrikam. He reads the document on his iPad, but he could just as easily read it on an iPhone, an Android tablet or phone, a Mac computer, or a Windows phone or computer.
 
-![](../media/AzRMS_StoryboardEmail_small1.png)
+![WHAT USERS SEE IN STEP 1](../media/AzRMS_StoryboardEmail_small1.png)
 
 **WHAT USERS SEE IN STEP 1:** From her Windows PC, Alice creates a standard email message and attaches a document.
 
@@ -206,7 +206,7 @@ Alice wants to restrict Bob to viewing and editing the document, and doesn’t w
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small2.png)
+![WHAT USERS SEE IN STEP 2](../media/AzRMS_StoryboardEmail_small2.png)
 
 **WHAT USERS SEE IN STEP 2:** Bob sees the email on his iPad.
 
@@ -214,7 +214,7 @@ In addition to Alice’s message and attachment, there are instructions that he 
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small3.png)
+![WHAT USERS SEE IN STEP 3](../media/AzRMS_StoryboardEmail_small3.png)
 
 **WHAT USERS SEE IN STEP 3:** Bob can now open the attachment. He is first asked to sign in to confirm that he is the intended recipient.
 
@@ -222,7 +222,7 @@ When Bob views the document, he also sees the restricted access information that
 
 ---
 
-![](../media/AzRMS_StoryboardEmail_small4.png)
+![WHAT USERS SEE IN STEP 4](../media/AzRMS_StoryboardEmail_small4.png)
 
 **WHAT USERS SEE IN STEP 4:** Alice receives an email message that tells her Bob successfully opened the document that she sent, and when he accessed the document.
 

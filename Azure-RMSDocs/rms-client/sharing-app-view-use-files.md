@@ -30,11 +30,11 @@ When the [Rights Management (RMS) sharing application is installed on your compu
 
 > [!NOTE]
 > Before you can view the protected file, RMS must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
-> 
+>
 > If your organization does not use either Azure Rights Management (Azure RMS) or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
-> 
+>
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
-> 
+>
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
 > -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
@@ -46,7 +46,7 @@ If you see two versions of the file but with different file name extensions, ope
 > [!NOTE]
 > For more information, see “[What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)”.
 
-How the file opens depends on how it was protected, which you can tell by looking at the file name extension. In each case, opening the file might be audited and remains audited as long as it is protected. In addition, if the file was sent as an email attachment, the sender might be notified by email each time you open the file. 
+How the file opens depends on how it was protected, which you can tell by looking at the file name extension. In each case, opening the file might be audited and remains audited as long as it is protected. In addition, if the file was sent as an email attachment, the sender might be notified by email each time you open the file.
 
 - **The file has a *.pfile* file name extension**
 
@@ -54,7 +54,7 @@ How the file opens depends on how it was protected, which you can tell by lookin
 
     When you open the file, you see a **protected file** dialog box from the sharing application that tells you who protected the file and that you are expected to honor the co-owner permissions. Click **Open** to read the file.
 
-    ![](../media/ADRMS_MSRMSApp_PfilePermission.png)
+    ![Dialog box for a pfile shared by email when using the RMS sharing application](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
 - **The file has a *.ppdf* file name extension or is a protected text or image file (such as *.ptxt* or *.pjpg*)**
 
@@ -68,7 +68,7 @@ How the file opens depends on how it was protected, which you can tell by lookin
 
     The file opens by using the application that is associated with the original file name extension, and a restriction banner is displayed at the top of the file. The banner might display the permissions that are applied to the file, or it might provide a link to display them. For example, you might see the following where you must click **Permission is currently restricted** to see the actual permissions that are applied to the file and the people that can access it:
 
-    ![](../media/ADRMS_MSRMSApp_RestrictedAccess.png)
+    ![Restricted access banner when file is protected](../media/ADRMS_MSRMSApp_RestrictedAccess.png)
 
 
 
@@ -108,4 +108,3 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
-

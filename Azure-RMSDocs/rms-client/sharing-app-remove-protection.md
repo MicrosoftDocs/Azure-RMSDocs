@@ -35,7 +35,7 @@ To remove protection from a file (that is, unprotect a file) that was previously
 
 1.  From File Explorer, right-click the file (for example, Sample.ptxt), select **Protect with RMS**, click **Protect in-place**, and then click **Remove Protection**:
 
-    ![](../media/ADRMS_MSRMSApp_RemoveProtection.png)
+    ![Remove protection menu option for RMS sharing application](../media/ADRMS_MSRMSApp_RemoveProtection.png)
 
     You might be prompted for credentials.
 
@@ -52,4 +52,3 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
-
