@@ -168,6 +168,10 @@ You will also need to install on these servers, a version of the RMS client that
 
 3.  Enable IRM functionality in Exchange. For more information, see [Information Rights Management Procedures](https://technet.microsoft.com/library/dd351212%28v=exchg.150%29.aspx) in the Exchange library.
 
+    > [!NOTE]
+    > By default, after you run **Set-IRMConfiguration -InternalLicensingEnabled $true**, IRM is automatically enabled for the Outlook Web App and mobile devices, in addition to enabling IRM for mailboxes. However, administrators can disable IRM at different levels, for example, for a Client Access Server, for the Outlook Web App virtual directory or the Outlook Web App mailbox policy, and for a mobile device mailbox policy. If users cannot see any of the Azure RMS templates in the Outlook Web App (after waiting a day) or on mobile devices when they can see the templates in the Outlook client, check the relevant settings to make sure that IRM is not disabled. For more information, see [Enable or Disable Information Rights Management on Client Access Servers](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) in the Exchange documentation. 
+
+
 ## Configuring a SharePoint server to use the connector
 The following SharePoint roles communicate with the RMS connector:
 
@@ -175,18 +179,20 @@ The following SharePoint roles communicate with the RMS connector:
 
 To use the RMS connector, these servers running SharePoint must be running one of the following software versions:
 
+-   SharePoint Server 2016
+
 -   SharePoint Server 2013
 
 -   SharePoint Server 2010
 
-A SharePoint 2013 server must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396).
+A server running SharePoint 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > There are multiple versions of the MSIPC 2.1 client, so make sure that you have version 1.0.2004.0 or later.
 >
 > You can verify the client version by checking the version number of MSIPC.dll, which is located in **\Program Files\Active Directory Rights Management Services Client 2.1**. The properties dialog box  shows the version number of the MSIPC 2.1 client.
 
-These servers running SharePoint 2010 must have installed a version of the MSDRM client that includes support for RMS Cryptographic Mode 2. The minimum version that is supported in Windows Server 2008 is included in the hotfix that you can download from [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](http://support.microsoft.com/kb/2627272), and the minimum version for Windows Server 2008 R2 can be downloaded from [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2](http://support.microsoft.com/kb/2627273). Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
+Servers running SharePoint 2010 must have installed a version of the MSDRM client that includes support for RMS Cryptographic Mode 2. The minimum version that is supported in Windows Server 2008 is included in the hotfix that you can download from [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](http://support.microsoft.com/kb/2627272), and the minimum version for Windows Server 2008 R2 can be downloaded from [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2](http://support.microsoft.com/kb/2627273). Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
 
 ### To configure SharePoint servers to use the connector
 
@@ -196,13 +202,13 @@ These servers running SharePoint 2010 must have installed a version of the MSDRM
 
     -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
-        For example, to run the tool locally to configure a server running SharePoint 2013:
+        For example, to run the tool locally to configure a server running SharePoint 2016 or SharePoint 2013:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   If you are using SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
+    -   If you are using SharePoint 2016 or SharePoint 2013, make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
 3.  Enable IRM in SharePoint. For more information, see [Configure Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in the SharePoint library.
 
