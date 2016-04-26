@@ -8,7 +8,7 @@ keywords: rights management documentation, rms documentation, Azure RMS document
 author: msmbaldwin
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: hubpage
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
