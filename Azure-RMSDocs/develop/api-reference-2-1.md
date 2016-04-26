@@ -30,11 +30,10 @@ API reference
 
 This section contains topics covering reference material for all of the API elements.
 
-[Constants](/rights-management/sdk/2.1/api/win/constants):  The platform uses the following constants.
-[Data types](/rights-management/sdk/2.1/api/win/data%20types): The Active Directory Rights Management Services Client 2.1 declares the following data types.
-[Functions](/rights-management/sdk/2.1/api/win/functions):  The platform provides the following functions.
-[Structures](/rights-management/sdk/2.1/api/win/structures):  The platform uses the following structures.
-[Supported platforms](./supported-platforms.md):  This topic identifies the Rights Management Services SDK 2.1 supported client and server platforms.
-[Usage restriction reference](./usage-restriction-reference.md):  
-Usage restrictions are defined by the constants listed in this topic.
-[Development environment files](./sdk-elements.md):  This topic shows the development environment files and their relative installation locations on your computer.
+- [Constants](/rights-management/sdk/2.1/api/win/constants):  The platform uses the following constants.
+- [Data types](/rights-management/sdk/2.1/api/win/data%20types): The Active Directory Rights Management Services Client 2.1 declares the following data types.
+- [Functions](/rights-management/sdk/2.1/api/win/functions):  The platform provides the following functions.
+- [Structures](/rights-management/sdk/2.1/api/win/structures):  The platform uses the following structures.
+- [Supported platforms](./supported-platforms.md):  This topic identifies the Rights Management Services SDK 2.1 supported client and server platforms.
+- [Usage restriction reference](./usage-restriction-reference.md): Usage restrictions are defined by the constants listed in this topic.
+- [Development environment files](./sdk-elements.md):  This topic shows the development environment files and their relative installation locations on your computer.
