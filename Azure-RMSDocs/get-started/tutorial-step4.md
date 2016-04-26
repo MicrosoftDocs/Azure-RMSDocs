@@ -50,7 +50,7 @@ Ask them to read the email message that you sent. They will see your email messa
 
 When they click the link, it takes them to instructions to install the RMS sharing app and if necessary, sign up for a free account. The free account grants them a subscription for RMS for individuals, which ensures that authorized users can always read a protected document, even if their organization does not have Azure RMS. They are then ready to read the protected attachment by using the following instructions.
 
-![](../media/AzRMS_Tutorial_4_Screenshots.png)
+![Tutorial step 4 screenshots](../media/AzRMS_Tutorial_4_Screenshots.png)
 
 ### To view the protected document attachment
 

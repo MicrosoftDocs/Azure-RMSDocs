@@ -45,7 +45,7 @@ The Rights Management sharing application (also known as the “RMS sharing app�
 
 This application is free to download and offers a scripted install for production environments. But for this tutorial, we’ll install it locally.
 
-![](../media/AzRMS_Tutorial_2_Screenshots.png)
+![Tutorial step 2 screenshots](../media/AzRMS_Tutorial_2_Screenshots.png)
 
 ### To download and install the Rights Management sharing application
 

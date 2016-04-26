@@ -49,7 +49,7 @@ This step is optional, but most people like to know if the attachment they sent 
 
 -   After seeing that somebody has opened the document, you follow up to ask her if she has any questions or requires additional information.
 
-![](../media/AzRMS_Tutorial_5_Screenshots.png)
+![Tutorial step 5 screenshots](../media/AzRMS_Tutorial_5_Screenshots.png)
 
 ### To track your protected document
 
