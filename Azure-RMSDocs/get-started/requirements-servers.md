@@ -39,6 +39,8 @@ The following on-premises server products are supported with Azure RMS when you 
 
 -   **Office SharePoint Server**:
 
+    -   Office SharePoint Server 2016
+
     -   Office SharePoint Server 2013
 
     -   Office SharePoint Server 2010
