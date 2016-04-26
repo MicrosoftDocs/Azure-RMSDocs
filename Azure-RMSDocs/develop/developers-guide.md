@@ -27,9 +27,11 @@ ms.suite: ems
 # Developer's Guide
 
 ## Overview ##
-Three generations of the Rights Management SDK are now available: **Microsoft Rights Management SDK 4.2** for Android, iOS/OS X, Windows devices and Linux, **Microsoft Rights Management SDK 2.1** for Windows Desktop Client and the superseded **AD RMS SDK**.
+This guide outlines our suite of Rights Management SDKs and a growing set of tools and code samples that span all supported platforms. 
 
 ## Software Development Kits ##
+Three generations of RMS SDK are now available, outlined in the following table.
+
 | SDK | Description |
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | A simplified, next-generation tool set that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services |
