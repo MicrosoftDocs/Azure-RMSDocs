@@ -2,16 +2,17 @@
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
 
-title: Azure Rights Management Documentation | Azure RMS
+title: Azure Rights Management Documentation
 description: Technical documentation for Azure Rights Management
 keywords: rights management documentation, rms documentation, Azure RMS documentation
 author: msmbaldwin
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: hubpage
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
+ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 
 ---
@@ -19,7 +20,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 <article id="main">
     <section id="hero-content">
       <h1>Azure Rights Management Documentation</h1>
-      <h2>Everything you need to know to deploy and manage Azure Rights Management (Azure RMS) can be found here. We'll help you quickly get started using Azure RMS to apply information protection to email, documents, and other sensitive data.</h2>
+      <h2>Learn how to deploy and manage Azure Rights Management (Azure RMS). Quickly get started using Rights Management to apply information protection to email, documents, and other sensitive data.</h2>
 
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
