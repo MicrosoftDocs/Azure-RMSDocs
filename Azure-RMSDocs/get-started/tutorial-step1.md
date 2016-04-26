@@ -46,7 +46,7 @@ Even though you might have a subscription that supports Azure Rights Management,
 
 -   If you do not have an Office 365 subscription: **Use the Azure classic portal**.
 
-![](../media/AzRMS_Tutorial_1_Screenshots.png)
+![Tutorial step 1 screenshots](../media/AzRMS_Tutorial_1_Screenshots.png)
 
 ### To activate Rights Management from the Office 365 classic admin center
 

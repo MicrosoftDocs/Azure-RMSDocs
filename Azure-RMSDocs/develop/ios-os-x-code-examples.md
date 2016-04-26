@@ -42,7 +42,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 - **Step 1**: Create an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object
 
- **Description**: Instantiate an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
+ **Description**: Instantiate an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -115,7 +115,7 @@ Following are **Objective C** code examples from a larger sample application rep
 
 ### Scenario: Create a new protected file using a template
 
-This scenario begins with getting a list of templates, [**MSTemplateDescriptor**](https://stage.docs.microsoft.com/en-us/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc), selecting the first one to create a policy, then creating and writing to the new protected file.
+This scenario begins with getting a list of templates, [**MSTemplateDescriptor**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_mstemplatedescriptor_interface_objc), selecting the first one to create a policy, then creating and writing to the new protected file.
 
 -   **Step 1**: Get list of templates
 
