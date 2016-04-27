@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Activating Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
 When you activate [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), your organization can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected files and emails that your organization owns. You must enable [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] before you can begin to use the information rights management (IRM) features within Office, SharePoint, and Exchange, and protect any sensitive or confidential file.
 
 If you want to learn more about Azure Rights Management before you activate the service—for example, what business problems it solves, some typical use cases, and how it works—see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)

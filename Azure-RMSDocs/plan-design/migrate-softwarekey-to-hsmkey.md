@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Step 2: Software-protected key to HSM-protected key migration
 
+*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+
+
 These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key. 
 
 If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.

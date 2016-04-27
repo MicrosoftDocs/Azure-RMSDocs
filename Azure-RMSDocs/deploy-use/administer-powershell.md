@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Administering Azure Rights Management by Using Windows PowerShell
+
+*Applies to: Azure Rights Management, Office 365*
+
 Although you can activate Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) by using the [!INCLUDE[o365_2](../includes/o365_2_md.md)] admin center or the Azure classic portal, you can also use the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (AADRM) to do this.
 
 After you have activated [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], further administration for the service might not be required. However, some advanced configuration scenarios might require you to use the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. The following table lists some of the advanced configuration scenarios that use Windows PowerShell. For a complete list of the available cmdlets with more information about each one, see [Azure Rights Management Cmdlets](http://msdn.microsoft.com/library/azure/dn629398.aspx).

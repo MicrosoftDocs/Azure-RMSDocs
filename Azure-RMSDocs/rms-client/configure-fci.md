@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
+
+*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
 Use this article for instructions and a script to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 
 This solutions lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution uses Azure Rights Management (Azure RMS) to protect the files, so you must have this technology deployed in your organization.

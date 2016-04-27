@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Azure RMS quick start Step 3: Email your document that you want to protect
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](quick-start-tutorial.md)

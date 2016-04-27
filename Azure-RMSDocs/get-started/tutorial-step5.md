@@ -29,6 +29,9 @@ ms.custom:
 
 # Azure RMS quick start Step 5: Track your protected document
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](quick-start-tutorial.md)

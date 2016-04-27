@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Configure work folders for persistent protection
+
+*Applies to: Azure Rights Management, Office 365*
+
 This scenario and supporting user documentation uses Azure Rights Management to apply persistent protection to Office documents in [Work Folders](https://technet.microsoft.com/library/dn265974.aspx). Work Folders uses a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices. Although Work Folders provides its own encryption to protect the files, this protection is lost if the files are then moved outside the Work Folders environment. For example, users copy the synchronized files and save them to storage that is not under the control of your IT department, or the files are emailed to others.
 
 The additional protection that Azure Rights Management provides helps to prevent accidental data loss by preventing the files from being viewed by people outside your organization. To do this, you can use one of the built-in, default rights policy templates. However, before you deploy this scenario, consider whether users might need to legitimately share any of these files with people outside the organization. For example, after working on a draft price list, a user then emails the final version to their customer in another organization. When you use the default Rights Management template for Work Folders, that customer in the other organization couldn't be able to read this emailed document. You can accommodate this requirement by creating a custom template that lets users apply a new rights policy to the file, which replaces the original restriction of all employees to the people that they specify in the email.

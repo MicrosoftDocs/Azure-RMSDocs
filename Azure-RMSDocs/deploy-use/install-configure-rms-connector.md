@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Installing and configuring the Azure Rights Management connector
+
+*Applies to: Azure Rights Management, Office 365*
+
 Use the following information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
 
 Before you begin, make sure that you have reviewed and checked the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) for this deployment.

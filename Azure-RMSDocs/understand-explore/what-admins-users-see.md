@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS in action: What administrators and users see
+
+*Applies to: Azure Rights Management, Office 365*
+
 This article shows some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) to help protect sensitive or confidential information.
 
 > [!NOTE]

@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Remove (archive) templates
+
+*Applies to: Azure Rights Management, Office 365*
+
 The default templates cannot be deleted, but they can be archived so that users do not see them.
 
 Similarly, if you have published a custom template and no longer want users to be able to see it, you can edit the template and choose **ARCHIVE** and **SAVE** from the **CONFIGURE** page. Or, you can select it from the **TEMPLATES** page and select **ARCHIVE**.

@@ -26,3 +26,6 @@ ms.reviewer: mbaldwin
 ---
 
 # Understand and Explore Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
