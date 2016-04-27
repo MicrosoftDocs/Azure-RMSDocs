@@ -41,6 +41,12 @@ For information about how to configure these applications for Azure RMS, see [Co
 > [!TIP]
 > For examples and screenshots of applications using Azure RMS, see [Azure RMS in action: What administrators and users see](what-admins-users-see.md).
 
+Search and indexing solutions can integrate with RMS-protected content, but how they do this depends on whether the index is integrated into a server solution or runs in the user context: 
+
+- Server solutions such as Microsoft Exchange and SharePoint create and manage the index and search results. When these solutions support Rights Management, they can use the Rights Management super user feature to decrypt protected content before indexing it. Information protection solutions from software vendors can also make use of the super user feature in this way to also index protected files. Although search operations return results for protected content in these scenarios, these solutions must implement additional safeguards to ensure that the index is protected from malicious or accidental disclosure. In addition, if these safeguards are not implemented, these solutions could enable users to see the indexed results of the protected content, even if they don't have RMS permissions to view the protected content itself.
+
+- Indexing services that run in the user context (such as when a user searches in Explorer on a PC) don’t use the super user feature. To support Rights Management and return just the files that the logged on user is allowed to see, the indexing service must run Rights Management in the user context. Currently, the Windows indexing service does not support Rights Management, which means that RMS-protected files do not appear in Windows search results, independently from users’ RMS permissions to view them. 
+
 
 ## Next steps
 
