@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # RMS sharing application for Windows and mobile platforms
+
+*Applies to: Azure Rights Management, Office 365*
+
 The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section from the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).

@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Refreshing templates for users
+
+*Applies to: Azure Rights Management, Office 365*
+
 When you use Azure RMS, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates:
 
 |Application or service|How templates are refreshed after changes|

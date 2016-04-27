@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Protect files on a file server share
+
+*Applies to: Azure Rights Management, Office 365*
+
 This scenario and supporting user documentation uses Azure Rights Management to bulk-protect all files that you want to protect on a file server to ensure that only employees from your organization can access them, even if they are copied and saved to storage that is not under the control of your IT department, or emailed to others.
 
 These instructions use one of the default templates, which restricts access to all employees with all usage rights. But if required, you can further restrict access and usage rights by configuring a custom template instead of using a default template.

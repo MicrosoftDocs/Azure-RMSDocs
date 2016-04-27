@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # How users sign up for RMS for individuals
+
+*Applies to: Azure Rights Management*
+
 To sign up for this free account, users request it by visiting the [Microsoft Rights Management page](https://portal.aadrm.com/), and provide their work or school email address. 
 
 The most typical way that users will be directed to this sign-up page is if they received an email message with a protected attachment, which contains instructions how to sign-up. They receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create their account. When they get an email confirmation from Microsoft, this final email message sends them to a page where they can download the sharing application for different devices, and a link to the user guide.

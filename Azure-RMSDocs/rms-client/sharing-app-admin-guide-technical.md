@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Technical overview for the Microsoft Rights Management sharing application
 
+*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+
+
 The Microsoft Rights Management sharing application is an optional downloadable application for Microsoft Windows and other platforms that provides the following:
 
 -   Protection of a single file or bulk protection of multiple files as well as all files within a selected folder.

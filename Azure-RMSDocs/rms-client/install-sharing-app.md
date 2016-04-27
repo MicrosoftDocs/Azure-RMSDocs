@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Download and install the Rights Management sharing application
+
+*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+
 You do not have to be a local administrator to install the RMS sharing application. However, if you are not and you use Office 2010, there are some limitations. For more information, see the [If you are not a local administrator and use Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) section on this page.
 
 ## To download and install the Rights Management sharing application

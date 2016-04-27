@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS requirements: Client devices that support Azure RMS
+
+*Applies to: Azure Rights Management, Office 365*
+
 Use the following sections to identify which devices support Azure Rights Management (Azure RMS).
 
 ## Computers

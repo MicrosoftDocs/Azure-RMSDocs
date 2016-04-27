@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Customer-managed: Tenant key lifecycle operations
+
+*Applies to: Azure Rights Management, Office 365*
+
 If you manage your tenant key for Azure Rights Management (the bring your own key, or BYOK, scenario), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 
 ## Revoke your tenant key

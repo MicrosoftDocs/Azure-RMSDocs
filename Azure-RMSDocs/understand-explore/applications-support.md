@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # How applications support Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
 Use the following information to help you understand how the most commonly used end-user applications (such as the Office applications, Word, Excel, PowerPoint, and Outlook) and services (such as Exchange and SharePoint) can use Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to help protect your organization’s data. 
 > [!NOTE]
 > To verify the applications and versions that [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) supports, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
