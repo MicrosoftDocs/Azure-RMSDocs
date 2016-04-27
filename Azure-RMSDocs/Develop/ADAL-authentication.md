@@ -32,14 +32,56 @@ Authentication with Azure RMS for your app using Azure ADAL is now part of the R
 By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
 - Utilize multi-factor authentication
-
 - Install the RMS 2.1 client without requiring administrative privileges to the machine
-
 - Certify your application for Windows 10
 
+## Two approaches to authentication
+
+This topic contains two approaches to authentication with corresponding code examples.
+
+- **Internal authentication** - OAuth authentication managed by the RMS SDK. Use this approach if you want the RMS client to display an ADAL authentication prompt when authentication is necessary. For details on how to configure your application, see the section, "Internal authentication".
+
+> [!NOTE] If your application currently uses AD RMS SDK 2.1 with the sign-in assistant, we recommend that you use the internal authentication method as your application migration path.
+
+- **External authentication** - OAuth authentication managed by your application. Use this approach if you want your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary. For a detailed example, see "External authentication" at the end of this topic.
+
+> [!NOTE] External authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
+
+### Internal authentication
+
+You will need the following:
+
+- A [subscription for Microsoft Azure](https://azure.microsoft.com/en-us/) (a free trial is sufficient):
+- A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) account is sufficient).
+
+> [!NOTE] Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a Work or school account, rather than a Microsoft account (i.e. Hotmail).
+
+After signing up for Microsoft Azure:
+
+- Login to the [Azure Management Portal](https://manage.windowsazure.com) for your organization using an account with administrative privileges.
+
+![Azure login](./media/AzurePortalLogin.png)
+
+- Browse down to the **Active Directory** application on the left side of the portal.
+
+![Select Active Directory](./media/AzureADPick.png)
+
+- If you haven’t created a directory already, choose the **New** button located in the bottom left corner of the portal.
+
+![Select NEW](./media/AzureNewBtn.png)
+
+- Select the **Rights Management** tab and ensure that the **Rights Management Status** is either **Active**, **Unknown** or **Unauthorized**. If the status is **Inactive**, choose the **Activate** button at the bottom, center portion of the portal and confirm your selection.
+
+![Choose ACTIVATE](./media/RMTab.png)
 
 
-... template ...
+
+
+
+
+
+
+... template below here ...
 
 # Metadata and Markdown Template
 
