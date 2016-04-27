@@ -60,240 +60,138 @@ After signing up for Microsoft Azure:
 
 - Login to the [Azure Management Portal](https://manage.windowsazure.com) for your organization using an account with administrative privileges.
 
-![Azure login](./media/AzurePortalLogin.png)
+![Azure login](../media/AzurePortalLogin.png)
 
 - Browse down to the **Active Directory** application on the left side of the portal.
 
-![Select Active Directory](./media/AzureADPick.png)
+![Select Active Directory](../media/AzureADPick.png)
 
 - If you haven’t created a directory already, choose the **New** button located in the bottom left corner of the portal.
 
-![Select NEW](./media/AzureNewBtn.png)
+![Select NEW](../media/AzureNewBtn.png)
 
 - Select the **Rights Management** tab and ensure that the **Rights Management Status** is either **Active**, **Unknown** or **Unauthorized**. If the status is **Inactive**, choose the **Activate** button at the bottom, center portion of the portal and confirm your selection.
 
-![Choose ACTIVATE](./media/RMTab.png)
+![Choose ACTIVATE](../media/RMTab.png)
+
+- Now, create a new *Native Application* in your directory by selecting your directory, choosing Applications.
+
+![Select APPLICATIONS](../media/CreateNativeApp.png)
+
+- Then choose the **ADD** button located in the bottom, center portion of the portal.
+
+![Select ADD](../media/AddAppBtn.png)
+
+- At the prompt choose **Add an application my organization is developing**.
+
+![Select Add an application my organization is developing](../media/AddAnAppPick.png)
+
+- Name your application by selecting **NATIVE CLIENT APPLICATION** and choosing the **Next** button.
+
+![Name your app](../media/TellUsInput.png)
+
+- Add a redirection URI and choose next. The redirection URI needs to be a valid URI and unique to your directory. For example, you could use something like `com.mycompany.myapplication://authorize`.
+
+![Add redirect URI](../media/RedirectURI.png)
+
+- Select your application in the directory and choose **CONFIGURE**.
+
+![Choose CONFIGURE](../media/ConfigYourApp.png)
+
+>[!NOTE] Copy the **CLIENT ID** and **REDIRECT URI** and store them for future use when configuring the RMS client.
+
+- Browse to the bottom of your application settings and choose the **Add application** button under **permissions to other applications**.
+
+![Select Add application](../media/PermissionsToOtherBtn.png)
+
+- Now, add this GUID `00000012-0000-0000-c000-000000000000` to the **STARTING WITH** edit box and choose the check button.
+
+![Add GUID](../media/AddGUID.png)
+
+- Choose the plus (+) button next to **Microsoft Rights Management**.
+
+![Select the + button](../media/ChoosePlusBtn.png)
+
+- Now, choose the check mark located on the bottom left corner of the dialog.
+
+![Choose check mark](../media/ChooseCheck.png)
+
+- You’re now ready to add a dependency to your application for Azure RMS. To add the dependency, select the new **Microsoft Rights Management Services** entry under **permissions to other applications** and choose the **Create and access protected content for users** checkbox under the **Delegated Permissions:** drop box.
+
+![Setup permissions](../media/AddDependency.png)
+
+- Save your application to persist the changes by choosing the **SAVE** icon located on the bottom, center of the portal.
+
+![Select SAVE](../media/SaveApplication.png)
+
+- You are now ready to configure your application to use the internal ADAL authentication provided by the RMS SDK 2.1. To configure you RMS client, add a call to [IpcSetGlobalProperty](/rights-management/sdk/2.1/api/win/IpcSetGlobalProperty) right after calling [IpcInitialize](/rights-management/sdk/2.1/api/win/IpcInitialize) to configure the RMS client. Use the following code snippet as an example.
 
 
+    IpcInitialize();
 
+    IPC_AAD_APPLICATION_ID applicationId = { 0 };
+    applicationId.cbSize = sizeof(IPC_AAD_APPLICATION_ID);
+    applicationId.wszClientId = L"GUID-provided-by-AAD-for-your-app-(no-brackets)";
+    applicationId.wszRedirectUri = L"RedirectionUriWeProvidedAADForOurApp://authorize";
 
+    HRESULT hr = IpcSetGlobalProperty(IPC_EI_APPLICATION_ID, &amp;applicationId);
 
-
-
-
-... template below here ...
-
-# Metadata and Markdown Template
-
-This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
-/template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
-
-When creating a markdown file you shluld copy the template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
-
-
-## Metadata
-
-The full metadata block is above, divided into required fields and optional fields; see the [OPS metadata cheatsheet](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data) for more details. Some key notes:
-
-- You **must** have a space between the colon (:) and the value for a metadata element.
-- If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na"); if you are adding a value to an element that was commnted out, be sure to remove the #.
-- Colons in a value (e.g., a title) break the metadata parser. In their place, use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS").
-- **title**: This title will appear in search engine results. The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading. It should be roughly 65 characters (including | SERVICE NAME)
-- **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
-- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
-
-## Basic Markdown and GFM
-
-All basic and Github-flavored markdown is supported. For more information on these, see:
-
-- [Baseline markdown syntax](https://daringfireball.net/projects/markdown/syntax)
-- [Github-flavored markdown (GFM) documentation](https://guides.github.com/features/mastering-markdown)
-
-## Headings
-
-Examples of first- and second-level headings are above.
-
-There **must** be only one first-level heading in your topic, which will be displayed as the on-page title.  
-
-Second-level headings will generate the on-page TOC that appears in the "In this article" section underneath the on-page title.
-
-### Third-level heading
-#### Fourth-level heading
-##### Fifth level heading
-###### Sixth-level heading
-
-## Text styling
-
-*Italics*
-
-**Bold**
-
-~~Strikethrough~~
-
-
-
-## Links
-
-To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2).
-
-- Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
-
-To link to a header in the same markdown file, view the source of the published article, find the id of the head (e.g. `id="blockquote"`, and link using # + id (e.g. `#blockquote`).
-
-- Example: [Blockquotes](#blockquote)
-
-To link to a header in a markdown file in the same repo, use relative linking + hashtag linking.
-
-- Example: [technical overiew of the sign-up process](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
-
-To link to an external file, use the full URL as the link.
-
-- Example: [Github](http://www.github.com)
-
-If a URL appears in a markdown file, it will be transformed into a clickable link.
-
-- Example: http://www.github.com
-
-## Lists
-
-### Ordered lists
-
-1. This
-1. Is
-1. An
-1. Ordered
-1. List  
-
-
-#### Ordered list with an embedded list
-
-1. Here
-1. comes
-1. an
-1. embedded
-    1. Miss Scarlett
-    1. Professor Plum
-1. ordered
-1. list
-
-
-### Unordered Lists
-
-- This
-- is
-- a
-- bulleted
-- list
-
-
-##### Unordered list with an embedded lists
-
-- This
-- bulleted
-- list
-    - Mrs. Peacock
-    - Mr. Green
-- contains  
-- other
-    1. Colonel Mustard
-    1. Mrs. White
-- lists
-
-
-## Horizontal rule
-
----
-
-## Tables
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| col 1 is default | left-aligned     |    $1 |
-
-
-## Code
-
-### Codeblock
-
-    function fancyAlert(arg) {
-      if(arg) {
-        $.docs({div:'#foo'})
-      }
+    if (FAILED(hr)) {
+     //Handle the error
     }
 
-### In-line code
+### External authentication
 
-This is an example of `in-line code`.
-
-## Blockquotes
-
-> The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
-
-## Images
-
-### Static Image
-
-![this is the alt text](./media/AzRMS_elements.png)
-
-### Linked Image
-
-[![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com)
-
-### Animated gif
-
-![animated gif](./media/hololens.gif)
-
-## Alerts
-
-### Note
-
-> [!NOTE]
-> This is NOTE
-
-### Warning
-
-> [!WARNING]
-> This is WARNING
-
-### Tip
-
-> [!TIP]
-> This is TIP
-
-### Important
-
-> [!IMPORTANT]
-> This is IMPORTANT
-
-## Videos
-
-### Channel 9
-
-<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+- Use  this code as an example of how to manage your own authentication tokens.
 
 
-### Youtube
+    extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST&amp; Parameters, __out wstring wstrToken) throw();
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+    HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out IPC_KEY_HANDLE &amp;hKey)
+    {
+      IPC_OAUTH2_CALLBACK pfGetADALToken =
+          [](LPVOID pvContext, PIPC_NAME_VALUE_LIST pParameters, IPC_AUTH_TOKEN_HANDLE* phAuthToken) -&gt; HRESULT
+      {
+          wstring wstrToken;
+          HRESULT hr = GetADALToken(pvContext, *pParameters, wstrToken);
+          return SUCCEEDED(hr) ? IpcCreateOAuth2Token(wstrToken.c_str(), OUT phAuthToken) : hr;
+      };
 
-## docs.ms extentions
+      IPC_OAUTH2_CALLBACK_INFO callbackCredentialContext =
+      {
+          sizeof(IPC_OAUTH2_CALLBACK_INFO),
+          pfGetADALToken,
+          pContextForAdal
+      };
 
-### Button
+      IPC_CREDENTIAL credentialContext =
+      {
+          IPC_CREDENTIAL_TYPE_OAUTH2,
+          NULL
+      };
+      credentialContext.pcOAuth2 = &amp;callbackCredentialContext;
 
-> [!div class="button"]
-[button links](/rights-management)
+      IPC_PROMPT_CTX promptContext =
+      {
+        sizeof(IPC_PROMPT_CTX),
+        NULL,
+        IPC_PROMPT_FLAG_SILENT | IPC_PROMPT_FLAG_HAS_USER_CONSENT,
+        NULL,
+        &amp;credentialContext
+      };
 
-### Selector
+      hKey = 0L;
+      return IpcGetKey(pvLicense, 0, &amp;promptContext, NULL, &amp;hKey);
+  }
 
-> [!div class="op_single_selector"]
-- [foo](/rights-management/template.md)
-- [bar](/rights-management/scratch.md)
-
-### Step-By-Step
-
->[!div class="step-by-step"]
-[Pre](https://www.example.com)
-[Next](https://www.example.com)
+### Related topics
+- [Data types](/rights-management/sdk/2.1/api/win/Data%20types)
+- [Environment properties](/rights-management/sdk/2.1/api/win/Environment%20properties)
+- [IpcCreateOAuth2Token](/rights-management/sdk/2.1/api/win/IpcCreateOAuth2Token)
+- [IpcGetKey](/rights-management/sdk/2.1/api/win/IpcGetKey)
+- [IpcInitialize](/rights-management/sdk/2.1/api/win/IpcInitialize)
+- [IPC_CREDENTIAL](/rights-management/sdk/2.1/api/win/IPC\_CREDENTIAL)
+- [IPC_NAME_VALUE_LIST](/rights-management/sdk/2.1/api/win/IPC\_NAME\_VALUE\_LIST)
+- [IPC_OAUTH2_CALLBACK_INFO](/rights-management/sdk/2.1/api/win/IPC\_OAUTH2\_CALLBACK\_INFO)
+- [IPC_PROMPT_CTX](/rights-management/sdk/2.1/api/win/IPC\_PROMPT\_CTX)
+- [IPC_AAD_APPLICATION_ID](/rights-management/sdk/2.1/api/win/IPC\_AAD\_APPLICATION\_ID)
