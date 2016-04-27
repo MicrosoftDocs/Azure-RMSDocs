@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Azure RMS requirements: Azure AD Directory
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 You must have an Azure AD directory to use Azure Rights Management (Azure RMS). You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 
 If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.

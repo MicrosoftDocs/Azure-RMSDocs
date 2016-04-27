@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Operations for your Azure Rights Management tenant key
+
+*Applies to: Azure Rights Management, Office 365*
+
 Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Microsoft Azure Rights Management (Azure RMS) tenant key after it is implemented.
 
 When you manage your own tenant key, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).

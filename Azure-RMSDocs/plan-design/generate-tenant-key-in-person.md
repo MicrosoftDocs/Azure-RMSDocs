@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Generate and transfer your tenant key – in person
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 Use the following procedures if you have decided to [manage your own tenant key](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and do not want to transfer it over the Internet, but instead, transfer your tenant key in person.
 
 ## Generate your tenant key

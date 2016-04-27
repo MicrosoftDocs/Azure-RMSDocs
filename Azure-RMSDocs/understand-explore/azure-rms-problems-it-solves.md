@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # What problems does Azure RMS solve?
+
+*Applies to: Azure Rights Management, Office 365*
+
 Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
 
 |Requirement or problem|Solved by Azure RMS|

@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Frequently asked questions for Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
 Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
 
 ## What do I need to deploy Azure RMS and how do I get going?

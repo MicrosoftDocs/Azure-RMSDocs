@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
+
+*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*

@@ -27,6 +27,9 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Office 365 admin center preview
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 Use these instructions only if you're using the new, preview version of the Office 365 admin center (**Office 365 Admin center preview**).
 
 1.  After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.

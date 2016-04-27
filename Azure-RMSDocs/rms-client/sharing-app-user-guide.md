@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Rights Management sharing application user guide
+
+*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+
 The Microsoft Rights Management (RMS) sharing application for Windows helps you keep important documents and pictures safe from people who shouldn’t see them, even if you email them or save them to another device. You can also use this application to open and use files that other people have protected by using the same Rights Management technology.
 
 All you need is a computer that runs at least Windows 7 with Service Pack 1. Then [download and install](http://go.microsoft.com/fwlink/?LinkId=303970) this free application from Microsoft.

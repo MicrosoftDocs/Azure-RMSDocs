@@ -29,6 +29,9 @@ ms.suite: ems
 
 # Azure RMS quick start Step 2: Install the Rights Management sharing application
 
+*Applies to: Azure Rights Management, Office 365*
+
+
 Jump to: 
 > [!div class="op_single_selector"]
 - [Introduction](quick-start-tutorial.md)

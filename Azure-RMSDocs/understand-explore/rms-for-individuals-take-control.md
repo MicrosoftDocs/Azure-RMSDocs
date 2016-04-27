@@ -29,6 +29,9 @@ ms.suite: ems
 
 # How administrators can control the accounts created for RMS for individuals
 
+*Applies to: Azure Rights Management*
+
+
 If you do not want to convert your organization’s RMS for individuals subscription to a paid subscription, you can still control the user accounts in the Azure directory that was created for your organization in the following ways:
 
 -   Implement directory integration solutions for Azure Active Directory and your Active Directory Domain Services infrastructure. You can synchronize accounts and passwords so that users will not have to create new accounts to use Rights Management and your on-premises password policies will apply to the new Azure user accounts. You can also synchronize passwords so that users do not have to remember a different password to use Rights Management.

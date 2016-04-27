@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # How does Azure RMS work? Under the hood
+
+*Applies to: Azure Rights Management, Office 365*
+
 One important thing to understand about how Azure RMS works is that the Rights Management service (and Microsoft) do not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
 -   The data is encrypted at the application level and includes a policy that defines the authorized use for that document.

@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Quick start tutorial for Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
 Jump to: 
 > [!div class="op_single_selector"]
 - [Step 1: Activate Azure RMS](tutorial-step1.md)

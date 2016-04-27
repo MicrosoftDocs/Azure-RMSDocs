@@ -26,3 +26,6 @@ ms.reviewer: mbaldwin
 ---
 
 # Plan and design Azure Rights Management
+
+*Applies to: Azure Rights Management, Office 365*
+
