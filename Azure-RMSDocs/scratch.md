@@ -165,6 +165,12 @@ This is an example of `in-line code`.
 [button links](/azure-rms/index.html)
 
 ### Selector
+
+Intro text: [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
+
+
 > [!div class="op_single_selector"]
 - [foo](./develop/developers-guide.md)
 - [bar](./develop/developer-notes.md)
