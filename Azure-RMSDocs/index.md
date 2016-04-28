@@ -28,7 +28,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
         <ol class="action-list">
-            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" target="_blank class="button-bordered button-translucent">Try Now</a></li>
+            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
         </ol>
     </aside>
 
@@ -234,8 +234,8 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <aside class="alert alert-social">
       <p>Keep up-to-date on Azure RMS
       <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/rms/" target="_blank class="button-bordered button-translucent">Official RMS Team Blog</a></li>
-        <li><a href="https://twitter.com/TheRMSGuy" target="_blank class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
+        <li><a href="http://blogs.technet.com/b/rms/" target="_blank" class="button-bordered button-translucent">Official RMS Team Blog</a></li>
+        <li><a href="https://twitter.com/TheRMSGuy" target="_blank" class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
       </ol>
     </aside>
 </article>
