@@ -3,7 +3,7 @@
 # [Plan & Design](/rights-management/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
 # [Deploy & Use the Client](use-client.md)
-## [use-client.md](Rights Management (RMS) client)
+## [use-client.md](Rights Management client)
 ### [RMS Client deployment notes](client-deployment-notes.md)
 ### [RMS protection with Windows Server FCI](configure-fci.md)
 #### [PowerShell script](fci-script.md)
