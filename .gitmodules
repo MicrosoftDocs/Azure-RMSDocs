@@ -1,0 +1,4 @@
+[submodule "docs shared themes"]
+	path = Azure-RMSDocs/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
