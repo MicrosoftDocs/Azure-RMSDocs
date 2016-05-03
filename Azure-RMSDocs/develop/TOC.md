@@ -54,6 +54,7 @@
 #### [Signing your application for production](signing-your-application-for-production.md)
 #### [Deploying your application](deploying-your-application.md)
 ### [Developer notes](Developer-notes.md)
+####[ADAL authentication for your RMS enabled application](ADAL-authentication.md)
 #### [Add explicit owner rights](add-explicit-owner-rights.md)
 #### [Common error conditions and solutions](common-error-conditions-and-solutions.md)
 #### [Enabling email notification](how-to-enable-email-notification.md)
