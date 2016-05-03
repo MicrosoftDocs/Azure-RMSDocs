@@ -4,8 +4,8 @@
 title: Privacy Statement for Microsoft Rights Management in RMS-Enlightened Applications | Azure RMS
 description:
 keywords:
-author: mbaldwin
-manager: mbaldwin
+author: msmbaldwin
+manager: msmbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: azure
