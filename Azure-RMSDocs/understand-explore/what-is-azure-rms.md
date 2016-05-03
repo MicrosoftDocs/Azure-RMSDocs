@@ -42,6 +42,9 @@ But very importantly, authorized people and services (such as search and indexin
 
 The following picture shows how Azure RMS works as a Rights Management solution for Office 365 as well as for on-premises servers and services. You'll also see that it supports the popular end user devices that run Windows, Mac OS, iOS, Android, and Windows Phone.
 
+> [!NOTE]
+You can use Azure RMS with different cloud subscriptions, which include Office 365, Enterprise Mobility Suite, and Azure RMS Premium. For more information, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+
 ![How Azure RMS works](../media/AzRMS_elements.png)
 
 ## Next steps
