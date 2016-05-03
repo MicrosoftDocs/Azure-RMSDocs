@@ -2,3 +2,7 @@
 	path = Azure-RMSDocs/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
+[submodule "docs themes for _themes"]
+	path = _themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
