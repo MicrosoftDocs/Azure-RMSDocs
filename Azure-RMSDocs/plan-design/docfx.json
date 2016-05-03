@@ -1,0 +1,44 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "**/obj/**"
+        ]
+      }
+    ],
+    "resource": [
+        {
+          "files": [
+          "**/images/**", 
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp",
+          "**/*.html",
+          "**/*.css",
+          "_themes/**"
+          ],
+        "exclude": [
+          "**/obj/**",
+          "_themes/DocPacker/**"
+        ]
+      }
+    ],
+    "dest": "Azure-RMSDocs/PlanDesign",
+    "template": "docs.html",
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/EM/toc.json",
+      "ms.locale": "en-us"
+    }
+  },
+  "render": {
+    "theme": "hyde",
+    "dest": "_output"
+  },
+  "basepath": "/rights-management/plan-design"
+}
