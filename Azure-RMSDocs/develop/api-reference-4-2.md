@@ -6,7 +6,7 @@ description: The Microsoft Rights Management SDK 4.2 supports several operating
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -36,7 +36,7 @@ The Microsoft Rights Management SDK 4.2 supports several operating systems. For
 
 [Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement) - API reference for the Windows Phone and Windows Store Applications SDKs.
 
-## Related topics ##
+## Related topics
 
 * [Get started](get-started.md)
  
