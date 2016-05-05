@@ -43,10 +43,13 @@ Use these instructions if you're using the classic (original) version of the Off
 
 4.  Click **Rights Management**.
 
-    > [!NOTE]
-    > If you do not see this option, it might be because your service plan or product version cannot support Rights Management, or it has not yet been upgraded to support Rights Management.
-    >
-    > Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm support. If your service plan or product version is supported but you do not see the Rights Management option, it might be because the service is not yet upgraded. For help with this issue, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
+----
+
+   NOTE: If you see an activation error, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+
+   Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+
+----
 
 5.  On the **RIGHTS MANAGEMENT** page, click **Manage**.
 
