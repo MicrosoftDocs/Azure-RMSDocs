@@ -111,22 +111,22 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 1.  Using a registry editor, create and set one of the following registry values:
 
-    - To set an update frequency in days (minimum of 1 day):  Create a new registry value named **TemplateUpdateFrequency** and define an integer value for the data, which specifies the frequency in days to download any changes to a downloaded template. Use the following table to locate the registry path to create this new registry value.
+    - To set an update frequency in days (minimum of 1 day):  Create a new registry value named **TemplateUpdateFrequency** and define an integer value for the data, which specifies the frequency in days to download any changes to a downloaded template. Use the following information to locate the registry path to create this new registry value.
 
-		**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+    	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-		**Type:** REG_DWORD
+    	**Type:** REG_DWORD
 
-		**Value:** TemplateUpdateFrequency
+    	**Value:** TemplateUpdateFrequency
 
 
-    - To set an update frequency in seconds (minimum of 1 second):  Create a new registry value named **TemplateUpdateFrequencyInSeconds** and define an integer value for the data, which specifies the frequency in seconds to download any changes to a downloaded template. Use the following table to locate the registry path to create this new registry value.
+    - To set an update frequency in seconds (minimum of 1 second):  Create a new registry value named **TemplateUpdateFrequencyInSeconds** and define an integer value for the data, which specifies the frequency in seconds to download any changes to a downloaded template. Use the following information to locate the registry path to create this new registry value.
 
-		**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+    	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
-		**Type:** REG_DWORD
+    	**Type:** REG_DWORD
 
-		**Value:** TemplateUpdateFrequencyInSeconds
+    	**Value:** TemplateUpdateFrequencyInSeconds
 
     Make sure that you create and set one of these registry values, not both. If both are present, **TemplateUpdateFrequency** is ignored.
 
