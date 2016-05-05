@@ -6,7 +6,7 @@ description: The Microsoft Rights Management SDK 4.2 supports several operating
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -28,7 +28,9 @@ ms.suite: ems
 
 The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release-notes.md).
 
-[Android API Reference](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement) - API reference for the Android operating system.
+[Android API Reference](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement) - API class reference for the Android operating system.
+
+[Android API Reference - exceptions](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions) - API exceptions reference for the Android operating system.
 
 [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
@@ -36,7 +38,7 @@ The Microsoft Rights Management SDK 4.2 supports several operating systems. For
 
 [Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement) - API reference for the Windows Phone and Windows Store Applications SDKs.
 
-## Related topics ##
+## Related topics
 
 * [Get started](get-started.md)
  

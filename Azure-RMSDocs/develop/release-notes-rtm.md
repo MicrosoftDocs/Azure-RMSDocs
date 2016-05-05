@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Release notes | Azure RMS
@@ -6,7 +6,7 @@ description:
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -28,7 +28,21 @@ ms.suite: ems
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 
-## New for the December 2015 update
+## New for the February 2016 - SDK documentation update
+
+>[!Note]  The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
+
+- **Improved authentication flow** - using OAuth2 token based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
+- **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
+
+ - Utilize multi-factor authentication
+ - Install the RMS 2.1 client without requiring administrative privileges to the machine
+ - Certify your application for Windows 10
+
+- **Support for Microsoft Online Sign-in Assistant (SIA) with the RMS SDK is being removed.** We will continue to support the use of SIA for 6 months after which time support will stop.
+
+
+## December 2015 update
 
 -   Performance improvements have been implemented in several areas including:
 
@@ -165,6 +179,3 @@ If no name and description can be retrieved, an error is returned. There can be 
  
 
  
-
-
-
