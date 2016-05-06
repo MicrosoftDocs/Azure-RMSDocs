@@ -47,7 +47,6 @@ Use these instructions only if you're using the new, preview version of the Offi
 
     Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
-
 5. On the **Microsoft Azure Rights Management** page, click **Manage Microsoft Azure Rights Management settings**.
 
 6. On the **rights management** page, click **activate**.
