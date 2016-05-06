@@ -40,7 +40,7 @@ The RMS client can be freely redistributed and bundled with other applications a
 -   Make the RMS client a prerequisite for your application. With this option, you might need to provide users with additional instructions for them to obtain, install, and update their computers with the client before they can use your application.
 
 ## Installing the RMS client
-The RMS client is contained in an installer executable file named **setup_msipc_***&lt;arch&gt;***.exe**, where *&lt;arch&gt;* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer will not run on a 64-bit Windows installation.
+The RMS client is contained in an installer executable file named **setup_msipc_***<arch>***.exe**, where *<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer will not run on a 64-bit Windows installation.
 
 > [!NOTE]
 > You need elevated privileges to install the RMS client, such as a member of the Administrators group on the local computer.
@@ -53,7 +53,7 @@ You can install the  RMS client by using either of the following installation m
     setup_msipc_x64.exe /quiet
     ```
 
--   **Interactive mode.** Alternately, you can install the  RMS client by using the GUI-based setup program that's provided by the  RMS Client  Installation Wizard. To do this, double-click the  RMS client installer package (**setup_msipc_***&lt;arch&gt;***.exe**) in the folder to which it was copied or downloaded on your local computer.
+-   **Interactive mode.** Alternately, you can install the  RMS client by using the GUI-based setup program that's provided by the  RMS Client  Installation Wizard. To do this, double-click the  RMS client installer package (**setup_msipc_***<arch>***.exe**) in the folder to which it was copied or downloaded on your local computer.
 
 ## Questions and answers about the RMS client
 The following section contains frequently asked questions about the RMS client and the answers to them.
@@ -72,7 +72,7 @@ The RMS client is supported with the following operating systems:
 The  RMS client is supported on x86 and x64 computing platforms.
 
 ### Where is the  RMS client installed?
-By default, the RMS client is installed in %ProgramFiles%\Active Directory Rights Management Services Client 2.&lt;minor version number&gt;.
+By default, the RMS client is installed in %ProgramFiles%\Active Directory Rights Management Services Client 2.<minor version number>.
 
 ### What files  are associated with the RMS client software?
 The following files  are installed as part of the  RMS client software:
@@ -104,22 +104,22 @@ The RMS client stores licenses on the local disk and also caches some  informati
 
 |Description|Client Mode Paths|Server Mode Paths|
 |---------------|---------------------|---------------------|
-|License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*&lt;SID&gt;*\|
-|Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*&lt;SID&gt;*\|
-|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \*&lt;SID&gt;*|
+|License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>*\|
+|Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>*\|
+|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \*<SID>*|
 > [!NOTE]
-> *&lt;SID&gt;* is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account,    replace *&lt;SID&gt;* with the value of the well-known SID for that account (S-1-5-20).
+> *<SID>* is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account,    replace *<SID>* with the value of the well-known SID for that account (S-1-5-20).
 
 ### Windows registry settings for the RMS client
 You can use Windows registry keys to set or modify some RMS client configurations. For example, as an administrator for RMS-enlightened applications that communicate with AD RMS servers, you might want to update the enterprise service location (override the AD RMS server that is currently selected for publishing) depending on the client computer's current location within your Active Directory topology. Or, you might  want to enable  RMS tracing at the client computer, to help troubleshoot a problem with an RMS-enlightened application. Use the following table to identify the registry settings that you can change for the RMS client.
 
 |Task|Settings|
 |--------|------------|
-|AD RMS only: To update the enterprise service location for a client computer|Update the following registry keys:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Value:**&lt;http or https&gt;:// *RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Value:** &lt;http or https&gt;:// *RMS_Cluster_Name*/_wmcs/Licensing|
+|AD RMS only: To update the enterprise service location for a client computer|Update the following registry keys:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Value:**<http or https>:// *RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Value:** <http or https>:// *RMS_Cluster_Name*/_wmcs/Licensing|
 |To enable and disable tracing|Update the following registry key:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Value:** 1 to enable tracing, 0 to disable tracing (default)|
-|To change the frequency in days to refresh templates|The following registry values specify how often templates  will be refreshed on the user’s computer if the TemplateUpdateFrequencyInSeconds value is not set.  If neither of these values are set, the default refresh interval for applications using the RMS client  (version 1.0.1784.0) to download templates is 1 day. Versions prior to this have a default value of every 7 days.<br /><br />**Client Mode:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** An integer value that specifies the number of days (minimum of 1) between downloads.<br /><br />**Server Mode:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*&lt;SID&gt;*<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** An integer value that specifies the number of days  (minimum of 1) between downloads.|
-|To change the frequency in seconds to refresh templates<br /><br />Important: If this is specified, the value to refresh templates in days is ignored. Specify one or the other,  not both.|The following registry values specify how often templates  will be refreshed on the user’s computer. If this value or the value to change the frequency in days (TemplateUpdateFrequency) is not set,  the default refresh interval for applications using the RMS client (version 1.0.1784.0) to download templates is 1 day. Versions prior to this have a default value of every 7 days.<br /><br />**Client Mode:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** An integer value that specifies the number of seconds (minimum of 1) between downloads.<br /><br />**Server Mode:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*&lt;SID&gt;*<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** An integer value that specifies the number of seconds   (minimum of 1) between downloads.|
-|AD RMS only: To  download templates immediately at the next publishing request|During testing and evaluations, you might want the RMS client to download templates as soon as possible. To do this, remove the following registry key and the RMS client will download templates immediately at the next publishing request rather than wait for the time specified by the TemplateUpdateFrequency registry setting:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\&lt;Server Name&gt;\Template<br /><br />**Note**: &lt;Server Name&gt; could have both external (corprights.contoso.com) and internal (corprights) URLs and therefore two different entries.|
+|To change the frequency in days to refresh templates|The following registry values specify how often templates  will be refreshed on the user’s computer if the TemplateUpdateFrequencyInSeconds value is not set.  If neither of these values are set, the default refresh interval for applications using the RMS client  (version 1.0.1784.0) to download templates is 1 day. Versions prior to this have a default value of every 7 days.<br /><br />**Client Mode:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** An integer value that specifies the number of days (minimum of 1) between downloads.<br /><br />**Server Mode:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*<SID>*<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Value:** An integer value that specifies the number of days  (minimum of 1) between downloads.|
+|To change the frequency in seconds to refresh templates<br /><br />Important: If this is specified, the value to refresh templates in days is ignored. Specify one or the other,  not both.|The following registry values specify how often templates  will be refreshed on the user’s computer. If this value or the value to change the frequency in days (TemplateUpdateFrequency) is not set,  the default refresh interval for applications using the RMS client (version 1.0.1784.0) to download templates is 1 day. Versions prior to this have a default value of every 7 days.<br /><br />**Client Mode:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** An integer value that specifies the number of seconds (minimum of 1) between downloads.<br /><br />**Server Mode:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\*<SID>*<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Value:** An integer value that specifies the number of seconds   (minimum of 1) between downloads.|
+|AD RMS only: To  download templates immediately at the next publishing request|During testing and evaluations, you might want the RMS client to download templates as soon as possible. To do this, remove the following registry key and the RMS client will download templates immediately at the next publishing request rather than wait for the time specified by the TemplateUpdateFrequency registry setting:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<Server Name>\Template<br /><br />**Note**: <Server Name> could have both external (corprights.contoso.com) and internal (corprights) URLs and therefore two different entries.|
 |AD RMS only: To enable support  for federated authentication|If the RMS client computer connects to an AD RMS cluster by using a federated trust, you must configure the federation home realm.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Value:** The value of this registry entry is the uniform resource identifier (URI) for the federation service (for example, "https://fs-01.contoso.com").|
 |AD RMS only: To  support partner federation servers that require forms-based authentication for user input|By default, the  RMS client operates in silent mode and user input is not required. Partner federation servers, however, might be configured to require user input such as by way of forms-based authentication. In this case, you must configure the RMS client     ignore  silent mode so that the federated authentication form appears in a browser window and the user is promoted for authentication.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Note**: If the federation server is configured to use forms-based authentication, this key is required. If the federation server is configured to use Windows integrated authentication, this key is not required.|
 |AD RMS only: To  block ILS service consumption|By default, the RMS client enables consuming content protected by the ILS service but you can configure the client to block this service by setting the following registry key. If this registry key is set to block the ILS service, any attempts to open and consume content protected by the ILS service will return the following error:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Value:** 1 to block ILS consumption, 0 to allow ILS consumption (default)|
@@ -129,7 +129,7 @@ Templates make it easy for users and administrators to quickly apply Rights Mana
 
 **Client Mode:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**Server Mode:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\*&lt;SID&gt;*
+**Server Mode:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\*<SID>*
 
 When you use this folder, there is no special naming convention required except that the templates should be issued by the RMS server or service and they must have the  .xml file name extension. For example, Contoso-Confidential.xml or Contoso-ReadOnly.xml are valid names.
 
@@ -146,7 +146,7 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
 **To add members to the list of trusted AD RMS servers**
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
-    REG_SZ: *&lt;URL_or_HostName&gt;*
+    REG_SZ: *<URL_or_HostName>*
 
     **Value:** The string values added in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**,  the RMS client will use SSL or TLS to contact   the specified AD RMS server.
 
@@ -201,11 +201,11 @@ As an alternative to using an SCP or where an SCP does not exist, you can config
 
 4.  To create the EnterpriseCertification subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterpriseCertification**.
 
-5.  To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey, and when the **Edit String** dialog box appears,  for **Value data**, type &lt;http or https&gt;://*AD RMS_cluster_name*/_wmcs/Certification, and then click **OK**.
+5.  To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey, and when the **Edit String** dialog box appears,  for **Value data**, type <http or https>://*AD RMS_cluster_name*/_wmcs/Certification, and then click **OK**.
 
 6.  To create the EnterprisePublishing subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type EnterprisePublishing.
 
-7.  To set the enterprise publishing URL, double-click **(Default)** , under the **EnterprisePublishing** subkey, and when the **Edit String** dialog box appears, type for **Value data** the following &lt;http or https&gt;://*AD RMS_cluster_name*/_wmcs/Licensing, and then click **OK**.
+7.  To set the enterprise publishing URL, double-click **(Default)** , under the **EnterprisePublishing** subkey, and when the **Edit String** dialog box appears, type for **Value data** the following <http or https>://*AD RMS_cluster_name*/_wmcs/Licensing, and then click **OK**.
 
 8.  Close Registry Editor.
 
