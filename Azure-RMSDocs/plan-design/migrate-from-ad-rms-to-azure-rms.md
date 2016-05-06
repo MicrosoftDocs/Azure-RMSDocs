@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -170,7 +170,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 [**PHASE 4: POST MIGRATION TASKS**](migrate-from-ad-rms-phase4.md )
 
-- **Step: Decommission AD RMS**
+- **Step 8: Decommission AD RMS**
 
     When you have confirmed that all clients are using Azure RMS and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
 
