@@ -6,7 +6,8 @@
           "**/*.md"
         ],
         "exclude": [
-          "**/obj/**"
+          "**/obj/**",
+          "**/includes/**"
         ]
       }
     ],
@@ -18,12 +19,11 @@
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
-          "**/*.html",
-          "_themes/**"
+          "**/*.html"
           ],
         "exclude": [
           "**/obj/**",
-          "_themes/DocPacker/**"
+          "_themes/**"
         ]
       }
     ],
