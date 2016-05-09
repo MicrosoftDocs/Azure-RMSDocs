@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,7 +35,7 @@ Azure Rights Management is also known as *Azure Rights Management service*, but 
 
 Because RMS is a well-known abbreviation for its predecessors, Azure Rights Management is often abbreviated to ***Azure RMS***.
 
-Azure Rights Management was originally named *Windows Azure Active Directory Rights Management* (often abbreviated to Windows Azure AD Rights Management, then Windows Azure Rights Management, and now finally Azure Rights Management.
+Azure Rights Management was originally named *Windows Azure Active Directory Rights Management* (often abbreviated to Windows Azure AD Rights Management), then Windows Azure Rights Management, and now finally Azure Rights Management.
 
 You might also see references to *Information Rights Management*, often abbreviated to *IRM*. This is the Office implementation of Rights Management, which can support both Azure RMS and AD RMS.  When Azure RMS was first released, it could only be used with Office 365—for example, with an Office 365 E3 subscription. Now, Azure RMS  is extended to other subscriptions, such as the Enterprise Mobility Suite (EMS) and support now includes Office 2016, Office 2013, Office 2010, on-premises versions of SharePoint and Exchange, and Azure RMS can protect any file type. For more information, see [How applications support Azure Rights Management](applications-support.md).
 
