@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,6 +32,8 @@ ms.suite: ems
 Use the following steps to prepare for, implement, and manage Azure Rights Management (Azure RMS) for your organization.
 
 However, if you just want to quickly try Azure RMS for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial.md).
+
+For a list of specific scenarios and associated configuration steps and end user documentation, see the [Rapid deployment guide for Azure Rights Management](../get-started/rapid-deployment-guide.md).
 
 > [!IMPORTANT]
 > Before you do the following steps, make sure that you have reviewed [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
