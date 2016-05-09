@@ -26,7 +26,7 @@ ms.suite: ems
 
 # API reference
 
-The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release-notes.md).
+The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
 
 ### Apple
 - [iOS / OS X API reference](/rights-management/sdk/4.2/api/iOS/iOS) - API reference for the Apple iOS and OS X operating systems.
