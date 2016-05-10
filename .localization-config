@@ -1,5 +1,5 @@
 {
-	"locales": ["de-de", "es-es", "fr-fr", "it-it", "ja-jp", "ko-kr", "pt-br", "ru-ru", "zh-cn", "zh-tw", "cs-cs", "da-dk", "hu-hu", "nb-no", "nl-nl", "pt-pt", "sv-se", "pl-pl", "fi-fi", "tr-tr"],
+	"locales": ["de-de", "es-es", "fr-fr", "it-it", "ja-jp", "ko-kr", "pt-br", "ru-ru", "zh-cn", "zh-tw", "cs-cz", "da-dk", "hu-hu", "nb-no", "nl-nl", "pt-pt", "sv-se", "pl-pl", "fi-fi", "tr-tr"],
 	"files": ["!/*.md", "**/**/*.md", "**/*.md", "**/index.html"], 
 	"includeDependencies": false,
 	"autoPush": true,
