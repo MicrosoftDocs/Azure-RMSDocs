@@ -28,7 +28,7 @@
 #### [How to: Use document tracking](how-to-use-document-tracking.md)
 #### [Terms](terms.md)
 ### [API reference](api-reference-4-2.md)
-#### [Android API Reference](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+#### [Android API Reference](android-namespaces.md)
 #### [Linux API reference](linux-c-api-reference.md)
 #### [iOS / OS X API reference](/rights-management/sdk/4.2/api/iOS/iOS)
 #### [Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
