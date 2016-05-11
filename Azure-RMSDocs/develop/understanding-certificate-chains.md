@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Understanding certificate chains | Azure RMS
-description:
+description: Rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust
 keywords:
 author: bruceperlerms
 manager: mbaldwin

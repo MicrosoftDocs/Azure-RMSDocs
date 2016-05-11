@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Usage restriction reference | Azure RMS
-description:
+description: Usage restrictions are defined by the constants listed in this topic.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
