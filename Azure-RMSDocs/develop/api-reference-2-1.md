@@ -2,7 +2,7 @@
 # required metadata
 
 title: RMS SDK 2.1 API reference | Azure RMS
-description: The Microsoft Rights Management SDK 2.1 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
+description: The Rights Management SDK 2.1 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
