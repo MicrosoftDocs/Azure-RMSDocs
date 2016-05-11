@@ -6,7 +6,7 @@ description: The last step of a tutorial to quickly try out Microsoft Azure Righ
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -77,9 +77,11 @@ You can return to this site to track further activity for your protected documen
 |For troubleshooting and customer questions|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
 
 ### Next steps
-This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see [Azure RMS in action](../understand-explore/what-admins-users-see.md)  from [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md). There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
+This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see [Azure RMS in action](../understand-explore/what-admins-users-see.md)  from [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md) There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
 
 If you’re ready to start deploying Azure RMS, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+
+Or, for a list of specific scenarios and associated configuration steps and end user documentation, see the [Rapid deployment guide for Azure Rights Management](../get-started/rapid-deployment-guide.md).
 
 >[!div class="step-by-step"]
 [Intro](quick-start-tutorial.md)

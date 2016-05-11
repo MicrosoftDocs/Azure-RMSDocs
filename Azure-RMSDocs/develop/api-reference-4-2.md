@@ -26,17 +26,19 @@ ms.suite: ems
 
 # API reference
 
-The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specific platforms, see [What's new](release-notes.md).
+The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
 
-[Android API Reference](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement) - API class reference for the Android operating system.
+### Apple
+- [iOS / OS X API reference](/rights-management/sdk/4.2/api/iOS/iOS) - API reference for the Apple iOS and OS X operating systems.
 
-[Android API Reference - exceptions](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions) - API exceptions reference for the Android operating system.
+### Google
+- [Android namespaces](android-namespaces.md)
 
-[Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
+### Linux
+- [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
-[iOS / OS X API reference](/rights-management/sdk/4.2/api/iOS/iOS) - API reference for the Apple iOS and OS X operating systems.
-
-[Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement) - API reference for the Windows Phone and Windows Store Applications SDKs.
+### Microsoft
+- [Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement) - API reference for the Windows Phone and Windows Store Applications SDKs.
 
 ## Related topics
 
