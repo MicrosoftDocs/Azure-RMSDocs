@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Tracking content | Azure RMS
-description:
+description: Basic guidance for implementing document tracking
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -25,8 +25,6 @@ ms.suite: ems
 ---
 
 # Tracking content
-
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
 This topic covers basic guidance for implementing document tracking of content protected with Rights Management Services SDK 2.1.
 
