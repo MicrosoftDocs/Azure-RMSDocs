@@ -26,7 +26,7 @@ ms.suite: ems
 
 # RMS SDK 2.1 API reference 
 
-API reference
+## API reference
 
 This topic provides overview of the API reference material.
 
