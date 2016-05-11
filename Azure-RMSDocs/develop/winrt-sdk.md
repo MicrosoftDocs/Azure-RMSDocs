@@ -2,7 +2,7 @@
 # required metadata
 
 title: Windows Store setup | Azure RMS
-description:
+description: Windows Store applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application.
 keywords:
 author: bruceperlerms
 manager: mbaldwin

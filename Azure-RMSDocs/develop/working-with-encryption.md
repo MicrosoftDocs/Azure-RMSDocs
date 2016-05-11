@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Working with encryption | Azure RMS
-description:
+description: orients you to our encryption packages
 keywords:
 author: bruceperlerms
 manager: mbaldwin
