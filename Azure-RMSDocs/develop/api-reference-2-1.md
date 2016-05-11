@@ -28,10 +28,10 @@ ms.suite: ems
 
 ## API reference
 
-This topic provides overview of the API reference material.
+This topic provides overview and navigation for the API reference material.
 
-- [Constants](/rights-management/sdk/2.1/api/win/constants):  The platform uses the following constants.
-- [Data types](/rights-management/sdk/2.1/api/win/data%20types): The Active Directory Rights Management Services Client 2.1 declares the following data types.
-- [Functions](/rights-management/sdk/2.1/api/win/functions):  The platform provides the following functions.
-- [Structures](/rights-management/sdk/2.1/api/win/structures):  The platform uses the following structures.
+- [Constants](/rights-management/sdk/2.1/api/win/constants)
+- [Data types](/rights-management/sdk/2.1/api/win/data%20types)
+- [Functions](/rights-management/sdk/2.1/api/win/functions)
+- [Structures](/rights-management/sdk/2.1/api/win/structures)
 
