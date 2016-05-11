@@ -73,3 +73,4 @@
 ### [Supported platforms](supported-platforms.md)
 ### [Usage restriction reference](usage-restriction-reference.md)
 ### [Development environment files](sdk-elements.md)
+# [Use the RMS Client](/rights-management/rms-client/use-client)
