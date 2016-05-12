@@ -1,8 +1,8 @@
----
+﻿---
 # required metadata
 
 title: Understanding usage restrictions | Azure RMS
-description:
+description: All RMS enabled applications must enforce usage restrictions.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
