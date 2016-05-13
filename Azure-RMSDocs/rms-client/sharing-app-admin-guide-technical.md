@@ -110,11 +110,11 @@ You can also force the RMS sharing application to block the protection of files 
 
 To configure the RMS sharing application to apply generic protection to all files that by default, would have native protection applied, make the following registry edits:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Create a new key named **`*`**.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Create a new key named *.
 
     This setting denotes files with any file name extension.
 
-2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection`\`*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
+2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
 
     This setting results in the RMS sharing application applying generic protection.
 
