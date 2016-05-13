@@ -114,7 +114,7 @@ To configure the RMS sharing application to apply generic protection to all file
 
     This setting denotes files with any file name extension.
 
-2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
+2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
 
     This setting results in the RMS sharing application applying generic protection.
 
