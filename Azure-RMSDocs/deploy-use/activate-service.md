@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -48,7 +48,13 @@ For instructions how to activate Rights Management, select whether you will use 
 - [Azure classic portal](activate-azure-classic.md)
 
 > [!TIP]
-> You can also use the Windows PowerShell cmdlet, [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+> You can also use Windows PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
+>  
+> 1. Install the Azure Rights Management Administration Tool, which installs the Azure Rights Management administration module. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md)
+> 
+> 2. From a Windows PowerShell session, run the [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) cmdlet, and provide your global administrator account details.
+> 
+> 3. Run [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md).
 
 ## Configuring onboarding controls for a phased deployment
 If you don’t want all users to be able to protect files immediately by using Azure RMS, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Windows PowerShell command. You can run this command before or after you activate Azure RMS.
