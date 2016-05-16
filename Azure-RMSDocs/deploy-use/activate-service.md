@@ -47,7 +47,7 @@ For instructions how to activate Rights Management from your management portal, 
 - [Office 365 admin center - classic](activate-office365-classic.md)
 - [Azure classic portal](activate-azure-classic.md)
 
-Alternatively, you can also use Windows PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
+Alternatively, you can use Windows PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
 1. Install the Azure Rights Management Administration Tool, which installs the Azure Rights Management administration module. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
