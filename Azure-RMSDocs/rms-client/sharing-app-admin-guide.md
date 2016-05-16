@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -354,6 +354,27 @@ The following URLs are used for document tracking and must be allowed (for examp
 -   https://&#42;.microsoftonline.com
 
 -   https://&#42;.microsoftonline-p.com
+
+### Tracking and revoking documents for users
+
+When users sign in to the document tracking site, they can track and revoke documents that they have shared by using the RMS sharing application. When you sign in as an administrator for Azure RMS (global admin), you can click the Admin icon in the top right of the page, which lets you sign in on behalf of a user in your organization.
+
+When you are signed in on behalf of that user, you can then use the same document tracking site and controls that the specified user sees. This lets you track the documents that users have shared, and revoke these documents, if necessary. These actions are audited and will be logged in the usage log files. For more information, see the next section.
+
+For instructions how to use the document tracking site, see [Track and revoke your documents](sharing-app-track-revoke.md) from the user guide.
+
+### Usage logging for the document tracking site
+
+Two fields in the usage log files are applicable to document tracking: **AdminAction** and **ActingAsUser**.
+
+**AdminAction** - This field has a value of true when an administrator signs into the document tracking site on behalf of a user, for example, to revoke a document on their behalf. This field is empty when a user signs in to the document tracking site.
+
+**ActingAsUser** - When the AdminAction field is true, this field contains the user name that the administrator is signing in on behalf of. This field is empty a user signs in to the document tracking site. 
+
+There are also request types that log how users and administrators are using the document tracking site. For example, **RevokeAccess** is the request type when a user or an administrator on behalf of a user has revoked a document in the document tracking site. Use this request type in combination with the AdminAction field to determine whether the user revoked their own document (the AdminAction field is empty) or an administrator revoked a document on behalf of a user (the AdminAction is true).
+
+
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md)
 
 ## AD RMS only: Support for multiple email domains within your organization
 If you use AD RMS and users in your organization have multiple email domains, perhaps as a result of a merger or acquisition, you must make the following registry edit:
