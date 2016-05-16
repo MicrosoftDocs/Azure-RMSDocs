@@ -156,10 +156,11 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |Template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |File-name|String|File name of the document that was protected.|TopSecretDocument.docx|
 |Date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
+|AdminAction|String|An administrative action in the document tracking site.|true|
+|ActingAsUser|String|The user for whom an administrator acts on behalf of in the document tracking site.|alice@contoso.com|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
-|AdminAction|String|An administrative action in the document tracking site|true|
-|ActingAsUser|String|The user for whom an administrator acts on behalf of in the document tracking site|alice@contoso.com|
+
 
 #### Exceptions for the user-id field
 Although the user-id field usually indicates the user who made the request, there are two exceptions where the value does not map to a real user:
