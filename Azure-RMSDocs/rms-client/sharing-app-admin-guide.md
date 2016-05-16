@@ -369,7 +369,7 @@ Two fields in the usage log files are applicable to document tracking: **AdminAc
 
 **AdminAction** - This field has a value of true when an administrator signs into the document tracking site on behalf of a user, for example, to revoke a document on their behalf. This field is empty when a user signs in to the document tracking site.
 
-**ActingAsUser** - When the AdminAction field is true, this field contains the user name that the administrator is signing in on behalf of. This field is empty a user signs in to the document tracking site. 
+**ActingAsUser** - When the AdminAction field is true, this field contains the user name that the administrator is signing in on behalf of. This field is empty when a user signs in to the document tracking site. 
 
 There are also request types that log how users and administrators are using the document tracking site. For example, **RevokeAccess** is the request type when a user or an administrator on behalf of a user has revoked a document in the document tracking site. Use this request type in combination with the AdminAction field to determine whether the user revoked their own document (the AdminAction field is empty) or an administrator revoked a document on behalf of a user (the AdminAction is true).
 
