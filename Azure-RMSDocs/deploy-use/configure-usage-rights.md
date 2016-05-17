@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -209,23 +209,25 @@ Allows the user to open the document and see the content.
 
 ---
 
-### View Rights
+### Copy
 
-Allows the user to see the policy that is applied to the document.
+Enables options to copy data (including screen captures) from the document into the same or another document.
 
-**Encoding in policy:** VIEWRIGHTSDATA
+**Encoding in policy:** EXTRACT
 
-**Implementation in Office custom rights:** Not implemented.
+**Implementation in Office custom rights:** As the *Allow users with Read access to copy content* custom policy option.
 
-**Name in the Azure classic portal:** *View Assigned Rights*
+**Name in the Azure classic portal:** *Copy and Extract content*
 
-**Name in AD RMS templates:** *View Rights*
+**Name in AD RMS templates:** *Extract*
 
-**API constant or value:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**API constant or value:** IPC_GENERIC_EXTRACTL"EXTRACT"
+
+In some applications it also allows the whole document to be saved in unprotected form.
 
 ---
 
-### Common name: View Rights
+### View Rights
 
 Allows the user to see the policy that is applied to the document.
 
