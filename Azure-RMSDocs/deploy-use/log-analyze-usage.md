@@ -154,7 +154,7 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |owner-email|String|Email address of the owner of the document.|alice@contoso.com|
 |issuer|String|Email address of the document issuer.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |Template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|File name of the document that was protected.|TopSecretDocument.docx|
+|File-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
 |Date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
 |AdminAction|String|An administrative action in the document tracking site.|true|
 |ActingAsUser|String|The user for whom an administrator acts on behalf of in the document tracking site.|alice@contoso.com|
