@@ -242,6 +242,7 @@ Allows the user to see the policy that is applied to the document.
 **API constant or value:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
 
 Ignored by some applications.
+
 ---
 
 ### Change Rights
