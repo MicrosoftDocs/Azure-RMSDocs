@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,6 +43,16 @@ For information about how to configure these applications for Azure RMS, see [Co
 
 > [!TIP]
 > For examples and screenshots of applications using Azure RMS, see [Azure RMS in action: What administrators and users see](what-admins-users-see.md).
+
+Search services can integrate with Rights Management in different ways. For example: 
+
+- Exchange Online and Exchange Server use service-side indexing so that a user's RMS-protected emails are automatically displayed in their search results. 
+
+- SharePoint Online and SharePoint Server apply RMS protection to files only on download, which means that indexing and search results on SharePoint are not affected by this document protection solution. However, if you have a document that you want to store in SharePoint and should not be returned in search results, RMS-protect the file before uploading it to SharePoint.
+
+- Windows desktop search uses a shared index between different users of the device, so to keep the data in the protected documents secure, it does not index RMS-protected files. This means that although your search results don’t include files that you have protected, you can be assured that your files containing sensitive data will not be displayed in search results for other users who might sign in to or connect to your PC. 
+
+
 
 ## Next steps
 
