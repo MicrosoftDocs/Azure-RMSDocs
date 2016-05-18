@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -51,8 +51,6 @@ Allows the user to modify, rearrange, format or filter the content inside the ap
 
 **API constant or value**: *Not applicable*
 
-In Office applications, this right also allows the user to save the document.
-
 ---
 
 ### Save
@@ -93,7 +91,7 @@ This right is available in the SDK, is available as an ad-hoc policy in the RMS 
 
 ### Save As, Export
 
-Enables the option to save the content to a different file name (Save As). Depending on the application, the file might be saved without protection.
+Enables the option to save the content to a different file name (Save As). For Office documents, the file can be saved without protection.
 
 **Encoding in policy:** EXPORT
 
@@ -111,7 +109,7 @@ This right also allows the user to perform other export options in applications,
 
 ### Forward
 
-Enables the option to forward an email message and to add recipients to the *To* and *Cc* lines.
+Enables the option to forward an email message and to add recipients to the *To* and *Cc* lines. This right does not apply to documents; only email messages.
 
 **Encoding in policy:** FORWARD
 
@@ -227,39 +225,6 @@ In some applications it also allows the whole document to be saved in unprotecte
 
 ---
 
-### View Rights
-
-Allows the user to see the policy that is applied to the document.
-
-**Encoding in policy:** VIEWRIGHTSDATA
-
-**Implementation in Office custom rights:** Not implemented.
-
-**Name in the Azure classic portal:** *View Assigned Rights*
-
-**Name in AD RMS templates:** *View Rights*
-
-**API constant or value:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
-
-Ignored by some applications.
-
----
-
-### Change Rights
-
-Allows the user to change the policy that is applied to the document. Includes including removing protection.
-
-**Encoding in policy:** EDITRIGHTSDATA
-
-**Implementation in Office custom rights:** Not implemented.
-
-**Name in the Azure classic portal:** *Change Rights*
-
-**Name in AD RMS templates:** *Edit Rights*
-
-**API constant or value:** IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
-
----
 
 ### Allow Macros
 
