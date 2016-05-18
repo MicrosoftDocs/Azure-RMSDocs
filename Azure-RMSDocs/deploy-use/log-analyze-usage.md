@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -183,7 +183,7 @@ There are many request types for Azure Rights Management but the following table
 |BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
 |BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
 |Certify|The client is certifying the content for protection.|
-|Decrypt|The client is attempting to decrypt the RMS-protected content.|
+|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK).|
 |DeleteTemplateById|A call is  made from the Azure classic portal, to delete a template by template  ID.|
 |ExportTemplateById|A call is  made from the Azure classic portal to export a template based on a template ID.|
 |FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
@@ -201,7 +201,7 @@ There are many request types for Azure Rights Management but the following table
 |ServerCertify|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
 |SetUsageLogFeatureState|A call is  made to enable usage logging.|
 |SetUsageLogStorageAccount|A call is  made to specify the location of the Azure RMS logs.|
-|SignDigest|A call is made when a key is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
+|KMSPSignDigest|A call is made when a customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
 |UpdateTemplate|A call is  made from the Azure classic portal to update an existing template.|
 
 ## Windows PowerShell reference
