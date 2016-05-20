@@ -21,17 +21,14 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <section id="hero-content">
       <h1>Azure Rights Management Documentation</h1>
       <h2>Learn how to deploy and manage Azure Rights Management (Azure RMS). Quickly get started using Rights Management to apply information protection to email, documents, and other sensitive data.</h2>
-
       <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
-
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
         <ol class="action-list">
             <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
         </ol>
     </aside>
-
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
@@ -46,7 +43,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
         </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
         <ul class="journeys-list">
@@ -93,7 +89,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <p class="description column-two-thirds">Start using Azure RMS within minutes.</p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
@@ -116,11 +111,8 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </li>
               </ul>
             </section>
-
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="./plan-design/deployment-roadmap.md">
                 <div class="title column-third">
@@ -130,7 +122,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <p class="description column-two-thirds">Plan and design Azure RMS.</p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
@@ -154,9 +145,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="./deploy-use/activate-service.md">
                 <div class="title column-third">
@@ -166,7 +155,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <p class="description column-two-thirds">Deploy and use Azure RMS.</p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                  <li class="column-third">
@@ -190,9 +178,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="./develop/developers-guide.md">
                 <div class="title column-third">
@@ -203,7 +189,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
@@ -230,7 +215,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
         </ul>
       </section>
     </div>
-
     <aside class="alert alert-social">
       <p>Keep up-to-date on Azure RMS
       <ol class="action-list">
