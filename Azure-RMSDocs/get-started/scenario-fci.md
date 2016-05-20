@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -53,7 +53,7 @@ For the instructions for this scenario to work, the following must be in place:
 |---------------|--------------------------------|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|One of the following:<br /><br />To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />To use a custom template for specific users: You have created and published this custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|One of the following:<br /><br />- To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />- To use a custom template for specific users: You have created and published this custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
