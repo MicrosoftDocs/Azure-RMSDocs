@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -59,7 +59,7 @@ For the instructions for this scenario to work, the following must be in place:
 |You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Your Azure Rights Management tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Rights Management tenant key](https://technet.microsoft.com/library/dn440580.aspx)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|One of the following:<br /><br />Exchange Online is enabled for Azure Rights Management<br /><br />The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the **Exchange Online: IRM Configuration** section from [Configuring applications for Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|One of the following:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the **Exchange Online: IRM Configuration** section from [Configuring applications for Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
 |You have not archived the default Azure Rights Management template **&lt;organization&gt; - Confidential**. Or, you have configured a custom template for this purpose because you need more restrictive settings or only a subset of users in the organization should be able to read the protected emails.|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />Tip: If you need more restrictive usage policy settings but for all users in the organization, copy and then edit one of the default templates, rather than create a template from scratch.<br /><br />Updated templates do not refresh immediately for the email clients in this scenario. Check the [Refreshing templates for users](https://technet.microsoft.com/library/dn642472.aspx) section in the configuring templates article for information.|
 |Users that send the protected email have Outlook 2013 or Outlook 2016, or Outlook Web Access.<br /><br />Users that receive the email have an email client that supports Azure Rights Management.|You can use Outlook 2010, but you must [install the Rights Management sharing application for Windows](https://technet.microsoft.com/library/dn339003.aspx) and adjust the user instructions accordingly.<br /><br />For a list of email clients that support Azure Rights Management, see the **Email** column in the [Client devices capability](https://technet.microsoft.com/library/dn655136.aspx) table, from [Requirements for Azure Rights Management](https://technet.microsoft.com/library/dn655136.aspx)|
 

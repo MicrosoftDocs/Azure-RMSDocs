@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -55,7 +55,7 @@ For this scenario, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />- A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
