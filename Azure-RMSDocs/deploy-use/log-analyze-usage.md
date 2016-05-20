@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -137,7 +137,7 @@ The first line identifies that these are Azure Rights Management logs. The secon
 
 The third line enumerates a list of field names that are separated by tabs:
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            AdminAction            ActingAsUser**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 Each of the subsequent lines is a log record. The values of the fields are in the same order as the preceding line, and are separated by tabs. Use the following table to interpret the fields.
 
@@ -156,8 +156,8 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |Template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |File-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
 |Date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
-|AdminAction|String|An administrative action in the document tracking site.|true|
-|ActingAsUser|String|The user for whom an administrator acts on behalf of in the document tracking site.|alice@contoso.com|
+|admin-action|String|An administrative action in the document tracking site.|true|
+|acting-as-user|String|The user for whom an administrator acts on behalf of in the document tracking site.|alice@contoso.com|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
 
@@ -194,7 +194,7 @@ There are many request types for Azure Rights Management but the following table
 |FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
 |FECreatePublishingLicenseV1|The same as Certify and GetClientLicensorCert combined, from mobile clients.|
 |FEGetAllTemplates|A call is  made, from a mobile device (front-end) to get the templates.|
-|GetAllDocs|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the AdminAction and ActingAsUser fields:<br /><br />- AdminAction is empty: A user views the **all documents** page for their own documents.<br /><br />- AdminAction is true and ActingAsUser is empty: An administrator views all documents for their tenant.<br /><br />- AdminAction is true and ActingAsUser is not empty: An administrator views the **all documents** page for a user.|
+|GetAllDocs|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
 |GetAllTemplates|A call is  made from the Azure classic portal, to get all the templates.|
 |GetClientLicensorCert|The client is requesting a publishing certificate (that is later used to protect content) from a Windows-based computer.|
 |GetConfiguration|An Azure PowerShell cmdlet is called to get the configuration of the Azure RMS tenant.|
