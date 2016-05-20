@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -145,10 +145,10 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |--------------|-----------------|---------------|-----------------|
 |date|Date|UTC date when the request was served.<br /><br />The source is the local clock on the server that served the request.|2013-06-25|
 |time|Time|UTC time in 24-hour format when the request was served.<br /><br />The source is the local clock on the server that served the request.|21:59:28|
-|row-id|Text|Unique GUID for this log record.<br /><br />This value is useful when you aggregate logs or copy logs into another format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
+|row-id|Text|Unique GUID for this log record. If a value is not present, use the correlation-id value to identify the entry.<br /><br />This value is useful when you aggregate logs or copy logs into another format.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Name|Name of the RMS API that was requested.|AcquireLicense|
-|user-id|String|The user who made the request.<br /><br />The value is enclosed in single quotation marks. Some request types are anonymous, in which case the value is ”.|‘joe@contoso.com’|
-|result|String|‘Success’ if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.|‘Success’|
+|user-id|String|The user who made the request.<br /><br />The value is enclosed in single quotation marks. Calls from a tenant key that is managed by you (BYOK) have a value of **"**, which also applies when the request types are anonymous.|‘joe@contoso.com’|
+|result|String|'Success' if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.|'Success'|
 |correlation-id|Text|GUID that is common between the RMS client log and server log for a given request.<br /><br />This value can be useful to help troubleshooting client issues.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Email address of the owner of the document.|alice@contoso.com|
