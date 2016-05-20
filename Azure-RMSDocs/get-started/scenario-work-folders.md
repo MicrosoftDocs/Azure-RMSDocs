@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -60,7 +60,7 @@ For the instructions for this scenario to work, the following must be in place:
 |---------------|--------------------------------|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that use Work Folders.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|One of the following:<br /><br />To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|One of the following:<br /><br />- To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />- To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |The Rights Management connector is installed, authorized for the Windows Server computer, and configured for the **FCI Server** role.|[Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
 |The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 

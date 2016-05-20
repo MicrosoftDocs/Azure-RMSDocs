@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -63,4 +63,4 @@ The cmdlets that support creating and managing templates:
 
 
 ## See Also
-[Configure Custom Templates for Azure Rights Management](configure-custom-templates.md)
+[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
