@@ -136,9 +136,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
 2.  Consider using usage logging, which logs every transaction that RMS performs.
 
-    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following example of a log file displayed in Excel where the **KMSPDecrypt** and **KMSPSignDigest** Request Types show that the tenant key is being used.
+    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KMSPDecrypt** and **KMSPSignDigest** Request Types show that the tenant key is being used.
 
-    ![log file in Excel where tenant key is being used](../media/RMS_Logging.gif)
+    ![log file in Excel where tenant key is being used](../media/RMS_Logging.png)
 
     For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
 
