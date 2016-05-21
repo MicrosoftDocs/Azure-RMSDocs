@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -91,7 +91,9 @@ From the **Get started with Rights Management** quick start page, now click **Ma
     As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see the [How to copy a template](copy-template.md).
 
     > [!TIP]
-    > You can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](install-powershell.md) and using one of the following methods:
+    > You can add users from outside your organization to the template by selecting a mail-enabled group that contains contacts from Office 365 or Exchange Online. This lets you assign rights to documents for these users in the same way as you can protect documents for users in your organization. Do not use this template configuration for emails.
+    > 
+    > In addition, for templates that will be used for document protection, you can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](install-powershell.md) and using one of the following methods:
     > 
     > -   **Use a rights definition object to update a template**:    Specify the external email addresses and their rights in a rights definition object, which you then use to update your template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet to modify an existing template. However, if you're adding these users to an existing template, you will also need to define rights definition objects for the existing groups in the templates and not just the new, external users.
     > -   **Export, edit, and import the updated template**:Use the [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) cmdlet to export the template to a file that you can edit to add the external email addresses of these users and their rights to the existing groups and rights. Then use the [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) cmdlet to import this change back into Azure RMS.
