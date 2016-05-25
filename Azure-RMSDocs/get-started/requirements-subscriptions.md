@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 05/25/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -92,7 +92,7 @@ For more information about the Enterprise Mobility Suite subscription, see the [
 ## RMS for individuals subscription
 This subscription is designed for individuals in an organization that hasn’t deployed Azure RMS or AD RMS. It lets these people read content that has been protected by an organization that is using Azure RMS, and they can also protect their own content.
 
-You might see this listed in the Office 365 admin portal as **Rights Management Adhoc** and automatically assigned to users. Do not manually assign this license to users. 
+You might see this listed in the Office 365 admin portal as **Rights Management Adhoc** and automatically assigned to users. Do not manually assign this license to users and do not use this license to administer Azure RMS for your organization. 
 
 For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
