@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
 # Understanding certificate chains
 
 Developing a rights-enabled application requires a public key pair and a certificate chain that leads back to a Microsoft certificate at the root of trust.

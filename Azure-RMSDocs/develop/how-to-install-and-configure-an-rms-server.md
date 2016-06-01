@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
 # Install and configure the server
 
 This topic covers the steps to install and configure and RMS Sever for testing your rights-enabled application.
