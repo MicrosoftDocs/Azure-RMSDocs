@@ -271,11 +271,11 @@ The rights that are included with the default templates are as follows:
 
 In addition to the individual usage rights, Office has their own option for emails: **Do Not Forward**. 
 
-Although this option appears to users as if it's a default template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that can be dynamically applied by users to emails.
+Although this option appears to users (and Exchange administrators) as if it's a default template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that can be dynamically applied by users to emails.
 
-When the **Do Not Forward** option is applied to an email, the recipient cannot forward it, or print it, copy from it, or save it.
+When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the Save As, Save Attachment, and Print menu options are not available, and you cannot add or change recipients in the To, Ccc, or Bcc boxes.
 
-Note that the **Do Not Forward** option is not the same as not granting the Forward right, this option includes more restrictions than just forwarding. For example, if you created a template that granted all rights except forward and applied this template to an email, the recipients wouldn't be able to forward the email but they would be able to print it, copy from it, and save it. Because they can save and copy the email, they could create and send a new email that contains the original email contents (copied or attached).
+[!NOTE] The **Do Not Forward** option is not the same as *not* granting the Forward right, because **Do Not Forward** includes more restrictions than just forwarding. For example, if you create a template that granted all rights except Forward and applied this template to an email, the recipients wouldn't be able to forward the email but they would be able to print it, copy from it, and save any attachments. Because they can save attachments and copy from the email, they could create and send a new email that contains the original email contents or attachments.
 
 
 ## See Also
