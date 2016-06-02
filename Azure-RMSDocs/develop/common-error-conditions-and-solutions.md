@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
 # Common error conditions and solutions
 This topic includes the most common error messages that you might encounter when using the Rights Management Services SDK 2.1 developer tools. It also provides a recommended action to fix the error, where applicable.
 
