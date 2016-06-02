@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -266,6 +266,17 @@ The rights that are included with the default templates are as follows:
 |----------------|---------------------------------|
 |&lt;*organization name*&gt; *- Confidential View Only*|View, Open, Read|
 |&lt;*organization name*&gt; *- Confidential*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+
+## Do Not Forward option for emails
+
+In addition to the individual usage rights, Office has their own option for emails: **Do Not Forward**. 
+
+Although this option appears to users as if it's a default template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that can be dynamically applied by users to emails.
+
+When the **Do Not Forward** option is applied to an email, the recipient cannot forward it, or print it, copy from it, or save it.
+
+Note that the **Do Not Forward** option is not the same as not granting the Forward right, this option includes more restrictions than just forwarding. For example, if you created a template that granted all rights except forward and applied this template to an email, the recipients wouldn't be able to forward the email but they would be able to print it, copy from it, and save it. Because they can save and copy the email, they could create and send a new email that contains the original email contents (copied or attached).
+
 
 ## See Also
 [Configuring custom templates for Azure Rights Management](configure-custom-templates.md)
