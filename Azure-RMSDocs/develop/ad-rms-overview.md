@@ -30,7 +30,9 @@ Rights Management Services (RMS) is an information protection technology that he
 
 ## Overview
 
-AD RMS consists of both [server](ad-rms-server.md) and [client](ad-rms-client.md) components. The server components include multiple web services that run on a Windows Server such as Windows Server 2008 R2 or via the cloud through RMS web services in Azure. The client component can be run on either a client or server operating system and contains functions that enable an application to encrypt and decrypt content, retrieve templates and revocation lists, acquire licenses and certificates from a server, and other related rights management tasks.
+AD RMS consists of both [server](ad-rms-server.md) and [client](ad-rms-client.md) components. The server, running on Azure or Windows Server, consists of multiple web services.
+
+The [client](ad-rms-client.md) component can be run on either a client or server operating system and contains functions that enable an application to encrypt and decrypt content, retrieve templates and revocation lists, acquire licenses and certificates from a server, and other related rights management tasks.
 
 For more information, see [Application types](application-types.md).
 
@@ -44,19 +46,21 @@ The following are just a few of the scenarios to which applications built on the
 
 For more information on AD RMS server, AD RMS client and their functionality, see the TechNet content for [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
 
-To get started see, [Getting started](getting-started-with-ad-rms-2-0.md).
+The remaining topics in this section cover the RMS Architecture and its implementations.
+
+## In this section
+
+| Topic | Description |
+|-------|-------------|
+|[Client](ad-rms-client.md) |This topic describes the purpose and function of the Rights Management Service Client 2.1 |
+|[Server](ad-rms-server.md) | This topic describes the purpose and functions of the RMS Server; for Azure and Windows Server.|
+
 
 ## Related topics
 
-* [AD RMS Concepts](application-types.md)
-* [Differences between AD RMS and AD RMS 2.1](differences-between-ad-rms-and-ad-rms-2-0.md)
-* [Getting started](getting-started-with-ad-rms-2-0.md)
+* [RMS Concepts](application-types.md)
+* [Get started](getting-started-with-ad-rms-2-0.md)
 * [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
-* [server](ad-rms-server.md)
-* [client](ad-rms-client.md)
  
 
  
-
-
-
