@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: ADAL authentication for your RMS enabled application | Azure RMS
@@ -24,7 +24,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
 # ADAL authentication for your RMS enabled application
 
 Authentication with Azure RMS for your app using Azure ADAL is now part of the RMS client 2.1.
