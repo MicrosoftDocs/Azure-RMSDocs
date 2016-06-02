@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
+
 # Overview
 
 Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled application, content owners will be able to define who can open, modify, print, forward, or take other actions with the content.
