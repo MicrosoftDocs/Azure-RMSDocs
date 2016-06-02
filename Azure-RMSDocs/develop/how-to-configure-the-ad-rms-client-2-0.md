@@ -38,7 +38,7 @@ This topic contains instructions about how to configure the Active Directory R
 
     -   If you will be testing your application on your development computer then you should have already installed the Rights Management Services SDK 2.1. The AD RMS Client 2.1 will have been silently installed at this time.
 
-        For information about how to install the RMS SDK 2.1, see [Install the SDK](create-your-first-rights-aware-application.md).
+        For information about how to install the RMS SDK 2.1, see [Install the SDK](install-the-rms-sdk.md).
 
     -   If you will be testing your application on a computer other than your development computer, you can install the AD RMS Client 2.1 on that computer from the [AD RMS Client 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
         **Note**  If your application uses Server API Mode (**IPC\_API\_MODE\_SERVER**), you are not required to use an application manifest. You can test your application against a production RMS server and you are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
@@ -109,7 +109,7 @@ The following steps describe how to install the developer runtime, configure the
            Wow6432Node
               Microsoft
                 MSIPC
-    
+
 
 ### Remarks
 
@@ -120,7 +120,7 @@ The guidance in this topic is not comprehensive. For detailed information about 
 
 * [How-to use](how-to-use-msipc.md)
 * [RMS Client 2.0 Deployment Notes](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx)
-* [Install the SDK](create-your-first-rights-aware-application.md)
+* [Install the SDK](install-the-rms-sdk.md)
 * [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
 * [Testing your rights-enabled applications](running-your-first-application.md)
 * [Understanding certificate chains](understanding-certificate-chains.md)

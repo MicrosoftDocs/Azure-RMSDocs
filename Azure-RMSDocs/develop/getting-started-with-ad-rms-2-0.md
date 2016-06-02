@@ -36,7 +36,7 @@ This topic will guide you through the process of setting up and running your rig
 | Topic | Description |
 |-------|-------------|
 | [Release Notes](release-notes-rtm.md) | This topic contains important information about this and previous releases of the RMS SDK 2.1.|
-| [Install the SDK](create-your-first-rights-aware-application.md) | This topic guides you through installing the developer tools.|
+| [Install the SDK](install-the-rms-sdk.md) | This topic guides you through installing the developer tools.|
 | [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | This topic contains instructions about how to configure a Visual Studio project to use the RMS SDK 2.1.|
 | [Developing your application](developing-your-application.md) | This topic contains essential guidance on the core aspects of an RMS enabled application and can serve as the foundation of your own application development.|
 | [Testing your application](running-your-first-application.md) |This topic contains instructions about how to setup for your application testing.|
@@ -47,7 +47,7 @@ Once you've gotten started, check out some of our other [RMS samples](samples.md
 
 Try using RMS SDK 2.1 by following the guidance in these topics:
 
--   [Install the SDK](create-your-first-rights-aware-application.md)
+-   [Install the SDK](install-the-rms-sdk.md)
 -   [Testing your rights-enabled application](running-your-first-application.md)
 -   [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 
@@ -73,7 +73,7 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 
 * [AD RMS samples](samples.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
-* [Install the SDK](create-your-first-rights-aware-application.md)
+* [Install the SDK](install-the-rms-sdk.md)
 * [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Overview](ad-rms-overview.md)
 * [Supported platforms](supported-platforms.md)

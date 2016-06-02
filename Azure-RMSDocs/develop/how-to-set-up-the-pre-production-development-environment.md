@@ -30,7 +30,7 @@ This section will guide you through the process of setting up for and running yo
 
 |Topic|Description|
 |-----|-----------|
-|[Install the SDK](create-your-first-rights-aware-application.md)|This topic guides you through installing the developer tools.|
+|[Install the SDK](install-the-rms-sdk.md)|This topic guides you through installing the developer tools.|
 |[Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)|This topic contains instructions about how to configure a Visual Studio project to use the Rights Management Services SDK 2.1.|
 |[Configure the client](how-to-configure-the-ad-rms-client-2-0.md)|This topic contains instructions about how to configure the Active Directory Rights Management Services Client 2.1.|
 |[Install and configure the server](how-to-install-and-configure-an-rms-server.md)|This topic covers the steps to install and configure and RMS Sever for testing your rights-enabled application.|

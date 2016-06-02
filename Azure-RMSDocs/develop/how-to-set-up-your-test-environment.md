@@ -34,7 +34,7 @@ Your rights-enabled application can be tested with different server options.
 
 ### Prerequisites
 
--   [Install the SDK](create-your-first-rights-aware-application.md)
+-   [Install the SDK](install-the-rms-sdk.md)
 
 Instructions
 
@@ -54,12 +54,9 @@ There are two options available for testing your application against an RMS serv
 * [How-to use](how-to-use-msipc.md)
 * [AD RMS SDK Webinar collateral download page](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 * [Configure client](how-to-configure-the-ad-rms-client-2-0.md)
-* [Install the SDK](create-your-first-rights-aware-application.md)
+* [Install the SDK](install-the-rms-sdk.md)
 * [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
 * [Understanding certificate chains](understanding-certificate-chains.md)
  
 
  
-
-
-

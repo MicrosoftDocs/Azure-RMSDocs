@@ -30,7 +30,7 @@ This topic contains instructions about how to configure a Visual Studio project 
 
 ## Prerequisites
 
--   [Install the SDK](create-your-first-rights-aware-application.md)
+-   [Install the SDK](install-the-rms-sdk.md)
 
 **Instructions**
 
@@ -76,10 +76,7 @@ These instructions apply to building a native 32-bit application.
 ## Related topics
 
 * [How-to use](how-to-use-msipc.md)
-* [Install the SDK](create-your-first-rights-aware-application.md)
+* [Install the SDK](install-the-rms-sdk.md)
  
 
  
-
-
-

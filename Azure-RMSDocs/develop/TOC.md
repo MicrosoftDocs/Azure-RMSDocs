@@ -42,7 +42,7 @@
 ### [Code samples](samples.md)
 ### [How-to use](how-to-use-msipc.md)
 #### [Setting up the pre-production Development environment](how-to-set-up-the-pre-production-Development-environment.md)
-#### [Install the SDK](create-your-first-rights-aware-application.md)
+#### [Install the SDK](install-the-rms-sdk.md)
 #### [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 #### [Configure the client](how-to-configure-the-ad-rms-client-2-0.md)
 #### [Install and configure the server](how-to-install-and-configure-an-rms-server.md)
