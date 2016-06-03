@@ -275,17 +275,17 @@ Although this option appears to users (and Exchange administrators) as if it's a
 
 When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the Save As, Save Attachment, and Print menu options are not available, and you cannot add or change recipients in the To, Ccc, or Bcc boxes.
 
+There's an important distinction between applying the **Do Not Forward** option and applying a template that doesn't grant the Forward right to an email: The **Do Not Forward** option uses a dynamic list of authorized users that is based on the user's chosen recipients of the original email; whereas the rights in the template have a static list of authorized users that the administrator has previously specified.   
+
+What's the difference?  Let's take an example: 
+
+A user wants to email some information to specific people in the Marketing department that shouldn't be shared with anybody else. Should she protect the email with a template that restricts rights (viewing, replying, and saving) to the Marketing department?  Or should she choose the **Do Not Forward** option? Both choices would result in the recipients not able to forward the email. 
+
+- If she applied the template, the recipients could still share the information with others in the marketing department. For example, a recipient could copy the email to a shared location or a USB drive. Now, anybody from the marketing department (and the email owner) who has access to this location can view the information in the email.
+ 
+- If she applied the **Do Not Forward** option, the recipients will not be able to share the information with anybody else in the marketing department by saving the email in another location. In this scenario, only the original recipients (and the email owner) will be able to view the information in the email.
+
 > [!NOTE] 
-> There's an important distinction between applying the **Do Not Forward** option and applying a template that doesn't grant the   Forward right to an email: The **Do Not Forward** option uses a dynamic list of authorized users that is based on the user's chosen recipients of the original email; whereas the rights in the template have a static list of authorized users that the administrator has previously specified.   
-> 
-> What's the difference?  Let's take an example: 
-> 
-> A user wants to email some information to specific people in the Marketing department that shouldn't be shared with anybody else. Should she protect the email with a template that restricts rights (viewing, replying, and saving) to the Marketing department?  Or should she choose the **Do Not Forward** option? Both choices would result in the recipients not able to forward the email. 
-> 
-> - If she applied the template, the recipients could still share the information with others in the marketing department. For example, a recipient could copy the email to a shared location or a USB drive. Now, anybody from the marketing department (and the email owner) who has access to this location can view the information in the email.
-> 
-> - If she applied the **Do Not Forward** option, the recipients will not be able to share the information with anybody else in the marketing department by saving the email in another location. In this scenario, only the original recipients (and the email owner) will be able to view the information in the email.
->
 > Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
 
 
