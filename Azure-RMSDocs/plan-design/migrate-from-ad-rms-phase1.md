@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -93,10 +93,10 @@ Use the following table to identify which procedure to use for your migration. C
 
 |Current AD RMS deployment|Chosen Azure RMS tenant key topology|Migration instructions|
 |-----------------------------|----------------------------------------|--------------------------|
-|Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key ** migration procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure RMS.|
-|HSM protection by using a Thales nShield hardware security module (HSM)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key ** migration procedure after this table.<br /><br />This requires the BYOK toolset and two set of steps to transfer the key from your on-premises HSM to the Azure RMS HSMs and then transfer your configuration data to Azure RMS.|
+|Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key** migration procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure RMS.|
+|HSM protection by using a Thales nShield hardware security module (HSM)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the BYOK toolset and two set of steps to transfer the key from your on-premises HSM to the Azure RMS HSMs and then transfer your configuration data to Azure RMS.|
 |Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the BYOK toolset and three sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure RMS HSMs, and finally transfer your configuration data to Azure RMS.|
-|HSM protection by using a hardware security module (HSM) from a supplier other than Thales|Customer-managed (BYOK)|Contact the supplier for you HSM for instructions how to transfer your key from this HSM to a Thales nShield Hardware Security Module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key ** migration procedure after this table.|
+|HSM protection by using a hardware security module (HSM) from a supplier other than Thales|Customer-managed (BYOK)|Contact the supplier for you HSM for instructions how to transfer your key from this HSM to a Thales nShield Hardware Security Module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 |Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for you cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 Before you start these procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the Internet-connected workstation.
 
