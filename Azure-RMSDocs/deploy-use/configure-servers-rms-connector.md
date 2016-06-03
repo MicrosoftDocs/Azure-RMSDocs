@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -248,14 +248,16 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 3.  Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
 
 ## Next steps
-Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email message and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
+Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 In addition, you might consider the following to help you monitor the RMS connector and your organization’s usage of Azure RMS:
 
--   The built-in **Microsoft Rights Management connector** performance counters.
+- The Application event log entries for the **Microsoft RMS connector**. For example, the Information events such as ID 1000 to confirm that the connector service has started, ID 1002 when a server successfully connects to the RMS connector, and ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector. If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
+
+-   The built-in **Microsoft Rights Management connector** performance counters. For example, **Authorization Success <group name>** for the number of individual servers in the specified group that have successfully connected to the RMS connector and have an account that is authorized to use the connector. If you have recently added new server accounts to use the connector, a good counter to check is **Time since last authorization policy update** to confirm that the connector has downloaded the list since you updated it, or whether you need to wait a little longer (up to 15 minutes).
 
 -   The [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437), using the RMS connector option to help you monitor the health of the connector and identify any configuration issues.
 
--   [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md)
+-   [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md), to help you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name that is automatically generated when you install the RMS connector.
 
 You can use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators. 
