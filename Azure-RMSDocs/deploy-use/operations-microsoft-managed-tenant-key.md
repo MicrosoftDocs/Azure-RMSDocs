@@ -54,7 +54,7 @@ You can export your Azure RMS configuration and tenant key by following the inst
 
 ### Step 1: Initiate export
 
--   To do this, contact Microsoft Customer Service Support (CSS) to open an **Azure RMS support case with a request for an Azure RMS key export**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm.
+-   To do this, contact Microsoft Customer Service Support (CSS) to open an **Azure RMS support case with a request for an Azure RMS key export**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; exporting your tenant key is a not a free-of-charge support service.
 
 ### Step 2: Wait for verification
 
