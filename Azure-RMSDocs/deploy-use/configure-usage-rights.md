@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Allows the user to modify, rearrange, format or filter the content inside the ap
 
 **Encoding in policy**: DOCEDIT
 
-**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.**
+**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.
 
 **Name in the Azure classic portal**: *Edit Content*
 
@@ -266,6 +266,28 @@ The rights that are included with the default templates are as follows:
 |----------------|---------------------------------|
 |&lt;*organization name*&gt; *- Confidential View Only*|View, Open, Read|
 |&lt;*organization name*&gt; *- Confidential*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+
+## Do Not Forward option for emails
+
+In addition to the individual usage rights, Office has their own option for emails: **Do Not Forward**. 
+
+Although this option appears to users (and Exchange administrators) as if it's a default template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
+
+When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
+
+There's an important distinction between applying the **Do Not Forward** option and applying a template that doesn't grant the Forward right to an email: The **Do Not Forward** option uses a dynamic list of authorized users that is based on the user's chosen recipients of the original email; whereas the rights in the template have a static list of authorized users that the administrator has previously specified. What's the difference? Let's take an example: 
+
+A user wants to email some information to specific people in the Marketing department that shouldn't be shared with anybody else. Should she protect the email with a template that restricts rights (viewing, replying, and saving) to the Marketing department?  Or should she choose the **Do Not Forward** option? Both choices would result in the recipients not able to forward the email. 
+
+- If she applied the template, the recipients could still share the information with others in the marketing department. For example, a recipient could use Explorer to drag and drop the email to a shared location or a USB drive. Now, anybody from the marketing department (and the email owner) who has access to this location can view the information in the email.
+ 
+- If she applied the **Do Not Forward** option, the recipients will not be able to share the information with anybody else in the marketing department by moving the email to another location. In this scenario, only the original recipients (and the email owner) will be able to view the information in the email.
+
+> [!NOTE] 
+> Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
+
+
+
 
 ## See Also
 [Configuring custom templates for Azure Rights Management](configure-custom-templates.md)
