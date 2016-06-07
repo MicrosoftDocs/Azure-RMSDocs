@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How Does Azure RMS Work | Azure RMS
@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -87,7 +87,7 @@ Before a user can protect content or consume protected content on a Windows comp
 
 **What's happening in step 1**: The RMS client on the computer first connects to Azure RMS, and authenticates the user by using their Azure Active Directory account.
 
-When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.|
+When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.
 
 ![RMS Client activation - step 2](../media/AzRMS_useractivation2.png)
 
@@ -106,7 +106,7 @@ When a user protects a document, the RMS client takes the following actions on a
 
 **What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document, either based on a template or by specifying specific rights for the document. This policy includes the rights for different users or groups and other restrictions, such as an expiration date.
 
-The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.|
+The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.
 
 ![RMS document protection - step 3](../media/AzRMS_documentprotection3.png)
 
