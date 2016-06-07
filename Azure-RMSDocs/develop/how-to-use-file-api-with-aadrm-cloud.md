@@ -171,7 +171,6 @@ You have now completed the steps needed to enable your application to use Azure 
 
 ## Related topics
 
-* [Developer concepts](ad-rms-concepts-nav.md)
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)

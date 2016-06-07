@@ -102,9 +102,6 @@ The following steps guide you in setting up your RMS server and include:
           MSIPC
             ```
 
-## Related topics
-
-* [How-to use](how-to-use-msipc.md)
  
 
  

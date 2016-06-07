@@ -37,7 +37,6 @@ For more information on *server mode*, see [Application types](application-types
 ## Related topics
 
 * [Application types](application-types.md)
-* [Developer concepts](ad-rms-concepts-nav.md)
 * [**API mode values**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
 * [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
  

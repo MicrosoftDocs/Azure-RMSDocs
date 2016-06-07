@@ -73,7 +73,6 @@ For example, the following command will enable the MSIPC event log and set the l
 
 ## Related topics
 
-* [How-to use](how-to-use-msipc.md)
  
 
  

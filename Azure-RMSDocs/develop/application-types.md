@@ -59,7 +59,6 @@ For more information on protecting your application, see [Understanding usage re
 
 ## Related topics
 
-* [Developer concepts](ad-rms-concepts-nav.md)
 * [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Setting the API security mode](setting-the-api-security-mode-api-mode.md)

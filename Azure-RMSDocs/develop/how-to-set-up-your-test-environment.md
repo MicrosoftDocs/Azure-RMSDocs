@@ -48,9 +48,6 @@ You can test with either Azure RMS or an RMS server running on Windows Server an
 
 The guidance in this topic is not comprehensive. For detailed information about how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
 
-
--   **You can run your application against an RMS server that is configured for pre-production and that is deployed on your network**. In this case, you must also install and configure the AD RMS Client 2.1 on the computer where your application will be running. For information about how to do this, see [Configure client](how-to-configure-the-ad-rms-client-2-0.md). For information about how to deploy an RMS server and configure it for pre-production, see [Install and configure the server](how-to-install-and-configure-an-rms-server.md).
-
 ### Related topics
 
 * [How-to install and configure an RMS server](how-to-install-and-configure-an-rms-server.md)

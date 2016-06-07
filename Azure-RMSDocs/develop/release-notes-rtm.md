@@ -120,8 +120,6 @@ The File API components of SDK has been extended and offers the following featur
 -   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application-types.md).
 -   **Documentation updates**
 
-    **Reorganized** - [How-to use](how-to-use-msipc.md) to clarify the order of steps for environment setup and application testing.
-
     **Testing best practice** - guidance added for use of on-premise server before testing with Azure RMS. For more information, see [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Important developer notes

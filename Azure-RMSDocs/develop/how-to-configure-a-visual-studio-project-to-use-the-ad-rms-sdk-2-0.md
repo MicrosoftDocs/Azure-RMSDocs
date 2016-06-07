@@ -75,7 +75,6 @@ These instructions apply to building a native 32-bit application.
 
 ## Related topics
 
-* [How-to use](how-to-use-msipc.md)
 * [Install the SDK](install-the-rms-sdk.md)
  
 

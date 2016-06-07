@@ -41,7 +41,7 @@
 #### [Install the SDK](install-the-rms-sdk.md)
 #### [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 #### [Developing your application](developing-your-application.md)
-#### [Testing your application](running-your-first-application.md)
+#### [Testing your application](how-to-set-up-your-test-environment.md)
 #### [Deploy into production](deploying-your-application.md)
 ### [Developer guidance and information](Developer-notes.md)
 #### [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
