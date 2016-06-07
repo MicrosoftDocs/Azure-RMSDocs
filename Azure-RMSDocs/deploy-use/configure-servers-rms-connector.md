@@ -250,7 +250,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 ## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
-In addition, you might consider the following to help you monitor the RMS connector and your organization’s usage of Azure RMS:
+In addition, you might consider the following to help you monitor the RMS connector and your organization’s use of Azure RMS:
 
 - The Application event log entries for the **Microsoft RMS connector**. For example, the Information events such as ID 1000 to confirm that the connector service has started, ID 1002 when a server successfully connects to the RMS connector, and ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector. If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
