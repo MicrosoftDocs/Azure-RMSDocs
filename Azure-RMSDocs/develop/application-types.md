@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
+
 # Application types
 
 
@@ -36,7 +36,6 @@ The following application types are currently supported by Rights Management S
 A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see, [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
 
 ### Server mode applications
-
 
 *Server mode* is meant for non-interactive applications that consume, protect or process RMS-protected content. An example would be a *Data Loss Prevention* application that runs as a service on a file server and automatically protects sensitive documents. See the [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) for an example of this application type.
 
@@ -65,9 +64,3 @@ For more information on protecting your application, see [Understanding usage re
 * [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
 * [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 * [Understanding usage restrictions](understanding-usage-restrictions.md)
- 
-
- 
-
-
-
