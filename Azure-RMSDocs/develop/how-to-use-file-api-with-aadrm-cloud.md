@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Enable your service application to work with cloud based RMS | Azure RMS
+title: How-to: enable your service application to work with cloud based RMS | Azure RMS
 description: This topic outlines steps for setting up your service application to use Azure Rights Management.
 keywords:
 author: bruceperlerms
@@ -23,15 +23,13 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
-# Enable your service application to work with cloud based RMS
+
+# How-to: enable your service application to work with cloud based RMS
 
 This topic outlines steps for setting up your service application to use Azure Rights Management. For more information, see [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
 
 **Important**  
-It is a recommended best practice to test your Rights Management Services SDK 2.1 application first with the RMS pre-production environment against an RMS Server. Then, should you want your customer to have the ability to use your application with the Azure RMS Service, move to testing with that environment.
-
-In order to use your RMS SDK 2.1 service application with Azure RMS, you will need to request an Azure RMS Tenant, if you don’t already have one. Send mail to <rmcstbeta@microsoft.com> with your tenant request.
+In order to use your Rights Management Services SDK 2.1 service application with Azure RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](/rights-management/get-started/requirements-subscriptions.md)
 
 ## Prerequisites
 
@@ -43,19 +41,18 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 -   Call [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize).
 -   Set [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
+        C++
+        int mode = IPC_API_MODE_SERVER;
+        IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-    int mode = IPC_API_MODE_SERVER;
-    IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-
-**Note**  For more information, see [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
+  **Note**  For more information, see [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 
      
-
 -   The following steps are the setup for creating an instance of an [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) structure with the **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) member populated with connection information from the Azure Rights Management Service.
 -   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the **wszServicePrincipal**, **wszBposTenantId**, and **cbKey** parameters when you create an instance of an [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) structure.
 
-**Note**   Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) parameter of [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
+**Note** Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) parameter of [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
 ## Generate a symmetric key and collect the needed information
 
@@ -66,13 +63,11 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
 
 **Note**  You must be a tenant administrator to use the Powershell cmdlets.
 
-
 -   Start Powershell and run the following commands to generate a key
             `Import-Module MSOnline`
             `Connect-MsolService` (type-in your admin credentials)
             `New-MsolServicePrincipal` (type-in a display name)
 -   After it generates a symmetric key, it will output information about key including the key itself and **AppPrincipalId**.
-
 
 
     The following symmetric key was created as one was not supplied
@@ -82,7 +77,6 @@ In order to use your RMS SDK 2.1 service application with Azure RMS, you will 
     ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
     ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
     AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
-
 
 
 ### Instructions to find out **TenantBposId** and **Urls**
@@ -112,7 +106,7 @@ For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-manageme
 
 -   Create an instance of an [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) structure containing your [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) instance.
 
-**Note**  The *conectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
+**Note**  The *connectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -177,7 +171,6 @@ You have now completed the steps needed to enable your application to use Azure 
 
 ## Related topics
 
-* [Developer concepts](ad-rms-concepts-nav.md)
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
