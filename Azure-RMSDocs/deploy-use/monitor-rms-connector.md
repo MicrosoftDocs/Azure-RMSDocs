@@ -29,24 +29,24 @@ ms.suite: ems
 
 *Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
-After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of Azure RMS:
+After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of Azure RMS.
 
 ## Application event log entries
 
 The RMS connector uses the Application event log to record entries for the **Microsoft RMS connector**. 
 
-For example, the Information events such as ID 1000 to confirm that the connector service has started, ID 1002 when a server successfully connects to the RMS connector, and ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector. 
+For example, Information events such as ID 1000 confirm that the connector service has started, ID 1002 when a server successfully connects to the RMS connector, and ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector. 
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
 If the connector fails to connects to Azure RMS, you will most likely see Error 3001. For example, this might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
 
 > [!TIP]
-> When RMS connector servers can't connect to Azure RMS, web proxy configurations are the most likely reason.
+> When RMS connector servers can't connect to Azure RMS, web proxy configurations are often the reason.
 
 As with all event log entries, drill into the message for more details.
 
-In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. For example, the connector might be working as expected initially, but other administrators change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
+In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. For example, the connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
 
 ## Performance counters
 
@@ -60,7 +60,7 @@ If you have recently added new server accounts to use the connector, a good coun
 
 You can use the Rights Management Services Analyzer tool to help you monitor the health of the connector and identify any configuration issues.
 
-If you haven't already downloaded this useful tool, you can do so from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and then install it on any computer that has access to the Internet and that can connect to the RMS connector. Run the tool, and on the **Welcome** page, select the **Azure RMS connector** option.
+If you haven't already downloaded this tool, you can do so from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and then install it on any computer that has access to the Internet and that can connect to the RMS connector. Run the tool, and on the **Welcome** page, select the **Azure RMS connector** option.
 
 For additional information and instructions, see the **Details** and **Install Instructions** on the download page.
 
@@ -84,5 +84,5 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
 4.  Stop and start IIS to activate tracing. 
 
-5.  When you have captured the traces that you need, revert the line in step 2 and stop and start IIS again.
+5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
 
