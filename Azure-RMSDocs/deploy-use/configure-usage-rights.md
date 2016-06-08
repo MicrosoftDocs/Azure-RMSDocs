@@ -269,9 +269,9 @@ The rights that are included with the default templates are as follows:
 
 ## Do Not Forward option for emails
 
-In addition to the individual usage rights, Office has their own option for emails: **Do Not Forward**. 
+Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have their own information rights protection option for emails: **Do Not Forward**. 
 
-Although this option appears to users (and Exchange administrators) as if it's a default template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
+Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
 When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
 
