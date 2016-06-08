@@ -252,4 +252,4 @@ Now that the RMS connector is installed and configured, and your servers are con
 
 You can use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators.
 
-To monitor the RMS connector, see [Monitor the Azure Rights Management connector[(monitor-rms-connector.md). 
+To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md). 
