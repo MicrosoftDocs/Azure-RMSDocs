@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
+
 # Install the SDK
 
 This topic guides you through installing the developer tools.
@@ -43,11 +43,7 @@ For more information on the files installed on your system by "setup\_sdk.exe", 
 
 ## Related topics
 
-* [How-to use](how-to-use-msipc.md)
 * [Development environment files](sdk-elements.md)
  
 
  
-
-
-
