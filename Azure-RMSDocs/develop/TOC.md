@@ -48,7 +48,7 @@
 ##### [Configure Azure RMS for ADAL authentication](adal-auth.md)
 #### [How-to: add explicit owner rights](add-explicit-owner-rights.md)
 #### [How-to: debug a rights-enabled application](debugging-applications-that-use-ad-rms.md)
-#### [How-to: enable document tracking and revocation](tracking-content.md)
+#### [How-to: enable document tracking and revocation](how-to-use-document-tracking.md)
 #### [How-to: enable email notification](how-to-enable-email-notification.md)
 #### [How-to: enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 #### [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md)
@@ -60,3 +60,4 @@
 #### [Supported platforms](supported-platforms.md)
 #### [Understanding usage restrictions](understanding-usage-restrictions.md)
 #### [Usage restriction reference](usage-restriction-reference.md)
+#### [API Reference](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
