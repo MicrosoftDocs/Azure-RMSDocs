@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How-to: install, configure and test with an RMS server | Azure RMS
+title: How-to install, configure and test with an RMS server | Azure RMS
 description: Install and configure and RMS Sever for testing your rights-enabled application.
 keywords:
 author: bruceperlerms

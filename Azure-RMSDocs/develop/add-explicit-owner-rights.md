@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How-to: add explicit owner rights | Azure RMS
+title: How-to add explicit owner rights | Azure RMS
 description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords:
 author: bruceperlerms
