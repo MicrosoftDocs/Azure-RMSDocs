@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2016
+ms.date: 06/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -49,6 +49,8 @@ Have additional questions about licensing for Azure RMS? Download the **Licensin
 ## Office 365 subscription
 [Free 30-day trial: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
+[Free 30-day trial: Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+
 This subscription is designed for organizations who want to use the Office online services and use their Information Rights Management (IRM) feature, which uses Azure RMS. However, not all Office 365 subscriptions include Azure RMS.
 
 Subscription  |Includes IRM 
@@ -84,7 +86,7 @@ If your trial subscription expires, you will lose access to content that was pro
 An exception to losing access upon expiry is if your organization used Azure RMS with the RMS for individuals subscription before you obtained the trial subscription. Then, access to previously protected content remains, even after the trial subscription expires.
 
 ## Enterprise Mobility Suite subscription
-[Free 30-day trial](http://go.microsoft.com/fwlink/?LinkId=615385)
+[Free 30-day trial](https://portal.office.com/Signup/Signup.aspx?OfferId=2E63A04D-BE0B-4A0F-A8CF-407C1C299221&dl=EMS)
 
 This subscription is designed for organizations who want to use a combination of Azure Active Directory Premium, Windows Intune, and Azure Rights Management. Support for using Azure Rights Management with Office is the same as using the Azure Rights Management Premium subscription. 
 For more information about the Enterprise Mobility Suite subscription, see the [Microsoft Enterprise Mobility Overview](http://go.microsoft.com/fwlink/?LinkId=615386).
