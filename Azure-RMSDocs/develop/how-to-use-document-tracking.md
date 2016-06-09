@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How-to: enable document tracking and revocation | Azure RMS
+title: How-to enable document tracking and revocation | Azure RMS
 description: The document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
 keywords:
 author: bruceperlerms

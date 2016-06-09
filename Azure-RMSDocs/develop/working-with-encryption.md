@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How-to: work with encryption settings | Azure RMS
+title: How-to work with encryption settings | Azure RMS
 description: This article orients you to our encryption packages
 keywords:
 author: bruceperlerms
