@@ -136,7 +136,7 @@ The rules are configured so that email messages that contain this information an
 Here, the rule is configured to use one of the default templates, **VanArsdel, Ltd – Confidential**, from our first example. But you can also see how the choice of templates includes any custom templates you’ve created, and a **No Do Forward** option that is specific to Exchange.
 
 > [!NOTE]
-> If the configuration options you see are slightly different from the picture, you might need to first select  **More options** when you configure the rule. You can then select **Modify the message security** > **Apply rights protection**, and then select the RMS template
+> If the configuration options you see are slightly different from the picture, you might need to first select  **More options** when you configure the rule. You can then select **Modify the message security** > **Apply rights protection**, and then select the RMS template.
 
 ---
 
