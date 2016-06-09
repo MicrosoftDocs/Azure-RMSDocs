@@ -30,7 +30,7 @@ This topic describes the purpose and functions of the RMS Server; for Azure and 
 
 **Azure RMS** - For information on using the Azure Rights Management service, see [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
-> [AZURE.IMPORTANT] We recommend developing and testing your application via Azure RMS.
+>[!Note] We recommend developing and testing your application via Azure RMS.
 
 **Windows Server** - For RMS on premise servers, beginning with Windows Server 2008, you can install and configure the RMS service by adding it as a role. To install the service on prior operating systems, download it from the Microsoft download center at [Microsoft Windows Rights Management Services with Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
 
