@@ -28,17 +28,6 @@ ms.suite: ems
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 
-- [New for the February 2016 - SDK documentation update](#new-for-the-february-2016-sdk-documentation-update)
-- [December 2015 update](#december-2015-update)
-- [May 2015 update](#may-2015-update)
-- [April 2015 update](#april-2015-update)
-- [January 2015 update](#january-2015-update)
-- [October 2014 update](#october-2014-update)
-- [July 2014 update](#july-2014-update)
-- [Important developer notes](#important-developer-notes)
-- [Frequently asked questions](#frequently-asked-questions)
-- [Related topics](#related-topics)
-
 ## New for the February 2016 - SDK documentation update
 
 >[!Note]  The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
@@ -70,7 +59,7 @@ This topic contains important information about this and previous releases of th
 
 ## April 2015 update
 
--   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](tracking-content.md).
+-   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](how-to-use-document-tracking.md).
 -   **Encryption type** - We now support API level control for selection of the encryption package. For more information, see [Working with encryption](working-with-encryption.md).
 
     **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working-with-encryption.md).
