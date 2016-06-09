@@ -43,13 +43,13 @@ This topic contains two approaches to authentication with corresponding code exa
 
   Use this approach if you want the RMS client to display an ADAL authentication prompt when authentication is necessary. For details on how to configure your application, see the section, "Internal authentication".
 
-  >AZURE.NOTE If your application currently uses AD RMS SDK 2.1 with the sign-in assistant, we recommend that you use the internal authentication method as your application migration path.
+  > [!Note] If your application currently uses AD RMS SDK 2.1 with the sign-in assistant, we recommend that you use the internal authentication method as your application migration path.
 
 - **External authentication** - OAuth authentication managed by your application.
 
   Use this approach if you want your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary. For a detailed example, see "External authentication" at the end of this topic.
 
-  >AZURE.NOTE External authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
+  > [!Note] External authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
 
 ## Internal authentication
 
