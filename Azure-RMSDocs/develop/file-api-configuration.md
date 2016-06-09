@@ -67,14 +67,14 @@ Set the **Encryption** value in the key to specify protection behavior. If the *
 
 - **Off**: Encryption is disabled.
 
-> [AZURE.NOTE] This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the **EXTRACT** right.
+> [!Note] This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the **EXTRACT** right.
 
 - **Native**:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p*zzz*, where *zzz* is the original file extension. For example .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied is included below.
 
 - **Pfile**: PFile encryption is used. The encrypted file will have .pfile appended to the original extension. For example, after encryption, a .txt file, will have an extension of .txt.pfile.
 
 
-> [AZURE.NOTE] This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
+> [!Note] This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
 
 Setting any other value or setting no value results in default behavior.
 

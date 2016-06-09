@@ -32,7 +32,7 @@ This topic contains essential guidance on the core aspects of an RMS enabled app
 
 The guidance in this topic is based on the sample application, IPCHelloWorld, which will help orient you to the basic concepts and code of a rights-enabled application. You can download the full IPCHellowWorld sample application, as [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440), from Microsoft Connect.
 
->AZURE.NOTE The IPCHelloWorld project is already configured for the Rights Management Services SDK 2.1. For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+> [!Note] The IPCHelloWorld project is already configured for the Rights Management Services SDK 2.1. For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
 ## Loading MSIPC.dll
 
