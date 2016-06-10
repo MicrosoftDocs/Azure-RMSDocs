@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
+
 # File API configuration
 
 
@@ -40,46 +40,45 @@ For more information about supported file formats, see **File API File Support D
 
 The following sections describe the keys and key values that control encryption.
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*Type*: Key
+**Type**: Key
 
-*Description*: Contains general configuration for the File API.
+**Description**: Contains general configuration for the File API.
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*Type: Key
+**Type**: Key
 
-*Description: Specifies configuration information for a specific file extension; for example, TXT, JPG, and so on.
+**Description**: Specifies configuration information for a specific file extension; for example, TXT, JPG, and so on.
 
 - The wildcard character, '*', is allowed; however, a setting for a specific extension takes precedence over the wild card setting. The wildcard character does not affect settings for Microsoft Office files; these must be explicitly disabled by file type.
 - To specify files that do not have an extension, use '.'
 - Do not specify the '.' character when specifying the key for a specific file extension; for example use `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` to specify settings for .txt files. (Do not use `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Set the *Encryption* value in the key to specify protection behavior. If the *Encryption* value is not set, the default behavior for the file type is observed.
+Set the **Encryption** value in the key to specify protection behavior. If the **Encryption** value is not set, the default behavior for the file type is observed.
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*Type: REG_SZ*
+**Type**: REG_SZ
 
-*Description: Contains one of three values:
+**Description**: Contains one of three values:
 
-- *Off*: Encryption is disabled.
+- **Off**: Encryption is disabled.
 
-> [AZURE.NOTE] This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the EXTRACT right.
+> [!Note] This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the **EXTRACT** right.
 
-- *Native*:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p**zzz**, where **zzz** is the original file extension. For example .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied is included below.
+- **Native**:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p*zzz*, where *zzz* is the original file extension. For example .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied is included below.
 
-- *Pfile*: PFile encryption is used. The encrypted file will have .pfile appended to the original extension. For example, after encryption, a .txt file, will have an extension of .txt.pfile.
+- **Pfile**: PFile encryption is used. The encrypted file will have .pfile appended to the original extension. For example, after encryption, a .txt file, will have an extension of .txt.pfile.
 
 
-> [AZURE.NOTE] This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
+> [!Note] This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
 
 Setting any other value or setting no value results in default behavior.
 
-## Default behavior for different file formats**
+## Default behavior for different file formats
 
 -   **Office files** Native encryption is enabled.
 -   **txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif files** Native encryption is enabled (xxx becomes pxxx)
@@ -89,7 +88,7 @@ If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\
 
 ### File API - File Support Details
 
-Native support can be added for any file type (extension) . For instance,any extension &lt;ext&gt; (non-office), \*.p&lt;ext&gt; will be used if the admin configuration for that extension is "NATIVE".
+Native support can be added for any file type (extension) . For instance, any extension &lt;ext&gt; (non-office), \*.p&lt;ext&gt; will be used if the admin configuration for that extension is "NATIVE".
 
 **Office files**
 
@@ -106,7 +105,7 @@ Native support can be added for any file type (extension) . For instance,any ext
 
 **All other file formats**
 
--   Protection type = Pfile: sample.*zzz* is encrypted and named sample.*zzz*.pfile; where zzz is the original file extension.
+-   Protection type = Pfile: sample.*zzz* is encrypted and named sample.*zzz*.pfile; where *zzz* is the original file extension.
 -   Off: Disables encryption.
 
 ### Examples
@@ -156,6 +155,3 @@ HKEY_LOCAL_MACHINE
  
 
  
-
-
-

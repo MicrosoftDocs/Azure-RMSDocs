@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** This SDK content is not current. For a short time, please find the [current version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) of the documentation on MSDN. **
+
 # Rights Management Services SDK 2.1
 
 ## Purpose
@@ -49,9 +49,7 @@ For information about the run-time requirements for a particular programming ele
 |[Getting started](getting-started-with-ad-rms-2-0.md)|The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.|
 |[Release notes](release-notes-rtm.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
 |[Code samples](samples.md)|This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.|
-|[How-to use](how-to-use-msipc.md)|Step-by-step guidance for scenarios and tasks using the RMS SDK 2.1.|
 |[Developer notes](developer-notes.md)|This section covers specific guidance for several important development scenarios.|
-|[Developer concepts](ad-rms-concepts-nav.md)|The topics in this section cover key concepts in RMS.|
 |[API reference](/rights-management/sdk/2.1/api/win/constants)|This section contains topics covering reference material for all of the API elements.|
 
  
