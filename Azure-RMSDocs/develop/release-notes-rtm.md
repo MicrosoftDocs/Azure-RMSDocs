@@ -59,7 +59,7 @@ This topic contains important information about this and previous releases of th
 
 ## April 2015 update
 
--   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](how-to-use-document-tracking.md).
+-   **Document tracking** is now possible through a set of new APIs. For more information, see [Tracking Content](tracking-content.md).
 -   **Encryption type** - We now support API level control for selection of the encryption package. For more information, see [Working with encryption](working-with-encryption.md).
 
     **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working-with-encryption.md).
