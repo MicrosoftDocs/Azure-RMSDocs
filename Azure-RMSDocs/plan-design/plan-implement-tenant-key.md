@@ -69,7 +69,7 @@ The following diagrams show and compares these two options. The first diagram sh
 
 The second diagram shows the additional steps required when you manage your own tenant key.
 
-![Azure RMS tenant key lifecycle - managed by you, BYOK](../media/RMS_BYOK_onprem.png)
+![Azure RMS tenant key lifecycle - managed by you, BYOK](../media/RMS_BYOK_onprem2.png)
 
 If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).
 
