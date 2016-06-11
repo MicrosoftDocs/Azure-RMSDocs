@@ -30,7 +30,7 @@ ms.suite: ems
 *Applies to: Azure Rights Management, Office 365*
 
 
-Organization that have an IT-managed Azure subscription can use BYOK and log its usage at no extra charge. Organizations that use RMS for individuals cannot use BYOK and logging because they do not have a tenant administrator to configure these features.
+Organization that have an IT-managed Azure subscription can use customer-managed keys (BYOK) and log its usage at no extra charge. Organizations that use RMS for individuals cannot use BYOK and logging because they do not have a tenant administrator to configure these features.
 
 
 > [!NOTE]
