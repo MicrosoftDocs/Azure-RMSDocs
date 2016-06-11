@@ -47,7 +47,7 @@ If you deploy Azure RMS by using a tenant key that is managed by Microsoft, you 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
 Decide which tenant key topology is best for your organization. By default, Azure RMS generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure RMS and the rest of the key management process is handled by Microsoft.
 
-Alternatively, you might want complete control over your tenant key, by using [Azure Key Vault}(https://azure.microsoft.com/services/key-vault/). This scenario involves creating your tenant key and keeping the master copy on your premises. This scenario is often referred to as bring your own key (BYOK). With this option, the following happens:
+Alternatively, you might want complete control over your tenant key, by using [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). This scenario involves creating your tenant key and keeping the master copy on your premises. This scenario is often referred to as bring your own key (BYOK). With this option, the following happens:
 
 1.  You generate your tenant key on your premises, in line with your IT and security policies.
 
@@ -94,6 +94,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
 |All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok). <br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|
 
+For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
 To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
