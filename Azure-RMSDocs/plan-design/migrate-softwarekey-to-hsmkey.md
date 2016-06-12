@@ -56,7 +56,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a command to extract this key from the file and import it to your on-premises HSM.
 
-2.  On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive, Migration folder:
+2.  On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive:
 
     ```
     	E:\Migration\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx
@@ -66,58 +66,57 @@ Before you begin, make sure that your organization has a key vault that has been
 
     -   The /tpd: specifies the full path to the TPD file. The full parameter name is TpdFilePath.
 
-    -   The /pfx: specifies  the output of the .PFX file name. The full parameter name is TpdPassword. If you don’t specify the password in the command, you will be prompted to specify it.
+    -   The /pfx: specifies  the output of the .PFX file name. The full parameter name is OutPfxFile. 
 
     -   If you don't specify the password when you run this command (by using the TpdPassword full parameter name or pwd short parameter name), you will be prompted to specify it.
-
 
     This command results in the .PFX file (by default, RmsoTDP.pfx) in the current directory.
 
 3.  On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the openssl utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
 
-	openssl pkcs12 -in e:\Migration\ContosoTPD.pfx -out e:\Migration\Contoso.pem -nodes
+		openssl pkcs12 -in e:\Migration\ContosoTPD.pfx -out e:\Migration\Contoso.pem -nodes
 
-You will be prompted for an import password and see a confirmation message of **MAC verified OK**.
+    You will be prompted for an import password and see a confirmation message of **MAC verified OK**.
 
-This creates a Contoso.pem file that you must secure from unauthorized access.
+    This creates a Contoso.pem file that you must secure from unauthorized access.
 
 4. Convert your PEM file to a format that is accepted by Thales HSM. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
 
-	openssl.exe rsa -in "e:\Migration\Contoso.pem" -out e:\Migration\Contoso_converted.pem -outform PEM
+		openssl.exe rsa -in "e:\Migration\Contoso.pem" -out e:\Migration\Contoso_converted.pem -outform PEM
 
-	The result will be save to Contoso_converted.pem file. Also keep it secure as it contains your key
+    The result will be save to Contoso_converted.pem file. Also keep it secure as it contains your key
 
-This creates a Contoso_converted.pem file that you must secure from unauthorized access.
+    This creates a Contoso_converted.pem file that you must secure from unauthorized access.
 
 5. By using your converted .PEM file, you can now import your key into your attached Thales HSM by using the following command:
 
-	generatekey --import simple pemreadfile=e:\Migration\Contoso_converted.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    	generatekey --import simple pemreadfile=e:\Migration\Contoso_converted.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
-This will generate an output display similar to the following:
+    This will generate an output display similar to the following:
 
-**key generation parameters:**
+    **key generation parameters:**
 
-**operation    Operation to perform         import**
+    **operation    Operation to perform         import**
 
-**application  Application                  simple**
+    **application  Application                  simple**
 
-**verify       Verify security of key       yes**
+    **verify       Verify security of key       yes**
 
-**type         Key type                     RSA**
+    **type         Key type                     RSA**
 
-**pemreadfile  PEM file containing RSA key  e:\Migration\Contoso_converted.pem**
+    **pemreadfile  PEM file containing RSA key  e:\Migration\Contoso_converted.pem**
 
-**ident        Key identifier               contosobyok**
+    **ident        Key identifier               contosobyok**
 
-**plainname    Key name                     ContosoBYOK**
+    **plainname    Key name                     ContosoBYOK**
 
-**Key successfully imported.**
+    **Key successfully imported.**
 
-**Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
+    **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
+    This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
-Now that your SLC has been extracted so that it’s an HSM-based key, you’re ready to package and transfer it to Azure Key Vault.
+    Now that your SLC has been extracted so that it’s an HSM-based key, you’re ready to package and transfer it to Azure Key Vault.
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
