@@ -63,6 +63,11 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	**Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want different RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
+- **Cryptographic Mode 2:**
+
+	- Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS.
+
+	See [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
 - **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
 
@@ -106,7 +111,7 @@ Limitations:
 ## Overview of the steps for migrating AD RMS to Azure RMS
 
 
-The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
+The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
 [**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase1.md)
 
@@ -124,11 +129,11 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 	- **HSM-protected  key to HSM-protected key migration**:
 
-	    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by the BYOK toolset.
+	    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to Azure Key Vault and authorize Azure RMS to use this key. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by Rights Management services.
 
 	- **Software-protected key to HSM-protected key migration**:
 
-	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
+	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to an Azure Key Vault HSM and authorize Azure RMS to use the key vault that stores the key.
 
 - **Step 3. Activate your Azure RMS tenant**
 
@@ -177,7 +182,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 - **Step 9: Re-key your Azure RMS tenant key**
 
-    This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure RMS tenant key.
+    This step is optional but recommended if your chosen tenant key topology is that your tenant key is managed by Microsoft. This additional step helps to safeguard the security of your Azure RMS tenant key. This step is not required if your chosen tenant key topology is customer-managed (BYOK).
 
 
 ## Next steps
