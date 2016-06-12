@@ -108,5 +108,5 @@ These procedures are done by the administrator for Azure RMS.
     Disconnect-AadrmService
     ```
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms#step-3-activate-your-rms-tenant).
 

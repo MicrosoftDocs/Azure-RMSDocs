@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,7 +35,7 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Righ
 ## Step 5. Reconfigure clients to use Azure RMS
 For Windows clients:
 
-1.  [Download the migration scripts](http://go.microsoft.com/fwlink/?LinkId=524619):
+1.  [Download the migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
 
     -   CleanUpRMS_RUN_Elevated.cmd
 

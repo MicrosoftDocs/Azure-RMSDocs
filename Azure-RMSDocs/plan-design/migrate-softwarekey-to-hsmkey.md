@@ -48,7 +48,7 @@ You must first extract your server licensor certificate (SLC) key from the confi
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a command to extract this key from the file and import it to your on-premises HSM.
 
-2.  On the disconnected workstation, run the Tpd2PfxConverter tool from the migration toolkit to extract the key from the SLC file. For example, if the tool is installed on your E drive:
+2.  On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive, Migration folder:
 
     ```
     	E:\Migration\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx

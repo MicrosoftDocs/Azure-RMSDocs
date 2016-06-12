@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -70,5 +70,5 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     Disconnect-AadrmService
     ```
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms#step-3-activate-your-rms-tenant).
 
