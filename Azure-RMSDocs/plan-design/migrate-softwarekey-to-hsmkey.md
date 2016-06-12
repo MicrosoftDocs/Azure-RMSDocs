@@ -94,7 +94,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **key generation parameters:**
 
-    **operation`&nbsp&nbsp&nbsp&nbsp`Operation to perform         import**
+    **operation\&nbsp\\&nbsp\\&nbsp\\&nbsp\\Operation to perform         import**
 
     **application  Application                  simple**
 
@@ -142,10 +142,10 @@ Before you begin, make sure that your organization has a key vault that has been
 
     When prompted, enter the password that you specified earlier for the SLC file, and confirm that you want to perform this action.
 
-If you have more than one AD RMS configuration data files, repeat this command for the remainder of these files.
+    If you have more than one AD RMS configuration data files, repeat this command for the remainder of these files. But for these files, set **-Active** to **false** when you run the Import command.
 
-> [!IMPORTANT]
-> When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+    > [!IMPORTANT]
+    > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
 
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
