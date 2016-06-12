@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,9 +34,17 @@ These instructions are part of the [migration path from AD RMS to Azure Rights M
 
 If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
 
-It’s a three-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK) in Azure Key Vault.
+It’s a four-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK) in Azure Key Vault.
 
 You must first extract your server licensor certificate (SLC) key from the configuration data and transfer the key to an on-premises Thales HSM, next package and transfer your HSM key to Azure Key Vault, then authorize Azure RMS to access your key vault, and then import the configuration data.
+
+Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordindate and work with that administrator to complete these procedures.
+
+Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
+
+> [!TIP]
+> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+
 
 ## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
 
@@ -111,7 +119,7 @@ This output confirms that the private key is now migrated to your on-premises Th
 
 Now that your SLC has been extracted so that it’s an HSM-based key, you’re ready to package and transfer it to Azure Key Vault.
 
-## Part 2: Package and transfer your HSM key to Azure RMS
+## Part 2: Package and transfer your HSM key to Azure Key Vault
 
 1.  Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
@@ -143,6 +151,6 @@ If you have more than one AD RMS configuration data files, repeat this command f
 > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
 
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms#step-3-activate-your-rms-tenant).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
 
 

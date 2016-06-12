@@ -95,7 +95,7 @@ These procedures are done by the administrator for Azure RMS.
 
     To run this cmdlet, you will need the URI for the key vault that was identified in the previous step.
 
-    For example, using our key vault URI example from the previous step, you would run:
+    For example, using our key vault URI value from the previous step, you would run:
 
     ```
     Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/ -Active $True -Verbose
