@@ -41,7 +41,7 @@ It’s a two-part procedure to import your HSM key and AD RMS configuration to A
 
 Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordindate and work with that administrator to complete these procedures.
 
-Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault must be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
+Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
 ## Part 1: Transfer your HSM key to transfer to Azure Key Vault
 
@@ -53,9 +53,9 @@ These procedures are done by the administrator for Azure Key Vault.
 
 2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
-For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
+    For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
 
-	Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+    	Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
 
 3. Identify the URI for the key vault by using the [Get-AzureRMKeyVault](https://msdn.microsoft.com/library/mt603612.aspx ) cmdlet. The Azure RMS administrator will need this for the next step. For example, using the same example names for the resource group and key vault: 
 
