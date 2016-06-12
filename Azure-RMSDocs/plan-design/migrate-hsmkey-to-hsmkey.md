@@ -43,7 +43,10 @@ Because your Azure RMS tenant key will be stored and managed by Azure Key Vault,
 
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
-## Part 1: Transfer your HSM key to transfer to Azure Key Vault
+> [!TIP]
+> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+
+## Part 1: Transfer your HSM key to Azure Key Vault
 
 These procedures are done by the administrator for Azure Key Vault.
 
