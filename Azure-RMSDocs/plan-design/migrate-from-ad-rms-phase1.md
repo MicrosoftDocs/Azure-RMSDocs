@@ -54,9 +54,6 @@ This step is a two-part process:
 
 Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this on licensing-only clusters.
 
-> [!NOTE]
-> If you are using Windows Server 2003 Rights Management, instead of these instructions, follow the procedure [Export SLC, TUD, TPD and RMS private key](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) from the [Migrating from Windows RMS to AD RMS in a Different Infrastructure](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) article.
-
 #### To export the configuration data (trusted publishing domain information)
 
 1.  Log on the AD RMS cluster as a user with AD RMS administration permissions.

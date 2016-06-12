@@ -139,10 +139,10 @@ Now that your SLC has been extracted so that it’s an HSM-based key, you’re r
 
 If you have more than one AD RMS configuration data files, repeat this command for the remainder of these files.
 
-IMPORTANT
-When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+> [!IMPORTANT]
+> When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
 
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms#step-3-activate-your-rms-tenant).
 
 
