@@ -70,5 +70,5 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     Disconnect-AadrmService
     ```
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms#step-3-activate-your-rms-tenant).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
 

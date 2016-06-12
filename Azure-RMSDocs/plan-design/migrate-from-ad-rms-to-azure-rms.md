@@ -61,9 +61,9 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	- Multiple forests, multiple RMS clusters
 
-	**Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
+    **Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
-	Cryptographic Mode 2:
+    Cryptographic Mode 2:
 
     - Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
