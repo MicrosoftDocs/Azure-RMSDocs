@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 06/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -41,7 +41,7 @@ Not sure whether this AD RMS migration is right for your organization?
 Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
 
 
-- **A supported RMS deployment**
+- **A supported RMS deployment:**
 
 	All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
 
@@ -63,13 +63,11 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	**Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want different RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
-- **Cryptographic Mode 2:**
+	Cryptographic Mode 2:
 
-	- Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS.
+	- Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
-	See [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
-- **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
+- **All requirements to run Azure RMS, including an Azure RMS tenant (not activated):**
 
 	See [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -92,6 +90,10 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 	You can continue to use IRM on these servers with Azure RMS after the migration. However, one of the migration steps is to temporarily disable the IRM service, install and configure a connector, reconfigure the servers, and then re-enable IRM.
 
 	This is the only interruption to service during the migration process.
+
+- **If you want to manage your own Azure RMS tenant key by using an HSM-protected key**:
+
+	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
 Limitations:
