@@ -48,7 +48,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 ## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
 
-1.  Use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+1.  Azure Key Vault administrator: Use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
     -   **Generate and transfer your key to Azure Key Vault HSM**: [Prepare your Internet-connected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
@@ -56,7 +56,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a command to extract this key from the file and import it to your on-premises HSM.
 
-2.  On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive:
+2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive:
 
     ```
     	E:\Migration\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx
@@ -72,7 +72,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     This command results in the .PFX file (by default, RmsoTDP.pfx) in the current directory.
 
-3.  On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the openssl utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
+3. On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the openssl utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
 
 		openssl pkcs12 -in e:\Migration\ContosoTPD.pfx -out e:\Migration\Contoso.pem -nodes
 
@@ -84,8 +84,6 @@ Before you begin, make sure that your organization has a key vault that has been
 
 		openssl.exe rsa -in "e:\Migration\Contoso.pem" -out e:\Migration\Contoso_converted.pem -outform PEM
 
-    The result will be save to Contoso_converted.pem file. Also keep it secure as it contains your key
-
     This creates a Contoso_converted.pem file that you must secure from unauthorized access.
 
 5. By using your converted .PEM file, you can now import your key into your attached Thales HSM by using the following command:
@@ -96,7 +94,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **key generation parameters:**
 
-    **operation    Operation to perform         import**
+    **operation`&nbsp&nbsp&nbsp&nbsp`Operation to perform         import**
 
     **application  Application                  simple**
 
@@ -120,7 +118,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
-1.  Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+1.  Azure Key Vault administrator: Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
     -   [Step 4: Prepare your key for transfer](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
@@ -134,7 +132,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 ## Part 3: Import the configuration data to Azure RMS
 
-1.  Still on the Internet-connected workstation and in the PowerShell session, copy over the RMS configuration files with the SLC removed.
+1.  Azure RMS administrator: Still on the Internet-connected workstation and in the PowerShell session, copy over the RMS configuration files with the SLC removed.
 
 2.  Upload the first file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. Use the following command:
 
