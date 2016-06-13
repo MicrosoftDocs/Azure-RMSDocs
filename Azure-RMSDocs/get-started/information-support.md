@@ -36,7 +36,7 @@ Use the following resources for additional information about Microsoft [!INCLUDE
 |… read the most current [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] product documentation →|Use the  Microsoft documentation site for  [Azure Rights Management](../understand-explore/azure-rights-management.md)|
 |… provide feedback about the documentation or ask a question about the documentation →|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |… receive tweets about Rights Management and announcements about documentation updates from the product group →|Follow Dan Plastina, who helps lead the Microsoft Rights Management Team. See [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
-|… get a trial version of [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] →|Use the links for free 30-day trials in [Azure RMS requirements: Cloud subscriptions that support Azure RMS](requirements-subscriptions.md)|
+|… get a trial version of [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] →|Use the links for the free 30-day trials in [Azure RMS requirements: Cloud subscriptions that support Azure RMS](requirements-subscriptions.md)|
 
 
 ## The Rights Management product group blog
@@ -66,7 +66,13 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
+Core skills learning:
+
+- Microsoft Virtual Academy [Azure Rights Management Services Core Skills](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681)
+
+Troubleshooting:
+
+- Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 
 ### Communnity resources
 
