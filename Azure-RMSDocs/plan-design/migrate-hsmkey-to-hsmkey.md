@@ -66,13 +66,13 @@ These procedures are done by the administrator for Azure Key Vault.
 
 The output might look similar to this, which shows the key vault URI to be https://contoso-byok-kv.vault.azure.net/:
 
-**Vault Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contoso-byok-kv**
+**Vault Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contoso-byok-kv**
 
-**Resource Group Name &nbsp; : contoso-byok-rg**
+**Resource Group Name &nbsp;&nbsp; : contoso-byok-rg**
 
 **Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : centralus**
 
-**Resource ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /subscriptions/aaaaaa-1234-5678/resourceGroups/contoso-byok-rg/providers/Microsoft.KeyVault/vaults/contoso-byok-kv**
+**Resource ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /subscriptions/aaaaaa-1234-5678/resourceGroups/contoso-byok-rg/providers/Microsoft.KeyVault/vaults/contoso-byok-kv**
 
 **Vault URI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : https://contoso-byok-kv.vault.azure.net/**
 
