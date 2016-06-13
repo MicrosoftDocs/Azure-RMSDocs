@@ -68,7 +68,7 @@ The output might look similar to this, which shows the key vault URI to be https
 
 **Vault Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contoso-byok-kv**
 
-**Resource Group Name &nbsp;&nbsp; : contoso-byok-rg**
+**Resource Group Name &nbsp; : contoso-byok-rg**
 
 **Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : centralus**
 
