@@ -29,7 +29,6 @@ ms.suite: ems
 
 Authentication with Azure RMS for your app using Azure Active Directory Authentication Library (ADAL).
 
-
 Using this approach requires your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary.
 
 Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md).
