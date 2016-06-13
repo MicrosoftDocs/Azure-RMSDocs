@@ -31,7 +31,7 @@ Authentication with Azure RMS for your app using Azure Active Directory Authenti
 
 Using this approach requires your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary.
 
-## Configure Azure
+## Configure via Azure portal
 Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md).
 
 ## Code sample
