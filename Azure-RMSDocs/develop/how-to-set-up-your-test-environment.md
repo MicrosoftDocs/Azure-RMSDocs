@@ -34,7 +34,7 @@ This topic contains instructions about how to setup for your application testing
 
 You can test with either Azure RMS or an RMS server running on Windows Server and, we suggest you begin your testing on Azure RMS then, if its required for your deployment, test with RMS Server.
 
-1. For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication,md).
+1. For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication.md).
 2. For testing with RMS Server, see [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md).
 3. The following describes how to install the developer runtime.
 
