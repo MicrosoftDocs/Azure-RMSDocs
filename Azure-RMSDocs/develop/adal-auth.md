@@ -29,7 +29,7 @@ ms.suite: ems
 
 This topic describes the steps for configuring Azure ADAL based authentication.
 
-## Internal authentication
+## Azure Authentication setup
 
 You will need the following:
 
