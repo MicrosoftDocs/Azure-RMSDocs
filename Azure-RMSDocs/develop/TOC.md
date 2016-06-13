@@ -25,7 +25,7 @@
 #### [How to: Enable error and performance logging](enabling-logging.md)
 #### [How to: Get an Azure Application ID](application-id.md)
 #### [How to: Use built-in rights](built-in-rights-usage-restriction-reference.md)
-#### [How to: Use ADAL authentication(how-to-use-adal-authentication-4-2.md)
+#### [How to: Use ADAL authentication](how-to-use-adal-authentication-4-2.md)
 #### [How to: Use document tracking](how-to-use-document-tracking.md)
 #### [Terms](terms.md)
 ### [API reference](api-reference-4-2.md)
