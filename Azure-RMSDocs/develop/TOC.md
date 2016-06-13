@@ -62,3 +62,8 @@
 #### [Understanding usage restrictions](understanding-usage-restrictions.md)
 #### [Usage restriction reference](usage-restriction-reference.md)
 ### [API Reference](api-reference-2-1.md)
+#### [Constants](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+#### [Data types](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/data types)
+#### [Functions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
+#### [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
+#### [Error codes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
