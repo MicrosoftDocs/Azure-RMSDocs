@@ -98,7 +98,7 @@ For more information about Thales HSMs and how they are used with Azure Key Vaul
 
 To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) from the Azure Key Vault documentation.
 
-After you have transferred your Azure RMS tenant key to Azure Key Vault, Azure RMS must be be authorized to use your organization's key vault that contains your Azure RMS tenant key. To do this, the Azure Key Vault administrator uses the the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service prinpcal, Microsoft.Azure.RMS. For example:
+After you have transferred your Azure RMS tenant key to Azure Key Vault, Azure RMS must be authorized to use your organization's key vault that contains your Azure RMS tenant key. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
