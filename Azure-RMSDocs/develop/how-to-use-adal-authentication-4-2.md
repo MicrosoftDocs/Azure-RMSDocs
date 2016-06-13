@@ -35,20 +35,7 @@ Using this approach requires your application to manage its own OAuth authentica
 Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the *Client ID* and *Redirection URI* from this process for use later.
 
 ## Code sample
-Here's and example of the mobile client code to enale Azure ADAL. For more information, see the full sample at [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
-
-Use this code as an example of how to manage your own authentication tokens.
-
-     /**
-     * The Class implements MSIPC AuthenticationRequestCallback using ADAL.
-     */
-     class MsipcAuthenticationCallback implements AuthenticationRequestCallback
-     {
-       public static final String TAG = "RmsAuthenticationCallback";
-       private String mClientId;
-       private Activity mParentActivity;;
-       private PromptBehavior mPromptBehavior = PromptBehavior.Auto;
-       private String mRedirectURI;
+Here's a code snip from the larger sample for mobile client code to enale Azure ADAL. For more information, see the full sample at [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 
        /**
        * Instantiates a new rms authentication callback.
