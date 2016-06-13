@@ -32,7 +32,7 @@ Authentication with Azure RMS for your app using Azure Active Directory Authenti
 Using this approach requires your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary.
 
 ## Configure via Azure portal
-Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md).
+Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the Client ID and Redirection URI from this process for use later.
 
 ## Code sample
 Here's and example of the mobile client code to enale Azure ADAL. For more information, see the full sample at [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
