@@ -23,6 +23,11 @@ ms.suite: ems
 #ms.custom:
 
 ---
+<<<<<<< HEAD
+
+# Tracking content
+=======
+>>>>>>> 81ec5ddf5acf3de78d77c01ed95631e44d37fe6e
 
 # How-to: enable document tracking and revocation
 

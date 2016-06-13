@@ -60,4 +60,4 @@
 #### [Supported platforms](supported-platforms.md)
 #### [Understanding usage restrictions](understanding-usage-restrictions.md)
 #### [Usage restriction reference](usage-restriction-reference.md)
-#### [API Reference](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+### [API Reference](api-reference-2-1.md)
