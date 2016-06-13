@@ -59,8 +59,7 @@ Use this code as an example of how to manage your own authentication tokens.
        * @throws UnsupportedEncodingException the unsupported encoding exception
        */
 
-       public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException,           InvalidKeySpecException,
-       UnsupportedEncodingException
+       public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException,                              InvalidKeySpecException, UnsupportedEncodingException
        {
          mParentActivity = parentActivity;
          setADALKeyStore();
