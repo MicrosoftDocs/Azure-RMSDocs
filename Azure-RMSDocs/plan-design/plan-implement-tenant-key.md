@@ -49,9 +49,9 @@ Decide which tenant key topology is best for your organization. By default, Azur
 
 Alternatively, you might want complete control over your tenant key, by using [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). This scenario involves creating your tenant key and keeping the master copy on your premises. This scenario is often referred to as bring your own key (BYOK). With this option, the following happens:
 
-1.  You generate your tenant key on your premises, in line with your IT and security policies.
+1.  You generate your tenant key on your premises, in line with your IT policies and security policies.
 
-2.  You securely transfer the tenant key from a Hardware Security Module (HSM) in your possession to HSMs that are owned and managed by Microsoft, using Azure Key Vault. Throughout this process, your tenant key never leaves the hardware protection boundary.
+2.  You securely transfer the tenant key from a hardware security module (HSM) in your possession to HSMs that are owned and managed by Microsoft, using Azure Key Vault. Throughout this process, your tenant key never leaves the hardware protection boundary.
 
 3.  When you transfer your tenant key to Microsoft, it stays protected by Azure Key Vault.
 
@@ -81,9 +81,9 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Customer Support Services (CSS) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Support before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
-> Also contact CSS if your organization has specific policies for handling keys.
+> Also contact Microsoft Support if your organization has specific policies for handling keys.
 
 ### Prerequisites for BYOK
 See the following table for a list of prerequisites for bring your own key (BYOK).
@@ -92,13 +92,13 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |---------------|--------------------|
 |A subscription that supports Azure RMS.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).|
 |You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
-|All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok). <br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|
+|All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation . <br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
-To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) from the Azure Key Vault documentation.
 
-After you have transferred your Azure RMS tenant key to Azure Key Vault, Azure RMS must be be authorized to use your organization's key vault that contains your Azure RMS tenant key. For example, using the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx):
+After you have transferred your Azure RMS tenant key to Azure Key Vault, Azure RMS must be be authorized to use your organization's key vault that contains your Azure RMS tenant key. To do this, the Azure Key Vault administrator uses the the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service prinpcal, Microsoft.Azure.RMS. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
