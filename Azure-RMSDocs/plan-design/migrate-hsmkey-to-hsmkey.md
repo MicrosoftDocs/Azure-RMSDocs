@@ -66,21 +66,19 @@ These procedures are done by the administrator for Azure Key Vault.
 
 The output might look similar to this, which shows the key vault URI to be https://contoso-byok-kv.vault.azure.net/:
 
-**Vault Name                       : contoso-byok-kv**
+**Vault Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contoso-byok-kv**
 
-**Resource Group Name              : contoso-byok-rg**
+**Resource Group Name &nbsp; : contoso-byok-rg**
 
-**Location                         : centralus**
+**Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : centralus**
 
-**Resource ID                      : /subscriptions/aaaaaa-1234-5678/resourceGroups/contoso-**
+**Resource ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /subscriptions/aaaaaa-1234-5678/resourceGroups/contoso-byok-rg/providers/Microsoft.KeyVault/vaults/contoso-byok-kv**
 
-**                               byok-rg/providers/Microsoft.KeyVault/vaults/contoso-byok-kv**
+**Vault URI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : https://contoso-byok-kv.vault.azure.net/**
 
-**Vault URI                        : https://contoso-byok-kv.vault.azure.net/**
+**Tenant ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : aaaaaaaa-1235-5678**
 
-**Tenant ID                        : aaaaaaaa-1235-5678**
-
-**SKU                              : Premium**
+**SKU &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Premium**
 
 
 Now that you’ve prepared your HSM key in Azure Key Vault for Azure RMS, you’re ready to import your AD RMS configuration data.
