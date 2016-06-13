@@ -46,14 +46,14 @@ Here's a code snip from the larger sample for mobile client code to enale Azure 
        * @throws UnsupportedEncodingException the unsupported encoding exception
        */
 
-       public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException,                              InvalidKeySpecException, UnsupportedEncodingException
+       public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException, InvalidKeySpecException, UnsupportedEncodingException
        {
          mParentActivity = parentActivity;
          setADALKeyStore();
 
-         /** 
-         * Note: Following values of are client_id and redirect_uri are for demo purpose only. 
-         * Your values will come from the preceeding Azure Portal process. 
+         /**
+         * Note: Following values of are client_id and redirect_uri are for demo purpose only.
+         * Your values will come from the preceeding Azure Portal process.
          */
          mClientId = "com.microsoft.rightsmanagement.sampleapp";
          mRedirectURI = mClientId + "://authorize";
