@@ -50,7 +50,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 1.  Azure Key Vault administrator: Use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
-    -   **Generate and transfer your key to Azure Key Vault HSM**: [Prepare your Internet-connected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
     -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
@@ -59,7 +59,7 @@ Before you begin, make sure that your organization has a key vault that has been
 2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive:
 
     ```
-    	E:\Migration\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx
+    	E:\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx
     ```
 
     Additional information for this command:
@@ -72,9 +72,9 @@ Before you begin, make sure that your organization has a key vault that has been
 
     This command results in the .PFX file (by default, RmsoTDP.pfx) in the current directory.
 
-3. On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the openssl utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
+3. On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the **openssl** utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
 
-		openssl pkcs12 -in e:\Migration\ContosoTPD.pfx -out e:\Migration\Contoso.pem -nodes
+		openssl pkcs12 -in e:\ContosoTPD.pfx -out e:\Contoso.pem -nodes
 
     You will be prompted for an import password and see a confirmation message of **MAC verified OK**.
 
@@ -82,13 +82,13 @@ Before you begin, make sure that your organization has a key vault that has been
 
 4. Convert your PEM file to a format that is accepted by Thales HSM. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
 
-		openssl.exe rsa -in "e:\Migration\Contoso.pem" -out e:\Migration\Contoso_converted.pem -outform PEM
+		openssl.exe rsa -in "e:\Contoso.pem" -out e:\Contoso_converted.pem -outform PEM
 
     This creates a Contoso_converted.pem file that you must secure from unauthorized access.
 
 5. By using your converted .PEM file, you can now import your key into your attached Thales HSM by using the following command:
 
-    	generatekey --import simple pemreadfile=e:\Migration\Contoso_converted.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    	generatekey --import simple pemreadfile=e:\Contoso_converted.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
     This will generate an output display similar to the following:
 
