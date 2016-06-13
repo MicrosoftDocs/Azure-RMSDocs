@@ -60,7 +60,7 @@ For other customers, use the following support channels, depending on how you ob
 
 - **Azure Rights Management with the Enterprise Mobility Suite**: If you also have Office 365, you can use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).  For more information, see [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx).
 
-- **Azure Rights Management Premium**: Open a support request in the Azure portal. To use this option, you must have an Azure subscription and an Azure support plan. For additional information, see Azure Support For Customers. 
+- **Azure Rights Management Premium**: Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For additional information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
 
 For additional support options, ask your Microsoft contact. 
 
