@@ -32,9 +32,10 @@ Authentication with Azure RMS for your app using Azure Active Directory Authenti
 
 Using this approach requires your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary. 
 
-  > [!Note] External authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
+  > [!Note] This form of authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
 
-## Here's and example of the mobile client code to enale Azure ADAL. For more information, see the full sample at [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
+## Code sample
+Here's and example of the mobile client code to enale Azure ADAL. For more information, see the full sample at [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 
 Use this code as an example of how to manage your own authentication tokens.
 
