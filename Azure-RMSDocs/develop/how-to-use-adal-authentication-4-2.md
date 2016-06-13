@@ -65,7 +65,10 @@ Use this code as an example of how to manage your own authentication tokens.
          mParentActivity = parentActivity;
          setADALKeyStore();
 
-         //Note: Following values of are client_id and redirect_uri are for demo purpose only.
+         /** 
+         * Note: Following values of are client_id and redirect_uri are for demo purpose only. 
+         * Your values will come from the preceeding Azure Portal process. 
+         */
          mClientId = "com.microsoft.rightsmanagement.sampleapp";
          mRedirectURI = mClientId + "://authorize";
        }
