@@ -94,7 +94,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **key generation parameters:**
 
-    **operation &nbsp &nbsp &nbsp &nbsp Operation to perform         import**
+    **operation &nbsp;&nbsp;&nbsp;&nbsp;Operation to perform         import**
 
     **application  Application                  simple**
 
