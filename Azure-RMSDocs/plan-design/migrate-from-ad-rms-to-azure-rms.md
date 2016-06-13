@@ -45,25 +45,25 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
 
-	- Windows Server 2008 (x86 or x64)
+    - Windows Server 2008 (x86 or x64)
 
-	- Windows Server 2008 R2 (x64)
+    - Windows Server 2008 R2 (x64)
 
-	- Windows Server 2012 (x64)
+    - Windows Server 2012 (x64)
 
-	- Windows Server 2012 R2 (x64)
+    - Windows Server 2012 R2 (x64)
 
-	Cryptographic Mode 2:
+    Cryptographic Mode 2:
 
     - Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
-	All valid AD RMS topologies are supported:
+    All valid AD RMS topologies are supported:
 
-	- Single forest, single RMS cluster
+    - Single forest, single RMS cluster
 
-	- Single forest, multiple licensing-only RMS clusters
+    - Single forest, multiple licensing-only RMS clusters
 
-	- Multiple forests, multiple RMS clusters
+    - Multiple forests, multiple RMS clusters
 
     **Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
