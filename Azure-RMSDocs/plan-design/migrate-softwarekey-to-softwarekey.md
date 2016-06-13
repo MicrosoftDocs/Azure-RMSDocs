@@ -39,7 +39,7 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
 
 ## To import the configuration data to Azure RMS
 
-1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure RMS (minimum version 2.1.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet.
+1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure RMS (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet.
 
     > [!TIP]
     > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm -ListAvailable).Version`
@@ -62,7 +62,7 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
 
     When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
 
-4.  When the command completes, repeat step 3 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
+4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
 
 5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
 
