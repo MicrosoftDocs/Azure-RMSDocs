@@ -160,8 +160,8 @@ Before you begin, make sure that your organization has a key vault that has been
     Disconnect-AadrmService
     ```
 
-    > [!TIP]
-    > If you later need to confirm the properties of your Azure RMS tenant key, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
+    > [!NOTE]
+    > If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).

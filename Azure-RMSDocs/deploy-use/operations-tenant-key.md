@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -37,7 +37,7 @@ The following table identifies which operations you can do, depending on the top
 
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revoke your tenant key|No (automatic)|No (automatic)|
+|Revoke your tenant key|No (automatic)|Yes|
 |Re-key your tenant key|Yes|Yes|
 |Backup and recover your tenant key|No|Yes|
 |Export your tenant key|Yes|No|
