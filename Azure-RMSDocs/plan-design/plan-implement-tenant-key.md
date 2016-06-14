@@ -98,7 +98,7 @@ For more information about Thales HSMs and how they are used with Azure Key Vaul
 
 To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) from the Azure Key Vault documentation.
 
-When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **/https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** You will need to tell Azure RMS to use this key, by using this URL.
+When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **/https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell Azure RMS to use this key, by using this URL.
 
 But before Azure RMS can use the key, Azure RMS must be authorized to use the key. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
 

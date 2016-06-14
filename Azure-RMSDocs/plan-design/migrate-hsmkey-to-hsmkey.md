@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -54,31 +54,13 @@ These procedures are done by the administrator for Azure Key Vault.
 
     -   Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key_(keyAppName)_(keyIdentifier)** locally on the server.
 
+    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to **/https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
+
 2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
     For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
 
     	Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
-
-3. Identify the URI for the key vault by using the [Get-AzureRMKeyVault](https://msdn.microsoft.com/library/mt603612.aspx ) cmdlet. The Azure RMS administrator will need this for the next step. For example, using the same example names for the resource group and key vault: 
-
-	Get-AzureRmKeyVault -ResourceGroupName "contoso-byok-rg" -VaultName "contoso-byok-kv"
-
-The output might look similar to this, which shows the key vault URI to be https://contoso-byok-kv.vault.azure.net/:
-
-**Vault Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contoso-byok-kv**
-
-**Resource Group Name &nbsp; : contoso-byok-rg**
-
-**Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : centralus**
-
-**Resource ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /subscriptions/aaaaaa-1234-5678/resourceGroups/contoso-byok-rg/providers/Microsoft.KeyVault/vaults/contoso-byok-kv**
-
-**Vault URI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : https://contoso-byok-kv.vault.azure.net/**
-
-**Tenant ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : aaaaaaaa-1235-5678**
-
-**SKU &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Premium**
 
 
 Now that you’ve prepared your HSM key in Azure Key Vault for Azure RMS, you’re ready to import your AD RMS configuration data.
@@ -91,12 +73,12 @@ These procedures are done by the administrator for Azure RMS.
 
     Then upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. 
 
-    To run this cmdlet, you will need the URI for the key vault that was identified in the previous step.
+    To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
-    For example, using our key vault URI value from the previous step, you would run:
+    For example, using our key URL value from the previous step, you would run:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/ -Active $True -Verbose
+    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
 
     When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
