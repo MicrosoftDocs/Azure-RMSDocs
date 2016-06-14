@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -64,11 +64,11 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Additional information for this command:
 
-    -   The /tpd: specifies the full path to the TPD file. The full parameter name is TpdFilePath.
+    -   The **/tpd**: specifies the full path to the TPD file. The full parameter name is **TpdFilePath**.
 
-    -   The /pfx: specifies  the output of the .PFX file name. The full parameter name is OutPfxFile. 
+    -   The **/pfx**: specifies  the output of the .PFX file name. The full parameter name is **OutPfxFile**. 
 
-    -   If you don't specify the password when you run this command (by using the TpdPassword full parameter name or pwd short parameter name), you will be prompted to specify it.
+    -   If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
 
     This command results in the .PFX file (by default, RmsoTDP.pfx) in the current directory.
 
@@ -114,7 +114,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
-    Now that your SLC has been extracted so that it’s an HSM-based key, you’re ready to package and transfer it to Azure Key Vault.
+    Now that your SLC has been extracted so that it’s an HSM-protected key, you’re ready to package it and transfer this key to Azure Key Vault.
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
@@ -136,7 +136,12 @@ Before you begin, make sure that your organization has a key vault that has been
 
 1.  Azure RMS administrator: Still on the Internet-connected workstation and in the PowerShell session, copy over the RMS configuration files with the SLC removed.
 
-2.  Upload the first file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. Use the following command:
+2. Upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
+
+    To run this cmdlet, you will need the URL for the key that was identified in the previous step.
+
+    For example, using our key URL value from the previous step, you would run:
+
 
     ```
     Import-AadrmTpd -TpdFile <PathToNoKeyTpdPackageFile> -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
@@ -148,6 +153,15 @@ Before you begin, make sure that your organization has a key vault that has been
 
     > [!IMPORTANT]
     > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+
+3.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
+
+    ```
+    Disconnect-AadrmService
+    ```
+
+    > [!TIP]
+    > If you later need to confirm the properties of your Azure RMS tenant key, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
