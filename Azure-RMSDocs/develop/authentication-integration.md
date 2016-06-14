@@ -33,8 +33,6 @@ User authentication is an essential step to establish communication between your
 
 **Note**  Scope is not currently used but may be and is therefore reserved for future use.
 
- 
-
 **User authentication callback** - The Microsoft Rights Management SDK 4.2 will use your implementation of an authentication callback when you don’t provide an access token, when your access token needs to be refreshed or when the access token is expired.
 
 Each of the platform's RMS APIs has a callback that must implement in order to enable the user's authentication.
