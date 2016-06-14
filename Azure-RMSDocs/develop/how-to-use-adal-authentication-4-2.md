@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ADAL authentication for your RMS enabled mobile application | Azure RMS
+title: Use Azure Portal to configure for RMS authentication | Azure RMS
 description: Outlines the process for authentication with ADAL
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# How-to: use ADAL authentication
+# How to: Use Azure Portal to configure for RMS authentication
 
 Authentication with Azure RMS for your app using Azure Active Directory Authentication Library (ADAL).
 
