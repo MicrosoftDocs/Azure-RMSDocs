@@ -98,9 +98,9 @@ For more information about Thales HSMs and how they are used with Azure Key Vaul
 
 To generate and transfer your own tenant key to Azure Key Vault, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) from the Azure Key Vault documentation.
 
-When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell Azure RMS to use this key, by using this URL.
+When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell Azure RMS to use this key, by specifying this URL.
 
-But before Azure RMS can use the key, Azure RMS must be authorized to use the key. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
+But before Azure RMS can use the key, Azure RMS must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
@@ -113,6 +113,10 @@ Then run the Add-AadrmKeyVaultKey cmdlet command, specifying the key URL:
 	Add-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
 When you run this command, it verifies that your Azure RMS tenant can access this key in Key Vault.
+
+If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
+
+If you need to confirm that the key URL is set correctly in Azure RMS, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) to see the key URL.
 
 
 ## Next steps
