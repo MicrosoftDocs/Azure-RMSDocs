@@ -114,7 +114,7 @@ Then run the Add-AadrmKeyVaultKey cmdlet command, specifying the key URL:
 
 When you run this command, it verifies that your Azure RMS tenant can access this key in Key Vault.
 
-If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
+If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet. The key that you are currently using as your Azure RMS tenant key will have the status of **Active**, the key type will display **Tenant managed (BYOK)** and the key that you are using in Azure Key Vault will be displayed as the **KeyVaultUrl**. 
 
 If you need to confirm that the key URL is set correctly in Azure RMS, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) to see the key URL.
 
