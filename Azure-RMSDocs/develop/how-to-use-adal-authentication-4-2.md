@@ -58,7 +58,7 @@ Here's a code snip from the larger sample for mobile client code to enale Azure 
          mClientId = "com.microsoft.rightsmanagement.sampleapp";
          mRedirectURI = mClientId + "://authorize";
        }
-   }
+
 
 ## Related topics
 
