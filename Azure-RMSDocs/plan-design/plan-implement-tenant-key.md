@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, contact Microsoft Support before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
-> Also contact Microsoft Support if your organization has specific policies for handling keys.
+> Also [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) if your organization has specific policies for handling keys.
 
 ### Prerequisites for BYOK
 See the following table for a list of prerequisites for bring your own key (BYOK).
@@ -111,8 +111,6 @@ You're now ready to configure Azure RMS to use this key as your organization's A
 Then run the Add-AadrmKeyVaultKey cmdlet command, specifying the key URL:
 
 	Add-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
-
-When you run this command, it verifies that your Azure RMS tenant can access this key in Key Vault.
 
 If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet. The key that you are currently using as your Azure RMS tenant key will have the status of **Active**, the key type will display **Tenant managed (BYOK)** and the key that you are using in Azure Key Vault will be displayed as the **KeyVaultUrl**. 
 

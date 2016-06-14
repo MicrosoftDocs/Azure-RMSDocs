@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -45,12 +45,11 @@ After decommissioning your AD RMS servers, you might want to take the opportunit
 ## Step 9. Re-key your Azure RMS tenant key
 This step is applicable only if your chosen tenant key topology is Microsoft-managed rather than customer-managed (BYOK with Azure Key Vault).
 
-This step is optional but recommended when your Azure RMS tenant key is managed by Microsoft and has been migrated from AD RMS. Re-keying in this scenario helps to protect your Azure RMS tenant key from potential security breaches to your AD RMS key. 
+This step is optional but recommended when your Azure RMS tenant key is managed by Microsoft and has been migrated from AD RMS. Re-keying in this scenario helps to protect your Azure RMS tenant key from potential security breaches to your AD RMS key.
 
 When you re-key your Azure RMS tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure RMS tenant key as soon as the migration is complete.
 
-To re-key your Azure RMS tenant key, contact Microsoft Support and open an **Azure Rights Management support case with a request to re-key your Azure RMS key after migration from AD RMS**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
-
+To re-key your Microsoft-managed Azure RMS tenant key, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) and open an **Azure Rights Management support case with a request to re-key your Azure RMS key after migration from AD RMS**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
 
 ## Next steps
 
