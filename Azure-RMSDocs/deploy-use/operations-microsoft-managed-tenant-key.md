@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ Re-keying is also known as rolling your key. Do not re-key your tenant key unles
 
 -   You believe the master copy of your tenant key (the copy in your possession) was compromised.
 
-You can re-key your tenant key by calling Microsoft Customer Support Services (CSS) and proving that you are the tenant administrator.
+You can re-key your tenant key by [contacting Microsoft support](../get-started/information-support#support-options-and-community-resources) to open an **Azure Rights Management support case with a request to re-key your Azure RMS tenant key**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
 
 When you re-key your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure RMS retains your old tenant key so that it can issue licenses for old content.
 
@@ -54,7 +54,7 @@ You can export your Azure RMS configuration and tenant key by following the inst
 
 ### Step 1: Initiate export
 
--   To do this, contact Microsoft Customer Service Support (CSS) to open an **Azure Rights Management support case with a request for an Azure RMS key export**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; exporting your tenant key is a not a free-of-charge support service.
+-   To do this, [contact Microsoft Support](../get-started/information-support#support-options-and-community-resources) to open an **Azure Rights Management support case with a request for an Azure RMS key export**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; exporting your tenant key is a not a free-of-charge support service.
 
 ### Step 2: Wait for verification
 
