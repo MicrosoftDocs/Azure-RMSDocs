@@ -29,8 +29,7 @@ The focus of Microsoft Rights Management SDK 4.2 is to help you build AD RMS-en
 
 The following topics are intended to support your design process for developing RMS-enabled applications.
 
-- [How to: Add authentication to your app](authentication-integration.md) - Describes the basics of user authentication for your RMS-enabled app.
-- [How to: use Azure Portal to configure for RMS authentication](how-to-use-adal-authentication-4-2.md) - Guides you through the process of configuring your Azure tenant and RMS account.
+- [How to: Add ADAL authentication to your app](authentication-integration.md) - Describes the basics of user authentication for your RMS-enabled app.
 - [How to: Enable error and performance logging](enabling-logging.md) - RMS SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 - [How to: Get an Azure Application ID](application-id.md) - Creating an RMS-enabled app with the MS RMS SDK 4.2 requires you to create an agreement with the RMS Team.
 - [How to: Use built-in rights](built-in-rights-usage-restriction-reference.md) - Outlines the built-in rights that the RMS SDK 4.2 provides and usage restrictions that an app should enforce in honoring those restrictions.
