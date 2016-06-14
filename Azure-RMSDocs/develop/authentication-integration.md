@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How to&#58; Add authentication to your app | Azure RMS
+title: How to add ADAL authentication to your app | Azure RMS
 description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
 author: bruceperlerms
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# How to: Add authentication to your app
+# How to: Add ADAL authentication to your app
 
 This topic describes the basics of user authentication for your RMS-enabled app.
 
@@ -73,6 +73,11 @@ These parameters and guidelines are required for RMS work-flows:
     iOS: `<app-scheme>://<bundle-id>`
 
 **Note**  If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
+
+## Configure via Azure portal
+
+Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the *client ID* and *redirection URI* from this process for use later.
+
 
 ## What should an authentication callback implementation look like
 
