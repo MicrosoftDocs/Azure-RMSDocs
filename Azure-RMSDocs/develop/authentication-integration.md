@@ -31,7 +31,7 @@ This topic will guide you through the basics of user authentication using the Az
 ## What is user authentication
 User authentication is an essential step to establish communication between your device app and the RMS infrastructure. This authentication process uses the standard OAuth 2.0 protocol which requires key pieces of information about the current user and the authentication request.
 
-## Registration
+## Registration via Azure portal
 Begin by following this guide for configuring your app's registration through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the **Client ID** and **Redirect Uri** from this process for use later.
 
 ## Implement user authentication for your app
