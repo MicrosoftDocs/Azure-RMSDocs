@@ -50,7 +50,7 @@ For information about the run-time requirements for a particular programming ele
 |[Release notes](release-notes-rtm.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
 |[Code samples](samples.md)|This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.|
 |[Developer notes](developer-notes.md)|This section covers specific guidance for several important development scenarios.|
-|[API reference](/rights-management/sdk/2.1/api/win/constants)|This section contains topics covering reference material for all of the API elements.|
+|[API reference](api-reference-2-1.md)|This section contains topics covering reference material for all of the API elements.|
 
  
 
