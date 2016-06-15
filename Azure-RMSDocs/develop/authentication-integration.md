@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How to register and RMS enable your app with Azure AD
 
-This topic will guide you through the basics of user authentication using the Azure Active Director Authentication Library (ADAL) and, through the Azure Portal, app registration and RMS enablement for your app.
+This topic will guide you through the basics of app registration and RMS enablement through the Azure portal followed by user authentication with the Azure Active Directory Authentication Library (ADAL).
 
 ## What is user authentication
 User authentication is an essential step to establish communication between your device app and the RMS infrastructure. This authentication process uses the standard OAuth 2.0 protocol which requires key pieces of information about the current user and the authentication request.
