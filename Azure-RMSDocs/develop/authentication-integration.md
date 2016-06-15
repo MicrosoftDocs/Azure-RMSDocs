@@ -42,7 +42,7 @@ Each RMS API has a callback that must be implemented in order to enable the user
 -  Windows Phone / Window RT -  [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
 - Linux -  [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
-## What library to use for authentication
+### What library to use for authentication
 In order to implement your authentication callback you will need to download an appropriate library and configure your development environment to use it. You will find the ADAL libraries on GitHub for these platforms.
 
 Each of the following resources contains guidance to setup your environment and use the library.
@@ -55,7 +55,7 @@ Each of the following resources contains guidance to setup your environment and 
 
 [!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
 
-## Inputs for authentication
+### Inputs for authentication
 
 ADAL requires several parameters to successfully authenticate a user to Azure RMS (or AD RMS). These are the standard OAuth 2.0 parameters that are generally required of any Azure AD app, as with RMS-enabled apps. You can find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
 
@@ -74,7 +74,7 @@ and comes from the previous registration step via the Azure portal.
 
 [!NOTE] **Scope** is not currently used but may be and is therefore reserved for future use.
 
-## What should an authentication callback implementation look like
+### What should an authentication callback implementation look like
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.
 
 **Android user authentication** - for more information, see [Android code examples](android-code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
