@@ -6,7 +6,7 @@ description: Describes the basics of user authentication for your RMS-enabled ap
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
