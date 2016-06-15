@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How to register and enable your app with Azure AD | Azure RMS
+title: How to register and RMS enable your app with Azure AD | Azure RMS
 description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
 author: bruceperlerms
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# How to: register and enable your app with Azure AD
+# How to register and RMS enable your app with Azure AD
 
 This topic will guide you through the basics of user authentication using the Azure Active Director Authentication Library (ADAL) and, through the Azure Portal, app registration and RMS enablement for your app.
 

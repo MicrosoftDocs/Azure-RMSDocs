@@ -21,7 +21,7 @@
 #### [iOS/OS X code examples](ios-os-x-code-examples.md)
 #### [Community resources](community-resources.md)
 ### [Developer guidance and terms](core-concepts.md)
-#### [How to register and enable your app with Azure AD](authentication-integration.md)
+#### [How to register and RMS enable your app with Azure AD](authentication-integration.md)
 #### [How to enable error and performance logging](enabling-logging.md)
 #### [How to use built-in rights](built-in-rights-usage-restriction-reference.md)
 #### [How to use document tracking](how-to-use-document-tracking.md)
