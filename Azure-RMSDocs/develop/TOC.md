@@ -21,7 +21,7 @@
 #### [iOS/OS X code examples](ios-os-x-code-examples.md)
 #### [Community resources](community-resources.md)
 ### [Developer guidance and terms](core-concepts.md)
-#### [How to: Add ADAL authentication to your app](authentication-integration.md)
+#### [How to: register and enable your app with Azure AD](authentication-integration.md)
 #### [How to: Enable error and performance logging](enabling-logging.md)
 #### [How to: Get an Azure Application ID](application-id.md)
 #### [How to: Use built-in rights](built-in-rights-usage-restriction-reference.md)
