@@ -24,27 +24,28 @@ ms.suite: ems
 
 ---
 
-# How to: Add ADAL authentication to your app
+# How to: register and enable your app in Azure AD
 
-This topic describes the basics of user authentication for your RMS-enabled app.
+This topic will guide you through the basics of user authentication using the Azure Active Director Authentication Library (ADAL) and, through the Azure Portal, app registration and RMS enablement for your app.
 
 ## What is user authentication
-User authentication is an essential step to establish communication between your device app and the RMS infrastructure. This authentication process uses the standard OAuth 2.0 protocol which requires the following pieces of information about the current user and his/her authentication request; **authority**, **resource** and **userId**.
+User authentication is an essential step to establish communication between your device app and the RMS infrastructure. This authentication process uses the standard OAuth 2.0 protocol which requires key pieces of information about the current user and the authentication request.
 
-**Note**  Scope is not currently used but may be and is therefore reserved for future use.
+## Registration
+Begin by following this guide for configuring your app's registration through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the **Client ID** and **Redirect Uri** from this process for use later.
 
-**User authentication callback** - The Microsoft Rights Management SDK 4.2 will use your implementation of an authentication callback when you don’t provide an access token, when your access token needs to be refreshed or when the access token is expired.
+## Implement user authentication for your app
+Each RMS API has a callback that must be implemented in order to enable the user's authentication. The RMS SDK 4.2 will then use your implementation of the callback when you do not provide an access token, when your access token needs to be refreshed or when the access token is expired.
 
-Each of the platform's RMS APIs has a callback that must implement in order to enable the user's authentication.
-
--   The Android API uses [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
--   The iOS/OS X API uses [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
--   The WinPhone API uses [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
--   The Linux API uses [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
+- Android -  [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
+- iOS / OS X -  [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
+-  Windows Phone / Window RT -  [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
+- Linux -  [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ## What library to use for authentication
+In order to implement your authentication callback you will need to download an appropriate library and configure your development environment to use it. You will find the ADAL libraries on GitHub for these platforms.
 
-In order to implement your authentication callback you will need to download an appropriate library and configure your development environment to use it. You will find the ADAL libraries on GitHub for these platforms. Each of the following resources contains guidance to setup your environment and use the library.
+Each of the following resources contains guidance to setup your environment and use the library.
 
 -   [Windows Azure Active Directory Authentication Library (ADAL) for iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
 -   [Windows Azure Active Directory Authentication Library (ADAL) for Mac](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/)
@@ -52,33 +53,28 @@ In order to implement your authentication callback you will need to download an 
 -   [Windows Azure Active Directory Authentication Library (ADAL) for dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   For Linux SDK, the ADAL library is packaged with the SDK source, available via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
-**Note**  We recommend that you use one of the above Active Directory Authentication Libraries (ADAL) although you may use other authentication libraries.
+[!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
 
-## Inputs for authentication with Azure Active Director Authentication Library (ADAL)
+## Inputs for authentication
 
-The ADAL requires several parameters to successfully authenticate a user to Azure RMS (or AD RMS). These are the standard OAuth 2.0 parameters that are generally required of any Azure AD app, as with RMS-enabled apps. You can find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
+ADAL requires several parameters to successfully authenticate a user to Azure RMS (or AD RMS). These are the standard OAuth 2.0 parameters that are generally required of any Azure AD app, as with RMS-enabled apps. You can find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
 
-These parameters and guidelines are required for RMS work-flows:
-
--   **Authority** – the URL for the authentication end-point, usually AAD or ADFS. This parameter is provided to your app by the RMS SDK authentication callback.
--   **Resource** - the URL/URI of the service application you are trying to access, usually Azure RMS or AD RMS. This parameter is provided to your app by the RMS SDK authentication callback.
--   **User Id** – the UPN, usually email address, of the user who wants to access the app. This parameter can be empty if the user is not yet known, and is also used for caching the user token or requesting a token from the cache. This is also generally used as a ‘hint’ for user prompting.
--   **Client Id** – the ID of your client app. This must be a valid Azure AD application ID. For more information, see How to: Get an Azure Application ID.
--   **Redirect Uri** – provides the authentication library with a URI target for the authentication code. Note that specific formats are required for iOS and Android, and are explained in the README files of the corresponding GitHub repositories of ADAL.
+- **Authority** – the URL for the authentication end-point, usually AAD or ADFS.
+- **Resource** - the URL/URI of the service application you are trying to access, usually Azure RMS or AD RMS.
+- **User Id** – the UPN, usually email address, of the user who wants to access the app. This parameter can be empty if the user is not yet known, and is also used for caching the user token or requesting a token from the cache. It is also generally used as a *hint* for user prompting.
+- **Client Id** – the ID of your client app. This must be a valid Azure AD application ID.
+and comes from the previous registration step via the Azure portal.
+- **Redirect Uri** – provides the authentication library with a URI target for the authentication code. Specific formats are required for iOS and Android. These are explained in the README files of the corresponding GitHub repositories of ADAL. This value comes from the previous registration step via the Azure  portal.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
-**Note**  If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
+[!NOTE] If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
 
-## Configure via Azure portal
-
-Begin by following this guide for configuring through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the *client ID* and *redirection URI* from this process for use later.
-
+[!NOTE] **Scope** is not currently used but may be and is therefore reserved for future use.
 
 ## What should an authentication callback implementation look like
-
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.
 
 **Android user authentication** - for more information, see [Android code examples](android-code.md), **Step 2** of the first scenario, "Consuming an RMS protected file".
@@ -157,8 +153,7 @@ Begin by following this guide for configuring through the Azure portal, [Configu
 
 
 **iOS/OS X user authentication** - for more information, see [iOS/OS X code examples](ios-os-x-code-examples.md),
-
-**Step 2** of the first scenario, "Consuming an RMS protected file".
+*Step 2 of the first scenario, "Consuming an RMS protected file".*
 
 
     // AuthenticationCallback holds the necessary information to retrieve an access token.
@@ -206,7 +201,7 @@ Begin by following this guide for configuring through the Azure portal, [Configu
 
 
 
-**Linux / C++ user authentication** - for more information, see [Linux code examples](linux-c-code-examples.md).
+**Linux user authentication** - for more information, see [Linux code examples](linux-c-code-examples.md).
 
 
 
