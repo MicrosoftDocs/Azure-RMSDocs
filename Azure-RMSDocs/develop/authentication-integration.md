@@ -37,9 +37,9 @@ Begin by following this guide for configuring your app's registration through th
 ## Implement user authentication for your app
 Each RMS API has a callback that must be implemented in order to enable the user's authentication. The RMS SDK 4.2 will then use your implementation of the callback when you do not provide an access token, when your access token needs to be refreshed or when the access token is expired.
 
-- Android -  [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [**AuthenticationCompletionCallback**](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
-- iOS / OS X -  [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
--  Windows Phone / Window RT -  [**IAuthenticationCallback**](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
+- Android -  [AuthenticationRequestCallback](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [AuthenticationCompletionCallback](/rights-management/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
+- iOS / OS X -  [MSAuthenticationCallback](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
+-  Windows Phone / Window RT -  [IAuthenticationCallback](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
 - Linux -  [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ### What library to use for authentication
@@ -53,7 +53,7 @@ Each of the following resources contains guidance to setup your environment and 
 -   [Windows Azure Active Directory Authentication Library (ADAL) for dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   For Linux SDK, the ADAL library is packaged with the SDK source, available via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
-[!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
+>[!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
 
 ### Inputs for authentication
 
@@ -66,13 +66,13 @@ ADAL requires several parameters to successfully authenticate a user to Azure RM
 and comes from the previous registration step via the Azure portal.
 - **Redirect Uri** – provides the authentication library with a URI target for the authentication code. Specific formats are required for iOS and Android. These are explained in the README files of the corresponding GitHub repositories of ADAL. This value comes from the previous registration step via the Azure  portal.
 
+>[!NOTE] **Scope** is not currently used but may be and is therefore reserved for future use.
+
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
-[!NOTE] If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
-
-[!NOTE] **Scope** is not currently used but may be and is therefore reserved for future use.
+>[!NOTE] If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
 
 ### What should an authentication callback implementation look like
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.
