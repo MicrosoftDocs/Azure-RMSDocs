@@ -55,9 +55,9 @@ Each of the following resources contains guidance to setup your environment and 
 
 >[!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
 
-### Inputs for authentication
+### Authentication parameters
 
-ADAL requires several parameters to successfully authenticate a user to Azure RMS (or AD RMS). These are the standard OAuth 2.0 parameters that are generally required of any Azure AD app, as with RMS-enabled apps. You can find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
+ADAL requires several pieces of information to successfully authenticate a user to Azure RMS (or AD RMS). These are standard OAuth 2.0 parameters and are generally required of any Azure AD app. You will find the current guidelines for ADAL usage in the README file of the corresponding Github repositories, listed previously.
 
 - **Authority** – the URL for the authentication end-point, usually AAD or ADFS.
 - **Resource** - the URL/URI of the service application you are trying to access, usually Azure RMS or AD RMS.
