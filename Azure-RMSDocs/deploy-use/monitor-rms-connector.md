@@ -174,27 +174,7 @@ For additional information and instructions, see the **Details** and **Install I
 
 ## Logging
 
-Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name that is automatically generated for each server on which you install the RMS connector.
-
-The service principal name is based on the SID of the computer and user who installed the RMS connector and can be identified in Azure Active Directory by the display name of "Microsoft.Azure.ActiveDirectoryRightsManagement". The service principal name will be "Aadrm_<SID>". You can use PowerShell to connect to Azure Active Directory and then use the [Get-MsolServicePrincipal](https://msdn.microsoft.com/library/dn194099.aspx) cmdlet to find the service principal name for the servers running the RMS connector. For example:
-
-First connect to Azure AD and when prompted, enter your admin credentials:
-
-```
-Connect-MsolService
-```
-
-Then run the following command to find all service principal accounts for your Azure RMS tenant, based on the display name for Azure RMS:
-
-```
-Get-MsolServicePrincipal | where-object {$_.DisplayName -eq "Microsoft.Azure.ActiveDirectoryRightsManagement"}
-```
-
-Or run the following command to find all service principal accounts by using the base name of "Aadrm_":
-
-```
-Get-MsolServicePrincipal | where-object {$_.ServicePrincipalNames -like "Aadrm_*"}
-```
+Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically generated for the RMS connector.
 
 For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
 
