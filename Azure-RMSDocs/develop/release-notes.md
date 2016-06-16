@@ -41,9 +41,9 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 
 ### New for June 2016
 
-- Added support for Modern Authentication (EvoSts)
-- Document Tracking support - developers can now enable document tracking when protecting a document in their app 
-
+- Multi-factor authentication is now supported
+- Document Tracking support - developers can now enable document tracking when protecting a document in their app
+- We've improved performance for consuming files
 
 ### December 2015 Update
 
