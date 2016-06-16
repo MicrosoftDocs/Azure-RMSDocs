@@ -184,13 +184,13 @@ First connect to Azure AD and when prompted, enter your admin credentials:
 Connect-MsolService
 ```
 
-Then run the following command to find all service principal accounts, based on the display name for Azure RMS:
+Then run the following command to find all service principal accounts for your Azure RMS tenant, based on the display name for Azure RMS:
 
 ```
 Get-MsolServicePrincipal | where-object {$_.DisplayName -eq "Microsoft.Azure.ActiveDirectoryRightsManagement"}
 ```
 
-Or the following command to find all service principal accounts, using the base name of "Aadrm_":
+Or run the following command to find all service principal accounts by using the base name of "Aadrm_":
 
 ```
 Get-MsolServicePrincipal | where-object {$_.ServicePrincipalNames -like "Aadrm_*"}
