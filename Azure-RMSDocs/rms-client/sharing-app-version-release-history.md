@@ -41,7 +41,7 @@ Versions before January 1, 2015 are not listed.
 
 **Fixes**:
 
-- Document tracking site now shows the correct number of views for each tracked document.
+- The document tracking site now shows the correct number of views for each tracked document.
 
 - Templates for all locales are now displayed as available to users.
 
