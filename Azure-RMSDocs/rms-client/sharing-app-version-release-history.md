@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -41,11 +41,9 @@ Versions before January 1, 2015 are not listed.
 
 **Fixes**:
 
+- Document tracking site now shows the correct number of views for each tracked document.
+
 - Templates for all locales are now displayed as available to users.
-
-- Support for UPN value that is different from the email address value.
-
-- Support for organizations that do not have any templates.
 
 - After using Share Protected for a PowerPoint file, changes to the local version of the file are now saved correctly.
 
