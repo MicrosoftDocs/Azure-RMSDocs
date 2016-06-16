@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -75,10 +75,10 @@ These procedures are done by the administrator for Azure RMS.
 
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
-    For example, using our key URL value from the previous step, you would run:
+    For example, using our key URL value from the previous step and a TPD file of C:\contoso-tpd1.xml, you would run:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
 
     When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
