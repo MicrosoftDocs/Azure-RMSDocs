@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,6 +35,22 @@ Versions before January 1, 2015 are not listed.
 
 > [!NOTE]
 > If you have feedback or a question about the RMS sharing application, send an email message to [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Version 1.0.2191.0
+**Released**: 06/16/2016
+
+**Fixes**:
+
+- Templates for all locales are now displayed as available to users.
+
+- Support for UPN value that is different from the email address value.
+
+- Support for organizations that do not have any templates.
+
+- After using Share Protected for a PowerPoint file, changes to the local version of the file are now saved correctly.
+
+- Small number of minor bugs and improvements for error messages.
+
 
 ## Version 1.0.2004.0
 **Released**: 12/11/2015
