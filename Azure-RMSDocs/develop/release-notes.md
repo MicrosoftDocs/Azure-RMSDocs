@@ -41,8 +41,8 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 
 ### New for June 2016
 
-- Multi-factor authentication is now supported
-- Document Tracking support - developers can now enable document tracking when protecting a document in their app
+- **Support for Modern Authentication** - this will bring Active Directory Authentication Library (ADAL), based sign-in to RMS enlightened apps. It enables sign-in features such as Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
+- **Document Tracking support** - developers can now enable document tracking when protecting document in their apps 
 - We've improved performance for consuming files
 
 ### December 2015 Update
