@@ -54,7 +54,7 @@ Use the following sections to identify the possible event IDs, descriptions, and
 
 -----
 
-Informational **1000**
+Information **1000**
 
 **The Microsoft RMS connector web service has started.**
 
@@ -62,7 +62,7 @@ This event is logged when the RMS connector first attempts to start.
 
 ----
 
-Informational **1001**
+Information **1001**
 
 **The Microsoft RMS connector web service has stopped.**
 
@@ -70,7 +70,7 @@ This event is logged when the RMS connector stops as a result of normal operatio
 
 ----
 
-Informational **1002**
+Information **1002**
 
 **Access to the Microsoft RMS connector has been allowed for an authorized server.**
 
@@ -78,7 +78,7 @@ This event is logged when an account from an on-premises server first connects t
 
 ----
 
-Informational **1003**
+Information **1003**
 
 **The connection from the client listed below has switched from a non-secure (HTTP) connection to a secure (HTTPS) connection.**
 
@@ -86,7 +86,7 @@ This event is logged when an on-premises server changes its connection to the RM
 
 ----
 
-Informational **1004**
+Information **1004**
 
 **The list of authorized accounts has been updated.**
 
@@ -108,11 +108,11 @@ Warning **2001**
 
 This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from Azure RMS.  For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
 
-Another reason can be if you installed the RMS connector on the same server that is configured to use the connector . For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because  the RMS connector cannot correctly identify the account when it attempts to connect.
+Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because  the RMS connector cannot correctly identify the account when it attempts to connect.
 
 The event message contains information about the account and computer trying to connect to the RMS connector:
 
-- If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more Informational about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector# add-a-server-to-the-list-of-allowed-servers). 
+- If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more information about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector# add-a-server-to-the-list-of-allowed-servers). 
 
 - If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the perquisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector#prerequisites-for-the-rms-connector).
 
@@ -126,7 +126,7 @@ This event is logged when an on-premises server makes a successful connection to
 
 The event message contains the account SID, account name, and the name of the computer that makes the connection to the RMS connector.
 
-For informational about how to configure the RMS connector for HTTPS connections, see [Configuring the RMS connector to use HTTPS](install-configure-rms-connector#configuring-the-rms-connector-to-use-https).
+For information about how to configure the RMS connector for HTTPS connections, see [Configuring the RMS connector to use HTTPS](install-configure-rms-connector#configuring-the-rms-connector-to-use-https).
 
 ----
 
@@ -136,7 +136,7 @@ Warning **2003**
 
 This event is logged when the RMS connector does not have a list of authorized accounts, so no on-premises servers can connect to it. The RMS connector downloads the list every 15 minutes from Azure RMS. 
 
-To specify the accounts, use the RMS connector administrator tool. For more Informational, see [Authorizing servers to use the RMS connector]( install-configure-rms-connector#authorizing-servers-to-use-the-rms-connector). 
+To specify the accounts, use the RMS connector administrator tool. For more information, see [Authorizing servers to use the RMS connector]( install-configure-rms-connector#authorizing-servers-to-use-the-rms-connector). 
 
 ----
 
