@@ -82,7 +82,7 @@ Troubleshooting:
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 
-### Communnity resources
+### Community resources
 
 -   [Yammer: Microsoft Rights Management (RMS)](http://www.yammer.com/AskIPTeam)
 
