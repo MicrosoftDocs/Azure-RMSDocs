@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -122,6 +122,17 @@ Instructions for this step are fully covered in the [Activating Azure Rights Man
 **What if your Azure RMS tenant is already activated?** If the Azure RMS service is already activated for your organization, users might have already used Azure RMS to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
 
 If your Azure RMS tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS_RUN_Elevated.cmd script on these computers, as described in Step 5. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
+
+In addition, if you created custom templates before the migration, these will become archived after the migration. Because they were created with your original Azure RMS tenant key that will become archived as part of the migration, you cannot simply republish the templates in the Azure classic portal as part of the next step. Instead, you will need to do the following to republish these templates after the migration is complete: 
+
+1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx). 
+
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
+
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+
+4. You can now set these templates to be published by using the Azure classic portal or by using the [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/dn727076.aspx) cmdlet.
+
 
 ## Step 4. Configure imported templates
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with Azure RMS.
