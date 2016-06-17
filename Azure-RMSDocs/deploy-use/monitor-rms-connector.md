@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -174,7 +174,7 @@ For additional information and instructions, see the **Details** and **Install I
 
 ## Logging
 
-Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically generated for the RMS connector.
+Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically created for the RMS connector.
 
 For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
 
