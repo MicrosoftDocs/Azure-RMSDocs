@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 06/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -132,7 +132,7 @@ For information about how to configure the RMS connector for HTTPS connections, 
 
 Warning **2003**
 
-**The list of authorizations is empty. The service will not be usable until the list of authorized users and groups for the connector is populated. **
+**The list of authorizations is empty. The service will not be usable until the list of authorized users and groups for the connector is populated.**
 
 This event is logged when the RMS connector does not have a list of authorized accounts, so no on-premises servers can connect to it. The RMS connector downloads the list every 15 minutes from Azure RMS. 
 
