@@ -1,8 +1,8 @@
 ﻿---
 # required metadata
 
-title: Working with encryption | Azure RMS
-description: orients you to our encryption packages
+title: How-to work with encryption settings | Azure RMS
+description: This article orients you to our encryption packages
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Working with encryption
+# How-to: work with encryption settings
 
 This topic orients you to our encryption packages and shows some code snips for their use.
 
@@ -58,49 +58,49 @@ Getting the benefit of the old deprecated encryption algorithms flag can still b
 
 No change in code needed, *AES 256* CBC4K is the default.
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
 
 ## Protect Files with AES-128 CBC4K
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K; 
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
+
 
 ## Protect Files with AES-128 ECB (Deprecated Algorithms)
 
 This sample also shows the new way of supporting *deprecated algorithms*.
 
+    C++
     
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
     DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE, 
+                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
- 
 
  
 
-
-
+ 

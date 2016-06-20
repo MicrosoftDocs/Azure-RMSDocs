@@ -45,6 +45,9 @@ For Windows clients:
 
 2.  Follow the instructions in the redirection script (Redirect_OnPrem.cmd) to modify the script to point to your new Azure RMS tenant.
 
+    > [!IMPORTANT]
+    > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
+
 3.  On the Windows computers, run these scripts with elevated privileges in the user’s context.
 
 For mobile device clients and Mac computers:

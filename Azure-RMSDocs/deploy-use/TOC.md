@@ -22,6 +22,7 @@
 ### [Install and configure the connector](install-configure-rms-connector.md)
 ### [Configure servers](configure-servers-rms-connector.md)
 #### [Registry settings](rms-connector-registry-settings.md)
+### [Monitor the connector](monitor-rms-connector.md)
 ## [Verifying Azure RMS](verify.md)
 ## [Helping users to protect files](help-users.md)
 ## [Logging and analyzing usage](log-analyze-usage.md)

@@ -43,11 +43,7 @@ For more information on the files installed on your system by "setup\_sdk.exe", 
 
 ## Related topics
 
-* [How-to use](how-to-use-msipc.md)
 * [Development environment files](sdk-elements.md)
  
 
  
-
-
-

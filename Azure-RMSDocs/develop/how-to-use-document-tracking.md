@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: How to&#58; Use document tracking | Azure RMS
+title: How to use document tracking | Azure RMS
 description: The document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
 keywords:
 author: bruceperlerms
@@ -65,6 +65,3 @@ The sequence of steps you will use to setup document tracking for a given piece 
  
 
  
-
-
-
