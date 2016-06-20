@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 06/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -114,7 +114,7 @@ The event message contains information about the account and computer trying to 
 
 - If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more information about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector# add-a-server-to-the-list-of-allowed-servers). 
 
-- If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the perquisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector#prerequisites-for-the-rms-connector).
+- If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the prerequisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector#prerequisites-for-the-rms-connector).
 
 ----
 
@@ -132,7 +132,7 @@ For information about how to configure the RMS connector for HTTPS connections, 
 
 Warning **2003**
 
-**The list of authorizations is empty. The service will not be usable until the list of authorized users and groups for the connector is populated. **
+**The list of authorizations is empty. The service will not be usable until the list of authorized users and groups for the connector is populated.**
 
 This event is logged when the RMS connector does not have a list of authorized accounts, so no on-premises servers can connect to it. The RMS connector downloads the list every 15 minutes from Azure RMS. 
 
