@@ -111,9 +111,9 @@ Before you start these procedures, make sure that you can access the .xml files 
 To complete Step 2, choose and select the instructions for your migration path: 
 
 
-- [Software key to software key](migrate-softwarekey-to-softwarekey.md)
-- [HSM key to HSM key](migrate-hsmkey-to-hsmkey.md)
-- [Software key to HSM key](migrate-softwarekey-to-hsmkey.md)
+- [Software-protected key to software-protected key](migrate-softwarekey-to-softwarekey.md)
+- [HSM-protected key to HSM-protected key](migrate-hsmkey-to-hsmkey.md)
+- [Software-protected key to HSM-protected key](migrate-softwarekey-to-hsmkey.md)
 
 
 ## Step 3. Activate your RMS tenant
