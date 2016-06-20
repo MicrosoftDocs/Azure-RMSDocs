@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/17/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -80,6 +80,14 @@ For more information, see the Citrix [product documentation for WorxMail](http:/
 For more information, see the following post on the Office blog: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ## More information about Azure RMS support for Office
+
+Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). The following Office client editions support protecting files and emails by using Azure RMS:
+
+- Office Professional Plus 2016
+
+- Office Professional Plus 2013
+
+- Office Professional Plus 2010
 
 All editions of Office (with the exception of Office 2007) support consuming protected content.
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 06/20/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -60,7 +60,7 @@ For other customers, use the following support channels, depending on how you ob
 
 - **Azure Rights Management with the Enterprise Mobility Suite**: If you also have Office 365, you can use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).  For more information, see [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx).
 
-- **Azure Rights Management Premium**: Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For additional information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
+- **Azure Rights Management Premium**: Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For more information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
 
 For additional support options, ask your Microsoft contact. 
 
@@ -72,9 +72,17 @@ Core skills learning:
 
 Troubleshooting:
 
-- Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
+- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs) page.
 
-### Communnity resources
+- If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms) information, which is regularly updated.
+
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](..deploy-use/help-users).
+
+- If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector) information, which includes details about event log entries, performance counters, and logging.
+
+- For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
+
+### Community resources
 
 -   [Yammer: Microsoft Rights Management (RMS)](http://www.yammer.com/AskIPTeam)
 

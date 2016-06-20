@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -127,12 +127,37 @@ Instructions for this step are fully covered in the [Activating Azure Rights Man
 
 If your Azure RMS tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS_RUN_Elevated.cmd script on these computers, as described in Step 5. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
 
+In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
+
 ## Step 4. Configure imported templates
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with Azure RMS.
 
-In addition, if your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure RMS; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure RMS is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-If  you're not sure whether your AD RMS templates include the ANYONE group, you can use the sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure RMS, or create new templates at this time. Instead, wait until the migration process is complete and you have decommissioned the AD RMS servers.
+
+The template changes that you might need to make for this step:
+
+- If you created custom templates in Azure RMS before the migration, you must manually export and import them.
+
+- If your templates in AD RMS used the **ANYONE** group, you must manually add the equivalent group and rights.
+
+## Procedure if you created custom templates before the migration
+
+If you created custom templates before the migration, either before or after activating Azure RMS, these will become archived after the migration. Because they were created with your original Azure RMS tenant key that will become archived as part of the migration, you cannot immediately set these templates to Published in the Azure classic portal. Instead, you must do the following before you can publish these templates: 
+
+1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
+
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
+
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+
+
+## Procedure if your templates in AD RMS used the **ANYONE** group
+
+If your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure RMS; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure RMS is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+
+If  you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
 You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
 
@@ -145,10 +170,6 @@ You can see your organization's automatically created group if you copy one of t
 > 
 > Because of this difference between the two groups, you might need to also add external users in addition to the "AllStaff" group. External email addresses for groups are not currently supported.
 
-Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, or to make other changes to the templates, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
-
-> [!TIP]
-> For a more consistent experience for users during the migration process, do not make changes to the imported templates other than these two changes; and do not publish the two default templates that come with Azure RMS, or create new templates at this time. Instead, wait until the migration process is complete and you have decommissioned the AD RMS servers.
 
 ### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
