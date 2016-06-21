@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Debug a rights-enabled application | Azure RMS
+title: How-to debug a rights-enabled application | Azure RMS
 description: The following topic shows how to debug your application and use the Windows Event Log.
 keywords:
 author: bruceperlerms
@@ -24,15 +24,16 @@ ms.suite: ems
 
 ---
 
-# Debug a rights-enabled application
+# How-to: debug a rights-enabled application
 
 The following topic shows how to debug your application and use the Windows Event Log.
 
 ## Debugging your application
 
-In Rights Management Services SDK 2.1, the anti-debugging checks in the developer version of our runtime are disabled.
+In Rights Management Services SDK 2.1, the anti-debugging checks in the developer version of our runtime are disabled.
 
 You can turn on debug tracing by using the following registry key. (To turn debug tracing off, change the value to 0.) Nothing else is required for debugging in this release.
+
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,10 +73,6 @@ For example, the following command will enable the MSIPC event log and set the l
 
 ## Related topics
 
-* [How-to use](how-to-use-msipc.md)
  
 
  
-
-
-

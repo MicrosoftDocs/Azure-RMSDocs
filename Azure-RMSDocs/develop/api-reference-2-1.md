@@ -1,17 +1,17 @@
 ﻿---
 # required metadata
 
-title: RMS SDK 2.1 API reference | Azure RMS
-description: The Rights Management SDK 2.1 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
+title: API reference | Azure RMS
+description: The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clients.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 04e76449-2945-4054-aa3e-94d642620a1e
+ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 # optional metadata
 
 #ROBOTS:
@@ -24,14 +24,20 @@ ms.suite: ems
 
 ---
 
-# RMS SDK 2.1 API reference 
+# API reference
 
-## API reference
+The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clients. For more information on specifics, see [Release notes](release-notes-rtm.md).
+- [Constants](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+- [Data types](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/data types)
+- [Functions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
+- [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
+- [Error codes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
 
-This topic provides overview and navigation for the API reference material.
 
-- [Constants](/rights-management/sdk/2.1/api/win/constants)
-- [Data types](/rights-management/sdk/2.1/api/win/data%20types)
-- [Functions](/rights-management/sdk/2.1/api/win/functions)
-- [Structures](/rights-management/sdk/2.1/api/win/structures)
 
+## Related topics
+
+* [Release notes](release-notes-rtm.md)
+ 
+
+ 

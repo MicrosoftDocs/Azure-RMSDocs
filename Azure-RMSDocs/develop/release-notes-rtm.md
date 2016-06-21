@@ -32,7 +32,8 @@ This topic contains important information about this and previous releases of th
 
 >[!Note]  The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
-- **Improved authentication flow** - using OAuth2 token based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
+- **Improved authentication flow** - using OAuth2 token based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
+
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
  - Utilize multi-factor authentication
@@ -44,14 +45,13 @@ This topic contains important information about this and previous releases of th
 
 ## December 2015 update
 
--   Performance improvements have been implemented in several areas including:
+- Performance improvements have been implemented in several areas including:
+    - Publish from primary licensing server when using license-only servers.
+    - RMS SDK 2.1 fails faster when there is no network connection.
 
-    Publish from primary licensing server when using license-only servers.
-
-    RMS SDK 2.1 fails faster when there is no network connection.
-
--   Many updates to improve error messaging and troubleshooting experience.
--   Note also that the [Supported platforms](supported-platforms.md) listing is also updated.
+- Many updates to improve error messaging and troubleshooting experience.
+- Note also that the [Supported platforms](supported-platforms.md) listing is also updated.
+- The need for the pre-production environment and the use of an application manifests has been removed from the RMS SDK 2.1. These sections of this developer documentation set have been removed and the overall documentation simplified and reorganized.
 
 ## May 2015 update
 
@@ -64,15 +64,13 @@ This topic contains important information about this and previous releases of th
 
     **Note**  We will no longer be exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future apps will no longer compile if they reference this flag, but apps already built will continue to work since we will honor the flag privately in the API code. Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing a flag. For more information, see [Working with encryption](working-with-encryption.md).
 
-     
-
 -   **Server Mode Applications**, those using an [**API mode value**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER) of **IPC\_API\_MODE\_SERVER**, no longer require an application manifest. You can test your application against a production RMS server and are not required to obtain a production license when switching to production environment. For more information on server mode applications, see [Application types](application-types.md).
 -   **Logging** is now implemented through both file and Event Tracing for Windows methods.
 -   If you're running on a **Windows 7 SP1 or Windows Server 2008 R2 machine**, see the note following under "Important developer notes".
 
 ## January 2015 update
 
--   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Support File Formats](supported-file-formats.md).
+-   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Supported File Formats](supported-file-formats.md).
 -   **Improved logging for better diagnostics** - Logging levels will show **ERROR** or **WARNING** for messages that should be reviewed. All other messages, including exceptions which are still displayed, will be logged as **INFO**.
 
     We chose this approach so that you won't lose any details. Now, only the important messages are shown with level as WARNING.
@@ -96,8 +94,6 @@ The File API components of SDK has been extended and offers the following featur
 
     **Note**  Further supporting data types and structures, not listed here, have been added for the File API extensions. All topics that have been updated for this release are marked as **preliminary and subject to change**.
 
-     
-
     -   [**IpcfOpenFileOnHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
     -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
     -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
@@ -112,8 +108,6 @@ The File API components of SDK has been extended and offers the following featur
 -   **Content ID** is now writable via the property **IPC\_LI\_CONTENT\_ID**. For more information, see [**License property types**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Production manifest requirement** - When your RMS enabled application/service is being run in server mode, we will not require a manifest anymore. For more information, see [Application types](application-types.md).
 -   **Documentation updates**
-
-    **Reorganized** - [How-to use](how-to-use-msipc.md) to clarify the order of steps for environment setup and application testing.
 
     **Testing best practice** - guidance added for use of on-premise server before testing with Azure RMS. For more information, see [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
@@ -135,11 +129,15 @@ The File API components of SDK has been extended and offers the following featur
 
     The Active Directory Rights Management Services File API , with the addition of File API, provides the following benefits and capabilities.
 
-    You can protect confidential data in an automated way without having to know the details of the Information Rights Management (IRM) implementation used by various file formats.
+      - You can protect confidential data in an automated way without having to know the details of the Information Rights Management (IRM) implementation used by various file formats.
 
-    Microsoft Office files, Portable Document Format (PDF) files, and selected other file types can be protected using native protection. For a complete list of file types that can be protected with native protection, see [File API configuration](file-api-configuration.md).
+      - Microsoft Office files, Portable Document Format (PDF) files, and selected other file types can be protected using native protection. For a complete list of file types that can be protected with native protection, see [File API configuration](file-api-configuration.md).
 
-    All files, except system files and Office files can be protected using RMS Protected File format (PFile).
+      - All files, except system files and Office files can be protected using RMS Protected File format (PFile).
+
+    The file API is implemented via the following four new functions: [IpcfDecryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile), [IpcfEncryptFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetserializedlicensefromfile) and [IpcfIsFileEncrypted](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfisfileencrypted).
+
+    The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
 
 -   **Issue**: When creating a license from scratch, ownership rights must be granted explicitly.
 
@@ -159,9 +157,10 @@ The File API components of SDK has been extended and offers the following featur
 
 **A**: Use 0 for the default locale. In this case, AD RMS Client 2.1 looks up names and descriptions in the following sequence and retrieves the first available one:
 
-1 - User preferred LCID.
-2 - System locale LCID.
-3 - The first available language specified in the Rights Management Server (RMS) template.
+    1 - User preferred LCID.
+    2 - System locale LCID.
+    3 - The first available language specified in the Rights Management Server (RMS) template.
+
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.
 
 ## Related topics

@@ -24,15 +24,14 @@ ms.suite: ems
 
 ---
 
-# Enabling email notification
+# How-to: enable email notification
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 
 To setup your email notification for a given license, use [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
 
-## C++
+    C++
 
-    ...
     int numDataPairs = 3;
 
     IPC_NAME_VALUE propertyValuePairs [numDataPairs];
@@ -46,7 +45,7 @@ To setup your email notification for a given license, use [**IpcSetLicenseProper
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-    ...    
+        
 
 The following table contains the application data fields, property name and value pairs, for RMS email notification.
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -44,6 +44,10 @@ Yes. Azure RMS can be integrated with your on-premises servers, such as Exchang
 
 Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
 
+## Is there a management pack or similar monitoring mechanism for the RMS connector?
+
+No. Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](.. deploy-use/monitor-rms-connector).
+
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
 
@@ -70,9 +74,9 @@ Azure RMS always uses an Azure Active Directory account and an associated email 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
 ## Can I add users from outside my company to custom templates?
-Yes.  Creating custom templates that end users (and administrators) can select from applications makes it quick and easily for them to apply information protection, using predefined policies that you specify. One of the settings in the template is who is able to access the content, and you can specify users and groups from within your organization, and users from outside your organization.
+Yes. Creating custom templates that end users (and administrators) can select from applications makes it quick and easily for them to apply information protection, using predefined policies that you specify. One of the settings in the template is who is able to access the content, and you can specify users and groups from within your organization, and users from outside your organization.
 
-To specify users from outside your organization, use [Windows PowerShell module for Azure Rights Management](../deploy-use/install-powershell.md):
+To specify users from outside your organization, add them as contacts to a group that you select in the Azure classic portal when configuring your templates. Or, use [Windows PowerShell module for Azure Rights Management](../deploy-use/install-powershell.md):
 
 -   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) cmdlet (for a new template) or [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
 
@@ -140,6 +144,11 @@ Preventing screen captures can help to avoid accidental or negligent disclosure 
 
 As these examples demonstrate, even if all platforms and all software supported the Rights Management APIs to block screen captures, technology alone cannot always prevent users from sharing data that they should not. Rights Management can help to safeguard your important data by using authorization and usage policies, but this enterprise rights management solution should be used with other controls. For example, implement physical security, carefully screen and monitor people who have authorized access to your organization's data, and invest in user education so users understand what data should not be shared.
 
+## What's the difference between a user protecting an email with Do Not Forward and a template that doesn't include the Forward right?
+
+Despite its name and appearance, **Do Not Forward** is neither the opposite of the Forward right, nor a template. It is actually a set of rights that include restricting copying, printing, and saving attachments, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
+
+
 ## Where can I find supporting information for Azure RMS—such as legal, compliance, and SLAs?
 Azure RMS supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
 
@@ -184,9 +193,6 @@ In addition, there are FAQs designed for end-users:
 
 -   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
 
-This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Microsoft Rights Management (RMS) Team](http://blogs.technet.com/b/rms/) blog.
-
-> [!TIP]
-> You can use the [docs tag](http://blogs.technet.com/b/rms/archive/tags/docs/) on the blog, to more easily find these documentation announcements.
+This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) blog.
 
 
