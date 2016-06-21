@@ -140,7 +140,7 @@ The template changes that you might need to make for this step:
 
 ## Procedure if you created custom templates before the migration
 
-If you created custom templates before the migration, either before or after activating Azure RMS, these templates will not be available to users after the migration, even if you set them to publish. To make them available to users, you must first do the following and then you can publish these templates: 
+If you created custom templates before the migration, either before or after activating Azure RMS, these templates will not be available to users after the migration, even if they are set to **Published**. To make them available to users, you must first do the following: 
 
 1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
 
