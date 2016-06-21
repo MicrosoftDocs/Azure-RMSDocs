@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -153,9 +153,9 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |content-id|Text|GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Email address of the owner of the document.|alice@contoso.com|
 |issuer|String|Email address of the document issuer.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|Template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
-|Date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
+|template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
+|date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
 
@@ -168,7 +168,7 @@ Although the user-id field usually indicates the user who made the request, ther
 
 -   If you are using the RMS connector.
 
-    Requests from this connector are logged with the service principal name that RMS automatically generates when you install the RMS connector.
+    Requests from this connector are logged with the service principal name of **Aadrm_S-1-7-0**, which is automatically generated when you install the RMS connector.
 
 #### Typical request types
 There are many request types for Azure Rights Management but the following table identifies some of the most typically used request types.
