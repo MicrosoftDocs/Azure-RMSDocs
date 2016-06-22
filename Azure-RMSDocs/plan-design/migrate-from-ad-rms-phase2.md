@@ -60,7 +60,7 @@ For Windows clients:
 
 			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
 
-	Optional: The scripts do not reference Office 2016 in the comments. If you wanted to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
+	Optional: The scripts do not reference Office 2016 in the comments. If you want to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
 
 	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
 	
