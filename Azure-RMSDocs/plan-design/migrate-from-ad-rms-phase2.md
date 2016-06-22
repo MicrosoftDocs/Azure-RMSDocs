@@ -62,11 +62,17 @@ For Windows clients:
 
 	Optional: The scripts do not reference Office 2016 in the comments. If you wanted to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
 
-       - Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this line with `::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS1`
+	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
+	
+			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS1
 
-        - Search for `echo Redirect SCP for Office 2013` and replace this line with `echo Redirect SCP for Office versions based on MSIPC`
+	- Search for `echo Redirect SCP for Office 2013` and replace this with the following:
+	
+			echo Redirect SCP for Office versions based on MSIPC
 
-        - Search for `echo Redirect MSIPC for Office 2013` and replace with `echo Redirect MSIPC for Office versions based on MSIPC`.
+	- Search for `echo Redirect MSIPC for Office 2013` and replace with the following:
+	
+			echo Redirect MSIPC for Office versions based on MSIPC
 
 4.  On the Windows computers:
 
@@ -99,7 +105,7 @@ CleanUpRMS_RUN_Elevated.cmd:
 
     -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
 
--   Delete the following registry values:
+-   Add the following registry values:
 
     -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
 
