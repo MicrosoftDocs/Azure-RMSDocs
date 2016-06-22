@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 06/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -144,13 +144,15 @@ The template changes that you might need to make for this step:
 
 ## Procedure if you created custom templates before the migration
 
-If you created custom templates before the migration, either before or after activating Azure RMS, these will become archived after the migration. Because they were created with your original Azure RMS tenant key that will become archived as part of the migration, you cannot immediately set these templates to Published in the Azure classic portal. Instead, you must do the following before you can publish these templates: 
+If you created custom templates before the migration, either before or after activating Azure RMS, these templates will not be available to users after the migration, even if they are set to **Published**. To make them available to users, you must first do the following: 
 
 1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
 
 2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
 
 3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+
+You can then publish or archive these templates as you would any other template that you create after the migration.
 
 
 ## Procedure if your templates in AD RMS used the **ANYONE** group
