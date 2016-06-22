@@ -64,7 +64,7 @@ For Windows clients:
 
 	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
 	
-			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS1
+			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
 
 	- Search for `echo Redirect SCP for Office 2013` and replace this with the following:
 	
