@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2016
+ms.date: 06/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -51,6 +51,9 @@ This step is a two-part process:
 
 > [!IMPORTANT]
 > Before you do this procedure, first confirm that your AD RMS servers are running in Cryptographic Mode 2, which is a requirement for Azure RMS.
+> 
+> You can confirm the mode by checking the AD RMS cluster properties, **General** tab. Make sure that the value for **Crytographic mode:** is **2**.
+
 
 Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this on licensing-only clusters.
 
