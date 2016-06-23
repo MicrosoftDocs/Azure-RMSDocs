@@ -44,7 +44,7 @@ The following are just a few of the scenarios to which applications built on the
 -   The owners of an online document library want to enable rights to view, print, or edit documents based on the identity of the user.
 -   A corporation wants to publish sensitive employee information to an internal website that restricts viewing and editing privileges to certain users.
 
-For more information on AD RMS server, AD RMS client and their functionality, see the TechNet content for [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
+For more information on AD RMS server, AD RMS client and their functionality, see the TechNet content for [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 The remaining topics in this section cover the RMS Architecture and its implementations.
 
