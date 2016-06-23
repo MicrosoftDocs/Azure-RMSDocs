@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -140,7 +140,7 @@ The template changes that you might need to make for this step:
 
 ## Procedure if you created custom templates before the migration
 
-If you created custom templates before the migration, either before or after activating Azure RMS, these templates will not be available to users after the migration, even if they are set to **Published**. To make them available to users, you must first do the following: 
+If you created custom templates before the migration, either before or after activating Azure RMS, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
 1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
 
