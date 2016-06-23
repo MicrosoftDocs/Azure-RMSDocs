@@ -6,7 +6,7 @@ description: Outlines important changes and features in this new version of the 
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -29,7 +29,8 @@ ms.suite: ems
 ## What's new
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 
--   [New for our December 2015 Update](#new_for_our_december_2015_update)
+-   [New for June 2016](#new_for_June_2016)
+-   [December 2015 Update](#december_2015_update)
 -   [July 2015 Update - Adds support for Linux / C++ development](#july_2015_update_-_adds_support_for_linux___c___development)
 -   [May 2015 Update - Adds logging control](#may_2015_update_-_adds_logging_control)
 -   [February 2015 Update - Adds Windows Store application support](#february_2015_update_-_adds_windows_store_application_support)
@@ -38,7 +39,15 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently_asked_questions)
 
-### New for our December 2015 Update
+### New for June 2016
+
+- **Support for Modern Authentication** - this will bring Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
+- **Document Tracking support** - developers can now enable document tracking when protecting document in their apps 
+- Performance improvements
+- Bug fixes
+
+
+### December 2015 Update
 
 With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
@@ -124,7 +133,7 @@ This section outlines information about the current and previous releases of the
 
 -   **AD RMS support** - IT administrators can use RMS enabled apps on mobile devices with the new AD RMS server's mobile device extensions.
 -   **Offline Consumption** - end-users can access RMS protected data offline.
--   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/en-us/library/jj573266.aspx)).
+-   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
 -   **Segregated UI** - developers can build their user interface to protect and consume RMS protected documents.
 -   **Re-designed API** - developers can now enjoy a simple and transparent encryption and decryption API, which provides consistent RMS behaviors and user experience, with minimum effort.
 
