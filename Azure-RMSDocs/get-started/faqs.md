@@ -150,7 +150,7 @@ Despite its name and appearance, **Do Not Forward** is neither the opposite of t
 
 ## Where can I find information about 3rd party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure RMS—too many to mention here and it's a very active space. You might find it useful to check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) with the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
+Many software vendors already have solutions or are implementing solutions that integrate with Azure RMS—and the list is growing very rapidly. You might find it useful to check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
 
 ## Where can I find supporting information for Azure RMS—such as legal, compliance, and SLAs?
 Azure RMS supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
