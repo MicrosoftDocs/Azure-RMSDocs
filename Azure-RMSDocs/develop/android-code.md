@@ -110,7 +110,7 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
 
     **Source**: *MsipcAuthenticationCallback.java*.
 
-    **Description**: In this step you will see ADAL used to implement an [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) with example authentication parameters. For more information on using ADAL, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx).
+    **Description**: In this step you will see ADAL used to implement an [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) with example authentication parameters. For more information on using ADAL, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback

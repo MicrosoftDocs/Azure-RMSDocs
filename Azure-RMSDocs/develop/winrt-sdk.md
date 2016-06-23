@@ -41,7 +41,7 @@ This topic will guide you through setting up your environment for creating your 
 You must have the following software on your development system:
 
 -   The [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet) operating system
--   The [Windows SDK for Windows 8.1](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)
+-   The [Windows SDK for Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) or above, or Visual Studio Express 2012, which is included in the Windows SDK for Windows 8.0/8.1.
 -   The MS RMS SDK 4.2 package for Windows Store Applications. For more information see, [Get started](get-started.md).
 -   Authentication library: We recommend that you use the [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) and other authentication libraries can be used.
