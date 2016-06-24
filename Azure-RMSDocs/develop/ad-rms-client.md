@@ -34,7 +34,7 @@ The RMS Client 2.1, exposes functionality that enables users to create, publish,
 
 The Rights Management Services SDK 2.1 works with RMS Client 2.1. Rights enabled applications built on the RMS SDK 2.1 must use the RMS Client 2.1.
 
-For more information, see the [TechNet documentation on the RMS Client 2.1](https://TechNet.Microsoft.Com/en-us/library/jj159267(WS.10).aspx).
+For more information, see the [TechNet documentation on the RMS Client 2.1](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx).
 
 ## Related topics
 

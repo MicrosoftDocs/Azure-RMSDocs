@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -48,11 +48,39 @@ For Windows clients:
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
 
-3.  On the Windows computers, run these scripts with elevated privileges in the user’s context.
+3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if users have this version of Office, you must manually update the scripts:
 
-For mobile device clients and Mac computers:
+	- For **CleanUpRMS.cmd** - search for the line `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` and immediately below it, add the following line:
 
--   Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
+			reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
+
+	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` and immediately below it, add the following two lines:
+
+			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
+
+			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
+
+	Optional: The scripts do not reference Office 2016 in the comments. If you want to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
+
+	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
+	
+			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
+
+	- Search for `echo Redirect SCP for Office 2013` and replace this with the following:
+	
+			echo Redirect SCP for Office versions based on MSIPC
+
+	- Search for `echo Redirect MSIPC for Office 2013` and replace with the following:
+	
+			echo Redirect MSIPC for Office versions based on MSIPC
+
+4.  On the Windows computers:
+
+	- Run these scripts with elevated privileges in the user’s context.
+
+    For mobile device clients and Mac computers:
+
+    -  Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
 #### Changes made by the migration scripts
 This section documents the changes that the migration scripts make. You can use this information for reference purposes only, or for troubleshooting, or if you prefer to make these changes yourself.
@@ -77,7 +105,7 @@ CleanUpRMS_RUN_Elevated.cmd:
 
     -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
 
--   Delete the following registry values:
+-   Add the following registry values:
 
     -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
 

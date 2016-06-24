@@ -36,7 +36,7 @@ Creating and releasing an RMS-enabled app with the MS RMS SDK 4.2 requires yo
 
 Use the following steps to create your app Id and sign your usage agreement with the RMS Team.
 
--   Follow the guidance in the topic, [How to create an App ID on Azure](https://msdn.microsoft.com/en-us/library/azure/dn132599.aspx) to create your app Id.
+-   Follow the guidance in the topic, [How to create an App ID on Azure](https://msdn.microsoft.com/library/azure/dn132599.aspx) to create your app Id.
 -   Write to the RMS Team to initiate your RMLA process, sending your "App ID" to <askipteam@microsoft.com>.
 -   Sign the RMLA and return it to the RMS Team.
 -   Now that you have a signed RMLA you should pass the Application ID when calling the authentication library through the *clientID* parameter.
