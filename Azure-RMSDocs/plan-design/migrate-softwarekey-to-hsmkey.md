@@ -114,6 +114,9 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
 
+    > [!IMPORTANT]
+    > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
 1.  Azure Key Vault administrator: Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
@@ -138,18 +141,17 @@ Before you begin, make sure that your organization has a key vault that has been
 
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
-    For example, using our key URL value from the previous step and a TPD file of C:\contoso-tpd1.xml, you would run:
+    For example, using our key URL value from the previous step and a configration data file of C:\contoso-tpd1.xml, you would run:
 
     ```
     Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
 
-    When prompted, enter the password that you specified earlier for the SLC file, and confirm that you want to perform this action.
+    When prompted, enter the password that you specified earlier for the configration data file, and confirm that you want to perform this action.
 
     If you have more than one AD RMS configuration data files, repeat this command for the remainder of these files. But for these files, set **-Active** to **false** when you run the Import command.
 
-    > [!IMPORTANT]
-    > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+
 
 3.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
 
