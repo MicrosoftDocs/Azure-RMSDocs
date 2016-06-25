@@ -149,7 +149,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     When prompted, enter the password that you specified earlier for the configration data file, and confirm that you want to perform this action.
 
-    If you have more than one AD RMS configuration data files, repeat this command for the remainder of these files. But for these files, set **-Active** to **false** when you run the Import command.
+    If you have more than one configuration data file, repeat this command for the remainder of these files. But for these files, set **-Active** to **false** when you run the Import command.
 
 
 
