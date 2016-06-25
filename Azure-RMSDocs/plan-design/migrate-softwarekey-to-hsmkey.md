@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/16/2016
+ms.date: 06/25/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -36,9 +36,9 @@ If this is not your chosen configuration scenario, go back to [Step 2. Export co
 
 It’s a four-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK) in Azure Key Vault.
 
-You must first extract your server licensor certificate (SLC) key from the configuration data and transfer the key to an on-premises Thales HSM, next package and transfer your HSM key to Azure Key Vault, then authorize Azure RMS to access your key vault, and then import the configuration data.
+You must first extract your server licensor certificate (SLC) key from the AD RMS configuration data and transfer the key to an on-premises Thales HSM, next package and transfer your HSM key to Azure Key Vault, then authorize Azure RMS to access your key vault, and then import the configuration data.
 
-Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordindate and work with that administrator to complete these procedures.
+Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
 
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
@@ -46,7 +46,7 @@ Before you begin, make sure that your organization has a key vault that has been
 > If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
-## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
+## Part 1: Extract your SLC key from the configuration data and import the key to your on-premises HSM
 
 1.  Azure Key Vault administrator: Use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
@@ -54,41 +54,38 @@ Before you begin, make sure that your organization has a key vault that has been
 
     -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
-    Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a command to extract this key from the file and import it to your on-premises HSM.
+    Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a tool to extract this key from the file and import it to your on-premises HSM. The tool creates two files when you run it:
 
-2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the Tpd2PfxConverter tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619) to extract the key from the SLC file. For example, if the tool is installed on your E drive:
+    - A new configuration file without the key that's ready to be imported to your Azure RMS tenant.
+
+    - A PEM file with the key, ready to be imported to your on-premises HSM.
+
+2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration file named ContosoTPD.xml:
 
     ```
-    	E:\Tpd2PfxConverter.exe /tpd:ContosoTPD.xml /pfx:ContosoTPD.pfx
+    	E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
 
     Additional information for this command:
 
     -   The **/tpd**: specifies the full path to the TPD file. The full parameter name is **TpdFilePath**.
 
-    -   The **/pfx**: specifies  the output of the .PFX file name. The full parameter name is **OutPfxFile**. 
+    -   The **/otpd**: specifies the output file name for the configuration data file without the key. The full parameter name is **OutPfxFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_keyless**, and stored in the current folder.
+
+    -   The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and stored in the current folder.
 
     -   If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
 
-    This command results in the .PFX file (by default, RmsoTDP.pfx) in the current directory.
+    To see Help for this tool, which includes a description, usage, and examples, run TpdUtil.exe with no parameters.
 
-3. On the same disconnected workstation, attach and configure Thales HSM according to your Thales documentation. Then convert your .PFX file to a PEM format by using a Command Prompt window with the **openssl** utility, which is included with Thales HSM software. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
+    If you have more than one RMS configuration data files, run this tool for the remainder of these files.
 
-		openssl pkcs12 -in e:\ContosoTPD.pfx -out e:\Contoso.pem -nodes
+3. On the same disconnected workstation, attach and configure your Thales HSM, according to your Thales documentation. You can now import your key into your attached Thales HSM by using the following command where you will need to substitute your own file name for ContosoTPD.pem:
 
-    You will be prompted for an import password and see a confirmation message of **MAC verified OK**.
+    	generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
-    This creates a Contoso.pem file that you must secure from unauthorized access.
-
-4. Convert your PEM file to a format that is accepted by Thales HSM. For example, from your \Program Files (x86)\nCipher\nfast\bin folder, run:
-
-		openssl.exe rsa -in "e:\Contoso.pem" -out e:\Contoso_converted.pem -outform PEM
-
-    This creates a Contoso_converted.pem file that you must secure from unauthorized access.
-
-5. By using your converted .PEM file, you can now import your key into your attached Thales HSM by using the following command:
-
-    	generatekey --import simple pemreadfile=e:\Contoso_converted.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
+    > [!NOTE]
+    >If you have more than one file, choose the file that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
 
     This will generate an output display similar to the following:
 
@@ -130,13 +127,13 @@ Before you begin, make sure that your organization has a key vault that has been
 
     When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
 
-    Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data, which contains only a pointer to the newly transferred tenant key.
+    Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
 ## Part 3: Import the configuration data to Azure RMS
 
-1.  Azure RMS administrator: Still on the Internet-connected workstation and in the PowerShell session, copy over the RMS configuration files with the SLC removed.
+1.  Azure RMS administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
-2. Upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
+2. Upload the first .xml file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one of these files because you had multiple trusted publishing domains, choose the file that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
 
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
