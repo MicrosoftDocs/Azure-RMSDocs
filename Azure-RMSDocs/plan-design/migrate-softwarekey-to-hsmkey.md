@@ -56,11 +56,11 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a tool to extract this key from the file and import it to your on-premises HSM. The tool creates two files when you run it:
 
-    - A new configuration file without the key that's ready to be imported to your Azure RMS tenant.
+    - A new configuration data file without the key, which is then ready to be imported to your Azure RMS tenant.
 
-    - A PEM file with the key, ready to be imported to your on-premises HSM.
+    - A PEM file (certificate container) with the key, which is then ready to be imported to your on-premises HSM.
 
-2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration file named ContosoTPD.xml:
+2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration data file named ContosoTPD.xml:
 
     ```
     	E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
@@ -68,13 +68,14 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Additional information for this command:
 
-    -   The **/tpd**: specifies the full path to the TPD file. The full parameter name is **TpdFilePath**.
+    -   The **/tpd**: specifies the full path and name of the exported AD RMS configuration data file. The full parameter name is **TpdFilePath**.
 
-    -   The **/otpd**: specifies the output file name for the configuration data file without the key. The full parameter name is **OutPfxFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_keyless**, and stored in the current folder.
+    -   The **/otpd**: specifies the output file name for the configuration data file without the key. The full parameter name is **OutPfxFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_keyless**, and it is stored in the current folder.
 
-    -   The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and stored in the current folder.
+    -   The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and it is stored in the current folder.
 
     -   If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
+
 
     To see Help for this tool, which includes a description, usage, and examples, run TpdUtil.exe with no parameters.
 
@@ -99,7 +100,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
 
-    **pemreadfile &nbsp;&nbsp; PEM file containing RSA key &nbsp;&nbsp; e:\Contoso_converted.pem**
+    **pemreadfile &nbsp;&nbsp; PEM file containing RSA key &nbsp;&nbsp; e:\ContosoTPD.pem**
 
     **ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key identifier &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contosobyok**
 
@@ -111,7 +112,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
-    Now that your SLC has been extracted so that it’s an HSM-protected key, you’re ready to package it and transfer this key to Azure Key Vault.
+    Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
