@@ -129,7 +129,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Before you transfer your key to Azure Key Vault, make sure that the KeyTransferRemote.exe utility returns **Result: SUCCESS** when you create a copy of your key with reduced permissions (step 4.1) and when you encrypt your key (step 4.3).
 
-    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
+    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
 
     Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
