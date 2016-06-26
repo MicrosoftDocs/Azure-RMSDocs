@@ -32,7 +32,7 @@ ms.suite: ems
 Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
 
 ## What do I need to deploy Azure RMS and how do I get going?
-First, check [Requirements for Azure Rights Management](requirements-azure-rms.md), which has information about the cloud subscription options, how you can use your on-premises servers with Azure RMS, which deployment scenarios are not currently supported, which devices and applications support Azure RMS, and a link if you need a list of IP addresses and domain names for firewalls or proxy servers. You might also want to check the other articles in this **Get Started **section as well as the **Understand & Explore** section, to get a basic understanding of how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] can help protect your organization’s data, how it works with applications, how it compares with the on-premises version of Active Directory Rights Management, and understand the terms and abbreviations that are specific to [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+First, check [Requirements for Azure Rights Management](requirements-azure-rms.md), which has information about the cloud subscription options, how you can use your on-premises servers with Azure RMS, which deployment scenarios are not currently supported, which devices and applications support Azure RMS, and a link if you need a list of IP addresses and domain names for firewalls or proxy servers. You might also want to check the other articles in this **Get Started ** section as well as the **Understand & Explore** section, to get a basic understanding of how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] can help protect your organization’s data, how it works with applications, how it compares with the on-premises version of Active Directory Rights Management, and understand the terms and abbreviations that are specific to [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 ## Do files have to be in the cloud to be protected by Azure RMS?
 No, this is a common misconception. The Azure Rights Management service (and Microsoft) do not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. 
@@ -51,6 +51,17 @@ Many software vendors already have solutions or are implementing solutions that 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
 Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](.. deploy-use/monitor-rms-connector).
+
+## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators that I don't want to grant full global admin permissions?
+
+Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure RMS. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connect Administrator**. As their names suggest, the first role grants permissions to run all administrative tasks for Azure Rights Management (without making them a global administrator for other cloud services) and the second role grants permissions to run only the Rights Management (RMS) connector.
+
+Two things to note:
+
+- To configure templates in the Azure classic portal, you must be a full global admin for your Office 365 or Azure AD tenant. This restriction does not apply to configuring templates by using Azure RMS PowerShell cmdlets.
+
+- If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this does not affect the ability to administer Azure RMS, with the exception of the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
+
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
