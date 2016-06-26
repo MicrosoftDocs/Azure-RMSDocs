@@ -60,7 +60,7 @@ As these role names suggest, the first role grants permissions to run all admini
 
 Some things to note:
 
-- To configure templates in the Azure classic portal, you must be a full global admin for your Office 365 or Azure AD tenant. This restriction does not apply to configuring templates by using Azure RMS PowerShell cmdlets.
+- Only global administrators for Office 365 and global administrators for Azure AD can use the management portals (Office 365 admin portal or Azure classic portal) to configure Azure RMS. Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
 
 - If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this does not affect the ability to administer Azure RMS, with the exception of the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
 
