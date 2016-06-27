@@ -133,7 +133,7 @@ This section outlines information about the current and previous releases of the
 
 -   **AD RMS support** - IT administrators can use RMS enabled apps on mobile devices with the new AD RMS server's mobile device extensions.
 -   **Offline Consumption** - end-users can access RMS protected data offline.
--   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/en-us/library/jj573266.aspx)).
+-   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
 -   **Segregated UI** - developers can build their user interface to protect and consume RMS protected documents.
 -   **Re-designed API** - developers can now enjoy a simple and transparent encryption and decryption API, which provides consistent RMS behaviors and user experience, with minimum effort.
 

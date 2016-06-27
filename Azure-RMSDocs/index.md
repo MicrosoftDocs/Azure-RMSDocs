@@ -21,7 +21,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <section id="hero-content">
       <h1>Azure Rights Management Documentation</h1>
       <h2>Learn how to deploy and manage Azure Rights Management (Azure RMS). Quickly get started using Rights Management to apply information protection to email, documents, and other sensitive data.</h2>
-      <h3>New to Azure RMS? <a href="http://www.microsoft.com/en-us/server-cloud/products/azure-rights-management/" target="_blank">Visit our product site &rarr;</a></h3>
+      <h3>New to Azure RMS? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
