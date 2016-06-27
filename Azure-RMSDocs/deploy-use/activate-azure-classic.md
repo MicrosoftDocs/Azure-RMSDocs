@@ -30,7 +30,7 @@ ms.suite: ems
 *Applies to: Azure Rights Management*
 
 
-Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite.
+Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Rights Management Premium subscription.
 
 > [!TIP]
 > Watch a 2-minute video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
