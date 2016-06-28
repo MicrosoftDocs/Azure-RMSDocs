@@ -76,7 +76,7 @@ Troubleshooting:
 
 - If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms.md) information, which is regularly updated.
 
-- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](..deploy-use/help-users.md).
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](../deploy-use/help-users.md).
 
 - If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
