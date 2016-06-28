@@ -112,9 +112,9 @@ Another reason can be if you installed the RMS connector on the same server that
 
 The event message contains information about the account and computer trying to connect to the RMS connector:
 
-- If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more information about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector# add-a-server-to-the-list-of-allowed-servers). 
+- If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more information about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector.md#add-a-server-to-the-list-of-allowed-servers). 
 
-- If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the prerequisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector#prerequisites-for-the-rms-connector).
+- If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the prerequisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector.md#prerequisites-for-the-rms-connector).
 
 ----
 
@@ -126,7 +126,7 @@ This event is logged when an on-premises server makes a successful connection to
 
 The event message contains the account SID, account name, and the name of the computer that makes the connection to the RMS connector.
 
-For information about how to configure the RMS connector for HTTPS connections, see [Configuring the RMS connector to use HTTPS](install-configure-rms-connector#configuring-the-rms-connector-to-use-https).
+For information about how to configure the RMS connector for HTTPS connections, see [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https).
 
 ----
 
@@ -136,7 +136,7 @@ Warning **2003**
 
 This event is logged when the RMS connector does not have a list of authorized accounts, so no on-premises servers can connect to it. The RMS connector downloads the list every 15 minutes from Azure RMS. 
 
-To specify the accounts, use the RMS connector administrator tool. For more information, see [Authorizing servers to use the RMS connector]( install-configure-rms-connector#authorizing-servers-to-use-the-rms-connector). 
+To specify the accounts, use the RMS connector administrator tool. For more information, see [Authorizing servers to use the RMS connector]( install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). 
 
 ----
 

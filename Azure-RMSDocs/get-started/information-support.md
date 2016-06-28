@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 06/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Use the following resources for additional information about Microsoft [!INCLUDE
 The Rights Management product group has joined forces with the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) to provide you with technical information and other news about [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], and related technologies. These blog posts supplement the product documentation and support information.
 
 > [!TIP]
-> If you are developing applications for Azure RMS or AD RMS, you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner Blog](http://blogs.msdn.com/b/rms/).
+> If you are developing applications for Azure RMS or AD RMS, you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/).
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
