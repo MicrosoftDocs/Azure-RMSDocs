@@ -95,7 +95,8 @@ The following steps guide you in setting up your RMS server and include:
 >[!NOTE] 
 > By default, these keys do not exist in the registry and must be created.
 
->[!IMPORTANT] If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:<p>
+>[!IMPORTANT] 
+> If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:<p>
   ```    
   HKEY_LOCAL_MACHINE
     SOFTWARE
