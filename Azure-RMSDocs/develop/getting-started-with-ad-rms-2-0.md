@@ -47,9 +47,11 @@ Once you've gotten started, check out some of our other [RMS samples](samples.md
 
 Try using RMS SDK 2.1 by following the guidance in these topics:
 
--   [Install the SDK](install-the-rms-sdk.md)
--   [Testing your rights-enabled application](running-your-first-application.md)
--   [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
+- [Install the SDK](install-the-rms-sdk.md)
+- [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+- [Developing your application](developing-your-application.md)
+- [Testing your application](how-to-set-up-your-test-environment.md)
+- [Deploy into production](deploying-your-application.md)
 
 ### Why use RMS SDK 2.1 for protecting your content
 
@@ -71,12 +73,9 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 
 ## Related topics
 
-* [AD RMS samples](samples.md)
+* [RMS Developers Guide](developers-guide.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
-* [Install the SDK](install-the-rms-sdk.md)
-* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
-* [Overview](ad-rms-overview.md)
-* [Supported platforms](supported-platforms.md)
+
  
 
  
