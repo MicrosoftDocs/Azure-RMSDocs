@@ -290,7 +290,7 @@ Optionally, run the Thales utilities to confirm the minimal permissions on the n
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-When you run these command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
+When you run this command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 ### Step 3: Encrypt your key by using Microsoft’s Key Exchange Key
 Run one of the following commands, depending on your region:
