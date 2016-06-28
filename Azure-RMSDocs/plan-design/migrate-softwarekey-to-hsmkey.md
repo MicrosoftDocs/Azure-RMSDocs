@@ -32,7 +32,7 @@ ms.suite: ems
 
 These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key. 
 
-If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
+If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase1.md##step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
 
 It’s a three-part procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK).
 
@@ -40,7 +40,7 @@ You must first extract your server licensor certificate (SLC) key from the confi
 
 ## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
 
-1.  Use the following steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#BKMK_ImplementBYOK) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md) topic:
+1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
 
     -   **Generate and transfer your tenant key – over the Internet**: **Prepare your Internet-connected workstation**
 
@@ -108,6 +108,6 @@ Now that you’ve transferred your HSM key to Azure RMS, you’re ready to impor
     Disconnect-AadrmService
     ```
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 

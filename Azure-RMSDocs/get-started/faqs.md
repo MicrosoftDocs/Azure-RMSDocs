@@ -50,7 +50,7 @@ Many software vendors already have solutions or are implementing solutions that 
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
-Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](.. deploy-use/monitor-rms-connector).
+Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](../deploy-use/monitor-rms-connector).
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
@@ -72,7 +72,7 @@ Absolutely, and the nice thing is, users will be able to seamlessly protect and 
 
 ## Are there step-by-step instructions to configure Exchange Online to use Azure RMS?
 
-Yes. See [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration.md ) to see a typical set of commands that enables Exchange Online to use Azure RMS, why the Outlook Web App doesn't immediately show the **Set permissions** menu options, and the command to run if you change or update the Azure RMS templates. 
+Yes. See [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) to see a typical set of commands that enables Exchange Online to use Azure RMS, why the Outlook Web App doesn't immediately show the **Set permissions** menu options, and the command to run if you change or update the Azure RMS templates. 
 
 ## If I deploy Azure RMS in production, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
 No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md).
@@ -108,7 +108,7 @@ As the option name clearly shows, this new group type is still in preview, with 
 
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of supported devices, see [Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all RMS capabilities, be sure to also check the [Client device capabilities](../get-started/requirements-client-devices.md#client-device-capabilities) table in the same article.
+For a list of supported devices, see [Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all RMS capabilities, be sure to also check the table in [Azure RMS requirements: Applications](../get-started/requirements-applications.md).
 
 Azure RMS can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure RMS provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
@@ -131,7 +131,7 @@ However, if your company policies require you to use a hardware security module 
 ## A feature I am looking for doesn’t seem to work with SharePoint protected libraries—is support for my feature planned?
 Currently, SharePoint supports RMS protected documents by using IRM protected libraries, which do not support custom templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](../understand-explore/office-apps-services-support.md) article .
 
-If you are interested in a specific  capability that isn't yet supported,  be sure to keep an eye on announcements on the [RMS team blog](http://blogs.technet.com/b/rms/).
+If you are interested in a specific  capability that isn't yet supported,  be sure to keep an eye on announcements on the [RMS team blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.

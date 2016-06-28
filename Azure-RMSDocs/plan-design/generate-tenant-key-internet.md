@@ -269,7 +269,7 @@ To reduce the permissions on your tenant key, do the following:
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-When you run this command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
+When you run this command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 You will be asked to plug in your security world ACS cards, and if specified, their password or PIN..
 
@@ -290,7 +290,7 @@ Optionally, run the Thales utilities to confirm the minimal permissions on the n
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-When you run these command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
+When you run these command, replace *contosokey* with the same value you specified in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 ### Step 3: Encrypt your key by using Microsoft’s Key Exchange Key
 Run one of the following commands, depending on your region:
@@ -315,7 +315,7 @@ Run one of the following commands, depending on your region:
 
 When you run this command, use these instructions:
 
--   Replace *contosokey* with the identifier that you used to generate the key in [Step 1: Create a security world](##step-1-create-a-security-world) from the *Generate your tenant key* section.
+-   Replace *contosokey* with the identifier that you used to generate the key in [Step 1: Create a security world](#step-1-create-a-security-world) from the *Generate your tenant key* section.
 
 -   Replace *GUID* with your Azure Active Directory tenant ID that you retrieved in [Step 2: Get your Azure Active Directory tenant ID](#step-2-get-your-azure-active-directory-tenant-id) from the *Prepare your Internet-connected workstation* section.
 
