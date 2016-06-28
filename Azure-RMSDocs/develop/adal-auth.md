@@ -6,7 +6,7 @@ description: Outlines the steps for configuring Azure ADAL based authentication
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -36,7 +36,8 @@ You will need the following:
 - A [subscription for Microsoft Azure](https://azure.microsoft.com/en-us/) (a free trial is sufficient). For more information, see [How users sing up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) account is sufficient).
 
-> [!NOTE] Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a *Work or school account*, rather than a *Microsoft account* (i.e. Hotmail).
+> [!NOTE] 
+> Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a *Work or school account*, rather than a *Microsoft account* (i.e. Hotmail).
 
 After signing up for Microsoft Azure:
 
@@ -81,11 +82,13 @@ After signing up for Microsoft Azure:
 
 ![Choose CONFIGURE](../media/ConfigYourApp.png)
 
->[!NOTE] Copy the **CLIENT ID** and **REDIRECT URI** and store them for future use when configuring the RMS client.
+>[!NOTE] 
+> Copy the **CLIENT ID** and **REDIRECT URI** and store them for future use when configuring the RMS client.
 
 - Browse to the bottom of your application settings and choose the **Add application** button under **permissions to other applications**.
 
->[!NOTE] The **Delegated Permissions** that are shown for Windows Azure Active Directory are correct by default – only one option should be selected and that option is **Sign in and read user profile**.
+>[!NOTE] 
+> The **Delegated Permissions** that are shown for Windows Azure Active Directory are correct by default – only one option should be selected and that option is **Sign in and read user profile**.
 
 ![Select Add application](../media/PermissionsToOtherBtn.png)
 
