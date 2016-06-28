@@ -40,7 +40,7 @@ You must first extract your server licensor certificate (SLC) key from the confi
 
 ## Part 1: Extract your SLC from the configuration data and import the key to your on-premises HSM
 
-1.  Use the following steps in the [Implementing bring your own key (BYOK)]((plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok)) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md) topic:
+1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
 
     -   **Generate and transfer your tenant key – over the Internet**: **Prepare your Internet-connected workstation**
 
