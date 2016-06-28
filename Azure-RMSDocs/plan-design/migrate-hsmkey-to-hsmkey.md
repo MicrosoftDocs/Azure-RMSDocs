@@ -43,13 +43,13 @@ You must first package your HSM key so it's ready to transfer to Azure RMS, and 
 
 ## Part 1: Package your HSM key so it's ready to transfer to Azure RMS
 
-1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) section of the [Planning and Implementing Your Azure Rights Management Tenant Key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
+1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
 
     -   Do not follow the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. You must identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key_(keyAppName)_(keyIdentifier)** locally on the server.
 
     -   Do not follow the steps for **Transfer your tenant key to Azure RMS**, which uses the  Add-AadrmKey command.  Instead, you will transfer your prepared HSM key when you upload your exported trusted publishing domain, by using the Import-AadrmTpd command.
 
-2.  On the Internet-connected workstation, in Windows PowerShell session, reconnect to the Azure RMS service.
+2.  On the Internet-connected workstation, in a Windows PowerShell session, reconnect to the Azure RMS service.
 
 Now that you’ve prepared your HSM key for Azure RMS, you’re ready to import your HSM key file and AD RMS configuration data.
 
