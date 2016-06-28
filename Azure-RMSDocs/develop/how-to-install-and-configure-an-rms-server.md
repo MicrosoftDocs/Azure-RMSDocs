@@ -6,7 +6,7 @@ description: Install and configure and RMS Sever for testing your rights-enabled
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -65,7 +65,8 @@ The following steps guide you in setting up your RMS server and include:
 
     For testing with an RMS server, configure either server-side discovery or client-side discovery to enable the Rights Management Service Client 2.1 to discover and establish communication with your RMS server.
 
-    > [!Note] Testing with Azure RMS does not require discovery configuration.
+    > [!Note]
+    > Testing with Azure RMS does not require discovery configuration.
 
   - In server-side discovery, an administrator registers a service connection point (SCP) for the RMS root cluster with Active Directory, and the client queries Active Directory to discover the SCP and establish a connection with the server.
   - In client-side discovery, you configure RMS Service Discovery settings in the registry on the computer where the RMS Client 2.1 is running. These settings point the RMS Client 2.1 to the RMS server to use. When they are present, server-side discovery is not performed.
@@ -91,7 +92,8 @@ The following steps guide you in setting up your RMS server and include:
                   EnterprisePublishing
   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
->[!NOTE] By default, these keys do not exist in the registry and must be created.
+>[!NOTE] 
+> By default, these keys do not exist in the registry and must be created.
 
 >[!IMPORTANT] If you are running a 32-bit application on a 64-bit version of Windows, you must set these keys in the following key location:<p>
   ```    
