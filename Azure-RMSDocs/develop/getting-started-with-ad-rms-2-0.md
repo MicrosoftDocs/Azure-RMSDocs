@@ -39,7 +39,7 @@ This topic will guide you through the process of setting up and running your rig
 | [Install the SDK](install-the-rms-sdk.md) | This topic guides you through installing the developer tools.|
 | [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | This topic contains instructions about how to configure a Visual Studio project to use the RMS SDK 2.1.|
 | [Developing your application](developing-your-application.md) | This topic contains essential guidance on the core aspects of an RMS enabled application and can serve as the foundation of your own application development.|
-| [Testing your application](running-your-first-application.md) |This topic contains instructions about how to setup for your application testing.|
+| [Testing your application](how-to-set-up-your-test-environment.md) |This topic contains instructions about how to setup for your application testing.|
 | [Deploy into production](deploying-your-application.md) |This topic guides you through deployment options for your rights-enabled application.|
 
 Once you've gotten started, check out some of our other [RMS samples](samples.md). Then, stay current through our [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
