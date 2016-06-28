@@ -42,8 +42,6 @@ This topic will guide you through the process of setting up and running your rig
 | [Testing your application](how-to-set-up-your-test-environment.md) |This topic contains instructions about how to setup for your application testing.|
 | [Deploy into production](deploying-your-application.md) |This topic guides you through deployment options for your rights-enabled application.|
 
-Once you've gotten started, check out some of our other [RMS samples](samples.md). Then, stay current through our [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
-
 
 Try using RMS SDK 2.1 by following the guidance in these topics:
 

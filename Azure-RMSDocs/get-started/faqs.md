@@ -54,7 +54,7 @@ Many software vendors already have solutions or are implementing solutions that 
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
-Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](../deploy-use/monitor-rms-connector).
+Although the Rights Management connector logs information, warning, and error messages to the event log, there isn’t a management pack that includes monitoring for these events. However, the list of events and their descriptions, with more information to help you take corrective action is documented in [Monitor the Azure Rights Management connector](../deploy-use/monitor-rms-connector.md).
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
