@@ -6,7 +6,7 @@ description: Describes the basics of user authentication for your RMS-enabled ap
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/15/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -53,7 +53,8 @@ Each of the following resources contains guidance to setup your environment and 
 -   [Windows Azure Active Directory Authentication Library (ADAL) for dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   For Linux SDK, the ADAL library is packaged with the SDK source, available via [Github](https://github.com/AzureAD/rms-sdk-for-cpp).
 
->[!NOTE]  We recommend that you use one of the ADAL although you may use other authentication libraries.
+>[!NOTE]  
+> We recommend that you use one of the ADAL although you may use other authentication libraries.
 
 ### Authentication parameters
 
@@ -66,13 +67,15 @@ ADAL requires several pieces of information to successfully authenticate a user 
 and comes from the previous registration step via the Azure portal.
 - **Redirect Uri** – provides the authentication library with a URI target for the authentication code. Specific formats are required for iOS and Android. These are explained in the README files of the corresponding GitHub repositories of ADAL. This value comes from the previous registration step via the Azure  portal.
 
->[!NOTE] **Scope** is not currently used but may be and is therefore reserved for future use.
+>[!NOTE] 
+> **Scope** is not currently used but may be and is therefore reserved for future use.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
+>[!NOTE] 
+> If your app does not follow these guidelines, Azure RMS and Azure AD workflows are likely to fail and will not be supported by Microsoft.com. Further, the Rights Management License Agreement (RMLA) may be violated if an invalid Client Id is used in a production app.
 
 ### What should an authentication callback implementation look like
 **Authentication Code Examples** - This SDK has example code showing the use of authentication callbacks. For your convenience, these code examples are represented here as well as in each of the follow linked topics.

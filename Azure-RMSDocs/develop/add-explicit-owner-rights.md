@@ -6,7 +6,7 @@ description: Your application should explicitly add "Owner" rights when creating
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,7 +32,8 @@ Your application should explicitly add "Owner" rights when creating a license fr
 
 When your application is creating a license handle using [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), it must also grant the owner full rights (permissions) explicitly.
 
->[!NOTE] Setting a user as "owner" using [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
+>[!NOTE] 
+> Setting a user as "owner" using [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
 The following example code only represents the steps involved in creating and adding the specific rights to a given license.
 

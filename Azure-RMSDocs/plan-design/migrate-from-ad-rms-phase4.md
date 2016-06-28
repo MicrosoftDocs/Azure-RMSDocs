@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -49,7 +49,7 @@ This step is optional but recommended when migration is complete even if you wer
 
 To re-key your Azure RMS tenant key:
 
--   If your Azure RMS tenant key is managed by Microsoft: To do this, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) to open an **Azure Rights Management support case with a request to re-key your Azure RMS tenant key**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+-   If your Azure RMS tenant key is managed by Microsoft: To do this, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Rights Management support case with a request to re-key your Azure RMS tenant key**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
 
 -   If your Azure RMS tenant key is managed by you (BYOK): Repeat the BYOK procedure to generate and create a new key over the Internet or in person.
 
