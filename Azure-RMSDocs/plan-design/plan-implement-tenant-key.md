@@ -81,7 +81,7 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
 > Also [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) if your organization has specific policies for handling keys.
 
