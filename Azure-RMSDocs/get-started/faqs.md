@@ -108,7 +108,7 @@ As the option name clearly shows, this new group type is still in preview, with 
 
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of supported devices, see [Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all RMS capabilities, be sure to also check the [Client device capabilities](../get-started/requirements-client-devices.md#mobile-devices) table in the same article.
+For a list of supported devices, see [Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all RMS capabilities, be sure to also check the table in [Azure RMS requirements: Applications](../get-started/requirements-applications.md).
 
 Azure RMS can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure RMS provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
