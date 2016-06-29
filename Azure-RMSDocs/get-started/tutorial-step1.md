@@ -6,7 +6,7 @@ description: The first step of a tutorial to quickly try out Microsoft Azure Rig
 keywords:
 author: Cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -52,6 +52,9 @@ Even though you might have a subscription that supports Azure Rights Management,
 ![Tutorial step 1 screenshots](../media/AzRMS_Tutorial_1_Screenshots.png)
 
 ### To activate Rights Management from the Office 365 classic admin center
+
+> [!NOTE]
+> If you are using the **Office 365 admin center preview** rather than the Office 365 classic admin center, you can either use the instructions from [How to activate Azure Rights Management from the Office 365 admin center preview](../deploy-use/activate-office365-preview.md), or switch to the classic version to use these instructions. To switch, click **Go to the old admin center** on the Home page.
 
 1.  Go to the [Office 365 portal](https://portal.office.com/) and sign in with your work or school account.
 
