@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -72,13 +72,13 @@ Core skills learning:
 
 Troubleshooting:
 
-- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs) page.
+- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs.md) page.
 
-- If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms) information, which is regularly updated.
+- If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms.md) information, which is regularly updated.
 
-- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](..deploy-use/help-users).
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](../deploy-use/help-users.md).
 
-- If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector) information, which includes details about event log entries, performance counters, and logging.
+- If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 

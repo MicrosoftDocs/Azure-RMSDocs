@@ -6,7 +6,7 @@ description:
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 05/03/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,7 +30,8 @@ This topic contains important information about this and previous releases of th
 
 ## New for the February 2016 - SDK documentation update
 
->[!Note]  The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
+>[!Note]
+> The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
 - **Improved authentication flow** - using OAuth2 token based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
 
