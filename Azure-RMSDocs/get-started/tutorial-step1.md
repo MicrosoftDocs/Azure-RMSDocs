@@ -54,9 +54,9 @@ Even though you might have a subscription that supports Azure Rights Management,
 ### To activate Rights Management from the Office 365 classic admin center
 
 > [!NOTE]
-> If you are using the **Office 365 admin center preview** rather than the Office 365 classic admin center, you can either use the instructions from [How to activate Azure Rights Management from the Office 365 admin center preview](../deploy-use/activate-office365-preview.md), or switch to the classic version to use these instructions. To switch, click **Go to the old admin center** on the Home page.
+> If you are using the **Office 365 admin center preview** rather than the Office 365 classic admin center, you can either use the instructions from [How to activate Azure Rights Management from the Office 365 admin center preview](../deploy-use/activate-office365-preview.md), or switch to the classic version to use these instructions. To switch, click **Go to the old admin center** on the **Home** page, after you have signed in.
 
-1.  Go to the [Office 365 portal](https://portal.office.com/) and sign in with your work or school account.
+1.  Go to the [Office 365 portal](https://portal.office.com/) and sign in with your Office 365 global administrator account.
 
 2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
@@ -79,7 +79,7 @@ At this time, do not click **advanced features**. This takes you to the Azure cl
 
 ### To activate Rights Management from the Azure classic portal
 
-1.  Go to the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081) and sign in.
+1.  Go to the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081) and sign in with your Azure Active Directory global administrator account.
 
 2.  In the left pane, click **ACTIVE DIRECTORY**.
 
