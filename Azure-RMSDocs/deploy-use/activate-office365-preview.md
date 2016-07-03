@@ -43,7 +43,7 @@ Use these instructions only if you're using the new, preview version of the Offi
 
     We suggest you navigate if you are new to the preview version and find it useful to see related configuration options, and use search if you are familiar with the preview version and want to go straight to activating Azure Rights Management. You might also need to use the search option during the preview version of the admin center, if the navigation instructions do not match what you see.
 
-    - To navigate: Left pane > **Settings** > **Services & add-ins** > **Microsoft Azure Rights Management** > **Manage Microsoft Azure Rights Management settings**
+    - To navigate: **Settings** > **Services & add-ins** > **Microsoft Azure Rights Management** > **Manage Microsoft Azure Rights Management settings**
 
     - To search: In the search box on the **Home** page, type **Rights Management**, and then from the search results, click **Microsoft Azure rights management settings**.
 
