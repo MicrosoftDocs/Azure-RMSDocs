@@ -47,11 +47,10 @@ Use these instructions only if you're using the new, preview version of the Offi
 
     - To search: In the search box on the **Home** page, type **Rights Management**, and then from the search results, click **Microsoft Azure rights management settings**.
 
-
-    > [!NOTE]
-    >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-    >
-    >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm Azure Rights Management support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+        > [!NOTE]
+        >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+        >
+        >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm Azure Rights Management support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 4. On the **rights management** page, click **activate**.
 
