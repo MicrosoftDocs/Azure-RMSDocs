@@ -39,7 +39,9 @@ Use these instructions only if you're using the new, preview version of the Offi
     > [!TIP]
     > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
 
-3. Navigate to the **rights management** page, or use the search functionality:
+3. Navigate to the **rights management** page, or use the search functionality.
+
+    We suggest you navigate if you are new to the preview version and find it useful to see related configuration options, and use search if you are familiar with the preview version and want to go straight to activating Azure Rights Management. You might also need to use the search option during the preview version of the admin center, if the navigation instructions do not match what you see.
 
     - To navigate: Left pane > **Settings** > **Services & add-ins** > **Microsoft Azure Rights Management** > **Manage Microsoft Azure Rights Management settings**
 
