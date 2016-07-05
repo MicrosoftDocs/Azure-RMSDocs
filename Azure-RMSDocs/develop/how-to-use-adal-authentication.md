@@ -117,13 +117,13 @@ Use this code as an example of how to manage your own authentication tokens.
 
 ## Related topics
 
-* [Data types](/rights-management/sdk/2.1/api/win/datatypes)
-* [Environment properties](/rights-management/sdk/2.1/api/win/environmentproperties)
+* [Data types](/rights-management/sdk/2.1/api/win/data%20types)
+* [Environment properties](/rights-management/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
 * [IpcCreateOAuth2Token](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
 * [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
 * [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [IPC_CREDENTIAL](/rights-management/sdk/2.1/api/win/IPC_CREDENTIAL)
 * [IPC_NAME_VALUE_LIST](/rights-management/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/rights-management/sdk/2.1/api/win/IIPC_OAUTH2_CALLBACK_INFO)
+* [IPC_OAUTH2_CALLBACK_INFO](/rights-management/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
 * [IPC_PROMPT_CTX](/rights-management/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/rights-management/sdk/2.1/api/win/IIPC_AAD_APPLICATION_ID)
+* [IPC_AAD_APPLICATION_ID](/rights-management/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
