@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Developing your application | Azure RMS
@@ -6,7 +6,7 @@ description: Instructions about how to develop an application using the RMS SDK
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 07/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
