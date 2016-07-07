@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/05/2016
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,7 +32,7 @@ ms.suite: ems
 
 Use these instructions if you're using the classic (original) version of the Office 365 admin center.
 
-1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.
+1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is a global administrator for your Office 365 deployment.
 
 2. If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
@@ -43,10 +43,10 @@ Use these instructions if you're using the classic (original) version of the Off
 
 4.  Click **Rights Management**.
 
-    NOTE: If you see an activation error, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-
-    Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
-
+    > [!NOTE]
+    >If you do not see this option, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >
+    >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 5. On the **RIGHTS MANAGEMENT** page, click **Manage**.
 

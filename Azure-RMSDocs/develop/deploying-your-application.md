@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Deploy into pre-production
+# Deploy into production
 
 
 This topic outlines and guides you through deployment options for your rights-enabled application.
