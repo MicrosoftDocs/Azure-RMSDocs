@@ -4,4 +4,5 @@
 	"includeDependencies": false,
 	"autoPush": true,
 	"useJavascriptMarkdownTransformer": true
+	"translationType": "HT"
 }
