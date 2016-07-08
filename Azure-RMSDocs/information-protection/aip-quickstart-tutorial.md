@@ -105,16 +105,16 @@ This section describes the basic steps for creating, maintaining and modifying t
 
 All the label names, tooltips, colors, and so on are configurable by you, the IT administrator, and these are the labels that will be displayed to the user in the Information Protection bar.   
 
-The title of our out-of-the-box Add-in bar is Sensitivity and the labels comprising the policy are ordered by the level of sensitivity. The order is significant, as it represents the order that will be displayed in the user's bar. You can drag labels up and down to change their order. 
+The title of our out-of-the-box Add-in bar is `Sensitivity` and the labels comprising the policy are ordered by the level of sensitivity. The order is significant, as it represents the order that will be displayed in the user's bar. You can drag labels up and down to change their order. 
 
 When you open Azure Information protection, only the left part of the screen is visible. Clicking a label opens an additional screen containing the label's settings.
 
 ![](../media/azip-screen.png)
 
 
-## Tasks
+### Configuration tasks
 
-Now that you are up and running, you can complete one of these simple tasks to gain a richer understanding of how AzIP protects your data.
+Now that you are up and running, you can complete one of these simple configuration tasks to gain a richer understanding of how AzIP protects your data.
 
 - [Deploying policies to user devices](task-deploy-policies-user-devices.md)
 - [Adding watermarks to a label](task-add-watermark-label.md)

@@ -6,7 +6,7 @@
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
 # [Azure Information Protection (preview)](what-is-information-protection.md)
 ## [What is Azure Information Protection?](what-is-information-protection.md)
-## [AzIP Quick start tutorial](aip-quickstart-tutorial.md)
+## [AzIP quick start tutorial](aip-quickstart-tutorial.md)
 ### [Task: Deploying policies](task-deploy-policies-user-devices.md)
 ### [Task: Adding watermarks](task-add-watermark-label.md)
 ### [Task: Adding a default label](task-add-default-label-downgrade-justification.md)
