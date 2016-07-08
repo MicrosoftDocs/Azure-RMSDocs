@@ -36,14 +36,14 @@ In this task, you will configure a rule that automatically applies the label Con
 5. Click `Add policy tip` and enter the message: "This file contains credit card information therefore it was automatically labeled Confidential".
 6. Click `Save` and `Publish`. 
 
-## The user sees
+## What the user sees
 1. Open a document in Office Word, Excel, or PowerPoint. 
-2. Enter the phrase “Credit card” AND a valid credit card number in the following format: 16 digits, either formatted (dddd-dddd-dddd-dddd) or unformatted (dddddddddddddddd). Valid card numbers include all major brands worldwide, including Visa, MasterCard, Discover Card, American Express and Diners.
+2. Enter the phrase "Credit card" AND a valid credit card number in the following format: 16 digits, either formatted (dddd-dddd-dddd-dddd) or unformatted (dddddddddddddddd). Valid card numbers include all major brands worldwide, including Visa, MasterCard, Discover Card, American Express and Diners.
 3. Save the document. When opened, the label will appear automatically and a message will be displayed in the Information bar. 
 
-![An excel spreadhseet with an automatic label applied](azip-automatic-label.png)
+![An excel spreadhseet with an automatic label applied](../media/azip-automatic-label.png)
 
 >[!div class="step-by-step"]
-[Prev task: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+[Prev: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
 [Next task: Adding protection to a label](task-add-protection-label.md)
 

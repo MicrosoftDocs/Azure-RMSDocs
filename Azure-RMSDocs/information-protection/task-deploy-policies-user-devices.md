@@ -30,11 +30,10 @@ After defining every configuration in your policy, you save it locally. However,
 To publish the entire policy:
 
 1. On the Azure Information Protection admin console, click `Save`.
-2. Click` Publish` to make this policy available for Azure Information Protection clients.
+2. Click `Publish` to make this policy available for Azure Information Protection clients.
 
 > [!NOTE]
 > The policy will be downloaded to the client only after restarting Office applications.
 
 >[!div class="step-by-step"]
-[Quick start tutorial](api-quickstart-tutorial.md)
-[Next task: Adding watermarks to a label](task-add-watermark-label.md)
+[Next: Adding watermarks to a label](task-add-watermark-label.md)

@@ -35,7 +35,7 @@ In this task, you will configure the label Confidential to add protection of a p
   > This option will only be available if Azure Rights Management is enabled in your tenant.
 3. Click `Save` and `Publish`. 
 
-## The user sees 
+## What the user sees 
 
 When selecting this label, the document will be automatically protected with the selected template.
 To see that this template is applied, click **File &rarr; info** and note that the "document protected" section is highlighted and contains the template's name.
@@ -43,6 +43,6 @@ To see that this template is applied, click **File &rarr; info** and note that t
 You can also save the document and reopen to view the protection information in the information bar.
 
 >[!div class="step-by-step"]
-[Prev task: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
+[Prev: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
 [Return to quick start tutorial](api-quickstart-tutorial.md)
 

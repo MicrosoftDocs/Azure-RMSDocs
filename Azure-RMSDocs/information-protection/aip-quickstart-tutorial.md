@@ -114,7 +114,7 @@ When you open Azure Information protection, only the left part of the screen is 
 ![](../media/azip-screen.png)
 
 
-## Next steps
+## Tasks
 
 Now that you are up and running, you can complete one of these simple tasks to gain a richer understanding of how AzIP protects your data.
 

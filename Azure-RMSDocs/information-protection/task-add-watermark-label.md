@@ -37,7 +37,7 @@ In this task, you will configure the label Confidential to add a watermark text 
 5. Set the `Color` to "Gray". 
 6. Click `Save` and `Publish` the policy. 
 
-## The user sees
+## What the user sees
 
 ![Document with a watermark](../media/azip-watermark.png)
  
@@ -45,5 +45,5 @@ In this task, you will configure the label Confidential to add a watermark text 
 > A watermark in Excel is only visible in Page layout, Print preview mode and when printed. 
 
 >[!div class="step-by-step"]
-[Prev task: Deploying policies to user devices](task-deploy-policies-user-devices.md)
-[Next task: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+[Prev: Deploying policies to user devices](task-deploy-policies-user-devices.md)
+[Next: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)

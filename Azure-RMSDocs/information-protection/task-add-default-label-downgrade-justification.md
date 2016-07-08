@@ -36,16 +36,16 @@ In this task, you set the default label of every newly created document to "Inte
 4. Set `Users must provide justification when lowering the sensitivity level` to "On". 
 5. Click `Save` and `Publish`. 
 
-## The user sees
+## What the user sees
 
 1. When creating a new document or email, the Internal label will be automatically selected.  
 2. To downgrade the label, click the pencil icon, and select Personal. The following message will be displayed: 
   
-  ![Downgrade justification dialog box](azip-downgrade-justification.png)
+  ![Downgrade justification dialog box](../media/azip-downgrade-justification.png)
  
   The justification is written into the local computer's event logs. To view the justification, open the event viewer application. The log appears under **Windows logs &rarr; Application &rarr; Microsoft Azure Information Protection**. When selected, the justification text is displayed on the screen. 
 
 >[!div class="step-by-step"]
-[Prev task: Adding watermarks to a label](task-add-watermark-label.md)
-[Next task: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
+[Prev: Adding watermarks to a label](task-add-watermark-label.md)
+[Next: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
 
