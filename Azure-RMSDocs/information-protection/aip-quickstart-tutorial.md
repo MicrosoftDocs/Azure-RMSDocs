@@ -5,7 +5,7 @@ title: Azure Information Protection Quickstart Tutorial | Azure Rights Managemen
 description: [PROVIDE A DESCRIPTION]
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -120,6 +120,6 @@ Now that you are up and running, you can complete one of these simple tasks to g
 
 - [Deploying policies to user devices](task-deploy-policies-user-devices.md)
 - [Adding watermarks to a label](task-add-watermark-label.md)
-- [Add a default label and downgrade justification ](task-add-default-label-downgrade-justification.md)
-- [Add an automatic labeling rule](task-add-automatic-labeling-rule.md)
+- [Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+- [Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
 - [Adding protection to a label](task-add-protection-label.md)
