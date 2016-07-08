@@ -36,7 +36,7 @@ To install and experience Microsoft Azure Information Protection, you need to pr
 
 > [!IMPORTANT]
 > - To enable Azure Rights Management service - please complete [Step 1 of the Azure Rights Management quick start tutorial](../get-started/tutorial-step1.md). Use either the Office 365 admin center, or the Azure classic portal.
-> - For more information about the subscription options and links to free trials of Office 365 or follow the [Cloud subscriptions that support Azure RMS page](..get-started/requirements-subscriptions.md).
+> - For more information about the subscription options and links to free trials of Office 365 or follow the [Cloud subscriptions that support Azure RMS page](../get-started/requirements-subscriptions.md).
 > - During the Azure Information Protection Public Preview period, **any user** in the Azure tenant / Office 365 subscription can sign into the Azure Information Protection Admin portal to get acquainted and configure an Information Protection policy. Upon general availability, access will be limited to users with administrative privileges only.
 
 ## Step 2: Set up and connect your Azure Information Protection administrator portal
