@@ -7,7 +7,6 @@
 # [Azure Information Protection (preview)](what-is-information-protection.md)
 ## [What is Azure Information Protection?](what-is-information-protection.md)
 ## [AzIP quick start tutorial](azip-quickstart-tutorial.md)
-## [Practice policy configuration](practice-policy-configuration.md)
 ### [Task: Deploying policies](task-deploy-policies-user-devices.md)
 ### [Task: Adding watermarks](task-add-watermark-label.md)
 ### [Task: Adding a default label](task-add-default-label-downgrade-justification.md)
