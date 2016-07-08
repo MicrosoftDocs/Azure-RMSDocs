@@ -97,6 +97,20 @@ When opening a new document, you can label it by clicking on a label that reflec
 
 If the document is already labeled, the Information Protection bar displays the current label. You can change the current label by clicking the Edit icon , or remove it, by clicking the Remove icon.
 
-## Next Steps
+# Practicing Policy Configuration
 
-Now that you are up and running,you can [practice AzIP policy configuration](practice-policy-configuration.md).
+All the label names, tooltips, colors, and so on are configurable by you, the IT administrator, and these are the labels that will be displayed to the user in the Information Protection bar.   
+
+The title of our out-of-the-box Add-in bar is `Sensitivity` and the labels comprising the policy are ordered by the level of sensitivity. The order is significant, as it represents the order that will be displayed in the user's bar. You can drag labels up and down to change their order. 
+
+When you open Azure Information protection, only the left part of the screen is visible. Clicking a label opens an additional screen containing the label's settings.
+
+![](../media/azip-screen.png)
+
+Here are some simple configuration tasks you can complete to gain a richer understanding of how AzIP protects your data.
+
+- [Deploying policies to user devices](task-deploy-policies-user-devices.md)
+- [Adding watermarks to a label](task-add-watermark-label.md)
+- [Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+- [Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
+- [Adding protection to a label](task-add-protection-label.md)
