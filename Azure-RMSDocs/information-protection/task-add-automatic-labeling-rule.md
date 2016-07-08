@@ -44,6 +44,6 @@ In this task, you will configure a rule that automatically applies the label Con
 ![An excel spreadhseet with an automatic label applied](../media/azip-automatic-label.png)
 
 >[!div class="step-by-step"]
-[Prev: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+[Prev: Adding a default label](task-add-default-label-downgrade-justification.md)
 [Next task: Adding protection to a label](task-add-protection-label.md)
 

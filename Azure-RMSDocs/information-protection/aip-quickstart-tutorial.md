@@ -72,12 +72,10 @@ The Client is connected to the Azure Information Protection service that is sync
 
 ### To install the Azure Information Protection Client
 
-Interactive Installation:
-
 1. Double-click `AZInfoProtection.exe` to start the installation.
 2. Select the `I accept the terms in the License Agreement` checkbox and click `Install`. 
 3. Select Install a demo policy until another policy is applied for Azure Information Protection to set an initial policy for demo purposes. You will be able to experience Azure Information Protection (based on the default Information Protection Policy) even if it is not connected to the Azure Information Protection service.
-4. When the Completed screen appears, click the Finish button. 
+4. When the Completed screen appears, click the `Finish` button. 
 5. Restart any open Office application to apply Azure Information Protection. The Information Protection bar now appears in all your Microsoft Office applications. 
 
 > [!NOTE]

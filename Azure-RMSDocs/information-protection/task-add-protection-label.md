@@ -28,7 +28,7 @@ ms.assetid: e5a4a242-da71-4ca8-9136-8b4a65f74a73
 
 In this task, you will configure the label Confidential to add protection of a particular RMS template to every document on which it is applied. 
 
-## To add protection to the Confidential label:
+## To add protection to the Confidential label
 1. Select the `Confidential` label. The label editing screen opens on the left.  
 2. In the `Set RMS protection for documents and emails containing this label` area, select the relevant RMS template from the list. 
   > [!NOTE]

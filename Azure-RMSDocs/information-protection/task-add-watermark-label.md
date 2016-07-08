@@ -28,11 +28,11 @@ ms.assetid: c2a3a59b-eaaa-44eb-8879-876791d210c6
 
 In this task, you will configure the label Confidential to add a watermark text to every document on which it is applied. 
 
-## To Add a watermark to the Confidential label
+## To add a watermark to the Confidential label
 
 1. Select the `Confidential` label. The label editing screen opens on the left.  
 2. In the `Set visual marking area`, set `Documents with this label have a watermark` to "On". 
-3. Enter the text that will appear in the watermark, for instance, “Confidential”.
+3. Enter the text that will appear in the watermark, for instance, "Confidential".
 4. In the `Size` field, leave the default "Auto" on.
 5. Set the `Color` to "Gray". 
 6. Click `Save` and `Publish` the policy. 
@@ -46,4 +46,4 @@ In this task, you will configure the label Confidential to add a watermark text 
 
 >[!div class="step-by-step"]
 [Prev: Deploying policies to user devices](task-deploy-policies-user-devices.md)
-[Next: Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
+[Next: Adding a default label](task-add-default-label-downgrade-justification.md)
