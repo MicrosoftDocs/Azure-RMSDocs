@@ -97,7 +97,7 @@ When opening a new document, you can label it by clicking on a label that reflec
 
 If the document is already labeled, the Information Protection bar displays the current label. You can change the current label by clicking the Edit icon , or remove it, by clicking the Remove icon.
 
-# Practicing Policy Configuration
+## Practicing Policy Configuration
 
 All the label names, tooltips, colors, and so on are configurable by you, the IT administrator, and these are the labels that will be displayed to the user in the Information Protection bar.   
 
