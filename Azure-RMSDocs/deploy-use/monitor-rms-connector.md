@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 07/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -48,6 +48,118 @@ As with all event log entries, drill into the message for more details.
 
 In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. For example, the connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
 
+### Event log IDs and descriptions
+
+Use the following sections to identify the possible event IDs, descriptions, and any additional information.
+
+-----
+
+Information **1000**
+
+**The Microsoft RMS connector web service has started.**
+
+This event is logged when the RMS connector first attempts to start.
+
+----
+
+Information **1001**
+
+**The Microsoft RMS connector web service has stopped.**
+
+This event is logged when the RMS connector stops as a result of normal operation. For example, IIS is restarted or the computer is shut down. 
+
+----
+
+Information **1002**
+
+**Access to the Microsoft RMS connector has been allowed for an authorized server.**
+
+This event is logged when an account from an on-premises server first connects to the RMS connector, after the account has been authorized by the Azure RMS administrator in the RMS connector administrator tool. The SID, account name, and the name of the computer making the connection is contained in the event message.
+
+----
+
+Information **1003**
+
+**The connection from the client listed below has switched from a non-secure (HTTP) connection to a secure (HTTPS) connection.**
+
+This event is logged when an on-premises server changes its connection to the RMS connector from HTTP (less secure) to HTTPS (more secure). The SID, account name, and the name of the computer making the connection is contained in the event message.
+
+----
+
+Information **1004**
+
+**The list of authorized accounts has been updated.**
+
+This event is logged when the RMS connector has downloaded the latest list of accounts (existing accounts and any changes) that are authorized to use the RMS connector. This list is downloaded every fifteen minutes, providing the RMS connector can communicate with Azure RMS.
+
+----
+
+Warning **2000**
+
+**The user principal in the HTTP context is missing or invalid, please verify that the Microsoft RMS connector web site has Anonymous Authentication disabled in IIS and only Windows Authentication is enabled.**
+
+This event is logged when the RMS connector can't uniquely identify the  account trying to connect to the RMS connector. This might be a result of anonymous authentication incorrectly configured for IIS or the account is from an untrusted forest.
+
+----
+
+Warning **2001**
+
+**Unauthorized access attempt to Microsoft RMS connector.**
+
+This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from Azure RMS. For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
+
+Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because  the RMS connector cannot correctly identify the account when it attempts to connect.
+
+The event message contains information about the account and computer trying to connect to the RMS connector:
+
+- If the account trying to connect to the RMS connector is a valid account, use the RMS connector administrator tool to add the account to the list of authorized accounts. For more information about which accounts must be authorized, see [Add a server to the list of allowed servers](install-configure-rms-connector.md#add-a-server-to-the-list-of-allowed-servers). 
+
+- If the account trying to connect to the RMS connector is from the same computer as the RMS connector server, install the connector on a separate server. For more information about the prerequisites for the connector, see [Prerequisites for the RMS connector]( deploy-rms-connector.md#prerequisites-for-the-rms-connector).
+
+----
+
+Warning **2002**
+
+**The connection from the client listed below is using a non-secure (HTTP) connection.**
+
+This event is logged when an on-premises server makes a successful connection to the RMS connector, but the connection uses HTTP (less secure) instead of HTTPS (more secure). One event is logged per account rather than per connection. This event is triggered again if the account successfully switched to using HTTPS but reverts to HTTP.
+
+The event message contains the account SID, account name, and the name of the computer that makes the connection to the RMS connector.
+
+For information about how to configure the RMS connector for HTTPS connections, see [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https).
+
+----
+
+Warning **2003**
+
+**The list of authorizations is empty. The service will not be usable until the list of authorized users and groups for the connector is populated.**
+
+This event is logged when the RMS connector does not have a list of authorized accounts, so no on-premises servers can connect to it. The RMS connector downloads the list every 15 minutes from Azure RMS. 
+
+To specify the accounts, use the RMS connector administrator tool. For more information, see [Authorizing servers to use the RMS connector]( install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). 
+
+----
+
+Error **3000**
+
+**An unhandled exception occurred in the Microsoft RMS connector.**
+
+This event is logged each time the RMS connector encounters an unexpected error, with the details of the error in the event message.
+
+One possible cause can be identified by the text **The request failed with an empty response** in the event message. If you see this text, it might be because you have a network device that is doing SSL inspection on the packets between the on-premises servers and the RMS connector server. This is not supported and will result in a failed communication and this event log message.
+
+----
+
+Error **3001**
+
+**An exception occurred while downloading authorization information.**
+
+This event is logged if the RMS connector cannot download the latest list of accounts that are authorized to use the RMS connector, with the details of the error in the event message.
+
+
+
+----
+
 ## Performance counters
 
 When you install the RMS connector, it automatically creates **Microsoft Rights Management connector** performance counters that you might find useful to help you monitor the performance of using Azure RMS via the connector. 
@@ -66,9 +178,9 @@ For additional information and instructions, see the **Details** and **Install I
 
 ## Logging
 
-Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name that is automatically generated when you install the RMS connector.
+Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically created for the RMS connector.
 
-For more information, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
 
 If you need more detailed logging for diagnosis purposes, you can use [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals and enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS. To do this:
 

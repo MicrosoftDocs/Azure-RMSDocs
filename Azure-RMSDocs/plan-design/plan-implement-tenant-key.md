@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
-> Also [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) if your organization has specific policies for handling keys.
+> Also [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if your organization has specific policies for handling keys.
 
 ### Prerequisites for BYOK
 See the following table for a list of prerequisites for bring your own key (BYOK).
@@ -114,7 +114,7 @@ The procedures to generate and use your own tenant key depend on whether you wan
     > [!NOTE]
     > Your tenant key can safely move through untrusted computers and networks because it is encrypted and secured with access control level permissions, which makes it usable only within your HSMs and Microsoft’s HSMs for Azure RMS. You can use the scripts that are provided in the toolset to verify the security measures and read more information about how this works from Thales: [Hardware Key management in the RMS Cloud](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **In person:** This requires that you [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
+-   **In person:** This requires that you [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to schedule a key transfer appointment for Azure RMS. You must travel to a Microsoft office in Redmond, Washington, United States of America to transfer your tenant key to the Azure RMS security world.
 
 For how-to instructions, select whether you will generate and transfer your tenant key over the Internet or in person: 
 
@@ -136,9 +136,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
 2.  Consider using usage logging, which logs every transaction that RMS performs.
 
-    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following example of a log file displayed in Excel where the **Decrypt** and **SignDigest** Request Types show that the tenant key is being used.
+    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KMSPDecrypt** and **KMSPSignDigest** request types show that the tenant key is being used.
 
-    ![log file in Excel where tenant key is being used](../media/RMS_Logging.gif)
+    ![log file in Excel where tenant key is being used](../media/RMS_Logging.png)
 
     For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
 

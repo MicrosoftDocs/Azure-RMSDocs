@@ -36,7 +36,7 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Righ
 
 ## Step 6. Configure IRM integration for Exchange Online
 
-If you have previously imported your TDP from AD RMS to Exchange Online, you must remove this TDP to avoid conflicting templates and policies after you have migrated to Azure RMS. To do this, use the [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/en-us/library/jj200720%28v=exchg.150%29.aspx) cmdlet from Exchange Online.
+If you have previously imported your TDP from AD RMS to Exchange Online, you must remove this TDP to avoid conflicting templates and policies after you have migrated to Azure RMS. To do this, use the [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) cmdlet from Exchange Online.
 
 If you chose an Azure RMS tenant key topology of **Microsoft managed**:
 
