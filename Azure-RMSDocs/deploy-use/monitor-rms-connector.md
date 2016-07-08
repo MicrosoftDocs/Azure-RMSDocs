@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 07/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -106,7 +106,7 @@ Warning **2001**
 
 **Unauthorized access attempt to Microsoft RMS connector.**
 
-This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from Azure RMS.  For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
+This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from Azure RMS. For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
 
 Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because  the RMS connector cannot correctly identify the account when it attempts to connect.
 
@@ -146,6 +146,8 @@ Error **3000**
 
 This event is logged each time the RMS connector encounters an unexpected error, with the details of the error in the event message.
 
+One possible cause can be identified by the text **The request failed with an empty response** in the event message. If you see this text, it might be because you have a network device that is doing SSL inspection on the packets between the on-premises servers and the RMS connector server. This is not supported and will result in a failed communication and this event log message.
+
 ----
 
 Error **3001**
@@ -153,6 +155,8 @@ Error **3001**
 **An exception occurred while downloading authorization information.**
 
 This event is logged if the RMS connector cannot download the latest list of accounts that are authorized to use the RMS connector, with the details of the error in the event message.
+
+
 
 ----
 
