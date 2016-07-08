@@ -34,9 +34,7 @@ When you open Azure Information protection, only the left part of the screen is 
 
 ![](../media/azip-screen.png)
 
-## Configuration tasks
-
-Now you can complete these simple configuration tasks to gain a richer understanding of how AzIP protects your data.
+Here are some simple configuration tasks you can complete to gain a richer understanding of how AzIP protects your data.
 
 - [Deploying policies to user devices](task-deploy-policies-user-devices.md)
 - [Adding watermarks to a label](task-add-watermark-label.md)
