@@ -26,7 +26,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 # What is Azure Information Protection (preview)
 
-Azure Information Protection (AIP) is a new service built on both [Azure Rights Management](/rights-management) and [Secure Islands](http://www.secureislands.com/). AIP helps you classify and protect your data, and applies persistent labels to your data so that it's identifiable at all times, regardless of where it is stored or with whom it is shared.
+Azure Information Protection (AzIP) is a new service built on both [Azure Rights Management](/rights-management) and [Secure Islands](http://www.secureislands.com/). AIP helps you classify and protect your data, and applies persistent labels to your data so that it's identifiable at all times, regardless of where it is stored or with whom it is shared.
 
 Visual marking, encryption and usage rights can be automatically attached the applied labels to further protect your data and to help prevent data loss. 
 
@@ -40,5 +40,5 @@ More information on how to buy Azure Information Protection will be available cl
 
 ## Next Steps
 
-* See the [Azure Information Protection quickstart tutorial](aip-quickstart-tutorial.md)
+* See the [Azure Information Protection quickstart tutorial](azip-quickstart-tutorial.md)
 

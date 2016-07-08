@@ -26,9 +26,9 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 # Quick Start Tutorial for Azure Information Protection 
 
-This tutorial to will enable you to quickly learn how to quickly and easily set up Azure Information Protection , so you can and to start labeling and protecting your sensitive data. 
+This tutorial to will enable you to quickly learn how to quickly and easily set up Azure Information Protection (AzIP), so you can and to start labeling and protecting your sensitive data. 
 
-## System requirements 
+## Step 1: Prepare for installation 
 To install and experience Microsoft Azure Information Protection, you need to prepare the following:
 - A computer running Windows (minimum Windows 7 SP1), with Microsoft Office 2016, Office 2013 SP1, or Office 2010 installed.
 - An Azure tenant OR an Office 365 subscription - to enable, configure and deploy an Azure Information Protection policy.  
@@ -39,7 +39,7 @@ To install and experience Microsoft Azure Information Protection, you need to pr
 > - For more information about the subscription options and links to free trials of Office 365 or follow the [Cloud subscriptions that support Azure RMS page](..get-started/requirements-subscriptions.md).
 > - During the Azure Information Protection Public Preview period, **any user** in the Azure tenant / Office 365 subscription can sign into the Azure Information Protection Admin portal to get acquainted and configure an Information Protection policy. Upon general availability, access will be limited to users with administrative privileges only.
 
-## Step 1: Set up and connect your Azure Information Protection administrator portal
+## Step 2: Set up and connect your Azure Information Protection administrator portal
 
 To enter the Azure Information Protection administrator portal:
 
@@ -60,7 +60,7 @@ The default policy includes the following labels:
 > [!NOTE] 
 > The Secret label includes two sample sub labels: All-Employees, and My-Group. Setting up the Information Protection policy is done via the Microsoft Azure Admin portal. 
 
-## Step 2: Install the Azure Information Protection client 
+## Step 3: Install the Azure Information Protection client 
 
 ### To download the Azure Information Protection Client
 
@@ -97,27 +97,6 @@ When opening a new document, you can label it by clicking on a label that reflec
 
 If the document is already labeled, the Information Protection bar displays the current label. You can change the current label by clicking the Edit icon , or remove it, by clicking the Remove icon.
 
-## Step 3: Practice policy configuration
+## Next Steps
 
-### Configuring the basics: classification labels and policy settings
-
-This section describes the basic steps for creating, maintaining and modifying the labels comprising your organizational policy. The title name and label names are based on the policy provided out-of-the box. 
-
-All the label names, tooltips, colors, and so on are configurable by you, the IT administrator, and these are the labels that will be displayed to the user in the Information Protection bar.   
-
-The title of our out-of-the-box Add-in bar is `Sensitivity` and the labels comprising the policy are ordered by the level of sensitivity. The order is significant, as it represents the order that will be displayed in the user's bar. You can drag labels up and down to change their order. 
-
-When you open Azure Information protection, only the left part of the screen is visible. Clicking a label opens an additional screen containing the label's settings.
-
-![](../media/azip-screen.png)
-
-
-### Configuration tasks
-
-Now that you are up and running, you can complete one of these simple configuration tasks to gain a richer understanding of how AzIP protects your data.
-
-- [Deploying policies to user devices](task-deploy-policies-user-devices.md)
-- [Adding watermarks to a label](task-add-watermark-label.md)
-- [Adding a default label and downgrade justification](task-add-default-label-downgrade-justification.md)
-- [Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
-- [Adding protection to a label](task-add-protection-label.md)
+Now that you are up and running,you can [practice AzIP policy configuration](practice-policy-configuration.md).

@@ -44,5 +44,5 @@ You can also save the document and reopen to view the protection information in 
 
 >[!div class="step-by-step"]
 [Prev: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
-[Return to quick start tutorial](api-quickstart-tutorial.md)
+[Return to AzIP quick start tutorial](azip-quickstart-tutorial.md)
 
