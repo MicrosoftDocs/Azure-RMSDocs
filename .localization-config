@@ -3,5 +3,6 @@
 	"files": ["!/*.md", "**/**/*.md", "**/*.md", "**/index.html"], 
 	"includeDependencies": false,
 	"autoPush": true,
-	"useJavascriptMarkdownTransformer": true
+	"useJavascriptMarkdownTransformer": true,
+	"translationType": "HT"
 }
