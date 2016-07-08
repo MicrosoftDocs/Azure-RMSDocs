@@ -26,13 +26,9 @@ ms.assetid: 2c028389-c165-44ef-8fb8-58a1c65e667e
 
 # Task: Adding a default label and downgrade justification
 
->[!div class="step-by-step"]
-[Prev task: Adding watermarks to a label](task-add-watermark-label.md)
-[Next task: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
-
 In this task, you set the default label of every newly created document to "Internal", and ask the user to provide justification when downgrading the label to a less sensitive one.
 
-To set the Internal label as default and require justification upon downgrade:
+## To set the Internal label as default and require justification upon downgrade
 
 1. Select the `Internal` label.  
 2. Set `All document and emails must have a label` to "On".
@@ -40,7 +36,8 @@ To set the Internal label as default and require justification upon downgrade:
 4. Set `Users must provide justification when lowering the sensitivity level` to "On". 
 5. Click `Save` and `Publish`. 
 
-The user sees: 
+## The user sees
+
 1. When creating a new document or email, the Internal label will be automatically selected.  
 2. To downgrade the label, click the pencil icon, and select Personal. The following message will be displayed: 
   
@@ -48,5 +45,7 @@ The user sees:
  
   The justification is written into the local computer's event logs. To view the justification, open the event viewer application. The log appears under **Windows logs &rarr; Application &rarr; Microsoft Azure Information Protection**. When selected, the justification text is displayed on the screen. 
 
-> [!div class="button"]
-[Next: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
+>[!div class="step-by-step"]
+[Prev task: Adding watermarks to a label](task-add-watermark-label.md)
+[Next task: Adding an automatic labeling rule](task-add-automatic-labeling-rule.md)
+

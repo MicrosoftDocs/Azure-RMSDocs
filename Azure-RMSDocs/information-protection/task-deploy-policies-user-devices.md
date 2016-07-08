@@ -26,10 +26,6 @@ ms.assetid: 4733b2e2-74eb-4264-b73e-f97969f41764
 
 # Task: Deploying policies to user devices
 
->[!div class="step-by-step"]
-[Quick start tutorial](api-quickstart-tutorial.md)
-[Next task: Adding watermarks to a label](task-add-watermark-label.md)
-
 After defining every configuration in your policy, you save it locally. However, in order for the changes to be available to all the users in the organizations, you need to **publish** the entire policy.  
 To publish the entire policy:
 
@@ -39,5 +35,6 @@ To publish the entire policy:
 > [!NOTE]
 > The policy will be downloaded to the client only after restarting Office applications.
 
-> [!div class="button"]
-[Next: Adding watermarks to a label](task-add-watermark-label.md)
+>[!div class="step-by-step"]
+[Quick start tutorial](api-quickstart-tutorial.md)
+[Next task: Adding watermarks to a label](task-add-watermark-label.md)
