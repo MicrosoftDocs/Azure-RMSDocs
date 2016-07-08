@@ -31,11 +31,11 @@ This tutorial to will enable you to quickly learn how to quickly and easily set 
 ## System requirements 
 To install and experience Microsoft Azure Information Protection, you need to prepare the following:
 - A computer running Windows (minimum Windows 7 SP1), with Microsoft Office 2016, Office 2013 SP1, or Office 2010 installed.
-- An Azure tenant OR an Office 365 subscription – to enable, configure and deploy an Azure Information Protection policy.  
-- An Azure Rights Management service - to enable encryption, and Azure Information Protection client-service communication (not mandatory if you are looking to experience only information classification and labeling – without protection).
+- An Azure tenant OR an Office 365 subscription - to enable, configure and deploy an Azure Information Protection policy.  
+- An Azure Rights Management service - to enable encryption, and Azure Information Protection client-service communication (not mandatory if you are looking to experience only information classification and labeling - without protection).
 
-> [!IMPORTANT]]
-> - To enable Azure Rights Management service – please complete [Step 1 of the Azure Rights Management quick start tutorial](../get-started/tutorial-step1.md). Use either the Office 365 admin center, or the Azure classic portal.
+> [!IMPORTANT]
+> - To enable Azure Rights Management service - please complete [Step 1 of the Azure Rights Management quick start tutorial](../get-started/tutorial-step1.md). Use either the Office 365 admin center, or the Azure classic portal.
 > - For more information about the subscription options and links to free trials of Office 365 or follow the [Cloud subscriptions that support Azure RMS page](..get-started/requirements-subscriptions.md).
 > - During the Azure Information Protection Public Preview period, **any user** in the Azure tenant / Office 365 subscription can sign into the Azure Information Protection Admin portal to get acquainted and configure an Information Protection policy. Upon general availability, access will be limited to users with administrative privileges only.
 
@@ -44,7 +44,7 @@ To install and experience Microsoft Azure Information Protection, you need to pr
 To enter the Azure Information Protection administrator portal:
 
 1. Access the Azure Admin portal here. 
-2. On the left pane, locate the Azure Information Protection module, as follows: click **Browse** at the bottom of the list and start typing “Information” in the Filter field. The Azure Information Protection screen opens with the default policy, which is described in this guide.
+2. On the left pane, locate the Azure Information Protection module, as follows: click **Browse** at the bottom of the list and start typing "Information" in the Filter field. The Azure Information Protection screen opens with the default policy, which is described in this guide.
 
 Every newly created tenant includes a default, pre-defined, Information Protection policy. Use this policy to experience the Azure Information Protection client, or edit this policy to create your own policy that meets your organizational needs. 
 The default policy includes the following labels:
@@ -66,7 +66,7 @@ The default policy includes the following labels:
 
 Download the Azure Information Protection client from the Microsoft download center.  <Link TBD> 
 
-The Microsoft Azure Information Protection Client will add the Information Protection bar to your Microsoft Office applications – Outlook, Word, Excel and PowerPoint. The Information Protection bar allows you to view the current label, assign a label or modify it. On the same bar, you will be notified when the client recommends that you assign a particular label or when assigned label will be assigned automatically.
+The Microsoft Azure Information Protection Client will add the Information Protection bar to your Microsoft Office applications - Outlook, Word, Excel and PowerPoint. The Information Protection bar allows you to view the current label, assign a label or modify it. On the same bar, you will be notified when the client recommends that you assign a particular label or when assigned label will be assigned automatically.
 
 The Client is connected to the Azure Information Protection service that is synchronized with the organization's Information Protection policy. 
 
@@ -75,7 +75,7 @@ The Client is connected to the Azure Information Protection service that is sync
 Interactive Installation:
 
 1. Double-click `AZInfoProtection.exe` to start the installation.
-2. Select the `I accept the terms in the License Agreement` checkbox and click Install. 
+2. Select the `I accept the terms in the License Agreement` checkbox and click `Install`. 
 3. Select Install a demo policy until another policy is applied for Azure Information Protection to set an initial policy for demo purposes. You will be able to experience Azure Information Protection (based on the default Information Protection Policy) even if it is not connected to the Azure Information Protection service.
 4. When the Completed screen appears, click the Finish button. 
 5. Restart any open Office application to apply Azure Information Protection. The Information Protection bar now appears in all your Microsoft Office applications. 
@@ -93,7 +93,7 @@ The Information Protection bar ensures that your documents can be classified, la
 
 ![](../media/azip-bar1.png)
  
-When opening a new document, you can label it by clicking on a label that reflects the sensitivity level of the information contained in the document. Some lables may have secondary levels (sub labels), in which case you can select the required secondary label from a list that is attached to the label. For example, the Secret label may contain sub labels such as “Legal” or “Finance”. The labels appear on the Information Protection bar according to the order of sensitivity from left to right, where the least sensitive is the left one.
+When opening a new document, you can label it by clicking on a label that reflects the sensitivity level of the information contained in the document. Some lables may have secondary levels (sub labels), in which case you can select the required secondary label from a list that is attached to the label. For example, the Secret label may contain sub labels such as "Legal" or "Finance". The labels appear on the Information Protection bar according to the order of sensitivity from left to right, where the least sensitive is the left one.
 
 ![](../media/azip-bar2.png)
 
