@@ -64,8 +64,8 @@ If you haven't yet activated Azure Rights Management, do this step first so that
 
 2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
-    > [!TIP]
-    > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
+  > [!TIP]
+  > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
 
 3.  In the left pane, expand **SERVICE SETTINGS**.
 
