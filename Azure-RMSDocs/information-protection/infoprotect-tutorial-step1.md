@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection quick start tutorial step 1 | Azure Rights Management
-description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
+description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you about 10 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/11/2016
@@ -26,7 +26,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate the Rights Management service
  
-If you have already activated Azure Rights Management - for example, you have already evaluated or deployed Azure Rights Management in your organization - go straight to the next step. 
+If you have already activated Azure Rights Management - for example, you have already evaluated or deployed Azure Rights Management in your organization - go straight to the [next step](infoprotect-tutorial-step2.md). 
 
 If you haven't yet activated Azure Rights Management, do this step first so that you can protect your most sensitive documents and files after they have been classified. To activate Azure Rights Management, you can use either the Office 365 admin center, or the Azure classic portal:
 
@@ -76,7 +76,7 @@ Although you can configure other options for Rights Management in the portal, th
 
 That's all you need to do for this first step. The Azure Rights Management service is activated so that later on in the tutorial, you can select one of the default Azure Rights Management templates to protect documents and emails that are classified as Confidential.
 
-For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to the next step.
+For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to the step 2.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
