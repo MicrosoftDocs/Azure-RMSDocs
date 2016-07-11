@@ -30,7 +30,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 In this step, you'll install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications. 
 
-1. On a PC that has Office installed (but not currently loaded), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
+1. On a PC that has Office installed (but Word is not currently open), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
 
 2. Run **AZInfoProtection.exe** and follow the prompts to install the client.
 
