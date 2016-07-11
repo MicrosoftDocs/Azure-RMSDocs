@@ -37,7 +37,7 @@ For end users, Azure Information Protection easily integrates with their existin
 
 - Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Evaluate: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md) 
+- Evaluate: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) 
 
 - FAQs: [Frequently asked questions for Azure Information Protection preview](faq.md)
 
