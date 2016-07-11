@@ -79,7 +79,7 @@ Although you can configure other options for Rights Management in the portal, th
 
 That's all you need to do for this first step. The Azure Rights Management service is activated so that later on in the tutorial, you can select one of the default Azure Rights Management templates to protect documents and emails that are classified as Confidential.
 
-For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to the step 2.
+For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to step 2.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
