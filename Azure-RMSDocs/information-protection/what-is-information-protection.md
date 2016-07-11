@@ -32,13 +32,16 @@ Visual markings such as a header, footer, or watermark can be automatically appl
 
 For end users, Azure Information Protection easily integrates with their existing workflows by adding an Information Protection bar to their Office appplications. 
 
-Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-Evaluate: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md) 
+- Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now)
 
-FAQs: [Frequently asked questions for Azure Information Protection preview](faq.md)
+- Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
+- Evaluate: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md) 
+
+- FAQs: [Frequently asked questions for Azure Information Protection preview](faq.md)
+
+- Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
 
