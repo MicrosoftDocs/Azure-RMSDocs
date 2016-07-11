@@ -26,6 +26,8 @@ ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # Step 4: See classification, labeling, and protection in action 
 
+*Applies to: Azure Information Protection preview*
+
 Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
 
 Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
