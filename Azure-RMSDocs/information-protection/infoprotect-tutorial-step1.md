@@ -28,11 +28,11 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
  
 If you have already activated Azure Rights Management - for example, you have already evaluated or deployed Azure Rights Management in your organization - go straight to the next step. 
 
-If you haven't yet activated Azure Rights Management, do this step first so that you can protect your most sensitive documents and files after they have been classified. To activate Azure Rights Management, you can use either the Office 365 admin center, or the Azure classic portal:
+If you haven't yet activated Azure Rights Management, do this step first so that you can protect your most sensitive documents and files after they have been classified. To activate Azure Rights Management, you can use either the Office 365 admin center, or the Azure classic portal:
 
--   If you have an Office 365 subscription that includes Azure Rights Management, or an Office 365 subscription that excludes Azure Rights Management but you have a subscription for Azure RMS Premium: **Use the Office 365 admin center**.
+-   If you have an Office 365 subscription that includes Azure Rights Management, or an Office 365 subscription that excludes Azure Rights Management but you have a subscription for Azure RMS Premium: **Use the Office 365 admin center**.
 
--   If you do not have an Office 365 subscription: **Use the Azure classic portal**.
+-   If you do not have an Office 365 subscription: **Use the Azure classic portal**.
 
 ### To activate Rights Management from the Office 365 classic admin center
 
@@ -41,7 +41,7 @@ If you haven't yet activated Azure Rights Management, do this step first so that
 
 1.  Go to the [Office 365 portal](https://portal.office.com/) and sign in with your Office 365 global administrator account.
 
-2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
+2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
   > [!TIP]
   > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
@@ -58,7 +58,7 @@ If you haven't yet activated Azure Rights Management, do this step first so that
 
 You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
 
-At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close the Office 365 admin center.
+At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close the Office 365 admin center.
 
 ### To activate Rights Management from the Azure classic portal
 
@@ -74,9 +74,9 @@ The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVAT
 
 Although you can configure other options for Rights Management in the portal, these are not needed for this tutorial, so you can close the Azure classic portal.
 
-That’s all you need to do for this first step. The Azure Rights Management service is activated so that later on in the tutorial, you can select one of the default Azure Rights Management templates to protect documents and emails that are classified as Confidential.
+That's all you need to do for this first step. The Azure Rights Management service is activated so that later on in the tutorial, you can select one of the default Azure Rights Management templates to protect documents and emails that are classified as Confidential.
 
-For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you’re ready to go to the next step.
+For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to the next step.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
