@@ -28,11 +28,11 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 In this step, you'll install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications. 
 
-1. On a PC that has Office installed (but not currently loaded), download the Azure Information Protection client from the Microsoft download center.  //Need link// 
+1. On a PC that has Office installed (but not currently loaded), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
 
 2. Run **AZInfoProtection.exe** and follow the prompts to install the client.
 
-- For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
+    For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
 3. Verify that the client has installed by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. When the document loads, you should see two new things:
 
@@ -41,6 +41,8 @@ In this step, you'll install the Azure Information Protection client so that the
         Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Information Protection policy is installed** and a recent connection time.
 
     - A new bar displays under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
+
+You're ready for the final step, to see classification, labeling, and protection in action.
 
 >[!div class="step-by-step"]
 [&#171; Step 2](infoprotect-tutorial-step2.md)

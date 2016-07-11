@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -38,6 +38,8 @@ Expect this list to be updated frequently as some information is moved to the ma
 This preview release adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using an Azure Rights Management template.  
 
 The classification labels and behavior are configured in the Azure portal. You can use the default built-in policies to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
+
+Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
 
 This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when additional features and capabilities become available:
 
@@ -120,6 +122,8 @@ Yes. You can configure an Azure Information Protection policy that only applies 
 
 In the Azure portal, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification.
 
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
+
 The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. 
 
 For the best user experience and to ensure business continuity, we recommend that you start with user recommendation actions, rather than fully automatic actions. This gives your users the ability to accept the labeling or protection action, or override these suggestions.   
@@ -127,6 +131,8 @@ For the best user experience and to ensure business continuity, we recommend tha
 ## Can Azure Information Protection prompt users to classify files themselves rather than use automatic classification? 
 
 Yes. Use the Azure portal to configure whether to use automatic classification or make a recommendation to users, by setting the option **Select how this label is applied: automatically or recommended to user** to **Recommended**.
+
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
 
 ## Can I force all documents to be classified?
 
@@ -144,6 +150,8 @@ Yes. To make sure users justify their change of classification, in the Azure por
 ## How can I automatically protect the content after it's been classified?
 
 In the Azure portal, you can select an Azure Rights Management template to automatically protect the content, according to the classification level that you specify.
+
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
 
 ## Can a file be classified with two different classifications?
 
@@ -177,13 +185,13 @@ Files and emails that are classified by Azure Information Protection can be cons
 
 If you find a problem when using this preview release, in your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
 
-If you have questions or feedback, use the Yammer site //need link//. 
+If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). 
 
 ## What do I do if my question isn’t here?
 
 First, check that your question isn't included in the [Azure Information Protection preview announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now), on the Enterprise Mobility and Security Blog.
 
-Then, visit our Yammer site //need link// to see if somebody else has asked the same question. If not, post your question there.
+Then, visit our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) to see if somebody else has asked the same question. If not, post your question there.
 
 
 
