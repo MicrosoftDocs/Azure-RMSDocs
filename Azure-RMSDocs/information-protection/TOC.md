@@ -12,3 +12,4 @@
 ### [Step 3: Install the client](infoprotect-tutorial-step3.md)
 ### [Step 4: See it in action](infoprotect-tutorial-step4.md)
 ## [Frequently asked questions](faq.md)
+# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)

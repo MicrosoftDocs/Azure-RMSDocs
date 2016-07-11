@@ -22,3 +22,4 @@
 ##### [Dialog box options](sharing-app-dialog-box.md)
 ### [Privacy statement for Microsoft Rights Management in RMS-enlightened applications](privacy-statement-rms-enlightened-applications.md)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
+# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)
