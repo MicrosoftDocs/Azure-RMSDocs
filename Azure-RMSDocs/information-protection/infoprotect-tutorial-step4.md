@@ -36,11 +36,16 @@ Classification and protection happens when you save the document, but before we 
 
     You'll see the **Sensitivity** value change to **Personal**.
 
+    ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/confirm-lowering.png.)
+
 ### To remove the classification completely:
 
 - On the Information Protection bar, click the Edit label icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the Remove label icon. Click **OK** to confirm and provide justification for this action.  
 
     You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label.
+
+    ![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-set.png.)
+
 
 ### To see a recommendation prompt for labeling and automatic protection:
 
@@ -49,6 +54,8 @@ Classification and protection happens when you save the document, but before we 
 2. Save the document (use any file name, any location). 
 
 3. You now see the prompt: **It is recommended to label this file as Confidential**. Click **Change now**.
+
+    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-now.png.)
 
     Immediately, you'll see the watermark of your organization name across the page, in addition to the footer of **Sensitivity: Confidential**. 
 
