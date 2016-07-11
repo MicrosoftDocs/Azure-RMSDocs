@@ -26,7 +26,7 @@ ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # Step 4: See classification, labeling, and protection in action 
 
-Now that you've got a Word document open, you're ready to see how easy it is to start labeling and protecting it, using the policy that we configured.
+Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
 
 Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
 
@@ -44,7 +44,7 @@ To remove the classification completely:
 
 To see a recommendation prompt for labeling and automatic protection:
 
-1. In the Word document, type a fake credit card number: 4242-4242-4242-4242. 
+1. In the Word document, type a fake credit card number: **4242-4242-4242-4242**. 
 
 2. Save the document (use any file name, any location). 
 
@@ -62,8 +62,5 @@ For example, you can change the default title of **Sensitivity** on the Informat
 
 Each time you change any settings in the Azure portal for the Information Protection policy, remember to save the policy and then publish it. If your Office application is open after you made policy changes, close it and reopen it to download the latest policy.
 
-When you've finished your own testing, you might find it useful to look over the frequently asked questions for Azure Information Protection.
+When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faq.md).
 
-
->[!div class="step-by-step"]
-[&#171; Step 3](infoprotect-tutorial-step3.md)
