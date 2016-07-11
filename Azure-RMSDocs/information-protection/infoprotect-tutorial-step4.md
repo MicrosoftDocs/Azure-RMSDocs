@@ -68,7 +68,7 @@ Classification and protection happens when you save the document, but before we 
 
 ##  Next steps
 
-Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. 
+Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
 
 For example, you can change the default title of **Sensitivity** on the Information Protection bar to a title of your own choice. You can change the tooltips, the label colors, the order of the labels, and their names. You can create new labels and define your own automatic rules.
 
