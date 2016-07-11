@@ -67,7 +67,7 @@ Now you've seen the default Azure Information Protection policy and how to custo
 
 For example, you can change the default title of **Sensitivity** on the Information Protection bar to a title of your own choice. You can change the tooltips, the label colors, the order of the labels, and their names. You can create new labels and define your own automatic rules.
 
-Each time you change any settings in the Azure portal for the Information Protection policy, remember to save the policy and then publish it. If your Office application is open after you made policy changes, close it and reopen it to download the latest policy.
+Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. If your Office application is open after you made policy changes, close it and reopen it to download the latest policy.
 
 When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faq.md).
 

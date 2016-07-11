@@ -140,7 +140,7 @@ Yes. If you require users to classify all files that they save, in the Azure por
 
 ## Can I remove classification from a file?
 
-Yes. To remove classification from a file, open the file in the Office application, click the **Edit label** icon in the Information Protection bar, click the ** Remove label** icon, and then click **OK** to confirm your action. 
+Yes. To remove classification from a file, open the file in the Office application, click the **Edit label** icon in the Information Protection bar, click the **Remove label** icon, and then click **OK** to confirm your action. 
 
 
 ## Can I prompt users to justify why they are changing the classification level?
