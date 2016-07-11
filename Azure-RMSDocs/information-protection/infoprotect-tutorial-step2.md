@@ -36,7 +36,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 - With its default settings, **Internal**, **Confidential**, and **Secret** have visual markings configured (such as footer, header, watermark) and none of the polices have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
 
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png.)
+    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
 For our tutorial, we'll change a couple of those global settings so that you can see how they work:
 
@@ -76,7 +76,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 7. Now we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
 
-![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png.)
+![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
