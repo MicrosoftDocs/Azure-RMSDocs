@@ -42,6 +42,9 @@ In this step, you'll install the Azure Information Protection client so that the
 
     - A new bar displays under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
 
+
+![Azure Information Protection quick start tutorial step 31](../media/Word2013-callouts.png.PNG)
+
 You're ready for the final step, to see classification, labeling, and protection in action.
 
 >[!div class="step-by-step"]
