@@ -59,7 +59,7 @@ This preview release has the following limitations. Look out for announcements o
 
 - The SDK for partners and developers is not available.
 
-## What subscription do I need, to try Azure Information Protection?
+## What subscription do I need to try Azure Information Protection?
 
 For the preview release, you can use any subscription that includes Azure Rights Management. Azure Information Protection is  available in all regions. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
 
@@ -112,7 +112,7 @@ Azure Information Protection policy actions take effect when documents are saved
 
 If you have saved files that you want to classify, simply open and save them in your Office application. 
 
-Currently, you cannot scan and apply classification in bulk, and must open and save each application in the Office application. 
+Currently, you cannot scan and apply classification in bulk, and must open and save each document in the Office application. 
 
 ## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
 
@@ -157,7 +157,7 @@ You'll see an example of this in the [Quick start tutorial for Azure Information
 
 If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret – Legal** and **Secret – Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
 
-Although currently, you can set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
+Although you can currently set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
