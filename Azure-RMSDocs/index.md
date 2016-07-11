@@ -33,7 +33,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
+          <li><span class="icon icon-tip"></span> <mark>NEW</mark><a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
           <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
           <li><a href="./get-started/quick-start-tutorial.md">Quick start tutorial for Azure RMS</a></li>
         </ul>
@@ -208,6 +208,39 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <a href="./develop/microsoft-information-protection-and-control-client-portal.md">
                     <h3>Microsoft Rights Management SDK 2.1</h3>
                     <p>Use this powerful SDK for Windows desktop application developers and server based solution providers to enable their products to work with Microsoft Rights Management services.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          <li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="./information-protection/what-is-information-protection">
+                <div class="title column-third">
+                  <span class="step-number"> Preview</span>
+                  <p>Azure Information Protection</p>
+                </div>
+                <p class="description column-two-thirds">Classify, label, and protect your data with Azure Information Protection, now in preview.
+                </p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="./information-protection/what-is-information-protection">
+                    <h3>What is Azure Information Protection?</h3>
+                    <p>Learn about Azure Information Protection, which brings together Azure Rights Management (RMS) and classification and labeling technologies from Secure Islands.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/infoprotect-quick-start-tutorial.md">
+                    <h3>Azure Information Protection quick start tutorial</h3>
+                    <p>Get started with Azure Information Protection in just four steps.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/faq.md">
+                    <h3>Azure Information Protection FAQ</h3>
+                    <p>Find answers to your frequently asked Azure Information Protection questions.</p>
                   </a>
                 </li>
               </ul>
