@@ -33,7 +33,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><span class="icon icon-important"></span><mark>NEW</mark> <a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
+          <li><mark><b>NEW</b></mark> <a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
           <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
           <li><a href="./get-started/quick-start-tutorial.md">Quick start tutorial for Azure RMS</a></li>
         </ul>
@@ -216,8 +216,8 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
             <header class="journey-step-header row">
               <a href="./information-protection/what-is-information-protection">
                 <div class="title column-third">
-                  <span class="step-number"> Preview</span>
-                  <p>Azure Information Protection</p>
+                  <span class="step-number"> 6</span>
+                  <p>Azure Information Protection (Preview)</p>
                 </div>
                 <p class="description column-two-thirds">Classify, label, and protect your data with Azure Information Protection, now in preview.
                 </p>
