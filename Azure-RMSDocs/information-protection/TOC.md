@@ -6,5 +6,5 @@
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
 # [Azure Information Protection (preview)](what-is-information-protection.md)
 ## [What is Azure Information Protection?](what-is-information-protection.md)
-## [What is Azure Information Protection?](quick-start-tutorial.md)
+## [Quick start tutorial](quick-start-tutorial.md)
 ## [Frequently asked questions](faq.md)
