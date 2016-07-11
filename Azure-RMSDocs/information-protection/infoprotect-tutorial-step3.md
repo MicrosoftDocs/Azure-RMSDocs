@@ -36,9 +36,9 @@ In this step, you'll install the Azure Information Protection client so that the
 
 3. Verify that the client has installed by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. When the document loads, you should see two new things:
 
-    - On the **File** tab, a new **Protection** group, with a button labeled **Protect**.
+    - On the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
 
-        Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Information Protection policy is installed** and a recent connection time.
+        Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Information Protection policy is installed** and a recent connection time. Verify that your displayed user name is correct for your tenant.
 
     - A new bar displays under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
 

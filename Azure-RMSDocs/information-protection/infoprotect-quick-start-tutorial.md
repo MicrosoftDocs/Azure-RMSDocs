@@ -40,9 +40,9 @@ To complete this tutorial, you will need the following:
   > [!TIP] 
   > If you need to get one or both of these subscription, do this in advance because this process can sometimes take a while to complete.
 
--   A global administrator account to sign in to the Office 365 admin center or the Azure classic portal, so that you can activate the Rights Management service. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
+-   A global administrator account to sign in to the Office 365 admin center or the Azure classic portal if you need to activate the Rights Management service. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
 
--   A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 2016, Office 2013 with Service Pack 1. You can use Office 2010 if you also have the Rights Management sharing application installed and your PC is not running Windows 10.
+-   A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 2016, Office 2013 with Service Pack 1, or Office 2010. 
 
 Let's get started.
 

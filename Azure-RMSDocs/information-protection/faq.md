@@ -92,13 +92,13 @@ For the preview release and at general availability (GA), Azure Information Prot
 
 - Office 2013 with Service Pack 1
 
-- Office 2010 with the [Rights Management sharing application](../rms-client/sharing-app-windows.md) installed (not supported on Windows 10)
+- Office 2010
 
 After general availability, look for an announcement on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when Azure Information Protection will support additional file types, such as PDF, audio, video, and image files.
 
 ## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
 
-Every time a user opens an Office application, the Azure Information Protection client downloads the latest policy from Azure, using an HTTPS link to secure the data. 
+Every time a user opens an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
 
 If the application is already loaded when an Azure Information Protection policy is updated, you must close and reopen the application to get the latest version of the policy.
 
