@@ -39,7 +39,7 @@ This preview release adds an Information Protection bar to Microsoft Office appl
 
 The classification labels and behavior are configured in the Azure portal. You can use the default built-in policies to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
 
-Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
+Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when additional features and capabilities become available:
 
@@ -122,7 +122,7 @@ Yes. You can configure an Azure Information Protection policy that only applies 
 
 In the Azure portal, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. 
 
@@ -132,7 +132,7 @@ For the best user experience and to ensure business continuity, we recommend tha
 
 Yes. Use the Azure portal to configure whether to use automatic classification or make a recommendation to users, by setting the option **Select how this label is applied: automatically or recommended to user** to **Recommended**.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 ## Can I force all documents to be classified?
 

@@ -43,8 +43,9 @@ For end users, Azure Information Protection easily integrates with their existin
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
 
 ## Next steps
 
-Get started with Azure Information Protection in four simple steps, with our [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
+Get started with Azure Information Protection in four simple steps, with our [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
