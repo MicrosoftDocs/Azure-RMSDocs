@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Rights Management
@@ -24,5 +24,27 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 ---
 
-# What is Azure Information Protection (preview) 
+# What is Azure Information Protection (preview)
 
+Azure Information Protection lets you classify, label, and protect your data. When you classify data, persistent labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. After data has been classified, it's then much easier to manage the data, in accordance with your in-house policies. 
+
+Visual markings such as a header, footer, or watermark can be automatically applied, according your classification labels. For your most sensitive data, you can use Azure Rights Management encryption, identity, and authorization policies, to help prevent data loss.
+
+For end users, Azure Information Protection easily integrates with their existing workflows by adding an Information Protection bar to their Office appplications. 
+
+
+- Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now)
+
+- Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+
+- Evaluate: [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md) 
+
+- FAQs: [Frequently asked questions for Azure Information Protection preview](faq.md)
+
+- Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
+## Next steps
+
+Get started with Azure Information Protection in four simple steps, with our [Quick start tutorial for Azure Information Protection](azip-quickstart-tutorial.md).
