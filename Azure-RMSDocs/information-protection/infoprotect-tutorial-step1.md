@@ -26,9 +26,10 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate the Rights Management service
  
-If you have already activated Azure Rights Management - for example, you have already evaluated or deployed Azure Rights Management in your organization - go straight to the [next step](infoprotect-tutorial-step2.md). 
+> [!NOTE]
+>If you only want to classify your data and not protect it with Azure Rights Management, or if you have already activated Azure Rights Management for your tenant - go straight to the [next step](infoprotect-tutorial-step2.md). 
 
-If you haven't yet activated Azure Rights Management, do this step first so that you can protect your most sensitive documents and files after they have been classified. To activate Azure Rights Management, you can use either the Office 365 admin center, or the Azure classic portal:
+When Azure Rights Management is activated, you can protect your most sensitive documents and files after they have been classified. To activate Azure Rights Management, you can use either the Office 365 admin center, or the Azure classic portal:
 
 -   If you have an Office 365 subscription that includes Azure Rights Management, or an Office 365 subscription that excludes Azure Rights Management but you have a subscription for Azure RMS Premium: **Use the Office 365 admin center**.
 

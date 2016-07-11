@@ -36,7 +36,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 - With its default settings, **Internal**, **Confidential**, and **Secret** have visual markings configured (such as footer, header, watermark) and none of the polices have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
 
-For our tutorial, we'll change a couple of those global settings:
+For our tutorial, we'll change a couple of those global settings so that you can see how they work:
 
 -  **Select the default label**: Set this to **Internal**.
 
@@ -48,7 +48,9 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. For **Select RMS template**: Click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is Contoso, Ltd, you will see and select **Contoso, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template.  
+    a. If you have activated Azure Rights Managment, for **Select RMS template**: Click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is Contoso, Ltd, you will see and select **Contoso, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template.
+
+    If you have not activated Azure Rights Management, you cannot use this option.
 
     b. **Documents with this label have a watermark**: Click **On** and for the **Text** box, type your organization name. For example, **Contoso, Ltd**. 
 
