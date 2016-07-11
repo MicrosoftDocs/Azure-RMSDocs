@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Rights Management
@@ -39,6 +39,8 @@ Evaluate: [Quick start tutorial for Azure Information Protection](azip-quickstar
 FAQs: [Frequently asked questions for Azure Information Protection preview](faq.md)
 
 Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
 
 ## Next steps
 
