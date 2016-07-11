@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -177,13 +177,13 @@ Files and emails that are classified by Azure Information Protection can be cons
 
 If you find a problem when using this preview release, in your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
 
-If you have questions or feedback, use the Yammer site //need link//. 
+If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). 
 
 ## What do I do if my question isn’t here?
 
 First, check that your question isn't included in the [Azure Information Protection preview announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now), on the Enterprise Mobility and Security Blog.
 
-Then, visit our Yammer site //need link// to see if somebody else has asked the same question. If not, post your question there.
+Then, visit our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) to see if somebody else has asked the same question. If not, post your question there.
 
 
 
