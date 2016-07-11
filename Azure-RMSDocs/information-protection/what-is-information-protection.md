@@ -32,7 +32,7 @@ Azure Information Protection lets you classify, label, and protect your data. Wh
 
 For end users, Azure Information Protection easily integrates with their existing workflows by adding an Information Protection bar to their Office appplications. 
 
-- Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now)
+- Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/22/announcing-azure-information-protection/)
 
 - Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 

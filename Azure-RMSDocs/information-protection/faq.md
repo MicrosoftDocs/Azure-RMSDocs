@@ -189,7 +189,7 @@ If you have questions or feedback, use the [Azure Information Protection Yammer 
 
 ## What do I do if my question isn’t here?
 
-First, check that your question isn't included in the [Azure Information Protection preview announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now), on the Enterprise Mobility and Security Blog.
+First, check that your question isn't included in the [Azure Information Protection preview announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/22/announcing-azure-information-protection/), on the Enterprise Mobility and Security Blog.
 
 Then, visit our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) to see if somebody else has asked the same question. If not, post your question there.
 
