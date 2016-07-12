@@ -214,7 +214,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
             </section>
           <li class="journey-step">
             <header class="journey-step-header row">
-              <a href="./information-protection/what-is-information-protection">
+              <a href="./information-protection/what-is-information-protection.md">
                 <div class="title column-third">
                   <span class="step-number"> 6</span>
                   <p>Azure Information Protection (Preview)</p>
@@ -226,7 +226,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="./information-protection/what-is-information-protection">
+                  <a href="./information-protection/what-is-information-protection.md">
                     <h3>What is Azure Information Protection?</h3>
                     <p>Learn about Azure Information Protection, which brings together Azure Rights Management (RMS) and classification and labeling technologies from Secure Islands.</p>
                   </a>
