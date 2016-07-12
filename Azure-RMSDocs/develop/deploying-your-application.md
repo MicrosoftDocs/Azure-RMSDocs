@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Deploy into pre-production
+# Deploy into production
 
 
 This topic outlines and guides you through deployment options for your rights-enabled application.
@@ -32,10 +32,6 @@ This topic outlines and guides you through deployment options for your rights-en
 ## Request a Production License Agreement
 
  Before you can release an application developed using the Rights Management Services SDK 2.1, you must apply for a Production License Agreement to obtain a production certificate.
-
-> [!IMPORTANT]
-> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
-> For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 You can obtain the certificate by applying for a Production License Agreement.
 
@@ -122,7 +118,8 @@ In order for your end-user to take advantage of Azure Rights Management services
 
 
 > [!IMPORTANT]
-> Running your RMS SDK 2.1 client application with Azure RMS, requires you to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+> If you will be running your client application with Azure based RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+> For more information on running with Azure RMS see, [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Download the [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/en-us/download/details.aspx?id=28177) from the Microsoft Download Center.
 -   Ensure that your deployment of a rights-enabled application includes a pre-requisites check for this service selection.

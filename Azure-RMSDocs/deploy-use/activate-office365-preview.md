@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/05/2016
+ms.date: 07/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,26 +32,29 @@ ms.suite: ems
 
 Use these instructions only if you're using the new, preview version of the Office 365 admin center (**Office 365 Admin center preview**).
 
-1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.
+1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is a global administrator for your Office 365 deployment.
 
 2. If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
     > [!TIP]
     > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
 
-3. From the left pane: **Settings** > **Services & add-ins**.
+3. Navigate to the **rights management** page, or use the search functionality.
 
-4. Click **Microsoft Azure Rights Management**.
+    We suggest you navigate if you are new to the preview version and find it useful to see related configuration options, and use search if you are familiar with the preview version and want to go straight to activating Azure Rights Management. You might also need to use the search option during the preview version of the admin center, if the navigation instructions do not match what you see.
 
-    NOTE: Depending on your display, you might need to scroll to see this option. However, if it is not listed, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    - To navigate: **Settings** > **Services & add-ins** > **Microsoft Azure Rights Management** > **Manage Microsoft Azure Rights Management settings**
 
-    Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    - To search: In the search box on the **Home** page, type **Rights Management**, and then from the search results, click **Microsoft Azure rights management settings**.
 
-5. On the **Microsoft Azure Rights Management** page, click **Manage Microsoft Azure Rights Management settings**.
+        > [!NOTE]
+        >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+        >
+        >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm Azure Rights Management support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
-6. On the **rights management** page, click **activate**.
+4. On the **rights management** page, click **activate**.
 
-7. When prompted **Do you want to activate Rights Management?**, click **activate**.
+5. When prompted **Do you want to activate Rights Management?**, click **activate**.
 
 You should now see **Rights management is activated** and the option to deactivate.
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -49,7 +49,15 @@ This step is optional but recommended when your Azure RMS tenant key is managed 
 
 When you re-key your Azure RMS tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure RMS tenant key as soon as the migration is complete.
 
+<<<<<<< HEAD
 To re-key your Microsoft-managed Azure RMS tenant key, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) and open an **Azure Rights Management support case with a request to re-key your Azure RMS key after migration from AD RMS**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+=======
+-   If your Azure RMS tenant key is managed by Microsoft: To do this, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Rights Management support case with a request to re-key your Azure RMS tenant key**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+
+-   If your Azure RMS tenant key is managed by you (BYOK): Repeat the BYOK procedure to generate and create a new key over the Internet or in person.
+
+For more information about managing your Azure RMS tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
+>>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
 
 ## Next steps
 

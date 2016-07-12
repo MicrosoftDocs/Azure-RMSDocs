@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2016
+ms.date: 07/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
 > 
-> Also [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) if your organization has specific policies for handling keys.
+> Also [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if your organization has specific policies for handling keys.
 
 ### Prerequisites for BYOK
 See the following table for a list of prerequisites for bring your own key (BYOK).
@@ -92,7 +92,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |---------------|--------------------|
 |A subscription that supports Azure RMS.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).|
 |You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
-|All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales drivers.|
+|All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br />**Note**: If you are migrating from AD RMS to Azure RMS by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -100,7 +100,7 @@ To generate and transfer your own tenant key to Azure Key Vault, follow the proc
 
 When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell Azure RMS to use this key, by specifying this URL.
 
-But before Azure RMS can use the key, Azure RMS must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants all permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
+But before Azure RMS can use the key, Azure RMS must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
@@ -129,9 +129,9 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
 2.  Consider using usage logging, which logs every transaction that Azure Rights Management performs.
 
-    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following example of a log file displayed in Excel where the **Decrypt** and **SignDigest** Request Types show that the tenant key is being used.
+    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KMSPDecrypt** and **KMSPSignDigest** request types show that the tenant key is being used.
 
-    ![log file in Excel where tenant key is being used](../media/RMS_Logging.gif)
+    ![log file in Excel where tenant key is being used](../media/RMS_Logging.png)
 
     For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
 

@@ -32,13 +32,7 @@
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "/EM/toc.json",
-      "ms.locale": "en-us"
+      "breadcrumb_path": "/enterprise-mobility/toc.json"
     }
-  },
-  "render": {
-    "theme": "hyde",
-    "dest": "_output"
-  },
-  "basepath": "/rights-management/deploy-use"
+  }
 }

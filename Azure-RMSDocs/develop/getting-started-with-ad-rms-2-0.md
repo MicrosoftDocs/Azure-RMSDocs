@@ -6,7 +6,7 @@ description: The RMS SDK 2.1 platform enables developers to build applications
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -39,17 +39,17 @@ This topic will guide you through the process of setting up and running your rig
 | [Install the SDK](install-the-rms-sdk.md) | This topic guides you through installing the developer tools.|
 | [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | This topic contains instructions about how to configure a Visual Studio project to use the RMS SDK 2.1.|
 | [Developing your application](developing-your-application.md) | This topic contains essential guidance on the core aspects of an RMS enabled application and can serve as the foundation of your own application development.|
-| [Testing your application](running-your-first-application.md) |This topic contains instructions about how to setup for your application testing.|
+| [Testing your application](how-to-set-up-your-test-environment.md) |This topic contains instructions about how to setup for your application testing.|
 | [Deploy into production](deploying-your-application.md) |This topic guides you through deployment options for your rights-enabled application.|
-
-Once you've gotten started, check out some of our other [RMS samples](samples.md). Then, stay current through our [RMS Developer's Corner](http://blogs.msdn.com/b/rms/).
 
 
 Try using RMS SDK 2.1 by following the guidance in these topics:
 
--   [Install the SDK](install-the-rms-sdk.md)
--   [Testing your rights-enabled application](running-your-first-application.md)
--   [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
+- [Install the SDK](install-the-rms-sdk.md)
+- [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
+- [Developing your application](developing-your-application.md)
+- [Testing your application](how-to-set-up-your-test-environment.md)
+- [Deploy into production](deploying-your-application.md)
 
 ### Why use RMS SDK 2.1 for protecting your content
 
@@ -71,12 +71,9 @@ The RMS SDK 2.1 supports a range of important client and server platforms. For
 
 ## Related topics
 
-* [AD RMS samples](samples.md)
+* [RMS Developers Guide](developers-guide.md)
 * [AD RMS Developer's Corner](http://blogs.msdn.com/b/rms/)
-* [Install the SDK](install-the-rms-sdk.md)
-* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
-* [Overview](ad-rms-overview.md)
-* [Supported platforms](supported-platforms.md)
+
  
 
  

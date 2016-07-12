@@ -1,12 +1,12 @@
 ﻿---
 # required metadata
 
-title: Overview | Azure RMS
+title: Overview - RMS SDK 4.2 | Azure RMS
 description: AD RMS and Azure RMS is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,10 +26,7 @@ ms.suite: ems
 
 # Overview
 
-
-Microsoft Rights Management Services (AD RMS and Azure RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled applications, content owners will be able to define who can open, modify, print, forward, or take other actions with their content.
-
-Microsoft Rights Management SDK 4.2 is available for several platforms and is a software developer kit (SDK) or framework, which is designed for client computers and devices to help protect access to and usage of information flowing through applications that are “rights-enabled”. The SDKs for these platforms provide a simple API for an application developer to protect or consume digital content, retrieve templates and acquire policies from a server, and other related rights management tasks.
+Microsoft Rights Management SDK 4.2 is an information protection technology and is available for several platforms.  It provides a software developer kit (SDK) or framework, which is designed for client computers and devices to help protect access to and usage of information flowing through applications that are “rights-enabled”. The SDKs for these platforms provide a simple API for an application developer to protect or consume digital content, retrieve templates and acquire policies from a server, and other related rights management tasks.
 
 For more information on the currently supported platforms, see our developer documentation portal for [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md).
 

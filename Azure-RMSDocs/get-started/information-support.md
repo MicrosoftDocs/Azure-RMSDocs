@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Use the following resources for additional information about Microsoft [!INCLUDE
 The Rights Management product group has joined forces with the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) to provide you with technical information and other news about [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], and related technologies. These blog posts supplement the product documentation and support information.
 
 > [!TIP]
-> If you are developing applications for Azure RMS or AD RMS, you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner Blog](http://blogs.msdn.com/b/rms/).
+> If you are developing applications for Azure RMS or AD RMS, you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/).
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
@@ -72,13 +72,13 @@ Core skills learning:
 
 Troubleshooting:
 
-- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs) page.
+- If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs.md) page.
 
-- If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms) information, which is regularly updated.
+- If you have a question about a support statement for Azure RMS: See the [Requirements](requirements-azure-rms.md) information, which is regularly updated.
 
-- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](..deploy-use/help-users).
+- For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure RMS: See [Helping users to protect files](../deploy-use/help-users.md).
 
-- If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector) information, which includes details about event log entries, performance counters, and logging.
+- If you have deployed the RMS connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 
