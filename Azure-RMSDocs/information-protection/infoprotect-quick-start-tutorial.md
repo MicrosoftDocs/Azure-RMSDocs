@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Azure Information Protection quick start tutorial | Azure Rights Management
@@ -35,7 +35,7 @@ This tutorial is aimed at IT administrators and consultants, to help them evalua
 ## Prerequisites 
 To complete this tutorial, you will need the following:
 
-- Any subscription that includes Azure Rights Management, which will give you access to the preview release of Azure Information Protection. Azure Information Protection is available in all regions. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+- Any subscription that includes Azure Rights Management, which will give you access to the preview release of Azure Information Protection. Azure Information Protection is available in all regions that support Azure Rights Management. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
 
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
