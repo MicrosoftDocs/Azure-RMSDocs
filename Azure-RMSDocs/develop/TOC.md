@@ -65,3 +65,4 @@
 #### [Functions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
 #### [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
 #### [Error codes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
+# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)
