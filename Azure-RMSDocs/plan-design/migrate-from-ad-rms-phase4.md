@@ -49,12 +49,12 @@ This step is optional but recommended when your Azure RMS tenant key is managed 
 
 When you re-key your Azure RMS tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure RMS tenant key as soon as the migration is complete.
 
-To re-key your Microsoft-managed Azure RMS tenant key, [contact Microsoft Support](../get-started/information-support#to-contact-microsoft-support) and open an **Azure Rights Management support case with a request to re-key your Azure RMS key after migration from AD RMS**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+To re-key your Microsoft-managed Azure RMS tenant key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Rights Management support case with a request to re-key your Azure RMS key after migration from AD RMS**. You must prove you are an administrator for your Azure RMS tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
 
 
 ## Next steps
 
-For more information about managing your RMS tenant key, see [Operations for your Azure Rights Management tenant ky](../deploy-use/operations-tenant-key.md).
+For more information about managing your RMS tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 
 Now that you have completed the migration, review the [deployment roadmap](deployment-roadmap.md) to identify any other deployment tasks that you might need to do.
 
