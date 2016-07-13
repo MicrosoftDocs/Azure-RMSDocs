@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,7 +34,7 @@ Use the following table to identify business requirements or problems that your 
 
 |Requirement or problem|Solved by Azure RMS|
 |--------------------------|-----------------------|
-|Protect all file types|√ In previous implementation of Rights Management, only Office files could be protected, using native protection. Now, [generic protection](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) means that all file types are supported.|
+|Protect all file types|√ In previous implementation of Rights Management, only Office files could be protected, using native protection. Now, [generic protection](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection) means that all file types are supported.|
 |Protect files anywhere|√ When a file is saved to a location ([protect in-place](../rms-client/sharing-app-protect-in-place.md)), the protection stays with the file, even if it is copied to storage that is not under the control of IT, such as a cloud storage service.|
 |Share files securely by email|√ When a file is shared by email ([share protected](../rms-client/sharing-app-protect-by-email.md)), the file is protected as an attachment to an email message, with instructions how to open the protected attachment. The email text is not encrypted, so the recipient can always read these instructions. However, because the attached document is protected, only authorized users will be able to open it, even if the email or document is forwarded to other people.|
 |Auditing and monitoring|√ You can [audit and monitor usage](../deploy-use/log-analyze-usage.md) of your protected files, even after these files leave your organization’s boundaries.<br /><br />For example, you work for Contoso, Ltd. You are working on a joint project with 3 people from Fabrikam, Inc. You email these 3 people a document that you protect and restrict to read-only. Azure RMS auditing can provide the following information:<br /><br />- Whether the people you specified in Fabrikam opened the document, and when.<br /><br />- Whether other people that you didn’t specify attempted (and failed) to open the document—perhaps because it was forwarded or saved to a shared location that others could access.<br /><br />- Whether any of the specified people tried (and failed) to print or change the document.|

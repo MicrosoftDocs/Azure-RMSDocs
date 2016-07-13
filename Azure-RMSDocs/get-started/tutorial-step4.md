@@ -6,7 +6,7 @@ description: The fourth step of a tutorial to quickly try out Microsoft Azure Ri
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -73,7 +73,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 |--------------------------------|--------------------------|
 |Full instructions for viewing files that are protected by Azure Rights Management|[View and use files that have been protected by Rights Management](../rms-client/sharing-app-view-use-files.md)|
 |About the free subscription, RMS for individuals|[RMS for Individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|About the two versions of the file that you see attached to the email message|[What’s the .ppdf file that’s automatically created?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|About the two versions of the file that you see attached to the email message|[What’s the .ppdf file that’s automatically created?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)|
 
 
 >[!div class="step-by-step"]
