@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2016
+ms.date: 07/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -40,11 +40,8 @@ You must first extract your server licensor certificate (SLC) key from the AD RM
 
 Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
 
-<<<<<<< HEAD
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
-=======
-1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
+
 
 > [!TIP]
 > If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
@@ -112,11 +109,8 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **Key successfully imported.**
 
-<<<<<<< HEAD
+
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
-=======
-1.  Use the following steps from the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md):
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
 
     This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
@@ -167,14 +161,11 @@ Before you begin, make sure that your organization has a key vault that has been
     Disconnect-AadrmService
     ```
 
-<<<<<<< HEAD
     > [!NOTE]
     > If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
-=======
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
+
 
 

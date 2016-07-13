@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2016
+ms.date: 07/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,26 +43,17 @@ Because your Azure RMS tenant key will be stored and managed by Azure Key Vault,
 
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
-<<<<<<< HEAD
+
 > [!TIP]
 > If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
-=======
-1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
+
 
 ## Part 1: Transfer your HSM key to Azure Key Vault
 
 These procedures are done by the administrator for Azure Key Vault.
 
-<<<<<<< HEAD
 1.  Follow the instructions in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) with the following exception:
-=======
-2.  On the Internet-connected workstation, in a Windows PowerShell session, reconnect to the Azure RMS service.
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
 
-    -   Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key_(keyAppName)_(keyIdentifier)** locally on the server.
-
-    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
 
 2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
 
@@ -99,12 +90,8 @@ These procedures are done by the administrator for Azure RMS.
     Disconnect-AadrmService
     ```
 
-<<<<<<< HEAD
     > [!NOTE]
     > If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1#step-3-activate-your-rms-tenant).
-=======
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
->>>>>>> 00cda5edc244cfe4478f8036e9dd0ef538cd4678
 
