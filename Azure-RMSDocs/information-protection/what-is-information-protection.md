@@ -1,11 +1,11 @@
-﻿---
+---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Rights Management
 description: An overview of the Azure Information Protection service, now in preview
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,7 +24,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 ---
 
-# What is Azure Information Protection (preview)
+# What is Azure Information Protection (preview)?
 
 *Applies to: Azure Information Protection preview*
 
