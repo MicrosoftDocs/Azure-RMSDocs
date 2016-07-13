@@ -40,7 +40,7 @@ You must first extract your server licensor certificate (SLC) key from the AD RM
 
 Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
 
-Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
+Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
 
 > [!TIP]
@@ -59,7 +59,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     - A new configuration data file without the key, which is then ready to be imported to your Azure RMS tenant.
 
-    - A PEM file (certificate container) with the key, which is then ready to be imported to your on-premises HSM.
+    - A PEM file (key container) with the key, which is then ready to be imported to your on-premises HSM.
 
 2. Azure RMS administrator or Azure Key Vault administrator: On the disconnected workstation, run the TpdUtil tool from the [Azure RMS migration toolkit](https://go.microsoft.com/fwlink/?LinkId=524619). For example, if the tool is installed on your E drive where you copy your configuration data file named ContosoTPD.xml:
 
