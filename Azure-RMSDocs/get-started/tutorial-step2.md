@@ -6,7 +6,7 @@ description: The second step of a tutorial to quickly try out Microsoft Azure Ri
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -68,7 +68,7 @@ You’re now ready to start protecting files that contain information that you w
 |--------------------------------|--------------------------|
 |About a local installation of the Rights Management sharing application for Windows and user instructions|[Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md)|
 |About the scripted installation of the Rights Management sharing application for Windows and more technical information|[Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md)|
-|To understand the difference between native protection and generic protection|[What’s the difference between generic protection and built-in (native) protection?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
+|To understand the difference between native protection and generic protection|[What’s the difference between generic protection and built-in (native) protection?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection)|
 
 
 >[!div class="step-by-step"]
