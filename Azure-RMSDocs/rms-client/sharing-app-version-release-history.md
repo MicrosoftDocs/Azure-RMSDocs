@@ -42,7 +42,7 @@ Versions before January 1, 2015 are not listed.
 
 **Fixes**:
 
-- Support for organizations using federation and multi-factor authentication (MFA).
+- Users in organizations using federation and multi-factor authentication no longer get error 0x800704DC when they protect content.
 
 
 
