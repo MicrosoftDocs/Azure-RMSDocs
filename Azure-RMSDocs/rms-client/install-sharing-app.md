@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -68,7 +68,7 @@ For examples for how you might use the Rights Management sharing application, an
 
 -   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)

@@ -30,7 +30,7 @@ ms.suite: ems
 
 *Applies to: Azure Rights Management, Office 365*
 
-Use the following procedures if you have decided to [manage your own tenant key](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
+Use the following procedures if you have decided to [manage your own tenant key](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) and want to transfer it over the Internet rather than travel to a Microsoft facility to transfer the tenant key in person:
 
 
 ## Prepare your Internet-connected workstation

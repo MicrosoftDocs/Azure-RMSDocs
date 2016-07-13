@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -565,7 +565,7 @@ Although you cannot configure IRM for users' OneDrive for Business by using the 
 
     3.  Search for `$webUrls` and replace the example values with your users' OneDrive for Business web URLs, adding or deleting as many entries as you need.
 
-        Alternatively, see the comments in the script about how to replace this array by importing a .CSV file that contains all the URLs you need to configure.  We've provided another sample script to automatically search for and extract the URLs to populate this .CSV file. When you're ready to do this, expand the [Additional script to output all OneDrive for Business URLs to a .CSV file](#BKMK_Script_OD4B_URLS) section immediately after these steps.
+        Alternatively, see the comments in the script about how to replace this array by importing a .CSV file that contains all the URLs you need to configure.  We've provided another sample script to automatically search for and extract the URLs to populate this .CSV file. When you're ready to do this, use the [Additional script to output all OneDrive for Business URLs to a .CSV file](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) section immediately after these steps.
 
         The web URL for the user's OneDrive for Business is in the following format: https://*&lt;tenant name&gt;*-my.sharepoint.com/personal/*&lt;user_name&gt;*_*&lt;tenant name&gt;*_com
 
