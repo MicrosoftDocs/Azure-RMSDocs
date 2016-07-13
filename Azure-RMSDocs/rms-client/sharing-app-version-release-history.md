@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,6 +35,16 @@ Versions before January 1, 2015 are not listed.
 
 > [!NOTE]
 > If you have feedback or a question about the RMS sharing application, send an email message to [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Version 1.0.2217.0
+
+**Released**: 07/13/2016
+
+**Fixes**:
+
+- Support for organizations using federation and multi-factor authentication (MFA).
+
+
 
 ## Version 1.0.2191.0
 **Released**: 06/16/2016
