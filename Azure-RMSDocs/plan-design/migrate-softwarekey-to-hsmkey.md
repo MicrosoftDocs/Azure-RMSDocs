@@ -69,18 +69,18 @@ Before you begin, make sure that your organization has a key vault that has been
 
     Additional information for this command:
 
-    -   The **/tpd**: specifies the full path and name of the exported AD RMS configuration data file. The full parameter name is **TpdFilePath**.
+    - The **/tpd**: specifies the full path and name of the exported AD RMS configuration data file. The full parameter name is **TpdFilePath**.
 
-    -   The **/otpd**: specifies the output file name for the configuration data file without the key. The full parameter name is **OutPfxFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_keyless**, and it is stored in the current folder.
+    - The **/otpd**: specifies the output file name for the configuration data file without the key. The full parameter name is **OutPfxFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_keyless**, and it is stored in the current folder.
 
-    -   The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and it is stored in the current folder.
+    - The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and it is stored in the current folder.
 
-    -   If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
+    - If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
 
 
-    To see Help for this tool, which includes a description, usage, and examples, run TpdUtil.exe with no parameters.
+	To see Help for this tool, which includes a description, usage, and examples, run TpdUtil.exe with no parameters.
 
-    If you have more than one RMS configuration data files, run this tool for the remainder of these files.
+	If you have more than one RMS configuration data files, run this tool for the remainder of these files.
 
 3. On the same disconnected workstation, attach and configure your Thales HSM, according to your Thales documentation. You can now import your key into your attached Thales HSM by using the following command where you will need to substitute your own file name for ContosoTPD.pem:
 
