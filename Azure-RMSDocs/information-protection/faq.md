@@ -82,7 +82,7 @@ If you select the option to install the demo policy when you install the Azure I
 If you want to protect the documents and emails that you classify and protect and you haven't yet activated Azure Rights Management, this does require special user permissions. For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)
 
 
-## I see **(“Premium P2” Service Plan)** on the Azure Information Protection blade, in the Azure portal – what does this mean?
+## I see **(“Premium P2” Service Plan)** on the Azure Information Protection blade, in the Azure portal—what does this mean?
 
 For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the blog post, [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
