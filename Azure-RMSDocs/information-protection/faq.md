@@ -79,7 +79,7 @@ For the preview release only, any user who is authenticated by Azure can see and
 
 If you select the option to install the demo policy when you install the Azure Information Protection client, you don't even need to sign in to the portal to try the preview. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
-If you want to protect the documents and emails that you classify and protect, and you haven't yet activated Azure Rights Management, this does require special administrator permissions. For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)
+If you want to protect the documents and emails that you classify and protect, and you haven't yet activated Azure Rights Management, the activation process does require special administrator permissions. For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)
 
 
 ## I see **(“Premium P2” Service Plan)** on the Azure Information Protection blade, in the Azure portal—what does this mean?
