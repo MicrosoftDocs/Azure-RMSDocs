@@ -108,7 +108,6 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **Key successfully imported.**
 
-
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
 This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
