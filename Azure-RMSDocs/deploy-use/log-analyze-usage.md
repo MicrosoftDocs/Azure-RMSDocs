@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -183,7 +183,6 @@ There are many request types for Azure Rights Management but the following table
 |BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
 |BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
 |Certify|The client is certifying the content for protection.|
-|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK).|
 |DeleteTemplateById|A call is  made from the Azure classic portal, to delete a template by template  ID.|
 |ExportTemplateById|A call is  made from the Azure classic portal to export a template based on a template ID.|
 |FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
@@ -197,12 +196,20 @@ There are many request types for Azure Rights Management but the following table
 |GetTemplateById|A call is  made from the Azure classic portal to get a template by specifying a template ID.|
 |ExportTemplateById|A call is being made from the Azure classic portal to export a template by specifying a template ID.|
 |FindServiceLocationsForUser|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
+|KeyVaultDecryptRequest|needs description|
+|KeyVaultGetKeyInfoRequest|needs description|
+|KeyVaultEncryptRequest|needs description|
+|KeyVaultImportKeyRequest|needs description|
+|KeyVaultSignRequest|needs description|
+|KeyVaultVerifySignatureRequest|needs description|
+|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK).|
+|KMSPSignDigest|A call is made when a customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
 |ImportTemplate|A call is  made from the Azure classic portal to import a template.|
 |ServerCertify|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
 |SetUsageLogFeatureState|A call is  made to enable usage logging.|
 |SetUsageLogStorageAccount|A call is  made to specify the location of the Azure RMS logs.|
-|KMSPSignDigest|A call is made when a customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
 |UpdateTemplate|A call is  made from the Azure classic portal to update an existing template.|
+
 
 ## Windows PowerShell reference
 Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
