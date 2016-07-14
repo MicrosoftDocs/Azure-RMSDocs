@@ -71,7 +71,11 @@ Any changes to the subscription requirements will be announced on the [Enterpris
 
 Currently, you must use this link to see Azure Information Protection in the portal: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
 
-Then, on the hub menu, click **Browse** and start typing "Information" in the Filter box. From the results, select **Azure Information Protection**.
+Then, on the hub menu, click **Browse** and start typing "Information Protection" in the Filter box. From the results, select **Azure Information Protection**.
+
+## I see **(“Premium P2” Service Plan)** on the Azure Information Protection blade, in the Azure portal – what does this mean?
+
+For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the blog post, [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
