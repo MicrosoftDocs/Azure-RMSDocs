@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 07/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,6 +66,12 @@ For the preview release, you can use any subscription that includes Azure Rights
 To configure the Azure Information Protection policies in the Azure portal, you must have an Azure subscription. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
 Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+
+## If Azure Information Protection is now public preview, why can't I find it in the Azure portal?
+
+Currently, you must use this link to see Azure Information Protection in the portal: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
+
+Then, on the hub menu, click **Browse** and start typing "Information" in the Filter box. From the results, select **Azure Information Protection**.
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
