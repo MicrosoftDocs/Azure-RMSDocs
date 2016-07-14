@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial | Azure Rights Manageme
 description: An introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,7 +30,9 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 Use this tutorial to quickly try out Azure Information Protection preview for your organization, with just 4 steps that should take you less than 15 minutes. Optionally, you’ll activate the Azure Rights Management service, look at and modify the default Azure Information Protection policy, install the Azure Information Protection client, and then use a Word document to see classification, labeling, and protection in action.
 
-This tutorial is aimed at IT administrators and consultants, to help them evaluate Azure Information Protection as an enterprise information protection solution for an organization. In a production environment, the instructions to activate the service, configure the Information Protection policy, and install the client for users would be done by an administrator. The instructions to label the document would be done by end users. Both sets of instructions are included in this tutorial, to demonstrate the end-to-end scenario of classifying, labeling, and protecting your organization's data. If you have any problems completing this tutorial, send an email message to [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Information%20Protection%20Quick%20Start%20tutorial) and we will help you out.
+This tutorial is aimed at IT administrators and consultants, to help them evaluate Azure Information Protection as an enterprise information protection solution for an organization. In a production environment, the instructions to activate the service, configure the Information Protection policy, and install the client for users would be done by an administrator. The instructions to label the document would be done by end users. Both sets of instructions are included in this tutorial, to demonstrate the end-to-end scenario of classifying, labeling, and protecting your organization's data. 
+
+If you have any problems completing this tutorial, using the preview release of Azure Information Protection, or want to see what others are saying about it, head over to the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
 ## Prerequisites 
 To complete this tutorial, you will need the following:
