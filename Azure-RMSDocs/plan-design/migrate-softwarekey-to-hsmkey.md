@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -111,12 +111,12 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-    This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
+This output confirms that the private key is now migrated to your on-premises Thales HSM device with an encrypted copy that is saved to a key (in our example, "key_simple_contosobyok"). 
 
-    Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
+Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
 
-    > [!IMPORTANT]
-    > When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+> [!IMPORTANT]
+> When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
@@ -142,10 +142,10 @@ Before you begin, make sure that your organization has a key vault that has been
 
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
-    For example, using our key URL value from the previous step and a configuration data file of C:\contoso-tpd1.xml, you would run:
+    For example, using our key URL value from the previous step and a configuration data file of C:\contoso_keyless.xml, you would run:
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
 
     When prompted, enter the password that you specified earlier for the configration data file, and confirm that you want to perform this action.
