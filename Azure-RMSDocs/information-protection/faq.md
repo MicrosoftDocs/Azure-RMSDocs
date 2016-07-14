@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 07/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,6 +66,25 @@ For the preview release, you can use any subscription that includes Azure Rights
 To configure the Azure Information Protection policies in the Azure portal, you must have an Azure subscription. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
 Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+
+## If Azure Information Protection is now public preview, why can't I find it in the Azure portal?
+
+Currently, you must use this link to see Azure Information Protection in the portal: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
+
+Then, on the hub menu, click **Browse** and start typing "Information Protection" in the Filter box. From the results, select **Azure Information Protection**.
+
+## Do I need to be a global admin to try Azure Information Protection preview?
+
+For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy in the Azure portal.
+
+If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't even need to sign in to the portal to try the preview. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
+
+If you want to protect the documents and emails that you classify and label, and you haven't yet activated Azure Rights Management, the activation process does require special administrator permissions. For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)
+
+
+## I see **("Premium P2" Service Plan)** on the Azure Information Protection blade, in the Azure portal—what does this mean?
+
+For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/)
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
