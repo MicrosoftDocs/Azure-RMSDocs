@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 4 | Azure Rights M
 description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -76,7 +76,7 @@ For example, you can change the default title of **Sensitivity** on the Informat
 
 Note that if you're using watermarks with Excel, they are visible only in Page layout and Print preview modes, and when printed.
 
-Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. If your Office application is open after you made policy changes, close it and reopen it to download the latest policy.
+Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. Because you can make changes on multiple blades, it's a good idea to check that all blades do not show the **Save** button as enabled, which indicates that you have unsaved changes. If your Office application was open when you published new changes, close your application and reopen it to download the latest policy.
 
 When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faq.md).
 

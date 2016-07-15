@@ -41,6 +41,8 @@ The classification labels and behavior are configured in the Azure portal. You c
 
 Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
+Note that the preview lets you try the new **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan at general availability. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
+
 This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when additional features and capabilities become available:
 
 - There is no centralized logging for classification and labeling.
