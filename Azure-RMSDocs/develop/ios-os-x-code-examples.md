@@ -40,9 +40,9 @@ Following are **Objective C** code examples from a larger sample application rep
 ###Scenario: Consume an RMS protected file
 
 
-- **Step 1**: Create an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object
+- **Step 1**: Create an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) object
 
- **Description**: Instantiate an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
+ **Description**: Instantiate an [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata) object, through its create method which implements service authentication using the [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) to get a token by passing an instance of **MSAuthenticationCallback**, as the parameter *authenticationCallback*, to the MSIPC API. See the call to [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) in the following example code section.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {

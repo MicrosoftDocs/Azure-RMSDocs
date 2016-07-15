@@ -36,7 +36,7 @@ To do this testing, you can use the information in [Helping users to protect fil
 If your testing is unsuccessful, review the configuration steps in [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md), and use the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) to help identify and fix potential problems. You can also run this tool periodically, as a general health check.
 
 > [!TIP]
-> If you need additional help, see the [Support options and community resources](../get-started/information-support.md##support-options-and-community-resources) section in the [Information and support for Azure Rights Management](../get-started/information-support.md) article.
+> If you need additional help, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) section in the [Information and support for Azure Rights Management](../get-started/information-support.md) article.
 
 ## Next steps
 

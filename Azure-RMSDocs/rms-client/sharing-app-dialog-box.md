@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -38,14 +38,14 @@ Use this information to help you specify the options in the RMS sharing applicat
 
 In addition to the options that you can choose, you might also be wondering:
 
--   [What’s the .ppdf file that’s automatically created?](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [What’s the .ppdf file that’s automatically created?](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [What’s the difference between generic protection and built-in (native) protection?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [What’s the difference between generic protection and built-in (native) protection?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Option|Description|
 |----------|---------------|
 |**USERS**|If you haven’t already specified an email address from Outlook, type the email addresses of the people that you want to be able to open the file.<br /><br />Note that the RMS sharing app does not support all email addresses.<br /><br />If your organization uses the on-premises version of Rights Management (AD RMS), the email addresses you can  specify are restricted to  people within your organization. When this applies, and you try to specify external email addresses, you will see a message that says your company configuration allows sharing of protected content only within the company. <br /><br /> If your organization uses Azure RMS, the email addresses that you specify can be for people within  your  organization, or for people in another organization.<br /><br />For example: **janetm@contoso.com; p.dover@fabrikam.com**<br /><br />Personal email addresses are not currently supported by the RMS sharing app.|
-|**Generic Protection**|If this option is selected, it means that the file you selected cannot be natively protected. For more information, see. [What’s the difference between generic protection and built-in (native) protection?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) on this page.|
+|**Generic Protection**|If this option is selected, it means that the file you selected cannot be natively protected. For more information, see. [What’s the difference between generic protection and built-in (native) protection?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection) on this page.|
 |**Viewer – View Only**<br /><br />**Reviewer – View and Edit**<br /><br />**Co-Author – View, Edit, Copy, and Print**<br /><br />**Co-Owner – All Permissions**<br /><br />Note: All these options have a round icon before the name, which represent a world globe. This icon is used because typically, you select one of these options when you send your attachment to somebody in a different organization.|Select one of these options if you want to define the rights for your protected document. Click each option to view a description.<br /><br />When you choose one of these options, only the people you specify in **USERS** have the rights you specify to open and use the document. For example, if they forward to somebody else, the document would not open.|
 |Policy templates that your administrator configures.<br /><br />For example, if your company name is Contoso, Ltd: **Contoso, Ltd - Confidential View Only**<br /><br />Note: All these options have a square icon before the name, which represent an office building. This icon is used because typically, you select one of these options when you send your attachment to somebody in your organization.|When you share a document with people who work for your organization, you see the available policy templates that your administrator configures. Choose one of these when the document should not be shared outside your organization.<br /><br />When you choose one of these options, your administrator defines the rights for the document and who can open it.|
 |**Expire these documents on**|Select this option only for time-sensitive files that the users that you selected should not be able to open after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you specify, others will not be able to open the file.<br /><br />This option is not available if you select a policy template that your administrator configures.|
@@ -77,7 +77,7 @@ For examples for how you might use the Rights Management sharing application, an
 
 -   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
