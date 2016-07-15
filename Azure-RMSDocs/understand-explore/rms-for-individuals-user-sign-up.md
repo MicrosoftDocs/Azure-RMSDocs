@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -33,7 +33,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Righ
 
 ## To sign up for RMS for individuals
 
-1.  Using a Windows or Mac computer, go to the [Microsoft Rights Management page](https://portal.office.com/signup?sku=RMS).
+1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Rights Management page](https://portal.office.com/signup?sku=RMS).
 
 2.  Type in the email address that you use for your organization, such as **janetm@contoso.com** or **p.dover@fabrikam.com**.
 
@@ -62,7 +62,7 @@ This is what happens in the background when a user signs up for RMS for individu
 1.  When the first user from an organization requests a subscription for RMS for individuals, the domain name supplied in their email address is checked to see whether it is already associated with an Azure tenant. If there is no existing tenant, a new tenant and Azure directory is automatically created for the organization, which contains an account for this first user. Unlike with a paid subscription for Azure, this first account is not a global administrator, but a standard user. The new account uses the email address and password that the user supplied.
 
     > [!NOTE]
-    > Some domain names cannot be used to create the directory and therefore cannot be used for RMS for individuals. The list of blocked domain names can be viewed from this JavaScript Object Notation file: [http://portal.aadrm.com/content/blocked_domains.json](http://portal.aadrm.com/content/blocked_domains.json)
+    > Some domain names cannot be used to create the directory and therefore cannot be used for RMS for individuals.
 
     If an existing tenant is found, it is checked to see whether it already has a subscription for Azure RMS. When no subscription is found, the free RMS for individuals subscription can be added.
 
