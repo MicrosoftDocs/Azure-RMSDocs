@@ -34,7 +34,9 @@ ms.suite: ems
 You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the **advanced features** for Rights Management, which then redirects you to the Azure classic portal.
 
 > [!NOTE]
-> You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for Azure RMS to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators). 
+> You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for Azure RMS to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). 
+> 
+> For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators). 
 
 Use the following procedures to create, configure, and publish custom templates for Rights Management.
 
