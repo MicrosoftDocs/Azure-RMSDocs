@@ -57,7 +57,7 @@ Here are just some examples of how you might use the RMS sharing application, to
 
 - [Protect a file that you share by email](sharing-app-protect-by-email.md)
 
-- [Change permissions on files](sharing-app-reprotect-files.md)
+- [Change permissions on protected files](sharing-app-reprotect-files.md)
 
 - [Track and revoke your documents](sharing-app-track-revoke.md)
 
