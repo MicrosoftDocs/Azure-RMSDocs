@@ -35,6 +35,8 @@ Use the following information if you are responsible for the Microsoft Rights Ma
 
 The RMS sharing application is best suited to work with Azure RMS, because this deployment configuration supports sending protected attachments to users in another organization, and options such as email notifications and document tracking with revocation.  However, with some limitations, it also works with the on-premises version, AD RMS. For a comprehensive comparison of features that are supported by Azure RMS and AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure RMS, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
+For a technical overview of the Rights Management sharing application, information about native and generic protection, and the supported file types, file name extensions, and how to change the default protection level, see [Technical overview and protection details for the Rights Management sharing application](sharing-app-admin-guide-technical.md). 
+
 ## Automatic deployment for the Microsoft Rights Management sharing application
 The Windows version of the RMS sharing application supports a scripted installation, which makes it suitable for enterprise deployments.
 
