@@ -87,7 +87,7 @@ If you want to change permissions for a file that you have emailed:
 
 	Because you cannot remove the previous permissions on the originally emailed file, only replace them with a new version, consider revoking the previously emailed file so that the recipients can no longer open that version of the document. Revoking is appropriate if you need to make the permissions more restrictive (for example, remove people who should not have access to the file, or they should no longer be able to edit it).
 
-	To revoke a file that you have emailed, see [Track and revoke your documents](sharing-app-track-revoke.md)
+	To revoke a file that you have emailed, see [Track and revoke your documents](sharing-app-track-revoke.md).
 
 
 ## Examples and other instructions
