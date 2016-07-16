@@ -10,7 +10,7 @@
 ### [Rights Management sharing application for Windows](sharing-app-windows.md)
 #### [Rights Management sharing application: Version release history](sharing-app-version-release-history.md)
 #### [Rights Management sharing application administrator guide](sharing-app-admin-guide.md)
-##### [Technical overview](sharing-app-admin-guide-technical.md)
+##### [Technical overview, file types, and customizations](sharing-app-admin-guide-technical.md)
 #### [Rights Management sharing application user guide](sharing-app-user-guide.md)
 ##### [Download and install](install-sharing-app.md)
 ##### [Protect a file on a device](sharing-app-protect-in-place.md)
