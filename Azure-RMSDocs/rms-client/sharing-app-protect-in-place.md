@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -56,6 +56,8 @@ When you protect a file in-place, it replaces the original, unprotected file. Yo
 3.  You might quickly see a dialog box to tell you that the file is being protected, and the focus then returns to File Explorer. The selected file or files are now protected. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Rights Management protection lock icon. For example:
 
     ![Protected file with lock icon for the RMS sharing application](../media/ADRMS_MSRMSApp_Pfile.png)
+
+If you change your mind about the permissions or later need to modify them, simply protect the file again.
 
 If you later need to remove protection from a file, see [Remove protection from a file by using the Rights Management sharing application](sharing-app-remove-protection.md).
 

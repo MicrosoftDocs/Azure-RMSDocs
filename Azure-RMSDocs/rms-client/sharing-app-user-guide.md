@@ -51,21 +51,23 @@ Here are just some examples of how you might use the RMS sharing application, to
 > [!NOTE]
 > For more technical information, such as supported file types and how to install this application on an enterprise network, see the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
--   [Download and install the sharing application](install-sharing-app.md)
+- [Download and install the sharing application](install-sharing-app.md)
 
--   [Protect a file on a device (protect in-place)](sharing-app-protect-in-place.md)
+- [Protect a file on a device (protect in-place)](sharing-app-protect-in-place.md)
 
--   [Protect a file that you share by email](sharing-app-protect-by-email.md)
+- [Protect a file that you share by email](sharing-app-protect-by-email.md)
 
--   [Track and revoke your documents](sharing-app-track-revoke.md)
+- [Change permissions on files](sharing-app-reprotect-files.md)
 
--   [View and use files that have been protected](sharing-app-view-use-files.md)
+- [Track and revoke your documents](sharing-app-track-revoke.md)
 
--   [Remove protection from a file](sharing-app-remove-protection.md)
+- [View and use files that have been protected](sharing-app-view-use-files.md)
 
--   [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
+- [Remove protection from a file](sharing-app-remove-protection.md)
 
--   [Specify settings in the dialog box](sharing-app-dialog-box.md)
+- [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
+
+- [Specify settings in the dialog box](sharing-app-dialog-box.md)
 
 
 

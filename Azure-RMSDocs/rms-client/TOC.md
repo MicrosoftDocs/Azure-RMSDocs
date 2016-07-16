@@ -15,6 +15,7 @@
 ##### [Download and install](install-sharing-app.md)
 ##### [Protect a file on a device](sharing-app-protect-in-place.md)
 ##### [Protect a file that you share by email](sharing-app-protect-by-email.md)
+##### [Change permissions on files](sharing-app-reprotect-files.md)
 ##### [Track and revoke your documents](sharing-app-track-revoke.md)
 ##### [View and use protected files](sharing-app-view-use-files.md)
 ##### [Remove protection](sharing-app-remove-protection.md)
