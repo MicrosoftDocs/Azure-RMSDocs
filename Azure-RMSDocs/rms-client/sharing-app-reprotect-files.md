@@ -42,6 +42,8 @@ If you are the owner of the file you want to re-protect (for example, you origin
 
 For example, if somebody else protected the file by using the Rights Management sharing application, and they specified a group that you belong to and **Co-Owner** as the custom permission, you will be able to re-protect the file. However, if they didn't specify your name or a group that you belong to, or if they selected **Reviewer - View and Edit**, or a template that does not let you remove permissions, you will not be able to re-protect the file. The easiest way to find out, is to try re-protecting the file.
 
+If you want to completely remove all permissions so that the file is no longer protected, see [Remove protection from a file](sharing-app-remove-protection.md).
+
 ## To re-protect a file in-place
 
 1.  In File Explorer, select a file to protect. Right-click, select **Protect with RMS**, and then select **Protect in-place**. For example:
