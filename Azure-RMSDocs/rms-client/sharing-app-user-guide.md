@@ -49,7 +49,7 @@ Here are just some examples of how you might use the RMS sharing application, to
 
 ## What do you want to do?
 > [!NOTE]
-> For more technical information, such as supported file types and how to install this application on an enterprise network, see the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
+> For more technical information, such as [supported file types](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) and [how to install this application on an enterprise network](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application), see the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
 - [Download and install the sharing application](install-sharing-app.md)
 
