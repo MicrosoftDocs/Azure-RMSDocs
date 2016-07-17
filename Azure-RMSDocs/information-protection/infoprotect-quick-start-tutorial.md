@@ -48,7 +48,7 @@ To complete this tutorial, you will need the following:
 
 - A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 2016, Office 2013 with Service Pack 1, or Office 2010. 
 
-- If you have Active Directory Rights Management Services (AD RMS) deployed in your organization: The computer must be a workgroup computer that has not previously used AD RMS. This is required if you want to protect documents, and ensures that the computer downloads templates only from Azure Rights Management.     
+- If you have Active Directory Rights Management Services (AD RMS) deployed in your organization: The computer must be a workgroup computer that has not previously used AD RMS. This is required if you want to protect documents, and ensures that the computer downloads templates only from Azure Rights Management. It is not supported for a computer to connect to both AD RMS and Azure RMS at the same time. If you are interested in migration information, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).   
 
 Let's get started.
 
