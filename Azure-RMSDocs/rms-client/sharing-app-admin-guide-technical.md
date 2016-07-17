@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Technical overview for the Microsoft Rights Management sharing application
+# Technical overview and protection details for the Microsoft Rights Management sharing application
 
 *Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
