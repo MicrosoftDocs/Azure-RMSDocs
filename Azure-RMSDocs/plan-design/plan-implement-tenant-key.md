@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -129,7 +129,7 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
 2.  Consider using usage logging, which logs every transaction that Azure Rights Management performs.
 
-    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KMSPDecrypt** and **KMSPSignDigest** request types show that the tenant key is being used.
+    If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KeyVaultDecryptRequest** and **KeyVaultSignRequest** request types show that the tenant key is being used.
 
     ![log file in Excel where tenant key is being used](../media/RMS_Logging.png)
 
