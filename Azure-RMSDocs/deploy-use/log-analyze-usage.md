@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -196,14 +196,11 @@ There are many request types for Azure Rights Management but the following table
 |GetTemplateById|A call is  made from the Azure classic portal to get a template by specifying a template ID.|
 |ExportTemplateById|A call is being made from the Azure classic portal to export a template by specifying a template ID.|
 |FindServiceLocationsForUser|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
-|KeyVaultDecryptRequest|needs description|
-|KeyVaultGetKeyInfoRequest|needs description|
-|KeyVaultEncryptRequest|needs description|
-|KeyVaultImportKeyRequest|needs description|
-|KeyVaultSignRequest|needs description|
-|KeyVaultVerifySignatureRequest|needs description|
-|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK).|
-|KMSPSignDigest|A call is made when a customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
+|KeyVaultDecryptRequest|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK) in Azure Key Vault.|
+|KeyVaultGetKeyInfoRequest|A call is made to verify that the key specified to be used in Azure Key Vault for the Azure RMS tenant key is accessible and not already used.|
+|KeyVaultSignDigest|A call is made when a customer-managed key (BYOK) in Azure Key Vault is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
+|KMSPDecrypt|The client is attempting to decrypt the RMS-protected content. Applicable only for a legacy customer-managed tenant key (BYOK).|
+|KMSPSignDigest|A call is made when a legacy customer-managed key (BYOK) is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
 |ImportTemplate|A call is  made from the Azure classic portal to import a template.|
 |ServerCertify|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
 |SetUsageLogFeatureState|A call is  made to enable usage logging.|

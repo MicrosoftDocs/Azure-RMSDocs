@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -15,7 +15,7 @@ ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
 
 # optional metadata
 
-#ROBOTS:
+#ROBOTS: NOINDEX, NOFOLLOW
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
