@@ -90,28 +90,8 @@ Azure Information Protection is a cloud-based solution. If you have an interest 
 
 ## What client platforms and applications are supported by Azure Information Protection?
 
-File classification and labeling is currently supported on the following clients:
+This is now documented and will be updated in [Requirements for Azure Information Protection](requirements-azure-infoprotect.md).
 
-- Windows 10 (x86, x64)
-
-- Windows 8.1 (x86, x64)
-
-- Windows 8 (x86, x64)
-
-- Windows 7 Service Pack 1 (x86, x64)
-
-
-When you protect the data, it can be consumed by the same devices (Windows, Mac, iOS, Android), that support Azure Rights Management. For details about these devices and the supported versions, see [Azure RMS requirements: Client devices that support Azure RMS](../get-started/requirements-client-devices.md).
-
-For the preview release and at general availability (GA), Azure Information Protection will support labeling and protection of files and emails that are created by the following Office applications: **Word**, **Excel**, **PowerPoint**, and **Outlook** from the following Office suites: 
-
-- Office 2016
-
-- Office 2013 with Service Pack 1
-
-- Office 2010
-
-After general availability, look for an announcement on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when Azure Information Protection will support additional file types, such as PDF, audio, video, and image files.
 
 ## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
 
