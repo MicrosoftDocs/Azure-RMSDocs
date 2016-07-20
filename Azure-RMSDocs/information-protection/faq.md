@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2016
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,13 +43,11 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Note that the preview lets you try the new **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan at general availability. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
-This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when additional features and capabilities become available:
+This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
 - There is no centralized logging for classification and labeling.
 
 - Label names and tooltips are supported in English only.
-
-- Departmental templates cannot be selected from the Azure portal.
 
 - Conditions for automatic classification must be phrases or patterns.
 
@@ -90,28 +88,8 @@ Azure Information Protection is a cloud-based solution. If you have an interest 
 
 ## What client platforms and applications are supported by Azure Information Protection?
 
-File classification and labeling is currently supported on the following clients:
+This is now documented and will be updated in [Requirements for Azure Information Protection](requirements-azure-infoprotect.md).
 
-- Windows 10 (x86, x64)
-
-- Windows 8.1 (x86, x64)
-
-- Windows 8 (x86, x64)
-
-- Windows 7 Service Pack 1 (x86, x64)
-
-
-When you protect the data, it can be consumed by the same devices (Windows, Mac, iOS, Android), that support Azure Rights Management. For details about these devices and the supported versions, see [Azure RMS requirements: Client devices that support Azure RMS](../get-started/requirements-client-devices.md).
-
-For the preview release and at general availability (GA), Azure Information Protection will support labeling and protection of files and emails that are created by the following Office applications: **Word**, **Excel**, **PowerPoint**, and **Outlook** from the following Office suites: 
-
-- Office 2016
-
-- Office 2013 with Service Pack 1
-
-- Office 2010
-
-After general availability, look for an announcement on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) for when Azure Information Protection will support additional file types, such as PDF, audio, video, and image files.
 
 ## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
 
