@@ -6,6 +6,7 @@
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
 # [Azure Information Protection (preview)](what-is-information-protection.md)
 ## [What is Azure Information Protection?](what-is-information-protection.md)
+## [Requirements](requirements-azure-infoprotect.md)
 ## [Quick start tutorial](infoprotect-quick-start-tutorial.md)
 ### [Step 1: Activate the Rights Management service](infoprotect-tutorial-step1.md)
 ### [Step 2: Configure and publish policy](infoprotect-tutorial-step2.md)
