@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2016
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -48,8 +48,6 @@ This preview release has the following limitations. Look out for announcements o
 - There is no centralized logging for classification and labeling.
 
 - Label names and tooltips are supported in English only.
-
-- Departmental templates cannot be selected from the Azure portal.
 
 - Conditions for automatic classification must be phrases or patterns.
 
