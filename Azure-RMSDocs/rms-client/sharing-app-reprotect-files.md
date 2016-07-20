@@ -6,7 +6,7 @@ description: When a file has been protected by Rights Management, you can change
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/16/2016
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
