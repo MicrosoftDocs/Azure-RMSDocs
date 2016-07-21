@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: XXX | Azure Rights Management
+title: How to configure conditions for automatic and recommended classification for Azure Information Protection | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,5 +24,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 ---
 
-# XXX
+# How to configure conditions for automatic and recommended classification for Azure Information Protection
+
+*Applies to: Azure Information Protection preview*
 

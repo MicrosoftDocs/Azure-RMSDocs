@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: XXX | Azure Rights Management
+title: The default Azure Information Protection policy | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,5 +24,10 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 ---
 
-# XXX
+# The default Azure Information Protection policy
+
+*Applies to: Azure Information Protection preview*
+
+Use the following information to understand how the default policy for Azure Information Protection is configured. 
+
 

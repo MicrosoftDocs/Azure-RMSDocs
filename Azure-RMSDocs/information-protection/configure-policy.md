@@ -56,7 +56,7 @@ When you make any changes on an **Azure Information Protection** blade, click **
 
 Use the following information to help you configure your Azure Information Protection policy:
 
-- Information about the default Information Protection policy
+- The default Information Protection policy
 
 - How to configure the global policy settings
 

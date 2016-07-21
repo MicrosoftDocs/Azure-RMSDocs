@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: XXX | Azure Rights Management
+title: How to deploy the Azure Information Protection policy for a disconnected computer | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,5 +24,7 @@ ms.assetid: 6995125c-1c57-4adb-b92b-d1d2acbc0eb2
 
 ---
 
-# XXX
+# How to deploy the Azure Information Protection policy for a disconnected computer
+
+*Applies to: Azure Information Protection preview*
 
