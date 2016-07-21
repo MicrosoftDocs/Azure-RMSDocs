@@ -72,5 +72,5 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
-- [How to deploy the policy for a disconnected computer](configure-policy-disconnected.md)
+- [How to deploy the policy for disconnected computers](configure-policy-disconnected.md)
 
