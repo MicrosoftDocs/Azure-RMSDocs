@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: XXX | Azure Rights Management
+title: How to configure a label to apply protection for Azure Information Protection | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,5 +24,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 ---
 
-# XXX
+# How to configure a label to apply protection for Azure Information Protection
+
+*Applies to: Azure Information Protection preview*
 

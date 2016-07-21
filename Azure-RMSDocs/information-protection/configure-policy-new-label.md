@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: XXX | Azure Rights Management
+title: How to create a new label for Azure Information Protection | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
+ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 
 # optional metadata
 
@@ -24,5 +24,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 ---
 
-# XXX
+# How to create a new label for Azure Information Protection
+
+*Applies to: Azure Information Protection preview*
 
