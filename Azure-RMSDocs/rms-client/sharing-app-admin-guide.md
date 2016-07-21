@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -122,13 +122,13 @@ To verify success, see the [Verifying installation success](#verifying-installat
         > [!NOTE]
         > This command might prompt you to enter your credentials for Azure. If the computer is not joined to a domain, you will be prompted. If the computer is joined to a domain, the tool might be able to use cached credentials.
 
-2.  On each computer on which you will install the RMS sharing application, run the following command with elevated privileges:
+2.  On each computer on which you will install the RMS sharing application, run the following command one time with elevated privileges:
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  On each computer on which you will install the RMS sharing application, users must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
+3.  On each computer on which you will install the RMS sharing application, each user on that computer must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
