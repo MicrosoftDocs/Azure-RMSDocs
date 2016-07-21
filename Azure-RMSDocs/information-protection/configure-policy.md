@@ -56,21 +56,21 @@ When you make any changes on an **Azure Information Protection** blade, click **
 
 Use the following information to help you configure your Azure Information Protection policy:
 
-- The default Information Protection policy
+- [The default Information Protection policy](configure-policy-default.md)
 
-- How to configure the global policy settings
+- [How to configure the global policy settings](configure-policy-settings.md)
 
-- How to create a new label
+- [How to create a new label](configure-policy-new-label.md)
 
-- How to delete or reorder a label
+- [How to delete or reorder a label](configure-policy-delete-reorder.md)
 
-- How to change or customize an existing label
+- [How to change or customize an existing label](configure-policy-change-label.md)
 
-- How to configure a label to apply protection 
+- [How to configure a label to apply protection](configure-policy-protection.md)
 
-- How to configure a label for visual markings 
+- [How to configure a label for visual markings](configure-policy-markings.md)
 
-- How to configure conditions for automatic and recommended classification
+- [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
-- How to deploy the policy for a disconnected computer
+- [How to deploy the policy for a disconnected computer](configure-policy-disconnected.md)
 
