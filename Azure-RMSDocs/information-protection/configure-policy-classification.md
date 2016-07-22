@@ -121,11 +121,11 @@ Match this information type when the content includes the following:
 
     **Formatted**:
 
-        - 16 digits: (dddd-dddd-dddd-dddd)  
+    - 16 digits: (dddd-dddd-dddd-dddd)  
 
     **Unformatted**:
 
-        - (dddddddddddddddd)  
+    - (dddddddddddddddd)  
 
 
 Examples for testing:
