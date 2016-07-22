@@ -54,6 +54,8 @@ Azure Information Protection comes with a default policy, which contains the lab
 
 When you make any changes on an **Azure Information Protection** blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you have finished making the changes that you want, click **Publish**. The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
 
+## Configuring your organization's policy
+
 Use the following information to help you configure your Azure Information Protection policy:
 
 - [The default Information Protection policy](configure-policy-default.md)
