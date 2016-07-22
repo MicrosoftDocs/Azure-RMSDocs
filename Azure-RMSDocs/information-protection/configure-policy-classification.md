@@ -28,7 +28,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 *Applies to: Azure Information Protection preview*
 
-When you configure conditions for a label, you can automatically assign a a label to a document or email. Or, you can prompt users to select the label that you recommend: 
+When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend: 
 
 - Automatic classification applies to Word, Excel, and PowerPoint when files are saved, and apply to Outlook when emails are sent. You cannot use automatic classification for files that were previously manually labeled.
  

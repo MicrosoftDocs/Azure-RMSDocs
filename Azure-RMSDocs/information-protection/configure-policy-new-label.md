@@ -42,9 +42,9 @@ Use the following instructions to add a new label to the Azure Information Prote
 
 	- To create a new label: Click **Add a new label**.
 
-	- To create a new sub-label: Click the label that you want to create a sub-label for, and then click **Add a new label**.
+	- To create a new sub-label: Select the Context menu (**...**) for the label that you want to create a sub-label for, and then click **Add a sub-label**.
 
-4. On the **Label** blade, select the options that you want for this new label, and then click **Save**.
+4. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
 
 	> [!NOTE]
 	>For information about setting protection, see [How to configure a label to apply protection](configure-policy-protection.md).
