@@ -56,7 +56,7 @@ Use the following instructions to configure recommended or automatic classificat
 
     - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences. 
     
-        For more information about how the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#more-information-about-the-built-in-conditions) section.
+        For more information about how the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences.
 
