@@ -54,7 +54,9 @@ Use the following instructions to configure recommended or automatic classificat
 
 5. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
-    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences. For more information about how the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#more-information-about-the-built-in-conditions) section.
+    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences. 
+    
+        For more information about how the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#more-information-about-the-built-in-conditions) section.
 
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences.
 
@@ -78,7 +80,7 @@ During the preview period, you can select the following conditions:
 
 - [USA Social Security Number (SSN)](#usa-social-security-number-ssn)
 
-- [International Banking Account Number (IBAN)](#-nternational-banking-account-number-iban)
+- [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
 
 ### SWIFT Code
@@ -99,6 +101,7 @@ Match this information type when the content includes the following:
 
 
 Regular expression:
+
 `\b([a-zA-Z]){4}([a-zA-Z]){2}([0-9a-zA-Z]){2}([0-9a-zA-Z]{3})?\b`
 
 Examples for testing:
@@ -180,15 +183,15 @@ Match this information type when the content includes the following:
 
 1. At least one of the following phrases: **ssn**, **social security**, **ssid**, **ss#** 
 
-2. A social security number: 9 digits, which can be in a formatted or unformatted pattern 
+2. A social security number: 9 digits, which can be in a formatted or unformatted pattern:
 
-    **Formatted**: 
+	**Formatted**: 
 
-    - Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
+	- Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
 
-    **Unformatted**: 
+	**Unformatted**: 
 
-    - Nine digits in the following format: ddddddddd 
+	- Nine digits in the following format: ddddddddd 
 
 Regular expression:
 
