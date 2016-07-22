@@ -144,25 +144,25 @@ Match this information type when the content includes the following:
 
 2. An ABA routing number, which includes 9 digits that can be in a formatted or unformatted pattern: 
 
-    **Formatted**: 
+**Formatted**: 
 
-    a. Four digits that start with 0, 1, 2, 3, 6, 7, or 8 
+a. Four digits that start with 0, 1, 2, 3, 6, 7, or 8 
 
-    b. A hyphen 
+b. A hyphen 
 
-    c. Four digits 
+c. Four digits 
 
-    d. A hyphen 
+d. A hyphen 
 
-    e. A digit 
+e. A digit 
 
-    Example: 3456-9876-1 ABA 
+Example: 3456-9876-1 ABA 
 
-    **Unformatted**: 
+**Unformatted**: 
 
-    - 9 consecutive digits that start with 0, 1, 2, 3, 6, 7, or 8 
+- 9 consecutive digits that start with 0, 1, 2, 3, 6, 7, or 8 
 
-    Example: 345698761 RTN 
+Example: 345698761 RTN 
  
 Regular expression:
 
