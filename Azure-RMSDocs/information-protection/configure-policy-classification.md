@@ -117,7 +117,7 @@ Examples for testing:
 
 Match this information type when the content includes the following:  
 
-- A valid credit card number, in a formatted or unformatted pattern, that  passes the luhn test. This information types detects cards from all major brands worldwide, including Visa, MasterCard, Discover Card, American Express, and Diners.
+- A valid credit card number, in a formatted or unformatted pattern, that  passes the [luhn check](https://wikipedia.org/wiki/Luhn_algorithm). This information type detects cards from all major brands worldwide, including Visa, MasterCard, Discover Card, American Express, and Diners.
 
 **Formatted**:
 
