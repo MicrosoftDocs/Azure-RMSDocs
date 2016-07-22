@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 2 | Azure Rights M
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,6 +81,10 @@ We'll now change the settings of one of the labels, **Confidential**:
 ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
+
+|If you want more information|Additional information|
+|--------------------------------|--------------------------|
+|About the configuration options for the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
 
 Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
 
