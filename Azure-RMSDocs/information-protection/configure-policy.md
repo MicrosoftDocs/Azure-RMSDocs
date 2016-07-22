@@ -70,7 +70,7 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to configure a label to apply protection](configure-policy-protection.md)
 
-- [How to configure a label for visual markings](configure-policy-markings.md)
+- [How to configure a label to apply visual markings](configure-policy-markings.md)
 
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
