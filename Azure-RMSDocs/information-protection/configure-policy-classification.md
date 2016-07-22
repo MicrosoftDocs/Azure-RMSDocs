@@ -185,13 +185,13 @@ Match this information type when the content includes the following:
 
 2. A social security number: 9 digits, which can be in a formatted or unformatted pattern:
 
-	**Formatted**: 
+**Formatted**: 
 
-	- Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
+- Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
 
-	**Unformatted**: 
+**Unformatted**: 
 
-	- Nine digits in the following format: ddddddddd 
+- Nine digits in the following format: ddddddddd 
 
 Regular expression:
 
