@@ -82,11 +82,11 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
+Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
+
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
-
-Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
 
 
 >[!div class="step-by-step"]
