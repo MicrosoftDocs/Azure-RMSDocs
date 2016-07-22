@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2016
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -29,7 +29,7 @@ ms.suite: ems
 
 *Applies to: Azure Information Protection preview*
 
-To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the Azure Information Protection client.
+To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 To configure the Azure Information Protection policy during the preview release of Azure Information Protection:
 
@@ -50,9 +50,9 @@ To configure the Azure Information Protection policy during the preview release 
     - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
 
 
-Azure Information Protection comes with a default policy, which contains the labels **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains the labels **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
 
-When you make any changes on an **Azure Information Protection** blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you have finished making the changes that you want, click **Publish**. The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you have finished making the changes that you want, click **Publish**. The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
 
 ## Configuring your organization's policy
 
@@ -75,4 +75,8 @@ Use the following information to help you configure your Azure Information Prote
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
 - [How to deploy the policy for disconnected computers](configure-policy-disconnected.md)
+
+## Next steps
+
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
