@@ -119,13 +119,13 @@ Match this information type when the content includes the following:
 
 - A valid credit card number, in a formatted or unformatted pattern, that  passes the [luhn check](https://wikipedia.org/wiki/Luhn_algorithm). This information type detects cards from all major brands worldwide, including Visa, MasterCard, Discover Card, American Express, and Diners.
 
-	**Formatted**:
+    **Formatted**:
 
-		- 16 digits: (dddd-dddd-dddd-dddd)  
+        - 16 digits: (dddd-dddd-dddd-dddd)  
 
-	**Unformatted**:
+    **Unformatted**:
 
-		- (dddddddddddddddd)  
+        - (dddddddddddddddd)  
 
 
 Examples for testing:
@@ -144,25 +144,25 @@ Match this information type when the content includes the following:
 
 2. An ABA routing number, which includes 9 digits that can be in a formatted or unformatted pattern: 
 
-	**Formatted**: 
+    **Formatted**: 
 
-		a. Four digits that start with 0, 1, 2, 3, 6, 7, or 8 
+    a. Four digits that start with 0, 1, 2, 3, 6, 7, or 8 
 
-		b. A hyphen 
+    b. A hyphen 
 
-		c. Four digits 
+    c. Four digits 
 
-		d. A hyphen 
+    d. A hyphen 
 
-		e. A digit 
+    e. A digit 
 
-	Example: 3456-9876-1 ABA 
+    Example: 3456-9876-1 ABA 
 
-	**Unformatted**: 
+    **Unformatted**: 
 
-		- 9 consecutive digits that start with 0, 1, 2, 3, 6, 7, or 8 
+    - 9 consecutive digits that start with 0, 1, 2, 3, 6, 7, or 8 
 
-	Example: 345698761 RTN 
+    Example: 345698761 RTN 
  
 Regular expression:
 
@@ -185,13 +185,13 @@ Match this information type when the content includes the following:
 
 2. A social security number: 9 digits, which can be in a formatted or unformatted pattern:
 
-	**Formatted**: 
+    **Formatted**: 
 
-		- Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
+    - Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
 
-	**Unformatted**: 
+    **Unformatted**: 
 
-		- Nine digits in the following format: ddddddddd 
+    - Nine digits in the following format: ddddddddd 
 
 Regular expression:
 
