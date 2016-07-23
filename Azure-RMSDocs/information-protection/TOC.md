@@ -23,4 +23,4 @@
 ### [Configure visual markings](configure-policy-markings.md)
 ### [Configure conditions](configure-policy-classification.md)
 ### [Deploy to disconnected computers](configure-policy-disconnected.md)
-## [Installing the client](info-protect-client.md)
+## [Install the client](info-protect-client.md)
