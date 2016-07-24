@@ -36,9 +36,6 @@ When you configure conditions for a label, you can automatically assign a label 
 
 When you configure conditions, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
-> [!TIP]
->For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration gives your users the ability to accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
-
 How multiple conditions are evaluated when they apply to more than one label:
 
 1. The labels are ordered for evaluation, according to their position that you specify in the policy: The label positioned first has the lowest position (least sensitive) and the label positioned last has the highest position (most sensitive).
@@ -47,7 +44,10 @@ How multiple conditions are evaluated when they apply to more than one label:
  
 3. The last sub-label is applied.
 
+> [!TIP]
+>For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration gives your users the ability to accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
 
+## To configure recommended or automatic classification for a label
 
 Use the following instructions to configure recommended or automatic classification for a label.
 
