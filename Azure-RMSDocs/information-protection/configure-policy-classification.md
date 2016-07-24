@@ -192,10 +192,6 @@ Match this information type when the content includes the following:
 
     - Nine digits in the following format: ddddddddd 
 
-Regular expression:
-
-`\b(?!000)([0-6]\\d{2}|7([0-6]\\d|70))([ -]?)(?!00)\\d\\d\\3(?!0000)\\d{4}\b`
-
 
 Examples for testing:
 
