@@ -37,7 +37,7 @@ Instead of deleting a label, you might simply want to disable it if you want to 
 Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity, which is how the [default policy](configure-policy-default.md) is configured.
 
 > [!IMPORTANT]
->If you configure conditions for your labels that might apply to more than one label, you must order them from from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated. For more information, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md ).
+>If you configure conditions for your labels that might apply to more than one label, you must order them from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated. For more information, see [How to configure conditions for automatic and recommended classification](configure-policy-classification.md ).
 
 
 Use the following instructions to make these changes.
