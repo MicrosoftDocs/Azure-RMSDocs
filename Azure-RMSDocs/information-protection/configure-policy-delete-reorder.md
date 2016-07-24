@@ -5,7 +5,7 @@ title: How to delete or reorder a label for Azure Information Protection | Azure
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2016
+ms.date: 07/24/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,6 +35,10 @@ You can delete or re-order the labels that users see on the Information Protecti
 Instead of deleting a label, you might simply want to disable it if you want to keep the label configuration but prevent it from displaying in the Information Protection bar.
 
 Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity, which is how the [default policy](configure-policy-default.md) is configured.
+
+> [!IMPORTANT]
+>If you configure conditions for your labels that might apply to more than one label, you must order them from from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated. For more information, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md ).
+
 
 Use the following instructions to make these changes.
 
