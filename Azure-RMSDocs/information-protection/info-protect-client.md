@@ -64,7 +64,7 @@ Before you install the client, check that you have the required operating system
 
 2. In the **Microsoft Azure Information Protection** dialog box, note the following:
 
-    - The **Last connection** value that identifies when the client last connected to your organization's Azure Information Protection service. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the application.
+    - The **Last connection** value that identifies when the client last connected to your organization's Azure Information Protection service. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the Office application.
 
     - Your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
@@ -84,7 +84,7 @@ Client files:
 
 Cient logs files and latest policy files:
 
-- **%localappdata%\Microsoft\MSIP\logs**.
+- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP\logs**.
 
 
 ## Next steps
