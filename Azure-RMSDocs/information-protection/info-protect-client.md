@@ -28,9 +28,11 @@ ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 
 *Applies to: Azure Information Protection preview*
 
-To classify documents and email messages by using Azure Information Protection, you must first install the Azure Information Protection client. This installation adds an Information Protection bar to your Office applications (Word, Excel, PowerPoint, Outlook) that displays the classification labels for your organization, in addition to a new **Protection** group on the **Home** tab, that has a button labeled **Protect**:
+To classify documents and email messages by using Azure Information Protection, you must first install the Azure Information Protection client. This installation adds an Information Protection bar to your Office applications (Word, Excel, PowerPoint, Outlook) that displays the classification labels for your organization, in addition to a new **Protection** group on the **Home** tab (Word, Excel, PowerPoint), that has a button labeled **Protect**:
 
-![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts.png)
+The following picture shows this Information Protection bar and the labels from the [default policy](configure-policy-default.md):
+
+![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -39,11 +41,11 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client]((https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AZInfoProtection.exe** and follow the prompts to install the client.
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AZInfoProtection.exe** and follow the prompts to install the client.
 
-    Select the option to install a demo policy if you do not have Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
+    Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
 
-2. If your computer runs Office 2010, restart your computer. For other versions of Office, restart any Office applications.
+2. To start using the Azure Information Protection client: If your computer runs Office 2010, restart your computer. For other versions of Office, restart any Office applications.
 
 ## To install the Azure Information Protection client for users
 
@@ -56,17 +58,21 @@ Before you install the client, check that you have the required operating system
 
 - Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
 
-## To verify installation and connection status
+## To verify installation, connection status, or report a problem
 
 1. Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**.
 
 2. In the **Microsoft Azure Information Protection** dialog box, note the following:
 
-    - The last connection time date and time that should show a recent date and time for when the client connected to your organization's Azure Information Protection service.
+    - The **Last connection** value that identifies when the client last connected to your organization's Azure Information Protection service. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the application.
 
-    - Your displayed user name that should show your work or school account for Office 365 or Azure Active Directory tenant.
+    - Your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
     - The version of the Azure Information Protection client.
+
+    - The **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate.
+
+    - The **Run diagnostics** link: This functionality is not currently implemented.
 
 ## File locations
 
