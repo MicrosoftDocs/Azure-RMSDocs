@@ -82,7 +82,7 @@ Client files:
 
 - For 32-bit operating systems: **\Program Files\Microsoft Azure Information Protection**
 
-Cient logs files and latest policy files:
+Client logs files and currently installed policy files:
 
 - For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP\logs**.
 
