@@ -37,7 +37,7 @@ Instead of deleting a label, you might simply want to disable it if you want to 
 Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity so that users see the least sensitive label on the left and the most sensitive label on the right. The [default policy](configure-policy-default.md) uses this configuration.
 
 > [!IMPORTANT]
->If you configure [conditions](configure-policy-classification.md) for your labels that might apply to more than one label, you must order them from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated.
+>If you configure [conditions](configure-policy-classification.md) for your labels that might apply to more than one label, you must order the labels from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated.
 
 
 Use the following instructions to make these changes.
