@@ -49,8 +49,6 @@ How multiple conditions are evaluated when they apply to more than one label:
 
 ## To configure recommended or automatic classification for a label
 
-Use the following instructions to configure recommended or automatic classification for a label.
-
 1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
  
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
