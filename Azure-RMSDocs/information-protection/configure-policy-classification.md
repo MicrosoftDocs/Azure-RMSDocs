@@ -5,7 +5,7 @@ title: How to configure conditions for automatic and recommended classification 
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/24/2016
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -47,10 +47,11 @@ How multiple conditions are evaluated when they apply to more than one label:
 > [!TIP]
 >For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration gives your users the ability to accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
 
-An example for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
+An example prompt for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
 
 ![Azure Information Protection detection and recommendation](../media/info-protect-recommend-callouts.png)
 
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by closing the bar.
 
 ## To configure recommended or automatic classification for a label
 
