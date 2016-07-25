@@ -47,6 +47,11 @@ How multiple conditions are evaluated when they apply to more than one label:
 > [!TIP]
 >For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration gives your users the ability to accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
 
+An example for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
+
+![Azure Information Protection detection and recommendation](../media/info-protect-recommend-callouts.png)
+
+
 ## To configure recommended or automatic classification for a label
 
 1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
