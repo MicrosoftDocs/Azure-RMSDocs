@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 2 | Azure Rights M
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -52,7 +52,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. If you have activated Azure Rights Managment, for **Select RMS template**: Click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+    a. If you have activated Azure Rights Managment, for **Set RMS template for protecting documents and emails containing this label**: Make sure that **Azure RMS** is selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
 
     If you have not activated Azure Rights Management, you cannot use this option.
 

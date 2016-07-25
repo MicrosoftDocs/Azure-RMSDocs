@@ -130,7 +130,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  On each computer on which you will install the RMS sharing application, each user on that computer must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
+3.  On each computer on which you will install the RMS sharing application, each user who uses that computer must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
