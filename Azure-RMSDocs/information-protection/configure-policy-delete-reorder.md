@@ -50,7 +50,7 @@ Use the following instructions to make these changes.
 
     - To delete a label: Select the **Context menu** (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 
-    - To disable a label: Select the label that you want to disable. On the **Label** bade, for **Enabled**, click **Off**, and then click **Save**.
+    - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, click **Off**, and then click **Save**.
 
     - To re-order a label: Select the **Context menu** (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
 
