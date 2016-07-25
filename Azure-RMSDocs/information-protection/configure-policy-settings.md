@@ -32,6 +32,17 @@ There are 3 settings in the Azure Information Protection policy that apply to al
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-settings.png)
 
+When you specify that all documents and emails must have a label, if a label is not set when users save their document or send their email message, they are prompted to select a label to continue:
+
+![Azure Information Protection prompt if new classification is lower](../media/info-protect-enforce-label.png)
+
+
+When users are prompted to provide justification, they see the following dialog box:
+
+![Azure Information Protection prompt if new classification is lower](../media/info-protect-policy-settings.png)
+
+info-protect-prompt-for-justification.png
+
 To configure these settings:
 
 1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
