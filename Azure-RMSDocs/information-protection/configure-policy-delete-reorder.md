@@ -48,11 +48,11 @@ Use the following instructions to make these changes.
 
 3. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
 
-    - To delete a label: Select the **Context menu** (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
+    - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 
     - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, click **Off**, and then click **Save**.
 
-    - To re-order a label: Select the **Context menu** (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
+    - To re-order a label: Right-click or select the context menu (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
 
 4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
