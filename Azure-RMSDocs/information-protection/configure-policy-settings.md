@@ -39,9 +39,8 @@ When you specify that all documents and emails must have a label, if a label is 
 
 When users are prompted to provide justification, they see the following dialog box:
 
-![Azure Information Protection prompt if new classification is lower](../media/info-protect-policy-settings.png)
+![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
 
-info-protect-prompt-for-justification.png
 
 To configure these settings:
 
