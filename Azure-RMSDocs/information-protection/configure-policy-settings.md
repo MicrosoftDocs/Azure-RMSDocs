@@ -32,15 +32,6 @@ There are 3 settings in the Azure Information Protection policy that apply to al
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-settings.png)
 
-When you specify that all documents and emails must have a label, if a label is not set when users save their document or send their email message, they are prompted to select a label to continue:
-
-![Azure Information Protection prompt if new classification is lower](../media/info-protect-enforce-label.png)
-
-
-When users are prompted to provide justification, they see the following dialog box:
-
-![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
-
 
 To configure these settings:
 
@@ -58,10 +49,11 @@ To configure these settings:
 
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
 
-    - **Users must provide justification when lowering the sensitivity level**: When you set this option to **On** and a user changes the label of an existing document or email to a label that has a lower sensitivity level (for example, from **Secret** to **Public**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**. This option is not applicable for sub-labels. 
+    - **Users must provide justification when lowering the sensitivity level**: When you set this option to **On** and a user changes the label of an existing document or email to a label that has a lower sensitivity level (for example, from **Secret** to **Public**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.  
 
-    ![Azure Information Protection prompt if new classification is lower](../media/info-protect-enforce-label.png)
+    ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
 
+    This option is not applicable for sub-labels.
 
 4. To save your changes, click **Save**.
 
