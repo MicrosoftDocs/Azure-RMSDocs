@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/24/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,9 +30,17 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark:
 
+The visual markings are applied to Word, Excel, and PowerPoint documents when the label is applied, and when the documented is saved. For email messages, the visual markings are applied when the email message is sent.
+
+Additional information about these visual markers:
+
 - Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
 
-- Watermarks apply to Word, Excel, and PowerPoint. When you use watermarks with Excel, they are visible only in Page layout and Print preview modes, and when printed.
+- Watermarks apply to Word, Excel, and PowerPoint:
+
+    - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
+
+	- PowerPoint: Watermarks are applied to the master slide, as a background image.
 
 Use the following instructions to configure visual markings for a label.
 

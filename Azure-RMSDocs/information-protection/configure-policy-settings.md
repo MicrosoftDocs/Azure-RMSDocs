@@ -5,7 +5,7 @@ title: How to configure the global policy settings for Azure Information Protect
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 07/24/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -40,11 +40,11 @@ To configure these settings:
 
 3. On the **Azure Information Protection** blade, configure these global settings:
 
-	**All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
+    **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
 
-	**Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. Labels with sub-labels cannot be set as default. 
+    **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
 
-	**Users must provide justification when lowering the sensitivity level**: When you set this option to **On** and a user changes the label of an existing document or email to a label that has a lower sensitivity level (for example, from **Secret** to **Public**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**
+    **Users must provide justification when lowering the sensitivity level**: When you set this option to **On** and a user changes the label of an existing document or email to a label that has a lower sensitivity level (for example, from **Secret** to **Public**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**. This option is not applicable for sub-labels. 
 
 4. To save your changes, click **Save**.
 
