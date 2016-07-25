@@ -21,6 +21,6 @@
 ##### [Remove protection](sharing-app-remove-protection.md)
 ##### [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
 ##### [Dialog box options](sharing-app-dialog-box.md)
-### [Privacy statement for Microsoft Rights Management in RMS-enlightened applications](privacy-statement-rms-enlightened-applications.md)
+### [Microsoft online services privacy statement](https://www.microsoft.com/en-us/privacystatement/OnlineServices/Default.aspx)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
 # [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)
