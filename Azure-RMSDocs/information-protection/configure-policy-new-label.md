@@ -5,7 +5,7 @@ title: How to create a new label for Azure Information Protection | Azure Rights
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ Use the following instructions to add a new label to the Azure Information Prote
 
 	- To create a new label: Click **Add a new label**.
 
-	- To create a new sub-label: Select the Context menu (**...**) for the label that you want to create a sub-label for, and then click **Add a sub-label**.
+	- To create a new sub-label: Right-click or select the context menu (**...**) for the label that you want to create a sub-label for, and then click **Add a sub-label**.
 
 4. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
 
