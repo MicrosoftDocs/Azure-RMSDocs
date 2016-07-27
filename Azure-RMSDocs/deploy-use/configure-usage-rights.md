@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/16/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -139,7 +139,7 @@ Grants all rights to the document and all available actions can be performed.
 
 **API constant or value:** IPC_GENERIC_ALL L"OWNER"
 
-Includes the ability to remove protection.
+Includes the ability to remove protection and re-protect a document.
 
 ---
 
