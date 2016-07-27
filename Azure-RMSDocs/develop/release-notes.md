@@ -29,9 +29,9 @@ ms.suite: ems
 ## What's new
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 
--   [New for June 2016](#new_for_June_2016)
--   [December 2015 Update](#december_2015_update)
--   [July 2015 Update - Adds support for Linux / C++ development](#july_2015_update_-_adds_support_for_linux___c___development)
+-   [New for June 2016](#new-for-June-2016)
+-   [December 2015 Update](#december-2015-update)
+-   [July 2015 Update - Adds support for Linux / C++ development](#july-2015-update--_adds_support_for_linux___c___development)
 -   [May 2015 Update - Adds logging control](#may_2015_update_-_adds_logging_control)
 -   [February 2015 Update - Adds Windows Store application support](#february_2015_update_-_adds_windows_store_application_support)
 -   [January 2015 Update - Adds WinPhone platform support](#january_2015_update_-_adds_winphone_platform_support)
@@ -39,7 +39,7 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently_asked_questions)
 
-### New for June 2016
+## New for June 2016
 
 - **Support for Modern Authentication** - this will bring Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
 - **Document Tracking support** - developers can now enable document tracking when protecting document in their apps 
@@ -47,7 +47,7 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 - Bug fixes
 
 
-### December 2015 Update
+## December 2015 Update
 
 With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
@@ -79,7 +79,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 -   Updates to improve error messaging and troubleshooting experience.
 -   Significant performance improvements for cryptographic operations.
 
-### July 2015 Update - Adds support for Linux / C++ development
+## July 2015 Update - Adds support for Linux / C++ development
 
 This release adds the following:
 
@@ -87,7 +87,7 @@ This release adds the following:
 
     For more information, see [Get started](get-started.md).
 
-### May 2015 Update - Adds logging control
+## May 2015 Update - Adds logging control
 
 This release adds support for the following:
 
@@ -105,11 +105,11 @@ This release adds support for the following:
 
     For more information, see [**MSProtection:resetStateWithCompletionBlock**](/rights-management/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc).
 
-### February 2015 Update - Adds Windows Store application support
+## February 2015 Update - Adds Windows Store application support
 
 This release adds support for Windows Store applications and provides functional parity with the Windows Phone, Android and iOS/OS X release of the RMS SDK 4.1.
 
-### January 2015 Update - Adds WinPhone platform support
+## January 2015 Update - Adds WinPhone platform support
 
 This release adds support for the Windows Phone operating system and provides functional parity with the Android and iOS/OS X release of the RMS SDK 4.1.
 
