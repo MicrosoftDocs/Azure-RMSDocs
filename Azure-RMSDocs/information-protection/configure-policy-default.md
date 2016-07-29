@@ -41,6 +41,8 @@ Tooltip: **Information Sensitivity consists of four distinct levels (Public, Int
 
 ## Labels
 
+There are 5 default labels that have the following settings.
+
 ### **Personal**
 
 Tooltip: **For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.**
@@ -114,6 +116,8 @@ Protection: No
 
 
 ## Sub-labels
+
+There are 2 default sub-labels that have the following settings.
 
 ### Secret > **All Company**
 
