@@ -32,7 +32,7 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Sign in to the [Azure portal](https://portal.azure.com).
  
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

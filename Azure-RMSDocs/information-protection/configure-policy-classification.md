@@ -130,13 +130,13 @@ Match this information type when the content includes the following:
 
 - A valid credit card number, in a formatted or unformatted pattern, that  passes the [luhn check](https://wikipedia.org/wiki/Luhn_algorithm). This information type detects cards from all major brands worldwide, including Visa, MasterCard, Discover Card, American Express, and Diners.
 
-    **Formatted**:
-
-    - 16 digits: (dddd-dddd-dddd-dddd)  
-
-    **Unformatted**:
-
-    - (dddddddddddddddd)  
+    - **Formatted**:
+    
+        - 16 digits: (dddd-dddd-dddd-dddd)  
+        
+    -**Unformatted**:
+    
+        - (dddddddddddddddd)  
 
 
 Examples for testing:
@@ -193,11 +193,11 @@ Match this information type when the content includes the following:
 2. A social security number: 9 digits, which can be in a formatted or unformatted pattern:
 
     - **Formatted**: 
-
+    
         - Nine digits in the following format: ddd-dd-dddd OR ddd dd dddd 
-
+        
     - **Unformatted**: 
-
+    
         - Nine digits in the following format: ddddddddd 
 
 

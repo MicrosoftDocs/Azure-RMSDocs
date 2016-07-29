@@ -42,7 +42,7 @@ For more information about the templates, see [Configuring custom templates for 
 
 Use the following instructions to configure a label to apply Rights Management protection.
 
-1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Sign in to the [Azure portal](https://portal.azure.com).
  
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

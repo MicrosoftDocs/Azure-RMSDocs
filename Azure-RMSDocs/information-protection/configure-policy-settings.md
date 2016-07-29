@@ -37,7 +37,7 @@ There are 3 settings in the Azure Information Protection policy that apply to al
 
 To configure these settings:
 
-1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Sign in to the [Azure portal](https://portal.azure.com).
  
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

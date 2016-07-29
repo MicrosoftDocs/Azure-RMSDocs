@@ -5,7 +5,7 @@ title: How to change or customize an existing label for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/28/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management

@@ -44,8 +44,8 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. Make sure that you are signed in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
- 
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 3. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
