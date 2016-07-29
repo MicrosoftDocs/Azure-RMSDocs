@@ -28,7 +28,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 You can protect your most sensitive documents and emails by using Azure Rights Management, which uses encryption, identity, and authorization policies to help prevent data loss. This  protection is applied when you configure a label to use a Rights Management template. 
 

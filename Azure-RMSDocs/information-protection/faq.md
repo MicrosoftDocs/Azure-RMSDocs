@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 Have a question about the preview release of Azure Information Protection?  See if it's answered here. 
 
