@@ -168,7 +168,7 @@ Match this information type when the content includes the following:
         e. A digit 
         
         Example: 3456-9876-1 ABA 
-    
+        
     - **Unformatted**: 
         
         9 consecutive digits that start with 0, 1, 2, 3, 6, 7, or 8 
