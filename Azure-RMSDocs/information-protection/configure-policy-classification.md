@@ -65,7 +65,9 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 5. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
-    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value. 
+    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count. 
+    - 
+    For example, you select the social security number option and set the minimum number of occurences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
     
         For more information about the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
