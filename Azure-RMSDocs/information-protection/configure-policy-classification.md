@@ -134,7 +134,7 @@ Match this information type when the content includes the following:
     
         - 16 digits: (dddd-dddd-dddd-dddd)  
         
-    -**Unformatted**:
+    - **Unformatted**:
     
         - (dddddddddddddddd)  
 
