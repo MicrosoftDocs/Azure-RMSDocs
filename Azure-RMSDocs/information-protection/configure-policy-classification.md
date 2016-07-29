@@ -5,7 +5,7 @@ title: How to configure conditions for automatic and recommended classification 
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,7 +26,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend: 
 
@@ -65,7 +65,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 5. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
-    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences. 
+    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value. 
     
         For more information about the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 

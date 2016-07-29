@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Information Protection preview
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 Have a question about the preview release of Azure Information Protection?  See if it's answered here. 
 

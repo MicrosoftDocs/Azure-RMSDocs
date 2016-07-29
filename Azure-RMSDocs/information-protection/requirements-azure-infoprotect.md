@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Requirements for Azure Information Protection
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 
 To evaluate the preview release of Azure Information Protection, make sure that you have the following prerequisites. 

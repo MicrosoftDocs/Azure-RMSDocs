@@ -5,7 +5,7 @@ title: Installing the Azure Information Protection client | Azure Rights Managem
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -41,7 +41,7 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AZInfoProtection.exe** and follow the prompts to install the client.
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AZInfoProtection.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
 
     Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
 
@@ -82,9 +82,9 @@ Client files:
 
 - For 32-bit operating systems: **\Program Files\Microsoft Azure Information Protection**
 
-Client logs files and currently installed policy files:
+Client logs files and currently installed policy file:
 
-- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP\logs**.
+- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**.
 
 
 ## Next steps
