@@ -34,6 +34,8 @@ You can protect your most sensitive documents and emails by using Azure Rights M
 
 This template can be one of the default templates that are automatically created when you activate Azure Rights Management, or a custom template. Departmental templates are supported but apply the protection only when the document or email author is within the configured scope of the template. If the user is not within the scope, they see a message that Azure Information Protection cannot apply the label.
 
+## How the protection works
+
 When a document or email is protected by Azure Rights Management, it is encrypted at rest and in transit and can only be decrypted by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
 
 - Only users within your organization can open the document or email.
