@@ -30,6 +30,32 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 **[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
-Use the following information to understand how the default policy for Azure Information Protection is configured. 
+Use the following information to understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
+
+Information Protection bar:
+
+- Title: **Sensitivity**
+
+- Tooltip: **Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**
 
 
+|Label name|Tooltip|Color|Visual markings|Conditions or protection|
+|--------------|-----------------|---------------|-----------------|
+|**Personal**|**For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.**|Light green|None|No|
+|**Public**|**This information is internal and can be used by everyone inside or outside the business.**|Green|None|No|
+|**Internal**|**This information includes a wide spectrum of internal business data that can be used by all employees and can be shared with authorized customers and business partners. Examples for internal information are company policies and most internal communications.**|Blue|Footer (document and email)|No|
+|**Confidential**|**This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.**|Orange|Footer (document and email)|No|
+|**Secret**|**This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.**|Red|Footer (document and email)|No|
+
+|Sub-label name|Tooltip|Visual markings|Conditions or protection|
+|--------------|-----------------|---------------|-----------------|
+|Secret > **All Company**|**This data includes sensitive business information - permitted for all company employees.**|None|No|
+|Secret > **My Group**|**This data includes sensitive business information - permitted for employee groups only.**|None|No|
+
+Global settings:
+
+- **All documents and emails must have a label (applied automatically or by users)**: Off
+
+- **Select the default label**: None
+
+- **Users must provide justification when lowering the sensitivity level (for example, from Confidential to Public)**: Off
