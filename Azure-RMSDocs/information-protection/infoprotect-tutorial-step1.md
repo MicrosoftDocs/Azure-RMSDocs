@@ -28,7 +28,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
  
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 > [!NOTE]
 >If you only want to classify your data and not protect it with Azure Rights Management, or if you have already activated Azure Rights Management for your tenant - go straight to the [next step](infoprotect-tutorial-step2.md). 

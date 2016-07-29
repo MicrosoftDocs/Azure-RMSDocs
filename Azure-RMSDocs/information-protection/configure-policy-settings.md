@@ -28,7 +28,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 There are 3 settings in the Azure Information Protection policy that apply to all users, all devices:
 

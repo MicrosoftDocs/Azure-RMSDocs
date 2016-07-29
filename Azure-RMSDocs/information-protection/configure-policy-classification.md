@@ -28,7 +28,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend: 
 
