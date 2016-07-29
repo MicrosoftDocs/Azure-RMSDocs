@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Information Protection preview
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 Have a question about the preview release of Azure Information Protection?  See if it's answered here. 
 
@@ -67,12 +69,6 @@ To configure the Azure Information Protection policies in the Azure portal, you 
 
 Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-## If Azure Information Protection is now public preview, why can't I find it in the Azure portal?
-
-Currently, you must use this link to see Azure Information Protection in the portal: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
-
-Then, on the hub menu, click **Browse** and start typing "Information Protection" in the Filter box. From the results, select **Azure Information Protection**.
-
 ## Do I need to be a global admin to try Azure Information Protection preview?
 
 For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy in the Azure portal.
@@ -93,9 +89,9 @@ This is now documented and will be updated in [Requirements for Azure Informatio
 
 ## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
 
-Every time a user opens an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
+Every time a user opens an an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
 
-If the application is already loaded when an Azure Information Protection policy is updated, you must close and reopen the application to get the latest version of the policy.
+If multiple instances of the Office application is loaded when a new Azure Information Protection policy is published, you must close all instances to get the latest version of the policy. For example, you have two Word documents open and want to test the updated Azure Information Protection policy in just one document: Close both Word documents and reopen the document that you want to use with the latest policy.
 
 ## Where can files be stored to use Azure Information Protection? 
 
@@ -119,7 +115,7 @@ In the Azure portal, you can use predefined patterns, such as “Credit card num
 
 You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
 
-The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see the Yammer post, [Description of content matching for our pre-define Information types](https://www.yammer.com/askipteam/#/Threads/show?threadId=737163344). The detection runs when the document is saved, or an email is sent.
+The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
 
 For the best user experience and to ensure business continuity, we recommend that you start with user recommendation actions, rather than fully automatic actions. This gives your users the ability to accept the labeling or protection action, or override these suggestions.   
 
@@ -127,7 +123,7 @@ For the best user experience and to ensure business continuity, we recommend tha
 
 Yes. Use the Azure portal to configure whether to use automatic classification or make a recommendation to users, by setting the option **Select how this label is applied: automatically or recommended to user** to **Recommended**.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).  
 
 ## Can I force all documents to be classified?
 
@@ -146,7 +142,7 @@ Yes. To make sure users justify their change of classification, in the Azure por
 
 In the Azure portal, you can select an Azure Rights Management template to automatically protect the content, according to the classification level that you specify.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md).
 
 ## Can a file be classified with two different classifications?
 
