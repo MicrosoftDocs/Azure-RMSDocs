@@ -26,7 +26,9 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 # The default Azure Information Protection policy
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+[This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders.]
 
 Use the following information to understand how the default policy for Azure Information Protection is configured. 
 
