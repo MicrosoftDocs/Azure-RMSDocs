@@ -73,11 +73,11 @@ In this example, the user can click **Change now** to apply the recommended labe
 
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
         
-    **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
+    **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
 
 6. On the **Label** blade, configure the following, and then click **Save**:
 
-    - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended** .
+    - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
 
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 

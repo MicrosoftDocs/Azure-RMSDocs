@@ -5,7 +5,7 @@ title: How to configure the global policy settings for Azure Information Protect
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,7 +26,9 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 # How to configure the global policy settings for Azure Information Protection
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 There are 3 settings in the Azure Information Protection policy that apply to all users, all devices:
 
