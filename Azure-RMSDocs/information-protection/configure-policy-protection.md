@@ -26,5 +26,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 # How to configure a label to apply protection for Azure Information Protection
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 

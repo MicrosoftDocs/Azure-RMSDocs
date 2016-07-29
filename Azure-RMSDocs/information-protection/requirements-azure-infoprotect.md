@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/28/2016
+ms.date: 07/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -29,6 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection preview*
 
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 To evaluate the preview release of Azure Information Protection, make sure that you have the following prerequisites. 
 

@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 3 | Azure Rights M
 description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/231/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,7 +26,9 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 # Step 3: Install the Azure Information Protection client 
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 In this step, you'll install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications. 
 
