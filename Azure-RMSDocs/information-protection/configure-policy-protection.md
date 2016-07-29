@@ -52,7 +52,7 @@ For more information about Azure Rights Management and how it works, see [What i
 > To configure a label to apply Rights Management protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 
-Use the following instructions to configure a label to apply Rights Management protection.
+## To configure a label to apply Rights Management protection
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
