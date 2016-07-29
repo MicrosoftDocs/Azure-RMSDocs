@@ -28,7 +28,7 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 Use this tutorial to quickly try out Azure Information Protection preview for your organization, with just 4 steps that should take you less than 15 minutes. Optionally, you’ll activate the Azure Rights Management service, look at and modify the default Azure Information Protection policy, install the Azure Information Protection client, and then use a Word document to see classification, labeling, and protection in action.
 
