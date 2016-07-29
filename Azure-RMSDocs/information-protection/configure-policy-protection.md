@@ -32,7 +32,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 You can protect your most sensitive documents and emails by using Azure Rights Management, which uses encryption, identity, and authorization policies to help prevent data loss. This  protection is applied when you configure a label to use a Rights Management template. 
 
-This template can be one of the default templates that are automatically created when you activate Azure Rights Management, or a custom template. Departmental templates are supported but will apply the protection only when the document or email author is within the configured scope of the template.
+This template can be one of the default templates that are automatically created when you activate Azure Rights Management, or a custom template. Departmental templates are supported but apply the protection only when the document or email author is within the configured scope of the template. If the user is not, they see a message that Azure Information Protection cannot apply the label.
 
 For more information about the templates, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
