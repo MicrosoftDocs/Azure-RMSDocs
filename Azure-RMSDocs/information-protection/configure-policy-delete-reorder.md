@@ -28,7 +28,7 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 
 >*Applies to: Azure Information Protection preview*
 
-**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+**[ This information is preliminary and subject to change. ]**
 
 You can delete or re-order the labels that users see on the Information Protection bar by configuring this in the Azure Information Protection policy.
 
