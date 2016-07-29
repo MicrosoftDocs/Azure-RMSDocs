@@ -62,15 +62,15 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     c. Click **Add a new condition** and then, in the **Condition** blade, select the following:
     
-        - **Choose the type of condition**: **Built-in**
-        
-        - **Select built-in**: **Credit Card Number**
-
-        - **Minimum number of occurrences**: **1**
-
-        - **Count occurrences with unique values only**: **On**
-        
-        - Click **Save** to return to the **Label: Confidential** blade.
+    - **Choose the type of condition**: **Built-in**
+    
+    - **Select built-in**: **Credit Card Number**
+    
+    - **Minimum number of occurrences**: **1**
+    
+    - **Count occurrences with unique values only**: **On**
+    
+    - Click **Save** to return to the **Label: Confidential** blade.
 
 3. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
 
