@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 2 | Azure Rights M
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,7 +26,9 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 # Step 2: Configure and publish the Azure Information Protection policy
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
@@ -66,6 +68,8 @@ We'll now change the settings of one of the labels, **Confidential**:
 
     - **Minimum number of occurrences**: **1**
 
+    - **Count occurrences with unique values only**: **On**
+    - 
     - Click **Save** to return to the **Label: Confidential** blade.
 
 3. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.

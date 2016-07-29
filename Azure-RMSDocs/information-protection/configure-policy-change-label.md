@@ -28,4 +28,4 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 >*Applies to: Azure Information Protection preview*
 
-
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**

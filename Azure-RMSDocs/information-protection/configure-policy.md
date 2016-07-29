@@ -29,6 +29,8 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection preview*
 
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
+
 To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 To configure the Azure Information Protection policy during the preview release of Azure Information Protection:
