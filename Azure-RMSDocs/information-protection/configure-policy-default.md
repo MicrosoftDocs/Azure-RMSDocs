@@ -41,20 +41,101 @@ Tooltip: **Information Sensitivity consists of four distinct levels (Public, Int
 
 ## Labels
 
-|Label name|Tooltip|Color|Visual markings|Conditions or protection|
-|--------------|-----------------|---------------|-----------------|
-|**Personal**|**For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.**|Light green|None|No|
-|**Public**|**This information is internal and can be used by everyone inside or outside the business.**|Green|None|No|
-|**Internal**|**This information includes a wide spectrum of internal business data that can be used by all employees and can be shared with authorized customers and business partners. Examples for internal information are company policies and most internal communications.**|Blue|Footer (document and email)|No|
-|**Confidential**|**This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.**|Orange|Footer (document and email)|No|
-|**Secret**|**This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.**|Red|Footer (document and email)|No|
+### **Personal**
+
+Tooltip: **For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.**
+
+Color: Light green
+
+Visual markings: None
+
+Conditions: None
+
+Protection: No
+
+----
+
+
+### **Public**
+
+Tooltip: **This information is internal and can be used by everyone inside or outside the business.**
+
+Color: Green
+
+Visual markings: None
+
+Conditions: None
+
+Protection: No
+
+----
+
+### **Internal**
+
+Tooltip: **This information includes a wide spectrum of internal business data that can be used by all employees and can be shared with authorized customers and business partners. Examples for internal information are company policies and most internal communications.**
+
+Color: Blue
+
+Visual markings: Footer (document and email)
+
+Conditions: None
+
+Protection: No
+
+----
+
+### **Confidential**
+
+Tooltip: **This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.**
+
+Color: Orange
+
+Visual markings: Footer (document and email)
+
+Conditions: None
+
+Protection: No
+
+----
+
+### **Secret**
+
+Tooltip: **This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.**
+
+Color: Red
+
+Visual markings: Footer (document and email)
+
+Conditions: None
+
+Protection: No
+
+----
+
 
 ## Sub-labels
 
-|Sub-label name|Tooltip|Visual markings|Conditions or protection|
-|--------------|-----------------|---------------|-----------------|
-|Secret > **All Company**|**This data includes sensitive business information - permitted for all company employees.**|None|No|
-|Secret > **My Group**|**This data includes sensitive business information - permitted for employee groups only.**|None|No|
+### Secret > **All Company**
+
+Tooltip: **This data includes sensitive business information - permitted for all company employees.**
+
+Visual markings: None
+
+Conditions: None
+
+Protection: No
+
+----
+
+### Secret > **My Group**
+
+Tooltip: **This data includes sensitive business information - permitted for employee groups only.**
+
+Visual markings: None
+
+Conditions: None
+
+Protection: No
 
 ## Global settings
 
