@@ -50,13 +50,13 @@ Use the following instructions to configure a label to apply Rights Management p
 
 4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, configure the following:
 
-- If you see **Select RMS template from**: Select **Azure RMS**. 
+    - If you see **Select RMS template from**: Select **Azure RMS**. 
     
-    Do not select **AD RMS** and the associated configuration options without assistance from Microsoft. If you are interested in testing Azure Information Protection with Active Directory Rights Management Services, send an email to askipteam@microsoft.com. 
+        Do not select **AD RMS** and the associated configuration options without assistance from Microsoft. If you are interested in testing Azure Information Protection with Active Directory Rights Management Services, send an email to askipteam@microsoft.com. 
+    
+    - For **Select RMS template**: Click the drop down box and select the template that you want to use to protect documents and emails with this label.
 
-- For **Select RMS template**: Click the drop down box and select the template that you want to use to protect documents and emails with this label.
-
-    > [!NOTE] If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
+        > [!NOTE] If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
 
 5. Click **Save**.
 
