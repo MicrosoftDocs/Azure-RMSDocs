@@ -32,8 +32,8 @@ Windows Phone applications can use the Microsoft Rights Management SDK 4.2 to e
 This topic will guide you through setting up your environment for creating your own new apps .
 
 -   [Prerequisites](#prerequisites)
--   [Configuring your development environment](#configuring_your_development_environment)
--   [See Also](#see_also)
+-   [Configuring your development environment](#configuring-your-development-environment)
+-   [See Also](#see-also)
 
 ## Prerequisites
 
