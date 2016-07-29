@@ -27,7 +27,7 @@ experiment_id: "priyamo-test-20160729"
 
 # How-to: enable document tracking and revocation
 
-This topic covers the basic guidance for implementing document tracking of content as well as example code for metadata updates and for creating a **Track Usage button** for your app.
+This topic covers the basic guidance for implementing document tracking of content as well as example code for metadata updates and for creating a [**Track Usage button**](#add-a-track-usage-button-to-your-app) for your app.
 
 ## Steps to implement document tracking
 
