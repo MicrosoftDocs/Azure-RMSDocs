@@ -91,7 +91,7 @@ This is now documented and will be updated in [Requirements for Azure Informatio
 
 Every time a user opens an an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
 
-If any instance of the application is already loaded when an Azure Information Protection policy is updated, you must close and reopen all instances of the application (for example, all Word documents) to get the latest version of the policy.
+If multiple instances of the Office application is loaded when a new Azure Information Protection policy is published, you must close all instances to get the latest version of the policy. For example, you have two Word documents open and want to test the updated Azure Information Protection policy in just one document: Close both Word documents and reopen the document that you want to use with the latest policy.
 
 ## Where can files be stored to use Azure Information Protection? 
 
