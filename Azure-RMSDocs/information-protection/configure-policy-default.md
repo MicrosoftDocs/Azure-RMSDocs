@@ -41,7 +41,7 @@ Tooltip: **Information Sensitivity consists of four distinct levels (Public, Int
 
 ## Labels
 
-There are 5 default labels that have the following settings.
+There are 5 default labels that have the following settings:
 
 ### **Personal**
 
@@ -117,7 +117,7 @@ Protection: No
 
 ## Sub-labels
 
-There are 2 default sub-labels that have the following settings.
+There are 2 default sub-labels that have the following settings:
 
 ### Secret > **All Company**
 
