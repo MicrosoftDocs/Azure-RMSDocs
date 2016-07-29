@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,6 +34,8 @@ ms.suite: ems
 Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](sharing-app-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
 The RMS sharing application is best suited to work with Azure RMS, because this deployment configuration supports sending protected attachments to users in another organization, and options such as email notifications and document tracking with revocation.  However, with some limitations, it also works with the on-premises version, AD RMS. For a comprehensive comparison of features that are supported by Azure RMS and AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure RMS, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+For a technical overview of the Rights Management sharing application, information about native and generic protection, and the supported file types, file name extensions, and how to change the default protection level, see [Technical overview and protection details for the Rights Management sharing application](sharing-app-admin-guide-technical.md). 
 
 ## Automatic deployment for the Microsoft Rights Management sharing application
 The Windows version of the RMS sharing application supports a scripted installation, which makes it suitable for enterprise deployments.
@@ -122,13 +124,13 @@ To verify success, see the [Verifying installation success](#verifying-installat
         > [!NOTE]
         > This command might prompt you to enter your credentials for Azure. If the computer is not joined to a domain, you will be prompted. If the computer is joined to a domain, the tool might be able to use cached credentials.
 
-2.  On each computer on which you will install the RMS sharing application, run the following command with elevated privileges:
+2.  On each computer on which you will install the RMS sharing application, run the following command one time with elevated privileges:
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  On each computer on which you will install the RMS sharing application, users must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
+3.  On each computer on which you will install the RMS sharing application, each user who uses that computer must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -335,7 +337,7 @@ Because the RMS sharing application is not supported by WSUS, you can use the fo
 3.  When testing is complete and any issues resolved, deploy the latest version to all users by using the automatic deployment instructions in this guide.
 
 ## Azure RMS only: Configuring document tracking
-If you have a [subscription that supports document tracking](https://technet.microsoft.com/en-us/dn858608), the document tracking site is enabled by default for all users in your organization.  Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+If you have a [subscription that supports document tracking](https://technet.microsoft.com/dn858608), the document tracking site is enabled by default for all users in your organization.  Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
 
 To run these cmdlets, you must have at least version **2.3.0.0** of the Azure RMS module for Windows PowerShell.  For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 

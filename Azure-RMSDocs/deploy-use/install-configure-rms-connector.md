@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -68,16 +68,18 @@ In addition, if you have implemented [onboarding controls](activate-service.md#c
 
 You can use an account that has one of the following privileges:
 
--   **Office 365 tenant administrator**: An account that is a global admin for your Office 365 tenant.
+-   **Global administrator for your tenant**: An account that is a global administrator for your Office 365 tenant or Azure AD tenant.
 
--   **Azure Rights Management global administrator**: An account with administrator privileges for the Azure RMS tenant.
+-   **Azure Rights Management global administrator**: An account in Azure Active Directory that has been assigned the Azure RMS global administrator role.
 
--   **Microsoft RMS connector Administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
+-   **Azure Rights Management connector administrator**: An account in Azure Active Directory that has been granted rights to install and administer the RMS connector for your organization.
 
     > [!NOTE]
-    > If you want to use the Microsoft RMS connector Administrator account, you must first do the following to assign the RMS connector administrator role:
+    > The Azure Rights Management global administrator role and Azure Rights Management connector administrator role are assigned to accounts by using the Azure RMS [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx) cmdlet.
+    > 
+    > To run the RMS connector with least privileges, create a dedicated account for this purpose that you then assign the Azure RMS connector administrator role by doing the following:
     >
-    > 1.  On the same computer, download and install Windows PowerShell for Rights Management. For more information, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+    > 1.  If you haven't already done so, download and install Windows PowerShell for Rights Management. For more information, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
     >
     >     Start Windows PowerShell with the **Run as administrator** command, and connect to the Azure RMS service by using the [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) command:
     >
@@ -97,9 +99,9 @@ You can use an account that has one of the following privileges:
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     For example, type: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role " ConnectorAdministrator "**
+    >     For example, type: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
-    >     Although these commands use the ConnectorAdministrator role, you could also use the GlobalAdministrator role here, as well.
+    >     Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here, as well.
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 

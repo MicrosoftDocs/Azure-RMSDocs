@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -65,7 +65,7 @@ Allows the user to save the document in its current location.
 
 **Name in AD RMS templates**: *Save*
 
-**API constant or value**: IPC_GENERIC_WRITEL"EDIT"
+**API constant or value**: IPC_GENERIC_WRITE L"EDIT"
 
 In Office applications, this right also allows the user to modify the document.
 
@@ -83,7 +83,7 @@ Enables the option to add annotations or comments to the content.
 
 **Name in AD RMS templates:** Not implemented.
 
-**API constant or value:** IPC_GENERIC_COMMENTL"COMMENT
+**API constant or value:** IPC_GENERIC_COMMENT L"COMMENT
 
 This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.
 
@@ -101,7 +101,7 @@ Enables the option to save the content to a different file name (Save As). For O
 
 **Name in AD RMS templates:** *Export (Save As)*
 
-**API constant or value:** IPC_GENERIC_EXPORTL"EXPORT"
+**API constant or value:** IPC_GENERIC_EXPORT L"EXPORT"
 
 This right also allows the user to perform other export options in applications, such as *Send to OneNote*.
 
@@ -119,7 +119,7 @@ Enables the option to forward an email message and to add recipients to the *To*
 
 **Name in AD RMS templates:** *Forward*
 
-**API constant or value:** IPC_EMAIL_FORWARDL"FORWARD"
+**API constant or value:** IPC_EMAIL_FORWARD L"FORWARD"
 
 Does not allow the forwarder to grant rights to other users as part of the forward action.
 
@@ -137,9 +137,9 @@ Grants all rights to the document and all available actions can be performed.
 
 **Name in AD RMS templates:** *Full Control*
 
-**API constant or value:** IPC_GENERIC_ALLL"OWNER"
+**API constant or value:** IPC_GENERIC_ALL L"OWNER"
 
-Includes the ability to remove protection.
+Includes the ability to remove protection and re-protect a document.
 
 ---
 
@@ -155,7 +155,7 @@ Enables the options to print the content.
 
 **Name in AD RMS templates:** *Print*
 
-**API constant or value:** IPC_GENERIC_PRINTL"PRINT
+**API constant or value:** IPC_GENERIC_PRINT L"PRINT
 
 ---
 
@@ -187,7 +187,7 @@ Enables the *Reply All* option in an email client, but doesn’t allow the user 
 
 **Name in AD RMS templates:** *Reply All*
 
-**API constant or value:** IPC_EMAIL_REPLYALLL"REPLYALL"
+**API constant or value:** IPC_EMAIL_REPLYALL L"REPLYALL"
 
 ---
 
@@ -203,7 +203,7 @@ Allows the user to open the document and see the content.
 
 **Name in AD RMS templates:** *View*
 
-**API constant or value:** IPC_GENERIC_READL"VIEW"
+**API constant or value:** IPC_GENERIC_READ L"VIEW"
 
 ---
 
@@ -219,7 +219,7 @@ Enables options to copy data (including screen captures) from the document into 
 
 **Name in AD RMS templates:** *Extract*
 
-**API constant or value:** IPC_GENERIC_EXTRACTL"EXTRACT"
+**API constant or value:** IPC_GENERIC_EXTRACT L"EXTRACT"
 
 In some applications it also allows the whole document to be saved in unprotected form.
 
@@ -251,8 +251,8 @@ Use the following table for a list of these permissions levels and a complete li
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
 |Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
 
 ----
 

@@ -26,10 +26,10 @@ ms.suite: ems
 
 # How-to: enable your service application to work with cloud based RMS
 
-This topic outlines steps for setting up your service application to use Azure Rights Management. For more information, see [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
+This topic outlines steps for setting up your service application to use Azure Rights Management. For more information, see [Getting started with Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Important**  
-In order to use your Rights Management Services SDK 2.1 service application with Azure RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](/rights-management/get-started/requirements-subscriptions.md)
+In order to use your Rights Management Services SDK 2.1 service application with Azure RMS, you'll need to create your own tenants. For more information, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md)
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 
      
 -   The following steps are the setup for creating an instance of an [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) structure with the **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) member populated with connection information from the Azure Rights Management Service.
--   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the **wszServicePrincipal**, **wszBposTenantId**, and **cbKey** parameters when you create an instance of an [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) structure.
+-   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the **wszServicePrincipal**, **wszBposTenantId**, and **cbKey** parameters when you create an instance of an [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) structure.
 
 **Note** Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) parameter of [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
@@ -91,7 +91,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
     `Get-AadrmConfiguration`
 
 
--   Create an instance of an  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) and set a few members.
+-   Create an instance of an  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) and set a few members.
 
     // Create a key structure.
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
@@ -102,9 +102,9 @@ In order to use your Rights Management Services SDK 2.1 service application with
     symKey.wszBposTenantId = "your tenent identifier";
 
 
-For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
--   Create an instance of an [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) structure containing your [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) instance.
+-   Create an instance of an [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) structure containing your [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) instance.
 
 **Note**  The *connectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
 
@@ -178,7 +178,7 @@ You have now completed the steps needed to enable your application to use Azure 
 * [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
 * [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key)
+* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
 * [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 * [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)

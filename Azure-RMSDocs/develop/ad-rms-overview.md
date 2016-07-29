@@ -1,12 +1,12 @@
 ﻿---
 # required metadata
 
-title: Overview | Azure RMS
+title: Overview - RMS SDK 2.1 | Azure RMS
 description: Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,9 +26,7 @@ ms.suite: ems
 
 # Overview
 
-Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled application, content owners will be able to define who can open, modify, print, forward, or take other actions with the content.
-
-## Overview
+Rights Management Services SDK 2.1 is an information protection technology that helps safeguard digital information from unauthorized use. Through your rights-enabled application, content owners will be able to define who can open, modify, print, forward, or take other actions with the content.
 
 AD RMS consists of both [server](ad-rms-server.md) and [client](ad-rms-client.md) components. The server, running on Azure or Windows Server, consists of multiple web services.
 
@@ -44,7 +42,7 @@ The following are just a few of the scenarios to which applications built on the
 -   The owners of an online document library want to enable rights to view, print, or edit documents based on the identity of the user.
 -   A corporation wants to publish sensitive employee information to an internal website that restricts viewing and editing privileges to certain users.
 
-For more information on AD RMS server, AD RMS client and their functionality, see the TechNet content for [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
+For more information on AD RMS server, AD RMS client and their functionality, see the TechNet content for [IT Pro documentation for AD RMS](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 The remaining topics in this section cover the RMS Architecture and its implementations.
 

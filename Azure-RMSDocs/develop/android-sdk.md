@@ -32,8 +32,8 @@ This topic will guide you through setting up your environment for creating your 
 
 -   [Prerequisites](#prerequisites)
 -   [Optional](#optional)
--   [Configuring your development environment](#configuring_your_development_environment_)
--   [See Also](#see_also)
+-   [Configuring your development environment](#configuring-your-development-environment_)
+-   [See Also](#see-also)
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ We recommend the following software on your development system:
 
     This SDK can be used to develop for Android 4.0.3 (API level 15) and later.
 
--   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx). However, other authentication libraries that support OAuth 2.0 can be used as well.
+-   Authentication library: We recommend that you use the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). However, other authentication libraries that support OAuth 2.0 can be used as well.
 
     For more information see, [ADAL for Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 

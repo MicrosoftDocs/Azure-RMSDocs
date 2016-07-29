@@ -45,12 +45,10 @@ For information about the run-time requirements for a particular programming ele
 |Topic|Description|
 |-----|--------|
 |[Overview](ad-rms-overview.md)|Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.|
-|[How this SDK is better](differences-between-ad-rms-and-ad-rms-2-0.md)|RMS SDK 2.1 is a significant improvement over the original Rights Management Services SDK.|
 |[Getting started](getting-started-with-ad-rms-2-0.md)|The RMS SDK 2.1 platform enables developers to build applications that leverage RMS information protection.|
 |[Release notes](release-notes-rtm.md)|This topic contains important information about this and previous releases of the RMS SDK 2.1.|
-|[Code samples](samples.md)|This topic lists a set of samples using the RMS SDK 2.1, available at the MSDN Download Center.|
 |[Developer notes](developer-notes.md)|This section covers specific guidance for several important development scenarios.|
-|[API reference](/rights-management/sdk/2.1/api/win/constants)|This section contains topics covering reference material for all of the API elements.|
+|[API reference](api-reference-2-1.md)|This section contains topics covering reference material for all of the API elements.|
 
  
 
