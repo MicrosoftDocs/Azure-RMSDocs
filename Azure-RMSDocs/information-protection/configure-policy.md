@@ -78,8 +78,6 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
-- [How to deploy the policy for disconnected computers](configure-policy-disconnected.md)
-
 ## Next steps
 
 For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
