@@ -34,7 +34,7 @@ You can change or refine any of the labels that users see on the Information Pro
 
 For example, you can change a label or sub-label name, tooltip, color, order, whether it applies visual markings such as a footer or watermark, whether it applies Azure Rights Management protection, and recommended or automatic classification.
 
-To change a label, follow these instructions.
+To change a label, use the following instructions.
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
