@@ -84,7 +84,7 @@ Client files:
 
 Client logs files and currently installed policy file:
 
-- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**.
+- For 64-bit and 32-bit operating systems: **%localappdata%\Microsoft\MSIP**
 
 
 ## Next steps
