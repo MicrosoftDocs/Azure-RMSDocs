@@ -30,7 +30,7 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 **[ This information is preliminary and subject to change. ]**
 
-You can change or refine any of the labels that users see on the Information Protection bar, by configuring this in the Azure Information Protection policy.
+You can change or refine any of the labels that users see on the Information Protection bar, by configuring them in the Azure Information Protection policy.
 
 For example, you can change a label or sub-label name, tooltip, color, order, whether it applies visual markings such as a footer or watermark, whether it applies Azure Rights Management protection, and recommended or automatic classification.
 
