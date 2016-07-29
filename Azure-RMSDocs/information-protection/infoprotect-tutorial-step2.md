@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 2 | Azure Rights M
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,11 +26,13 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 # Step 2: Configure and publish the Azure Information Protection policy
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. During the preview, blank articles might be published as placeholders. ]**
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the Azure portal by using this special link for Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Sign in to the [Azure portal](https://portal.azure.com).
  
 2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
@@ -52,7 +54,11 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
+<<<<<<< HEAD
+    a. If you have activated Azure Rights Managment: In the **Set RMS template for protecting documents and emails containing this label** section, if you see **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+=======
     a. If you have activated Azure Rights Managment, for **Set RMS template for protecting documents and emails containing this label**: Make sure that **Azure RMS** is selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+>>>>>>> adc63ba3c1f76897d232f00f055546a9cb0e89f5
 
     If you have not activated Azure Rights Management, you cannot use this option.
 
@@ -66,6 +72,8 @@ We'll now change the settings of one of the labels, **Confidential**:
 
     - **Minimum number of occurrences**: **1**
 
+    - **Count occurrences with unique values only**: **On**
+    - 
     - Click **Save** to return to the **Label: Confidential** blade.
 
 3. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
@@ -83,6 +91,10 @@ We'll now change the settings of one of the labels, **Confidential**:
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
 Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
+
+|If you want more information|Additional information|
+|--------------------------------|--------------------------|
+|About the configuration options for the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
 
 
 >[!div class="step-by-step"]
