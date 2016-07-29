@@ -32,12 +32,14 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 Use the following information to understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
 
-Information Protection bar:
+## Information Protection bar
 
-- Title: **Sensitivity**
+Title: **Sensitivity**
 
-- Tooltip: **Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**
+Tooltip: **Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**
 
+
+## Labels
 
 |Label name|Tooltip|Color|Visual markings|Conditions or protection|
 |--------------|-----------------|---------------|-----------------|
@@ -47,15 +49,21 @@ Information Protection bar:
 |**Confidential**|**This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.**|Orange|Footer (document and email)|No|
 |**Secret**|**This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.**|Red|Footer (document and email)|No|
 
+## Sub-labels
+
 |Sub-label name|Tooltip|Visual markings|Conditions or protection|
 |--------------|-----------------|---------------|-----------------|
 |Secret > **All Company**|**This data includes sensitive business information - permitted for all company employees.**|None|No|
 |Secret > **My Group**|**This data includes sensitive business information - permitted for employee groups only.**|None|No|
 
-Global settings:
+## Global settings
 
-- **All documents and emails must have a label (applied automatically or by users)**: Off
+**All documents and emails must have a label (applied automatically or by users)**: Off
 
-- **Select the default label**: None
+**Select the default label**: None
 
-- **Users must provide justification when lowering the sensitivity level (for example, from Confidential to Public)**: Off
+**Users must provide justification when lowering the sensitivity level (for example, from Confidential to Public)**: Off
+
+## Next steps
+
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organization-s-policy) section. 
