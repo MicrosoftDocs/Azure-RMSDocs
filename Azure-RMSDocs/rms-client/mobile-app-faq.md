@@ -26,7 +26,7 @@ ms.suite: ems
 
 # FAQ for Microsoft Azure Information Protection app (preview) for iOS and Android
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management 
+*Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 This page provides answers to frequently asked questions about the Azure Information Protection app for iOS and Android, currently in preview.
 
