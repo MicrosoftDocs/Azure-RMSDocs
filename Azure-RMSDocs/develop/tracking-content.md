@@ -21,13 +21,12 @@ ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
+experimental: true
+experiment_id: "priyamo-test-20160729"
 
 ---
-<<<<<<< HEAD
 
 # Tracking content
-=======
->>>>>>> 81ec5ddf5acf3de78d77c01ed95631e44d37fe6e
 
 # How-to: enable document tracking and revocation
 

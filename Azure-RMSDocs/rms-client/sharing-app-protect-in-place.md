@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -57,6 +57,8 @@ When you protect a file in-place, it replaces the original, unprotected file. Yo
 
     ![Protected file with lock icon for the RMS sharing application](../media/ADRMS_MSRMSApp_Pfile.png)
 
+If you change your mind about the permissions or later need to modify them, simply protect the file again.
+
 If you later need to remove protection from a file, see [Remove protection from a file by using the Rights Management sharing application](sharing-app-remove-protection.md).
 
 ## Examples and other instructions
@@ -64,7 +66,7 @@ For examples for how you might use the Rights Management sharing application, an
 
 -   [Examples for using the RMS sharing application](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [What do you want to do?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
