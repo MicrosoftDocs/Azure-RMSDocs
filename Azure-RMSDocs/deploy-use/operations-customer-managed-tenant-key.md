@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -33,7 +33,7 @@ ms.suite: ems
 If you manage your tenant key for Azure Rights Management (the bring your own key, or BYOK, scenario), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
-In Key Vault, you can change the permissions on the key vault that contains your Azure RMS tenant key so that Azure RMS can no longer access the key. However, when you do this, nobody will be able to open documents and emails that you previously protected with Azure RMS.
+In Azure Key Vault, you can change the permissions on the key vault that contains your Azure RMS tenant key so that Azure RMS can no longer access the key. However, when you do this, nobody will be able to open documents and emails that you previously protected with Azure RMS.
 
 When you unsubscribe from Azure RMS, Azure RMS stops using your tenant key and no action is needed from you.
 
