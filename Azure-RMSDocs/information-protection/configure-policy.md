@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Configuring policy for Azure Information Protection | Azure RMS
+
+title: Configuring Azure Information Protection policy | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -11,7 +12,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 78202be8-e54c-463c-8678-1cf600250e10
+ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 
 
 # optional metadata
@@ -26,48 +27,64 @@ ms.suite: ems
 
 ---
 
-# Configuring policy for Azure Information Protection for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+# Configuring Azure Information Protection policy
 
-After you have [activated Azure Rights Management](activate-service.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
+>*Applies to: Azure Information Protection preview*
 
--   Read-only viewing for the protected content
+**[ This information is preliminary and subject to change. ]**
 
-    -   Display name: **&lt;organization name&gt; - Confidential View Only**
+To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-    -   Specific permission: View Content
+To configure the Azure Information Protection policy during the preview release of Azure Information Protection:
 
--   Read or Modify permissions for the protected content
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-    -   Display name: **&lt;organization name&gt; - Confidential**
+2. On the hub menu, click **Browse** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
-    -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
+    You'll then see the **Azure Information Protection** blade where you can configure the Azure Information Protection policy, which contains the following elements:
 
-In addition, the [RMS sharing application](../rms-client/sharing-app-windows.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the [Do Not Forward option](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+    - Title and tooltip for the Information Protection bar that users see in their Office applications.
 
-For many organizations, the default templates might be sufficient. But if you want to create your own custom rights policy templates, you can do so. Reasons for creating a custom template include the following:
+    - Labels that let you and users classify documents and emails.
 
--   You want a template to grant rights to a subset of users in the organization rather than all users.
+    - The option to enforce classification when users save documents and send emails.
 
--   You want only a subset of users to be able to see and select a template (departmental template) from applications, rather than all users in the organization see and can select the template.
+    - The option to set a default label as a starting point for classifying documents and emails.
 
--   You want to define a custom right for a template, such as View and Edit, but not Copy and Print.
+    - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
 
--   You want to configure additional options in a template that include an expiration date and whether the content can be accessed without an Internet connection.
 
-For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it. Although you will probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure. 
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains the labels **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
 
-Use the following information to help you configure and use custom templates:
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
 
--   [How to create, configure, and publish a custom template](create-template.md)
+When you have finished making the changes that you want, click **Publish**. 
 
--   [How to copy a template](copy-template.md)
+The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
 
--   [How to remove (archive) templates](remove-template.md)
+## Configuring your organization's policy
 
--   [How to refresh templates for users](refresh-templates.md)
+Use the following information to help you configure your Azure Information Protection policy:
 
--   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
+- [The default Information Protection policy](configure-policy-default.md)
+
+- [How to configure the global policy settings](configure-policy-settings.md)
+
+- [How to create a new label](configure-policy-new-label.md)
+
+- [How to delete or reorder a label](configure-policy-delete-reorder.md)
+
+- [How to change or customize an existing label](configure-policy-change-label.md)
+
+- [How to configure a label to apply protection](configure-policy-protection.md)
+
+- [How to configure a label to apply visual markings](configure-policy-markings.md)
+
+- [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
+
+## Next steps
+
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 

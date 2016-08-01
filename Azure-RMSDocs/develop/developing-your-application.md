@@ -60,7 +60,7 @@ The following code snip enumerates the available RMS templates from the default 
         goto exit;
       }
 
-This call will retrieve RMS templates installed on the default server and load the results in the [IPC_TIL](/rights-management/sdk/2.1/api/win/functions#msipc_ipctil) structure pointed by the *pcTil* variable, then display the templates.
+This call will retrieve RMS templates installed on the default server and load the results in the [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til) structure pointed by the *pcTil* variable, then display the templates.
 
       C++
       if (0 == pcTil->cTi) {
@@ -184,5 +184,5 @@ Before you are done, you also need to release all the allocated resources.
 - [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
 - [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 - [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-- [IPC_TIL](/rights-management/sdk/2.1/api/win/functions#msipc_ipctil)
+- [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til)
 - [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)

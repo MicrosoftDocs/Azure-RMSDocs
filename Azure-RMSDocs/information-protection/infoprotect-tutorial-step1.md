@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 1 | Azure Rights M
 description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you about 10 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/291/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,7 +26,9 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate the Rights Management service
  
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
+
+**[ This information is preliminary and subject to change. ]**
 
 > [!NOTE]
 >If you only want to classify your data and not protect it with Azure Rights Management, or if you have already activated Azure Rights Management for your tenant - go straight to the [next step](infoprotect-tutorial-step2.md). 
