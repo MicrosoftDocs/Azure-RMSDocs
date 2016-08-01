@@ -32,9 +32,9 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you open protected emails (RPMSG files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format protected as a .pfile.
+This app lets you open protected emails (RPMSG files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile.
 
-## Can I open PDF files that are in SharePoint protected libraries, and OneDrive For Business?
+## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
 Yes, on iOS devices, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. We are working on enabling this capability for Android devices and will update this entry when it’s available.
 
