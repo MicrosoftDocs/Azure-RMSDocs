@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2016
+ms.date: 08/01/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
