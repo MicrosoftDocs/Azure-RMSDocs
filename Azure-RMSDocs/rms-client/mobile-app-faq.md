@@ -32,7 +32,11 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you protect pictures with an RMS policy before you share them. This app also allows you to open RMS-protected PDF files, pictures, text files, and any other file format protected as a .pfile.
+This app lets you open protected emails (RPMSG files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format protected as a .pfile.
+
+## Can I open PDF files that are in SharePoint Online protected libraries, and OneDrive For Business?
+
+Yes, on iOS devices, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link to open the file. We are working on enabling this capability for Android devices and will update this entry when it’s available.
 
 ## How do I sign in to this app?
 
@@ -44,19 +48,7 @@ Not yet. Today, you can sign up only with your business email address (work or s
 
 ## Which file extensions can I open with this app?
 
-You can open .ppdf, .pjpg, .ptxt, and several other text and image file formats.
-
-## Can I protect files that are not images?
-
-On mobile platforms, you can protect only photos. You can protect other types of files when you use the RMS sharing application for Windows.
-
-## When I protect a picture, it creates a .pjpg file. What’s that?
-
-A PJPG (or PJPEG) file is a digital photographic image that has been protected with an RMS policy. Only the users with whom you share the file can open it using the RMS sharing application, according to the rights defined in the policy.
-
-## I can choose only from a company template—can’t I specify my own custom permissions?
-
-A custom permissions option that lets you apply your own permissions is not yet implemented in this app. 
+You can open .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
 
 ## Why do I have to consent before viewing a protected .pfile?
 
@@ -65,6 +57,11 @@ Consent is required to validate that you are aware of the following:
 - The owner of the document expects you to honor the rights.
 
 - Opening this content in a third-party application will be audited.
+
+##  How do I provide feedback about this app?
+
+In the app, tap the menu > **Settings** > **send feedback**.
+
 
 ## My question has not been answered—what should I do?
 
