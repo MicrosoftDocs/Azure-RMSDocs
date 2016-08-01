@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -29,5 +29,5 @@ ms.suite: ems
 
 *Applies to: Azure Rights Management, Office 365*
 
-The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). For more information about this change, see <blog post title> on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 

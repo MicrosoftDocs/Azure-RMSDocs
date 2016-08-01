@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-
 title: Configuring Azure Information Protection policy | Azure RMS
 description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2016
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
-
 
 # optional metadata
 
@@ -26,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 
 # Configuring Azure Information Protection policy
 
@@ -86,5 +83,4 @@ Use the following information to help you configure your Azure Information Prote
 ## Next steps
 
 For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
-
 
