@@ -60,7 +60,7 @@ Consent is required to validate that you are aware of the following:
 
 ##  How do I provide feedback about this app?
 
-In the app, tap the menu (sometimes referred to as the hamburger menu or sliding sidebar). Then tap **Settings** > **send feedback**.
+In the app, go to **Settings** > **send feedback**.
 
 
 ## My question has not been answered—what should I do?
