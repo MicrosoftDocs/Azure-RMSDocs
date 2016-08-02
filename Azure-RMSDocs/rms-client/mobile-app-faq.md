@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2016
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,7 +32,7 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you open rights-protected email messages (.RPMSG files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile.
+This app lets you open rights-protected email messages (.rpmsg files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
@@ -60,7 +60,7 @@ Consent is required to validate that you are aware of the following:
 
 ##  How do I provide feedback about this app?
 
-In the app, tap the menu > **Settings** > **send feedback**.
+In the app, tap the menu (sometimes referred to as the hamburger menu or sliding sidebar). Then tap **Settings** > **send feedback**.
 
 
 ## My question has not been answered—what should I do?
