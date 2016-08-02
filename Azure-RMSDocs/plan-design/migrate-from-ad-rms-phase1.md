@@ -179,7 +179,7 @@ You can see your organization's automatically created group if you copy one of t
 ### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
-**Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.*
+**Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
 ```
 import-module adrmsadmin 
