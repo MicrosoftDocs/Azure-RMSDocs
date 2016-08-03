@@ -6,7 +6,7 @@ description: When a file has been protected by Rights Management, you can change
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -32,7 +32,7 @@ ms.suite: ems
 When a file has been protected by Rights Management, you can change the permissions by re-protecting it and then specifying all the users that should have access to it, and what permissions you want to give them.
 
 > [!IMPORTANT]
-> This is not an increment change but a complete replacement. You are effectively re-protecting the file with the complete set of permissions that you want.
+> This is not an incremental change but a complete replacement. You are effectively re-protecting the file with the complete set of permissions that you want.
 > 
 >  For example, if a file is protected such that only people in the Marketing department can open it and you want people in the Sales department to also be able to open it, you must re-protect the file so that the Sales department and the Marketing department can open it.
 >
