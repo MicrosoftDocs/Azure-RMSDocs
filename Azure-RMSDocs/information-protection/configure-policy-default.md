@@ -36,8 +36,8 @@ Use the following information to understand how the default policy for Azure Inf
 
 |Setting|Value|
 |-------------------------------|---------------------------|
-|Title|**Sensitivity**|
-|Tooltip|**Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**|
+|**Title**|**Sensitivity**|
+|**Tooltip**|**Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**|
 
 ## Labels
 
