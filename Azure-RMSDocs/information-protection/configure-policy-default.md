@@ -58,7 +58,7 @@ Use the following information to understand how the default policy for Azure Inf
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Secret > **All Company**|**This data includes sensitive business information - permitted for all company employees.**|**Visual markings**: None<br /><br />**Conditions**: None<br /><br />Protection: No|
+|Secret > **All Company**|**This data includes sensitive business information - permitted for all company employees.**|**Visual markings**: None<br /><br />**Conditions**: None<br /><br />**Protection**: No|
 |Secret > **My Group**|**This data includes sensitive business information - permitted for employee groups only.**|**Visual markings**: None<br /><br />**Conditions**: None<br /><br />**Protection**: No|
 
 
