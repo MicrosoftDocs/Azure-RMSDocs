@@ -42,7 +42,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 3.  Explore the main **Azure Information Protection** blade, which shows the default Information Protection policy that's automatically created:
     
-    - The following labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
+    - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
 
     - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
 
@@ -56,7 +56,7 @@ For our tutorial, we'll change a couple of those global settings so that you can
 
 We'll now change the settings of one of the labels, **Confidential**:
 
-1. Click the **Confidential** label entry.
+1. Click the **Confidential** label.
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
