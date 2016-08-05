@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -39,9 +39,11 @@ When you access this site, sign in to track your documents. Providing your organ
 
 -   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
 
--   If you want to export to Excel: Click **Open in Excel**, so that you can then modify the data, and create your own views and graphs.
+-   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs.
 
 -   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
+
+- If you want to track and revoke shared documents for others: Administrators for Azure RMS can track and revoke documents for others by clicking the Admin icon. Only administrators see this icon.
 
 -   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 
