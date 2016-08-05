@@ -5,7 +5,7 @@ title: How to delete or reorder a label for Azure Information Protection | Azure
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -46,7 +46,7 @@ Use the following instructions to make these changes.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 3. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
 
