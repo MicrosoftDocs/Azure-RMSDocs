@@ -21,6 +21,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
+experimental: true
+experiment_id: "priyamo-TableVsFlatList-20160805" 
 
 ---
 
