@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 2 | Azure Rights M
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,11 +34,15 @@ Although Azure Information Protection comes with a default policy that you can u
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection (preview)** > **Create**.
 
-- You'll now see the main **Azure Information Protection** blade, showing the default Information Protection policy that's automatically created. This default policy contains the following labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
+    This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **Browse** list. 
 
-- With its default settings, **Internal**, **Confidential**, and **Secret** have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
+    > [!TIP] Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip the browse step next time you sign in to the portal.
+
+    - You'll now see the main **Azure Information Protection** blade, showing the default Information Protection policy that's automatically created. This default policy contains the following labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
+
+    - With its default settings, **Internal**, **Confidential**, and **Secret** have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
