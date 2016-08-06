@@ -66,7 +66,7 @@ For more information about Azure Rights Management and how it works, see [What i
     
     Typically, you will select Azure RMS and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration can be referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that is configured for rights policy templates. 
     
-    For documentation about AD RMS prerequisites and deployment information, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. For more information about this feature, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
+    For documentation about AD RMS prerequisites and deployment information, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. For more information about this hold your own key feature with Azure Information Protection, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
     
 5. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template that you want to use to protect documents and emails with this label.
 
