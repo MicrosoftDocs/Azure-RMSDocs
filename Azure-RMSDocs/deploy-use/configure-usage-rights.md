@@ -34,10 +34,10 @@ When you set protection on files or emails by using Azure Rights Management (Azu
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 ## Usage rights and descriptions
-The following sections list and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by the **Common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an RMS-enlightened application that checks for a usage right, or adds a usage right to a policy.
+The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by the **Common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an RMS-enlightened application that checks for a usage right, or adds a usage right to a policy.
 
 
-|Right|Description|Implemented|
+|Right|Description|Implementation|
 |-------------------------------|---------------------------|-----------------|
 |Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable|
 |Common name: **Save** <br /><br />Encoding in policy: **EDIT**|Allows the user to save the document in its current location.<br /><br />In Office applications, this right also allows the user to modify the document.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Save File**<br /><br />Name in AD RMS templates: **Save** <br /><br />API constant or value: **IPC_GENERIC_WRITE L"EDIT"**|
