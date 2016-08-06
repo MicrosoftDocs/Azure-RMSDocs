@@ -62,9 +62,9 @@ For more information about Azure Rights Management and how it works, see [What i
 
 3. On the **Azure Information Protection** blade, select the label that you want to configure to apply Rights Management protection.
 
-4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**: Select **Azure RMS** or **AD RMS (PREVIEW)**.
+4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
     
-    Typically, you will select Azure RMS and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration can be referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that is configured for rights policy templates. 
+    Typically, you will select Azure RMS and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that is configured for rights policy templates. 
     
     For documentation about AD RMS prerequisites and deployment information, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. For more information about this hold your own key feature with Azure Information Protection, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
     
@@ -76,7 +76,7 @@ For more information about Azure Rights Management and how it works, see [What i
     
     You can find both these values from the Active Directory Rights Management Sevices console:
     
-    - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use.
+    - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
     
     - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the value for the **Intranet cluster URL**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
 
