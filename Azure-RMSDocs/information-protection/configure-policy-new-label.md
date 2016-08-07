@@ -5,7 +5,7 @@ title: How to create a new label for Azure Information Protection | Azure Rights
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management

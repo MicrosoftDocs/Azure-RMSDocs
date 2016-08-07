@@ -5,7 +5,7 @@ title: How to configure the global policy settings for Azure Information Protect
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
