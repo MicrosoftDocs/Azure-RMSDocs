@@ -38,15 +38,15 @@ This template can be one of the default templates that are automatically created
 
 When a document or email is protected by Azure Rights Management, it is encrypted at rest and in transit and can only be decrypted by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
 
-- Only users within your organization can open the document or email.
+- Only users within your organization can open the company-confidential document or email.
 
-- Only users in the marketing department can edit and print the document or email while all other users in your organization can only view the document or email.
+- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only read the document or email.
 
-- Users cannot forward an email.
+- Users cannot forward an email that contains news about an internal reorganization.
 
-- Documents or emails that are sent to business partners cannot be opened after a specified date.
+- The current price list that is sent to business partners cannot be opened after a specified date.
 
-For more information about the templates and how to configure these usage rights and restrictions, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
+For more information about Azure Rights Management templates and how to configure these usage rights and restrictions, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 For more information about Azure Rights Management and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
