@@ -5,7 +5,7 @@ title: How to configure a label to apply Rights Management protection | Azure Ri
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -40,9 +40,9 @@ When a document or email is protected by Rights Management, it is encrypted at r
 
 - Only users within your organization can open the company-confidential document or email.
 
-- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only view the document or email.
+- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only read the document or email.
 
-- Users cannot forward an email that contains reorganization news.
+- Users cannot forward an email that contains news about an internal reorganization.
 
 - The current price list that is sent to business partners cannot be opened after a specified date.
 
@@ -64,7 +64,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
     
-    Typically, you will select Azure RMS and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that is configured for rights policy templates. 
+    Typically, you will select Azure RMS and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that has a single AD RMS root cluster that is configured for rights policy templates, and users are configured for single sign-on. Office 2010 is not support for this hold your own key scenario.
     
     For documentation about AD RMS prerequisites and deployment information, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. For more information about this hold your own key feature with Azure Information Protection, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
     
@@ -80,7 +80,9 @@ For more information about Azure Rights Management and how it works, see [What i
     
     - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the value for the **Intranet cluster URL**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
 
-    > [!IMPORTANT] To apply an AD RMS template, make sure that the Azure Information Protection client is version x or later.  
+    > [!IMPORTANT] To succesfully apply an AD RMS template, make sure that the Azure Information Protection client is version **233** or later and that the Office version is at least Office 2013.
+    > 
+    >There are some important limitations that apply to documents and emails that are protected by AD RMS. For example, many Office 365 services and features will not be able to support this protected data. These limitations are listed and explained in the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
 
 5. Click **Save**.
 
