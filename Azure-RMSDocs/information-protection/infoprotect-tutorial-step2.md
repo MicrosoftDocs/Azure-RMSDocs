@@ -32,7 +32,7 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com). If you want to test protection as well as classification and labeling, sign in as a global admin so that you can retrieve the Azure Rights Management templates.
  
 2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection (preview)** > **Create**.
 
