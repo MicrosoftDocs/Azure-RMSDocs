@@ -80,11 +80,7 @@ If you want to protect the documents and emails that you classify and label, and
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
-Azure Information Protection is a cloud-based solution that stores the Information Protection policy in Azure. However, if you have a specific requirement that your keys must remain on premises for specified documents or emails (for example, for regulatory requirements), you can use the "hold your own key" (HYOK) feature for these scenarios.
-
-HYOK requires you to install and configure Active Directory Rights Management Services, as an on-premises Rights Management solution. This scenario has some important restrictions and limitations, so make sure that you understand them before you configure a label to apply protection by using AD RMS.
-
-For more information, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
+Azure Information Protection is a cloud-based solution. If you have an interest in hybrid scenarios, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
 
 ## What client platforms and applications are supported by Azure Information Protection?
 

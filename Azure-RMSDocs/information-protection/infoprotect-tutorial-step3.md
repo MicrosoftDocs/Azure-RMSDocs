@@ -45,8 +45,8 @@ In this step, you'll install the Azure Information Protection client so that the
         Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Information Protection policy is installed** and a recent connection time. Verify that your displayed user name is correct for your tenant.
 
     - A new bar displays under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
-
-
+    
+    
     ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts2.png)
 
 You're ready for the final step, to see classification, labeling, and protection in action.
