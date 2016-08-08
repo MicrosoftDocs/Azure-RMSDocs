@@ -80,7 +80,7 @@ If you want to protect the documents and emails that you classify and label, and
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
-Azure Information Protection is a cloud-based solution. If you have an interest in hybrid scenarios, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
+Azure Information Protection is a cloud-based solution. If you have an interest in deploying Azure Information Protection for a hybrid scenario, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
 
 ## What client platforms and applications are supported by Azure Information Protection?
 
