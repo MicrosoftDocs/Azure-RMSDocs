@@ -58,7 +58,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 3. On the **Azure Information Protection** blade, select the label that you want to configure to apply Rights Management protection.
 
