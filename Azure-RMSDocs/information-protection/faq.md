@@ -156,7 +156,11 @@ Because Azure Information Protection uses persistent metadata for classification
 
 ## How does document tracking and revocation work for Azure Information Protection?
 
-Document tracking for files that you classify and protect by using Azure Information Protection works the same as it does today, for Azure Rights Management. For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
+Document tracking for files that you classify and protect by using Azure Information Protection works the same as it does today, for Azure Rights Management and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 233 or later): 
+
+- In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
+
+For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
 
 ## How does Azure Information Protection enforce the policies that I configure?
 
