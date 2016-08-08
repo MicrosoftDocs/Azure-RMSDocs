@@ -5,8 +5,7 @@ title: The default Azure Information Protection policy | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
->>>>>>> 0fffab7b4f1ac9a020335bd74c9884840fc915c0
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
