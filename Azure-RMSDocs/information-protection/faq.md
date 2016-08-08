@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -71,7 +71,7 @@ Any changes to the subscription requirements will be announced on the [Enterpris
 
 ## Do I need to be a global admin to try Azure Information Protection preview?
 
-For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy in the Azure portal.
+For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy for classification and labeling in the Azure portal. However, to configure a label to apply an Azure Rights Management template, you must be signed in as a global admin for Azure Active Directory.
 
 If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't even need to sign in to the portal to try the preview. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
@@ -80,7 +80,11 @@ If you want to protect the documents and emails that you classify and label, and
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
-Azure Information Protection is a cloud-based solution. If you have an interest in hybrid scenarios, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
+Azure Information Protection is a cloud-based solution that stores the Information Protection policy in Azure. However, if you have a specific requirement that your keys must remain on premises for specified documents or emails (for example, for regulatory requirements), you can use the "hold your own key" (HYOK) feature for these scenarios.
+
+HYOK requires you to install and configure Active Directory Rights Management Services, as an on-premises Rights Management solution. This scenario has some important restrictions and limitations, so make sure that you understand them before you configure a label to apply protection by using AD RMS.
+
+For more information, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
 
 ## What client platforms and applications are supported by Azure Information Protection?
 
