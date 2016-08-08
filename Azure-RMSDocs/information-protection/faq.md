@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -71,7 +71,7 @@ Any changes to the subscription requirements will be announced on the [Enterpris
 
 ## Do I need to be a global admin to try Azure Information Protection preview?
 
-For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy in the Azure portal.
+For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy for classification and labeling in the Azure portal. However, to configure a label to apply an Azure Rights Management template, you must be signed in as a global admin for Azure Active Directory.
 
 If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't even need to sign in to the portal to try the preview. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
