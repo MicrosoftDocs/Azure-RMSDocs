@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 3 | Azure Rights M
 description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -47,7 +47,7 @@ In this step, you'll install the Azure Information Protection client so that the
     - A new bar displays under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
 
 
-![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts.png)
+![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts2.png)
 
 You're ready for the final step, to see classification, labeling, and protection in action.
 

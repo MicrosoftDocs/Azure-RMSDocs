@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial step 4 | Azure Rights M
 description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -36,7 +36,7 @@ Classification and protection happens when you save the document, but before we 
 
 ### To manually change our default label:
 
-- On the Information Protection bar, click the Edit label icon next to **Internal**. This displays the available labels. Choose **Personal** and you are prompted to justify why are lowering the classification level. Select **This file no longer requires that classification**, and click **Confirm**.  
+- On the Information Protection bar, select the **Personal** label and you are prompted to justify why are lowering the classification level. Select **This file no longer requires that classification**, and click **Confirm**.  
 
     You'll see the **Sensitivity** value change to **Personal**.
 
