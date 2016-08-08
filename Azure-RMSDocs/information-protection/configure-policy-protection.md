@@ -56,7 +56,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 ## To configure a label to apply Rights Management protection
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin so that you can retrieve the Azure Rights Management templates.
  
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
@@ -70,7 +70,8 @@ For more information about Azure Rights Management and how it works, see [What i
     
     - For **Select RMS template**: Click the drop down box and select the template that you want to use to protect documents and emails with this label.
 
-        > [!NOTE] If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
+        > [!NOTE] 
+        > If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
 
 5. Click **Save**.
 
