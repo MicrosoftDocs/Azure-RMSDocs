@@ -38,7 +38,8 @@ Although Azure Information Protection comes with a default policy that you can u
 
     This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **Browse** list. 
 
-    > [!TIP] Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip the browse step next time you sign in to the portal.
+    > [!TIP] 
+    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip the browse step next time you sign in to the portal.
 
 3.  Explore the main **Azure Information Protection** blade, which shows the default Information Protection policy that's automatically created:
     
