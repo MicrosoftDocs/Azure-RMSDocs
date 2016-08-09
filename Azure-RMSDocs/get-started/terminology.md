@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/10/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -41,7 +41,7 @@ Confused by a word, phrase, or acronym that’s related to Microsoft [!INCLUDE[a
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service that provides information protection by using encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />*Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />*RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
 |Azure RMS|See *Azure Rights Management*.|
 |BYOK|See *bring your own key*.|
-|bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration option chosen by an organization that wants to generate and manage their own tenant key for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].|
+|bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].|
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] and that helps to limit the risk of information disclosure.|
 |consume|To unlock a file to read or use it when that file has been protected by [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
 |deactivate|To disable the Rights Management service so that the organization can no longer use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].|
@@ -50,6 +50,8 @@ Confused by a word, phrase, or acronym that’s related to Microsoft [!INCLUDE[a
 |enterprise rights management|An industry-standard, generic term that is often used to describe products and solutions that help organizations protect sensitive or valuable information by using a combination of encryption and policy authorization tools. Microsoft Rights Management is an example of an enterprise rights management (ERM) solution.|
 |ERM|See *enterprise rights management*.|
 |generic protection|A level of protection that encrypts any file type and prevents unauthorized people from opening the file. After the file is opened, the file is now unencrypted and usable in an application that doesn’t natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
+|HYOK|See *hold your own key*.|
+|HYOK|Frequently abbreviated to HYOK.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory reasons.|
 |information protection|Sometimes abbreviated to *IP*.<br /><br />An industry-standard, generic term that refers to protecting data and files from unauthorized access, even after the data and files leave the organizational boundaries by using email or document sharing. Microsoft Rights Management is an example of an information protection (IP) solution.|
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support Rights Management.|
 |IRM|See *Information Rights Management*.|
