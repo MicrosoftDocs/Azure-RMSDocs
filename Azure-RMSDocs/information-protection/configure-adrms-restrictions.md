@@ -33,17 +33,19 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 When you protect your most sensitive documents and emails, you will typically do this by applying Azure Rights Management protection to benefit from the following:
 
-- No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution
+- No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution.
 
-- Easier sharing with partners and users from other organizations by using cloud-based authentication
+- Easier sharing with partners and users from other organizations by using cloud-based authentication.
 
-- Tight integration with Office 365 services, such as search, web viewers, pivoted views, anti-malware, eDiscovery, Delve
+- Tight integration with Office 365 services, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
 
-- Document tracking, revocation, and email notification for sensitive documents that you have shared
+- Document tracking, revocation, and email notification for sensitive documents that you have shared.
 
-Azure RMS protects your organization's documents and emails by using a tenant key that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about these tenant key options, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
+Azure RMS protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about these tenant key options, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
-However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment.
+However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons. 
+
+This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment. In this scenario, the rights policies and the organization's private key that protects these policies is managed and kept on-premises; while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure.
 
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
