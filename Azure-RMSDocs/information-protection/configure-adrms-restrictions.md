@@ -57,7 +57,7 @@ Other requirements for this HYOK scenario:
 
 - The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
 
->!IMPORTANT
+>![IMPORTANT]
 >To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
