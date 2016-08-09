@@ -5,7 +5,7 @@ title: How to configure a label to apply Rights Management protection | Azure Ri
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -56,7 +56,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 ## To configure a label to apply Rights Management protection
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin so that you can retrieve the Azure Rights Management templates.
  
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

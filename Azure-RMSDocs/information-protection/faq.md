@@ -49,7 +49,7 @@ This preview release has the following limitations. Look out for announcements o
 
 - There is no centralized logging for classification and labeling.
 
-- Label names and tooltips are supported in English only.
+- Label names and tooltips are supported in one language only.
 
 - Conditions for automatic classification must be phrases or patterns.
 
