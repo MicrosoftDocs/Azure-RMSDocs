@@ -46,8 +46,7 @@ Azure RMS protects your organization's documents and emails by using a tenant ke
 However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment.
 
 > ![NOTE]
-> Use this configuration only when you have to, and for just the documents and email that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
-
+> Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
 
 Other requirements for this HYOK scenario:
 
