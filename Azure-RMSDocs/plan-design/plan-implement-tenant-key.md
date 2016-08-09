@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -108,9 +108,9 @@ You're now ready to configure Azure RMS to use this key as your organization's A
 
 	Connect-AadrmService
 
-Then run the Add-AadrmKeyVaultKey cmdlet command, specifying the key URL:
+Then run the Use-AadrmKeyVaultKey cmdlet command, specifying the key URL:
 
-	Add-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
+	Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
 If you need to confirm that the key URL is set correctly in Azure RMS, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) to see the key URL.
 
