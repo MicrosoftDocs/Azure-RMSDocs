@@ -45,7 +45,7 @@ Azure RMS protects your organization's documents and emails by using a private k
 
 However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons. 
 
-This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment. In this scenario, the rights policies and the organization's private key that protects these policies is managed and kept on-premises; while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure.
+This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment. In this scenario, the rights policies and the organization's private key that protects these policies is managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure.
 
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
@@ -70,6 +70,7 @@ Users will not be aware when a label uses AD RMS protection rather than Azure RM
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
+
 
 ## Locating the information to specify AD RMS protection with an Azure Information Protection label
 
