@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -56,10 +56,10 @@ These procedures are done by the administrator for Azure Key Vault.
 
 
 2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
-
+    
     For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
-
-    	Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
 
 
 Now that you’ve prepared your HSM key in Azure Key Vault for Azure RMS, you’re ready to import your AD RMS configuration data.
@@ -69,17 +69,17 @@ Now that you’ve prepared your HSM key in Azure Key Vault for Azure RMS, you’
 These procedures are done by the administrator for Azure RMS.
 
 1.  On the Internet-connect workstation and in the PowerShell session, connect to Azure RMS by using the [Connnect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ) cmdlet.
-
+    
     Then upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. 
-
+    
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
-
+    
     For example, using our key URL value from the previous step and a TPD file of C:\contoso-tpd1.xml, you would run:
-
+    
     ```
     Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
-
+    
     When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
 
 2.  When the command completes, repeat step 1 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command.  

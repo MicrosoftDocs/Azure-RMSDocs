@@ -5,7 +5,7 @@ title: The default Azure Information Protection policy | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,120 +34,36 @@ Use the following information to understand how the default policy for Azure Inf
 
 ## Information Protection bar
 
-Title: **Sensitivity**
-
-Tooltip: **Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.**
-
+|Setting|Value|
+|-------------------------------|---------------------------|
+|Title|Sensitivity|
+|Tooltip|Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.|
 
 ## Labels
 
-There are 5 default labels that have the following settings:
-
-### **Personal**
-
-Tooltip: **For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.**
-
-Color: Light green
-
-Visual markings: None
-
-Conditions: None
-
-Protection: No
-
-----
-
-
-### **Public**
-
-Tooltip: **This information is internal and can be used by everyone inside or outside the business.**
-
-Color: Green
-
-Visual markings: None
-
-Conditions: None
-
-Protection: No
-
-----
-
-### **Internal**
-
-Tooltip: **This information includes a wide spectrum of internal business data that can be used by all employees and can be shared with authorized customers and business partners. Examples for internal information are company policies and most internal communications.**
-
-Color: Blue
-
-Visual markings: Footer (document and email)
-
-Conditions: None
-
-Protection: No
-
-----
-
-### **Confidential**
-
-Tooltip: **This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.**
-
-Color: Orange
-
-Visual markings: Footer (document and email)
-
-Conditions: None
-
-Protection: No
-
-----
-
-### **Secret**
-
-Tooltip: **This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.**
-
-Color: Red
-
-Visual markings: Footer (document and email)
-
-Conditions: None
-
-Protection: No
-
-----
-
+|Label|Tooltip|Settings|
+|-------------------------------|---------------------------|-----------------|
+|Personal|For personal use only. This data will not be monitored by the organization. Personal information must not include any business-related data.|**Enabled**: On <br /><br />**Color**: Light green<br /><br />**Visual markings**: Off <br /><br />**Conditions**: None<br /><br />**Protection**: No|
+|Public|This information is internal and can be used by everyone inside or outside the business.|**Enabled**: On <br /><br />**Color**: Green<br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: No|
+|Internal|This information includes a wide spectrum of internal business data that can be used by all employees and can be shared with authorized customers and business partners. Examples for internal information are company policies and most internal communications.|**Enabled**: On <br /><br />**Color**: Blue <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: No|
+|Confidential|This data includes sensitive business information. Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data.|**Enabled**: On <br /><br />**Color**: Orange<br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: No|
+|Secret|This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.|**Enabled**: On <br /><br />**Color**: Red<br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: No|
 
 ## Sub-labels
 
-There are 2 default sub-labels that have the following settings:
-
-### Secret > **All Company**
-
-Tooltip: **This data includes sensitive business information - permitted for all company employees.**
-
-Visual markings: None
-
-Conditions: None
-
-Protection: No
-
-----
-
-### Secret > **My Group**
-
-Tooltip: **This data includes sensitive business information - permitted for employee groups only.**
-
-Visual markings: None
-
-Conditions: None
-
-Protection: No
+|Label|Tooltip|Settings|
+|-------------------------------|---------------------------|-----------------|
+|*Secret* > All Company|This data includes sensitive business information - permitted for all company employees.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: No|
+|*Secret* > My Group|This data includes sensitive business information - permitted for employee groups only.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: No|
 
 ## Global settings
 
-**All documents and emails must have a label (applied automatically or by users)**: Off
+|Setting|Value|
+|-------------------------------|---------------------------|
+|All documents and emails must have a label (applied automatically or by users)|Off|
+|Select the default label|None|
+|Users must provide justification when lowering the sensitivity level (for example, from Confidential to Public)|Off|
 
-**Select the default label**: None
-
-**Users must provide justification when lowering the sensitivity level (for example, from Confidential to Public)**: Off
 
 ## Next steps
 
