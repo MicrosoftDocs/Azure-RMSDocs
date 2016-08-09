@@ -60,9 +60,9 @@ When you access this site, sign in to track your documents. Providing your organ
 If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 > [!NOTE] 
-> If you have installed the preview version of the Azure Information Protection client, version 233 or later, you can also access the document tracking site by using Protect button: 
-
-- In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
+> If you have installed the preview version of the [Azure Information Protection client](../information-protection/info-protect-client.md), version 1.0.233 or later, you can also access the document tracking site by using the **Protect** button: 
+> 
+> - In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
 
 ### Other ways to track and revoke your documents
 In addition to tracking your documents on Windows computers by using Office applications, you can also use these alternatives:
