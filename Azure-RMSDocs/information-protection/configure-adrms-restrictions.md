@@ -52,7 +52,7 @@ In this HYOK scenario, the rights policies and the organization's private key th
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
 
-Users will not be aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions that come with AD RMS protection, provide additional user guidance for when these labels should be selected if users see labels that are configured to apply AD RMS protection.
+Users will not be aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions that come with AD RMS protection, make sure that you provide clear guidance for when users should select labels that apply AD RMS protection.
 
 ## Requirements for HYOK
 
