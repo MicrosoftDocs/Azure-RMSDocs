@@ -44,7 +44,7 @@ Additional information about these visual markers:
 
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
 
-	- You can specify just a text string, or use variables to dynamically create the text string when the watermark is applied.
+- You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied. 
 
 Use the following instructions to configure visual markings for a label.
 
@@ -60,17 +60,25 @@ Use the following instructions to configure visual markings for a label.
     
     - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, color, and alignment for the header.
     
-    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header. For the text string, you can use the following variables:
-        - `${Item.Label}` for the selected label
-        - `${Item.Name}` for the file name or email subject
-        - `${Item.Location}` for the file path
-        - `${User.Name}` for the user who set the label
-        - `${Event.DateTime}` for the date and time when the selected label was set 
-    
-    Example of a watermark that uses variables: If you specify the string **Document: ${item.name}. sensitivity: ${item.label}** for the Secret label, the watermark applied to a documented named project.docx will be **Document: project.docx. Sensitivity: Secret**. 
-
+    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header. 
 
 5. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+
+## Using variables in the text string
+
+You can use the following variables in the text string for your header, footer, or watermark:
+
+- `${Item.Label}` for the selected label
+
+- `${Item.Name}` for the file name or email subject
+
+- `${Item.Location}` for the file path
+
+- `${User.Name}` for the user who set the label
+
+- `${Event.DateTime}` for the date and time when the selected label was set 
+    
+Example: If you specify the string **Document: ${item.name} Sensitivity: ${item.label}** for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Sensitivity: Secret**.
 
 ## Next steps
 
