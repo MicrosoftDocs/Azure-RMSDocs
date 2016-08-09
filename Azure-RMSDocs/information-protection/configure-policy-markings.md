@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -44,6 +44,8 @@ Additional information about these visual markers:
 
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
 
+- You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied. 
+
 Use the following instructions to configure visual markings for a label.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -55,12 +57,28 @@ Use the following instructions to configure visual markings for a label.
 4. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markers that you want, and then click **Save**:
 
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, color, and alignment for the header.
-
+    
     - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, color, and alignment for the header.
-
-    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header.
+    
+    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header. 
 
 5. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+
+## Using variables in the text string
+
+You can use the following variables in the text string for your header, footer, or watermark:
+
+- `${Item.Label}` for the selected label
+
+- `${Item.Name}` for the file name or email subject
+
+- `${Item.Location}` for the file path
+
+- `${User.Name}` for the owner of the document or email
+
+- `${Event.DateTime}` for the date and time when the selected label was set 
+    
+Example: If you specify the string `Document: ${item.name} Sensitivity: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Sensitivity: Secret**.
 
 ## Next steps
 
