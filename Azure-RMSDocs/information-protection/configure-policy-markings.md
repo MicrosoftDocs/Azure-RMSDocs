@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -74,7 +74,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Location}` for the file path
 
-- `${User.Name}` for the user who set the label
+- `${User.Name}` for the owner of the document or email
 
 - `${Event.DateTime}` for the date and time when the selected label was set 
     
