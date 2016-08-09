@@ -56,8 +56,6 @@ Users will not be aware when a label uses AD RMS protection rather than Azure RM
 
 - AD RMS is configured as a single AD RMS root cluster, with configured rights templates.
 
-- AD RMS is configured to use a hardware security module (HSM).
-
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
 
 - If you will share documents and emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
