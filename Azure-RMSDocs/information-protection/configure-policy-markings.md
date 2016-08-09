@@ -78,7 +78,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Event.DateTime}` for the date and time when the selected label was set 
     
-Example: If you specify the string `ocument: ${item.name} Sensitivity: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Sensitivity: Secret**.
+Example: If you specify the string `Document: ${item.name} Sensitivity: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Sensitivity: Secret**.
 
 ## Next steps
 
