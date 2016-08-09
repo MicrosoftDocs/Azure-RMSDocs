@@ -43,10 +43,10 @@ When you protect your most sensitive documents and emails, you will typically do
 
 Azure RMS protects your organization's documents and emails by using a tenant key that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about these tenant key options, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
-However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory reasons. This configuration is sometimes referred to as "*hold your own key*" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment.
+However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment.
 
->![NOTE]
->Use this configuration only when you have to, and for just the documents and email that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
+> ![NOTE]
+> Use this configuration only when you have to, and for just the documents and email that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
 
 
 Other requirements for this HYOK scenario:
@@ -63,8 +63,8 @@ Other requirements for this HYOK scenario:
 
 - The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
 
->![IMPORTANT]
->To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
+> ![IMPORTANT]
+> To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
 
