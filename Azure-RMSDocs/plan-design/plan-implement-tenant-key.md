@@ -108,7 +108,7 @@ You're now ready to configure Azure RMS to use this key as your organization's A
 
 	Connect-AadrmService
 
-Then run the Use-AadrmKeyVaultKey cmdlet command, specifying the key URL:
+Then run the [Use-AadrmKeyVaultKey cmdlet](https://go.microsoft.com/fwlink/?LinkId=799849), specifying the key URL. For example:
 
 	Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
