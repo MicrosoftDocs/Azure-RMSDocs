@@ -64,9 +64,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
     
-    Typically, you will select **Azure RMS** and select AD RMS only when you must protect documents and emails with a key that is hosted on-premises. For example, this might be required for specific types of documents, for regulatory reasons. This configuration is sometimes referred to as "hold your own key" (HYOK) and requires you to have a working Active Directory Rights Management Services (AD RMS) deployment that has a single AD RMS root cluster that is configured for rights policy templates, and users are configured for single sign-on. Office 2010 is not support for this hold your own key scenario.
-    
-    For documentation about AD RMS prerequisites and deployment information, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. For more information about this hold your own key feature with Azure Information Protection, see the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
+    In most cases, you will select **Azure RMS**. Do not select AD RMS unless you have read and understood the prerequisites and restrictions that accompany this configuration, which is sometimes referred to as hold your own key (HYOK). For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md).
     
 5. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template that you want to use to protect documents and emails with this label.
 
@@ -74,17 +72,6 @@ For more information about Azure Rights Management and how it works, see [What i
     > If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
     
 6. If you selected AD RMS: Provide the template GUID and licensing URL of your AD RMS cluster.
-    
-    You can find both these values from the Active Directory Rights Management Sevices console:
-    
-    - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
-    
-    - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the value for the **Intranet cluster URL**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
-
-    > [!IMPORTANT] 
-    > To succesfully apply an AD RMS template, make sure that the Azure Information Protection client is version **233** or later and that the Office version is at least Office 2013.
-    > 
-    >There are some important limitations that apply to documents and emails that are protected by AD RMS. For example, many Office 365 services and features will not be able to support this protected data. These limitations are listed and explained in the blog post [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/).
 
 5. Click **Save**.
 
