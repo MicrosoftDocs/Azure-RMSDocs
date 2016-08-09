@@ -56,11 +56,19 @@ Users will not be aware when a label uses AD RMS protection rather than Azure RM
 
 ## Requirements for HYOK
 
-- AD RMS is configured as a single AD RMS root cluster, with configured rights templates.
+Check that your AD RMS deployment meets the following requirements to provide AD RMS protection for Azure Information Protection.
 
-- AD RMS is running in [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx).
-
-- The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the AD RMS client computers.
+- AD RMS configuration:
+    
+    - Single AD RMS root cluster.
+    
+    - A hardware security module (HSM).
+    
+    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx).
+    
+    - The servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the AD RMS client computers.
+    
+    - Configured rights templates.
 
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
 
