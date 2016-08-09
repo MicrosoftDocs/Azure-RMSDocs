@@ -45,7 +45,9 @@ Azure RMS protects your organization's documents and emails by using a private k
 
 However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons. 
 
-This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment. In this scenario, the rights policies and the organization's private key that protects these policies is managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure.
+This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section. 
+
+In this HYOK scenario, the rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with AD RMS is never sent to the cloud; the protected documents and emails are is stored in Azure unless you explicitly store them in Azure or use another cloud service that stores them in Azure.
 
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
@@ -56,11 +58,15 @@ Users will not be aware when a label uses AD RMS protection rather than Azure RM
 
 - AD RMS is configured as a single AD RMS root cluster, with configured rights templates.
 
+- AD RMS is running in [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx).
+
+- The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the AD RMS client computers.
+
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
 
 - If you will share documents and emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2013 or later, running on Windows 7 or later.
+- Users have a version of Office that is Office 2013 or later, running on Windows 7 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
 - The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
 
@@ -76,7 +82,7 @@ When you configure a label for AD RMS protection, you must specify the template 
 
 - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the value for the **Intranet cluster URL**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
+- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value from the **Extranet cluster URLs**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
 
 ## Next steps
 
