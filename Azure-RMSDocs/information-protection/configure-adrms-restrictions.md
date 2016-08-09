@@ -50,15 +50,17 @@ This configuration is sometimes referred to as "hold your own key" (HYOK) and it
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
 
-Other requirements for this HYOK scenario:
+Users will not be aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions that come with AD RMS protection, provide user guidance if users will see labels that are configured for AD RMS protection.
+
+## Requirements for HYOK
 
 - AD RMS is configured as a single AD RMS root cluster, with configured rights templates.
 
-- You have configured AD RMS to use a hardware security module (HSM).
+- AD RMS is configured to use a hardware security module (HSM).
 
-- You have configured directory synchronization between your on-premises Active Directory and Azure Active Directory, and users are configured for single sign-on.
+- Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
 
-- If you will share documents and emails with others outside your organization, you have configured AD RMS with explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that you create by using Active Directory Federation Services (AD FS).
+- If you will share documents and emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
 - Users have a version of Office that is Office 2013 or later, running on Windows 7 or later.
 
