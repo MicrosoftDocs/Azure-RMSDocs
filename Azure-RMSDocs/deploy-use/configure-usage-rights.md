@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -34,211 +34,24 @@ When you set protection on files or emails by using Azure Rights Management (Azu
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 ## Usage rights and descriptions
-The following sections list and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by the **Common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an RMS-enlightened application that checks for a usage right, or adds a usage right to a policy.
+The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by the **Common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an RMS-enlightened application that checks for a usage right, or adds a usage right to a policy.
+
+
+|Right|Description|Implementation|
+|-------------------------------|---------------------------|-----------------|
+|Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable.|
+|Common name: **Save** <br /><br />Encoding in policy: **EDIT**|Allows the user to save the document in its current location.<br /><br />In Office applications, this right also allows the user to modify the document.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Save File**<br /><br />Name in AD RMS templates: **Save** <br /><br />API constant or value: `IPC_GENERIC_WRITE L"EDIT"`|
+|Common name: **Comment** <br /><br />Encoding in policy: **COMMENT**|Enables the option to add annotations or comments to the content.<br /><br />This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.|Office custom rights: Not implemented. <br /><br />Name in the Azure classic portal: Not implemented.<br /><br />Name in AD RMS templates: Not implemented. <br /><br />API constant or value: `IPC_GENERIC_COMMENT L"COMMENT`|
+|Common name: **Save As, Export** <br /><br />Encoding in policy: **EXPORT**|Enables the option to save the content to a different file name (Save As). For Office documents, the file can be saved without protection.<br /><br />This right also allows the user to perform other export options in applications, such as **Send to OneNote**.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Export Content (Save As)**<br /><br />Name in AD RMS templates: **Export (Save As)** <br /><br />API constant or value: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Common name: **Forward** <br /><br />Encoding in policy: **FORWARD**|Enables the option to forward an email message and to add recipients to the **To** and **Cc** lines. This right does not apply to documents; only email messages.<br /><br />Does not allow the forwarder to grant rights to other users as part of the forward action.|Office custom rights: Denied when using the **Do Not Forward** standard policy.<br /><br />Name in the Azure classic portal: **Forward**<br /><br />Name in AD RMS templates: **Forward** <br /><br />API constant or value: `IPC_EMAIL_FORWARD L"FORWARD"`|
+|Common name: **Full Control** <br /><br />Encoding in policy: **OWNER**|Grants all rights to the document and all available actions can be performed.<br /><br />Includes the ability to remove protection and re-protect a document.|Office custom rights: As the **Full Control** custom option.<br /><br />Name in the Azure classic portal: **Full Control**<br /><br />Name in AD RMS templates: **Full Control** <br /><br />API constant or value: `IPC_GENERIC_ALL L"OWNER"`|
+|Common name: **Print** <br /><br />Encoding in policy: **PRINT**|Enables the options to print the content.|Office custom rights: As the **Print Content** option in custom permissions. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Print**<br /><br />Name in AD RMS templates: **Print** <br /><br />API constant or value: `IPC_GENERIC_PRINT L"PRINT"`|
+|Common name: **Reply** <br /><br />Encoding in policy: **PRINT**|Enables the **Reply** option in an email client, without allowing changes in the **To** or **Cc** lines.|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply**<br /><br />Name in AD RMS templates: **Reply** <br /><br />API constant or value: `IPC_EMAIL_REPLY`|
+|Common name: **Reply All** <br /><br />Encoding in policy: **REPLYALL**|Enables the **Reply All** option in an email client, but doesn’t allow the user to add recipients to the **To** or **Cc** lines.|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply All**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
+|Common name: **View, Open, Read** <br /><br />Encoding in policy: **VIEW**|Allows the user to open the document and see the content.|Office custom rights: As the **Read** custom policy, **View** option.<br /><br />Name in the Azure classic portal: **View**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_GENERIC_READ L"VIEW"`|
+|Common name: **Copy** <br /><br />Encoding in policy: **EXTRACT**|Enables options to copy data (including screen captures) from the document into the same or another document.<br /><br />In some applications it also allows the whole document to be saved in unprotected form.|Office custom rights: As the **Allow users with Read access to copy content** custom policy option.<br /><br />Name in the Azure classic portal: **Copy and Extract content**<br /><br />Name in AD RMS templates: **Extract** <br /><br />API constant or value: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
+|Common name: **Allow Macros** <br /><br />Encoding in policy: **OBJMODEL**|Enables the option to run macros or perform other programmatic or remote access to the content in a document.|Office custom rights: As the **Allow Programmatic Access** custom policy option. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Allow Macros**<br /><br />Name in AD RMS templates: **Allow Macros** <br /><br />API constant or value: Not implemented.|
 
-
-### Edit Content, Edit
-
-Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.
-
-**Encoding in policy**: DOCEDIT
-
-**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.
-
-**Name in the Azure classic portal**: *Edit Content*
-
-**Name in AD RMS templates**: *Edit*
-
-**API constant or value**: *Not applicable*
-
----
-
-### Save
-
-Allows the user to save the document in its current location.
-
-**Encoding in policy**: EDIT
-
-**Implementation in Office custom rights**: As part of the *Change* and *Full Control* options.
-
-**Name in the Azure classic portal**: *Save File*
-
-**Name in AD RMS templates**: *Save*
-
-**API constant or value**: IPC_GENERIC_WRITE L"EDIT"
-
-In Office applications, this right also allows the user to modify the document.
-
----
-
-### Comment
-
-Enables the option to add annotations or comments to the content.
-
-**Encoding in policy**: COMMENT
-
-**Implementation in Office custom rights**: Not implemented.
-
-**Name in the Azure classic portal**: Not implemented.
-
-**Name in AD RMS templates:** Not implemented.
-
-**API constant or value:** IPC_GENERIC_COMMENT L"COMMENT
-
-This right is available in the SDK, is available as an ad-hoc policy in the RMS Protection module for Windows PowerShell, and has been implemented in some software vendor applications. However, it is not widely used and is not currently supported by Office applications.
-
----
-
-### Save As, Export
-
-Enables the option to save the content to a different file name (Save As). For Office documents, the file can be saved without protection.
-
-**Encoding in policy:** EXPORT
-
-**Implementation in Office custom rights:** As part of the *Change* and *Full Control* options.
-
-**Name in the Azure classic portal:** *Export Content (Save As)*
-
-**Name in AD RMS templates:** *Export (Save As)*
-
-**API constant or value:** IPC_GENERIC_EXPORT L"EXPORT"
-
-This right also allows the user to perform other export options in applications, such as *Send to OneNote*.
-
----
-
-### Forward
-
-Enables the option to forward an email message and to add recipients to the *To* and *Cc* lines. This right does not apply to documents; only email messages.
-
-**Encoding in policy:** FORWARD
-
-**Implementation in Office custom rights:** Denied when using the *Do Not Forward* standard policy.
-
-**Name in the Azure classic portal:** *Forward*
-
-**Name in AD RMS templates:** *Forward*
-
-**API constant or value:** IPC_EMAIL_FORWARD L"FORWARD"
-
-Does not allow the forwarder to grant rights to other users as part of the forward action.
-
----
-
-### Full Control
-
-Grants all rights to the document and all available actions can be performed.
-
-**Encoding in policy:** OWNER
-
-**Implementation in Office custom rights:** As the *Full Control* custom option.
-
-**Name in the Azure classic portal:** *Full Control*
-
-**Name in AD RMS templates:** *Full Control*
-
-**API constant or value:** IPC_GENERIC_ALL L"OWNER"
-
-Includes the ability to remove protection and re-protect a document.
-
----
-
-### Print
-
-Enables the options to print the content.
-
-**Encoding in policy:** PRINT
-
-**Implementation in Office custom rights:** As the *Print Content* option in custom permissions. Not a per-recipient setting.
-
-**Name in the Azure classic portal:** *Print*
-
-**Name in AD RMS templates:** *Print*
-
-**API constant or value:** IPC_GENERIC_PRINT L"PRINT
-
----
-
-### Reply
-
-Enables the Reply option in an email client, without allowing changes in the *To* or *Cc* lines.
-
-**Encoding in policy:** REPLY
-
-**Implementation in Office custom rights:** Not applicable
-
-**Name in the Azure classic portal:** *Reply*
-
-**Name in AD RMS templates:** *Reply*
-
-**API constant or value:** IPC_EMAIL_REPLY
-
----
-
-### Reply All
-
-Enables the *Reply All* option in an email client, but doesn’t allow the user to add recipients to the *To* or *Cc* lines.
-
-**Encoding in policy:** REPLYALL
-
-**Implementation in Office custom rights:** Not applicable
-
-**Name in the Azure classic portal:** *Reply All*
-
-**Name in AD RMS templates:** *Reply All*
-
-**API constant or value:** IPC_EMAIL_REPLYALL L"REPLYALL"
-
----
-
-### View, Open, Read
-
-Allows the user to open the document and see the content.
-
-**Encoding in policy:** VIEW
-
-**Implementation in Office custom rights:** As the *Read* custom policy, *View* option.
-
-**Name in the Azure classic portal:** *View Content*
-
-**Name in AD RMS templates:** *View*
-
-**API constant or value:** IPC_GENERIC_READ L"VIEW"
-
----
-
-### Copy
-
-Enables options to copy data (including screen captures) from the document into the same or another document.
-
-**Encoding in policy:** EXTRACT
-
-**Implementation in Office custom rights:** As the *Allow users with Read access to copy content* custom policy option.
-
-**Name in the Azure classic portal:** *Copy and Extract content*
-
-**Name in AD RMS templates:** *Extract*
-
-**API constant or value:** IPC_GENERIC_EXTRACT L"EXTRACT"
-
-In some applications it also allows the whole document to be saved in unprotected form.
-
----
-
-
-### Allow Macros
-
-Enables the option to run macros or perform other programmatic or remote access to the content in a document.
-
-**Encoding in policy:** OBJMODEL
-
-**Implementation in Office custom rights:** As the *Allow Programmatic Access* custom policy option. Not a per-recipient setting.
-
-**Name in the Azure classic portal:** *Allow Macros*
-
-**Name in AD RMS templates:** *Allow Macros*
-
-**API constant or value:** Not applicable
 
 
 ## Rights included in permissions levels
