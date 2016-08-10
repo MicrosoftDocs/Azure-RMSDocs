@@ -62,11 +62,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - Single AD RMS root cluster.
     
-    - A hardware security module (HSM).
-    
     - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx).
-    
-    - The servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the AD RMS client computers.
     
     - Configured rights templates.
 
