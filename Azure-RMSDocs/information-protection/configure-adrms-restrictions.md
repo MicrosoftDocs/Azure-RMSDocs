@@ -70,7 +70,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - If you will share documents and emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2013 or later, running on Windows 7 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
+- Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
 - The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
 
