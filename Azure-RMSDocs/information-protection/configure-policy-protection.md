@@ -56,22 +56,20 @@ For more information about Azure Rights Management and how it works, see [What i
 
 ## To configure a label to apply Rights Management protection
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin so that you can retrieve the Azure Rights Management templates.
- 
-2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) as a global admin so that you can retrieve the Azure Rights Management templates. Then navigate to the **Azure Information Protection** blade. For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-3. On the **Azure Information Protection** blade, select the label that you want to configure to apply Rights Management protection.
+2. On the **Azure Information Protection** blade, select the label that you want to configure to apply Rights Management protection.
 
-4. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
+3. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
     
     In most cases, you will select **Azure RMS**. Do not select AD RMS unless you have read and understood the prerequisites and restrictions that accompany this configuration, which is sometimes referred to as "*hold your own key*" (HYOK). For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md).
     
-5. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template that you want to use to protect documents and emails with this label.
+4. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template that you want to use to protect documents and emails with this label.
 
     > [!NOTE] 
-    > If you create a new template after you open the **Label** blade, close this blade and return to step 3, so that your newly created template is retrieved from Azure for you to select.
+    > If you create a new template after you open the **Label** blade, close this blade and return to step 2, so that your newly created template is retrieved from Azure for you to select.
     
-6. If you selected AD RMS: Provide the template GUID and licensing URL of your AD RMS cluster.
+5. If you selected AD RMS: Provide the template GUID and licensing URL of your AD RMS cluster.
 
 5. Click **Save**.
 

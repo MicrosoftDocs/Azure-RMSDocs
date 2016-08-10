@@ -5,7 +5,7 @@ title: How to configure conditions for automatic and recommended classification 
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -57,15 +57,13 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## To configure recommended or automatic classification for a label
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
- 
-2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-3. On the **Azure Information Protection** blade, select the label that you want to configure for automatic or recommended classification.
+2. On the **Azure Information Protection** blade, select the label that you want to configure for automatic or recommended classification.
 
-4. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
+3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
-5. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
+4. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
     - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
         
@@ -75,13 +73,13 @@ In this example, the user can click **Change now** to apply the recommended labe
         
     **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
 
-6. On the **Label** blade, configure the following, and then click **Save**:
+5. On the **Label** blade, configure the following, and then click **Save**:
 
     - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
 
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
-7. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Information about the built-in conditions
 
