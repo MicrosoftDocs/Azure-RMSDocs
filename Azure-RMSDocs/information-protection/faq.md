@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -45,11 +45,11 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Note that the preview lets you try the new **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan at general availability. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
-This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
+This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
 - There is no centralized logging for classification and labeling.
 
-- Label names and tooltips are supported in English only.
+- Label names and tooltips are supported in one language only.
 
 - Conditions for automatic classification must be phrases or patterns.
 
@@ -67,7 +67,7 @@ For the preview release, you can use any subscription that includes Azure Rights
 
 To configure the Azure Information Protection policies in the Azure portal, you must have an Azure subscription. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
-Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection).
 
 ## Do I need to be a global admin to try Azure Information Protection preview?
 
@@ -80,7 +80,7 @@ If you want to protect the documents and emails that you classify and label, and
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
-Azure Information Protection is a cloud-based solution. If you have an interest in hybrid scenarios, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
+Azure Information Protection is a cloud-based solution. If you have an interest in deploying Azure Information Protection for a hybrid scenario, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
 
 ## What client platforms and applications are supported by Azure Information Protection?
 
@@ -156,7 +156,11 @@ Because Azure Information Protection uses persistent metadata for classification
 
 ## How does document tracking and revocation work for Azure Information Protection?
 
-Document tracking for files that you classify and protect by using Azure Information Protection works the same as it does today, for Azure Rights Management. For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
+Document tracking for files that you classify and protect by using Azure Information Protection works the same as it does today, for Azure Rights Management and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 1.0.233 or later): 
+
+- In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
+
+For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
 
 ## How does Azure Information Protection enforce the policies that I configure?
 
