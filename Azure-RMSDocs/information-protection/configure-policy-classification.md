@@ -57,7 +57,9 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. On the **Azure Information Protection** blade, select the label that you want to configure for automatic or recommended classification.
 

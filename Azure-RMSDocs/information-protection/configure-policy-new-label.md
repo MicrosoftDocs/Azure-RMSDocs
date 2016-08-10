@@ -36,7 +36,9 @@ You can add a new label, or add a new sub-label to an existing label when you ne
 
 Use the following instructions to add a new label to the Azure Information Protection policy.
 
-1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. On the **Azure Information Protection** blade, do one of the following:
 

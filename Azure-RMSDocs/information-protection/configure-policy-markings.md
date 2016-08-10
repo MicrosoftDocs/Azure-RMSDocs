@@ -48,7 +48,9 @@ Additional information about these visual markers:
 
 Use the following instructions to configure visual markings for a label.
 
-1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. On the **Azure Information Protection** blade, select the label that you want to configure for visual markings.
 
