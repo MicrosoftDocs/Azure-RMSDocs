@@ -90,7 +90,7 @@ When you configure a label for AD RMS protection, you must specify the template 
 
 - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value from the **Extranet cluster URLs**, minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
+- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value from the **Extranet cluster URLs**, minus the **/_wmcs/licensing** string. If you do not have a value specified for the extranet cluster URLs, use the intranet licensing value. For example: https://rmscluster.contoso.com 
 
 ## Next steps
 
