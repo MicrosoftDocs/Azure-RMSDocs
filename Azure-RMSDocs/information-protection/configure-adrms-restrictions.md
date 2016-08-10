@@ -90,4 +90,6 @@ When you configure a label for AD RMS protection, you must specify the template 
 
 ## Next steps
 
+To read more information about this preview feature, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
+
 To configure a label for AD RMS protection, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md). 
