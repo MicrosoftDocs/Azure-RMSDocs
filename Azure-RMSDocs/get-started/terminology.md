@@ -51,7 +51,7 @@ Confused by a word, phrase, or acronym that’s related to Microsoft [!INCLUDE[a
 |ERM|See *enterprise rights management*.|
 |generic protection|A level of protection that encrypts any file type and prevents unauthorized people from opening the file. After the file is opened, the file is now unencrypted and usable in an application that doesn’t natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
 |HYOK|See *hold your own key*.|
-|HYOK|Frequently abbreviated to HYOK.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory reasons.|
+|hold your own key|Frequently abbreviated to *HYOK*.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory or compliance reasons.|
 |information protection|Sometimes abbreviated to *IP*.<br /><br />An industry-standard, generic term that refers to protecting data and files from unauthorized access, even after the data and files leave the organizational boundaries by using email or document sharing. Microsoft Rights Management is an example of an information protection (IP) solution.|
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support Rights Management.|
 |IRM|See *Information Rights Management*.|
