@@ -43,7 +43,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 - **A supported RMS deployment:**
     
-    All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
+    - All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
     
         - Windows Server 2008 (x86 or x64)
         
@@ -53,11 +53,11 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
         - Windows Server 2012 R2 (x64)
         
-    Cryptographic Mode 2:
+    - Cryptographic Mode 2:
     
         - Make sure that your AD RMS servers and clients are running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
-    All valid AD RMS topologies are supported:
+    - All valid AD RMS topologies are supported:
     
         - Single forest, single RMS cluster
         
