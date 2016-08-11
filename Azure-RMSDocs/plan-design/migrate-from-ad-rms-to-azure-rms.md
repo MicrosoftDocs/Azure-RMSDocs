@@ -42,7 +42,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 
 - **A supported RMS deployment:**
-
+    
     All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
     
         - Windows Server 2008 (x86 or x64)
