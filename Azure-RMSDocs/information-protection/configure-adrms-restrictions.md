@@ -90,8 +90,7 @@ When you configure a label for AD RMS protection, you must specify the template 
 
 - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
     
-    > [!NOTE]
-    > If you have an extranet licensing value as well as an intranet licensing value and they are different: Specify the extranet value only if you will share protected files and documents with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your connecting client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection.
+    If you have an extranet licensing value as well as an intranet licensing value and they are different: Specify the extranet value only if you will share protected files and documents with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your connecting client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection.
 
 ## Next steps
 
