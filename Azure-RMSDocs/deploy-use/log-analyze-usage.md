@@ -187,7 +187,8 @@ There are many request types for Azure Rights Management but the following table
 |Certify|The client is certifying the content for protection.|
 |DeleteTemplateById|A call is  made from the Azure classic portal, to delete a template by template  ID.|
 |DocumentEventsCsv|A call is made from the document tracking site to download the .CSV file for a single document.|
-|ExportTemplateById|A call is  made from the Azure classic portal to export a template based on a template ID.||FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
+|ExportTemplateById|A call is  made from the Azure classic portal to export a template based on a template ID.|
+|FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
 |FECreatePublishingLicenseV1|The same as Certify and GetClientLicensorCert combined, from mobile clients.|
 |FEGetAllTemplates|A call is  made, from a mobile device (front-end) to get the templates.|
 |FindServiceLocationsForUser|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
