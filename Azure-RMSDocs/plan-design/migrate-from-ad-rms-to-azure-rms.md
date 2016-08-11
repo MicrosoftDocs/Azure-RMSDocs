@@ -65,7 +65,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
         - Multiple forests, multiple RMS clusters
         
-    **Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
+    Note: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
 - **All requirements to run Azure RMS, including an Azure RMS tenant (not activated):**
 
