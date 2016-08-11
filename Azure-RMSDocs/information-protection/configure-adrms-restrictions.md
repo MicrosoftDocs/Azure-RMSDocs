@@ -5,7 +5,7 @@ title: HYOK restrictions | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -68,11 +68,11 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
 
-- If you will share documents and emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
+- If you will share documents or emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
 - Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
-- The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
+- The [Azure Information Protection client](info-protect-client.md) is version **1.0.233.0** or later.
 
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
@@ -82,12 +82,16 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
 
 ## Locating the information to specify AD RMS protection with an Azure Information Protection label
 
-When you configure a label for AD RMS protection, you must specify the template GUID and licensing URL of your AD RMS cluster. You can find both these values from the Active Directory Rights Management Sevices console:
+When you configure a label for AD RMS protection, you must specify the template GUID and licensing URL of your AD RMS cluster. You can find both these values from the Active Directory Rights Management Services console:
 
 - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value from the **Extranet cluster URLs**, minus the **/_wmcs/licensing** string. If you do not have a value specified for the extranet cluster URLs, use the intranet licensing value. For example: https://rmscluster.contoso.com 
+- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
+    
+    If you have an extranet licensing value as well as an intranet licensing value and they are different: Specify the extranet value only if you will share protected documents or emails with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection).
 
 ## Next steps
+
+To read more information about this preview feature, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
 To configure a label for AD RMS protection, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md). 
