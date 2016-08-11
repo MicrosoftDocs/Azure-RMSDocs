@@ -5,7 +5,7 @@ title: HYOK restrictions | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/11/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -72,7 +72,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
-- The [Azure Information Protection client](info-protect-client.md) is version **1.0.233** or later.
+- The [Azure Information Protection client](info-protect-client.md) is version **1.0.233.0** or later.
 
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
@@ -87,6 +87,11 @@ When you configure a label for AD RMS protection, you must specify the template 
 - To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value from the **Extranet cluster URLs**, minus the **/_wmcs/licensing** string. If you do not have a value specified for the extranet cluster URLs, use the intranet licensing value. For example: https://rmscluster.contoso.com 
+
+- To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
+    
+    > [!NOTE]
+    > If you have an extranet licensing value as well as an intranet licensing value and they are different: Specify the extranet value only if you will share protected files and documents with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your connecting client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection.
 
 ## Next steps
 
