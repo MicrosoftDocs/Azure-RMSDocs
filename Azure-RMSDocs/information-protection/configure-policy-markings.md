@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -48,13 +48,13 @@ Additional information about these visual markers:
 
 Use the following instructions to configure visual markings for a label.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
- 
-2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-3. On the **Azure Information Protection** blade, select the label that you want to configure for visual markings.
+2. On the **Azure Information Protection** blade, select the label that you want to configure for visual markings.
 
-4. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markers that you want, and then click **Save**:
+3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markers that you want, and then click **Save**:
 
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, color, and alignment for the header.
     
@@ -62,7 +62,7 @@ Use the following instructions to configure visual markings for a label.
     
     - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header. 
 
-5. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Using variables in the text string
 
