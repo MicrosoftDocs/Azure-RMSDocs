@@ -5,7 +5,7 @@ title: How to configure the global policy settings for Azure Information Protect
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -37,11 +37,11 @@ There are 3 settings in the Azure Information Protection policy that apply to al
 
 To configure these settings:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
- 
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-3. On the **Azure Information Protection** blade, configure these global settings:
+2. On the **Azure Information Protection** blade, configure these global settings:
 
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
 
@@ -57,9 +57,9 @@ To configure these settings:
 
     This option is not applicable for sub-labels.
 
-4. To save your changes, click **Save**.
+3. To save your changes, click **Save**.
 
-5. To make your changes available to users, click **Publish**.
+4. To make your changes available to users, click **Publish**.
 
 ## Next steps
 
