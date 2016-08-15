@@ -5,7 +5,7 @@ title: HYOK restrictions | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -62,7 +62,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - Single AD RMS root cluster.
     
-    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): Required for production environments but not required for testing or evaluation purposes. You can confirm the version of the crytographic mode of the AD RMS cluster by using the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the version of the crytographic mode of the AD RMS cluster, and its overall health, by using the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
     
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
