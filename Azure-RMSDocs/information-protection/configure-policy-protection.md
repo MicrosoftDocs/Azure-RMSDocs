@@ -5,7 +5,7 @@ title: How to configure a label to apply Rights Management protection | Azure Ri
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -70,6 +70,10 @@ For more information about Azure Rights Management and how it works, see [What i
 
     > [!NOTE] 
     > If you create a new template after you open the **Label** blade, close this blade and return to step 2, so that your newly created template is retrieved from Azure for you to select.
+    
+    Be aware that if you select a departmental template or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
     
 5. If you selected AD RMS: Provide the template GUID and licensing URL of your AD RMS cluster.
 
