@@ -80,7 +80,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
     
-Example: If you specify the string `Document: ${item.name} Classification: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Classification: Secret**.
+Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: Secret**.
 
 ## Next steps
 
