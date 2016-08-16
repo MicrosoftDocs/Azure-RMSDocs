@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -68,17 +68,19 @@ Use the following instructions to configure visual markings for a label.
 
 You can use the following variables in the text string for your header, footer, or watermark:
 
-- `${Item.Label}` for the selected label
+- `${Item.Label}` for the selected label. For example: Internal
 
-- `${Item.Name}` for the file name or email subject
+- `${Item.Name}` for the file name or email subject. For example: JulySales.docx
 
-- `${Item.Location}` for the file path
+- `${Item.Location}` for the file path. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email
+- `${User.Name}` for the owner of the document or email, by user name. For example: rsimone
 
-- `${Event.DateTime}` for the date and time when the selected label was set 
+- `${User.PrincipalName}` for the owner of the document or email, by user principal name. For example: rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
     
-Example: If you specify the string `Document: ${item.name} Sensitivity: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx Sensitivity: Secret**.
+Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the Secret label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: Secret**.
 
 ## Next steps
 
