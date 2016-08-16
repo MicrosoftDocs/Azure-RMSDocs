@@ -72,7 +72,7 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Name}` for the file name or email subject. For example: JulySales.docx
 
-- `${Item.Location}` for the file path. For example: \\Sales\2016\Q2\JulyReport.docx
+- `${Item.Location}` for the file path. For example: \\\Sales\2016\Q2\JulyReport.docx
 
 - `${User.Name}` for the owner of the document or email, by user name. For example: rsimone
 
