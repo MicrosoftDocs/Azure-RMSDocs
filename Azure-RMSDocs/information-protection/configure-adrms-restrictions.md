@@ -5,7 +5,7 @@ title: HYOK restrictions | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/15/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -59,6 +59,8 @@ Users will not be aware when a label uses AD RMS protection rather than Azure RM
 Check that your AD RMS deployment meets the following requirements to provide AD RMS protection for Azure Information Protection.
 
 - AD RMS configuration:
+    
+    - Minimal version: Windows Server 2012 R2.
     
     - Single AD RMS root cluster.
     
