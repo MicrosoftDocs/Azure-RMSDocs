@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,47 +30,71 @@ ms.suite: ems
 *Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 
-These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key. 
+These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key in Azure Key Vault. 
 
 If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
 
 > [!NOTE]
-> These instructions assume your AD RMS key is module-protected. This is the common case. If your AD RMS key is OCS-protected, please contact [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) before you do these instructions.
+> These instructions assume your AD RMS key is module-protected. This is the most typical case. 
 
 It’s a two-part procedure to import your HSM key and AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by you (BYOK).
 
-You must first package your HSM key so it's ready to transfer to Azure RMS, and then import it with the configuration data.
+Because your Azure RMS tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Key RMS. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
 
-## Part 1: Package your HSM key so it's ready to transfer to Azure RMS
+Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure RMS. This key vault will be configured to allow Azure RMS to access it, so the keys that this key vault stores should be limited to Azure RMS keys only.
 
-1.  Follow the steps in the [Implementing bring your own key (BYOK)](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section of the [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md), using the procedure **Generate and transfer your tenant key – over the Internet** with the following exceptions:
 
-    -   Do not follow the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. You must identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key_(keyAppName)_(keyIdentifier)** locally on the server.
+> [!TIP]
+> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
-    -   Do not follow the steps for **Transfer your tenant key to Azure RMS**, which uses the  Add-AadrmKey command.  Instead, you will transfer your prepared HSM key when you upload your exported trusted publishing domain, by using the Import-AadrmTpd command.
 
-2.  On the Internet-connected workstation, in a Windows PowerShell session, reconnect to the Azure RMS service.
+## Part 1: Transfer your HSM key to Azure Key Vault
 
-Now that you’ve prepared your HSM key for Azure RMS, you’re ready to import your HSM key file and AD RMS configuration data.
+These procedures are done by the administrator for Azure Key Vault.
 
-## Part 2: Import the HSM key and configuration data to Azure RMS
+1.  Follow the instructions from the Azure Key Vault documentation, using [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) with the following exception:
 
-1.  Still on the Internet-connect workstation and in the Windows PowerShell session, upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. Use the following command:
+    - Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key<*keyAppName*><*keyIdentifier*>** locally on the server.
 
+    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
+
+2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+    
+    For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+
+
+Now that you’ve prepared your HSM key in Azure Key Vault for Azure RMS, you’re ready to import your AD RMS configuration data.
+
+## Part 2: Import the configuration data to Azure RMS
+
+These procedures are done by the administrator for Azure RMS.
+
+1.  On the Internet-connect workstation and in the PowerShell session, connect to Azure RMS by using the [Connnect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ) cmdlet.
+    
+    Then upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. 
+    
+    To run this cmdlet, you will need the URL for the key that was identified in the previous step.
+    
+    For example, using our key URL value from the previous step and a TPD file of C:\contoso-tpd1.xml, you would run:
+    
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -HsmKeyFile <PathToBYOKPackage> -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
-    For example: **Import -TpdFile E:\no_key_tpd_contosokey1.xml  -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $true -Verbose**
-
+    
     When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
 
-2.  When the command completes, repeat step 1 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command.  For example: **Import -TpdFile E:\contosokey2.xml -HsmKeyFile E:\KeyTransferPackage-contosokey.byok -ProtectionPassword -Active $false -Verbose**
+2.  When the command completes, repeat step 1 for each remaining  .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command.  
 
 3.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
 
     ```
     Disconnect-AadrmService
     ```
+
+    > [!NOTE]
+    > If you later need to confirm which key your Azure RMS tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 

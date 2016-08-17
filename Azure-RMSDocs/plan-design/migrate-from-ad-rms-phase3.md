@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -49,7 +49,7 @@ If you chose an Azure RMS tenant key topology of **customer-managed (BYOK)**:
 ## Step 7. Deploy the RMS connector
 If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you must first disable IRM on these servers and remove AD RMS configuration. Then, deploy the Rights Management (RMS) connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS.
 
-Finally for this step, if you have imported multiple TPDs into Azure RMS that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all TPDs URLs to the RMS connector.
+Finally for this step, if you have imported multiple AD RMS data configuration files (.xml) into Azure RMS that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
 
 > [!NOTE]
 > Before you start, check the versions of the on-premises servers that Azure RMS supports, from [On-premises servers that support Azure RMS](../get-started/requirements-servers.md).
@@ -102,7 +102,7 @@ Finally for this step, if you have imported multiple TPDs into Azure RMS that we
 
 #### For Exchange only and multiple TPDs: Edit the registry
 
--   On each Exchange Server, manually add the following registry keys for each additional TPD that you imported, to redirect the TPD URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
+-   On each Exchange Server, manually add the following registry keys for each additional configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
 
     When you make these registry edits, use the following instructions:
 

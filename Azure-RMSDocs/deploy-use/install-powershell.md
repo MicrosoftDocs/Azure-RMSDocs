@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use the following information to help you install Windows PowerShell for Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS).
 
-You can use this Windows PowerShell module to administer [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] from the command line by using any computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
+You can use this PowerShell module to administer [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] from the command line by using any computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
 
 ## Prerequisites
 This table lists the prerequisites to install and use Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
@@ -39,9 +39,11 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 |Requirement|More information|
 |---------------|--------------------|
 |A version of Windows that supports the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module|Check the list of supported operating systems in the **System Requirements** section of the [download page for the Azure Rights Management Administration Tool](http://go.microsoft.com/fwlink/?LinkId=257721).|
-|Minimum version of Windows PowerShell: 2.0|Support for the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module is introduced in Windows PowerShell 2.0.<br /><br />By default, most Windows operating systems install with at least version 2.0 of Windows PowerShell. If you need to install Windows PowerShell 2.0, see [Install Windows PowerShell 2.0](http://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tip: You can confirm the version of Windows PowerShell that you are running by typing **$PSVersionTable** in a Windows PowerShell session.|
+|Minimum version of Windows PowerShell: 2.0|Support for the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module is introduced in Windows PowerShell 2.0.<br /><br />By default, most Windows operating systems install with at least version 2.0 of Windows PowerShell. If you need to install Windows PowerShell 2.0, see [Install Windows PowerShell 2.0](http://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tip: You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session.|
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module uses.|
-|Microsoft Online Services Sign-In Assistant 7.0|The Microsoft Online Services Sign-In Assistant is required for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] authentication.<br /><br />For more information, see [Download Center: Microsoft Online Services Assistant for IT Professionals RTW](http://www.microsoft.com/en-us/download/details.aspx?id=41950).|
+
+> [!NOTE]
+> The Microsoft Online Services Sign-In Assistant is no longer required for the current version of the Rights Management administration module.
 
 ## How to install the Rights Management administration module
 

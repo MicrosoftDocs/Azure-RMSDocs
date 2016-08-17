@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -33,7 +33,10 @@ ms.suite: ems
 If you manage your tenant key for Azure Rights Management (the bring your own key, or BYOK, scenario), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
+In Azure Key Vault, you can change the permissions on the key vault that contains your Azure RMS tenant key so that Azure RMS can no longer access the key. However, when you do this, nobody will be able to open documents and emails that you previously protected with Azure RMS.
+
 When you unsubscribe from Azure RMS, Azure RMS stops using your tenant key and no action is needed from you.
+
 
 ## Re-key your tenant key
 Re-keying is also known as rolling your key. Do not re-key your tenant key unless it’s really necessary. Older clients, such as Office 2010, were not designed to handle key changes gracefully. In this scenario, you must clear the RMS state on computers by using Group Policy or an equivalent mechanism. However, there are some legitimate events that may force you to re-key your tenant key. For example:
@@ -44,15 +47,15 @@ Re-keying is also known as rolling your key. Do not re-key your tenant key unles
 
 When you re-key your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure RMS retains your old tenant key so that it can issue licenses for old content.
 
-To re-key your tenant key, generate and create a new key over the Internet or in person, by using the procedures in the [Implementing bring your own key (BYOK)](..\plan-design\plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and Implementing Your Azure Rights Management Tenant Key](..\plan-design\plan-implement-tenant-key.md) topic.
+To re-key your tenant key, first re-key your Azure RMS tenant key in Key Vault. Then run the Add-AadrmKeyVaultKey cmdlet again, specifying the new key URL.
 
 ## Backup and recover your tenant key
 You are responsible for backing up your tenant key. If you generated your tenant key in a Thales HSM, to back up the key, just back up the Tokenized Key file, the World file, and the Administrator Cards.
 
-If you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md) article, Azure RMS will persist the Tokenized Key File, to protect against failure of any Azure RMS nodes. However, do not consider this to be a full backup. For example, if you ever need a plaintext copy of your key to use outside a Thales HSM, Azure RMS will not be able to retrieve it for you because it only has a non-recoverable copy.
+Because you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md) article, Key Vault will persist the Tokenized Key File, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault will not be able to retrieve it for you because it only has a non-recoverable copy.
 
 ## Export your tenant key
-If you use BYOK, you cannot export your tenant key from Azure RMS. The copy in Azure RMS is non-recoverable. If you want to delete this key so it can no longer be used, contact Microsoft Customer Service Support (CSS).
+If you use BYOK, you cannot export your tenant key from Azure Key Vault or Azure RMS. The copy in Azure Key Vault is non-recoverable. 
 
 ## Respond to a breach
 No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s well protected well, vulnerabilities might be found in current generation HSM technology or current key lengths and algorithms.
@@ -66,6 +69,6 @@ If you have a breach, the best action that you or Microsoft can take  depends on
 |Your tenant key is leaked.|Re-key your tenant key. See [Re-key your tenant key](#re-key-your-tenant-key).|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Re-keying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, then Microsoft will instruct all customers to renew their tenant keys.|
-|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update the Azure RMS to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
+|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure RMS to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
 
