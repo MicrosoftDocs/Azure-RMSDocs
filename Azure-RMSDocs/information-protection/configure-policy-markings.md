@@ -5,7 +5,7 @@ title: How to configure a label for visual markings for Azure Information Protec
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -72,11 +72,11 @@ You can use the following variables in the text string for your header, footer, 
 
 - `${Item.Name}` for the file name or email subject. For example: JulySales.docx
 
-- `${Item.Location}` for the file path. For example: \\\Sales\2016\Q3\JulyReport.docx
+- `${Item.Location}` for the path and file name for documents, and the email subject for emails. For example: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` for the owner of the document or email, by user name. For example: rsimone
+- `${User.Name}` for the owner of the document or email, by the Windows signed in user name. For example: rsimone
 
-- `${User.PrincipalName}` for the owner of the document or email, by user principal name. For example: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` for the owner of the document or email, by the Azure Information Protection client signed in email address (user principal name). For example: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` for the date and time when the selected label was set. For example: 8/16/2016 1:30 PM
     
