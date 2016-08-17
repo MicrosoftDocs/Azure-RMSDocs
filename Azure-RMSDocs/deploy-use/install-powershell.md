@@ -43,7 +43,10 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module uses.|
 
 > [!NOTE]
-> The Microsoft Online Services Sign-In Assistant is no longer required for the current version of the Rights Management administration module.
+> Starting with version 2.5.0.0 of the Rights Management administration module, the Microsoft Online Services Sign-In Assistant is no longer required.
+> 
+> If you had a previous version of the Rights Management administration module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
+
 
 ## How to install the Rights Management administration module
 
