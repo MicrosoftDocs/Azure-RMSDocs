@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -31,13 +31,13 @@ ms.suite: ems
 
 Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Microsoft Azure Rights Management (Azure RMS) tenant key after it is implemented.
 
-When you manage your own tenant key, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
+When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
 The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure RMS tenant key.
 
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revoke your tenant key|No (automatic)|No (automatic)|
+|Revoke your tenant key|No (automatic)|Yes|
 |Re-key your tenant key|Yes|Yes|
 |Backup and recover your tenant key|No|Yes|
 |Export your tenant key|Yes|No|
