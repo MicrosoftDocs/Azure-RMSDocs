@@ -60,7 +60,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - AD RMS configuration:
     
-    - Minimal version: Windows Server 2012 R2.
+    - Minimal version of Windows Server 2012 R2: Required for production environments but you can use a minimal version of Windows Server 2008 R2 with Service Pack 1 for testing or evaluation purposes.
     
     - Single AD RMS root cluster.
     
