@@ -5,7 +5,7 @@ title: Azure Information Protection quick start tutorial | Azure Rights Manageme
 description: An introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -39,7 +39,7 @@ If you have any problems completing this tutorial, using the preview release of 
 ## Prerequisites 
 To complete this tutorial, you will need the following:
 
-- Any subscription that includes Azure Rights Management, which will give you access to the preview release of Azure Information Protection. Azure Information Protection is available in all regions that support Azure Rights Management. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+- An Office 365 subscription that includes protecting Office documents and emails by using Azure RMS. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
 
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
