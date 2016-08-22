@@ -39,7 +39,7 @@ If you have any problems completing this tutorial, using the preview release of 
 ## Prerequisites 
 To complete this tutorial, you will need the following:
 
-- Any Office 365 subscription that includes Azure Rights Management. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
+- An Office 365 subscription that includes protecting Office documents and emails by using Azure RMS. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
 
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
