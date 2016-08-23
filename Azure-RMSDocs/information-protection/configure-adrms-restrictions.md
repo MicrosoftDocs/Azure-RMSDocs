@@ -5,7 +5,7 @@ title: HYOK restrictions | Azure Rights Management
 description:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -60,9 +60,13 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - AD RMS configuration:
     
+    - Minimal version of Windows Server 2012 R2: Required for production environments but for testing or evaluation purposes, you can use a minimal version of Windows Server 2008 R2 with Service Pack 1.
+    
     - Single AD RMS root cluster.
     
-    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx).
+    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the version of the cryptographic mode of the AD RMS cluster, and its overall health, by using the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    
+    - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
     - Configured rights templates.
 
@@ -75,7 +79,9 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 - The [Azure Information Protection client](info-protect-client.md) is version **1.0.233.0** or later.
 
 > [!IMPORTANT]
-> To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers).
+> To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
+> 
+> We also recommend that your AD RMS cluster uses a hardware security module (HSM), so that the private key for your Server Licensor Certificate (SLC) cannot be exposed or stolen if your AD RMS deployment should ever be breached or compromised. 
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
 
