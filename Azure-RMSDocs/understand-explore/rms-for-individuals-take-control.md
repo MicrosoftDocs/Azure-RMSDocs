@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/12/2016
+ms.date: 08/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -38,9 +38,9 @@ If you do not want to convert your organization’s RMS for individuals subscrip
 
 -   You could prevent users from signing up to use Azure Rights Management with the RMS for individuals subscription. In most cases, there is little advantage in doing this because users will either share files without protection (which could put your company at risk), or will use another file protection mechanism that doesn’t provide the IT department with the option to access the data. However, if you want to prevent users from signing up to use RMS for individuals, do one of the following after you have taken ownership of your organization’s directory in Azure:
 
-    -   Prevent all users from signing up for self-service subscriptions, which includes RMS for individuals.  Currently, you cannot set this by service; the setting applies to all Azure subscriptions that use the self-service process. To do this, set the **AllowAdHocSubscriptions** parameter to false with the [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) cmdlet from the Windows PowerShell module for Azure Active Directory. For example: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
+    -   Prevent all users from signing up for self-service subscriptions, which includes RMS for individuals.  Currently, you cannot set this by service; the setting applies to all Azure subscriptions that use the self-service process. To do this, set the **AllowAdHocSubscriptions** parameter to false with the [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) cmdlet from the PowerShell module for Azure Active Directory. For example: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
 
-    -   Prevent users from creating a new account in Azure, which means that only users who already have an account in Azure can sign up for self-service subscriptions, which includes RMS for individuals.  To do this, set the **AllowEmailVerifiedUsers** parameter to false with the [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) cmdlet from the Windows PowerShell module for Azure Active Directory. For example: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
+    -   Prevent users from creating a new account in Azure, which means that only users who already have an account in Azure can sign up for self-service subscriptions, which includes RMS for individuals.  To do this, set the **AllowEmailVerifiedUsers** parameter to false with the [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) cmdlet from the PowerShell module for Azure Active Directory. For example: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
 
     -   Synchronize your Active Directory Domain Services infrastructure with Azure Active Directory. This action prevents new accounts from being created when users sign up for self-service subscriptions such as RMS for individuals, and you can delete or disable accounts that were previously created in the Azure directory.
 
