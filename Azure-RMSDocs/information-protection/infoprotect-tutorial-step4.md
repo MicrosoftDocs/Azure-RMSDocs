@@ -26,7 +26,7 @@ ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # Step 4: See classification, labeling, and protection in action 
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

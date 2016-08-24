@@ -25,7 +25,7 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 # The default Azure Information Protection policy
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

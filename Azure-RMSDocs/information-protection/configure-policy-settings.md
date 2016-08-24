@@ -25,7 +25,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 # How to configure the global policy settings for Azure Information Protection
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

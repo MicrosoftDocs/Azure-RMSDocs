@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Information Protection preview
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

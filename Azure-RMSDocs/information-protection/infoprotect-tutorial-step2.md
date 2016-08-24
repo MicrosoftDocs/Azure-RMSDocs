@@ -26,7 +26,7 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 # Step 2: Configure and publish the Azure Information Protection policy
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

@@ -26,7 +26,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 # Step 3: Install the Azure Information Protection client 
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

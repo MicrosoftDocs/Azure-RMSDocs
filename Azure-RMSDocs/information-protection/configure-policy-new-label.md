@@ -25,7 +25,7 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 
 # How to create a new label for Azure Information Protection
 
->>*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 
