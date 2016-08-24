@@ -2,7 +2,7 @@
 # required metadata
 
 title: Terminology for Azure Rights Management | Azure RMS
-description: Confused by a word, phrase, or acronym that's related to Microsoft Azure RMS? Find the definition here for terms and abbreviations that are either specific to Azure' RMS or have a specific meaning when used in the context of Rights Management.
+description: Confused by a word, phrase, or acronym that's related to Microsoft Azure RMS? Find the definition here for terms and abbreviations that are either specific to Azure RMS or have a specific meaning when used in the context of Rights Management.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016

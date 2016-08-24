@@ -2,7 +2,7 @@
 # required metadata
 
 title: Logging and analyzing Azure Rights Management usage | Azure RMS
-description: Use the information in this topic to help you understand how you can use usage logging with Azure Rights Management (Azure RMS). The Azure Rights Management service can log every request that it makes for your organization, which includes requests from users, actions performed by Rights Management administrators in your organization, and actions performed by Microsoft operators to support your Azure Rights' Management deployment.
+description: Use the information in this topic to help you understand how you can use usage logging with Azure Rights Management (Azure RMS). The Azure Rights Management service can log every request that it makes for your organization, which includes requests from users, actions performed by Rights Management administrators in your organization, and actions performed by Microsoft operators to support your Azure Rights Management deployment.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
