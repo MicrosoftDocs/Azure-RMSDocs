@@ -25,7 +25,7 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 # How to change or customize an existing label for Azure Information Protection
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

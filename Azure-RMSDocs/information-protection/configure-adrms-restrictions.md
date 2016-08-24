@@ -26,7 +26,7 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 # Hold your own key (HYOK) requirements and restrictions for AD RMS protection
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

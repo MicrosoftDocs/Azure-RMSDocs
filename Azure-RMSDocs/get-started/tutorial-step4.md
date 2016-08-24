@@ -29,7 +29,7 @@ ms.custom:
 
 # Azure RMS quick start Step 4: Ask your recipients to open the emailed document
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Jump to: 

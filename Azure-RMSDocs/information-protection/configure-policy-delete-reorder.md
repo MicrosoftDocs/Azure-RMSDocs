@@ -25,7 +25,7 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 
 # How to delete or reorder a label for Azure Information Protection
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

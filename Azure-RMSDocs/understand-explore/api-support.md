@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Other applications that support the RMS APIs
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following information to help you understand how Azure Rights Management (Azure RMS) can support other applications to protect your organization’s data.
 

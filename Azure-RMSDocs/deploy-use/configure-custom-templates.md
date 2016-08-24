@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Configuring custom templates for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 After you have [activated Azure Rights Management](activate-service.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
 

@@ -25,7 +25,7 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 # How to configure a label for visual markings for Azure Information Protection
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

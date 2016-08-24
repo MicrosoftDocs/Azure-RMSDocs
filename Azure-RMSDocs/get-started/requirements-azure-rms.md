@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Requirements for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to deploy Rights Management for your organization.

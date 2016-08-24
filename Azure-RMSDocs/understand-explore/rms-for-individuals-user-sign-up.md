@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How users sign up for RMS for individuals
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 To sign up for this free account, users request it by visiting the [Microsoft Rights Management page](https://portal.aadrm.com/), and provide their work or school email address. 
 

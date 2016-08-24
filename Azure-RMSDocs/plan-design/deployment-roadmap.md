@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Azure Rights Management deployment roadmap
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following steps to prepare for, implement, and manage Azure Rights Management (Azure RMS) for your organization.
 

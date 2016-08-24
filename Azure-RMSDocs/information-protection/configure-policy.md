@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Configuring Azure Information Protection policy
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

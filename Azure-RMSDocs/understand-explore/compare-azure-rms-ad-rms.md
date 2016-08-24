@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Comparing Azure Rights Management and AD RMS
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management, Office 365*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Office 365*
 
 If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) compares in terms of functionality and requirements. 
 

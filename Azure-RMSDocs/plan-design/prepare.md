@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Preparing for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 After you have signed up for a cloud subscription and established your organization with an account for [!INCLUDE[o365_1](../includes/o365_1_md.md)] or Azure Active Directory, you’re ready to enable the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service.
 

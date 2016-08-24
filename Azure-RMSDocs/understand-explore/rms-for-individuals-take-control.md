@@ -28,7 +28,7 @@ ms.suite: ems
 
 # How administrators can control the accounts created for RMS for individuals
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 
 If you do not want to convert your organization’s RMS for individuals subscription to a paid subscription, you can still control the user accounts in the Azure directory that was created for your organization in the following ways:

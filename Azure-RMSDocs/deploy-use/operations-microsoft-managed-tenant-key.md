@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Microsoft-managed: Tenant key lifecycle operations
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 If Microsoft manages your tenant key for Azure Rights Management (the default), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 

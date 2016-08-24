@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Office apps: Configuration for clients
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Use this information to determine what you need to do so that Office apps used by your end users will work with Azure Rights Management (Azure RMS).

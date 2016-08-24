@@ -28,7 +28,7 @@ ms.suite: ems
 
 # PowerShell reference for custom templates
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Everything that you can do in the Azure classic portal to create and manage templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 

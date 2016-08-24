@@ -26,7 +26,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 # What is Azure Information Protection (preview)?
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

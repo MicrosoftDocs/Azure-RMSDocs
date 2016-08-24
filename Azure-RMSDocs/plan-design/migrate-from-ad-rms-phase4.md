@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Migration phase 4 - post migration tasks
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).

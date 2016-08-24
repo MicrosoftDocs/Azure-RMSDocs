@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Azure classic portal
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 
 Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Rights Management Premium subscription.

@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Office 365 classic admin center
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Use these instructions if you're using the classic (original) version of the Office 365 admin center.

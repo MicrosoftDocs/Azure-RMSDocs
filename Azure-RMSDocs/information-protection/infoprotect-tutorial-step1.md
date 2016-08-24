@@ -26,7 +26,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate the Rights Management service
  
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

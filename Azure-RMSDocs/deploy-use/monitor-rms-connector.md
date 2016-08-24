@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Monitor the Azure Rights Management connector
 
-*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of Azure RMS.
 

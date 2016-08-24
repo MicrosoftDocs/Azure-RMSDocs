@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Rapid deployment guide for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
 

@@ -26,7 +26,7 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 # Quick start tutorial for Azure Information Protection 
 
->*Applies to: Azure Information Protection preview*
+>>*Applies to: Azure Information Protection preview*
 
 **[ This information is preliminary and subject to change. ]**
 

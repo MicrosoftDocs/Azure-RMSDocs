@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Rights Management - also known as ...
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Azure Rights Management is also known as *Azure Rights Management service*, but because it runs as a service in Azure, the "service" is often omitted from its name. It is the cloud version of *Active Directory Rights Management Services* (AD RMS), which was first released as *Windows Rights Management Services* (Windows RMS).

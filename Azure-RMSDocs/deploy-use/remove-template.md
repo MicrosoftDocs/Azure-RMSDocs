@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Remove (archive) templates
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 The default templates cannot be deleted, but they can be archived so that users do not see them.
 

@@ -27,7 +27,7 @@ ms.suite: ems
 
 # How to find out if your users have signed up for RMS for individuals
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of the following methods:
 

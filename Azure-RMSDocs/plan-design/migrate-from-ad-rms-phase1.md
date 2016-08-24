@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Migration phase 1 - server-side configuration for AD RMS
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 Use the following information for Phase 1 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover steps 1 though 4 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 

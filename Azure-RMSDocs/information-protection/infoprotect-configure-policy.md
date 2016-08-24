@@ -27,5 +27,5 @@ ms.assetid: 38ecc425-9bab-4e70-9436-eccbef0e3113
 
 # Configuring the Azure Information Protection policy 
 
-*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection preview*
 
