@@ -2,8 +2,7 @@
 # required metadata
 
 title: View and use files that have been protected by Rights Management | Azure RMS
-description:
-keywords:
+description: When the Rights Management (RMS) sharing application is installed on your computer, you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

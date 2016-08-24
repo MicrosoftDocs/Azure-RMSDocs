@@ -2,8 +2,7 @@
 # required metadata
 
 title: How to configure conditions for automatic and recommended classification for Azure Information Protection | Azure Rights Management
-description:
-author: cabailey
+description: When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: article

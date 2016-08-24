@@ -2,8 +2,7 @@
 # required metadata
 
 title: How to find out if users have signed up for RMS for individuals | Azure RMS
-description:
-keywords:
+description: As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of these methods.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

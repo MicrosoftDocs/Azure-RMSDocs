@@ -2,8 +2,7 @@
 # required metadata
 
 title: Rights Management sharing application&colon; Installation and configuration for clients | Azure RMS
-description:
-keywords:
+description: The Rights Management (RMS) sharing application is required for client computers to use Azure RMS with Office 2010, and recommended for all computers and mobile devices that support Azure RMS. The RMS sharing application integrates with Office applications by installing an Office add-in so that users can easily protect files and emails directly from the ribbon. It also offers generic protection for files types that are not natively supported by Azure RMS, and a document tracking site for users to track and revoke files that they have protected.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

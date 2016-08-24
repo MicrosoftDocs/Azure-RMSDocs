@@ -2,8 +2,7 @@
 # required metadata
 
 title: Protect a file that you share by email by using the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: When you protect a file that you share by email, it creates a new version of the original file. The original file remains unprotected and the new version is protected and automatically attached to an email that you then send.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

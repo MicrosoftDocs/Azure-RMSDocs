@@ -2,8 +2,7 @@
 # required metadata
 
 title: Information and support for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Use the following resources for additional information about Microsoft Azure RMS.
 author: cabailey
 manager: mbaldwin
 ms.date: 06/29/2016

@@ -2,8 +2,7 @@
 # required metadata
 
 title: Configuring usage rights for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: When you set protection on files or emails by using Azure Rights Management (Azure RMS) and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure RMS, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/09/2016

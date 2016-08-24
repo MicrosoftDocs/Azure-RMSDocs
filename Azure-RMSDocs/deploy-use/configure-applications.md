@@ -2,8 +2,7 @@
 # required metadata
 
 title: Configuring applications for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: After you have deployed Azure Rights Management (Azure RMS) for your organization, use the following information to configure applications and services to support Azure RMS. These include Office applications such as Word 2013 and Word 2010, and services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

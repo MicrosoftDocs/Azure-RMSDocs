@@ -2,8 +2,7 @@
 # required metadata
 
 title: Comparing Azure Rights Management and AD RMS | Azure RMS
-description:
-keywords:
+description: If you know or have previously deployed Active Directory Rights Management Services (AD RMS), you might be wondering how Azure RMS compares in terms of functionality and requirements. 
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

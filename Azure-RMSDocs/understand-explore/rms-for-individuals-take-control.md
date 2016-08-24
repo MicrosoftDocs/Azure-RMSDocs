@@ -2,8 +2,7 @@
 # required metadata
 
 title: How administrators can control the accounts created for RMS for individuals | Azure RMS
-description:
-keywords:
+description: If you do not want to convert your organization's RMS for individuals subscription to a paid subscription, you can still control the user accounts in the Azure directory that was created for your organization in the following ways.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

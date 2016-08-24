@@ -2,8 +2,7 @@
 # required metadata
 
 title: Rapid deployment guide for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Use this guide in addition to the configuration information in the Deploy & Use section, to help you more quickly deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

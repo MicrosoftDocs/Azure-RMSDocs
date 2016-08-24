@@ -2,8 +2,7 @@
 # required metadata
 
 title: Monitor the Azure Rights Management connector | Azure RMS
-description:
-keywords:
+description: After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization's use of Azure RMS.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/08/2016

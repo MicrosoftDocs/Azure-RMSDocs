@@ -2,8 +2,7 @@
 # required metadata
 
 title: Scenario - Secure your most (few) valuable files | Azure RMS
-description:
-keywords:
+description: This scenario and supporting user documentation uses Azure Rights Management to manually and custom-protect a handful of files that you have identified as being your most valuable, which warrant the highest level of protection from unauthorized access. These are usually files that only a few people should be able to access. For example, recipe instructions for your company's signature food product, or takeover plans that must not be public before a specified date.
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016

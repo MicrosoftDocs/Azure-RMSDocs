@@ -2,8 +2,7 @@
 # required metadata
 
 title: Remove templates | Azure RMS
-description:
-keywords:
+description: The default templates cannot be deleted, but they can be archived so that users do not see them.
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016

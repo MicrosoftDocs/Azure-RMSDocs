@@ -2,8 +2,7 @@
 # required metadata
 
 title: Registry settings for the RMS connector | Azure RMS
-description:
-keywords:
+description: Use the tables in the following sections only if you want to manually add or check registry settings on the servers running Exchange, SharePoint, or Windows Server, which configures the servers to use the RMS connector. The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

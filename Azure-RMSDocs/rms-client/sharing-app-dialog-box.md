@@ -2,8 +2,7 @@
 # required metadata
 
 title: Dialog box options for the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: Use this information to help you specify the options in the RMS sharing application add protection dialog box or the share protected dialog box. You will see this dialog box when you protect a file to share or you protect a file in place and choose custom permissions.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

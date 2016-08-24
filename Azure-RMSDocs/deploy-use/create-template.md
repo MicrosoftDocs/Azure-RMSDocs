@@ -2,8 +2,7 @@
 # required metadata
 
 title: Create, configure, and publish a custom template | Azure RMS
-description:
-keywords:
+description: You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the advanced features for Rights Management, which then redirects you to the Azure classic portal.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016

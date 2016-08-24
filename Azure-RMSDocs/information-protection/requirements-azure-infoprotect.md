@@ -2,8 +2,7 @@
 # required metadata
 
 title: Requirements for Azure Information Protection | Azure RMS
-description:
-keywords:
+description: To evaluate the preview release of Azure Information Protection, make sure that you have the following prerequisites. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/22/2016

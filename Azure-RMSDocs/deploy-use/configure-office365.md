@@ -2,8 +2,7 @@
 # required metadata
 
 title: Office 365&colon; Configuration for clients and online services | Azure RMS
-description:
-keywords:
+description: Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their Microsoft Office 365 credentials and they can protect files and emails, and use files and emails that have been protected by others.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

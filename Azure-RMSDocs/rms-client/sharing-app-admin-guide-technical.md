@@ -2,8 +2,7 @@
 # required metadata
 
 title: Technical overview for the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: The Microsoft Rights Management sharing application is an optional downloadable application for Microsoft Windows and other platforms that provides the following.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016

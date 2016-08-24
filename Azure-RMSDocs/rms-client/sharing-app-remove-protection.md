@@ -2,8 +2,7 @@
 # required metadata
 
 title: Remove protection from a file by using the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: To remove protection from a file (that is, unprotect a file) that was previously protected by using the RMS sharing application, use the Remove Protection option from File Explorer.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016

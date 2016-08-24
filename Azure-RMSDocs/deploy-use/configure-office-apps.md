@@ -2,8 +2,7 @@
 # required metadata
 
 title: Office apps; Configuration for clients | Azure RMS
-description:
-keywords:
+description: Use this information to determine what you need to do so that Office apps used by your end users will work with Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

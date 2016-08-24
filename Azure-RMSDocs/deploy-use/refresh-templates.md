@@ -2,8 +2,7 @@
 # required metadata
 
 title: Refresh templates | Azure RMS
-description:
-keywords:
+description: When you use Azure RMS, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates.
 author: cabailey
 manager: mbaldwin
 ms.date: 05/06/2016

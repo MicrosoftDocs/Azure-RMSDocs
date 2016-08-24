@@ -2,8 +2,7 @@
 # required metadata
 
 title: How to activate Azure Rights Management from the Azure classic portal | Azure RMS
-description:
-keywords:
+description: Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Rights Management Premium subscription.
 author: cabailey
 manager: mbaldwin
 ms.date: 06/27/2016

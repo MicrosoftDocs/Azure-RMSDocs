@@ -2,8 +2,7 @@
 # required metadata
 
 title: Azure Rights Management deployment roadmap | Azure RMS
-description:
-keywords:
+description: Use the following steps to prepare for, implement, and manage Azure Rights' Management (Azure RMS) for your organization.
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016

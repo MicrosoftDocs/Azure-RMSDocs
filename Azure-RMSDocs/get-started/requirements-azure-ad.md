@@ -2,8 +2,7 @@
 # required metadata
 
 title: Azure RMS requirements&#58; Azure AD Directory | Azure RMS
-description:
-keywords:
+description: You must have an Azure AD directory to use Azure Rights Management (Azure RMS). You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016

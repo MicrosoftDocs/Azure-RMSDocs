@@ -2,8 +2,7 @@
 # required metadata
 
 title: Rights Management sharing application administrator guide | Azure RMS
-description:
-keywords:
+description: Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the Rights Management sharing application user guide or FAQ for Microsoft Rights Management Sharing Application for Windows.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/05/2016

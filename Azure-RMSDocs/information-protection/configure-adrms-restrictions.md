@@ -2,8 +2,7 @@
 # required metadata
 
 title: HYOK restrictions | Azure Rights Management
-description:
-author: cabailey
+description: When you protect your most sensitive documents and emails, you will typically do this by applying Azure Rights Management protection to benefit from the following.
 manager: mbaldwin
 ms.date: 08/18/2016
 ms.topic: article

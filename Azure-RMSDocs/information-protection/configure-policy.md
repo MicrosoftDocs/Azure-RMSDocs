@@ -2,8 +2,7 @@
 # required metadata
 
 title: Configuring Azure Information Protection policy | Azure RMS
-description:
-keywords:
+description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the Azure Information Protection client.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/08/2016

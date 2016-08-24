@@ -2,8 +2,7 @@
 # required metadata
 
 title: Configuring super users for Azure Rights Management and discovery services or data recovery | Azure RMS
-description:
-keywords:
+description: The super user feature of Microsoft Azure RMS ensures that authorized people and services can always read and inspect the data that Azure RMS protects for your organization. And if necessary, remove the protection or change the protection that was previously applied. A super user always has full owner rights for all use licenses that was granted by the organization's RMS tenant. This ability is sometimes referred to as 'reasoning over data' and is a crucial element in maintaining control of your organization's data.
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
