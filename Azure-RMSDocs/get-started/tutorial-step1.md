@@ -8,7 +8,7 @@ author: Cabailey
 manager: mbaldwin
 ms.date: 06/29/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 

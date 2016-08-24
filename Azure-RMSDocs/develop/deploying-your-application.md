@@ -8,7 +8,7 @@ author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E

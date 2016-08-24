@@ -6,7 +6,7 @@ description: To classify documents and email messages by using Azure Information
 manager: mbaldwin
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78

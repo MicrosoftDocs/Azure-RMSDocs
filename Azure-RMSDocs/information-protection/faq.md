@@ -7,7 +7,7 @@ author: cabailey
 manager: mbaldwin
 ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd

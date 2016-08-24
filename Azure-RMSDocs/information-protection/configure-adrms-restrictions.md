@@ -6,7 +6,7 @@ description: When you protect your most sensitive documents and emails, you will
 manager: mbaldwin
 ms.date: 08/18/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126

@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails by using a
 manager: mbaldwin
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
