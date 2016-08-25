@@ -2,13 +2,12 @@
 # required metadata
 
 title: Scenario - Protect files on a file server share | Azure RMS
-description:
-keywords:
+description: This scenario and supporting user documentation uses Azure Rights Management to bulk-protect all files that you want to protect on a file server to ensure that only employees from your organization can access them, even if they are copied and saved to storage that is not under the control of your IT department, or emailed to others.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Scenario - Protect files on a file server share
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 This scenario and supporting user documentation uses Azure Rights Management to bulk-protect all files that you want to protect on a file server to ensure that only employees from your organization can access them, even if they are copied and saved to storage that is not under the control of your IT department, or emailed to others.
 

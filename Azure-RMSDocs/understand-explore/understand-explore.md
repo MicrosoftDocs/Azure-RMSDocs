@@ -6,7 +6,7 @@ description:
 keywords:
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service:
@@ -27,5 +27,5 @@ ms.reviewer: mbaldwin
 
 # Understand and Explore Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 

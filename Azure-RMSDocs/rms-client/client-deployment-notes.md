@@ -2,13 +2,12 @@
 # required metadata
 
 title: RMS client deployment notes | Azure RMS
-description:
-keywords:
+description: The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. In addition to shipping with the Rights Management sharing application for Windows, the RMS client is available as an optional download that can, with acknowledgment and acceptance of its license agreement, be freely distributed with third-party software so that clients can protect and consume content that has been protected by Rights Management services.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # RMS Client deployment notes
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 7 with SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 7 with SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
 
 The  Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. In addition to shipping with the [Rights Management sharing application for Windows](sharing-app-windows.md), the RMS client is  available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can  protect and consume content that has been  protected by Rights Management services.
 

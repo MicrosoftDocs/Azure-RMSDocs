@@ -2,13 +2,12 @@
 # required metadata
 
 title: Planning and implementing your Azure Rights Management tenant key | Azure RMS
-description:
-keywords:
+description: Use the information in this article to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Planning and implementing your Azure Rights Management tenant key
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the information in this article to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization.  Managing your own tenant key is also referred to as bring your own key, or BYOK.
 

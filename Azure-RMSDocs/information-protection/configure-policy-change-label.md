@@ -2,12 +2,11 @@
 # required metadata
 
 title: How to change or customize an existing label for Azure Information Protection | Azure Rights Management
-description:
-author: cabailey
+description: You can change or refine any of the labels that users see on the Information Protection bar, by configuring them in the Azure Information Protection policy.
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32

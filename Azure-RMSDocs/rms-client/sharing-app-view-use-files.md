@@ -2,13 +2,12 @@
 # required metadata
 
 title: View and use files that have been protected by Rights Management | Azure RMS
-description:
-keywords:
+description: When the Rights Management (RMS) sharing application is installed on your computer, you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # View and use files that have been protected by Rights Management
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 
