@@ -2,7 +2,7 @@
 # required metadata
 
 title: RMS sharing application for Windows and mobile platforms | Azure RMS
-description: The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support Rights Management, which means that all files can be protected.
+description: How the RMS sharing application supports Azure RMS as a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016

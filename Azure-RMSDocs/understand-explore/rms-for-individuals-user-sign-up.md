@@ -2,10 +2,10 @@
 # required metadata
 
 title: How users sign up for RMS for individuals | Azure RMS
-description: To sign up for this free account, users request it by visiting the Microsoft Rights Management page, and provide their work or school email address. 
+description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
