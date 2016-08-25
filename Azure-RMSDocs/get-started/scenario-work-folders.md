@@ -5,7 +5,7 @@ title: Scenario - Configure work folders for persistent protection | Azure RMS
 description: This scenario and supporting user documentation uses Azure Rights Management to apply persistent protection to Office documents in Work Folders. Work Folders uses a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices. Although Work Folders provides its own encryption to protect the files, this protection is lost if the files are then moved outside the Work Folders environment. 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

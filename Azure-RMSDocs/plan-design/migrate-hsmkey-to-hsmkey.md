@@ -5,7 +5,7 @@ title: Step 2&colon; HSM-protected key to HSM-protected key migration | Azure RM
 description: These instructions are part of the migration path from AD RMS to Azure Rights Management, and are applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Rights Management with a HSM-protected tenant key in Azure Key Vault. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -5,7 +5,7 @@ title: Rights Management sharing application user guide | Azure RMS
 description: The Microsoft Rights Management (RMS) sharing application for Windows helps you keep important documents and pictures safe from people who shouldn't see them, even if you email them or save them to another device. You can also use this application to open and use files that other people have protected by using the same Rights Management technology.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

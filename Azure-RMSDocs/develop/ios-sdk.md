@@ -6,7 +6,7 @@ description: iOS and OS X applications can use the RMS SDK 4.2 to enable integr
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

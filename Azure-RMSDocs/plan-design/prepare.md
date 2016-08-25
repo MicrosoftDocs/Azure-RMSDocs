@@ -5,7 +5,7 @@ title: Preparing for Azure Rights Management | Azure RMS
 description: After you have signed up for a cloud subscription and established your organization with an account for Microsoft Office 365 or Azure Active Directory, you're ready to enable the Rights Management service.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

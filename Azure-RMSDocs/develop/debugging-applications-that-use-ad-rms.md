@@ -6,7 +6,7 @@ description: The following topic shows how to debug your application and use the
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -5,7 +5,7 @@ title: Scenario - Executives securely exchange privileged information | Azure RM
 description: This scenario and supporting user documentation uses Azure Rights Management so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. The emails and any attachments will be automatically protected by Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

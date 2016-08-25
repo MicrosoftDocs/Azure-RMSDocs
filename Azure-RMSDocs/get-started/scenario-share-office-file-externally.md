@@ -5,7 +5,7 @@ title: Scenario - Share an Office file with users in another organization | Azur
 description: This scenario and supporting user documentation uses Azure Rights Management so that users can safely email an Office file with people in another organization. For example, the Office file might be a Word document, Excel spreadsheet, or PowerPoint presentation that contains price list information for a partner, a list of products for a reseller, or a list of delivery time lines with potential customers. When users follow the instructions, the file attached to the email message will be protected by Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

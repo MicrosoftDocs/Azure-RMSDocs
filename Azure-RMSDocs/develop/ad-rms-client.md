@@ -6,7 +6,7 @@ description: The AD RMS Client 2.1 is software designed for your client compu
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

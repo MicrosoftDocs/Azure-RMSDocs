@@ -6,7 +6,7 @@ description: An introduction tutorial to quickly try out Microsoft Azure Rights 
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

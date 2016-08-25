@@ -5,7 +5,7 @@ title: Windows PowerShell script for Azure RMS protection by using File Server R
 description: This page contains the sample script to copy and edit, as described in RMS protection with Windows Server File Classification Infrastructure.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
