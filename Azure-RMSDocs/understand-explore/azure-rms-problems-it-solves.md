@@ -2,13 +2,12 @@
 # required metadata
 
 title: What Problem Does Azure RMS Solve | Azure RMS
-description:
-keywords:
+description: Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # What problems does Azure RMS solve?
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
 

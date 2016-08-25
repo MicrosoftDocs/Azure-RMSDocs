@@ -2,13 +2,12 @@
 # required metadata
 
 title: Remove templates | Azure RMS
-description:
-keywords:
+description: The default templates cannot be deleted, but they can be archived so that users do not see them.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # Remove (archive) templates
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 The default templates cannot be deleted, but they can be archived so that users do not see them.
 

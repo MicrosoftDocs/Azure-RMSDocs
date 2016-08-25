@@ -2,13 +2,12 @@
 # required metadata
 
 title: Configuring usage rights for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: When you set protection on files or emails by using Azure Rights Management (Azure RMS) and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure RMS, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Configuring usage rights for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 When you set protection on files or emails by using Azure Rights Management (Azure RMS) and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure RMS, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services. For example, in the Azure  classic portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 
@@ -46,7 +45,7 @@ The following table lists and describes the usage rights that Rights Management 
 |Common name: **Forward** <br /><br />Encoding in policy: **FORWARD**|Enables the option to forward an email message and to add recipients to the **To** and **Cc** lines. This right does not apply to documents; only email messages.<br /><br />Does not allow the forwarder to grant rights to other users as part of the forward action.|Office custom rights: Denied when using the **Do Not Forward** standard policy.<br /><br />Name in the Azure classic portal: **Forward**<br /><br />Name in AD RMS templates: **Forward** <br /><br />API constant or value: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Common name: **Full Control** <br /><br />Encoding in policy: **OWNER**|Grants all rights to the document and all available actions can be performed.<br /><br />Includes the ability to remove protection and re-protect a document.|Office custom rights: As the **Full Control** custom option.<br /><br />Name in the Azure classic portal: **Full Control**<br /><br />Name in AD RMS templates: **Full Control** <br /><br />API constant or value: `IPC_GENERIC_ALL L"OWNER"`|
 |Common name: **Print** <br /><br />Encoding in policy: **PRINT**|Enables the options to print the content.|Office custom rights: As the **Print Content** option in custom permissions. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Print**<br /><br />Name in AD RMS templates: **Print** <br /><br />API constant or value: `IPC_GENERIC_PRINT L"PRINT"`|
-|Common name: **Reply** <br /><br />Encoding in policy: **PRINT**|Enables the **Reply** option in an email client, without allowing changes in the **To** or **Cc** lines.|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply**<br /><br />Name in AD RMS templates: **Reply** <br /><br />API constant or value: `IPC_EMAIL_REPLY`|
+|Common name: **Reply** <br /><br />Encoding in policy: **REPLY**|Enables the **Reply** option in an email client, without allowing changes in the **To** or **Cc** lines.|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply**<br /><br />Name in AD RMS templates: **Reply** <br /><br />API constant or value: `IPC_EMAIL_REPLY`|
 |Common name: **Reply All** <br /><br />Encoding in policy: **REPLYALL**|Enables the **Reply All** option in an email client, but doesn’t allow the user to add recipients to the **To** or **Cc** lines.|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply All**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |Common name: **View, Open, Read** <br /><br />Encoding in policy: **VIEW**|Allows the user to open the document and see the content.|Office custom rights: As the **Read** custom policy, **View** option.<br /><br />Name in the Azure classic portal: **View**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_GENERIC_READ L"VIEW"`|
 |Common name: **Copy** <br /><br />Encoding in policy: **EXTRACT**|Enables options to copy data (including screen captures) from the document into the same or another document.<br /><br />In some applications it also allows the whole document to be saved in unprotected form.|Office custom rights: As the **Allow users with Read access to copy content** custom policy option.<br /><br />Name in the Azure classic portal: **Copy and Extract content**<br /><br />Name in AD RMS templates: **Extract** <br /><br />API constant or value: `IPC_GENERIC_EXTRACT L"EXTRACT"`|

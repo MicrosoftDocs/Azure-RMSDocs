@@ -2,13 +2,12 @@
 # required metadata
 
 title: RMS for individuals and Azure Rights Management | Azure RMS
-description:
-keywords:
+description: RMS for individuals is a free self-service subscription for users in an organization who have been sent sensitive files that have been protected by Microsoft Azure Rights Management (Azure RMS), but they cannot be authenticated because their IT department does not manage an account for them in Azure. For example, the IT department doesn't have Office 365 or use Azure services.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # RMS for individuals and Azure Rights Management
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 RMS for individuals is a free self-service subscription for users in an organization who have been sent sensitive files that have been protected by Microsoft Azure Rights Management (Azure RMS), but they cannot be authenticated because their IT department does not manage an account for them in Azure. For example, the IT department doesn't have Office 365 or use Azure services.
 

@@ -2,13 +2,12 @@
 # required metadata
 
 title: Rapid deployment guide for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Use this guide in addition to the configuration information in the Deploy & Use section, to help you more quickly deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Rapid deployment guide for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
 

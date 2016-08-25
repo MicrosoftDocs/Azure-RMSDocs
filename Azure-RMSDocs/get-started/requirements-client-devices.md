@@ -2,13 +2,12 @@
 # required metadata
 
 title: Azure RMS requirements&#58; Client device | Azure RMS
-description:
-keywords:
+description: Use the following sections to identify which devices support Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # Azure RMS requirements: Client devices that support Azure RMS
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following sections to identify which devices support Azure Rights Management (Azure RMS).
 
