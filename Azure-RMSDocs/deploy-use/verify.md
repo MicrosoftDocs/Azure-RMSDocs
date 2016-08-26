@@ -2,10 +2,10 @@
 # required metadata
 
 title: Verifying Azure Rights Management | Azure RMS
-description: After you have activated Azure RMS and performed any additional configuration steps that are required for your organization, you can verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
+description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

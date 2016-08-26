@@ -2,10 +2,10 @@
 # required metadata
 
 title: Installing Windows PowerShell for Azure Rights Management | Azure RMS
-description: Use the following information to help you install Windows PowerShell for Microsoft Azure RMS.
+description: Instructions to install Windows PowerShell for Microsoft Azure RMS. The name of this module is AADRM.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -2,10 +2,10 @@
 # required metadata
 
 title: Microsoft-managed - tenant key lifecycle operations | Azure RMS
-description: If Microsoft manages your tenant key for Azure Rights Management (the default), use the following sections for more information about the lifecycle operations that are relevant to this topology.
+description: Information about the lifecycle operations that are relevant if Microsoft manages your tenant key for Azure Rights Management (the default).
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
