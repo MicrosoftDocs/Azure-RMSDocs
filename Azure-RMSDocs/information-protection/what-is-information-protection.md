@@ -1,8 +1,8 @@
-﻿---
+---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Rights Management
-description: An overview of the Azure Information Protection service, now in preview
+description: An overview of the Azure Information Protection service, now in preview.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/29/2016

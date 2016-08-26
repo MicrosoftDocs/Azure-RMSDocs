@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection quick start tutorial step 1 | Azure Rights Management
-description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you about 10 minutes.
+description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/291/2016
