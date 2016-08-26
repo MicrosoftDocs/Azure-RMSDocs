@@ -2,10 +2,10 @@
 # required metadata
 
 title: Use keyboard shortcuts in the Rights Management sharing application | Azure RMS
-description: When you use the RMS sharing application, press the Alt key to see the available access keys, and then press Alt + the access key to select an option.
+description: Instructions how to use keyboard shortcuts with the RMS sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
