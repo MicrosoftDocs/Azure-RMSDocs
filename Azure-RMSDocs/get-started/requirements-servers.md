@@ -2,13 +2,12 @@
 # required metadata
 
 title: Azure RMS requirements&#58; On-premises servers that support Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Identify the on-premises server products that are supported with Azure RMS when you use the Azure RMS connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # Azure RMS requirements: On-premises servers that support Azure RMS
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 The following on-premises server products are supported with Azure RMS when you use the Azure RMS connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS. In addition, this configuration requires that you configure directory synchronization between your Active Directory forests and Azure Active Directory.
 

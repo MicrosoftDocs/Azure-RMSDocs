@@ -2,13 +2,12 @@
 # required metadata
 
 title: BYOK pricing and restrictions | Azure RMS
-description:
-keywords:
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # BYOK pricing and restrictions
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Organizations that have a subscription that includes Azure Rights Management can use customer-managed keys (BYOK) in Azure Key Vault and log its usage at no extra charge. However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).

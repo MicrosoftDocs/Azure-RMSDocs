@@ -2,13 +2,12 @@
 # required metadata
 
 title: Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI | Azure RMS
-description:
-keywords:
+description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
-*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 

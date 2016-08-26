@@ -2,13 +2,12 @@
 # required metadata
 
 title: Configuring servers for the Azure Rights Management connector | Azure RMS
-description:
-keywords:
+description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Configuring servers for the Azure Rights Management connector
 
-*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).

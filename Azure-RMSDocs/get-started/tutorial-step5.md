@@ -6,9 +6,9 @@ description: The last step of a tutorial to quickly try out Microsoft Azure Righ
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
@@ -29,7 +29,7 @@ ms.custom:
 
 # Azure RMS quick start Step 5: Track your protected document
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Jump to: 

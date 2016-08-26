@@ -2,13 +2,12 @@
 # required metadata
 
 title: Office 365&colon; Configuration for clients and online services | Azure RMS
-description:
-keywords:
+description: Information and instructions for admins to configure Office 365 to work with Azure Rights Management (Azure RMS). 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Office 365: Configuration for clients and online services
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Because Office 365 natively supports Azure RMS, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
 

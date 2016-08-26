@@ -2,13 +2,12 @@
 # required metadata
 
 title: How to activate Azure Rights Management from the Office 365 admin center preview | Azure RMS
-description:
-keywords:
+description: Activation instructions for Azure RMS when you have access to the new, preview version of the Office 365 admin center (Office 365 Admin center preview).
 author: cabailey
 manager: mbaldwin
-ms.date: 07/03/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Office 365 admin center preview
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Use these instructions only if you're using the new, preview version of the Office 365 admin center (**Office 365 Admin center preview**).
