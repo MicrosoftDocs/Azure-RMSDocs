@@ -2,13 +2,12 @@
 # required metadata
 
 title: Information and support for Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Resources for additional information about Microsoft Azure RMS. Includes information about the product team's blog, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Information and support for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following resources for additional information about Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS).
 

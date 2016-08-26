@@ -2,13 +2,12 @@
 # required metadata
 
 title: Other applications that support the RMS APIs - Installation and configuration | Azure RMS
-description:
-keywords:
+description: Understand how Azure Rights Management (Azure RMS) can support other applications to protect your organization's data.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Other applications that support the RMS APIs
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the following information to help you understand how Azure Rights Management (Azure RMS) can support other applications to protect your organization’s data.
 

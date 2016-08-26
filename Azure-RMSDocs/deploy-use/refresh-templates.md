@@ -2,13 +2,12 @@
 # required metadata
 
 title: Refresh templates | Azure RMS
-description:
-keywords:
+description: When you use Azure RMS, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # Refreshing templates for users
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 When you use Azure RMS, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates:
 

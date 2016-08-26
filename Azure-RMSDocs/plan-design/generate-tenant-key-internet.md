@@ -2,13 +2,12 @@
 # required metadata
 
 title: Generate and transfer your tenant key – over the Internet: RETIRED CONTENT | Azure RMS
-description:
-keywords:
+description: The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
@@ -28,6 +27,6 @@ ms.suite: ems
 
 # Generate and transfer your tenant key – over the Internet: RETIRED CONTENT
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 

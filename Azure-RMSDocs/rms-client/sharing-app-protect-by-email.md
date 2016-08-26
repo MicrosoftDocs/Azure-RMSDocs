@@ -2,13 +2,12 @@
 # required metadata
 
 title: Protect a file that you share by email by using the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: Instructions how to safely share a document by email.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Protect a file that you share by email by using the Rights Management sharing application
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When you protect a file that you share by email, it creates a new version of the original file. The original file remains unprotected and the new version is protected and automatically attached to an email that you then send.
 

@@ -2,13 +2,12 @@
 # required metadata
 
 title: Frequently asked questions for Azure Information Protection preview | Azure Information Protection
-description:
-keywords:
+description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
@@ -63,7 +62,7 @@ This preview release has the following limitations. Look out for announcements o
 
 ## What subscription do I need to try Azure Information Protection?
 
-For the preview release, you can use any subscription that includes Azure Rights Management. Azure Information Protection is  available in all regions. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+For the preview release, you can use any Office 365 subscription that includes protecting Office documents and emails by using Azure Rights Management. Azure Information Protection is  available in all regions. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
 
 To configure the Azure Information Protection policies in the Azure portal, you must have an Azure subscription. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
