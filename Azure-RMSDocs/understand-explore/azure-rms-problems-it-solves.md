@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: What Problem Does Azure RMS Solve | Azure RMS
-description: Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
+title: What Problems Does Azure RMS Solve | Azure RMS
+description: Identify business requirements or problems that your organization might have, and understand how Azure RMS can address these.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -2,10 +2,10 @@
 # required metadata
 
 title: Rights Management sharing application&colon; Version release history | Azure RMS
-description: The Rights Management team regularly updates the Rights Management sharing application for fixes and new functionality. Use the following information to see what's new or changed in a release. The most current release is listed first.
+description: See what's new or changed in a release of the Rights Management sharing application for Windows. 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

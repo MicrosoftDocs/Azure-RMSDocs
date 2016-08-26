@@ -2,10 +2,10 @@
 # required metadata
 
 title: Copy a template | Azure RMS
-description: If you want to create a new template that has very similar settings to an existing template, select the original template on the TEMPLATES page, click COPY, specify a unique name, and make the changes that you need.
+description: Instructions to copy a template, which is an easy way to create a new template that has very similar settings to an existing template.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
