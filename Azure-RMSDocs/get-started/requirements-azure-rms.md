@@ -2,10 +2,10 @@
 # required metadata
 
 title: Requirements for Azure Rights Management | Azure RMS
-description: To deploy Microsoft Azure Rights Management (Azure RMS) in your organization, make sure that you have the following prerequisites. You can then use the Azure Rights Management deployment roadmap to deploy Rights Management for your organization.
+description: Identify the prerequisites to deploy Microsoft Azure Rights Management (Azure RMS) in your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

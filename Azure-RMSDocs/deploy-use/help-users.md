@@ -2,10 +2,10 @@
 # required metadata
 
 title: Helping users to protect files by Using Azure Rights Management | Azure RMS
-description: After you have deployed and configured Azure Rights Management (Azure RMS) for your organization, provide help and guidance for users, administrators, and your help desk.
+description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured Azure Rights Management (Azure RMS) for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -2,9 +2,9 @@
 # required metadata
 
 title: Installing the Azure Information Protection client | Azure Rights Management
-description: To classify documents and email messages by using Azure Information Protection, you must first install the Azure Information Protection client. This installation adds an Information Protection bar to your Office applications (Word, Excel, PowerPoint, Outlook) that displays the classification labels for your organization, in addition to a new Protection group on the Home tab (Word, Excel, PowerPoint), that has a button named Protect.
+description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

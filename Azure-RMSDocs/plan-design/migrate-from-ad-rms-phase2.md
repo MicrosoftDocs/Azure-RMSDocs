@@ -2,10 +2,10 @@
 # required metadata
 
 title: Migrating from AD RMS to Azure Rights Management - Phase 2 | Azure RMS
-description: Use the following information for Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover step 5 from Migrating from AD RMS to Azure Rights Management.
+description: Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS), covering step 5 from Migrating from AD RMS to Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

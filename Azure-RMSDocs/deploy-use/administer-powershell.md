@@ -2,10 +2,10 @@
 # required metadata
 
 title: Administering Azure Rights Management by Using Windows PowerShell | Azure RMS
-description: Although you can activate Microsoft Azure Rights Management (Azure RMS) by using the Office 365 admin center or the Azure classic portal, you can also use the Windows PowerShell module for (AADRM) to do this.
+description: Learn how you can use the Windows PowerShell module for Azure RMS (AADRM) to administer this service for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/18/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
