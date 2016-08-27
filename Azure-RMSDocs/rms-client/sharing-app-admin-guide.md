@@ -167,7 +167,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     -   For Windows 7, 32-bit:
 
-            pushd 86\win7
+            pushd x86\win7
             aadrmpep.exe /configureO2010
             popd
 
