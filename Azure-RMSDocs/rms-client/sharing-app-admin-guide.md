@@ -5,7 +5,7 @@ title: Rights Management sharing application administrator guide | Azure RMS
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -145,7 +145,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
     setup.exe /s /configureO2010Admin
     ```
 
-2.  On each computer on which you will install the RMS sharing application, users must run the following command (does not need elevated privileges). There are different ways to achieve this, including asking users to run the command (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
+2.  On each computer on which you will install the RMS sharing application, users must run the following commands (they do not need elevated privileges). There are different ways to achieve this, including asking users to run the commands (for example, a link in an email message or a link on the help desk portal) or you can add it to their logon script:
 
     -   For Windows 10, Windows 8.1  and Windows 8, 64-bit:
 
@@ -161,9 +161,16 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     -   For Windows 7, 64-bit:
 
-        ```
-        x64\win7\aadrmpep.exe /configureO2010
-        ```
+            pushd x64\win7
+            aadrmpep.exe /configureO2010
+            popd
+
+    -   For Windows 7, 32-bit:
+
+            pushd x86\win7
+            aadrmpep.exe /configureO2010
+            popd
+
 
 To verify success, see the [Verifying installation success](#verifying-installation-success) section in this article.
 
