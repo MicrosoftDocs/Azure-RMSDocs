@@ -5,7 +5,7 @@ title: Rights Management sharing application administrator guide | Azure RMS
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
