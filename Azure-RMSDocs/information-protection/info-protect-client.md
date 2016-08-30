@@ -4,7 +4,7 @@
 title: Installing the Azure Information Protection client | Azure Rights Management
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -50,7 +50,7 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client for users
 
-- You can script and automate the installation of the Azure Information Protection client by packaging AZInfoProtection.exe and using standard [Windows Installer (msiexec) command line options](https://technet.microsoft.com/library/cc759262(v=ws.10).aspx).
+- You can script and automate the installation of the Azure Information Protection client by packaging AZInfoProtection.exe and using standard [Windows Installer (msiexec) command line options](https://msdn.microsoft.com/library/windows/desktop/aa367988(v=vs.85).aspx).
 
     For example, if the packaged version you create is named InfoProtect.msi and you want to install the client silently: `msiexec /qn InfoProtection.msi`
 
