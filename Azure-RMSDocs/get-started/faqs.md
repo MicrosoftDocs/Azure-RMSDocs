@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Rights Management | Azure RMS
 description: Some frequently asked questions for Microsoft Azure Rights Management, also known as Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -127,7 +127,7 @@ Initially, Azure RMS didn’t support migration from an on-premises deployment 
 For more information, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 ## We really want to use BYOK with Azure RMS but learned that this isn’t compatible with Exchange Online—what’s your advice?
-Don’t let this current limitation delay your Azure RMS deployment. If you have Exchange Online and want to use bring your own key (BYOK), we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. That way, you get all the benefits of protecting your important files and emails now, with the option to move to BYOK later (for example, when Exchange Online does support BYOK).
+Don’t let this current limitation delay your Azure RMS deployment. If you have Exchange Online and want to use bring your own key (BYOK), we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. That way, you get all the benefits of protecting your important files and emails now, with the option to move to BYOK later (for example, when Exchange Online does support BYOK). When you do move to BYOK, your previously protected documents and emails will remain accessible by using an archived key.
 
 However, if your company policies require you to use a hardware security module (HSM) and this would otherwise block your Azure RMS deployment, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange. For more information, see [BYOK pricing and restrictions](../plan-design/byok-price-restrictions.md) from [Planning and iplementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
