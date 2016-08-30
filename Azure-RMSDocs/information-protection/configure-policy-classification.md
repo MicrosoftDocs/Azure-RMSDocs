@@ -4,7 +4,7 @@
 title: How to configure conditions for automatic and recommended classification for Azure Information Protection | Azure Rights Management
 description: When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
  
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved.
 
-When you configure conditions, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
+When you configure conditions, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
 How multiple conditions are evaluated when they apply to more than one label:
 
