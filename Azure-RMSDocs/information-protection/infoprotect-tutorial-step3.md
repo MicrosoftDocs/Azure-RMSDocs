@@ -5,9 +5,9 @@ title: Azure Information Protection quick start tutorial step 3 | Azure Rights M
 description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
@@ -34,7 +34,7 @@ In this step, you'll install the Azure Information Protection client so that the
 
 1. On a PC that has Office installed (but Word is not currently open), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
 
-2. Run **AZInfoProtection.exe** and follow the prompts to install the client.
+2. Run **AzInfoProtection_v233.exe** and follow the prompts to install the client.
 
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 

@@ -2,13 +2,12 @@
 # required metadata
 
 title: Protect a file on a device (protect in-place) by using the Rights Management sharing application | Azure RMS
-description:
-keywords:
+description: Instructions how to safely store a file on your computer, a server, or another storage device.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Protect a file on a device (protect in-place) by using the Rights Management sharing application
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When you protect a file in-place, it replaces the original, unprotected file. You can then leave the file where it is, copy it to another folder or device, or share the folder that it is in and the file will remain protected. You could also attach the protected file to an email message, although the recommended way to share a protected file by email is directly from File Explorer or an Office application (see [Protect a file that you share by email by using the Rights Management sharing application](sharing-app-protect-by-email.md)).
 

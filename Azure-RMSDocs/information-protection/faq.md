@@ -2,13 +2,12 @@
 # required metadata
 
 title: Frequently asked questions for Azure Information Protection preview | Azure Information Protection
-description:
-keywords:
+description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd

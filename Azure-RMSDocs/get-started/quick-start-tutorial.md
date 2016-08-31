@@ -6,9 +6,9 @@ description: An introduction tutorial to quickly try out Microsoft Azure Rights 
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Quick start tutorial for Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Jump to: 
 > [!div class="op_single_selector"]

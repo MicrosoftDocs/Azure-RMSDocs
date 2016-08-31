@@ -2,13 +2,12 @@
 # required metadata
 
 title: Monitor the Azure Rights Management connector | Azure RMS
-description:
-keywords:
+description: Information to help you monitor the connector and your organization's use of Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/08/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Monitor the Azure Rights Management connector
 
-*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of Azure RMS.
 

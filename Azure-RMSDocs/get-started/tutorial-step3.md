@@ -6,9 +6,9 @@ description: The third step of a tutorial to quickly try out Microsoft Azure Rig
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure RMS quick start Step 3: Email your document that you want to protect
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 
 Jump to: 

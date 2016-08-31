@@ -2,13 +2,12 @@
 # required metadata
 
 title: Decommissioning and deactivating Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Information and instructions if you decide you no longer want to use this information protection solution.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Decommissioning and deactivating Azure Rights Management
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 You are always in control of whether your organization protects content by using [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), and if you decide you no longer want to use this information protection solution, you have the assurance that you won’t be locked out of content that was previously protected. If you don’t need continued access to previously protected content, you simply deactivate the service and you can let your subscription for Azure Rights Management expire. For example, this would be appropriate for when you have completed testing [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] before you deploy it in a production environment.
 

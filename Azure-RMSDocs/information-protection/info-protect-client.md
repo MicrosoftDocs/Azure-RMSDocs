@@ -2,12 +2,11 @@
 # required metadata
 
 title: Installing the Azure Information Protection client | Azure Rights Management
-description:
-author: cabailey
+description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
@@ -43,7 +42,7 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AZInfoProtection.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AzInfoProtection_v233.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
 
     Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
 
@@ -51,9 +50,9 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client for users
 
-- You can script and automate the installation of the Azure Information Protection client by packaging AZInfoProtection.exe and using standard [Windows Installer (msiexec) command line options](https://technet.microsoft.com/library/cc759262(v=ws.10).aspx).
+- You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection_v233.exe /help`.
 
-    For example, if the packaged version you create is named InfoProtect.msi and you want to install the client silently: `msiexec /qn InfoProtection.msi`
+    For example, to install the client silently: `AzInfoProtection_v233.exe /passive | quiet`
 
 
 ## To uninstall the Azure Information Protection client

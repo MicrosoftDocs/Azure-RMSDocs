@@ -2,13 +2,12 @@
 # required metadata
 
 title: Operations for your Azure Rights Management tenant key | Azure RMS
-description:
-keywords:
+description: Identify the different levels of control and responsibility that you have for your Azure Rights Management (Azure RMS) tenant key.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Operations for your Azure Rights Management tenant key
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Microsoft Azure Rights Management (Azure RMS) tenant key after it is implemented.
 

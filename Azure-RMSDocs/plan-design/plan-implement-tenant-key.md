@@ -2,13 +2,12 @@
 # required metadata
 
 title: Planning and implementing your Azure Rights Management tenant key | Azure RMS
-description:
-keywords:
+description: Information to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/29/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Planning and implementing your Azure Rights Management tenant key
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Use the information in this article to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization.  Managing your own tenant key is also referred to as bring your own key, or BYOK.
 
@@ -71,7 +70,7 @@ The second diagram shows the additional steps required when you manage your own 
 
 ![Azure RMS tenant key lifecycle - managed by you, BYOK](../media/RMS_BYOK_onprem4.png)
 
-If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).
+If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps). If you later decide to manage your tenant key, you can do so, and your previously protected documents and emails will remain accessible by using an archived key. 
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 

@@ -2,13 +2,12 @@
 # required metadata
 
 title: How users sign up for RMS for individuals | Azure RMS
-description:
-keywords:
+description: Sign up instructions for this free account, and technical information about how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # How users sign up for RMS for individuals
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
 To sign up for this free account, you request it by visiting the [Microsoft Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign-up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the sharing application for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
 
