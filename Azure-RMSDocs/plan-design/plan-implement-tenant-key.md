@@ -5,7 +5,7 @@ title: Planning and implementing your Azure Rights Management tenant key | Azure
 description: Information to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -70,7 +70,7 @@ The second diagram shows the additional steps required when you manage your own 
 
 ![Azure RMS tenant key lifecycle - managed by you, BYOK](../media/RMS_BYOK_onprem4.png)
 
-If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps). If you later decide to manage your tenant key, you can do so, and your previously protected documents and emails will remain accessible by using an archived key. 
+If you decide to let Microsoft manage your tenant key, no further action is required for you to generate the key and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).  
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
@@ -80,7 +80,7 @@ Use the information and procedures in this section if you have decided to genera
 
 
 > [!IMPORTANT]
-> If you have already started to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (the service is activated) and you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) before you run these procedures. Depending on your scenario and requirements, you can still use BYOK but with some limitations or additional steps.
+> If you have started to use Azure RMS with a tenant key that is managed by Microsoft and you now want to manage your tenant key (move to BYOK), your previously protected documents and emails will remain accessible by using an archived key. However, if you have users who run Office 2010, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) before you run these procedures. These computers will need some additional configuration steps.
 > 
 > Also [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if your organization has specific policies for handling keys.
 
