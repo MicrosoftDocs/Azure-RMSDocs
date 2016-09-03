@@ -2,7 +2,7 @@
 # required metadata
 
 title: What Problems Does Azure RMS Solve | Azure RMS
-description: Identify business requirements or problems that your organization might have, and understand how Azure RMS can address these.
+description: Identify information protection requirements or problems that your organization might have, and understand how the Azure RMS technology can address these.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -27,9 +27,11 @@ ms.suite: ems
 
 # What problems does Azure RMS solve?
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-Use the following table to identify business requirements or problems that your organization might have, and how Azure RMS can address these.
+Use the following table to identify business requirements or problems that your organization might have for protecting documents and emails, and how the Azure RMS technology can address these.
+
+Azure RMS is the protection technology used by Azure Information Protection.
 
 |Requirement or problem|Solved by Azure RMS|
 |--------------------------|-----------------------|
