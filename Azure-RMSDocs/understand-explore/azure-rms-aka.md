@@ -42,7 +42,7 @@ Have you seen references to *Information Rights Management*, often abbreviated t
 > [!TIP]
 > You'll find many of these product and service names, and their related terms in [Terminology for Azure Rights Management](../get-started/terminology.md).
 
-Now, the Azure RMS protection is included in Azure Information Protection when you purchase it as a standalone service, or as part of one of the security suites, Enterprise Mobility + Security suite (EMS) or Secure Productive Enterprise suite (SPE). The Azure RMS technology also remains in the Office products and services.
+Now, the Azure RMS protection is included in Azure Information Protection, which you can purchase as a standalone service, or as part of one of the security suites, Enterprise Mobility + Security suite (EMS) or Secure Productive Enterprise suite (SPE). The Azure RMS technology also remains in the Office products and services.
 
 For more information about how you can purchase or evaluate Azure Information Protection, and the different features that are available for the subscription plans, see the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) marketing site.
 
