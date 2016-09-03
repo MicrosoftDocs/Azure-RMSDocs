@@ -5,7 +5,7 @@
 # [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
 # [Azure Information Protection (preview)](what-is-information-protection.md)
-## [What is Azure Information Protection?](what-is-information-protection.md)
+## [What is Azure Information Protection?](what-is-information-protection-preview.md)
 ## [Requirements](requirements-azure-infoprotect.md)
 ## [Quick start tutorial](infoprotect-quick-start-tutorial.md)
 ### [Step 1: Activate the Rights Management service](infoprotect-tutorial-step1.md)
