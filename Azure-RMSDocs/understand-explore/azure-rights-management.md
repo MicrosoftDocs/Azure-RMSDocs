@@ -28,7 +28,8 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Azure Information Protection helps you classify and label your documents and emails, which can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.  
+Azure Information Protection helps you classify and label your documents and emails, which can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.
+
 The Azure Information Protection client adds a bar to Office applications, that makes it easy for users to select classification labels. The protection is added as a configuration of the label, and uses Azure Rights Management (Azure RMS) to apply usage rights and restrictions to the document or email.   
 
 Azure Rights Management is a cloud service that is integrated into other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud. 
