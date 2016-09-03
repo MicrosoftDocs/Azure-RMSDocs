@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use the following table to identify business requirements or problems that your organization might have for protecting documents and emails, and how the Azure RMS technology can address these.
 
-Azure RMS is the protection technology used by Azure Information Protection.
+Azure RMS is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
 
 |Requirement or problem|Solved by Azure RMS|
 |--------------------------|-----------------------|
