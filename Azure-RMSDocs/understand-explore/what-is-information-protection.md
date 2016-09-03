@@ -42,7 +42,7 @@ These templates can be part of a label's configuration, so that when a specific 
 
 Azure Information Protection integrates with end user's existing workflows when the Azure Information Protection client is installed. This client installs an Information Protection bar to Office applications, making it easy for end users to select labels for the correct classification, and where necessary, protect their documents and emails.
 
-For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md).
+For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
 Know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
 
