@@ -46,7 +46,7 @@ For more information about the Azure Rights Management protection, see [What is 
 
 Know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
 
-
+## Resources for Azure Information Protection
 
 - Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/)
 
