@@ -29,7 +29,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Azure Rights Management (Azure RMS) is the protection technology used by Azure Information Protection.
+Azure Rights Management (Azure RMS) is the protection technology used by [Azure Information Protection](what-is-information-protection.md).
 
 This cloud-based service uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization’s boundaries.
 
