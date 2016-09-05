@@ -41,9 +41,6 @@ This means that all documents and emails that are protected by using the Azure R
 ## What subscription do I need for Azure Information Protection and what features are included?
 All the subscription information is now on the Azure Information Protection site. Note that some features in the documentation might be not available to you if your subscription does not support those features.
 
-## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how it really works and how to take control of the accounts?
-You’ll find answers to these questions in [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md) and related articles.
-
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
 The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
@@ -97,7 +94,7 @@ In addition, there are FAQs designed for end-users:
 
 -----
 
-##### Specific to the classification and labeling functionality in Azure Information Protection:
+#### Specific to the classification and labeling functionality in Azure Information Protection:
 
 ## What can I do with Azure Information Protection?
 
