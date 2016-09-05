@@ -26,7 +26,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 # What is Azure Information Protection?
 
->*Applies to: Azure Information Protection*
+>*Applies to: Azure Information Protection preview*
 
 Azure Information Protection lets you classify, label, and protect your documents and emails. When you classify this data, persistent labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. For your most sensitive data, you can also use Azure Rights Management encryption, identity, and authorization policies, to help prevent data loss. 
 
