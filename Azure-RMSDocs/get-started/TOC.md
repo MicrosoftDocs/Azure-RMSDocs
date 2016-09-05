@@ -1,4 +1,4 @@
-# [Understand & Explore](/rights-management/understand-explore/what-is-information-protection.md)
+# [Understand & Explore](/rights-management/understand-explore/azure-rights-management.md)
 # [Get Started](requirements-azure-rms.md)
 ## [Requirements](requirements-azure-rms.md)
 ### [Cloud subscriptions](requirements-subscriptions.md)
