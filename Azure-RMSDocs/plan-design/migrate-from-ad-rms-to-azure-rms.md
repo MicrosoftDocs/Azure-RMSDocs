@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Migrating from AD RMS to Azure Rights Management | Azure RMS
-description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS). After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure RMS.
+title: Migrating from AD RMS to Azure Rights Management | Azure Information Protection
+description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure Information Protection.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -24,25 +24,25 @@ ms.suite: ems
 
 ---
 
-# Migrating from AD RMS to Azure Rights Management
+# Migrating from AD RMS to Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS). After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure RMS.
+Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use the Azure Rights Management service from Azure Information Protection.
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure RMS,  the business problems that it can solve, what it looks like to administrators and users, and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+-   For an introduction to Azure Information Protection, see [What is Azure Azure Information Protection?](../information-protection/what-is-information-protection.md)
 
--   For a comparison of Azure RMS with AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
+-   For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
-## Prerequisites for migrating AD RMS to Azure RMS
-Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
+## Prerequisites for migrating AD RMS to Azure Information Protection
+Before you start the migration to Azure Information Protection, make sure that the following prerequisites are in place and that you understand any limitations.
 
 
 - **A supported RMS deployment:**
     
-    - The following releases of AD RMS support a migration to Azure RMS:
+    - The following releases of AD RMS support a migration to Azure Information Protection:
     
         - Windows Server 2008 R2 (x64)
         
@@ -52,7 +52,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
     - Cryptographic Mode 2:
     
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - All valid AD RMS topologies are supported:
     
@@ -62,16 +62,16 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
         - Multiple forests, multiple RMS clusters
         
-    Note: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
+    Note: By default, multiple RMS clusters migrate to a single Azure Information Protection tenant. If you want separate Azure Information Protection tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure Information Protection tenant.
 
-- **All requirements to run Azure RMS, including an Azure RMS tenant (not activated):**
+- **All requirements to run Azure Information Protection, including an Azure Information Protection tenant (not activated):**
 
 	See [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
-	Although you must have an Azure RMS tenant before you can migrate from AD RMS, we recommend that you do not activate the Rights Management service before the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure RMS. However, if Azure RMS is already activated, you can still migrate from AD RMS.
+	Although you must have an Azure Information Protection tenant before you can migrate from AD RMS, we recommend that the Rights Management service is not activated prior to the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure RMS. However, if the Rights Management service is already activated, you can still migrate from AD RMS.
 
 
-- **Preparation for Azure RMS:**
+- **Preparation for Azure Information Protection:**
 
 	- Directory synchronization between your on-premises directory and Azure Active Directory
 
@@ -88,26 +88,26 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	This is the only interruption to service during the migration process.
 
-- **If you want to manage your own Azure RMS tenant key by using an HSM-protected key**:
+- **If you want to manage your own Azure Information Protection tenant key by using an HSM-protected key**:
 
 	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
 Limitations:
 
--   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure RMS, Exchange Online does not currently support this configuration. If you want full IRM functionality with Exchange Online after you migrate to Azure RMS, your Azure RMS tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online  when your Azure RMS tenant is managed by you (BYOK). For more information about using Exchange Online with Azure RMS, see [Step 6. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
+-   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure Information Protection, Exchange Online does not currently support this configuration for the Rights Management service that is used by Azure Information Protection. If you want full IRM functionality with Exchange Online after you migrate to Azure Information Protection, your Azure Information Protection tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online when your Azure Information Protection tenant is managed by you (BYOK). For more information about using Exchange Online with the Azure Rights Management service, see [Step 6. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
 
--   If you have software and clients that are not supported with Azure RMS, they will not be able to protect or consume content that is protected by Azure RMS. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md) article.
+-   If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from the [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md) article.
 
--   If you import your on-premises key to Azure RMS as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
+-   If you import your on-premises key to Azure Information Protection as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
 
     This limitation does not apply when you set the TPD to active during the import process, because all users will protect content by using the same key. We recommend this configuration because it lets you migrate all users independently and at your own pace.
 
--   If you collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure RMS either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using AD RMS, they must make client configuration changes that are similar to those that you make, and included in this document.
+-   If you collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using AD RMS, they must make client configuration changes that are similar to those that you make, and included in this document.
 
     Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. For help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
 
-## Overview of the steps for migrating AD RMS to Azure RMS
+## Overview of the steps for migrating AD RMS to Azure Information Protection
 
 
 The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
@@ -120,21 +120,21 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 - **Step 2. Export configuration data from AD RMS and import it to Azure RMS**
 
-    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to Azure RMS by using the Import-AadrmTpd Windows PowerShell cmdlet. Additional steps might be needed, depending your on AD RMS key configuration:
+    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service by using the Import-AadrmTpd Windows PowerShell cmdlet. Additional steps might be needed, depending your on AD RMS key configuration:
 
 	- **Software-protected key to software-protected key migration**:
 
-	    Centrally managed, password-based keys in AD RMS to Microsoft-managed Azure RMS tenant key. This is the simplest migration path and no additional steps are required.
+	    Centrally managed, password-based keys in AD RMS to Microsoft-managed Azure Information Protection tenant key. This is the simplest migration path and no additional steps are required.
 
-	- **HSM-protected  key to HSM-protected key migration**:
+	- **HSM-protected key to HSM-protected key migration**:
 
-	    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to Azure Key Vault and authorize Azure RMS to use this key. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by Rights Management services.
+	    Keys that are stored by an HSM for AD RMS to customer-managed Azure Information Protection tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to Azure Key Vault and authorize Azure RMS to use this key. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by Rights Management services.
 
 	- **Software-protected key to HSM-protected key migration**:
 
-	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to an Azure Key Vault HSM and authorize Azure RMS to use the key vault that stores the key.
+	    Centrally managed, password-based keys in AD RMS to customer-managed Azure Information Protection tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to an Azure Key Vault HSM and authorize Azure RMS to use the key vault that stores the key.
 
-- **Step 3. Activate your Azure RMS tenant**
+- **Step 3. Activate your Azure Information Protection tenant**
 
     If possible, do this step after the import process and not before.
 
@@ -146,9 +146,9 @@ The migration steps can be divided into 4 phases that can be done at different t
 [**PHASE 2: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase2.md)
 
 
-- **Step 5: Reconfigure clients to use Azure RMS**
+- **Step 5: Reconfigure clients to use Azure Information Protection**
 
-    Existing Windows computers must be reconfigured to use the Azure RMS service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
+    Existing Windows computers must be reconfigured to use the Azure Information Protection service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
 
     In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS
 
@@ -158,12 +158,12 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 - **Step 6: Configure IRM integration with Exchange Online**
 
-    This step is required if you want to use Exchange Online with Azure RMS.
+    This step is required if you want to use Exchange Online with the Azure Rights Management service from Azure Information Protection.
 
 
 - **Step 7: Deploy the RMS connector**
 
-    This step is required if you want to use any of the following on-premises services with Azure RMS:
+    This step is required if you want to use any of the following on-premises services with the Azure Rights Management service to protect Office documents and emails:
 
 	- Exchange Server (for example, transport rules and Outlook Web Access)
 
@@ -176,12 +176,12 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 - **Step 8: Decommission AD RMS**
 
-    When you have confirmed that all clients are using Azure RMS and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
+    When you have confirmed that all clients are using Azure Information Protection and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
 
 
-- **Step 9: Re-key your Azure RMS tenant key**
+- **Step 9: Re-key your Azure Information Protection tenant key**
 
-    This step is optional but recommended if your chosen Azure RMS tenant key topology from step 2 is Microsoft-managed. This step is not applicable if your chosen Azure RMS tenant key topology is customer-managed (BYOK).
+    This step is optional but recommended if your chosen Azure Information Protection tenant key topology from step 2 is Microsoft-managed. This step is not applicable if your chosen Azure Information Protection tenant key topology is customer-managed (BYOK).
 
 
 ## Next steps
