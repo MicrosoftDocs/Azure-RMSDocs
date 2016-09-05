@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Frequently asked questions for Azure Rights Management | Azure Information Protection
-description: Some frequently asked questions about Azure Rights Management, also known as Azure RMS, which provides the protection service for Azure Information Protection.
+title: Frequently asked questions for Azure Information Protection | Azure Information Protection
+description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
@@ -24,32 +24,221 @@ ms.suite: ems
 
 ---
 
-# Frequently asked questions for Azure Rights Management
+# Frequently asked questions for Azure Information Protection and Azure Rights Management
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
+Have a question about Azure Information Protection, or Azure Rights Management (Azure RMS)? See if it's answered here. 
 
-## What do I need to deploy Azure RMS and how do I get going?
-First, check [Requirements for Azure Rights Management](requirements-azure-rms.md), which has information about the cloud subscription options, how you can use your on-premises servers with Azure RMS, which deployment scenarios are not currently supported, which devices and applications support Azure RMS, and a link if you need a list of IP addresses and domain names for firewalls or proxy servers. 
+This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
-You might also want to check the other articles in this **Get Started** section as well as the **Understand & Explore** section, to get a basic understanding of how [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] can help protect your organization’s data, how it works with applications, how it compares with the on-premises version of Active Directory Rights Management, and understand the terms and abbreviations that are specific to [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+## What's the difference between Azure Information Protection and Azure Rights Management?
 
-Then to get going, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md).
+Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
 
-## Do files have to be in the cloud to be protected by Azure RMS?
+This means that all documents and emails that are protected by using the Azure Rights Management service do so by using Azure Information Protection. But you can use Azure Information Protection without using the Azure Rights Management service.
+
+## What subscription do I need for Azure Information Protection and what features are included?
+All the subscription information is now on the Azure Information Protection site. Note that some features in the documentation might be not available to you if your subscription does not support those features.
+
+## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how it really works and how to take control of the accounts?
+You’ll find answers to these questions in [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md) and related articles.
+
+## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
+
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+
+
+## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
+Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
+
+**Legal and privacy:**
+
+-   For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
+
+-   For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](http://azure.microsoft.com/support/legal/privacy-statement/)
+
+**Security, compliance, and auditing:**
+
+See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article. In addition:
+
+-   For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
+
+-   For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
+
+**Service level agreements:**
+
+-   Service level agreement for Azure Information Protection, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+
+	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
+
+-   Service level agreement for Azure Active Directory: [Service Level Agreements](http://azure.microsoft.com/support/legal/sla/)
+
+**Documentation:**
+
+-   Azure Active Directory Documentation site: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
+
+-   Azure Active Directory Library: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
+
+-   Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+
+
+## What do I do if my question isn’t answered on this page?
+Use the links and resources listed in [Information and support for Azure Rights Management](information-support.md).
+
+In addition, there are FAQs designed for end-users:
+
+-   [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
+
+-   [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)
+
+-   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
+
+
+-----
+
+##### Specific to the classification and labeling functionality in Azure Information Protection:
+
+## What can I do with Azure Information Protection?
+
+The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using a Rights Management service.  
+
+The classification labels and behavior are configured in the Azure portal. You can use the default built-in policies to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
+
+Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+
+Note that the tutorial is aimed at the **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
+
+The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
+
+- There is no centralized logging for classification and labeling.
+
+- Label names and tooltips are supported in one language only.
+
+- Conditions for automatic classification must be phrases or patterns.
+
+- Files cannot be classified from Windows File Explorer.
+
+- Office apps for mobile devices (iOS and Android) and Mac computers, and the Office web apps (Office Online) are not yet supported.
+
+- No integration with Exchange Online or SharePoint Online.
+
+- The SDK for partners and developers is not available.
+
+## Do I need to be a global admin to try Azure Information Protection?
+
+To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
+
+However, if you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
+
+## Does Azure Information Protection support on premises and hybrid scenarios?
+
+Azure Information Protection is a cloud-based solution. If you have an interest in deploying Azure Information Protection for a hybrid scenario, please contact the Information Protection team, by sending an email to askipteam@microsoft.com.
+
+## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
+
+Every time a user opens an an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. In addition, Office applications check every 24 hours. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
+
+If multiple instances of the Office application are loaded when a new Azure Information Protection policy is published, you must close all instances to get the latest version of the policy. For example, you have two Word documents open and want to test the updated Azure Information Protection policy in just one document: Close both Word documents and reopen the document that you want to use with the latest policy.
+
+## Where can files be stored to use Azure Information Protection? 
+
+Because Azure Information Protection applies persistent labels and protection to files and emails, it doesn't matter where the files are stored.
+
+## Can I classify only new data, or can I also classify existing data?
+
+Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content. 
+
+If you have saved files that you want to classify, simply open and save them in your Office application. 
+
+Currently, you cannot scan and apply classification in bulk, and must open and save each document in the Office application. 
+
+## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
+
+Yes. You can configure an Azure Information Protection policy that only applies a label. In fact, we expect this to be the majority case for deployment networks where you need to protect only a subset of documents or emails that require special data management.
+
+## How does automatic classification work?
+
+In the Azure portal, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification.
+
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
+
+The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
+
+For the best user experience and to ensure business continuity, we recommend that you start with user recommendation actions, rather than fully automatic actions. This gives your users the ability to accept the labeling or protection action, or override these suggestions.   
+
+## Can Azure Information Protection prompt users to classify files themselves rather than use automatic classification? 
+
+Yes. Use the Azure portal to configure whether to use automatic classification or make a recommendation to users, by setting the option **Select how this label is applied: automatically or recommended to user** to **Recommended**.
+
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).  
+
+## Can I force all documents to be classified?
+
+Yes. If you require users to classify all files that they save, in the Azure portal, set the option **All documents and emails must have a label** to **On**. 
+
+## Can I remove classification from a file?
+
+Yes. To remove classification from a file, open the file in the Office application, click the **Edit label** icon in the Information Protection bar, click the **Remove label** icon, and then click **OK** to confirm your action. 
+
+
+## Can I prompt users to justify why they are changing the classification level?
+
+Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
+
+## How can I automatically protect the content after it's been classified?
+
+In the Azure portal, you can select a Rights Management template to automatically protect the content, according to the classification level that you specify.
+
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md).
+
+## Can a file be classified with two different classifications?
+
+If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret \ Legal** and **Secret \ Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
+
+Although you can currently set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
+
+## How can DLP solutions and other applications integrate with Azure Information Protection?
+
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
+
+## How does document tracking and revocation work for Azure Information Protection?
+
+Document tracking for files that you classify and protect by using Azure Information Protection works with Azure Rights Management protection and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 1.0.233 or later): 
+
+- In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
+
+For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
+
+## Can I control which users can use Azure Information Protection to classify and protect content?
+
+You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. 
+
+Files and emails that are classified by Azure Information Protection can be consumed or edited by any user, with or without the Azure Information Protection client installed. 
+
+## How can I report a problem or send feedback for Azure Information Protection?
+
+If you have a problem with Azure Information Protection and you are using the current release of the client: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
+
+If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
+
+-----
+
+##### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
+
+## Do files have to be in the cloud to be protected by Azure Rights Management?
 No, this is a common misconception. The Azure Rights Management service (and Microsoft) do not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. 
 
-For more information, see [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by Azure RMS but remains on-premises.
+For more information, see [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
 
-## Can I integrate Azure RMS with my on-premises servers?
-Yes. Azure RMS can be integrated with your on-premises servers, such as Exchange Server, SharePoint, and Windows file servers. To do this, you use the [Rights Management connector](../deploy-use/deploy-rms-connector.md). Or, if you're just interested in using File Classification Infrastructure (FCI) with Windows Server, you can use the [RMS Protection cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
+## Can I integrate the Azure Rights Management service with my on-premises servers?
+Yes. Azure Rights Management can be integrated with your on-premises servers, such as Exchange Server, SharePoint, and Windows file servers. To do this, you use the [Rights Management connector](../deploy-use/deploy-rms-connector.md). Or, if you're just interested in using File Classification Infrastructure (FCI) with Windows Server, you can use the [RMS Protection cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx). You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
-Azure RMS automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure RMS uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
+Azure Rights Management automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
 
 ## Where can I find information about 3rd party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure RMS—and the list is growing very rapidly. You might find it useful to check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
+Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing very rapidly. You might find it useful to check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
@@ -57,7 +246,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
-Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure RMS. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
+Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
 
 As these role names suggest, the first role grants permissions to run all administrative tasks for Azure Rights Management (without making them a global administrator for other cloud services) and the second role grants permissions to run only the Rights Management (RMS) connector.
 
@@ -73,25 +262,21 @@ Some things to note:
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
 
-## Are there step-by-step instructions to configure Exchange Online to use Azure RMS?
+## If I use this protection for my production environment, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
+No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md).
 
-Yes. See [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) to see a typical set of commands that enables Exchange Online to use Azure RMS, why the Outlook Web App doesn't immediately show the **Set permissions** menu options, and the command to run if you change or update the Azure RMS templates. 
-
-## If I deploy Azure RMS in production, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
-No, you always remain in control of your data and can continue to access it, even if you decide to no longer use Azure RMS. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md).
-
-However, before you decommission your Azure RMS deployment, we would like to hear from you and understand why you made this decision. If Azure RMS does not fulfill your business requirements, check with us in case new functionality is planned for the near-future or if there are alternatives. Send an email message to [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) and we’ll be happy to discuss your technical and business requirements.
+However, before you decommission your Azure RMS deployment, we would like to hear from you and understand why you made this decision. If Azure Rights Management protection does not fulfill your business requirements, check with us in case new functionality is planned for the near-future or if there are alternatives. Send an email message to [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) and we’ll be happy to discuss your technical and business requirements.
 
 ## Can I control which of my users can use Azure RMS to protect content?
-Yes, Azure RMS has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
+Yes, the Azure Rights Management service has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
 
 ## Can I prevent users from sharing protected documents with specific organizations?
-One of the biggest benefits of Azure RMS is that it supports business-to-business collaboration without you having to configure explicit trusts for each partner organization, because Azure AD takes care of the authentication for you.
+One of the biggest benefits of using the Azure Rights Management service for data protection is that it supports business-to-business collaboration without you having to configure explicit trusts for each partner organization, because Azure AD takes care of the authentication for you.
 
-There is no administration option to prevent users from securely sharing documents with specific organizations. For example, you want to block an organization that you don’t trust or that has a competing business. Preventing Azure RMS from sending protected documents to users in these organizations wouldn’t make sense because your users would then share their documents unprotected, which is probably the last thing you want to happen in this scenario! For example, you wouldn’t be able to identify who is sharing company-confidential documents with which users in these organizations, which you can do when the document (or email) is protected by Azure RMS.
+There is no administration option to prevent users from securely sharing documents with specific organizations. For example, you want to block an organization that you don’t trust or that has a competing business. Preventing the Azure Rights Management service from sending protected documents to users in these organizations wouldn’t make sense because your users would then share their documents unprotected, which is probably the last thing you want to happen in this scenario! For example, you wouldn’t be able to identify who is sharing company-confidential documents with which users in these organizations, which you can do when the document (or email) is protected by the Azure Rights Management service.
 
 ## When I share a protected document with somebody outside my company, how does that user get authenticated?
-Azure RMS always uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users will already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Office 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user’s organization doesn’t have managed accounts in Azure, users can sign up for [RMS for individuals](../understand-explore/rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for Azure RMS.
+The Azure Rights Management service always uses an Azure Active Directory account and an associated email address for user authentication, which makes business-to-business collaboration seamless for administrators. If the other organization uses Azure services, users will already have accounts in Azure Active Directory, even if these accounts are created and managed on-premises and then synchronized to Azure. If the organization has Office 365, under the covers, this service also uses Azure Active Directory for the user accounts. If the user’s organization doesn’t have managed accounts in Azure, users can sign up for [RMS for individuals](../understand-explore/rms-for-individuals.md), which creates an unmanaged Azure tenant and directory for the organization with an account for the user, so that this user (and subsequent users) can then be authenticated for the Azure Rights Management service.
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
@@ -105,54 +290,41 @@ To specify users from outside your organization, add them as contacts to a group
 For more information about custom templates, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Does Azure RMS work with dynamic groups in Azure AD?
-An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with Azure RMS. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure RMS.
+An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with the Azure Rights Management service. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
 
-As the option name clearly shows, this new group type is still in preview, with additional functionality expected and new documentation to follow. In the meantime, we wanted to confirm that you can use this new group type with Azure RMS.
+As the option name clearly shows, this new group type is still in preview, with additional functionality expected and new documentation to follow. In the meantime, we wanted to confirm that you can use this new group type with Azure Rights Management protection.
 
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of supported devices, see [Azure RMS requirements: Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all RMS capabilities, be sure to also check the table in [Azure RMS requirements: Applications](../get-started/requirements-applications.md).
+For a list of devices that support the Azure Rights Management service, see [Azure RMS requirements: Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table in [Azure RMS requirements: Applications](../get-started/requirements-applications.md).
 
-Azure RMS can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure RMS provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
+The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
-For a list of file name extensions that are natively supported by Azure RMS, see the [Supported file types and file name extensions](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section of the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md). File name extensions not listed are supported by using the RMS sharing application that automatically applies generic protection to these files.
+For a list of file name extensions that are natively supported by Azure Rights Management, see the [Supported file types and file name extensions](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section of the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md). File name extensions not listed are supported by using the RMS sharing application that automatically applies generic protection to these files.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
 No. In this scenario, the associated temporary file doesn’t contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
-## When will you support migration from AD RMS?
-Initially, Azure RMS didn’t support migration from an on-premises deployment of Rights Management, such as AD RMS. But it’s supported now.
+## We really want to use BYOK with Azure Information Protection but learned that this isn’t compatible with Exchange Online—what’s your advice?
+Don’t let this current limitation delay using the Azure Rights Management service of Azure Information Protection. If you have Exchange Online and want to use bring your own key (BYOK), we recommend that you deploy Azure Information Protection in the default key management mode now, where Microsoft generates and manages your key. That way, you get all the benefits of protecting your important files and emails now, with the option to move to BYOK later (for example, when Exchange Online does support BYOK). When you do move to BYOK, your previously protected documents and emails will remain accessible by using an archived key.
 
-For more information, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
-
-## We really want to use BYOK with Azure RMS but learned that this isn’t compatible with Exchange Online—what’s your advice?
-Don’t let this current limitation delay your Azure RMS deployment. If you have Exchange Online and want to use bring your own key (BYOK), we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. That way, you get all the benefits of protecting your important files and emails now, with the option to move to BYOK later (for example, when Exchange Online does support BYOK). When you do move to BYOK, your previously protected documents and emails will remain accessible by using an archived key.
-
-However, if your company policies require you to use a hardware security module (HSM) and this would otherwise block your Azure RMS deployment, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange. For more information, see [BYOK pricing and restrictions](../plan-design/byok-price-restrictions.md) from [Planning and iplementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
+However, if your company policies require you to use a hardware security module (HSM) and this would otherwise block your Azure Information Protection deployment, another option is to deploy Azure Information Protection with BYOK now, with reduced Rights Management protection functionality for Exchange. For more information, see [BYOK pricing and restrictions](../plan-design/byok-price-restrictions.md) from [Planning and iplementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
 ## A feature I am looking for doesn’t seem to work with SharePoint protected libraries—is support for my feature planned?
-Currently, SharePoint supports RMS protected documents by using IRM protected libraries, which do not support custom templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](../understand-explore/office-apps-services-support.md) article .
+Currently, SharePoint supports Rights Management-protected documents by using IRM protected libraries, which do not support custom templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](../understand-explore/office-apps-services-support.md) article .
 
-If you are interested in a specific  capability that isn't yet supported,  be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.
 
 Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library.  However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article.
 
-## Do you have any tips or tricks for a successful RMS deployment?
+## Do you have any tips or tricks for a successful deployment?
 After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple rights policies**.
 
-Because Azure RMS supports sharing securely with anyone, you can afford to be ambitious with your information protection reach. But be conservative with your rights policies. For many organizations, the biggest business impact comes from preventing data leakage by applying the default rights policy template that restricts access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don’t implement these more restrictive policies on day one, but plan for a more phased approach.
-
-## What features can or can’t be used with the different subscriptions for Azure RMS?
-For the paid subscriptions that support Azure RMS (Office 365, Azure RMS Premium, and Enterprise Mobility Suite), there are some differences in the RMS features that are supported. For a list of these, see [Comparison of Rights Management Services (RMS) Offerings](http://technet.microsoft.com/dn858608).
-
-The free subscription that supports Azure RMS (RMS for individuals) supports consuming content that has been protected by Azure RMS. For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
-
-## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how it really works, how to take control of the accounts, and which domains can’t be used?
-You’ll find answers to these questions in [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md) and related articles.
+Because Azure Information Protection supports sharing securely with anyone, you can afford to be ambitious with your data protection reach. But be conservative with your rights policies. For many organizations, the biggest business impact comes from preventing data leakage by applying the default rights policy template that restricts access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don’t implement these more restrictive policies on day one, but plan for a more phased approach.
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
 Use the super user feature of Azure RMS, which lets authorized users have full owner rights for all use licenses that were granted by your organization’s RMS tenant. This same feature lets authorized services index and inspect files, as needed.
@@ -170,59 +342,5 @@ As these examples demonstrate, even if all platforms and all software supported 
 
 Despite its name and appearance, **Do Not Forward** is neither the opposite of the Forward right, nor a template. It is actually a set of rights that include restricting copying, printing, and saving attachments, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
-## Where can I find supporting information for Azure RMS—such as legal, compliance, and SLAs?
-Azure RMS supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
-
-**Legal and privacy:**
-
--   For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Security, compliance, and auditing:**
-
-See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article. In addition:
-
--   For external certifications for Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
-
--   For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Service level agreements:**
-
--   Service level agreement for Azure RMS, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
-
--   Service level agreement for Azure Active Directory: [Service Level Agreements](http://azure.microsoft.com/support/legal/sla/)
-
-**Documentation:**
-
--   Azure Active Directory Documentation site: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Azure Active Directory Library: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
-
-## What's the latest on the new classification and labeling functionality?
-
-This functionality, in Azure Information Protection, is now in public preview. To try it out, and for a list of available resources, see [What is Azure Information Protection preview?](../information-protection/what-is-information-protection.md)
-
-
-## I’ve heard a new release is going to be available soon, for Azure RMS—when will it be released?
-
-The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
-
-## What do I do if my question isn’t here?
-Use the links and resources listed in [Information and support for Azure Rights Management](information-support.md).
-
-In addition, there are FAQs designed for end-users:
-
--   [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
-
--   [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)
-
--   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
-
-This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 
