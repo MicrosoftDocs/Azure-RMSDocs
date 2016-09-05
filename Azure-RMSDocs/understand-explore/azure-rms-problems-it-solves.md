@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What Problems Does Azure RMS Solve | Azure RMS
+title: What Problems Does Azure RMS Solve | Azure Information Protection
 description: Identify information protection requirements or problems that your organization might have, and understand how the Azure RMS technology can address these.
 author: cabailey
 manager: mbaldwin

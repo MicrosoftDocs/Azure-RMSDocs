@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What Do Admins and Users See? | Azure RMS
-description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) to help protect sensitive or confidential information.
+title: What Do Admins and Users See? | Azure Information Protection
+description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) technology to help protect sensitive or confidential information.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure RMS in action: What administrators and users see
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
 This article shows some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) to help protect sensitive or confidential information.
 

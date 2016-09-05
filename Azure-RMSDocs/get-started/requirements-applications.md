@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; Applications | Azure RMS
-description: Identify the applications that natively support Azure RMS, which means that RMS is tightly integrated into these applications by using RMS APIs to support usage restrictions. 
+title: Azure RMS requirements&#58; Applications | Azure Information Protection
+description: Identify the applications that natively support Azure RMS technology, which means that RMS is tightly integrated into these applications by using RMS APIs to support usage restrictions. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure RMS requirements: Applications
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
 
 Use the following table to identify the applications that natively support Azure RMS, which means that RMS is tightly integrated into these applications by using RMS APIs to support usage restrictions. These applications are also known as RMS-enlightened.

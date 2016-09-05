@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How users sign up for RMS for individuals | Azure RMS
+title: How users sign up for RMS for individuals | Azure Information Protection
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 manager: mbaldwin
@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How users sign up for RMS for individuals
 
->*Applies to: Azure Rights Management*
+>*Applies to: Azure Information Protection*
 
 To sign up for this free account, users request it by visiting the [Microsoft Rights Management page](https://portal.aadrm.com/), and provide their work or school email address. 
 

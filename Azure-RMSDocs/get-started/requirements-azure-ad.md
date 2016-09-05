@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; Azure AD Directory | Azure RMS
-description: Identify the Azure AD requirements to use Azure Rights Management (Azure RMS), so that users can be successfully authenticated.
+title: Azure RMS requirements&#58; Azure AD Directory | Azure Information Protection
+description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -24,12 +24,11 @@ ms.suite: ems
 
 ---
 
-# Azure RMS requirements: Azure AD Directory
+# Azure Information Protection requirements: Azure AD Directory
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-
-You must have an Azure AD directory to use Azure Rights Management (Azure RMS). You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
+You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 
 If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
@@ -47,7 +46,7 @@ If you want to integrate your Azure AD directory with your on-premises AD forest
 > -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
 
 ## Multi-factor authentication (MFA) and Azure RMS
-To use multi-factor authentication (MFA) with Azure RMS requires at least one of the following:
+To use multi-factor authentication (MFA) with Azure Information Protection requires at least one of the following:
 
 -   Office 2013 (minimum version):
 

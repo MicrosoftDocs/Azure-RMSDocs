@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Frequently asked questions for Azure Rights Management | Azure RMS
-description: Some frequently asked questions for Microsoft Azure Rights Management, also known as Azure RMS.
+title: Frequently asked questions for Azure Rights Management | Azure Information Protection
+description: Some frequently asked questions about Azure Rights Management, also known as Azure RMS, which provides the protection service for Azure Information Protection.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Rights Management
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
 Some frequently asked questions for Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], also known as Azure RMS:
 
