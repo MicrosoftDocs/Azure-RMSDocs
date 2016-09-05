@@ -10,7 +10,7 @@ ms.topic: article
 ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
+ms.assetid: <removed>
 
 # optional metadata
 
