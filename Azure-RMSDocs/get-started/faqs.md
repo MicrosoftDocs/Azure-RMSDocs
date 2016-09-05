@@ -94,7 +94,7 @@ In addition, there are FAQs designed for end-users:
 
 -----
 
-##### Specific to the classification and labeling functionality in Azure Information Protection:
+##### **Specific to the classification and labeling functionality in Azure Information Protection:**
 
 -----
 
@@ -228,7 +228,7 @@ If you have questions or feedback, use the [Azure Information Protection Yammer 
 -----
 
 ## Do files have to be in the cloud to be protected by Azure Rights Management?
-No, this is a common misconception. The Azure Rights Management service (and Microsoft) do not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. 
+No, this is a common misconception. The Azure Rights Management service (and Microsoft) does not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. 
 
 For more information, see [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
 
