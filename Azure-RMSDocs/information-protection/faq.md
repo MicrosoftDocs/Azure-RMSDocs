@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection preview | Azu
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -88,7 +88,7 @@ This is now documented and will be updated in [Requirements for Azure Informatio
 
 ## How do computers get the policy information from Azure Information Protection and how often is it refreshed?
 
-Every time a user opens an an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
+Every time a user opens an Office application, the Azure Information Protection client checks to see if there is a later version of the Azure Information Protection policy. In addition, Office applications automatically check every 24 hours. If there is a later version, the client downloads it using an HTTPS link to secure the data. 
 
 If multiple instances of the Office application are loaded when a new Azure Information Protection policy is published, you must close all instances to get the latest version of the policy. For example, you have two Word documents open and want to test the updated Azure Information Protection policy in just one document: Close both Word documents and reopen the document that you want to use with the latest policy.
 
@@ -135,7 +135,7 @@ Yes. To remove classification from a file, open the file in the Office applicati
 
 ## Can I prompt users to justify why they are changing the classification level?
 
-Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification when lowering the sensitivity level** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
+Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
 
 ## How can I automatically protect the content after it's been classified?
 
