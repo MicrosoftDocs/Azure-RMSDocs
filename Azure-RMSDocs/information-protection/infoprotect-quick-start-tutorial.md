@@ -44,7 +44,7 @@ To complete this tutorial, you will need the following:
   > [!TIP] 
   > If you need to get one or more of these subscriptions, do this in advance because this process can sometimes take a while to complete.
 
-- The Azure Rights Management service must be activated. If your subscription that includes the Azure Rights Management service is recent (for example, beginning October 2016), the service is automatically activated and no additional steps are required. If you need to manually activate the service, see [Activating Azure Rights Management](../deploy-use/active-service.md).
+- The Azure Rights Management service must be activated. If your subscription that includes the Azure Rights Management service is recent (for example, beginning October 2016), the service is automatically activated and no additional steps are required. If you need to manually activate the service, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 - A global administrator account to sign in to the Azure portal to configure the Azure Information Protection policy. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
 
