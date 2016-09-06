@@ -34,6 +34,8 @@ The guidance in this topic is based on the sample application, IPCHelloWorld, wh
 
 > [!Note] 
 > The IPCHelloWorld project is already configured for the Rights Management Services SDK 2.1. For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+> **If you receive an error, you haven’t registered at Microsoft Connect.** 
+> To register: go to [Connect](www.connect.microsoft.com), sign in with your Microsoft Account > Directory> Search for Rights Management Services > Join.
 
 ## Loading MSIPC.dll
 
