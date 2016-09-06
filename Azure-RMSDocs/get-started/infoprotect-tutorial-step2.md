@@ -95,7 +95,7 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About the configuration options for the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
+|About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 
 
 >[!div class="step-by-step"]

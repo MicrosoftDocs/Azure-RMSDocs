@@ -78,5 +78,5 @@ Note that if you're using watermarks with Excel, they are visible only in Page l
 
 Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. Because you can make changes on multiple blades, it's a good idea to check that all blades do not show the **Save** button as enabled, which indicates that you have unsaved changes. If your Office application was open when you published new changes, close your application and reopen it to download the latest policy.
 
-When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faq.md).
+When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faqs.md).
 

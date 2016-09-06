@@ -162,7 +162,7 @@ In the Azure portal, you can use predefined patterns, such as “Credit card num
 
 You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
 
-The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
+The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
 
 For the best user experience and to ensure business continuity, we recommend that you start with user recommendation actions, rather than fully automatic actions. This gives your users the ability to accept the labeling or protection action, or override these suggestions.   
 
@@ -189,7 +189,7 @@ Yes. To make sure users justify their change of classification, in the Azure por
 
 In the Azure portal, you can select a Rights Management template to automatically protect the content, according to the classification level that you specify.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
 
 ## Can a file be classified with two different classifications?
 

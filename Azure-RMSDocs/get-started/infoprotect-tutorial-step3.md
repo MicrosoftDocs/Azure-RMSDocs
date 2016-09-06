@@ -50,7 +50,7 @@ You're ready for the final step, to see classification, labeling, and protection
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About installing the client|[Installing the Azure Information Protection client](info-protect-client.md)|
+|About installing the client|[Installing the Azure Information Protection client](../rms-client/info-protect-client.md)|
 
 
 >[!div class="step-by-step"]
