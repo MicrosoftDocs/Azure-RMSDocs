@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to configure the global policy settings for Azure Information Protection | Azure Rights Management
+title: How to configure the global policy settings | Azure Information Protection
 description: There are 3 settings in the Azure Information Protection policy that apply to all users, all devices.
 manager: mbaldwin
 ms.date: 08/08/2016
@@ -25,9 +25,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 # How to configure the global policy settings for Azure Information Protection
 
->*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
+>*Applies to: Azure Information Protection*
 
 There are 3 settings in the Azure Information Protection policy that apply to all users, all devices:
 

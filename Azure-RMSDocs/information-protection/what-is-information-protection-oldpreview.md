@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Azure Information Protection? | Azure Rights Management
-description: An overview of the Azure Information Protection service, now in preview.
+description: An overview of the Azure Information Protection service.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/29/2016
@@ -10,7 +10,7 @@ ms.topic: article
 ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
+ms.assetid: <removed>
 
 # optional metadata
 
@@ -24,11 +24,9 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 ---
 
-# What is Azure Information Protection (preview)?
+# What is Azure Information Protection?
 
 >*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
 
 Azure Information Protection lets you classify, label, and protect your documents and emails. When you classify this data, persistent labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. For your most sensitive data, you can also use Azure Rights Management encryption, identity, and authorization policies, to help prevent data loss. 
 

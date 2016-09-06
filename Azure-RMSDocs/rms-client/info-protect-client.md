@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Installing the Azure Information Protection client | Azure Rights Management
+title: Installing the Azure Information Protection client | Azure Information Protection
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
 ms.date: 08/29/2016
@@ -25,24 +25,22 @@ ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 
 # Installing the Azure Information Protection client
 
->*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
+>*Applies to: Azure Information Protection*
 
 To classify documents and email messages by using Azure Information Protection, you must first install the Azure Information Protection client. This installation adds an Information Protection bar to your Office applications (Word, Excel, PowerPoint, Outlook) that displays the classification labels for your organization, in addition to a new **Protection** group on the **Home** tab (Word, Excel, PowerPoint), that has a button named **Protect**:
 
-The following picture shows this Information Protection bar and the labels from the [default policy](configure-policy-default.md):
+The following picture shows this Information Protection bar and the labels from the [default policy](../deploy-use/configure-policy-default.md):
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Before you install the client, check that you have the required operating system versions and applications: [Requirements for Azure Information Protection](requirements-azure-infoprotect.md).
+Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
 
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AzInfoProtection_v233.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AzInfoProtection_v\<version_number>.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
 
     Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
 
@@ -50,7 +48,7 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client for users
 
-- You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection_v233.exe /help`.
+- You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection_v\<version_number>.exe /help`.
 
     For example, to install the client silently: `AzInfoProtection_v233.exe /passive | quiet`
 
@@ -90,6 +88,6 @@ Client logs files and currently installed policy file:
 
 ## Next steps
 
-To change the labels on the Information Protection bar, you must configure the Azure Information Protection policy. For more information, see [Configuring Azure Information Protection policy](configure-policy.md).
+To change the labels on the Information Protection bar, you must configure the Azure Information Protection policy. For more information, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). 

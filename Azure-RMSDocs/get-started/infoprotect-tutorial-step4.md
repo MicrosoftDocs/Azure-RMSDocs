@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial step 4 | Azure Rights Management
-description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
+title: Quick start tutorial step 4 | Azure Rights Management
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
@@ -26,9 +26,7 @@ ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # Step 4: See classification, labeling, and protection in action 
 
->*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
+>*Applies to: Azure Information Protection*
 
 Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
 
@@ -80,5 +78,5 @@ Note that if you're using watermarks with Excel, they are visible only in Page l
 
 Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. Because you can make changes on multiple blades, it's a good idea to check that all blades do not show the **Save** button as enabled, which indicates that you have unsaved changes. If your Office application was open when you published new changes, close your application and reopen it to download the latest policy.
 
-When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faq.md).
+When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faqs.md).
 

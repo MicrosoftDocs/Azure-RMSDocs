@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View and use files that have been protected by Rights Management | Azure RMS
+title: View and use files that have been protected by Rights Management | Azure Information Protection
 description: Instructions to view and use a protected file, which requires you to have the Rights Management (RMS) sharing application installed.
 author: cabailey
 manager: mbaldwin
@@ -26,14 +26,14 @@ ms.suite: ems
 
 # View and use files that have been protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 
 > [!NOTE]
-> Before you can view the protected file, RMS must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
+> Before you can view the protected file, the Rights Management service must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
 >
-> If your organization does not use either Azure Rights Management (Azure RMS) or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
+> If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by using RMS:
 >
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -74,7 +74,7 @@ How the file opens depends on how it was protected, which you can tell by lookin
 
 
 
-For a complete list of file name extensions that Rights Management supports, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) sections in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md). If your file name extension is not listed, use a web search to see if it is a file name extension that is supported by another application.
+For a complete list of file name extensions that the Rights Management services support, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) sections in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md). If your file name extension is not listed, use a web search to see if it is a file name extension that is supported by another application.
 
 > [!NOTE]
 > If, after confirming that the file is protected by Rights Management, and the file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
@@ -96,7 +96,7 @@ If, after opening the protected file, you want to do more than just read it (for
 
 - **Other file name extensions**
 
-    Your device must have an application that understands Rights Management to use these files. These applications are called RMS-enlightened applications. Applications from Office 2016, Office 2013,  and Office 2010 (such as Word, Excel, PowerPoint, and Outlook) are examples of applications that are enlightened for Rights Management. But applications that do not come from Microsoft, such as other software companies and your own line-of-business applications, might also be enlightened for Rights Management.
+    Your device must have an application that understands Rights Management protection to use these files. These applications are called RMS-enlightened applications. Applications from Office 2016, Office 2013, and Office 2010 (such as Word, Excel, PowerPoint, and Outlook) are examples of applications that are enlightened for Rights Management. But applications that do not come from Microsoft, such as other software companies and your own line-of-business applications, might also be enlightened for Rights Management.
 
     Applications that are enlightened for Rights Management know how to open files that have been protected by other Rights Management enlightened applications. They also persist the protection that is applied to them, even if you edit the file or save it to another file name or another location. These applications let you use the file according to the permissions that are currently applied to the file, so that if you have permissions to use the file, you can do so. For example, you might be able to edit the file but not print it.
 

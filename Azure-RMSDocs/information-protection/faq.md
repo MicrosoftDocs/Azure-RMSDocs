@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Frequently asked questions for Azure Information Protection preview | Azure Information Protection
+title: Frequently asked questions | Azure Information Protection
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
@@ -24,27 +24,25 @@ ms.suite: ems
 
 ---
 
-# Frequently asked questions for Azure Information Protection preview
+# Frequently asked questions for Azure Information Protection
 
->*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection
 
-**[ This information is preliminary and subject to change. ]**
+Have a question about Azure Information Protection?  See if it's answered here. 
 
-Have a question about the preview release of Azure Information Protection?  See if it's answered here. 
+Expect this list to be updated frequently to incorporate changes to the service and to include new questions that we hear from customers. 
 
-Expect this list to be updated frequently as some information is moved to the main documentation, and we include new questions that we hear from customers. 
+## What can I do with Azure Information Protection?
 
-## What can I do with the preview release of Azure Information Protection and what are the current limitations?
-
-This preview release adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using an Azure Rights Management template.  
+The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using a Rights Management service.  
 
 The classification labels and behavior are configured in the Azure portal. You can use the default built-in policies to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
 
 Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-Note that the preview lets you try the new **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan at general availability. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
+Note that the tutorial is aimed at the **Premium P2 service plan** and that some advanced features, such as automatic and recommended labeling, might not be available to you on your current plan. For information about the different service plans (Azure Information Protection Premium P1 and Azure Information Protection Premium P2), see the following blog post: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/).
 
-This preview release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
+The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
 - There is no centralized logging for classification and labeling.
 
@@ -62,20 +60,13 @@ This preview release has the following limitations. Look out for announcements o
 
 ## What subscription do I need to try Azure Information Protection?
 
-For the preview release, you can use any Office 365 subscription that includes protecting Office documents and emails by using Azure Rights Management. Azure Information Protection is  available in all regions. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
+Information about subscriptions and free trial links is on the the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection).
 
-To configure the Azure Information Protection policies in the Azure portal, you must have an Azure subscription. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
+## Do I need to be a global admin to try Azure Information Protection?
 
-Any changes to the subscription requirements will be announced on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection).
+To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
 
-## Do I need to be a global admin to try Azure Information Protection preview?
-
-For the preview release only, any user who is authenticated by Azure can see and configure their tenant's Azure Information Protection policy for classification and labeling in the Azure portal. However, to configure a label to apply an Azure Rights Management template, you must be signed in as a global admin for Azure Active Directory.
-
-If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't even need to sign in to the portal to try the preview. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
-
-If you want to protect the documents and emails that you classify and label, and you haven't yet activated Azure Rights Management, the activation process does require special administrator permissions. For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators)
-
+However, if you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
@@ -135,17 +126,17 @@ Yes. To remove classification from a file, open the file in the Office applicati
 
 ## Can I prompt users to justify why they are changing the classification level?
 
-Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification when lowering the sensitivity level** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
+Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
 
 ## How can I automatically protect the content after it's been classified?
 
-In the Azure portal, you can select an Azure Rights Management template to automatically protect the content, according to the classification level that you specify.
+In the Azure portal, you can select a Rights Management template to automatically protect the content, according to the classification level that you specify.
 
 You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md).
 
 ## Can a file be classified with two different classifications?
 
-If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret – Legal** and **Secret – Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
+If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret \ Legal** and **Secret \ Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
 
 Although you can currently set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
 
@@ -155,7 +146,7 @@ Because Azure Information Protection uses persistent metadata for classification
 
 ## How does document tracking and revocation work for Azure Information Protection?
 
-Document tracking for files that you classify and protect by using Azure Information Protection works the same as it does today, for Azure Rights Management and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 1.0.233 or later): 
+Document tracking for files that you classify and protect by using Azure Information Protection works with Azure Rights Management protection and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 1.0.233 or later): 
 
 - In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
 
@@ -173,11 +164,11 @@ Azure Information Protection uses Azure Active Directory for user authentication
 
 You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. 
 
-Files and emails that are classified by Azure Information Protection can be consumed or edited by any user, with or without the Azure Information Protection client  installed. 
+Files and emails that are classified by Azure Information Protection can be consumed or edited by any user, with or without the Azure Information Protection client installed. 
 
-## How can I report a problem or send feedback for this preview?
+## How can I report a problem or send feedback for Azure Information Protection?
 
-If you find a problem when using this preview release, in your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
+If you have a problem with Azure Information Protection and you are using the current release of the client: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
 
 If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). 
 

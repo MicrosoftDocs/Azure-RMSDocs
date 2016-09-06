@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenario - Send a company-confidential email | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that any user in the organization can safely send email communications that cannot be read outside the organization. 
+title: Scenario - Send a company-confidential email | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that any user in the organization can safely send email communications that cannot be read outside the organization. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Send a company-confidential email
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that any user in the organization can safely send email communications that cannot be read outside the organization. For example, if somebody forwards the email message to somebody in another organization or to a personal email account. The emails and any attachments will be protected by Azure Rights Management and a template that users select from the email client.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that any user in the organization can safely send email communications that cannot be read outside the organization. For example, if somebody forwards the email message to somebody in another organization or to a personal email account. The emails and any attachments will be protected by Azure Rights Management and a template that users select from the email client.
 
 The simplest way to enable this scenario is to use one of the built-in, default templates that automatically restrict access to all users in your organization. But if required, you can make this more restrictive by creating a custom template that for example, restricts access to a subset of users, or has other restrictions such as read-only or an expiration date, or disables the Forward button in the email client.
 
