@@ -35,7 +35,7 @@ The following picture shows this Information Protection bar and the labels from 
 
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Before you install the client, check that you have the required operating system versions and applications: [Requirements for Azure Information Protection](requirements-azure-infoprotect.md).
+Before you install the client, check that you have the required operating system versions and applications: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
 
 
 ## To install the Azure Information Protection client manually
@@ -88,6 +88,6 @@ Client logs files and currently installed policy file:
 
 ## Next steps
 
-To change the labels on the Information Protection bar, you must configure the Azure Information Protection policy. For more information, see [Configuring Azure Information Protection policy](configure-policy.md).
+To change the labels on the Information Protection bar, you must configure the Azure Information Protection policy. For more information, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). 
