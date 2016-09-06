@@ -4,4 +4,4 @@
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
 # [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & customize apps](/rights-management/develop/developers-guide)
-# [Administer](/rights-management/administer/administer-powershell)
+

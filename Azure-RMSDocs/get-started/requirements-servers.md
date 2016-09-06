@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; On-premises servers that support Azure Information Protection | Azure Information Protection
-description: Identify the on-premises server products that can use Azure Rights Management protection when you use the Rights Management connector (also known as the "RMS connector").
+title: Azure RMS requirements&#58; On-premises servers that support the Azure Rights Management service | Azure Information Protection
+description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -25,11 +25,11 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: On-premises servers that support Azure RMS
+# Azure RMS requirements: On-premises servers that support the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 
-The following on-premises server products are supported with Azure Information Protection when you use the Azure Rights Management connector. This connector acts as a communications interface (a relay) between the on-premises servers and the Azure Rights Management service that is used by Azure Information Protection to protect documents and emails. 
+The following on-premises server products are supported with Azure Information Protection when you use the Azure Rights Management connector. This connector acts as a communications interface (a relay) between the on-premises servers and the Azure Rights Management service that is used by Azure Information Protection to protect Office documents and emails. 
 
 To use this connector, you must configure directory synchronization between your Active Directory forests and Azure Active Directory.
 

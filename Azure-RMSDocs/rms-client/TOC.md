@@ -22,4 +22,3 @@
 ##### [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
 ##### [Dialog box options](sharing-app-dialog-box.md)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
-# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)

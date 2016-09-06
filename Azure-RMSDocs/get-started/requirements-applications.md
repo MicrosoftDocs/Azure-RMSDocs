@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure RMS requirements&#58; Applications | Azure Information Protection
-description: Identify the applications that natively support Azure RMS technology, which means that RMS is tightly integrated into these applications by using RMS APIs to support usage restrictions. 
+description: Identify the applications that natively support the Azure Rights Management service from Azure Information Protection, which means that Rights Management is tightly integrated into these applications by using RMS APIs to support usage restrictions. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -25,14 +25,14 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: Applications
+# Azure RMS requirements: Applications that support the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use the following table to identify the applications that natively support Azure RMS, which means that RMS is tightly integrated into these applications by using RMS APIs to support usage restrictions. These applications are also known as RMS-enlightened.
+Use the following table to identify the applications that natively support the Azure Rights Management service (Azure RMS), which means that Rights Management is tightly integrated into these applications by using the Rights Management APIs to support usage restrictions. These applications are also known as RMS-enlightened.
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
 Information about the table columns:
 

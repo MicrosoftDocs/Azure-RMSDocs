@@ -20,4 +20,3 @@
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
 # [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize apps](/rights-management/develop/developers-guide)
-# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)

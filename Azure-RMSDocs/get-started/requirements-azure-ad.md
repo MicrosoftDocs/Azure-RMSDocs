@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; Azure AD Directory | Azure Information Protection
+title: Azure Information Protection requirements&#58; Azure AD Directory | Azure Information Protection
 description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
 manager: mbaldwin
@@ -45,7 +45,7 @@ If you want to integrate your Azure AD directory with your on-premises AD forest
 > 
 > -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
 
-## Multi-factor authentication (MFA) and Azure RMS
+## Multi-factor authentication (MFA) and Azure Information Protection
 To use multi-factor authentication (MFA) with Azure Information Protection requires at least one of the following:
 
 -   Office 2013 (minimum version):
@@ -75,5 +75,5 @@ Then, configure your MFA solution:
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 
