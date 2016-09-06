@@ -1,4 +1,4 @@
-# [Understand & Explore](/rights-management/understand-explore/azure-rights-management.md)
+# [Understand & Explore](/rights-management/understand-explore/azure-rights-management)
 # [Get Started](requirements-azure-rms.md)
 ## [Requirements](requirements-azure-rms.md)
 ### [Azure Active Directory requirements](requirements-azure-ad.md)
