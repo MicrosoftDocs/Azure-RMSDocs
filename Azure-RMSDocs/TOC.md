@@ -1,4 +1,4 @@
-# [Understand & explore](/rights-management/understand-explore/azure-rights-management)
+# [Understand & Explore](/rights-management/information-protection/what-is-information-protection)
 # [Get started](/rights-management/get-started/requirements-azure-rms)
 # [Plan & design](/rights-management/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)

@@ -1,4 +1,4 @@
-# [Understand & Explore](/rights-management/understand-explore/azure-rights-management)
+# [Understand & Explore](/rights-management/information-protection/what-is-information-protection)
 # [Get Started](requirements-azure-rms.md)
 ## [Requirements](requirements-azure-rms.md)
 ### [Azure Active Directory requirements](requirements-azure-ad.md)
