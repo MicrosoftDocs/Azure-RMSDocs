@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rights Management (RMS) client | Azure Information Protection
+title: The client | Azure Information Protection
 description: Microsoft Azure Information Protection provides a client-server solution that helps to protect an organization's data. The client (the Azure Information Protection client or the Rights Management client) is integrated with applications that you run on computers and mobile devices.
 author: cabailey
 manager: mbaldwin
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Rights Management (RMS) client
+# The client side of Azure Information Protection
 
 >*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
