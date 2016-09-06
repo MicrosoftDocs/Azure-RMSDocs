@@ -40,6 +40,8 @@ The Rights Management (RMS) client is automatically installed with some applicat
 
 Use the following documentation when you need more information about how to deploy and use these clients, which can be used with Azure Information Protection and Active Directory Rights Management Services to help protect your organization's data:
 
+- [Installing the Azure Information Protection client](info-protect-client.md)
+
 - [RMS client deployment notes](client-deployment-notes.md)
 
 - [RMS protection with Windows Server File Classification Infrastructure (FCI)](configure-fci.md)
