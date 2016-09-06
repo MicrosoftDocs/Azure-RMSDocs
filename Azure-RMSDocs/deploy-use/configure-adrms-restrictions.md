@@ -38,7 +38,7 @@ When you protect your most sensitive documents and emails, you will typically do
 
 - Document tracking, revocation, and email notification for sensitive documents that you have shared.
 
-Azure RMS protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with Azure RMS is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md). 
+Azure RMS protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with Azure RMS is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
 
 However, a few customers might need to protect selected documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons. 
 
@@ -73,7 +73,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
-- The [Azure Information Protection client](info-protect-client.md) is version **1.0.233.0** or later.
+- The [Azure Information Protection client](../rms-client/info-protect-client.md) is version **1.0.233.0** or later.
 
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
@@ -97,4 +97,4 @@ When you configure a label for AD RMS protection, you must specify the template 
 
 To read more information about this preview feature, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
-To configure a label for AD RMS protection, see [How to configure a label to apply Rights Management protection](configure-policy-protection.md). 
+To configure a label for AD RMS protection, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md). 
