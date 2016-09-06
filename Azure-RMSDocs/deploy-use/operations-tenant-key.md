@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Operations for your Azure Rights Management tenant key | Azure RMS
-description: Identify the different levels of control and responsibility that you have for your Azure Rights Management (Azure RMS) tenant key.
+title: Operations for your Azure Rights Management tenant key | Azure Information Protection
+description: Identify the different levels of control and responsibility that you have for your Azure Information Protection tenant key.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -24,15 +24,15 @@ ms.suite: ems
 
 ---
 
-# Operations for your Azure Rights Management tenant key
+# Operations for your Azure Information Protection tenant key
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Microsoft Azure Rights Management (Azure RMS) tenant key after it is implemented.
+Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Azure Information Protection tenant key after it is implemented.
 
 When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
-The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure RMS tenant key.
+The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
 
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
@@ -42,7 +42,7 @@ The following table identifies which operations you can do, depending on the top
 |Export your tenant key|Yes|No|
 |Respond to a breach|Yes|Yes|
 
-After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure RMS tenant key:
+After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure Information Protection tenant key:
 
 
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
