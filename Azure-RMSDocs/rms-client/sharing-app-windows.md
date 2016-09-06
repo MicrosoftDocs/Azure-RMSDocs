@@ -28,7 +28,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
-The Rights Management sharing application for Windows (also known as just “the RMS sharing app”) is a free, downloadable application for organizations that use [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) or [Azure Information Protection](../understand-explore/what-is-azure-information-protection.md), and for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use the Azure Rights Management service from Azure Information Protection.
+The Rights Management sharing application for Windows (also known as just “the RMS sharing app”) is a free, downloadable application for organizations that use [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) or [Azure Information Protection](../understand-explore/what-is-information-protection.md), and for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use the Azure Rights Management service from Azure Information Protection.
 
 -   [Rights Management sharing application: Version release history](sharing-app-version-release-history.md)
 
