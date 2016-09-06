@@ -4,7 +4,7 @@
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
 # [Deploy & Use the Client](use-client.md)
 ## [Rights Management client](use-client.md)
-### [Install the Azure Information Protection client](/information-protection/info-protect-client.md)
+### [Install the Azure Information Protection client](/rights-management/information-protection/info-protect-client.md)
 ### [RMS client deployment notes](client-deployment-notes.md)
 ### [RMS protection with Windows Server FCI](configure-fci.md)
 #### [PowerShell script](fci-script.md)
