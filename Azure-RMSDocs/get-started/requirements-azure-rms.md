@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Requirements for Azure Rights Management | Azure Information Protection
-description: Identify the prerequisites to use Microsoft Azure Rights Management (Azure RMS) technology in your organization.
+title: Requirements for Azure Information Protection | Azure Information Protection
+description: Identify the prerequisites to deploy Azure Information Protection for your organization.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Requirements for Azure Rights Management
+# Requirements for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
