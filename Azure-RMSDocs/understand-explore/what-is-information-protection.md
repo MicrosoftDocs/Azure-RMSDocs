@@ -52,7 +52,7 @@ Know Azure Information Protection or Azure Rights Management by another name? Se
 
 - Download the client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- FAQs: [Frequently asked questions for Azure Information Protection preview](../get-started/faqs.md)
+- FAQs: [Frequently asked questions for Azure Information Protection](../get-started/faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
