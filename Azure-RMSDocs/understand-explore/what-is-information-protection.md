@@ -50,9 +50,7 @@ Know Azure Information Protection or Azure Rights Management by another name? Se
 
 - Announcement: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/)
 
-- Download: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
-
-- Evaluate: [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) 
+- Download the client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
 - FAQs: [Frequently asked questions for Azure Information Protection preview](../get-started/faqs.md)
 
@@ -63,4 +61,4 @@ Know Azure Information Protection or Azure Rights Management by another name? Se
 
 ## Next steps
 
-Get started with Azure Information Protection in three simple steps, with our [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Get started with Azure Information Protection in three simple steps, with our [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
