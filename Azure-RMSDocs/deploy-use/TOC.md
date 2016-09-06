@@ -18,7 +18,7 @@
 ### [RMS sharing app](configure-sharing-app.md)
 ## [Configuring usage rights](configure-usage-rights.md)
 ## [Configuring super users for discovery services or data recovery](configure-super-users.md)
-## [Configure Information Protection policy](information-protection/configure-policy.md)
+## [Configure Information Protection policy](configure-policy.md)
 ### [The default policy](configure-policy-default.md)
 ### [Configure the global settings](configure-policy-settings.md)
 ### [Create a new label](configure-policy-new-label.md)
