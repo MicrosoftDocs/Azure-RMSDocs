@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: The default Azure Information Protection policy | Azure Rights Management
+title: The default Azure Information Protection policy | Azure Information Protection
 description: Understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
 manager: mbaldwin
 ms.date: 09/07/2016

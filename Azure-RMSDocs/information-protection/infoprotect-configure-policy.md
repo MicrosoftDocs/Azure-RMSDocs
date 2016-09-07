@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring the Azure Information Protection policy | Azure Rights Management
+title: Configuring the Azure Information Protection policy | Azure Information Protection
 description: Detailed information how to configure and publish the Azure Information Protection policy.
 author: cabailey
 manager: mbaldwin

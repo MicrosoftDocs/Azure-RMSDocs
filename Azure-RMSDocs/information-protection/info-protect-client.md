@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Installing the Azure Information Protection client | Azure Rights Management
+title: Installing the Azure Information Protection client | Azure Information Protection
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
 ms.date: 08/29/2016
