@@ -35,7 +35,7 @@ For information about how to configure a new project to use the RMS SDK 2.1, see
 
 You can download the full *IPCHellowWorld* sample application, as [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440), from Microsoft Connect.
 > [!Note]
-> If you receive an error accessing Microsoft Connect, you may not be registered. To register: go to [Connect](www.connect.microsoft.com), sign in with your Microsoft Account > Directory > Search for Rights Management Services > Join.
+> If you receive an error accessing Microsoft Connect, you may not be registered. To register: go to [Connect](http://connect.microsoft.com), sign in with your Microsoft Account > Directory > Search for Rights Management Services > Join.
 
 
 ## Loading MSIPC.dll
