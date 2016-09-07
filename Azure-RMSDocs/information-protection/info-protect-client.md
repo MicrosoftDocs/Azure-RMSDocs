@@ -42,7 +42,7 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AzInfoProtection_v233.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run **AzInfoProtection.exe** and follow the prompts to install the client. This installation requires local administrative permissions.
 
     Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
 
@@ -50,14 +50,21 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client for users
 
-- You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection_v233.exe /help`.
+- You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection.exe /help`.
 
-    For example, to install the client silently: `AzInfoProtection_v233.exe /passive | quiet`
+    For example, to install the client silently: `AzInfoProtection.exe /passive | quiet`
 
 
 ## To uninstall the Azure Information Protection client
 
+You can use any of these options:
+
 - Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
+
+- Rerun **AzInfoProtection.exe**, and from the **Modify Setup** page, click **Uninstall**. 
+
+- Run `AzInfoProtection.exe /uninstall`
+
 
 ## To verify installation, connection status, or report a problem
 
