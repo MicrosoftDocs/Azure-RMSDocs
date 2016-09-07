@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Frequently asked questions for Azure Information Protection and Azure Rights Management
+# Frequently asked questions for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
