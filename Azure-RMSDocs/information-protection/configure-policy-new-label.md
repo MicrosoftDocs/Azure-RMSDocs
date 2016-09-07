@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to create a new label for Azure Information Protection | Azure Rights Management
+title: How to create a new label for Azure Information Protection | Azure Information Protection
 description: Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 manager: mbaldwin
 ms.date: 08/10/2016
