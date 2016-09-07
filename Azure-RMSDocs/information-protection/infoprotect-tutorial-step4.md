@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial step 4 | Azure Rights Management
+title: Azure Information Protection quick start tutorial step 4 | Azure Information Protection
 description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -40,7 +40,7 @@ Classification and protection happens when you save the document, but before we 
 
     You'll see the **Sensitivity** value change to **Personal**.
 
-    ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/confirm-lowering.png)
+    ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
 
 ### To remove the classification completely:
 
