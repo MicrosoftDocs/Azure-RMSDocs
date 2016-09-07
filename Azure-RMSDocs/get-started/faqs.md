@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Rights Management | Azure RMS
 description: Some frequently asked questions for Microsoft Azure Rights Management, also known as Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -151,7 +151,7 @@ For the paid subscriptions that support Azure RMS (Office 365, Azure RMS Prem
 
 The free subscription that supports Azure RMS (RMS for individuals) supports consuming content that has been protected by Azure RMS. For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how it really works, how to take control of the accounts, and which domains can’t be used?
+## Where can I get technical information about the free Azure RMS subscription (RMS for individuals)—for example, how this process works and how an admin can take control of the accounts that are created?
 You’ll find answers to these questions in [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md) and related articles.
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
