@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Protect a file that you share by email by using the Rights Management sharing application | Azure RMS
+title: Protect a file that you share by email by using the Rights Management sharing application | Azure Information Protection
 description: Instructions how to safely share a document by email.
 author: cabailey
 manager: mbaldwin
@@ -26,13 +26,13 @@ ms.suite: ems
 
 # Protect a file that you share by email by using the Rights Management sharing application
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When you protect a file that you share by email, it creates a new version of the original file. The original file remains unprotected and the new version is protected and automatically attached to an email that you then send.
 
-In some cases (for files that are created by Microsoft Word, Excel, and PowerPoint), the RMS sharing application creates two versions of the file that it attaches to the email message. The second version of the file has a **.ppdf** file name extension and it is a PDF shadow copy of the file. This version of the file ensures that recipients can always read the file, even if they don’t have the same application installed that you used to create it. This is often the case when people read their email on mobile devices, and want to view their email attachments. All they need to open the file, is the RMS sharing application. Then, they can read the attached file, but they won’t be able to change it until they open the other version of the file by using an application that supports RMS.
+In some cases (for files that are created by Microsoft Word, Excel, and PowerPoint), the RMS sharing application creates two versions of the file that it attaches to the email message. The second version of the file has a **.ppdf** file name extension and it is a PDF shadow copy of the file. This version of the file ensures that recipients can always read the file, even if they don’t have the same application installed that you used to create it. This is often the case when people read their email on mobile devices, and want to view their email attachments. All they need to open the file, is the RMS sharing application. Then, they can read the attached file, but they won’t be able to change it until they open the other version of the file by using an application that supports a Rights Management service.
 
-If your organization uses Azure RMS, you can keep track of the files that you protect by sharing:
+If your organization uses Azure Information Protection, you can keep track of the files that you protect by sharing:
 
 -   Select an option to receive emails when somebody tries to open these protected attachments. Each time the file is accessed, you will be notified who tried to open the file and when, and whether they were successful (they were successfully authenticated) or not.
 
@@ -75,7 +75,7 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     Example:
 
-    ![Email message for Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![Email message for Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Are you wondering: [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 

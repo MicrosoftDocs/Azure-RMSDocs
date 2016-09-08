@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenario - Share an Office file with users in another organization | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that users can safely email an Office file with people in another organization. 
+title: Scenario - Share an Office file with users in another organization | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that users can safely email an Office file with people in another organization. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Share an Office file with users in another organization
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that users can safely email an Office file with people in another organization. For example, the Office file might be a Word document, Excel spreadsheet, or PowerPoint presentation that contains price list information for a partner, a list of products for a reseller, or a list of delivery time lines with potential customers. When users follow the instructions, the file attached to the email message will be protected by Azure Rights Management.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that users can safely email an Office file with people in another organization. For example, the Office file might be a Word document, Excel spreadsheet, or PowerPoint presentation that contains price list information for a partner, a list of products for a reseller, or a list of delivery time lines with potential customers. When users follow the instructions, the file attached to the email message will be protected by Azure Rights Management.
 
 This scenario is suitable for the following set of circumstances:
 

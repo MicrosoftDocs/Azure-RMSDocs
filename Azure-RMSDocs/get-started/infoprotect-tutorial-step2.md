@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial step 2 | Azure Information Protection
-description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
+title: Quick start tutorial step 1 | Azure Information Protection
+description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 3 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2016
@@ -24,11 +24,9 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 ---
 
-# Step 2: Configure and publish the Azure Information Protection policy
+# Step 1: Configure and publish the Azure Information Protection policy
 
->*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
+>*Applies to: Azure Information Protection*
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
@@ -97,9 +95,9 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About the configuration options for the policy|[Configuring Azure Information Protection policy](configure-policy.md)|
+|About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 
 
 >[!div class="step-by-step"]
-[&#171; Step 1](infoprotect-tutorial-step1.md)
-[Step 3 &#187;](infoprotect-tutorial-step3.md)
+[&#171; Introduction](infoprotect-quick-start-tutorial.md)
+[Step 2 &#187;](infoprotect-tutorial-step3.md)

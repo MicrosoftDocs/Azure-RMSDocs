@@ -1,4 +1,4 @@
-# [Understand & Explore](/rights-management/understand-explore/azure-rights-management)
+# [Understand & Explore](/rights-management/understand-explore/what-is-information-protection)
 # [Get Started](/rights-management/get-started/requirements-azure-rms)
 # [Plan & Design](/rights-management/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
@@ -65,4 +65,3 @@
 #### [Functions](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
 #### [Structures](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
 #### [Error codes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
-# [Azure Information Protection (preview)](/rights-management/information-protection/what-is-information-protection)

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenario - Executives securely exchange privileged information | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. 
+title: Scenario - Executives securely exchange privileged information | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Executives securely exchange privileged information
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. The emails and any attachments will be automatically protected by Azure Rights Management.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. The emails and any attachments will be automatically protected by Azure Rights Management.
 
 If required, you can add an exception to the rule, such as the abbreviation of DNP (for "Do Not Protect") in the email message subject, so that executives can specify this if they need to send an unprotected email to other executives-for example, to review before forwarding to others.
 

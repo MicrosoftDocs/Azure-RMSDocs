@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Rapid deployment guide for Azure Rights Management | Azure RMS
-description: A guide to help you more quickly deploy and use Azure Rights Management (Azure RMS) to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
+title: Rapid deployment guide for Azure Information Protection | Azure Information Protection
+description: A guide to help you more quickly deploy and use Azure Information Protection to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,23 +26,23 @@ ms.suite: ems
 
 # Rapid deployment guide for Azure Rights Management
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy and use Azure Rights Management (Azure RMS) by choosing from a list of specific scenarios to implement.
+Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy and use Azure Information Protection by choosing from a list of specific scenarios to implement.
 
 These scenarios contain both administrator instructions and accompanying end user documentation. Before you give the documentation (instructions or announcements) to your end users, you will need to first customize this documentation for your business requirements and existing work flows. An example set of instructions or an announcement show how the final end user documentation might look.
 
 Each scenario has a list of requirements with links to more information if needed, so that you can deploy these solutions independently and in any order.
 
-The scenarios listed here are a sample of the most popular ones. Because Azure RMS can be used to protect information in a large number of scenarios both within an organization and across organizations, you can define your own scenarios and deploy them to your environment and to your users by using this same model. By focusing on specific scenarios, your Azure RMS deployment will more closely align to your business goals. In addition, our experience is that users tend to follow scenario-specific instructions much more closely and systematically than general guidance such as "protect sensitive documents".
+The scenarios listed here are a sample of the most popular ones. Because Azure Information Protection can be used to protect information in a large number of scenarios both within an organization and across organizations, you can define your own scenarios and deploy them to your environment and to your users by using this same model. By focusing on specific scenarios, your Azure Information Protection deployment will more closely align to your business goals. In addition, our experience is that users tend to follow scenario-specific instructions much more closely and systematically than general guidance such as "protect sensitive documents".
 
 Before you roll out these solutions, you might want to send a broad announcement to end users, letting them know that some changes are coming to help protect company data, and that it might require some changes from them. An example communication is included after the following table.
 
 > [!NOTE]
 > If you have questions and comments about this guide, use the feedback mechanisms on this page, or send an email message to [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Scenarios for Azure RMS
-To help you more quickly deploy Azure RMS to address specific business problems, choose the scenarios that most closely match your business goals, and adapt them where necessary.
+## Scenarios for Azure Information Protection
+To help you more quickly deploy Azure Information Protection to address specific business problems, choose the scenarios that most closely match your business goals, and adapt them where necessary.
 
 
 
@@ -130,14 +130,14 @@ See: [Scenario - Configure work folders for persistent protection](scenario-work
 
 
 ## Announcement for users before rollout
-You can use the following example communication message to let users know that deploying Azure RMS means that some changes are on the way. Copy and paste the following text, to be sent by email to all users from somebody in your organization's leadership team, preferably your Chef Executive Officer. Consider making any changes to this text that will make the message more relevant to users and your organization.
+You can use the following example communication message to let users know that deploying Azure Information Protection means that some changes are on the way. Copy and paste the following text, to be sent by email to all users from somebody in your organization's leadership team, preferably your Chef Executive Officer. Consider making any changes to this text that will make the message more relevant to users and your organization.
 
 ![Example user documentation banner for Azure RMS Rapid Deployment](../media/AzRMS_ExampleBanner.png)
 
 ### Changes we're making to safeguard our data
 Have you ever wanted to block access to that document you sent to your partners by mistake? Have you wondered if there’s a way to know which of your customers have read the latest product news you sent? Do you have a need to share confidential product information without concerns that it might be sent on to people who shouldn't see it?
 
-You'll soon be able to do these things because the IT Department is rolling out some changes that implement Microsoft Azure Rights Management (Azure RMS) as an enterprise data protection solution. Many of these solutions will automatically apply the protection that we need, without you having to do anything different. But some changes might require you do some things differently and when this is the case, the IT Department will send you information and instructions, with support from the help desk if you have questions or problems.
+You'll soon be able to do these things because the IT Department is rolling out some changes that implement Microsoft Azure Information Protection as an enterprise data protection solution. Many of these solutions will automatically apply the protection that we need, without you having to do anything different. But some changes might require you do some things differently and when this is the case, the IT Department will send you information and instructions, with support from the help desk if you have questions or problems.
 
 For example, to track (and if necessary, revoke) the documents that you share, you'll be using the document tracking site:
 

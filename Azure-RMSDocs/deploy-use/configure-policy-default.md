@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: The default Azure Information Protection policy | Azure Information Protection
+title: The default policy | Azure Information Protection
 description: Understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
 manager: mbaldwin
 ms.date: 09/07/2016
@@ -25,9 +25,7 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 # The default Azure Information Protection policy
 
->*Applies to: Azure Information Protection preview*
-
-**[ This information is preliminary and subject to change. ]**
+>*Applies to: Azure Information Protection*
 
 Use the following information to understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
 
