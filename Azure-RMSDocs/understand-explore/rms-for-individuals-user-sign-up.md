@@ -43,7 +43,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Azur
 
     Microsoft uses your email address to check whether your organization already has a [paid subscription that includes Azure RMS](../get-started/requirements-subscriptions.md). If that’s the case, you don’t need RMS for individuals so you’ll be signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription for Azure RMS isn’t found, you'll continue to the next step.
 
-4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Azure Rights Management**.
+4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Rights Management**.
 
 5.  When you receive the email, click **Yes, that's me** to verify your email address and complete the sign up process.
 
