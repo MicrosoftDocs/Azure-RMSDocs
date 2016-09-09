@@ -46,7 +46,7 @@ The RMS connector is a small-footprint service that you install on-premises, on 
 The RMS connector supports the following on-premises servers: Exchange Server, SharePoint Server, and file servers that run Windows Server and use File Classification Infrastructure to classify and apply policies to Office documents in a folder. 
 
 > [!NOTE]
-> If you want to protect all file types using File Classification Infrastructure, do not use the RMS connector, but instead, use the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+> If you want to protect all file types (in addition to Office documents) by using File Classification Infrastructure, do not use the RMS connector, but instead, use the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 For supported versions of these on-premises servers, see [On-premises servers that support Azure RMS](..\get-started\requirements-servers.md).
 
