@@ -5,7 +5,7 @@ title: BYOK pricing and restrictions | Azure RMS
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -29,9 +29,18 @@ ms.suite: ems
 >*Applies to: Azure Rights Management, Office 365*
 
 
-Organizations that have a subscription that includes Azure Rights Management can use customer-managed keys (BYOK) in Azure Key Vault and log its usage at no extra charge. However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+Organizations that have a subscription that includes Azure Rights Management can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
-If you have users who have signed up for a free account by using RMS for individuals, you cannot use BYOK and usage logging because this configuration does not have a tenant administrator to configure these features.
+However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+When you use Azure Key Vault for your Azure RMS tenant key, we recommend that you use a dedicated key vault for this key, to ensure that it's used by only the Azure Rights Management service. For additional assurance, you can use [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to carefully monitor that only Azure RMS is using this key, and if necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
+
+Although we recommend a dedicated key vault for Azure RMS, using the same subscription you can create other key vaults to securely store and access other keys and secrets (such as passwords). For more information, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/), to see how other services use this technology.
+
+
+## Restrictions
+
+If you have users who have signed up for a free account by using RMS for individuals, you cannot use BYOK or usage logging because this configuration does not have a tenant administrator to configure these features.
 
 
 > [!NOTE]
