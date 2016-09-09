@@ -99,4 +99,4 @@ The connector does not automatically check all the [prerequistes](deploy-rms-con
 
 ## Next steps
 
-Go to **Step 1:** [Installing and configuring the Azure Rights Management connector](install-configure-rms-connector.md).
+Go to Step 1: [Installing and configuring the Azure Rights Management connector](install-configure-rms-connector.md).
