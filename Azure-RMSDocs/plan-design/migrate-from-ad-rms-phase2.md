@@ -5,7 +5,7 @@ title: Migrating from AD RMS to Azure Rights Management - Phase 2 | Azure RMS
 description: Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS), covering step 5 from Migrating from AD RMS to Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/09/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -53,7 +53,7 @@ For Windows clients:
 
 			reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` and immediately below it, add the following two lines:
+	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` and immediately below it, add the following two lines:
 
 			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 
