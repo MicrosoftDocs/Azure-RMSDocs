@@ -40,6 +40,17 @@ The RMS connector is a small-footprint service that you install on-premises, on 
 
 ![RMS connector architecture overview](../media/RMS_connector.png)
 
+
+### On-premises servers supported
+
+The RMS connector supports the following on-premises servers: Exchange Server, SharePoint Server, and file servers that run Windows Server and use File Classification Infrastructure to classify and apply policies to Office documents in a folder. 
+
+> [!NOTE]
+> If you want to protect all file types using File Classification Infrastructure, do not use the RMS connector, but instead, use the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+
+For supported versions of these on-premises servers, see [On-premises servers that support Azure RMS](..\get-started\requirements-servers.md).
+
+
 ### Support for hybrid scenarios
 
 You can use the RMS connector even if some of your users are connecting to online services, in a hybrid scenario. For example, some users' mailboxes use Exchange Online and some users' mailboxes use Exchange Server. After you install the RMS connector, all users can protect and consume emails and attachments by using Azure RMS, and information protection works seamlessly between the two deployment configurations.
@@ -48,14 +59,6 @@ You can use the RMS connector even if some of your users are connecting to onlin
 
 If you manage your own tenant key for Azure RMS (the bring your own key, or BYOK scenario), the RMS connector and the on-premises servers that use it do not access the hardware security module (HSM) that contains your tenant key. This is because all cryptographic operations that use the tenant key are performed in Azure RMS, and not on-premises.
 
-## On-premises servers supported
-
-The RMS connector supports the following on-premises servers: Exchange Server, SharePoint Server, and file servers that run Windows Server and use File Classification Infrastructure to classify and apply policies to Office documents in a folder. 
-
-> [!NOTE]
-> If you want to protect all file types using File Classification Infrastructure, do not use the RMS connector, but instead, use the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
-
-For supported versions of these on-premises servers, see [On-premises servers that support Azure RMS](..\get-started\requirements-servers.md).
 
 ## Prerequisites for the RMS connector
 Before you install the RMS connector, make sure that the following requirements are in place.
