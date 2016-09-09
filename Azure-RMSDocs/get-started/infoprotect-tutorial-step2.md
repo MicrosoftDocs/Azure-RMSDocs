@@ -5,7 +5,7 @@ title: Quick start tutorial step 1 | Azure Information Protection
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 3 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -43,7 +43,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
 
-    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
+    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the classification level.
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
@@ -51,7 +51,7 @@ For our tutorial, we'll change a couple of those global settings so that you can
 
 -  **Select the default label**: Set this to **Internal**.
 
-- **Users must provide justification when lowering the sensitivity level**: Set this to **On**.
+- **Users must provide justification to set a lower classification label, remove a label, or remove protection**: Set this to **On**.
 
 We'll now change the settings of one of the labels, **Confidential**:
 

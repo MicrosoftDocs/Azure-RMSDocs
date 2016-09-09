@@ -63,7 +63,7 @@ For more information about Azure Rights Management and how it works, see [What i
     
     In most cases, you will select **Azure RMS**. Do not select AD RMS unless you have read and understood the prerequisites and restrictions that accompany this configuration, which is sometimes referred to as "*hold your own key*" (HYOK). For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md).
     
-4. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template that you want to use to protect documents and emails with this label.
+4. If you selected Azure RMS: For **Select RMS template**, click the drop down box and select the template or rights management option that you want to use to protect documents and emails with this label.
 
     > [!NOTE] 
     > If you create a new template after you open the **Label** blade, close this blade and return to step 2, so that your newly created template is retrieved from Azure for you to select.

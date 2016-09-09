@@ -50,12 +50,16 @@ Before you install the client, check that you have the required operating system
 
 - You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run `AzInfoProtection_v\<version_number>.exe /help`.
 
-    For example, to install the client silently: `AzInfoProtection_v233.exe /passive | quiet`
-
-
 ## To uninstall the Azure Information Protection client
 
+You can use any of these options:
+
 - Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
+
+- Rerun **AzInfoProtection.exe**, and from the **Modify Setup** page, click **Uninstall**. 
+
+- Run `AzInfoProtection.exe /uninstall`
+
 
 ## To verify installation, connection status, or report a problem
 
