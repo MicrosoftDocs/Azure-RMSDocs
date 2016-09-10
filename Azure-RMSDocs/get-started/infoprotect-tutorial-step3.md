@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 3 | Azure Information Protection
-description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/06/2016
@@ -50,7 +50,7 @@ In this step, you'll install the Azure Information Protection client so that the
     
         ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts2.png)
 
-You're ready for the final step, to see classification, labeling, and protection in action.
+You're ready to see classification, labeling, and protection in action.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
@@ -58,5 +58,5 @@ You're ready for the final step, to see classification, labeling, and protection
 
 
 >[!div class="step-by-step"]
-[&#171; Step 1](infoprotect-tutorial-step2.md)
-[Step 4 &#187;](infoprotect-tutorial-step3.md)
+[&#171; Step 2](infoprotect-tutorial-step2.md)
+[Step 4 &#187;](infoprotect-tutorial-step4.md)
