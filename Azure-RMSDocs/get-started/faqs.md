@@ -28,7 +28,12 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Have a question about Azure Information Protection, or Azure Rights Management (Azure RMS)? See if it's answered here. 
+Have a question about Azure Information Protection, or for the Azure Rights Management service (Azure RMS)? See if it's answered here.
+
+- [Questions specific to Azure Information Protection](#specific-to-the-classification-and-labeling-functionality-in-azure-information-protection)
+
+- [Questions specific to Azure Rights Management](specific-to-the-azure-rights-management-service-that-provides-the-protection-technology-for-azure-information-protection)
+
 
 This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
@@ -37,6 +42,7 @@ This FAQ page will be updated regularly, with new additions listed in the monthl
 Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
 
 This means that all documents and emails that are protected by using the Azure Rights Management service do so by using Azure Information Protection. But you can use Azure Information Protection without using the Azure Rights Management service.
+
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 All the subscription information is now on the Azure Information Protection site. Note that some features in the documentation might be not available to you if your subscription does not support those features.
@@ -94,7 +100,7 @@ In addition, there are FAQs designed for end-users:
 
 -----
 
-##### **Specific to the classification and labeling functionality in Azure Information Protection:**
+### **Specific to the classification and labeling functionality in Azure Information Protection:**
 
 -----
 
@@ -223,7 +229,7 @@ If you have questions or feedback, use the [Azure Information Protection Yammer 
 
 -----
 
-##### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
+### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
 
 -----
 
