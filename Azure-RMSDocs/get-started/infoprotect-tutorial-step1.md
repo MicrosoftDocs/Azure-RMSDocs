@@ -37,17 +37,17 @@ For this tutorial, we'll go straight to the activation page for Office 365 admin
 
 ## To activate the Rights Management service
 
-1 Go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+1. Go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
     
     If you are prompted to sign in, use an account that is a global administrator for Office 365.
 
-2 On the **rights management** page, click **activate**.
+2. On the **rights management** page, click **activate**.
 
 3. When prompted **Do you want to activate Rights Management?**, click **activate**.
 
-You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
+    You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
 
-At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close this page.
+    At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close this page.
 
 That's all you need to do for this first step to complete this tutorial. For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to step 2.
 
