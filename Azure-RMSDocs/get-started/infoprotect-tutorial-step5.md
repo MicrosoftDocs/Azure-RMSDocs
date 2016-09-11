@@ -74,17 +74,19 @@ This free account grants them a subscription for RMS for individuals, which ensu
 
 If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
 
-### To view the protected document attachment
+### Instructions for recipient: To view the protected document attachment
 
 1. Open one of the attachments to read the document:
     
-    - If you have a version of Office on your device that supports Rights Management: Open the document that has the .docx file name extension.
-    
-    - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: Open the document that has a .ppdf file name extension.
+    - If you have a version of Office on your device that supports Rights Management:
+        -  Open the document that has the .docx file name extension.
+        
+    - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: 
+    -     Open the document that has a .ppdf file name extension.
 
 2.  If you are prompted for your user name and password, enter your user name in the same format as the email address that was used to send you the email and attachment. For example, **janetm@contoso.com** or **p.dover@fabrikam.com**. For your password, type the password that you supplied when you signed up for RMS for individuals. Or, if your organization has a cloud service such as Office 365 or uses Azure, enter your usual work password.
 
-3. Read the document contents when it opens. Because it’s protected as read-only, you cannot change the contents.
+3. Read the document contents when it opens. Because it’s read-only, you cannot change the contents.
 
 As an optional step, your recipient could forward the email to other people that you didn’t specify in your original email. Even if those other people work for an organization that has Azure Information Protection, or they apply for their own RMS for individuals subscription, they won’t be able to open the attachment. When they are promoted for their user name, access to the document will be denied.
 
