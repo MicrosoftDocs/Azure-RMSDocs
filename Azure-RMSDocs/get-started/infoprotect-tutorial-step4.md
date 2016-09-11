@@ -32,7 +32,7 @@ Now that you've got a Word document open with the Azure Information Protection c
 
 Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
 
-### To manually change our default label:
+## To manually change our default label
 
 - On the Information Protection bar, select the **Personal** label and you are prompted to justify why are lowering the classification level. Select **This file no longer requires that classification**, and click **Confirm**.  
 
@@ -40,7 +40,7 @@ Classification and protection happens when you save the document, but before we 
 
     ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
 
-### To remove the classification completely:
+## To remove the classification completely
 
 - On the Information Protection bar, click the **Edit label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Remove label** icon. Click **OK** to confirm and then provide justification for this action.  
 
@@ -49,7 +49,7 @@ Classification and protection happens when you save the document, but before we 
     ![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-set.png)
 
 
-### To see a recommendation prompt for labeling and automatic protection:
+## To see a recommendation prompt for labeling and automatic protection
 
 1. In the Word document, type a valid credit card number, for example: **4242-4242-4242-4242**. 
 
