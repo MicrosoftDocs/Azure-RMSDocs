@@ -66,19 +66,5 @@ Classification and protection happens when you save the document, but before we 
 
 
 >[!div class="step-by-step"]
-[« Step 3](tutorial-step3.md)
-[Step 4 »](tutorial-step3.md)
-
-
-##  Next steps
-
-Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
-
-For example, you can change the default title of **Sensitivity** on the Information Protection bar to a title of your own choice. You can change the tooltips, the label colors, the order of the labels, and their names. You can create new labels and define your own automatic rules. You can fine-tune your watermarks, by configuring the size, color, and change from diagonal to horizontal.
-
-Note that if you're using watermarks with Excel, they are visible only in Page layout and Print preview modes, and when printed.
-
-Each time you change any settings in the Azure portal for the Information Protection policy, remember to **save** the policy and then **publish** it. Because you can make changes on multiple blades, it's a good idea to check that all blades do not show the **Save** button as enabled, which indicates that you have unsaved changes. If your Office application was open when you published new changes, close your application and reopen it to download the latest policy.
-
-When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faqs.md).
-
+[&#171; Step 4](infoprotect-tutorial-step4.md)
+[Step 5 &#187;](infoprotect-tutorial-step5.md)

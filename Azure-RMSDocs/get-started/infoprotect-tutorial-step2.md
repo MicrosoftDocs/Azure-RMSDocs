@@ -30,7 +30,7 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com)as a global admin for your tenant.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
  
 2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection** > **Create**.
 
@@ -91,7 +91,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
-Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
+Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client and the Rights Management sharing application.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
