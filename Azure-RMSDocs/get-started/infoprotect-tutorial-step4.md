@@ -66,5 +66,5 @@ Classification and protection happens when you save the document, but before we 
 
 
 >[!div class="step-by-step"]
-[&#171; Step 4](infoprotect-tutorial-step4.md)
+[&#171; Step 3](infoprotect-tutorial-step3.md)
 [Step 5 &#187;](infoprotect-tutorial-step5.md)

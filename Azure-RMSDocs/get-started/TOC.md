@@ -13,7 +13,7 @@
 ### [Step 2: Configure and publish policy](infoprotect-tutorial-step2.md)
 ### [Step 3: Install the client and application](infoprotect-tutorial-step3.md)
 ### [Step 4: See it in action - labeling, classification, protection](infoprotect-tutorial-step4.md)
-### [Step 5: See it in action - share protected](infoprotect-tutorial-step4.md)
+### [Step 5: See it in action - share protected](infoprotect-tutorial-step5.md)
 ## [Rapid deployment guide](rapid-deployment-guide.md)
 ### [Share an Office file with users in another organization](scenario-share-office-file-externally.md)
 ### [Retain control of documents stored in SharePoint](scenario-sharepoint.md)
