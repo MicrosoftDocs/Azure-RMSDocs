@@ -62,7 +62,7 @@ You’re then ready to safely share this document by email.
 
     Click **Send** in your email message.
 
-Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Word, because we’ll use it again in our final step to track the shared document.
+Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Word, because we’ll use it again in our final procedure to track the shared document.
 
 ## Ask your recipients to open the emailed document
 
@@ -77,10 +77,10 @@ If this is not the first time that they have received attachments that are prote
 ### To view the protected document attachment
 
 1. Open one of the attachments to read the document:
-
-- If you have a version of Office on your device that supports Rights Management: Open the document that has the .docx file name extension.
-
-- If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: Open the document that has a .ppdf file name extension.
+    
+    - If you have a version of Office on your device that supports Rights Management: Open the document that has the .docx file name extension.
+    
+    - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: Open the document that has a .ppdf file name extension.
 
 2.  If you are prompted for your user name and password, enter your user name in the same format as the email address that was used to send you the email and attachment. For example, **janetm@contoso.com** or **p.dover@fabrikam.com**. For your password, type the password that you supplied when you signed up for RMS for individuals. Or, if your organization has a cloud service such as Office 365 or uses Azure, enter your usual work password.
 
