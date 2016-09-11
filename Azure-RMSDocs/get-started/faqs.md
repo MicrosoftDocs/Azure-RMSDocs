@@ -100,7 +100,11 @@ In addition, there are FAQs designed for end-users:
 
 -----
 
+-----
+
 ### **Specific to the classification and labeling functionality in Azure Information Protection:**
+
+-----
 
 -----
 

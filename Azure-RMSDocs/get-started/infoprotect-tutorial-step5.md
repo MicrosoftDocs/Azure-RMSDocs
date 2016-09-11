@@ -34,7 +34,7 @@ For this final step in the tutorial, locate a Word document that you have alread
 
 You’re then ready to safely share this document by email. 
 
-## To safely share your document by email
+### To safely share your document by email:
 
 1.  In Word, open your document. You will see that the default label of **Internal** is again automatically applied. 
 
@@ -64,7 +64,7 @@ You’re then ready to safely share this document by email.
 
 Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Word, because we’ll use it again in our final procedure to track the shared document.
 
-## Ask your recipients to open the emailed document
+### Ask your recipients to open the emailed document:
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
@@ -72,7 +72,7 @@ Ask them to read the email message that you sent. Assuming that this is the firs
 
 If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
 
-### Instructions for recipient: To view the protected document attachment
+#### Instructions for recipient: To view the protected document attachment
 
 1. Open one of the attachments to read the document:
     
@@ -87,11 +87,11 @@ If this is not the first time that they have received attachments that are prote
 
 3. Read the document contents when it opens. Because it’s read-only, you cannot change the contents.
 
-As an optional step, your recipient could forward the email to other people that you didn’t specify in your original email. Even if those other people work for an organization that has Azure Information Protection, or they apply for their own RMS for individuals subscription, they won’t be able to open the attachment. When they are promoted for their user name, access to the document will be denied.
+As an optional step, your recipient could forward the email to other people that you didn’t specify in your original email. These people won’t be able to open the attachment. When they are promoted for their user name, access to the document will be denied.
 
 Now that the recipient has opened the attachment and optionally, forwarded it to somebody else, expect to get an email notification that reports this activity. But email messages are easy to lose over time, so a better way to track who accessed your document is to use the document tracking site, which is covered in the final procedure.
 
-## To track your protected document
+### To track your protected document:
 
 1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**.
 
