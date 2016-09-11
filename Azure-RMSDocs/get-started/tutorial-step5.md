@@ -74,19 +74,16 @@ You can return to this site to track further activity for your protected documen
 |--------------------------------|--------------------------|
 |Full instructions for tracking your documents|[Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md)|
 |Two minute video that explains and shows document tracking|[Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
-|For troubleshooting and customer questions|[FAQ for Document Tracking](https://technet.microsoft.com/dn947488)|
+
 
 ### Next steps
-This tutorial stepped you through just one scenario for how Azure RMS can help protect your data. To see other common uses, see [Azure RMS in action](../understand-explore/what-admins-users-see.md)  from [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md) There are other sections in this article that you might also find useful, such as how Azure RMS works and what business problems it can solve.
 
-If you’re ready to start deploying Azure RMS, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
 
-Or, for a list of specific scenarios and associated configuration steps and end user documentation, see the [Rapid deployment guide for Azure Rights Management](../get-started/rapid-deployment-guide.md).
+Try sending more protected documents by using the Rights Management sharing application, and use the document tracking site to monitor how your documents are being used. 
 
->[!div class="step-by-step"]
-[Intro](quick-start-tutorial.md)
-[Step 1](tutorial-step1.md)
-[Step 2](tutorial-step2.md)
-[Step 3](tutorial-step3.md)
-[Step 4](tutorial-step4.md)
-*Step 5*
+When you've finished your own testing, you might find it useful to look over the [frequently asked questions for Azure Information Protection](faqs.md) and also [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md) for a better understanding of how the protection service works.
+
+If you’re ready to start deploying Azure Information Protection, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+
+

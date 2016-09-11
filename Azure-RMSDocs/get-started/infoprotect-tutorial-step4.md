@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 4 | Azure Rights Management
-description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2016
@@ -63,10 +63,12 @@ Classification and protection happens when you save the document, but before we 
 
     If you chose the option to apply an RMS template, the document is also protected with the Azure Rights Management template you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
 
-> [!NOTE]
->If you have any problems completing these steps, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. 
->
->In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose any problems.
+
+
+>[!div class="step-by-step"]
+[« Step 3](tutorial-step3.md)
+[Step 4 »](tutorial-step3.md)
+
 
 ##  Next steps
 
