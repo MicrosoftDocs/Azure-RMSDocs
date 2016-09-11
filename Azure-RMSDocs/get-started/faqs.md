@@ -229,7 +229,11 @@ If you have questions or feedback, use the [Azure Information Protection Yammer 
 
 -----
 
-#### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
+-----
+
+### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
+
+-----
 
 -----
 
