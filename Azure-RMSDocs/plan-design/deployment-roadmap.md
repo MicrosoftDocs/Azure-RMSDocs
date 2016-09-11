@@ -37,7 +37,7 @@ However, if you just want to quickly try Azure Information Protection for yourse
 
 Choose the deployment roadmap that's applicable for your organization:
 
-- **Your organization has a Premium subscription in addition to Office 365 with Azure Rights Management:**
+- **[Your organization has a Premium subscription in addition to Office 365 with Azure Rights Management](#roadmap-for-a-premium-subscription-with-office-365):**
     
     Your organization has both these subscriptions:
     
@@ -45,14 +45,14 @@ Choose the deployment roadmap that's applicable for your organization:
     
     -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
             
-- **Your organization has just Office 365 with Azure Rights Management:**
+- **[Your organization has just Office 365 with Azure Rights Management](#roadmap-for-an-office-365-subscription-only):**
     
     Your organization does not have a Premium subscription for Azure Information Protection, but  has the following:
     
     -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
 
 
-## Roadmap for a Premium subscription with Office 365
+## Deployment roadmap for a Premium subscription with Office 365
 
 ### Step 1: Confirm your subscription and assign user licenses
 Use the subscription information from the marketing site to confirm that your subscription includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will classify, label, and protect documents and emails.
@@ -93,7 +93,7 @@ If you're interested in automatically protecting files using File Classification
 ### Step 5: Administer the Rights Management service for your tenant account as needed
 As you begin to use the Azure Rights Management service, you might find Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](../deploy-use/administer-powershell.md).
 
-## Roadmap for an Office 365 subscription only
+## Deployment roadmap for an Office 365 subscription only
 
 ### Step 1: Confirm that you have a subscription that includes Azure Rights Management
 Use the subscription information from the marketing site to confirm that your subscription includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will protect documents and emails by using the Azure Rights Management service.
