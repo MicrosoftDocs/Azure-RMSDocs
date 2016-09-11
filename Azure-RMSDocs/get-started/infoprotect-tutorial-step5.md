@@ -11,7 +11,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: xxxx
+ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 
 # optional metadata
 
@@ -38,34 +38,75 @@ You’re then ready to safely share this document by email.
 
 1.  In Word, open your document. You will see that the default label of **Internal** is again automatically applied. 
 
-2.  On the Home tab, in the **RMS** group, click **Share Protected**, and then click **Share Protected** from the menu.
-3.  
-4.  
-5.    the **To** box, type one or more business email addresses. Make sure you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Rights Management doesn’t support personal email addresses that you might use at home from your Internet provider. Don’t worry about whether the person you’re sending it to also has Azure Rights Management or not.
+2.  On the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Share Protected** from the menu. You'll see the **share protected** dialog box.
 
-3.  Type a subject, such as  **Confidential document** and then type a short message for the email, such as **Please read this confidential document and do not share it with others.**
+3. In the **USERS** box, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Or, you can specify a co-worker's email address. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
 
-4.  Then, on the **Message** tab, in the **RMS** group, click **Share Protected** and then click **Share Protected** again:
+    Don’t worry about whether the person you’re sending it to also has Azure Information Protectin or not.
 
-5.  In the **share protected** dialog box:
-
-    1.  Select **Viewer – View Only**.
+4. Select **Viewer – View Only**.
 
         This means our recipients will be able to view the document but not edit or print it.
 
-    2.  Select **Email me when somebody tries to open these documents**.
+5. Select **Email me when somebody tries to open these documents**.
 
-        You’ll get an email notification each time the recipients try to open the attachment, and also if somebody else tries to open it—for example, your recipient forwards the email to co-worker. In this last scenario, you’ll see that access was denied and from the user details, you can decide whether to send that person a copy of the document that they can open.
+    You’ll get an email notification each time the recipients try to open the attachment, and also if somebody else tries to open it—for example, your recipient forwards the email to co-worker. In this last scenario, you’ll see that access was denied and from the user details, you can decide whether to send that person a copy of the document that they can open.
 
-    3.  Select **Allow me to instantly revoke access to these documents**.
+6. Select **Allow me to instantly revoke access to these documents**.
 
-        This option requires the recipients to have an Internet connection each time they open the attachment but with the benefit that if you later revoke the document, the next time they try to open it, they will not be able to. If you do not select this option, the recipients might be able to open it even without an Internet connection but with the disadvantage that if you later revoke the document, there might be a delay for when that takes effect.
+    This option requires the recipients to have an Internet connection each time they open the attachment but with the benefit that if you later revoke the document, the next time they try to open it, they will not be able to. If you do not select this option, the recipients might be able to open it even without an Internet connection but with the disadvantage that if you later revoke the document, there might be a delay for when that takes effect.
 
-    4.  Click **Send Now**.
+4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions.
 
-        The email with attachment is sent to the email addresses that you specified. In addition to your email message, they will see instructions how to read the attached document that is protected by Azure Rights Management.
+    You might notice that you have two attachments; the original Word document and a file that has the same name but with a .ppdf file name extension. The protected PDF file is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that support protected documents. Then, the recipient can read the .ppdf version of the file by using the viewer that is installed with the Rights Management sharing application.
 
-Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Outlook, because we’ll use it again in our final step to track the attachment.
+    Click **Send** in your email message.
+
+Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Word, because we’ll use it again in our final step to track the shared document.
+
+## Ask your recipients to open the emailed document
+
+Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
+
+Ask them to read the email message that you sent. Assuming that this is the first time that they have received attachments that are protected by Rights Management, ask them to click the instructions link. They will then see the [Welcome to Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) page, with instructions to install the RMS sharing application and if necessary, sign up for a free account. 
+
+This free account grants them a subscription for RMS for individuals, which ensures that authorized users can always read a protected document, even if their organization does not have Azure Rights Management. They are then ready to read the protected attachment by using the following instructions.
+
+If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
+
+### To view the protected document attachment
+
+1. Open one of the attachments to read the document:
+
+- If you have a version of Office on your device that supports Rights Management: Open the document that has the .docx file name extension.
+
+- If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: Open the document that has a .ppdf file name extension.
+
+2.  If you are prompted for your user name and password, enter your user name in the same format as the email address that was used to send you the email and attachment. For example, **janetm@contoso.com** or **p.dover@fabrikam.com**. For your password, type the password that you supplied when you signed up for RMS for individuals. Or, if your organization has a cloud service such as Office 365 or uses Azure, enter your usual work password.
+
+3. Read the document contents when it opens. Because it’s protected as read-only, you cannot change the contents.
+
+As an optional step, your recipient could forward the email to other people that you didn’t specify in your original email. Even if those other people work for an organization that has Azure Information Protection, or they apply for their own RMS for individuals subscription, they won’t be able to open the attachment. When they are promoted for their user name, access to the document will be denied.
+
+Now that the recipient has opened the attachment and optionally, forwarded it to somebody else, expect to get an email notification that reports this activity. But email messages are easy to lose over time, so a better way to track who accessed your document is to use the document tracking site, which is covered in the final procedure.
+
+## To track your protected document
+
+1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**.
+
+2.  If you see the **Protect and share on your terms** page, click **Sign in** and supply your user name and password again.
+
+3.  On the **Your shared documents** page, you’ll see the document name that you shared. At this point, it’s the only file displayed but as you share additional protected documents, the list will grow.
+
+    From this page, you’ll see when you shared the document (when you sent the email with the protected attachment), the date of the last activity, and the name of the recipient you sent the email to. Click the document name for additional details.
+
+4.  On the new page, which has the name of the file that you clicked, you’ll see summary details for that document only, and a list of other options that are available for the document (**List**, **Timeline**, **Map**, **Settings**).
+
+    Click each option to explore different ways to track your protected document. Or, still on the **Summary** page, click **Open in Excel** to export the information to a spreadsheet, or click **Revoke access** to stop sharing the document.
+
+You can return to this site to track further activity for your protected document, or revoke access if necessary. You can even access the site from your mobile device or tablet, by using a browser with this link: [document tracking](http://go.microsoft.com/fwlink/?LinkId=529562)
+
+
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
