@@ -87,7 +87,7 @@ See the [Security, compliance, and regulatory requirements](../understand-explor
 
 
 ## What do I do if my question isn’t answered on this page?
-Use the links and resources listed in [Information and support for Azure Rights Management](information-support.md).
+Use the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
 
 In addition, there are FAQs designed for end-users:
 
@@ -229,7 +229,7 @@ If you have questions or feedback, use the [Azure Information Protection Yammer 
 
 -----
 
-### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
+#### Specific to the Azure Rights Management service that provides the protection technology for Azure Information Protection:
 
 -----
 
