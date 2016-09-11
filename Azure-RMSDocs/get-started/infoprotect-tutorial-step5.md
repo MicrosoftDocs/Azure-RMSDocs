@@ -26,11 +26,11 @@ ms.suite: ems
 ---
 
 
-# Step 4: See sharing of protected files in action and track your document 
+# Step 5: See sharing of protected files in action and track your document 
 
 >*Applies to: Azure Information Protection*
 
-For this step, locate a Word document that you have already created and will send to a partner or co-worker. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
+For this final step in the tutorial, locate a Word document that you have already created and will send to a partner or co-worker. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
 
 You’re then ready to safely share this document by email. 
 
@@ -46,7 +46,7 @@ You’re then ready to safely share this document by email.
 
 4. Select **Viewer – View Only**.
 
-        This means our recipients will be able to view the document but not edit or print it.
+    This means our recipients will be able to view the document but not edit or print it.
 
 5. Select **Email me when somebody tries to open these documents**.
 
@@ -58,7 +58,7 @@ You’re then ready to safely share this document by email.
 
 4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions.
 
-    You might notice that you have two attachments; the original Word document and a file that has the same name but with a .ppdf file name extension. The protected PDF file is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that support protected documents. Then, the recipient can read the .ppdf version of the file by using the viewer that is installed with the Rights Management sharing application.
+    You might notice that you have two attachments; the original Word document and a file that has the same name but with a .ppdf file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. Then, the recipient can read the protected PDF version of the file by using the viewer that is installed with the Rights Management sharing application.
 
     Click **Send** in your email message.
 
