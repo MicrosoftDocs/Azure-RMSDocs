@@ -68,9 +68,7 @@ Now you’ve sent your protected document, you’re ready to ask your recipients
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
-Ask them to read the email message that you sent. Assuming that this is the first time that they have received attachments that are protected by Rights Management, ask them to click the instructions link. They will then see the [Welcome to Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) page, with instructions to install the RMS sharing application and if necessary, sign up for a free account. 
-
-This free account grants them a subscription for RMS for individuals, which ensures that authorized users can always read a protected document, even if their organization does not have Azure Rights Management. They are then ready to read the protected attachment by using the following instructions.
+Ask them to read the email message that you sent. Assuming that this is the first time that they have received attachments that are protected by Rights Management, ask them to click the instructions link. They will then see the [Welcome to Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) page, with instructions to install the RMS sharing application and if necessary, sign up for a free account. They are then ready to read the protected attachment by using the following instructions.
 
 If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
 
@@ -79,10 +77,11 @@ If this is not the first time that they have received attachments that are prote
 1. Open one of the attachments to read the document:
     
     - If you have a version of Office on your device that supports Rights Management:
-        -  Open the document that has the .docx file name extension.
+        -  Open the document that has the **.docx** file name extension.
         
     - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: 
-    -     Open the document that has a .ppdf file name extension.
+    
+    -     Open the document that has a **.ppdf** file name extension.
 
 2.  If you are prompted for your user name and password, enter your user name in the same format as the email address that was used to send you the email and attachment. For example, **janetm@contoso.com** or **p.dover@fabrikam.com**. For your password, type the password that you supplied when you signed up for RMS for individuals. Or, if your organization has a cloud service such as Office 365 or uses Azure, enter your usual work password.
 

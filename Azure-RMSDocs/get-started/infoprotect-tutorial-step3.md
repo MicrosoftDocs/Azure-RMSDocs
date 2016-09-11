@@ -30,7 +30,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 In this step, you'll first install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications.
 
-Second, you'll install the Rights Management sharing application, so that you can safely share a document by email, and then track its usage. 
+Second, you'll install the Rights Management sharing application, so that you can safely share a document by email, and then track how it is used. 
 
 Both these installations integrate with Office applications and currently, you must install them separately.
 
