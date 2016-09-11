@@ -58,7 +58,7 @@ You’re then ready to safely share this document by email.
 
 4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions.
 
-    You might notice that you have two attachments; the original Word document and a file that has the same name but with a .ppdf file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. Then, the recipient can read the protected PDF version of the file by using the viewer that is installed with the Rights Management sharing application.
+    You might notice that you have two attachments; the original Word document and a file that has the same name but with a **.ppdf** file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. This version lets the recipient read the protected document by using the viewer that is installed with the Rights Management sharing application.
 
     Click **Send** in your email message.
 

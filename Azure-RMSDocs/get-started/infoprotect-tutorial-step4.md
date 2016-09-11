@@ -34,17 +34,17 @@ Classification and protection happens when you save the document, but before we 
 
 ## To manually change our default label
 
-On the Information Protection bar, select the **Personal** label and you are prompted to justify why are lowering the classification level. Select **The previous label no longer applies**, and click **Confirm**.  
-
-You'll see the **Sensitivity** value change to **Personal**.
+On the Information Protection bar, select the **Personal** label and you are prompted to justify why are lowering the classification level:
 
 ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
+
+Select **The previous label no longer applies**, and click **Confirm**. You'll see the **Sensitivity** value change to **Personal**.
 
 ## To remove the classification completely
 
 On the Information Protection bar, click the **Edit label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Remove label** icon. Click **OK** to confirm and then provide justification for this action.  
 
-You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label.
+You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 
 ![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-set.png)
 
