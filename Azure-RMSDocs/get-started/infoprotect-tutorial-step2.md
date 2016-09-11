@@ -47,11 +47,15 @@ Although Azure Information Protection comes with a default policy that you can u
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
+## Changing the global settings for a default template and prompt for justification
+
 For our tutorial, we'll change a couple of those global settings so that you can see how they work:
 
 -  **Select the default label**: Set this to **Internal**.
 
 - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: Set this to **On**.
+
+## Configuring a label for protection, a watermark, and a condition to prompt for classification
 
 We'll now change the settings of one of the labels, **Confidential**:
 
