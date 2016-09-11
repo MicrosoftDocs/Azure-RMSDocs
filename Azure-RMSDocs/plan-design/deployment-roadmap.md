@@ -32,21 +32,25 @@ Use the following steps to prepare for, implement, and manage Azure Information 
 
 However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-For a list of specific scenarios and associated configuration steps and end user documentation, see the [Rapid deployment guide for Azure Information Protection](../get-started/rapid-deployment-guide.md).
-
 > [!IMPORTANT]
 > Before you do the following steps, make sure that you have reviewed [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
 
 Choose the deployment roadmap that's applicable for your organization:
 
-- Your organization has a Premium subscription in addition to Office 365:
+- **Your organization has a Premium subscription in addition to Office 365 with Azure Rights Management:**
     
-    - An Azure Information Protection Premium subscription (P1 or P2) - either standalone subscription or as part of the Enterprise Mobility + Security suite or Secure Productive Enterprise suite.
-    
-    -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
+    Your organization has both these subscriptions:
 
-- Your organization has just an Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS)
+        - An Azure Information Protection Premium subscription (P1 or P2) - either standalone subscription or as part of the Enterprise Mobility + Security suite or Secure Productive Enterprise suite.
     
+        -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
+
+- **Your organization has just Office 365 with Azure Rights Management:**
+    
+    Your organization does not have a Premium subscription for Azure Information Protection, but  has the following:
+    
+        -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
+
 
 ## Roadmap for a Premium subscription with Office 365
 
