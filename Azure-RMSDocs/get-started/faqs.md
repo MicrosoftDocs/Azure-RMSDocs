@@ -32,7 +32,7 @@ Have a question about Azure Information Protection, or for the Azure Rights Mana
 
 - [Questions specific to Azure Information Protection](#specific-to-the-classification-and-labeling-functionality-in-azure-information-protection)
 
-- [Questions specific to Azure Rights Management](specific-to-the-azure-rights-management-service-that-provides-the-protection-technology-for-azure-information-protection)
+- [Questions specific to Azure Rights Management](#specific-to-the-azure-rights-management-service-that-provides-the-protection-technology-for-azure-information-protection)
 
 
 This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
