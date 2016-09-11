@@ -34,7 +34,7 @@ For this final step in the tutorial, locate a Word document that you have alread
 
 You’re then ready to safely share this document by email. 
 
-### To safely share your document by email:
+## To safely share your document by email
 
 1.  In Word, open your document. You will see that the default label of **Internal** is again automatically applied. 
 
@@ -64,7 +64,7 @@ You’re then ready to safely share this document by email.
 
 Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. But don’t close Word, because we’ll use it again in our final procedure to track the shared document.
 
-### Ask your recipients to open the emailed document:
+## Ask your recipients to open the emailed document
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
@@ -72,7 +72,7 @@ Ask them to read the email message that you sent. Assuming that this is the firs
 
 If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
 
-#### Instructions for recipient: To view the protected document attachment
+### Instructions for recipient: To view the protected document attachment
 
 1. Open one of the attachments to read the document:
     
@@ -91,7 +91,7 @@ As an optional step, your recipient could forward the email to other people that
 
 Now that the recipient has opened the attachment and optionally, forwarded it to somebody else, expect to get an email notification that reports this activity. But email messages are easy to lose over time, so a better way to track who accessed your document is to use the document tracking site, which is covered in the final procedure.
 
-### To track your protected document:
+## To track your protected document
 
 1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**.
 
@@ -113,6 +113,7 @@ You can return to this site to track further activity for your protected documen
 |--------------------------------|--------------------------|
 |Full instructions and alternative methods for protecting files that you share by email|[Protect a file that you share by email by using the Rights Management sharing application](../rms-client/sharing-app-protect-by-email.md)|
 |About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/sharing-app-dialog-box.md)|
+|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../understand-explore/rms-for-individuals.md)|
 
 
 ## Next Steps
