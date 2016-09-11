@@ -114,6 +114,10 @@ You can return to this site to track further activity for your protected documen
 |About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"]
-[« Step 2](tutorial-step2.md)
-[Step 4 »](tutorial-step4.md)
+## Next Steps
+
+Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
+
+Try sharing more documents and track how they are being used, and confirm how document revocation works.
+
+You might then find it useful to read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](../deploy-use/deployment-roadmap.md). 
