@@ -40,11 +40,11 @@ Choose the deployment roadmap that's applicable for your organization:
 - **Your organization has a Premium subscription in addition to Office 365 with Azure Rights Management:**
     
     Your organization has both these subscriptions:
-
+    
         - An Azure Information Protection Premium subscription (P1 or P2) - either standalone subscription or as part of the Enterprise Mobility + Security suite or Secure Productive Enterprise suite.
     
         -  An Office 365 subscription that supports protecting documents and emails with the Azure Rights Management service (Azure RMS).
-
+            
 - **Your organization has just Office 365 with Azure Rights Management:**
     
     Your organization does not have a Premium subscription for Azure Information Protection, but  has the following:
