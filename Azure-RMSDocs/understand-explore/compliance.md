@@ -54,9 +54,7 @@ See the [Security, compliance, and regulatory requirements](../understand-explor
 
 ## Documentation
 
-- Azure Active Directory Documentation site: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
-- Azure Active Directory Library: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
+- Azure Active Directory documentation site: [/active-directory/)
 
 - Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
