@@ -101,7 +101,7 @@ Use the subscription information from the marketing site to confirm that your su
 ### Step 2: Prepare your tenant account to use the Azure Rights Management service
 Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], do the following preparation:
 
-1.  Make sure that your Office 365 tenant contains the user accounts and groups that will be used by Azure RMS to authenticate users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. For more information, see [Preparing for Azure Rights Management](prepare.md).
+1.  Make sure that your Office 365 tenant contains the user accounts and groups that will be used by Azure Information Protection to authenticate users from your organization. If necessary, create these account and groups, or synchronize them from your on-premises directory. For more information, see [Preparing for Azure Rights Management](prepare.md).
 
 2.  Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). Note that currently, you cannot use BYOK if you use Exchange Online. For more information, see [Planning and implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md).
 
