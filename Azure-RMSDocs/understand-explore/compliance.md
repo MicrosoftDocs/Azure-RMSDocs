@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Compliance and supporting information for Azure Rights Management
 
-Azure RMS supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
+Azure Rights Management (Azure RMS) supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
 
 ## Legal and privacy
 
