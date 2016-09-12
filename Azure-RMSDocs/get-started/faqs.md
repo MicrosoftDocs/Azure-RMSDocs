@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Rights Management | Azure RMS
 description: Some frequently asked questions for Microsoft Azure Rights Management, also known as Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -171,37 +171,8 @@ As these examples demonstrate, even if all platforms and all software supported 
 Despite its name and appearance, **Do Not Forward** is neither the opposite of the Forward right, nor a template. It is actually a set of rights that include restricting copying, printing, and saving attachments, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 ## Where can I find supporting information for Azure RMS—such as legal, compliance, and SLAs?
-Azure RMS supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
 
-**Legal and privacy:**
-
--   For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   For Microsoft Azure privacy information: [Microsoft Azure Privacy Statement](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Security, compliance, and auditing:**
-
-See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article. In addition:
-
--   For external certifications for Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
-
--   For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Service level agreements:**
-
--   Service level agreement for Azure RMS, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
-
--   Service level agreement for Azure Active Directory: [Service Level Agreements](http://azure.microsoft.com/support/legal/sla/)
-
-**Documentation:**
-
--   Azure Active Directory Documentation site: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Azure Active Directory Library: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+See [Compliance and supporting information for Azure Rights Management](../understand-explore/compliance.md).
 
 ## What's the latest on the new classification and labeling functionality?
 
