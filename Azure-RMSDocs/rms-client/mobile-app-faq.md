@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: FAQ for Azure Information Protection app for iOS and Android | Azure RMS
+title: FAQ for Azure Information Protection app for iOS and Android | Azure Information Protection
 description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -24,11 +24,11 @@ ms.suite: ems
 
 ---
 
-# FAQ for Microsoft Azure Information Protection app (preview) for iOS and Android
+# FAQ for Microsoft Azure Information Protection app for iOS and Android
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
-This page provides answers to frequently asked questions about the Azure Information Protection app for iOS and Android, currently in preview.
+This page provides answers to frequently asked questions about the Azure Information Protection app for iOS and Android.
 
 ## What can I do with the Azure Information Protection app?
 
