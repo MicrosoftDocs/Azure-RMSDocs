@@ -37,7 +37,7 @@ For this tutorial, we'll go straight to the activation page for Office 365 admin
 
 ## To activate the Rights Management service
 
-1. Go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+1. Open a new browser window and go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
     
     If you are prompted to sign in, use an account that is a global administrator for Office 365.
 

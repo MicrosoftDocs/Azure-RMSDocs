@@ -24,7 +24,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 ---
 
-# Step 2: Install the client and application 
+# Step 3: Install the client and application 
 
 >*Applies to: Azure Information Protection*
 
