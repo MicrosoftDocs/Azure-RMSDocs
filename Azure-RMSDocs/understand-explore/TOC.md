@@ -15,7 +15,7 @@
 ### [File servers that run Windows Server and use File Classification Infrastructure](file-server-support.md)
 ### [Other applications that support the RMS APIs](api-support.md)
 ## [Comparing Information Protection and AD RMS](compare-azure-rms-ad-rms.md)
-## [Common Scenarios]()
+## [Common scenarios]()
 # [Get Started](/rights-management/get-started/requirements-azure-rms)
 # [Plan & Design](/rights-management/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)

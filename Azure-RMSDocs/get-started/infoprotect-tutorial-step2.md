@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 1 | Azure Information Protection
-description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 3 steps that should take you less than 15 minutes.
+description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 15 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2016
@@ -24,15 +24,15 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 ---
 
-# Step 1: Configure and publish the Azure Information Protection policy
+# Step 2: Configure and publish the Azure Information Protection policy
 
 >*Applies to: Azure Information Protection*
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com). If you want to test protection as well as classification and labeling, sign in as a global admin so that you can retrieve the Azure Rights Management templates.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
  
-2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection (preview)** > **Create**.
+2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection** > **Create**.
 
     This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **Browse** list. 
 
@@ -47,11 +47,15 @@ Although Azure Information Protection comes with a default policy that you can u
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
+## Changing the global settings for a default template and prompt for justification
+
 For our tutorial, we'll change a couple of those global settings so that you can see how they work:
 
 -  **Select the default label**: Set this to **Internal**.
 
 - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: Set this to **On**.
+
+## Configuring a label for protection, a watermark, and a condition to prompt for classification
 
 We'll now change the settings of one of the labels, **Confidential**:
 
@@ -59,9 +63,9 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. If you have activated Azure Rights Managment: In the **Set RMS template for protecting documents and emails containing this label** section, if you see **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+    a. In the **Set RMS template for protecting documents and emails containing this label** section, if you see **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-    If you have not activated Azure Rights Management, you cannot use this option.
+    Note that if you have not activated Azure Rights Management from [step 1](infoprotect-quick-start-tutorial.md), you cannot use this option.
     
     b. **Documents with this label have a watermark**: Click **On** and for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. 
     
@@ -91,7 +95,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
-Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
+Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client and the Rights Management sharing application.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
@@ -99,5 +103,5 @@ Now that you've had a look at the default policy and made some changes, the next
 
 
 >[!div class="step-by-step"]
-[&#171; Introduction](infoprotect-quick-start-tutorial.md)
-[Step 2 &#187;](infoprotect-tutorial-step3.md)
+[&#171; Step 2](infoprotect-tutorial-step2.md)
+[Step 3 &#187;](infoprotect-tutorial-step3.md)
