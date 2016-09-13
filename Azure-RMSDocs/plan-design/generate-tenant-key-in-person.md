@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Generate and transfer your tenant key – in person: RETIRED CONTENT | Azure RMS
+title: Generate and transfer your tenant key – in person&#58; RETIRED CONTENT | Azure RMS
 description: The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 author: cabailey
 manager: mbaldwin
