@@ -59,7 +59,6 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     ```
     You can use either [ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) or [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) to specify the password as a secure string. When you use ConvertTo-SecureString and the password has special characters, enter the password between single quotes or escape the special characters.
     
-
     For example: First run **$TPD_Password = Read-Host -AsSecureString**. Then run **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
 
 4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
