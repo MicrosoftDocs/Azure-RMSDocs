@@ -37,9 +37,9 @@ However, if you just want to quickly try Azure Information Protection for yourse
 
 Choose the deployment roadmap that's applicable for your organization and that matches the [subscriptions and number of user licenses for the functionality]( http://go.microsoft.com/fwlink/?LinkId=827589) that you need:
 
-- [Use classification, labeling, and protection](#use-classification-labeling-and-protection)
+- [Use classification, labeling, and protection](#deployment-roadmap-for-classification-labeling-and-protection)
 
-- [Use data protection only](#use-data-protection-only)
+- [Use data protection only](#deployment-roadmap-for-data-protection-only)
 
 
 ## Deployment roadmap for classification, labeling, and protection
@@ -72,7 +72,7 @@ After a period of time, when users are comfortable labeling their documents and 
 
 At this stage, do not select the option to protect documents and emails.
 
-## Step 4: Prepare for Rights Management data protection
+### Step 4: Prepare for Rights Management data protection
 
 When users are comfortable labeling documents and emails, you're ready to start introducing data protection for your most sensitive data. This stage requires the following preparation for the Azure Rights Management service:
 
