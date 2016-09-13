@@ -54,11 +54,11 @@ Before you begin using Azure Information Protection, do the following preparatio
 
 ### Step 3: Configure and deploy classification and labeling
 
-Review and if necessary, make changes to the default Azure Information Protection policy to support manual labeling by users, and provide guidance for users to explain which label to apply and when. For more information, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)
+Review and if necessary, make changes to the default Azure Information Protection policy to support manual labeling by users, and provide guidance for users to explain which label to apply and when. For more information, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 Then deploy the Azure Information Protection client for users, and provide user training when to select the labels. For more information, see [Installing the Azure Information Protection client](../rms-client/info-protect-client.md).
 
-After a period of time, when users are comfortable labeling their documents and emails, introduce more advantaged configurations. These might include the following:
+After a period of time, when users are comfortable labeling their documents and emails, introduce more advanced configurations. These might include the following:
 
 - Apply a default label
 
@@ -78,11 +78,11 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 - Decide whether you want Microsoft to manage your tenant key (the default), or generate and manage your tenant key yourself (known as bring your own key, or BYOK). Note that currently, you cannot use BYOK if you use Exchange Online. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md).
 
-- Install the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+- Install the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] on at least one computer that has Internet access. You can do this step now, or later. For more information, see [Installing Windows PowerShell for the Azure Rights Management service](../deploy-use/install-powershell.md).
 
 - If you are currently using on-premises Rights Management services: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-- Activate Rights Management so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+- Activate the Azure Rights Management service so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 Optionally, consider configuring the following:
 
@@ -92,29 +92,29 @@ Optionally, consider configuring the following:
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for Rights Management data protection
 
-#### Add protection to your Azure Information Protection policy
+- Add protection to your Azure Information Protection policy
+    
+    Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
 
-Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
+- Deploy the Rights Management sharing application
+    
+    Install the Rights Management sharing application for users, so that they can safely share documents by email, protect files in place, and track their shared documents that they protected. Provide user training for this application. For more information, see [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
 
-#### Deploy the Rights Management sharing application
+- Configure Office applications and services for IRM
+    
+    Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
-Install the Rights Management sharing application for users, so that they can safely share documents by email, protect files in place, and track their shared documents that they protected. Provide user training for this application. For more information, see [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
+- Configure the super user feature for data recovery
+    
+    If you have existing IT services that need to inspect files that Azure Rights Management will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
-#### Configure Office applications and services for IRM
+- Bulk-protect files 
+    
+    To be able to bulk protect or bulk unprotect all file types, install the RMS Protection Tool, which uses the RMS Protection PowerShell module. For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx).
 
-Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
-
-#### Configure the super user feature for data recovery
-
-If you have existing IT services that need to inspect files that Azure Rights Management will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
-
-#### Bulk-protect files 
-
-To be able to bulk protect or bulk unprotect all file types, install the RMS Protection Tool, which uses the RMS Protection PowerShell module. For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx).
-
-#### Deploy the connector for on-premises servers
-
-If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+- Deploy the connector for on-premises servers
+    
+    If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 ### Step 4: Publish and consume rights-protected content
 You’re now ready to publish and consume protected content, and log how your company is using Rights Management. For more information, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md) and [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
