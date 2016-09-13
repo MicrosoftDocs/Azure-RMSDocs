@@ -5,7 +5,7 @@ title: Step 2&colon; Software-protected key to software-protected key migration 
 description: Instructions that are part of the migration path from AD RMS to Azure Rights Management, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a software-protected tenant key. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -55,11 +55,12 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
 3.  Use the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use in Azure RMS to protect content after the migration. Use the following command:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -Active $True -Verbose
+    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
     ```
-    For example: **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword -Active $true -Verbose**
+    You can use either [ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) or [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) to specify the password as a secure string. When you use ConvertTo-SecureString and the password has special characters, enter the password between single quotes or escape the special characters.
+    
 
-    When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
+    For example: First run **$TPD_Password = Read-Host -AsSecureString**. Then run **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
 
 4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
 
