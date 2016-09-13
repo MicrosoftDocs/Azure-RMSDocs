@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Frequently asked questions for classification and labeling | Azure Information Protection
+title: Frequently asked questions about classification and labeling | Azure Information Protection
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
@@ -24,11 +24,11 @@ ms.suite: ems
 
 ---
 
-# Frequently asked questions for classification and labeling in Azure Information Protection
+# Frequently asked questions about classification and labeling in Azure Information Protection
 
->*Applies to: Azure Information Protection
+>*Applies to: Azure Information Protection, Office 365*
 
-Have a question about Azure Information Protection that is about classification and labeling?  See if it's answered here. 
+Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
 ## What can I do with Azure Information Protection?
 
