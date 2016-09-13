@@ -40,7 +40,7 @@ This means that all documents and emails that are protected by using the Azure R
 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) from marketing.
+See the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection.
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
@@ -55,7 +55,7 @@ See [Compliance and supporting information for Azure Rights Management](../under
 
 First, review the frequently asked questions that are specific to classification and labeling, or specific to data protection. the Azure Rights Management service (Azure RMS) provides the data protection technology for Azure Information Protection and Azure RMS can be used with classification and labeling, or without: 
 
-- [FAQs for classification and labeling](faq.md)
+- [FAQs for classification and labeling](faqs-inforprotect.md)
 
 - [FAQs for data protection](faqs-rms.md)
 
