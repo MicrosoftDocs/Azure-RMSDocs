@@ -61,7 +61,7 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     
     For example: First run **$TPD_Password = Read-Host -AsSecureString**. Then run **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. When prompted, enter the password that you specified earlier, and confirm that you want to perform this action.
     
-4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
+4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
 5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
 
