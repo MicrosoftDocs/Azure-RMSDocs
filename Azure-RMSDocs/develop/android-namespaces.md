@@ -2,7 +2,7 @@
 # required metadata
 
 title: Android namespace | Azure RMS
-description: The Android API has two namespaces.
+description: Links to the two Android API namespaces, which cover the primary functionality and exceptions.
 keywords: RMS, Android
 author: bruceperlerms
 manager: mbaldwin
