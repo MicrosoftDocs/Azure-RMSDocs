@@ -35,8 +35,6 @@ The following picture shows this Information Protection bar and the labels from 
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
-NOTE: To access the Azure Information Protection bar by using keyboard shortcuts, press **Ctrl** + **Shift** + **~**. Then, use the Tab key to select the labels and other controls on the bar (the **Hide labels** icon and **Remove label** icon), and the Enter key to select them.
-
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 Before you install the client, check that you have the required operating system versions and applications: [Requirements for Azure Information Protection](requirements-azure-infoprotect.md).
@@ -83,6 +81,15 @@ You can use any of these options:
     - The **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate.
 
     - The **Run diagnostics** link: This functionality is not currently implemented.
+
+## Keyboard shortcuts for the Azure Information Protection bar
+
+To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
+
+- Press **Ctrl** + **Shift** + **~** 
+
+Then, use the Tab key to select the labels and other controls on the bar (the **Hide labels** icon and **Remove label** icon), and the Enter key to select them.
+
 
 ## File locations
 
