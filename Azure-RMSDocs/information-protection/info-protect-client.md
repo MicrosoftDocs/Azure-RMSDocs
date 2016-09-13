@@ -35,8 +35,7 @@ The following picture shows this Information Protection bar and the labels from 
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
-> [!NOTE]
-> To access the Azure Information Protection bar by using keyboard shortcuts, press **Ctrl** + **Shift** + **~**. Then, use the Tab key to select the labels and other controls (the **Hide labels** icon and **Remove label** icon), and the Enter key to select.>  
+NOTE: To access the Azure Information Protection bar by using keyboard shortcuts, press **Ctrl** + **Shift** + **~**. Then, use the Tab key to select the labels and other controls (the **Hide labels** icon and **Remove label** icon), and the Enter key to select them.
 
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
