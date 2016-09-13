@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection | Azure Infor
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -357,5 +357,30 @@ As these examples demonstrate, even if all platforms and all software supported 
 
 Despite its name and appearance, **Do Not Forward** is neither the opposite of the Forward right, nor a template. It is actually a set of rights that include restricting copying, printing, and saving attachments, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
+## Where can I find supporting information for Azure RMS—such as legal, compliance, and SLAs?
+
+See [Compliance and supporting information for Azure Rights Management](../understand-explore/compliance.md).
+
+## What's the latest on the new classification and labeling functionality?
+
+This functionality, in Azure Information Protection, is now in public preview. To try it out, and for a list of available resources, see [What is Azure Information Protection preview?](../information-protection/what-is-information-protection.md)
+
+
+## I’ve heard a new release is going to be available soon, for Azure RMS—when will it be released?
+
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+
+## What do I do if my question isn’t here?
+Use the links and resources listed in [Information and support for Azure Rights Management](information-support.md).
+
+In addition, there are FAQs designed for end-users:
+
+-   [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
+
+-   [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)
+
+-   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
+
+This FAQ page will be updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 
