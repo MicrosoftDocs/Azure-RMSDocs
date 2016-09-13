@@ -92,27 +92,27 @@ Optionally, consider configuring the following:
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for Rights Management data protection
 
-- Add protection to your Azure Information Protection policy
+1. Add protection to your Azure Information Protection policy
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
 
-- Deploy the Rights Management sharing application
+2. Deploy the Rights Management sharing application
     
     Install the Rights Management sharing application for users, so that they can safely share documents by email, protect files in place, and track their shared documents that they protected. Provide user training for this application. For more information, see [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
 
-- Configure Office applications and services for IRM
+3. Configure Office applications and services for IRM
     
     Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
-- Configure the super user feature for data recovery
+4. Configure the super user feature for data recovery
     
     If you have existing IT services that need to inspect files that Azure Rights Management will protect—such as data leak prevention (DLP) solutions, content encryption gateways (CEG), and anti-malware products—configure the service accounts to be super users for Azure Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
-- Bulk-protect files 
+5. Bulk-protect files 
     
     To be able to bulk protect or bulk unprotect all file types, install the RMS Protection Tool, which uses the RMS Protection PowerShell module. For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx).
 
-- Deploy the connector for on-premises servers
+6. Deploy the connector for on-premises servers
     
     If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
