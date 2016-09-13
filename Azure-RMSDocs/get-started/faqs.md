@@ -53,7 +53,7 @@ See [Compliance and supporting information for Azure Rights Management](../under
 
 ## What do I do if my question isn’t here?
 
-First, review the frequently asked questions that are specific to classification and labeling, or specific to Azure Rights Management that provides the data protection technology for Azure Information Protection: 
+First, review the frequently asked questions that are specific to classification and labeling, or specific to data protection. the Azure Rights Management service (Azure RMS) provides the data protection technology for Azure Information Protection and Azure RMS can be used with classification and labeling, or without: 
 
 - [FAQs for classification and labeling](faq.md)
 
