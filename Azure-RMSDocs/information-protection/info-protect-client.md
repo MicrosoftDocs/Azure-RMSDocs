@@ -4,7 +4,7 @@
 title: Installing the Azure Information Protection client | Azure Information Protection
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -34,6 +34,9 @@ To classify documents and email messages by using Azure Information Protection, 
 The following picture shows this Information Protection bar and the labels from the [default policy](configure-policy-default.md):
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
+
+> [!NOTE]
+> To access the Azure Information Protection bar by using keyboard shortcuts, press **Ctrl** + **Shift** + **~**. Then, use the Tab key to select the labels and other controls (the **Hide labels** icon and **Remove label** icon), and the Enter key to select.>  
 
 Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
