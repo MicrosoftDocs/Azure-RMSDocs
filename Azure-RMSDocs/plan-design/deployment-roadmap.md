@@ -92,7 +92,7 @@ Optionally, consider configuring the following:
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for Rights Management data protection
 
-1. Add protection to your Azure Information Protection policy
+1. Update your Azure Information Protection policy to apply data protection
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
 
