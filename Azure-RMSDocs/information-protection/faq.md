@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection preview | Azu
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -148,6 +148,10 @@ You'll see an example of this in the [Quick start tutorial for Azure Information
 If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret – Legal** and **Secret – Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
 
 Although you can currently set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
+
+## When an email is labeled, do any attachments automatically get the same labeling?
+
+No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 

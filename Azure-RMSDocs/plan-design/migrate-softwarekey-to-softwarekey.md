@@ -5,7 +5,7 @@ title: Step 2&colon; Software-protected key to software-protected key migration 
 description: Instructions that are part of the migration path from AD RMS to Azure Rights Management, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a software-protected tenant key. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
