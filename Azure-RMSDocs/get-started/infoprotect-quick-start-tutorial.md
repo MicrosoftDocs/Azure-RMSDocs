@@ -28,7 +28,7 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 >*Applies to: Azure Information Protection*
 
-Use this tutorial to quickly try out Azure Information Protection with just 5 steps that should take you about 30 minutes. This tutorial is designed to be a self-guided demo to quickly showcase some of the features and functionality that the Azure Information Protection Premium 2 subscription offers. It does not include all the features and is not intended to be a deployment guide for your organization. If you are looking to deploy Azure Information Protection for your organization, see the [deployment roadmap documentation](../plan-design/deployment-roadmap.md). 
+Use this tutorial to quickly try out Azure Information Protection with just 5 steps that should take you about 30 minutes. This tutorial is designed to be a self-guided demo to quickly showcase some of the features and functionality that the Azure Information Protection Premium offers. It does not include all the features and is not intended to be a deployment guide for your organization. If you are looking to deploy Azure Information Protection for your organization, see the [deployment roadmap documentation](../plan-design/deployment-roadmap.md). 
 
 In this tutorial, you’ll activate the Azure Rights Management service, which provides the protection technology for Azure Information Protection. Then look at and modify the default Azure Information Protection policy. Next, install the client and application, and you're then ready to see Azure Information Protection in action. The final step is where you'll first use a Word document to see classification, labeling, and protection in action. And then safely share a Word document by email and track how it is used.
 
