@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 3 | Azure Information Protection
-description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 15 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/06/2016
@@ -24,7 +24,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 ---
 
-# Step 2: Install the client and application 
+# Step 3: Install the client and application 
 
 >*Applies to: Azure Information Protection*
 

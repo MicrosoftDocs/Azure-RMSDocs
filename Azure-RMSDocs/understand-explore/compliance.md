@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Compliance and supporting information for Azure Rights Management | Azure RMS
-description: Supporting information for Azure RMS that includes legal, compliance, and SLAs.
+title: Compliance and supporting information | Azure Information Protection
+description: Supporting information for Azure Information Protection that includes legal, compliance, and SLAs.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/12/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 
 
-# Compliance and supporting information for Azure Rights Management
+# Compliance and supporting information for Azure Information Protection
 
-Azure Rights Management (Azure RMS) supports other services and also relies on other services. If you’re looking for information that is related to Azure RMS but not about how to use the Azure RMS service, check the following resources:
+Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
 ## Legal and privacy
 
@@ -40,13 +40,13 @@ Azure Rights Management (Azure RMS) supports other services and also relies on 
 
 See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article. In addition:
 
-- For external certifications for Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
+- For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
 - For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 ## Service level agreements
 
-- Service level agreement for Azure RMS, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- Service level agreement for Azure Information Protection, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
 
 	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
 
