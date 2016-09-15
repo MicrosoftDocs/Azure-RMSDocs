@@ -48,67 +48,67 @@ The organization also has access to detailed tracking and reporting so they can 
 
 Watch this short video for a quick introduction on how Azure Information Protection makes it simpler to classify, label and protect information, even as it travels outside of your organization.
 
-Watch this short video for a quick introduction on how Azure Information Protection makes it simpler to classify, label and protect information, even as it travels outside of your organization.
-
-
+<iframe src="https://channel9.msdn.com/Shows/Mechanics/An-Introduction-to-Microsoft-Azure-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## How to implement this solution
 
-To configure Exchange  to support Azure RMS, you must configure the information rights management (IRM) service for Exchange. Follow these steps to implement this solution:
+Follow these steps to implement data classification, labeling and protection using Azure Information Protection:
 
-1. Integration with Exchange:
-	- Exchange Online: [Enable Exchange Online to use Azure RMS](../deploy-use/configure-office365.md#exchange-online-irm-configuration)
-	- Exchange On-premises: [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)
-2. Install RMS sharing application
-3. Send a Protected Office Document Using Exchange
+- Step 1: Preparing for data classification and protection
+- Step 2: Configure information protection policies and labels
+- Step 3: Implement content based automatic classification
+- Step 4: Configure conditions for automatic and recommended classification
+
+## How to secure data using classification, labeling and protection with Azure Information Protection
+
+Companies need to identify which data needs protection and which data does not need the same level of protection. The steps that follows will guide you through core tasks that must be done to enable IT to implement Azure Information Protection.
+
+### Step 1: Preparing for document protection and content classification
+
+Before implementing this solution, review the [requirements for Azure Information Protection](requirements-azure-infoprotect.md) and ensure that Azure Rights Management is activated. If it is activated, you should see the following screen in Azure Portal:
+
+![Azure Portal](../media/infoprotect-secure-classify-scenario-fig2.png)
+
+When you activate Azure Rights Management, you can protect important data by using applications and services supported by this information protection solution. You can also manage and monitor protected files and emails that your organization owns. You must activate Azure Rights Management before you can use the Rights Management features within Office, SharePoint, and Exchange to protect sensitive or confidential files.
+
+### Step 2: Configure information protection policies and labels
+
+When planning to implement information protection policies and labels, use the following guidelines:
+
+- Classify data based on sensitivity
+- Start with the data that is most sensitive
+- IT can set automatic rules; users can complement it 
+- Associate actions such as visual markings and protection
+
+The following diagram has an example of how this could be implemented:
+
+![Classification](../media/infoprotect-secure-classify-scenario-fig3.png)
+
+Azure Information Protection comes with default labels, however you can [customize](configure-policy-new-label.md) and create your own labels or sub-labels that users see on the Information Protection bar. 
+
+> [!IMPORTANT] Labels are metadata written to documents. Labels are in clear text so that other systems such as a DLP engine can read it.
+
+In the following example, you can see custom sub-labels that were created under the **Secret** label:
+
+![Label](../media/infoprotect-secure-classify-scenario-fig4.png)
+
+Once you define how you will be using your labels (default or custom ones), [configure a label to apply Rights Management protection](configure-policy-protection.md#to-configure-a-label-to-apply-rights-management-protection). 
+
+### Step 3: Implement content based automatic classification
+
+With Azure Information Protection, data classification and protection controls are integrated into Office and other common applications. This integration provides simple one-click options to secure data that users are working on. In the Azure portal, you can apply predefined patterns, such as “Credit card numbers” or “USA Social Security Numbers”, as a condition for automatic classification. Alternately, you can use text patterns and regular expressions to define a custom string or pattern.
+
+When you configure conditions for a label, you can automatically assign a label to a document/email or, you can prompt users to select the label that you recommend. Read [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md) for more information on how to perform this configuration.
 
 
-## How to share sensitive data internally and externally
+### Step 4: Configure conditions for automatic and recommended classification
 
-Companies need to enable employees to collaborate internally across data silos and externally with third-party vendors. At the same time, companies must align security protocols to the business and influence end-user behavior and protection processes. Data share becomes a critical part of the process that organizations need to enable while reducing the likelihood that data is lost or compromised.
+Policies can be set by IT Admins for automatically applying classification and protection to data. Policies can also be based on the content you’re working on and it can be configured to prompt users for suggested classification. The list of built-in conditions are:
 
-### Step 1: Integration with Exchange
+- SWIFT Code
+- Credit Card Number
+- ABA Routing Number
+- USA Social Security Number (SSN)
+- International Banking Account Number (IBAN)
 
-Rights Management protection is applied to email by assigning  an Azure Rights Management policy template to an email message. The first step to enable this integration to take place will vary according to where your Exchange is located: in the cloud (Exchange Online) or on-premises. 
-
-#### Enable Rights Management Integration with Exchange Online
-
-To configure Exchange Online to support Azure RMS, you must configure the information rights management (IRM) service for Exchange Online. In the article [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md), follow the steps from the section [Exchange Online: IRM Configuration to configure Exchange Online for IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration#exchange-online-irm-configuration).
-
-The last step should be the final test to validate the configuration and you should see a result similar to the one shown in the following screen:
-
-![PowerShell result](../media/infoprotect-share-sensitive-data-scenario-fig2.png)
-
-#### Enable Rights Management Integration with Exchange On-Premises
-
-To configure rights management integration with Exchange on-premises, you must configure the Microsoft Rights Management (RMS) connector. This connector will enable existing on-premises Exchange servers to use their Information Rights Management (IRM) functionality with the cloud-based Microsoft Rights Management service (Azure RMS). You can use this connector even if some of your users are connecting to online services, in a hybrid scenario.
-
-Review the [prerequisites to install RMS Connector](../deploy-use/deploy-rms-connector.md#prerequisites-for-the-rms-connector) and follow the five steps available in the article [Installing and configuring the Azure Rights Management connector](../deploy-use/install-configure-rms-connector.md).
-
-### Step 2: Install RMS sharing application
-
-A key scenario of the Azure RMS is the ability to share rights-protected documents to other users–both internal to the organization and external–via email. The Microsoft RMS sharing application for Windows is an add-in on the Microsoft Office application’s Home ribbon, as shown in the following screen:
-
-![RMS Sharing in Office](../media/infoprotect-share-sensitive-data-scenario-fig3.png)
-
-If you already see this on your PC, you don’t need to download the app. If you do not see it and you need to install this application with user interaction, follow the steps from [Download and install the Rights Management sharing application](../rms-client/install-sharing-app.md). If you need to automate your installation, use the steps from [Automatic deployment for the Microsoft Rights Management sharing application](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
-
-Microsoft Azure Information Protection is an add-in on the Microsoft Office applications’ Home Ribbon, as shown in the following screen: 
-
-![Azure Information Protection add-in in Office](../media/infoprotect-share-sensitive-data-scenario-fig4.png)
-
-If you already see this on your PC, you don’t need to download the app. If you don’t see it, use the steps from [Installing the Azure Information Protection client](../rms-client/info-protect-client.md).
-
-### Step 3: Send a Protected Document Using Exchange
-
-If you need to support different types of clients, review the article [Rights Management sharing application: Installation and configuration for clients](../deploy-use/configure-sharing-app.md) for more details on how to install RMS Sharing application. If you want to share an Office document, for example directly from Word, you can simply use the **Share Protected** icon in the ribbon as shown in the following image:
-
-![Share protected icon](../media/infoprotect-share-sensitive-data-scenario-fig5.png)
-
-After you click on this option, you should see the share protected dialog with more details about how you want to share this document, as shown in the following image:
-
-![Share document window](../media/infoprotect-share-sensitive-data-scenario-fig6.png)
-
-On top of this window you must type the target user’s email, and select the type of access that you want to provide for this user. In the bottom of this window, you can also control the document’s expiration date and enable the option to receive an email every time someone tries to open this document. After finishing making the proper selections, click Send and Outlook will open with a new message as shown in the following screen:
-
-![Outlook](../media/infoprotect-share-sensitive-data-scenario-fig7.png)
+Read [Information about the built-in conditions](configure-policy-classification.md#information-about-the-built-in-conditions) for more details about this type of implementation.
