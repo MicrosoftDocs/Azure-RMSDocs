@@ -25,5 +25,6 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master"
     }
-  ]
+  ],
+  "need_preview_pull_request": "true"
 }

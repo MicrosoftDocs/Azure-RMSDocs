@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How to&#58; Use built-in rights | Azure RMS
@@ -8,7 +8,7 @@ author: bruceperlerms
 manager: mbaldwin
 ms.date: 09/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1

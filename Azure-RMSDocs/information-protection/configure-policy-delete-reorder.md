@@ -1,13 +1,12 @@
 ---
 # required metadata
 
-title: How to delete or reorder a label for Azure Information Protection | Azure Rights Management
-description:
-author: cabailey
+title: How to delete or reorder a label for Azure Information Protection | Azure Information Protection
+description: You can delete or re-order the labels that users see on the Information Protection bar by configuring this in the Azure Information Protection policy.
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 09/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
@@ -44,11 +43,11 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+    
+    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
-
-3. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
+2. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 
@@ -56,7 +55,7 @@ Use the following instructions to make these changes.
 
     - To re-order a label: Right-click or select the context menu (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
 
-4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+3. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Next steps
 

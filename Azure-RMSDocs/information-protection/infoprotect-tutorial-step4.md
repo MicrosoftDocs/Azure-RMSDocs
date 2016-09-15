@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial step 4 | Azure Rights Management
+title: Azure Information Protection quick start tutorial step 4 | Azure Information Protection
 description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 09/07/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
@@ -36,15 +36,15 @@ Classification and protection happens when you save the document, but before we 
 
 ### To manually change our default label:
 
-- On the Information Protection bar, click the Edit label icon next to **Internal**. This displays the available labels. Choose **Personal** and you are prompted to justify why are lowering the classification level. Select **This file no longer requires that classification**, and click **Confirm**.  
+- On the Information Protection bar, select the **Personal** label and you are prompted to justify why are lowering the classification level. Select **This file no longer requires that classification**, and click **Confirm**.  
 
     You'll see the **Sensitivity** value change to **Personal**.
 
-    ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/confirm-lowering.png)
+    ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
 
 ### To remove the classification completely:
 
-- On the Information Protection bar, click the Edit label icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the Remove label icon. Click **OK** to confirm and provide justification for this action.  
+- On the Information Protection bar, click the **Edit label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Remove label** icon. Click **OK** to confirm and then provide justification for this action.  
 
     You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label.
 

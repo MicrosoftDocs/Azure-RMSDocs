@@ -20,6 +20,8 @@
 ### [Delete or reorder a label](configure-policy-delete-reorder.md)
 ### [Change a label](configure-policy-change-label.md)
 ### [Apply protection](configure-policy-protection.md)
+#### [HYOK restrictions](configure-adrms-restrictions.md)
 ### [Configure visual markings](configure-policy-markings.md)
 ### [Configure conditions](configure-policy-classification.md)
 ## [Install the client](info-protect-client.md)
+## [Software License Terms for Azure Information Protection](aip-software-license-terms.md)

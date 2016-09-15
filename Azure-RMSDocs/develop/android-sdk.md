@@ -6,9 +6,9 @@ description: Android applications can use the Microsoft Rights Management SDK 4
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
@@ -32,7 +32,7 @@ This topic will guide you through setting up your environment for creating your 
 
 -   [Prerequisites](#prerequisites)
 -   [Optional](#optional)
--   [Configuring your development environment](#configuring-your-development-environment_)
+-   [Configuring your development environment](#configuring-your-development-environment)
 -   [See Also](#see-also)
 
 ## Prerequisites

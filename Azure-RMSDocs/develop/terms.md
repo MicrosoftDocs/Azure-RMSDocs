@@ -6,9 +6,9 @@ description: A collection of terminology definitions specific to Rights Manageme
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
@@ -29,7 +29,7 @@ ms.suite: ems
 A collection of terminology definitions specific to Rights Management Services.
 
 **Deprecated Algorithm**  
-A modal setting that implements an older content protection scheme, specifically referring to electronic cookbook cipher mode (ECB). In this SDK, the setting allows you to generate licenses compatible with the MSDRM library used by the [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+A modal setting that implements an older content protection scheme, specifically referring to electronic codebook cipher mode (ECB). In this SDK, the setting allows you to generate licenses compatible with the MSDRM library used by the [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
 
 This setting may cause your application to protect content in a way that does not conform to your customers' standards for content protection.
 

@@ -2,13 +2,12 @@
 # required metadata
 
 title: Migrating from AD RMS to Azure Rights Management | Azure RMS
-description:
-keywords:
+description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS). After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # Migrating from AD RMS to Azure Rights Management
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS). After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure RMS.
 
@@ -41,30 +40,31 @@ Not sure whether this AD RMS migration is right for your organization?
 Before you start the migration to Azure RMS, make sure that the following prerequisites are in place and that you understand any limitations.
 
 
-- **A supported RMS deployment**
+- **A supported RMS deployment:**
+    
+    - The following releases of AD RMS support a migration to Azure RMS:
+    
+        - Windows Server 2008 R2 (x64)
+        
+        - Windows Server 2012 (x64)
+        
+        - Windows Server 2012 R2 (x64)
+        
+    - Cryptographic Mode 2:
+    
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        
+    - All valid AD RMS topologies are supported:
+    
+        - Single forest, single RMS cluster
+        
+        - Single forest, multiple licensing-only RMS clusters
+        
+        - Multiple forests, multiple RMS clusters
+        
+    Note: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want separate Azure RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
 
-	All releases of AD RMS from Windows Server 2008 through Windows Server 2012 R2 support a migration to Azure RMS:
-
-	- Windows Server 2008 (x86 or x64)
-
-	- Windows Server 2008 R2 (x64)
-
-	- Windows Server 2012 (x64)
-
-	- Windows Server 2012 R2 (x64)
-
-	All valid AD RMS topologies are supported:
-
-	- Single forest, single RMS cluster
-
-	- Single forest, multiple licensing-only RMS clusters
-
-	- Multiple forests, multiple RMS clusters
-
-	**Note**: By default, multiple RMS clusters migrate to a single Azure RMS tenant. If you want different RMS tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure RMS tenant.
-
-
-- **All requirements to run Azure RMS, including an Azure RMS tenant (not activated)**
+- **All requirements to run Azure RMS, including an Azure RMS tenant (not activated):**
 
 	See [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -88,6 +88,10 @@ Before you start the migration to Azure RMS, make sure that the following prereq
 
 	This is the only interruption to service during the migration process.
 
+- **If you want to manage your own Azure RMS tenant key by using an HSM-protected key**:
+
+	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+
 
 Limitations:
 
@@ -106,7 +110,7 @@ Limitations:
 ## Overview of the steps for migrating AD RMS to Azure RMS
 
 
-The 9 migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
+The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
 [**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase1.md)
 
@@ -124,11 +128,11 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 	- **HSM-protected  key to HSM-protected key migration**:
 
-	    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by the BYOK toolset.
+	    Keys that are stored by an HSM for AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires additional steps to transfer the key from your on-premises Thales HSM to Azure Key Vault and authorize Azure RMS to use this key. Your existing HSM-protected key must be module-protected; OCS-protected keys are not supported by Rights Management services.
 
 	- **Software-protected key to HSM-protected key migration**:
 
-	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to the Azure RMS HSM.
+	    Centrally managed, password-based keys in AD RMS to customer-managed Azure RMS tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to an Azure Key Vault HSM and authorize Azure RMS to use the key vault that stores the key.
 
 - **Step 3. Activate your Azure RMS tenant**
 
@@ -177,7 +181,7 @@ The 9 migration steps can be divided into 4 phases that can be done at different
 
 - **Step 9: Re-key your Azure RMS tenant key**
 
-    This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure RMS tenant key.
+    This step is optional but recommended if your chosen Azure RMS tenant key topology from step 2 is Microsoft-managed. This step is not applicable if your chosen Azure RMS tenant key topology is customer-managed (BYOK).
 
 
 ## Next steps

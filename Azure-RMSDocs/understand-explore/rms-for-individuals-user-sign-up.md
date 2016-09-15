@@ -2,13 +2,12 @@
 # required metadata
 
 title: How users sign up for RMS for individuals | Azure RMS
-description:
-keywords:
+description: Sign up instructions for this free account, and technical information about how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/01/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
@@ -27,36 +26,32 @@ ms.suite: ems
 
 # How users sign up for RMS for individuals
 
-*Applies to: Azure Rights Management*
+>*Applies to: Azure Rights Management*
 
-To sign up for this free account, users request it by visiting the [Microsoft Rights Management page](https://portal.aadrm.com/), and provide their work or school email address. 
-
-The most typical way that users will be directed to this sign-up page is if they received an email message with a protected attachment, which contains instructions how to sign-up. They receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create their account. When they get an email confirmation from Microsoft, this final email message sends them to a page where they can download the sharing application for different devices, and a link to the user guide.
+To sign up for this free account, you request it by visiting the [Microsoft Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the sharing application for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
 
 ## To sign up for RMS for individuals
 
-1.  Using a Windows or Mac computer, go to the [Microsoft Rights Management page](https://portal.aadrm.com).
+1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Type in the email address that you use for your organization, such as **janetm@contoso.com** or **p.dover@fabrikam.com**.
 
     > [!IMPORTANT]
     > Personal email accounts are not supported, so do not enter a Microsoft account (formerly known as a Microsoft Live ID account) or another personal account that you might use at home from your Internet provider.
 
-3.  Click **Get started**.
+3.  Click **Sign up**.
 
     Microsoft uses your email address to check whether your organization already has a [paid subscription that includes Azure RMS](../get-started/requirements-subscriptions.md). If that’s the case, you don’t need RMS for individuals so you’ll be signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription for Azure RMS isn’t found, you'll continue to the next step.
 
-4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from Microsoft (DoNotReply@microsoft.com) and has the subject **Microsoft RMS**.
+4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Rights Management**.
 
-5.  When you receive the email, click the link in the instructions to complete the sign up process.
+5.  When you receive the email, click **Yes, that's me** to verify your email address and complete the sign up process.
 
-6.  The link takes you a new **Microsoft Rights Management** page for you to supply details for your account. Type in your first name, your last name, enter and confirm a password of your choice, select your country (or the nearest country to yours if your country is not listed)  from the drop down, and then click **Create**.
+6.  You now see a **One last thing ...** page for you to supply details for your account. Type in your first name, your last name, enter and confirm a password of your choice, and then click **Start**.
 
-7.  Wait for another email message from Microsoft that now confirms that your account is ready to use.
+7. When your account is created, you'll see a new Microsoft Rights Management page where you can download and install the sharing application, or click the [More information](../rms-client/sharing-app-user-guide.md) link to read the sharing application user guide.
 
-8.  When you receive the email, click the link to sign in and read the instructions to download and install the sharing application, or click the Help link to read the sharing application user guide.
-
-Now your account is created, you’re ready to start protecting files and read files that others have protected. When prompted to sign in to protect or read protected files, enter your email address and password that you used to create the account for RMS for the individuals.
+Now your account is created, you’re ready to start protecting files and read files that others have protected. If you're prompted to sign in to protect or read protected files, enter the same email address and password that you used to create the account for RMS for the individuals.
 
 ## Technical overview of the sign-up process
 RMS for individuals uses a self-service sign up process that is also used by other services that use Microsoft cloud-based technology to authenticate users.
@@ -66,7 +61,7 @@ This is what happens in the background when a user signs up for RMS for individu
 1.  When the first user from an organization requests a subscription for RMS for individuals, the domain name supplied in their email address is checked to see whether it is already associated with an Azure tenant. If there is no existing tenant, a new tenant and Azure directory is automatically created for the organization, which contains an account for this first user. Unlike with a paid subscription for Azure, this first account is not a global administrator, but a standard user. The new account uses the email address and password that the user supplied.
 
     > [!NOTE]
-    > Some domain names cannot be used to create the directory and therefore cannot be used for RMS for individuals. The list of blocked domain names can be viewed from this JavaScript Object Notation file: [http://portal.aadrm.com/content/blocked_domains.json](http://portal.aadrm.com/content/blocked_domains.json)
+    > Some domain names cannot be used to create the directory and therefore cannot be used for RMS for individuals.
 
     If an existing tenant is found, it is checked to see whether it already has a subscription for Azure RMS. When no subscription is found, the free RMS for individuals subscription can be added.
 

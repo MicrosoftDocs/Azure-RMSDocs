@@ -2,13 +2,12 @@
 # required metadata
 
 title: RMS sharing application for Windows and mobile platforms | Azure RMS
-description:
-keywords:
+description: How the RMS sharing application supports Azure RMS as a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # RMS sharing application for Windows and mobile platforms
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section from the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 

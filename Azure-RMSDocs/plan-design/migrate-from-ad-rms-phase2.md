@@ -2,13 +2,12 @@
 # required metadata
 
 title: Migrating from AD RMS to Azure Rights Management - Phase 2 | Azure RMS
-description:
-keywords:
+description: Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS), covering step 5 from Migrating from AD RMS to Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/23/2016
+ms.date: 09/09/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
@@ -27,7 +26,7 @@ ms.suite: ems
 ---
 # Migration phase 2 - client-side configuration
 
-*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management*
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover step 5 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -35,7 +34,7 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Righ
 ## Step 5. Reconfigure clients to use Azure RMS
 For Windows clients:
 
-1.  [Download the migration scripts](http://go.microsoft.com/fwlink/?LinkId=524619):
+1.  [Download the migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
 
     -   CleanUpRMS_RUN_Elevated.cmd
 
@@ -54,7 +53,7 @@ For Windows clients:
 
 			reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
 
-	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` and immediately below it, add the following two lines:
+	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` and immediately below it, add the following two lines:
 
 			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
 

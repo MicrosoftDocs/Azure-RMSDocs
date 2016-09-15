@@ -2,13 +2,12 @@
 # required metadata
 
 title: Operations for your Azure Rights Management tenant key | Azure RMS
-description:
-keywords:
+description: Identify the different levels of control and responsibility that you have for your Azure Rights Management (Azure RMS) tenant key.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
@@ -27,17 +26,17 @@ ms.suite: ems
 
 # Operations for your Azure Rights Management tenant key
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Microsoft Azure Rights Management (Azure RMS) tenant key after it is implemented.
 
-When you manage your own tenant key, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
+When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
 The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure RMS tenant key.
 
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revoke your tenant key|No (automatic)|No (automatic)|
+|Revoke your tenant key|No (automatic)|Yes|
 |Re-key your tenant key|Yes|Yes|
 |Backup and recover your tenant key|No|Yes|
 |Export your tenant key|Yes|No|

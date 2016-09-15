@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial | Azure Rights Management
+title: Azure Information Protection quick start tutorial | Azure Information Protection
 description: An introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
@@ -39,18 +39,16 @@ If you have any problems completing this tutorial, using the preview release of 
 ## Prerequisites 
 To complete this tutorial, you will need the following:
 
-- Any subscription that includes Azure Rights Management, which will give you access to the preview release of Azure Information Protection. Azure Information Protection is available in all regions that support Azure Rights Management. For more information about the available subscriptions and links to free trials, see [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).
+- An Office 365 subscription that includes protecting Office documents and emails by using Azure RMS. For more information about the available subscriptions and links to free trials, see the [Office 365 subscription](../get-started/requirements-subscriptions.md#office-365-subscription) section from the Azure RMS requirements documentation.
 
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
   > [!TIP] 
   > If you need to get one or both of these subscription, do this in advance because this process can sometimes take a while to complete.
 
-- A global administrator account to sign in to the Office 365 admin center or the Azure classic portal if you need to activate the Rights Management service. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
+- A global administrator account to sign in to the Office 365 admin center or the Azure classic portal if you need to activate the Rights Management service, or select Azure RMS templates in the Azure portal. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
 
 - A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. 
-
-- If you have Active Directory Rights Management Services (AD RMS) deployed in your organization: The computer must be a workgroup computer that has not previously used AD RMS. This is required if you want to protect documents, and ensures that the computer downloads templates only from Azure Rights Management. It is not supported for a computer to connect to both AD RMS and Azure RMS at the same time. If you are interested in migration information, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).   
 
 Let's get started.
 

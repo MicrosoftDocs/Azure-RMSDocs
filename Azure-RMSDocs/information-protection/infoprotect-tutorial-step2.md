@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure Information Protection quick start tutorial step 2 | Azure Rights Management
+title: Azure Information Protection quick start tutorial step 2 | Azure Information Protection
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization with just 4 steps that should take you less than 15 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 09/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
@@ -32,13 +32,20 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com). If you want to test protection as well as classification and labeling, sign in as a global admin so that you can retrieve the Azure Rights Management templates.
  
-2. On the hub menu, click **Browse** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection (preview)** > **Create**.
 
-- You'll now see the main **Azure Information Protection** blade, showing the default Information Protection policy that's automatically created. This default policy contains the following labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
+    This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
 
-- With its default settings, **Internal**, **Confidential**, and **Secret** have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the sensitivity level.
+    > [!TIP] 
+    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
+
+3.  Explore the main **Azure Information Protection** blade, which shows the default Information Protection policy that's automatically created:
+    
+    - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
+
+    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the three global settings are not set so that all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when lowering the classification level.
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
@@ -46,15 +53,15 @@ For our tutorial, we'll change a couple of those global settings so that you can
 
 -  **Select the default label**: Set this to **Internal**.
 
-- **Users must provide justification when lowering the sensitivity level**: Set this to **On**.
+- **Users must provide justification to set a lower classification label, remove a label, or remove protection**: Set this to **On**.
 
 We'll now change the settings of one of the labels, **Confidential**:
 
-1. Click the **Confidential** label entry.
+1. Click the **Confidential** label.
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. If you have activated Azure Rights Managment: In the **Set RMS template for protecting documents and emails containing this label** section, if you see **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+    a. If you have activated Azure Rights Managment: In the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
     If you have not activated Azure Rights Management, you cannot use this option.
     

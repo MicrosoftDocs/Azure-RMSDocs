@@ -2,13 +2,12 @@
 # required metadata
 
 title: Copy a template | Azure RMS
-description:
-keywords:
+description: Instructions to copy a template, which is an easy way to create a new template that has very similar settings to an existing template.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod:
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f329ce49-e044-4c11-821d-5496d83c1bb3
@@ -28,7 +27,7 @@ ms.suite: ems
 
 # Copy a template
 
-*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Rights Management, Office 365*
 
 If you want to create a new template that has very similar settings to an existing template, select the original template on the **TEMPLATES** page, click **COPY**, specify a unique name, and make the changes that you need.
 
