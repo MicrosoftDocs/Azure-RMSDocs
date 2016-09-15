@@ -22,4 +22,5 @@
 ##### [Remove protection](sharing-app-remove-protection.md)
 ##### [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
 ##### [Dialog box options](sharing-app-dialog-box.md)
+### [FAQ for Azure Information Protection app for iOS and Android](mobile-app-faq.md)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)
