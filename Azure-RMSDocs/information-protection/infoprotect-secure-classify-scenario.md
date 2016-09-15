@@ -48,7 +48,7 @@ The organization also has access to detailed tracking and reporting so they can 
 
 Watch this short video for a quick introduction on how Azure Information Protection makes it simpler to classify, label and protect information, even as it travels outside of your organization.
 
-<iframe src="https://channel9.msdn.com/Shows/Mechanics/An-Introduction-to-Microsoft-Azure-Information-Protection/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+<iframe src="https://channel9.msdn.com/Shows/Mechanics/An-Introduction-to-Microsoft-Azure-Information-Protection/player" width="560" height="315" allowFullScreen frameBorder="0"></iframe>
 
 ## How to implement this solution
 
