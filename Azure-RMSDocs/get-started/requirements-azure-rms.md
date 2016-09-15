@@ -50,7 +50,7 @@ If you want to use the Azure Rights Management service from Azure Information Pr
 For information about the additional requirements for this scenario, see [On-premises servers that support the Azure Rights Management service](requirements-servers.md).
 
 > [!IMPORTANT]
-> The following deployment scenario is not supported unless you have installed the Azure Information Protection client:
+> The following deployment scenario is not supported unless you are using AD RMS protection with Azure Information Protection (the "hold your own key" or HYOK configuration):
 > 
 > -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 > 
