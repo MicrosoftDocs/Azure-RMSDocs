@@ -6,7 +6,7 @@
 ### [Applications that support Azure RMS](requirements-applications.md)
 ### [On-premises servers that support Azure RMS](requirements-servers.md)
 ## [Frequently asked questions](faqs.md)
-### [FAQs for classification and labeling](faqs-inforprotect.md)
+### [FAQs for classification and labeling](faqs-infoprotect.md)
 ### [FAQs for data protection](faqs-rms.md)
 ## [Information and support](information-support.md)
 ## [Terminology](terminology.md)

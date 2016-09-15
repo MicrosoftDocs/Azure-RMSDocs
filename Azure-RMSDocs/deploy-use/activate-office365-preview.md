@@ -49,7 +49,7 @@ Use these instructions only if you're using the new, preview version of the Offi
         > [!NOTE]
         >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
         >
-        >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+        >Use the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your subscription includes Azure Rights Management. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 4. On the **rights management** page, click **activate**.
 

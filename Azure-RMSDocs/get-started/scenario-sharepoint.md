@@ -48,7 +48,7 @@ For this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
 |Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
