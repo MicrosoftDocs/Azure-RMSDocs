@@ -31,13 +31,13 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 > [!NOTE]
 >If you already activated the Azure Rights Management service for your tenant - go straight to the [next step](infoprotect-tutorial-step2.md). 
 
-When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how they are used when you share them with others. There are different ways to activate this service, which include using Windows PowerShell and navigating through the admin portals.
+When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how they are used when you share them with others. There are different ways to activate this service, which include using Windows PowerShell, and navigating through the admin portals.
 
 For this tutorial, we'll go straight to the activation page for Office 365 administrators, which is the same page for the Office 365 classic portal and the Office 365 admin center preview. 
 
-If you prefer to navigate to this page from your Office 365 admin portal rather than go directly to the page, or to activate the service from the Azure portal, see the full instructions from [Activating Azure Rights Management](../deploy-use/activate-service.md).
+If you prefer to navigate to this page from your Office 365 admin portal rather than go directly to the page, see the full instructions from [Activating Azure Rights Management](../deploy-use/activate-service.md). Also use these full instructions if you have access to the Azure portal but not the Office 365 admin portal.
 
-## To activate the Rights Management service for Office 365
+## To activate the Rights Management service
 
 1. Open a new browser window and go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
     
