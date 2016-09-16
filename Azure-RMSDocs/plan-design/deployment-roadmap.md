@@ -44,6 +44,8 @@ Choose the deployment roadmap that's applicable for your organization and that m
 
 ## Deployment roadmap for classification, labeling, and protection
 
+Already using the Azure Rights Management service for data protection? You can skip many of these steps and focus on steps 3 and 5.1.
+
 ### Step 1: Confirm your subscription and assign user licenses
 Review the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will classify, label, and protect documents and emails.
 
