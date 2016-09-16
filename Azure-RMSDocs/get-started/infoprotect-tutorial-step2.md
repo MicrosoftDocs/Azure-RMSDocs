@@ -63,9 +63,9 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. In the **Set RMS template for protecting documents and emails containing this label** section, if you see **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+    a. In the **Set RMS template for protecting documents and emails containing this label** section, for the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
-    Note that if you have not activated Azure Rights Management from [step 1](infoprotect-quick-start-tutorial.md), you cannot use this option.
+    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
     b. **Documents with this label have a watermark**: Click **On** and for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. 
     
