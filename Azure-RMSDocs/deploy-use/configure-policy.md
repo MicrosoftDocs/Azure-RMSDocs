@@ -32,9 +32,9 @@ To configure classification, labeling, and protection, you must configure the Az
 
 To configure the Azure Information Protection policy during the preview release of Azure Information Protection:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com).
 
-2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **Browse** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
+2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
     You'll then see the **Azure Information Protection** blade where you can configure the Azure Information Protection policy, which contains the following elements:
 

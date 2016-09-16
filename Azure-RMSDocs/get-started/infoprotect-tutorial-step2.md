@@ -5,7 +5,7 @@ title: Quick start tutorial step 1 | Azure Information Protection
 description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -30,14 +30,14 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
- 
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
+
 2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection** > **Create**.
 
-    This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **Browse** list. 
+    This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
 
     > [!TIP] 
-    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip the browse step next time you sign in to the portal.
+    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
 3.  Explore the main **Azure Information Protection** blade, which shows the default Information Protection policy that's automatically created:
     
@@ -63,7 +63,11 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
+<<<<<<< HEAD:Azure-RMSDocs/get-started/infoprotect-tutorial-step2.md
     a. In the **Set RMS template for protecting documents and emails containing this label** section, for the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
+=======
+    a. If you have activated Azure Rights Managment: In the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+>>>>>>> dc8159574f1608f7bc3cbc803752069b8a18b3ac:Azure-RMSDocs/information-protection/infoprotect-tutorial-step2.md
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
