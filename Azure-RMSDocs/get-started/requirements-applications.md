@@ -96,6 +96,14 @@ Azure RMS with Office Professional Plus 2010 or Office Professional 2010:
 
 - Not supported on Windows 10
 
+## More information about the Azure Information Protection app for iOS and Android
+
+The Azure Information Protection app for iOS and Android replaces the RMS sharing app for these devices. It provides the same functionality and in addition, supports rights-protected email messages and rights-protected PDF files on SharePoint Online.
+
+If your iOS and Android devices are enrolled by Microsoft Intune, you can deploy and manage this app by using a policy managed app. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2, use the instructions to publish a policy managed app.
+
+For more information, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md).
+
 
 ## More information about the Rights Management sharing application
 
@@ -109,15 +117,10 @@ For more information about the Rights Management sharing application for mobile 
 
 -   Download the relevant app by using the links on the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970)
 
--   If you have Microsoft Intune, you can deploy and manage the app by using a policy managed app: 
-
-    -   For iOS and Android devices that are enrolled by Intune: [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)
-
-    -   For Android devices that are not enrolled by Intune: [Create and deploy mobile app management policies with Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
-
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
-
+> [!NOTE]
+> The RMS sharing application for iOS and Android is now replaced by the Azure Information Protection app.
 
 ## More information about other applications that support Azure RMS
 
@@ -146,7 +149,7 @@ In addition, the RMS sharing application has the following restrictions:
 
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 
 For more information about how the most commonly used applications support Azure RMS, see [How applications support Azure Rights Management](../understand-explore/applications-support.md).
 
