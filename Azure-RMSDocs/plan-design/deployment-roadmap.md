@@ -44,7 +44,8 @@ Choose the deployment roadmap that's applicable for your organization and that m
 
 ## Deployment roadmap for classification, labeling, and protection
 
-Already using the Azure Rights Management service for data protection? You can skip many of these steps and focus on steps 3 and 5.1.
+> [!NOTE]
+> Already using the Azure Rights Management service for data protection? You can skip many of these steps and focus on steps 3 and 5.1.
 
 ### Step 1: Confirm your subscription and assign user licenses
 Review the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will classify, label, and protect documents and emails.
@@ -56,9 +57,11 @@ Before you begin using Azure Information Protection, do the following preparatio
 
 ### Step 3: Configure and deploy classification and labeling
 
-Review and if necessary, make changes to the default Azure Information Protection policy to support manual labeling by users, and provide guidance for users to explain which label to apply and when. For more information, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
+Decide which data you want to classify first, and what classification label to assign to that data. Start with a realistic scope, and plan to increase that scope over time. For example, start with the data that is the most sensitive.
 
-Then deploy the Azure Information Protection client for users, and provide user training when to select the labels. For more information, see [Installing the Azure Information Protection client](../rms-client/info-protect-client.md).
+Review the default Azure Information Protection policy and make the changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
+
+Then deploy the Azure Information Protection client for users, and support it by providing user training and your instructions for when to select the labels. For more information about installing the client, see [Installing the Azure Information Protection client](../rms-client/info-protect-client.md).
 
 After a period of time, when users are comfortable labeling their documents and emails, introduce more advanced configurations. These might include the following:
 
