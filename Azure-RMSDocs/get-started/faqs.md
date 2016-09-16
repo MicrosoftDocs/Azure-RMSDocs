@@ -68,10 +68,3 @@ In addition, there are FAQs designed for end-users:
 -   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
 
 
-## Next steps
-
-Review the other frequently asked questions:
-
-- [FAQs for classification and labeling](faqs-infoprotect.md)
-
-- [FAQs for data protection](faqs-rms.md)
