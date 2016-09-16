@@ -50,15 +50,15 @@ You’re then ready to safely share this document by email.
 
 5. Select **Email me when somebody tries to open these documents**.
 
-    You’ll get an email notification each time the recipients try to open the attachment, and also if somebody else tries to open it—for example, your recipient forwards the email to co-worker. In this last scenario, you’ll see that access was denied and from the user details, you can decide whether to send that person a copy of the document that they can open.
+    You’ll get an email notification each time the recipients try to open the attachment, and also if somebody else tries to open it—for example, your recipient forwards the email to co-worker. If the document is forwarded, you’ll see that access was denied and from the user details, you can decide whether to send that person a copy of the document that they can open.
 
 6. Select **Allow me to instantly revoke access to these documents**.
 
-    This option requires the recipients to have an Internet connection each time they open the attachment but with the benefit that if you later revoke the document, the next time they try to open it, they will not be able to. If you do not select this option, the recipients might be able to open it even without an Internet connection but with the disadvantage that if you later revoke the document, there might be a delay for when that takes effect.
+    This option requires the recipients to have an Internet connection each time they open the attachment but with the benefit that if you later revoke the document, the next time they try to open it, they will not be able to. 
 
 4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions.
 
-    You might notice that you have two attachments; the original Word document and a file that has the same name but with a **.ppdf** file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. This version lets the recipient read the protected document by using the viewer that is installed with the Rights Management sharing application.
+    You might notice that you have two attachments; the original Word document, and a file that has the same name but with a **.ppdf** file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. This version lets the recipient read the protected document by using the viewer that is installed with the Rights Management sharing application.
 
     Click **Send** in your email message.
 
@@ -68,9 +68,7 @@ Now you’ve sent your protected document, you’re ready to ask your recipients
 
 Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers.
 
-Ask them to read the email message that you sent. Assuming that this is the first time that they have received attachments that are protected by Rights Management, ask them to click the instructions link. They will then see the [Welcome to Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) page, with instructions to install the RMS sharing application and if necessary, sign up for a free account. They are then ready to read the protected attachment by using the following instructions.
-
-If this is not the first time that they have received attachments that are protected by Rights Management, they can simply open the attachment by following these same instructions.
+Ask them to read the email message that you sent. Assuming that this is the first time that they have received attachments that are protected by Rights Management, ask them to click the instructions link. They will then see the [Welcome to Microsoft RMS!](https://portal.azurerms.com/#/rmshelp) page, with instructions to install the RMS sharing application and if necessary, sign up for a free account. They are then ready to read the protected attachment.
 
 ### Instructions for recipient: To view the protected document attachment
 
@@ -81,7 +79,7 @@ If this is not the first time that they have received attachments that are prote
         
     - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: 
     
-    -     Open the document that has a **.ppdf** file name extension.
+        - Open the document that has a **.ppdf** file name extension.
 
 2.  If you are prompted for your user name and password, enter your user name in the same format as the email address that was used to send you the email and attachment. For example, **janetm@contoso.com** or **p.dover@fabrikam.com**. For your password, type the password that you supplied when you signed up for RMS for individuals. Or, if your organization has a cloud service such as Office 365 or uses Azure, enter your usual work password.
 

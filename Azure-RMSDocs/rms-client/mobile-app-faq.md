@@ -32,15 +32,15 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you open rights-protected email messages (.rpmsg files). This app also lets you open RMS-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile.
+This app lets you view (but not create new or reply to) rights-protected email messages (.rpmsg files). This app also lets you view (but not create new or edit) rights-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile. 
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
-Yes, on iOS devices, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. We are working on enabling this capability for Android devices and will update this entry when it’s available.
+Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. 
 
 ## How do I sign in to this app?
 
-If your organization already has AD RMS on-premises (with the mobile device extension) or Azure RMS, you can use your credentials to sign in. If not, you can sign up for a free new account at http://portal.aadrm.com.
+If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 ## Can I sign up with my personal email address, such as a Hotmail or Gmail account?
 
@@ -48,7 +48,7 @@ Not yet. Today, you can sign up only with your business email address (work or s
 
 ## Which file extensions can I open with this app?
 
-You can open .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
+You can open .rpmsg, .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
 
 ## Why do I have to consent before viewing a protected .pfile?
 

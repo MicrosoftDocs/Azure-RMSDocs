@@ -67,5 +67,7 @@ In addition, there are FAQs designed for end-users:
 
 -   [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)
 
+- [FAQ for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
+
 -   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
 
