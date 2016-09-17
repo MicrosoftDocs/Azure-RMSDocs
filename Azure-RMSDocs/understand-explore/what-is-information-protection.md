@@ -55,7 +55,7 @@ As soon as you activate the Azure Rights Management service, two default templat
 
 These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
-This example shows how you might select a template or rights management option for a label when you configure the Azure Information Protection policy from the Azure portal:
+This example shows how you might select a template for a label when you configure the Azure Information Protection policy from the Azure portal:
 
 ![Example of selecting templates in the Azure portal](../media/templates-infoprotection-callouts.png)
 
