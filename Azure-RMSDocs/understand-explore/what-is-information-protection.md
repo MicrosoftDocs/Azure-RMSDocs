@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Information Protection
@@ -30,7 +30,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 Azure Information Protection is a cloud-based solution that helps an organization to classify and label its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.
 
-The following picture shows an example of Azure Information Protection in action, after an administrator has configured the Azure Information Protection policy for their organization. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator has previously configured:
+The following picture shows an example of Azure Information Protection in action, after an administrator has configured the Azure Information Protection policy for their organization. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured:
 
 ![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-callouts.png)
 
@@ -88,7 +88,8 @@ When users share their protected documents by email, they can use a document tra
 
 - Video presentation:
 
-(add video)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
 
 ## Next steps
 
