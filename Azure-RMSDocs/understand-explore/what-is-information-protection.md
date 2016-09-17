@@ -34,7 +34,9 @@ The following picture shows an example of Azure Information Protection in action
 
 ![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-callouts.png)
 
-When you classify your documents and emails by using Azure Information Protection, labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+## How labels apply classification
+
+You use Azure Information Protection labels to apply classifcation to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
 
 Example email headers showing the classification label of "Internal":
 
