@@ -49,9 +49,14 @@ For example, you can configure a report document or sales forecast spreadsheet s
 
 These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
+This example shows how you might select a template or rights management option to a label:
 
+![Example of selecting templates in the Azure portal](../media/templates-infoprotection-callouts.png)
 
-Some examples 
+The same templates are available to configure mail flow rules for Exchange Online, which supports the Azure Rights Management technology:
+
+![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
+
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
