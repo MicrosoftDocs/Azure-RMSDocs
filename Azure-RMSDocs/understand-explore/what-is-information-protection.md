@@ -51,7 +51,7 @@ For example, you can configure a report document or sales forecast spreadsheet s
 
 ### Rights management templates
 
-As soon as you activate the Azure Rights Management service, two default templates are created for your organization that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that implement more restrictive controls.
+As soon as you activate the Azure Rights Management service, two default templates are created for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that implement more restrictive controls.
 
 These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
