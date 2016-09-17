@@ -51,7 +51,7 @@ For example, you can configure a report document or sales forecast spreadsheet s
 
 ### Rights management templates
 
-As soon as you activate the Azure Rights Management service, two default templates are created for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that implement more restrictive controls.
+As soon as you activate the Azure Rights Management service, two default templates are created for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that apply more restrictive controls.
 
 These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
@@ -69,7 +69,7 @@ For more information about the Azure Rights Management protection, see [What is 
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture. The same bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](../media/excel2013-infoprotect-bar.png)
+![Example of the Azure Information Protection bar in Excel](../media/excel2013-infoprotect-bar2.png)
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required these labels can also automatically protect their documents and emails.
 
