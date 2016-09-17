@@ -28,9 +28,15 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 >*Applies to: Azure Information Protection*
 
-Azure Information Protection helps you classify and label your documents and emails, which can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.
+Azure Information Protection helps an organization to classify and label its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.
 
-When you classify your documents and emails, labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. Metadata is added to files so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+The following picture shows an example where an administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she is recommended to apply a specific label that the administrator has previously configured:
+
+![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-callouts.png)
+
+When you classify your documents and emails by using Azure Information Protection, labels are added to the data, so that the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. Metadata is added to files so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+
+## How data is protected
 
 *Azure Rights Management* is used for the protection. This technology is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud.
 
