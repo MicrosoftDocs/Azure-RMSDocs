@@ -88,7 +88,7 @@ When users share their protected documents by email, they can use a document tra
 
 - Video presentation:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
 
 
 ## Next steps
