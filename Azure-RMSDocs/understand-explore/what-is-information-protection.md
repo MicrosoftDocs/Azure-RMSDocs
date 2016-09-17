@@ -41,21 +41,25 @@ Some example visual markings:
 
 ## How data is protected
 
-*Azure Rights Management* is used for the protection. This technology is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud.
+The protection technology uses *Azure Rights Management*. This technology is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud.
 
 This protection technology uses encryption, identity, and authorization policies. Similarly to the persistent labels, protection that is applied by using Rights Management stays with the documents and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
 
-For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and in addition, prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using rights management templates.
+For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and in addition, prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using **rights management templates**.
+
+### Rights management templates
+
+As soon as you activate the Azure Rights Management service, two default templates are created for your organization that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that implement more restrictive controls.
 
 These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
 This example shows how you might select a template or rights management option to a label:
 
-![Example of selecting templates in the Azure portal](../media/templates-infoprotection.png)
+![Example of selecting templates in the Azure portal](../media/templates-infoprotection-callouts.png)
 
 The same templates are available to configure mail flow rules for Exchange Online, which supports the Azure Rights Management technology:
 
-![Example of selecting templates for Exchange Online](../media/templates-exchangeonline.png)
+![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
