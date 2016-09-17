@@ -57,7 +57,6 @@ The same templates are available to configure mail flow rules for Exchange Onlin
 
 ![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
 
-
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
 ## Integration with end user workflows
