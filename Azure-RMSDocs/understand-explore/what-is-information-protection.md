@@ -75,8 +75,6 @@ This Information Protection bar makes it easy for end users to select labels for
 
 When users share their protected documents by email, they can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents.
 
-![Example of the document tracking site for protected documents](../media/doc-tracking-site.png)
-
 
 ## Resources for Azure Information Protection
 
