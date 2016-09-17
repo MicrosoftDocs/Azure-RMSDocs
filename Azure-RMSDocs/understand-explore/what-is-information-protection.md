@@ -84,12 +84,12 @@ This Information Protection bar makes it easy for end users to select labels for
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Presentation:
+- Video presentation:
 
 (add video)
 
 ## Next steps
 
-See Azure Information Protection for yourself, with our [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 Know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
