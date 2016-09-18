@@ -38,7 +38,11 @@ You’re then ready to safely share this document by email.
 
 1.  In Word, open your document. You will see that the default label of **Internal** is again automatically applied. 
 
-2.  On the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Share Protected** from the menu. You'll see the **share protected** dialog box.
+2.  On the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Share Protected** from the menu:
+
+    ![Azure Information Protection quick start tutorial step 5 - Share Protected](../media/share-protected-callout.png)
+
+    You'll see the **share protected** dialog box.
 
 3. In the **USERS** box, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Or, you can specify a co-worker's email address. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
 
@@ -56,9 +60,11 @@ You’re then ready to safely share this document by email.
 
     This option requires the recipients to have an Internet connection each time they open the attachment but with the benefit that if you later revoke the document, the next time they try to open it, they will not be able to. 
 
-4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions.
+4.  Click **Send** to see an email message that is ready to be sent to the recipients you specified and with default text for instructions. For example:
 
-    You might notice that you have two attachments; the original Word document, and a file that has the same name but with a **.ppdf** file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. This version lets the recipient read the protected document by using the viewer that is installed with the Rights Management sharing application.
+    ![Example email message when you share protected](../media/example-email-share-protected.png)
+
+    You might notice that you have two attachments; the original Word document, and a file that has the same name but with a **.ppdf** file name extension. The .ppdf version is a protected PDF file that is automatically created by the Rights Management sharing application, in case the recipient does not have a version of Office that supports protected documents. This additional file lets the recipient read the protected document by using the viewer that is installed with the Rights Management sharing application.
 
     Click **Send** in your email message.
 
@@ -75,6 +81,7 @@ Ask them to read the email message that you sent. Assuming that this is the firs
 1. Open one of the attachments to read the document:
     
     - If you have a version of Office on your device that supports Rights Management:
+    
         -  Open the document that has the **.docx** file name extension.
         
     - If you do not have a version of Office that supports Rights Management, or if you are not sure, or simply want to try the viewer from the Rights Management sharing application: 
@@ -91,7 +98,11 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 ## To track your protected document
 
-1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**.
+1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**:
+
+        ![Track usage option](../media/track-usage-callout.png)
+
+    This takes you to the document tracking site.
 
 2.  If you see the **Protect and share on your terms** page, click **Sign in** and supply your user name and password again.
 
