@@ -63,27 +63,27 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. In the **Set RMS template for protecting documents and emails containing this label** section, for the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
+    a. Locate the section **Set RMS template for protecting documents and emails containing this label**. For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-    b. **Documents with this label have a watermark**: Click **On** and for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. 
+    b. Locate the section **Set visual marking**. For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
-    c. Click **Add a new condition** and then, in the **Condition** blade, select the following:
+    c. Locate the section **Configure conditions for automatically applying this label**. Click **Add a new condition** and then, in the **Condition** blade, select the following:
     
-    - **Choose the type of condition**: **Built-in**
+    - **Choose the type of condition**: Keep the default of **Built-in**.
     
-    - **Select built-in**: **Credit Card Number**
+    - **Select built-in**: From the drop down, select **Credit Card Number**.
     
-    - **Minimum number of occurrences**: **1**
+    - **Minimum number of occurrences**: Keep the default of **1**.
     
-    - **Count occurrences with unique values only**: **On**
+    - **Count occurrences with unique values only**: Keep the default of **Off**.
     
     - Click **Save** to return to the **Label: Confidential** blade.
 
 3. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
 
-4. Leave **Select how this label is applied**: **Recommended**
+4. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip.
 
 5. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
 
