@@ -79,17 +79,17 @@ We'll now change the settings of one of the labels, **Confidential**:
     
 4. Locate the section **Configure conditions for automatically applying this label**:
     
-    Click **Add a new condition** and then, in the **Condition** blade, configure the following:
+    Click **Add a new condition** and then, in the **Condition** blade, select the following:
     
-    - **Choose the type of condition**: Keep the default of **Built-in**.
+    a. **Choose the type of condition**: Keep the default of **Built-in**.
     
-    - **Select built-in**: From the drop down, select **Credit Card Number**.
+    b. **Select built-in**: From the drop down, select **Credit Card Number**.
     
-    - **Minimum number of occurrences**: Keep the default of **1**.
+    c. **Minimum number of occurrences**: Keep the default of **1**.
     
-    - **Count occurrences with unique values only**: Keep the default of **Off**.
+    d. **Count occurrences with unique values only**: Keep the default of **Off**.
     
-    - Click **Save** to return to the **Label: Confidential** blade.
+    e. Click **Save** to return to the **Label: Confidential** blade.
 
 5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
 
