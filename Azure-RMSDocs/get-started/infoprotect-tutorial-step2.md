@@ -59,7 +59,9 @@ For our tutorial, we'll change a couple of those global settings so that you can
 
 We'll now change the settings of one of the labels, **Confidential**:
 
-1. Click the **Confidential** label. In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
+1. Click the **Confidential** label. 
+    
+    In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
 
 2. In the **Label: Confidential** blade, locate the section **Set RMS template for protecting documents and emails containing this label**:
     
