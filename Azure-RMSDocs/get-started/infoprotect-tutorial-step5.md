@@ -100,7 +100,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Track Usage**:
 
-        ![Track usage option](../media/track-usage-callout.png)
+    ![Track usage option](../media/track-usage-callout.png)
 
     This takes you to the document tracking site.
 
