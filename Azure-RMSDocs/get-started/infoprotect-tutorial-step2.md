@@ -109,7 +109,7 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
 
-8. Click **Save** on this **Label: Confidential** blade, and on the main **Azure Information Protection** blade, click **Save** again.
+8. Click **Save** on this **Label: Confidential** blade. Then, on the main **Azure Information Protection** blade, click **Save** again.
 
 9. Now we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
 
