@@ -37,7 +37,7 @@ If you have any problems completing this tutorial, using Azure Information Prote
 ## Prerequisites 
 To complete this tutorial, you will need the following:
 
-- A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations. Make sure that your subscription supports these features. For more information, see the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589).
+- A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that your subscription supports these features. For more information, see the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589).
 
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
