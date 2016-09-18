@@ -105,7 +105,9 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommended.png)
 
-7. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
+7. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**:
+    
+    ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
 
 8. Click **Save** on this **Label: Confidential** blade, and on the main **Azure Information Protection** blade, click **Save** again.
 
