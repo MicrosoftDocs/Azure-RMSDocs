@@ -69,7 +69,7 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     b. Locate the section **Set visual marking**. For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
-    c. Locate the section **Configure conditions for automatically applying this label**. Click **Add a new condition** and then, in the **Condition** blade, select the following:
+    c. Locate the section **Configure conditions for automatically applying this label**. Click **Add a new condition** and then, in the **Condition** blade, configure the following:
     
     - **Choose the type of condition**: Keep the default of **Built-in**.
     
