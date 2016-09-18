@@ -51,29 +51,27 @@ Although Azure Information Protection comes with a default policy that you can u
 
 For our tutorial, we'll change a couple of those global settings so that you can see how they work:
 
--  **Select the default label**: Set this to **Internal**.
+1. For **Select the default label**, set this to **Internal**.
 
-- **Users must provide justification to set a lower classification label, remove a label, or remove protection**: Set this to **On**.
+2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this to **On**.
 
 ## Configuring a label for protection, a watermark, and a condition to prompt for classification
 
 We'll now change the settings of one of the labels, **Confidential**:
 
-1. Click the **Confidential** label.
+1. Click the **Confidential** label. In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
 
-2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
-
-    a. Locate the section **Set RMS template for protecting documents and emails containing this label**:
+2. In the **Label: Confidential** blade, locate the section **Set RMS template for protecting documents and emails containing this label**:
     
     For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-    b. Locate the section **Set visual marking**:
+3. Locate the section **Set visual marking**:
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
-    c. Locate the section **Configure conditions for automatically applying this label**:
+4. Locate the section **Configure conditions for automatically applying this label**:
     
     Click **Add a new condition** and then, in the **Condition** blade, configure the following:
     
@@ -87,15 +85,15 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     - Click **Save** to return to the **Label: Confidential** blade.
 
-3. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
+5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
 
-4. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip.
+6. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip.
 
-5. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
+7. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
 
-6. Click **Save** on this **Label: Confidential** blade, and on the main **Azure Information Protection** blade, click **Save** again.
+8. Click **Save** on this **Label: Confidential** blade, and on the main **Azure Information Protection** blade, click **Save** again.
 
-7. Now we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
+9. Now we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
 
 ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
 
