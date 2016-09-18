@@ -32,7 +32,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
 
-2. On the hub menu: Click **New** > **Security + Identity** > **Azure Information Protection** > **Create**.
+2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. In the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. In the **Azure Information Protection** blade, click **Create**.
 
     This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
 
