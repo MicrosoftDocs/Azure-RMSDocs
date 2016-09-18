@@ -67,11 +67,15 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
-    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
+    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. 
+    
+    If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
 3. Locate the section **Set visual marking**:
     
-    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
+    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. 
+    
+    Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
 4. Locate the section **Configure conditions for automatically applying this label**:
     
