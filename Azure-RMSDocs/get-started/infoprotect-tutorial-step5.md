@@ -98,7 +98,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 ## To track your protected document
 
-1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Share Protected** and then **Track Usage**:
+1.  Back in Word, on the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Track Usage** from the menu:
 
     ![Track usage option](../media/track-usage-callout.png)
 
