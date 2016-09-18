@@ -63,13 +63,19 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, you'll now see the settings that are available for each label. Make the following changes:
 
-    a. Locate the section **Set RMS template for protecting documents and emails containing this label**. For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
+    a. Locate the section **Set RMS template for protecting documents and emails containing this label**:
+    
+    For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-    b. Locate the section **Set visual marking**. For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
+    b. Locate the section **Set visual marking**:
     
-    c. Locate the section **Configure conditions for automatically applying this label**. Click **Add a new condition** and then, in the **Condition** blade, configure the following:
+    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
+    
+    c. Locate the section **Configure conditions for automatically applying this label**:
+    
+    Click **Add a new condition** and then, in the **Condition** blade, configure the following:
     
     - **Choose the type of condition**: Keep the default of **Built-in**.
     
