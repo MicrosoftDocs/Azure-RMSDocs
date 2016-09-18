@@ -67,13 +67,17 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
     
-    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**. 
+    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
+    
+    ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-select-rms-template.png)
     
     If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
 3. Locate the section **Set visual marking**:
     
-    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**. 
+    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
+    
+    ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-configure-watermark.png)
     
     Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
@@ -89,11 +93,15 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     d. **Count occurrences with unique values only**: Keep the default of **Off**.
     
-    e. Click **Save** to return to the **Label: Confidential** blade.
+    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-configure-condition.png)
+    
+    Click **Save** to return to the **Label: Confidential** blade.
 
 5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
 
-6. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip.
+6. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
+    
+    ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommended.png)
 
 7. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
 
