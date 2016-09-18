@@ -42,7 +42,9 @@ You’re then ready to safely share this document by email.
 
     ![Azure Information Protection quick start tutorial step 5 - Share Protected](../media/share-protected-callout.png)
 
-    You'll see the **share protected** dialog box.
+    You'll see the **share protected** dialog box, similar to this picture:
+
+    ![Azure Information Protection quick start tutorial step 5 - share protected dialog box](../media/example-share-protected-dialog.png)
 
 3. In the **USERS** box, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Or, you can specify a co-worker's email address. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
 
