@@ -43,7 +43,7 @@ Both these installations integrate with Office applications and currently, you m
 
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
-## Install the Rights Management sharing application. 
+## Install the Rights Management sharing application 
 
 1. Go to the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
