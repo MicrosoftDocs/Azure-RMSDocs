@@ -123,6 +123,7 @@ You can return to this site to track further activity for your protected documen
 |Full instructions and alternative methods for protecting files that you share by email|[Protect a file that you share by email by using the Rights Management sharing application](../rms-client/sharing-app-protect-by-email.md)|
 |About the options in the **share protected** dialog box|[Dialog box options for the Rights Management sharing application](../rms-client/sharing-app-dialog-box.md)|
 |About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../understand-explore/rms-for-individuals.md)|
+|About using the document tracking site|[Track and revoke your documents](../rms-client/sharing-app-track-revoke.md)
 
 
 ## Next Steps
