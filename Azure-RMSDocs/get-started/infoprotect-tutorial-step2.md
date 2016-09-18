@@ -97,7 +97,9 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     Click **Save** to return to the **Label: Confidential** blade.
 
-5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**.
+5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+    
+    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
 6. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
     
