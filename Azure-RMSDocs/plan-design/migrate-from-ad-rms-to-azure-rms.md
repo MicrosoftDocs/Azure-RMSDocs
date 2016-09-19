@@ -5,7 +5,7 @@ title: Migrating from AD RMS to Azure Rights Management | Azure RMS
 description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Rights Management (Azure RMS). After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -52,7 +52,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
     - Cryptographic Mode 2:
     
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. Archived keys in Cryptographic Mode 1 are supported. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - All valid AD RMS topologies are supported:
     
