@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure RMS requirements&#58; Applications | Azure Information Protection
-description: Identify the applications that natively support the Azure Rights Management service from Azure Information Protection, which means that Rights Management is tightly integrated into these applications by using RMS APIs to support usage restrictions. 
+description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
