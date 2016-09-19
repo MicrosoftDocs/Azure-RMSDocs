@@ -2,12 +2,11 @@
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
 
-title: Azure Rights Management Documentation - RMS Documentation | Microsoft Docs
-description: Technical documentation for Azure Rights Management
-keywords: rights management documentation, rms documentation, Azure RMS documentation
+title: Azure Information Protection Documentation | Microsoft Docs
+description: Technical documentation for Azure RInformation Protection 
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: hubpage
 ms.prod: azure
 ms.service: rights-management
@@ -16,26 +15,26 @@ ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 
 ---
-# Azure Rights Management (RMS) Documentation
+# Azure Information Protection Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management (RMS) Documentation</h1>
-      <h2>Learn how to deploy and manage Azure Rights Management (Azure RMS). Quickly get started using Rights Management to apply information protection to email, documents, and other sensitive data.</h2>
-      <h3>New to Azure RMS? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">Visit our product site &rarr;</a></h3>
+      <h1>Azure Information Protection Documentation</h1>
+      <h2>Learn how to deploy and manage Azure Information Protection (formerly Azure Rights Management or RMS). Quickly get started using the service to apply information protection to email, documents, and other sensitive data.</h2>
+      <h3>New to Azure Information Protection? <a href="https://www.microsoft.com/cloud-platform/azure-information-protection" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
         <ol class="action-list">
-            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
+            <li><a href="https://portal.office.com/Signup?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=INFORMATIONPROTECTION&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
         </ol>
     </aside>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><mark><b>NEW</b></mark> <a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
-          <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
-          <li><a href="./get-started/quick-start-tutorial.md">Quick start tutorial for Azure RMS</a></li>
+          <li><mark><a href="./understand-explore/what-is-information-protection.md">What is Azure Information Protection</a></li>
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Quick start tutorial for Azure Information Protection</a></li>
+          <li><a href="./understand-explore/infoprotect-secure-classify-scenario.md">Common scenarios for Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="./get-started/rapid-deployment-guide.md">Rapid deployment guide for Azure RMS</a></li>
