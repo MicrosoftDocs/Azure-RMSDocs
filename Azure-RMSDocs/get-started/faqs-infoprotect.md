@@ -30,7 +30,7 @@ ms.suite: ems
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
-## What can I do with Azure Information Protection?
+## What can I do with the classification capabilities in Azure Information Protection?
 
 The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using a Rights Management service.  
 

@@ -45,7 +45,7 @@ The technical documentation does not contain information about upcoming releases
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 
-See [Compliance and supporting information for Azure Rights Management](../understand-explore/compliance.md).
+See [Compliance and supporting information for Azure Information Protection](../understand-explore/compliance.md).
 
 ## What do I do if my question isn’t here?
 
@@ -66,4 +66,5 @@ In addition, there are FAQs designed for end-users:
 - [FAQ for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
 
 -   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
+
 

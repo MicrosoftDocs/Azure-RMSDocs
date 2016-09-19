@@ -43,7 +43,7 @@ Both these installations integrate with Office applications and currently, you m
 
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
-## Install the Rights Management sharing application. 
+## Install the Rights Management sharing application 
 
 1. Go to the [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
@@ -58,11 +58,11 @@ Verify that these installations were successful by opening Word and a new, blank
 
 When the document loads, you should see three new things:
 
-- On the **Home** tab, a new **RMS** group, with a button labeled **Share Protected**.
-
-- Also on the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
+- On the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
 
     Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Information Protection policy is installed** and a recent connection time. Verify that your displayed user name is correct for your tenant.
+
+- Also on the **Home** tab, a new **RMS** group, with a button labeled **Share Protected**.
 
 - A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
     
