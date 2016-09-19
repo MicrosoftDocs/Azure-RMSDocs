@@ -57,9 +57,9 @@ Before you begin using Azure Information Protection, do the following preparatio
 
 ### Step 3: Configure and deploy classification and labeling
 
-Decide which data you want to classify first, and what classification label to assign to that data. Start with a realistic scope, and plan to increase that scope over time. For example, start with the data that is the most sensitive.
+If you do not already have a classification strategy, review the [default Azure Information Protection policy](../deploy-use/configure-policy-default.md) and use this as the basis for deciding what classification labels to assign to your organization data. You can customize these to meet your business requirements. 
 
-Review the default Azure Information Protection policy and make the changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
+Reconfigure the default Azure Information Protection labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 Then deploy the Azure Information Protection client for users, and support it by providing user training and your instructions for when to select the labels. For more information about installing the client, see [Installing the Azure Information Protection client](../rms-client/info-protect-client.md).
 
