@@ -5,7 +5,7 @@ title: Scenario - Executives securely exchange privileged information | Azure In
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management
@@ -55,7 +55,7 @@ For the instructions for this scenario to work, the following must be in place:
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |One of these configurations:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) information.<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
 |You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|You have configured a transport protection rule for IRM, as described later in this article|For Exchange Online: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />For Exchange 2013: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432.aspx)<br /><br />For Exchange 2010: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432.aspx)|
+|You have configured a transport protection rule for IRM, as described later in this article|For Exchange Online: [Mail flow or transport rules](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />For Exchange 2013: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />For Exchange 2010: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### To configure the custom template for executives
 
