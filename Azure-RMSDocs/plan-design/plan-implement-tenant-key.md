@@ -5,7 +5,7 @@ title: Planning and implementing your Azure Rights Management tenant key | Azure
 description: Information to help you plan for and manage your Rights Management (RMS) tenant key for Azure RMS. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -102,7 +102,7 @@ When the key is transferred to Key Vault, it is given a key ID in Key Vault, whi
 
 But before Azure RMS can use the key, Azure RMS must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants permissions to the Azure RMS service principal, **Microsoft.Azure.RMS**. For example:
 
-	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
+	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 You're now ready to configure Azure RMS to use this key as your organization's Azure RMS tenant key. Using Azure RMS cmdlets, first connect to Azure RMS and sign in:
 
