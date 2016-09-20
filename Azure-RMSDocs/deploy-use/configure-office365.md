@@ -89,7 +89,7 @@ The following steps provide a typical set of commands that you would run to enab
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.sa.aadrm.com/TenantManagement/ServicePartner.svc"
     ```
-    For Government (Government Community Cloud):
+    Office 365 for Government (Government Community Cloud):
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.govus.aadrm.com/TenantManagement/ServicePartner.svc"
