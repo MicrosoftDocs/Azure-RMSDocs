@@ -5,7 +5,7 @@ title: Office 365&colon; Configuration for clients and online services | Azure R
 description: Information and instructions for admins to configure Office 365 to work with Azure Rights Management (Azure RMS). 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -69,7 +69,7 @@ The following steps provide a typical set of commands that you would run to enab
 
 4.  Specify the location of the Azure RMS tenant key, according to according to where your organization's tenant was created:
 
-    For North America (and government subscriptions):
+    For North America:
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.na.aadrm.com/TenantManagement/ServicePartner.svc"
@@ -88,6 +88,11 @@ The following steps provide a typical set of commands that you would run to enab
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.sa.aadrm.com/TenantManagement/ServicePartner.svc"
+    ```
+    For Government (Government Community Cloud):
+
+    ```
+    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.govus.aadrm.com/TenantManagement/ServicePartner.svc"
     ```
 
 5.  Import configuration data from Azure RMS to Exchange Online, in the form of the trusted publishing domain (TPD). This includes the Azure RMS tenant key and Azure RMS templates:
