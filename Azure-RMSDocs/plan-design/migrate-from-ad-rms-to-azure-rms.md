@@ -52,7 +52,7 @@ Before you start the migration to Azure RMS, make sure that the following prereq
         
     - Cryptographic Mode 2:
     
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. Archived keys in Cryptographic Mode 1 are supported. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure RMS. Although the current server licensor certificate (SLC) key must be using Cryptographic Mode 2, previous keys that were configured for Cryptographic Mode 1 are supported in Azure RMS as archived keys. For more information about the cryptographic modes and how to move to Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - All valid AD RMS topologies are supported:
     
