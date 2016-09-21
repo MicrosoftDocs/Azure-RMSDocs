@@ -63,7 +63,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                     <p>Learn about Azure Information Protection, a cloud-based solution that helps you classify, label, and protect your documents and emails.</p>
                   </a>
                 </li>
-                </li>
                 <li class="column-third">
                   <a href="./understand-explore/applications-support.md">
                     <h3>How applications support Azure Rights Management protection</h3>
@@ -186,8 +185,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 5</span>
                   <p>Develop &amp; Customize Apps</p>
                 </div>
-                <p class="description column-two-thirds">Integrate Azure Information Protection with your applications.
-                </p>
+                <p class="description column-two-thirds">Integrate applications using the Microsoft Rights Management SDK.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
