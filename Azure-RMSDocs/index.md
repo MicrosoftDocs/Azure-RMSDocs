@@ -69,7 +69,6 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                     <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data.</p>
                   </a>
                 </li>
-                 </li>
                 <li class="column-third">
                   <a href="./understand-explore/compliance.md">
                     <h3>Compliance and supporting information for Azure Information Protection</h3>
