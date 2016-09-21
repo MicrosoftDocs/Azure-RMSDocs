@@ -52,7 +52,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number">1</span>
                   <p>Understand &amp; Explore</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Azure RMS.</p>
+                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
@@ -65,7 +65,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </li>
                 <li class="column-third">
                   <a href="./understand-explore/rms-for-individuals.md">
-                    <h3>RMS for individuals and Azure Rights Management</h3>
+                    <h3>Azure RMS for individuals and Azure Rights Management</h3>
                     <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
                   </a>
                 </li>
@@ -151,7 +151,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 4</span>
                   <p>Deploy & Use</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use Azure RMS.</p>
+                <p class="description column-two-thirds">Deploy and use Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
