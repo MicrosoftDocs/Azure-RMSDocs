@@ -39,7 +39,6 @@ Not sure whether this AD RMS migration is right for your organization?
 ## Prerequisites for migrating AD RMS to Azure Information Protection
 Before you start the migration to Azure Information Protection, make sure that the following prerequisites are in place and that you understand any limitations.
 
-
 - **A supported RMS deployment:**
     
     - The following releases of AD RMS support a migration to Azure Information Protection:
