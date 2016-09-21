@@ -12,7 +12,7 @@
 ### [Post migration tasks](migrate-from-ad-rms-phase4.md)
 ## [Planning and implementing your tenant key](plan-implement-tenant-key.md)
 ### [BYOK pricing and restrictions](byok-price-restrictions.md)
-## [Preparing for Azure RMS](prepare.md)
+## [Preparing for Azure Information Protection](prepare.md)
 # [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
 # [Deploy & Use the Client](/rights-management/rms-client/use-client)
 # [Develop & Customize Apps](/rights-management/develop/developers-guide)

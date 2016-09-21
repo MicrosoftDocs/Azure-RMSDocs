@@ -63,16 +63,18 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                     <p>Learn about Azure Information Protection, a cloud-based solution that helps you classify, label, and protect your documents and emails.</p>
                   </a>
                 </li>
-                <li class="column-third">
-                  <a href="./understand-explore/rms-for-individuals.md">
-                    <h3>Azure RMS for individuals and Azure Rights Management</h3>
-                    <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
-                  </a>
                 </li>
                 <li class="column-third">
                   <a href="./understand-explore/applications-support.md">
-                    <h3>How applications support the Azure Rights Management service</h3>
-                    <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data </p>
+                    <h3>How applications support Azure Rights Management protection</h3>
+                    <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data.</p>
+                  </a>
+                </li>
+                 </li>
+                <li class="column-third">
+                  <a href="./understand-explore/compliance.md">
+                    <h3>Compliance and supporting information for Azure Information Protection</h3>
+                    <p>Supplimental information (such as legal and privacy statements) about Azure Information Protection.</p>
                   </a>
                 </li>
               </ul>
@@ -118,7 +120,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 3</span>
                   <p>Plan & Design</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design Azure RMS.</p>
+                <p class="description column-two-thirds">Plan and design Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
@@ -137,7 +139,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </li>
                 <li class="column-third">
                   <a href="./plan-design/plan-implement-tenant-key.md">
-                    <h3>Planning and implementing your Azure Information Protection Tenant Key</h3>
+                    <h3>Planning and implementing your Azure Information Protection tenant key</h3>
                     <p>Plan for and manage your tenant key for Azure Information Protection, which includes the "bring your own key" (BYOK) scenario.</p>
                   </a>
                 </li>
@@ -158,7 +160,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
               <ul class="row">
                  <li class="column-third">
                  <a href="./deploy-use/activate-service.md">
-                    <h3>Activating Azure Rights Management</h3>
+                    <h3>Activating the Azure Rights Management service</h3>
                     <p>Start protecting important data by using applications and services that support this information protection solution.</p>
                   </a>
                 </li>
@@ -169,7 +171,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </li>
                 <li class="column-third">
                   <a href="./deploy-use/configure-custom-templates.md">
-                    <h3>Configuring custom templates for Azure Rights Management</h3>
+                    <h3>Configuring custom templates</h3>
                     <p>Use templates to easily apply policies to sensitive files that restrict access to authorized users in your organization.</p>
                  </a>
                  </a>
