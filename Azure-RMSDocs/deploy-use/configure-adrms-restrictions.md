@@ -28,6 +28,8 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 >*Applies to: Azure Information Protection*
 
+**[ This feature is still preliminary and the information is subject to change. ]**
+
 When you protect your most sensitive documents and emails, you will typically do this by applying Azure Rights Management protection to benefit from the following:
 
 - No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution.
