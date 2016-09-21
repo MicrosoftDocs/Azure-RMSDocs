@@ -28,11 +28,13 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 >*Applies to: Azure Information Protection*
 
-Azure Information Protection is a cloud-based solution that helps an organization to classify and label its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. For your most sensitive data, you can then protect it from unauthorized access, and control how this information is used.
+Azure Information Protection is a cloud-based solution that helps an organization to classify, label, and protect its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. 
 
-The following picture shows an example of Azure Information Protection in action, after an administrator has configured the Azure Information Protection policy for their organization. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured:
+The following picture shows an example of Azure Information Protection in action. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured, which classifies and optionally, protects the document. 
 
 ![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-callouts.png)
+
+After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
 ## How labels apply classification
 
