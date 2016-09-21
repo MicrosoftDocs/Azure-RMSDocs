@@ -2,7 +2,7 @@
 # required metadata
 
 title: Deploying the Azure Rights Management connector | Azure Information Protection
-description: Instructions to deploy the Azure Rights Management (RMS) connector, which provides the data protection service for existing on-premises deployments that use Microsoft Exchange Server, Microsoft SharePoint Server, or file servers that run Windows Server and File Classification Infrastructure (FCI).
+description: Instructions to deploy the RMS connector, which provides the data protection service for existing on-premises deployments that use Exchange Server, SharePoint Server, or Windows Server and File Classification Infrastructure (FCI).
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
