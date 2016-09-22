@@ -73,7 +73,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 <li class="column-third">
                   <a href="./understand-explore/compliance.md">
                     <h3>Compliance and supporting information for Azure Information Protection</h3>
-                    <p>Supplimental information (such as legal and privacy statements) about Azure Information Protection.</p>
+                    <p>Supplemental information (such as legal and privacy statements) about Azure Information Protection.</p>
                   </a>
                 </li>
               </ul>
