@@ -19,7 +19,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 <article id="main">
     <section id="hero-content">
       <h1>Azure Information Protection Documentation</h1>
-      <h2>Learn how to deploy and manage Azure Information Protection (formerly Azure Rights Management or RMS). Quickly get started using the service to apply information protection to email, documents, and other sensitive data.</h2>
+      <h2>Learn how to deploy and manage Azure Information Protection (formerly Azure Rights Management or RMS). Quickly get started using the service to apply classification, labeling, and protection to your organization’s emails and documents.</h2>
       <h3>New to Azure Information Protection? <a href="https://www.microsoft.com/cloud-platform/azure-information-protection" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
@@ -34,11 +34,12 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
         <ul class="column column-half">
           <li><a href="./understand-explore/what-is-information-protection.md">What is Azure Information Protection?</a></li>
           <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Quick start tutorial for Azure Information Protection</a></li>
-          <li><a href="./understand-explore/infoprotect-secure-classify-scenario.md">Common scenarios for Azure Information Protection</a></li>
+          <li><a href="./get-started/faqs.md">Frequently asked questions for Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection deployment roadmap</a></li>
           <li><a href="./develop/developers-guide.md">Integrate applications with Azure Information Protection</a></li>
+          <li><a href="./rms-client/info-protect-client">Installing the Azure Information Protection client</a></li>
         </ul>
       </div>
     </section>
