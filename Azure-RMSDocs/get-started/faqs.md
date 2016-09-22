@@ -37,7 +37,7 @@ These FAQ pages will be updated regularly, with new additions listed in the mont
 Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection.
+See the subscription information from the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection.
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
