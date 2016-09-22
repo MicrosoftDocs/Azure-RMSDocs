@@ -39,7 +39,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
         <ul class="column column-half">
           <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection deployment roadmap</a></li>
           <li><a href="./develop/developers-guide.md">Azure Information Protection Developer's Guide</a></li>
-          <li><a href="./rms-client/info-protect-client">Installing the Azure Information Protection client</a></li>
+          <li><a href="./rms-client/info-protect-client.md">Installing the Azure Information Protection client</a></li>
         </ul>
       </div>
     </section>
