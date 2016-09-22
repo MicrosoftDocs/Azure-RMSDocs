@@ -1,4 +1,4 @@
-# [Understand & Explore](what-is-information-protection)
+# [Understand & Explore](what-is-information-protection.md)
 ## [What is Azure Information Protection?](what-is-information-protection.md)
 ### [Also known as ...](azure-rms-aka.md)
 ### [What is Azure Rights Management?](what-is-azure-rms.md)
