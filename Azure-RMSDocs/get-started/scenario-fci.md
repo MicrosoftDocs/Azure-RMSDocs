@@ -50,10 +50,10 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
-|One of the following:<br /><br />- To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />- To use a custom template for specific users: You have created and published this custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure Rights Management.|[Preparing for Azure Information Protection](../plan-design/prepare.md)|
+|One of the following:<br /><br />- To use a default template for all users: You have not archived the default, &lt;organization name&gt; - Confidential<br /><br />- To use a custom template for specific users: You have created and published this custom template|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |You have downloaded the RMS Protection tool and configured the prerequisites for Azure RMS|For instructions to download the tool and prerequisites: [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />To configure additional prerequisites for Azure RMS, such as the service principal account: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 ### Configuring a file server to protect all files by using Azure RMS and File Server Resource Manager with File Classification Infrastructure
@@ -74,7 +74,7 @@ For the instructions for this scenario to work, the following must be in place:
     ```
     To use the default template that restricts access to all employees with all usage rights, look for the template name of **&lt;organization name&gt; - Confidential**. For example, **VanArsdel, Ltd - Confidential**.
 
-4.  Follow the step-by-step instructions in [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx).
+4.  Follow the step-by-step instructions in [RMS Protection with Windows Server File Classification Infrastructure (FCI)](../rms-client/configure-fci.md).
 
     These instructions include a Windows PowerShell script that you specify to run as a custom executable in File Server Resource Manager. The instructions also include how to verify that the files are protected by Azure Rights Management.
 
@@ -123,7 +123,7 @@ Periodically, the file will be protected again, which again adds the .pfile file
 
 -   For additional information:
 
-    -   [View and use files that have been protected](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [View and use files that have been protected](../rms-client/sharing-app-view-use-files.md)
 
 -   Contact the help desk:
 
@@ -154,7 +154,7 @@ Periodically, the file will be protected again, which again adds the .pfile file
 
 -   For additional information:
 
-    -   [View and use files that have been protected](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [View and use files that have been protected](../rms-client/sharing-app-view-use-files.md)
 
 -   Contact the help desk: helpdesk@vanarsdelltd.com
 
