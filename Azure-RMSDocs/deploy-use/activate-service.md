@@ -35,7 +35,7 @@ If you want to learn more about the Azure Rights Management service before you a
 > [!IMPORTANT]
 > Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] services. If not, you will not be able to activate Azure Rights Management.
 >
-> Check the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your organization has a subscription that includes Azure Rights Management.
+> Check the subscription information from the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your organization has a subscription that includes Azure Rights Management.
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
