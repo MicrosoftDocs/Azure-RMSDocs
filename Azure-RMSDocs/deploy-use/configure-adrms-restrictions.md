@@ -87,8 +87,6 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
-- The [Azure Information Protection client](../rms-client/info-protect-client.md) is version **1.0.233.0** or later.
-
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
 > 
