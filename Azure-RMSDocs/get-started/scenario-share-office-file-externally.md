@@ -112,7 +112,7 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
     -   [Protect a file that you share by email](../rms-client/rms-client/sharing-app-protect-by-email.md)
 
-    -   [Track and revoke your documents](../rms-client/rms-client/sharing-app-track-revoke.md)
+    -   [Track and revoke your documents](../rms-client/sharing-app-track-revoke.md)
 
 -   Contact the help desk:
 
@@ -151,7 +151,7 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
     -   [Protect a file that you share by email](../rms-client/rms-client/sharing-app-protect-by-email.md)
 
-    -   [Track and revoke your documents](../rms-client/rms-client/sharing-app-track-revoke.md)
+    -   [Track and revoke your documents](../rms-client/sharing-app-track-revoke.md)
 
 -   Contact the help desk:
 
