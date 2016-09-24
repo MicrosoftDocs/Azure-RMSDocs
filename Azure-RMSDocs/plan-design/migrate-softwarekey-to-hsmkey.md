@@ -132,7 +132,7 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
     Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
-## Part 3: Import the configuration data to Azure RMS
+## Part 3: Import the configuration data to Azure Information Protection
 
 1.  Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 

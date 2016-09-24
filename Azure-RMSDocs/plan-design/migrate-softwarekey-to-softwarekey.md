@@ -36,7 +36,7 @@ If this is not your chosen configuration scenario, go back to [Step 2. Export co
 
 Use the following procedure to import the AD RMS configuration to Azure Information Protection, to result in your Azure Information Protection tenant key that is managed by Microsoft.
 
-## To import the configuration data to Azure RMS
+## To import the configuration data to Azure Information Protection
 
 1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure Rights Management (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet. The Azure Rights Management service (Azure RMS) provides the protection service for Azure Information Protection.
 
