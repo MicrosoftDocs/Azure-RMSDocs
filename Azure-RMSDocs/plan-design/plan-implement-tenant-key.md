@@ -89,7 +89,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 
 |Requirement|More information|
 |---------------|--------------------|
-|A subscription that supports Azure Information Protection.|For more information about the available subscriptions, see [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md).|
+|A subscription that supports Azure Information Protection.|For more information about the available subscriptions, see the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
 |You do not use RMS for individuals or Exchange Online. Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
 |All the prerequisites listed for Key Vault BYOK.|See [Prequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br />**Note**: If you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
 |The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
@@ -100,7 +100,7 @@ To generate and transfer your own tenant key to Azure Key Vault, follow the proc
 
 When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell the Azure Rights Management service from Azure Information Protection to use this key, by specifying this URL.
 
-But before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) and grants permissions to the Azure Rights Management service principal, **Microsoft.Azure.RMS**. For example:
+But before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) and grants permissions to the Azure Rights Management service principal, **Microsoft.Azure.RMS**. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
