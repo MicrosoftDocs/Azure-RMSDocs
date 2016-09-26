@@ -51,7 +51,9 @@ Before you start the migration to Azure Information Protection, make sure that t
         
     - Cryptographic Mode 2:
 
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection. Although the current server licensor certificate (SLC) key must be using Cryptographic Mode 2, previous keys that were configured for Cryptographic Mode 1 are supported by Azure Information Protection as archived keys. For more information about the cryptographic modes and how to move to Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection.
+        
+        Although the current server licensor certificate (SLC) key must be using Cryptographic Mode 2, previous keys that were configured for Cryptographic Mode 1 are supported by Azure Information Protection as archived keys. For more information about the cryptographic modes and how to move to Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - All valid AD RMS topologies are supported:
     
