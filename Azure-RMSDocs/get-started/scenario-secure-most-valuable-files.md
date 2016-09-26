@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Scenario - Secure your most (few) valuable files | Azure RMS
+title: Scenario - Secure your most (few) valuable files | Azure Information Protection
 description: This scenario and supporting user documentation uses Azure Rights Management to manually and custom-protect a handful of files that you have identified as being your most valuable, which warrant the highest level of protection from unauthorized access. 
 author: cabailey
 manager: mbaldwin
@@ -26,15 +26,15 @@ ms.suite: ems
 
 # Scenario - secure your most (few) valuable files
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management to manually and custom-protect a handful of files that you have identified as being your most valuable, which warrant the highest level of protection from unauthorized access. These are usually files that only a few people should be able to access. For example, recipe instructions for your company's signature food product, or takeover plans that must not be public before a specified date.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection to manually and custom-protect a handful of files that you have identified as being your most valuable, which warrant the highest level of protection from unauthorized access. These are usually files that only a few people should be able to access. For example, recipe instructions for your company's signature food product, or takeover plans that must not be public before a specified date.
 
 The instructions are suitable for the following set of circumstances:
 
 -   You have identified the small set of files to protect .
 
--   The files are in one of the Office file formats that support Rights Management. If the files are in other file formats (for example, CAD files) ensure that these formats support Azure RMS and that you deploy applications that natively support Azure RMS. For more information, see [How Applications Support Azure Rights Management](https://technet.microsoft.com/library/jj585004.aspx).
+-   The files are in one of the Office file formats that support Rights Management. If the files are in other file formats (for example, CAD files) ensure that these formats support Azure RMS and that you deploy applications that natively support Azure RMS. For more information, see [How Applications Support the Azure Rights Management service](../understand-explore/applications-support.md).
 
 -   The files contain highly confidential, sensitive information that should be accessible to only a few people.
 
@@ -54,12 +54,12 @@ For this scenario, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />- A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />- A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Information Protection](../plan-design/deployment-roadmap.md)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|You have configured a custom template as described next|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
+|The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](../rms-client/install-sharing-app.md)|
 |Authorized users have a minimum version of Office 2013|If users have Office 2010, they must also install the Rights Management sharing application.|
-|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](https://technet.microsoft.com/library/dn529121.aspx) capabilities of Azure RMS, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
+|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](../deploy-use/log-analyze-usage.md) capabilities of Azure RMS, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />Check the subscription information from the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
 
 ### To configure the custom template
 
@@ -91,7 +91,7 @@ For this scenario, the following must be in place:
 
 5.  If you have more files to protect in other folders, repeat steps 1 through 4 for each folder.
 
-For more information about protecting files in-place, see [Protect a file on a device (protect in-place) by using the Rights Management sharing application](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx)
+For more information about protecting files in-place, see [Protect a file on a device (protect in-place) by using the Rights Management sharing application](../rms-client/sharing-app-protect-in-place.md)
 
 > [!TIP]
 > If the number of files to protect are too many for this manual process, consider using the [RMS Protection tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) to bulk-protect the files with the template.

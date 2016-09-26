@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Migrating from AD RMS to Azure Rights Management - Phase 2 | Azure RMS
-description: Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS), covering step 5 from Migrating from AD RMS to Azure Rights Management.
+title: Migrating from AD RMS to Azure Rights Management - Phase 2 | Azure Information Protection
+description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering step 5 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 manager: mbaldwin
 ms.date: 09/09/2016
@@ -26,12 +26,12 @@ ms.suite: ems
 ---
 # Migration phase 2 - client-side configuration
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following information for Phase 2 of migrating from AD RMS to Azure Rights Management (Azure RMS). These procedures cover step 5 from [Migrating from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover step 5 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Step 5. Reconfigure clients to use Azure RMS
+## Step 5. Reconfigure clients to use Azure Information Protection
 For Windows clients:
 
 1.  [Download the migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
@@ -40,9 +40,9 @@ For Windows clients:
 
     -   Redirect_OnPrem.cmd
 
-    These scripts reset the configuration on Windows computers so that they will use the Azure RMS service rather than AD RMS.
+    These scripts reset the configuration on Windows computers so that they will use the Azure Information Protection service rather than AD RMS.
 
-2.  Follow the instructions in the redirection script (Redirect_OnPrem.cmd) to modify the script to point to your new Azure RMS tenant.
+2.  Follow the instructions in the redirection script (Redirect_OnPrem.cmd) to modify the script to point to your new Azure Information Protection tenant.
 
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.

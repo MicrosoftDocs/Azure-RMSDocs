@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring custom templates for Azure Rights Management | Azure RMS
+title: Configuring custom templates for the Azure Rights Management service| Azure Information Protection
 description: Information and instructions for admins to configure and manage usage rights templates. Templates make it easy for users and other admins to apply policies to sensitive files that restrict access to authorized users.
 author: cabailey
 manager: mbaldwin
@@ -24,11 +24,11 @@ ms.suite: ems
 
 ---
 
-# Configuring custom templates for Azure Rights Management
+# Configuring custom templates for the Azure Rights Management service
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-After you have [activated Azure Rights Management](activate-service.md) (Azure RMS), users are automatically able to use two default templates that make it easy for them to apply policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
+When the Azure Rights Management service has been [activated](activate-service.md), users are automatically able to use two default templates that make it easy for them to apply rights management policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
 
 -   Read-only viewing for the protected content
 

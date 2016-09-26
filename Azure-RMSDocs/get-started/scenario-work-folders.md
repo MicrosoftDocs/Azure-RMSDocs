@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenario - Configure work folders for persistent protection | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management to apply persistent protection to Office documents in Work Folders.  
+title: Scenario - Configure work folders for persistent protection | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection to apply persistent protection to Office documents in Work Folders.  
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Configure work folders for persistent protection
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management to apply persistent protection to Office documents in [Work Folders](https://technet.microsoft.com/library/dn265974.aspx). Work Folders uses a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices. Although Work Folders provides its own encryption to protect the files, this protection is lost if the files are then moved outside the Work Folders environment. For example, users copy the synchronized files and save them to storage that is not under the control of your IT department, or the files are emailed to others.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection to apply persistent protection to Office documents in [Work Folders](https://technet.microsoft.com/library/dn265974.aspx). Work Folders uses a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices. Although Work Folders provides its own encryption to protect the files, this protection is lost if the files are then moved outside the Work Folders environment. For example, users copy the synchronized files and save them to storage that is not under the control of your IT department, or the files are emailed to others.
 
 The additional protection that Azure Rights Management provides helps to prevent accidental data loss by preventing the files from being viewed by people outside your organization. To do this, you can use one of the built-in, default rights policy templates. However, before you deploy this scenario, consider whether users might need to legitimately share any of these files with people outside the organization. For example, after working on a draft price list, a user then emails the final version to their customer in another organization. When you use the default Rights Management template for Work Folders, that customer in the other organization couldn't be able to read this emailed document. You can accommodate this requirement by creating a custom template that lets users apply a new rights policy to the file, which replaces the original restriction of all employees to the people that they specify in the email.
 
@@ -57,11 +57,11 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that use Work Folders.|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|One of the following:<br /><br />- To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />- To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|The Rights Management connector is installed, authorized for the Windows Server computer, and configured for the **FCI Server** role.|[Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that use Work Folders.|[Preparing for Azure Information Protection](../plan-design/prepare.md)|
+|One of the following:<br /><br />- To use a default template for all users that does not allow users to apply a new rights policy: You have not archived the default template, **&lt;organization name&gt; - Confidential**<br /><br />- To use a custom template that is suitable for users to apply a new rights policy: You use the instructions that follow to create a custom template|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
+|The Rights Management connector is installed, authorized for the Windows Server computer, and configured for the **FCI Server** role.|[Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)|
+|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
 ### Configuring the custom rights policy template so that users can share Work Folders files outside the organization
 
@@ -121,7 +121,7 @@ If the files you are protecting with Azure Rights Management do not need to be s
 If you configured the custom template as documented for this scenario, users will see the template description in the information bar: **This content is protected by Work Folders and is restricted to company employees only. To share this content with people outside the organization, attach the document to an email message and use the Share Protected function.**. Although this description provides a summary of how to share the file outside the organization, users will probably need detailed instructions how to do this, especially for the first few times they do this. To support this follow-on scenario, use the administrator and end-user instructions from [Scenario - Share an Office file with users in another organization](scenario-share-office-file-externally.md).
 
 > [!TIP]
-> If you decided not to use the custom template in these instructions, because you do not want users to be able to share these files outside the organization without IT oversight, let your help desk know so that if the sharing requirement is legitimate, it can be accommodated by using whatever mechanism is most appropriate for your business. For example, somebody who is a [super user](https://technet.microsoft.com/library/mt147272.aspx) could apply a new template to the content that grants the requesting user Full Control rights, so that this user can then use the Share Protected function.
+> If you decided not to use the custom template in these instructions, because you do not want users to be able to share these files outside the organization without IT oversight, let your help desk know so that if the sharing requirement is legitimate, it can be accommodated by using whatever mechanism is most appropriate for your business. For example, somebody who is a [super user](../deploy-use/configure-super-users.md) could apply a new template to the content that grants the requesting user Full Control rights, so that this user can then use the Share Protected function.
 > 
-> After a period of time, if you discover there are many such requests, you might decide to define your own custom template for this scenario that grants only specific users (such as managers or the help desk) the Co-Owner option while standard users are granted Co-Author or whatever [rights](https://technet.microsoft.com/library/mt169423.aspx) you decide are suitable.
+> After a period of time, if you discover there are many such requests, you might decide to define your own custom template for this scenario that grants only specific users (such as managers or the help desk) the Co-Owner option while standard users are granted Co-Author or whatever [rights](../deploy-use/configure-usage-rights.md) you decide are suitable.
 

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Step 2&colon; Software-protected key to software-protected key migration | Azure RMS
-description: Instructions that are part of the migration path from AD RMS to Azure Rights Management, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a software-protected tenant key. 
+title: Step 2&colon; Software-protected key to software-protected key migration | Azure Information Protection
+description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a software-protected tenant key. 
 author: cabailey
 manager: mbaldwin
 ms.date: 09/14/2016
@@ -27,18 +27,18 @@ ms.suite: ems
 
 # Step 2: Software-protected key to software-protected key migration
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-These instructions are part of the [migration path from AD RMS to Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Rights Management with a software-protected tenant key. 
+These instructions are part of the [migration path from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a software-protected tenant key. 
 
 If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) and choose a different configuration.
 
-Use the following procedure to import the AD RMS configuration to Azure RMS, to result in your Azure RMS tenant key that is managed by Microsoft.
+Use the following procedure to import the AD RMS configuration to Azure Information Protection, to result in your Azure Information Protection tenant key that is managed by Microsoft.
 
-## To import the configuration data to Azure RMS
+## To import the configuration data to Azure Information Protection
 
-1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure RMS (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet.
+1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure Rights Management (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet. The Azure Rights Management service (Azure RMS) provides the protection service for Azure Information Protection.
 
     > [!TIP]
     > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm -ListAvailable).Version`
@@ -52,7 +52,7 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     ```
     When prompted, enter your [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-3.  Use the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use in Azure RMS to protect content after the migration. Use the following command:
+3.  Use the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use with Azure Information Protection to protect content after the migration. Use the following command:
 
     ```
     Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
@@ -63,13 +63,13 @@ Use the following procedure to import the AD RMS configuration to Azure RMS, to 
     
 4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
-5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure RMS service:
+5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
     ```
 
 
-You’re now ready to go to [Step 3. Activate your RMS tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+You’re now ready to go to [Step 3. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rights Management sharing application&colon; Version release history | Azure RMS
+title: Rights Management sharing application&colon; Version release history | Azure Information Protection
 description: See what's new or changed in a release of the Rights Management sharing application for Windows. 
 author: cabailey
 manager: mbaldwin
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Rights Management sharing application: Version release history
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
-The Rights Management team regularly updates the Rights Management sharing application for fixes and new functionality. Use the following information to see what’s new or changed in a release. The most current release is listed first.
+The Azure Information Protection team regularly updates the Rights Management sharing application for fixes and new functionality. Use the following information to see what’s new or changed in a release. The most current release is listed first.
 
 Versions before January 1, 2015 are not listed.
 
