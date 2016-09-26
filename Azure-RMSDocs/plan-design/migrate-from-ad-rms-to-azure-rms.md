@@ -5,7 +5,7 @@ title: Migrating from AD RMS to Azure Information Protection | Azure Information
 description: Instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2016
+ms.date: 09/26/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -51,7 +51,7 @@ Before you start the migration to Azure Information Protection, make sure that t
         
     - Cryptographic Mode 2:
 
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection. For more information, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection. Although the current server licensor certificate (SLC) key must be using Cryptographic Mode 2, previous keys that were configured for Cryptographic Mode 1 are supported by Azure Information Protection as archived keys. For more information about the cryptographic modes and how to move to Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - All valid AD RMS topologies are supported:
     
