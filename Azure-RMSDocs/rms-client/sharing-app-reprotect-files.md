@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change permissions on files that have been protected by Rights Management | Azure RMS
+title: Change permissions on files that have been protected by Rights Management | Azure Information Protection
 description: When a file has been protected by Rights Management, you can change the permissions by re-protecting it and then specifying all the users that should have access to it, and what permissions you want to give them.
 keywords:
 author: cabailey
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Change permissions on files that have been protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When a file has been protected by Rights Management, you can change the permissions by re-protecting it and then specifying all the users that should have access to it, and what permissions you want to give them.
 
@@ -68,9 +68,9 @@ If you want to completely remove all permissions so that the file is no longer p
     If you do have permissions to re-protect the file, you might quickly see a dialog box to tell you that the file is being protected, and the focus then returns to File Explorer. The selected file or files are now protected with your changes. 
 
 > [!NOTE]
-> Before you can re-protect the file, RMS must first confirm that you are authorized to do this action for this file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
+> Before you can re-protect the file, the Rights Management service must first confirm that you are authorized to do this action for this file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
 >
-> If your organization does not use either Azure Rights Management (Azure RMS) or AD RMS, you can apply for a free account that will accept your credentials so that you can use RMS-protected files:
+> If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can use RMS-protected files:
 >
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >

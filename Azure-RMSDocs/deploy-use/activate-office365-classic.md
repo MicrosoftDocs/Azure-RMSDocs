@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How to activate Azure Rights Management from the Office 365 classic admin center | Azure RMS
-description: Activation instructions for Azure RMS when you have access to the classic (original) version of the Office 365 admin center.
+title: How to activate Azure Rights Management from the Office 365 classic admin center | Azure Information Protection
+description: Activation instructions for the Azure Rights Management service when you have access to the classic (original) version of the Office 365 admin center.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,7 +26,7 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Office 365 classic admin center
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
 
 Use these instructions if you're using the classic (original) version of the Office 365 admin center.
@@ -43,9 +43,9 @@ Use these instructions if you're using the classic (original) version of the Off
 4.  Click **Rights Management**.
 
     > [!NOTE]
-    >If you do not see this option, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >If you do not see this option, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
     >
-    >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Use the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your subscription includes Azure Rights Management. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 5. On the **RIGHTS MANAGEMENT** page, click **Manage**.
 

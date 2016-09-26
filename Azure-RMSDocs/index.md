@@ -2,12 +2,11 @@
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
 
-title: Azure Rights Management Documentation - RMS Documentation | Microsoft Docs
-description: Technical documentation for Azure Rights Management
-keywords: rights management documentation, rms documentation, Azure RMS documentation
+title: Azure Information Protection Documentation | Microsoft Docs
+description: Technical documentation for Azure RInformation Protection 
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/25/2016
 ms.topic: hubpage
 ms.prod: azure
 ms.service: rights-management
@@ -16,31 +15,31 @@ ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 
 ---
-# Azure Rights Management (RMS) Documentation
+# Azure Information Protection Documentation
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management (RMS) Documentation</h1>
-      <h2>Learn how to deploy and manage Azure Rights Management (Azure RMS). Quickly get started using Rights Management to apply information protection to email, documents, and other sensitive data.</h2>
-      <h3>New to Azure RMS? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">Visit our product site &rarr;</a></h3>
+      <h1>Azure Information Protection Documentation</h1>
+      <h2>Learn how to deploy and manage Azure Information Protection (formerly Azure Rights Management or RMS). Quickly get started using the service to apply classification, labeling, and protection to your organization’s emails and documents.</h2>
+      <h3>New to Azure Information Protection? <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
         <ol class="action-list">
-            <li><a href="https://portal.office.com/Signup/Signup.aspx?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=RIGHTSMANAGEMENT&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
+            <li><a href="https://portal.office.com/Signup?&OfferId=A43415D3-404C-4df3-B31B-AAD28118A778&dl=INFORMATIONPROTECTION&ali=1#0" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
         </ol>
     </aside>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><mark><b>NEW</b></mark> <a href="./information-protection/what-is-information-protection.md">Azure Information Protection (preview)</a></li>
-          <li><a href="./understand-explore/what-is-azure-rms.md">What is Azure Rights Management?</a></li>
-          <li><a href="./get-started/quick-start-tutorial.md">Quick start tutorial for Azure RMS</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md">What is Azure Information Protection?</a></li>
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Quick start tutorial for Azure Information Protection</a></li>
+          <li><a href="./get-started/faqs.md">Frequently asked questions for Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./get-started/rapid-deployment-guide.md">Rapid deployment guide for Azure RMS</a></li>
-          <li><a href="./plan-design/deployment-roadmap.md">Azure RMS deployment roadmap</a></li>
-          <li><a href="./develop/developers-guide.md">Integrate applications with Azure RMS</a></li>
+          <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection deployment roadmap</a></li>
+          <li><a href="./develop/developers-guide.md">Azure Information Protection Developer's Guide</a></li>
+          <li><a href="./rms-client/info-protect-client.md">Installing the Azure Information Protection client</a></li>
         </ul>
       </div>
     </section>
@@ -54,27 +53,27 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number">1</span>
                   <p>Understand &amp; Explore</p>
                 </div>
-                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Azure RMS.</p>
+                <p class="description column-two-thirds">Learn the high-level concepts, features, and capabilities of Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="./understand-explore/azure-rights-management.md">
-                    <h3>Overview of Azure Rights Management</h3>
-                    <p>Learn about Azure RMS, which protects your organization's sensitive information from unauthorized access and controls how this information is used.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="./understand-explore/rms-for-individuals.md">
-                    <h3>RMS for individuals and Azure Rights Management</h3>
-                    <p>Discover the free self-service subscription for users who have been sent sensitive files that have been protected by Azure RMS.</p>
+                  <a href="./understand-explore/what-is-information-protection.md">
+                    <h3>What is Azure Information Protection?</h3>
+                    <p>Learn about Azure Information Protection, a cloud-based solution that helps you classify, label, and protect your documents and emails.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="./understand-explore/applications-support.md">
-                    <h3>How applications support Azure Rights Management</h3>
-                    <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data </p>
+                    <h3>How applications support Azure Rights Management protection</h3>
+                    <p>Understand how your end-user applications and services can use Microsoft Azure Rights Management to protect your organization's data.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./understand-explore/compliance.md">
+                    <h3>Compliance and supporting information for Azure Information Protection</h3>
+                    <p>Supplemental information (such as legal and privacy statements) about Azure Information Protection.</p>
                   </a>
                 </li>
               </ul>
@@ -87,27 +86,27 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number">2</span>
                   <p>Get Started</p>
                 </div>
-                <p class="description column-two-thirds">Start using Azure RMS within minutes.</p>
+                <p class="description column-two-thirds">Start using Azure Information Protection within minutes.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="./get-started/requirements-azure-rms.md">
-                    <h3>Requirements for Azure Rights Management</h3>
-                    <p>Identify the prerequisites for deploying Azure Azure RMS.</p>
+                    <h3>Requirements for Azure Information Protection</h3>
+                    <p>Identify the prerequisites for deploying Azure Information Protection.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="./get-started/terminology.md">
-                    <h3>Terminology for Azure Rights Management</h3>
-                    <p>Learn the terms and abbreviations that are used in the context of Rights Management.</p>
+                    <h3>Terminology for Azure Information Protection</h3>
+                    <p>Learn the terms and abbreviations that are used in the context of Information Protection.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="./get-started/quick-start-tutorial.md">
-                    <h3>Quick start tutorial for Azure RMS</h3>
-                    <p>Quickly try out Azure Rights Management for your organization with just 5 steps.</p>
+                    <h3>Quick start tutorial for Azure Information Protection</h3>
+                    <p>Quickly try out Azure Information Protection for your organization with just 5 steps.</p>
                   </a>
                 </li>
               </ul>
@@ -120,27 +119,27 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 3</span>
                   <p>Plan & Design</p>
                 </div>
-                <p class="description column-two-thirds">Plan and design Azure RMS.</p>
+                <p class="description column-two-thirds">Plan and design Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="./plan-design/deployment-roadmap.md">
-                    <h3>Azure Rights Management deployment roadmap</h3>
-                    <p>Identify and follow the steps to implement and manage Azure RMS for your organization.</p>
+                    <h3>Azure Information Protection deployment roadmap</h3>
+                    <p>Identify and follow the steps to implement and manage Azure Information Protection for your organization.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="./plan-design/migrate-from-ad-rms-to-azure-rms.md">
-                    <h3>Migrating from AD RMS to Azure Rights Management</h3>
-                    <p>Migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure RMS.</p>
+                    <h3>Migrating from AD RMS to Azure Information Protection</h3>
+                    <p>Migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="./plan-design/plan-implement-tenant-key.md">
-                    <h3>Planning and implementing your Azure Rights Management Tenant Key</h3>
-                    <p>Plan for and manage your tenant key for Azure RMS, which includes the "bring your own key" (BYOK) scenario.</p>
+                    <h3>Planning and implementing your Azure Information Protection tenant key</h3>
+                    <p>Plan for and manage your tenant key for Azure Information Protection, which includes the "bring your own key" (BYOK) scenario.</p>
                   </a>
                 </li>
               </ul>
@@ -153,27 +152,27 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 4</span>
                   <p>Deploy & Use</p>
                 </div>
-                <p class="description column-two-thirds">Deploy and use Azure RMS.</p>
+                <p class="description column-two-thirds">Deploy and use Azure Information Protection.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                  <li class="column-third">
                  <a href="./deploy-use/activate-service.md">
-                    <h3>Activating Azure Rights Management</h3>
+                    <h3>Activating the Azure Rights Management service</h3>
                     <p>Start protecting important data by using applications and services that support this information protection solution.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="./deploy-use/configure-custom-templates.md">
-                    <h3>Configuring custom templates for Azure Rights Management</h3>
-                    <p>Use templates to easily apply policies to sensitive files that restrict access to authorized users in your organization.</p>
-                 </a>
+                  <a href="./deploy-use/configure-applications.md">
+                    <h3>Configuring Azure Information Protection policy</h3>
+                    <p>Configure classification, labeling, and protection by updating the Azure Information Protection policy.</p>
                 </li>
                 <li class="column-third">
-                  <a href="./deploy-use/configure-applications.md">
-                    <h3>Configuring applications for Azure Rights Management</h3>
-                    <p>Configure applications and services to support Azure RMS. For example, the RMS sharing app, Office applications, and Office 365 services.</p>
+                  <a href="./deploy-use/configure-custom-templates.md">
+                    <h3>Configuring custom templates</h3>
+                    <p>Use templates to easily apply policies to sensitive files that restrict access to authorized users in your organization.</p>
+                 </a>
                  </a>
                 </li>
               </ul>
@@ -186,16 +185,15 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                   <span class="step-number"> 5</span>
                   <p>Develop &amp; Customize Apps</p>
                 </div>
-                <p class="description column-two-thirds">Integrate Azure RMS with your applications.
-                </p>
+                <p class="description column-two-thirds">Integrate applications using the Microsoft Rights Management SDK.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="./develop/developers-guide.md">
-                    <h3>Azure RMS developer's guide</h3>
-                    <p>See a collection of Microsoft supplied RMS code samples and developer support tools spanning all supported operating systems.</p>
+                    <h3>Azure Information Protection developer's guide</h3>
+                    <p>See a collection of Microsoft supplied Azure Information Protection code samples and developer support tools spanning all supported operating systems.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -212,47 +210,13 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
                 </li>
               </ul>
             </section>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="./information-protection/what-is-information-protection.md">
-                <div class="title column-third">
-                  <span class="step-number"> 6</span>
-                  <p>Azure Information Protection (Preview)</p>
-                </div>
-                <p class="description column-two-thirds">Classify, label, and protect your data with Azure Information Protection, now in preview.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="./information-protection/what-is-information-protection.md">
-                    <h3>What is Azure Information Protection?</h3>
-                    <p>Learn about Azure Information Protection, which brings together Azure Rights Management (RMS) and classification and labeling technologies from Secure Islands.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="./information-protection/infoprotect-quick-start-tutorial.md">
-                    <h3>Azure Information Protection quick start tutorial</h3>
-                    <p>Get started with Azure Information Protection in just four steps.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="./information-protection/faq.md">
-                    <h3>Azure Information Protection FAQ</h3>
-                    <p>Find answers to your frequently asked Azure Information Protection questions.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
+         </ul>
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up-to-date on Azure RMS
+      <p>Keep up-to-date on Azure Information Protection
       <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/rms/" target="_blank" class="button-bordered button-translucent">Official RMS Team Blog</a></li>
+        <li><a href="http://blogs.technet.com/b/rms/" target="_blank" class="button-bordered button-translucent">Official Azure Information Protection Team Blog</a></li>
         <li><a href="https://twitter.com/TheRMSGuy" target="_blank" class="button-bordered button-translucent">@TheRMSGuy on Twitter</a></li>
       </ol>
     </aside>

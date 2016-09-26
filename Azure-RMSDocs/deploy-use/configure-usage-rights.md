@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configuring usage rights for Azure Rights Management | Azure RMS
-description: Understand and identify the specific rights that are used when you protect files or emails by using Azure Rights Management (Azure RMS).
+title: Configuring usage rights for Azure Rights Management | Azure Information Protection
+description: Understand and identify the specific rights that are used when you protect files or emails by using the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Configuring usage rights for Azure Rights Management
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-When you set protection on files or emails by using Azure Rights Management (Azure RMS) and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure RMS, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services. For example, in the Azure  classic portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
+When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure Rights Management, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services. For example, in the Azure  classic portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
@@ -83,7 +83,7 @@ The rights that are included with the default templates are as follows:
 
 Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have one additional information rights protection option for emails: **Do Not Forward**. 
 
-Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure RMS. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
+Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
 When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
 
