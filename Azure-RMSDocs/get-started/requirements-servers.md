@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; On-premises servers that support Azure Rights Management | Azure RMS
-description: Identify the on-premises server products that are supported with Azure RMS when you use the Azure RMS connector.
+title: Azure RMS requirements&#58; On-premises servers that support the Azure Rights Management service | Azure Information Protection
+description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -25,11 +25,13 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: On-premises servers that support Azure RMS
+# Azure RMS requirements: On-premises servers that support the Azure Rights Management service
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-The following on-premises server products are supported with Azure RMS when you use the Azure RMS connector, which acts as a communications interface (a relay) between the on-premises servers and Azure RMS. In addition, this configuration requires that you configure directory synchronization between your Active Directory forests and Azure Active Directory.
+The following on-premises server products are supported with Azure Information Protection when you use the Azure Rights Management connector. This connector acts as a communications interface (a relay) between the on-premises servers and the Azure Rights Management service that is used by Azure Information Protection to protect Office documents and emails. 
+
+To use this connector, you must configure directory synchronization between your Active Directory forests and Azure Active Directory.
 
 -   **Exchange Server**:
 
@@ -54,13 +56,13 @@ The following on-premises server products are supported with Azure RMS when you 
     -   Windows Server 2012
 
     > [!NOTE]
-    > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply RMS protection, you cannot use the RMS connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply Rights Management protection, you cannot use the Rights Management connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
     > 
     > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](../rms-client/configure-fci.md).
 
-The RMS connector is supported on Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
+The Rights Management connector is supported on Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
 
-For more information about how to configure the RMS connector for these on-premises servers, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).

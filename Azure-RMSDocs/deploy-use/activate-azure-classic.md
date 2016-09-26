@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: How to activate Azure Rights Management from the Azure classic portal | Azure RMS
-description: Activation instructions for Azure RMS when you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Rights Management Premium subscription.
+title: How to activate Azure Rights Management from the Azure classic portal | Azure Information Protection
+description: Activation instructions for the Azure Rights Management service when you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,10 +26,10 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Azure classic portal
 
->*Applies to: Azure Rights Management*
+>*Applies to: Azure Information Protection*
 
 
-Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Rights Management Premium subscription.
+Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
 
 > [!TIP]
 > Watch a 2-minute video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
@@ -43,9 +43,9 @@ Use these instructions if you have access to the Azure portal. For example, you 
 4.  Select the directory to manage for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], click **ACTIVATE**, and then confirm your action.
 
     > [!NOTE]
-    >If you see an activation error, it might be because your service plan or product version does not include [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >If you see an activation error, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
     >
-    >Use the information in [Cloud subscriptions that support Azure RMS](../get-started/requirements-subscriptions.md) to confirm RMS support. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >Use the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your subscription includes Azure Rights Management. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.

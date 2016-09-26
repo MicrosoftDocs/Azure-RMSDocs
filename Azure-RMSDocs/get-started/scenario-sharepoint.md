@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenario - Retain control of documents stored in SharePoint | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. 
+title: Scenario - Retain control of documents stored in SharePoint | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. 
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Retain control of documents stored in SharePoint
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. For example, the documents are automatically protected from accidental or intended leakage by users and you can block access to content even after it is downloaded or synchronized. The files you want to protect might be for internal collaborating on design documents or plans, or for other deliverables. When you configure protected libraries for SharePoint, the Office files stored in them will be protected by Azure Rights Management.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. For example, the documents are automatically protected from accidental or intended leakage by users and you can block access to content even after it is downloaded or synchronized. The files you want to protect might be for internal collaborating on design documents or plans, or for other deliverables. When you configure protected libraries for SharePoint, the Office files stored in them will be protected by Azure Rights Management.
 
 The instructions are suitable for the following set of circumstances:
 
@@ -48,9 +48,9 @@ For this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Information Protection](../plan-design/prepare.md)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|If you will use SharePoint Server: Deploy the RMS connector and configure it for SharePoint|[Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)|
 |Configure permissions for the SharePoint site to protect|[Manage permissions for a list, library, folder, document, or list item](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |Configure SharePoint for IRM and protected libraries|[Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Apply Information Rights Management to a list or library](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
