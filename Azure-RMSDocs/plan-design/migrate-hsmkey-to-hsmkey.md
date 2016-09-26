@@ -55,18 +55,18 @@ These procedures are done by the administrator for Azure Key Vault.
 
     - Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key<*keyAppName*><*keyIdentifier*>** locally on the server.
 
-    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure RMS administrator will need it to tell Azure RMS to use this key for its tenant key.
+    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service to use this key for its tenant key.
 
-2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) cmdlet to authorize the Azure RMS service principal (Microsoft.Azure.RMS) to access the key vault that will store the Azure RMS tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) cmdlet to authorize the service principal named Microsoft.Azure.RMS to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
-    For example, if the key vault that you have created for Azure RMS is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
+    For example, if the key vault that you have created for Azure Information Protection is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
     
         Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
 Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights Management service from Azure Information Protection, you’re ready to import your AD RMS configuration data.
 
-## Part 2: Import the configuration data to Azure RMS
+## Part 2: Import the configuration data to Azure Information Protection
 
 These procedures are done by the administrator for Azure Information Protection.
 
