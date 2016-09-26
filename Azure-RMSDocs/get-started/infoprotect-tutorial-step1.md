@@ -56,7 +56,7 @@ That's all you need to do for this first step to complete this tutorial. For a p
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About activating Rights Management|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
-|About the default templates and how to create new, custom templates|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|About the default templates and how to create new, custom templates|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
 
 >[!div class="step-by-step"]
 [&#171; Introduction](infoprotect-quick-start-tutorial.md)
