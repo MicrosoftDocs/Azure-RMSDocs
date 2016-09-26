@@ -20,7 +20,7 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
     <section id="hero-content">
       <h1>Azure Information Protection Documentation</h1>
       <h2>Learn how to deploy and manage Azure Information Protection (formerly Azure Rights Management or RMS). Quickly get started using the service to apply classification, labeling, and protection to your organization’s emails and documents.</h2>
-      <h3>New to Azure Information Protection? <a href="https://www.microsoft.com/cloud-platform/azure-information-protection" target="_blank">Visit our product site &rarr;</a></h3>
+      <h3>New to Azure Information Protection? <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">Visit our product site &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Ready to get hands-on?</p>
