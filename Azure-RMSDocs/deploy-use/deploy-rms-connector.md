@@ -36,7 +36,7 @@ Use this information to learn about the Azure Rights Management connector, and t
 ## Overview of the Microsoft Rights Management connector
 The Microsoft Rights Management (RMS) connector lets you quickly enable existing on-premises servers to use their Information Rights Management (IRM) functionality with the cloud-based Microsoft Rights Management service (Azure RMS). With this functionality, IT and users can easily protect documents and pictures both inside your organization and outside, without having to install additional infrastructure or establish trust relationships with other organizations. 
 
-The RMS connector is a small-footprint service that you install on-premises, on servers that run Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. In addition to running the connector on physical computers, you can also run it on virtual machines, including Azure IaaS VMs. After you deploy the connector, it acts as a communications interface (a relay) between the on-premises servers and the cloud service, as shown in the following picture.
+The RMS connector is a small-footprint service that you install on-premises, on servers that run Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. In addition to running the connector on physical computers, you can also run it on virtual machines, including Azure IaaS VMs. After you deploy the connector, it acts as a communications interface (a relay) between the on-premises servers and the cloud service, as shown in the following picture. The arrows indicate the direction in which network connections are initiated.
 
 ![RMS connector architecture overview](../media/RMS_connector.png)
 
