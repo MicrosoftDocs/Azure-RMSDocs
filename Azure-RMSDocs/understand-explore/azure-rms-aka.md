@@ -5,7 +5,7 @@ title: Azure Information Protection also known as | Azure Information Protection
 description: Azure Information Protection has undergone many name changes, and you might know it as a previous name.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 08/26/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -31,7 +31,7 @@ ms.suite: ems
 
 Azure Information Protection is the renamed cloud-based solution for Azure Rights Management, which was also known as *Azure Rights Management service*. Because RMS is a well-known abbreviation for its predecessors, you will often see Azure Rights Management abbreviated to ***Azure RMS***.
 
-Azure Information Protection was announced for General Availability on October 1, 2016. It offers classification and labeling in addition to rights management protection for an organization's documents and emails. The protection is done by using the Azure Rights Management service. For a very small percentage of documents and emails that must be protected by an on-premises key, protection can done by using the on-premises version of the rights management technology, *Active Directory Rights Management Services* (AD RMS). This on-premises product was first released as *Windows Rights Management Services* (Windows RMS).
+Azure Information Protection is announced for General Availability in October, 2016. It offers classification and labeling in addition to rights management protection for an organization's documents and emails. The protection is done by using the Azure Rights Management service. For a very small percentage of documents and emails that must be protected by an on-premises key, protection can done by using the on-premises version of the rights management technology, *Active Directory Rights Management Services* (AD RMS). This on-premises product was first released as *Windows Rights Management Services* (Windows RMS).
 
 Other names for Azure Rights Management: This service was originally named *Windows Azure Active Directory Rights Management* (often abbreviated to Windows Azure AD Rights Management), then Windows Azure Rights Management, and then Azure Rights Management.
 
