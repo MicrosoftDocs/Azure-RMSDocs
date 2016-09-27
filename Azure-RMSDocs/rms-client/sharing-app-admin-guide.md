@@ -5,7 +5,7 @@ title: Rights Management sharing application administrator guide | Azure Informa
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/27/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -315,13 +315,13 @@ Not all of the installation commands that are required for these deployments sup
 
 -   Use the following commands:
 
-    -   For 64-bit version of Office:
+    -   For 64-bit Windows:
 
         ```
         msiexec /x \x64\Setup[64].msi /quiet
         ```
 
-    -   For 32-bit version of Office:
+    -   For 32-bit Windows:
 
         ```
         msiexec /x \x86\Setup.msi /quiet
