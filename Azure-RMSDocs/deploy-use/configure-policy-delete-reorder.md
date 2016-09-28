@@ -4,7 +4,7 @@
 title: How to delete or reorder a label | Azure Information Protection
 description: You can delete or re-order the labels that users see on the Information Protection bar by configuring this in the Azure Information Protection policy.
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -41,7 +41,7 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
