@@ -4,7 +4,7 @@
 title: How to configure the global policy settings | Azure Information Protection
 description: There are 3 settings in the Azure Information Protection policy that apply to all users, all devices.
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -34,7 +34,7 @@ There are 3 settings in the Azure Information Protection policy that apply to al
 
 To configure these settings:
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

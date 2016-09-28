@@ -4,7 +4,7 @@
 title: How to configure a label to apply Rights Management protection | Azure Information Protection
 description: You can protect your most sensitive documents and emails by using a Rights Management service, which uses encryption, identity, and authorization policies to help prevent data loss. This protection is applied when you configure a label to use a Rights Management template. 
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -53,7 +53,7 @@ For more information about Azure Rights Management and how it works, see [What i
 
 ## To configure a label to apply Rights Management protection
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin so that you can retrieve the Azure Rights Management templates. Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
 
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
