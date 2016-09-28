@@ -4,7 +4,7 @@
 title: How to configure conditions for automatic and recommended classification | Azure Information Protection
 description: When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
@@ -54,7 +54,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

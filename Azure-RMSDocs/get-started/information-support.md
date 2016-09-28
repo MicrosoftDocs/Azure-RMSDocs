@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Information and support for Azure Rights Management
+# Information and support for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
