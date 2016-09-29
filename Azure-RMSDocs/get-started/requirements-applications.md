@@ -25,7 +25,7 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: Applications that support the Azure Rights Management service
+# Applications that support the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 
