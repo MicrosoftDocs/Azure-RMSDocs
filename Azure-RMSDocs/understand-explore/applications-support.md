@@ -30,15 +30,15 @@ ms.suite: ems
 
 Use the following information to help you understand how the most commonly used end-user applications (such as the Office applications, Word, Excel, PowerPoint, and Outlook) and services (such as Exchange and SharePoint) can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s documents and emails. 
 > [!NOTE]
-> To verify the applications and versions that the Azure Rights Management service supports, see [Azure RMS requirements: Applications that support the Azure Rights Management service](../get-started/requirements-applications.md).
+> To verify the applications and versions that the Azure Rights Management service supports, see [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md).
 
 In some cases, the Azure Rights Management service automatically applies protection, according to policies that administrators configure. For example, this is the case with SharePoint libraries, classified files, and Exchange transport rules. In other cases, end users must apply information protection themselves from their applications, either by selecting a template or by selecting specific options. For example, this is the case when users share a file by email, or protect a file in-place by restricting access or usage to selected users or to users outside the organization.
 
-Templates make it easier for users (and administrators who configure policies) to apply the correct level of protection and restrict access to people inside your organization. Although the Azure Rights Management service comes with two default templates, you will probably want to create custom templates to reduce the times when they have to specify individual options. For more information, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
+Templates make it easier for users (and administrators who configure policies) to apply the correct level of protection and restrict access to people inside your organization. Although the Azure Rights Management service comes with two default templates, you will probably want to create custom templates to reduce the times when they have to specify individual options. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
 For the cases where users must apply information protection themselves, be sure to provide them with instructions and guidance how and when to do this. The instructions should be specific for the application and versions that they use and how they use them, and the guidance for when and how to apply information protection should be appropriate for your business. For more information, see [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md).
 
-For information about how to configure these applications for the Azure Rights Management service from Azure Information Protection, see [Configuring applications for the Azure Rights Management service](../deploy-use/configure-applications.md).
+For information about how to configure these applications for the Azure Rights Management service from Azure Information Protection, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
 > [!TIP]
 > For examples and screenshots of applications using the Azure Rights Management service, see [Azure RMS in action: What administrators and users see](what-admins-users-see.md).

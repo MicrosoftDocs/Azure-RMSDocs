@@ -66,7 +66,7 @@ To configure on-premises servers such as Exchange Server and SharePoint Server, 
 In addition to these applications and services, there are other applications that support the Rights Management APIs. This category includes line-of-business applications that are written in-house by using the Rights Management SDK, and applications from software vendors that are written by using the Rights Management SDK. For these applications, follow the instructions that are provided with the application.
 
 ## Next steps
-After you’ve configured your applications to support the Azure Rights Management service, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Information Protection to users and administrators. If not, you might find the following operational information useful:
+After you’ve configured your applications to support the Azure Rights Management service, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Information Protection to users and administrators. If not, you might find the following operational information useful:
 
 - [Verifying the Azure Rights Management service](verify.md)
 
