@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; On-premises servers that support the Azure Rights Management service | Azure Information Protection
+title: On-premises server support for data protection | Azure Information Protection
 description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 manager: mbaldwin
@@ -25,7 +25,7 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: On-premises servers that support the Azure Rights Management service
+# On-premises servers that support Azure Rights Management data protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
