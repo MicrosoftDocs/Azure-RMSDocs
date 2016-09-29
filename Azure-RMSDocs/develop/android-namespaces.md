@@ -30,7 +30,7 @@ ms.suite: ems
 
 The Android API has two namespaces that cover the primary functionality and exceptions.
 
-- [com.microsoft.rightsmanagement](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
-- [com.microsoft.rightsmanagementexceptions](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions)
+- [com.microsoft.rightsmanagement](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+- [com.microsoft.rightsmanagementexceptions](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions)
 
 

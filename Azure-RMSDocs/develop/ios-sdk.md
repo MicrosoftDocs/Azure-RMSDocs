@@ -112,7 +112,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 * [Developer terms and concepts](core-concepts.md)
 
-* [iOS / OS X API Reference](/rights-management/sdk/4.2/api/ios/ios)
+* [iOS / OS X API Reference](/information-protection/sdk/4.2/api/ios/ios)
 
  
 

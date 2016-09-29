@@ -28,7 +28,7 @@ ms.suite: ems
 
 All RMS enabled applications must enforce usage restrictions. A usage restriction is a condition that results when a user tries to take an action (ex. printing a document), but the RMS policy for that document does not grant them permission or right to perform that action (ex. the PRINT right).
 
-A user's permissions for a document can be queried by using the [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck) function.
+A user's permissions for a document can be queried by using the [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck) function.
 
 ## Understanding usage restrictions
 
@@ -52,7 +52,7 @@ A user's permissions for a document can be queried by using the [**IpcAccessChec
 
 ## Related topics
 
-* [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
 * [Usage restriction reference](usage-restriction-reference.md)
  
 

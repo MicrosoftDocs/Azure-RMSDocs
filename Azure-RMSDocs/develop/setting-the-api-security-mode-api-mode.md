@@ -26,9 +26,9 @@ ms.suite: ems
 
 # How-to: set the API security mode
 
-You can choose which security mode your File API application runs in by using the [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function.
+You can choose which security mode your File API application runs in by using the [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function.
 
-To initialize your application to run in *server mode*, call the [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function and set the security mode to [**IPC\_API\_MODE\_SERVER**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER). By default, your application will run in *client mode*, **IPC\_API\_MODE\_CLIENT**.
+To initialize your application to run in *server mode*, call the [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) function and set the security mode to [**IPC\_API\_MODE\_SERVER**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER). By default, your application will run in *client mode*, **IPC\_API\_MODE\_CLIENT**.
 
 For more information on *server mode*, see [Application types](application-types.md).
 
@@ -37,8 +37,8 @@ For more information on *server mode*, see [Application types](application-types
 ## Related topics
 
 * [Application types](application-types.md)
-* [**API mode values**](/rights-management/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
-* [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
+* [**API mode values**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
+* [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
  
 
  
