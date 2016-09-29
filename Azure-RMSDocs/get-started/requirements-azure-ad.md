@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Azure Information Protection requirements&#58; Azure AD Directory | Azure Information Protection
+title: Azure Active Directory requirements | Azure Information Protection
 description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/29/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Azure Information Protection requirements: Azure AD Directory
+# Azure Active Directory requirements for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 

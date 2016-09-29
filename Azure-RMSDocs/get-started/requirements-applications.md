@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; Applications | Azure Information Protection
+title: Application support for data protection | Azure Information Protection
 description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
 author: cabailey
 manager: mbaldwin
@@ -25,12 +25,14 @@ ms.suite: ems
 ---
 
 
-# Applications that support the Azure Rights Management service
+# Applications that support Azure Rights Management data protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use the following table to identify the applications that natively support the Azure Rights Management service (Azure RMS), which means that Rights Management is tightly integrated into these applications by using the Rights Management APIs to support usage restrictions. These applications are also known as RMS-enlightened.
+Use the following table to identify the applications that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection. 
+
+For these applications, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications are also known as RMS-enlightened.
 
 Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
