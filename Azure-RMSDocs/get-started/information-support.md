@@ -55,11 +55,13 @@ You might be eligible for **FastTrack**: You can use the FastTrack Center Benefi
 
 For other customers, use the following support channels, depending on how you obtained Azure Information Protection:
 
-- **Azure Rights Management with an Office 365 subscription**: See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
+- **Azure Information Protection Premium** (standalone): Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For more information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
 
-- **Azure Information Protection with the Enterprise Mobility Suite**: If you also have Office 365, you can use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).  For more information, see [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx).
+- **Azure Information Protection with an Office 365 subscription**: See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
 
-- **Azure Information Protection Premium**: Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For more information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
+- **Azure Information Protection with Enterprise Mobility + Security (EMS)**: If you also have Office 365, you can use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). For more information, see [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx).
+
+- **Azure Information Protection with Secure Productive Enterprise (SPE)**: Use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 For additional support options, ask your Microsoft contact. 
 
