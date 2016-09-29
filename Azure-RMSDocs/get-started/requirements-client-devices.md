@@ -5,7 +5,7 @@ title: Azure RMS requirements&#58; Client device | Azure Information Protection
 description: Identify which devices support the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

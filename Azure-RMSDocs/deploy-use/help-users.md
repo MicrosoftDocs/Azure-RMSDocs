@@ -5,7 +5,7 @@ title: Helping users to protect files by Using the Azure Rights Management servi
 description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

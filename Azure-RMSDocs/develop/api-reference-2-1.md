@@ -6,7 +6,7 @@ description: The Microsoft Rights Management SDK 2.1 supports RMS enablement of
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

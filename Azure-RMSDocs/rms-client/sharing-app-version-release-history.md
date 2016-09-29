@@ -5,7 +5,7 @@ title: Rights Management sharing application&colon; Version release history | Az
 description: See what's new or changed in a release of the Rights Management sharing application for Windows. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

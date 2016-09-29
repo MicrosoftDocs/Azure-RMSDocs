@@ -6,7 +6,7 @@ description: Orientation for the Azure RMS encryption packages and code snips fo
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -5,7 +5,7 @@ title: Technical overview for the Rights Management sharing application | Azure 
 description: Technical details for admins on enterprise networks who are are responsible for deploying the RMS sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

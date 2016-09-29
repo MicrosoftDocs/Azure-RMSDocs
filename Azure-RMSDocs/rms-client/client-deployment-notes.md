@@ -5,7 +5,7 @@ title: RMS client deployment notes | Azure Information Protection
 description: The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. In addition to shipping with the Rights Management sharing application for Windows, the RMS client is available as an optional download that can, with acknowledgment and acceptance of its license agreement, be freely distributed with third-party software so that clients can protect and consume content that has been protected by Rights Management services.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

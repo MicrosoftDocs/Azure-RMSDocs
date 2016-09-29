@@ -5,7 +5,7 @@ title: Logging and analyzing usage of the Azure Rights Management service | Azur
 description: Information and instructions how to use usage logging with Azure Rights Management (Azure RMS). 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

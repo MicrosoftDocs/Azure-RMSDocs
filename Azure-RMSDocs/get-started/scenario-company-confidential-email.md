@@ -5,7 +5,7 @@ title: Scenario - Send a company-confidential email | Azure Information Protecti
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that any user in the organization can safely send email communications that cannot be read outside the organization. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

@@ -6,7 +6,7 @@ description: Your application should explicitly add "Owner" rights when creating
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

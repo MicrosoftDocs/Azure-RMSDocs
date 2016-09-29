@@ -5,7 +5,7 @@ title: Scenario - Configure work folders for persistent protection | Azure Infor
 description: This scenario and supporting user documentation uses Azure Rights Management protection to apply persistent protection to Office documents in Work Folders.  
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

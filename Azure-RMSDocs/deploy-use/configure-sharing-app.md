@@ -5,7 +5,7 @@ title: Rights Management sharing application&colon; Installation and configurati
 description: Information for admins about deploying the Rights Management (RMS) sharing application on Windows computers and mobile devices.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

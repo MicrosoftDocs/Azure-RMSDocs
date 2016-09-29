@@ -5,7 +5,7 @@ title: How to activate Azure Rights Management from the Office 365 classic admin
 description: Activation instructions for the Azure Rights Management service when you have access to the classic (original) version of the Office 365 admin center.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

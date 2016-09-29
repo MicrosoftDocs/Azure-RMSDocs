@@ -5,7 +5,7 @@ title: Office apps; Configuration for clients | Azure Information Protection
 description: Information and instructions for admins to configure Office apps to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

@@ -5,7 +5,7 @@ title: Protect a file that you share by email by using the Rights Management sha
 description: Instructions how to safely share a document by email.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

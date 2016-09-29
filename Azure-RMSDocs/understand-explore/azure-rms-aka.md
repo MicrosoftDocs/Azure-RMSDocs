@@ -5,7 +5,7 @@ title: Azure Information Protection also known as | Azure Information Protection
 description: Azure Information Protection has undergone many name changes, and you might know it as a previous name.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/26/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

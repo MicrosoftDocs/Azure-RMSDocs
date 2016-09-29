@@ -5,7 +5,7 @@ title: Configuring the Azure Information Protection policy | Azure Information P
 description: Detailed information how to configure and publish the Azure Information Protection policy.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

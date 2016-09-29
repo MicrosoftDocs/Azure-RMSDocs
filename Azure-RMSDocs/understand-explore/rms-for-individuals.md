@@ -5,7 +5,7 @@ title: RMS for individuals and Azure Information Protection | Azure Information 
 description: Information about RMS for individuals, a free self-service subscription for users in an organization who have been sent sensitive files that have been protected by the Azure Rights Management service, but these users cannot be authenticated because their IT department does not manage an account for them in Azure. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

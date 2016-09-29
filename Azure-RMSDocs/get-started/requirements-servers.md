@@ -5,7 +5,7 @@ title: Azure RMS requirements&#58; On-premises servers that support the Azure Ri
 description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

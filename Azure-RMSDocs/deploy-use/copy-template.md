@@ -5,7 +5,7 @@ title: Copy a template | Azure Information Protection
 description: Instructions to copy a template, which is an easy way to create a new template that has very similar settings to an existing template.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

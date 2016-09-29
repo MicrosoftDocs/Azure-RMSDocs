@@ -5,7 +5,7 @@ title: Information and support for Azure Information Protection | Azure Informat
 description: Resources for additional information about Microsoft Azure Information Protection. Includes information about the product team's blog, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: rights-management

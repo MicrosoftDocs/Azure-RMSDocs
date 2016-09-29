@@ -5,7 +5,7 @@ title: Decommissioning and deactivating the Azure Rights Management service| Azu
 description: Information and instructions if you decide you no longer want to use this information protection service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management

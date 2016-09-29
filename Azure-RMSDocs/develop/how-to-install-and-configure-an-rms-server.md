@@ -6,7 +6,7 @@ description: Install and configure and RMS Sever for testing your rights-enabled
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: rights-management
