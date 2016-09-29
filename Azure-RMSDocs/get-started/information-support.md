@@ -32,7 +32,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this …|.. do this:|
 |----------------|---------------|
-|… read the most current documentation for the service →|Use the  Microsoft documentation site for [Azure Information Protection](../understand-explore/azure-rights-management.md)|
+|… see recommended documentation for the service →|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |… provide feedback about the documentation or ask a question about the documentation →|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |… receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow Dan Plastina, who helps lead the Microsoft Information Protection team. See [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
 |… check subscription information and what features are supported →|Use the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) on the Azure Information Protection site.|
