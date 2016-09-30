@@ -6,10 +6,10 @@ description: The focus of RMS SDK 4.2 is to help you build AD RMS-enabled appli
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 # optional metadata

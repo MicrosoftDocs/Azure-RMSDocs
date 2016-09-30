@@ -5,10 +5,10 @@ title: Verifying Azure Rights Management | Azure Information Protection
 description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 

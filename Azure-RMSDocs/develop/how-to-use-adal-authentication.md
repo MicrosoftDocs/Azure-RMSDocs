@@ -6,10 +6,10 @@ description: Outlines the process for authentication with ADAL
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 
@@ -58,7 +58,7 @@ This topic contains two approaches to authentication with corresponding code exa
 1. Follow the Azure configuration steps in [Configure Azure RMS for ADAL authentication](adal-auth.md) then return to the following app initialization step.
 2. You are now ready to configure your application to use the internal ADAL authentication provided by the RMS SDK 2.1.
 
-To configure you RMS client, add a call to [IpcSetGlobalProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) right after calling [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) to configure the RMS client. Use the following code snippet as an example.
+To configure you RMS client, add a call to [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) right after calling [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) to configure the RMS client. Use the following code snippet as an example.
 
       C++
       IpcInitialize();
@@ -117,13 +117,13 @@ Use this code as an example of how to manage your own authentication tokens.
 
 ## Related topics
 
-* [Data types](/rights-management/sdk/2.1/api/win/data%20types)
-* [Environment properties](/rights-management/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
-* [IpcCreateOAuth2Token](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
-* [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [IPC_CREDENTIAL](/rights-management/sdk/2.1/api/win/IPC_CREDENTIAL)
-* [IPC_NAME_VALUE_LIST](/rights-management/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/rights-management/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
-* [IPC_PROMPT_CTX](/rights-management/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/rights-management/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
+* [Data types](/information-protection/sdk/2.1/api/win/data%20types)
+* [Environment properties](/information-protection/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
+* [IpcCreateOAuth2Token](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
+* [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+* [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [IPC_CREDENTIAL](/information-protection/sdk/2.1/api/win/IPC_CREDENTIAL)
+* [IPC_NAME_VALUE_LIST](/information-protection/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
+* [IPC_OAUTH2_CALLBACK_INFO](/information-protection/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
+* [IPC_PROMPT_CTX](/information-protection/sdk/2.1/api/win/IPC_PROMPT_CTX)
+* [IPC_AAD_APPLICATION_ID](/information-protection/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)

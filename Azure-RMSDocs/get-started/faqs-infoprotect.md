@@ -5,10 +5,10 @@ title: Frequently asked questions about classification and labeling | Azure Info
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 

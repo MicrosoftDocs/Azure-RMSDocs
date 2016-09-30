@@ -7,10 +7,10 @@ description: This topic identifies the Rights Management Services SDK 2.1 su
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4E46521F-8C2F-401A-A481-113CE130ACF0
 # optional metadata

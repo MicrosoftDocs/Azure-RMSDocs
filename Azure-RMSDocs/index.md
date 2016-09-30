@@ -9,7 +9,7 @@ manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: hubpage
 ms.prod: azure
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77

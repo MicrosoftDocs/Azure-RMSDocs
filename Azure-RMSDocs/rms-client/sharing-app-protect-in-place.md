@@ -5,10 +5,10 @@ title: Protect a file on a device (protect in-place) by using the Rights Managem
 description: Instructions how to safely store a file on your computer, a server, or another storage device.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 
