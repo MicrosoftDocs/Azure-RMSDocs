@@ -5,10 +5,10 @@ title: Remove protection from a file by using the Rights Management sharing appl
 description: Instructions to remove protection from a file (that is, unprotect a file) that was previously protected by using the RMS sharing application.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 

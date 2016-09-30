@@ -5,10 +5,10 @@ title: Configuring usage rights for Azure Rights Management | Azure Information 
 description: Understand and identify the specific rights that are used when you protect files or emails by using the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 

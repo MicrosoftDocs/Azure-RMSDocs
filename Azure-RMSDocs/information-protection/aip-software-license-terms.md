@@ -7,10 +7,10 @@ description:
 keywords:
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 09/06/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology:
 ms.assetid: 6343f09a-59bf-46ce-b34a-14e9dcde0902
 

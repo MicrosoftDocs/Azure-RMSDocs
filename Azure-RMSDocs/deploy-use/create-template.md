@@ -5,10 +5,10 @@ title: Create, configure, and publish a custom template | Azure Information Prot
 description: Instructions to create and manage custom templates in the Azure classic portal. Templates make it easy for end users and other admins to apply appropriate policies that protect documents and emails.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 

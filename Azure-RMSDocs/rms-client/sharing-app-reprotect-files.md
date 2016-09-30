@@ -6,10 +6,10 @@ description: When a file has been protected by Rights Management, you can change
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 

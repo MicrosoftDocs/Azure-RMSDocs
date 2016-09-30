@@ -5,10 +5,10 @@ title: Azure Information Protection deployment roadmap | Azure Information Prote
 description: Use these steps to prepare for, implement, and manage Azure Information Protection for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 

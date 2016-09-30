@@ -5,10 +5,10 @@ title: Quick start tutorial | Azure Information Protection
 description: An introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 

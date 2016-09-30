@@ -5,10 +5,10 @@ title: Use keyboard shortcuts in the Rights Management sharing application | Azu
 description: Instructions how to use keyboard shortcuts with the RMS sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 

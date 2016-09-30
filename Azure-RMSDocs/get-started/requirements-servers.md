@@ -5,10 +5,10 @@ title: On-premises server support for data protection | Azure Information Protec
 description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 

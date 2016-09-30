@@ -5,10 +5,10 @@ title: Rapid deployment guide for Azure Information Protection | Azure Informati
 description: A guide to help you more quickly deploy and use Azure Information Protection to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 
