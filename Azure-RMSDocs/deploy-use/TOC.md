@@ -1,6 +1,6 @@
-# [Understand & Explore](/rights-management/understand-explore/what-is-information-protection)
-# [Get Started](/rights-management/get-started/requirements-azure-rms)
-# [Plan & Design](/rights-management/plan-design/deployment-roadmap)
+# [Understand & Explore](/information-protection/understand-explore/what-is-information-protection)
+# [Get Started](/information-protection/get-started/requirements-azure-rms)
+# [Plan & Design](/information-protection/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](activate-service.md)
 ## [Activating the service](activate-service.md)
 ### [Office 365 admin center preview](activate-office365-preview.md)
@@ -42,6 +42,6 @@
 ## [Decommissioning and deactivating](decommission-deactivate.md)
 ## [Administering with PowerShell](administer-powershell.md)
 ### [Installing Windows PowerShell for Azure RMS](install-powershell.md)
-# [Deploy & Use the Client](/rights-management/rms-client/use-client)
-# [Develop & Customize Apps](/rights-management/develop/developers-guide)
+# [Deploy & Use the Client](/information-protection/rms-client/use-client)
+# [Develop & Customize Apps](/information-protection/develop/developers-guide)
 

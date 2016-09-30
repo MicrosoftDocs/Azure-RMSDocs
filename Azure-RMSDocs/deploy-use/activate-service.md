@@ -5,10 +5,10 @@ title: Activating Azure Rights Management | Azure Information Protection
 description: The Azure Rights Management service must be activated before your organization can start to protect documents and emails by using applications and services that support this information protection solution. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 

@@ -6,10 +6,10 @@ description: iOS and OS X applications can use the RMS SDK 4.2 to enable integr
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata
@@ -112,7 +112,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 * [Developer terms and concepts](core-concepts.md)
 
-* [iOS / OS X API Reference](/rights-management/sdk/4.2/api/ios/ios)
+* [iOS / OS X API Reference](/information-protection/sdk/4.2/api/ios/ios)
 
  
 

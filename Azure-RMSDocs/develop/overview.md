@@ -6,10 +6,10 @@ description: AD RMS and Azure RMS is an information protection technology that h
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 # optional metadata

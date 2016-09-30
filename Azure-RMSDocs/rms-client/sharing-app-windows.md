@@ -5,10 +5,10 @@ title: Rights Management Sharing Application for Windows | Azure Information Pro
 description: Information resources for the Rights Management sharing application for Windows. This is free, downloadable application for organizations that use Active Directory Rights Management Services (AD RMS) or Azure Information Protection, and for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 

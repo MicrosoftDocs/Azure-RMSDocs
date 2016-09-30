@@ -6,10 +6,10 @@ description: The File API's behavior can be configured through settings in the r
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 # optional metadata
@@ -86,7 +86,7 @@ Setting any other value or setting no value results in default behavior.
 -   **txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif files** Native encryption is enabled (xxx becomes pxxx)
 -   **All other files** Encryption is protected file (pfile) enabled (xxx become xxx.pfile)
 
-If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes) error occurs.
+If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) error occurs.
 
 ### File API - File Support Details
 
@@ -153,7 +153,7 @@ HKEY_LOCAL_MACHINE
 ## Related topics
 
 * [Developer notes](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
+* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
  
 
  

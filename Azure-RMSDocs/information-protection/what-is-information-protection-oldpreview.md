@@ -10,10 +10,10 @@ description: An overview of the Azure Information Protection service.
 >>>>>>> f3868aa0309a72e81fcc8b689c544f3d14f46d71:Azure-RMSDocs/information-protection/what-is-information-protection-oldpreview.md
 author: cabailey
 manager: mbaldwin
-ms.date: 09/06/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: <removed>
 

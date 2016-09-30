@@ -5,10 +5,10 @@ title: Azure RMS requirements&#58; Cloud subscriptions | Azure RMS
 description: Identify the subscriptions that you can use to deploy Azure Rights Management (Azure RMS) in your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 

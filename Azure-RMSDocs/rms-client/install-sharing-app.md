@@ -5,10 +5,10 @@ title: Download and install the Rights Management sharing application | Azure In
 description: Instructions to interactively install the RMS sharing application for Windows, so that you can safely share documents with others. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 

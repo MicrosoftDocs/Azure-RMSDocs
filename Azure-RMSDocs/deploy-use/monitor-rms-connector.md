@@ -5,10 +5,10 @@ title: Monitor the Azure Rights Management connector | Azure Information Protect
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 
