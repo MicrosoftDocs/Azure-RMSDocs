@@ -6,10 +6,10 @@ description: This topic introduces you to important scenarios and code elements 
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 # optional metadata

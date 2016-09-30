@@ -1,4 +1,4 @@
-# [Understand & Explore](/rights-management/understand-explore/what-is-information-protection)
+# [Understand & Explore](/information-protection/understand-explore/what-is-information-protection)
 # [Get Started](requirements-azure-rms.md)
 ## [Requirements](requirements-azure-rms.md)
 ### [Azure Active Directory requirements](requirements-azure-ad.md)
@@ -24,8 +24,8 @@
 ### [Secure your most valuable files](scenario-secure-most-valuable-files.md)
 ### [Send a company-confidential email](scenario-company-confidential-email.md)
 ### [Configure work folders for persistent protection](scenario-work-folders.md)
-# [Plan & Design](/rights-management/plan-design/deployment-roadmap)
-# [Deploy & Use the Service](/rights-management/deploy-use/activate-service)
-# [Deploy & Use the Client](/rights-management/rms-client/use-client)
-# [Develop & Customize Apps](/rights-management/develop/developers-guide)
+# [Plan & Design](/information-protection/plan-design/deployment-roadmap)
+# [Deploy & Use the Service](/information-protection/deploy-use/activate-service)
+# [Deploy & Use the Client](/information-protection/rms-client/use-client)
+# [Develop & Customize Apps](/information-protection/develop/developers-guide)
 

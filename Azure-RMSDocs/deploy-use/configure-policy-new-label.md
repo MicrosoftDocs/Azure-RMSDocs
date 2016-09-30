@@ -4,10 +4,10 @@
 title: How to create a new label | Azure Information Protection
 description: Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 

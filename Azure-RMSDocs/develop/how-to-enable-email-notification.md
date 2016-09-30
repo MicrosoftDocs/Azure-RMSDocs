@@ -6,10 +6,10 @@ description: Email notification allows for a protected content owner to be notif
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 # optional metadata
@@ -28,7 +28,7 @@ ms.suite: ems
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 
-To setup your email notification for a given license, use [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
+To setup your email notification for a given license, use [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
 
     C++
 
@@ -62,9 +62,9 @@ The following table contains the application data fields, property name and valu
 
 ## Related topics
 
-* [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
-* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
-* [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list)
+* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
+* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
+* [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list)
  
 
  

@@ -6,10 +6,10 @@ description: The Microsoft Rights Management SDK 4.2 manages diagnosis and perf
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata
@@ -83,7 +83,7 @@ Enable automatic logging
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-For more information on optional settings, see [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+For more information on optional settings, see [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
 
 Get current logging control flag setting
 

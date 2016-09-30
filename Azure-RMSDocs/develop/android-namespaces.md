@@ -6,10 +6,10 @@ description: Links to the two Android API namespaces, which cover the primary fu
 keywords: RMS, Android
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 41dc2300-13c5-42c2-9288-0d1054f31830
 
@@ -30,7 +30,7 @@ ms.suite: ems
 
 The Android API has two namespaces that cover the primary functionality and exceptions.
 
-- [com.microsoft.rightsmanagement](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
-- [com.microsoft.rightsmanagementexceptions](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions)
+- [com.microsoft.rightsmanagement](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+- [com.microsoft.rightsmanagementexceptions](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement.exceptions)
 
 

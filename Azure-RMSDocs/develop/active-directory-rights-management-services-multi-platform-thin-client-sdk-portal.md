@@ -6,10 +6,10 @@ description: RMS SDK 4.2 is a simplified, next-generation API that enables a li
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 # optional metadata

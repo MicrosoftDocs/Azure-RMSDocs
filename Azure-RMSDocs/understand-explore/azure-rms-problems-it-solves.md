@@ -5,10 +5,10 @@ title: What Problems Does Azure RMS Solve | Azure Information Protection
 description: Identify information protection requirements or problems that your organization might have, and understand how the Azure RMS technology can address these.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 
