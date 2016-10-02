@@ -29,13 +29,25 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Organizations that have a subscription that includes Azure Rights Management can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
+Organizations that have a subscription that includes Azure Information Protection can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
 However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
-When you use Azure Key Vault for your Azure RMS tenant key, we recommend that you use a dedicated key vault for this key, to ensure that it's used by only the Azure Rights Management service. For additional assurance, you can use [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to carefully monitor that only Azure RMS is using this key, and if necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
+When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key, to ensure that it's used by only the Azure Rights Management service. In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this with [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to independently monitor that only the Azure Rights Management service is using this key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
 
-Although we recommend a dedicated key vault for Azure RMS, using the same subscription you can create other key vaults to securely store and access other keys and secrets (such as passwords). For more information, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/), to see how other services use this technology.
+Although we recommend a dedicated key vault for Azure Information Protection, using the same subscription you can create other key vaults to securely store and access other keys and secrets (such as passwords).
+
+Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+
+- Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that support encryption.
+
+- Azure Key Vault supports a number of interfaces for key management, including PowerShell, CLI, REST APIs, and the Azure portal. As a result, many other services and tools can support and interface with Key Vault, to provide supporting tools and services for managing keys. For example, you can analyze your key usage logs via Log analytics from the Operations Management Suite, set alerts when specified criteria are met, and so on.
+
+- Azure Key Vault provides role separation, as a recognized security best practice. Azure Information Protection administrators can focus on managing data classification and protection, and Azure Key Vault administrators can focus on managing encryption keys and any special policies that they might require for security or compliance.
+
+- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, 28 Azure regions are supported and this number is expected to increase.
+
+For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/), for the latest information and how other services use this technology.
 
 
 ## Restrictions
