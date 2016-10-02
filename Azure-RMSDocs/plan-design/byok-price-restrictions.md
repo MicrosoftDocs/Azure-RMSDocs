@@ -35,7 +35,7 @@ However, to use Azure Key Vault, you must have an Azure subscription that suppor
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key, to ensure that it's used by only the Azure Rights Management service. In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this with [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to independently monitor that only the Azure Rights Management service is using this key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
 
-Although we recommend a dedicated key vault for Azure Information Protection, the same subscription can be used to create other key vaults to securely store and access keys and secrets (such as passwords) for services and applications that use encryption.
+Although we recommend a dedicated key vault for Azure Information Protection, the same subscription can be used to create other key vaults that can securely store and manage keys, secrets (such as passwords), and certificates for services and applications that use encryption.
 
 Benefits of using Azure Key Vault for your Azure Information Protection tenant key:
 
@@ -47,7 +47,7 @@ Benefits of using Azure Key Vault for your Azure Information Protection tenant k
 
 - Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, 28 Azure regions are supported and this number is expected to increase.
 
-For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/), for the latest information and how other services use this technology.
+For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and how other services use this technology.
 
 
 ## Restrictions
