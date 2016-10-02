@@ -37,7 +37,7 @@ When you use Azure Key Vault for your Azure Information Protection tenant key, w
 
 Although we recommend a dedicated key vault for Azure Information Protection, the same subscription can be used to create other key vaults that can securely store and manage keys, secrets (such as passwords), and certificates for services and applications that use encryption.
 
-Benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
 
 - Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
 
@@ -45,7 +45,7 @@ Benefits of using Azure Key Vault for your Azure Information Protection tenant k
 
 - Azure Key Vault provides role separation, as a recognized security best practice. Azure Information Protection administrators can focus on managing data classification and protection, and Azure Key Vault administrators can focus on managing encryption keys and any special policies that they might require for security or compliance.
 
-- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, 28 Azure regions are supported and this number is expected to increase.
+- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 Azure regions and you can expect this number to increase.
 
 For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and how other services use this technology.
 
