@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Monitor the Azure Rights Management connector | Azure RMS
-description: Information to help you monitor the connector and your organization's use of Azure RMS.
+title: Monitor the Azure Rights Management connector | Azure Information Protection
+description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Monitor the Azure Rights Management connector
 
->*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
-After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of Azure RMS.
+After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
 ## Application event log entries
 
@@ -38,10 +38,10 @@ For example, Information events such as ID 1000 confirm that the connector servi
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
-If the connector fails to connects to Azure RMS, you will most likely see Error 3001. For example, this might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
+If the connector fails to connects to the Azure Rights Management service, you will most likely see Error 3001. For example, this might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
 
 > [!TIP]
-> When RMS connector servers can't connect to Azure RMS, web proxy configurations are often the reason.
+> When RMS connector servers can't connect to Azure Rights Management service, web proxy configurations are often the reason.
 
 As with all event log entries, drill into the message for more details.
 
@@ -89,7 +89,7 @@ Information **1004**
 
 **The list of authorized accounts has been updated.**
 
-This event is logged when the RMS connector has downloaded the latest list of accounts (existing accounts and any changes) that are authorized to use the RMS connector. This list is downloaded every fifteen minutes, providing the RMS connector can communicate with Azure RMS.
+This event is logged when the RMS connector has downloaded the latest list of accounts (existing accounts and any changes) that are authorized to use the RMS connector. This list is downloaded every fifteen minutes, providing the RMS connector can communicate with the Azure Rights Management service.
 
 ----
 
@@ -105,9 +105,9 @@ Warning **2001**
 
 **Unauthorized access attempt to Microsoft RMS connector.**
 
-This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from Azure RMS. For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
+This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from the Azure Rights Management service. For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
 
-Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because  the RMS connector cannot correctly identify the account when it attempts to connect.
+Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because the RMS connector cannot correctly identify the account when it attempts to connect.
 
 The event message contains information about the account and computer trying to connect to the RMS connector:
 
@@ -161,9 +161,8 @@ This event is logged if the RMS connector cannot download the latest list of acc
 
 ## Performance counters
 
-When you install the RMS connector, it automatically creates **Microsoft Rights Management connector** performance counters that you might find useful to help you monitor the performance of using Azure RMS via the connector. 
-
-For example, if you regularly experience delays when protecting documents or emails, or when opening protected documents or emails, the performance counters can help you determine whether the delay is due to processing time on the connector, processing time from Azure RMS, or network delays. To help you identify where the delay is occurring, look for counters that include average counts for **Connector Processing Time**, **Service Response Time**, and **Connector Response Time**. For example: **Licensing Successful Batched Request Average Connector Response Time**.
+When you install the RMS connector, it automatically creates **Microsoft Rights Management connector** performance counters that you might find useful to help you monitor the performance of using the Azure Rights Management service via the connector. 
+For example, if you regularly experience delays when protecting documents or emails, or when opening protected documents or emails, the performance counters can help you determine whether the delay is due to processing time on the connector, processing time from the Azure Rights Management service, or network delays. To help you identify where the delay is occurring, look for counters that include average counts for **Connector Processing Time**, **Service Response Time**, and **Connector Response Time**. For example: **Licensing Successful Batched Request Average Connector Response Time**.
 
 If you have recently added new server accounts to use the connector, a good counter to check is **Time since last authorization policy update** to confirm that the connector has downloaded the list since you updated it, or whether you need to wait a little longer (up to 15 minutes).
 

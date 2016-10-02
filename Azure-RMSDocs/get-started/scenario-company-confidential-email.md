@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Scenario - Send a company-confidential email | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that any user in the organization can safely send email communications that cannot be read outside the organization. 
+title: Scenario - Send a company-confidential email | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that any user in the organization can safely send email communications that cannot be read outside the organization. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Send a company-confidential email
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that any user in the organization can safely send email communications that cannot be read outside the organization. For example, if somebody forwards the email message to somebody in another organization or to a personal email account. The emails and any attachments will be protected by Azure Rights Management and a template that users select from the email client.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that any user in the organization can safely send email communications that cannot be read outside the organization. For example, if somebody forwards the email message to somebody in another organization or to a personal email account. The emails and any attachments will be protected by Azure Rights Management and a template that users select from the email client.
 
 The simplest way to enable this scenario is to use one of the built-in, default templates that automatically restrict access to all users in your organization. But if required, you can make this more restrictive by creating a custom template that for example, restricts access to a subset of users, or has other restrictions such as read-only or an expiration date, or disables the Forward button in the email client.
 
@@ -55,12 +55,12 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Your Azure Rights Management tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Rights Management tenant key](https://technet.microsoft.com/library/dn440580.aspx)|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|One of the following:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the **Exchange Online: IRM Configuration** section from [Configuring applications for Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|You have not archived the default Azure Rights Management template **&lt;organization&gt; - Confidential**. Or, you have configured a custom template for this purpose because you need more restrictive settings or only a subset of users in the organization should be able to read the protected emails.|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)<br /><br />Tip: If you need more restrictive usage policy settings but for all users in the organization, copy and then edit one of the default templates, rather than create a template from scratch.<br /><br />Updated templates do not refresh immediately for the email clients in this scenario. Check the [Refreshing templates for users](https://technet.microsoft.com/library/dn642472.aspx) section in the configuring templates article for information.|
-|Users that send the protected email have Outlook 2013 or Outlook 2016, or Outlook Web Access.<br /><br />Users that receive the email have an email client that supports Azure Rights Management.|You can use Outlook 2010, but you must [install the Rights Management sharing application for Windows](https://technet.microsoft.com/library/dn339003.aspx) and adjust the user instructions accordingly.<br /><br />For a list of email clients that support Azure Rights Management, see the **Email** column in the [Client devices capability](https://technet.microsoft.com/library/dn655136.aspx) table, from [Requirements for Azure Rights Management](https://technet.microsoft.com/library/dn655136.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Information Protection](../plan-design/prepare.md)|
+|Your Azure Information Protection tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|One of the following:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the **Exchange Online: IRM Configuration** section from [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md).<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)|
+|You have not archived the default Azure Rights Management template **&lt;organization&gt; - Confidential**. Or, you have configured a custom template for this purpose because you need more restrictive settings or only a subset of users in the organization should be able to read the protected emails.|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)<br /><br />Tip: If you need more restrictive usage policy settings but for all users in the organization, copy and then edit one of the default templates, rather than create a template from scratch.<br /><br />Updated templates do not refresh immediately for the email clients in this scenario. Check the [Refreshing templates for users](../deploy-use/refresh-templates.md) article for information.|
+|Users that send the protected email have Outlook 2013 or Outlook 2016, or Outlook Web Access.<br /><br />Users that receive the email have an email client that supports Azure Rights Management.|You can use Outlook 2010, but you must [install the Rights Management sharing application for Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) and adjust the user instructions accordingly.<br /><br />For a list of email clients that support Azure Rights Management, see the **Email** column in the table from [Azure RMS requirements: Applications](../get-started/requirements-applications.md).|
 
 ## User documentation instructions
 Using the following template, copy and paste the user instructions into a communication for your end users, and make these modifications to reflect your environment:

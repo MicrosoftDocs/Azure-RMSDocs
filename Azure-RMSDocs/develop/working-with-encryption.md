@@ -2,14 +2,14 @@
 # required metadata
 
 title: How-to work with encryption settings | Azure RMS
-description: This article orients you to our encryption packages
+description: Orientation for the Azure RMS encryption packages and code snips for their use.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 # optional metadata
@@ -44,7 +44,7 @@ Beginning with the [March 2015 update](release-notes-rtm.md), we have incorporat
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (Also known as, Deprecated Algorithms)
 
-The encryption package flags, see [**Preferred encryption**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption), can be used in conjunction with our new, License Property flag **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+The encryption package flags, see [**Preferred encryption**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption), can be used in conjunction with our new, License Property flag **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
 
 Following are some simple code snippets that demonstrates how to use the new license property.
 

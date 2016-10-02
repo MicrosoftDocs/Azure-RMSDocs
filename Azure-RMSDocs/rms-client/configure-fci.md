@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: RMS protection with Windows Server File Classification Infrastructure (FCI) | Azure RMS
+title: RMS protection with Windows Server File Classification Infrastructure (FCI) | Azure Information Protection
 description: Instructions to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 
@@ -26,20 +26,20 @@ ms.suite: ems
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
 
->*Applies to: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Use this article for instructions and a script to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 
-This solutions lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution uses Azure Rights Management (Azure RMS) to protect the files, so you must have this technology deployed in your organization.
+This solutions lets you automatically protect all files in a folder on a file server running Windows Server, or automatically protect files that meet a specific criteria. For example, files that have been classified as containing confidential or sensitive information. This solution uses the Azure Rights Management service from Azure Information Protection to protect the files, so you must have this technology deployed in your organization.
 
 > [!NOTE]
-> Although Azure RMS includes a [connector](../deploy-use/deploy-rms-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
+> Although Azure Information Protection includes a [connector](../deploy-use/deploy-rms-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
 > 
 > To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
 The instructions that follow are for Windows Server 2012 R2 or Windows Server 2012. If you run other supported versions of Windows, you might need to adapt some of the steps for differences between your operating system version and the one documented in this article.
 
-## Prerequisites for Azure RMS protection with Windows Server FCI
+## Prerequisites for Azure Rights Management protection with Windows Server FCI
 Prerequisites for these instructions:
 
 -   On each file server where you will run File Resource Manager with file classification infrastructure:
@@ -54,7 +54,7 @@ Prerequisites for these instructions:
 
     -   You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
 
--   You have configured the additional prerequisites for your Azure Rights Management deployment, as described in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Specifically, you have the following values to connect to Azure RMS by using a service principal:
+-   You have configured the additional prerequisites for your Azure Information Protection deployment, as described in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal:
 
     -   BposTenantId
 
@@ -62,7 +62,7 @@ Prerequisites for these instructions:
 
     -   Symmetric key
 
--   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and Azure RMS. If you do not  do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for Azure Rights Management](../plan-design/prepare.md).
+-   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for the Azure Rights Management service](../plan-design/prepare.md).
 
 -   You have identified the Rights Management template to use, which will protect the files. Make sure that you know the ID for this template by using the [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) cmdlet.
 
@@ -100,7 +100,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Search for the following string and replace it with your own symmetric key that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to Azure RMS:
+    -   Search for the following string and replace it with your own symmetric key that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your key here>
@@ -111,7 +111,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Search for the following string and replace it with your own BposTenantId (tenant ID) that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to Azure RMS:
+    -   Search for the following string and replace it with your own BposTenantId (tenant ID) that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your BposTenantId here>
@@ -122,7 +122,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-    -   If your server is running Windows Server 2012, you might have to manually load the RMSProtection module at the beginning of the script. Add the following command (or equivalent if  the "Program Files"  folder is  on a drive other than the  C: drive :
+    -   If your server is running Windows Server 2012, you might have to manually load the RMSProtection module at the beginning of the script. Add the following command (or equivalent if  the "Program Files" folder is  on a drive other than the  C: drive :
 
         ```
         Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"

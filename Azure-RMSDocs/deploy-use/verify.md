@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Verifying Azure Rights Management | Azure RMS
+title: Verifying Azure Rights Management | Azure Information Protection
 description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Verifying Azure Rights Management
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-After you have activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) and performed any additional configuration steps that are required for your organization, you can verify that the service is working as expected by protecting a file or email message by using one  user account, and then attempting to open and use that protected content from another user account.
+When the Azure Rights Management service of Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you can verify that this protection service is working as expected by protecting a file or email message by using one  user account, and then attempting to open and use that protected content from another user account.
 
 To do this testing, you can use the information in [Helping users to protect files by Using Azure Rights Management](help-users.md).
 
@@ -39,7 +39,7 @@ If your testing is unsuccessful, review the configuration steps in [Azure Rights
 
 ## Next steps
 
-You can monitor how your organization is using information protection by using usage logging. For more information, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
+You can monitor how your organization is using the Azure Rights Management service by using usage logging. For more information, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
 
 
 

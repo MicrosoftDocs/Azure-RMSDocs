@@ -6,10 +6,10 @@ description: Windows Store applications can use the Microsoft Rights Management 
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 # optional metadata
@@ -86,4 +86,4 @@ You are now ready to create your own new Windows Store apps.
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows API Reference](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)

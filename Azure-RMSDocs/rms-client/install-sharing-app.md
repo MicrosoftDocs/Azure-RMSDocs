@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Download and install the Rights Management sharing application | Azure RMS
+title: Download and install the Rights Management sharing application | Azure Information Protection
 description: Instructions to interactively install the RMS sharing application for Windows, so that you can safely share documents with others. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Download and install the Rights Management sharing application
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 You do not have to be a local administrator to install the RMS sharing application. However, if you are not and you use Office 2010, there are some limitations. For more information, see the [If you are not a local administrator and use Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) section on this page.
 
@@ -50,13 +50,13 @@ You’re now ready to start protecting your files or read files that others have
 ## If you are not a local administrator and use Office 2010
 If you sign in to your computer and do not have local administrative rights, and Setup detects that you have Office 2010 installed, you will see a warning message that some scenarios will not work with this configuration. The scenarios are:
 
--   If your organization uses Azure RMS rather than an on-premises version of RMS:
+-   If your organization uses the Azure Rights Management service from Azure Information Protection rather than an on-premises version of Rights Management:
 
     -   The Information Rights Management (IRM) features of Office will not be available. For example, the **Do Not Forward** option for emails, and the **Restrict Access** permissions that you can set from the **File** menu in Word and Excel. You can use the Share Protected option on the ribbon, and the right-click options from File Explorer.
 
--   If your organization uses an on-premises version of RMS rather than Azure RMS:
+-   If your organization uses an on-premises version of Rights Management rather than the Azure Rights Management service from Azure Information Protection:
 
-    -   You won’t be able to read a protected document sent to you by somebody from another organization that’s using Azure RMS.
+    -   You won’t be able to read a protected document sent to you by somebody from another organization that’s using the Azure Rights Management service.
 
 If you are not a local administrator and use Office 365 or Office 2013, you do not see this message and these scenarios are supported.
 

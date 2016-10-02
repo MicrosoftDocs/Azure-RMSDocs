@@ -2,14 +2,15 @@
 # required metadata
 
 title: How to enable document tracking and revocation | Azure RMS
-description: Basic guidance for implementing document tracking
+description: Basic guidance for implementing document tracking of content as well as example code for metadata updates and a Track Usage button for your app.
+
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
@@ -52,12 +53,12 @@ Use these APIs to add/update a content license with document tracking metadata.
 Operationally, only the **content name** and the **notification type** properties are required for document tracking.
 
 
-- [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
 
   We expect that you will set all of the metadata properties. Here they are, listed by type.
 
-  For more information, see [License metadata property types](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
+  For more information, see [License metadata property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -83,16 +84,16 @@ Operationally, only the **content name** and the **notification type** propertie
 
     Use to set the origination date of the file
 
-- [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
 
 Use the appropriate one of these APIs to add the metadata to your file or stream.
 
-- [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
 
 Lastly, use this API to register your tracked document with the tracking system.
 
-- [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
 
 ## 2. Register the document with the RMS service
@@ -143,7 +144,7 @@ Here's a code snippet showing an example of setting document tracking metadata a
 Adding a **Track Usage** UI item to your app is as simple as using one of the following URL formats:
 
 - Using Content ID
-  - Get the content ID by using [IpcGetLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) or [IpcGetSerializedLicenseProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) if the license is serialized and use the license property **IPC_LI_CONTENT_ID**. For more information, see [License property types](/rights-management/sdk/2.1/api/win/constants#msipc_license_property_types).
+  - Get the content ID by using [IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) or [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) if the license is serialized and use the license property **IPC_LI_CONTENT_ID**. For more information, see [License property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types).
   - With the **ContentId** and **Issuer** metadata, use the following format: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Example - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
@@ -156,14 +157,14 @@ The client simply needs to open a browser with the appropriate URL. The RMS Docu
 
 ## Related topics
 
-* [License metadata property types](/rights-management/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [Notification preference](/rights-management/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [Notification type](/rights-management/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/rights-management/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [License metadata property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
+* [Notification preference](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
+* [Notification type](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
+* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
 
  

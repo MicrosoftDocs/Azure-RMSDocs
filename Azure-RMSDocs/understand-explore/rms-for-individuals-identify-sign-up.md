@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: How to find out if users have signed up for RMS for individuals | Azure RMS
-description: As an administrator, you might use any or a combination of methods described in this article to identify whether your users have signed up for RMS for individuals.
+title: How to find out if users have signed up for RMS for individuals | Azure Information Protection
+description: As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of methods described in this article.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # How to find out if your users have signed up for RMS for individuals
 
->*Applies to: Azure Rights Management*
+>*Applies to: Azure Information Protection*
 
 As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of the following methods:
 

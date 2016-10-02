@@ -6,10 +6,10 @@ description: Windows Phone applications can use the Microsoft Rights Management 
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
@@ -82,7 +82,7 @@ You are now ready to create your own new Windows Phone apps.
 
 [Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Windows API Reference](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows API Reference](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Scenario - Share an Office file with users in another organization | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that users can safely email an Office file with people in another organization. 
+title: Scenario - Share an Office file with users in another organization | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that users can safely email an Office file with people in another organization. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Share an Office file with users in another organization
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that users can safely email an Office file with people in another organization. For example, the Office file might be a Word document, Excel spreadsheet, or PowerPoint presentation that contains price list information for a partner, a list of products for a reseller, or a list of delivery time lines with potential customers. When users follow the instructions, the file attached to the email message will be protected by Azure Rights Management.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that users can safely email an Office file with people in another organization. For example, the Office file might be a Word document, Excel spreadsheet, or PowerPoint presentation that contains price list information for a partner, a list of products for a reseller, or a list of delivery time lines with potential customers. When users follow the instructions, the file attached to the email message will be protected by Azure Rights Management.
 
 This scenario is suitable for the following set of circumstances:
 
@@ -50,11 +50,11 @@ For the user instructions for this scenario to work, the following must be in pl
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory|[Preparing for Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|Users have Outlook from Office 2013|If users have Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
-|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />To check your subscription support: [Comparison of Rights Management Services (RMS) Offerings](https://technet.microsoft.com/dn858608)|
+|The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|Users have Outlook from Office 2013|If users have Office 2016 or Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
+|Your subscription for Azure Information Protection includes document tracking|If your subscription does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />Check the subscription information from the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
 
 ## User documentation instructions
 Using the following template, copy and paste the user instructions into a communication for your end users, and make these modifications to reflect your environment:
@@ -110,9 +110,9 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
 -   For additional information:
 
-    -   [Protect a file that you share by email](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Protect a file that you share by email](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Track and revoke your documents](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Track and revoke your documents](../rms-client/sharing-app-track-revoke.md)
 
 -   Contact the help desk:
 
@@ -149,9 +149,9 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
 -   For additional information:
 
-    -   [Protect a file that you share by email](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Protect a file that you share by email](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Track and revoke your documents](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Track and revoke your documents](../rms-client/sharing-app-track-revoke.md)
 
 -   Contact the help desk:
 

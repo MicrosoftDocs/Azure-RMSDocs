@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Azure RMS requirements&#58; Client device | Azure RMS
-description: Identify which devices support Azure Rights Management (Azure RMS).
+title: Client device support for data protection | Azure Information Protection
+description: Identify which devices support the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 
@@ -25,14 +25,14 @@ ms.suite: ems
 ---
 
 
-# Azure RMS requirements: Client devices that support Azure RMS
+# Client devices that support Azure Rights Management data protection
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-Use the following sections to identify which devices support Azure Rights Management (Azure RMS).
+Use the following sections to identify which devices support the Azure Rights Management service, which provides data protection for Azure Information Protection.
 
 ## Computers
-The following computer operating systems support Azure Rights Management:
+The following computer operating systems support the Azure Rights Management service:
 
 -   **Windows 7** (x86, x64)
 
@@ -45,7 +45,7 @@ The following computer operating systems support Azure Rights Management:
 -   **Mac OS X**: Minimum version of Mac OS X 10.8 (Mountain Lion)
 
 ## Mobile devices
-The following mobile device operating systems support Azure Rights Management:
+The following mobile device operating systems support the Azure Rights Management service:
 
 -   **Windows Phone**: Windows Phone 8.1
 
@@ -57,5 +57,5 @@ The following mobile device operating systems support Azure Rights Management:
 
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Scenario - Executives securely exchange privileged information | Azure RMS
-description: This scenario and supporting user documentation uses Azure Rights Management so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. 
+title: Scenario - Executives securely exchange privileged information | Azure Information Protection
+description: This scenario and supporting user documentation uses Azure Rights Management protection so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 
@@ -26,9 +26,9 @@ ms.suite: ems
 
 # Scenario - Executives securely exchange privileged information
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
-This scenario and supporting user documentation uses Azure Rights Management so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. The emails and any attachments will be automatically protected by Azure Rights Management.
+This scenario and supporting user documentation uses the Azure Rights Management technology from Azure Information Protection, so that executives can safely exchange emails and attachments by email with one another and policies automatically restrict access to the executives without requiring special action from them. The emails and any attachments will be automatically protected by Azure Rights Management.
 
 If required, you can add an exception to the rule, such as the abbreviation of DNP (for "Do Not Protect") in the email message subject, so that executives can specify this if they need to send an unprotected email to other executives-for example, to review before forwarding to others.
 
@@ -50,12 +50,12 @@ For the instructions for this scenario to work, the following must be in place:
 
 |Requirement|If you need more information|
 |---------------|--------------------------------|
-|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Executives**, and all executives are members of this group<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Your Azure Rights Management tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Rights Management tenant key](https://technet.microsoft.com/library/dn440580.aspx)|
-|Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|One of these configurations:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the **Exchange Online: IRM Configuration** section in [Configuring applications for Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](https://technet.microsoft.com/library/dn375964.aspx)|
-|You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|You have configured a transport protection rule for IRM, as described later in this article|For Exchange Online: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />For Exchange 2013: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)<br /><br />For Exchange 2010: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
+|You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Executives**, and all executives are members of this group<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Information Protection](../plan-design/prepare.md)|
+|Your Azure Information Protection tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md)|
+|Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|One of these configurations:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) information.<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)|
+|You have configured a custom template as described next|[Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|You have configured a transport protection rule for IRM, as described later in this article|For Exchange Online: [Mail flow or transport rules](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />For Exchange 2013: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />For Exchange 2010: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### To configure the custom template for executives
 

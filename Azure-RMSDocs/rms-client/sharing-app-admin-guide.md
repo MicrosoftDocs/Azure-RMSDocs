@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Rights Management sharing application administrator guide | Azure RMS
+title: Rights Management sharing application administrator guide | Azure Information Protection
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 
@@ -27,12 +27,12 @@ ms.suite: ems
 
 # Rights Management sharing application administrator guide
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 
 Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](sharing-app-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-The RMS sharing application is best suited to work with Azure RMS, because this deployment configuration supports sending protected attachments to users in another organization, and options such as email notifications and document tracking with revocation. However, with some limitations, it also works with the on-premises version, AD RMS. For a comprehensive comparison of features that are supported by Azure RMS and AD RMS, see [Comparing Azure Rights Management and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure RMS, see [Migrating from AD RMS to Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+The RMS sharing application is best suited to work with Azure Information Protection, because this deployment configuration supports sending protected attachments to users in another organization, and options such as email notifications and document tracking with revocation. However, with some limitations, it also works with the on-premises version, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 For a technical overview of the Rights Management sharing application, information about native and generic protection, and the supported file types, file name extensions, and how to change the default protection level, see [Technical overview and protection details for the Rights Management sharing application](sharing-app-admin-guide-technical.md). 
 
@@ -53,36 +53,36 @@ The setup packages for the RMS sharing application supports different deployment
 
 |Description|Deployment scenario|
 |---------------|-----------------------|
-|Microsoft Online Sign-In Assistant|Office 2010 and Azure RMS<br /><br />Office 2013 and Azure RMS if you have not installed the [June 9, 2015, update for Office 2013](https://support.microsoft.com/kb/3054853) (KB3054853)|
-|Hotfix for Office (KB 2596501)|Office 2010 and Azure RMS<br /><br />Office 2010 and Active Directory RMS|
-|Hotfix to enable the AD RMS Client 1.0 to work with Azure RMS (KB 2843630)|Office 2010 and Azure RMS<br /><br />Office 2010 and Active Directory RMS|
-|AD RMS Client and the RMS sharing application|Office 2016 or Office 2013 and Azure RMS or Active Directory RMS<br /><br />Office 2010 and Azure RMS<br /><br />Office 2010 and Active Directory RMS<br /><br />RMS sharing application and Office add-in only|
-|Office add-in for the ribbon|Office 2016 or Office 2013 and Azure RMS or Active Directory RMS<br /><br />Office 2010 and Azure RMS<br /><br />Office 2010 and Active Directory RMS<br /><br />RMS sharing application and Office add-in only|
-|Azure Active Directory Rights Management preparation tool|Office 2010 and Azure RMS|
+|Microsoft Online Sign-In Assistant|Office 2010 and Azure Information Protection<br /><br />Office 2013 and Azure Information Protection if you have not installed the [June 9, 2015, update for Office 2013](https://support.microsoft.com/kb/3054853) (KB3054853)|
+|Hotfix for Office (KB 2596501)|Office 2010 and Azure Information Protection<br /><br />Office 2010 and Active Directory RMS|
+|Hotfix to enable the AD RMS Client 1.0 to work with Azure Information Protection (KB 2843630)|Office 2010 and Azure Information Protection<br /><br />Office 2010 and Active Directory RMS|
+|AD RMS Client and the RMS sharing application|Office 2016 or Office 2013 and Azure Information Protection or Active Directory RMS<br /><br />Office 2010 and Azure Information Protection<br /><br />Office 2010 and Active Directory RMS<br /><br />RMS sharing application and Office add-in only|
+|Office add-in for the ribbon|Office 2016 or Office 2013 and Azure Information Protection or Active Directory RMS<br /><br />Office 2010 and Azure Information Protection<br /><br />Office 2010 and Active Directory RMS<br /><br />RMS sharing application and Office add-in only|
+|Azure Active Directory Rights Management preparation tool|Office 2010 and Azure Information Protection|
 Use the following procedures to identify the commands required to deploy the RMS sharing application for these deployment scenarios:
 
--   **Office 2016 or Office 2013 and Azure RMS or Active Directory RMS**
+-   **Office 2016 or Office 2013 and Azure Information Protection or Active Directory RMS**
 
-    Your users are running Office 2016 or Office 2013, your organization uses Azure RMS or Active Directory RMS, and users collaborate with other organizations who use Azure RMS or Active Directory RMS.
+    Your users are running Office 2016 or Office 2013, your organization uses Azure Information Protection or Active Directory RMS, and users collaborate with other organizations who use Azure Information Protection or Active Directory RMS.
 
--   **Office 2010 and Azure RMS**
+-   **Office 2010 and Azure Information Protection**
 
-    Your users are running Office 2010, your organization uses Azure RMS, and users collaborate with other organizations who use Azure RMS or Active Directory RMS.
+    Your users are running Office 2010, your organization uses Azure Information Protection, and users collaborate with other organizations who use Azure Information Protection or Active Directory RMS.
 
 -   **Office 2010 and Active Directory RMS**
 
-    Your users are running Office 2010, your organization uses AD RMS, and users collaborate with other organizations who use Azure RMS.
+    Your users are running Office 2010, your organization uses AD RMS, and users collaborate with other organizations who use Azure Information Protection.
 
 -   **RMS sharing application and Office add-in only**
 
-    Your users are running Office 2016, Office 2013, or Office 2010, your organization uses AD RMS, and users do not need to collaborate with other organizations who use Azure RMS. This installation lets you install just the sharing application and Office add-in.
+    Your users are running Office 2016, Office 2013, or Office 2010, your organization uses AD RMS, and users do not need to collaborate with other organizations who use Azure Information Protection. This installation lets you install just the sharing application and Office add-in.
 
 > [!NOTE]
-> In these scenarios, if your organization is running AD RMS, your users can receive protected content from other organizations who use Azure RMS, but your users cannot send protected content to users in an organization that uses Azure RMS. However, if your organization is running Azure RMS, your users can send and receive protected content from other organizations.
+> In these scenarios, if your organization is running AD RMS, your users can receive protected content from other organizations that use Azure Information Protection, but your users cannot send protected content to users in an organization that uses Azure Information Protection. However, if your organization is running Azure Information Protection, your users can send and receive protected content from other organizations.
 
 To complete the installation for each procedure, the computer must restart. You can initiate an automatic restart by using a command such as **shutdown /i**.
 
-### To deploy the RMS sharing application for Office 2016 or Office 2013 and Azure RMS or Active Directory RMS
+### To deploy the RMS sharing application for Office 2016 or Office 2013 and Azure Information Protection or Active Directory RMS
 
 -   On each computer on which you want to install the RMS sharing application and related components, run the following command with elevated privileges:
 
@@ -92,7 +92,7 @@ To complete the installation for each procedure, the computer must restart. You 
 
 To verify success, see the [Verifying installation success](#verifying-installation-success) section in this article.
 
-### To deploy the RMS sharing application for Office 2010 and Azure RMS
+### To deploy the RMS sharing application for Office 2010 and Azure Information Protection
 
 1.  You must be the global administrator for your Office 365 or Azure Active Directory tenant so that you can get your organization’s certification service URL by running the Azure Active Directory Rights Management preparation tool. You need run this tool only once, on a single computer. You will use the certification service URL when you install the RMS sharing application on each computer:
 
@@ -213,7 +213,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 ## Verifying installation success
 You can use the installation log files to verify a successful installation.
 
-### To verify installation success for the RMS sharing application for Office 2016 or Office 2013 and Azure RMS or Active Directory RMS
+### To verify installation success for the RMS sharing application for Office 2016 or Office 2013 and Azure Information Protection or Active Directory RMS
 
 -   To verify success of the Setup.exe command, on each computer, search for the installation log file **RMInstaller.log** in the *%temp%\RMS_installer_&lt;guid&gt;* folder, and then identify the exit code.
 
@@ -221,7 +221,7 @@ You can use the installation log files to verify a successful installation.
 
     Example log file name: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
-### To verify installation success for the RMS sharing application for Office 2010 and Azure RMS
+### To verify installation success for the RMS sharing application for Office 2010 and Azure Information Protection
 
 1.  To verify success of the Setup.exe command, on each computer, search for the installation log file **RMInstaller.log** in the *%temp%\RMS_installer_&lt;guid&gt;* folder, and then identify the exit code.
 
@@ -315,13 +315,13 @@ Not all of the installation commands that are required for these deployments sup
 
 -   Use the following commands:
 
-    -   For 64-bit version of Office:
+    -   For 64-bit Windows:
 
         ```
         msiexec /x \x64\Setup[64].msi /quiet
         ```
 
-    -   For 32-bit version of Office:
+    -   For 32-bit Windows:
 
         ```
         msiexec /x \x86\Setup.msi /quiet
@@ -342,10 +342,10 @@ Because the RMS sharing application is not supported by WSUS, you can use the fo
 
 3.  When testing is complete and any issues resolved, deploy the latest version to all users by using the automatic deployment instructions in this guide.
 
-## Azure RMS only: Configuring document tracking
-If you have a [subscription that supports document tracking](https://technet.microsoft.com/dn858608), the document tracking site is enabled by default for all users in your organization.  Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+## Azure Information Protection only: Configuring document tracking
+If you have a [subscription that supports document tracking](https://technet.microsoft.com/dn858608), the document tracking site is enabled by default for all users in your organization. Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
 
-To run these cmdlets, you must have at least version **2.3.0.0** of the Azure RMS module for Windows PowerShell.  For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
@@ -365,7 +365,7 @@ The following URLs are used for document tracking and must be allowed (for examp
 
 ### Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have shared by using the RMS sharing application. When you sign in as an administrator for Azure RMS (global admin), you can click the Admin icon in the top right of the page, which switches to Administrator mode so that you can see the documents that have been shared by users in your organization.
+When users sign in to the document tracking site, they can track and revoke documents that they have shared by using the RMS sharing application. When you sign in as an administrator for Azure Information Protection (global admin), you can click the Admin icon in the top right of the page, which switches to Administrator mode so that you can see the documents that have been shared by users in your organization.
 
 Actions that you take in Administrator mode are audited and logged in the usage log files, and you must confirm to continue. For more information about this logging, see the next section.
 
@@ -399,7 +399,7 @@ If you use AD RMS and users in your organization have multiple email domains, p
 
     For example: The company Coho Vineyard &amp; Winery has a standard email domain of **cohovineyardandwinery.com**, but as a result of mergers, they also use the email domains **cohowinery.com**, **eastcoast.cohowinery.com**, and **cohovineyard**. For the **FederatedDomains** value data, the administrator enters: **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
 
-If you do not make this registry change, users might not be able to consume content that has been protected by other users in their organization. This registry edit is not needed if you use Azure RMS.
+If you do not make this registry change, users might not be able to consume content that has been protected by other users in their organization. This registry edit is not needed if you use Azure Information Protection.
 
 
 ## Next steps

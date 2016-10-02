@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Registry settings for the RMS connector | Azure RMS
+title: Registry settings for the RMS connector | Azure Information Protection
 description: Information about the registry settings on servers using the RMS connector. The recommended method to configure these settings is to use the server configuration tool for Microsoft RMS connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Registry setting for the Rights Management connector
 
->*Applies to: Azure Rights Management, Office 365*
+>*Applies to: Azure Information Protection, Office 365*
 
 
 Use the tables in the following sections only if you want to manually add or check registry settings on the servers running Exchange, SharePoint, or Windows Server, which configures the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.

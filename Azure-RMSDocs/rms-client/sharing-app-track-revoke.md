@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Track and revoke your documents when you use the RMS sharing application | Azure RMS
+title: Track and revoke your documents when you use the RMS sharing application | Azure Information Protection
 description: After you have protected your documents by using the RMS sharing application, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 
@@ -26,15 +26,15 @@ ms.suite: ems
 
 # Track and revoke your documents when you use the RMS sharing application
 
->*Applies to: Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
-After you have protected your documents by using the RMS sharing application, if your organization is using Azure Rights Management rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
+After you have protected your documents by using the RMS sharing application, if your organization is using Azure Information Protection rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://technet.microsoft.com/dn858608.aspx) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
+When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://go.microsoft.com/fwlink/?LinkId=827589) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
 
 -   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
 
@@ -42,7 +42,7 @@ When you access this site, sign in to track your documents. Providing your organ
 
 -   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
 
-- If you want to track and revoke shared documents for others: Administrators for Azure RMS can track and revoke documents for others by clicking the Admin icon. Only administrators see this icon.
+- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke documents for others by clicking the Admin icon. Only administrators see this icon.
 
 -   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -59,7 +59,7 @@ When you access this site, sign in to track your documents. Providing your organ
 If you do not see these options for RMS, it’s likely that either the RMS sharing application is not installed on your computer, the latest version isn’t installed, or your computer must be restarted to complete the installation. For more information about how to install the sharing application, see [Download and install the Rights Management sharing application](install-sharing-app.md).
 
 > [!NOTE] 
-> If you have installed the preview version of the [Azure Information Protection client](../information-protection/info-protect-client.md), version 1.0.233 or later, you can also access the document tracking site by using the **Protect** button: 
+> If you have installed the [Azure Information Protection client](../rms-client/info-protect-client.md), you can also access the document tracking site by using the **Protect** button: 
 > 
 > - In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
 
