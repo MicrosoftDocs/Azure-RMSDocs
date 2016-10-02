@@ -37,7 +37,7 @@ When you use Azure Key Vault for your Azure Information Protection tenant key, w
 
 Although we recommend a dedicated key vault for Azure Information Protection, the same subscription can be used to create other key vaults to securely store and access keys and secrets (such as passwords) for services and applications that use encryption.
 
-Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+Benefits of using Azure Key Vault for your Azure Information Protection tenant key:
 
 - Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
 
