@@ -35,7 +35,7 @@ However, to use Azure Key Vault, you must have an Azure subscription that suppor
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key, to ensure that it's used by only the Azure Rights Management service. In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this with [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to independently monitor that only the Azure Rights Management service is using this key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
 
-Although we recommend a dedicated key vault for Azure Information Protection, using the same subscription you can create other key vaults to securely store and access other keys and secrets (such as passwords).
+Although we recommend a dedicated key vault for Azure Information Protection, the same subscription can be used to create other key vaults to securely store and access keys and secrets (such as passwords) for services and applications that use encryption.
 
 Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
 
