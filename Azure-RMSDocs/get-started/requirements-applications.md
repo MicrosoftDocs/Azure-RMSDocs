@@ -5,7 +5,7 @@ title: Application support for data protection | Azure Information Protection
 description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -64,12 +64,12 @@ Supports viewing protected content.
 Supports viewing protected content in SharePoint Online, OneDrive for Business, and Outlook Web Access.
 
 ##### Footnote 3
-If a recipient has a mailbox in Exchange on-premises, and receives a protected email, this content can be opened only in a rich email client, such as Outlook.  This content cannot be opened from Outlook Web Access.
+If a recipient receives a protected email and is not using Exchange as the mail server or if the sender belongs to another organization, this content can be opened only in a rich email client, such as Outlook. This content cannot be opened from Outlook Web Access.
 
 ##### Footnote 4
 Uses Exchange ActiveSync IRM, which must be enabled by the Exchange administrator. Users can view, reply, and reply all for protected email messages but users cannot protect new email messages themselves.
 
-If a recipient has a mailbox in Exchange on-premises, and receives a protected email from another organization who is using Exchange, this content can be opened only in a rich email client, such as Outlook.  This content cannot be opened from a device that uses Exchange Active Sync IRM.
+If a recipient receives a protected email and is not using Exchange as the mail server or if the sender belongs to another organization, this content can be opened only in a rich email client, such as Outlook. This content cannot be opened from Outlook Web Access or from mobile mail clients using Exchange Activesync IRM..
 
 ##### Footnote 5
 Supports viewing and editing protected documents. For more information, see the following post on the Office blog: [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
