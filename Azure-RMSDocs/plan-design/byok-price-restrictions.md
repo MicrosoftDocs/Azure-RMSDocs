@@ -39,7 +39,7 @@ Although we recommend a dedicated key vault for Azure Information Protection, us
 
 Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
 
-- Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that support encryption.
+- Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
 
 - Azure Key Vault supports a number of interfaces for key management, including PowerShell, CLI, REST APIs, and the Azure portal. As a result, many other services and tools can support and interface with Key Vault, to provide supporting tools and services for managing keys. For example, you can analyze your key usage logs via Log analytics from the Operations Management Suite, set alerts when specified criteria are met, and so on.
 
