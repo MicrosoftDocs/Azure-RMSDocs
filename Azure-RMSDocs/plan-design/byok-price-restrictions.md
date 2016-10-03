@@ -45,7 +45,7 @@ Other benefits of using Azure Key Vault for your Azure Information Protection te
 
 - Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 [Azure regions and you can expect this number to increase. For more information, see the [Products available by region] (https://azure.microsoft.com/regions/services/) page on the Azure site.
 
-In addition to managing keys, Azure Key Vault also offers a consistent management experience for your security administrators to store and manage secrets (such as passwords) and certificates for other services and applications that use encryption. 
+In addition to managing keys, Azure Key Vault offers the same management experience for your security administrators to store and manage secrets (such as passwords) and certificates for other services and applications that use encryption. 
 
 For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
