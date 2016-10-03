@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection | Azure Infor
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,9 @@ These FAQ pages will be updated regularly, with new additions listed in the mont
 Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the subscription information from the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection.
+See the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. 
+
+If you have an Office 365 subscription that includes Rights Management, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) from the **Features** page.
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 

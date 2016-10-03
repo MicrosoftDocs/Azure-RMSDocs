@@ -5,7 +5,7 @@ title: Azure Information Protection deployment roadmap | Azure Information Prote
 description: Use these steps to prepare for, implement, and manage Azure Information Protection for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,7 @@ Choose the deployment roadmap that's applicable for your organization and that m
 > Already using the Azure Rights Management service for data protection? You can skip many of these steps and focus on steps 3 and 5.1.
 
 ### Step 1: Confirm your subscription and assign user licenses
-Review the subscription information from the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will classify, label, and protect documents and emails.
+Review the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will classify, label, and protect documents and emails.
 
 ### Step 2: Prepare your tenant account to use Azure Information Protection
 Before you begin using Azure Information Protection, do the following preparation:
@@ -133,7 +133,7 @@ As you begin to use the Azure Rights Management service, you might find Windows 
 ## Deployment roadmap for data protection only
 
 ### Step 1: Confirm that you have a subscription that includes Azure Rights Management
-Review the subscription information from the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) for Azure Information Protection to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will protect documents and emails by using the Azure Rights Management service.
+Review the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to confirm that your organization has a subscription that includes the functionality and features that you expect. Then, assign a license from this subscription to each user in your organization who will protect documents and emails by using the Azure Rights Management service.
 
 ### Step 2: Prepare your tenant account to use the Azure Rights Management service
 Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], do the following preparation:
