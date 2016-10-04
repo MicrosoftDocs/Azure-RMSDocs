@@ -5,7 +5,7 @@ title: Quick start tutorial | Azure Information Protection
 description: An introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,7 +38,9 @@ If you have any problems completing this tutorial, using Azure Information Prote
 To complete this tutorial, you will need the following:
 
 - A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that your subscription supports these features. For more information, see the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
-
+    
+    If you don't have a subscription for these features, you can sign up for a free trial for [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
+    
 - A subscription for Azure, so you can access the Azure portal, to configure the Azure Information Protection policy. If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial: Go to the [Azure Get started page](https://account.windowsazure.com/organization) and follow the instructions.
 
   > [!TIP] 
