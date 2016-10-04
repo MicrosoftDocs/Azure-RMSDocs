@@ -5,7 +5,7 @@ title: Admin information and support for Azure Information Protection | Azure In
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 10/04/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |… see recommended documentation for the service →|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |… provide feedback about the documentation or ask a question about the documentation →|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |… receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow Dan Plastina, who helps lead the Microsoft Information Protection team. See [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
-|… check subscription information and what features are supported →|Use the [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589) on the Azure Information Protection site.|
+|… check subscription information and what features are supported →|Use the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
 ## Information about new releases
