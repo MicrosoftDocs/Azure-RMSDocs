@@ -49,7 +49,7 @@ Use these instructions only if you're using the new, preview version of the Offi
         > [!NOTE]
         >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan does not include the Azure Rights Management service for Azure Information Protection.
         >
-        >To activate the Azure Rights Management service, you must have either an [Azure Information Protection plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+        >To activate the Azure Rights Management service, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 4. On the **rights management** page, click **activate**.
 
