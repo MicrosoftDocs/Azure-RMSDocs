@@ -45,7 +45,7 @@ Use these instructions if you have access to the Azure portal. For example, you 
     > [!NOTE]
     >If you see an activation error, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
     >
-    >Use the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your subscription includes Azure Rights Management. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >To activate the Azure Rights Management service, you must have either an [Azure Information Protection plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
