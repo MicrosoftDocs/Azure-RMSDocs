@@ -5,7 +5,7 @@ title: Windows PowerShell script for Azure RMS protection by using File Server R
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,8 +30,6 @@ ms.suite: ems
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
-This script uses a minimum version of **2.2.0.0** for the RMS Protection module. Run the following command to check the version: `(Get-Module RMSProtection -ListAvailable).Version` 
-
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
 *script is provided AS IS without warranty of any kind.*
 
@@ -40,7 +38,7 @@ This script uses a minimum version of **2.2.0.0** for the RMS Protection module.
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and RMS Protection module minimum version 2.2.0.0.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -64,7 +62,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 2.0' 
+[String] $Script:Version = 'version 1.0' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -106,11 +104,11 @@ function Protect-File ($ffile, $ftemplateId, $fownermail) {
     [bool] $returnValue = $false
     try {
         If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId
+            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
         } else {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId -OwnerEmail $fownermail
+            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId -OwnerEmail $fownermail
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
         }
