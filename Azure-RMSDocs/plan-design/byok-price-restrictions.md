@@ -5,7 +5,7 @@ title: BYOK pricing and restrictions | Azure Information Protection
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,9 +29,34 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Organizations that have a subscription that includes Azure Rights Management can use customer-managed keys (BYOK) in Azure Key Vault and log its usage at no extra charge. However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+Organizations that have a subscription that includes Azure Information Protection can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
-If you have users who have signed up for a free account by using RMS for individuals, you cannot use BYOK and usage logging because this configuration does not have a tenant administrator to configure these features.
+However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription, to ensure that it's used by only the Azure Rights Management service. 
+
+## Benefits of using Azure Key Vault
+
+In addition to using Azure Information Protection usage logging, for additional assurance, you can cross-reference this with [Azure Key Vault logging](https://azure.microsoft.com/documentation/articles/key-vault-logging/) to independently monitor that only the Azure Rights Management service is using this key. If necessary, you can immediately revoke access to the key by removing the permissions on the key vault.
+
+Other benefits of using Azure Key Vault for your Azure Information Protection tenant key:
+
+- Azure Key Vault provides a centralized key management solution that offers a consistent management solution for many cloud-based and even on-premises services that use encryption.
+
+- Azure Key Vault supports a number of built-in interfaces for key management, including PowerShell, CLI, REST APIs, and the Azure portal. Other services and tools have integrated with Key Vault, to provide capabilities that are optimized for specific tasks, such as monitoring. For example, you can analyze your key usage logs via Log analytics from the Operations Management Suite, set alerts when specified criteria are met, and so on.
+
+- Azure Key Vault provides role separation, as a recognized security best practice. Azure Information Protection administrators can focus on managing data classification and protection, and Azure Key Vault administrators can focus on managing encryption keys and any special policies that they might require for security or compliance.
+
+- Some organizations have restrictions where their master key must live. Azure Key Vault provides a high level of control where to store the master key because the service is available in many Azure regions. Currently, you can choose from 28 [Azure regions and you can expect this number to increase. For more information, see the [Products available by region] (https://azure.microsoft.com/regions/services/) page on the Azure site.
+
+In addition to managing keys, Azure Key Vault offers your security administrators the same management experience to store, access, and manage certificates and secrets (such as passwords) for other services and applications that use encryption. 
+
+For more information about Azure Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
+
+
+## Restrictions when using BYOK
+
+If you have users who have signed up for a free account by using RMS for individuals, you cannot use BYOK or usage logging because this configuration does not have a tenant administrator to configure these features.
 
 
 > [!NOTE]
