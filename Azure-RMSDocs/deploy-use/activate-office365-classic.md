@@ -5,7 +5,7 @@ title: How to activate Azure Rights Management from the Office 365 classic admin
 description: Activation instructions for the Azure Rights Management service when you have access to the classic (original) version of the Office 365 admin center.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ Use these instructions if you're using the classic (original) version of the Off
     > [!NOTE]
     >If you do not see this option, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
     >
-    >Use the [subscription information](https://go.microsoft.com/fwlink/?LinkId=827589) to confirm that your subscription includes Azure Rights Management. For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >To activate the Azure Rights Management service, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 5. On the **RIGHTS MANAGEMENT** page, click **Manage**.
 

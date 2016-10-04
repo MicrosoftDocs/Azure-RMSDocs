@@ -5,7 +5,7 @@ title: Azure Information Protection deployment roadmap | Azure Information Prote
 description: Use these steps to prepare for, implement, and manage Azure Information Protection for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ However, if you just want to quickly try Azure Information Protection for yourse
 > [!IMPORTANT]
 > Before you do the following steps, make sure that you have reviewed [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
 
-Choose the deployment roadmap that's applicable for your organization and that matches the [subscriptions](http://go.microsoft.com/fwlink/?LinkId=827589) for the functionality and features that you need:
+Choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) that you need:
 
 - [Use classification, labeling, and protection](#deployment-roadmap-for-classification-labeling-and-protection)
 
