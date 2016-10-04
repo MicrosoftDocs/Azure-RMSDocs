@@ -5,7 +5,7 @@ title: Create, configure, and publish a custom template | Azure Information Prot
 description: Instructions to create and manage custom templates in the Azure classic portal. Templates make it easy for end users and other admins to apply appropriate policies that protect documents and emails.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,11 +74,13 @@ Use the following procedures to create, configure, and publish custom templates 
 
     -   In the Azure classic portal, from the **Get started with Rights Management** quick start page, click **Create a new rights policy template**.
 
-        If you do not immediately see this page after following the instructions for Office 365, use the navigation instructions, above,  for the Azure classic portal.
+        If you do not immediately see this page after following the instructions for Office 365, use the navigation instructions, above, for the Azure classic portal.
 
-3.  On the **Add a new rights policy template** page, choose a language in which you will type the template name and description that users will see (you can add more languages later). Then type a unique name and a description, and click the Complete button.
+3. On the **Add a new rights policy template** page, choose a language in which you will type the template name and description that users will see (you can add more languages later). Then type a unique name and a description, and click the Complete button.
 
-From the **Get started with Rights Management** quick start page, now click **Manage your rights policy templates**. You will see your newly created template added to the list of templates, with a status of **Archived**. At this stage, the template is created but not configured, and is not visible to users.
+    Do not include a colon or semicolon in your template name or description. Not all services and applications that use Rights Management templates can support these characters for these templates. In this scenario, these services and applications might not be able to retrieve or use these Azure Rights Management templates.
+
+4. From the **Get started with Rights Management** quick start page, now click **Manage your rights policy templates**. You will see your newly created template added to the list of templates, with a status of **Archived**. At this stage, the template is created but not configured, and is not visible to users.
 
 ## To configure and publish a custom template
 
