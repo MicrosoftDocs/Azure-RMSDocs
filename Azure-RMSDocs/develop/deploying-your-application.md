@@ -66,8 +66,6 @@ The Active Directory Rights Management Licensing Agreement (ADRMLA) team will re
 
 Be sure to follow the instructions you receive from the ADRMLA team. The instructions list the items of digital information needed to fulfill your certificate request. By following the step-by-step instructions you will reduce delays.
 
-The ADRMLA team will forward your production certificate to you after it is created. Please note that it may take up to 15 business days for the ADRMLA team to reply with your certificate by email, longer if communication is by postal service.
-
 
 ## Installation options and requirements for Rights Management Service Client 2.1
 
