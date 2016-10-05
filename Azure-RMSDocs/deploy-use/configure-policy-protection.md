@@ -4,7 +4,7 @@
 title: How to configure a label to apply Rights Management protection | Azure Information Protection
 description: You can protect your most sensitive documents and emails by using a Rights Management service, which uses encryption, identity, and authorization policies to help prevent data loss. This protection is applied when you configure a label to use a Rights Management template. 
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ When a document or email is protected by Rights Management, it is encrypted at r
 
 - The current price list that is sent to business partners cannot be opened after a specified date.
 
-For more information about Azure Rights Management templates and how to configure these usage rights and restrictions, see [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
+For more information about Azure Rights Management templates and how to configure these usage rights and restrictions, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
 For more information about Azure Rights Management and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 

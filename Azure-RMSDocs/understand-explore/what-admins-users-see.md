@@ -5,7 +5,7 @@ title: What Do Admins and Users See? | Azure Information Protection
 description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) technology to help protect sensitive or confidential information.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,7 +79,7 @@ If you do not want users to see these templates or if you want to create your ow
 
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
+- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
 - To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md).
 
