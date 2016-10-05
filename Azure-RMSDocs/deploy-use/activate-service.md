@@ -5,7 +5,7 @@ title: Activating Azure Rights Management | Azure Information Protection
 description: The Azure Rights Management service must be activated before your organization can start to protect documents and emails by using applications and services that support this information protection solution. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,5 +83,5 @@ Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_ri
 For example, you might want to use [custom templates](configure-custom-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Rights Management sharing application](../rms-client/sharing-app-windows.md) that supports protecting all file types on all devices. 
 
 Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. 
-For information about how your applications work with the Rights Management service, see [How applications support Azure Rights Management](../understand-explore/applications-support.md).
+For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
 

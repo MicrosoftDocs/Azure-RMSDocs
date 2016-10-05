@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection | Azure Infor
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,7 +57,7 @@ First, review the frequently asked questions that are specific to classification
 
 - [FAQs for data protection](faqs-rms.md)
 
-If you question isn't answered, use the links and resources listed in [Information and support for Azure Rights Management](information-support.md).
+If you question isn't answered, use the links and resources listed in [Information and support for Azure Information Protection](information-support.md).
 
 In addition, there are FAQs designed for end-users:
 
