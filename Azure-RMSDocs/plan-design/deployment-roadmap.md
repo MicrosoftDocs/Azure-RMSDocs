@@ -93,7 +93,7 @@ Optionally, consider configuring the following:
 
 -   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
--   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
+-   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
 ### Step 5: Configure your Azure Information Protection policy, applications, and services for Rights Management data protection
 
@@ -122,7 +122,7 @@ Optionally, consider configuring the following:
     If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 ### Step 4: Use and monitor your data protection solutions
-You’re now ready to protect your data, and log how your company is using Rights Management. For addition information to support this deployment phase, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md) and [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
+You’re now ready to protect your data, and log how your company is using Rights Management. For addition information to support this deployment phase, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md) and [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
 If you're interested in automatically protecting files using File Classification Infrastructure on a Windows-based file server, see [RMS protection with Windows Server File Classification Infrastructure (FCI)](../rms-client/configure-fci.md).
 
@@ -152,7 +152,7 @@ Optionally, consider configuring the following:
 
 -   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
--   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
+-   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
 ### Step 3: Configure your applications and services for Rights Management
 
@@ -178,7 +178,7 @@ Optionally, consider configuring the following:
 
 
 ### Step 4: Use and monitor your data protection solutions
-You’re now ready to protect your data, and log how your company is using Rights Management. For addition information to support this deployment phase, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md) and [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
+You’re now ready to protect your data, and log how your company is using Rights Management. For addition information to support this deployment phase, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md) and [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
 If you're interested in automatically protecting files using File Classification Infrastructure on a Windows-based file server, see [RMS protection with Windows Server File Classification Infrastructure (FCI)](../rms-client/configure-fci.md).
 

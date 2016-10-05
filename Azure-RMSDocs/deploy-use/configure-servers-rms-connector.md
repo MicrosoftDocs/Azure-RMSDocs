@@ -5,7 +5,7 @@ title: Configuring servers for the Azure Rights Management connector | Azure Inf
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -249,6 +249,6 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 ## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
-You can use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators.
+You can use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators.
 
 To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md). 
