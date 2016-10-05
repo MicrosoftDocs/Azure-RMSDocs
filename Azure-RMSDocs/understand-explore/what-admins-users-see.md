@@ -155,7 +155,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 **More information for this scenario:**
 
--   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](applications-support.md).
+-   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How applications support the Azure Rights Management service](applications-support.md).
 
 -   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -189,7 +189,7 @@ The document remains protected even if the user renames it, saves it to another 
 
 **More information for this scenario:**
 
--   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section from [How applications support Azure Rights Management](applications-support.md).
+-   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section from [How applications support the Azure Rights Management service](applications-support.md).
 
 -   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
