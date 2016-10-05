@@ -5,7 +5,7 @@ title: How users sign up for RMS for individuals | Azure Information Protection
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,7 +89,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
     -   Perform e-discovery on company-owned data so that you can, if required, decrypt files that were protected by using Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data eecovery](../deploy-use/configure-super-users.md).
 
-    -   Log all activity for Rights Management as used in your organization. This is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and analyzing Azure Rights Management usage](../deploy-use/log-analyze-usage.md).
+    -   Log all activity for Rights Management as used in your organization. This is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
     -   Provide users with the ability to track and revoke their protected documents, if these features are supported by your [Azure RMS subscription](https://technet.microsoft.com/dn858608). For more information, see [Track and revoke your files](../rms-client/sharing-app-track-revoke.md) from the [RMS sharing application user guide](../rms-client/sharing-app-user-guide.md).
 

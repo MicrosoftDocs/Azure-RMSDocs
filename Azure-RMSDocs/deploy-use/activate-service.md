@@ -78,7 +78,7 @@ When you use these onboarding controls, all users in the organization can always
 
 
 ## Next steps
-Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators. 
+Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators. 
 
 For example, you might want to use [custom templates](configure-custom-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Rights Management sharing application](../rms-client/sharing-app-windows.md) that supports protecting all file types on all devices. 
 

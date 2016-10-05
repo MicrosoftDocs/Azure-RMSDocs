@@ -81,7 +81,7 @@ If you do not want users to see these templates or if you want to create your ow
 
 - For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
-- To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md).
+- To help users protect important company files, see [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md).
 
 Next, see some examples of how administrators can apply the templates to automatically configure information protection for files and emails.
 
