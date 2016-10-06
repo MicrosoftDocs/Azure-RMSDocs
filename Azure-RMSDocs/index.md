@@ -3,7 +3,7 @@ asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
 
 title: Azure Information Protection Documentation | Microsoft Docs
-description: Technical documentation for Azure RInformation Protection 
+description: Technical documentation for Azure Information Protection 
 author: msmbaldwin
 manager: mbaldwin
 ms.date: 09/25/2016
