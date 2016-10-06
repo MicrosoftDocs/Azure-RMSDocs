@@ -5,7 +5,7 @@ title: Monitor the Azure Rights Management connector | Azure Information Protect
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -178,7 +178,7 @@ For additional information and instructions, see the **Details** and **Install I
 
 Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically created for the RMS connector.
 
-For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](log-analyze-usage.md).
+For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
 
 If you need more detailed logging for diagnosis purposes, you can use [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals and enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS. To do this:
 
