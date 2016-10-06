@@ -5,7 +5,7 @@ title: What Do Admins and Users See? | Azure Information Protection
 description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) technology to help protect sensitive or confidential information.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,9 +79,9 @@ If you do not want users to see these templates or if you want to create your ow
 
 **More information for this scenario:**
 
-- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for Azure Rights Management](../deploy-use/configure-custom-templates.md).
+- For step-by-step instructions, see [Activating Azure Rights Management](../deploy-use/activate-service.md) and [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
-- To help users protect important company files, see [Helping users to protect files by using Azure Rights Management](../deploy-use/help-users.md).
+- To help users protect important company files, see [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md).
 
 Next, see some examples of how administrators can apply the templates to automatically configure information protection for files and emails.
 
@@ -155,7 +155,7 @@ The email is encrypted when it leaves the organization’s infrastructure, so th
 
 **More information for this scenario:**
 
--   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How applications support Azure Rights Management](applications-support.md).
+-   For more information about how Azure RMS works with Exchange Online, see [Exchange Online and Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) section from [How applications support the Azure Rights Management service](applications-support.md).
 
 -   For step-by-step instructions to configure Exchange Online for Azure RMS, see the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) from [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -189,7 +189,7 @@ The document remains protected even if the user renames it, saves it to another 
 
 **More information for this scenario:**
 
--   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section from [How applications support Azure Rights Management](applications-support.md).
+-   For more information how Azure RMS works with SharePoint, see the [SharePoint Online and SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section from [How applications support the Azure Rights Management service](applications-support.md).
 
 -   For step-by-step instructions to configure SharePoint for Azure RMS, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section from [Configuring Applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
