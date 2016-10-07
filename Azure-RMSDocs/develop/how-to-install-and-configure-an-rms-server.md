@@ -74,6 +74,7 @@ The following steps guide you in setting up your RMS server and include:
   To configure client-side discovery, you can set the following registry keys to point to your RMS server. For information about how to configure service-side discovery, see [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
+
         HKEY_LOCAL_MACHINE
           SOFTWARE
             Microsoft
@@ -81,16 +82,18 @@ The following steps guide you in setting up your RMS server and include:
                 ServiceLocation
                   EnterpriseCertification
 
-  **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
+
         HKEY_LOCAL_MACHINE
           SOFTWARE
             Microsoft
               MSIPC
                 ServiceLocation
                   EnterprisePublishing
-  **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+                  
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > By default, these keys do not exist in the registry and must be created.
