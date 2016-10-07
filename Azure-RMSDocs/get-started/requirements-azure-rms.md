@@ -1,3 +1,3 @@
 ---
-redirect_url: requirements.md
+redirect_url: requirements
 ---

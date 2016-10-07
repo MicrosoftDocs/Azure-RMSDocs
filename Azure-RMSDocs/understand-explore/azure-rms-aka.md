@@ -1,3 +1,3 @@
 ---
-redirect_url: aka.md
+redirect_url: aka
 ---

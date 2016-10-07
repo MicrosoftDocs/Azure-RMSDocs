@@ -1,3 +1,3 @@
 ---
-redirect_url: compare-on-premise.md
+redirect_url: compare-on-premise
 ---
