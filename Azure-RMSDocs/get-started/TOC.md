@@ -1,6 +1,6 @@
 # [Understand & Explore](/information-protection/understand-explore/what-is-information-protection)
 # [Get Started](requirements-azure-rms.md)
-## [Requirements](requirements-azure-rms.md)
+## [Requirements](requirements.md)
 ### [Azure Active Directory requirements](requirements-azure-ad.md)
 ### [Client device support for data protection](requirements-client-devices.md)
 ### [Application support for data protection](requirements-applications.md)
