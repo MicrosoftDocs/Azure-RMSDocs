@@ -5,7 +5,7 @@ title: Frequently asked questions about the data protection service, Azure Right
 description: Some frequently asked questions about the data protection service, Azure Rights Management (Azure RMS), from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -100,7 +100,7 @@ As the option name clearly shows, this new group type is still in preview, with 
 
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of devices that support the Azure Rights Management service, see [Azure RMS requirements: Client devices that support Azure RMS](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table in [Azure RMS requirements: Applications](../get-started/requirements-applications.md).
+For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table in [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
