@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -33,6 +33,12 @@ This page provides answers to frequently asked questions about the Azure Informa
 ## What can I do with the Azure Information Protection app?
 
 This app lets you view rights-protected email messages (.rpmsg files). This app also lets you view rights-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile. Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
+
+## I've just downloaded the app, how do I use it to read encrypted emails and encrypted files?
+
+Optionally, view the instructions from the Azure Information Protection app tour. But if you want to go straight to reading a rights-protected email or file, use your email client to open the encrypted email or tap the link to open the encrypted file. 
+
+When you're prompted to select an app, select the **AIP Viewer** app. You'll then be prompted to sign in. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
