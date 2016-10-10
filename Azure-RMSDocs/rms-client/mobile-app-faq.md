@@ -34,21 +34,21 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 This app lets you view rights-protected email messages (.rpmsg files). This app also lets you view rights-protected PDF files, pictures, text files, and any other file format that is protected as a .pfile. Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
 
-## I've just downloaded the app, how do I use it to read encrypted emails and encrypted files?
-
-Optionally, view the tour instructions from the Azure Information Protection app. But if you want to go straight to reading a rights-protected email or file, use your email client to open the encrypted email or tap the link to open the encrypted file. 
-
-When you're prompted to select an app, select the **AIP Viewer** app. You'll then be prompted to sign in. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
-
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
 Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. 
 
-## How do I sign in to this app?
+## I've just downloaded the app, how do I use it to read encrypted emails and encrypted files?
+
+Optionally, view the tour from the Azure Information Protection app. But if you want to go straight to reading a rights-protected email or file, use your email client to open the encrypted email or tap the link to open the encrypted file. 
+
+When you're prompted to select an app, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
+
+## What credentials should I use to sign in to this app?
 
 If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
-## Can I sign up with my personal email address, such as a Hotmail or Gmail account?
+## Can I sign up for the free account with my personal email address, such as a Hotmail or Gmail account?
 
 Not yet. Today, you can sign up only with your business email address (work or school account). We’re working on support for personal email addresses and will update this entry when it’s available.
 
