@@ -36,7 +36,7 @@ This app lets you view rights-protected email messages (.rpmsg files). This app 
 
 ## I've just downloaded the app, how do I use it to read encrypted emails and encrypted files?
 
-Optionally, view the instructions from the Azure Information Protection app tour. But if you want to go straight to reading a rights-protected email or file, use your email client to open the encrypted email or tap the link to open the encrypted file. 
+Optionally, view the tour instructions from the Azure Information Protection app. But if you want to go straight to reading a rights-protected email or file, use your email client to open the encrypted email or tap the link to open the encrypted file. 
 
 When you're prompted to select an app, select the **AIP Viewer** app. You'll then be prompted to sign in. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
 
