@@ -38,9 +38,9 @@ This app lets you view rights-protected email messages (.rpmsg files) if your em
 
 Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. 
 
-## I've just downloaded the app, how do I confirm it's working?
+## How do I get started with the viewer app?
 
-Because the app is designed to open and display specific file types, you will need to access one of these files from your mobile device to see the viewer in action. For example:
+From your mobile device, you will need to access one of the files that the app supports to see the viewer in action. For example:
 
 - **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
     
@@ -50,7 +50,7 @@ Because the app is designed to open and display specific file types, you will ne
 
 - **A .ptxt or .pjpg or .pfile**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types that you can use for testing, see the first table from the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section in the Rights Management sharing application admin guide. 
 
-To view these encrypted files, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
+To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays the email or file for you to read.
 
 ## What credentials should I use to sign in to this app?
 
