@@ -42,13 +42,13 @@ Yes, you can open protected PDF files that others have shared with you via Share
 
 Because the app is designed to open and display specific file types, you will need to access one of these files from your mobile device to see the viewer in action. For example:
 
-**A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
+- **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
+    
+    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md) page.
 
-Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md) page.
+- **A rights-protected PDF file**: Use a PDF application that natively supports rights management to send yourself a rights-protected PDF file as an attachment in email. Or, upload a PDF file to a SharePoint protected library and then share it, using your email address.
 
-**A rights-protected PDF file**: Use a PDF application that natively supports rights management to send yourself a rights-protected PDF file as an attachment in email. Or, upload a PDF file to a SharePoint protected library and then share it, using your email address.
-
-**A .ptxt or .pjpg or .pfile**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section from the Rights Management sharing application admin guide. 
+- **A .ptxt or .pjpg or .pfile**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section from the Rights Management sharing application admin guide. 
 
 To view these encrypted files, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays an unencrypted version of the email or file for you to read.
 
