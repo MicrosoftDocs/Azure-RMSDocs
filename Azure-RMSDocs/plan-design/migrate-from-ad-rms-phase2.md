@@ -47,7 +47,7 @@ For Windows clients:
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
     >
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number 443 in the string. For example: https:// rms.treynet.com:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, **https://rms.treynet.com:443**.
+    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number 443 in the string. For example: https:// rms.treynet.com:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, **https://rms.treyresearch.net:443**.
 
 3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if users have this version of Office, you must manually update the scripts:
 
