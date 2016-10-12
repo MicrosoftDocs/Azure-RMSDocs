@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -36,7 +36,7 @@ This app lets you view rights-protected email messages (.rpmsg files) if your em
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
-Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and this app opens the file for you. 
+Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and choose this app to open the file for you. 
 
 ## How do I get started with the viewer app?
 
