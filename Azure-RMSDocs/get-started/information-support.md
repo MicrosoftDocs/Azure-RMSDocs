@@ -71,7 +71,7 @@ On-demand sessions:
 
 - Microsoft Ignite 2016
 
-    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely)](https://myignite.microsoft.com/videos?q=BRK2127)
+    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely](https://myignite.microsoft.com/videos?q=BRK2127)
     
     - [THR2107: Collaborate securely using Azure Information Protection](https://myignite.microsoft.com/videos?q=THR2107)
     

@@ -92,13 +92,13 @@ When users share their protected documents by email, they can use a document tra
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Video presentation:
+- Video overview
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
 
-    In addition, Microsoft Ignite 2016 has many on-demand sessions for Azure Information Protection:
+    In addition, Microsoft Ignite 2016 offers many on-demand sessions for Azure Information Protection:
 
-    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely)](https://myignite.microsoft.com/videos?q=BRK2127)
+    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely](https://myignite.microsoft.com/videos?q=BRK2127)
     
     - [THR2107: Collaborate securely using Azure Information Protection](https://myignite.microsoft.com/videos?q=THR2107)
     
