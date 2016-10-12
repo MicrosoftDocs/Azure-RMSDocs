@@ -5,7 +5,7 @@ title: Admin information and support for Azure Information Protection | Azure In
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/13/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -67,7 +67,19 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-Core skills learning:
+On-demand videos:
+
+- Microsoft Ignite 2016 sessions
+
+    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely (Level 200)](https://myignite.microsoft.com/videos?q=BRK2127)
+    
+    - [THR2107: Collaborate securely using Azure Information Protection (Level 200)](https://myignite.microsoft.com/videos?q=THR2107)
+    
+    - [THR2108: Ensure comprehensive protection of your data with Azure Information Protection (Level 200)](https://myignite.microsoft.com/videos?q=THR2108)
+    
+    - [BRK3095: Learn how classification, labeling, and protection delivers persistent data protection  (Level 300)](https://myignite.microsoft.com/videos?q=BRK3095)
+    
+    - [BRK2128: Send secure email to anyone with the power of Microsoft office 365 and Azure Information Protection (Level 200)](https://myignite.microsoft.com/videos?q=BRK2128)
 
 - Microsoft Virtual Academy [Azure Rights Management Services Core Skills](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681)
 
