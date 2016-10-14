@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -32,7 +32,7 @@ This page provides answers to frequently asked questions about the Azure Informa
 
 ## What can I do with the Azure Information Protection app?
 
-This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF files, pictures and text files that are rights-protected, and generically protected files (these have a .pfile file name extension). Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
+This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF files, and pictures and text files that are rights-protected. Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
@@ -48,7 +48,7 @@ From your mobile device, you will need to access one of the files that the app s
 
 - **A rights-protected PDF file**: Use the Rights Management sharing application from a Windows computer or a PDF application that natively supports rights management to send yourself a rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
 
-- **A .ptxt or .pjpg or .pfile**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types that you can use for testing, see the first table from the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section in the Rights Management sharing application admin guide. 
+- **A .ptxt or .pjpg or .ppng**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types that you can use for testing, see the first table from the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section in the Rights Management sharing application admin guide. 
 
 To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays the email or file for you to read.
 
@@ -63,14 +63,6 @@ Not yet. Today, you can sign up only with your business email address (work or s
 ## Which file extensions can I open with this app?
 
 You can open .rpmsg, .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
-
-## Why do I have to consent before viewing a protected .pfile?
-
-Consent is required to validate that you are aware of the following:
-
-- The owner of the document expects you to honor the rights.
-
-- Opening this content in a third-party application will be audited.
 
 ##  How do I provide feedback about this app?
 
