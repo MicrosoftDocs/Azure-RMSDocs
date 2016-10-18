@@ -5,7 +5,7 @@ title: Rights Management sharing application administrator guide | Azure Informa
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -176,7 +176,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
 ### To install the RMS sharing application and Office add-in only
 
-1.  Install the AD RMS Client and the RMS sharing application by using the following command:
+1.  Install the AD RMS Client and the RMS sharing application by using the following command, specifying an existing folder to create the log file:
 
     -   For 64-bit Windows:
 
@@ -192,7 +192,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     For example: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
 
-2.  Install the Office add-in by using the following commands:
+2.  Install the Office add-in by using the following commands, specifying an existing folder to create the log file:
 
     -   For 64-bit version of Office:
 
