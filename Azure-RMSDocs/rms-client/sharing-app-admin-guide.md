@@ -5,7 +5,7 @@ title: Rights Management sharing application administrator guide | Azure Informa
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -176,7 +176,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
 ### To install the RMS sharing application and Office add-in only
 
-1.  Install the AD RMS Client and the RMS sharing application by using the following command:
+1.  Install the AD RMS Client and the RMS sharing application by using the following command, specifying an existing folder to create the log file:
 
     -   For 64-bit Windows:
 
@@ -191,8 +191,10 @@ To verify success, see the [Verifying installation success](#verifying-installat
         ```
 
     For example: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    
+    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
-2.  Install the Office add-in by using the following commands:
+2.  Install the Office add-in by using the following commands, specifying an existing folder to create the log file:
 
     -   For 64-bit version of Office:
 
@@ -207,6 +209,8 @@ To verify success, see the [Verifying installation success](#verifying-installat
         ```
 
     For example: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    
+    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
 To verify success, see the [Verifying installation success](#verifying-installation-success) section in this article.
 
