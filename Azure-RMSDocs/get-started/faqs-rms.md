@@ -5,7 +5,7 @@ title: Frequently asked questions about the data protection service, Azure Right
 description: Some frequently asked questions about the data protection service, Azure Rights Management (Azure RMS), from Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -134,6 +134,18 @@ Because Azure Information Protection supports sharing securely with anyone, you 
 Use the super user feature of Azure RMS, which lets authorized users have full owner rights for all use licenses that were granted by your organization’s RMS tenant. This same feature lets authorized services index and inspect files, as needed.
 
 For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
+
+## When I test document revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
+
+Yes. This message reflects the use license for that specific file. A use license is a per-document certificate that is granted to a user who opens a protected file or email message. This certificate contains that user's rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document's policy. When the validity period of the use license is expired and the user tries to open the file or email message, the user credentials must be resubmitted to the Azure Rights Management service. 
+
+If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user will continue to have access to the document for the duration of the use license. When the use license expires, the user must re-authenticate, at which point the user will be denied access because the document is now revoked.
+
+The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). This setting can be overridden by a more restrictive setting in a custom template. 
+
+The tenant setting and the template setting can be overridden by users when they use the RMS sharing application and select the option **Allow me to instantly revoke access to these documents**. This setting effectively sets the use license validity time to 0. 
+
+For more information and examples of how the use license works, see the detailed description for [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
 
 ## Can Rights Management prevent screen captures?
 By not granting the **Copy** [usage righ](../deploy-use/configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows Phone) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures, and browsers (for example, when used with Outlook Web App and Office Online) also cannot prevent screen captures.
