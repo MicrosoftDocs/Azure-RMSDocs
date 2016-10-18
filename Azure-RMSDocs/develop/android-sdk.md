@@ -151,7 +151,7 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 [Developer terms and concepts](core-concepts.md)
 
-[Android API Reference](android-namespaces.md)
+[Android API Reference](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 
