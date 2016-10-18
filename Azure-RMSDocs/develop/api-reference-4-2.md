@@ -29,16 +29,16 @@ ms.suite: ems
 The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
 
 ### Apple
-- [iOS / OS X API reference](https://msdn.microsoft.com/library/dn758306(v=vs.85).aspx) - API reference for the Apple iOS and OS X operating systems.
+- [iOS / OS X API reference](https://msdn.microsoft.com/library/dn758306.aspx) - API reference for the Apple iOS and OS X operating systems.
 
 ### Google
-- [Android namespaces](https://msdn.microsoft.com/library/dn758245(v=vs.85).aspx)
+- [Android namespaces](https://msdn.microsoft.com/library/dn758245.aspx)
 
 ### Linux
 - [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### Microsoft
-- [Windows API Reference](https://msdn.microsoft.com/library/dn891914(v=vs.85).aspx) - API reference for the Windows Phone and Windows Store Applications SDKs.
+- [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx) - API reference for the Windows Phone and Windows Store Applications SDKs.
 
 ## Related topics
 
