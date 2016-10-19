@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Administering the Azure Rights Management service by Using Windows PowerShell | Azure Information Protection
+title: Administering the Azure Rights Management service by using Windows PowerShell | Azure Information Protection
 description: Learn how you can use the Windows PowerShell module for the Azure Rights Management service (AADRM) for Azure Information Protection, to administer this service for your organization.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# Administering the Azure Rights Management service by Using Windows PowerShell
+# Administering the Azure Rights Management service by using Windows PowerShell
 
 >*Applies to: Azure Information Protection, Office 365*
 
