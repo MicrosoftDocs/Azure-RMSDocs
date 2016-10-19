@@ -44,7 +44,7 @@ This section covers specific guidance for several important development scenario
 - [Usage restriction reference](usage-restriction-reference.md) - Usage restrictions are defined by the constants listed in this topic.
 
  
-## Related topics ##
+## Related topics
 * [Overview](ad-rms-overview.md)
  
 
