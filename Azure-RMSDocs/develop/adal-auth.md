@@ -98,7 +98,7 @@ After signing up for Microsoft Azure:
 
 - Now, choose the check mark located on the bottom left corner of the dialog.
 
-![Choose check mark](../media/ChooseCheck01.png)
+![Choose check mark](../media/choosecheck01.png)
 
 - You’re now ready to add a dependency to your application for Azure RMS. To add the dependency, select the new **Microsoft Rights Management Services** entry under **permissions to other applications** and choose the **Create and access protected content for users** checkbox under the **Delegated Permissions:** drop box.
 
