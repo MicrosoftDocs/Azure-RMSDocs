@@ -6,7 +6,7 @@ description: Describes the basics of user authentication for your RMS-enabled ap
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,9 +40,9 @@ Before you can deploy your application you must complete an RMLA with the Micros
 ## Implement user authentication for your app
 Each RMS API has a callback that must be implemented in order to enable the user's authentication. The RMS SDK 4.2 will then use your implementation of the callback when you do not provide an access token, when your access token needs to be refreshed or when the access token is expired.
 
-- Android -  [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) and [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java) interfaces.
-- iOS / OS X -  [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc) protocol.
--  Windows Phone / Window RT -  [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback) interface.
+- Android -  [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) and [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx) interfaces.
+- iOS / OS X -  [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) protocol.
+-  Windows Phone / Window RT -  [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx) interface.
 - Linux -  [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html) interface.
 
 ### What library to use for authentication
@@ -70,7 +70,7 @@ ADAL requires several pieces of information to successfully authenticate a user 
 and comes from the previous registration step via the Azure portal.
 - **Redirect Uri** – provides the authentication library with a URI target for the authentication code. Specific formats are required for iOS and Android. These are explained in the README files of the corresponding GitHub repositories of ADAL. This value comes from the previous registration step via the Azure  portal.
 
->[!NOTE] 
+>[!NOTE]
 > **Scope** is not currently used but may be and is therefore reserved for future use.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
