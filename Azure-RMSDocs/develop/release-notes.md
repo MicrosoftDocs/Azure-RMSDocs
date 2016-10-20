@@ -5,7 +5,7 @@ title: What's new and release notes | Azure RMS
 description: Outlines important changes and features in this new version of the RMS SDK.
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -23,7 +23,7 @@ ms.suite: ems
 
 ---
 
-# What's new and release notes
+# What's new and Release notes
 
 ## What's new
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
