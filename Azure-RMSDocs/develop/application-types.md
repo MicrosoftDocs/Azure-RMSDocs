@@ -6,7 +6,7 @@ description: This topic covers types of applications that you might choose to cr
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
