@@ -6,7 +6,7 @@ description: This topic covers types of applications that you might choose to cr
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ The following application types are currently supported by Rights Management S
 
 ## Simple applications
 
-A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see, [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
+A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see our implementation of *IPCHelloWorld*, described in [Developing your application](developing-your-application.md).
 
 ### Server mode applications
 
@@ -59,7 +59,7 @@ For more information on protecting your application, see [Understanding usage re
 
 ## Related topics
 
-* [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
-* [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
-* [Understanding usage restrictions](understanding-usage-restrictions.md)
+- [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Developing your application](developing-your-application.md)
+- [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
+- [Understanding usage restrictions](understanding-usage-restrictions.md)
