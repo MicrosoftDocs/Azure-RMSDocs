@@ -6,7 +6,7 @@ description: The Microsoft Rights Management SDK 2.1 supports RMS enablement of
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,11 +27,11 @@ ms.suite: ems
 # API reference
 
 The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clients. For more information on specifics, see [Release notes](release-notes-rtm.md).
-- [Constants](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/constants)
-- [Data types](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/data types)
-- [Functions](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/functions)
-- [Structures](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/structures)
-- [Error codes](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/Error codes)
+- [Constants](https://msdn.microsoft.com/library/hh535291.aspx)
+- [Data types](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Functions](https://msdn.microsoft.com/library/hh535289.aspx)
+- [Structures](https://msdn.microsoft.com/library/hh535294.aspx)
+- [Error codes](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
 
