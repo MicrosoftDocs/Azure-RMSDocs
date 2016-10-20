@@ -40,7 +40,7 @@ You can download the full *IPCHellowWorld* sample application, as [Webinar_Colla
 
 ## Loading MSIPC.dll
 
-Before you can call any RMS SDK 2.1 functions, you need to first call [IpcInitialize](https://msdn.microsoft.com/library/windows/desktop/jj127295.aspx) function to load the MSIPC.dll.
+Before you can call any RMS SDK 2.1 functions, you need to first call [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) function to load the MSIPC.dll.
 
         C++
         hr = IpcInitialize();
@@ -63,7 +63,7 @@ The following code snip enumerates the available RMS templates from the default 
         goto exit;
       }
 
-This call will retrieve RMS templates installed on the default server and load the results in the [IPC_TIL](https://msdn.microsoft.com/library/windows/desktop/hh535283.aspx) structure pointed by the *pcTil* variable, then display the templates.
+This call will retrieve RMS templates installed on the default server and load the results in the [IPC_TIL](https://msdn.microsoft.com/library/hh535283.aspx) structure pointed by the *pcTil* variable, then display the templates.
 
       C++
       if (0 == pcTil->cTi) {
@@ -82,9 +82,9 @@ This call will retrieve RMS templates installed on the default server and load t
 
 ## Serializing a license
 
-Before you can protect any data, you need to serialize a license and get a content key. The content key is used to encrypt the sensitive data. The serialized license is usually attached to the encrypted data and is used by the consumer of the protected data. The consumer will need to call the [IpcGetKey](https://msdn.microsoft.com/library/windows/desktop/hh535263.aspx) function using the serialized license to get the content key for decrypting the content and for getting the policy associated with the content.
+Before you can protect any data, you need to serialize a license and get a content key. The content key is used to encrypt the sensitive data. The serialized license is usually attached to the encrypted data and is used by the consumer of the protected data. The consumer will need to call the [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx) function using the serialized license to get the content key for decrypting the content and for getting the policy associated with the content.
 
-For the sake of simplicity use the first RMS template returned by [IpcGetTemplateList](https://msdn.microsoft.com/library/windows/desktop/hh535267.aspx) to serialize a license.
+For the sake of simplicity use the first RMS template returned by [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) to serialize a license.
 
 Normally, you would use a user interface dialog to allow the user to select the desired template.
 
@@ -102,7 +102,7 @@ After doing this you have the content key, *hContentKey*, and the serialized lic
 
 ## Protecting data
 
-Now you are ready to encrypt the sensitive data using the [IpcEncrypt](https://msdn.microsoft.com/library/windows/desktop/hh535259.aspx) function. First, you need to ask the **IpcEncrypt** function how big the encrypted data is going to be.
+Now you are ready to encrypt the sensitive data using the [IpcEncrypt](https://msdn.microsoft.com/library/hh535259.aspx) function. First, you need to ask the **IpcEncrypt** function how big the encrypted data is going to be.
 
       C++
       cbText = (DWORD)(sizeof(WCHAR)*(wcslen(wszText)+1));
@@ -114,7 +114,7 @@ Now you are ready to encrypt the sensitive data using the [IpcEncrypt](https://m
         goto exit;
       }
 
-Here *wszText* contains the plain text that you are going to protect. The [IpcEncrypt](https://msdn.microsoft.com/library/windows/desktop/hh535259.aspx) function returns the size of the encrypted data in the *cbEncrypted* parameter.
+Here *wszText* contains the plain text that you are going to protect. The [IpcEncrypt](https://msdn.microsoft.com/library/hh535259.aspx) function returns the size of the encrypted data in the *cbEncrypted* parameter.
 
 Now allocate memory for the encrypted data.
 
@@ -156,7 +156,7 @@ Throughout this example application the *DisplayError* function is being used to
         }
       }
 
-The *DisplayError* function uses the [IpcGetErrorMessageText](https://msdn.microsoft.com/library/windows/desktop/hh535261.aspx) function to get the error message from the corresponding error code and prints it to the standard output.
+The *DisplayError* function uses the [IpcGetErrorMessageText](https://msdn.microsoft.com/library/hh535261.aspx) function to get the error message from the corresponding error code and prints it to the standard output.
 
 ## Cleaning up
 
@@ -182,10 +182,10 @@ Before you are done, you also need to release all the allocated resources.
 ## Related topics
 
 - [Developer guidance and information](developer-notes.md)
-- [IpcEncrypt](https://msdn.microsoft.com/library/windows/desktop/hh535259.aspx)
-- [IpcGetErrorMessageText](https://msdn.microsoft.com/library/windows/desktop/hh535261.aspx)
-- [IpcGetKey](https://msdn.microsoft.com/library/windows/desktop/hh535263.aspx)
-- [IpcGetTemplateList](https://msdn.microsoft.com/library/windows/desktop/hh535267.aspx)
-- [IpcInitialize](https://msdn.microsoft.com/library/windows/desktop/jj127295.aspx)
-- [IPC_TIL](https://msdn.microsoft.com/library/windows/desktop/hh535283.aspx)
+- [IpcEncrypt](https://msdn.microsoft.com/library/hh535259.aspx)
+- [IpcGetErrorMessageText](https://msdn.microsoft.com/library/hh535261.aspx)
+- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
+- [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx)
+- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+- [IPC_TIL](https://msdn.microsoft.com/library/hh535283.aspx)
 - [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)

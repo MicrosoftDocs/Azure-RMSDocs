@@ -44,13 +44,13 @@ Beginning with the [March 2015 update](release-notes-rtm.md), we have incorporat
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (Also known as, Deprecated Algorithms)
 
-The encryption package flags, see [Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx), can be used in conjunction with our new, License Property flag **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+The encryption package flags, see [Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx), can be used in conjunction with the, License Property flag - *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Following are some simple code snippets that demonstrates how to use the new license property.
 
 ## Deprecated Algorithms
 
-We are no longer exposing the **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** flag in our API. This means that future applications will no longer compile if they reference this flag, but applications already built using it will continue to work since we honor the flag privately in the API code.
+We are no longer exposing the *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* flag in our API. This means that future applications will no longer compile if they reference this flag, but applications already built using it will continue to work since we honor the flag privately in the API code.
 
 Getting the benefit of the old deprecated encryption algorithms flag can still be achieved simply by changing one flag. See the following code snippets for an examples.
 
@@ -88,7 +88,7 @@ No change in code needed, *AES 256* CBC4K is the default.
 This sample also shows the new way of supporting *deprecated algorithms*.
 
     C++
-    
+
     hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
                                     0,
                                     NULL,
