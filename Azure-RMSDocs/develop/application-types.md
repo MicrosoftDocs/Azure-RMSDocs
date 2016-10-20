@@ -33,7 +33,7 @@ The following application types are currently supported by Rights Management S
 
 ## Simple applications
 
-A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application see, [IPCHelloWorld - an example application](how-to-build-your-first-application.md).
+A simple application could be a command line tool built to encrypt a provided file. For an example of a simple, rights-enabled application try the out the *IPCHelloWorld* example application in [Developing your application](developing-your-application.md).
 
 ### Server mode applications
 
