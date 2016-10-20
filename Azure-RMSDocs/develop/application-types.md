@@ -59,7 +59,7 @@ For more information on protecting your application, see [Understanding usage re
 
 ## Related topics
 
-* [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld - an example application](how-to-build-your-first-application.md)
-* [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
-* [Understanding usage restrictions](understanding-usage-restrictions.md)
+- [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Developing your application](developing-your-application.md)
+- [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
+- [Understanding usage restrictions](understanding-usage-restrictions.md)
