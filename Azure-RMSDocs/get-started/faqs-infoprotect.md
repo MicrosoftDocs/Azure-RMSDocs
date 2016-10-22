@@ -5,7 +5,7 @@ title: Frequently asked questions about classification and labeling | Azure Info
 description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,13 +40,17 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
-- There is no centralized logging for classification and labeling.
+- You can apply labels to Office file types and Outlook email messages only.
+
+- Labels on the Office add-in are visible to all users who have the Azure Information Protection client installed.
 
 - Label names and tooltips are supported in one language only.
 
-- Conditions for automatic classification must be phrases or patterns.
-
 - Files cannot be classified from Windows File Explorer.
+
+- There is no centralized logging for classification and labeling.
+
+- Conditions for automatic classification must be phrases or patterns.
 
 - Office apps for mobile devices (iOS and Android) and Mac computers, and the Office web apps (Office Online) are not yet supported.
 
@@ -59,6 +63,10 @@ The current release has the following limitations. Look out for announcements on
 To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
 
 However, if you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
+
+## Which options in the Azure portal are P1 or P2?
+
+To check which features are included in the Azure Information Protection Premium 1 (P1) subscription vs. the Azure Information Protection Premium 2 (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
