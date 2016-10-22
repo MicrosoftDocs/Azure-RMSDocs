@@ -66,7 +66,7 @@ However, if you select the option to install the demo policy when you install th
 
 ## Which options in the Azure portal are P1 or P2?
 
-To check which features are included in the Azure Information Protection Premium 1 (P1) subscription vs. the Azure Information Protection Premium 2 (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
