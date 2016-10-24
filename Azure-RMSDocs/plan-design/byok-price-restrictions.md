@@ -5,7 +5,7 @@ title: BYOK pricing and restrictions | Azure Information Protection
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 Organizations that have a subscription that includes Azure Information Protection can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
-However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+However, to use Azure Key Vault, you must have an Azure subscription and use the Azure Key Vault Premium service tier to support HSM-protected keys. Using an HSM-protected key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription, to ensure that it's used by only the Azure Rights Management service. 
 

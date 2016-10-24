@@ -112,11 +112,8 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 * [Developer terms and concepts](core-concepts.md)
 
-* [iOS / OS X API Reference](/information-protection/sdk/4.2/api/ios/ios)
+* [iOS / OS X API Reference](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
