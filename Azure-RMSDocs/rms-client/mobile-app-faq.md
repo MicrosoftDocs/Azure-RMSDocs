@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 10/14/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -54,7 +54,7 @@ To view these files in the Azure Information Protection viewer app, tap the emai
 
 ## What credentials should I use to sign in to this app?
 
-If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 ## Can I sign up for the free account with my personal email address, such as a Hotmail or Gmail account?
 
