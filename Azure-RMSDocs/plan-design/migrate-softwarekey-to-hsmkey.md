@@ -152,7 +152,7 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 
 
-3.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
+3.  Use the [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService

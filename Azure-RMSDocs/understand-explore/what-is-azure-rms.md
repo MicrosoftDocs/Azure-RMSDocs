@@ -5,7 +5,7 @@ title: What is Azure Rights Management? | Azure Information Protection
 description: Azure Rights Management (Azure RMS) is the protection technology used by Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,7 +58,7 @@ To learn more about Azure RMS:
 
 If you want to dive right in and try Azure RMS for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial.md).
 
-However, if you’re ready to start deploying Azure Information Protection for your organization, use the [Azure Rights Management deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+However, if you’re ready to start deploying Azure Information Protection for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Rights Management](../get-started/information-support.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](../get-started/information-support.md).

@@ -36,7 +36,7 @@ You will need the following:
 - A [subscription for Microsoft Azure](https://azure.microsoft.com/en-us/) (a free trial is sufficient). For more information, see [How users sing up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) account is sufficient).
 
-> [!NOTE] 
+> [!NOTE]
 > Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a *Work or school account*, rather than a *Microsoft account* (i.e. Hotmail).
 
 After signing up for Microsoft Azure:
@@ -82,19 +82,15 @@ After signing up for Microsoft Azure:
 
 ![Choose CONFIGURE](../media/ConfigYourApp.png)
 
->[!NOTE] 
+>[!NOTE]
 > Copy the **CLIENT ID** and **REDIRECT URI** and store them for future use when configuring the RMS client.
 
 - Browse to the bottom of your application settings and choose the **Add application** button under **permissions to other applications**.
 
->[!NOTE] 
+>[!NOTE]
 > The **Delegated Permissions** that are shown for Windows Azure Active Directory are correct by default – only one option should be selected and that option is **Sign in and read user profile**.
 
 ![Select Add application](../media/PermissionsToOtherBtn.png)
-
-- Now, add this GUID `00000012-0000-0000-c000-000000000000` to the **STARTING WITH** edit box and choose the check button.
-
-![Add GUID](../media/AddGUID.png)
 
 - Choose the plus button next to **Microsoft Rights Management**.
 
@@ -102,7 +98,7 @@ After signing up for Microsoft Azure:
 
 - Now, choose the check mark located on the bottom left corner of the dialog.
 
-![Choose check mark](../media/ChooseCheck.png)
+![Choose check mark](../media/choosecheck01.png)
 
 - You’re now ready to add a dependency to your application for Azure RMS. To add the dependency, select the new **Microsoft Rights Management Services** entry under **permissions to other applications** and choose the **Create and access protected content for users** checkbox under the **Delegated Permissions:** drop box.
 
