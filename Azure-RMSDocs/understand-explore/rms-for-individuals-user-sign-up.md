@@ -5,7 +5,7 @@ title: How users sign up for RMS for individuals | Azure Information Protection
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,11 +28,11 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
-To sign up for this free account, you request it by visiting the [Microsoft Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the sharing application for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
+To sign up for this free account, you request it by visiting the [Microsoft Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the sharing application for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
 
 ## To sign up for RMS for individuals
 
-1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Azure Rights Management page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Type in the email address that you use for your organization, such as **janetm@contoso.com** or **p.dover@fabrikam.com**.
 
@@ -41,7 +41,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Azur
 
 3.  Click **Sign up**.
 
-    Microsoft uses your email address to check whether your organization already has a [paid subscription that includes Azure RMS](../get-started/requirements-subscriptions.md). If that’s the case, you don’t need RMS for individuals so you’ll be signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription for Azure RMS isn’t found, you'll continue to the next step.
+    Microsoft uses your email address to check whether your organization already has a [paid subscription for Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If that’s the case, you don’t need RMS for individuals so you’ll be signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription isn’t found, you'll continue to the next step.
 
 4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Rights Management**.
 
@@ -93,7 +93,7 @@ Throughout this process, there is no charge to the organization and no work requ
 
     -   Provide users with the ability to track and revoke their protected documents, if these features are supported by your [Azure RMS subscription](https://technet.microsoft.com/dn858608). For more information, see [Track and revoke your files](../rms-client/sharing-app-track-revoke.md) from the [RMS sharing application user guide](../rms-client/sharing-app-user-guide.md).
 
-    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a Hardware Security Module (HSM). For more information, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
+    -   Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a hardware security module (HSM). For more information, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
 
 ## Next steps
