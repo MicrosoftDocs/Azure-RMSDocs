@@ -5,7 +5,7 @@ title: How users sign up for RMS for individuals | Azure Information Protection
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Azur
 
     Microsoft uses your email address to check whether your organization already has a [paid subscription for Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If that’s the case, you don’t need RMS for individuals so you’ll be signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription isn’t found, you'll continue to the next step.
 
-4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Rights Management**.
+4.  Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
 
 5.  When you receive the email, click **Yes, that's me** to verify your email address and complete the sign up process.
 
