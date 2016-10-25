@@ -5,7 +5,7 @@ title: View and use files that have been protected by Rights Management | Azure 
 description: Instructions to view and use a protected file, which requires you to have the Rights Management (RMS) sharing application installed.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ By using File Explorer or the email message that contains the attachment, double
 If you see two versions of the file but with different file name extensions, open the file that has a .ppdf file extension only if the other file does not open. If you cannot open the .ppdf version either, first install the [RMS sharing application](install-sharing-app.md), which knows how to open files that have a .ppdf file name extension.
 
 > [!NOTE]
-> For more information, see “[What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)”.
+> For more information, see [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 How the file opens depends on how it was protected, which you can tell by looking at the file name extension. In each case, opening the file might be audited and remains audited as long as it is protected. In addition, if the file was sent as an email attachment, the sender might be notified by email each time you open the file.
 
