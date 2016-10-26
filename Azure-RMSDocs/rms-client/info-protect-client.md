@@ -4,7 +4,7 @@
 title: Installing the Azure Information Protection client | Azure Information Protection
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -69,13 +69,12 @@ You can use any of these options:
 
 2. In the **Microsoft Azure Information Protection** dialog box, note the following:
 
-    - The **Last connection** value that identifies when the client last connected to your organization's Azure Information Protection service. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the Office application.
+    - In the **client status** section: Use the **Version** value to verify that the installation was successful. In addition, you see when the client last connected to your organization's Azure Information Protection service and when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the Office application.
+    
+        You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
-    - Your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
+    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. To self-diagnose, click the **Run Diagnostics** link to.... This requires a minimum version of the Microsoft .NET Framework 4.6 and you will be prompted to install this prerequisite if necessary.
 
-    - The version of the Azure Information Protection client.
-
-    - The **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate.
 
 ## Keyboard shortcuts for the Azure Information Protection bar
 
