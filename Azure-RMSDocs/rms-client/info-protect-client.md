@@ -73,7 +73,7 @@ You can use any of these options:
     
         You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
-    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. To self-diagnose, click the **Run Diagnostics** link to.... This requires a minimum version of the Microsoft .NET Framework 4.6 and you will be prompted to install this prerequisite if necessary.
+    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. To self-diagnose, click the **Run Diagnostics** link to run a set of automatic tests, with the option to reset the client. The **Microsoft Azure Information Protection diagnostics** application requires a minimum version of the Microsoft .NET Framework 4.6 and you are prompted to install this prerequisite if necessary.
 
 
 ## Keyboard shortcuts for the Azure Information Protection bar
