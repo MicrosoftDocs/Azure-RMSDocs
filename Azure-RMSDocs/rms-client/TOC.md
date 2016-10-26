@@ -5,6 +5,7 @@
 # [Deploy & Use the Client](use-client.md)
 ## [Rights Management client](use-client.md)
 ### [Install the Azure Information Protection client](info-protect-client.md)
+#### [Azure Information Protection client: Version release history](client-version-release-history.md)
 ### [RMS client deployment notes](client-deployment-notes.md)
 ### [RMS protection with Windows Server FCI](configure-fci.md)
 #### [PowerShell script](fci-script.md)
