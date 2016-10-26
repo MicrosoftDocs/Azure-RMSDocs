@@ -5,7 +5,7 @@ title: RMS protection with Windows Server File Classification Infrastructure (FC
 description: Instructions to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,7 +89,7 @@ At the end of these instructions, all files in your selected folder will be clas
 
 2.  Review the script and make the following changes:
 
-    -   Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to Azure RMS:
+    -   Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your AppPrincipalId here>

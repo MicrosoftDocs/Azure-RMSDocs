@@ -5,7 +5,7 @@ title: Frequently asked questions for Azure Information Protection | Azure Infor
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/26/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,7 +51,7 @@ See [Compliance and supporting information for Azure Information Protection](../
 
 ## What do I do if my question isn’t here?
 
-First, review the frequently asked questions that are specific to classification and labeling, or specific to data protection. the Azure Rights Management service (Azure RMS) provides the data protection technology for Azure Information Protection and Azure RMS can be used with classification and labeling, or without: 
+First, review the frequently asked questions that are specific to classification and labeling, or specific to data protection. The Azure Rights Management service (Azure RMS) provides the data protection technology for Azure Information Protection and Azure RMS can be used with classification and labeling, or without: 
 
 - [FAQs for classification and labeling](faqs-infoprotect.md)
 
