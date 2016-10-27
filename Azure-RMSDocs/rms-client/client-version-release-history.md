@@ -57,4 +57,8 @@ Versions before General Availability are not listed.
 
     For more information about this option, see the [To verify installation, connection status, or report a problem](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem) section from the client installation documentation.
 
+## Version 1.1.23.0
 
+**Released**: 10/01/2016
+
+General Availability.
