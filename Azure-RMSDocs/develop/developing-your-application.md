@@ -6,11 +6,7 @@ description: Instructions about how to develop an application using the RMS SDK
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-<<<<<<< HEAD
-ms.date: 10/220/2016
-=======
-ms.date: 10/20/2016
->>>>>>> cbb090570eb3d49aa6a545442efb358dc238d504
+ms.date: 10/27/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
