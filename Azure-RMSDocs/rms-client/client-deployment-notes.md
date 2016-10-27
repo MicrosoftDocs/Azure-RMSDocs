@@ -169,7 +169,7 @@ To perform service discovery for the cloud version of Rights Management (the Azu
 
 2. The client connects to the Azure Rights Management discovery service, **https://discover.aadrm.com**, and prompts the user to authenticate.
 
-3. When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. Then the Azure Information Protection URL to use for that user account is returned to the RMS client to use. The URL will be in the following format: **https://**<YourTenantURL\>**/_wmcs/licensing** 
+3. When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. The Azure Information Protection URL to use for that user account is returned to the RMS client. The URL will be in the following format: **https://**<YourTenantURL\>**/_wmcs/licensing** 
 
     For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
