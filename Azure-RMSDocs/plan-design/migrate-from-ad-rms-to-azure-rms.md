@@ -36,7 +36,7 @@ Not sure whether this AD RMS migration is right for your organization?
 
 -   For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
-## Recommended reading before you migrate
+## Recommended reading before you migrate to Azure Information Protection
 
 Although not required, you might find it useful to read the following before you start the migration so that you have a better understanding of how the technology works when it is relevant to your migration step:
 
