@@ -62,3 +62,7 @@ Versions before General Availability are not listed.
 **Released**: 10/01/2016
 
 General Availability.
+
+## Next steps
+
+For more information about installing the client, see [Installing the Azure Information Protection client](info-protect-client.md).
