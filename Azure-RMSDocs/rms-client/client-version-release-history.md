@@ -30,9 +30,7 @@ ms.suite: ems
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. The client is included in the Microsoft Update Catalog (category: **Azure Information Protection**) and you can always download the latest version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Use the following information to see what’s new or changed in a release. The most current release is listed first.
-
-Versions before General Availability are not listed. 
+Use the following information to see what’s new or changed in a release. The most current release is listed first. Versions before General Availability are not listed. 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release. If it is, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate.
