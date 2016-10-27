@@ -45,7 +45,7 @@ Not sure whether this AD RMS migration is right for your organization?
 >
 >- [Overview of the Microsoft Rights Management connector](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): This section from the RMS connector documentation explains how your on-premises servers can connect to the Azure Rights Management service to protect documents and emails.
 >
->In addition, if you are familiar with AD RMS but not yet familiar with how Azure Rights Management works, you might find it useful to read [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) for a quick introduction.
+>In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
 
 ## Prerequisites for migrating AD RMS to Azure Information Protection
 Before you start the migration to Azure Information Protection, make sure that the following prerequisites are in place and that you understand any limitations.
