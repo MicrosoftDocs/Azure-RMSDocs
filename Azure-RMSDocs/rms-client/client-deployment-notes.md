@@ -2,10 +2,10 @@
 # required metadata
 
 title: RMS client deployment notes | Azure Information Protection
-description: The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside those managed boundaries. In addition to shipping with the Rights Management sharing application for Windows, the RMS client is available as an optional download that can, with acknowledgment and acceptance of its license agreement, be freely distributed with third-party software so that clients can protect and consume content that has been protected by Rights Management services.
+description: Information about redistribution, installation, supported operating systems, registry settings, and service discovery for the Rights Management Service client (RMS client) version 2, which is also known as the MSIPC client. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/27/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,9 +26,11 @@ ms.suite: ems
 
 # RMS Client deployment notes
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protectin, Windows 7 with SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
 
-The  Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. In addition to shipping with the [Rights Management sharing application for Windows](sharing-app-windows.md), the RMS client is available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can  protect and consume content that has been protected by Rights Management services.
+The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. 
+
+In addition to shipping with the [Rights Management sharing application for Windows](sharing-app-windows.md), the RMS client is available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can protect and consume content that has been protected by Rights Management services.
 
 
 ## Redistributing the RMS client
@@ -42,7 +44,7 @@ The RMS client can be freely redistributed and bundled with other applications a
 The RMS client is contained in an installer executable file named **setup_msipc_***<arch>***.exe**, where *<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer will not run on a 64-bit Windows installation.
 
 > [!NOTE]
-> You need elevated privileges to install the RMS client, such as a member of the Administrators group on the local computer.
+> You must have elevated privileges to install the RMS client, such as a member of the Administrators group on the local computer.
 
 You can install the  RMS client by using either of the following installation methods:
 
@@ -62,6 +64,7 @@ The RMS client is supported with the following operating systems:
 
 |Windows Server Operating System|Windows Client Operating System|
 |-----------------------------------|-----------------------------------|
+|Windows Server 2016|Windows 10|
 |Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 with minimum of SP1|
@@ -90,13 +93,13 @@ In addition to these files, the RMS client also installs multilingual user inter
 No. This version of the  RMS client ships as an optional download that can be installed separately on computers running supported versions of the Microsoft Windows operating system.
 
 ### Is the RMS client automatically updated by Microsoft Update?
-If you installed this RMS client by using the silent installation option, the RMS client  inherits your current Microsoft Update settings. If you installed the RMS client by using the GUI-based setup program, the RMS client installation wizard  prompts you to enable Microsoft Update.
+If you installed this RMS client by using the silent installation option, the RMS client inherits your current Microsoft Update settings. If you installed the RMS client by using the GUI-based setup program, the RMS client installation wizard prompts you to enable Microsoft Update.
 
 ## RMS client settings
 The following section contains settings information about the RMS client. This information might be helpful if you have problems with applications or services that use the RMS client.
 
 > [!NOTE]
-> Some settings depend on whether the RMS-enlightened application runs as a client mode application (such as Microsoft Word and Outlook, or the RMS sharing application), or server mode application  (such as SharePoint and Exchange).  In the following tables, these settings are identified as **Client Mode** and **Server Mode**, respectively.
+> Some settings depend on whether the RMS-enlightened application runs as a client mode application (such as Microsoft Word and Outlook, or the RMS sharing application), or server mode application  (such as SharePoint and Exchange). In the following tables, these settings are identified as **Client Mode** and **Server Mode**, respectively.
 
 ### Where the RMS client stores licenses on client computers
 The RMS client stores licenses on the local disk and also caches some  information in the Windows registry.
@@ -124,7 +127,7 @@ You can use Windows registry keys to set or modify some RMS client configuration
 |AD RMS only: To  block ILS service consumption|By default, the RMS client enables consuming content protected by the ILS service but you can configure the client to block this service by setting the following registry key. If this registry key is set to block the ILS service, any attempts to open and consume content protected by the ILS service will return the following error:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Value:** 1 to block ILS consumption, 0 to allow ILS consumption (default)|
 
 ### Managing template distribution for the RMS client
-Templates make it easy for users and administrators to quickly apply Rights Management protection and the RMS client automatically downloads templates from its RMS servers or service If you put the  templates in the following folder location, the RMS client will not download any templates from its default location and instead, download the templates that you have put in this folder. The RMS client might continue to download templates from other available RMS servers.
+Templates make it easy for users and administrators to quickly apply Rights Management protection and the RMS client automatically downloads templates from its RMS servers or service If you put the templates in the following folder location, the RMS client will not download any templates from its default location and instead, download the templates that you have put in this folder. The RMS client might continue to download templates from other available RMS servers.
 
 **Client Mode:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
@@ -150,15 +153,35 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
     **Value:** The string values added in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**,  the RMS client will use SSL or TLS to contact the specified AD RMS server.
 
 ## RMS service discovery
-RMS service discovery lets the RMS client check which RMS server or service to communicate with before  protecting content. Service discovery might also happen when the RMS client consumes protected content, but this is less likely to happen because   the policy attached to the content  contains   the preferred RMS server or service and only if that is unsuccessful does the client then run service discovery.
+RMS service discovery lets the RMS client check which RMS server or service to communicate with before protecting content. Service discovery might also happen when the RMS client consumes protected content, but this is less likely to happen because the policy attached to the content contains the preferred RMS server or service and only if that is unsuccessful does the client then run service discovery.
 
-Service discovery first looks for an on-premises version of Rights Management (AD RMS). If that is unsuccessful, service discovery automatically looks for the cloud version of Rights Management (Azure RMS).
+Service discovery first looks for an on-premises version of Rights Management (AD RMS). If that is unsuccessful, service discovery automatically looks for the cloud version of Rights Management (the Azure Rights Management service).
 
-To perform service discovery for an on-premises deployment, the RMS client checks the following:
+**To perform service discovery for an on-premises deployment (AD RMS)**, the RMS client checks the following:
 
-1.  The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first.  By default, these settings are not configured in the registry.
+1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first.  By default, these settings are not configured in the registry but an administrator can configure them as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry).
 
-2.  Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). If an SCP is registered, the URL of the RMS server is returned to the RMS client to use.
+2. Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). If an SCP is registered as documented in the [following section](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), the URL of the RMS server is returned to the RMS client to use.
+
+**To perform service discovery for the cloud version of Rights Management (the Azure Rights Management service)**, the RMS client checks the following:
+
+1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first. By default, these settings are not configured in the registry but typically, an administrator configures them during the [migration process](../plan-design/migrate-from-ad-rms-phase2.md) from AD RMS to Azure Information Protection.
+
+2. The client connects to the Azure Rights Management discovery service, **https://discover.aadrm.com**, and prompts the user to authenticate.
+
+3. When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. The Azure Information Protection URL to use for that user account is returned to the RMS client. The URL will be in the following format: **https://**\<YourTenantURL\>**/_wmcs/licensing** 
+
+    For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+
+    *\<YourTenantURL\>* has the following format: **{GUID}.rms.[Region].aadrm.com**.You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS.
+
+> [!NOTE]
+> There are two important exceptions for this service discovery flow:
+> 
+> - Mobile devices are best suited to use a cloud service, so by default they use service discovery for the Azure Rights Management service (https://discover.aadrm.com). To override this so that mobile devices use AD RMS rather than the Azure Rights Management service, you must specify SRV records in DNS and install the mobile device extension as documented in [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
+>
+> - When the Rights Management service is invoked by an Azure Information Protection label, service discovery is not performed. Instead, the URL is specified directly in the label setting that is configured in the Azure Information Protection policy.  
+
 
 ### AD RMS only: Enabling server-side service discovery by using Active Directory
 If your account has  sufficient privileges (Enterprise Admins and  local administrator for the AD RMS server), you can automatically register a a service connection point (SCP) when you install the AD RMS root cluster server. If a SCP already exists in the forest, you must first delete the existing SCP before you can register  a new one.
