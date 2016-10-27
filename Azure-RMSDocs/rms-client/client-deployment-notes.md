@@ -157,13 +157,13 @@ RMS service discovery lets the RMS client check which RMS server or service to c
 
 Service discovery first looks for an on-premises version of Rights Management (AD RMS). If that is unsuccessful, service discovery automatically looks for the cloud version of Rights Management (the Azure Rights Management service).
 
-To perform service discovery for an on-premises deployment (AD RMS), the RMS client checks the following:
+**To perform service discovery for an on-premises deployment (AD RMS)**, the RMS client checks the following:
 
 1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first.  By default, these settings are not configured in the registry but an administrator can configure them as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry).
 
 2. Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). If an SCP is registered as documented in the [following section](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), the URL of the RMS server is returned to the RMS client to use.
 
-To perform service discovery for the cloud version of Rights Management (the Azure Rights Management service from Azure Information Protection), the RMS client checks the following:
+**To perform service discovery for the cloud version of Rights Management (the Azure Rights Management service)**, the RMS client checks the following:
 
 1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first. By default, these settings are not configured in the registry but typically, an administrator configures them during the [migration process](../plan-design/migrate-from-ad-rms-phase2.md) from AD RMS to Azure Information Protection.
 
