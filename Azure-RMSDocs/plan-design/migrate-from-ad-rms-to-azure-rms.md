@@ -61,6 +61,8 @@ Before you start the migration to Azure Information Protection, make sure that t
         
         - Windows Server 2012 R2 (x64)
         
+        - Windows Server 2016 (x64)
+        
     - Cryptographic Mode 2:
 
         - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection.
