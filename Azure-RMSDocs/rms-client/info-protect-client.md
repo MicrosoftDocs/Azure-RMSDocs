@@ -73,7 +73,9 @@ You can use any of these options:
     
         You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
-    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. For diagnostic information, click **Run Diagnostics** to run a set of automatic tests and an  option to reset the client. When the tests complete, click **Copy Results** so that you can paste the information into an email that you can send to your help desk or Microsoft support.
+    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. 
+    
+        For diagnostic information and to reset the client, click **Run diagnostics**. When the tests complete, click **Copy Results** to paste the information into an email that you can send to your help desk or Microsoft support. 
 
 
 ## Keyboard shortcuts for the Azure Information Protection bar
