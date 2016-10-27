@@ -36,7 +36,7 @@ Not sure whether this AD RMS migration is right for your organization?
 
 -   For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
-> [!Optional but recommend pre-reading]
+> [!TIP]
 > Although not required, you might find it useful to read the following before you start the migration so that you have a better understanding of how the technology works when it is relevant to your migration step:
 >
 - [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md): Understand the key management options that you have for your Azure Information Protection tenant where you SLC key equivalent is either managed by Microsoft (the default) or managed by you (the "bring your own key", or BYOK configuration). 
