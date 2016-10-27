@@ -53,6 +53,8 @@ Versions before General Availability are not listed.
 
 **New feature**:
 
-- Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, click **Run diagnostics**. For more information, see the [To verify installation, connection status, or report a problem](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem) section from the client installation documentation.
+- Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
+
+    For more information about this option, see the [To verify installation, connection status, or report a problem](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem) section from the client installation documentation.
 
 
