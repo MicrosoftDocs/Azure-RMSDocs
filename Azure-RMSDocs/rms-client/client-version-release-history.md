@@ -33,7 +33,9 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 Use the following information to see what’s new or changed in a release. The most current release is listed first. Versions before General Availability are not listed. 
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release. If it is, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate.
+> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release.
+>  
+> If the problem remains, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate. For support options, see the [Support options and community resources](../get-started/information-support.#support-options-and-community-resources) information.
 
 ## Version 1.2.4.0
 
