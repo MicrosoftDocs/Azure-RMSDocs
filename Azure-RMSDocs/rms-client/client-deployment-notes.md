@@ -26,7 +26,7 @@ ms.suite: ems
 
 # RMS Client deployment notes
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
 
 The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. 
 
@@ -161,7 +161,7 @@ To perform service discovery for an on-premises deployment (AD RMS), the RMS cli
 
 1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first.  By default, these settings are not configured in the registry but an administrator can configure them as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry).
 
-2. Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). If an SCP is registered, the URL of the RMS server is returned to the RMS client to use.
+2. Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). If an SCP is registered as documented in the [following section](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), the URL of the RMS server is returned to the RMS client to use.
 
 To perform service discovery for the cloud version of Rights Management (the Azure Rights Management service from Azure Information Protection), the RMS client checks the following:
 
@@ -169,7 +169,7 @@ To perform service discovery for the cloud version of Rights Management (the Azu
 
 2. The client connects to the Azure Rights Management discovery service, **https://discover.aadrm.com**, and prompts the user to authenticate.
 
-3. When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. Then the Azure Information Protection URL to use for that account is returned to the client. The URL will be in the following format: **https://**<YourTenantURL\>**/_wmcs/licensing** 
+3. When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. Then the Azure Information Protection URL to use for that user account is returned to the RMS client to use. The URL will be in the following format: **https://**<YourTenantURL\>**/_wmcs/licensing** 
 
     For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
