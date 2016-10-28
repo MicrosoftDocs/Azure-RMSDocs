@@ -157,15 +157,15 @@ RMS service discovery lets the RMS client check which RMS server or service to c
 
 To perform service discovery, the RMS client checks the following:
 
-1. The Windows registry on the local computer: If service discovery settings are configured in the registry, these settings are tried first. 
+**1. The Windows registry on the local computer**: If service discovery settings are configured in the registry, these settings are tried first. 
 
     By default, these settings are not configured in the registry but an administrator can configure them for AD RMS as documented in a [following section](#enabling-client-side-service-discovery-by-using-the-windows-registry). An administrator typically configures these settings for the Azure Rights Management service during the [migration process](../plan-design/migrate-from-ad-rms-phase2.md) from AD RMS to Azure Information Protection.
 
-2. Active Directory Domain Services: A domain-joined computer queries Active Directory for a service connection point (SCP). 
+**2. Active Directory Domain Services**: A domain-joined computer queries Active Directory for a service connection point (SCP). 
 
     If an SCP is registered as documented in the [following section](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), the URL of the AD RMS server is returned to the RMS client to use.
 
-3. The Azure Rights Management discovery service, **https://discover.aadrm.com**: When the client connects to this service, the user is prompted to authenticate.
+**3. The Azure Rights Management discovery service**: The RMS client connects to **https://discover.aadrm.com**, which prompts the user to authenticate.
 
     When authentication is successful, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. The Azure Information Protection URL to use for that user account is returned to the RMS client. The URL will be in the following format: **https://**\<YourTenantURL\>**/_wmcs/licensing** 
 
@@ -181,7 +181,6 @@ To perform service discovery, the RMS client checks the following:
 > - When the Rights Management service is invoked by an Azure Information Protection label, service discovery is not performed. Instead, the URL is specified directly in the label setting that is configured in the Azure Information Protection policy.  
 
 > - When a user initiates sign in, for example from an Office application, the user name (and domain) from the authentication is used to identify the Azure Information Protection tenant to use. In this case, registry settings are not needed and the SCP is not checked.
-
 
 ### AD RMS only: Enabling server-side service discovery by using Active Directory
 If your account has  sufficient privileges (Enterprise Admins and  local administrator for the AD RMS server), you can automatically register a a service connection point (SCP) when you install the AD RMS root cluster server. If a SCP already exists in the forest, you must first delete the existing SCP before you can register  a new one.
