@@ -56,7 +56,7 @@ To learn more about this data protection service from Azure Information Protecti
 
 
 
-If you want to dive right in and try protecting documents for yourself, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). This tutorial includes prompting you to protect a document when sensitive data is detected, and then protecting a document that you share with others  and can then track to see how it's being used.
+If you want to dive right in and try protecting documents for yourself, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). This tutorial includes prompting you to protect a document when sensitive data is detected. It also includes protecting a document that you share by email, which you can then track to see how it's being used and if necessary, revoke access to it.
 
 However, if you’re ready to start deploying Azure Information Protection for your organization so that administrators and users can start protecting documents and emails, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
