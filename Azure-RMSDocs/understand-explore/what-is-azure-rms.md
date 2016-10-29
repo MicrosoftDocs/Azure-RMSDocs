@@ -5,7 +5,7 @@ title: What is Azure Rights Management? | Azure Information Protection
 description: Azure Rights Management (Azure RMS) is the protection technology used by Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,14 +39,14 @@ But very importantly, authorized people and services (such as search and indexin
 
 The following picture shows how Azure RMS works as a Rights Management solution for Office 365 as well as for on-premises servers and services. You'll also see that it supports the popular end user devices that run Windows, Mac OS, iOS, Android, and Windows Phone.
 
-> [!NOTE]
-You can use Azure RMS protection with different cloud subscriptions, and it supports multiple features. For more information, see the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) marketing site.
 
 ![How Azure RMS works](../media/AzRMS_elements.png)
 
+You can use Azure RMS protection with different cloud subscriptions, and it supports multiple features. You'll find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) site.
+
 ## Next steps
 
-To learn more about Azure RMS:
+To learn more about this data protection service from Azure Information Protection:
 
 -   [What problems does Azure RMS solve?](azure-rms-problems-it-solves.md)
 
@@ -56,9 +56,9 @@ To learn more about Azure RMS:
 
 
 
-If you want to dive right in and try Azure RMS for yourself, use the [Quick start tutorial for Azure Rights Management](../get-started/quick-start-tutorial.md).
+If you want to dive right in and try protecting documents for yourself, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). This tutorial includes prompting you to protect a document when sensitive data is detected, and then protecting a document that you share with others  and can then track to see how it's being used.
 
-However, if you’re ready to start deploying Azure Information Protection for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+However, if you’re ready to start deploying Azure Information Protection for your organization so that administrators and users can start protecting documents and emails, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Information Protection](../get-started/information-support.md).
