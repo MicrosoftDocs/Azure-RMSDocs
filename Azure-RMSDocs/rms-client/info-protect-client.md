@@ -85,7 +85,7 @@ You can use any of these options:
         
         - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client log files, templates, and the downloaded Azure Information Protection policy are stored. If there are log files that you want to keep, save them before resetting the client.
         
-        - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you still have a Service Connection Point on your network during migration from AD RMS), you must reconfigure the registry settings after you reset the client.
+        - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you are migration from AD RMS and still have a Service Connection Point on your network), you must reconfigure the registry settings after you reset the client.
         
         - After you have reset the client, you must re-initialize the user environment (also known as "bootstrapping"), which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This will also check that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
 
