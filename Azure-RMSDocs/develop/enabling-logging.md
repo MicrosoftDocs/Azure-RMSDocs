@@ -28,7 +28,7 @@ ms.suite: ems
 The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 
 ## Overview ##
-You can improve your users' experience and troubleshooting by enabling automatic diagnostics and performance logging upload to Microsoft. In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
+You can improve your users' experience and troubleshooting by enabling automatic diagnostics, performance, and telemetry logging upload to Microsoft. In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
 
 You will manager logging control through two properties.
 
