@@ -5,7 +5,7 @@ title: Dialog box options for the Rights Management sharing application | Azure 
 description: Information to help you specify the options in the RMS sharing application add protection dialog box or the share protected dialog box. You will see this dialog box when you protect a file to share or you protect a file in place and choose custom permissions.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,9 +37,9 @@ Use this information to help you specify the options in the RMS sharing applicat
 
 In addition to the options that you can choose, you might also be wondering:
 
--   [What’s the .ppdf file that’s automatically created?](#what-s-the-ppdf-file-that-s-automatically-created)
+-   [What’s the .ppdf file that’s automatically created?](#whats-the-ppdf-file-that-s-automatically-created)
 
--   [What’s the difference between generic protection and built-in (native) protection?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
+-   [What’s the difference between generic protection and built-in (native) protection?](#whats-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Option|Description|
 |----------|---------------|
