@@ -6,7 +6,7 @@ description: Instructions about how to develop an application using the RMS SDK
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 10/27/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,11 +31,20 @@ This topic contains essential guidance on the core aspects of an RMS enabled app
 ## Introduction
 
 The guidance in this topic is based on the sample application, *IPCHelloWorld*, which will help orient you to the basic concepts and code of a rights-enabled application. The *IPCHelloWorld* project is already configured for the Rights Management Services SDK 2.1.
-For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+<<<<<<< HEAD
 
-You can download the full *IPCHellowWorld* sample application, as [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440), from Microsoft Connect.
-> [!Note]
-> If you receive an error accessing Microsoft Connect, you may not be registered. To register: go to [Connect](http://connect.microsoft.com), sign in with your Microsoft Account > Directory > Search for Rights Management Services > Join.
+### Download sample
+- Verify that you have registered with the Connect site:
+  - To register go to [Connect](http://connect.microsoft.com)
+  - Sign in with your Microsoft Account
+  - Go to the [Rights Management Connect Site](https://connect.microsoft.com/site1170)
+  - Join 
+- Download the full *IPCHellowWorld* sample application, as [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
+
+=======
+For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+>>>>>>> cbb090570eb3d49aa6a545442efb358dc238d504
+
 
 
 ## Loading MSIPC.dll

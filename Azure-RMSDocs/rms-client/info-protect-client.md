@@ -52,6 +52,8 @@ You can script and automate the installation of the Azure Information Protection
 
 For example, to install the client silently: `AzInfoProtection.exe /passive | quiet`
 
+The Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog.
+
 ## To uninstall the Azure Information Protection client
 
 You can use any of these options:
@@ -75,8 +77,17 @@ You can use any of these options:
 
     - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. 
     
-        For diagnostic information and to reset the client, click **Run diagnostics**. When the tests complete, click **Copy Results** to paste the information into an email that you can send to your help desk or Microsoft support. 
-
+        For diagnostic information and to reset the client, click **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to your help desk or Microsoft support. When the tests finish, you can also reset the client.
+        
+        More information about the **Reset** option:
+        
+        - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer.
+        
+        - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy or the client log files.
+        
+        - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network), you must reconfigure the registry settings after you reset the client.
+        
+        - After you have reset the client, you must re-initialize the user environment (also known as "bootstrapping"), which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action will also check that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
 
 ## Keyboard shortcuts for the Azure Information Protection bar
 
