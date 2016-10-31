@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-# RMS Client deployment notes
+# RMS client deployment notes
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
 
