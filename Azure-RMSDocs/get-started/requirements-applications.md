@@ -5,7 +5,7 @@ title: Application support for data protection | Azure Information Protection
 description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
 author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 10/31/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -61,7 +61,7 @@ Information about the table columns:
 Supports viewing protected content.
 
 ##### Footnote 2 
-Supports viewing protected content in SharePoint Online, OneDrive for Business, and Outlook Web Access.
+Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business. 
 
 ##### Footnote 3
 If a recipient receives a protected email and is not using Exchange as the mail server or if the sender belongs to another organization, this content can be opened only in a rich email client, such as Outlook. This content cannot be opened from Outlook Web Access.
