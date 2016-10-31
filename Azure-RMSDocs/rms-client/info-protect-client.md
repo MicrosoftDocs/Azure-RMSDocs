@@ -83,11 +83,11 @@ You can use any of these options:
         
         - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer.
         
-        - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client log files, templates, and the downloaded Azure Information Protection policy are stored. If there are log files that you want to keep, save them before resetting the client.
+        - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templatesare stored. It does not delete the Azure Information Protection policy or the client log files.
         
         - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network), you must reconfigure the registry settings after you reset the client.
         
-        - After you have reset the client, you must re-initialize the user environment (also known as "bootstrapping"), which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This will also check that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
+        - After you have reset the client, you must re-initialize the user environment (also known as "bootstrapping"), which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action will also check that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
 
 ## Keyboard shortcuts for the Azure Information Protection bar
 
