@@ -31,10 +31,11 @@ The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs 
 You can improve your users' experience and troubleshooting by enabling automatic diagnostics, performance, and telemetry logging data upload to Microsoft. 
 
 > [!IMPORTANT] 
-In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
+> In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
 
 > [!NOTE]
-As example, here is a standard message Microsoft uses for logging notification: *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft.  Microsoft will collect error and performance data over the internet (“Data”).  Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services.  For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product.  Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*  
+> As example, here is a standard message Microsoft uses for logging notification: 
+> *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft.  Microsoft will collect error and performance data over the internet (“Data”).  Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services.  For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product.  Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*  
 
 You will manager logging control through two properties.
 
