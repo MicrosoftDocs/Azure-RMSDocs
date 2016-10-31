@@ -5,7 +5,7 @@ title: Office applications and services | Azure Information Protection
 description: How end-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) and Office services (such as Exchange and SharePoint) can use the Azure Rights Management service to help protect your organization's data.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,9 +65,9 @@ If you use SharePoint Server, you can use the information protection features wi
 > [!NOTE]
 > Currently, there are some limitations when you use IRM with SharePoint:
 > 
-> -   You cannot use the default or custom templates that you manage in the Azure classic portal.
-> -   Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
-> -   Because Office on mobile devices does not yet support Rights Management, these devices must use a browser to view files that have been protected with Rights Management, and the files are read-only.
+> - You cannot use the default or custom templates that you manage in the Azure classic portal.
+> - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
+
 
 Azure RMS applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
