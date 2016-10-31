@@ -37,7 +37,7 @@ Use this information to help you specify the options in the RMS sharing applicat
 
 In addition to the options that you can choose, you might also be wondering:
 
--   [What’s the .ppdf file that’s automatically created?](#whats-the-ppdf-file-that-s-automatically-created)
+-   [What’s the .ppdf file that’s automatically created?](#whats-the-ppdf-file-thats-automatically-created)
 
 -   [What’s the difference between generic protection and built-in (native) protection?](#whats-the-difference-between-generic-protection-and-built-in-native-protection)
 
