@@ -4,7 +4,7 @@
 title: Installing the Azure Information Protection client | Azure Information Protection
 description: Instructions to install the client that adds an Information Protection bar to your Office applications so that you can select classification labels for your documents and emails.
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/01/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,9 +81,9 @@ You can use any of these options:
         
         More information about the **Reset** option:
         
-        - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer.
+        - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. You can identify a reset action by using the log file, **%localappdata%\Local\Microsoft\MSIP\logs\ipdiag.ipclog**. Open this file with a text editor, such as Notepad, and then search for the following string `<get_ResetConfigurationCommand>`.
         
-        - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy or the client log files.
+        - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
         
         - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network), you must reconfigure the registry settings after you reset the client.
         
