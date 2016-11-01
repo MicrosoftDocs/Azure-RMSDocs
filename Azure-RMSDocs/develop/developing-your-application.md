@@ -41,7 +41,6 @@ The guidance in this topic is based on the sample application, *IPCHelloWorld*, 
   - Join 
 - Download the full *IPCHellowWorld* sample application, as [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 
-=======
 For information about how to configure a new project to use the RMS SDK 2.1, see [Configure Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
 
