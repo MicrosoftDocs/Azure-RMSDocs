@@ -81,7 +81,7 @@ You can use any of these options:
         
         More information about the **Reset** option:
         
-        - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. You can identify a reset action by using the log file, **%localappdata%\Local\Microsoft\MSIP\logs\ipdiag.ipclog**. Open this file with a text editor, such as Notepad, and then search for the following string `<get_ResetConfigurationCommand>`.
+        - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
         
         - Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
         

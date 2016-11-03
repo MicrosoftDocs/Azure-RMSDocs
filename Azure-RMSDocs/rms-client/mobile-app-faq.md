@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -66,7 +66,7 @@ You can open .rpmsg, .pdf, .ppdf, .pjpg, .ptxt, and several other text and image
 
 ##  How do I provide feedback about this app?
 
-In the app, go to **Settings** > **send feedback**.
+In the app, go to **Settings** > **Send feedback**.
 
 
 ## My question has not been answered—what should I do?
