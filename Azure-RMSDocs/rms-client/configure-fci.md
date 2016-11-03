@@ -5,7 +5,7 @@ title: RMS protection with Windows Server File Classification Infrastructure (FC
 description: Instructions to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ This solutions lets you automatically protect all files in a folder on a file se
 > [!NOTE]
 > Although Azure Information Protection includes a [connector](../deploy-use/deploy-rms-connector.md) that supports file classification infrastructure, that solution supports native protection only—for example, Office files.
 > 
-> To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
+> To support all file types with file classification infrastructure, you must use the Windows PowerShell **RMS Protection** module, as documented in this article. The RMS Protection cmdlets, like the RMS sharing application, support generic protection as well as native protection, which means that all files can be protected. For more information about these different protection levels, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
 The instructions that follow are for Windows Server 2012 R2 or Windows Server 2012. If you run other supported versions of Windows, you might need to adapt some of the steps for differences between your operating system version and the one documented in this article.
 
@@ -50,7 +50,7 @@ Prerequisites for these instructions:
 
     -   You have installed the RMS Protection tool, including the prerequisites for the tool (such as the RMS client) and for Azure RMS (such as the service principal account). For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
-    -   If you want to change the default level of RMS protection (native or generic) for specific file name extensions, you have edited the registry as described in the [File API configuration](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx) page.
+    -   If you want to change the default level of RMS protection (native or generic) for specific file name extensions, you have edited the registry as described in the [File API configuration](../develop/file-api-configuration.md) page.
 
     -   You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
 
