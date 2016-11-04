@@ -42,99 +42,22 @@ For Windows clients:
 
     These scripts reset the configuration on Windows computers so that they will use the Azure Information Protection service rather than AD RMS.
 
-2.  Follow the instructions in the redirection script (Redirect_OnPrem.cmd) to modify the script to point to your new Azure Information Protection tenant.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet volutpat aliquet. Suspendisse venenatis ex vitae fringilla suscipit. Maecenas eu nibh vitae lorem porta mollis. Nam in nisi eu nisi hendrerit pretium. Nullam vel gravida felis. Pellentesque luctus massa mi. Proin ultricies egestas erat. Morbi ut tincidunt nulla, eu ornare urna. Fusce sit amet aliquam est, at efficitur erat. Curabitur blandit mauris in dolor luctus feugiat. Proin sit amet dignissim arcu. Proin turpis lorem, congue ut bibendum non, posuere in eros. Nullam gravida leo ac nulla venenatis, sit amet imperdiet metus eleifend. Nullam id pharetra elit.
 
-    > [!IMPORTANT]
-    > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
-    >
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net**:443**.
+Aenean porta sit amet nisl quis posuere. In ut magna felis. Nulla quis euismod odio. Sed scelerisque nisi justo, sed egestas odio volutpat non. Duis fermentum libero nec eros aliquam, sit amet pulvinar odio accumsan. Sed scelerisque felis tristique arcu euismod lobortis. Nunc id volutpat lectus. In pharetra sapien a ullamcorper gravida. Sed ultricies tellus nec magna posuere tempus.
 
-3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if users have this version of Office, you must manually update the scripts:
+Etiam ac mauris in odio tincidunt tempor. Mauris vel orci dictum enim egestas sagittis sed eu mi. Nulla augue urna, tincidunt eu enim nec, scelerisque suscipit eros. Aliquam imperdiet diam sit amet dictum semper. Sed tincidunt diam id erat scelerisque, in sagittis nibh tempus. Ut pharetra leo vitae fringilla faucibus. Aliquam sem nisi, mattis eget sollicitudin non, suscipit quis magna. Vestibulum pulvinar auctor finibus. Praesent at sollicitudin elit, sed blandit diam. Cras non viverra velit, eu mattis ipsum. Fusce sed laoreet libero, vitae cursus nisl. Ut semper est eget felis lobortis tempus faucibus vitae libero. Sed lacus tellus, sagittis non vehicula vitae, ornare nec lacus.
 
-	- For **CleanUpRMS.cmd** - search for the line `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` and immediately below it, add the following line:
+Proin metus mi, ullamcorper eu mollis eget, pulvinar ut enim. Ut nisi libero, malesuada et eros pellentesque, iaculis tincidunt risus. Nulla ut tincidunt nunc. Integer et rutrum nunc, a accumsan ante. Fusce nec neque sem. Phasellus quis purus et dui pharetra tempor nec pharetra erat. Integer vel quam quis nulla vestibulum maximus vitae vel nisi. In vitae rhoncus nibh. Ut at euismod erat. Phasellus a cursus ante. Fusce quis auctor erat.
 
-			reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
+In cursus finibus metus vel bibendum. Mauris congue maximus metus vitae ultrices. Aenean tincidunt sapien id quam congue, eget pharetra velit mollis. Aenean eleifend ante sed nulla tempor, ut ullamcorper ante pulvinar. Proin ultricies mauris ut mi auctor rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam porttitor velit tortor, nec sagittis eros consectetur at. Etiam sit amet ultrices metus, non sagittis elit. Donec et dolor in nisl vehicula rutrum eu vel tellus.
 
-	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` and immediately below it, add the following two lines:
+Cras vitae diam ac dui luctus tempus. Cras in eros vitae neque pretium consequat. Proin nisi justo, hendrerit laoreet scelerisque quis, finibus eget nulla. Sed a laoreet erat, ac molestie quam. Suspendisse et viverra nisi. Vivamus convallis interdum faucibus. Donec viverra ante sit amet massa consectetur blandit. Morbi id dolor enim. Aliquam sit amet mattis velit, sit amet rhoncus purus. Nam sodales, neque ac porttitor luctus, dui purus consequat dui, eu placerat mi felis venenatis dolor.
 
-			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
+Suspendisse potenti. Morbi vel cursus lacus, nec aliquam leo. Curabitur tempus porta aliquet. Mauris a ipsum nec justo tristique porta. In quis sodales ligula, ut tincidunt urna. Vivamus a ligula hendrerit, dictum sapien sit amet, molestie nisi. Donec quis ante vitae ligula mattis tincidunt. Praesent pharetra nisi ligula, quis scelerisque dui auctor at. Nam id iaculis ipsum. Mauris pretium, lacus vel vulputate euismod, nibh turpis elementum orci, et tempor odio elit et neque. Aenean dignissim interdum rutrum. Pellentesque feugiat volutpat neque vel dictum. Phasellus id convallis nisi. Quisque turpis sapien, pulvinar ut tortor a, gravida gravida arcu. Sed tempor malesuada odio ut ornare. Aenean a urna libero.
 
-			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
+Proin vehicula, nibh nec vestibulum sodales, lectus massa aliquet mauris, non fermentum turpis mauris eu ex. Fusce condimentum aliquam velit. Vivamus sit amet ante a magna tristique dignissim et in libero. Nulla sit amet sagittis diam. Vivamus sagittis mattis tincidunt. Phasellus convallis luctus purus, sit amet mattis urna tempor ut. Etiam lacinia eleifend risus sollicitudin euismod. Etiam non gravida ante. Mauris non justo ut elit laoreet volutpat ut eget velit. Donec sit amet bibendum mauris. Mauris quis odio ut mauris pellentesque blandit vel eget massa. Duis in venenatis tellus. Pellentesque quis sem nisi. Proin ut quam tristique, pharetra turpis ut, lacinia nisi.
 
-	Optional: The scripts do not reference Office 2016 in the comments. If you want to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
+Morbi dictum vel magna ac dictum. Proin ultricies gravida est, quis pulvinar erat accumsan ac. Aliquam euismod et mauris in semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam gravida semper mauris sollicitudin malesuada. Duis vitae placerat nisl. Sed luctus massa id dolor ultricies blandit. Mauris posuere congue auctor. Donec tincidunt lectus sit amet interdum convallis. Donec efficitur elit a lorem vulputate sollicitudin. Vestibulum sit amet elit sed ipsum mollis euismod mollis vel lectus. Donec bibendum nulla libero, eget fringilla arcu aliquet vel.
 
-	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
-	
-			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
-
-	- Search for `echo Redirect SCP for Office 2013` and replace this with the following:
-	
-			echo Redirect SCP for Office versions based on MSIPC
-
-	- Search for `echo Redirect MSIPC for Office 2013` and replace with the following:
-	
-			echo Redirect MSIPC for Office versions based on MSIPC
-
-4.  On the Windows computers:
-
-	- Run these scripts with elevated privileges in the user’s context.
-
-    For mobile device clients and Mac computers:
-
-    -  Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
-
-#### Changes made by the migration scripts
-This section documents the changes that the migration scripts make. You can use this information for reference purposes only, or for troubleshooting, or if you prefer to make these changes yourself.
-
-CleanUpRMS_RUN_Elevated.cmd:
-
--   Delete the contents of the %userprofile%\AppData\Local\Microsoft\DRM and %userprofile%\AppData\Local\Microsoft\MSIPC folders, including any subfolders and any files with long file names.
-
--   Delete the contents of the following registry keys:
-
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation
-
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\WoW6432Node\Microsoft\MSIPC\ServiceLocation
-
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
-
--   Add the following registry values:
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServer
-
-Redirect_OnPrem.cmd:
-
--   Create the following registry values for each URL supplied as a parameter under each of the following locations:
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
-
-    Each entry has a REG_SZ value of **https://OldRMSserverURL/_wmcs/licensing** with the data in the following format: **https://&lt;YourTenantURL&gt;/_wmcs/licensing**.
-
-    > [!NOTE]
-    > *&lt;YourTenantURL&gt;* has the following format: **{GUID}.rms.[Region].aadrm.com**.
-    > 
-    > For example:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
-    > 
-    > You can find this value by identifying the **RightsManagementServiceId** value when you run the [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS.
-
-
-## Next steps
-To continue the migration, go to [phase 3 -supporting services configuration](migrate-from-ad-rms-phase3.md).
+Aliquam erat volutpat. Donec sed lacinia lorem. Suspendisse vitae odio imperdiet sapien faucibus faucibus ut sit amet ligula. Maecenas fermentum non magna eu rutrum. Curabitur auctor urna sit amet imperdiet porttitor. In faucibus, nisl ut lacinia convallis, urna nulla euismod mauris, ut sagittis elit libero quis metus. Integer semper risus ac mattis hendrerit.
