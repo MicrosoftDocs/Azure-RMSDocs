@@ -5,7 +5,7 @@ title: Step 2&colon; HSM-protected key to HSM-protected key migration | Azure In
 description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and are applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
 author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,5 +95,5 @@ These procedures are done by the administrator for Azure Information Protection.
     > [!NOTE]
     > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
-You’re now ready to go to [Step 3. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+You’re now ready to go to [Step 3. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
