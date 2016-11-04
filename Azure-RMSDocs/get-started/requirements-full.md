@@ -35,7 +35,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 |Requirement|More information|
 |---------------|--------------------|
 |A subscription for Azure Information Protection|Review the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to make sure that your organization's subscription includes the Azure Information Protection features that you want to use.|
-|Azure Active Directory|Your organization must have an Azure Active Directory (Azure AD) to support user authentication for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.<br /><br />If your accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication is not supported for Azure Information Protection.<br /><br />Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.<br /><br />For more information, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md).|
+|Azure Active Directory|Your organization must have an Azure Active Directory (Azure AD) to support user authentication for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.<br /><br />If your accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication is not supported for Azure Information Protection.<br /><br />Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.<br /><br />For more information, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md).|
 |Client devices|Users must have client devices (computer or mobile device) that run an operating system that supports Azure Information Protection.<br /><br />The following devices support the Azure Information Protection client, which lets users classify and label their Office documents and emails:<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />When this client protects the data by using the Azure Rights Management service, it can be consumed by the same devices (Windows, Mac, iOS, Android), that support the Azure Rights Management service. <br /><br />For details about the devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md).|
 |Applications|The Azure Information Protection client supports labeling and protection of files and emails that are created by the following Office applications: **Word**, **Excel**, **PowerPoint**, and **Outlook** from the following Office suites:<br /><br />- Office Professional Plus 2016<br /><br />- Office Professional Plus 2013 with Service Pack 1<br /><br />- Office Professional Plus 2010<br /><br />For information about the applications that support the Azure Rights Management service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).|
 |Infrastructure that supports connectivity to the Internet and dependent cloud services|If you have a firewall or similar intervening network devices that must be configured to allow specific connections, see the information for **Azure Rights Management (RMS)** in the [Office 365 portal and shared](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_Portal-identity) section from the following Office article: [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).<br /><br />Use the instructions in this Office article to keep up-to-date with changes to this information, by subscribing to an RSS feed.<br /><br />In addition to the information in the Office article, specific to Azure Information Protection:<br /><br />- Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.<br /><br />- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with Azure RMS.<br /><br />- If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user’s Active Directory logon credentials.|
@@ -53,17 +53,17 @@ For information about the additional requirements for this scenario, see [On-pre
 > [!IMPORTANT]
 > The following deployment scenario is not supported unless you are using AD RMS protection with Azure Information Protection (the "hold your own key" or HYOK configuration):
 > 
-> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+> -   Running AD RMS and Azure RMS side-by-side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 > 
-> There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
+> There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
 ## Azure Active Directory requirements for Azure Information Protection
 
-You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
+You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 
-If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
+If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
-For more information, see the following resources in the Azure Active Directory documentation:
+For more information, see the following resources in the Azure Active Directory documentation:
 
 -   [What is Azure AD Directory?](/active-directory/active-directory-whatis)
 
@@ -72,9 +72,9 @@ For more information, see the following resources in the Azure Active Directory 
 If you want to integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 > [!NOTE]
-> If you have mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
+> If you have mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
 > 
-> -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
+> -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
 
 ### Multi-factor authentication (MFA) and Azure Information Protection
 To use multi-factor authentication (MFA) with Azure Information Protection requires at least one of the following:
@@ -110,26 +110,26 @@ Then, configure your MFA solution:
 Use the following sections to identify which devices support the Azure Rights Management service, which provides data protection for Azure Information Protection.
 
 ### Computers
-The following computer operating systems support the Azure Rights Management service:
+The following computer operating systems support the Azure Rights Management service:
 
 -   **Windows 7** (x86, x64)
 
--   **Windows 8** (x86, x64)
+-   **Windows 8** (x86, x64)
 
--   **Windows 8.1** (x86, x64)
+-   **Windows 8.1** (x86, x64)
 
--   **Windows 10** (x86, x64)
+-   **Windows 10** (x86, x64)
 
--   **Mac OS X**: Minimum version of Mac OS X 10.8 (Mountain Lion)
+-   **Mac OS X**: Minimum version of Mac OS X 10.8 (Mountain Lion)
 
 ### Mobile devices
-The following mobile device operating systems support the Azure Rights Management service:
+The following mobile device operating systems support the Azure Rights Management service:
 
--   **Windows Phone**: Windows Phone 8.1
+-   **Windows Phone**: Windows Phone 8.1
 
 -   **Android phones and tablets**: Minimum version of Android 4.0.3
 
--   **iPhone and iPad**: Minimum version of iOS 7.0
+-   **iPhone and iPad**: Minimum version of iOS 7.0
 
 -   **Windows tablets**: Windows 10 Mobile and Windows 8.1 RT
 
@@ -139,27 +139,27 @@ Use the following table to identify the applications that natively support the A
 
 For these applications, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications are also known as RMS-enlightened.
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
 Information about the table columns:
 
--   **Protected PDF**: Files that have a .ppdf file name extension and that are automatically created when you use the RMS sharing application to share Office files and PDF files by email. The RMS sharing application and the Azure Information Protection app for iOS and Android include a reader for protected PDF files. Previously, if you created PDF files that you protected by using Azure RMS or AD RMS, you can continue to read these files on Windows, iOS, and Android devices by using Foxit Reader and Nitro Pro.
+-   **Protected PDF**: Files that have a .ppdf file name extension and that are automatically created when you use the RMS sharing application to share Office files and PDF files by email. The RMS sharing application and the Azure Information Protection app for iOS and Android include a reader for protected PDF files. Previously, if you created PDF files that you protected by using Azure RMS or AD RMS, you can continue to read these files on Windows, iOS, and Android devices by using Foxit Reader and Nitro Pro.
 
 -   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached files. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
 
 -   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 
-|**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
+|**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Mobile apps (Azure RMS only) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|RMS sharing application for Windows: Text, images, pfile<br /><br />Siemens JT2Go: JT files (Windows 10 only)|
-|**iOS**|Office for iPad and iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Azure Information Protection app [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection app [[1]](#footnote-1): Text, images<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS only) [[1]](#footnote-1)|Azure Information Protection app [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS sharing app [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) and [[7]](#footnote-7)<br /><br />Samsung Email (S3 and later) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Azure Information Protection app [[1]](#footnote-1): Text, images|
-|**OS X**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS sharing app [[1]](#footnote-1)|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS sharing app [[1]](#footnote-1): Text, images, pfile|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Mobile apps (Azure RMS only) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|RMS sharing application for Windows: Text, images, pfile<br /><br />Siemens JT2Go: JT files (Windows 10 only)|
+|**iOS**|Office for iPad and iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|Azure Information Protection app [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />OWA for iOS [[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection app [[1]](#footnote-1): Text, images<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (Azure RMS only) [[1]](#footnote-1)|Azure Information Protection app [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />RMS sharing app [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />OWA for Android [[3]](#footnote-3) and [[7]](#footnote-7)<br /><br />Samsung Email (S3 and later) [[7]](#footnote-7)<br /><br />TITUS Classification for Mobile|Azure Information Protection app [[1]](#footnote-1): Text, images|
+|**OS X**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />RMS sharing app [[1]](#footnote-1)|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac|RMS sharing app [[1]](#footnote-1): Text, images, pfile|
 |**Windows 10 Mobile**|Office Mobile apps (Azure RMS only)[[1]](#footnote-1)|Not supported|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook Mail|Not supported|
-|**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
-|**Windows Phone 8.1**|Office Mobile (AD RMS only)|RMS sharing app [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4)|RMS sharing app [[1]](#footnote-1): Text, images, pfile|
-|**Blackberry 10**|Not supported|Not supported|Blackberry email [[4]](#footnote-4)|Not supported|
+|**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
+|**Windows Phone 8.1**|Office Mobile (AD RMS only)|RMS sharing app [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4)|RMS sharing app [[1]](#footnote-1): Text, images, pfile|
+|**Blackberry 10**|Not supported|Not supported|Blackberry email [[4]](#footnote-4)|Not supported|
 
 
 ##### Footnote 1
@@ -243,15 +243,15 @@ For more information about the SDK, see the [Microsoft Rights Management SDK](..
 
 The following applications that are not currently supported by Azure RMS include the following:
 
--   Microsoft Office for Mac 2011
+-   Microsoft Office for Mac 2011
 
--   Microsoft OneDrive for Business for SharePoint Server 2013
+-   Microsoft OneDrive for Business for SharePoint Server 2013
 
 -   XPS Viewer
  
 In addition, the RMS sharing application has the following restrictions:
 
--   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
+-   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
 ## On-premises servers that support Azure Rights Management data protection
 
