@@ -5,7 +5,7 @@ title: Rights Management sharing application&colon; Version release history | Az
 description: See what's new or changed in a release of the Rights Management sharing application for Windows. 
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,7 +85,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for multi-factor authentication (MFA) for Azure RMS, which also removes the dependency on the Microsoft Sign-in Assistant for applications that use modern authentication.
 
-    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) section from  [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
+    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) section from  [Azure Active Directory requirements for Azure Information Protection](../get-started/requirements-azure-ad.md).
 
 ## Version 1.0.1784.0
 **Released**: 7/30/2015
