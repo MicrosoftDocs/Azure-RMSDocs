@@ -49,7 +49,7 @@ Some of the main differences for Azure Information Protection:
 
 In addition, because Azure Information Protection is a cloud service, it can deliver new features and fixes more quickly than an on-premises server-based solution. There are no new features planned for AD RMS in Windows Server 2016.
 
-For more details and other differences, use the following table for a side-by-side comparison of the features and benefits of Azure Information Protection and AD RMS. If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](compare-azure-rms-ad-rms.md#cryptographic-controls-for-signing-and-encryption) section in this article.
+For more details and other differences, use the following table for a side-by-side comparison of the features and benefits of Azure Information Protection and AD RMS. If you have security-specific comparison questions, see the [Cryptographic controls for signing and encryption](#cryptographic-controls-for-signing-and-encryption) section in this article.
 
 > [!NOTE]
 > To make this comparison easier, some information here is repeated from [Requirements for Azure Information Protecion](../get-started/requirements-azure-rms.md). Use that source for more specific support and version information for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
