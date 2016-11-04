@@ -28,8 +28,6 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-1 | [Azure Active Directory requirements](requirements-azure-ad.md) | [Client device support for data protection](requirements-client-devices.md) | [Application support for data protection](requirements-applications.md) | [On-premises server support](requirements-servers.md) | [Full Article](requirements-full.md]
-
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
 |Requirement|More information|
