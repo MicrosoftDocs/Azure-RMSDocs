@@ -32,7 +32,6 @@ This topic contains essential guidance on the core aspects of an RMS enabled app
 
 The guidance in this topic is based on the sample application, *IPCHelloWorld*, which will help orient you to the basic concepts and code of a rights-enabled application. The *IPCHelloWorld* project is already configured for the Rights Management Services SDK 2.1.
 
-
 ### Download sample
 - Verify that you have registered with the Connect site:
   - To register go to [Connect](http://connect.microsoft.com)
