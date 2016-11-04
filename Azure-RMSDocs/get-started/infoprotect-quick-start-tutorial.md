@@ -35,7 +35,7 @@ This tutorial is intended for IT administrators and consultants, to help them ev
 If you have any problems completing this tutorial, using Azure Information Protection, or want to see what others are saying about it, head over to the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
 ## Prerequisites 
-To complete this tutorial, you will need the following:
+To complete this tutorial, you will need the following things:
 
 - A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that your subscription supports these features. For more information, see the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
     
