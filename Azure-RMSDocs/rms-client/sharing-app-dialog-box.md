@@ -5,7 +5,7 @@ title: Dialog box options for the Rights Management sharing application | Azure 
 description: Information to help you specify the options in the RMS sharing application add protection dialog box or the share protected dialog box. You will see this dialog box when you protect a file to share or you protect a file in place and choose custom permissions.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,7 @@ In addition to the options that you can choose, you might also be wondering:
 
 -   In comparison, when you use the **built-in (native) protection** of Rights Management with applications that support this (for example, Office files), the protection applies to the file even if the file is then sent to somebody else or saved in another location. And, when you protect these files, you can use restrictive permissions such as read-only, or the permission to edit but not print or copy. For example, you could select **Viewer – View Only**, so that the content cannot be edited, printed, or copied.
 
-For additional technical information, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
+For additional technical information, see the [Levels of protection – native and generic](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) section in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md).
 
 ## What’s the .ppdf file that’s automatically created?
 

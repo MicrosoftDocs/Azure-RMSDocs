@@ -5,7 +5,7 @@ title: Protect a file that you share by email by using the Rights Management sha
 description: Instructions how to safely share a document by email.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,7 +77,7 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     ![Email message for Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Are you wondering: [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    Are you wondering: [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#whats-the-ppdf-file-that-s-automatically-created)
 
 4.  Optional: You can change anything that you want in this email message. For example, you can add to or change the subject or text in the message.
 

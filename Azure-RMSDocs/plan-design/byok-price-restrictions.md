@@ -5,7 +5,7 @@ title: BYOK pricing and restrictions | Azure Information Protection
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -86,7 +86,7 @@ Sometimes, the Azure RMS BYOK  exception for Exchange Online is not a problem in
 
 ## Next steps
 
-If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
 If you've decided to stay with the default configuration where Microsoft manages your tenant key, see the [Next steps](plan-implement-tenant-key.md#next-steps) section of the Planning and implementing your Azure Rights Management tenant key article.
 
