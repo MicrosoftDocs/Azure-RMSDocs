@@ -5,7 +5,7 @@ title: Create, configure, and publish a custom template | Azure Information Prot
 description: Instructions to create and manage custom templates in the Azure classic portal. Templates make it easy for end users and other admins to apply appropriate policies that protect documents and emails.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the **advanced features** for Rights Management, which then redirects you to the Azure classic portal.
 
-You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for the Azure Rights Management service to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for the Azure Rights Management service to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Use the following procedures to create, configure, and publish custom templates for Rights Management.
 
