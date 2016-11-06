@@ -46,4 +46,4 @@ To view these files in the Azure Information Protection viewer app, tap the emai
 
 If you have other questions about this app, check whether they are addressed in the [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md). 
 
-For other questions, visit our [Yammer site](http://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+For other questions, visit our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
