@@ -28,7 +28,6 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
 |Requirement|More information|
