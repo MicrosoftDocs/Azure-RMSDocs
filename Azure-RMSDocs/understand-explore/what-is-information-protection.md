@@ -2,7 +2,7 @@
 # required metadata
 
 title: What is Azure Information Protection? | Azure Information Protection
-description: An overview of the Azure Information Protection service.
+description: An overview of the Information Protection service.
 author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
