@@ -6,7 +6,7 @@ description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -40,18 +40,9 @@ Yes, you can open protected PDF files that others have shared with you via Share
 
 ## How do I get started with the viewer app?
 
-From your mobile device, you will need to access one of the files that the app supports to see the viewer in action. For example:
+After you've installed the app, you don't need to do anything more at that point. Wait until you get a protected email or file that you want to view, and then choose the **AIP Viewer** to open it. You will then be asked to sign in with your work or school account. After your credentials are authenticated, you can then read the contents.
 
-- **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
-    
-    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md) page.
-
-- **A rights-protected PDF file**: Use the Rights Management sharing application from a Windows computer or a PDF application that natively supports rights management to send yourself a rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
-
-- **A .ptxt or .pjpg or .ppng**: Use the Rights Management sharing application from a Windows computer and the [Share Protected](sharing-app-protect-by-email.md) option to send yourself a protected file as an email attachment. For the full list of file types that you can use for testing, see the first table from the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section in the Rights Management sharing application admin guide. 
-
-To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays the email or file for you to read.
-
+However, if you don't want to wait, you can use the following instructions to send yourself a protected email or file to view: [Get started with the Microsoft Azure Information Protection app for iOS and Android](mobile-app-get-started.md) 
 ## What credentials should I use to sign in to this app?
 
 If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
@@ -71,4 +62,4 @@ In the app, go to **Settings** > **Send feedback**.
 
 ## My question has not been answered—what should I do?
 
-Post your question to our [Yammer site](http://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Post your question to our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
