@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use these instructions only if you're using the new, preview version of the Office 365 admin center (**Office 365 Admin center preview**).
 
-Note that because this version of the admin center is in preview, and because of the ongoing rebranding of Azure Rights Management to Azure Information Protection, instructions for this version of the admin center are less reliable than using the classic version of the admin center. Different customers might see different options in this admin center.
+Note that because this version of the admin center is in preview, and because of the ongoing rebranding of Azure Rights Management to Azure Information Protection, instructions for this version of the admin center are less reliable than using the instructions for the classic version of the admin center. Different customers might see different options when they use this version of the admin center.
 
 1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that is a global administrator for your Office 365 deployment.
 
