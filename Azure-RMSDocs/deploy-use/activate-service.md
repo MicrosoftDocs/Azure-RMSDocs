@@ -67,7 +67,7 @@ For example, if you initially want only administrators in the “IT department�
 ```
 Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
 ```
-Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the GUID for the group, use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command.
+Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command.
 
 Or, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
