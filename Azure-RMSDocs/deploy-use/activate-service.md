@@ -5,7 +5,7 @@ title: Activating Azure Rights Management | Azure Information Protection
 description: The Azure Rights Management service must be activated before your organization can start to protect documents and emails by using applications and services that support this information protection solution. 
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,19 +46,19 @@ For instructions how to activate the Rights Management service from your managem
 - [Office 365 admin center - classic](activate-office365-classic.md)
 - [Azure classic portal](activate-azure-classic.md)
 
-Alternatively, you can use Windows PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
+Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
 1. Install the Azure Rights Management Administration Tool, which installs the Azure Rights Management administration module. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
-2. From a Windows PowerShell session, run [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx), and when prompted, provide the global administrator account details for your Azure Information Protection tenant.
+2. From a PowerShell session, run [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx), and when prompted, provide the global administrator account details for your Azure Information Protection tenant.
 
 3. Run [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), which activates the Azure Rights Management service.
 
 ## Configuring onboarding controls for a phased deployment
-If you don’t want all users to be able to protect files immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Windows PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
+If you don’t want all users to be able to protect files immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
 
 > [!IMPORTANT]
-> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management Windows PowerShell module](http://go.microsoft.com/fwlink/?LinkId=257721).
+> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](http://go.microsoft.com/fwlink/?LinkId=257721).
 >
 > To check the version you have installed, run: **(Get-Module aadrm –ListAvailable).Version**
 
@@ -67,13 +67,16 @@ For example, if you initially want only administrators in the “IT department�
 ```
 Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
 ```
-Note that for this configuration option, you must specify a group; you cannot specify individual users.
+Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command.
 
 Or, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
 ```
 Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 ```
+
+For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx) help.
+
 When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office clients the default templates that are automatically published when the Azure Rights Management service is activated, or custom templates that you might configure.  Server-side applications, such as Exchange, can implement their own per-user controls for Rights Management integration to achieve the same result.
 
 
