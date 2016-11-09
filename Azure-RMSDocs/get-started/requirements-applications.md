@@ -5,7 +5,7 @@ title: Application support for data protection | Azure Information Protection
 description: Identify the applications that use RMS APIs to natively support the Azure Rights Management service from Azure Information Protection.  
 author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/09/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
