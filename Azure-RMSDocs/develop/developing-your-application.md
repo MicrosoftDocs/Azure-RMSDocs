@@ -5,6 +5,7 @@ title: Developing your application | Azure RMS
 description: Instructions about how to develop an application using the RMS SDK 2.1.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 11/01/2016
 ms.topic: article

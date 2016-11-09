@@ -5,6 +5,7 @@ title: Configure Azure RMS for ADAL authentication | Azure RMS
 description: Outlines the steps for configuring Azure RMS to use Azure ADAL based authentication
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

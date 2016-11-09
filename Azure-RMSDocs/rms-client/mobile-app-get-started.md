@@ -5,6 +5,7 @@ title: Get started with the Azure Information Protection app for iOS and Android
 description:
 keywords: How to view emails or files with the Azure Information Protection app for iOS and Android
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/07/2016
 ms.topic: article

@@ -4,6 +4,7 @@
 title: Installing and configuring the Azure Rights Management connector | Azure Information Protection
 description: Information to help you install and configure the Azure Rights Management (RMS) connector. These procedures cover steps 1 though 4 from Deploying the Azure Rights Management connector.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

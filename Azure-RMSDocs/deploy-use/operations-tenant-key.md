@@ -4,6 +4,7 @@
 title: Operations for your Azure Rights Management tenant key | Azure Information Protection
 description: Identify the different levels of control and responsibility that you have for your Azure Information Protection tenant key.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -5,6 +5,7 @@ title: Community resources | Azure RMS
 description: AD RMS is well supported by a growing community of developers on multiple platforms.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

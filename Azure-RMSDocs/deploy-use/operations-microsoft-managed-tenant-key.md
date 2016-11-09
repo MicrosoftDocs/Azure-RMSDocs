@@ -4,6 +4,7 @@
 title: Microsoft-managed - tenant key lifecycle operations | Azure Information Protection
 description: Information about the lifecycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

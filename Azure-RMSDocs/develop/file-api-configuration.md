@@ -5,6 +5,7 @@ title: File API configuration | Azure RMS
 description: The File API's behavior can be configured through settings in the registry.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -4,6 +4,7 @@
 title: Rights Management sharing application&colon; Version release history | Azure Information Protection
 description: See what's new or changed in a release of the Rights Management sharing application for Windows. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

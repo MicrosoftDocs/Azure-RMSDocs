@@ -5,6 +5,7 @@ title: Overview - RMS SDK 2.1 | Azure RMS
 description: Rights Management Services (RMS) is an information protection technology that helps safeguard digital information from unauthorized use.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

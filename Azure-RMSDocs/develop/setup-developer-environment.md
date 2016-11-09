@@ -5,6 +5,7 @@ title: Setup developer environment | Azure RMS
 description: Show you how to setup you your development environment to work with the AD RMS SDK APIs for your particular operating system.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

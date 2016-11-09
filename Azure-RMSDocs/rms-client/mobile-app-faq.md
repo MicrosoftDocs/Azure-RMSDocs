@@ -5,6 +5,7 @@ title: FAQs for Azure Information Protection app for iOS and Android | Azure Inf
 description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/07/2016
 ms.topic: article

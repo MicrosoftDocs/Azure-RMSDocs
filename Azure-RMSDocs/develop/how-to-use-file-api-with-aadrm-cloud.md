@@ -5,6 +5,7 @@ title: How-to enable your service application to work with cloud based RMS | Azu
 description: This topic outlines steps for setting up your service application to use Azure Rights Management.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
