@@ -4,6 +4,7 @@
 title: Compliance and supporting information | Azure Information Protection
 description: Supporting information for Azure Information Protection that includes legal, compliance, and SLAs.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

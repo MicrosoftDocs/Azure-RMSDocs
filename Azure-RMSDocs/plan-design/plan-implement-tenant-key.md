@@ -4,6 +4,7 @@
 title: Planning and implementing your Azure Rights Management tenant key | Azure Information Protection
 description: Information to help you plan for and manage your Azure Information Protection tenant key. Instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/09/2016
 ms.topic: article

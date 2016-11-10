@@ -4,6 +4,7 @@
 title: Scenario - Share an Office file with users in another organization | Azure Information Protection
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that users can safely email an Office file with people in another organization. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article

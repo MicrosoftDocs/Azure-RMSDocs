@@ -4,6 +4,7 @@
 title: Configuring custom templates for the Azure Rights Management service| Azure Information Protection
 description: Information and instructions for admins to configure and manage usage rights templates. Templates make it easy for users and other admins to apply policies to sensitive files that restrict access to authorized users.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

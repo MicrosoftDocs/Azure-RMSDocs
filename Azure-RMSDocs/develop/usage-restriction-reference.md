@@ -5,6 +5,7 @@ title: Usage restriction reference | Azure RMS
 description: Usage restrictions are defined by the constants listed in this topic.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article

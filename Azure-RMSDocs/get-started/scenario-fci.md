@@ -4,6 +4,7 @@
 title: Scenario - Protect files on a file server share | Azure Information Protection
 description: This scenario and supporting user documentation uses Azure Rights Management protection to bulk-protect all files that you want to protect on a file server to ensure that only employees from your organization can access them, even if they are copied and saved to storage that is not under the control of your IT department, or emailed to others.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article

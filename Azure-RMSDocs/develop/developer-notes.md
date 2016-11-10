@@ -5,6 +5,7 @@ title: Developer guidance and information | Azure RMS
 description: This topic covers specific guidance for several important development scenarios.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article

@@ -4,6 +4,7 @@
 title: Information about Thales HSMs and Microsoft additions&#58; RETIRED CONTENT | Azure RMS
 description: The information in this article has been removed because it is no longer relevant now that Azure Rights Management uses Azure Key Vault for customer-managed tenant keys (also known as bring your own key, or BYOK). 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

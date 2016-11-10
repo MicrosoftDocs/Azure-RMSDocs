@@ -5,6 +5,7 @@ title: Deploying your application | Azure RMS
 description: This topic outlines and guides you through deployment options for your rights-enabled application
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -5,6 +5,7 @@ title: Enabling email notification | Azure RMS
 description: Email notification allows for a protected content owner to be notified when his or her content is accessed.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -4,6 +4,7 @@
 title: Use keyboard shortcuts in the Rights Management sharing application | Azure Information Protection
 description: Instructions how to use keyboard shortcuts with the RMS sharing application for Windows.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

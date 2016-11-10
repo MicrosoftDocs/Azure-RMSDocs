@@ -4,6 +4,7 @@
 title: How to find out if users have signed up for RMS for individuals | Azure Information Protection
 description: As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of methods described in this article.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/24/2016
 ms.topic: article

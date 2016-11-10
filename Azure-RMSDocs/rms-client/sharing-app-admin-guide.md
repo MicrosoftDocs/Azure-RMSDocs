@@ -4,6 +4,7 @@
 title: Rights Management sharing application administrator guide | Azure Information Protection
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article

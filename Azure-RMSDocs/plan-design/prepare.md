@@ -4,6 +4,7 @@
 title: Preparing for Azure Rights Management protection| Azure Information Protection
 description: Check that you have everything ready to use the Azure Rights Management service, so that your organization can protect documents and emails.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

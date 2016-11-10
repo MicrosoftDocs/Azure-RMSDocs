@@ -5,6 +5,7 @@ title: Windows Phone setup | Azure RMS
 description: Windows Phone applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

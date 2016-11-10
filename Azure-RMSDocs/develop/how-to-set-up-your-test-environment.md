@@ -5,6 +5,7 @@ title: Testing your application | Azure RMS
 description: Instructions on how to setup your application for testing.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
