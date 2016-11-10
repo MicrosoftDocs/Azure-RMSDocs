@@ -4,6 +4,7 @@
 title: Configuring servers for the Azure Rights Management connector | Azure Information Protection
 description: Information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from Deploying the Azure Rights Management connector.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

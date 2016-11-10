@@ -4,6 +4,7 @@
 title: How users sign up for RMS for individuals | Azure Information Protection
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article

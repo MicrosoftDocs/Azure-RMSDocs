@@ -5,6 +5,7 @@ title: How-to install, configure and test with an RMS server | Azure RMS
 description: Install and configure and RMS Sever for testing your rights-enabled application.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

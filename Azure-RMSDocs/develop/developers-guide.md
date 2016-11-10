@@ -5,6 +5,7 @@ title: Developer's Guide | Azure RMS
 description: Overview of developer tools use; SDKs, additional libraries, and code examples.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

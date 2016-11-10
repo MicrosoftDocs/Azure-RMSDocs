@@ -4,6 +4,7 @@
 title: RMS protection with Windows Server File Classification Infrastructure (FCI) | Azure Information Protection
 description: Instructions to use the Rights Management (RMS) client with the RMS Protection tool to configure File Server Resource Manager and file classification infrastructure (FCI).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2016
 ms.topic: article

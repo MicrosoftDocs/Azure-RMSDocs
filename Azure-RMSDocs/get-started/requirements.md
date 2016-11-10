@@ -4,6 +4,7 @@
 title: Requirements for Azure Information Protection | Azure Information Protection
 description: Identify the prerequisites to deploy Azure Information Protection for your organization.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: get-started-article

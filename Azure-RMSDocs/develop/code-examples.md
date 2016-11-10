@@ -5,6 +5,7 @@ title: Code examples | Azure RMS
 description: RMS SDK 4.2 includes example code and working projects for some supported operating systems.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

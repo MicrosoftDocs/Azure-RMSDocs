@@ -5,6 +5,7 @@ title: Linux setup | Azure RMS
 description: Several flavors of Linux operating systems can now make use of the Microsoft Rights Management SDK 4.2.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

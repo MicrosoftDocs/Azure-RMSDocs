@@ -6,6 +6,7 @@ description: Basic guidance for implementing document tracking of content as wel
 
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

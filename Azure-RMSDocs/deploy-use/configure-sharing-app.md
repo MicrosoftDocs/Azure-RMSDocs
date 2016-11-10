@@ -4,6 +4,7 @@
 title: Rights Management sharing application&colon; Installation and configuration for clients | Azure Information Protection
 description: Information for admins about deploying the Rights Management (RMS) sharing application on Windows computers and mobile devices.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
