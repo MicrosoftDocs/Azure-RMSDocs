@@ -4,6 +4,7 @@
 title: Scenario - Retain control of documents stored in SharePoint | Azure Information Protection
 description: This scenario and supporting user documentation uses Azure Rights Management protection to ensure that Office documents stored in SharePoint remain under your control by using protected libraries. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article

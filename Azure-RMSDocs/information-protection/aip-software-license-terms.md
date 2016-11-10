@@ -6,6 +6,7 @@ title: Software Licensing Terms | Azure RMS
 description:
 keywords:
 author: msmbaldwin
+ms.author: mbaldwin
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

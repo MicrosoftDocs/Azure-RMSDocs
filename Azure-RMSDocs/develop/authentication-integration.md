@@ -5,6 +5,7 @@ title: How to register and RMS enable your app with Azure AD | Azure RMS
 description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article

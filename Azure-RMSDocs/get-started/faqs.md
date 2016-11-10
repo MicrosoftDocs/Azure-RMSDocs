@@ -4,6 +4,7 @@
 title: Frequently asked questions for Azure Information Protection | Azure Information Protection
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/26/2016
 ms.topic: article

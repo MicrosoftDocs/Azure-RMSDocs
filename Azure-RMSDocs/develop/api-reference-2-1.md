@@ -5,6 +5,7 @@ title: API reference | Azure RMS
 description: The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clients.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article

@@ -4,6 +4,7 @@
 title: Azure Information Protection deployment roadmap | Azure Information Protection
 description: Use these steps to prepare for, implement, and manage Azure Information Protection for your organization.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

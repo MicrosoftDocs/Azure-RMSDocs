@@ -5,6 +5,7 @@ title: Developer's Guide | Azure RMS
 description: Overview of developer tools use; SDKs, additional libraries, and code examples.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -67,12 +68,12 @@ The following run on iOS / OS X supported by [RMS SDK 4.2](active-directory-righ
 The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) and later versions of the 2.x SDK.
 
 - [Read PFILE protected PDF](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) is a simple code example on our RMS Developer's Corner blog that uses the MSIPC File API to decrypt and open a PFILE protected PDF document.
-- [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.
-- [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.
-- [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
-- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
-- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
-- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
+- [IpcManagedAPI](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI) is a .NET (C#) representation of RMS SDK 2.1 to make it easy for your managed application to be RMS-enabled.
+- [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcNotepad) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content.
+- [IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
+- [IpcAzureApp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcAzureApp) is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
+- [RmsDocumentInspector](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/RmsDocumentInspector) is a tool can give information about any RMS protected file such as content-id or user rights.
+- [RmsFileWatcher](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/RmsFileWatcher) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
 
 ### Windows Store and Phone
 

@@ -4,6 +4,7 @@
 title: What is Azure Information Protection? | Azure Information Protection
 description: An overview of the Azure Information Protection service.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/12/2016
 ms.topic: article

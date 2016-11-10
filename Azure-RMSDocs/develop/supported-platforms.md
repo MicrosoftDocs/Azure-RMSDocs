@@ -6,6 +6,7 @@ description: This topic identifies the Rights Management Services SDK 2.1 su
 
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

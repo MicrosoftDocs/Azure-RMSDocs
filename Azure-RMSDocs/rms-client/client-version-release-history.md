@@ -4,6 +4,7 @@
 title: Azure Information Protection client&colon; Version release history | Azure Information Protection
 description: See what's new or changed in a release of the Azure Information Protection client for Windows. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/27/2016
 ms.topic: article

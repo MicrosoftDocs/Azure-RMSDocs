@@ -4,6 +4,7 @@
 title: Azure Active Directory requirements | Azure Information Protection
 description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
 ms.topic: get-started-article
