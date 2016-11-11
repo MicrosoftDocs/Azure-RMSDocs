@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/11/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -148,7 +148,13 @@ To use the RMS connector, these servers running Exchange must be running one of 
 
 -   Exchange Server 2010 with Exchange 2010 Service Pack 3 Rollup Update 6
 
-You will also need to install on these servers, a version of the RMS client that includes support for RMS Cryptographic Mode 2. The minimum version that is supported in Windows Server 2008 is included in the hotfix that you can download from [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](http://support.microsoft.com/kb/2627272). The minimum version for Windows Server 2008 R2 can be downloaded from [RSA key length is increased to 2048 bits for AD RMS in Windows 7 or in Windows Server 2008 R2](http://support.microsoft.com/kb/2627273). Windows Server 2012 and Windows Server 2012 R2 natively support Cryptographic Mode 2.
+You will also need on these servers, a version of the RMS client that includes support for RMS Cryptographic Mode 2. You might already have this, because the operating system includes a version of the RMS client. However, early versions of the client did not support Cryptographic Mode 2. If your Exchange servers are running at least Windows Server 2012, no further action is required because the RMS client installed with these operating systems natively supports Cryptographic Mode 2. 
+
+If these servers are running an earlier version of the operating system, you can install the latest version of the RMS client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396). However, if you want to check whether the currently installed version of the RMS client supports Cryptographic Mode 2, you can check your installed file version of Windows\System32\Msdrm.dll against the version numbers listed in the following knowledge-based articles. If the version number installed is the same or higher than the version numbers listed, the RMS client supports Cryptographic Mode 2 and there's no need to upgrade this client or install the latest RMS client for your Exchange servers to work with the RMS connector:
+
+- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
+
+- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
 > If these versions or later versions of Exchange and the RMS client are not installed, you will not be able to configure Exchange to use the connector. Check that these versions are installed before you continue.
@@ -188,7 +194,7 @@ To use the RMS connector, these servers running SharePoint must be running one o
 
 -   SharePoint Server 2010
 
-A server running SharePoint 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396).
+A server running SharePoint 2016 or SharePoint 2013 must also be running a version of the MSIPC client 2.1 that is supported with the RMS connector. To make sure that you have a supported version, download the latest client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > There are multiple versions of the MSIPC 2.1 client, so make sure that you have version 1.0.2004.0 or later.
