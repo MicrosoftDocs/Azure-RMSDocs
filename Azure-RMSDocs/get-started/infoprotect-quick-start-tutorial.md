@@ -49,7 +49,7 @@ To complete this tutorial, you will need the following:
 
 - A global administrator account to sign in to the Azure portal to configure the Azure Information Protection policy. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
 
-- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. 
+- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. 
 
 Let's get started.
 
