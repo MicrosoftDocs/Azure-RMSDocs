@@ -42,7 +42,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 ## Information about new releases and updated documentation
 The Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). These blog posts supplement the product documentation and support information.
 
-At the end of each month, you'll see a summary of changes to the documentation, titled "**Azure Information Protection Documentation Update for \<month and year>**". These posts are tagged as [content updates](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) and include documentation updates for new releases, and also corrections and clarifications for existing releases.
+At the end of each month, you'll see a summary of changes to the documentation, titled "**Azure Information Protection Documentation Update for \<month, year>**". These posts have the content type tag of [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) and include documentation updates for new releases, and also corrections and clarifications for existing releases.
 
 > [!TIP]
 > If you are developing applications that use Microsoft Rights Management services (Azure RMS or AD RMS), you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/).
