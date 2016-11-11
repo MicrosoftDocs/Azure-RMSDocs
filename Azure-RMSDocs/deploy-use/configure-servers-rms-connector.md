@@ -148,16 +148,16 @@ To use the RMS connector, these servers running Exchange must be running one of 
 
 -   Exchange Server 2010 with Exchange 2010 Service Pack 3 Rollup Update 6
 
-You will also need on these servers, a version of the RMS client that includes support for RMS Cryptographic Mode 2. You might already have this, because the operating system includes a version of the RMS client. However, early versions of the client did not support Cryptographic Mode 2. If your Exchange servers are running at least Windows Server 2012, no further action is required because the RMS client installed with these operating systems natively supports Cryptographic Mode 2. 
+You will also need on these servers, a version 1 of the RMS client (also known as MSDRM) that includes support for RMS Cryptographic Mode 2. All Windows operating systems include the MSDRM client but early versions of the client did not support Cryptographic Mode 2. If your Exchange servers are running at least Windows Server 2012, no further action is required because the RMS client installed with these operating systems natively supports Cryptographic Mode 2. 
 
-If these servers are running an earlier version of the operating system, you can install the latest version of the RMS client from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396). However, if you want to check whether the currently installed version of the RMS client supports Cryptographic Mode 2, you can check your installed file version of Windows\System32\Msdrm.dll against the version numbers listed in the following knowledge-based articles. If the version number installed is the same or higher than the version numbers listed, the RMS client supports Cryptographic Mode 2 and there's no need to upgrade this client or install the latest RMS client for your Exchange servers to work with the RMS connector:
+If your Exchange servers are running an earlier version of the operating system, verify that the installed version of the RMS client supports Cryptographic Mode 2. To do this, check your installed file version of Windows\System32\Msdrm.dll against the version numbers listed in the following knowledge-based articles. If the version number installed is the same or higher than the version numbers listed, no further action is required. If the version number installed is lower, download and install the hotfix from the article.
 
 - Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
 
 - Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
-> If these versions or later versions of Exchange and the RMS client are not installed, you will not be able to configure Exchange to use the connector. Check that these versions are installed before you continue.
+> If these versions or later versions of Exchange and the MSDRM client are not installed, you will not be able to configure Exchange to use the connector. Check that these versions are installed before you continue.
 
 ### To configure Exchange servers to use the connector
 
