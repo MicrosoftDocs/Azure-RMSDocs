@@ -76,12 +76,16 @@ The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-inform
 
 - [Sample application](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) - The Sample for Microsoft RMS SDK v4.1 for Windows Store Applications provides a basic document consumption example for the platform.
 
+---
+
 ## PowerShell guidance
 We have PowerShell cmdlets for both rights management administration and bulk protection operations.
 
 [Azure Rights Management Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
 
 [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
+
+---
 
 ## Software development kits
 
