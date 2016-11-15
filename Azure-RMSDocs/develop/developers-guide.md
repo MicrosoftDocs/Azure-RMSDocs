@@ -6,7 +6,7 @@ description: Overview of developer tools use; SDKs, additional libraries, and co
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -17,7 +17,7 @@ ms.assetid: a22e6bd0-8ce8-45b4-9a32-273126ab831e
 #ROBOTS:
 audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,6 +34,7 @@ This guide outlines our growing set of tools and code samples that span all supp
 [**PowerShell guidance**](#powershell-guidance) - for both Rights Management administration and bulk protection operations.
 
 [**Software development kits**](#software-development-kits) - three generations of RMS SDKs including extensive support for Windows client and several mobile device operating systems.
+
 
 ---
 
