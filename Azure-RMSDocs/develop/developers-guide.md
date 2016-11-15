@@ -27,28 +27,15 @@ ms.suite: ems
 # Developer's Guide
 
 ## Overview ##
-This guide outlines our suite of Rights Management SDKs and a growing set of tools and code samples that span all supported platforms.
+This guide outlines our growing set of tools and code samples that span all supported platforms, a suite of Rights Management SDKs and PowerShell management  tools.
 
-| [**Software Development Kits**](#software-development-kits) | [**Code Samples**](#code-samples-and-tools) | [**PowerShell Guidance**](#powershell-guidance) |
+[**Code samples and tools**](#code-samples-and-tools) - a collection of Microsoft supplied RMS code samples and developer support tools that spans all supported operating systems; Android, iOS/OS X, Windows Phone and Windows Desktop and is updated periodically to maintained compatibility with its supported SDK.
 
-## Software development kits
+[**PowerShell guidance**](#powershell-guidance) - for both Rights Management administration and bulk protection operations.
 
+[**Software development kits**](#software-development-kits) - three generations of RMS SDKs including extensive support for Windows client and several mobile device operating systems.
 
-Three generations of RMS SDK are now available, outlined in the following table.
-
-| SDK | Description |
-|------|---------|
-| [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | A simplified, next-generation tool set that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services |
-| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | A powerful SDK offering for Windows desktop application developers and server based solution providers to enable their products with rights management|
-|[AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx)|** NOTE ** - AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista. It may be altered or unavailable in subsequent versions. Instead, use Microsoft Rights Management Services SDK 2.1, which leverages functionality exposed by the client in Msipc.dll.|
-|[AD RMS Scripting API](https://msdn.microsoft.com/en-us/library/bb968797.aspx)| Used to create scripts to administer an AD RMS installation|
-
-## PowerShell guidance
-
-
-[Azure Rights Management Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
-
-[RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
+---
 
 ## Code samples and tools
 
@@ -87,3 +74,22 @@ The following run on Windows Desktop supported by [RMS SDK 2.1](microsoft-inform
 - [UI Library for Windows Phone](https://github.com/AzureAD/rms-sdk-ui-for-winphone) - A UI Library for Microsoft RMS SDK v4.1 for Windows Phone Applications. This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.1
 
 - [Sample application](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) - The Sample for Microsoft RMS SDK v4.1 for Windows Store Applications provides a basic document consumption example for the platform.
+
+## PowerShell guidance
+We have PowerShell cmdlets for both rights management administration and bulk protection operations.
+
+[Azure Rights Management Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
+
+[RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
+
+## Software development kits
+
+
+Three generations of RMS SDK are now available, outlined in the following table.
+
+| SDK | Description |
+|------|---------|
+| [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | A simplified, next-generation tool set that provides a lightweight development experience for enabling your Android, iOS, Mac OS X, Windows Phone/RT and Linux/C++ device apps with information protection via Microsoft Rights Management services |
+| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | A powerful SDK offering for Windows desktop application developers and server based solution providers to enable their products with rights management|
+|[AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx)|** NOTE ** - AD RMS SDK leveraging functionality exposed by the client in Msdrm.dll is available for use in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista. It may be altered or unavailable in subsequent versions. Instead, use Microsoft Rights Management Services SDK 2.1, which leverages functionality exposed by the client in Msipc.dll.|
+|[AD RMS Scripting API](https://msdn.microsoft.com/en-us/library/bb968797.aspx)| Used to create scripts to administer an AD RMS installation|
