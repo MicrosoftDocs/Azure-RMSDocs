@@ -5,7 +5,7 @@
 #### [What problems does it solve?](azure-rms-problems-it-solves.md)
 #### [What do admins and users see?](what-admins-users-see.md)
 #### [How does it work?](how-does-it-work.md)
-## [RMS for individuals and Azure RMS](rms-for-individuals.md)
+## [RMS for individuals and Azure Information Protection](rms-for-individuals.md)
 ### [How users sign up for RMS for individuals](rms-for-individuals-user-sign-up.md)
 ### [Control the accounts created for RMS for individuals](rms-for-individuals-take-control.md)
 ### [Find out if your users have signed up for RMS for individuals](rms-for-individuals-identify-sign-up.md)
