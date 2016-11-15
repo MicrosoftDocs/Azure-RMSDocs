@@ -29,7 +29,11 @@ ms.suite: ems
 ## Overview ##
 This guide outlines our suite of Rights Management SDKs and a growing set of tools and code samples that span all supported platforms.
 
-## Software Development Kits ##
+| [Software Development Kits](#SDK) | [Code Samples](#Code) | [PowerShell Guidance](#PSh) |
+
+## Software Development Kits
+'id="SDK"'
+
 Three generations of RMS SDK are now available, outlined in the following table.
 
 | SDK | Description |
@@ -40,12 +44,14 @@ Three generations of RMS SDK are now available, outlined in the following table.
 |[AD RMS Scripting API](https://msdn.microsoft.com/en-us/library/bb968797.aspx)| Used to create scripts to administer an AD RMS installation|
 
 ## PowerShell guidance
+'id="PSh"'
 
 [Azure Rights Management Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
 
 [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
 
 ## Code Samples and Tools
+'id="Code"'
 This collection of Microsoft supplied RMS code samples and developer support tools spans all supported operating systems; Android, iOS/OS X, Windows Phone and Windows Desktop and is updated periodically to maintained compatibility with its supported SDK.
 
 ### Android
