@@ -29,11 +29,11 @@ ms.suite: ems
 ## Overview ##
 This guide outlines our growing set of tools and code samples that span all supported platforms, a suite of Rights Management SDKs and PowerShell management  tools.
 
-[**Code samples and tools**](#code-samples-and-tools) - a collection of Microsoft supplied RMS code samples and developer support tools that spans all supported operating systems; Android, iOS/OS X, Windows Phone and Windows Desktop and is updated periodically to maintained compatibility with its supported SDK.
+[**Code samples and tools**](#code-samples-and-tools) -  that span all supported operating systems; Android, iOS/OS X, Windows client and phone.
 
 [**PowerShell guidance**](#powershell-guidance) - for both Rights Management administration and bulk protection operations.
 
-[**Software development kits**](#software-development-kits) - three generations of RMS SDKs including extensive support for Windows client and several mobile device operating systems.
+[**Software development kits**](#software-development-kits) - providing support for several mobile device operating systems including Android, iOS as well as extensive support for Windows client.
 
 
 ---
