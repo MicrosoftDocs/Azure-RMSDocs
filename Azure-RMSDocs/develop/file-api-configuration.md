@@ -41,13 +41,13 @@ For more information about supported file formats, see **File API File Support D
 
 The following sections describe the keys and key values that control encryption.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
 **Type**: Key
 
 **Description**: Contains general configuration for the File API.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **Type**: Key
 
@@ -60,7 +60,7 @@ The following sections describe the keys and key values that control encryption.
 Set the **Encryption** value in the key to specify protection behavior. If the **Encryption** value is not set, the default behavior for the file type is observed.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
 **Type**: REG_SZ
 
