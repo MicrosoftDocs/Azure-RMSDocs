@@ -36,7 +36,7 @@ No, this is a common misconception. The Azure Rights Management service (and Mic
 
 For more information, see [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
 
-## What’s the difference between Azure Rights Management encryption and Office 365 encryption?
+## What’s the difference between Azure Rights Management encryption and encryption in other Microsoft cloud services?
 
 Microsoft provides multiple encryption technologies that enable you to protect your data for different, and often complementary scenarios. For example, while Office 365 offers encryption at-rest for data stored in Office 365, the Azure Rights Management service from Azure Information Protection independently encrypts your data so that it is protected regardless of where it is located or how it is transmitted.
 
