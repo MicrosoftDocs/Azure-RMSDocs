@@ -6,7 +6,7 @@ description: There are 3 settings in the Azure Information Protection policy tha
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 >*Applies to: Azure Information Protection*
 
-There are 3 settings in the Azure Information Protection policy that apply to all users, all devices:
+There are four settings in the Azure Information Protection policy that apply to all users, all devices:
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-settings.png)
 
@@ -55,6 +55,10 @@ To configure these settings:
     ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
 
     This option is not applicable for sub-labels.
+
+    - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection ) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the URL entered is accessible.
+    
+    For example, for your help desk, you might enter the Microsoft documentation page that includes information about installing the client (https://docs.microsoft.com/information-protection/rms-client/info-protect-client) or release version information (https://docs.microsoft.com/information-protection/rms-client/client-version-release-history). Alternatively, you might publish your own webpage that includes information for users that is issued by your help desk.
 
 3. To save your changes, click **Save**.
 
