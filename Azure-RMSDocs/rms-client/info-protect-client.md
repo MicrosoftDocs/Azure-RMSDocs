@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/01/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,7 +77,9 @@ You can use any of these options:
     
         You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
 
-    - In the **Help and feedback** section: Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. 
+    - In the **Help and feedback** section: The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [global settings](..deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+        
+        Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. 
     
         For diagnostic information and to reset the client, click **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to your help desk or Microsoft support. When the tests finish, you can also reset the client.
         
