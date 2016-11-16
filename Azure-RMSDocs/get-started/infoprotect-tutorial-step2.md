@@ -44,7 +44,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
 
-    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the four global settings are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and no custom help link for the client.
+    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the four global settings are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and the client is not configured for a custom help link.
 
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
 
