@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
