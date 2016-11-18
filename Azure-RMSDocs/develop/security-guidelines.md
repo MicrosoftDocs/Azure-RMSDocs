@@ -12,21 +12,18 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="identity"
-   ms.date="11/17/2016"
+   ms.date="11/18/2016"
    ms.author="bruceper" />
 
 # Security Best Practices for Azure Information Protection
 
-The Azure Information Protection (AIP) Software Development Kit (SDK) provides a robust system for publishing and consuming protected information of all types. To help an AIP   system be as strong as possible, AIP enabled applications must be built using AIP    best practices. Choosing to ignore some of these best practices can contribute to the compromise of the security of the AIP ecosystem. AIP enabled applications share responsibility for helping to maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
+The Azure Information Protection (AIP) Software Development Kit (SDK) provides a robust system for publishing and consuming protected information of all types. To help an AIP   system be as strong as possible, AIP enabled applications must be built using AIP    best practices. AIP enabled applications share responsibility for helping to maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
 
 Best practices for implementing applications by using the Azure Information Protection Software Development Kit (SDK) include the following categories of suggestions:
 - [Threat Models and Mitigations](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
 - [Security Attacks](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
 
-This information supplements the legal agreement that must be signed in order to obtain the digital certificates needed to implement applications using the AIP   SDK. These guidelines are organized by type of security threat and by standard of guideline: minimum standard, recommended, or preferred.
-
-To use the AIP SDK properly, you must be familiar with practices that help increase the protection of digital information at every stage of program flow. These guidelines provide important concepts both for application developers and for information owners who buy applications designed to help protect their intellectual property.
-Before using the production certificate to build an application for release, partners must have made a good-faith attempt to meet the minimum standards described in these topics. Their application must have passed the partner's own internal test cases that demonstrate meeting these criteria.
+This information supplements the legal agreement that must be signed in order to obtain the digital certificates needed to implement applications using the AIP SDK.
 
 ## Subjects Not Covered in These Topics
 These topics briefly describe the following issues, which are significant when attempting to create both a development environment and a secure application:
@@ -39,6 +36,7 @@ These topics briefly describe the following issues, which are significant when a
 
 ## Threat Models and Mitigations
 Digital information owners need to be able to evaluate the environments in which their assets will be decrypted. A statement of minimum security standards can provide information owners with a framework for understanding and assessing the security level of the applications to which they entrust their information.
+
 Some industries, such as government and health care, have certification and accreditation processes and standards that may apply to your product. Meeting these minimum security recommendations is not a substitute for the unique accreditation needs of your customers. However, the intent of the security standards is to help you prepare for current and future customer requirements, and any investment you make early in the development cycle will benefit your application. These are recommendations, not a formal Microsoft certification program.
 
 There are several major categories of vulnerabilities in a rights management services system including:
@@ -48,7 +46,7 @@ There are several major categories of vulnerabilities in a rights management ser
 
 These topics focus primarily on leakage issues. The integrity of a API system depends upon its ability, over time, to protect information, enabling access only to designated entities. These topics also touch upon corruption issues. Denial issues are not covered.
 
-Microsoft requires minimum security standards of partners who are building AIP enabled applications *and want to receive a signed certificate out of the production hierarchy (a production certificate)*. Partners attest to having met the minimum standards when they sign a legal agreement to obtain the production certificate. Microsoft does not test or review test results related to meeting the minimum standard; it is entirely up to the partner to ensure the minimum standards are met. Microsoft provides two additional levels of recommendations to help mitigate common threats. In general, these suggestions are additive — for example, meeting preferred recommendations assumes that you have met minimum standards, where applicable, unless otherwise specified.
+Microsoft does not test or review test results related to meeting the minimum standard; it is entirely up to the partner to ensure the minimum standards are met. Microsoft provides two additional levels of recommendations to help mitigate common threats. In general, these suggestions are additive; for example, meeting preferred recommendations assumes that you have met minimum standards, where applicable, unless otherwise specified.
 
 |Standard level|	Description|
 |---|---|
@@ -79,11 +77,7 @@ AIP does not support code modification at run time or modification of the import
 
 If your application does not correctly interpret and enforce the rights expressed in the AIP   issuance license, you may make information available in ways that the information owner did not intend. An example of this is when an application allows a user to save unencrypted information to new media when the issuance license only confers the right to view the information.
 
-The AIP system organizes rights into four groups:
-- **EDIT** — The EDIT right allows a user to create an AIP  encrypting object and an AIP   decrypting object; therefore, this user has permission to consume or publish information at will. The application itself must implement functionality for the rights that will actually be available for a user with the EDIT right and provide or prohibit access in the interface for the exercise of various rights.
-- **OWNER** — The OWNER right allows a user to exercise all rights in the license, whether or not they are specifically granted. It also allows the creation of both an AIP   encrypting object and an AIP   decrypting object. As in the case of a user who has the EDIT right, the application may limit the exercise of some rights by not providing the functionality to exercise the rights.
-- **VIEWRIGHTSDATA** — The AIP client allows a user granted the VIEWRIGHTSDATA right to reuse the license information. It grants the right to make an AIP   decrypting object, but it should ideally be used only for reusing the rights information from a license.
-- **All other rights** — Users with any other rights can create an AIP decrypting object only if the rights are specifically defined by the application and granted in the license and none of these rights allow the creation of an AIP  encrypting object. Users with these rights are limited to the functions explicitly allowed by the various rights.
+The AIP system organizes rights a few groupings. For more information, see [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 ### Azure Information Protection  
 API allows a user to either decrypt information or not; the information does not have any inherent protection. If a user has the right to decrypt information, the API permits it, and the application is responsible for managing or protecting that information after it is in the clear. An application is responsible for managing its environment and interface to prevent the unauthorized use of information; for example, disabling the **Print** and **Copy** buttons if a license only grants the PLAY right. Your test suite should verify that your application acts correctly on all the license rights that it recognizes.
