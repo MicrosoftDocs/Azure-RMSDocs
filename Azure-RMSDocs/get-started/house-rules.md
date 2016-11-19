@@ -30,7 +30,9 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-If you have feedback about the documentation on this page, we would love to hear from you. For example, if you have a clarifying question about the information documented, want to report a problem with the documentation, or can’t find the information that you need. Please note that these posts are public and visible to everybody. 
+If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information documented, want to report a problem with the documentation, or can’t find the information that you need. 
+
+Before you post, make sure that your comment is relevant to the page where you are posting (or your sidenote is relevant to the paragraph). These posts are public and visible to everybody. If your post is not relevant or it is outside the scope of our house rules (see below), expect it to be deleted.
  
 Livefyre posts and sidenotes should not be used for the following:
  
