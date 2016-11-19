@@ -43,7 +43,7 @@ Livefyre posts and sidenotes should not be used for the following:
 - **Documentation design feedback**. For example, you want to report a problem or request a few feature for all documentation pages on the docs.microsoft.com site. Instead, visit our [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](https://docs.microsoft.com/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
 
 
-You’ll find additional resources in [Information and support for Azure Information Protection](..get-started/information-support.md). 
+You’ll find additional resources in [Information and support for Azure Information Protection](../get-started/information-support.md). 
  
 
 Note: If you are a Microsoft employee,  please use internal communication channels.
