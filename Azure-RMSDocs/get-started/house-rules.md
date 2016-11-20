@@ -49,6 +49,4 @@ You’ll find additional resources in [Information and support for Azure Informa
  
 
 Note: If you are a Microsoft employee,  please use internal communication channels.
- 
-
 
