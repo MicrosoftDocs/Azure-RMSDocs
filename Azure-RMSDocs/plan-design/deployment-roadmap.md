@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -104,6 +104,8 @@ Optionally, consider configuring the following:
 1. Update your Azure Information Protection policy to apply data protection
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
+    
+    Note that labels in Outlook that apply Rights Management protection require additional configuration: Exchange must be configured to use information rights management (IRM). If you are using Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration). If you are using Exchange on-premises, you must deploy and configure the [RMS connector and your Exchange servers](../deploy-use/deploy-rms-connector.md).
 
 2. Deploy the Rights Management sharing application
     
