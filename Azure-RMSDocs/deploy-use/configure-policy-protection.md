@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails by using a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,6 +51,8 @@ For more information about Azure Rights Management and how it works, see [What i
 
 > [!IMPORTANT]
 > To configure a label to apply Azure Rights Management protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+>
+>In addition, Exchange must be configured for information rights management (IRM) before users can apply labels in Outlook that apply Rights Management protection by using templates or the Do Not Forward option. If you are using Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration). If you are using Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
 
 ## To configure a label to apply Rights Management protection
