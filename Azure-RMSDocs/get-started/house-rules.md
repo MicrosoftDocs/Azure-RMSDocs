@@ -6,7 +6,7 @@ description: Scope and intent for Livefyre posts and sidebars for the Azure Info
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/19/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information documented, want to report a problem with the documentation, or can’t find the information that you need. 
+If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information documented, want to report an inaccuracy in the documentation, or can’t find the information that you need. 
 
 Before you post, make sure that your comment is relevant to the page where you are posting (or your sidenote is relevant to the paragraph). These posts are public and visible to everybody. If your post is not relevant or it is outside the scope of our house rules (see below), expect it to be deleted.
  
@@ -44,9 +44,7 @@ Livefyre posts and sidenotes should not be used for the following:
 
 - **Documentation design feedback**. For example, you want to report a problem or request a few feature for all documentation pages on the docs.microsoft.com site. Instead, visit our [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](https://docs.microsoft.com/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
 
-
 You’ll find additional resources in [Information and support for Azure Information Protection](../get-started/information-support.md). 
- 
 
 Note: If you are a Microsoft employee,  please use internal communication channels.
 
