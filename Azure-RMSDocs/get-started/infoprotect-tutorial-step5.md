@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/21/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -134,6 +134,8 @@ You can return to this site to track further activity for your protected documen
 ## Next Steps
 
 Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
+
+Note that when testing Outlook for labels that apply protection, Exchange must first be configured for Azure Rights Management. If you are using Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration). If you are using Exchange on-premises, you must deploy and configure the [RMS connector and your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
 Try sharing more documents and track how they are being used, and confirm how document revocation works.
 
