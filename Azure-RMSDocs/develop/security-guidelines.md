@@ -1,5 +1,5 @@
 ﻿<properties
-  pageTitle="Security Best Practices for Azure Information Protection  | Microsoft Azure"
+  pageTitle="Security Best Practices | Microsoft Information Protection"
   description="RMS-enabled applications are best built using Azure Information Protection best practices."
   services="rights-management"
   documentationCenter=""
@@ -12,7 +12,7 @@
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="identity"
-   ms.date="11/18/2016"
+   ms.date="11/21/2016"
    ms.author="bruceper" />
 
 # Security Best Practices for Azure Information Protection
