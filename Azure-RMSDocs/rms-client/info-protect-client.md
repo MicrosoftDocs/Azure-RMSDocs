@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -75,7 +75,7 @@ You can use any of these options:
 
     - In the **client status** section: Use the **Version** value to verify that the installation was successful. In addition, you see when the client last connected to your organization's Azure Information Protection service and when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy. If you have made policy changes after the displayed time, close and reopen the Office application.
     
-        You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory.
+        You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
     - In the **Help and feedback** section: The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [global settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
         
