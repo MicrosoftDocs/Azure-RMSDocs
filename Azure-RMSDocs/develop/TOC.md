@@ -55,6 +55,7 @@
 #### [How-to: work with encryption settings](working-with-encryption.md)
 #### [Application types](application-types.md)
 #### [File API configuration](file-api-configuration.md)
+#### [Security guide](security-guidelines.md)
 #### [Supported file formats](supported-file-formats.md)
 #### [Supported platforms](supported-platforms.md)
 #### [Understanding usage restrictions](understanding-usage-restrictions.md)
