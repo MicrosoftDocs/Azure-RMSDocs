@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails by using a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/21/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,8 +51,12 @@ For more information about Azure Rights Management and how it works, see [What i
 
 > [!IMPORTANT]
 > To configure a label to apply Azure Rights Management protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
->
->In addition, Exchange must be configured for information rights management (IRM) before users can apply labels in Outlook that apply Rights Management protection by using templates or the Do Not Forward option. If you are using Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration). If you are using Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
+
+Exchange does not have to be configured for information rights management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook Web Access, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for rights management protection. To configure Exchange to support these additional scenarios, see the following resources:
+
+- For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+- For Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
 
 ## To configure a label to apply Rights Management protection
