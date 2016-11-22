@@ -12,7 +12,7 @@
    ms.topic: "article"
    ms.tgt_pltfrm: "na"
    ms.workload: "identity"
-   ms.date: "11/21/2016"
+   ms.date: "11/22/2016"
    ms.author: "bruceper"
 ---
 
@@ -42,13 +42,19 @@ These scripts, generally used by Azure Rights management administrators, are use
 
 
 ## User Applications
-User applications are created with our lightweight RMS SDK 4.2. Applications of this type allow users who are on devices running iOS, Android, OS X, Linux or, Windows Phone to consume protected content.
+User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
+The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
+
 
 - [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content. <new link for this when it moves to github >
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 
-### Development environment setup guides
-|[![iOS setup](../media/ios-bug.png)](ios-sdk.md) | [![Android setup](../media/android-bug.png)](android-sdk.md) | [![Windows Phone setup](../media/windows-bug.png)](windows-phone-apps.md)| [![Linux setup](../media/linux-bug.png)](linux-setup.md)|
+### Development environment
+The following guides lead you through OS specific setup steps for an application development environment using common tools.
+- [iOS setup](ios-sdk.md)
+- [Android setup](android-sdk.md)
+- [Windows Phone setup](windows-phone-apps.md)
+- [Linux setup](linux-setup.md)|
 
 ## How-tos
 Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
@@ -56,7 +62,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 |Service Application| User Application|
 |:---:|:---:|
 |[How to add explicit owner rights](add-explicit-owner-rights.md)|[How to use built in rights](built-in-rights-usage-restriction-reference.md) |
-| [How to set the API security mode](setting-the-api-security-mode-api-model.md) | |
+| [How to set the API security mode](setting-the-api-security-mode-api-mode.md) | |
 | [How to enable document tracking and revocation](tracking-content.md) | [How to use document tracking](how-to-use-document-tracking) |
 |[Enable your service applications to work cloud Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)||
 |[How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)|[How to enable error and performance logging](enabling-logging.md)|
@@ -88,3 +94,4 @@ These videos are from this year's Ignite conference
 - [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
 - [AD RMS Scripting Tool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
 - [Windows Client SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
+- [Security best practice guide](security-guidelines.md)
