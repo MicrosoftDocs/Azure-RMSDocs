@@ -39,6 +39,7 @@ This section covers specific guidance for several important development scenario
 - [How-to: work with encryption settings](working-with-encryption.md) - This topic orients you to our encryption packages and shows some code snips for their use.
 - [Application types](application-types.md) - This topic covers types of applications that you might choose to create as rights-enabled.
 - [File API configuration](file-api-configuration.md) - The File API's behavior can be configured through settings in the registry.
+- [Security guidelines](security-guidelines.md) - provides orientation and direction to application developers for working well within the AIP ecosystem.
 - [Supported file formats](supported-file-formats.md) - The File API supports native and Pfile formats
 - [Supported platforms](supported-platforms.md) - This topic identifies the RMS SDK 2.1 supported client and server platforms.
 - [Understanding usage restrictions](understanding-usage-restrictions.md) - All RMS enabled applications must enforce usage restrictions.
