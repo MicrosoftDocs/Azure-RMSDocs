@@ -105,7 +105,7 @@ Optionally, consider configuring the following:
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
     
-    Note that users can apply labels in Outlook that apply Rights Management protection without requiring Exchange to be configured for information rights management (IRM). However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 3 for Exchange Online, and step 6 for Exchange on-premises. 
+    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 3 for Exchange Online, and step 6 for Exchange on-premises. 
 
 2. Deploy the Rights Management sharing application
     
