@@ -97,18 +97,18 @@ These videos are from this year's Ignite conference
 - [Learn how classification, labeling and protection delivers persistent data protection](https://myignite.microsoft.com/videos/2786)
 
 
-### Other resources
+## Other resources
 - [Security best practice guide](security-guidelines.md)
 - [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
 - [RMS Frequently Asked Questions](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)
 
-#### Support articles
+### Support articles
 - [File API Configuration](file-api-configuration.md)
 - [Supported file formats](supported-file-formats.md)
 - [Supported platforms](supported-platforms.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
 
-#### API reference
+### API reference
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
   - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
@@ -116,6 +116,6 @@ These videos are from this year's Ignite conference
 - [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 - [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
 
-#### Previous versions
+### Previous versions
 - [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
 - [AD RMS Scripting Tool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
