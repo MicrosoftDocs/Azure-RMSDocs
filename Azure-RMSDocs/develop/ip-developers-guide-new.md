@@ -63,7 +63,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 |:---:|:---:|
 |[How to add explicit owner rights](add-explicit-owner-rights.md)|[How to use built in rights](built-in-rights-usage-restriction-reference.md) |
 | [How to set the API security mode](setting-the-api-security-mode-api-mode.md) | |
-| [How to enable document tracking and revocation](tracking-content.md) | [How to use document tracking](how-to-use-document-tracking) |
+| [How to enable document tracking and revocation](tracking-content.md) | [How to use document tracking](how-to-use-document-tracking.md) |
 |[Enable your service applications to work cloud Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)||
 |[How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)|[How to enable error and performance logging](enabling-logging.md)|
 |[File API configuration](file-api-configuration.md)||
