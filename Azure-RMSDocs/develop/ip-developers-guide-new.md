@@ -77,6 +77,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [How to use ADAL authentication](how-to-use-adal-authentication.md)
 - [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
 - [How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)
+- [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 
 ### User Application
 - [Configure Azure RMS for ADAL authentication](adal-auth.md)
@@ -84,6 +85,8 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [How to register and RMS enable your app with Azure AD](authentication-integration.md)
 - [How to use built in rights](built-in-rights-usage-restriction-reference.md)
 - [How to use document tracking](how-to-use-document-tracking.md)
+
+
 
 
 
@@ -107,7 +110,7 @@ These videos are from this year's Ignite conference
 - [Supported file formats](supported-file-formats.md)
 - [Supported platforms](supported-platforms.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
-- [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+
 
 ### API reference
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
