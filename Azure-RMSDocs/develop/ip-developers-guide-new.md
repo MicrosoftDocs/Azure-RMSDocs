@@ -24,7 +24,6 @@ ms.reviewer: kartikk
 ---
 
 # Azure Information Protection Developer's Guide
->*Applies to: Azure Information Protection*
 
 Using Rights Management Services (RMS), the development aspect of Azure Information Protection, you will be able to rights-enable new and existing applications of different types for a range of supported platforms.
 
