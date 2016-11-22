@@ -71,15 +71,19 @@ Each of the following topics presents specific guidance for an aspect of impleme
 |Service Application| User Application|
 |:---:|:---:|
 |[How to add explicit owner rights](add-explicit-owner-rights.md)|[How to use built in rights](built-in-rights-usage-restriction-reference.md) |
-| [How to set the API security mode](setting-the-api-security-mode-api-mode.md) | |
 | [How to enable document tracking and revocation](tracking-content.md) | [How to use document tracking](how-to-use-document-tracking.md) |
+|[How to use ADAL authentication](how-to-use-adal-authentication.md)|[How to register and RMS enable your app with Azure AD](authentication-integration.md)|
+|[Configure Azure RMS for ADAL authentication](adal-auth.md)|[Configure Azure RMS for ADAL authentication](adal-auth.md)|
+| [How to set the API security mode](setting-the-api-security-mode-api-mode.md) | |
 |[Enable your service applications to work cloud Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)||
-|[How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)|[How to enable error and performance logging](enabling-logging.md)|
+|[How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)||
 |[File API configuration](file-api-configuration.md)||
 |[How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)||
-|[How to use ADAL authentication](how-to-use-adal-authentication.md)|[How to register and RMS enable your app with Azure AD](authentication-integration.md)|
+||[How to enable error and performance logging](enabling-logging.md)|
 
-Works with both the service and user SDKs - [Configure Azure RMS for ADAL authentication](adal-auth.md)
+
+
+ works with both service and user applications
 
 
 ## Videos
@@ -99,12 +103,13 @@ These videos are from this year's Ignite conference
 
 #### Support articles
 - [File API Configuration](file-api-configuration.md)
+- [Understanding usage restrictions](understanding-usage-restrictions.md)
 - [Supported file formats](supported-file-formats.md)
 - [Supported platforms](supported-platforms.md)
 
 #### API reference
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
-  - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
+- [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
 - [Android API reference](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
 - [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
