@@ -42,8 +42,7 @@ This section covers specific guidance for several important development scenario
 - [Security guidelines](security-guidelines.md) - provides orientation and direction to application developers for working well within the AIP ecosystem.
 - [Supported file formats](supported-file-formats.md) - The File API supports native and Pfile formats
 - [Supported platforms](supported-platforms.md) - This topic identifies the RMS SDK 2.1 supported client and server platforms.
-- [Understanding usage restrictions](understanding-usage-restrictions.md) - All RMS enabled applications must enforce usage restrictions.
-- [Usage restriction reference](usage-restriction-reference.md) - Usage restrictions are defined by the constants listed in this topic.
+- [Understanding usage restrictions](understanding-usage-restrictions.md) - All RMS enabled applications must enforce usage restrictions which are defined by the constants listed in this topic.
 
  
 ## Related topics
