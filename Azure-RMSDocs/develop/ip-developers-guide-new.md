@@ -1,19 +1,20 @@
-﻿<properties
-  pageTitle="Azure Information Protection Developer's Guide | Microsoft Azure"
-  description="Developers can use RMS to protect and manage files of all types"
-  services="rights-management"
-  documentationCenter=""
-  authors="BrucePerlerMS"
-  manager="mbaldwin"
-  editor="bruceper"/>
-<tags
-   ms.service="information-protection"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="identity"
-   ms.date="11/16/2016"
-   ms.author="bruceper" />
+﻿---
+  pageTitle: "Azure Information Protection Developer's Guide | Azure Information Protection"
+  description: "Developers can use RMS to protect and manage files of all types"
+  services: "rights-management"
+  documentationCenter: ""
+  authors: "BrucePerlerMS"
+  manager: "mbaldwin"
+  editor: "bruceper"
+
+   ms.service: "information-protection"
+   ms.devlang: "na"
+   ms.topic: "article"
+   ms.tgt_pltfrm: "na"
+   ms.workload: "identity"
+   ms.date: "11/21/2016"
+   ms.author: "bruceper"
+---
 
 # Azure Information Protection Developer's Guide
 Using Rights Management Services (RMS), the development aspect of Azure Information Protection, you will be able to rights-enable new and existing applications of different types for a range of supported platforms.
