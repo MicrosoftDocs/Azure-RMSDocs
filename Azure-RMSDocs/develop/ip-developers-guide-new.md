@@ -68,17 +68,23 @@ The following guides lead you through OS specific setup steps for an application
 ## How-tos
 Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
 
-|Service Application| User Application|
-|:---:|:---:|
-||[How to enable error and performance logging](enabling-logging.md)|
-|[How to add explicit owner rights](add-explicit-owner-rights.md)|[How to use built in rights](built-in-rights-usage-restriction-reference.md) |
-| [How to enable document tracking and revocation](tracking-content.md) | [How to use document tracking](how-to-use-document-tracking.md) |
-|[How to use ADAL authentication](how-to-use-adal-authentication.md)|[How to register and RMS enable your app with Azure AD](authentication-integration.md)|
-|[Configure Azure RMS for ADAL authentication](adal-auth.md)|[Configure Azure RMS for ADAL authentication](adal-auth.md)|
-| [How to set the API security mode](setting-the-api-security-mode-api-mode.md) | |
-|[Enable your service applications to work cloud Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)||
-|[How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)||
-|[How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)| |
+### Service Application
+- [Configure Azure RMS for ADAL authentication](adal-auth.md)
+- [Enable your service applications to use Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)
+- [File API Configuration](file-api-configuration.md)
+- [How to set the API security mode](setting-the-api-security-mode-api-mode.md)
+- [How to add explicit owner rights](add-explicit-owner-rights.md)
+- [How to enable document tracking and revocation](tracking-content.md)
+- [How to use ADAL authentication](how-to-use-adal-authentication.md)
+- [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
+- [How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)
+
+### User Application
+- [Configure Azure RMS for ADAL authentication](adal-auth.md)
+- [How to enable error and performance logging](enabling-logging.md)
+- [How to register and RMS enable your app with Azure AD](authentication-integration.md)
+- [How to use built in rights](built-in-rights-usage-restriction-reference.md)
+- [How to use document tracking](how-to-use-document-tracking.md)
 
 
 
