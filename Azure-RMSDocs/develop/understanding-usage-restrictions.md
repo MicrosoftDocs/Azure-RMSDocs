@@ -76,7 +76,7 @@ Each user right, listed in the AD RMS right column, has a description, an enforc
 ## Related topics
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
-* [Usage restriction reference](usage-restriction-reference.md)
+
  
 
  
