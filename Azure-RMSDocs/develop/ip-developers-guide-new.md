@@ -1,22 +1,31 @@
 ﻿---
-  pageTitle: "Azure Information Protection Developer's Guide | Azure Information Protection"
-  description: "Developers can use RMS to protect and manage files of all types"
-  services: "rights-management"
-  documentationCenter: ""
-  authors: "BrucePerlerMS"
-  manager: "mbaldwin"
-  editor: "bruceper"
+# required metadata
 
-   ms.service: "information-protection"
-   ms.devlang: "na"
-   ms.topic: "article"
-   ms.tgt_pltfrm: "na"
-   ms.workload: "identity"
-   ms.date: "11/22/2016"
-   ms.author: "bruceper"
+title: Azure Information Protection Developer's Guide | Azure Information Protection
+description: Developers can use RMS to protect and manage files of all types
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.date: 11/22/2016
+ms.topic: article
+ms.prod:
+ms.service: information-protection
+ms.technology: techgroup-identity
+ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
+ms.suite: ems
+ms.reviewer: kartikk
+
+# optional metadata
+#ROBOTS:
+#audience:
+#ms.devlang:
+#ms.tgt_pltfrm: "na"
+
 ---
 
 # Azure Information Protection Developer's Guide
+>*Applies to: Azure Information Protection*
+
 Using Rights Management Services (RMS), the development aspect of Azure Information Protection, you will be able to rights-enable new and existing applications of different types for a range of supported platforms.
 
 - [Service applications](#service-applications)
@@ -46,7 +55,7 @@ User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
 The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
 
 
-- [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) is a sample RMS-enabled application that takes you through the basic steps that each RMS-enabled application should perform when protecting and consuming restricted content. <new link for this when it moves to github >
+- [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) is a sample RMS-enabled application that takes you through the basic steps each RMS-enabled application should perform when protecting and consuming restricted content.
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 
 ### Development environment
@@ -84,14 +93,20 @@ These videos are from this year's Ignite conference
 
 
 ### Other resources
-- The [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/) is an active hub for the Information Protection developer.
-- [Windows Client API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
-- List out all the 2.1 SDK menu - Kartik, please explain
+- [Security best practice guide](security-guidelines.md)
+- [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
+- [RMS Frequently Asked Questions](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)
+#### Support articles
+- [File API Configuration](file-api-configuration.md)
+- [Supported file formats](supported-file-formats.md)
+- [Supported platforms](supported-platforms.md)
+#### API reference
+- [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
+  - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
 - [Android API reference](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
 - [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 - [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
+#### Previous versions
 - [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
 - [AD RMS Scripting Tool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
-- [Windows Client SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
-- [Security best practice guide](security-guidelines.md)
