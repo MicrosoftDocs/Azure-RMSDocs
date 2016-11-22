@@ -107,6 +107,7 @@ These videos are from this year's Ignite conference
 - [Supported file formats](supported-file-formats.md)
 - [Supported platforms](supported-platforms.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
+- [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 
 ### API reference
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
