@@ -176,7 +176,7 @@ Additionally:
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
-- If you want to delete the currently downloaded Azure Information Protection policy, you can do so by deleting the Policy.msip file from the %localappdata%\microsoft\msip folder.
+- If you want to delete the currently downloaded Azure Information Protection policy, you can do so by deleting the **Policy.msip** file from the %localappdata%\Microsoft\MSIP folder.
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
