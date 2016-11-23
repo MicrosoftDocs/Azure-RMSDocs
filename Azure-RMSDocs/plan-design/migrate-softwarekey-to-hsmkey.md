@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -149,7 +149,7 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
     When prompted, enter the password that you specified earlier for the configration data file, and confirm that you want to perform this action.
 
-    If you have more than one configuration data file, repeat this command for the remainder of these files. But for these files, set **-Active** to **false** when you run the Import command.
+    If you have more than one configuration data file, repeat this command for the remainder of these files. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. But for these files, set **-Active** to **false** when you run the Import command.
 
 
 
