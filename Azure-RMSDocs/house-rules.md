@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: House rules for customer posts on the Microsoft documentation site for Azure Information Protection | Azure Information Protection
-description: Scope and intent for Livefyre posts and sidebars for the Azure Information Protection documentation.
+title: House rules for customer comments on the Microsoft documentation site for Azure Information Protection | Azure Information Protection
+description: Scope and intent for Livefyre comments and sidebars for the Azure Information Protection documentation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -26,15 +26,15 @@ ms.suite: ems
 
 ---
 
-# House rules for customer posts on the Microsoft documentation site for Azure Information Protection
+# House rules for customer comments on the documentation site for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
 If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information documented, want to report an inaccuracy in the documentation, or can’t find the information that you need. 
 
-Before you post, make sure that your comment is relevant to the page where you are posting (or your sidenote is relevant to the paragraph). These posts are public and visible to everybody. If your post is not relevant or it is outside the scope of our house rules (see below), expect it to be deleted.
+Before you post your comment, make sure that it's relevant to the page where you are posting. These posts are public and visible to everybody. If your post is not relevant or it is outside the scope of our house rules (see below), expect it to be deleted.
  
-Livefyre posts and sidenotes should not be used for the following:
+Livefyre comments and sidenotes should not be used for the following:
  
 - **Technical support**. For example, a feature isn’t working after checking any requirements and following the documentation instructions, or you have a question about licensing. Instead, use your standard support channels or [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support).
 
