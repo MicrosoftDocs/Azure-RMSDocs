@@ -6,7 +6,7 @@ description: Phase 1 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -80,6 +80,12 @@ Do the following procedure on all AD RMS clusters, for all trusted publishing do
     -   Do not select the checkbox to save the trusted domain file in RMS version 1.0.
 
 When you have exported all the trusted publishing domains, you’re ready to start the procedure to import this data to Azure Information Protection.
+
+> [!IMPORTANT]
+> The trusted publishing domains include the keys to decrypt previously protected files, so it's important that you export (and later import into Azure) all the trusted publishing domains and not just the currently active one.
+>  
+> For example, you will have multiple trusted publishing domains if you upgraded your AD RMS servers from Cryptographic Mode 1 to Cryptographic Mode 2. If you do not export and import the trusted publishing domain that contains your archived key that used Cryptographic Mode 1, users will not be able to open content that was protected with the Cryptographic Mode 1 key after they are migrated to Azure Information Protection.
+
 
 ### Import the configuration data to Azure Information Protection
 The exact procedures for this step depend on your current AD RMS deployment configuration, and your preferred topology for your Azure Information Protection tenant key.
