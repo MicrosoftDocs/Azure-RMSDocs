@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -62,7 +62,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
     For example: First run **$TPD_Password = Read-Host -AsSecureString** and enter the password that you specified earlier. Then run **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. When prompted, confirm that you want to perform this action.
     
-4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
+4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
 5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
 
