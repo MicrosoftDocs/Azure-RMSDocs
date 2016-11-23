@@ -83,7 +83,7 @@ When you have exported all the trusted publishing domains, you’re ready to sta
 
 Note that the trusted publishing domains include the keys to decrypt previously protected files, so it's important that you export (and later import into Azure) all the trusted publishing domains and not just the currently active one.
 
-For example, you will have multiple trusted publishing domains if you upgraded your AD RMS servers from Cryptographic Mode 1 to Cryptographic Mode 2. If you do not export and import the trusted publishing domain that contains your archived key that used Cryptographic Mode 1, users will not be able to open content that was protected with the Cryptographic Mode 1 key after these users are migrated to Azure Information Protection.
+For example, you will have multiple trusted publishing domains if you upgraded your AD RMS servers from Cryptographic Mode 1 to Cryptographic Mode 2. If you do not export and import the trusted publishing domain that contains your archived key that used Cryptographic Mode 1, at the end of the migration, users will not be able to open content that was protected with the Cryptographic Mode 1 key.
 
 
 ### Import the configuration data to Azure Information Protection
