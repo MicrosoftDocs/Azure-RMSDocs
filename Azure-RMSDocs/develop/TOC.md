@@ -59,7 +59,6 @@
 #### [Supported file formats](supported-file-formats.md)
 #### [Supported platforms](supported-platforms.md)
 #### [Understanding usage restrictions](understanding-usage-restrictions.md)
-#### [Usage restriction reference](usage-restriction-reference.md)
 ### [API Reference](api-reference-2-1.md)
 #### [Constants](https://msdn.microsoft.com/library/hh535291.aspx)
 #### [Data types](https://msdn.microsoft.com/library/hh535288.aspx)

@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,8 +43,6 @@ Use the following information to see what’s new or changed in a release. The m
 **Released**: 10/27/2016
 
 **Fixes**:
-
-- You can successfully apply a label that protects content when you use Office 2010 and your environment has not been initialized for the Azure Rights Management service (also known as "bootstrapping").
 
 - Client installation completes when the Windows Update service is disabled.
 
