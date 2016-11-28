@@ -6,7 +6,7 @@ description: Developers can use RMS to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 11/22/2016
+ms.date: 11/28/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,6 +77,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [How to use ADAL authentication](how-to-use-adal-authentication.md)
 - [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
 - [How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)
+#### Other useful how-to articles for AIP developers
 - [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 
 ### User Application
@@ -104,6 +105,7 @@ These videos are from this year's Ignite conference
 - [Security best practice guide](security-guidelines.md)
 - [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
 - [RMS Frequently Asked Questions](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)
+
 
 ### Support articles
 - [File API Configuration](file-api-configuration.md)
