@@ -1,4 +1,3 @@
-e hi---
 # required metadata
 
 title: Compliance and supporting information | Azure Information Protection
