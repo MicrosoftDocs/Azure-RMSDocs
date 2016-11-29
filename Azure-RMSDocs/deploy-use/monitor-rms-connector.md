@@ -6,7 +6,7 @@ description: Information to help you monitor the connector and your organization
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -169,9 +169,11 @@ If you have recently added new server accounts to use the connector, a good coun
 
 ## RMS Analyzer
 
-You can use the Rights Management Services Analyzer tool to help you monitor the health of the connector and identify any configuration issues.
+Although this tool comes with "as-is" support, you can use the Rights Management Services Analyzer tool to help you monitor the health of the connector and identify any configuration issues. If you haven't already downloaded this tool, you can do so from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437). 
 
-If you haven't already downloaded this tool, you can do so from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and then install it on any computer that has access to the Internet and that can connect to the RMS connector. Run the tool, and on the **Welcome** page, select the **Azure RMS connector** option.
+Sign in to one of the servers that you configured for the RMS connector, using an account that you authorized to use the connector for that workload. For example, if you configured the RMS connector for Exchange, sign in on that server by using one of the accounts that you authorized for Exchange in the RMS connector configuration tool. Then run the RMS Analyzer tool with the **Run as administrator** option.
+
+When the tool loads, on the **Welcome** page, select the **Azure RMS connector** option. Enter your RMS connector URL as the active address, and click the green arrow. You should see your tenant details displayed, which confirms that the connector can connect successfully to the Azure Rights Management service. If this initial test fails, be sure to check for proxy server configuration and firewalls that might be blocking server traffic. After your tenant details successfully display, you can then continue to run the diagnostic tests for that server workload, which checks for things like supported version numbers, prerequisites, and registry settings.
 
 For additional information and instructions, see the **Details** and **Install Instructions** on the download page.
 
