@@ -59,10 +59,8 @@ The 4.2 version is a REST based client. The 2.1 version is used for building nat
 
 ## Development environment
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
-- [iOS setup](ios-sdk.md)
-- [Android setup](android-sdk.md)
-- [Windows Phone setup](windows-phone-apps.md)
-- [Linux setup](linux-setup.md)
+
+|[![iOS/OS X setup](../media/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/linux-icon.png)](linux-setup.md) |
 
 ## How-tos
 Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
