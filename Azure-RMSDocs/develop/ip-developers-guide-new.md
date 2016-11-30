@@ -78,29 +78,24 @@ The following guides lead you through OS specific setup steps for an application
 ## How-tos
 Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
 
-### Service Application
-- [Configure Azure RMS for ADAL authentication](adal-auth.md)
-- [Enable your service applications to use Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)
-- [File API Configuration](file-api-configuration.md)
-- [How to set the API security mode](setting-the-api-security-mode-api-mode.md)
-- [How to add explicit owner rights](add-explicit-owner-rights.md)
+### General
 - [How to enable document tracking and revocation](tracking-content.md)
-- [How to use ADAL authentication](how-to-use-adal-authentication.md)
-- [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
-- [How to debug a rights enabled application](debugging-applications-that-use-ad-rms.md)
-#### Other useful how-to articles for AIP developers
-- [How to configure your App Service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
-
-### User Application
-- [Configure Azure RMS for ADAL authentication](adal-auth.md)
-- [How to enable error and performance logging](enabling-logging.md)
-- [How to register and RMS enable your app with Azure AD](authentication-integration.md)
-- [How to use built in rights](built-in-rights-usage-restriction-reference.md)
 - [How to use document tracking](how-to-use-document-tracking.md)
+- [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
 
+### Security and authentication
+- [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [How to use ADAL authentication](how-to-use-adal-authentication.md)
+- [Configuring Azure RMS for authentication](adal-auth.md)
+- [How to set the API security mode](setting-the-api-security-mode-api-mode.md)
+- [Enable your service applications to use Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)
+- [How to register and RMS enable your app with Azure AD](authentication-integration.md)
 
-
-
+### Configuration and performance management
+- [How to add explicit owner rights](add-explicit-owner-rights.md)
+- [How to use built in rights](built-in-rights-usage-restriction-reference.md)
+- [How to enable error and performance logging](enabling-logging.md)
+- [File API Configuration](file-api-configuration.md)
 
 ## Videos
 Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
@@ -119,7 +114,6 @@ These videos are from this year's Ignite conference
 
 
 ### Support articles
-- [File API Configuration](file-api-configuration.md)
 - [Supported file formats](supported-file-formats.md)
 - [Supported platforms](supported-platforms.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
@@ -128,10 +122,11 @@ These videos are from this year's Ignite conference
 ### API reference
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
   - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
+- [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
 - [iOS/OSX API reference](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
 - [Android API reference](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
 - [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
-- [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
+
 
 ### Previous versions
 - [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
