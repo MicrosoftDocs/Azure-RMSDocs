@@ -26,8 +26,8 @@ ms.reviewer: kartikk
 # Azure Information Protection Developer's Guide
 
 This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service. The intent of this guide is allow developers who want to leverage the rights management system to build different types of applications for a range of supported platforms.
-[!NOTE]
->The current Azure Information protection SDK has the rights management component and the classification and labelling are under development.
+
+>The current Azure Information Protection SDK has the rights management component and the classification and labelling are under development.
 
 - [Service applications](#service-applications)
 - [User applications](#user-applications)
@@ -38,15 +38,15 @@ This guide will orient you to tools for extending and integrating with Azure Inf
 - [Other resources](#other-resources)
 
 ## Service Applications
-Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Leakage Protection (DLP) and Cloud Application Security (CAS) applications are examples of service applications. The SDK comes in the following types. Our SDK for developing service applications is available through two programming models.
+Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Leakage Protection (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
 
 - [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
 - [C# Managed API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 
 ### Examples of service applications
-- [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
-- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure application to protect data in Azure Blob Storage.
+- [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled DLP application that takes you through the basic steps that a DLP RMS-enabled application should perform by using the RMS File API for protecting and consuming restricted content.
+- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure applications to protect data in an Azure Blob Storage.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
 
 ## PowerShell guides
