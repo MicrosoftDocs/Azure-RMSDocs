@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,11 +43,7 @@ The current release has the following limitations. Look out for announcements on
 
 - You can apply labels to Office file types and Outlook email messages only.
 
-- Labels on the Office add-in are visible to all users who have the Azure Information Protection client installed.
-
 - Label names and tooltips are supported in one language only.
-
-- Files cannot be classified from Windows File Explorer.
 
 - There is no centralized logging for classification and labeling.
 
@@ -67,7 +63,7 @@ However, if you select the option to install the demo policy when you install th
 
 ## Which options in the Azure portal are P1 or P2?
 
-To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, as a general guide, the advanced features such as automatic classification and hold your own key (HYOK) are specific to the Azure Information Protection Premium 2 subscription.
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 

@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails by using a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,7 +65,9 @@ Exchange does not have to be configured for information rights management (IRM) 
 
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, select the label that you want to configure to apply Rights Management protection.
+2. If the label that you want to configure will apply to all users, select the label to change from the **Policy:Global** blade. 
+
+     If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.
 
 3. On the **Label** blade, in the **Set RMS template for protecting documents and emails containing this label** section, for **Select RMS template from**, select **Azure RMS** or **AD RMS (PREVIEW)**.
     

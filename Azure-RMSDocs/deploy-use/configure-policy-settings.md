@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to configure the global policy settings | Azure Information Protection
-description: There are 3 settings in the Azure Information Protection policy that apply to all users, all devices.
+title: How to configure the policy settings | Azure Information Protection
+description: There are 4 settings in the Azure Information Protection policy that apply to all users, all devices.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 ---
 
-# How to configure the global policy settings for Azure Information Protection
+# How to configure the policy settings for Azure Information Protection
 
 >*Applies to: Azure Information Protection*
 
@@ -40,7 +40,7 @@ To configure these settings:
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, configure these global settings:
+2. If these settings that you want to configure will apply to all users, configure the following global settings from the **Policy:Global** blade:
 
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
 
@@ -60,9 +60,12 @@ To configure these settings:
     
     As an example, for your help desk, you might enter the Microsoft documentation page that includes information about installing and using the client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) or release version information (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternatively, you might publish your own webpage that includes information for users to contact your help desk, or a video that steps users through how to use the labels that you have configured.
 
+
+     These settings can be overwritten for specified users when you have created a [scoped policy](configure-policy-scope.md). To configure these settings in a scoped policy, first select that scoped policy from the initial **Azure Information Protection** blade.
+
 3. To save your changes, click **Save**.
 
-4. To make your changes available to users, click **Publish**.
+4. To make your changes available to users, on the Azure Information Protection blade, click **Publish**.
 
 ## Next steps
 
