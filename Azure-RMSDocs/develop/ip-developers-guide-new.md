@@ -6,7 +6,7 @@ description: Developers can use RMS to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 11/30/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,9 @@ ms.reviewer: kartikk
 
 # Azure Information Protection Developer's Guide
 
-Using Rights Management Services (RMS), the development aspect of Azure Information Protection, you will be able to rights-enable new and existing applications of different types for a range of supported platforms.
+This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service. The intent of this guide is allow developers who want to leverage the rights management system to build different types of applications for a range of supported platforms.
+[!NOTE]
+>The current Azure Information protection SDK has the rights management component and the classification and labelling are under development.
 
 - [Service applications](#service-applications)
 - [User applications](#user-applications)
@@ -36,7 +38,11 @@ Using Rights Management Services (RMS), the development aspect of Azure Informat
 - [Other resources](#other-resources)
 
 ## Service Applications
-Service applications leverage the Azure RMS protection capabilities to create data protection solutions. Examples of service applications are Data Leakage Protection applications (DLP) or Cloud Application Security applications. The RMS SDK 2.1, a native C++ library, provides a breadth of capacity for developing these types of applications. [Get started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md) building your own service applications. We also provide a [Managed API](https://github.com/Azure-Samples/active-directory-dotnet-rms) which is a C# wrapper for this SDK.
+Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Leakage Protection (DLP) and Cloud Application Security (CAS) applications are examples of service applications. The SDK comes in the following types. Our SDK for developing service applications is available through two programming models.
+
+- [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
+- [C# Managed API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
+
 
 ### Examples of service applications
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled Data Leak Protection (DLP) application that takes you through the basic steps that a DLP RMS-enabled application should perform by using File API for protecting and consuming restricted content.
@@ -49,18 +55,25 @@ These scripts, generally used by Azure Rights management administrators, are use
 - [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type
 
 
-## User Applications
+## User applications
 User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
 The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
 
+### User application development process guides
+- [Developing you Application](developing-your-application.md)
+- [Testing your application](how-to-set-up-your-test-environment.md)
+- [Deploying your application](deploying-your-application.md)
 
+
+### User application samples
+- [AzureIP Test](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) is a sample console application that allows you to encrypt documents with an Azure template or an ad-hoc policy.
 - [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) is a sample RMS-enabled application that takes you through the basic steps each RMS-enabled application should perform when protecting and consuming restricted content.
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 
 ## Development environment
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
 
-|[![iOS/OS X setup](../media/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/linux-icon.png)](linux-setup.md) |
+|[![iOS/OSX setup](../media/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/linux-icon.png)](linux-setup.md) |
 
 ## How-tos
 Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
