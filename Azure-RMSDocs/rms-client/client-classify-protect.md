@@ -62,7 +62,7 @@ For a list of file types that are supported from File Explorer, see the [File ty
 
 The selected file or files are now classified and protected, according to your selections. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Azure Information Protection lock icon. For example:
 
-    ![Protected file with lock icon for Azure Information Protection](../media/Pfile.png)
+![Protected file with lock icon for Azure Information Protection](../media/Pfile.png)
 
 If you change your mind about the classification and protection, or later need to modify them, simply repeat this process with your new settings.
 
