@@ -47,16 +47,14 @@ If your administrator does not install the Azure Information Protection client f
 
 4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.
 
-    > [!NOTE]
-    > If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). The install program checks whether this required update is installed and if it is not, you will see a message that it must be installed before you can use some features of the Azure Information Protection client.
-
 3. Click **Close** and before you start to use the Azure Information Protection client:
 
     - If your computer runs Office 2010, restart your computer.
     
     - For other versions of Office, restart all Office applications.
 
-
+> [!NOTE]
+> If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). If your PC needs this update but it not installed, you will see a message that it must be installed before you can use all features of the Azure Information Protection client.
 
 ## Other instructions
 For how-to instructions, see the following sections from the Azure Information Protection user guide:
