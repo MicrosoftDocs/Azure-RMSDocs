@@ -81,7 +81,7 @@ In addition to tracking your protected documents on Windows computers by using O
 
 #### Using File Explorer to access the doc tracking site
 
--   Right-click the file, select **Classify and protect**, and then select the Track Usage icon.
+-   Right-click the file, select **Classify and protect (preview)**, and then from the **Azure Information Protection Viewer**, select the Track Usage icon.
 
 
 ## Other instructions
