@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -62,15 +62,15 @@ Use the following table for a list of these permissions levels and a complete li
 
 |Permissions Level|Applications|Rights included (common name)|
 |---------------------|----------------|---------------------------------|
-|Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Reply; Reply All|
-|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
-|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
+|Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Reply; Reply All|
+|Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
+|Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
 
 ----
 
 ###### Footnote 1
-Not applicable to the Rights Management sharing application for Windows.
+Not applicable to the Rights Management sharing application for Windows or the Azure Information Protection client for Windows (preview).
 
 ## Rights included in the default templates
 The rights that are included with the default templates are as follows:

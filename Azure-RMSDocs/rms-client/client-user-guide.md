@@ -43,9 +43,9 @@ If you have questions that are not answered by this guide, visit our [Azure Info
 
 - [Classify and protect a file or email](client-classify-protect.md)
 
-- [Track and revoke your documents](client--track-revoke.md)
+- [Track and revoke your documents](client-track-revoke.md)
 
-- [Open files and emails that have been protected](sharing-app-view-use-files.md)
+- [Open files and emails that have been protected]
 
 
 

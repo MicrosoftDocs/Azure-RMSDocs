@@ -26,5 +26,5 @@
 ### [Azure Information Protection user guide](client-user-guide.md)
 #### [Download and install the Azure Information Protection client](install-client-app.md)
 #### [Classify and protect a file or email](client-classify-protect.md)
-#### [Track and revoke your documents](client--track-revoke.md)
+#### [Track and revoke your documents](client-track-revoke.md)
 # [Develop & Customize Apps](/information-protection/develop/developers-guide)
