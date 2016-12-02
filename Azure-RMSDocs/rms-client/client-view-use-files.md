@@ -6,7 +6,7 @@ description: Instructions to view and use a protected file that requires you to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,11 +45,11 @@ When the [Azure Information Protection client is installed on your computer](ins
 
 ## To view and use a protected file
 
-1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection (Preview)**. 
+1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection Viewer (Preview)**. 
 
-2. Click **Sign in** and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
+2. If you see **Sign in**, click this and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
 
-3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file and edit it. You can check your permissions when you click **Permissions**.
+3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file, and edit it. 
 
     You can check your permissions for the file by clicking **Permissions**. From the **Permissions** dialog box, you can also identify the file owner to contact if you want to request a new version of the file with additional permissions.
     
