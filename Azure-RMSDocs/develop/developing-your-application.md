@@ -2,7 +2,7 @@
 # required metadata
 
 title: Developing your application | Azure Information Protection
-description: Instructions about how to develop an application using the RMS SDK 2.1.
+description: Guidance thorugh a basic console app implementing document protection with AIP
 keywords:
 author: bruceperlerms
 ms.author: bruceper
