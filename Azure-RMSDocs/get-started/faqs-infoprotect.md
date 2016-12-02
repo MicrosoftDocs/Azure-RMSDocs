@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -55,6 +55,7 @@ The current release has the following limitations. Look out for announcements on
 
 - The SDK for partners and developers is not available.
 
+
 ## Do I need to be a global admin to try Azure Information Protection?
 
 To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
@@ -82,10 +83,6 @@ Because Azure Information Protection applies persistent labels and protection to
 ## Can I classify only new data, or can I also classify existing data?
 
 Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content. 
-
-If you have saved files that you want to classify, simply open and save them in your Office application. 
-
-Currently, you cannot scan and apply classification in bulk, and must open and save each document in the Office application. 
 
 ## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
 
