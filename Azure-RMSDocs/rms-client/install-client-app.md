@@ -58,10 +58,8 @@ If your administrator does not install the Azure Information Protection client f
 
 
 
-## Examples and other instructions
-For examples for how you might use the Azure Information Protection client, and how-to instructions, see the following sections from the Azure Information Protection client user guide:
-
--   [Examples for using the Azure Information Protection client](client-user-guide.md#examples-for-using-the-azure-information-protection-client)
+## Other instructions
+For how-to instructions, see the following sections from the Azure Information Protection user guide:
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
