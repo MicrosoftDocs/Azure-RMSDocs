@@ -53,6 +53,8 @@ When the [Azure Information Protection client is installed on your computer](ins
 
     You can check your permissions for the file by clicking **Permissions**. From the **Permissions** dialog box, you can also identify the file owner to contact if you want to request a new version of the file with additional permissions.
     
+    For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
+
 4. To edit the file, click **Save As**, which lets you save the file without protection to its original file name extension. You can then edit the file by using the application that's associated with that file type.
 
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
