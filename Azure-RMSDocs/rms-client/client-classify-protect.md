@@ -66,7 +66,7 @@ The selected file or files are now classified and protected, according to your s
 
 If you change your mind about the classification and protection, or later need to modify them, simply repeat this process with your new settings.
 
-The classification and protection that you specified stays with the file, even if you email it or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents and emails when you use Azure Information Protection](client-track-revoke.md). 
+The classification and protection that you specified stays with the file, even if you email the file or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents when you use Azure Information Protection](client-track-revoke.md). 
 
 ## File types supported for classification and protection
 
@@ -82,7 +82,7 @@ Classification is supported for the following file types:
 
 - **Microsoft XPS**: .xps .oxps​
 
-- **Images**: .jpg, .pe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
+- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
 
 - **SolidWorks**: .sldprt, .slddrw, .sldasm​
 
@@ -93,7 +93,7 @@ Classification is supported for the following file types:
 - **Digital Negative**: .dng
 
 
-Protection using the the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-the-default-templates). 
+Protection using the the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
 
 ## Other instructions

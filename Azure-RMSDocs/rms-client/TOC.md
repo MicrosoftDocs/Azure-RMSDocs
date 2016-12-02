@@ -23,7 +23,7 @@
 ##### [Remove protection](sharing-app-remove-protection.md)
 ##### [Use keyboard shortcuts](sharing-app-keyboard-shortcuts.md)
 ##### [Dialog box options](sharing-app-dialog-box.md)
-### [Azure Information Protection user guide](client-user-guide.md)
+### [Azure Information Protection user guide - preview](client-user-guide.md)
 #### [Download and install the Azure Information Protection client](install-client-app.md)
 #### [Classify and protect a file or email](client-classify-protect.md)
 #### [Track and revoke your documents](client-track-revoke.md)
