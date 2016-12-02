@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Track and revoke your protected documents and emails when you use Azure Information Protection | Azure Information Protection
-description: After you have protected your documents and emails, you can track how people are using them. If necessary, you can also revoke access to these documents and emails if people should no longer be able to read them. 
+title: Track and revoke your protected documents when you use Azure Information Protection | Azure Information Protection
+description: After you have protected your documents, you can track how people are using them. If necessary, you can also revoke access to these documents if people should no longer be able to read them. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -25,27 +25,27 @@ ms.suite: ems
 
 ---
 
-# Track and revoke your documents and emails when you use Azure Information Protection
+# Track and revoke your documents when you use Azure Information Protection
 
 >*Applies to: Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 **[ This version of the client is in preview and subject to change. ]**
 
-After you have protected your documents and emails by using Azure Information Protection, you can track how people are using these documents and emails. If necessary, you can also revoke access to these documents and emails if people should no longer be able to read them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
+After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-When you access this site, sign in to track your documents and emails. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files and emails that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document or email, and their location at the time. In addition:
+When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. You will also see each time they tried to access the document, and their location at the time. In addition:
 
--   If you need to stop sharing a document or email: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document or email, it doesn't delete the document that you shared or the email that you sent, but authorized users will no longer be able to open it.
+-   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared, but authorized users will no longer be able to open it.
 
 -   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs.
 
 -   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
 
-- If you want to track and revoke shared documents and emails for others: Administrators for Azure Information Protection can track and revoke protected documents and emails for others by clicking the Admin icon. Only administrators see this icon.
+- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon.
 
 -   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -57,7 +57,7 @@ If you do not see these options in your Office applications, it’s likely that 
 
 
 ### Other ways to track and revoke your documents
-In addition to tracking your protected documents and emails on Windows computers by using Office applications, you can also use these alternatives:
+In addition to tracking your protected documents on Windows computers by using Office applications, you can also use these alternatives:
 
 -   **Using a web browser**: This method works for all supported devices.
 
@@ -81,12 +81,11 @@ In addition to tracking your protected documents and emails on Windows computers
 
 #### Using File Explorer to access the doc tracking site
 
--   Right-click the file, select **Classify and protect**, and then select the Track Usage icon:
+-   Right-click the file, select **Classify and protect**, and then select the Track Usage icon.
 
 
 ## Other instructions
 For how-to instructions, see the following sections from the Azure Information Protection user guide:
-
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
