@@ -115,7 +115,7 @@ Yes. To remove classification from a file, open the file in the Office applicati
 
 ## Can I prompt users to justify why they are changing the classification level?
 
-Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
+Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Applications and Services Logs** > **Microsoft Azure Information Protection**.
 
 ## How can I automatically protect the content after it's been classified?
 
