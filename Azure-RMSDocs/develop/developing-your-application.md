@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Developing your application | Azure RMS
+title: Developing your application | Azure Information Protection
 description: Instructions about how to develop an application using the RMS SDK 2.1.
 keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 11/01/2016
+ms.date: 12/02/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -18,7 +18,7 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 #ROBOTS:
 audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,11 +27,11 @@ ms.suite: ems
 
 # Developing your application
 
-In this example you are going to build a simple console app that will take as input the path of a document that you would like to protect, then protect it with an ad-hoc license or an Azure template. It will then apply the correct policies according to the inputs, creating a information protected document. The sample code you will be using is [Azure IP test application](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) and is on Github.
+In this example you are going to build a simple console application that interacts with the Azure Information Protection service (AIP).  It will take as input the path of a document to protect, then protect it with an ad-hoc policy or an Azure template. The application will then apply the correct policies according to the inputs, creating a information protected document. The sample code you will be using is [Azure IP test application](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) and is on Github.
 
-## Sample app prerequisets
+## Sample app prerequisites
 - **Operating System**: Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012
-- **Programming Language**: C, C++, or C# (.NET Framework 3.0 and above)
+- **Programming Language**: C# (.NET Framework 3.0 and above)
 - **Development environment**: Visual Studio 2015 (and later)
 
 ## Setting up your Azure Configuration
@@ -80,22 +80,22 @@ Follow these steps to create a Service Principal:
 
 
 ## Design summary
-The following diagram depicts an architecture and process flow. The steps are detailed following the diagram.
+The following diagram depicts an architecture and process flow for the app you're creating, steps outlined below.
 ![design summary](../media/develop/design-summary.png)
 
-1. The user inputs the following:
-  - The path of the file to be encrypted
-  - Selection from a list of available templates to use for file encryption
-2. The application requests authentication with the Azure AD RMS Service.
-3. The Azure AD RMS Service confirms authentication
-4. The application requests pre-defined templates from the Azure AD RMS Service.
-5. The Azure AD RMS Service returns pre-defined templates.
+1. The user inputs:
+  - The path of the file to be protected
+  - Selects a template or creates an ad-hoc policy
+2. The application requests authentication with AIP.
+3. AIP confirms authentication
+4. The application requests pre-defined templates from the AIP.
+5. AIP returns pre-defined templates.
 6. The application locates the specified file.
-7. The application applies the Azure encryption template to the file.
+7. The application applies the AIP protection policy to the file.
 
 ## How the code works
 
-In the sample, Azure IP Test solution open up with the file Iprotect.cs. This is a C# Console application and like with any other application you have to start with loading the *MSIPC.dll* as shown in the `main()` method of the program.
+In the sample, Azure IP Test, the solution begins up with the file Iprotect.cs. This is a C# console application and, like with any other AIP enabled application, you begin with loading the *MSIPC.dll* as shown in the `main()` method.
 
     //Loads MSIPC.dll
     SafeNativeMethods.IpcInitialize();
@@ -109,28 +109,28 @@ Load the parameters needed to connect to Azure
     symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
     symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
 
-When you provide the file path in the console application, the application checks if the document is already encrypted. The method is stored within the **SafeFileApiNativeMethods** class.
+When you provide the file path in the console application, the application checks if the document is already encrypted. The method is of the **SafeFileApiNativeMethods** class.
 
     var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
 
-If the document is not encrypted, then it proceeds to encrypt the document with the selection provided on the prompt. It first proceed
+If the document is not encrypted, then it proceeds to encrypt the document with the selection provided on the prompt.
 
     if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
     {
       if (method == EncryptionMethod1)
       {
-        //Encrypt a file via Azure Template
+        //Encrypt a file via AIP template
         ProtectWithTemplate(symmetricKeyCred, filePath);
 
       }
       else if (method == EncryptionMethod2)
       {
-        //Encrypt a file using Ad-Hoc policy
+        //Encrypt a file using ad-hoc policy
         ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
       }
 
 The protect with template option proceeds to get the template list from the server and provides the user the option to select.
->If you did not Modify templates then you will get default templates from Azure Information protection
+>If you did not Modify templates then you will get default templates from AIP
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
@@ -174,7 +174,7 @@ The protect with template option proceeds to get the template list from the serv
         }
       }
 
-If you select ad-hoc policy, the user of the application has to provide emails of the people that would have rights. In this section the license is created using the **IpcCreateLicenseFromScratch()** method and applying the new policy on the template. 
+If you select ad-hoc policy, the user of the application has to provide emails of the people that would have rights. In this section the license is created using the **IpcCreateLicenseFromScratch()** method and applying the new policy on the template.
 
     if (issuerDisplayName.Trim() != "")
     {
@@ -193,10 +193,10 @@ If you select ad-hoc policy, the user of the application has to provide emails o
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
         SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
-        SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture, 
+        SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
                                                                 policyName,
-                                                                policyDescription, 
-                                                                issuerDisplayName, 
+                                                                policyDescription,
+                                                                issuerDisplayName,
                                                                 false));
 
         //Encrypts the file using the ad hoc policy             
@@ -210,30 +210,29 @@ If you select ad-hoc policy, the user of the application has to provide emails o
                                        null,
                                        symmetricKeyCredential);
        }
-    } 
+    }
 
 ## User interaction example
 
 Once you get everything built and executing, the outputs of the application should look like the following:
 
-1.You are prompted to select an encryption method. 
+1.You are prompted to select an encryption method.
 ![app output - step 1](../media/develop/app-output-1.png)
 
-2. You are asked to provide the path to the file to be protected. 
+2. You are asked to provide the path to the file to be protected.
 ![app output - step 2](../media/develop/app-output-2.png)
 
-3. You are prompted to enter a license owner’s email (this owner must have Global Administrator privileges on the Azure AD Tenant). 
+3. You are prompted to enter a license owner’s email (this owner must have Global Administrator privileges on the Azure AD Tenant).
 ![app output - step 3](../media/develop/app-output-3.png)
 
-4. You enter email addresses of users who will have rights to access the file (emails must be separated by spaces). 
+4. You enter email addresses of users who will have rights to access the file (emails must be separated by spaces).
 ![app output - step 4](../media/develop/app-output-4.png)
 
-5. You select from a list of rights to be given to the authorized users. 
+5. You select from a list of rights to be given to the authorized users.
 ![app output - step 5](../media/develop/app-output-5.png)
 
-6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name 
+6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
 ![app output - step 6](../media/develop/app-output-6.png)
 
 ### See Also
-- link to some other good supporting stuff 
-
+- link to some other good supporting stuff
