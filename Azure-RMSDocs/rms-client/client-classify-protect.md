@@ -33,7 +33,7 @@ ms.suite: ems
 
 The easiest way to classify and protect your documents and emails is from within your Office applications: Word, Excel, PowerPoint, Outlook. To do this, you use the Azure Information Protection bar and select one of the labels that has been configured for you. For example:
 
-![Azure Information Protection bar example](../media/info-protect-bar-not-set.png)
+![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
 You can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. You can select one file, multiple files, or a folder for this configuration. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder will not be automatically configured with the same options.
 
