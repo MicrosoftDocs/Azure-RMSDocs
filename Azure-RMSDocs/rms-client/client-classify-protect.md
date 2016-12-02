@@ -35,9 +35,11 @@ The easiest way to classify and protect your documents and emails is from within
 
 ![Azure Information Protection bar example](../media/excel2013-infoprotect-bar2.png)
 
-You can also classify and protect files by using File Explorer, which supports additional file types and is a convenient way to classify and protect multiple files at once. You can select one file, multiple files, or a folder for this configuration. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set but new files that you create in that folder will not be automatically configured with the same options.
+You can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. You can select one file, multiple files, or a folder for this configuration. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set but new files that you create in that folder will not be automatically configured with the same options.
 
-When files do not support classification, labels that only apply classification only are not available. For these files, you can only select a label if it's been configured for protection, or you can specify your own protection setting. For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
+When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can only select a label only if it's been configured for protection. Or, you can specify your own protection setting. 
+
+For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
 
 
 ## To classify and protect a file by using File Explorer

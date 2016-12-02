@@ -33,7 +33,7 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 Use the following information to see what’s new or changed in a release. The most current release is listed first. Versions before General Availability are not listed.
 
-In addition to the current release, there is now a preview version of the Azure Information Protection client that you can only download from the Microsoft Download Center. It offers the same functionality as the Rights Management sharing application for Windows, with right-click options from File Explorer and a viewer for protected files. For more information, see the preliminary documentation: Azure Information Protection user guide.
+In addition to the current release, there is now a preview version of the Azure Information Protection client that you can only download from the Microsoft Download Center. It offers the same functionality as the Rights Management sharing application for Windows, with right-click options from File Explorer and a viewer for protected files. For more information, see the preliminary documentation: [Azure Information Protection user guide](client-user-guide.md).
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release.
