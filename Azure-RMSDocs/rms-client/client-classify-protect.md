@@ -31,9 +31,9 @@ ms.suite: ems
 
 **[ This version of the client is in preview and subject to change. ]**
 
+The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-
-The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office apps: Word, Excel, PowerPoint, Outlook. However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. 
+However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. 
 
 ## Using Office apps to classify and protect your documents and emails
 
@@ -44,9 +44,11 @@ Use the Azure Information Protection bar and select one of the labels that has b
 
 ## Using File Explorer to classify and protect files
 
-When you use File Explorer, you can quickly classify and protect a single file, multiple files, or all files in a folder. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder will not be automatically configured with the same options.
+When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 
 
-When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can only select a label if it's been configured for protection. Or, you can specify your own protection setting. 
+When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder are not automatically configured with those options.
+
+When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can only select a label if it's been configured for protection. Or, you can specify your own protection settings. 
 
 For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
 
@@ -58,12 +60,16 @@ For a list of file types that are supported from File Explorer, see the [File ty
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If a label cannot be selected (it is unavailable), the selected file does not support classification but you can protect it.
 
 3. To protect the file, choose between the protection settings that your administrator defined for your selected label (**Automatic, based on the selected classification label**), or specify your own settings (**Override with custom permissions**).
+    
+    The override option displays values that your administrator might have set for your selected label. You can modify these values (for example, add or remove individual people). Or you can completely replace them with your own values. 
 
 4. If you selected the override option, now specify the following:
 
     - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. For people and groups in your organization, you can use the address book to search and select them. For people in another organization, you must specify their full email address. Make sure that you use a business email address because personal email addresses are not currently supported.
+        
+        Note: If you see a value that begins with "AllStaff" and looks similar to **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**: This is a special group that you won't see in your address book but includes everybody in your organization.
     
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
@@ -102,7 +108,7 @@ Classification is supported for the following file types:
 - **Digital Negative**: .dng
 
 
-Protection using the the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
+Protection using the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
 
 ## Other instructions
