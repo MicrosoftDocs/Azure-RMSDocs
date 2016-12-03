@@ -50,7 +50,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     In addition, there are some global policy settings that are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and the client is not configured for a custom help link:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings)
+    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
 ## Changing the global settings for a default template and prompt for justification
 
