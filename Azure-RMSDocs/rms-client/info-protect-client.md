@@ -35,7 +35,7 @@ The following picture shows this Information Protection bar and the labels from 
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
-Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Currently, you can install the general availability (GA) version, and the preview version. The preview version includes new functionality for evaluation purposes, and is subject to change. For more information, see the following blog post announcement: [blog post]  
+Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Currently, you can install the General Availability (GA) version, and the preview version. The preview version includes new functionality for evaluation purposes, and is subject to change. For more information, see the following blog post announcement: [Azure Information Protection December preview now available](https://aka.ms/aip-december-release)
 
 Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). In addition, for the preview version of the client, computers running Windows 7 SP1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you will be prompted to install it.
 
