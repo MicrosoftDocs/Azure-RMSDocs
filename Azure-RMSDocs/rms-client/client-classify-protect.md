@@ -31,7 +31,7 @@ ms.suite: ems
 
 **[ This version of the client is in preview and subject to change. ]**
 
-The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. 
 
