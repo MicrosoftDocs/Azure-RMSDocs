@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Track and revoke your documents when you use Azure Information Protection
 
->*Applies to: Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 **[ This version of the client is in preview and subject to change. ]**
 
