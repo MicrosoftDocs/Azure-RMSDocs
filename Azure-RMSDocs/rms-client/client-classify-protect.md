@@ -31,18 +31,27 @@ ms.suite: ems
 
 **[ This version of the client is in preview and subject to change. ]**
 
-The easiest way to classify and protect your documents and emails is from within your Office applications: Word, Excel, PowerPoint, Outlook. To do this, you use the Azure Information Protection bar and select one of the labels that has been configured for you. For example:
+
+
+The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office apps: Word, Excel, PowerPoint, Outlook. However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. 
+
+## Using Office apps to classify and protect your documents and emails
+
+Use the Azure Information Protection bar and select one of the labels that has been configured for you. For example:
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
-You can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. You can select one file, multiple files, or a folder for this configuration. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder will not be automatically configured with the same options.
+
+## Using File Explorer to classify and protect files
+
+When you use File Explorer, you can quickly classify and protect a single file, multiple files, or all files in a folder. When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder will not be automatically configured with the same options.
 
 When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can only select a label if it's been configured for protection. Or, you can specify your own protection setting. 
 
 For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
 
 
-## To classify and protect a file by using File Explorer
+### To classify and protect a file by using File Explorer
 
 1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect (preview)**. 
 
@@ -68,7 +77,7 @@ If you change your mind about the classification and protection, or later need t
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents when you use Azure Information Protection](client-track-revoke.md). 
 
-## File types supported for classification and protection
+#### File types supported for classification and protection
 
 Classification is supported for the following file types:
 

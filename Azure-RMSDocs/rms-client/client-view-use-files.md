@@ -36,7 +36,7 @@ When the [Azure Information Protection client is installed on your computer](ins
 > [!NOTE]
 > Before you can view the protected file, the Rights Management service must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
 >
-> If your organization does not use either Azure Information Protection or AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by Rights Management:
+> If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by Rights Management:
 >
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -47,7 +47,9 @@ When the [Azure Information Protection client is installed on your computer](ins
 
 1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection Viewer (Preview)**. 
 
-2. If you see **Sign in**, click this and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
+2. If you see a page to **Sign in** or **Sign up**: Click **Sign in** and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
+    
+    If you do not have an account that is accepted, see the Note at the top of this page. Sign up for a free account and return to these instructions.
 
 3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file, and edit it. 
 
