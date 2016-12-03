@@ -79,7 +79,7 @@ The selected file or files are now classified and protected, according to your s
 
 ![Protected file with lock icon for Azure Information Protection](../media/Pfile.png)
 
-If you change your mind about the classification and protection, or later need to modify them, simply repeat this process with your new settings.
+If you change your mind about the classification and protection, or later need to modify your settings, simply repeat this process with your new settings.
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents when you use Azure Information Protection](client-track-revoke.md). 
 
