@@ -33,7 +33,7 @@ ms.suite: ems
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. 
+However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once.
 
 ## Using Office apps to classify and protect your documents and emails
 
@@ -48,7 +48,7 @@ When you use File Explorer, you can quickly classify and protect a single file, 
 
 When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder are not automatically configured with those options.
 
-When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can only select a label if it's been configured for protection. Or, you can specify your own protection settings. 
+When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
 
 For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
 
