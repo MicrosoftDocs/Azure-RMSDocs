@@ -20,7 +20,7 @@
 ## [Configuring super users for discovery services or data recovery](configure-super-users.md)
 ## [Configuring the Information Protection policy](configure-policy.md)
 ### [The default policy](configure-policy-default.md)
-### [Configure the global settings](configure-policy-settings.md)
+### [Configure the policy settings](configure-policy-settings.md)
 ### [Create a new label](configure-policy-new-label.md)
 ### [Delete or reorder a label](configure-policy-delete-reorder.md)
 ### [Change a label](configure-policy-change-label.md)

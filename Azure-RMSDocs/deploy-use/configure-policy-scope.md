@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,9 +31,9 @@ ms.suite: ems
 
 **[ This feature is in preview and subject to change. ]**
 
-When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the global settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement these for specific users, by having different settings and labels, you must create a **scoped policy** (currently in preview) that's configured for those users.
+When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement these for specific users, by having different settings and labels, you must create a **scoped policy** (currently in preview) that's configured for those users.
 
-All users receive the global policy, which contains global settings and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. Scoped policies are additive in their design.
+All users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. Scoped policies are additive in their design.
 
 Scoped policies, just like labels, are ordered in the Azure portal. If there is a conflict of settings when a user downloads the global policy and one or more scoped policies, the last setting is applied.
 

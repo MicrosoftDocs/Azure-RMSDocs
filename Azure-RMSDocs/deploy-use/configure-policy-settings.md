@@ -2,11 +2,11 @@
 # required metadata
 
 title: How to configure the policy settings | Azure Information Protection
-description: There are 4 settings in the Azure Information Protection policy that apply to all users, all devices.
+description: Configure settings in the Azure Information Protection policy that apply to all users, all devices.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 >*Applies to: Azure Information Protection*
 
-There are four settings in the Azure Information Protection policy that apply to all users, all devices:
+In addition to the Information Protection bar title and tooltip, there are four settings in the Azure Information Protection policy that apply to all users, all devices:
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-settings.png)
 
@@ -64,7 +64,7 @@ To configure these settings:
 
 3. To save your changes, click **Save**.
 
-4. To make your changes available to users, on the Azure Information Protection blade, click **Publish**.
+4. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
 
 ## Next steps
 
