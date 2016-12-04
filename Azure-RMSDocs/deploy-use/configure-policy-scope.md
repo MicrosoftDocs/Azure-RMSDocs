@@ -56,7 +56,7 @@ To configure a scoped policy for Azure Information Protection:
 
     If you need help configuring the labels or settings, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
 
-5. As for when you edit the global policy, when you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
+5. Just as when you edit the global policy, when you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
 
 6. When you have finished making the changes that you want for this scoped policy, on the initial **Azure Information Protection** blade, make sure that this scoped policy is in the order that you want it applied. This is important when you have selected the same user for multiple scoped policies. Then click **Publish**. 
 
