@@ -46,7 +46,7 @@ Use the Azure Information Protection bar and select one of the labels that has b
 
 When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 
 
-When you select a folder, all the files in that folder are automatically selected for the classification and protection options that you set. However, new files that you create in that folder are not automatically configured with those options.
+When you select a folder, all the files in that folder and any subfolders it has are automatically selected for the classification and protection options that you set. However, new files that you create in that folder or subfolders are not automatically configured with those options.
 
 When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
 
