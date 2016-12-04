@@ -61,7 +61,7 @@ For a list of file types that are supported from File Explorer, see the [File ty
 
 3. To protect the file, choose between the protection settings that your administrator defined for your selected label (**Automatic, based on the selected classification label**), or specify your own settings (**Override with custom permissions**).
     
-    The override option displays values that your administrator might have set for your selected label. You can modify these values (for example, add or remove individual people). Or you can completely replace them with your own values. 
+    The override option doesn't use any protection settings that your administrator might have defined for your chosen label. Instead, you specify your own protection settings. 
 
 4. If you selected the override option, now specify the following:
 
@@ -69,8 +69,6 @@ For a list of file types that are supported from File Explorer, see the [File ty
     
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. For people and groups in your organization, you can use the address book to search and select them. For people in another organization, you must specify their full email address. Make sure that you use a business email address because personal email addresses are not currently supported.
         
-        Note: If you see a value that begins with "AllStaff" and looks similar to **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**: This is a special group that you won't see in your address book but includes everybody in your organization.
-    
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
 5. Click **Apply**, and then click **Close**.
