@@ -6,7 +6,7 @@ description: Developers can use RMS to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 11/30/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,7 @@ User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
 The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
 
 ### User application development process guides
-- [Developing you Application](developing-your-application.md)
+- [Developing you application](developing-your-application.md)
 - [Testing your application](how-to-set-up-your-test-environment.md)
 - [Deploying your application](deploying-your-application.md)
 
@@ -110,7 +110,7 @@ These videos are from this year's Ignite conference
 ## Other resources
 - [Security best practice guide](security-guidelines.md)
 - [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
-- [RMS Frequently Asked Questions](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx)
+- [Frequently Asked Questions for Azure Information Protection](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
 
 
 ### Support articles

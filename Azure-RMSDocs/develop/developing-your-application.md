@@ -7,7 +7,7 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/02/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -88,9 +88,9 @@ The following diagram depicts an architecture and process flow for the app you'r
   - Selects a template or creates an ad-hoc policy
 2. The application requests authentication with AIP.
 3. AIP confirms authentication
-4. The application requests pre-defined templates from the AIP.
+4. The application requests templates from the AIP.
 5. AIP returns pre-defined templates.
-6. The application locates the specified file.
+6. The application locates the specified file with given location.
 7. The application applies the AIP protection policy to the file.
 
 ## How the code works
@@ -233,5 +233,3 @@ Once you get everything built and executing, the outputs of the application shou
 
 6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
 ![app output - step 6](../media/develop/app-output-6.png)
-
-
