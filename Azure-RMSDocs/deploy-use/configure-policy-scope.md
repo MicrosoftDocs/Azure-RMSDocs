@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,7 +50,7 @@ To configure a scoped policy for Azure Information Protection:
 
     On the initial **Azure Information Protection** blade, select **Add a new policy (PREVIEW)**. You'll then see the second blade that used to show the global policy refresh, so that you can now configure your new, scoped policy.
 
-3. Specify a policy name and description that only administrators see in the Azure portal. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only. 
+3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only. 
 
 4. Now create new labels or configure the scoped policy settings. The global policy is always applied first, so you can supplement the global policy with new labels and you can override the global settings. For example, the global policy might have no default label specified and you configure a different default label in different scoped policies for specific departments.
 
