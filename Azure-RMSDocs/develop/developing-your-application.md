@@ -78,6 +78,8 @@ Follow these steps to create a Service Principal:
 *Example App.config file*
 ![cmdlet output](../media/develop/example-App.config-file.png)
 
+- The *ClientID* and *RedirectUri*  will be available to you from when you registered you application in Azure. For more details on how to register your application in Azure and to acquire a *ClientID* and *RedirectUri* see, [Configure Azure RMS for ADAL authentication](adal-auth.md).
+
 
 ## Design summary
 The following diagram depicts an architecture and process flow for the app you're creating, steps outlined below.
