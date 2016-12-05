@@ -65,12 +65,16 @@ Use the following table for a list of these permissions levels and a complete li
 |Viewer|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Reply; Reply All|
 |Reviewer|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
 |Co-Author|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1)|
-|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
+|Co-Owner|Azure classic portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows (preview)|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[2]](#footnote-2); Print; Reply [[1]](#footnote-1); Reply All [[1]](#footnote-1); Forward [[1]](#footnote-1); Full Control|
 
 ----
 
 ###### Footnote 1
 Not applicable to the Rights Management sharing application for Windows or the Azure Information Protection client for Windows (preview).
+
+###### Footnote 2
+Not included in the Azure Information Protection client for Windows (preview). In this client, the Export usage right includes the ability to remove protection.
+
 
 ## Rights included in the default templates
 The rights that are included with the default templates are as follows:
