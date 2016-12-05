@@ -41,8 +41,6 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
-- You can apply labels to Office file types and Outlook email messages only.
-
 - Label names and tooltips are supported in one language only.
 
 - There is no centralized logging for classification and labeling.
