@@ -29,14 +29,6 @@ This guide will orient you to tools for extending and integrating with Azure Inf
 
 >The current Azure Information Protection SDK has the rights management component and the classification and labelling are under development.
 
-- [Service applications](#service-applications)
-- [User applications](#user-applications)
-- [PowerShell guides](#powershell-guides)
-- [Development setup guides](#development-environment-setup-guides)
-- [How-to guides](#how-tos)
-- [Videos](#videos)
-- [Other resources](#other-resources)
-
 ## Service Applications
 Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Leakage Protection (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
 
@@ -60,7 +52,7 @@ User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
 The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
 
 ### User application development process guides
-- [Developing you application](developing-your-application.md)
+- [Developing your application](developing-your-application.md)
 - [Testing your application](how-to-set-up-your-test-environment.md)
 - [Deploying your application](deploying-your-application.md)
 
@@ -70,7 +62,7 @@ The 4.2 version is a REST based client. The 2.1 version is used for building nat
 - [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) is a sample RMS-enabled application that takes you through the basic steps each RMS-enabled application should perform when protecting and consuming restricted content.
 - [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a tool can give information about any RMS protected file such as content-id or user rights.
 
-## Development environment
+## Development environment setup
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
 
 |[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/develop/linux-icon.png)](linux-setup.md) |
@@ -85,7 +77,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ### Security and authentication
 - [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
-- [How to use ADAL authentication](how-to-use-adal-authentication.md)
+- [How to use Azure Active Directory Authentication (ADAL) authentication](how-to-use-adal-authentication.md)
 - [Configuring Azure RMS for authentication](adal-auth.md)
 - [How to set the API security mode](setting-the-api-security-mode-api-mode.md)
 - [Enable your service applications to use Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)
@@ -100,7 +92,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ## Videos
 Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
 
-These videos are from this year's Ignite conference
+These videos are from the Micorsoft 2016 Ignite conference
 
 - [Email security inside your org](https://myignite.microsoft.com/videos/2787)
 - [Adopt a comprehensive identity-driven solution for protecting and sharing data securely](https://myignite.microsoft.com/videos/2784)
