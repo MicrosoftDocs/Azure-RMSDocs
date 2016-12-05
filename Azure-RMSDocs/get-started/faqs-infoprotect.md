@@ -135,6 +135,33 @@ Although you can currently set visual markings, protection, and conditions at bo
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
+## How is Azure Information Protection classification for emails different from Exchange message classification?
+
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the preview version of the Azure Information Protection client applies the corresponding label settings for that classification.
+
+Although the Outlook web app doesn't yet natively support Azure Information Protection classification and protection, you can use this same technique to use your labels with this email client in addition to the desktop Outlook client.
+
+To achieve this solution: 
+
+1. Use the [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+
+2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message 
+properties to set a message header. 
+
+    For the message header, you'll find the information to specify by inspecting the properties of an Office file that you classified by using your Azure Information Protection label. Identify the file property that has the format **MSIP_Label_<GUID>_Enabled** and specify this string for the message header, and then specify **True** for the header value. For example, your message header might look like this string: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+
+
+The following now happens when users use the Outlook web access app or a mobile device client that supports rights management protection: 
+
+- Users select the Exchange message classification and send the email.
+
+- The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
+
+- When recipients running the preview version of the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+
+If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
+
+
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
@@ -149,7 +176,7 @@ For more information, see [Track and revoke your documents when you use the RMS 
 
 ## Can I control which users can use Azure Information Protection to classify and protect content?
 
-You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. 
+You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. You add new labels just for specified users when you configure a [scoped policy](../deploy-use\configure-policy-scope.md). 
 
 Files and emails that are classified by Azure Information Protection can be consumed or edited by any user, with or without the Azure Information Protection client installed. 
 
