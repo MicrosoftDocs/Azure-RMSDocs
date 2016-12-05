@@ -68,26 +68,28 @@ The following guides lead you through OS specific setup steps for an application
 |[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/develop/linux-icon.png)](linux-setup.md) |
 
 ## How-tos
-Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x.
+Each of the following topics presents specific guidance for an aspect of implementing your application. Service applications are built using the RMS SDK 2.x. User applications are built using RMS SDK 4.x. The article link is attributed with the application type; service, user.
 
 ### General
-- [How to enable document tracking and revocation](tracking-content.md)
-- [How to use document tracking](how-to-use-document-tracking.md)
-- [How to install and configure an RMS Server](how-to-install-and-configure-an-rms-server.md)
+- [How to enable document tracking and revocation (service)](tracking-content.md)
+- [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
+- [How to use document tracking (user)](how-to-use-document-tracking.md)
+
 
 ### Security and authentication
 - [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [How to use Azure Active Directory Authentication (ADAL) authentication](how-to-use-adal-authentication.md)
-- [Configuring Azure RMS for authentication](adal-auth.md)
-- [How to set the API security mode](setting-the-api-security-mode-api-mode.md)
-- [Enable your service applications to use Azure RMS](how-to-use-file-api-with-aadrm-cloud.md)
-- [How to register and RMS enable your app with Azure AD](authentication-integration.md)
+- [Configuring Azure RMS for authentication (service)](adal-auth.md)
+- [How to set the API security mode (service)](setting-the-api-security-mode-api-mode.md)
+- [Enable your applications to use Azure RMS (service)](how-to-use-file-api-with-aadrm-cloud.md)
+- [How to register and RMS enable your app with Azure AD (user)](authentication-integration.md)
 
 ### Configuration and performance management
-- [How to add explicit owner rights](add-explicit-owner-rights.md)
-- [How to use built in rights](built-in-rights-usage-restriction-reference.md)
-- [How to enable error and performance logging](enabling-logging.md)
-- [File API Configuration](file-api-configuration.md)
+- [How to add explicit owner rights (service)](add-explicit-owner-rights.md)
+- [File API configuration (service)](file-api-configuration.md)
+- [How to use built in rights (user)](built-in-rights-usage-restriction-reference.md)
+- [How to enable error and performance logging (user)](enabling-logging.md)
+
 
 ## Videos
 Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
@@ -123,3 +125,7 @@ These videos are from the Micorsoft 2016 Ignite conference
 ### Previous versions
 - [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
 - [AD RMS Scripting Tool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
+
+### See also
+- [Developer terminlogy](terms.md)
+- [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
