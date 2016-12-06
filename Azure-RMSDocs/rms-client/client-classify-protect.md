@@ -83,7 +83,7 @@ The classification and protection that you specified stays with the file, even i
 
 #### File types supported for classification and protection
 
-Classification is supported for the following file types:
+Classification-only is supported for the following file types. Other file types support classification when they are also protected.
 
 - **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
 
