@@ -1,20 +1,20 @@
 ﻿
 ﻿---
-  pageTitle: "Security Best Practices | Microsoft Information Protection"
-  description: "RMS-enabled applications are best built using Azure Information Protection best practices."
-  services: "rights-management"
-  documentationCenter: ""
-  authors: "BrucePerlerMS"
-  manager: "mbaldwin"
-  editor: "bruceper"
+# required metadata 
+ 
+pageTitle: Security Best Practices | Microsoft Information Protection
+description: RMS-enabled applications are best built using Azure Information Protection best practices.
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.date: 12/06/2016
+ms.topic: article
+ms.prod:
+ms.service: information-protection
+ms.technology: techgroup-identity
+ms.suite: ems
+ms.reviewer: kartikk
 
-   ms.service: "information-protection"
-   ms.devlang: "na"
-   ms.topic: "article"
-   ms.tgt_pltfrm: "na"
-   ms.workload: "identity"
-   ms.date: "11/21/2016"
-   ms.author: "bruceper"
 ---
 
 # Security Best Practices for Azure Information Protection
