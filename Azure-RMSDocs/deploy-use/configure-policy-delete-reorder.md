@@ -6,7 +6,7 @@ description: You can delete or re-order the labels that users see on the Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,13 +47,15 @@ Use the following instructions to make these changes.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, do one of the following actions, depending on whether you want to delete, disable, or reorder a label:
+2. If the label that you want to delete, disable, or reorder applies to all users, do one of the following from the **Policy:Global** blade. 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 
     - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, click **Off**, and then click **Save**.
 
     - To re-order a label: Right-click or select the context menu (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
+
+     If the label that you want to delete, disable, or reorder is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.
 
 3. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
