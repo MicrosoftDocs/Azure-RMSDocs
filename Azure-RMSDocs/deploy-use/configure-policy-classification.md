@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,9 @@ In this example, the user can click **Change now** to apply the recommended labe
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, select the label that you want to configure for automatic or recommended classification.
+2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy:Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
+
+     If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
 
 3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 

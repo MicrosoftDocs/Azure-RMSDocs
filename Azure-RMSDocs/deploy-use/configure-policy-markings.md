@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,7 +51,9 @@ Use the following instructions to configure visual markings for a label.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, select the label that you want to configure for visual markings.
+2. If the label that you want to configure for visual markings will apply to all users, select the label to change from the **Policy:Global** blade. 
+
+     If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.
 
 3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markers that you want, and then click **Save**:
 

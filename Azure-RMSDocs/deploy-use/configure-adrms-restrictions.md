@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,8 +29,6 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 # Hold your own key (HYOK) requirements and restrictions for AD RMS protection
 
 >*Applies to: Azure Information Protection*
-
-**[ This feature is still preliminary and the information is subject to change. ]**
 
 When you protect your most sensitive documents and emails, you will typically do this by applying Azure Rights Management protection to benefit from the following:
 

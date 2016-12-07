@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,13 +41,7 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
 
-- You can apply labels to Office file types and Outlook email messages only.
-
-- Labels on the Office add-in are visible to all users who have the Azure Information Protection client installed.
-
 - Label names and tooltips are supported in one language only.
-
-- Files cannot be classified from Windows File Explorer.
 
 - There is no centralized logging for classification and labeling.
 
@@ -59,6 +53,9 @@ The current release has the following limitations. Look out for announcements on
 
 - The SDK for partners and developers is not available.
 
+Some of the limitations previously listed are now available in preview. For more information, see the blog post announcement: [Azure Information Protection December preview now available](https://aka.ms/aip-december-release).
+
+
 ## Do I need to be a global admin to try Azure Information Protection?
 
 To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
@@ -67,7 +64,7 @@ However, if you select the option to install the demo policy when you install th
 
 ## Which options in the Azure portal are P1 or P2?
 
-To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, as a general guide, the advanced features such as automatic classification and hold your own key (HYOK) are specific to the Azure Information Protection Premium 2 subscription.
 
 ## Does Azure Information Protection support on premises and hybrid scenarios?
 
@@ -86,10 +83,6 @@ Because Azure Information Protection applies persistent labels and protection to
 ## Can I classify only new data, or can I also classify existing data?
 
 Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content. 
-
-If you have saved files that you want to classify, simply open and save them in your Office application. 
-
-Currently, you cannot scan and apply classification in bulk, and must open and save each document in the Office application. 
 
 ## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
 
@@ -122,7 +115,7 @@ Yes. To remove classification from a file, open the file in the Office applicati
 
 ## Can I prompt users to justify why they are changing the classification level?
 
-Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.
+Yes. To make sure users justify their change of classification, in the Azure portal, set the option **Users must provide justification to set a lower classification label, remove a label, or remove protection** to **On**. When they do this, their action and justification reason is logged in their local Windows event log: **Applications and Services Logs** > **Microsoft Azure Information Protection**.
 
 ## How can I automatically protect the content after it's been classified?
 
@@ -140,6 +133,33 @@ Although you can currently set visual markings, protection, and conditions at bo
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
+## How is Azure Information Protection classification for emails different from Exchange message classification?
+
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the preview version of the Azure Information Protection client applies the corresponding label settings for that classification.
+
+Although the Outlook web app doesn't yet natively support Azure Information Protection classification and protection, you can use this same technique to use your labels with this email client in addition to the desktop Outlook client.
+
+To achieve this solution: 
+
+1. Use the [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+
+2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message 
+properties to set a message header. 
+
+    For the message header, you'll find the information to specify by inspecting the properties of an Office file that you classified by using your Azure Information Protection label. Identify the file property that has the format **MSIP_Label_<GUID>_Enabled** and specify this string for the message header, and then specify **True** for the header value. For example, your message header might look like this string: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+
+
+The following now happens when users use the Outlook web access app or a mobile device client that supports rights management protection: 
+
+- Users select the Exchange message classification and send the email.
+
+- The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
+
+- When recipients running the preview version of the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+
+If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
+
+
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
@@ -154,7 +174,7 @@ For more information, see [Track and revoke your documents when you use the RMS 
 
 ## Can I control which users can use Azure Information Protection to classify and protect content?
 
-You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. 
+You can restrict which users classify and protect data by controlling the distribution of the Azure Information Protection client. You add new labels just for specified users when you configure a [scoped policy](../deploy-use\configure-policy-scope.md). 
 
 Files and emails that are classified by Azure Information Protection can be consumed or edited by any user, with or without the Azure Information Protection client installed. 
 
