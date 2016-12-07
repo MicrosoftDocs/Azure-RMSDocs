@@ -118,7 +118,7 @@ For more information, see the [FAQ for Microsoft Azure Information Protection ap
 
 This preview version of the Azure Information Protection client is for evaluation and feedback. It will replace the existing Rights Management sharing application for Windows. 
 
-For more information about this preview version of the client, see the [blog post announcement](https://aka.ms/aip-december-release) and the [preview user guide](../rms-client/client-user-guide.md).
+For more information about this preview version of the client, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/) and the [preview user guide](../rms-client/client-user-guide.md).
 
 ## More information about the Rights Management sharing application
 
