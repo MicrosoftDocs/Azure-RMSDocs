@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 12/07/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure classic portal, where, for example, you can configure and manage Rights Management templates.
 
-If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial.: Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
+If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial. Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
 
 For more information, see the following resources in the Azure Active Directory documentation:
 
@@ -41,10 +41,15 @@ For more information, see the following resources in the Azure Active Directory
 
 If you want to integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-> [!NOTE]
-> If you have mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
-> 
-> -   You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
+### Scenarios that have specific requirements 
+
+Computers running Office 2010: 
+
+- If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario will fail to authenticate users for Azure Information Protection.
+
+Mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
+
+- You must use AD FS on the minimum server version of **Windows Server 2012 R2**, or an alternative authentication provider that supports the OAuth 2.0 protocol.
 
 ## Multi-factor authentication (MFA) and Azure Information Protection
 To use multi-factor authentication (MFA) with Azure Information Protection requires at least one of the following:
