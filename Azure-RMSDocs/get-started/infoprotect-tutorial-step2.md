@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Microsoft Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,17 +40,21 @@ Although Azure Information Protection comes with a default policy that you can u
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-3.  Explore the main **Azure Information Protection** blade, which shows the default Information Protection policy that's automatically created:
+3.  Explore the automatically displayed **Policy: Global** blade, which shows the default Information Protection policy that's automatically created:
     
     - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
 
-    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set. In addition, the four global settings are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and the client is not configured for a custom help link.
-
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy.png)
+    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
+    
+    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labels.png)
+    
+    In addition, there are some global policy settings that are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and the client is not configured for a custom help link:
+    
+    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
 ## Changing the global settings for a default template and prompt for justification
 
-For our tutorial, we'll change a couple of those global settings so that you can see how they work:
+For our tutorial, we'll change a couple of those global policy settings so that you can see how they work:
 
 1. For **Select the default label**, set this to **Internal**.
 
@@ -110,11 +114,11 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
 
-8. Click **Save** on this **Label: Confidential** blade. Then, on the main **Azure Information Protection** blade, click **Save** again.
+8. Click **Save** on this **Label: Confidential** blade. Then, on the **Policy: Global** blade, click **Save** again.
 
-9. Now we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
+    ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
 
-![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
+9. Now we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
