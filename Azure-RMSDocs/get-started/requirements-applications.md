@@ -89,6 +89,8 @@ For more information, see the following post on the Enterprise and Mobility Blog
 
 Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). The following Office client editions support protecting files and emails by using Azure RMS:
 
+- Office 365 ProPlus: Office 2016 and Office 2013
+
 - Office Professional Plus 2016
 
 - Office Professional Plus 2013
@@ -112,6 +114,12 @@ If your iOS and Android devices are enrolled by Microsoft Intune, you can deploy
 For more information, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md).
 
 
+## More information about the Azure Information Protection client for Windows (preview)
+
+This preview version of the Azure Information Protection client is for evaluation and feedback. It will replace the existing Rights Management sharing application for Windows. 
+
+For more information about this preview version of the client, see the [blog post announcement](https://aka.ms/aip-december-release) and the [preview user guide](../rms-client/client-user-guide.md).
+
 ## More information about the Rights Management sharing application
 
 For more information about the Rights Management sharing application for Windows, see the following resources:
@@ -129,15 +137,15 @@ For more information about the Rights Management sharing application for mobile 
 > [!NOTE]
 > The RMS sharing application for iOS and Android is now replaced by the Azure Information Protection app.
 
-## More information about other applications that support Azure RMS
+## More information about other applications that support Azure Information Protection
 
-In addition to the applications in the table, any application that support that RMS APIs can be integrated with Azure RMS, which includes:
+In addition to the applications in the table, any application that supports the APIs for the Azure Rights Management service can be integrated with Azure Information Protection, which includes:
 
-- Line-of-business applications that are written in-house by using the RMS SDK
+- Line-of-business applications that are written in-house by using the RMS SDKs
 
-- Applications from software vendors that are written by using the RMS SDK.
+- Applications from software vendors that are written by using the RMS SDKs.
 
-For more information about the SDK, see the [Microsoft Rights Management SDK](../develop/developers-guide.md).
+For more information, see the [Azure Information Protection Developer's Guide](../develop/developers-guide.md).
 
 ## Applications that are not supported by Azure RMS
 
