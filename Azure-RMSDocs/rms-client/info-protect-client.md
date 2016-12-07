@@ -35,7 +35,7 @@ The following picture shows this Information Protection bar and the labels from 
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
-Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Currently, you can install the General Availability (GA) version, and the preview version. The preview version includes new functionality for evaluation purposes, and is subject to change. For more information, see the following blog post announcement: [Azure Information Protection December preview now available](https://aka.ms/aip-december-release)
+Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Currently, you can install the General Availability (GA) version, and the preview version. The preview version includes new functionality for evaluation purposes, and is subject to change. For more information, see the following blog post announcement: [Azure Information Protection December preview now available](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/)
 
 Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). In addition, for the preview version of the client, computers running Windows 7 SP1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you will be prompted to install it.
 
@@ -76,7 +76,7 @@ You can use any of these options:
     
         You also see your displayed user name that identifies the account that is used to authenticate you to Azure Information Protection. This user name must match an account that you use for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
-    - In the **Help and feedback** section: The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [global settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+    - In the **Help and feedback** section: The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
         
         Use the **Send feedback** link to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate a problem. 
     
