@@ -53,7 +53,7 @@ The current release has the following limitations. Look out for announcements on
 
 - The SDK for partners and developers is not available.
 
-Some of the limitations previously listed are now available in preview. For more information, see the blog post announcement: [Azure Information Protection December preview now available](https://aka.ms/aip-december-release).
+Some of the limitations previously listed are now available in preview. For more information, see the blog post announcement: [Azure Information Protection December preview now available](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/).
 
 
 ## Do I need to be a global admin to try Azure Information Protection?
