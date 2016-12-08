@@ -1,4 +1,3 @@
-﻿
 ﻿---
 # required metadata
 
@@ -15,7 +14,6 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-
 ---
 
 # Security Best Practices for Azure Information Protection

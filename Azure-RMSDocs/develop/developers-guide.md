@@ -14,7 +14,6 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-
 ---
 
 # Azure Information Protection Developer's Guide
