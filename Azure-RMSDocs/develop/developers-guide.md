@@ -129,3 +129,7 @@ These videos are from the Micorsoft 2016 Ignite conference
 ### See also
 - [Developer terminlogy](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
+
+## Comments
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
