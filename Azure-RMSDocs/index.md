@@ -32,11 +32,13 @@ ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><mark><b>NEW</b></mark> <a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Azure Information Protection sessions from Microsoft Ignite 2016</a></li>
+          <li><mark><b>NEW</b></mark> <a href="./deploy-use/configure-policy-scope.md">How to configure scoped policies (preview)</a></li>
+          <li><mark><b>NEW</b></mark> <a href="./ rms-client/client-user-guide.md">User guide (preview)</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Azure Information Protection sessions from Microsoft Ignite 2016</a></li>
           <li><a href="./understand-explore/what-is-information-protection.md">What is Azure Information Protection?</a></li>
-          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Quick start tutorial for Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Quick start tutorial for Azure Information Protection</a></li>
           <li><a href="./get-started/faqs.md">Frequently asked questions for Azure Information Protection</a></li>
 	  <li><a href="./plan-design/deployment-roadmap.md">Azure Information Protection deployment roadmap</a></li>
           <li><a href="./develop/developers-guide.md">Azure Information Protection Developer's Guide</a></li>
