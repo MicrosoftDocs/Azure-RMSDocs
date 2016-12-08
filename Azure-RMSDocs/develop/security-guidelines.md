@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-pageTitle: Security Best Practices | Microsoft Information Protection
+title: Security Best Practices | Microsoft Information Protection
 description: RMS-enabled applications are best built using Azure Information Protection best practices.
 author: BrucePerlerMS
 ms.author: bruceper
