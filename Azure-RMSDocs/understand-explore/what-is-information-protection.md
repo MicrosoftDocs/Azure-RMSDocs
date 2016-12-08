@@ -118,4 +118,4 @@ Know Azure Information Protection or Azure Rights Management by another name? Se
 
 ## Comments
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
