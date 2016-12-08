@@ -115,3 +115,7 @@ When users share their protected documents by email, they can use a document tra
 Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 Know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
+
+## Comments
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)
