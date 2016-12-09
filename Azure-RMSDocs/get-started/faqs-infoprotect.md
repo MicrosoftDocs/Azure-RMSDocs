@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,11 +82,13 @@ Because Azure Information Protection applies persistent labels and protection to
 
 ## Can I classify only new data, or can I also classify existing data?
 
-Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content. 
+Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content.
+
+If you have the preview client, you can also quickly classify (and optionally, protect) existing files from File Explorer. 
 
 ## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
 
-Yes. You can configure an Azure Information Protection policy that only applies a label. In fact, we expect this to be the majority case for deployment networks where you need to protect only a subset of documents or emails that require special data management.
+Yes. You can configure an Azure Information Protection policy that only applies classification without protection, when the file type supports this action. In fact, we expect this to be the majority case for deployment networks where you need to protect only a subset of documents or emails that require special data management.
 
 ## How does automatic classification work?
 
@@ -106,7 +108,7 @@ You'll see an example of this in the [Quick start tutorial for Azure Information
 
 ## Can I force all documents to be classified?
 
-Yes. If you require users to classify all files that they save, in the Azure portal, set the option **All documents and emails must have a label** to **On**. 
+Yes. If you require users to classify all files that they save, in the Azure portal, configure the policy setting **All documents and emails must have a label** to **On**. 
 
 ## Can I remove classification from a file?
 
@@ -123,11 +125,13 @@ In the Azure portal, you can select a Rights Management template to automaticall
 
 You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
 
-## Can a file be classified with two different classifications?
+## Can a file have more than one classification?
 
-If required, you can create sub-labels to better describe sub-categories for a specific sensitivity label. For example, the principal label **Secret** might contain sub-labels such as **Secret \ Legal** and **Secret \ Finance**. You can then apply different classification visual markings and different Rights Management templates to different sub-labels.
+Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sub-label, this actually applies two labels at the same time; a primary label and a secondary label. By using sub-labels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
 
-Although you can currently set visual markings, protection, and conditions at both levels, when you use sub-levels, configure these setting on the sub-level only. If you configure the same settings on the parent label and its sub-level, the settings at the sub-level take precedence.
+For example, the label **Secret** might contain sub-labels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sub-labels. A user cannot select the **Secret** label by itself; only one of its sub-labels, such as **Legal**. As a result, the label that they see set is **Secret \ Legal**. The metadata for that file includes one custom text property for **Secret**, one custom text property for **Legal**, and another that contains both values (**Secret Legal**). 
+
+When you use sub-labels, don't configure visual markings, protection, and conditions at the primary label. When you use sub-levels, configure these setting on the sub-label only. If you configure these settings on the primary label and its sub-label, the settings at the sub-label take precedence.
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
