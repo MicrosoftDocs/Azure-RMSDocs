@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,10 +36,11 @@ When the Azure Information Protection policy downloads to computers that have in
 All users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. 
 
 Scoped policies, just like labels, are ordered in the Azure portal. If a user is configured for multiple scopes, an effective policy is computed for that user before it is downloaded. According to the order of the polices, the last policy setting is applied. The labels that the user sees are from the global policy and any additional labels from scoped policies that the user belongs to. 
+An exception to this rule for what labels a user sees: When a document or email has been labeled and protected, if the protection grants the user at least view rights, that user will see this label when they open or select that content. This label might be in addition to their effective policy. If the label is configured in a policy scope that doesn't include this user, that label will no longer be visible when that document or email is closed.
 
 Because a scoped policy always inherits the labels and settings and from the global policy, the labels from the global policy are displayed when you create or edit a scoped policy. However, you cannot edit the labels from the global policy when you edit a scoped policy. You can however, add sub-labels to these inherited labels.
 
-For example, if you have a label named Confidential in the global policy, all users see this label. You cannot remove or re-order it with a scoped policy. But you might want to create a scoped policy for the Marketing department that adds a new sub-label to Confidential, so that these users see Confidential\Promotions. Then you create another scoped policy for the Sales department that adds a new sub-label to Confidential, so that these users see Confidential\Partners. Each sub-label can then be configured for different settings and the sub-label is visible only to the users in the respective departments.
+For example, if you have a label named **Confidential** in the global policy, all users see this label. You cannot remove or re-order it with a scoped policy. But you might want to create a scoped policy for the Marketing department that adds a new sub-label to Confidential, so that these users see **Confidential \ Promotions**. You also create another scoped policy for the Sales department that adds a new sub-label to Confidential, so that these users see **Confidential \ Partners**. Each sub-label can then be configured for different settings and the sub-label is visible only to the users in the respective departments.
 
 
 To configure a scoped policy for Azure Information Protection:
