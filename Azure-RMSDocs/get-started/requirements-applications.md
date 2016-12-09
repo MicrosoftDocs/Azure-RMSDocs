@@ -105,6 +105,8 @@ Azure RMS with Office Professional Plus 2010 or Office Professional 2010:
 
 - Not supported on Windows 10
 
+- Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
+
 ## More information about the Azure Information Protection app for iOS and Android
 
 The Azure Information Protection app for iOS and Android replaces the RMS sharing app for these devices. It provides the same functionality and in addition, supports rights-protected email messages and rights-protected PDF files on SharePoint Online.
