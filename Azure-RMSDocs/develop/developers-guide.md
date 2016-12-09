@@ -14,13 +14,6 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-
-# optional metadata
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.tgt_pltfrm: "na"
-
 ---
 
 # Azure Information Protection Developer's Guide
@@ -48,10 +41,10 @@ These scripts, generally used by Azure Rights management administrators, are use
 
 
 ## User applications
-User Applications are built using both the RMS SDK 2.1 and RMS SDK 4.2.
-The 4.2 version is a REST based client. The 2.1 version is used for building native Windows based applications.
+User applications can be built with either the RMS SDK 2.1 or the RMS SDK 4.2.
+The 4.2 version is REST client based with operating system specific APIs for several popular OSs; iOS/OSX, Android, Linux, Windows. The 2.1 version is used for building native Windows based applications.
 
-### User application development process guides
+### User application development guides
 - [Developing your application](developing-your-application.md)
 - [Testing your application](how-to-set-up-your-test-environment.md)
 - [Deploying your application](deploying-your-application.md)
@@ -129,3 +122,7 @@ These videos are from the Micorsoft 2016 Ignite conference
 ### See also
 - [Developer terminlogy](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
+
+## Comments
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
