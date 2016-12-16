@@ -86,22 +86,22 @@ The RMS Client 2.1 is not a Windows operating system component. The client ships
 
 ### Creating your deployment package
 
-    We recommend that you bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed other applications and solutions.
+We recommend that you bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed other applications and solutions.
 
-    You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently installing it. The integration steps will be:
+You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently installing it. The integration steps will be:
 
-    -   Download RMS Client 2.1 installer
-    -   Integrate the RMS Client 2.1 installer to run with your application installer
+-   Download RMS Client 2.1 installer
+-   Integrate the RMS Client 2.1 installer to run with your application installer
 
-    An example of integrating the RMS Client 2.1 with your application is the [Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx) package. Try installing it yourself to understand the approach.
+An example of integrating the RMS Client 2.1 with your application is the [Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx) package. Try installing it yourself to understand the approach.
 
 ### Make RMS Client 2.1 a pre-requisite for your application install
 
-    In this case, you will create a pre-requisite such that your application install will fail if RMS Client 2.1 is not present on the end-user machine.
+In this case, you will create a pre-requisite such that your application install will fail if RMS Client 2.1 is not present on the end-user machine.
 
-    If the client is not present, provide an error message informing the user where they can download a copy of the RMS Client 2.1
+If the client is not present, provide an error message informing the user where they can download a copy of the RMS Client 2.1
 
-    If the client is present, proceed with your application installation.
+If the client is present, proceed with your application installation.
 
 ## Enabling Azure Information Protection / Rights Management Services with your application
 
