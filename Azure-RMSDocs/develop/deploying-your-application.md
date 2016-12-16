@@ -7,7 +7,7 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -24,49 +24,50 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 # Deploy into production
 
+This topic guides you through the deployment process for your Azure Information Protection-enabled application.
 
-This topic outlines and guides you through deployment options for your rights-enabled application.
+## Request an Information Protection Integration Agreement (IPIA)
+Before you can release an application developed with Azure Information Protection, you must apply for an IPIA.
 
-## Request a Production License Agreement
+### Begin the process
+Obtain your IPIA by sending an email to **IPIA@microsoft.com** with the following information:
 
- Before you can release an application developed using the Rights Management Services SDK 2.1, you must apply for a Production License Agreement to obtain a production certificate.
+**Subject:** Requesting IPIA for *Company Name*
 
-You can obtain the certificate by applying for a Production License Agreement.
-
-Send an email message to [RMLA@microsoft.com](mailto:rmla@microsoft.com) and include the following information:
-
-- Full company name
-- Physical corporate address (include the city, state, country or region, and zip or postal code)
-- Corporate mailing address (include the city, state, country or region, and zip or postal code)
-- Company phone and fax numbers
-- Company URL
-- Country or region of incorporation
-- Application or product name
+In the body of the email, include:
+- Application and product name
 - First and last name of the requester
-- Title or position of the requester
 - Email address of the requester
 
-Although an email account is not strictly required, the application process typically relies on email for communication. You can get a free email account at Microsoft Outlook.com. If you do not have an account and do not want one, you can send a typewritten application to the following address:
+### Next steps
+Upon receipt of your IPIA request, we will send you a form (as a Word document).
+Review the terms and conditions of the IPIA, and return the form to **IPIA@microsoft.com** with the following information:
+- Legal name of the Company
+- State/Province (US/Canada) or Country of Incorporation
+- Company URL
+- Email address of the contact person
+- Additional addresses of the company (optional)
+- Name of the Company Application
+- Brief Description of the Application
+- *Azure Tenant ID*
+- *App ID* for the application
+- Company contacts, email, and phone for Critical Situation Correspondence
 
-      Active Directory Rights Management License Agreements (ADRMLA)
+### Completing the agreement
+When we receive your form, we'll send you the final IPIA link to digitally sign. After your signing, it will be signed by the appropriate Microsoft representative, completing the agreement.
 
-      Microsoft Corporation
+### Already have a signed IPIA?
+If you already have a signed IPIA and want to add a new *App ID*
+for an application you are releasing, send an email to **IPIA@microsoft.com** and provide us with the following information:
+- Name of the Company Application
+- Brief Description of the Application
+- Azure Tenant ID (even if it the same one as before)
+- App ID for the application
+- Company contacts, email, and phone for Critical Situation Correspondence
 
-      One Microsoft Way
-
-      Redmond, WA 98052-6399
-
-When requesting an agreement, please do the following;
-- Submit the information, in English, as it should appear on the agreement.
-- Send all requested information. Missing or incomplete information can delay processing of your request.
-
-The Active Directory Rights Management Licensing Agreement (ADRMLA) team will respond to your emailed request within three business days, longer if you sent the request by using a postal service. The response will include the license agreement form and further instructions. Read, sign, and return all pages of the agreement to the ADRMLA team. Please do not change the fonts or reformat the paragraphs of the license agreement.
-
-Be sure to follow the instructions you receive from the ADRMLA team. The instructions list the items of digital information needed to fulfill your certificate request. By following the step-by-step instructions you will reduce delays.
-
+Upon the sending of the email, please allow up to 72 hours for an acknowledgement of the receipt.
 
 ## Installation options and requirements for Rights Management Service Client 2.1
 
@@ -74,9 +75,9 @@ Given that you utilized RMS SDK 2.1, you will need Active Directory Rights 
 
 ### RMS Client 2.1
 
-The RMS Client 2.1 is software designed for your client computers to help protect access to and usage of information flowing through applications that use RMS whether installed on your premises or in a Microsoft datacenter.
+The RMS Client 2.1 is software designed for your client computers to help protect access to and usage of information flowing through applications that use RMS, whether installed on your premises or in a Microsoft datacenter.
 
-The RMS Client 2.1 is not a Windows operating system component. The RMS Client 2.1 ships as an optional download which can be, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access content that has been rights protected by use and deployment of RMS servers in your environment.
+The RMS Client 2.1 is not a Windows operating system component. The client ships as an optional download which can be, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access content that has been rights protected by use and deployment of RMS servers in your environment.
 
 
 > [!IMPORTANT]
@@ -85,9 +86,9 @@ The RMS Client 2.1 is not a Windows operating system component. The RMS Client 2
 
 ## RMS Client 2.1 installation choices
 
--   **Redistributing the RMS Client 2.1**
+### Redistributing the RMS Client 2.1
 
-    The recommended approach is to bundle RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed and bundled with other applications and IT solutions.
+    The recommended approach is to bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed and bundled with other applications and IT solutions.
 
     You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently install it. The integration steps will be:
 
@@ -96,7 +97,7 @@ The RMS Client 2.1 is not a Windows operating system component. The RMS Client 2
 
     Two good examples of integrating the RMS Client 2.1 with your application are the RMS SDK 2.1 installer package and the Right Protected Folder Explorer package. Try installing them yourself to understand the approach.
 
--   **Make RMS Client 2.1 a pre-requisite for your application install**
+### Make RMS Client 2.1 a pre-requisite for your application install
 
     In this case, you will create a pre-requisite such that your application install will fail if RMS Client 2.1 is not present on the end-user machine.
 
@@ -113,7 +114,7 @@ The RMS Client 2.1 is not a Windows operating system component. The RMS Client 2
 > Install the RMS Client 2.1 without requiring administrative privileges to the machine
 
 
-In order for your end-user to take advantage of Azure Rights Management services, you must deploy the *Online Services Sign-in Assistant (SIA)*. As the application developer, you do not know whether the end-user will use RMS (on premises) or Azure Rights Management services (cloud service).
+In order for your end-user to take advantage of Information Protection services, you must deploy the *Online Services Sign-in Assistant (SIA)*. As the application developer, you do not know whether the end-user will use Information Protection through RMS (on premises) or through Azure Information Protection.
 
 
 > [!IMPORTANT]
