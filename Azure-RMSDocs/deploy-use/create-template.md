@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 12/16/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -149,8 +149,8 @@ Use the following procedures to create, configure, and publish custom templates 
 
     |Setting|More information|
     |-----------|--------------------|
-    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|
-    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|
+    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone. <br /><br /Recommended setting: **Content never expires** unless the content has a specific time-bound requirement.|
+    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.<br /><br />Recommended setting for sensitive business data that could cause damage to the business if shared with unauthorized people (for example, contracts, security reports, forecast summaries, and sales account data): **Number of days the content is available without an Internet connection** = **7** <br /><br />Recommended setting for very sensitive business data that would cause damage to the business if it was shared with unauthorized people (for example, employee and customer information, passwords, source code, and pre-announced financial reports): **Content is available only with an Internet connection**|
 
 10. When you are confident that the template is configured appropriately for your users, click **PUBLISH** to make the template visible for users, and then click **SAVE**.
 
