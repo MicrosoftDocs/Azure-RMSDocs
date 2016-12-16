@@ -1,9 +1,9 @@
 ﻿---
 # required metadata
 
-title: Deploying your application | Azure RMS
-description: This topic outlines and guides you through deployment options for your rights-enabled application
-keywords:
+title: Deploying your application | Azure Information Protection
+description: This topic outlines and guides you through deployment of your application
+keywords: deploy, RMS, AIP
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
@@ -26,10 +26,10 @@ ms.suite: ems
 ---
 # Deploy into production
 
-This topic guides you through the deployment process for your Azure Information Protection-enabled application.
+This topic guides you through the deployment process for your Azure Information Protection (AIP) / Rights Management Services (RMS) enabled application.
 
 ## Request an Information Protection Integration Agreement (IPIA)
-Before you can release an application developed with Azure Information Protection, you must apply for an IPIA.
+Before you can release an application developed with AIP/RMS, you must apply for and complete a formal agreement with Microsoft.
 
 ### Begin the process
 Obtain your IPIA by sending an email to **IPIA@microsoft.com** with the following information:
@@ -69,33 +69,31 @@ for an application you are releasing, send an email to **IPIA@microsoft.com** an
 
 Upon the sending of the email, please allow up to 72 hours for an acknowledgement of the receipt.
 
-## Installation options and requirements for Rights Management Service Client 2.1
+## Deploying to the client environment
 
-Given that you utilized RMS SDK 2.1, you will need Active Directory Rights Management Services Client 2.1 to be deployed on the end-user machine.
+In order to deploy your application, built with Azure Information Protection (AIP) / Rights Management Services (RMS) tools, you will need to deploy the RMS Client 2.1 on the end-user's machine.
 
 ### RMS Client 2.1
+The RMS Client 2.1 is designed to protect access to and usage of information flowing through AIP/RMS enabled applications, whether installed on your premises or in a Microsoft datacenter.
 
-The RMS Client 2.1 is software designed for your client computers to help protect access to and usage of information flowing through applications that use RMS, whether installed on your premises or in a Microsoft datacenter.
-
-The RMS Client 2.1 is not a Windows operating system component. The client ships as an optional download which can be, with acknowledgment and acceptance of its license agreement, freely distributed with your third-party software to enable client access content that has been rights protected by use and deployment of RMS servers in your environment.
-
+The RMS Client 2.1 is not a Windows operating system component. The client ships as an optional download which can be, with acknowledgment and acceptance of its license agreement, freely distributed with your application.
 
 > [!IMPORTANT]
-> The AD RMS Client 2.1 is architecture specific and must match the architecture of your target operating system.
+> The RMS Client 2.1 is architecture specific and must match the architecture of your target operating system.
 
 
-## RMS Client 2.1 installation choices
+## RMS Client 2.1 installation options
 
-### Redistributing the RMS Client 2.1
+### Creating your deployment package
 
-    The recommended approach is to bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed and bundled with other applications and IT solutions.
+    We recommend that you bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed other applications and solutions.
 
-    You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently install it. The integration steps will be:
+    You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently installing it. The integration steps will be:
 
     -   Download RMS Client 2.1 installer
-    -   Integrate the RMS Client 2.1 installer run with your application installer
+    -   Integrate the RMS Client 2.1 installer to run with your application installer
 
-    Two good examples of integrating the RMS Client 2.1 with your application are the RMS SDK 2.1 installer package and the Right Protected Folder Explorer package. Try installing them yourself to understand the approach.
+    An example of integrating the RMS Client 2.1 with your application is the [Rights Protected Folder Explorer](https://technet.microsoft.com/en-us/library/rights-protected-folder-explorer(v=ws.10).aspx) package. Try installing it yourself to understand the approach.
 
 ### Make RMS Client 2.1 a pre-requisite for your application install
 
@@ -105,16 +103,16 @@ The RMS Client 2.1 is not a Windows operating system component. The client ships
 
     If the client is present, proceed with your application installation.
 
-## Enabling Azure Rights Management Services with your application
+## Enabling Azure Information Protection / Rights Management Services with your application
 
 > [!NOTE]
-> If you have migrated to the new ADAL model for authentication, you don’t have to install SIA. For more information, see [ADAL authentication for your RMS enabled application](adal-auth.md).
+> If you have migrated to the new ADAL model for authentication, you don’t have to install **SIA**. For more information, see [ADAL authentication for your RMS enabled application](adal-auth.md).
 > Also, you can **Certify your application for Windows 10** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 > Utilize multi-factor authentication
 > Install the RMS Client 2.1 without requiring administrative privileges to the machine
 
 
-In order for your end-user to take advantage of Information Protection services, you must deploy the *Online Services Sign-in Assistant (SIA)*. As the application developer, you do not know whether the end-user will use Information Protection through RMS (on premises) or through Azure Information Protection.
+In order for your end-user to take advantage of Information Protection / Rights Management services, you must deploy the *Online Services Sign-in Assistant (SIA)*. As the application developer, you do not know whether the end-user will use Information Protection through RMS (on premises) or through Azure Information Protection.
 
 
 > [!IMPORTANT]
