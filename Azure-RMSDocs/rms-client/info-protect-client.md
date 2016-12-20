@@ -93,15 +93,19 @@ Use one of the following procedures to identify the value to specify for the Ser
 
 3. From the value, remove **/_wmcs/licensing** from this string. For example: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
+    The remaining string is the the value to specify for your ServiceLocation parameter.
+
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /passive | quiet /ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 #### AD RMS: To identify the value to specify for the ServiceLocation parameter
 
 1. In the **Active Directory Rights Management Services** console, click the cluster name. 
 
-2. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: **https://rmscluster.contoso.com** 
+2. From the **Cluster Details** information, locate the **Licensing** value and remove **/_wmcs/licensing** from this string. For example: **https://rmscluster.contoso.com** 
     
-    If you have an extranet licensing value as well as an intranet licensing value and they are different: Specify the extranet value.
+    If you have an extranet licensing value as well as an intranet licensing value and they are different: Use the extranet value.
+
+    The remaining string is the the value to specify for your ServiceLocation parameter.
 
 Example to install the client silently for Office 2010 and AD RMS: `AzInfoProtection.exe /passive | quiet /ServiceLocation=https://rmscluster.contoso.com`
 
