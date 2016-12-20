@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -104,7 +104,7 @@ Use the following procedures to create, configure, and publish custom templates 
 
 3.  Click the Next button, and then assign one of the listed rights to your selected users and groups.
 
-    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
+    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support Rights Management might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
 
 4.  If you selected **Custom**, click the Next button, and then select those custom rights.
 
@@ -147,10 +147,10 @@ Use the following procedures to create, configure, and publish custom templates 
 
     Then check whether you want to make any changes to the following settings:
 
-    |Setting|More information|
-    |-----------|--------------------|
-    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|
-    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|
+    |Setting|More information| Recommended setting
+    |-----------|--------------------|--------------------|
+    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Content is available only with an Internet connection** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
 
 10. When you are confident that the template is configured appropriately for your users, click **PUBLISH** to make the template visible for users, and then click **SAVE**.
 
