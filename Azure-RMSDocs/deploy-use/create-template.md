@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/16/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
