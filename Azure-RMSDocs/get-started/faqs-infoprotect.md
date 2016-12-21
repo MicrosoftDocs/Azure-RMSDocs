@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -194,7 +194,7 @@ Especially when you're using an administrator account, be sure to check the doma
 
 To sign in as a different user, you must currently edit the registry:
 
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** key.
+1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
 
 2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
 
