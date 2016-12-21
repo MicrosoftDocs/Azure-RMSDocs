@@ -63,7 +63,7 @@ You can script and automate the installation of the Azure Information Protection
 
 Example to install the client silently: `AzInfoProtection.exe /passive | quiet`
 
-If you are installing the preview version of the client on computers that run Office 2010, you must specify the /ServiceLocation parameter. See the next section for more information.
+If you are installing the preview version of the client on computers that run Office 2010, specify the **/ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
 
 The general availability version of the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. Preview versions of the client are not included in the Microsoft Update catalog.
 
