@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,10 @@ To configure a scoped policy for Azure Information Protection:
 
 6. When you have finished making the changes that you want for this scoped policy, on the initial **Azure Information Protection** blade, make sure that this scoped policy is in the order that you want it applied. This is important when you have selected the same user for multiple scoped policies. Then click **Publish**. 
 
-The Azure Information Protection client checks for any changes whenever a supported Office application starts. It downloads any changes to the global policy or scoped policies that apply to that user.
+The Azure Information Protection client checks for any changes whenever a supported Office application starts or File Explorer is opened. The client downloads any changes to the global policy or scoped policies that apply to that user.
+
+> [!TIP]
+> After you have saved your scoped policy, you can use the **Cross Policy Editor** on the initial **Azure Information Protection** blade, to view and reconfigure all the labels from your Azure Information Protection policy. This method provides an easy way to compare labels from multiple policies (your global policy and all scoped policies). However, this editor doesn't let you add or reorder labels, or view or configure the policy settings.
 
 ## Next steps
 
