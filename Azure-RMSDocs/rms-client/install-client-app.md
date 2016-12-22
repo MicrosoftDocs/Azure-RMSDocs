@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/20/2016
+ms.date: 12/22/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,7 +68,7 @@ Only if you use Office 2010 must you be a local administrator to install the Azu
 
 After you have installed the Azure Information Protection client by using the previous instructions:
 
-1. Open Microsoft Word. Because this is the first time that you have run an Office 2010 application after you have installed the Azure Information Protection client, you see a **Microsoft Azure Information Protection** dialog box. This dialog box tells you that administrator credentials are required to complete the sign in process.
+1. Open Microsoft Word. When this is the first time that you have run an Office 2010 application after you have installed the Azure Information Protection client, you see a **Microsoft Azure Information Protection** dialog box. This dialog box tells you that administrator credentials are required to complete the sign in process.
 
 2. In the **Microsoft Azure Information Protection** dialog box, click **OK**.
 

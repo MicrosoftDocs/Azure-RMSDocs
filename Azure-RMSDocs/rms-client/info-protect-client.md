@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/20/2016
+ms.date: 12/22/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,7 +53,7 @@ Before you install the client, check that you have the required operating system
 
 2. To complete the installation: 
 
-    - If your computer runs Office 2010, restart your computer. If you installed the preview version of the client: Additionally, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm the prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
+    - If your computer runs Office 2010, restart your computer. If you installed the preview version of the client: Additionally, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
     
     - For other versions of Office, restart any Office applications.
 
@@ -63,13 +63,13 @@ You can script and automate the installation of the Azure Information Protection
 
 Example to install the client silently: `AzInfoProtection.exe /passive | quiet`
 
-If you are installing the preview version of the client on computers that run Office 2010, specify the **/ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
+If you are installing the preview version of the client on computers that run Office 2010, specify the **ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
 
-The general availability version of the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. Preview versions of the client are not included in the Microsoft Update catalog.
+The General Availability version of the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. Preview versions of the client are not included in the Microsoft Update catalog.
 
 ### Preview version and Office 2010 only
 
-For the preview version of the client and Office 2010, when you install the client for users, specify the ServiceLocation parameter and the URL for your Rights Management service. This parameter and value creates and sets the following registry keys:
+For the preview version of the client and Office 2010, when you install the client for users, specify the ServiceLocation parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -79,9 +79,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
-Use one of the following procedures to identify the value to specify for the ServiceLocation parameter. Most deployments will be using the Azure Rights Management service (Azure RMS), rather than just the on-premises version, Active Directory Rights Management Services (AD RMS):
+Use the following procedure to identify the value to specify for the ServiceLocation parameter. 
 
-#### Azure RMS: To identify the value to specify for the ServiceLocation parameter
+#### To identify the value to specify for the ServiceLocation parameter
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
@@ -95,19 +95,7 @@ Use one of the following procedures to identify the value to specify for the Ser
 
     The remaining string is the the value to specify for your ServiceLocation parameter.
 
-Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /passive | quiet /ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
-
-#### AD RMS: To identify the value to specify for the ServiceLocation parameter
-
-1. In the **Active Directory Rights Management Services** console, click the cluster name. 
-
-2. From the **Cluster Details** information, locate the **Licensing** value and remove **/_wmcs/licensing** from this string. For example: **https://rmscluster.contoso.com** 
-    
-    If you have an extranet licensing value as well as an intranet licensing value and they are different: Use the extranet value.
-
-    The remaining string is the the value to specify for your ServiceLocation parameter.
-
-Example to install the client silently for Office 2010 and AD RMS: `AzInfoProtection.exe /passive | quiet /ServiceLocation=https://rmscluster.contoso.com`
+Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /passive | quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
 ## To uninstall the Azure Information Protection client
