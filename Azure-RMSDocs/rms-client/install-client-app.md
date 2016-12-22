@@ -74,7 +74,7 @@ After you have installed the Azure Information Protection client by using the pr
 
 2. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.
 
-Your installation is now complete and you can use client to label and protect your documents and emails.
+Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
 
 ## Other instructions
 For how-to instructions, see the following sections from the Azure Information Protection user guide:
