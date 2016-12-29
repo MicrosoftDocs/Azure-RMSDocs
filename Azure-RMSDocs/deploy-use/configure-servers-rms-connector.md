@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 12/29/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -254,7 +254,9 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 3.  Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
 
 ## Next steps
-Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using Azure RMS. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
+Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using the Azure Rights Management service. To make this easy for users, deploy the RMS sharing application, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
+
+Note that if you configure departmental templates that you want to use with Exchange transport rules or Windows Server FCI, the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 
 You can use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators.
 
