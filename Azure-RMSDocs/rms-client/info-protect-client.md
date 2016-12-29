@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2016
+ms.date: 12/29/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -61,7 +61,7 @@ Before you install the client, check that you have the required operating system
 
 You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run the executable with **/help**. For example: `AzInfoProtection.exe /help`.
 
-Example to install the client silently: `AzInfoProtection.exe /passive | quiet`
+Example to install the client silently: `AzInfoProtection.exe /quiet`
 
 If you are installing the preview version of the client on computers that run Office 2010, specify the **ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
 
@@ -95,7 +95,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
     The remaining string is the the value to specify for your ServiceLocation parameter.
 
-Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /passive | quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
 ## To uninstall the Azure Information Protection client
