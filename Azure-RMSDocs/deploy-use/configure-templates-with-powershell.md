@@ -64,3 +64,5 @@ The cmdlets that support creating and managing templates:
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

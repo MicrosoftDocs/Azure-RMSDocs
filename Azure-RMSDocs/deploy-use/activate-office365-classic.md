@@ -58,3 +58,5 @@ You should now see **Rights management is activated** and the option to deactiva
 
 ## Next steps
 Back to [Activating Azure Rights Management](activate-service.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

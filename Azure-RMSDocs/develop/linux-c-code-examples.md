@@ -608,3 +608,4 @@ Description: Call **result-> accessToken()** method
 
 **Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

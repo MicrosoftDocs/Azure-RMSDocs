@@ -70,4 +70,5 @@ In addition, there are FAQs designed for end-users:
 
 -   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

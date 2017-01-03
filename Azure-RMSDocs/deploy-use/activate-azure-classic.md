@@ -63,3 +63,5 @@ In addition to the **Active** status, which indicates that the Rights Management
 
 ## Next steps
 Back to [Activating Azure Rights Management](activate-service.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

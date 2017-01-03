@@ -632,7 +632,4 @@ This scenario begins with getting a list of templates, selecting the first one t
           …
         }
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

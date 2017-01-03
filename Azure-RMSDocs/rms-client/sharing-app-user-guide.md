@@ -69,5 +69,6 @@ Here are just some examples of how you might use the RMS sharing application, to
 
 - [Specify settings in the dialog box](sharing-app-dialog-box.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

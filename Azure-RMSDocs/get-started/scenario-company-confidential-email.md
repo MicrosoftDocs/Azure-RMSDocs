@@ -161,3 +161,4 @@ People that you send your email to will be able to forward it to other people, b
 
     -   Email: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

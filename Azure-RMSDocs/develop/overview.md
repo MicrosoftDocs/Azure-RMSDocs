@@ -60,9 +60,5 @@ Use the [Get started](get-started.md) guide to begin your protected information 
 * [Get started](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
 * [GitHub account](https://github.com/AzureAD/)
- 
 
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

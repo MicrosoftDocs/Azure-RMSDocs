@@ -136,3 +136,4 @@ When sending company-confidential information to another VanArsdel executive, pl
 
 -   Contact the help desk: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -89,6 +89,5 @@ For example, you might want to use [custom templates](configure-custom-templates
 Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. 
 For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
 
-## Comments
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -245,3 +245,5 @@ If Bob forwards his email with the attachment, or saves it where others can acce
 ## Next steps
 
 Now you’ve seen some examples of what Azure RMS can do, you might be interested in how it does it. For technical information about how Azure RMS works, see [How does Azure RMS work?](how-does-it-work.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

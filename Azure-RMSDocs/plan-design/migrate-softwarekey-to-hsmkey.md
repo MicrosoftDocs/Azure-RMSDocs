@@ -165,5 +165,6 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 You’re now ready to go to [Step 3. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

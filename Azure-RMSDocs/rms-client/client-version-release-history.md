@@ -67,3 +67,5 @@ General Availability.
 ## Next steps
 
 For more information about installing the client, see [Installing the Azure Information Protection client](info-protect-client.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

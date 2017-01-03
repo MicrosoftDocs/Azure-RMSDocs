@@ -89,9 +89,4 @@ You are now ready to create your own new Windows Phone apps.
 
 [Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
 
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -49,6 +49,4 @@ After you have identified which topology you have implemented, select one of the
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)
 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -74,4 +74,5 @@ For more information about these cmdlets, see [RMS Protection Cmdlets](https://m
 > [!NOTE]
 > The RMS Protection PowerShell module that ships with the RMS Protection Tool is different from and supplements the main [Windows PowerShell module for Azure Rights Management](administer-powershell.md). The RMS Protection module supports both the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

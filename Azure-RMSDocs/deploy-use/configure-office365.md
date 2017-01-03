@@ -1114,3 +1114,4 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

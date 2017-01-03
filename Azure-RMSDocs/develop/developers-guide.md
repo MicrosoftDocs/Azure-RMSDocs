@@ -23,7 +23,7 @@ This guide will orient you to tools for extending and integrating with Azure Inf
 >The current Azure Information Protection SDK has the rights management component and the classification and labelling are under development.
 
 ## Service Applications
-Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Leakage Protection (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
+Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Loss Prevention (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
 
 - [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
 - [C# Managed API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
@@ -122,7 +122,5 @@ These videos are from the Micorsoft 2016 Ignite conference
 ### See also
 - [Developer terminlogy](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
-
-## Comments
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

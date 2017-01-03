@@ -139,3 +139,5 @@ Redirect_OnPrem.cmd:
 
 ## Next steps
 To continue the migration, go to [phase 3 -supporting services configuration](migrate-from-ad-rms-phase3.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

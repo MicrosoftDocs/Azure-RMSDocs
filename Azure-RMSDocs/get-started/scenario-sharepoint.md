@@ -109,3 +109,4 @@ You will not be able to upload documents to the Sales Forecasts and Reports site
 
 -   Contact the help desk: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
