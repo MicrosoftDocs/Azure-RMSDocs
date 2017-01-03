@@ -56,8 +56,6 @@ For information about the additional requirements for this scenario, see [On-pre
 > 
 > There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
-## Comments
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

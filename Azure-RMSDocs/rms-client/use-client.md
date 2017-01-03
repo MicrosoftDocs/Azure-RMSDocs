@@ -53,6 +53,4 @@ Use the following documentation when you need more information about how to depl
 ## See also
 [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
 
-## Comments
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

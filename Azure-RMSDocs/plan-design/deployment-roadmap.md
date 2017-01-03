@@ -194,6 +194,4 @@ If you're interested in automatically protecting files using File Classification
 ### Step 5: Administer the Rights Management service for your tenant account as needed
 As you begin to use the Azure Rights Management service, you might find Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](../deploy-use/administer-powershell.md).
 
-## Comments
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
