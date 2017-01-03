@@ -77,3 +77,5 @@ For more information about using the Azure Rights Management service with ShareP
 ## Next steps
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -78,4 +78,6 @@ For more information about these external certifications, see the [Azure Trust C
 
 To see what Azure RMS looks like, for administrators and for users, see [Azure RMS in action](what-admins-users-see.md).
 
-If you're interested in more technical information about Azure RMS works, see [How does Azure RMS work?](how-does-it-work.md) 
+If you're interested in more technical information about Azure RMS works, see [How does Azure RMS work?](how-does-it-work.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

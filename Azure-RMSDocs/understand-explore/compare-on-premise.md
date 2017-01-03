@@ -80,4 +80,5 @@ Azure Information Protection is compliant with FIPS 140-2 when your tenant key i
 ## Next steps
 If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
