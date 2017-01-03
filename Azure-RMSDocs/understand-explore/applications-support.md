@@ -66,3 +66,4 @@ Learn more about how each of the following supports the Azure Rights Management 
 
 -   [Other applications that support the RMS APIs](api-support.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

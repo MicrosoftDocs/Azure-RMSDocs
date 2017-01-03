@@ -221,3 +221,5 @@ Instructions for when you use these settings:
 
 
 Back to [Deploying the Azure Rights Management connector](deploy-rms-connector.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

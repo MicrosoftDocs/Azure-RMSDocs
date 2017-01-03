@@ -55,8 +55,4 @@ This release, MS RMS SDK 4.2, is available for the following operating system
 
 [API reference](api-reference-4-2.md) - The MS RMS SDK 4.2 supports several operating systems noted in the table of contents following.
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

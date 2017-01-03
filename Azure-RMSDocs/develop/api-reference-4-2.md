@@ -44,6 +44,5 @@ The Microsoft Rights Management SDK 4.2 supports several operating systems. For
 ## Related topics
 
 * [Get started](get-started.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

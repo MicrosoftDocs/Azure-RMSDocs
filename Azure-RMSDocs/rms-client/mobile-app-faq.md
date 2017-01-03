@@ -64,3 +64,5 @@ In the app, go to **Settings** > **Send feedback**.
 ## My question has not been answered—what should I do?
 
 Post your question to our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

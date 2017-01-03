@@ -151,3 +151,4 @@ The following files now have a very high level of protection applied to them, so
 
 -   If you cannot access these files or if you notice suspicious changes in the files, call the 24-hour support escalation line that has been sent to you in a protected email message from the IT Department.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

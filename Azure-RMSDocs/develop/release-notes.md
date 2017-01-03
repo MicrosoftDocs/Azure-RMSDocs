@@ -221,6 +221,4 @@ This section outlines information about the current and previous releases of the
 
 **A**:The OS X SDK works with Xcode 4.6 and later only, as well as OS X 10.8 and later.
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -87,4 +87,5 @@ Example: If you specify the string `Document: ${item.name}  Classification: ${it
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

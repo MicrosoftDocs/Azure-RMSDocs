@@ -59,9 +59,4 @@ Two guidance topis for this SDK are hosted on Github for basic SDK build and usa
 
 * [Developer terms and concepts](core-concepts.md)
 
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

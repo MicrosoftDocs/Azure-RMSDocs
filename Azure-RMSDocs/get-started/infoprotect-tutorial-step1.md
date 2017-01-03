@@ -62,3 +62,5 @@ That's all you need to do for this first step to complete this tutorial. For a p
 >[!div class="step-by-step"]
 [&#171; Introduction](infoprotect-quick-start-tutorial.md)
 [Step 2 &#187;](infoprotect-tutorial-step2.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

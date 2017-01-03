@@ -47,7 +47,4 @@ If you have questions that are not answered by this guide, visit our [Azure Info
 
 - [Open files that have been protected](client-view-use-files.md)
 
-
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

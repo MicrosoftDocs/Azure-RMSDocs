@@ -191,3 +191,5 @@ By editing the registry on the computers running Office 2010, you can set a valu
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

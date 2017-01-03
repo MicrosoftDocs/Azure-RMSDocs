@@ -39,6 +39,5 @@ The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clie
 ## Related topics
 
 * [Release notes](release-notes-rtm.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

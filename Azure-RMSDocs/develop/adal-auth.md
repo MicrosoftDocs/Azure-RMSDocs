@@ -108,3 +108,5 @@ After signing up for Microsoft Azure:
 - Save your application to persist the changes by choosing the **Save** icon located on the bottom, center of the portal.
 
 ![Select SAVE](../media/SaveApplication.png)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

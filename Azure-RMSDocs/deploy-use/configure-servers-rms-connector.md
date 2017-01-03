@@ -261,3 +261,5 @@ Note that if you configure departmental templates that you want to use with Exch
 You can use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] to users and administrators.
 
 To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md). 
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
