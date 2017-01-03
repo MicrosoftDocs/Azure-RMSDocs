@@ -306,3 +306,4 @@ To do this, use one of the built-in classification properties (for example, **Pe
 
 Now all you need to do is create a new file management task that uses the same script but perhaps with a different template, and configure the condition for the classification property that you have just configured. For example, instead of the condition that we configured previously (**RMS** property, **Equal**, **Yes**), select the **Personally Identifiable Information** property with the **Operator** value set to **Equal** and the **Value** of **High**.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

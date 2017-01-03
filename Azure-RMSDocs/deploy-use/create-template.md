@@ -173,3 +173,5 @@ To make any changes to your template, select it, and then use the quick start st
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

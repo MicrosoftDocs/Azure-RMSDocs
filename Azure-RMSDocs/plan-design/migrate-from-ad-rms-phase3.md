@@ -220,3 +220,5 @@ After you have completed these procedures, you are ready to read the **Next step
 
 ## Next steps
 To continue the migration, go to [phase 4 -post migration tasks](migrate-from-ad-rms-phase4.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

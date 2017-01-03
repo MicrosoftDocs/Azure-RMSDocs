@@ -159,3 +159,4 @@ Periodically, the file will be protected again, which again adds the .pfile file
 
 -   Contact the help desk: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -44,11 +44,4 @@ If you haven’t registered on Microsoft Connect, do the following:
 -   Search for **Rights Management Services**.
 -   Click **Join** to register.
 
- 
-
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

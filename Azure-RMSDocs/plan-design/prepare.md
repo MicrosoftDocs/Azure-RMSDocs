@@ -42,5 +42,6 @@ Before you deploy Azure Information Protection for your organization, make sure 
 ## Activate the Rights Management service for data protection
 When you are ready to start protecting documents and emails, activate the Rights Management service to enable this technology. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

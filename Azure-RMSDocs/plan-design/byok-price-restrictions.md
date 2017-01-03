@@ -91,3 +91,4 @@ If you've made the decision to manage your own key, go to [Implementing your Azu
 
 If you've decided to stay with the default configuration where Microsoft manages your tenant key, see the [Next steps](plan-implement-tenant-key.md#next-steps) section of the Planning and implementing your Azure Rights Management tenant key article.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

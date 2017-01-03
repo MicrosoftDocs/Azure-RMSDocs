@@ -165,7 +165,4 @@ The File API components of SDK has been extended and offers the following featur
 
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

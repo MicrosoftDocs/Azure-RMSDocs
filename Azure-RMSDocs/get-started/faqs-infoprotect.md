@@ -209,3 +209,5 @@ Additionally:
 If you have a problem with Azure Information Protection and you are using the current release of the client: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
 
 If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

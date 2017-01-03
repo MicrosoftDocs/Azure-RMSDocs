@@ -69,4 +69,5 @@ Use the following information to help you configure and use custom templates:
 
 -   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -143,3 +143,4 @@ You can make similar registry edits for other scenarios by changing the value of
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -65,3 +65,5 @@ Here's a code snip from the larger sample for mobile client code to enale Azure 
 
 - [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 - [Configure Azure RMS for ADAL authentication](adal-auth.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

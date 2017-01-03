@@ -42,3 +42,4 @@ For client computers to use the Azure Rights Management service with Office 201
 
 For more information about the Rights Management sharing application, see [Rights Management sharing application: Installation and configuration for clients](configure-sharing-app.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -118,4 +118,5 @@ Similarly to viewing a protected document, when the recipients receive the email
 
 Similarly to viewing a protected document, when the recipients receive the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted usage rights that were specified for that user. For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -203,3 +203,4 @@ The migration steps can be divided into 4 phases that can be done at different t
 ## Next steps
 To start the migration, go to [Phase 1 - server-side configuration](migrate-from-ad-rms-phase1.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -115,6 +115,4 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 * [iOS / OS X API Reference](https://msdn.microsoft.com/library/dn758306.aspx)
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

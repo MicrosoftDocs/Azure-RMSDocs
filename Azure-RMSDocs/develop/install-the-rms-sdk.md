@@ -45,6 +45,5 @@ For more information on the files installed on your system by "setup\_sdk.exe", 
 ## Related topics
 
 * [Development environment files](sdk-elements.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

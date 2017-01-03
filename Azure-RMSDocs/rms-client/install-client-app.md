@@ -84,3 +84,4 @@ For how-to instructions, see the following sections from the Azure Information P
 ## Additional information for administrators
 [Installing the Azure Information Protection client](info-protect-client.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -96,3 +96,4 @@ Troubleshooting:
 
 -   [Forum: RMS for Users (applications)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -228,3 +228,4 @@ Remove-PSDrive MyRmsAdmin -force
 ## Next steps
 Go to [phase 2 - client-side configuration](migrate-from-ad-rms-phase2.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
