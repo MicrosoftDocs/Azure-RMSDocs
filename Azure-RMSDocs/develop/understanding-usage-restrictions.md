@@ -77,6 +77,4 @@ Each user right, listed in the AD RMS right column, has a description, an enforc
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

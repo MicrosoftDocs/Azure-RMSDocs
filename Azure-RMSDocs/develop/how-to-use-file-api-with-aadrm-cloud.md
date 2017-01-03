@@ -189,6 +189,5 @@ You have now completed the steps needed to enable your application to use Azure 
 * [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
 * [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
 * [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

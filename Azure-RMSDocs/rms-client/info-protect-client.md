@@ -214,3 +214,5 @@ To change the labels on the Information Protection bar, you must configure the A
 For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 To check the release version information for the client, see the [Version release history](client-version-release-history.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

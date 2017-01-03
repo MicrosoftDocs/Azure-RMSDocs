@@ -158,3 +158,4 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
     -   Email: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -93,5 +93,6 @@ You should now see **Rights Management is not activated** and the option to acti
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Inactive** and the **DEACTIVATE** option is replaced with **ACTIVATE**.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

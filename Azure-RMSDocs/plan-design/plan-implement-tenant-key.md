@@ -147,3 +147,4 @@ Now that you've planned for and if necessary, generated your tenant key, do the 
 
     For more information, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

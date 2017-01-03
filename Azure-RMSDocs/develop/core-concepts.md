@@ -36,8 +36,4 @@ The following topics are intended to support your design process for developing 
 - [How to use document tracking](how-to-use-document-tracking.md) - Using the document tracking feature requires some simple understandings about managing the associated metadata and registration with the service.
 - [Terms](terms.md) - Collection of terminology definitions specific to Rights Management Services.
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

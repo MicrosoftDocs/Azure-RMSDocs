@@ -79,3 +79,5 @@ Before you can run any commands that configure the [!INCLUDE[aad_rightsmanagemen
 
 ## See Also
 [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

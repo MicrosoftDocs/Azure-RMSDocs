@@ -180,3 +180,5 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 ---
 
 Back to [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

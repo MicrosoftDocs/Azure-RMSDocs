@@ -47,6 +47,5 @@ This section covers specific guidance for several important development scenario
  
 ## Related topics
 * [Overview](ad-rms-overview.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

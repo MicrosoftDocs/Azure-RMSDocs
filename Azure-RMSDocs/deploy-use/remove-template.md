@@ -46,3 +46,5 @@ The status changes from **Published** to **Archived**. If you change your mind, 
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

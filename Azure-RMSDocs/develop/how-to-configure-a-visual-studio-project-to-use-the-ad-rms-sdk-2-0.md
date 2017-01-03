@@ -77,6 +77,5 @@ These instructions apply to building a native 32-bit application.
 ## Related topics
 
 * [Install the SDK](install-the-rms-sdk.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

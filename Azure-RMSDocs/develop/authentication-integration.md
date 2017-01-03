@@ -272,8 +272,4 @@ and comes from the previous registration step via the Azure portal.
       }
     }
 
-
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

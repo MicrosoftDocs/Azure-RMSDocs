@@ -126,3 +126,4 @@ If you configured the custom template as documented for this scenario, users wil
 > 
 > After a period of time, if you discover there are many such requests, you might decide to define your own custom template for this scenario that grants only specific users (such as managers or the help desk) the Co-Owner option while standard users are granted Co-Author or whatever [rights](../deploy-use/configure-usage-rights.md) you decide are suitable.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
