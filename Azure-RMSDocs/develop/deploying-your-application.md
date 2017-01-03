@@ -130,6 +130,5 @@ For more on enabling your application to use RMS for Azure Rights Management ser
 * [Microsoft Online Services Sign-In Assistant](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Configuring Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
 * [Enable your application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

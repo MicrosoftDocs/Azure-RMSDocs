@@ -109,6 +109,4 @@ The following steps guide you in setting up your RMS server and include:
           MSIPC
             ```
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

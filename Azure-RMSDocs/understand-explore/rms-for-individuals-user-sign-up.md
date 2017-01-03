@@ -100,4 +100,4 @@ Throughout this process, there is no charge to the organization and no work requ
 ## Next steps
 See [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-take-control.md).
 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

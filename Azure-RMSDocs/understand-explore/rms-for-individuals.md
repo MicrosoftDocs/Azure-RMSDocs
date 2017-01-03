@@ -45,3 +45,4 @@ RMS for individuals is an example of a self-service signup that is supported by 
 ## Next steps
 See [How users sign up for RMS for individuals](rms-for-individuals-user-sign-up.md), for step-by-step instructions and a technical overview of what's happening in the background. 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

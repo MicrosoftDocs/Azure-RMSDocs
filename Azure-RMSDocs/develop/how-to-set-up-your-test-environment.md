@@ -55,6 +55,5 @@ The guidance in this topic is not comprehensive. For detailed information about 
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

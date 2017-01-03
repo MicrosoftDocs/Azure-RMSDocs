@@ -109,3 +109,5 @@ A user wants to email some information to specific people in the Marketing depar
 ## See Also
 [Configuring custom templates for the Azure Rights Management service](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+

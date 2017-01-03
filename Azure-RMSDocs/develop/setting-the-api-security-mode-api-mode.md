@@ -40,6 +40,5 @@ For more information on *server mode*, see [Application types](application-types
 * [Application types](application-types.md)
 * [API mode values](https://msdn.microsoft.com/library/hh535236.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

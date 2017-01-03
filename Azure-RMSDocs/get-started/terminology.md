@@ -75,5 +75,4 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |unprotect|Remove rights management controls from files or email messages, which used encryption, identity, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

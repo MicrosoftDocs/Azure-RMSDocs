@@ -150,3 +150,4 @@ One of this organization's most valuable assets is its data—the data that we g
 
 The solutions that we're implementing will help us safeguard our valuable data, and give you the tools to keep control of that data. Thank you for your cooperation while we implement these changes.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

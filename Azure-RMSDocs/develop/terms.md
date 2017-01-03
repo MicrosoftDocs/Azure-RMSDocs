@@ -42,9 +42,5 @@ Also referred to as PFile format, it is the default file format for AD RMS and f
 
 PFile format is transparent to the application developer as it is embedded in the way Microsoft Rights Management SDK 4.2 is designed.
 
- 
 
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
