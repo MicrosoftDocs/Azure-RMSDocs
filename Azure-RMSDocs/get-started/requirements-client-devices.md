@@ -6,7 +6,7 @@ description: Identify which devices support the Azure Rights Management service 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 04/01/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -53,6 +53,8 @@ The following mobile device operating systems support the Azure Rights Managem
 -   **Android phones and tablets**: Minimum version of Android 4.0.3
 
 -   **iPhone and iPad**: Minimum version of iOS 7.0
+     
+    Exception:  The Azure Information Protection client for iOS and Android has a minimum version of iOS 8.
 
 -   **Windows tablets**: Windows 10 Mobile and Windows 8.1 RT
 

@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -38,6 +38,14 @@ This app lets you view rights-protected email messages (.rpmsg files) if your em
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive For Business?
 
 Yes, you can open protected PDF files that others have shared with you via SharePoint and OneDrive for Business. Tap the link, and choose this app to open the file for you. 
+
+## Can my mobile device run the Azure Information Protection app?
+
+The Azure Information Protection app requires a minimum version of **iOS 8** or **Android 4.0.3**.
+
+If your mobile device is managed by Microsoft Intune, you might be able to install the Azure Information Protection app from your company portal.
+
+Otherwise, you can install it either directly from the iTunes store and the Google Play store, or by clicking the iOS or Android icon from the **Mobile Devices** section on the [Azure Information Protection download page](https://portal.azurerms.com/#/download). 
 
 ## How do I get started with the viewer app?
 
