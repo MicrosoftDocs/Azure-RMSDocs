@@ -47,7 +47,7 @@ If you have these versions or higher, you can install the app to run on your mob
 
 - If your mobile device is managed by Microsoft Intune, you might be able to install the Azure Information Protection app from your company portal.
 
-- If your mobile device is not managed by Microsoft Intune or the app isn't available from your company portal, you can install it either directly from the iTunes store and the Google Play store, or by clicking the iOS or Android icon from the **Mobile Devices** section on the [Azure Information Protection download page](https://portal.azurerms.com/#/download). 
+- If your mobile device is not managed by Microsoft Intune or the Azure Information Protection app isn't available from your company portal, you can install the app either directly from the iTunes store and the Google Play store, or by clicking the iOS or Android icon from the **Mobile Devices** section on the [Azure Information Protection download page](https://portal.azurerms.com/#/download). 
 
 ## How do I get started with the viewer app?
 
