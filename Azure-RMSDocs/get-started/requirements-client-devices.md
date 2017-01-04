@@ -54,7 +54,7 @@ The following mobile device operating systems support the Azure Rights Managem
 
 -   **iPhone and iPad**: Minimum version of iOS 7.0
      
-    Exception:  The Azure Information Protection client for iOS and Android has a minimum version of iOS 8.
+    Exception: The Azure Information Protection client for iOS and Android has a minimum version of iOS 8.
 
 -   **Windows tablets**: Windows 10 Mobile and Windows 8.1 RT
 
