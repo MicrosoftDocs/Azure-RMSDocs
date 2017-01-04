@@ -6,7 +6,7 @@ description: Technical details for admins on enterprise networks who are are res
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -108,7 +108,7 @@ Similarly, you can force the RMS sharing application to apply native protection 
 
 You can also force the RMS sharing application to block the protection of files (not apply native protection or generic protection). For example, this might be required if you have an automated application or service that must be able to open a specific file to process its contents. When you block protection for a file type, users cannot use the RMS sharing application to protect a file that has that file type. When they try, they see a message that the administrator has prevented protection and they must cancel their action to protect the file.
 
-To configure the RMS sharing application to apply generic protection to all files that by default, would have native protection applied, make the following registry edits:
+To configure the RMS sharing application to apply generic protection to all files that by default, would have native protection applied, make the following registry edits. Note if the RMSSharingApp or FileProtection keys do not exist, you must manually create them.
 
 1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Create a new key named *.
 
