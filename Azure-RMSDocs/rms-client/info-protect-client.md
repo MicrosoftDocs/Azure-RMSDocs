@@ -62,11 +62,11 @@ Installations that require local administrative permissions:
 
     - If your computer runs Office 2010, restart your computer. 
         
-        If you installed the preview version of the client: In addition to restarting your computer, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
+        **If you installed the preview version of the client**: In addition to restarting your computer, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
     
     - For other versions of Office, restart any Office applications. 
         
-        If you installed the preview version of the client: In addition to restarting any Office applications, also close and restart File Explorer.
+        **If you installed the preview version of the client**: In addition to restarting any Office applications, also close and restart File Explorer.
 
 ## To install the Azure Information Protection client for users
 
