@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/29/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,29 +39,45 @@ Download the Azure Information Protection client from the [Microsoft Download Ce
 
 Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). In addition, for the preview version of the client, computers running Windows 7 SP1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you will be prompted to install it.
 
+
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client. 
-
-    Installations that require local administrative permissions:
-
-    - The General Availability version
+> [!NOTE]
+> Installations that require local administrative permissions:
+> 
+> - The General Availability version
+>     
+> - The preview version with Office 2010
     
-    - The preview version with Office 2010
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client.
+    
+    Select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
+    
+    More information about what gets installed:
 
-    Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
+    - The General Availability version installs the Azure Information Protection bar for the Office applications. 
+    
+    - The latest preview version of the client installs the Azure Information Protection bar for the Office applications, right-click options for File Explorer, a viewer for protected files, and Windows PowerShell cmdlets to classify and protect files in bulk. 
+        
+        Note that you can install just the PowerShell module (RMSProtection) by specifying the parameter **PowerShellOnly=true**. For example: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true`
 
 2. To complete the installation: 
 
-    - If your computer runs Office 2010, restart your computer. If you installed the preview version of the client: Additionally, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
+    - If your computer runs Office 2010, restart your computer. 
+        
+        **If you installed the preview version of the client**: In addition to restarting your computer, open one of the Office applications that use the Azure Information Protection bar (for example, Word), and confirm any prompts to update the registry for this first-time use. [Service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is used to populate the registry keys. 
     
-    - For other versions of Office, restart any Office applications.
+    - For other versions of Office, restart any Office applications. 
+        
+        **If you installed the preview version of the client**: In addition to restarting any Office applications, also close and restart File Explorer.
 
 ## To install the Azure Information Protection client for users
 
-You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run the executable with **/help**. For example: `AzInfoProtection.exe /help`.
+You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run the executable with **/help**. For example: `AzInfoProtection.exe /help`
 
-Example to install the client silently: `AzInfoProtection.exe /quiet`
+Example to silently install the General Availability version of the client: `AzInfoProtection.exe /quiet`
+
+Example to silently install only the PowerShell module, with the preview client: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true /quiet`
 
 If you are installing the preview version of the client on computers that run Office 2010, specify the **ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
 
