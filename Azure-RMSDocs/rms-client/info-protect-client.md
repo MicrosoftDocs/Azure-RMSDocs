@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/29/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,8 +41,12 @@ Before you install the client, check that you have the required operating system
 
 ## To install the Azure Information Protection client manually
 
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client. 
-
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client and related software:
+    
+    - The General Availability version installs the Azure Information Protection bar for the Office applications. 
+    
+    - The latest preview version of the client installs the Azure Information Protection bar for the Office applications, and right-click options for File Explorer, a viewer for protected files, and Windows PowerShell cmdlets to classify and protect files in bulk. Note that you install just the PowerShell module (RMSProtection) if you specify the parameter PowerShellOnly=true. For example: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true`
+    
     Installations that require local administrative permissions:
 
     - The General Availability version
@@ -61,7 +65,9 @@ Before you install the client, check that you have the required operating system
 
 You can script and automate the installation of the Azure Information Protection client by using command line options. To see the install options, run the executable with **/help**. For example: `AzInfoProtection.exe /help`.
 
-Example to install the client silently: `AzInfoProtection.exe /quiet`
+Example to install the General Availability client silently: `AzInfoProtection.exe /quiet`
+
+Example to install only the PowerShell module silently, with the preview client: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true /quiet`
 
 If you are installing the preview version of the client on computers that run Office 2010, specify the **ServiceLocation** parameter if your users are not local administrators on their computers. See the next section for more information.
 
