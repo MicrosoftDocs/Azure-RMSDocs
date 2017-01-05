@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -59,17 +59,17 @@ For a list of file types that are supported from File Explorer, see the [File ty
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If a label cannot be selected (it is unavailable), the selected file does not support classification but you can protect it.
 
-3. To protect the file, choose between the protection settings that your administrator defined for your selected label (**Automatic, based on the selected classification label**), or specify your own settings (**Override with custom permissions**).
+3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
-    The override option doesn't use any protection settings that your administrator might have defined for your chosen label. Instead, you specify your own protection settings. 
+    Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
 
-4. If you selected the override option, now specify the following:
+4. If you selected the custom permissions option, now specify the following:
 
     - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. For people and groups in your organization, you can use the address book to search and select them. For people in another organization, you must specify their full email address. Make sure that you use a business email address because personal email addresses are not currently supported.
         
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
+    - **Expire access on**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
 5. Click **Apply**, and then click **Close**.
 
