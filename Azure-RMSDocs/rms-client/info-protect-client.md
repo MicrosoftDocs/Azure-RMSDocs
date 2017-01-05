@@ -49,16 +49,18 @@ Before you install the client, check that you have the required operating system
 >     
 > - The preview version with Office 2010
     
-1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**. Follow the prompts to install the client and related software:
+1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client.
     
+    Select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
+    
+    More information about what gets installed:
+
     - The General Availability version installs the Azure Information Protection bar for the Office applications. 
     
     - The latest preview version of the client installs the Azure Information Protection bar for the Office applications, right-click options for File Explorer, a viewer for protected files, and Windows PowerShell cmdlets to classify and protect files in bulk. 
         
         Note that you can install just the PowerShell module (RMSProtection) by specifying the parameter **PowerShellOnly=true**. For example: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true`
-        
-    Select the option to install a demo policy if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy. 
-    
+
 2. To complete the installation: 
 
     - If your computer runs Office 2010, restart your computer. 
