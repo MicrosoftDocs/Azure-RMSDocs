@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2017
+ms.date: 01/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -41,7 +41,7 @@ Yes, you can open protected PDF files that others have shared with you via Share
 
 ## Can my mobile device run the Azure Information Protection app?
 
-The Azure Information Protection app requires a minimum version of **iOS 8** or **Android 4.0.3**.
+The Azure Information Protection app requires a minimum version of **iOS 8** or **Android 4.4**.
 
 If you have these versions or higher, you can install the app to run on your mobile device:
 
