@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/20/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,15 +41,9 @@ Use the following procedures to create, configure, and publish custom templates 
 
 1.  Depending on whether you sign in to the Office 365 admin center, or the Azure classic portal, do one of the following:
 
-    -   From the [Office 365 admin center](https://portal.office.com/):
+    -   From the **Office 365 admin center**, navigation depends on whether you are using the Office 365 admin center preview (and what version), or the Office 365 classic admin center. However, for all versions, you can go directly to the [rights management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) page: 
 
-        1.  In the left pane, click **service settings**.
-
-        2.  From the **service settings** page, click **rights management**.
-
-        3.  In the **Protect your information** section, click **Manage**.
-
-        4.  In the **rights management** section, click **advanced features**.
+        1.  In the **additional configuration** section, click **advanced features**.
 
             > [!NOTE]
             > If the Rights Management service is not activated, first click **activate** and confirm your action. For more information, see [Activating Azure Rights Management](activate-service.md).
