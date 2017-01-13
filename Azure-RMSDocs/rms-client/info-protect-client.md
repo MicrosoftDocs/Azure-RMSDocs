@@ -6,7 +6,7 @@ description: Instructions to install the client that adds an Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/05/2017
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,11 +43,8 @@ Before you install the client, check that you have the required operating system
 ## To install the Azure Information Protection client manually
 
 > [!NOTE]
-> Installations that require local administrative permissions:
-> 
-> - The General Availability version
->     
-> - The preview version with Office 2010
+> This installation requires local administrative permissions.
+
     
 1. After you have [downloaded the client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), run the executable, such as **AzInfoProtection.exe**, and follow the prompts to install the client.
     

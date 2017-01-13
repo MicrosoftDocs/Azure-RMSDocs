@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,14 +54,14 @@ The following steps provide a typical set of commands that you would run to enab
     To sign in, type:
 
     ```
-    $Cred = Get-Credential
+    $UserCredential = Get-Credential
     ```
     In the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
 
 3.  Connect to the Exchange Online service by running the following two commands:
 
     ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
     ```
