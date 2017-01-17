@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,23 +29,15 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-**[ This version of the client is in preview and subject to change. ]**
-
-If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You do not have to be a local administrator for your PC to install this client, unless you use Office 2010. 
-
-### Office 2010 only
-
-Only if you use Office 2010 must you be a local administrator to install the Azure Information Protection client. When you use this version of Office, the Azure Information Protection client must set registry keys that require administrator permission: 
-
-- **If your account is not a local administrator for your PC**: Ask your administrator or IT department to install this client for you.
-
-- **If your account is a local administrator for your PC**: Use the instructions to download and install the client, and then use the instructions in the following section for Office 2010.
+If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client. 
 
 ## To download and install the Azure Information Protection client
 
-1.  Go to the [Microsoft Download Site](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download the **preview** version of the Azure Information Protection client.
+1.  Go to the [Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
-2. Double-click the executable file that was downloaded. 
+2. Click the Windows icon for the **Azure Information Protection client** and save the **AzInfoProtection.exe** file to install to install the Azure Information Protection client. 
+
+2. Double-click the executable file that was downloaded. If you are prompted to continue, click **Yes**.
 
 3. On the **Install the Azure Information Protection client** page: 
     

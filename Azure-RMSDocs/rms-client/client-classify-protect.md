@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/05/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,8 +29,6 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-**[ This version of the client is in preview and subject to change. ]**
-
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once.
@@ -41,6 +39,14 @@ Use the Azure Information Protection bar and select one of the labels that has b
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
+
+### Keyboard shortcuts for the Azure Information Protection bar
+
+To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
+
+- Press **Ctrl** + **Shift** + **~** 
+
+Then, use the Tab key to select the labels and other controls on the bar (the **Hide labels** icon and **Remove label** icon), and the Enter key to select them.
 
 ## Using File Explorer to classify and protect files
 
@@ -71,7 +77,7 @@ For a list of file types that are supported from File Explorer, see the [File ty
         
     - **Expire access on**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
-5. Click **Apply**, and then click **Close**.
+5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
 The selected file or files are now classified and protected, according to your selections. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Azure Information Protection lock icon. For example:
 
