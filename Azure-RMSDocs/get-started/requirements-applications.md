@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 12/16/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -82,7 +82,7 @@ For more information, see the Citrix [product documentation for WorxMail](http:/
 For more information, see the following post on the Office blog: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ###### Footnote 8
-For more information, see the following post on the Enterprise and Mobility Blog: [SealPath brings RMS protection to AutoCAD:(https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
+For more information, see the following post on the Enterprise and Mobility Blog: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
 ## More information about Azure RMS support for Office
