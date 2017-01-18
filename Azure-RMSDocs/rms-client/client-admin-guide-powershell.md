@@ -58,6 +58,13 @@ Before you start to use these cmdlets, see the documentation that corresponds to
 
 
 ## Next steps
+See the following for additional information that you might need to support the Azure Information Protection client:
+
+-[Client files and usage logging](client-admin-guide-files-and-logging.md)
+
+- [Configuring and using document tracking](client-admin-guide-document-tracking.md)
+
+- [File types supported](client-admin-guide-file-types.md)
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

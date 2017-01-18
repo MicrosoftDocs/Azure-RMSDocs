@@ -96,6 +96,12 @@ For information about usage logging for the Azure Rights Management service, see
 
 
 ## Next steps
+Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
+- [Configuring and using document tracking](client-admin-guide-document-tracking.md)
+
+- [File types supported](client-admin-guide-file-types.md)
+
+- [Using PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

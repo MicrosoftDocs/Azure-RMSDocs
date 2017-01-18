@@ -208,6 +208,15 @@ For more information about usage logging, see [Logging and analyzing usage of th
 
 
 ## Next steps
-For additional technical information that includes explaining the difference between the levels of protections (native and generic), the supported file types and file name extensions, and how to change the default protection level, see [Technical overview for the Rights Management sharing application](sharing-app-admin-guide-technical.md).
+Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
+
+-[Client files and usage logging](client-admin-guide-files-and-logging.md)
+
+- [Configuring and using document tracking](client-admin-guide-document-tracking.md)
+
+- [File types supported](client-admin-guide-file-types.md)
+
+- [Using PowerShell](client-admin-guide-powershell.md)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

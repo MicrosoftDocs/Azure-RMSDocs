@@ -78,6 +78,12 @@ For more information about usage logging, see [Logging and analyzing usage of th
 
 
 ## Next steps
+Now that you've configured the document tracking site for the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
+-[Client files and usage logging](client-admin-guide-files-and-logging.md)
+
+- [File types supported](client-admin-guide-file-types.md)
+
+- [Using PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
