@@ -49,4 +49,6 @@ If you have questions that are not answered by this guide, visit our [Azure Info
 
 - [Remove labels and protection from files and emails](client-remove-label-protection.md)
 
+- [Tasks that I used to do with the RMS sharing application](upgrade-client-app.md)
+
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
