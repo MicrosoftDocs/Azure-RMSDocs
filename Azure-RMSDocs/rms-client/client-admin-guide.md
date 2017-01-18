@@ -160,13 +160,13 @@ You can use any of these options:
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
--[Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](client-admin-guide-files-and-logging.md)
 
-- [Configuring and using document tracking](client-admin-guide-document-tracking.md)
+- [Document tracking](client-admin-guide-document-tracking.md)
 
 - [File types supported](client-admin-guide-file-types.md)
 
-- [Using PowerShell](client-admin-guide-powershell.md)
+- [PowerShell commands](client-admin-guide-powershell.md)
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

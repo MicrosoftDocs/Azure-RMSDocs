@@ -173,10 +173,10 @@ To help prevent users from changing files that are critical for computer operati
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
--[Client files and usage logging](client-admin-guide-files-and-logging.md)
+- [Client files and usage logging](client-admin-guide-files-and-logging.md)
 
-- [Configuring and using document tracking](client-admin-guide-document-tracking.md)
+- [Document tracking](client-admin-guide-document-tracking.md)
 
-- [Using PowerShell](client-admin-guide-powershell.md)
+- [PowerShell commands](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
