@@ -49,7 +49,7 @@ Use the following documentation when you need more information about how to depl
 
 - [Rights Management sharing application for Windows](sharing-app-windows.md)
 
-Note that the Rights Management sharing application for Windows and the RMS Protection Tool is now replaced by the Azure Information Protection client.
+Note that the Rights Management sharing application for Windows and the RMS Protection Tool is now replaced by the Azure Information Protection client. 
 
 
 ## See also
