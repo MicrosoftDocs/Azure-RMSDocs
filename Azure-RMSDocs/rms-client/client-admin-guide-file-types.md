@@ -2,7 +2,7 @@
 # required metadata
 
 title: File types supported by the Azure Information Protection client | Azure Information Protection
-description: Technical details about file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection client for Windows.
+description: Technical details about supported file types, file name extensions, and levels of protection for admins who are are responsible for the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -30,10 +30,15 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-The Azure Information Protection client can apply classification only to documents and emails, classification and protection, and protection only.
+The Azure Information Protection client can apply the following to documents and emails:
 
+-Classification only
 
+- Classification and protection
 
+- Protection only
+
+Use the following information to check which file types are supported, the different levels of protection and how to change the default protection level, and which files are automatically excluded (skipped) from classification and protection.
 
 ## File types supported for classification only
 
