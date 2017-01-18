@@ -6,7 +6,7 @@ description: Instructions to view and use a protected file that requires you to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 30/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,27 +29,40 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-**[ This version of the client is in preview and subject to change. ]**
+You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-When the [Azure Information Protection client is installed on your computer](install-client-app.md), you can view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
+If the file doesn't open, you can use the **Azure Information Protection viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the Azure Information Protection page. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md)
 
 > [!NOTE]
-> Before you can view the protected file, the Rights Management service must first confirm that you are authorized to view the file, which it does by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
->
-> If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use AD RMS, you can apply for a free account that will accept your credentials so that you can open files that are protected by Rights Management:
->
-> -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
->
->     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
+> 
+> - Azure Information Protection
+> 
+> - Azure Rights Management
+> 
+> - Active Directory Rights Management Services 
+> 
+> Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
+
+## Prompts for authentication
+
+Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
+
+If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you can apply for a free account that will accept your credentials so that you can open files that are protected by Rights Management:
+
+-   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
+    
+    When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
+    
+-   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## To view and use a protected file
 
-1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection Viewer (Preview)**. 
+1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection Viewer**. 
 
 2. If you see a page to **Sign in** or **Sign up**: Click **Sign in** and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
     
-    If you do not have an account that is accepted, see the Note at the top of this page. Sign up for a free account and return to these instructions.
+    If you do not have an account that is accepted, see the [Prompts for authentication}(#prompts-for-authentication) section on this page. Sign up for a free account and return to these instructions.
 
 3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file, and edit it. 
 

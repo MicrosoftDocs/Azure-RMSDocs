@@ -57,7 +57,7 @@ When the Azure Information Protection client is installed, it adds an Informatio
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
-## How to install the Azure Information Protection client
+## How to install the Azure Information Protection client for users
 
 Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). In addition, for the preview version of the client, computers running Windows 7 SP1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you will be prompted to install it.
 

@@ -157,11 +157,11 @@ You can make similar registry edits for other scenarios by changing the value of
 
 ## File types that are excluded from classification and protection by the Azure Information Protection client
 
-To help prevent users from changing files that are critical for computer operations, the some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files, they see a message that they are excluded.
+To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files, they see a message that they are excluded.
 
-- Excluded file types: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
+- **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
 
-- Excluded folders: 
+- **Excluded folders**: 
     - Windows
     - Program Files (\Program Files and \Program Files (x86))
     - \ProgramData 
