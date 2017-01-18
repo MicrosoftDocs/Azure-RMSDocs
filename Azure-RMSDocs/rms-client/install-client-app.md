@@ -29,7 +29,7 @@ If your administrator does not install the Azure Information Protection client f
 
 ## To download and install the Azure Information Protection client    
 
-1.  Go to the [Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.    
+1.  Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.    
 2. Click the Windows icon for the **Azure Information Protection client** and save the **AzInfoProtection.exe** file to install to install the Azure Information Protection client.     
 
 2. Double-click the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
@@ -47,8 +47,8 @@ If your administrator does not install the Azure Information Protection client f
         
     - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use client to label and protect your documents and emails.    
 
-   -> [!NOTE]    
-   -> If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). If your PC needs this update but it not installed, you will see a message when you try to use the client that this update must be installed before you can use all features of the Azure Information Protection client.    
+   [!NOTE]    
+   > If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). If your PC needs this update but it not installed, you will see a message when you try to use the client that this update must be installed before you can use all features of the Azure Information Protection client.
 
 ### Installing the Azure Information Protection client with Office 2010    
 After you have installed the Azure Information Protection client by using the previous instructions:    

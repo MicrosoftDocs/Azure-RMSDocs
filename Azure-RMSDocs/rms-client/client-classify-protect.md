@@ -56,7 +56,9 @@ When you select a folder, all the files in that folder and any subfolders it has
 
 When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
 
-For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
+Some files are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file. Examples include executable files and your Windows folder.
+
+The admin guide contains a full list of the file types supported and the files and folders that are automatically excluded: [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md).
 
 
 ### To classify and protect a file by using File Explorer
@@ -86,33 +88,6 @@ The selected file or files are now classified and protected, according to your s
 If you change your mind about the classification and protection, or later need to modify your settings, simply repeat this process with your new settings.
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents when you use Azure Information Protection](client-track-revoke.md). 
-
-#### File types supported for classification and protection
-
-Classification-only is supported for the following file types. Other file types support classification when they are also protected.
-
-- **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
-
-- **Microsoft Project**: .mpp, .mpt​
-
-- **Microsoft Publisher**: .pub​
-
-- **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
-
-- **Microsoft XPS**: .xps .oxps​
-
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
-
-- **SolidWorks**: .sldprt, .slddrw, .sldasm​
-
-- **Autodesk Design Review 2013**: .dwfx​
-
-- **Adobe Photoshop**: .psd​
-
-- **Digital Negative**: .dng
-
-
-Protection using the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
 
 ## Other instructions

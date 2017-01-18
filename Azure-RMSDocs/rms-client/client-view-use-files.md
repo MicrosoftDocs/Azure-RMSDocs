@@ -31,7 +31,7 @@ ms.suite: ems
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the file doesn't open, you can use the **Azure Information Protection viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the Azure Information Protection page. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md)
+If the file doesn't open, you can use the **Azure Information Protection viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
@@ -62,7 +62,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 
 2. If you see a page to **Sign in** or **Sign up**: Click **Sign in** and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
     
-    If you do not have an account that is accepted, see the [Prompts for authentication}(#prompts-for-authentication) section on this page. Sign up for a free account and return to these instructions.
+    If you do not have an account that is accepted, see the [Prompts for authentication](#prompts-for-authentication) section on this page. Sign up for a free account and return to these instructions.
 
 3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file, and edit it. 
 
