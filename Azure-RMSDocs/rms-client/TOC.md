@@ -7,6 +7,7 @@
 ### [Azure Information Protection client administrator guide](client-admin-guide.md)
 #### [Client files and usage logging](client-admin-guide-files-and-logging.md)
 #### [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md)
+#### [File types supported](client-admin-guide-file-types.md)
 #### [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)
 ### [Azure Information Protection user guide](client-user-guide.md)
 #### [Download and install the client](install-client-app.md)
