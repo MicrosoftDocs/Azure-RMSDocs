@@ -6,7 +6,7 @@ description: Microsoft Azure Information Protection provides a client-server sol
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # The client side of Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 Azure Information Protection provides a client-server solution that helps to protect an organization's documents and emails:
 
@@ -37,17 +37,19 @@ Azure Information Protection provides a client-server solution that helps to pro
 
 The Azure Information Protection client supports classification and labeling, in addition to protection. This client integrates with Office applications and must be installed separately.
 
-The Rights Management (RMS) client is automatically installed with some applications, such as Office applications, the RMS sharing application, and RMS-enlightened applications from software vendors. However, it can also be installed by itself, which supports scenarios such as developers who want to integrate Rights Management protection into your line-of-business applications, and administrators or power users who want to bulk-protect files by using the RMS Protection Tool.
+The Rights Management (RMS) client is automatically installed with some applications, such as Office applications, the Azure Information Protection client, and RMS-enlightened applications from software vendors. However, it can also be installed by itself, which supports scenarios such as developers who want to integrate Rights Management protection into line-of-business applications.
 
 Use the following documentation when you need more information about how to deploy and use these clients, which can be used with Azure Information Protection and Active Directory Rights Management Services to help protect your organization's data:
 
-- [Installing the Azure Information Protection client](info-protect-client.md)
+- [Azure Information Protection client](AIP-client.md)
 
 - [RMS client deployment notes](client-deployment-notes.md)
 
 - [RMS protection with Windows Server File Classification Infrastructure (FCI)](configure-fci.md)
 
 - [Rights Management sharing application for Windows](sharing-app-windows.md)
+
+Note that the Rights Management sharing application for Windows and the RMS Protection Tool is now replaced by the Azure Information Protection client.
 
 
 ## See also
