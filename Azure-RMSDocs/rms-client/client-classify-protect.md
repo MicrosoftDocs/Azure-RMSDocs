@@ -46,7 +46,7 @@ If a label is already applied to the document and you want to change it, you can
 In addition to manually selecting labels, labels can also be applied in the following ways:
 
 - Your administrator configured a default label, which you can keep or change.
-- 
+
 - Your administrator configured recommended prompts to select a specific label when sensitive data is detected. You can accept the recommendation (and the label is applied), or reject it (the recommended label is not applied).
 
 
