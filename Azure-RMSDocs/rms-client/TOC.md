@@ -4,7 +4,7 @@
 # [Deploy & Use the Service](/information-protection/deploy-use/activate-service)
 # [Deploy & Use the Client](use-client.md)
 ## [Rights Management client](use-client.md)
-### [Azure Information Protection client](AIP-client.md)
+### [Azure Information Protection client](aip-client.md)
 #### [Azure Information Protection client: Version release history](client-version-release-history.md)
 #### [Azure Information Protection client administrator guide](client-admin-guide.md)
 ##### [Client files and usage logging](client-admin-guide-files-and-logging.md)
