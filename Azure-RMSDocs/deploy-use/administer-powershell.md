@@ -6,7 +6,7 @@ description: Learn how you can use the Windows PowerShell module for the Azure R
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,7 +36,7 @@ When the Azure Rights Management service is activated, further administration fo
 > [!NOTE]
 > If you need to install the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
 
-There is also a supplemental Windows PowerShell module, **RMSProtection**, which supports both the Azure Rights Management service (Azure RMS) and Active Directory Rights Management Services (AD RMS). This module supports protecting and removing protection from multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see the [Scripting options for super users](configure-super-users.md#scripting-options-for-super-users) section in the [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md) article.
+The Azure Information Protection client installs a supplemental Windows PowerShell module, **AIP**, which supports Azure Information Protection, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). This module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. This module replaces the RMSProtection module that shipped with the RMS Protection Tool. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md) from the admin guide, and [Scripting options for super users](configure-super-users.md#scripting-options-for-super-users) section in the [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md) article.
 
 |If you need to…|…use the following cmdlets|
 |-------------------|------------------------------|

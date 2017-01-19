@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 30/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,8 +32,6 @@ ms.suite: ems
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. The client is included in the Microsoft Update Catalog (category: **Azure Information Protection**) and you can always download the latest version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 Use the following information to see what’s new or changed in a release. The most current release is listed first. Versions before General Availability are not listed.
-
-In addition to the current release, there is now a **preview** version of the Azure Information Protection client that you can only download from the Microsoft Download Center. It offers the same functionality as the Rights Management sharing application for Windows, with right-click options from File Explorer and a viewer for protected files. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/) and preliminary documentation: [Azure Information Protection user guide](client-user-guide.md).
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release.
@@ -66,6 +64,11 @@ General Availability.
 
 ## Next steps
 
-For more information about installing the client, see [Installing the Azure Information Protection client](info-protect-client.md).
+For more information about installing the client:
+
+- For users: [Download and install the client](install-client-app.md)
+
+- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
