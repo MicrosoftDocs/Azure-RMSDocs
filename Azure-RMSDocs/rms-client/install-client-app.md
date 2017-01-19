@@ -63,7 +63,7 @@ After you have installed the Azure Information Protection client by using the pr
 Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
 
 ## Other instructions    
-[What do you want to do?](client-admin-guide.md#what-do-you-want-to-do)
+[What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
 See [How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
