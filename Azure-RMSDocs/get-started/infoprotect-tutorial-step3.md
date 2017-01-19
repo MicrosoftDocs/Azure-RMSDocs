@@ -58,9 +58,8 @@ You’re now ready to see Azure Information Protection in action.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About installing the Azure Information Protection client|[Installing the Azure Information Protection client](../rms-client/info-protect-client.md)|
-|About installing the Rights Management sharing application and user instructions|[Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md)|
-|About the scripted installation of the Rights Management sharing application for Windows and more technical information|[Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md)|
+|About installing the Azure Information Protection client|[Download and install the Azure Information Protection client](../rms-client/install-client-app.md)|
+|Admin instructions for the Azure Information Protection client|[Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md)|
 
 
 >[!div class="step-by-step"]

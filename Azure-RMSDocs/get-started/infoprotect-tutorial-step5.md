@@ -109,9 +109,9 @@ You can return to this site to track further activity for your protected documen
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for protecting files that you share by email|[Safely share a file with others](client-protect-share.md)|
+|Full instructions for protecting files that you share by email|[Safely share a file with others](../rms-client/client-protect-share.md)|
 |About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../understand-explore/rms-for-individuals.md)|
-|About using the document tracking site|[Track and revoke your documents](client-track-revoke.md
+|About using the document tracking site|[Track and revoke your documents](../rms-client/client-track-revoke.md)
 
 
 ## Next Steps

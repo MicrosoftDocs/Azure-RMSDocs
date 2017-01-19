@@ -68,7 +68,7 @@ Now that you've seen classification, labeling, and protection in action, let's s
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for labeling and protecting files |[Classify and protect a file or email](client-classify-protect.md)|
+|Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
 
 
 
