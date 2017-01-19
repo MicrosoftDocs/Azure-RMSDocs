@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,8 +28,6 @@ ms.suite: ems
 # How to configure the Azure Information Protection policy for specific users by using scoped policies
 
 >*Applies to: Azure Information Protection*
-
-**[ This feature is in preview and subject to change. ]**
 
 When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement these for specific users, by having different settings and labels, you must create a **scoped policy** (currently in preview) that's configured for those users.
 

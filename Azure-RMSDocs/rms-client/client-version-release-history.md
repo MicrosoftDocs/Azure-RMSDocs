@@ -38,6 +38,29 @@ Use the following information to see what’s new or changed in a release. The m
 >  
 > If the problem remains, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate. For support options, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information.
 
+## Version 1.x.x.x
+
+**Released**: 02/06/2017
+
+**Fixes**:
+
+- On Office 2010 Standard (which doesn't support protecting documents and emails): Labels that are configured to apply protection display as unavailable to users on the Azure Information Protection bar. Previously, these labels would display as available and then show an error message when selected by a user.
+
+**New features**:
+
+- A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
+    
+    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and multiple file selection.
+    - A viewer for protected documents (includes protected PDF for SharePoint).
+    - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
+
+This client version is the GA release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
+
+- [Azure Information Protection client administrator guide](client-admin-guide.md)
+
+- [Azure Information Protection user guide](client-user-guide.md)
+
+
 ## Version 1.2.4.0
 
 **Released**: 10/27/2016
