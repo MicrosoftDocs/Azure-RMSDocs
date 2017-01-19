@@ -54,7 +54,7 @@ Use the following information to see what’s new or changed in a release. The m
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
 
-This client version is the GA release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
+This client version is the General Availability release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
 
 - [Azure Information Protection client administrator guide](client-admin-guide.md)
 
