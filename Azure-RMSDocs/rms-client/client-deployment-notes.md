@@ -6,7 +6,7 @@ description: Information about redistribution, installation, supported operating
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/28/2016
+ms.date: 30/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. 
 
-In addition to shipping with the [Rights Management sharing application for Windows](sharing-app-windows.md), the RMS client is available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can protect and consume content that has been protected by Rights Management services.
+In addition to shipping with the [Azure Information Protection client for Windows](aip-client.md), the RMS client is available [as an optional download](http://www.microsoft.com/download/details.aspx?id=38396) that can, with acknowledgment and acceptance of its license agreement, be freely distributed with  third-party software so that clients can protect and consume content that has been protected by Rights Management services.
 
 
 ## Redistributing the RMS client
@@ -100,7 +100,7 @@ If you installed this RMS client by using the silent installation option, the RM
 The following section contains settings information about the RMS client. This information might be helpful if you have problems with applications or services that use the RMS client.
 
 > [!NOTE]
-> Some settings depend on whether the RMS-enlightened application runs as a client mode application (such as Microsoft Word and Outlook, or the RMS sharing application), or server mode application  (such as SharePoint and Exchange). In the following tables, these settings are identified as **Client Mode** and **Server Mode**, respectively.
+> Some settings depend on whether the RMS-enlightened application runs as a client mode application (such as Microsoft Word and Outlook, or the Azure Information Protection client with Windows File Explorer), or server mode application  (such as SharePoint and Exchange). In the following tables, these settings are identified as **Client Mode** and **Server Mode**, respectively.
 
 ### Where the RMS client stores licenses on client computers
 The RMS client stores licenses on the local disk and also caches some  information in the Windows registry.
