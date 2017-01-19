@@ -33,7 +33,19 @@ ms.suite: ems
 
 Use the following information if you are responsible for the Microsoft Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md).
 
-The Azure Information Protection client is best suited to work with Azure Information Protection, because this deployment configuration supports sending protected documents to users in another organization, and options such as document tracking with revocation. However, with some limitations, it also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+The Azure Information Protection client includes the following:
+
+- An Office add-on, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options.
+
+- Windows File Explorer, right-click options for users to apply classification labels and protection to files.
+
+- A viewer to display protected files when a native application cannot open it.
+
+- A PowerShell module to apply and remove classification labels and protection from files.
+
+- The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
+
+The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 ## Should you deploy the Azure Information Protection client?
 
@@ -45,15 +57,15 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
-- You want to view protected documents when a native application to display the file is not installed.
+- You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
 - You want to just protect files by using File Explorer or by using Powershell commands.
 
-- You want to remove encryption (unprotect) files and containers in bulk for data recovery purposes.
+- You want to remove encryption (unprotect) from files and containers in bulk for data recovery purposes.
 
 - You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
 
-When the Azure Information Protection client is installed, it adds an Information Protection bar to your Office applications (Word, Excel, PowerPoint, Outlook) that displays the classification labels for your organization, in addition to a new **Protection** group on the **Home** tab (Word, Excel, PowerPoint), that has a button named **Protect**:
+Example showing the Azure Information Protection client add-on in an Office applications, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
 ![Azure Information Protection bar with default policy](../media/info-protect-bar-default.png)
 
