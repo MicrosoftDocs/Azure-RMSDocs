@@ -65,7 +65,7 @@ If you do not already have a classification strategy, review the [default Azure 
 
 Reconfigure the default Azure Information Protection labels to make any changes you need to support your classification decisions. Configure the policy for manual labeling by users, and write user guidance that explains which label to apply and when. For more information about how to configure Azure Information Protection policy, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-Then deploy the Azure Information Protection client for users, and support it by providing user training and your instructions for when to select the labels. For more information about installing and supporting the client, see the [Azure Information Protection client administrator guide](client-admin-guide.md).
+Then deploy the Azure Information Protection client for users, and support it by providing user training and your instructions for when to select the labels. For more information about installing and supporting the client, see the [Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md).
 
 After a period of time, when users are comfortable labeling their documents and emails, introduce more advanced configurations. These might include the following:
 
