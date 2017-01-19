@@ -35,9 +35,19 @@ However, you can also classify and protect files by using **File Explorer**, whi
 
 ## Using Office apps to classify and protect your documents and emails
 
-Use the Azure Information Protection bar and select one of the labels that has been configured for you. For example:
+Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
+
+For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "Internal", click **Internal**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it.
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
+
+If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
+
+In addition to manually selecting labels, labels can also be applied in the following ways:
+
+- Your administrator configured a default label, which you can keep or change.
+- 
+- Your administrator configured recommended prompts to select a specific label when sensitive data is detected. You can accept the recommendation (and the label is applied), or reject it (the recommended label is not applied).
 
 
 ### Keyboard shortcuts for the Azure Information Protection bar
