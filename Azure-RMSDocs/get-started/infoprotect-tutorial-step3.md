@@ -44,6 +44,8 @@ In this step, you'll install the Azure Information Protection client so that the
 
 Verify that the installation was successful by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. 
 
+If this is the first time that you've installed the client, you'll see a **Congratulations** page with basic instructions. After you have read it, click **Close**.
+
 When the document loads, you should see two new things:
 
 - On the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
