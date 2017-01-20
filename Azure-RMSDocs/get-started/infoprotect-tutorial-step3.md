@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 3 | Azure Information Protection
-description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
