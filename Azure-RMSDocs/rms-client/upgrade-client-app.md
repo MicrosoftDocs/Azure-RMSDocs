@@ -41,6 +41,20 @@ Use the following information to help you get up and running quickly for the tas
 |View and use files that have been protected|The Azure Information Protection viewer can open protected files that your installed applications can't open. This viewer is automatically installed with the client, or you can install it separately.<br /><br />For more information, see [Open files that have been protected](client-view-use-files.md).
 |Remove protection from files|Use the File Explorer menu option, **Classify and protect** to open the **Classify and protect - Azure Information Protection** dialog box. <br /><br />Then, for a single file, clear the **Protect with custom permissions** option. For multiple files or a folder, click **Remove custom permissions**.<br /><br />For more information, see [Remove labels and protection from files and emails](client-remove-label-protection.md).|
 
+## Can't find the option you're looking for?
+
+If you're looking for a specific option that you're used to selecting with the RMS sharing application, check the following table.
+
+|Option in the RMS sharing app|Information
+|-----------|--------------------|
+|**Share Protected**|This option is no longer available from the Office ribbon. Instead of sharing directly from within your Office application, use File Explorer's right-click option, **Classify and protect** to protect a copy of the document with custom permissions and then share the file using your choice of email client, or sharing location.
+|**Email me when somebody tries to open these documents**|This option is no longer available. Instead, use the document tracking site
+|**Allow me to instantly revoke access to these documents**|This option is no longer available. Configure templates that do not allow offline access. Additionally, consider whether you need to reduce the use license validity period for your tenant, by running [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime) 
+
+
+
+
+
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  

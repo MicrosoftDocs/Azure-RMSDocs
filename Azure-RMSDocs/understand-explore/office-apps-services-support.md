@@ -6,7 +6,7 @@ description: How end-user Office applications (such as the Word, Excel, PowerPoi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,7 +70,7 @@ If you use SharePoint Server, you can use the information protection features wi
 > - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 
 
-Azure RMS applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
+Azure Rights Management applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
 For more information about using the Azure Rights Management service with SharePoint, see the following  post from the Office blog: [What’s New with Information Rights Management in SharePoint and SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
