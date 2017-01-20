@@ -124,7 +124,7 @@ For more information, see the following resources:
 
 - [Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md)
 
-- [Azure Information Protection client user guide](../rms-client/cient-user-guide.md)
+- [Azure Information Protection client user guide](../rms-client/client-user-guide.md)
 
 - [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
 
