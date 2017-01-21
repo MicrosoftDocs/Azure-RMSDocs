@@ -85,15 +85,13 @@ The admin guide contains a full list of the file types supported and the files a
 
 1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. 
 
-2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If none of the labels can be selected (they display as unavailable), the selected file does not support classification but you can protect it with custom permissions (step 3).
+2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
-    If you see **Select template** in this dialog box:
+    - If none of the labels can be selected (they display as unavailable): The selected file does not support classification but you can protect it with custom permissions (step 3).
     
-    - The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
+        If only some labels display as unavailable, you have a version of Office that doesn't support protecting data (Standard edition). When this Office edition is detected, labels that are configured to apply protection display as unavailable.
     
-    If only some labels display as unavailable:
-    
-     - You have a version of Office that doesn't support protecting data (Standard edition). When this Office edition is detected, labels that are configured to apply protection display as unavailable.
+    - If you see **Select template** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
     
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
