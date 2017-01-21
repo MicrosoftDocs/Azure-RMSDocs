@@ -31,7 +31,7 @@ ms.suite: ems
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the file doesn't open, you can use the **Azure Information Protection viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
+If the file doesn't open, you can use the **Azure Information Protection Viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
