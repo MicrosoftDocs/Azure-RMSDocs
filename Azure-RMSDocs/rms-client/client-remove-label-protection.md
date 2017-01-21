@@ -44,9 +44,14 @@ You can also remove labels and protection by using **File Explorer**, which supp
 
 ## Using Office apps to remove labels and protection from documents and emails
 
-On the Information Protection bar, click the **Delete Label** icon. 
+On the Information Protection bar, click the **Delete Label** icon:
 
-If the **Delete Label** icon is not immediately available, first click the **Edit Label** icon. 
+![Azure Information Protection bar - Delete Label](../media/delete-label.png)
+
+
+If the **Delete Label** icon is not immediately available, first click the **Edit Label** icon:
+
+![Azure Information Protection bar - Edit Label](../media/edit-label.png)
 
 ## Using File Explorer to remove labels and protection from files
 
