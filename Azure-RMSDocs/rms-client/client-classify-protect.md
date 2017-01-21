@@ -49,14 +49,15 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - Your administrator configured recommended prompts to select a specific label when sensitive data is detected. You can accept the recommendation (and the label is applied), or reject it (the recommended label is not applied).
 
-**Don't see this Information Protection bar in your Office apps?**
+### Exceptions for the Azure Information Protection bar 
+
+Don't see this Information Protection bar in your Office apps?
 
 - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
  
-**Do you see some labels that are unavailable?** 
+Do you see some labels that are unavailable? 
 
-- You have a version of Office that doesn't support protecting data (Standard edition). When this is detected, labels that are configured to apply protection display as unavailable. 
-
+- You have a version of Office that doesn't support protecting data (Standard edition). When this Office edition is detected, labels that are configured to apply protection display as unavailable. 
 
 
 ### Keyboard shortcuts for the Azure Information Protection bar
@@ -89,8 +90,8 @@ The admin guide contains a full list of the file types supported and the files a
     If you see **Select template** in this dialog box:
     
     - The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
-    
-    If only some labels are unavailable:
+
+    If only some labels display as unavailable:
     
      - You have a version of Office that doesn't support protecting data (Standard edition). When this is detected, labels that are configured to apply protection display as unavailable.
 
