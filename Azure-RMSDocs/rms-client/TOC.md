@@ -18,7 +18,7 @@
 ##### [Track and revoke your documents](client-track-revoke.md)
 ##### [Open files that have been protected](client-view-use-files.md)
 ##### [Remove labels and protection](client-remove-label-protection.md)
-#### [Protection-only mode](client-protection-only-mode.md)
+##### [Protection-only mode](client-protection-only-mode.md)
 ##### [Tasks that you used to do with the RMS sharing application](upgrade-client-app.md)
 ### [RMS client deployment notes](client-deployment-notes.md)
 ### [RMS protection with Windows Server FCI](configure-fci.md)
