@@ -30,7 +30,7 @@ ms.suite: ems
 
 Recently upgraded from the Rights Management sharing application (also known as just the "RMS sharing app") to the Azure Information Protection client? 
 
-Use the following information to help you get up and running quickly for the tasks you're used to doing.
+Use the following information to help you get up and running quickly.
 
 |Task using the RMS sharing app|How to do this with the Azure Information Protection client
 |-----------|--------------------|
