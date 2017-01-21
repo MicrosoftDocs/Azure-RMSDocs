@@ -31,13 +31,15 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
-For this final step in the tutorial, locate a Word document that you have already created and will send to a partner or co-worker. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
+For this final step in the tutorial, locate a Word document or Excel spreadsheet that you have already created and will send to a partner or co-worker. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
 
 You’re then ready to safely share this document by email. 
 
 ## To safely share your document by email
 
-1. In File Explorer, right-click your document and select **Classify and protect**. The **Classify and protect - Azure Information Protection** dialog box opens. 
+1. In File Explorer, right-click your document and select **Classify and protect**. The **Classify and protect - Azure Information Protection** dialog box opens:
+
+    ![Azure Information Protection quick start tutorial step 5 - right-click classify and protect](../media/classify-protect-dialog.png)
 
 2. Select **Protect with custom permissions**, which displays additional options.
 
@@ -45,7 +47,9 @@ You’re then ready to safely share this document by email.
 
     With this setting, our recipients will be able to view the document but not edit or print it.
 
-4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. Alternatively, click the address book to select a co-worker's email address. 
+4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. Alternatively, click the address book to select a co-worker's email address:
+
+    ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](../media/protect-custom-permissions.png)  
     
     After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
 
@@ -53,13 +57,17 @@ You’re then ready to safely share this document by email.
 
 4. Back in File Explorer, right-click your file again, and this time, select **Send to** > **Mail recipient**. This action attaches your document to an email message with some default text that we will change.
 
+5. If your email client is Outlook and this wasn't open when you installed the Azure Information client, you'll now see the same Information Protection bar so that you can easily apply labels to your email messages in addition to documents. Just as with our Word document, the default label of **Internal** is automatically selected. Because you're sending the document to a co-worker or somebody that your organization does business with, we'll keep this default label for our email message. 
+
 5. Before we change the default text, paste the email addresses that you specified earlier into the **To** box. 
 
-6. Type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
+6. Optionally, type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
 
 7. Modify the default message description so that it's suitable for your recipients. However, add the following text:
 
-    **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://go.microsoft.com/fwlink/?LinkId=524168).** 
+    **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://go.microsoft.com/fwlink/?LinkId=524168.** 
+
+    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-email.png)
 
     Click **Send**.
 
