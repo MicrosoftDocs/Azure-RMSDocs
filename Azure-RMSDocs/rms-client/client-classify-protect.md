@@ -85,7 +85,7 @@ The admin guide contains a full list of the file types supported and the files a
 
 1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. 
 
-2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If none of the labels can be selected (they display as unavailable), the selected file does not support classification but you can protect it.
+2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If none of the labels can be selected (they display as unavailable), the selected file does not support classification but you can protect it with custom permissions (step 3).
 
     If you see **Select template** in this dialog box:
     
