@@ -32,7 +32,7 @@ Recently upgraded from the Rights Management sharing application (also known as 
 
 Use the following information to help you get up and running quickly.
 
-|Task using the RMS sharing app|How to do this with the Azure Information Protection client
+|The RMS sharing app|How to do this with the Azure Information Protection client
 |-----------|--------------------|
 |Protect a file on a device by using menu options in File Explorer <br /><br />Also known as "protect in place"|Use the File Explorer menu option, **Classify and protect** to open the **Classify and protect - Azure Information Protection** dialog box. <br /><br />Then select a label that automatically applies protection, or specify your own custom permissions. <br /><br />For more information, see [Classify and protect a file or email](client-classify-protect.md).
 |Protect a file that you share by email <br /><br />Also known as "share protected"|Using a copy of the file, use the File Explorer menu option, **Classify and protect** to open the **Classify and protect - Azure Information Protection** dialog box. <br /><br />Select **Protect with custom permissions** to specify email addresses and custom permissions.<br /><br /> Finally, share the file using your standard sharing mechanism, such as an attachment to an email or an invitation to a SharePoint Online document.<br /><br />For more information, see [Set custom protection for a file and then share it with others](client-protect-share.md).
