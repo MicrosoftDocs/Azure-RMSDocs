@@ -57,8 +57,6 @@ You’re then ready to safely share this document by email.
 
 4. Back in File Explorer, right-click your file again, and this time, select **Send to** > **Mail recipient**. This action attaches your document to an email message with some default text that we will change.
 
-5. If your email client is Outlook and this wasn't open when you installed the Azure Information client, you'll now see the same Information Protection bar so that you can easily apply labels to your email messages in addition to documents. Just as with our Word document, the default label of **Internal** is automatically selected. Because you're sending the document to a co-worker or somebody that your organization does business with, we'll keep this default label for our email message. 
-
 5. Before we change the default text, paste the email addresses that you specified earlier into the **To** box. 
 
 6. Optionally, type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
