@@ -41,6 +41,16 @@ For example, the following picture shows that the document hasn't yet been label
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
+> [!NOTE]
+> If you don't see this Information Protection bar in your Office apps:
+> 
+> - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
+> 
+> If you see labels that are unavailable:
+> 
+> - You have a version of Office that doesn't support protecting data (Standard edition). When this is detected, labels that are configured to apply protection display as unavailable. 
+
+
 If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
 
 In addition to manually selecting labels, labels can also be applied in the following ways:
@@ -75,7 +85,16 @@ The admin guide contains a full list of the file types supported and the files a
 
 1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. 
 
-2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If a label cannot be selected (it is unavailable), the selected file does not support classification but you can protect it.
+2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If none of the labels can be selected (they display as unavailable), the selected file does not support classification but you can protect it.
+
+    > [!NOTE]
+    > If you see **Select template** in this dialog box:
+    > 
+    > - The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
+    
+    > If some of the labels are available but not all:
+    > 
+    > - You have a version of Office that doesn't support protecting data (Standard edition). When this is detected, labels that are configured to apply protection display as unavailable.
 
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     

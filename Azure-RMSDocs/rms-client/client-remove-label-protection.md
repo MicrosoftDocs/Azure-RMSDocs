@@ -48,16 +48,20 @@ On the Information Protection bar, click the **Delete Label** icon:
 
 ![Azure Information Protection bar - Delete Label](../media/delete-label.png)
 
-
 If the **Delete Label** icon is not immediately available, first click the **Edit Label** icon:
 
 ![Azure Information Protection bar - Edit Label](../media/edit-label.png)
+
+> [!NOTE]
+> If you don't see this Information Protection bar in your Office apps:
+> 
+> - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
 
 ## Using File Explorer to remove labels and protection from files
 
 When you use File Explorer, you can quickly remove labels and protection from a single file, multiple files, or a folder. When you select a folder, all the files in that folder and any subfolders it has are automatically selected. 
 
-1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. 
+1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**.
 
 2. To remove a label: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove label**. 
 
