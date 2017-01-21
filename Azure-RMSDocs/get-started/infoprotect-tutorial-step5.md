@@ -47,7 +47,9 @@ You’re then ready to safely share this document by email.
 
     With this setting, our recipients will be able to view the document but not edit or print it.
 
-4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. Alternatively, click the address book to select a co-worker's email address:
+4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
+
+    Alternatively, click the address book to select a co-worker's email address:
 
     ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](../media/protect-custom-permissions.png)  
     
