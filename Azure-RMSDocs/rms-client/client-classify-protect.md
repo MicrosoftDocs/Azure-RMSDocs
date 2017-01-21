@@ -90,10 +90,10 @@ The admin guide contains a full list of the file types supported and the files a
     If you see **Select template** in this dialog box:
     
     - The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
-
+        
     If only some labels display as unavailable:
     
-     - You have a version of Office that doesn't support protecting data (Standard edition). When this is detected, labels that are configured to apply protection display as unavailable.
+     - You have a version of Office that doesn't support protecting data (Standard edition). When this Office edition is detected, labels that are configured to apply protection display as unavailable.
 
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
