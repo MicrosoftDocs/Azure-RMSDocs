@@ -34,7 +34,7 @@ When you run the Azure Information Protection client without an Azure Informatio
     - This is a supported scenario and you can use the Azure Information Protection client to protect files and view protected files.
 
 - Your organization has a subscription for Azure Information Protection but you cannot download the Azure Information Protection policy. 
-    - This can happen because of a misconfiguration or because your sign in is not successful. Contact your help desk or administrator but in the meantime, you can use the Azure Information Protection client to protect files and view protected files.
+    - This can happen because of a misconfiguration or because your sign in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
 
 ## Limitations for protection-only mode
 
