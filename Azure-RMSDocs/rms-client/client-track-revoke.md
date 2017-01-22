@@ -81,7 +81,7 @@ In addition to tracking your protected documents on Windows computers by using O
 
 #### Using File Explorer to access the doc tracking site
 
--   Right-click the file, select **Classify and protect**, and then from the **Classify and protect - Azure Information Protection** dialog box, select **Track Usage**.
+-   Right-click the file, select **Classify and protect**, and then from the **Classify and protect - Azure Information Protection** dialog box, select **Track and revoke**.
 
 
 ## Other instructions
