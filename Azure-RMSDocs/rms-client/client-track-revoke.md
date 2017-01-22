@@ -51,7 +51,7 @@ When you access this site, sign in to track your documents. Providing your organ
 
 -   For the Office applications, Word, Excel, PowerPoint, and Outlook: On the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**:
 
-![Track usage option](../media/track-usage-callout.png)
+    ![Track usage option](../media/track-usage-callout.png)
 
 If you do not see these options in your Office applications, it’s likely that either the Azure Information Protection client is not installed on your computer, your Office applications must be restarted, or your computer must be restarted to complete the installation. For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
