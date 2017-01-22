@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,8 +28,6 @@ ms.suite: ems
 # Track and revoke your documents when you use Azure Information Protection
 
 >*Applies to: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
-
-**[ This version of the client is in preview and subject to change. ]**
 
 After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
@@ -81,7 +79,7 @@ In addition to tracking your protected documents on Windows computers by using O
 
 #### Using File Explorer to access the doc tracking site
 
--   Right-click the file, select **Classify and protect (preview)**, and then from the **Azure Information Protection Viewer**, select the Track Usage icon.
+-   Right-click the file, select **Classify and protect**, and then from the **Classify and protect - Azure Information Protection** dialog box, select **Track Usage**.
 
 
 ## Other instructions
