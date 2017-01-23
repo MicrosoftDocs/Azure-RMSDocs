@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Developer guidance | Microsoft Docs
+title: Azure Information Protection SDK 4.2 developer guidance | Microsoft Docs
 description: A collection of how-to topics for developing the AIP SDK 4.2
 keywords:
 author: bruceperlerms
