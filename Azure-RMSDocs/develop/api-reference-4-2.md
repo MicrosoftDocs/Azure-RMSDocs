@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: API reference | Azure RMS
-description: The Microsoft Rights Management SDK 4.2 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
+title: API SDK 4.2 reference | Microsoft Docs
+description: Azure Information Protection SDK 4.2 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
 keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,9 +25,9 @@ ms.suite: ems
 
 ---
 
-# API reference
+# API SDK 4.2 reference
 
-The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
+The Azure Information Protection SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
 
 ### Apple
 - [iOS / OS X API reference](https://msdn.microsoft.com/library/dn758306.aspx) - API reference for the Apple iOS and OS X operating systems.
