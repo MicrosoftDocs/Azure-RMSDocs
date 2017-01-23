@@ -1,12 +1,12 @@
 ﻿---
 # required metadata
 
-title: Azure Information Protection Developer's Guide | Azure Information Protection
-description: Developers can use RMS to protect and manage files of all types
+title: Azure Information Protection Developer's Guide | Microsoft Docs
+description: Developers can use Azure Information Protection to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/05/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -16,7 +16,7 @@ ms.suite: ems
 ms.reviewer: kartikk
 ---
 
-# Azure Information Protection Developer's Guide
+# Azure Information Protection Developer's Guide 
 
 This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service. The intent of this guide is allow developers who want to leverage the rights management system to build different types of applications for a range of supported platforms.
 
