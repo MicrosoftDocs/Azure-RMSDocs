@@ -32,7 +32,7 @@ ms.suite: ems
 
 The Azure Information Protection client can apply the following to documents and emails:
 
--Classification only
+- Classification only
 
 - Classification and protection
 
