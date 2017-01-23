@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Configure Azure RMS for ADAL authentication | Azure RMS
-description: Outlines the steps for configuring Azure RMS to use Azure ADAL based authentication
-keywords: authentication, RMS, ADAL
+title: Configure for ADAL authentication | Microsoft Docs
+description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
+keywords: authentication, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,11 +26,11 @@ ms.suite: ems
 
 ---
 
-# Configure Azure RMS for ADAL authentication
+# Configure Azure Information Protection for ADAL authentication
 
-This topic describes the steps for configuring Azure ADAL based authentication.
+This topic describes the steps for configuring Azure Active Directory Authentication Library (ADAL) based authentication.
 
-## Azure Authentication setup
+## Azure authentication setup
 
 You will need the following:
 
