@@ -26,9 +26,9 @@ ms.suite: ems
 
 ---
 
-# Configure Azure Information Protection for ADAL authentication
+# Configure your app for ADAL authentication
 
-This topic describes the steps for configuring Azure Active Directory Authentication Library (ADAL) based authentication.
+This topic describes the steps for configuring your app for Azure Active Directory Authentication Library (ADAL) based authentication.
 
 ## Azure authentication setup
 
