@@ -47,27 +47,34 @@ When you access this site, sign in to track your documents. Providing your organ
 
 -   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 
-## Using Office to access the document tracking site
+To track a protected document, it must be registered in the document tracking site. To do this, use either File Explorer, or your Office apps.
 
--   For the Office applications, Word, Excel, PowerPoint, and Outlook: On the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**:
+## Using Office to track or revoke the document
+
+For the Office applications, Word, Excel, PowerPoint, and Outlook: 
+
+1. Open the protected document that you want to track or revoke.
+
+2. On the **Home** tab, in the **Protection** group, click **Protect** > **Track and revoke**:
 
     ![Track usage option](../media/track-usage-callout.png)
 
 If you do not see these options in your Office applications, it’s likely that either the Azure Information Protection client is not installed on your computer, your Office applications must be restarted, or your computer must be restarted to complete the installation. For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
+## Using File Explorer to track or revoke the document
 
-### Other ways to track and revoke your documents
-In addition to tracking your protected documents on Windows computers by using Office applications, you can also use these alternatives:
+1. Right-click the protected file, and select **Classify and protect**.
 
--   **Using a web browser**: This method works for all supported devices.
+2. From the **Classify and protect - Azure Information Protection** dialog box, select **Track and revoke**.
 
--   **Using File Explorer**: This method works for Windows computers.
 
-#### Using a web browser to access the doc tracking site
+### Using a web browser track and revoke documents that you have registered
 
--   Using a supported browser, go to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
+After you have registered the protected document by using your Office apps or File Explorer, you can track and revoke these documents by using a supported web browser:
 
-    Supported browsers: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
+- Using your Windows PC, Mac computer, or mobile device, visit the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
+
+    **Supported browsers**: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
 
     -   Internet Explorer: At least version 10
 
@@ -78,10 +85,6 @@ In addition to tracking your protected documents on Windows computers by using O
     -   Apple Safari 5: At least version 5
 
     -   Google Chrome: At least version 18
-
-#### Using File Explorer to access the doc tracking site
-
--   Right-click the file, select **Classify and protect**, and then from the **Classify and protect - Azure Information Protection** dialog box, select **Track and revoke**.
 
 
 ## Other instructions
