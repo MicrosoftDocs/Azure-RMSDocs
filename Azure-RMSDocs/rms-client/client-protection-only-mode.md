@@ -30,7 +30,7 @@ ms.suite: ems
 
 When you run the Azure Information Protection client without an Azure Information Protection policy, it displays in **protection-only** mode:
 
-    ![Protection-only mode](../media/protection-only-mode.png)
+![Protection-only mode](../media/protection-only-mode.png)
 
  This mode runs in the following scenarios:
 
