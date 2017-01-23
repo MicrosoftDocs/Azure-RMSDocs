@@ -1,12 +1,12 @@
 ﻿---
 # required metadata
 
-title: Azure Information Protection Developer's Guide | Azure Information Protection
-description: Developers can use RMS to protect and manage files of all types
+title: Azure Information Protection Developer's Guide | Microsoft Docs
+description: Developers can use Azure Information Protection to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/05/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -16,7 +16,7 @@ ms.suite: ems
 ms.reviewer: kartikk
 ---
 
-# Azure Information Protection Developer's Guide
+# Azure Information Protection Developer's Guide 
 
 This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service. The intent of this guide is allow developers who want to leverage the rights management system to build different types of applications for a range of supported platforms.
 
@@ -33,6 +33,8 @@ Service applications provide capabilities to protect information when exporting 
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled DLP application that takes you through the basic steps that a DLP RMS-enabled application should perform by using the RMS File API for protecting and consuming restricted content.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure applications to protect data in an Azure Blob Storage.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) is a simple console application sample that takes a directory as input and protects all the files in that directory only, no recursion. 
+
 
 ## PowerShell guides
 These scripts, generally used by Azure Rights management administrators, are useful for developing and testing your service applications.
