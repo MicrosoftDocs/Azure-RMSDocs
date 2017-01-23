@@ -1,8 +1,8 @@
 ﻿---
 # required metadata
 
-title: API reference | Azure RMS
-description: The Microsoft Rights Management SDK 2.1 supports RMS enablement of Windows clients.
+title: API SDK 2.1 reference | Microsoft Docs
+description: Azure Information Protection SDK 2.1 supports RMS enablement of Windows clients.
 keywords:
 author: bruceperlerms
 ms.author: bruceper
