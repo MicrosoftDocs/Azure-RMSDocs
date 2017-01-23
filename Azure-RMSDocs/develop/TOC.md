@@ -65,3 +65,4 @@
 #### [Functions](https://msdn.microsoft.com/library/hh535289.aspx)
 #### [Structures](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [Error codes](https://msdn.microsoft.com/library/hh535248.aspx)
+## [Terms](terms.md) 

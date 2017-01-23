@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Configure for ADAL authentication | Microsoft Docs
+title: Configure your app for ADAL authentication | Microsoft Docs
 description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
 keywords: authentication, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
