@@ -29,12 +29,10 @@ ms.suite: ems
 
 Active Directory Rights Management Services is well supported by a growing community of developers on multiple platforms.
 
-## AD RMS Community Resources
-
-### Developer's Blog
+## Developer's Blog
 The [RMS Developer's Corner (blog)](http://blogs.msdn.com/b/rms/) is the active hub for the information protection developer.
 
-### Microsoft Connect
+## Microsoft Connect
 The Rights Management Services section on the Connect site is where you can find current deliverables and have the opportunity to offer feedback.
 
 > [!NOTE]
