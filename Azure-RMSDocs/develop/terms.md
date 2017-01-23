@@ -1,7 +1,7 @@
 ﻿---
 # required metadata
 
-title: Azure Information Protection Developer Terms | Microsoft Docs
+title: AIP Developer Terminology | Microsoft Docs
 description: A collection of developer terminology definitions specific to Rights Management Services.
 keywords:
 author: bruceperlerms
