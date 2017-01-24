@@ -38,7 +38,7 @@ Use the following information to see what’s new or changed in a release. The m
 >  
 > If the problem remains, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate. For support options, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information.
 
-## Version 1.x.x.x
+## Version 1.3.139.0
 
 **Released**: 02/06/2017
 

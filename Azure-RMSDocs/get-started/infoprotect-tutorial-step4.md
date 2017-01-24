@@ -43,7 +43,7 @@ Select **The previous label no longer applies**, and click **Confirm**. You'll s
 
 ## To remove the classification completely
 
-On the Information Protection bar, click the **Edit Label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Remove label** icon. This time, type in "This document doesn't need classifying" and click **Confirm**.  
+On the Information Protection bar, click the **Edit Label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Delete Label** icon. This time, type in "This document doesn't need classifying" and click **Confirm**.  
 
 You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 

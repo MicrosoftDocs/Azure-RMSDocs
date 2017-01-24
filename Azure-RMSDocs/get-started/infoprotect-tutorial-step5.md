@@ -95,7 +95,11 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 ## To track your protected document
 
-1.  Back in Word, on the **Home** tab, click **Protect** > **Track and revoke**:
+1.  Open the document that you protected and shared. The information banner confirms the custom protection settings that you specified:
+
+    ![Information banner for custom protection](../media/information-banner-custom-protection.png)
+
+2.  On the **Home** tab, click **Protect** > **Track and revoke**:
 
     ![Track usage option](../media/track-usage-callout.png)
 
