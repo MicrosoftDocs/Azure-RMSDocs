@@ -89,7 +89,7 @@ The admin guide contains a full list of the file types supported and the files a
 
     - If none of the labels can be selected (they display as unavailable): The selected file does not support classification but you can protect it with custom permissions (step 3).
     
-    - If you see **Select template** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). You can select a template to apply protection that your administrator has configured for you.
+    - If you see **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
     
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
@@ -101,7 +101,7 @@ The admin guide contains a full list of the file types supported and the files a
     
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. For people and groups in your organization, you can use the address book to search and select them. For people in another organization, you must specify their full email address. Make sure that you use a business email address because personal email addresses are not currently supported.
         
-    - **Expire access on**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
+    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 

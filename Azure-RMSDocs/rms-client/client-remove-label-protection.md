@@ -63,11 +63,11 @@ When you use File Explorer, you can quickly remove labels and protection from a 
 
 1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**.
 
-2. To remove a label: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove label**. 
+2. To remove a label: In the **Classify and protect - Azure Information Protection** dialog box, click **Delete Label**. If the label was configured to apply protection, that protection is automatically removed.
 
-3. To just remove protection from a single file: In the **Classify and protect - Azure Information Protection** dialog box, clear the **Protect with custom permissions** option.
+3. To remove custom protection from a single file: In the **Classify and protect - Azure Information Protection** dialog box, clear the **Protect with custom permissions** option.
     
-4. To remove protection from multiple files: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove custom permissions**.
+4. To remove custom protection from multiple files: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove custom permissions**.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
