@@ -44,7 +44,7 @@ Use the following information to see what’s new or changed in a release. The m
 
 **Fixes**:
 
-- On Office 2010 Standard (which doesn't support protecting documents and emails): Labels that are configured to apply protection display as unavailable to users on the Azure Information Protection bar. Previously, these labels would display as available and then show an error message when selected by a user.
+- ??
 
 **New features**:
 
@@ -53,6 +53,14 @@ Use the following information to see what’s new or changed in a release. The m
     - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and multiple file selection.
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
+    - Client usage logs that record information such as which label was applied, how, and by whom.
+
+Previously installed versions will automatically upgrade. 
+
+[!NOTE] 
+> This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. 
+>
+> If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
 This client version is the General Availability release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
 
