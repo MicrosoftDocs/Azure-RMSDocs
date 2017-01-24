@@ -6,7 +6,7 @@ description: Information about RMS for individuals, a free self-service subscrip
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
