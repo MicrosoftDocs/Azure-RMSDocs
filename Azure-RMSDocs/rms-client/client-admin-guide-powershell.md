@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Using PowerShell with the Azure Information Protection client | Azure Information Protection
+# Using PowerShell with the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
@@ -39,6 +39,12 @@ The AIP module includes all the Rights Management cmdlets from the RMS Protectio
 - [Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus)
 
 - [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel) 
+
+Examples for using these cmdlets:
+
+- For a shared folder, identify all files with a specific label.
+
+- For a shared folder, apply a specified label to all files that do not have a label.
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
