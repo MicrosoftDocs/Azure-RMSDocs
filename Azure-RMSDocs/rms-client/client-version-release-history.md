@@ -57,7 +57,7 @@ Use the following information to see what’s new or changed in a release. The m
 
 Previously installed versions will automatically upgrade. 
 
-[!NOTE] 
+>[!NOTE] 
 > This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. 
 >
 > If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
