@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Developer guidance and information | Azure RMS
-description: This topic covers specific guidance for several important development scenarios.
+title: Azure Information Protection SDK 2.1 developer guidance | Microsoft Docs
+description: A collection of how-to topics for developing with the AIP SDK 2.1
 keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Developer guidance and information
+# Developer guidance
 
 This section covers specific guidance for several important development scenarios as well as general information about developing with this SDK. The scenarios in this section are specific to this release of the Rights Management Services SDK 2.1 and may be altered in subsequent releases.
 - [How-to: use ADAL authentication](how-to-use-adal-authentication.md) - Authentication with Azure RMS for your app using Azure Active Directory Authentication Library (ADAL).

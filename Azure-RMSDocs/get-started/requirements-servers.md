@@ -6,7 +6,7 @@ description: Identify the on-premises server products that can use the Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -61,7 +61,7 @@ To use this connector, you must configure directory synchronization between your
     > 
     > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](../rms-client/configure-fci.md).
 
-The Rights Management connector is supported on Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
+The Rights Management connector is supported on Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
 
 For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
