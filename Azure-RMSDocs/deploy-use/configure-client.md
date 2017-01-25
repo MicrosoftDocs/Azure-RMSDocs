@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Information Protection client &colon; Installation and configuration for clients | Azure Information Protection
-description: Information for admins about deploying the Rights Management (RMS) sharing application on Windows computers and mobile devices.
+description: Information for admins about deploying the Azure Information Protection client on Windows computers and mobile devices.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
