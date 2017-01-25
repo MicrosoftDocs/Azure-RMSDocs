@@ -37,7 +37,7 @@ The Azure Information Protection client integrates with Office applications by i
 For an enterprise installation and configuration of the client for Windows, see the [Azure Information Protection administrator guide](../rms-client/client-admin-guide.md).
 
 > [!TIP]
-> If you want to quickly install and test the Azure Information Protection client for a single computer, see [Download and install the Azure Information Protection client](../rms-client/install-client.md) from the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
+> If you want to quickly install and test the Azure Information Protection client for a single computer, see [Download and install the Azure Information Protection client](../rms-client/install-client-app.md) from the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
 
 ## The Azure Information Protection client for iOS and Android: Installation and management
 To install the Azure Information Protection client for these popular mobile platforms, you can download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970). No configuration is required.
