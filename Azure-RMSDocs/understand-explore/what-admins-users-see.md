@@ -6,7 +6,7 @@ description: See some typical examples of how administrators and users see and c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 01/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
