@@ -134,7 +134,7 @@ The re-encrypted content key is then embedded into an encrypted use license with
 The client also decrypts the rights list and passes them to the application, which enforces those rights in the application’s user interface.
 
 > [!NOTE]
-> When users who are external to your organization consume content that you've protected, the consumption flow itself is the same. The variation is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
 
 
 ### Variations
