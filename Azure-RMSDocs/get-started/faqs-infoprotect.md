@@ -115,7 +115,7 @@ Yes. If you require users to classify all files that they save, in the Azure por
 
 ## Can I remove classification from a file?
 
-Yes. This is now covered in the user guide:[Remove classification labels and protection from files and emails](client-remove-label-protection.md) 
+Yes. This is now covered in the user guide:[Remove classification labels and protection from files and emails](../rms-client/client-remove-label-protection.md) 
 
 ## Can I prompt users to justify why they are changing the classification level?
 
