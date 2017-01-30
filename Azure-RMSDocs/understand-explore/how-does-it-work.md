@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 01/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,13 +83,13 @@ After the user environment is initialized, that user can then protect documents 
 ### Initializing the user environment
 Before a user can protect content or consume protected content on a Windows computer, the user environment must be prepared on the device. This is a one-time process and happens automatically without user intervention when a user tries to protect or consume protected content:
 
-![RMS Client activation - step 1](../media/AzRMS.png)
+![RMS Client activation flow - step 1, authenticating the client](../media/AzRMS.png)
 
 **What's happening in step 1**: The RMS client on the computer first connects to the Azure Rights Management service, and authenticates the user by using their Azure Active Directory account.
 
 When the user’s account is federated with Azure Active Directory, this authentication is automatic and the user is not prompted for credentials.
 
-![RMS Client activation - step 2](../media/AzRMS_useractivation2.png)
+![RMS Client activation - step 2, certificates are downloaded to the client](../media/AzRMS_useractivation2.png)
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s Azure Information Protection tenant, which issues certificates that let the user authenticate to the Azure Rights Management service in order to consume protected content and to protect content offline.
 
@@ -98,17 +98,17 @@ A copy of the user’s certificate is stored in Azure so that if the user moves 
 ### Content protection
 When a user protects a document, the RMS client takes the following actions on an unprotected document:
 
-![RMS document protection - step 1](../media/AzRMS_documentprotection1.png)
+![RMS document protection - step 1, document is encrypted](../media/AzRMS_documentprotection1.png)
 
 **What's happening in step 1**: The RMS client creates a random key (the content key) and encrypts the document using this key with the AES symmetric encryption algorithm.
 
-![RMS document protection - step 2](../media/AzRMS_documentprotection2.png)
+![RMS document protection - step 2, policy is created](../media/AzRMS_documentprotection2.png)
 
 **What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document, either based on a template or by specifying specific rights for the document. This policy includes the rights for different users or groups and other restrictions, such as an expiration date.
 
 The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.
 
-![RMS document protection - step 3](../media/AzRMS_documentprotection3.png)
+![RMS document protection - step 3, policy is embedded in the document](../media/AzRMS_documentprotection3.png)
 
 **What's happening in step 3**: Finally, the RMs client embeds the policy into a file with the body of the document encrypted previously, which together comprise a protected document.
 
@@ -117,21 +117,25 @@ This document can be stored anywhere or shared by using any method, and the poli
 ### Content consumption
 When a user wants to consume a protected document, the RMS client starts by requesting access to the Azure Rights Management service:
 
-![RMS document consumption - step 1](../media/AzRMS_documentconsumption1.png)
+![RMS document consumption - step 1, user is authenticated and gets the list of rights](../media/AzRMS_documentconsumption1.png)
 
 **What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document.
 
-![RMS document consumption - step 2](../media/AzRMS_documentconsumption2.png)
+![RMS document consumption - step 2, use license is returned to the client](../media/AzRMS_documentconsumption2.png)
 
 **What's happening in step 2**: The service then extracts the AES content key from the decrypted policy. This key is then encrypted with the user’s public RSA key that was obtained with the request.
 
 The re-encrypted content key is then embedded into an encrypted use license with the list of user rights, which is then returned to the RMS client.
 
-![RMS document consumption - step 3](../media/AzRMS_documentconsumption3.png)
+![RMS document consumption - step 3, document is decrypted and rights are endforced](../media/AzRMS_documentconsumption3.png)
 
 **What's happening in step 3**: Finally, the RMS client takes the encrypted use license and decrypts it with its own user private key. This lets the RMS client decrypt the document’s body as it is needed and render it on the screen.
 
 The client also decrypts the rights list and passes them to the application, which enforces those rights in the application’s user interface.
+
+> [!NOTE]
+> When users who are external to your organization consume content that you've protected, the consumption flow is the same. What changes for this scenario, is how the user is authenticated. For more information, see [When I share a protected document with somebody outside my company, how does that user get authenticated?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+
 
 ### Variations
 The preceding walkthroughs cover the standard scenarios but there are some variations:
