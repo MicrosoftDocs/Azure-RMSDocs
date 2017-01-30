@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 01/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,10 @@ Have a question about Azure Information Protection that is specifically about cl
 
 ## What can I do with the classification capabilities in Azure Information Protection?
 
-The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets you view and modify assigned classification labels to data. Classification can be done manually, or recommended for you, or automatically applied. For the classifications that you specify, data can be protected by using a Rights Management service.  
+The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets users view and assign classification labels to their Office documents and emails.
+
+Classification can be applied by default, manually, recommended, or automatically applied when sensitive data is detected. These labels can also automatically protect the data by using a Rights Management service. 
+In addition to Office documents and emails, other files can be classified and protected by using File Explorer to right-click a file, multiple files, or a folder. Or, you can use PowerShell to do this from the command line for faster classification and protection in bulk.
 
 The classification labels and behavior are configured in the Azure portal. You can use the default built-in policy to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
 
@@ -53,7 +56,7 @@ The current release has the following limitations. Look out for announcements on
 
 - The SDK for partners and developers is not available.
 
-Some of the limitations previously listed are now available in preview. For more information, see the blog post announcement: [Azure Information Protection December preview now available](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/).
+Some of the limitations previously listed are now available with the February release of the new client. For more information, see the blog post announcement.
 
 
 ## Do I need to be a global admin to try Azure Information Protection?
@@ -84,7 +87,7 @@ Because Azure Information Protection applies persistent labels and protection to
 
 Azure Information Protection policy actions take effect when documents are saved and emails are sent, for both new content and changes to existing content.
 
-If you have the preview client, you can also quickly classify (and optionally, protect) existing files from File Explorer. 
+If you have the latest version of the client, you can also quickly classify (and optionally, protect) existing files from File Explorer. 
 
 ## Can I use Azure Information Protection for classification only, without enforcing encryption and restricting usage rights?
 
@@ -112,8 +115,7 @@ Yes. If you require users to classify all files that they save, in the Azure por
 
 ## Can I remove classification from a file?
 
-Yes. To remove classification from a file, open the file in the Office application, click the **Edit label** icon in the Information Protection bar, click the **Remove label** icon, and then click **OK** to confirm your action. 
-
+Yes. This is now covered in the user guide:[Remove classification labels and protection from files and emails](client-remove-label-protection.md) 
 
 ## Can I prompt users to justify why they are changing the classification level?
 
@@ -172,11 +174,9 @@ Because Azure Information Protection uses persistent metadata for classification
 
 ## How does document tracking and revocation work for Azure Information Protection?
 
-Document tracking for files that you classify and protect by using Azure Information Protection works with Azure Rights Management protection and the RMS sharing application. You can also access the document tracking site by using the Azure Information Protection client (version 1.0.233 or later): 
+Document tracking for files that you classify and protect by using Azure Information Protection works with the latest release of the Azure Information Protection client (version 1.3.155.2 or later). 
 
-- In an Office application, on the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**. 
-
-For more information, see [Track and revoke your documents when you use the RMS sharing application](../rms-client/sharing-app-track-revoke.md).
+For more information, see [Track and revoke your protected documents when you use Azure Information Protection](../rms-client/client-track-revoke.md).
 
 ## Can I control which users can use Azure Information Protection to classify and protect content?
 
