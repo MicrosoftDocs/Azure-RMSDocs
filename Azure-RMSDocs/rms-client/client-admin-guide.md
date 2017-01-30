@@ -84,7 +84,7 @@ In addition:
 > [!NOTE]
 > Installation requires local administrative permissions.
 
-In addition to using the following instructions, the General Availability version of the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
+In addition to using the following instructions, the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
 
 1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
