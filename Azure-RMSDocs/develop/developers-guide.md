@@ -63,9 +63,12 @@ The 4.2 version is REST client based with operating system specific APIs for sev
 
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
 
-|[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/develop/linux-icon.png)](linux-setup.md) |
-|:---:|:---:|:---:|:---:|:---:|
-|[iOS/OSX setup](ios-sdk.md) | [Android setup](android-sdk.md) | [Windows Phone setup](windows-phone-apps.md) | [Windows Service setup](install-the-rms-sdk.md) | [Linux setup](linux-setup.md) |
+[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Android setup](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux setup](../media/develop/linux-icon.png)](linux-setup.md)
+
 
 ## How-tos
 
