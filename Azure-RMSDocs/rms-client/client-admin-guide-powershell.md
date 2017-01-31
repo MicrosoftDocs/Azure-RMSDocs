@@ -56,9 +56,18 @@ As with the RMSProtection module, the current release of the AIP module has the 
 
 - For Azure Information Protection and for Azure Rights Management protection, the cmdlets are not supported outside North America. As a workaround, you can edit the registry, as documented in [about_RMSProtection_AzureRMS](/powershell/rmsprotection/vlatest/about_RMSProtection_AzureRMS). Without this registry change, authentication to the service fails outside the Azure North America region.
 
-Before you start to use these cmdlets, see the documentation that corresponds to your deployment of Rights Management for additional prerequisites and instructions:
+Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
-- Azure Information Protection and Azure RMS: [about_RMSProtection_AzureRMS](/powershell/rmsprotection/vlatest/about_RMSProtection_AzureRMS)
+- [How to use the PowerShell commands for the Azure Information Protection client and the Azure Rights Management service](client-admin-guide-powershell-aip-azurerms.md)
+
+	- Applicable if you use classification-only or classification with Azure Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
+	- Applicable if you use protection-only with the Azure Rights Management service: You have a subscription that includes the Azure Rights Management service (for example, Office 365 E3 and Office 365 E5).
+
+- [How to use the PowerShell commands for Active Directory Rights Management Services](client-admin-guide-powershell-adrms.md)
+
+	- Applicable if you use protection-only with the on-premises version of Azure Rights Management; Active Directory Rights Management Services (AD RMS).
+
+
 
 - AD RMS: [about_RMSProtection_ADRMS](/powershell/rmsprotection/vlatest/about_RMSProtection_ADRMS)
 
