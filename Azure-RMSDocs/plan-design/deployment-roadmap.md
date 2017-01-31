@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -165,11 +165,11 @@ Optionally, consider configuring the following:
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
-### Step 3: Configure your applications and services for Rights Management
+### Step 3: Install the client and configure applications and services for Rights Management
 
-1. Deploy the Rights Management sharing application
+1. Deploy the Azure Information Protection client
     
-    Install the Rights Management sharing application for users, so that they can safely share documents by email and protect files in place, and track their shared documents that they protected. Provide user training for this application. For more information, see [Rights Management Sharing Application for Windows](../rms-client/sharing-app-windows.md).
+    Install the Azure Information Protection for users, to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](../rms-client/aip-client.md).
 
 2. Configure Office applications and services for IRM
     
@@ -181,7 +181,7 @@ Optionally, consider configuring the following:
 
 4. Protect files in bulk - as needed 
     
-    To be able to bulk protect or bulk unprotect all file types, install the RMS Protection Tool, which uses the RMS Protection PowerShell module. For more information, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx).
+    The PowerShell cmdlets that let you bulk protect or bulk unprotect multiple file types are automatically installed with the Azure Information Protection client. For more information, see [Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md) from the admin guide..
 
 5. Deploy the connector for on-premises servers
     
