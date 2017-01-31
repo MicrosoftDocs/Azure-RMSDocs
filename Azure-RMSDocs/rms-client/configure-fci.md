@@ -51,7 +51,7 @@ Prerequisites for these instructions:
 
     -   You have installed the Azure Information Protection module and configured the prerequisites for Azure Rights Management. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal: **BposTenantId**, **AppPrincipalId**, and **Symmetric key**.
 
-    -   If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types#changing-the-default-protection-level-of-files) section from the admin guide.
+    -   If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
 
     -   You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
 
