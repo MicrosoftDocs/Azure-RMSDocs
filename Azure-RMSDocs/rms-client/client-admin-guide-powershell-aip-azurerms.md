@@ -57,7 +57,7 @@ If your Azure Information Protection tenant is not activated, see the instructio
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels for classification, you could remove the protection by setting a new label that doesn't apply protection. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
-You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
+You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see 
 
 ### Prerequisite 3: To protect or unprotect files without interaction
 
