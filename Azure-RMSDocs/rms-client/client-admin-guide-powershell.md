@@ -297,7 +297,7 @@ To protect all files in a folder, use the **-Folder** parameter with a drive let
 
 	Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	InputFile                          EncryptedFile
 	---------                          -------------
@@ -310,7 +310,7 @@ When the file name extension does not change after the protection is applied, yo
 
 	Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	FileName                              Status
 	--------                              ------
@@ -320,7 +320,7 @@ To unprotect a file, you must have Owner or Extract rights from when the file wa
 
 	Unprotect-RMSFile C:\test.docx -InPlace
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	InputFile                             DecryptedFile
 	---------                             -------------
@@ -410,7 +410,7 @@ To protect all files in a folder, use the -Folder parameter with a drive letter 
 
 	Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	InputFile                          EncryptedFile
 	---------                          -------------
@@ -423,7 +423,7 @@ When the file name extension does not change after RMS protection is applied, yo
 
 	Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	FileName                              Status
 	--------                              ------
@@ -433,7 +433,7 @@ To unprotect a file, you must have Owner or Extract rights from when the  file w
 
 	Unprotect-RMSFile C:\test.docx -InPlace
 
-And your output might look similar to the following:
+Your output might look similar to the following:
 
 	InputFile                             DecryptedFile
 	---------                             -------------
@@ -441,7 +441,7 @@ And your output might look similar to the following:
 
 
 ## Next steps
-For more information about any of the cmdlets in this module, use the Get-Help <cmdlet name> cmdlet, where <cmdlet name> is the name of the cmdlet
+For cmdlet help when you are in a PowerShell session, use the Get-Help <cmdlet name> cmdlet, where <cmdlet name> is the name of the cmdlet
 that you want to research. For example: 
 
 	Get-Help Get-RMSTemplate
