@@ -56,17 +56,17 @@ As with the RMSProtection module, the current release of the AIP module has the 
 
 Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
-- [Using PowerShell for the Azure Information Protection service and Azure Rights Management service](#using-powerShell-for-the-azure-information-protection-service-and-azure-rights-management-service)
+- [The Azure Information Protection service and Azure Rights Management service](#the-azure-information-protection-service-and-azure-rights-management-service)
 
 	- Applicable if you use classification-only or classification with Azure Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
 	- Applicable if you use protection-only with the Azure Rights Management service: You have a subscription that includes the Azure Rights Management service (for example, Office 365 E3 and Office 365 E5).
 
-- [Using PowerShell for the Azure Information Protection client and Active Directory Rights Management Services](#using-powerShell-for-the-azure-information-protection-client-and-active-directory-rights-management-services)
+- [The Azure Information Protection client and Active Directory Rights Management Services](#the-azure-information-protection-client-and-active-directory-rights-management-services)
 
 	- Applicable if you use protection-only with the on-premises version of Azure Rights Management; Active Directory Rights Management Services (AD RMS).
 
 
-## Using PowerShell for the Azure Information Protection service and Azure Rights Management service
+## Azure Information Protection service and Azure Rights Management service
 
 Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
 
@@ -128,19 +128,18 @@ Windows PowerShell module:
 4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
     
     The following is an example of output from Get-AadrmConfiguration:
-
     
-	    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-	
-	    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-	
-	    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-	
-	    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-	
-	    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-	
-	    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+		
+		    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+		
+		    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+		
+		    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+		
+		    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+		
+		    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Disconnect from the service:
     
@@ -328,7 +327,7 @@ And your output might look similar to the following:
 	C:\Test.docx                          C:\Test.docx
 
 
-## Using PowerShell for the Azure Information Protection client and Active Directory Rights Management Services
+## The Azure Information Protection client and Active Directory Rights Management Services
 
 Read this section before you start using the PowerShell commands to protect or unprotect files when your organization uses Active Directory Rights Management Services.
 
