@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use PowerShell for Active Directory Rights Management Services | Azure Information Protection
+title: Using PowerShell for Active Directory Rights Management Services | Azure Information Protection
 description: Information to get started using PowerShell with the Azure Information Protection client when your organization uses Active Directory Rights Management Services (AD RMS)
 author: cabailey
 ms.author: cabailey
@@ -25,13 +25,13 @@ ms.suite: ems
 
 ---
 
-# How to use the PowerShell commands for the Azure Information Protection client and Active Directory Rights Management Services
+# Using PowerShell for the Azure Information Protection client and Active Directory Rights Management Services
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
 Read this information before you start using the PowerShell commands to protect or unprotect files when your organization uses Active Directory Rights Management Services.
 
-The PowerShell cmdlets install with the Azure Information Protection module, **AIP**. For more information, see [Using PowerShell with the Azure Information Protection client](Using PowerShell with the Azure Information Protection client.md)
+The PowerShell cmdlets install with the Azure Information Protection module, **AIP**. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md)
 
 
 ## Prerequisites
@@ -129,7 +129,7 @@ And your output might look similar to the following:
 
 	FileName                              Status
 	--------                              ------
-	\\Server1\Documents\Test1.docx         Protected
+	\\Server1\Documents\Test1.docx        Protected
 
 To unprotect a file, you must have Owner or Extract rights from when the  file was protected, or be super user for AD RMS. Then, use the Unprotect cmdlet. For example:
 
@@ -150,7 +150,6 @@ that you want to research. For example:
 	Get-Help Get-RMSTemplate
 
 Not all the cmdlets are applicable for AD RMS. The applicable cmdlets are the following:
-
 
 - [Get-RMSFileStatus](/powershell/rmsprotection/vlatest/Get-RMSFileStatus)
 

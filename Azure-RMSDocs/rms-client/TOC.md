@@ -11,6 +11,8 @@
 ##### [Document tracking](client-admin-guide-document-tracking.md)
 ##### [File types supported](client-admin-guide-file-types.md)
 ##### [PowerShell commands](client-admin-guide-powershell.md)
+###### [Using PowerShell commands for AIP and Azure RMS](client-admin-guide-powershell-aip-azurerms.md)
+###### [Using PowerShell commands for AD RMS](client-admin-guide-powershell-adrms.md)
 #### [Azure Information Protection user guide](client-user-guide.md)
 ##### [Download and install the client](install-client-app.md)
 ##### [Classify and protect a file or email](client-classify-protect.md)

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use PowerShell for Azure Information Protection and Azure Rights Management | Azure Information Protection
+title: Using PowerShell for Azure Information Protection and Azure Rights Management | Azure Information Protection
 description: Information to get started using PowerShell with the Azure Information Protection client when your organization uses classification labels or protection by using the Azure Rights Management service
 author: cabailey
 ms.author: cabailey
@@ -25,13 +25,13 @@ ms.suite: ems
 
 ---
 
-# How to use the PowerShell commands for the Azure Information Protection client and the Azure Rights Management service
+# Using PowerShell for the Azure Information Protection service and Azure Rights Management service
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
-Read this information before you start using the PowerShell commands to protect and classify files, or unprotect and remove classification from files when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
+Read this information before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
 
-The PowerShell cmdlets install with the Azure Information Protection module, **AIP**. For more information, see [Using PowerShell with the Azure Information Protection client](Using PowerShell with the Azure Information Protection client.md)
+The PowerShell cmdlets install with the Azure Information Protection module, **AIP**. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md).
 
 
 ## Prerequisites
