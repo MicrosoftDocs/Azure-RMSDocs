@@ -42,8 +42,7 @@ In addition to the prerequisites for installing the AIP module, there are additi
 
 2. To remove protection from files for others using your own account: The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
 
-3. To directly protect or unprotect files without interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider
-making this service principal a super user for Azure RMS.
+3. To directly protect or unprotect files without interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure RMS.
 
 4. For regions outside North America: Edit the registry.
 
@@ -57,7 +56,7 @@ If your Azure Information Protection tenant is not activated, see the instructio
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels for classification, you could remove the protection by setting a new label that doesn't apply protection. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
-You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see 
+You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
 
 ### Prerequisite 3: To protect or unprotect files without interaction
 
@@ -183,8 +182,7 @@ and unprotect files by using your service principal.
 Consider making this service principal a super user: To ensure that this
 service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) but specify the **-ServicePrincipalId** parameter with your AppPrincipalId value.
 
-For more information about super users, see [Configuring super users for
-Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
+For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management
