@@ -68,11 +68,11 @@ First, if you have more than one deployment of AD RMS, you will need the names o
 
 Your output might look similar to the following:
 
-**Number of RMS Servers that can provide templates: 2** 
-**ConnectionInfo             DisplayName          AllowFromScratch**
-**--------------             -------------        ----------------**
-**Microsoft.InformationAnd…  RmsContoso                       True**
-**Microsoft.InformationAnd…  RmsFabrikam                      True**
+	Number of RMS Servers that can provide templates: 2 
+	ConnectionInfo             DisplayName          AllowFromScratch
+	--------------             -------------        ----------------
+	Microsoft.InformationAnd…  RmsContoso                       True
+	Microsoft.InformationAnd…  RmsFabrikam                      True
 
 Before you can protect files, you need to get a list of RMS templates to identify which one to use and its corresponding ID number. Only when you have more than one AD RMS deployment will you need to specify the  RMS server as well. 
 
@@ -82,21 +82,21 @@ From the output, you can then copy the template ID:
 
 Your output might look similar to the following:
 
-**TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}**
-**CultureInfo       : en-US**
-**Description       : This content is proprietary information intended for internal users only. This content cannot be modified.**
-**Name              : Contoso, Ltd - Confidential View Only**
-**IssuerDisplayName : Contoso, Ltd**
-**FromTemplate      : True**
-
-
-**TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}**
-**CultureInfo       : en-US**
-**Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.**
-**Name              : Contoso, Ltd - Confidential**
-**IssuerDisplayName : Contoso, Ltd**
-**FromTemplate      : True**
-**FromTemplate      : True**
+	TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+	CultureInfo       : en-US
+	Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+	Name              : Contoso, Ltd - Confidential View Only
+	IssuerDisplayName : Contoso, Ltd
+	FromTemplate      : True
+	
+	
+	TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+	CultureInfo       : en-US
+	Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+	Name              : Contoso, Ltd - Confidential
+	IssuerDisplayName : Contoso, Ltd
+	FromTemplate      : True
+	FromTemplate      : True
 
 Now you know the template ID, you can use it with the Protect-RMSFile cmdlet to protect a single file or all files in a folder. For example, if you want to protect a single file only and replace the original, by using the "Contoso, Ltd - Confidential" template:
 
@@ -104,9 +104,9 @@ Now you know the template ID, you can use it with the Protect-RMSFile cmdlet to 
 
 Your output might look similar to the following:
 
-**InputFile             EncryptedFile**
-**---------             -------------**
-**C:\Test.docx          C:\Test.docx**   
+	InputFile             EncryptedFile
+	---------             -------------
+	C:\Test.docx          C:\Test.docx   
 
 To protect all files in a folder, use the -Folder parameter with a drive letter and path, or UNC path. For example:
 
@@ -114,12 +114,12 @@ To protect all files in a folder, use the -Folder parameter with a drive letter 
 
 And your output might look similar to the following:
 
-**InputFile                          EncryptedFile**
-**---------                          -------------**
-**\\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx**   
-**\\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx**   
-**\\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx**   
-**\\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx**   
+	InputFile                          EncryptedFile
+	---------                          -------------
+	\\Server1\Documents\Test1.docx     \\Server1\Documents\Test1.docx   
+	\\Server1\Documents\Test2.docx     \\Server1\Documents\Test2.docx   
+	\\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
+	\\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
 When the file name extension does not change after RMS protection is applied, you can always use the Get-RMSFileStatus cmdlet later to check whether the file is protected. For example: 
 
@@ -127,9 +127,9 @@ When the file name extension does not change after RMS protection is applied, yo
 
 And your output might look similar to the following:
 
-**FileName                              Status**
-**--------                              ------**
-**\\Server1\Documents\Test1.docx         Protected**
+	FileName                              Status
+	--------                              ------
+	\\Server1\Documents\Test1.docx         Protected
 
 To unprotect a file, you must have Owner or Extract rights from when the  file was protected, or be super user for AD RMS. Then, use the Unprotect cmdlet. For example:
 
@@ -137,9 +137,9 @@ To unprotect a file, you must have Owner or Extract rights from when the  file w
 
 And your output might look similar to the following:
 
-**InputFile                             DecryptedFile**
-**---------                             -------------**
-**C:\Test.docx                          C:\Test.docx**
+	InputFile                             DecryptedFile
+	---------                             -------------
+	C:\Test.docx                          C:\Test.docx
 
 
 ## Next steps

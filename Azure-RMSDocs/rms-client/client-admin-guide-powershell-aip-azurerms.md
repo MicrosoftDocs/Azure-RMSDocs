@@ -93,19 +93,18 @@ Windows PowerShell module:
     
     The following is an example of output from Get-AadrmConfiguration:
 
-    **C:\PS> Get-AadrmConfiguration**
     
-    **BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42**
-
-    **RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76**
-
-    **LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing**
-
-    **LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing**
-
-    **CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification**
-
-    **CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification**
+	    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
+	
+	    RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
+	
+	    LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+	
+	    LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
+	
+	    CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
+	
+	    CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Disconnect from the service:
     
@@ -137,24 +136,24 @@ service principal:
     
     An example of the output of New-MsolServicePrincipal:
     
-    **Supply values for the following parameters:**
-    
-    **DisplayName: AzureRMSProtectionServicePrincipal**
-    **The following symmetric key was created as one was not supplied**
-    **zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=**
-    
-    **Display Name: AzureRMSProtectionServicePrincipal**
-    **ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)**
-    **ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109**
-    **AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4**
-    **TrustedForDelegation: False**
-    **AccountEnabled: True**
-    **Addresses: ()**
-    **KeyType: Symmetric**
-    **KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c**
-    **StartDate: 3/7/2014 4:43:59 AM**
-    **EndDate: 3/7/2014 4:43:59 AM**
-    **Usage: Verify**
+	    Supply values for the following parameters:
+	    
+	    DisplayName: AzureRMSProtectionServicePrincipal
+	    The following symmetric key was created as one was not supplied
+	    zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
+	    
+	    Display Name: AzureRMSProtectionServicePrincipal
+	    ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
+	    ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
+	    AppPrincialId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
+	    TrustedForDelegation: False
+	    AccountEnabled: True
+	    Addresses: ()
+	    KeyType: Symmetric
+	    KeyId: 8ef61651-ca11-48ea-a350-25834a1ba17c
+	    StartDate: 3/7/2014 4:43:59 AM
+	    EndDate: 3/7/2014 4:43:59 AM
+	    Usage: Verify
 
 5. From this output, make a note of the symmetric key and the AppPrincialId.
 
@@ -232,20 +231,20 @@ Before you can protect files, you need to get a list of the Rights Management te
     
 Your output might look similar to the following:
 
-**TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}**
-**CultureInfo       : en-US**
-**Description       : This content is proprietary information intended for internal users only. This content cannot be modified.**
-**Name              : Contoso, Ltd - Confidential View Only**
-**IssuerDisplayName : Contoso, Ltd**
-**FromTemplate      : True**
-
-**TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}**
-**CultureInfo       : en-US**
-**Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.**
-**Name              : Contoso, Ltd - Confidential**
-**IssuerDisplayName : Contoso, Ltd**
-**FromTemplate      : True**
-**FromTemplate      : True**
+	TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
+	CultureInfo       : en-US
+	Description       : This content is proprietary information intended for internal users only. This content cannot be modified.
+	Name              : Contoso, Ltd - Confidential View Only
+	IssuerDisplayName : Contoso, Ltd
+	FromTemplate      : True
+	
+	TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
+	CultureInfo       : en-US
+	Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
+	Name              : Contoso, Ltd - Confidential
+	IssuerDisplayName : Contoso, Ltd
+	FromTemplate      : True
+	FromTemplate      : True
 
 Note that if you didn't run the Set-RMSServerAuthentication command, you will be authenticated to the Azure Rights Management service by using your own user account. If you are on a domain-joined computer, your current credentials will always be used automatically. If you are on a workgroup computer, you will be prompted to sign in to Azure and these credentials are then cached for subsequent commands. In this scenario, if you later need to sign in as a different user, use the `Clear-RMSAuthentication` cmdlet.
 
@@ -256,9 +255,9 @@ you want to protect a single file only and overwrite the original, by using the 
 
 Your output might look similar to the following:
 
-**InputFile             EncryptedFile**
-**---------             -------------**
-**C:\Test.docx          C:\Test.docx**
+	InputFile             EncryptedFile
+	---------             -------------
+	C:\Test.docx          C:\Test.docx
 
 To protect all files in a folder, use the **-Folder** parameter with a drive letter and path, or UNC path. For example:
 
@@ -266,12 +265,12 @@ To protect all files in a folder, use the **-Folder** parameter with a drive let
 
 And your output might look similar to the following:
 
-**InputFile                          EncryptedFile**
-**---------                          -------------**
-**\Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx**
-**\Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx**
-**\Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx**
-**\Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx**
+	InputFile                          EncryptedFile
+	---------                          -------------
+	\Server1\Documents\Test1.docx     \Server1\Documents\Test1.docx
+	\Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
+	\Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
+	\Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
 When the file name extension does not change after the protection is applied, you can always use the `Get-RMSFileStatus` cmdlet later to check whether the file is protected. For example:
 
@@ -279,9 +278,9 @@ When the file name extension does not change after the protection is applied, yo
 
 And your output might look similar to the following:
 
-**FileName                              Status**
-**--------                              ------**
-**\Server1\Documents\Test1.docx         Protected**
+	FileName                              Status
+	--------                              ------
+	\Server1\Documents\Test1.docx         Protected
 
 To unprotect a file, you must have Owner or Extract rights from when the file was protected, or you must be running the cmdlets as a super user. Then, use the Unprotect cmdlet. For example:
 
@@ -289,9 +288,9 @@ To unprotect a file, you must have Owner or Extract rights from when the file wa
 
 And your output might look similar to the following:
 
-**InputFile                             DecryptedFile**
-**---------                             -------------**
-**C:\Test.docx                          C:\Test.docx**
+	InputFile                             DecryptedFile
+	---------                             -------------
+	C:\Test.docx                          C:\Test.docx
 
 
 ## Next steps
