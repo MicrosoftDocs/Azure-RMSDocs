@@ -100,9 +100,13 @@ The admin guide contains a full list of the file types supported and the files a
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
-    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3).
+    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3). For example:
+
+    ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-dimmed.png)
     
-    - If you see **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
+    - If you do not see labels but an option for **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
+    
+    ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
     
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
