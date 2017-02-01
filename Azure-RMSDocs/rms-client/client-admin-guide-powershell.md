@@ -111,7 +111,7 @@ Run the Get-AadrmConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
-[Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).)
+[Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
