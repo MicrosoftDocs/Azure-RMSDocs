@@ -57,7 +57,7 @@ Don't see this Information Protection bar in your Office apps?
  
 Is the label that you expect to see not displayed on the bar? 
 
-- If your administrator has recently configured a new label for you, try closing all instances of Office and reopening your Office app. This action checks for changes to your labels.
+- If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening your Office app. This action checks for changes to your labels.
 
 - If the label is configured to apply protection but you have a version of Office that doesn't support protecting data (Standard edition), this label does not appear on the Azure Information Protection bar. 
 
