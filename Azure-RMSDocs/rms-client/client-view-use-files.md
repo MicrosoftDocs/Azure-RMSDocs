@@ -6,7 +6,7 @@ description: Instructions to view and use a protected file that requires you to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 30/01/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,7 +79,9 @@ If your organization does not have a cloud-based account for you to use (for Off
 
 
 ## Other instructions
-For how-to instructions, see the following sections from the Azure Information Protection user guide:
+More how-to instructions from the Azure Information Protection user guide:
+
+-   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
