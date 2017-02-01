@@ -63,6 +63,8 @@ If you do not see these options in your Office applications, it’s likely that 
 
 2. From the **Classify and protect - Azure Information Protection** dialog box, select **Track and revoke**.
 
+    ![Track and revoke icon from the Classify and protect - Azure Information Protection dialog box](../media/track-and-revoke.png)
+
 
 ### Using a web browser track and revoke documents that you have registered
 
