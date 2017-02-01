@@ -39,9 +39,9 @@ When you access this site, sign in to track your documents. Providing your organ
 
 -   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
 
-- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon.
-
--   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
+- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon:
+    
+    ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
 To track a protected document, it must be registered in the document tracking site. To do this, use either File Explorer, or your Office apps.
 
