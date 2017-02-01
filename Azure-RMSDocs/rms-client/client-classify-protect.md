@@ -35,7 +35,7 @@ However, you can also classify and protect files by using **File Explorer**, whi
 
 ### Safely share a file with people outside your organization
 
-Files that are protected are safe to share with others, for example, you attach the file to an email or send an invitation from SharePoint.
+Files that are protected are safe to share with others. For example, you attach the file to an email or send an invitation from your SharePoint site.
 
 If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
 
@@ -68,7 +68,7 @@ Don't see this Information Protection bar in your Office apps?
  
 Is the label that you expect to see not displayed on the bar? 
 
-- If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening your Office app. This action checks for changes to your labels.
+- If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
 
 ### Keyboard shortcuts for the Azure Information Protection bar
@@ -77,7 +77,7 @@ To access the Azure Information Protection bar by using keyboard shortcuts, use 
 
 - Press **Ctrl** + **Shift** + **~** 
 
-Then, use the Tab key to select the labels and other controls on the bar (the **Hide labels** icon and **Remove label** icon), and the Enter key to select them.
+Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
 
 ## Using File Explorer to classify and protect files
 
@@ -96,7 +96,7 @@ The admin guide contains a full list of the file types supported and the files a
 
 1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
 
-![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect.png)
+![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
