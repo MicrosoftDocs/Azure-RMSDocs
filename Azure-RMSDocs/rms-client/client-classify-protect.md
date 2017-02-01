@@ -33,6 +33,17 @@ The easiest way to classify and protect your documents and emails is when you ar
 
 However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once.
 
+### Safely share a file with people outside your organization
+
+Files that are protected are safe to share with others, for example, you attach the file to an email or send an invitation from SharePoint.
+
+If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
+
+If you set your own custom permissions and the file is already protected for internal use, first make a copy of it. Use this copy to set the custom permissions.  
+
+When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://go.microsoft.com/fwlink/?LinkId=524168).**
+
+
 ## Using Office apps to classify and protect your documents and emails
 
 Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
@@ -83,13 +94,13 @@ The admin guide contains a full list of the file types supported and the files a
 
 ### To classify and protect a file by using File Explorer
 
-1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
+1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
 
 ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect.png)
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
-    - If none of the labels can be selected (they display as unavailable): The selected file does not support classification but you can protect it with custom permissions (step 3).
+    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3).
     
     - If you see **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
     

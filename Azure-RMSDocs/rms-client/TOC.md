@@ -14,7 +14,6 @@
 #### [Azure Information Protection user guide](client-user-guide.md)
 ##### [Download and install the client](install-client-app.md)
 ##### [Classify and protect a file or email](client-classify-protect.md)
-##### [Safely share a file with others](client-protect-share.md)
 ##### [Track and revoke your documents](client-track-revoke.md)
 ##### [Open files that have been protected](client-view-use-files.md)
 ##### [Remove labels and protection](client-remove-label-protection.md)
