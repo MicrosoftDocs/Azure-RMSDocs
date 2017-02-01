@@ -6,7 +6,7 @@ description: The Azure Information Protection client for Windows helps you keep 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 30/01/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,8 +40,6 @@ If you have questions that are not answered by this guide, visit our [Azure Info
 - [Download and install the Azure Information Protection client](install-client-app.md)
 
 - [Classify and protect a file or email](client-classify-protect.md)
-
-- [Set custom protection for a file and then share it with others](client-protect-share.md)
 
 - [Track and revoke your documents](client-track-revoke.md)
 
