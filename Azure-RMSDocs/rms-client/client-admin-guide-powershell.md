@@ -242,7 +242,7 @@ First, if you need to authenticate to the Azure Rights Management service with a
 
 	Set-RMSServerAuthentication
 
-When prompted, enter the three identifiers as described in [Prerequisite 3: To protect or unprotect files without user interaction](#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
+When prompted, enter the three identifiers as described in [Prerequisite 3: To protect or unprotect files without user interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
 Before you can protect files, you need to get a list of the Rights Management templates to identify which one to use and its corresponding ID number. From the output, you can then copy the template ID:
 
