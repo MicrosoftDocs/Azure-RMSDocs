@@ -65,7 +65,7 @@ You’re then ready to safely share this document by email.
 
 7. Modify the default message description so that it's suitable for your recipients. However, add the following text:
 
-    **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://go.microsoft.com/fwlink/?LinkId=524168.** 
+    **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://aka.ms/rms-signup.** 
 
     ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-email.png)
 

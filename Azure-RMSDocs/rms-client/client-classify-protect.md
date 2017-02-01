@@ -41,7 +41,7 @@ If you regularly share files with people outside your organization, your adminis
 
 If you set your own custom permissions and the file is already protected for internal use, first make a copy of it. Use this copy to set the custom permissions.  
 
-When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://go.microsoft.com/fwlink/?LinkId=524168).**
+When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
 
 
 ## Using Office apps to classify and protect your documents and emails
