@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,7 +40,7 @@ The AIP module includes all the Rights Management cmdlets from the RMS Protectio
 
 - [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel) 
 
-Examples for using these AIP cmdlets:
+Examples for using these labeling cmdlets:
 
 - For a shared folder, identify all files with a specific label.
 
@@ -56,12 +56,12 @@ As with the RMSProtection module, the current release of the AIP module has the 
 
 Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
-- [The Azure Information Protection service and Azure Rights Management service](#the-azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection service and Azure Rights Management service](#azure-information-protection-service-and-azure-rights-management-service)
 
-	- Applicable if you use classification-only or classification with Azure Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
+	- Applicable if you use classification-only or classification with Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
 	- Applicable if you use protection-only with the Azure Rights Management service: You have a subscription that includes the Azure Rights Management service (for example, Office 365 E3 and Office 365 E5).
 
-- [The Azure Information Protection client and Active Directory Rights Management Services](#the-azure-information-protection-client-and-active-directory-rights-management-services)
+- [Active Directory Rights Management Services](#active-directory-rights-management-services)
 
 	- Applicable if you use protection-only with the on-premises version of Azure Rights Management; Active Directory Rights Management Services (AD RMS).
 
@@ -79,23 +79,23 @@ In addition to the prerequisites for installing the AIP module, there are additi
 
 2. To remove protection from files for others using your own account: The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
 
-3. To directly protect or unprotect files without interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure RMS.
+3. To directly protect or unprotect files without user interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
 
-4. For regions outside North America: Edit the registry.
+4. For regions outside North America: Edit the registry for authentication to the service.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
-This prerequisite applies whether you apply the data protection directly or by indirectly by using labels that are configured to apply the data protection.
+This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service. onfigured to apply the data protection.
 
 If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 #### Prerequisite 2: To remove protection from files for others using your own account
 
-Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels for classification, you could remove the protection by setting a new label that doesn't apply protection. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
+Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
 You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
 
-#### Prerequisite 3: To protect or unprotect files without interaction
+#### Prerequisite 3: To protect or unprotect files without user interaction
 
 Currently, you cannot apply labels non-interactively but you can connect directly to the Azure Rights Management service non-interactively to protect or unprotect files.
 
@@ -205,59 +205,48 @@ required to run Set-RMSServerAuthentication:
 
 Our example command would then look like this:
 
-	Set-RMSServerAuthentication
-	-Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
-	-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4
-	-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
+	Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-As shown in the previous command, you can supply the values with a single
-command, or just type Set-RMSServerAuthentication, and supply the values
-one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means you can now protect
-and unprotect files by using your service principal.
+As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means you can now protect and unprotect files by using your service principal.
 
-Consider making this service principal a super user: To ensure that this
-service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) but specify the **-ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) but specify the **-ServicePrincipalId** parameter with your AppPrincipalId value.
 
 For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
 > [!NOTE]
-> To use your own account to authenticate to the Azure Rights Management
-service, there's no need to run Set-RMSServerAuthentication before you
-protect or unprotect files, or get templates.
+> To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
 
 #### Prerequisite 4: For regions outside North America
 
 For authentication outside the Azure North America region, you must edit the registry as follows. If your Azure Information Protection tenant is in North America, do not do this step:
 
-1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the
-values for CertificationExtranetDistributionPointUrl and LicensingExtranetDistributionPointUrl.
+1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
-2. On each computer where you will run the RMS Protection cmdlets, open the registry editor and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. On each computer where you will run the AIP cmdlets, open the registry editor and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
 
-3. If you do not see the ServiceLocation key, create it, so that your
-registry path shows **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. If you do not see a **ServiceLocation** key, create it, so that your registry path shows **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
 
 4. For the **ServiceLocation** key, create two keys if they do not exist, named **EnterpriseCertification** and **EnterprisePublishing**. 
     
     When you create these REG_SZ keys, do not change the Name of "(Default)", but edit them to set the Value data:
 
-    - For EnterpriseCertification, paste your CertificationExtranetDistributionPointUrl value.
+    - For **EnterpriseCertification**, paste your CertificationExtranetDistributionPointUrl value.
     
-    - For EnterprisePublishing, paste your LicensingExtranetDistributionPointUrl value.
+    - For **EnterprisePublishing**, paste your LicensingExtranetDistributionPointUrl value.
 
 5. Close the registry editor. There is no need to restart your computer. However, if you are using a service principal account rather than your own user account, you must run the Set-RMSServerAuthentication command after making this registry edit.
 
 ### Example scenarios for using the cmdlets for Azure Information protection and the Azure Rights Management service
 
-It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, that typically stand alone: [Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
+It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
 
-However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must run a series of cmdlets as described next.
+However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must typically run a series of cmdlets as described next.
 
 First, if you need to authenticate to the Azure Rights Management service with a service principal rather than use your own account, in a Powershell session, type:
 
 	Set-RMSServerAuthentication
 
-When prompted, enter the three identifiers as described in Prerequisites 3.
+When prompted, enter the three identifiers as described in [Prerequisites 3](#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
 Before you can protect files, you need to get a list of the Rights Management templates to identify which one to use and its corresponding ID number. From the output, you can then copy the template ID:
 
@@ -327,9 +316,9 @@ Your output might look similar to the following:
 	C:\Test.docx                          C:\Test.docx
 
 
-## The Azure Information Protection client and Active Directory Rights Management Services
+## Active Directory Rights Management Services
 
-Read this section before you start using the PowerShell commands to protect or unprotect files when your organization uses Active Directory Rights Management Services.
+Read this section before you start using the PowerShell commands to protect or unprotect files when your organization uses just Active Directory Rights Management Services.
 
 
 ### Prerequisites for AD RMS
