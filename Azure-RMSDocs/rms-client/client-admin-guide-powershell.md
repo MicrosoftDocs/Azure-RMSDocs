@@ -36,15 +36,11 @@ The cmdlets are installed with the PowerShell module **AIP**, which replaces the
 
 The AIP module includes all the Rights Management cmdlets from the RMS Protection Tool, and two new cmdlets that use the Azure Information Protection (AIP) service for labeling:
 
-- [Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus)
+|Labeling cmdlet|Example usage|
+|----------------|---------------|
+|[Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
+|[Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 
-- [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel) 
-
-Examples for using these labeling cmdlets:
-
-- For a shared folder, identify all files with a specific label.
-
-- For a shared folder, apply a specified label to all files that do not have a label.
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
@@ -197,13 +193,13 @@ service principal:
 From these instructions and our examples, we have the three identifiers
 required to run Set-RMSServerAuthentication:
 
-- Tenant Id: 23976bc6-dcd4-4173-9d96-dad1f48efd42
+- Tenant Id: **23976bc6-dcd4-4173-9d96-dad1f48efd42**
 
-- Symmetric key: zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
+- Symmetric key: **zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=**
 
-- AppPrincipalId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
+- AppPrincipalId: **b5e3f76a-b5c2-4c96-a594-a0807f65bba4**
 
-Our example command would then look like this:
+Our example command would then look like the following:
 
 	Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
