@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,13 +52,17 @@ The following URLs are used for document tracking and must be allowed (for examp
 
 ## Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an administrator for Azure Information Protection (global admin), you can click the Admin icon in the top right of the page, which switches to Administrator mode so that you can see the documents that have been shared by users in your organization.
+When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an administrator for Azure Information Protection (global admin), you can click the Admin icon, which switches to Administrator mode so that you can see the documents that have been shared by users in your organization:
+
+![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
 Actions that you take in Administrator mode are audited and logged in the usage log files, and you must confirm to continue. For more information about this logging, see the next section.
 
 When you are in Administrator mode, you can then search by user or document. If you search by user, you will see all the documents that the specified user has shared. If you search by document, you will see all the users in your organization who shared that document. You can then drill into the search results to track the documents that users have shared and revoke these documents, if necessary. 
 
-To leave the Administrator mode, click **X** next to **Exit administrator mode**.
+To leave the Administrator mode, click **X** next to **Exit administrator mode**:
+
+![Exit administrator mode in the document tracking site](../media/tracking-site-exit-admin-icon.png)
 
 For instructions how to use the document tracking site, see [Track and revoke your documents](client-track-revoke.md) from the user guide.
 

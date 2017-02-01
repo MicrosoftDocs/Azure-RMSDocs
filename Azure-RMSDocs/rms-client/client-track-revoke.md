@@ -41,7 +41,7 @@ When you access this site, sign in to track your documents. Providing your organ
     
     ![Export to CSV icon in the document tracking site](../media/tracking-site-export-icon.png)
 
--   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed:.
+-   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed:
     
     ![Export to CSV icon in the document tracking site](../media/tracking-site-settings-email.png)
 
