@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -55,9 +55,11 @@ Don't see this Information Protection bar in your Office apps?
 
 - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
  
-Do you see some labels that are unavailable? 
+Is the label that you expect to see not displayed on the bar? 
 
-- You have a version of Office that doesn't support protecting data (Standard edition). When this Office edition is detected, labels that are configured to apply protection display as unavailable. 
+- If your administrator has recently configured a new label for you, try closing all instances of Office and reopening your Office app. This action checks for changes to your labels.
+
+- If the label is configured to apply protection but you have a version of Office that doesn't support protecting data (Standard edition), this label does not appear on the Azure Information Protection bar. 
 
 
 ### Keyboard shortcuts for the Azure Information Protection bar

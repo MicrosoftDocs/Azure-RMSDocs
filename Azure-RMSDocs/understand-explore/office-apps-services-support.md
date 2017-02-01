@@ -6,7 +6,7 @@ description: How end-user Office applications (such as the Word, Excel, PowerPoi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,6 +36,8 @@ End-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) 
 These applications natively support Rights Management by using information rights management (IRM) and let users apply protection to a saved document or to an email message to be sent. Users can apply templates or, for Word, Excel, and PowerPoint, users can choose very customized settings for access, rights, and usage restrictions. 
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization, or control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured (directly by users or by applying a template) for when the file can no longer be accessed. For Outlook, users can choose the **Do Not Forward** option to help prevent data leakage, in addition to choosing a template.
+
+In addition to native IRM support, these applications support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md ). This bar displays labels that makes it easier for users to automatically apply Rights Management protection to documents and emails that contain sensitive data.
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can use information rights management (IRM) integration, which provides additional information protection solutions:

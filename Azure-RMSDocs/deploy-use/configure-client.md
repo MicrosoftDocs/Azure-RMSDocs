@@ -6,7 +6,7 @@ description: Information for admins about deploying the Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Computers running Office 2010 require the Azure Information Protection client to authenticate to the Azure Rights Management service and the Azure Information Protection service. This client is also recommended for all Windows computers and iOS and Android devices that support the Azure Rights Management service and Azure Information Protection. 
+Computers running Office 2010 require the Azure Information Protection client (or the Rights Management sharing application) to authenticate to the Azure Rights Management service and the Azure Information Protection service. This client is also recommended for all Windows computers and iOS and Android devices that support the Azure Rights Management service and Azure Information Protection. 
 
 The Azure Information Protection client integrates with Office applications by installing an Office add-in so that users can easily label and protect documents and emails directly from the Office ribbon. This client also offers labeling and protection for files types that are not natively supported by the Azure Rights Management service, a viewer for protected files, and a document tracking site for users to track and revoke files that they have protected.
 

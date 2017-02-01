@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -128,7 +128,7 @@ For more information, see the following resources:
 
 - [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
 
-Download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970)
+Download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 ## More information about the Rights Management sharing application
 
@@ -142,7 +142,7 @@ For more information, see the following resources:
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
-Download the app for Mac computers and for Windows Phone using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970)
+Download the app for Mac computers and for Windows Phone using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
 ## More information about other applications that support Azure Information Protection
@@ -165,7 +165,7 @@ The following applications that are not currently supported by Azure RMS include
 
 -   XPS Viewer
  
-In addition, the RMS sharing application has the following restrictions:
+In addition, the RMS sharing application and the Azure Information Protection client has the following restrictions:
 
 -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
