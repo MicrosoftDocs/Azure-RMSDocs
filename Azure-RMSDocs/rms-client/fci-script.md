@@ -31,7 +31,7 @@ ms.suite: ems
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
-This script uses a minimum version of **1.3.155.2** for the Azure Information Protection module. Run the following command to check the version: `(Get-Module AIP -ListAvailable).Version` 
+This script uses a minimum version of **1.3.155.2** for the Azure Information Protection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
 *script is provided AS IS without warranty of any kind.*
@@ -41,7 +41,7 @@ This script uses a minimum version of **1.3.155.2** for the Azure Information Pr
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AIP module minimum version 1.0.0.0.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AzureInformationProtection module minimum version 1.3.155.2.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -142,11 +142,11 @@ $Script:isScriptProcess = $True
 
 # Validate Azure RMS connection by checking the module and then connection
 if ($Script:isScriptProcess) {
- 		if (Check-Module -Module AIP){
+ 		if (Check-Module -Module AzureInformationProtection){
     	$Script:isScriptProcess = $True
 	} else {
 
-		Write-Host ("The Azure Information Protection (AIP) module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
+		Write-Host ("The AzureInformationProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
 		$Script:isScriptProcess = $False
 	}
 }

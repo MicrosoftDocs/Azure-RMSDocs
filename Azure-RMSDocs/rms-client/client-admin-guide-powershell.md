@@ -32,9 +32,9 @@ ms.suite: ems
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed so that you can manage the client by running commands that you can put into scripts for automation.
 
-The cmdlets are installed with the PowerShell module **AIP**, which replaces the RMSProtection module that was installed with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
+The cmdlets are installed with the PowerShell module **AzureInformationProtection**, which replaces the RMSProtection module that was installed with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
 
-The AIP module includes all the Rights Management cmdlets from the RMS Protection Tool, and two new cmdlets that use the Azure Information Protection (AIP) service for labeling:
+The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool, and two new cmdlets that use the Azure Information Protection (AIP) service for labeling:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
@@ -44,7 +44,7 @@ The AIP module includes all the Rights Management cmdlets from the RMS Protectio
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
-As with the RMSProtection module, the current release of the AIP module has the following limitations:
+As with the RMSProtection module, the current release of the AzureInformationProtection module has the following limitations:
 
 - You can unprotect Outlook personal folders (.pst files), but you cannot currently natively protect these files or other container files by using this PowerShell module.
 
@@ -69,7 +69,7 @@ Read this section before you start using the PowerShell commands when your organ
 
 ### Prerequisites for AIP and Azure RMS
 
-In addition to the prerequisites for installing the AIP module, there are additional prerequisite for the Azure Information Protection service and the Azure Rights Management data protection service:
+In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisite for the Azure Information Protection service and the Azure Rights Management data protection service:
 
 1. The Azure Rights Management service must be activated.
 
@@ -218,7 +218,7 @@ For authentication outside the Azure North America region, you must edit the reg
 
 1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
-2. On each computer where you will run the AIP cmdlets, open the registry editor and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
 
 3. If you do not see a **ServiceLocation** key, create it, so that your registry path shows **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
 
@@ -319,7 +319,7 @@ Read this section before you start using the PowerShell commands to protect or u
 
 ### Prerequisites for AD RMS
 
-In addition to the prerequisites for installing the AIP module, your account must have Read and Execute permissions to access ServerCertification.asmx:
+In addition to the prerequisites for installing the AzureInformationProtection module, your account must have Read and Execute permissions to access ServerCertification.asmx:
 
 1. Log on to an AD RMS server.
 
