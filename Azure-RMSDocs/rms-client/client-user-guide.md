@@ -33,7 +33,6 @@ The Azure Information Protection client for Windows helps you keep important doc
 
 All you need is a computer that runs at least Windows 7 with Service Pack 1. Then download and install this free client from Microsoft.
 
-If you have questions that are not answered by this guide, visit our [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam). 
 
 ## What do you want to do?
 
@@ -48,5 +47,12 @@ If you have questions that are not answered by this guide, visit our [Azure Info
 - [Remove labels and protection from files and emails](client-remove-label-protection.md)
 
 - [Tasks that you used to do with the RMS sharing application](upgrade-client-app.md)
+
+
+> [!NOTE]
+> If you are an administrator who is responsible for this client on an enterprise network, see the [Azure Information Protection client administrator guide](client-admin-guide.md) for additional technical information. 
+
+Additional questions? Visit our [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam). 
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
