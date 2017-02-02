@@ -6,7 +6,7 @@ description: Developers can use Azure Information Protection to protect and mana
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -63,7 +63,12 @@ The 4.2 version is REST client based with operating system specific APIs for sev
 
 The following guides lead you through OS specific setup steps for an application development environment using common tools.
 
-|[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux setup](../media/develop/linux-icon.png)](linux-setup.md) |
+[![iOS/OSX setup](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Android setup](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows Service setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux setup](../media/develop/linux-icon.png)](linux-setup.md)
+
 
 ## How-tos
 
@@ -72,8 +77,10 @@ Each of the following topics presents specific guidance for an aspect of impleme
 ### General
 
 - [How to enable document tracking and revocation (service)](tracking-content.md)
+- [How to deploy your client](../rms-client/client-deployment-notes.md)
 - [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
 - [How to use document tracking (user)](how-to-use-document-tracking.md)
+
 
 ### Security and authentication
 
