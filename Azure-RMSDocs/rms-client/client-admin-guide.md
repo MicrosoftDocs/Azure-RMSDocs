@@ -53,7 +53,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to classify (and optionally, protect) documents and email messages by selecting labels from within your Office applications (Word, Excel, PowerPoint, Outlook).
 
-- You want to classify (and optionally, protect) documents and email messages by using File Explorer, which supports non-Office files, multi-select, and folders.
+- You want to classify (and optionally, protect) documents and email messages by using File Explorer, which supports additional file types, multi-select, and folders.
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
@@ -61,7 +61,9 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to just protect files by using File Explorer or by using Powershell commands.
 
-- You want to remove encryption (unprotect) from files and containers in bulk for data recovery purposes.
+- You want users and administrators to be able to track and revoke protected documents.
+
+- You want to remove encryption from files and containers (unprotect) in bulk for data recovery purposes.
 
 - You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
 
@@ -75,7 +77,7 @@ Before you install the client, check that you have the required operating system
 
 In addition:
 
-- The full installation of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. 
+- The full installation of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted.
 
 - If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 

@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,12 +27,18 @@ ms.suite: ems
 
 # Download and install the Azure Information Protection client
 
-If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client.     
+If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client. 
+
+In addition:
+
+- The Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
+
+- If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/kb/2533623). If your PC needs this update but it is not installed, installation completes but you will see a message that you must install this update before you can use all features of the Azure Information Protection client. 
 
 ## To download and install the Azure Information Protection client    
 
 1.  Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.    
-2. Click the Windows icon for the **Azure Information Protection client** and save the **AzInfoProtection.exe** file to install to install the Azure Information Protection client.     
+2. Click the Windows icon for the **Azure Information Protection client** and save the **AzInfoProtection.exe** file to install the Azure Information Protection client.     
 
 2. Double-click the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
 
@@ -47,10 +53,7 @@ If your administrator does not install the Azure Information Protection client f
 
     - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
         
-    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use client to label and protect your documents and emails.    
-
-   > [!NOTE]
-   > If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). If your PC needs this update but it not installed, you will see a message when you try to use the client that this update must be installed before you can use all features of the Azure Information Protection client.
+    - For other versions of Office, restart all Office applications and all instances of File Explorer. Your installation is now complete and you can use the client to label and protect your documents and emails.    
 
 ### Installing the Azure Information Protection client with Office 2010    
 After you have installed the Azure Information Protection client by using the previous instructions:    
@@ -63,7 +66,9 @@ After you have installed the Azure Information Protection client by using the pr
 Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
 
 ## Other instructions    
-[What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+More how-to instructions from the Azure Information Protection user guide:
+
+- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
 See [How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
