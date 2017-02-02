@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure and manage usa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ When the Azure Rights Management service has been [activated](activate-service.m
 
     -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
 
-In addition, the [RMS sharing application](../rms-client/sharing-app-windows.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the [Do Not Forward option](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+In addition, the [Azure Information Protection client](../rms-client/aip-client.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the [Do Not Forward option](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 For many organizations, the default templates might be sufficient. But if you want to create your own custom rights policy templates, you can do so. Reasons for creating a custom template include the following:
 
