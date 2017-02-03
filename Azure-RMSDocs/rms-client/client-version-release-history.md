@@ -42,9 +42,13 @@ Use the following information to see what’s new or changed in a release. The m
 
 **Released**: 02/08/2017
 
-**Fixes**:
+**New requirements**:
 
-- ??
+Microsoft .NET Framework
+
+- This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. A computer restart might be required after the Azure Information Protection client installation is complete.
+
+- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
 **New features**:
 
@@ -54,12 +58,6 @@ Use the following information to see what’s new or changed in a release. The m
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
     - Client usage logs that record information such as which label was applied, how, and by whom.
-
-Microsoft .NET Framework requirements:
-
-- This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. A computer restart might be required after the Azure Information Protection client installation is complete.
-
-- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
 This client version is the General Availability release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
 

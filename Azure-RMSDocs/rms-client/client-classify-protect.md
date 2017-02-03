@@ -70,6 +70,9 @@ Is the label that you expect to see not displayed on the bar?
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
+- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and feedback** and check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
+
+- The label that you expect to see might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
 ### Keyboard shortcuts for the Azure Information Protection bar
 
