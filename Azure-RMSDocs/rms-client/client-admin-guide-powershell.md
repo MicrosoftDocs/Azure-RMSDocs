@@ -38,8 +38,8 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
-|[Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
-|[Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
+|[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
+|[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
@@ -234,7 +234,7 @@ For authentication outside the Azure North America region, you must edit the reg
 
 ### Example scenarios for using the cmdlets for Azure Information protection and the Azure Rights Management service
 
-It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/rmsprotection/vlatest/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/rmsprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
+It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
 
 However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must typically run a series of cmdlets as described next.
 
