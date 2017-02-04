@@ -72,7 +72,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and feedback** and check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
 
-- The label that you expect to see might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
+- The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
 ### Keyboard shortcuts for the Azure Information Protection bar
 
