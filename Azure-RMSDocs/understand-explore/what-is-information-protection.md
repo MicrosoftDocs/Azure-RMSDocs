@@ -78,13 +78,13 @@ Azure Information Protection integrates with end users' existing workflows when 
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required, these labels can also automatically protect their documents and emails.
 
-To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from File Explore:
+To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explore:
 
 ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
-When users select the **Classify and protect** option, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
+When users select the **Classify and protect** menu option from Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
 
-Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classifcation and protection in bulk. The PowerShell commands to do this are automatically included with the client, although you can also install the PowerShell module separately.
+Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classifcation and protection for multiple files. The PowerShell commands to do this are automatically included with the client, although you can also install the PowerShell module separately.
 
 After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents.
 
