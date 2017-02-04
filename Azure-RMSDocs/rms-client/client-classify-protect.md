@@ -62,11 +62,11 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 ### Exceptions for the Azure Information Protection bar 
 
-Don't see this Information Protection bar in your Office apps?
+###Don't see this Information Protection bar in your Office apps?
 
 - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
  
-Is the label that you expect to see not displayed on the bar? 
+### Is the label that you expect to see not displayed on the bar? 
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
