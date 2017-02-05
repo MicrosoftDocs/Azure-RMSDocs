@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -108,7 +108,7 @@ For a list of devices that support the Azure Rights Management service, see [Cli
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
-For a list of file name extensions that are natively supported by Azure Rights Management, see the [Supported file types and file name extensions](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section of the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md). File name extensions not listed are supported by using the RMS sharing application that automatically applies generic protection to these files.
+For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](../client-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
