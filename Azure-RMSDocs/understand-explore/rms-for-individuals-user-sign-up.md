@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
-To sign up for this free account, you request it by visiting the [Microsoft Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the sharing application for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
+To sign up for this free account, you request it by visiting the [Microsoft Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload), and provide your work email address. The most typical way that you'll be directed to this sign-up page is if you received an email message with a protected attachment, which contains instructions how to sign up. You'll receive an email in response from Microsoft, and can then complete the sign-up process by entering details to create your account. When this completes, you'll see a page where you can download the Azure Information Protection for different devices, a link to the user guide, and a link for a current list of applications that natively support Rights Management protection. 
 
 ## To sign up for RMS for individuals
 
@@ -50,7 +50,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Azur
 
 6.  You now see a **One last thing ...** page for you to supply details for your account. Type in your first name, your last name, enter and confirm a password of your choice, and then click **Start**.
 
-7. When your account is created, you'll see a new Microsoft Rights Management page where you can download and install the sharing application, or click the [More information](../rms-client/sharing-app-user-guide.md) link to read the sharing application user guide.
+7. When your account is created, you'll see a new Microsoft Azure Information Protection page where you can download and install the Azure Information Protection client, or click the [User guide](../rms-client/client-user-guide.md) link for how-to instructions for Windows computers.
 
 Now your account is created, you’re ready to start protecting files and read files that others have protected. If you're prompted to sign in to protect or read protected files, enter the same email address and password that you used to create the account for RMS for the individuals.
 
@@ -66,7 +66,7 @@ This is what happens in the background when a user signs up for RMS for individu
 
     If an existing tenant is found, it is checked to see whether it already has a subscription for Azure RMS. When no subscription is found, the free RMS for individuals subscription can be added.
 
-2.  The organization is granted the RMS for individuals subscription. Now, this user can be authenticated by Azure and can then protect files and read files that others have protected by using Azure Rights Management. To protect and read protected files, the user must have an RMS-enlightened application, such as  the free [Rights Management sharing application](../rms-client/sharing-app-windows.md).
+2.  The organization is granted the RMS for individuals subscription. Now, this user can be authenticated by Azure and can then protect files and read files that others have protected by using Azure Rights Management. To protect and read protected files, the user must have an RMS-enlightened application, such as the free [Azure Information Protection client](../rms-client/aip-client.md).
 
 3.  When the second user from the same organization requests an RMS for individuals subscription, a new user account is added to the previously created Azure directory, by using the organization’s RMS for individuals subscription. This second user can do everything that the first user could do (protect files and read protected files), but in addition, these two users can now more easily collaborate securely because they can quickly apply default templates to files that restrict access to accounts in their organization’s Azure directory.
 
