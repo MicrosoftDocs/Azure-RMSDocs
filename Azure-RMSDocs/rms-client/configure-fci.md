@@ -36,7 +36,7 @@ This solution lets you automatically protect all files in a folder on a file ser
 > [!NOTE]
 > Although Azure Information Protection includes a [connector](../deploy-use/deploy-rms-connector.md) that supports File Classification Infrastructure, that solution supports native protection only—for example, Office files.
 > 
-> To support all file types with Windows Server file classification infrastructure, you must use the PowerShell **AIP** module, as documented in this article. The Azure Information Protection cmdlets, like the Azure Information Protection client, support generic protection as well as native protection, which means that multiple file types can be protected. For more information, see [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
+> To support multiple file types with Windows Server file classification infrastructure, you must use the PowerShell **AzureInformationProtection** module, as documented in this article. The Azure Information Protection cmdlets, like the Azure Information Protection client, support generic protection as well as native protection, which means that file types other than Office documents can be protected. For more information, see [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
 The instructions that follow are for Windows Server 2012 R2 or Windows Server 2012. If you run other supported versions of Windows, you might need to adapt some of the steps for differences between your operating system version and the one documented in this article.
 
@@ -49,7 +49,7 @@ Prerequisites for these instructions:
 
     -   You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
 
-    -   You have installed the Azure Information Protection module and configured the prerequisites for Azure Rights Management. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal: **BposTenantId**, **AppPrincipalId**, and **Symmetric key**.
+    -   You have installed the AzureInformationProtection module and configured the prerequisites for Azure Rights Management. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal: **BposTenantId**, **AppPrincipalId**, and **Symmetric key**.
 
     -   If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
 
@@ -114,12 +114,6 @@ At the end of these instructions, all files in your selected folder will be clas
         `[Parameter(Mandatory = $false)]`
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
-
-    -   If your server is running Windows Server 2012, you might have to manually load the RMSProtection module at the beginning of the script. Add the following command (or equivalent if  the "Program Files" folder is  on a drive other than the  C: drive :
-
-        ```
-        Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
-        ```
 
 3.  Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the servers that run it. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: **Set-ExecutionPolicy RemoteSigned**. However, this configuration lets all unsigned scripts run when they are stored on this server (less secure).
 

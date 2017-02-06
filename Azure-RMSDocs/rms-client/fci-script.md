@@ -31,7 +31,7 @@ ms.suite: ems
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
 
-This script uses a minimum version of **1.3.155.2** for the Azure Information Protection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
+This script uses a minimum version of **1.3.155.2** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
 *script is provided AS IS without warranty of any kind.*
