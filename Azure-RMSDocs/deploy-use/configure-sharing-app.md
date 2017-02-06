@@ -6,7 +6,7 @@ description: Information for admins about deploying the Rights Management (RMS) 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -34,7 +34,7 @@ As an administrator, how do you know if your users have signed up for RMS for in
 
 -   Ask users how they protect highly confidential files, especially when collaborating with others outside the organization.
 
--   When you have an Azure subscription for your organization, use the [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) cmdlet to see if any users are assigned the **RIGHTSMANAGEMENT_ADHOC** license. If it is, this license comes from the RMS for individuals subscription that was granted to the organization, with a pool of active units available for users to use the self-service sign-up process.
+-   When you have an Azure subscription for your organization, use the [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) cmdlet to see if any users are assigned the **RIGHTSMANAGEMENT_ADHOC** license. This license comes from the RMS for individuals subscription that was granted to the organization, with a pool of active units available for users to use the self-service sign-up process.
 
 -   Use a system management solution, such as System Center Configuration Manager, to inventory software installed and software in use. For example, look for **MSIP.App.exe**, which is used by the Azure Information Protection client, and **ipviewer.exe** for the Rights Management sharing application. You can download and install this client and application for free to identify other characteristics that you then use for software inventory.
 

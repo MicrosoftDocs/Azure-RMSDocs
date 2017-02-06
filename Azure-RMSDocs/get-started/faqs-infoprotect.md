@@ -6,7 +6,7 @@ description: Have a question about the preview release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -115,7 +115,7 @@ Yes. If you require users to classify all files that they save, in the Azure por
 
 ## Can I remove classification from a file?
 
-Yes. This is now covered in the user guide:[Remove classification labels and protection from files and emails](../rms-client/client-remove-label-protection.md) 
+Yes. This is now covered in the user guide: [Remove classification labels and protection from files and emails](../rms-client/client-remove-label-protection.md) 
 
 ## Can I prompt users to justify why they are changing the classification level?
 
@@ -206,8 +206,10 @@ Additionally:
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
-If you have a problem with Azure Information Protection and you are using the current release of the client: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC to help diagnose the problem. 
+For technical support, use your standard support channels or [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support). 
 
-If you have questions or feedback, use the [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
+For feedback such as suggestions for improvements or new features: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC. 
+
+We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

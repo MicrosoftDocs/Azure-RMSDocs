@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -69,7 +69,7 @@ The following log extract shows some example entries from using the Get-AadrmAdm
 ## Scripting options for super users
 Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, you can use the [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) cmdlet, and [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) cmdlet as required. 
 
-If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) to apply a new label that doesn't apply protection. 
+If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection. 
 
 For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 

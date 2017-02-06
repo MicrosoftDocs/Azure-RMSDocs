@@ -6,7 +6,7 @@ description: Step 3 of an introduction tutorial to quickly try out Microsoft Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

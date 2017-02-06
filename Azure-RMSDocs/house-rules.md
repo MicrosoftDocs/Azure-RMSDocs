@@ -6,7 +6,7 @@ description: Scope and intent for Livefyre comments and sidebars for the Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection

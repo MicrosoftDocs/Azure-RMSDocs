@@ -6,7 +6,7 @@ description: Information for users who run the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Protection-only mode for the Azure Information Protection client
 
-When you run the Azure Information Protection client without an Azure Information Protection policy, it displays in **protection-only** mode:
+When you run the Azure Information Protection client without an Azure Information Protection policy, it displays in **protection-only** mode. For example, when you use Windows File Explorer, right-click, **Classify and protect**:
 
 ![Protection-only mode](../media/protection-only-mode.png)
 
@@ -44,7 +44,7 @@ When you run the Azure Information Protection client without an Azure Informatio
 
 - In Office apps, the Azure Information Protection bar does not display. When you click **Protect** > **Show Bar**, this menu option is unavailable.
 
-- When you use the **Classify and protect - Azure Information Protection** dialog box with File Explorer, you do not see labels for classification. Instead, you see an option to select Rights Management (RMS) templates. 
+- When you use the **Classify and protect - Azure Information Protection** dialog box with File Explorer, you do not see labels for classification. Instead, as in the previous picture, you see an option to select Rights Management (RMS) templates. 
 
 ## Supported tasks for protection-only mode
 

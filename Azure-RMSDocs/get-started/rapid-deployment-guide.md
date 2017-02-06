@@ -32,7 +32,7 @@ ms.suite: ems
 Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy a protection-only solution that uses the Azure Rights Management service from Azure Information Protection. Choose from a list of specific scenarios to implement.
 
 > [!NOTE]
-> At this time, the guide contains scenarios for protection-only and does not contain scenarios for classification and protection. 
+> At this time, the guide contains scenarios for protection-only and does not contain scenarios for classification and protection or the Azure Information Protection client. 
 
 These scenarios contain both administrator instructions and accompanying end user documentation. Before you give the documentation (instructions or announcements) to your end users, you will need to first customize this documentation for your business requirements and existing work flows. An example set of instructions or an announcement show how the final end user documentation might look.
 
