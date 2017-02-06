@@ -206,7 +206,7 @@ Additionally:
 
 ## How can I report a problem or send feedback for Azure Information Protection?
 
-For technical support, use your standard support channels or [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support). 
+For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 For feedback such as suggestions for improvements or new features: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC. 
 

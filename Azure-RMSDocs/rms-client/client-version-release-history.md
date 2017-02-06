@@ -36,7 +36,7 @@ Use the following information to see what’s new or changed in a release. The m
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release.
 >  
-> If the problem remains, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate. For support options, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information.
+> If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 ## Version 1.3.155.2
 
