@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/27/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,7 +58,7 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 ###### Footnote 1 
 
-256 bits is used by the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
+256 bits is used by the Azure Information Protection client and the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
 
 How the cryptographic keys are stored and secured:
 
@@ -146,7 +146,7 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 -   **Generic protection (.pfile)**: When the Azure Rights Management service generically protects a file, the flow is basically the same for content protection except that the RMS client creates a policy that grants all rights. When the file is consumed, it is decrypted before it is passed to the target application. This scenario lets you protect all files, even if they don’t natively support RMS.
 
--   **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device will always be able to read them even if the mobile device doesn’t have an app that natively supports protected Office files.
+-   **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device will always be able to read them even if the mobile device doesn’t have an app that natively supports protected Office files.
 
 ## Next steps
 

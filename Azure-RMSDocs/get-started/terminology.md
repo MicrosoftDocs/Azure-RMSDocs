@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -56,7 +56,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
 |MSDRM|Sometimes seen as references for the RMS client 1.0, which is replaced with the newer client, MSIPC. This older client supports applications that are developed with the RMS SDK 1.0 and supports Office 2010 and Office 2007, Exchange 2010 and Exchange 2013, and SharePoint 2010 and SharePoint 2007.|
-|MSIPC|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 2016 and Office 2013, SharePoint 2013, and the RMS sharing application.|
+|MSIPC|Sometimes seen as references for the RMS client 2.0, which replaced the older RMS client, MSDRM. This later client supports applications that are developed with the RMS SDK 2.0 and supports Office 2016 and Office 2013, SharePoint 2013, the RMS sharing application, and the Azure Information Protection client.|
 |native protection|A level of protection available in all enlightened applications that prevents unauthorized people from opening a file and that can also enforce more stringent policies, such as read-only, and do not print. In addition, this protection stays with the file, even when the file is forwarded to other people or saved in a public location that others can access.|
 |.pfile|The file name extension that is appended to all files that a rights management service generically protects.|
 |.ppdf|The file name extension that a rights management service creates when it automatically creates a PDF copy of a file (Word, Excel, PowerPoint, or PDF) that you share by email, so that the file can be read (but not edited) on all devices.|
@@ -65,7 +65,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management services|The generic term that applies to both the cloud version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) and the on-premises version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
-|Rights Management sharing application|An optional downloadable application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
+|Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] when their organization does not have a subscription to Office 365 or Azure Active Directory.|

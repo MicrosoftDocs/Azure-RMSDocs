@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What is Azure Information Protection? | Azure Information Protection
@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,11 +74,21 @@ For more information about the Azure Rights Management protection, see [What is 
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture. The same bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](../media/excel2013-infoprotect-bar2.png)
+![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-bar.png)
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required, these labels can also automatically protect their documents and emails.
 
-When users share their protected documents by email, they can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents.
+To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explore:
+
+![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
+
+When users select the **Classify and protect** menu option from File Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
+
+Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do this are automatically included with the client, although you can also install the PowerShell module separately.
+
+After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents:
+
+![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
 
 
 ## Resources for Azure Information Protection
