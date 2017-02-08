@@ -6,7 +6,7 @@ description: How end-user Office applications (such as the Word, Excel, PowerPoi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,6 +36,8 @@ End-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) 
 These applications natively support Rights Management by using information rights management (IRM) and let users apply protection to a saved document or to an email message to be sent. Users can apply templates or, for Word, Excel, and PowerPoint, users can choose very customized settings for access, rights, and usage restrictions. 
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization, or control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured (directly by users or by applying a template) for when the file can no longer be accessed. For Outlook, users can choose the **Do Not Forward** option to help prevent data leakage, in addition to choosing a template.
+
+In addition to native IRM support, these applications support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md ). This bar displays labels that makes it easier for users to automatically apply Rights Management protection to documents and emails that contain sensitive data.
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can use information rights management (IRM) integration, which provides additional information protection solutions:
@@ -70,7 +72,7 @@ If you use SharePoint Server, you can use the information protection features wi
 > - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 
 
-Azure RMS applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
+Azure Rights Management applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
 For more information about using the Azure Rights Management service with SharePoint, see the following  post from the Office blog: [What’s New with Information Rights Management in SharePoint and SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 

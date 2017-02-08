@@ -13,7 +13,7 @@
 ## [Quick start tutorial](infoprotect-quick-start-tutorial.md)
 ### [Step 1: Activate the service](infoprotect-tutorial-step1.md)
 ### [Step 2: Configure and publish policy](infoprotect-tutorial-step2.md)
-### [Step 3: Install the client and application](infoprotect-tutorial-step3.md)
+### [Step 3: Install the client](infoprotect-tutorial-step3.md)
 ### [Step 4: See it in action - labeling, classification, protection](infoprotect-tutorial-step4.md)
 ### [Step 5: See it in action - share protected and tracking](infoprotect-tutorial-step5.md)
 ## [Rapid deployment guide](rapid-deployment-guide.md)

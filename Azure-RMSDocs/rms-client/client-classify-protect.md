@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/05/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -18,7 +18,7 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
+ms.reviewer: eymanor
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,18 +29,58 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-**[ This version of the client is in preview and subject to change. ]**
-
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once.
+However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
+
+### Safely share a file with people outside your organization
+
+Files that are protected are safe to share with others. For example, you attach the file to an email or send an invitation from your SharePoint site.
+
+If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
+
+If you set your own custom permissions and the file is already protected for internal use, first make a copy of it. Use this copy to set the custom permissions.  
+
+When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
+
 
 ## Using Office apps to classify and protect your documents and emails
 
-Use the Azure Information Protection bar and select one of the labels that has been configured for you. For example:
+Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
+
+For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "Internal", click **Internal**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it.
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
+If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
+
+In addition to manually selecting labels, labels can also be applied in the following ways:
+
+- Your administrator configured a default label, which you can keep or change.
+
+- Your administrator configured recommended prompts to select a specific label when sensitive data is detected. You can accept the recommendation (and the label is applied), or reject it (the recommended label is not applied).
+
+### Exceptions for the Azure Information Protection bar 
+
+##### Don't see this Information Protection bar in your Office apps?
+
+- You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
+ 
+##### Is the label that you expect to see not displayed on the bar? 
+
+- If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
+
+- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and feedback** and check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
+
+- The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
+
+### Keyboard shortcuts for the Azure Information Protection bar
+
+To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
+
+- Press **Ctrl** + **Shift** + **~** 
+
+Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
 
 ## Using File Explorer to classify and protect files
 
@@ -48,17 +88,29 @@ When you use File Explorer, you can quickly classify and protect a single file, 
 
 When you select a folder, all the files in that folder and any subfolders it has are automatically selected for the classification and protection options that you set. However, new files that you create in that folder or subfolders are not automatically configured with those options.
 
-When you use File Explorer to classify and protect your files, you might notice that the labels are not always available. That happens when the files that you select do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
+When you use File Explorer to classify and protect your files, if one or more of the labels appear dimmed, the files that you selected do not support classification. For these files, you can select a label only if your administrator has configured the label to apply protection. Or, you can specify your own protection settings. 
 
-For a list of file types that are supported from File Explorer, see the [File types supported for classification and protection](#file-types-supported-for-classification-and-protection) section on this page.
+Some files are automatically excluded from classification and protection, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file. Examples include executable files and your Windows folder.
+
+The admin guide contains a full list of the file types supported and the files and folders that are automatically excluded: [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md).
 
 
 ### To classify and protect a file by using File Explorer
 
-1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect (preview)**. 
+1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**. For example:
+    
+    ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
-2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. If a label cannot be selected (it is unavailable), the selected file does not support classification but you can protect it.
+2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification and protection as defined by your administrator. 
 
+    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification but you can protect it with custom permissions (step 3). For example:
+
+    ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-dimmed.png)
+    
+    - If you do not see labels but an option for **Company pre-defined protection** in this dialog box: The client is running in [protection-only mode](client-protection-only-mode.md). Either select a template to apply protection that your administrator has configured for you, or, select **Custom permissions** to specify your own protection settings and go to step 4.
+    
+    ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
+    
 3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
     
     Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
@@ -69,9 +121,9 @@ For a list of file types that are supported from File Explorer, see the [File ty
     
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. For people and groups in your organization, you can use the address book to search and select them. For people in another organization, you must specify their full email address. Make sure that you use a business email address because personal email addresses are not currently supported.
         
-    - **Expire access on**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
+    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
-5. Click **Apply**, and then click **Close**.
+5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
 The selected file or files are now classified and protected, according to your selections. In some cases (when adding protection changes the file name extension), the original file in File Explorer is replaced with a new file that has the Azure Information Protection lock icon. For example:
 
@@ -81,36 +133,9 @@ If you change your mind about the classification and protection, or later need t
 
 The classification and protection that you specified stays with the file, even if you email the file or save it to another location. If you protected the file, you can track how people are using it and if necessary, revoke access to it. For more information, see [Track and revoke your protected documents when you use Azure Information Protection](client-track-revoke.md). 
 
-#### File types supported for classification and protection
-
-Classification-only is supported for the following file types. Other file types support classification when they are also protected.
-
-- **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
-
-- **Microsoft Project**: .mpp, .mpt​
-
-- **Microsoft Publisher**: .pub​
-
-- **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
-
-- **Microsoft XPS**: .xps .oxps​
-
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
-
-- **SolidWorks**: .sldprt, .slddrw, .sldasm​
-
-- **Autodesk Design Review 2013**: .dwfx​
-
-- **Adobe Photoshop**: .psd​
-
-- **Digital Negative**: .dng
-
-
-Protection using the Rights Management service is supported for the file types documented in the [File API configuration](../develop/file-api-configuration.md). This protection can be applied automatically when you select a label that your administrator has configured, or you can specify your own protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
-
 
 ## Other instructions
-For how-to instructions, see the following sections from the Azure Information Protection user guide:
+More how-to instructions from the Azure Information Protection user guide:
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 

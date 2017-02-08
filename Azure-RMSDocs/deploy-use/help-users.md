@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,20 +67,16 @@ After you have deployed and configured Azure Information Protection for your org
 
 Use the following sections for application-specific information to help users protect sensitive documents and emails.
 
-## Using information protection with the Rights Management sharing application
-The Rights Management (RMS) sharing application might be required for users to protect and consume protected content if they use Office 2010, but also recommended for all computers and mobile devices that support the Azure Rights Management service.
+## Using information protection with the Azure Information Protection client
+The Azure Information Protection client might be required for users to protect and consume protected documents and emails if they use Office 2010, but it also recommended for computers and mobile devices.
 
-In addition to making it easier for users to protect important documents, the RMS sharing application lets users track the documents that they have protected, and if necessary, revoke access to them.
+In addition to making it easier for users to protect important documents, the Azure Information Protection client lets users track the documents that they have protected, and if necessary, revoke access to them.
 
-For instructions to use this application for Windows computers, see the [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md).
+For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
 
-For mobile devices, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> For a high-level example scenario with screenshots, see [Users safely share attachments with mobile users](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
-If you are using the Azure Rights Management service and have not installed the Rights Management sharing application, users will not see the **Share Protected** button on the ribbon or **Protect in-place** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to these.
+If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users will not see the Azure Information Protection bar in their Office desktop apps, the **Protect** button on the ribbon, or **Classify and protect** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
