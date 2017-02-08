@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: House rules for customer comments on the Microsoft documentation site for Azure Information Protection | Azure Information Protection
+title: House rules for customer comments | Azure Information Protection
 description: Scope and intent for Livefyre comments and sidebars for the Azure Information Protection documentation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-# House rules for customer comments on the documentation site for Azure Information Protection
+# House rules for comments on the Azure Information Protection documentation
 
 >*Applies to: Azure Information Protection, Office 365*
 

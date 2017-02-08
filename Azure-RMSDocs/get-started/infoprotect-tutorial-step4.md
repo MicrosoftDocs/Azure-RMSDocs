@@ -2,11 +2,11 @@
 # required metadata
 
 title: Quick start tutorial step 4 | Azure Rights Management
-description: Step 4 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ Select **The previous label no longer applies**, and click **Confirm**. You'll s
 
 ## To remove the classification completely
 
-On the Information Protection bar, click the **Edit label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Remove label** icon. Click **OK** to confirm and then provide justification for this action.  
+On the Information Protection bar, click the **Edit Label** icon next to **Personal**. This displays the available labels. But instead of choosing one of the labels, this time, click the **Delete Label** icon. This time, type in "This document doesn't need classifying" and click **Confirm**.  
 
 You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 
@@ -64,7 +64,17 @@ You'll see the **Sensitivity** value display **Not set**, which is what users se
 
     The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
 
+4. You can now close this document.
+
 Now that you've seen classification, labeling, and protection in action, let's see how you can protect your documents even when they are shared with others in another organization. You can even track how they are being used and revoke access to them.
+
+|If you want more information|Additional information|
+|--------------------------------|--------------------------|
+|Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Step 3](infoprotect-tutorial-step3.md)

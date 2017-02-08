@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,12 +33,38 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 Use the following information to see what’s new or changed in a release. The most current release is listed first. Versions before General Availability are not listed.
 
-In addition to the current release, there is now a **preview** version of the Azure Information Protection client that you can only download from the Microsoft Download Center. It offers the same functionality as the Rights Management sharing application for Windows, with right-click options from File Explorer and a viewer for protected files. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/) and preliminary documentation: [Azure Information Protection user guide](client-user-guide.md).
-
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest release.
 >  
-> If the problem remains, open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Click the **Send feedback** link, which you can use to automatically attach your client logs to an email message that can be sent to the Information Protection team to investigate. For support options, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information.
+> If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Version 1.3.155.2
+
+**Released**: 02/08/2017
+
+**New requirements**:
+
+Microsoft .NET Framework
+
+- This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. A computer restart might be required after the Azure Information Protection client installation is complete.
+
+- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
+
+**New features**:
+
+- A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
+    
+    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and multiple file selection.
+    - A viewer for protected documents (includes protected PDF for SharePoint).
+    - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
+    - Client usage logs that record information such as which label was applied, how, and by whom.
+
+This client version is the [General Availability release](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/) of the preview client that was first announced in December 2016. For more information about this version of the client, see the following guides:
+
+- [Azure Information Protection client administrator guide](client-admin-guide.md)
+
+- [Azure Information Protection user guide](client-user-guide.md)
+
 
 ## Version 1.2.4.0
 
@@ -56,7 +82,7 @@ In addition to the current release, there is now a **preview** version of the Az
 
 - Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
 
-    For more information about this option, see the [To verify installation, connection status, or report a problem](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem) section from the client installation documentation.
+    For more information about this option, see the [To verify installation, connection status, or send feedback](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) section from the client installation documentation.
 
 ## Version 1.1.23.0
 
@@ -66,6 +92,11 @@ General Availability.
 
 ## Next steps
 
-For more information about installing the client, see [Installing the Azure Information Protection client](info-protect-client.md).
+For more information about installing the client:
+
+- For users: [Download and install the client](install-client-app.md)
+
+- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

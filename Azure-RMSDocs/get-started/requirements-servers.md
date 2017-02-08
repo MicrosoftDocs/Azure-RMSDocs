@@ -6,7 +6,7 @@ description: Identify the on-premises server products that can use the Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -57,7 +57,7 @@ To use this connector, you must configure directory synchronization between your
     -   Windows Server 2012
 
     > [!NOTE]
-    > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply Rights Management protection, you cannot use the Rights Management connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [RMS Protection cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > Because file servers that run Windows Server 2008 R2 do not have a built-in file management task action to apply Rights Management protection, you cannot use the Rights Management connector for this scenario. However, you can use File Classification Infrastructure and Azure RMS on these operating systems if you configure a custom file management task to run an executable or script that can protect files by using Azure RMS. For example, a Windows PowerShell script that uses the [AzureInformationProtection cmdlets](/powershell/azureinformationprotection/vlatest/aip).
     > 
     > You can also use these cmdlets with servers running later versions of Windows Server, with the benefit that these cmdlets can protect all file types. The RMS connector protects Office files only. For how-to instructions, see [RMS Protection with Windows Server File Classification Infrastructure &#40;FCI&#41;](../rms-client/configure-fci.md).
 

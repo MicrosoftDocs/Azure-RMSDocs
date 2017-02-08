@@ -15,6 +15,7 @@
 ## [Configuring applications](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Office apps](configure-office-apps.md)
+### [Azure Information Protection client](configure-client.md)
 ### [RMS sharing app](configure-sharing-app.md)
 ## [Configuring usage rights](configure-usage-rights.md)
 ## [Configuring super users for discovery services or data recovery](configure-super-users.md)
