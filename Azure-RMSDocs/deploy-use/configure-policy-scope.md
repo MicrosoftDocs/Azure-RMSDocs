@@ -46,7 +46,7 @@ To configure a scoped policy for Azure Information Protection:
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
-    On the initial **Azure Information Protection** blade, select **Add a new policy (PREVIEW)**. You'll then see the second blade that used to show the global policy refresh, so that you can now configure your new, scoped policy.
+    On the initial **Azure Information Protection** blade, select **Add a new policy**. You'll then see the second blade that used to show the global policy refresh, so that you can now configure your new, scoped policy.
 
 3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only. 
 

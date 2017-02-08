@@ -2,7 +2,7 @@
 # required metadata
 
 title: Frequently asked questions about classification and labeling | Azure Information Protection
-description: Have a question about the preview release of Azure Information Protection? See if it's answered here. 
+description: Have a question about the current release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -99,7 +99,7 @@ In the Azure portal, you can use predefined patterns, such as “Credit card num
 
 You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). 
 
-The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available during the preview, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
+The accuracy of classification depends on how you configure the classification rule, which is based on conditions. Currently, conditions support text patterns and regular expressions. For an explanation of each of the options available, with some suggested examples for you to test, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md). The detection runs when the document is saved, or an email is sent.
 
 For the best user experience and to ensure business continuity, we recommend that you start with user recommendation actions, rather than fully automatic actions. This gives your users the ability to accept the labeling or protection action, or override these suggestions.   
 
@@ -141,7 +141,7 @@ No. When you label an email message that has attachments, those attachments do n
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
-Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the preview version of the Azure Information Protection client applies the corresponding label settings for that classification.
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the the Azure Information Protection client applies the corresponding label settings for that classification.
 
 Although the Outlook web app doesn't yet natively support Azure Information Protection classification and protection, you can use this same technique to use your labels with this email client in addition to the desktop Outlook client.
 
@@ -160,7 +160,7 @@ The following now happens when users use the Outlook web access app or a mobile 
 
 - The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
 
-- When recipients running the preview version of the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+- When recipients running the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
 
 If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
 

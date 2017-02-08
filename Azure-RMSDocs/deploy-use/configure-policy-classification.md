@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -86,7 +86,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## Information about the built-in conditions
 
-During the preview period, you can select the following conditions:
+You can select the following conditions:
 
 - [SWIFT Code](#swift-code )
 
