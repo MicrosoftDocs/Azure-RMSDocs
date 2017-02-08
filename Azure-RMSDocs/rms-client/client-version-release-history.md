@@ -59,7 +59,7 @@ Microsoft .NET Framework
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
     - Client usage logs that record information such as which label was applied, how, and by whom.
 
-This client version is the General Availability release of the preview client that was [announced in December 2016](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/). For more information, which includes updates since the preview, see the following admin and user guides:
+This client version is the [General Availability release](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/) of the preview client that was first announced in December 2016. For more information about this version of the client, see the following guides:
 
 - [Azure Information Protection client administrator guide](client-admin-guide.md)
 
