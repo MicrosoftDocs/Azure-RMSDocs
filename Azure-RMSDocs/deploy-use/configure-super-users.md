@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,12 +67,14 @@ The following log extract shows some example entries from using the Get-AadrmAdm
 `2015-08-01T19:01:45	admin@contoso.com	SetSuperUserFeatureState -state Enabled	Passed	True`
 
 ## Scripting options for super users
-Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, [download the RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Then, use the  [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) cmdlet, and [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx)   cmdlet as required.
+Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, you can use the [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) cmdlet, and [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) cmdlet as required. 
 
-For more information about these cmdlets, see [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection. 
+
+For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
-> The RMS Protection PowerShell module that ships with the RMS Protection Tool is different from and supplements the main [Windows PowerShell module for Azure Rights Management](administer-powershell.md). The RMS Protection module supports both the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
+> The AIP module replaces the RMS Protection PowerShell module that installed with the RMS Protection Tool. Both these modules are different from and supplements the main [Windows PowerShell module for Azure Rights Management](administer-powershell.md). The AIP module supports Azure Information Protection, the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

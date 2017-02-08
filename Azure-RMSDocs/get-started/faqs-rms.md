@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -92,9 +92,9 @@ The Azure Rights Management service always uses an Azure Active Directory accoun
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
 ## Can I add external users (people from outside my company) to custom templates?
-Yes. Creating custom templates that end users (and administrators) can select from applications makes it quick and easily for them to apply information protection, using predefined policies that you specify. One of the settings in the template is who is able to access the content, and you can specify users and groups from within your organization, and users from outside your organization.
+Yes. Creating custom templates that end users (and administrators) can select from applications makes it quick and easily for them to apply information protection, using predefined policies that you specify. One of the settings in the template is who is able to access the content, and you can specify users and groups from within your organization, and users and groups from outside your organization. 
 
-To specify users from outside your organization, add them as contacts to a group that you select in the Azure classic portal when configuring your templates. Or, use [Windows PowerShell module for Azure Rights Management](../deploy-use/install-powershell.md):
+To specify users from outside your organization, add them as contacts to a group that you select in the Azure classic portal when configuring your templates. To specify groups from outside your organization, you must use [Windows PowerShell module for Azure Rights Management](../deploy-use/install-powershell.md), which you can also use to specify individual external users and even all users from another organization:
 
 -   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) cmdlet (for a new template) or [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
 
@@ -103,15 +103,12 @@ For more information about custom templates, see [Configuring custom templates f
 ## Does Azure RMS work with dynamic groups in Azure AD?
 An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with the Azure Rights Management service. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
 
-As the option name clearly shows, this new group type is still in preview, with additional functionality expected and new documentation to follow. In the meantime, we wanted to confirm that you can use this new group type with Azure Rights Management protection.
-
-
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table in [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
-For a list of file name extensions that are natively supported by Azure Rights Management, see the [Supported file types and file name extensions](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) section of the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md). File name extensions not listed are supported by using the RMS sharing application that automatically applies generic protection to these files.
+For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](../rms-client/client-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
@@ -149,8 +146,6 @@ Yes. This message reflects the use license for that specific file. A use license
 If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user will continue to have access to the document for the duration of the use license. When the use license expires, the user must re-authenticate, at which point the user will be denied access because the document is now revoked.
 
 The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). This setting can be overridden by a more restrictive setting in a custom template. 
-
-The tenant setting and the template setting can be overridden by users when they use the RMS sharing application and select the option **Allow me to instantly revoke access to these documents**. This setting effectively sets the use license validity period to 0. 
 
 For more information and examples of how the use license works, see the detailed description for [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
 

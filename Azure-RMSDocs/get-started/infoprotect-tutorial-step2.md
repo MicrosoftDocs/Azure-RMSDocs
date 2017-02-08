@@ -2,11 +2,11 @@
 # required metadata
 
 title: Quick start tutorial step 2 | Azure Information Protection
-description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 30 minutes.
+description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -122,7 +122,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
-Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client and the Rights Management sharing application.
+Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|

@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -62,13 +62,12 @@ If you question isn't answered, use the links and resources listed in [Informati
 
 In addition, there are FAQs designed for end-users:
 
--   [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
-
--   [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](https://technet.microsoft.com/dn451248)
-
 - [FAQ for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
 
--   [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977)
+- [FAQ for RMS sharing app for Mac computers and Windows Phone](https://technet.microsoft.com/dn451248)
+
+- [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

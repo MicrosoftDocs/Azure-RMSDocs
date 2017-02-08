@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,45 +29,56 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-**[ This version of the client is in preview and subject to change. ]**
-
 After you have protected your documents by using Azure Information Protection, you can track how people are using these documents. If necessary, you can also revoke access to them if people should no longer be able to read them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
-
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
-</div>
 
 When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. You will also see each time they tried to access the document, and their location at the time. In addition:
 
--   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared, but authorized users will no longer be able to open it.
+-   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared, but authorized users will no longer be able to open it:
+    
+    ![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
 
--   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs.
+-   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs:
+    
+    ![Export to CSV icon in the document tracking site](../media/tracking-site-export-icon.png)
 
--   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
+-   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed:
+    
+    ![Export to CSV icon in the document tracking site](../media/tracking-site-settings-email.png)
 
-- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon.
+- If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon:
+    
+    ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
--   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
+To track a protected document, it must be registered in the document tracking site. To do this, use either File Explorer, or your Office apps.
 
-## Using Office to access the document tracking site
+## Using Office to track or revoke the document
 
--   For the Office applications, Word, Excel, PowerPoint, and Outlook: On the **Home** tab, in the **Protection** group, click **Protect** > **Track usage**.
+For the Office applications, Word, Excel, PowerPoint, and Outlook: 
+
+1. Open the protected document that you want to track or revoke.
+
+2. On the **Home** tab, in the **Protection** group, click **Protect** > **Track and revoke**:
+
+    ![Track usage option](../media/track-usage-callout.png)
 
 If you do not see these options in your Office applications, it’s likely that either the Azure Information Protection client is not installed on your computer, your Office applications must be restarted, or your computer must be restarted to complete the installation. For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
+## Using File Explorer to track or revoke the document
 
-### Other ways to track and revoke your documents
-In addition to tracking your protected documents on Windows computers by using Office applications, you can also use these alternatives:
+1. Right-click the protected file, and select **Classify and protect**.
 
--   **Using a web browser**: This method works for all supported devices.
+2. From the **Classify and protect - Azure Information Protection** dialog box, select **Track and revoke**.
 
--   **Using File Explorer**: This method works for Windows computers.
+    ![Track and revoke icon from the Classify and protect - Azure Information Protection dialog box](../media/track-and-revoke.png)
 
-#### Using a web browser to access the doc tracking site
 
--   Using a supported browser, go to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
+### Using a web browser track and revoke documents that you have registered
 
-    Supported browsers: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
+After you have registered the protected document by using your Office apps or File Explorer, you can track and revoke these documents by using a supported web browser:
+
+- Using your Windows PC, Mac computer, or mobile device, visit the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
+
+    **Supported browsers**: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
 
     -   Internet Explorer: At least version 10
 
@@ -79,14 +90,10 @@ In addition to tracking your protected documents on Windows computers by using O
 
     -   Google Chrome: At least version 18
 
-#### Using File Explorer to access the doc tracking site
-
--   Right-click the file, select **Classify and protect (preview)**, and then from the **Azure Information Protection Viewer**, select the Track Usage icon.
-
 
 ## Other instructions
-For how-to instructions, see the following sections from the Azure Information Protection user guide:
+More how-to instructions from the Azure Information Protection user guide:
 
--   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
