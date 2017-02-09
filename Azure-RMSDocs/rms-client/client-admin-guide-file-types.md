@@ -155,7 +155,7 @@ You can make similar registry edits for other scenarios by changing the value of
 
 -   **Off**: Block protection
 
-For additional information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance documenation.
+For additional information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. Note that for developers, generic protection is referred to as "PFile". 
 
 ## File types that are excluded from classification and protection by the Azure Information Protection client
 
