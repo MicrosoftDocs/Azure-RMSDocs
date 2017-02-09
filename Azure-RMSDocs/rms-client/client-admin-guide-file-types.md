@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -154,6 +154,8 @@ You can make similar registry edits for other scenarios by changing the value of
 -   **Native**: Native protection
 
 -   **Off**: Block protection
+
+For additional information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance documenation.
 
 ## File types that are excluded from classification and protection by the Azure Information Protection client
 
