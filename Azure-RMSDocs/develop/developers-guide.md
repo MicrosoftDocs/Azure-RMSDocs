@@ -6,7 +6,7 @@ description: Developers can use Azure Information Protection to protect and mana
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/30/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ Service applications provide capabilities to protect information when exporting 
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample RMS-enabled DLP application that takes you through the basic steps that a DLP RMS-enabled application should perform by using the RMS File API for protecting and consuming restricted content.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to use RMS SDK in Azure applications to protect data in an Azure Blob Storage.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) is a sample that demonstrates how to build a Windows application that watches directories in the file system and applies RMS protection policies on every change, for example file added or file modified.
-- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) is a simple console application sample that takes a directory as input and protects all the files in that directory only, no recursion.
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) is a simple console application sample that takes a directory as input and protects all the files in that directory only, no recursion.
 
 ## PowerShell guides
 
