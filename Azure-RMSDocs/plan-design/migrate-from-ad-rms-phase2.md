@@ -33,7 +33,49 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Info
 
 
 ## Step 5. Reconfigure clients to use Azure Information Protection
-For Windows clients:
+
+For Windows computers that use Office 2016:
+
+- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest, but it is restricted to Office 2016 (or later).
+    
+    This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
+
+- For Windows computers that don't use Office 2016:
+    
+    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office 2016 and other versions of Office, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
+    
+    The registry changes are made easier for you by editing and deploying scripts that you can download. 
+
+For mobile device clients and Mac computers:
+
+- Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx)
+
+See the following sections for more information about how to reconfigure Windows clients.
+
+## Client reconfiguration by using DNS redirection 
+
+This method is suitable only for Windows clients that run Office 2016 (or later).
+
+1. Create a DNS SRV record:
+
+2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
+
+    a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
+
+    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **publish.asmx**
+
+    c. Right-click **publish.asmx** > **Properties** > **Edit**
+
+    d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and the specify a group that contains the users that you want to redirect.
+    
+    Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
+    
+    e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
+
+
+## Client reconfiguration by using registry edits
+
+This method is suitable for all Windows clients and should be used if they do not run Office 2016 but an earlier version.
 
 1.  [Download the migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
 
@@ -50,7 +92,7 @@ For Windows clients:
     >
     > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net**:443**.
 
-3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if users have this version of Office, you must manually update the scripts:
+3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if you will deploy this script for users who have this version of Office, you must manually update the scripts:
 
 	- For **CleanUpRMS.cmd** - search for the line `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` and immediately below it, add the following line:
 
@@ -76,13 +118,8 @@ For Windows clients:
 	
 			echo Redirect MSIPC for Office versions based on MSIPC
 
-4.  On the Windows computers:
+4.  On the Windows client computers, run these scripts with elevated privileges in the user’s context.
 
-	- Run these scripts with elevated privileges in the user’s context.
-
-    For mobile device clients and Mac computers:
-
-    -  Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
 #### Changes made by the migration scripts
 This section documents the changes that the migration scripts make. You can use this information for reference purposes only, or for troubleshooting, or if you prefer to make these changes yourself.
