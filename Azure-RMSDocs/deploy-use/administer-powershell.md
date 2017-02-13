@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if you are a global administrator and the only configuration required for this service is to activate (or deactivate) it, and configure Rights Management templates.
+Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if you are a global administrator and the only configuration required for this service is to activate it (or deactivate), and configure Rights Management templates.
 
 However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control.
 
@@ -38,7 +38,7 @@ The following table includes some of the advanced configuration scenarios that u
 For a complete list of the available cmdlets with more information about each one, see [Azure Rights Management Cmdlets](http://msdn.microsoft.com/library/azure/dn629398.aspx).
 
 > [!NOTE]
-> To install the PowerShell module for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+> To install this PowerShell module, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
 
 The Azure Information Protection client installs a supplemental Windows PowerShell module, **AzureInformationProtection**, which supports Azure Information Protection, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). This client module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the admin guide.
 
