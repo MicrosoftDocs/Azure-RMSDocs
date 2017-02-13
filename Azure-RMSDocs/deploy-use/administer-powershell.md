@@ -31,7 +31,7 @@ ms.suite: ems
 
 Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if you are a global administrator and the only configuration required for this service is to activate it (or deactivate), and configure Rights Management templates.
 
-However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control.
+However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control and scripting.
 
 The following table includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 
@@ -40,7 +40,7 @@ For a complete list of the available cmdlets with more information about each on
 > [!NOTE]
 > To install this PowerShell module, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
 
-The Azure Information Protection client installs a supplemental Windows PowerShell module, **AzureInformationProtection**, which supports Azure Information Protection, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). This client module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the admin guide.
+In addition to this service-side PowerShell module, the Azure Information Protection client installs a supplemental PowerShell module, **AzureInformationProtection**. This client module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the admin guide.
 
 |If you need to…|…use the following cmdlets|
 |-------------------|------------------------------|
