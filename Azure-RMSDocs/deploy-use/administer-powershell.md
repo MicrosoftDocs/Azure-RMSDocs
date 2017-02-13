@@ -33,7 +33,9 @@ Do you need to use PowerShell to administer the Azure Rights Management service 
 
 However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control.
 
-The following table includes some of the advanced configuration scenarios that use PowerShell. For a complete list of the available cmdlets with more information about each one, see [Azure Rights Management Cmdlets](http://msdn.microsoft.com/library/azure/dn629398.aspx).
+The following table includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
+
+For a complete list of the available cmdlets with more information about each one, see [Azure Rights Management Cmdlets](http://msdn.microsoft.com/library/azure/dn629398.aspx).
 
 > [!NOTE]
 > To install the PowerShell module for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
