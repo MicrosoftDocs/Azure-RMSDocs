@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Microsoft Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,7 +40,7 @@ Although Azure Information Protection comes with a default policy that you can u
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-3.  Explore the automatically displayed **Policy: Global** blade, which shows the default Information Protection policy that's automatically created:
+3.  On the Azure Information Protection blade, click **Global** and explore the **Policy: Global** blade, which shows the default Information Protection policy that's automatically created:
     
     - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
 
