@@ -56,7 +56,23 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later).
 
-1. Create a DNS SRV record:
+1. Create a DNS SRV record that client computers will find for their DNS namespace, using the following format: 
+
+	_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>
+
+For this record, specify the port number that your AD RMS cluster is using (for example, 443) and your own cluster name (for example, rmsserver.contoso.com). 
+
+If you use the DNS Server role on Windows Server, use the following tables as a guide for the SRV record properties in the DNS Manager console:
+
+|Field|Value|  
+|-----------|-----------|  
+|**Domain**|_tcp.contoso.com|  
+|**Service**|_rmsredir|  
+|**Protocol**|_http|  
+|**Priority**|0|  
+|**Weight**|0|  
+|**Port number**|443|  
+|**Host offering this service**|rmsserver.contoso.com|  
 
 2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
 
