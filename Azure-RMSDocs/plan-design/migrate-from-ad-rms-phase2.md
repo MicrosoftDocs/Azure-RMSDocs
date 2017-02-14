@@ -56,7 +56,7 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later).
 
-1. Create a DNS SRV record in your AD RMS cluster domain, using the following format: 
+1. Create a DNS SRV record, using the following format: 
 
 		_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>
 
