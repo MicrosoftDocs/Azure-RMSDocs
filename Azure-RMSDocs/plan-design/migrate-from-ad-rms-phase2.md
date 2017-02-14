@@ -56,7 +56,7 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later).
 
-1. Create a DNS SRV record, using the following format: 
+1. Create a DNS SRV record for clients, using the following format: 
 
 		_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>
 
@@ -87,6 +87,10 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
     Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
+
+    To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following, which will prompt the client running Office 2016 to look for the SRV record:
+    
+    **Error message 401.3: You do not have permissions to view this diectory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
 
 ## Client reconfiguration by using registry edits
