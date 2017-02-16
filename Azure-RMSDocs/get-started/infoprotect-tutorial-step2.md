@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Microsoft Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,9 +68,9 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
 
-2. In the **Label: Confidential** blade, locate the section **Set RMS template for protecting documents and emails containing this label**:
+2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**, click **Protect**, and then click the **Protection** bar to open the **Permissions** blade.
     
-    For the **Select RMS template from** option, keep the default of **Azure RMS**. Then, for **Select RMS template**, click the drop down box and select the default template **\<your organization name> - Confidential**. 
+3. In the **Permissions** blade, make sure that **Azure RMS** is selected, that **Select template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
     
@@ -78,7 +78,9 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-3. Locate the section **Set visual marking**:
+4. Click **Done** to save your changes and close the **Permissions** blade.
+
+5. Back on the **Label: Confidential** blade, locate the section **Set visual marking**:
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
     
@@ -86,7 +88,7 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
     
-4. Locate the section **Configure conditions for automatically applying this label**:
+6. Locate the section **Configure conditions for automatically applying this label**:
     
     Click **Add a new condition** and then, in the **Condition** blade, select the following:
     
@@ -102,23 +104,23 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     Click **Save** to return to the **Label: Confidential** blade.
 
-5. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+7. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
-6. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
+8. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
     
     ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommended.png)
 
-7. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**:
+9. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**:
     
     ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
 
-8. Click **Save** on this **Label: Confidential** blade. Then, on the **Policy: Global** blade, click **Save** again.
+10. Click **Save** on this **Label: Confidential** blade. Then, on the **Policy: Global** blade, click **Save** again.
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
 
-9. Now we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
+11. Now we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
