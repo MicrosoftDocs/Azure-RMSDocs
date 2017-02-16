@@ -76,7 +76,7 @@ Exchange does not have to be configured for information rights management (IRM) 
     - If you selected **Protect**, go to step 5.
     - If you selected **Remove Protection**, go to step 11.
 
-5. If you selected **Protect**, now click the **Protection** bar to open the **Permissions** blade:
+5. If you select **Protect**, now click the **Protection** bar to open the **Permissions** blade:
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
@@ -98,7 +98,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 10. Click **Done** to close the **Permissions** blade and see your choice of **Do not forward** or your chosen template display on the **Protection** bar in the **Label** blade.
 
-11. If you selected **Remove Protection**:
+11. If you select **Remove Protection**:
     
     Users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires them to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
     
