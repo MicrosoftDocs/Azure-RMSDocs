@@ -68,7 +68,13 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
 
-2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**, click **Protect**, and then click the **Protection** bar to open the **Permissions** blade.
+2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**.
+
+    Click the **Protection** bar:
+    
+    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png). 
+    
+    This action opens the **Permissions** blade.
     
 3. In the **Permissions** blade, make sure that **Azure RMS** is selected, that **Select template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
     
