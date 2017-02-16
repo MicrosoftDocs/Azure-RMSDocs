@@ -59,7 +59,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 - For Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
 
-## To configure a label to apply Rights Management protection
+## To configure a label for Rights Management protection
 
 1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
 
@@ -69,10 +69,12 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 3. On the **Policy** blade, select the label that you want to configure, which opens the **Label** blade. 
 
-4. On the **Label** blade, locate **Set permissions for documents and emails containing this label**, select **Protect** to apply protection, or select **Remove Protection** to remove protection that might be applied to an email or document:
+4. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. 
+    
+    Select **Protect** to apply protection, or select **Remove Protection** to remove protection that might be applied to an email or document:
 
     - If you selected **Protect**, go to step 5.
-    - If you selected **Remove Protection**, go to step x.
+    - If you selected **Remove Protection**, go to step 11.
 
 5. If you selected **Protect**, now click the **Protection** bar to open the **Permissions** blade.
 
