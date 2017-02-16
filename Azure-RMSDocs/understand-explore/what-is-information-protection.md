@@ -62,7 +62,7 @@ These templates can be part of a label's configuration, so that when a specific 
 
 This example shows how you might select a template for a label when you configure the Azure Information Protection policy from the Azure portal:
 
-![Example of selecting templates in the Azure portal](../media/step2-select-rms-template)
+![Example of selecting templates in the Azure portal](../media/step2-select-rms-template.png)
 
 The same templates can be selected from the Exchange admin center, to configure Exchange Online mail flow rules, which support the Azure Rights Management technology:
 
