@@ -76,7 +76,9 @@ Exchange does not have to be configured for information rights management (IRM) 
     - If you selected **Protect**, go to step 5.
     - If you selected **Remove Protection**, go to step 11.
 
-5. If you selected **Protect**, now click the **Protection** bar to open the **Permissions** blade.
+5. If you selected **Protect**, now click the **Protection** bar to open the **Permissions** blade:
+    
+    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
 6. On the **Permissions** blade, select **Azure RMS** or **HYOK (AD RMS)**. 
     
