@@ -67,11 +67,11 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 2. If the label that you want to configure will apply to all users, select **Global** from the **Azure Information Protection** blade. However, if the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, select that scoped policy instead.
 
-3. On the **Policy** blade, select the label that you configure, which opens the **Label** blade. 
+3. On the **Policy** blade, select the label that you want to configure, which opens the **Label** blade. 
 
 4. On the **Label** blade, locate **Set permissions for documents and emails containing this label**, select **Protect** to apply protection, or select **Remove Protection** to remove protection that might be applied to an email or document:
 
-    - If you selected **Protect**, go to step x.
+    - If you selected **Protect**, go to step 5.
     - If you selected **Remove Protection**, go to step x.
 
 5. If you selected **Protect**, now click the **Protection** bar to open the **Permissions** blade.
@@ -84,9 +84,7 @@ Exchange does not have to be configured for information rights management (IRM) 
     
 8. If you selected **Select template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
     
-    More information about the templates:
-    
-    - If you select a **departmental template** or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    If you select a **departmental template** or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
         - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
         
@@ -96,11 +94,11 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 10. Click **Done** to close the **Permissions** blade and see your choice of **Do not forward** or your chosen template display on the **Protection** bar in the **Label** blade.
 
-11. If you selected **Remove Protection**, note the following:
+11. If you selected **Remove Protection**:
     
-    - Users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires them to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
+    Users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires them to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
     
-        If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+    If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
 6. On the **Label** blade, click **Save**.
 
