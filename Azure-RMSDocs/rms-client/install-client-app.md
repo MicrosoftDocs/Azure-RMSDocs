@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,19 +37,22 @@ In addition:
 
 ## To download and install the Azure Information Protection client    
 
-1.  Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.    
-2. Click the Windows icon for the **Azure Information Protection client** and save the **AzInfoProtection.exe** file to install the Azure Information Protection client.     
+1.  Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
-2. Double-click the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
+    This page has links for all the popular devices you might use, so that you can easily download a viewer app if it's needed to open protected files. But we're going to install the full client, which lets you label and protect files. 
 
-3. On the **Install the Azure Information Protection client** page:     
+2. Locate the **Azure Information Protection client** section and click the Windows icon. Click **Download** and save the **AzInfoProtection.exe** file.     
+
+3. Run the executable file that was downloaded. If you are prompted to continue, click **Yes**.    
+
+4. On the **Install the Azure Information Protection client** page:     
     - Select the option to install a demo policy if you cannot connect to the cloud but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.    
 
     - Click **I agree** when you have read the license terms and conditions.    
 
-4. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
+5. If you are prompted to continue, click **Yes**, and wait for the installation to finish.    
 
-3. Click **Close**. Before you start to use the Azure Information Protection client:    
+6. Click **Close**. Before you start to use the Azure Information Protection client:    
 
     - If your computer runs Office 2010, restart your computer and then go to the next section for your final step.    
         
