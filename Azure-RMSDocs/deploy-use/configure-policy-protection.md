@@ -73,13 +73,13 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     - **Not configured**: Select this option if the label is currently configured to apply protection and you do no longer want the selected label to apply protection. Then go to step 10.
     
--  - **Protect**: Select this option to apply protection, and then go to step 5.
+    - **Protect**: Select this option to apply protection, and then go to step 5.
     
--  **Remove Protection**: Select this option to remove protection if it is configured for a document or email. Then go to step 10.
-    
-    Note that users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires users to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
-    
-    If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+    - **Remove Protection**: Select this option to remove protection if it is configured for a document or email. Then go to step 10.
+        
+        Note that users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires users to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
+        
+        If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
 5. If you selected **Protect**, now select **Protection** to open the **Permissions** blade:
     
