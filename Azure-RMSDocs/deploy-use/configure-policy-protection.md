@@ -71,15 +71,15 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 4. On the **Label** blade, locate **Set permissions for documents and emails containing this label** and select one of the following options.
     
-    - **Not configured**: Select this option if the label is currently configured to apply protection and you do no longer want the selected label to apply protection. Then go to step 10.
+    - **Not configured**: Select this option if the label is currently configured to apply protection and you no longer want the selected label to apply protection. Then go to step 10.
     
--  - **Protect**: Select this option to apply protection, and then go to step 5.
+    - **Protect**: Select this option to apply protection, and then go to step 5.
     
--  **Remove Protection**: Select this option to remove protection if it is configured for a document or email. Then go to step 10.
-    
-    Note that users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires users to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
-    
-    If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+    - **Remove Protection**: Select this option to remove protection if it is configured for a document or email. Then go to step 10.
+        
+        Note that users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires users to have the **Export** or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (which automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default Azure Rights Management templates do not include the usage rights that lets users remove protection. 
+        
+        If users do not have permissions to remove Rights Management protection and select a label that is configured with this **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
 5. If you selected **Protect**, now select **Protection** to open the **Permissions** blade:
     
@@ -87,7 +87,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 6. On the **Permissions** blade, select **Azure RMS** or **HYOK (AD RMS)**. 
     
-    In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md).
+    In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 9.
     
 7. Select either **Do not forward** if you want to set this Outlook option for emails, or **Select template**. 
     
