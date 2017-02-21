@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,7 +73,7 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to change or customize an existing label](configure-policy-change-label.md)
 
-- [How to configure a label to apply protection](configure-policy-protection.md)
+- [How to configure a label for protection](configure-policy-protection.md)
 
 - [How to configure a label to apply visual markings](configure-policy-markings.md)
 
