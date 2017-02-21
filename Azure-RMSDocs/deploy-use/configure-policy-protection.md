@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to configure a label to apply Rights Management protection | Azure Information Protection
-description: You can protect your most sensitive documents and emails by using a Rights Management service, which uses encryption, identity, and authorization policies to help prevent data loss. This protection is applied when you configure a label to use a Rights Management template. 
+title: How to configure a label for Rights Management protection | Azure Information Protection
+description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,13 +25,13 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 ---
 
-# How to configure a label to apply Rights Management protection
+# How to configure a label for Rights Management protection
 
 >*Applies to: Azure Information Protection*
 
-You can protect your most sensitive documents and emails by using a Rights Management service, which uses encryption, identity, and authorization policies to help prevent data loss. This  protection is applied when you configure a label to use a Rights Management template. 
+You can protect your most sensitive documents and emails by using a Rights Management service, which uses encryption, identity, and authorization policies to help prevent data loss. This protection is applied when you configure a label to use a Rights Management template for documents and emails, or the **Do not forward** option for Outlook email messages. 
 
-This template can be one of the default templates that are automatically created when you activate Azure Rights Management, or a custom template. Azure Rights Management departmental templates are supported but apply the protection only when the document or email author is within the configured scope of the template. If the user is not within the scope, they see a message that Azure Information Protection cannot apply the label.
+The template can be one of the default templates that are automatically created when you activate Azure Rights Management, or a custom template. Azure Rights Management departmental templates are supported but apply the protection only when the document or email author is within the configured scope of the template. If the user is not within the scope, they see a message that Azure Information Protection cannot apply the label.
 
 ## How the protection works
 
@@ -69,20 +69,25 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 3. On the **Policy** blade, select the label that you want to configure, which opens the **Label** blade. 
 
-4. On the **Label** blade, locate **Set permissions for documents and emails containing this label**. 
+4. On the **Label** blade, locate **Set permissions for documents and emails containing this label** and select one of the following options.
     
-    Select **Protect** to apply protection, or select **Remove Protection** to remove protection that might be applied to an email or document:
+    - **Not configured**: Select this option if the label is currently configured to apply protection and you no longer want the selected label to apply protection. Then go to step 10.
+    
+    - **Protect**: Select this option to apply protection, and then go to step 5.
+    
+    - **Remove Protection**: Select this option to remove protection if it is configured for a document or email. Then go to step 10.
+        
+        Note that users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires users to have the **Export** or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (which automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default Azure Rights Management templates do not include the usage rights that lets users remove protection. 
+        
+        If users do not have permissions to remove Rights Management protection and select a label that is configured with this **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
-    - If you selected **Protect**, go to step 5.
-    - If you selected **Remove Protection**, go to step 11.
-
-5. If you select **Protect**, now click the **Protection** bar to open the **Permissions** blade:
+5. If you selected **Protect**, now select **Protection** to open the **Permissions** blade:
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
 6. On the **Permissions** blade, select **Azure RMS** or **HYOK (AD RMS)**. 
     
-    In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md).
+    In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 9.
     
 7. Select either **Do not forward** if you want to set this Outlook option for emails, or **Select template**. 
     
@@ -96,17 +101,11 @@ Exchange does not have to be configured for information rights management (IRM) 
             
 9. If you selected **Select template** for **HYOK (AD RMS)**: Provide the template GUID and licensing URL of your AD RMS cluster. [More information](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. Click **Done** to close the **Permissions** blade and see your choice of **Do not forward** or your chosen template display on the **Protection** bar in the **Label** blade.
+10. Click **Done** to close the **Permissions** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
 
-11. If you select **Remove Protection**:
-    
-    Users must have permissions to remove Rights Management protection to apply a label that has this option. This option requires them to have the **Export** (for Office documents) or **Full Control** [usage right](../deploy-use/configure-usage-rights.md), or be the Rights Management owner (automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default rights management templates do not include the usage rights that lets users remove protection. 
-    
-    If users do not have permissions to remove Rights Management protection and select this label with the **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+10. On the **Label** blade, click **Save**.
 
-6. On the **Label** blade, click **Save**.
-
-7. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+11. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Next steps
 

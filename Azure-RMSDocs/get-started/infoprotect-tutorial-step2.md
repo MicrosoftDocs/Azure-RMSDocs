@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Microsoft Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,7 +70,7 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**.
 
-    Click the **Protection** bar:
+    Select the **Protection** option:
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png) 
     
