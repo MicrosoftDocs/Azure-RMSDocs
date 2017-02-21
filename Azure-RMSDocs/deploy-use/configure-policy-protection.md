@@ -25,7 +25,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 ---
 
-# How to configure a label to apply Rights Management protection
+# How to configure a label for Rights Management protection
 
 >*Applies to: Azure Information Protection*
 
