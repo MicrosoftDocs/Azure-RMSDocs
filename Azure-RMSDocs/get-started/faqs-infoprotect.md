@@ -125,7 +125,7 @@ Yes. To make sure users justify their change of classification, in the Azure por
 
 In the Azure portal, you can select a Rights Management template to automatically protect the content, according to the classification level that you specify.
 
-You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label to apply Rights Management protection](../deploy-use/configure-policy-protection.md).
+You'll see an example of this in the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). For more information, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
 
 ## Can a file have more than one classification?
 
