@@ -113,7 +113,9 @@ In addition to using the following instructions, the Azure Information Protectio
     
     - For other versions of Office, restart any Office applications and all instances of File Explorer. 
         
-
+5. You can confirm that the installation was successful by checking the install log file in the %temp% folder. This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. For example: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.**
 
 ### Additional instructions for Office 2010 only
 
