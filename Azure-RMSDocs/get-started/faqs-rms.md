@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,9 +48,11 @@ These encryption technologies are complementary and using them requires enabling
 
 For more information about BYOK and how to choose the right key topology for your organization, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
 
-**Hold your own key** (HYOK) in the context of Azure Information Protection, is for when you have a subset of documents or emails that cannot be protected by a key that is stored in the cloud (even if you created the key and manage it, using BYOK). This restriction is usually because of regulatory or compliance reasons. For these exceptions, you can use an on-premises solution, Active Directory Rights Management Services, to create the key and it remains on-premises. With this solution, client computers get their Azure Information Protection policy from the cloud, but specific content can be protected by using the on-premises key.
+**Hold your own key** (HYOK) in the context of Azure Information Protection, is for a small number of organizations that have a subset of documents or emails that cannot be protected by a key that is stored in the cloud (even if you created the key and manage it, using BYOK). This restriction can often be because of regulatory or compliance reasons, and this configuration should be reserved for "Top Secret" information only, that will never be shared outside your organization, will only be consumed on your internal network, and does not need to be accessed from mobile devices. 
 
-For more information about HYOK and to make sure that you understand its limitations and restrictions, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](../deploy-use/configure-adrms-restrictions.md).
+For these exceptions (typically 10% or less of your content), you can use an on-premises solution, Active Directory Rights Management Services, to create the key and it remains on-premises. With this solution, client computers get their Azure Information Protection policy from the cloud, but specific content can be protected by using the on-premises key.
+
+For more information about HYOK and to make sure that you understand its limitations and restrictions, and guidance when to use it, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](../deploy-use/configure-adrms-restrictions.md).
 
 
 ## Can I integrate the Azure Rights Management service with my on-premises servers?
