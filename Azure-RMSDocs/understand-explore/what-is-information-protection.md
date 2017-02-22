@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -62,7 +62,7 @@ These templates can be part of a label's configuration, so that when a specific 
 
 This example shows how you might select a template for a label when you configure the Azure Information Protection policy from the Azure portal:
 
-![Example of selecting templates in the Azure portal](../media/templates-infoprotection-callouts.png)
+![Example of selecting templates in the Azure portal](../media/info-protect-template-callout.png)
 
 The same templates can be selected from the Exchange admin center, to configure Exchange Online mail flow rules, which support the Azure Rights Management technology:
 

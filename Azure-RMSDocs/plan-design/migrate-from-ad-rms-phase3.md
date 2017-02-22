@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -123,15 +123,15 @@ Reg_SZ
 
 **Value:**
 
-https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorName>/_wmcs/licensing
+- https://\<connectorName\>/_wmcs/licensing
 
 
 ---
@@ -149,16 +149,16 @@ Reg_SZ
 
 **Value:**
 
-https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 
 **Data:**
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorFQDN>/_wmcs/licensing
+- https://\<connectorFQDN\>/_wmcs/licensing
 
 ---
 
@@ -176,15 +176,15 @@ Reg_SZ
 
 **Value:**
 
-https://<AD RMS Intranet Licensing URL>/_wmcs/licensing
+https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorName>/_wmcs/licensing
+- https://\<connectorName\>/_wmcs/licensing
 
 
 ---
@@ -203,16 +203,16 @@ Reg_SZ
 
 **Value:**
 
-https://<AD RMS Extranet Licensing URL>/_wmcs/licensing
+https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 
 **Data:**
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://<connectorFQDN>/_wmcs/licensing
+- http://\<connectorFQDN\>/_wmcs/licensing
 
-- https://<connectorFQDN>/_wmcs/licensing
+- https://\<connectorFQDN\>/_wmcs/licensing
 
 ---
 

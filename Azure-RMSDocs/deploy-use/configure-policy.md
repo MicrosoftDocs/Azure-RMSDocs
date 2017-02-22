@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ To configure the Azure Information Protection policy:
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
-    You'll then see the **Azure Information Protection** blade, which automatically opens the blade for the global Information Protection policy that all users get. It contains the following elements that you can configure:
+    You'll then see the **Azure Information Protection** blade, where you can open the **Global** policy that all users get. You can also optionally add and edit scoped policies. The **Global** Azure Information Protection policy contains the following elements that you can configure:
 
     - Labels that let you and users classify documents and emails.
 
@@ -73,7 +73,7 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to change or customize an existing label](configure-policy-change-label.md)
 
-- [How to configure a label to apply protection](configure-policy-protection.md)
+- [How to configure a label for protection](configure-policy-protection.md)
 
 - [How to configure a label to apply visual markings](configure-policy-markings.md)
 

@@ -6,7 +6,7 @@ description: Sample script to copy and edit, as described in the instructions fo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,7 +65,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 3.0' 
+[String] $Script:Version = 'version 3.1' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -81,25 +81,22 @@ function Get-ScriptName(){
 
 function Check-Module{
 
-	param ([String]$Module = $(Throw "Module name not specified"))
+    param ([String]$Module = $(Throw "Module name not specified"))
 
-	[bool]$isResult = $False
+    [bool]$isResult = $False
 
-	#try to load the module
-	if (get-module -list -name $Module) {
-		import-module $Module
+    #try to load the module
+    if ((get-module -list -name $Module) -ne $nil)
+        {
 
-		if (get-module -name $Module ) {
+            $isResult = $True
+        } else 
+        
+        {
+            $isResult = $False
+        } 
 
-			$isResult = $True
-		} else {
-			$isResult = $False
-		} 
-
-	} else {
-			$isResult = $False
-	}
-	return $isResult
+    return $isResult
 }
 
 function Protect-File ($ffile, $ftemplateId, $fownermail) {
@@ -127,6 +124,7 @@ function Set-RMSConnection ($fappId, $fkey, $fbposId) {
     try {
                Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
         Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
+        Get-RMSTemplate
         $returnValue = $true
     } catch {
         Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
