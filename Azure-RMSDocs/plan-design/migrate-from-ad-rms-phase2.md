@@ -84,12 +84,12 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
     d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and the specify a group that contains the users that you want to redirect.
     
-    Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
+        Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
     f. To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following, which will prompt the client running Office 2016 to look for the SRV record:
-        
+    
         **Error message 401.3: You do not have permissions to view this diectory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
 
