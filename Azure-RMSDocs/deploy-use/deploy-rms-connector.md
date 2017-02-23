@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploying the Azure Rights Management connector | Azure Information Protection
+title: Deploy the Rights Management connector - AIP
 description: Instructions to deploy the RMS connector, which provides the data protection service for existing on-premises deployments that use Exchange Server, SharePoint Server, or Windows Server and File Classification Infrastructure (FCI).
 author: cabailey
 ms.author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Migrating from AD RMS to Azure Information Protection - phase 3 | Azure Information Protection
+title: Migrate AD RMS-Azure Information Protection - phase 3
 description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering steps 6 through 7 from Migrating from AD RMS to Azure Information Protection
 author: cabailey
 ms.author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: HYOK restrictions | Azure Information Protection
+title: HYOK restrictions for Azure Information Protection
 description: Identify the limitations, prerequisites, and recommendations if you select HYOK (AD RMS) protection with Azure Information Protection.
 author: cabailey
 ms.author: cabailey

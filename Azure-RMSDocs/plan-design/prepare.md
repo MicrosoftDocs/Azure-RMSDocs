@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Preparing for Azure Rights Management protection| Azure Information Protection
+title: Prepare for Azure Rights Management protection - AIP
 description: Check that you have everything ready to use the Azure Rights Management service, so that your organization can protect documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

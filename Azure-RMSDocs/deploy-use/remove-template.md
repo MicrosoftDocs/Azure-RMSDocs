@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Remove templates | Azure Information Protection
+title: Remove Azure RMS templates - AIP
 description: The default templates cannot be deleted, but they can be archived so that users do not see them.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What Do Admins and Users See? | Azure Information Protection
+title: What admins and users see with  Azure RMS - AIP
 description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) technology to help protect sensitive or confidential information.
 author: cabailey
 ms.author: cabailey

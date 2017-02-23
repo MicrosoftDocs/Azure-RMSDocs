@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client &colon; Installation and configuration for clients | Azure Information Protection
+title: Azure Information Protection client &colon; Install & configure
 description: Information for admins about deploying the Azure Information Protection client on Windows computers and mobile devices.
 author: cabailey
 ms.author: cabailey

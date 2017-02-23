@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection also known as | Azure Information Protection
+title: Azure Information Protection also known as
 description: Azure Information Protection has undergone many name changes, and you might know it as a previous name.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

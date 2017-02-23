@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office applications and services | Azure Information Protection
+title: Office apps & services with Azure Information Protection
 description: How end-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) and Office services (such as Exchange and SharePoint) can use the Azure Rights Management service to help protect your organization's data.
 author: cabailey
 ms.author: cabailey

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Send a company-confidential email | Azure Information Protection
+title: AIP Scenario - Send a company-confidential email
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that any user in the organization can safely send email communications that cannot be read outside the organization. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection

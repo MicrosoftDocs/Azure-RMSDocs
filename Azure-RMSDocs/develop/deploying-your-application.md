@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Deploying your application | Azure Information Protection
+title: Deploying your application
 description: This topic outlines and guides you through deployment of your application
 keywords: deploy, RMS, AIP
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/15/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

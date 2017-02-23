@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create, configure, and publish a custom template | Azure Information Protection
+title: Configure & publish an Azure RMS custom template
 description: Instructions to create and manage custom templates in the Azure classic portal. Templates make it easy for end users and other admins to apply appropriate policies that protect documents and emails.
 author: cabailey
 ms.author: cabailey

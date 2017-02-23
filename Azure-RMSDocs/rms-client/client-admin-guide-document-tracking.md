@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring and using document tracking for Azure Information Protection | Azure Information Protection
+title: Document tracking for Azure Information Protection
 description: Instructions and information for admins to configure and use document tracking for Azure Information Protection.
 author: cabailey
 ms.author: cabailey
