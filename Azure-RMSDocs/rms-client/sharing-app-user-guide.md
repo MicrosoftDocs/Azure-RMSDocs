@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rights Management sharing application user guide | Azure Information Protection
+title: RMS sharing app user guide - AIP
 description: The Microsoft Rights Management (RMS) sharing application for Windows helps you keep important documents and pictures safe from people who shouldn't see them, even if you email them or save them to another device. 
 author: cabailey
 ms.author: cabailey

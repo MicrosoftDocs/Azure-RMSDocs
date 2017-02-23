@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Admin information and support for Azure Information Protection | Azure Information Protection
+title: Admin info & support for Azure Information Protection
 description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
 author: cabailey
 ms.author: cabailey

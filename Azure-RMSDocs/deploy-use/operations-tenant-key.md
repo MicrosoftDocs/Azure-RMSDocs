@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Operations for your Azure Rights Management tenant key | Azure Information Protection
+title: Operations for your Azure Information Protection tenant key
 description: Identify the different levels of control and responsibility that you have for your Azure Information Protection tenant key.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

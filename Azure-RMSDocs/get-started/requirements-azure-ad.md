@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Active Directory requirements | Azure Information Protection
+title: Azure Active Directory requirements for AIP
 description: Identify the Azure AD requirements to use Azure Information Protection, so that users can be successfully authenticated.
 author: cabailey
 ms.author: cabailey

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Monitor the Azure Rights Management connector | Azure Information Protection
+title: Monitor the Rights Management connector - AIP
 description: Information to help you monitor the connector and your organization's use of the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

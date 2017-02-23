@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Protect a file that you share by email by using the Rights Management sharing application | Azure Information Protection
+title: Share protected with the RMS sharing app - AIP
 description: Instructions how to safely share a document by email.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

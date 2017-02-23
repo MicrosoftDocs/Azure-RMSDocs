@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Refresh templates | Azure Information Protection
+title: Refresh Azure RMS templates - AIP
 description: When you use the Azure Rights Management service, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates.
 author: cabailey
 ms.author: cabailey
