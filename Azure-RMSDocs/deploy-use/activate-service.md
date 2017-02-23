@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Activating Azure Rights Management | Azure Information Protection
+title: Activating Azure Rights Management - AIP
 description: The Azure Rights Management service must be activated before your organization can start to protect documents and emails by using applications and services that support this information protection solution. 
 author: cabailey
 ms.author: cabailey

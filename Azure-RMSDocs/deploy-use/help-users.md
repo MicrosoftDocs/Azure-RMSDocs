@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Helping users to protect files by Using the Azure Rights Management service| Azure Information Protection
+title: Help users protect files by using Azure RMS - AIP
 description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey

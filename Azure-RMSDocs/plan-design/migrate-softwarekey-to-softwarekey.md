@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Step 2&colon; Software-protected key to software-protected key migration | Azure Information Protection
+title: Migrate software-protected key to software-protected key - AIP
 description: Instructions that are part of the migration path from AD RMS to Azure Information Protection, and are applicable only if your AD RMS key is software-protected and you want to migrate to Azure Information Protection with a software-protected tenant key. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Microsoft-managed - tenant key lifecycle operations | Azure Information Protection
+title: Microsoft-managed - AIP tenant key lifecycle operations
 description: Information about the lifecycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

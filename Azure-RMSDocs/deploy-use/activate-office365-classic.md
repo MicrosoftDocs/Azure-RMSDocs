@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to activate Azure Rights Management from the Office 365 classic admin center | Azure Information Protection
+title: Activate Azure RMS with Office 365 classic admin center - AIP
 description: Activation instructions for the Azure Rights Management service when you have access to the classic (original) version of the Office 365 admin center.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

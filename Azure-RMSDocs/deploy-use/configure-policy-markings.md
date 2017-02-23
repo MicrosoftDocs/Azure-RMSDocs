@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to configure a label for visual markings | Azure Information Protection
+title: Configure visual markings for an Azure Information Protection label
 description: When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

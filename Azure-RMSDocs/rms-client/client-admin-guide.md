@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client administrator guide | Azure Information Protection
+title: Azure Information Protection client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey

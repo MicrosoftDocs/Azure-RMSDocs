@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tasks that you used to do with the RMS sharing application
+title: Tasks that did with the RMS sharing application - AIP
 description: Instructions for users who have upgraded from the RMS sharing application to the Azure Information Protection client. 
 author: cabailey
 ms.author: cabailey

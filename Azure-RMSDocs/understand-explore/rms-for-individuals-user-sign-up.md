@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How users sign up for RMS for individuals | Azure Information Protection
+title: How users sign up for RMS for individuals - AIP
 description: Sign up instructions for this free account, and technical information how this process works. 
 author: cabailey
 ms.author: cabailey

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Customer-managed - tenant key lifecycle operations | Azure Information Protection
+title: Customer-managed - AIP tenant key lifecycle operations
 description: Information about the lifecycle operations that are relevant if you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

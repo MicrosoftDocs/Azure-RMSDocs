@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring the policy | Azure Information Protection
+title: Configure the Azure Information Protection policy
 description: To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. 
 author: cabailey
 ms.author: cabailey
