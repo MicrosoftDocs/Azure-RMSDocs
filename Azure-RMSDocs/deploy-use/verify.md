@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Verifying Azure Rights Management | Azure Information Protection
+title: Verifying Azure Rights Management - AIP
 description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

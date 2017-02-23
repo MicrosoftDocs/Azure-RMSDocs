@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to configure a label for Rights Management protection | Azure Information Protection
+title: Configure an Azure Information Protection label for protection
 description: You can protect your most sensitive documents and emails when you configure a label to use Rights Management protection. 
 author: cabailey
 ms.author: cabailey

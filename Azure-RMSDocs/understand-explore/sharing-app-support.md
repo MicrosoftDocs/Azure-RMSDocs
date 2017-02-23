@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: RMS sharing application for Windows and mobile platforms | Azure Information Protection
+title: RMS sharing app for Windows and mobile platforms - AIP
 description: How the RMS sharing application supports Azure RMS as a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. 
 author: cabailey
 ms.author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rights Management sharing application administrator guide | Azure Information Protection
+title: RMS sharing application admin guide - AIP
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Microsoft Rights Management sharing application for Windows.
 author: cabailey
 ms.author: cabailey

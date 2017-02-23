@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Track and revoke your protected documents when you use Azure Information Protection | Azure Information Protection
+title: Track & revoke documents - Azure Information Protection
 description: After you have protected your documents, you can track how people are using them. If necessary, you can also revoke access to these documents if people should no longer be able to read them. 
 author: cabailey
 ms.author: cabailey

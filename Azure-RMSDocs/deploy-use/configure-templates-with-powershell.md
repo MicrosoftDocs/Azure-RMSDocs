@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: PowerShell reference for custom templates | Azure Information Protection
+title: PowerShell for Azure RMS custom templates - AIP
 description: Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
