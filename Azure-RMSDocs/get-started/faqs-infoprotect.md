@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Frequently asked questions about classification and labeling | Azure Information Protection
+title: FAQs for classification & labeling - AIP
 description: Have a question about the current release of Azure Information Protection? See if it's answered here. 
 author: cabailey
 ms.author: cabailey

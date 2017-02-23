@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Remove classification labels and protection from files and emails | Azure Information Protection
+title: Remove Azure Information Protection labels
 description: Instructions to remove classification labels and protection from files that have been labeled by Azure Information Protection or protected by Rights Management.
 author: cabailey
 ms.author: cabailey

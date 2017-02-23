@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Download and install the Azure Information Protection client | Azure Information Protection
+title: Download & install the Azure Information Protection client
 description: Instructions for users to install the Azure Information Protection client for Windows, so that you can classify and protect your documents and emails. 
 author: cabailey
 ms.author: cabailey

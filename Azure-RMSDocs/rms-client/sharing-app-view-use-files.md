@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: View and use files that have been protected by Rights Management | Azure Information Protection
+title: Open RMS-protected files with the RMS sharing app - AIP
 description: Instructions to view and use a protected file, which requires you to have the Rights Management (RMS) sharing application installed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

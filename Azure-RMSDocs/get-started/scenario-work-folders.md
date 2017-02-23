@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Configure work folders for persistent protection | Azure Information Protection
+title: AIP Scenario - Configure work folders for RMS protection
 description: This scenario and supporting user documentation uses Azure Rights Management protection to apply persistent protection to Office documents in Work Folders.  
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection

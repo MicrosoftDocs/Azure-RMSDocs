@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client files and usage logging | Azure Information Protection
+title: Azure Information Protection client files and usage logging
 description: Information about the client files and usage logging for the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey

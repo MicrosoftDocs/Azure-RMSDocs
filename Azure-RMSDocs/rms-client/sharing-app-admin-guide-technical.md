@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Technical overview for the Rights Management sharing application | Azure Information Protection
+title: Technical overview for the RMS sharing app - AIP
 description: Technical details for admins on enterprise networks who are are responsible for deploying the RMS sharing application for Windows.
 author: cabailey
 ms.author: cabailey

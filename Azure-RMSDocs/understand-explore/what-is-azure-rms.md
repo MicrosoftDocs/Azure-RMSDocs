@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: What is Azure Rights Management? | Azure Information Protection
+title: What is Azure Rights Management? - AIP
 description: Azure Rights Management (Azure RMS) is the protection technology used by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

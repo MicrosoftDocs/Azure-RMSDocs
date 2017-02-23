@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client&colon; Version release history | Azure Information Protection
+title: Azure Information Protection client&colon; Version release history
 description: See what's new or changed in a release of the Azure Information Protection client for Windows. 
 author: cabailey
 ms.author: cabailey
