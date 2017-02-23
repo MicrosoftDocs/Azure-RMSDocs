@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office 365&colon; Configuration for clients and online services | Azure Information Protection
+title: Office 365&colon; Configure clients & online services - AIP
 description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection. 
 author: cabailey
 ms.author: cabailey

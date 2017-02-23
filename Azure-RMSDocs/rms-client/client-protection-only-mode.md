@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Protection-only mode for the Azure Information Protection client
+title: Protection-only mode for Azure Information Protection
 description: Information for users who run the Azure Information Protection client in protection-only mode. 
 author: cabailey
 ms.author: cabailey

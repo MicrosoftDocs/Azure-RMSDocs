@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to find out if users have signed up for RMS for individuals | Azure Information Protection
+title: Have users have signed up for RMS for individuals - AIP
 description: As an administrator, how do you know if your users have signed up for RMS for individuals? You might use any or a combination of methods described in this article.
 author: cabailey
 ms.author: cabailey

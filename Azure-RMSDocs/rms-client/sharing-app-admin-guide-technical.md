@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Technical overview for the Rights Management sharing application | Azure Information Protection
+title: Technical overview for the RMS sharing app - AIP
 description: Technical details for admins on enterprise networks who are are responsible for deploying the RMS sharing application for Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,7 +81,6 @@ For files that are generically protected, the original file name extension is al
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Remove protection from a file by using the Rights Management sharing application | Azure Information Protection
+title: Remove protection by using the RMS sharing app - AIP
 description: Instructions to remove protection from a file (that is, unprotect a file) that was previously protected by using the RMS sharing application.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rights Management sharing application&colon; Installation and configuration for clients | Azure Information Protection
+title: RMS sharing application&colon; Install & configure
 description: Information for admins about deploying the Rights Management (RMS) sharing application on Windows computers and mobile devices.
 author: cabailey
 ms.author: cabailey

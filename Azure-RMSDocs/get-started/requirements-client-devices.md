@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Client device support for data protection | Azure Information Protection
+title: Client device support for data protection  - AIP
 description: Identify which devices support the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey

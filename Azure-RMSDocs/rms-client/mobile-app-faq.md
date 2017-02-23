@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: FAQs for Azure Information Protection app for iOS and Android | Azure Information Protection
+title: FAQs for Azure Information Protection app for iOS & Android
 description:
 keywords: Some frequently asked questions to help you use the Azure Information Protection app for iOS and Android
 author: cabailey

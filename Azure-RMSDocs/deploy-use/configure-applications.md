@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring applications for the Azure Rights Management service | Azure Information Protection
+title: Configuring applications for Azure Rights Management - AIP
 description: Instructions for admins to configure applications and services to support the Azure Rights Management protection service for Azure Information Protection. For example, Office applications such as Word 2013 and Word 2010, and services such as Exchange Online (transport rules, data loss prevention, do not forward, and message encryption) and SharePoint Online (protected libraries). 
 author: cabailey
 ms.author: cabailey
