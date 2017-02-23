@@ -50,7 +50,7 @@ For more information about BYOK and whether you should choose this key topology 
 
 **Hold your own key** (HYOK) in the context of Azure Information Protection, is for a small number of organizations that have a subset of documents or emails that cannot be protected by a key that is stored in the cloud. For these organizations, this restriction applies even if they created the key and manage it, using BYOK. The restriction can often be because of regulatory or compliance reasons and the HYOK configuration should be applied to "Top Secret" information only, that will never be shared outside the organization, will only be consumed on the internal network, and does not need to be accessed from mobile devices. 
 
-For these exceptions (typically 10% or less of content), organizations can use an on-premises solution, Active Directory Rights Management Services, to create the key and it remains on-premises. With this solution, client computers get their Azure Information Protection policy from the cloud, but specific content can be protected by using the on-premises key.
+For these exceptions (typically less than 10% of all the content that needs to be protected), organizations can use an on-premises solution, Active Directory Rights Management Services, to create the key that remains on-premises. With this solution, computers get their Azure Information Protection policy from the cloud, but this identified content can be protected by using the on-premises key.
 
 For more information about HYOK and to make sure that you understand its limitations and restrictions, and guidance when to use it, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](../deploy-use/configure-adrms-restrictions.md).
 
