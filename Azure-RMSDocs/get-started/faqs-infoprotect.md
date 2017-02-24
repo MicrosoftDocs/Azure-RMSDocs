@@ -6,7 +6,7 @@ description: Have a question about the current release of Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,13 +50,13 @@ The current release has the following limitations. Look out for announcements on
 
 - Conditions for automatic classification must be phrases or patterns.
 
-- Office apps for mobile devices (iOS and Android) and Mac computers, and the Office web apps (Office Online) are not yet supported.
+- No labeling ability for Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
 
-- No integration with Exchange Online or SharePoint Online.
+- No classification and labeling integration with Exchange Online or SharePoint Online.
 
-- The SDK for partners and developers is not available.
+- The SDK for partners and developers does not yet include classification and labeling.
 
-Some of the limitations previously listed are now available with the February release of the new client. For more information, see the blog post announcement.
+Some of the limitations previously listed are now available with the February release of the new client. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
 
 
 ## Do I need to be a global admin to try Azure Information Protection?
