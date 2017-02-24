@@ -33,15 +33,9 @@ Have a question about Azure Information Protection that is specifically about cl
 
 ## What can I do with the classification capabilities in Azure Information Protection?
 
-The Azure Information Protection client adds an Information Protection bar to Microsoft Office applications that lets users view and assign classification labels to their Office documents and emails.
-
-Classification can be applied by default, manually, recommended, or automatically applied when sensitive data is detected. These labels can also automatically protect the data by using a Rights Management service. In addition to Office documents and emails, other files can be classified and protected by using File Explorer to right-click a file, multiple files, or a folder. Or, you can use PowerShell to do this from the command line for faster classification and protection in bulk.
-
-The classification labels and behavior are configured in the Azure portal. You can use the default built-in policy to very quickly evaluate Azure Information Protection, or fully customize your own policies. You can change the colors, names, and the order of the classification labels that users see. You can also configure tooltips and classification visual markings such as the header, footer, or a watermark.
-
 Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-The current release has the following limitations. Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional features and capabilities become available:
+Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are some known limitations with the current release:
 
 - Label names and tooltips are supported in one language only.
 
@@ -56,7 +50,6 @@ The current release has the following limitations. Look out for announcements on
 - The SDK for partners and developers does not yet include classification and labeling.
 
 Some of the limitations previously listed are now available with the February release of the new client. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
-
 
 ## Do I need to be a global admin to configure classification and labels?
 
