@@ -140,7 +140,7 @@ If you are interested in a specific capability that isn't yet supported, be sure
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.
 
-Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library.  However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article.
+Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article.
 
 ## Do you have any tips or tricks for a successful deployment?
 After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple rights policies**.
@@ -148,9 +148,7 @@ After overseeing many deployments and listening to our customers, partners, cons
 Because Azure Information Protection supports sharing securely with anyone, you can afford to be ambitious with your data protection reach. But be conservative with your rights policies. For many organizations, the biggest business impact comes from preventing data leakage by applying the default rights policy template that restricts access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don’t implement these more restrictive policies on day one, but plan for a more phased approach.
 
 ## How do we regain access to files that were protected by an employee who has now left the organization?
-Use the super user feature of Azure RMS, which lets authorized users have full owner rights for all use licenses that were granted by your organization’s RMS tenant. This same feature lets authorized services index and inspect files, as needed.
-
-For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
+Use the [super user feature](../deploy-use/configure-super-users.md), which lets authorized users have full usage rights for all use licenses that were granted by your organization’s tenant. This same feature lets authorized services index and inspect files, as needed.
 
 ## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
 
