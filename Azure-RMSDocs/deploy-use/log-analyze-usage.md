@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,7 +73,7 @@ To download your usage logs, you will use the Azure Rights Management administra
 
 ### To download your usage logs by using PowerShell
 
-1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure Rights Management service:
+1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AadrmService
@@ -106,7 +106,7 @@ By default, this cmdlet uses three threads to download the logs. If you have suf
 #### If you manually enabled Azure Rights Management usage logging before the logging change February 22, 2016
 
 
-If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) cmdlet to download your old logs. For example:
+If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) cmdlet to download your old logs. For example:
 
 - To download all available logs to your E:\logs folder: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -151,11 +151,11 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |result|String|'Success' if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.|'Success'|
 |correlation-id|Text|GUID that is common between the RMS client log and server log for a given request.<br /><br />This value can be useful to help troubleshooting client issues.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|String|Email address of the owner of the document.|alice@contoso.com|
-|issuer|String|Email address of the document issuer.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
-|date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
+|owner-email|String|Email address of the owner of the document.<br /><br /> This field is blank if the request type is RevokeAccess.|alice@contoso.com|
+|issuer|String|Email address of the document issuer. <br /><br /> This field is blank if the request type is RevokeAccess.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|String|ID of the template used to protect the document. <br /><br /> This field is blank if the request type is RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|File name of the document that was protected. <br /><br /> This field is blank if the request type is RevokeAccess. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
+|date-published|Date|Date when the document was protected.<br /><br /> This field is blank if the request type is RevokeAccess.|2015-10-15T21:37:00|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
 
