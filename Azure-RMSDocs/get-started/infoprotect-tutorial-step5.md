@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Quick start tutorial step 5 | Azure Information Protection
+title: Quick start tutorial step 5  - AIP
 description: Step 5 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
 keywords:
 author: cabailey

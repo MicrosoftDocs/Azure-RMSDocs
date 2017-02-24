@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Track and revoke your documents when you use the RMS sharing application | Azure Information Protection
+title: Track and revoke documents with the RMS sharing app - AIP
 description: After you have protected your documents by using the RMS sharing application, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

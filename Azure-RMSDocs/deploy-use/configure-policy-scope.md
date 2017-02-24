@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring scoped policies | Azure Information Protection
+title: Configure scoped policies for Azure Information Protection
 description: To configure different settings and labels for specific users, you must configure a scoped policy for Azure Information Protection. 
 author: cabailey
 ms.author: cabailey

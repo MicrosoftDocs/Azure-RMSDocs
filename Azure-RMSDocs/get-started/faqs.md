@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Frequently asked questions for Azure Information Protection | Azure Information Protection
+title: FAQs for Azure Information Protection
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey

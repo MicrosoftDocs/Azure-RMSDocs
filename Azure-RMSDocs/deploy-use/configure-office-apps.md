@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office apps; Configuration for clients | Azure Information Protection
+title: Office apps; Configuration for clients - AIP
 description: Information and instructions for admins to configure Office apps to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey

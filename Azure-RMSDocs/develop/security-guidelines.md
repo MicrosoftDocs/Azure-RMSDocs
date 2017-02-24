@@ -6,7 +6,7 @@ description: RMS-enabled applications are best built using Azure Information Pro
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/06/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee

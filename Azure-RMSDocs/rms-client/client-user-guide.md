@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection user guide | Azure Information Protection
+title: Azure Information Protection user guide
 description: The Azure Information Protection client for Windows helps you keep important documents and emails safe from people who shouldn't see them, even if your email is forwarded or your document is saved to another location. 
 author: cabailey
 ms.author: cabailey

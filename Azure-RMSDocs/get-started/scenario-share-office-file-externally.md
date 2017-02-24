@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Share an Office file with users in another organization | Azure Information Protection
+title: AIP Scenario - Share Office files with external users
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that users can safely email an Office file with people in another organization. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection

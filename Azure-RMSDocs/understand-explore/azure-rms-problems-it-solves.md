@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What Problems Does Azure RMS Solve | Azure Information Protection
+title: Problems solved by Azure Rights Management - AIP
 description: Identify requirements or problems that your organization might have, and understand how the Azure RMS technology can address these.
 author: cabailey
 ms.author: cabailey
