@@ -35,7 +35,7 @@ Have a question about Azure Information Protection that is specifically about cl
 
 Try our quick start tutorial to see this working in just a few minutes: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are some known limitations with the current release:
+Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release:
 
 - Label names and tooltips are supported in one language only.
 
@@ -49,7 +49,7 @@ Look out for announcements on the [Enterprise Mobility and Security Blog](https:
 
 - The SDK for partners and developers does not yet include classification and labeling.
 
-Some of the limitations previously listed are now available with the February release of the new client. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Many of the limitations previously listed are now available with the February release of the new client. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
 
 ## Do I need to be a global admin to configure classification and labels?
 
