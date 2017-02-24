@@ -49,7 +49,7 @@ Look out for announcements on the [Enterprise Mobility and Security Blog](https:
 
 - The SDK for partners and developers does not yet include classification and labeling.
 
-The February release of the new client removes many previous limitations. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+The February release removes many previous limitations. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
 
 ## Do I need to be a global admin to configure classification and labels?
 
