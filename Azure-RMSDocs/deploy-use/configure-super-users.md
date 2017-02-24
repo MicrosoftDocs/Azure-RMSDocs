@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,9 @@ The super user feature of the Azure Rights Management service from Azure Informa
 
 By default, the super user feature is not enabled, and no users are assigned this role. It is enabled for you automatically if you configure the Rights Management connector for Exchange, and it is not required for standard services that run Exchange Online, SharePoint Online, or SharePoint Server.
 
-If you need to manually enable the super user feature, use the Windows PowerShell cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), and then assign users (or service accounts) as needed by using the [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) cmdlet or the [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) cmdlet and add users (or other groups) as needed to this group. 
+If you need to manually enable the super user feature, use the PowerShell cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature), and then assign users (or service accounts) as needed by using the [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) cmdlet or the [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) cmdlet and add users (or other groups) as needed to this group. 
+
+Although using a group for your super users is easier to manage, be aware that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AadrmSuperUser, rather than adding the user to an existing group that you have configured by using Set-AadrmSuperUserGroup.
 
 > [!NOTE]
 > If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
