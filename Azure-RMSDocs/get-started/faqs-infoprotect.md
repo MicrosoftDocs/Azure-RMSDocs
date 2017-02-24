@@ -56,7 +56,7 @@ The current release has the following limitations. Look out for announcements on
 
 - The SDK for partners and developers does not yet include classification and labeling.
 
-Some of the limitations previously listed are now available with the February release of the new client. For more information, see the blog post announcement.
+Some of the limitations previously listed are now available with the February release of the new client. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
 
 
 ## Do I need to be a global admin to try Azure Information Protection?
