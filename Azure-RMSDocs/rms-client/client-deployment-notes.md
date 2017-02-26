@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
