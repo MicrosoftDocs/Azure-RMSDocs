@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,6 +41,7 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 |[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
 |[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 
+For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/azureinformationprotection/vlatest/aip).
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
