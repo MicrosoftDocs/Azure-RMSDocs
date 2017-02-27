@@ -7,7 +7,7 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -18,7 +18,7 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 #ROBOTS:
 audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,13 @@ ms.suite: ems
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 
-## New for the February 2016 - SDK documentation update
+## New for the February 2017 - SDK documentation update
+>[!Note]  
+> The documentation updates in this section apply to the SDK download version 1.03102.0221.
+ 
+- **Data collection** - application error and performance information collection is now available. This feature is controlled via a new property, *IPC_EI_DATA_COLLECTION_ENABLED* one of the [Environment properties](https://msdn.microsoft.com/en-us/library/hh535247.aspx), and can be administratively overridden. 
+
+## February 2016 - SDK documentation update
 
 >[!Note]
 > The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
