@@ -105,7 +105,7 @@ After a document has been protected, users and administrators can use a document
 
 - Video "Top 5 Tips for Information Protection"
 
-    <iframe width="560" height="315" src="https://youtu.be/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
     In addition, Microsoft Ignite 2016 offers many on-demand sessions for Azure Information Protection:
 
