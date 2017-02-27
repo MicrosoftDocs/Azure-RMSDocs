@@ -158,7 +158,7 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
-|admin-action|Bool|Whether an administrator has accessed the document tracking site on behalf of another user.|True|
+|admin-action|Bool|Whether an administrator has accessed the document tracking site in Administrator mode.|True|
 |acting-as-user|String|The email address of the user for whom an administrator is accessing the document tracking site. |'joe@contoso.com'|
 
 

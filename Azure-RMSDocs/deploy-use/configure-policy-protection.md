@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,11 +81,11 @@ Exchange does not have to be configured for information rights management (IRM) 
         
         If users do not have permissions to remove Rights Management protection and select a label that is configured with this **Remove Protection** option, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
 
-5. If you selected **Protect**, now select **Protection** to open the **Permissions** blade:
+5. If you selected **Protect**, now select **Protection** to open the **Protection** blade:
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
-6. On the **Permissions** blade, select **Azure RMS** or **HYOK (AD RMS)**. 
+6. On the **Protection** blade, select **Azure RMS** or **HYOK (AD RMS)**. 
     
     In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 9.
     
@@ -101,7 +101,7 @@ Exchange does not have to be configured for information rights management (IRM) 
             
 9. If you selected **Select template** for **HYOK (AD RMS)**: Provide the template GUID and licensing URL of your AD RMS cluster. [More information](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. Click **Done** to close the **Permissions** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
+10. Click **OK** to close the **Protection** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
 
 10. On the **Label** blade, click **Save**.
 
