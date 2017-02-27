@@ -103,7 +103,7 @@ After a document has been protected, users and administrators can use a document
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Video "Top 5 Tips for Information Protection"
+- Video: "Top 5 Tips for Information Protection"
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
