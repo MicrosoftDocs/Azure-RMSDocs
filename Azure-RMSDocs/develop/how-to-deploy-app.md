@@ -35,7 +35,7 @@ This article describes the process of peploying your service application into a 
 ## Scenario
 Company *CoolApp* has developed a service application using Azure Information Protection (AIP) that encrypts, labels, and protects documents when users are exporting documents from a business application such as Dynamics, SAP, or Salesforce. For this scenario, large enterprise *ABC* buys  *CoolApp's* new application so, the *CoolApp* team needs to deploy their solution into *ABC’s* environment. 
 
-![Sample flow for creating symetric key in a different tenant](media/develop/service-app-provision.jpg)
+![Sample flow for creating symetric key in a different tenant](../media/develop/service-app-provision.jpg)
 
 ## Flow 1: *CoolApp* provides a UI dialog to *ABC* to implement the deployment
 
@@ -43,14 +43,14 @@ Once the large company *ABC* purchases *CoolApp's* solution, the IT administrato
 
 The steps for this are outlined in [Developing you application](developing-your-application.md), in the section, **Create a service Principal**.
 
-![Form example for the IT Administrator to input for your application](media/develop/how-to-deploy-app-UI.png)
+![Form example for the IT Administrator to input for your application](../media/develop/how-to-deploy-app-UI.png)
 
 > [!Note]
 > To create Service Principal in a tenant you need tenant admin rights
 
 The IT administrator then launches the *CoolApp* application as service their environment and embeds the details for the *CoolApp* application to work such as application ID, tenant ID, and the symmetric key.
 
-## Flow 2: The *ABC* IT Administrator provides the key to the CoolApp team
+## Flow 2: *ABC* IT Administrator provides the key to the CoolApp team
 
 Once *ABC's* IT Administrator creates the service principal as shown in Figure 1, the *ABC* provides the information to the *CoolApp* team. The *CoolApp* team then proceeds to embed the information in to the *CoolApp* application for use in the *ABC's* tenant.
 
