@@ -42,13 +42,17 @@ Use the following information to see what’s new or changed in a release. The m
 
 **Released**: 03/15/2017
 
+**Fixes**:
+
+- Better support for large files ( >250 MB) in the viewer. 
+
 **New features**:
 
 - The ability to set custom permissions from your Office application, which lets you set protection just for you, for external groups, or all users in another organization. For more information, see [Set custom permissions for a document](client-classify-protect.md#set-custom-permissions-for-a-document) from the user guide.
     
 - PDF files now support labels that apply classification-only.
 
-- The viewer now supports search and rotate for PDF files.
+- The viewer now supports search, zoom, and rotate for PDF files.
 
 
 ## Version 1.3.155.2
