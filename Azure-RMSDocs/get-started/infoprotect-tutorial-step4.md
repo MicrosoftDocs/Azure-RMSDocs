@@ -37,7 +37,7 @@ Classification and protection happens when you save the document, but before we 
 
 On the Information Protection bar, select the **Secret** label and you will see the two sub-labels to choose from. 
 
-Select **All Company**, and you will see how the other labels now no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to **Secret \ All Company** with a corresponding change in label color.
+Select **All Company**, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to **Secret \ All Company** with a corresponding change in label color.
 
 On the Information Protection bar, click the **Edit Label** icon next to **Secret \ All Company**. This displays the available labels again.
 
