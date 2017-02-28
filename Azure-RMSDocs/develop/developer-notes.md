@@ -31,6 +31,7 @@ This section covers specific guidance for several important development scenario
 - [How-to: use ADAL authentication](how-to-use-adal-authentication.md) - Authentication with Azure RMS for your app using Azure Active Directory Authentication Library (ADAL).
 - [How-to: Add explicit owner rights](add-explicit-owner-rights.md) - Your application should explicitly add "Owner" rights when creating a license from scratch ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [How-to: debug a rights-enabled application](debugging-applications-that-use-ad-rms.md) - This topic shows how to debug your application and use the Windows Event Log.
+- [How-to: deploy an app into a customer's tenant](how-to-deploy-app.md) - Outlines the steps for deploying an app from its developement Azure AD tenant to a production Azure AD tenant.
 - [How-to: enable document tracking and revocation](tracking-content.md) - This topic covers the basic guidance for implementing document tracking of content as well as example code for metadata updates and for creating a **Track Usage** button for your app.
 - [How-to: enable email notification](how-to-enable-email-notification.md) - Email notification allows for a protected content owner to be notified when his or her content is accessed.
 - [How-to: enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md) - This topic outlines steps for setting up your service application to use Azure Rights Management.
