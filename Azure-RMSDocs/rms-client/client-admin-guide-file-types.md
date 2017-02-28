@@ -44,6 +44,8 @@ Use the following information to check which file types are supported, the diffe
 
 Classification-only is supported for the following file types. Other file types support classification when they are also protected.
 
+- **Adobe Portable Document Format**: .pdf​
+
 - **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
 
 - **Microsoft Project**: .mpp, .mpt​
@@ -51,7 +53,6 @@ Classification-only is supported for the following file types. Other file types 
 - **Microsoft Publisher**: .pub​
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
-
 - **Microsoft XPS**: .xps .oxps​
 
 - **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
