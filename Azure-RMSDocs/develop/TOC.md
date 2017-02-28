@@ -46,7 +46,7 @@
 ##### [Configure Azure RMS for ADAL authentication](adal-auth.md)
 #### [How-to: add explicit owner rights](add-explicit-owner-rights.md)
 #### [How-to: debug a rights-enabled application](debugging-applications-that-use-ad-rms.md)
-#### [How-to: deploy an app](how-to-deploy.md)
+#### [How-to: deploy an app](how-to-deploy-app.md)
 #### [How-to: enable document tracking and revocation](tracking-content.md)
 #### [How-to: enable email notification](how-to-enable-email-notification.md)
 #### [How-to: enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
