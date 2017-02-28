@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -75,7 +75,7 @@ No. When you label an email message that has attachments, those attachments do n
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
-Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the the Azure Information Protection client applies the corresponding label settings for that classification.
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the Azure Information Protection client applies the corresponding label settings for that classification.
 
 Although the Outlook web app doesn't yet natively support Azure Information Protection classification and protection, you can use this same technique to use your labels with this email client in addition to the desktop Outlook client.
 
