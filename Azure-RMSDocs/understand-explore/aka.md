@@ -30,34 +30,42 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Azure Information Protection has evolved from a long history of Microsoft technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
-
-## As a cloud-based solution
-
-- **Azure Rights Management** or **Azure Rights Management service** - frequently abbreviated to *Azure RMS*
-
-- **Azure Active Directory Rights Management** - occasionally abbreviated to *AADRM*
-
-- **Windows Azure Active Directory Rights Management** - often abbreviated to *Windows Azure AD Rights Management*
-
-## As an on-premises solution
-
-- **Active Directory Rights Management Services** - frequently abbreviated to *AD RMS*
-
-- **Windows Rights Management Services**  - often abbreviated to *Windows RMS*
-
-## Other names
-
-- **Microsoft Rights Management** or **Microsoft Rights Management services**, which is a collective term that includes the current on-premises version (AD RMS) and the cloud-based version (Azure RMS).
-
-- "**The NEW Microsoft RMS**", which was a popular label that was sometimes used when the cloud-based version was officially released, to emphasize the new ease of deployment in comparison to its on-premises predecessors.
-
-- **Information Rights Management**, often abbreviated to *IRM*, which is the Office implementation of Rights Management that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
-
-- **Rights Management Online** or **RMS Online**, which was a proposed early name for the cloud-based version of AD RMS. You might see this name in log files.
+Azure Information Protection has evolved from a long history of Microsoft-established technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
 > [!TIP]
 > You'll find many of these product and service names, and their related terms in [Terminology for Azure Rights Management](../get-started/terminology.md).
+
+## As a cloud-based solution
+
+- **Azure Rights Management** or **Azure Rights Management service**—frequently abbreviated to *Azure RMS*
+
+- **Azure Active Directory Rights Management**—occasionally abbreviated to *AADRM*
+
+- **Windows Azure Active Directory Rights Management**—often abbreviated to *Windows Azure AD Rights Management*
+
+## As an on-premises solution
+
+- **Active Directory Rights Management Services**—frequently abbreviated to *AD RMS*
+
+- **Windows Rights Management Services**—often abbreviated to *Windows RMS*
+
+## Other names
+
+- **Microsoft Rights Management** or **Microsoft Rights Management services**
+    
+    The collective name that includes the current on-premises version (AD RMS) and the cloud-based version (Azure RMS).
+
+- "**The NEW Microsoft RMS**"
+    
+    This was a popular label that was sometimes used when the cloud-based version was officially released, to emphasize the new ease of deployment in comparison to its on-premises predecessors.
+
+- **Information Rights Management**—often abbreviated to *IRM*
+    
+    This is the Office implementation of the technology that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
+
+- **Rights Management Online** or **RMS Online**
+    
+    This was a proposed early name for the cloud-based version of AD RMS, and included here because you might see this name in log files and error messages.
 
 Note that as an enterprise information protection solution, these technologies have never provided digital rights management (DRM) solutions that typically protect against illegal distribution of digital software. 
 
