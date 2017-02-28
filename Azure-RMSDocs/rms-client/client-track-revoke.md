@@ -57,7 +57,7 @@ For the Office applications, Word, Excel, PowerPoint, and Outlook:
 
 1. Open the protected document that you want to track or revoke.
 
-2. On the **Home** tab, in the **Protection** group, click **Protect** > **Track and revoke**:
+2. On the **Home** tab, in the **Protection** group, click **Protect** > **Track and Revoke**:
 
     ![Track usage option](../media/track-usage-callout.png)
 
