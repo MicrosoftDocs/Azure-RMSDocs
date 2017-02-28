@@ -32,8 +32,7 @@ ms.suite: ems
 
 Azure Information Protection has evolved from a long history of Microsoft-established technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
-> [!TIP]
-> You'll find many of these product and service names, and their related terms in [Terminology for Azure Rights Management](../get-started/terminology.md).
+You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](../get-started/terminology.md).
 
 ## As a cloud-based solution
 
