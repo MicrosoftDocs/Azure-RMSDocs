@@ -69,7 +69,7 @@ Azure Information Protection has evolved from a long history of Microsoft-establ
 
 Note that you might see or hear references to this technology as **DRM**, which is a well-known abbreviation for digital rights management. DRM solutions typically protect against illegal distribution of digital software, which is very different from this enterprise information protection solution. 
 
-## So does "Azure Information Protection" now replace all these names?
+## Does "Azure Information Protection" now replace all these names?
 
 As the cloud-based solution that you purchase, yes. Azure Information Protection offers the new capabilities of classification and labeling for an organization's documents and emails, which in turn can apply Rights Management protection. 
 
