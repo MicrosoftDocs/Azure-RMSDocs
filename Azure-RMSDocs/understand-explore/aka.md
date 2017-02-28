@@ -32,7 +32,8 @@ ms.suite: ems
 
 Azure Information Protection has evolved from a long history of Microsoft-established technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
-You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](../get-started/terminology.md).
+> [!TIP]
+> You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](../get-started/terminology.md).
 
 ## As a cloud-based solution
 
@@ -56,17 +57,17 @@ You'll find many of these product and service names, and their related terms in 
 
 - "**The NEW Microsoft RMS**"
     
-    This was a popular label that was sometimes used when the cloud-based version was officially released, to emphasize the new ease of deployment in comparison to its on-premises predecessors.
+    A popular label that was sometimes used when the cloud-based version was officially released, to emphasize the new ease of deployment in comparison to its on-premises predecessors.
 
 - **Information Rights Management**—often abbreviated to *IRM*
     
-    This is the Office implementation of the technology that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
+    The Office implementation of the technology that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
 
 - **Rights Management Online** or **RMS Online**
     
     This was a proposed early name for the cloud-based version of AD RMS, and included here because you might see this name in log files and error messages.
 
-Note that as an enterprise information protection solution, these technologies have never provided digital rights management (DRM) solutions that typically protect against illegal distribution of digital software. 
+Note that you might see or hear references to this technology as **DRM**, which is a well-known abbreviation for digital rights management. DRM solutions typically protect against illegal distribution of digital software, which is very different from this enterprise information protection solution. 
 
 ## So does "Azure Information Protection" now replace all these names?
 
