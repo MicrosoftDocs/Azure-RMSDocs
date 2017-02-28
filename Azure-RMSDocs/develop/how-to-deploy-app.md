@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to deploy an app - AIP
-description: This article describes the process of peploying your service application into a different tenant than the one it was originally developed with.
+description: This article describes the process of deploying a service application into a different tenant than the one it was originally developed with.
 keywords:
 author: kkanakas
 ms.author: kartikk
@@ -25,9 +25,9 @@ ms.suite: ems
 
 ---
 
-# Deploying your Service Application into a different tenant
+# Deploying a service application into a different tenant
 
-This article describes the process of deploying a service application into a different tenant than the one it was originally developed in.
+This article describes the process of deploying a service application. In this scenario we are transitioning the application from being registered with its initial development AD tenant to being registered with a different company's production AD tenant.
 
 > [!Note]
 > This scenario is only relevant if the service application uses symmetric key authentication.
@@ -39,7 +39,7 @@ Company *CoolApp* has developed a service application using Azure Information Pr
 
 ## Flow 1: *CoolApp* provides a UI dialog to *ABC* to implement the deployment
 
-Once *ABC* purchases *CoolApp's* solution, the IT administrator at *ABC* must create the *CoolApp* service principal and register the application in *ABC's* tenant. 
+Once *ABC* purchases *CoolApp's* solution, the IT administrator at *ABC* must create the *CoolApp* service principal and register the application in *ABC's* Azure AD tenant. 
 
 The steps for this are outlined in the **Create a service Principal** section of [Developing your application](developing-your-application.md).
 
@@ -50,10 +50,10 @@ The steps for this are outlined in the **Create a service Principal** section of
 
 *ABC's* IT administrator then launches *CoolApp's* application as a service in their environment and embeds the details for the *CoolApp* application to work such as; application ID, tenant ID, and, the symmetric key.
 
+If the desired experience is to not provide the IT administrator of *ABC* with a UI dialog for the service principal information, then **Flow 2** is the method to follow.
+
 ## Flow 2: *ABC* IT Administrator provides the key to the *CoolApp* team
 
 Once *ABC's* IT Administrator creates the service principal, as shown in **Figure 1**, *ABC* provides the information to the *CoolApp* team. The *CoolApp* team then proceeds to embed the information in the *CoolApp* application for use in *ABC's* tenant.
-
-In both cases the authentication is done using the symmetric key. If the desired experience is to not provide the IT administrator of *ABC* with a UI dialog for the service principal information, then **Flow 2** is the method to follow. Sharing the symmetric key from *ABC’s* tenant does not give the *CoolApp* product administrative rights in *ABC’s* tenant environment.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
