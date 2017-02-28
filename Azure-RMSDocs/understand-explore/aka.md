@@ -34,25 +34,25 @@ Azure Information Protection has evolved from a long history of Microsoft techno
 
 As a cloud-based solution:
 
-- **Azure Rights Management** or **Azure Rights Management service** - frequently abbreviated to **Azure RMS**.
+- **Azure Rights Management** or **Azure Rights Management service** - frequently abbreviated to *Azure RMS*
 
-- **Azure Active Directory Rights Management** - occasionally abbreviated to **AADRM**.
+- **Azure Active Directory Rights Management** - occasionally abbreviated to *AADRM*
 
-- **Windows Azure Active Directory Rights Management** - often abbreviated to **Windows Azure AD Rights Management**.
+- **Windows Azure Active Directory Rights Management** - often abbreviated to *Windows Azure AD Rights Management*
 
 As an on-premises solution:
 
-- **Active Directory Rights Management Services** - frequently abbreviated to **AD RMS**.
+- **Active Directory Rights Management Services** - frequently abbreviated to *AD RMS**
 
-- **Windows Rights Management Services**  - often abbreviated to **Windows RMS*).
+- **Windows Rights Management Services**  - often abbreviated to *Windows RMS*
 
 Other names include:
 
-- **Microsoft Rights Management**, or **Microsoft Rights Management services**, which is a collective term that includes the current on-premises version (AD RMS) and the cloud-based version (Azure RMS).
+- **Microsoft Rights Management** or **Microsoft Rights Management services**, which is a collective term that includes the current on-premises version (AD RMS) and the cloud-based version (Azure RMS).
 
 - "**The NEW Microsoft RMS**", which was a popular label that was sometimes used when the cloud-based version was officially released, to emphasize the new ease of deployment in comparison to its on-premises predecessors.
 
-- **Information Rights Management**, often abbreviated to **IRM**, which is the Office implementation of Rights Management that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
+- **Information Rights Management**, often abbreviated to *IRM*, which is the Office implementation of Rights Management that supports the current on-premises version (AD RMS) and the cloud-based version (Azure RMS). 
 
 - **Rights Management Online** or **RMS Online**, which was a proposed early name for the cloud-based version of AD RMS. You might see this name in log files.
 
