@@ -30,9 +30,9 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Azure Information Protection has evolved from a long history of Microsoft technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. These previous names include the following:
+Azure Information Protection has evolved from a long history of Microsoft technologies that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
-As a cloud-based solution:
+## As a cloud-based solution
 
 - **Azure Rights Management** or **Azure Rights Management service** - frequently abbreviated to *Azure RMS*
 
@@ -40,13 +40,13 @@ As a cloud-based solution:
 
 - **Windows Azure Active Directory Rights Management** - often abbreviated to *Windows Azure AD Rights Management*
 
-As an on-premises solution:
+## As an on-premises solution
 
-- **Active Directory Rights Management Services** - frequently abbreviated to *AD RMS**
+- **Active Directory Rights Management Services** - frequently abbreviated to *AD RMS*
 
 - **Windows Rights Management Services**  - often abbreviated to *Windows RMS*
 
-Other names include:
+## Other names
 
 - **Microsoft Rights Management** or **Microsoft Rights Management services**, which is a collective term that includes the current on-premises version (AD RMS) and the cloud-based version (Azure RMS).
 
