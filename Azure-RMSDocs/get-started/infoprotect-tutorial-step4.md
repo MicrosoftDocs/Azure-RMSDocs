@@ -35,11 +35,19 @@ Classification and protection happens when you save the document, but before we 
 
 ## To manually change our default label
 
-On the Information Protection bar, select the **Secret** label and you will see the two sub-labels to choose from. 
+On the Information Protection bar, select the **Secret** label and you will see how sub-labels display:
 
-Select **All Company**, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to **Secret \ All Company** with a corresponding change in label color.
+![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labels.png)
 
-On the Information Protection bar, click the **Edit Label** icon next to **Secret \ All Company**. This displays the available labels again.
+Select **All Company**, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to **Secret \ All Company** with a corresponding change in label color:
+
+![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selected.png)
+
+On the Information Protection bar, click the **Edit Label** icon next to **Secret \ All Company**:
+
+![Azure Information Protection quick start tutorial step 4 - Edit Label icon](../media/info-protect-edit-label-selected.png)
+
+This displays the available labels again.
 
 Now select the **Personal** label. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why are lowering the classification level:
 
@@ -49,7 +57,11 @@ Select **The previous label no longer applies**, and click **Confirm**. The **Se
 
 ## To remove the classification completely
 
-On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon. This time, type in "This document doesn't need classifying" and click **Confirm**.  
+On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
+
+![Azure Information Protection quick start tutorial step 4 - Delete Icon](../media/delete-icon-from-personal.png)
+
+This time when you are prompted, type "This document doesn't need classifying" and click **Confirm**.  
 
 You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 
