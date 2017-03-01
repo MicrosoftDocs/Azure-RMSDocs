@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
+ms.assetid: 6ebdf0ca3-1864-4b3d-bb3e-a168eee5eb1d
 
 # optional metadata
 
@@ -99,7 +99,7 @@ This client version is the [General Availability release](https://blogs.technet.
 
 - Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
 
-    For more information about this option, see the [To verify installation, connection status, or send feedback](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) section from the client installation documentation.
+    For more information about this option, see the [To verify installation, connection status, or send feedback](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
 
 ## Version 1.1.23.0
 
