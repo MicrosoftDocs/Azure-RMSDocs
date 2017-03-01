@@ -2,11 +2,11 @@
 # required metadata
 
 title: Quick start tutorial step 3 - AIP
-description: Step 3 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
+description: Step 3 of an introduction tutorial to quickly try out Azure Information Protection - Install the client.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

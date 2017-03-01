@@ -2,11 +2,11 @@
 # required metadata
 
 title: Quick start tutorial step 1 - AIP
-description: Step 1 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
+description: Step 1 of an introduction tutorial to quickly try out Azure Information Protection - Activate the Azure Rights Management service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
