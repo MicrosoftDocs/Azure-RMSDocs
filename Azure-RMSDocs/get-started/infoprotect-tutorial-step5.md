@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 5  - AIP
-description: Step 5 of an introduction tutorial to quickly try out Azure Information Protection: Share protected and track.
+description: Step 5 of an introduction tutorial to quickly try out Azure Information Protection - Share protected and track.
 keywords:
 author: cabailey
 ms.author: cabailey
