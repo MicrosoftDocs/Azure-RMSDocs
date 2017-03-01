@@ -44,7 +44,7 @@ Use the following information to see what’s new or changed in a release. The m
 
 **Change to requirements:**
 
-The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
+The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. For more information, see the [installation section of the admin guide](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
 
 
 **Fixes**:
