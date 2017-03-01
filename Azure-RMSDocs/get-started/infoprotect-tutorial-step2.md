@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 2  - AIP
-description: Step 2 of an introduction tutorial to quickly try out Azure Information Protection: Configure the policy.
+description: Step 2 of an introduction tutorial to quickly try out Azure Information Protection - Configure the policy.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
