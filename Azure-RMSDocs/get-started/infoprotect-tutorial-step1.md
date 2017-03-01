@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 1 - AIP
-description: Step 1 of an introduction tutorial to quickly try out Azure Information Protection: Activate the Azure Rights Management service.
+description: Step 1 of an introduction tutorial to quickly try out Azure Information Protection - Activate the Azure Rights Management service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
