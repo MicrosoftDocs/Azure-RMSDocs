@@ -95,13 +95,17 @@ In addition to using the following instructions, the Azure Information Protectio
 
 1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-2. For a default installation, simply run the executable, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
+2. For a default installation, simply run the executable, **AzInfoProtection.exe**. However, to see installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
 
-   Example to silently install the client: `AzInfoProtection.exe /quiet`
-   
-   Example to silently install only the PowerShell cmdlets: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
-   
-   In addition, if you are installing the client on computers that run Office 2010, you must specify the **ServiceLocation** parameter (not included in the help screen) if your users are not local administrators on their computers. See the next section for more information.
+    Example to silently install the client: `AzInfoProtection.exe /quiet`
+    
+    Example to silently install only the PowerShell cmdlets: `AzInfoProtection.exe  PowerShellOnly=true /quiet`
+    
+    Additional parameters that are not listed on the help screen:
+    
+    - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter) 
+    
+    - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
 
 3. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
     
@@ -113,13 +117,15 @@ In addition to using the following instructions, the Azure Information Protectio
     
     - For other versions of Office, restart any Office applications and all instances of File Explorer. 
         
-5. You can confirm that the installation was successful by checking the install log file in the %temp% folder. This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
+5. You can confirm that the installation was successful by checking the install log file, which by default is created in the %temp% folder. You can change this location with the **/log** installation parameter. 
+ 
+    This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
     For example: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** If the installation failed, this log file contains details to help you identify and resolve any problems.
 
-### Additional instructions for Office 2010 only
+### More information about the ServiceLocation installation parameter
 
 When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the ServiceLocation parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
@@ -150,6 +156,16 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
+### More information about the DowngradeDotNetRequirement installation parameter
+
+For reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
+
+If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
+
+For example: **AzInfoProtection.exe DowngradeDotNetRequirement=True**
+
+We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions.
+
 ## To uninstall the Azure Information Protection client
 
 You can use any of these options:
@@ -175,7 +191,7 @@ The **Tell me more link** by default, goes to the [Azure Information Protection]
 
 Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources). 
 
-The **Export Logs** is to automatically collect and attach log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. They can also be used by end users to send these log files to your help desk.
+The **Export Logs** is to automatically collect and attach log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
 For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
 
