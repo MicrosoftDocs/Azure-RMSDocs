@@ -32,10 +32,12 @@ ms.suite: ems
 
 Azure Information Protection (sometimes abbreviated to AIP) has evolved from a long history of established technologies from Microsoft that implement rights management protection. Because of this evolution, you might know this solution by one of its previous names. Or you might see references to these names in documentation, the UI, and log files. 
 
+The following sections list some of these names.
+
 > [!TIP]
 > You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](../get-started/terminology.md).
 
-## As a cloud-based solution
+## Cloud-based solutions
 
 - **Azure Rights Management** or **Azure Rights Management service**—frequently abbreviated to *Azure RMS*
 
@@ -43,7 +45,7 @@ Azure Information Protection (sometimes abbreviated to AIP) has evolved from a l
 
 - **Windows Azure Active Directory Rights Management**—often abbreviated to *Windows Azure AD Rights Management*
 
-## As an on-premises solution
+## On-premises solutions
 
 - **Active Directory Rights Management Services**—frequently abbreviated to *AD RMS*
 
