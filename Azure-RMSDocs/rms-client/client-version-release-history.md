@@ -49,7 +49,7 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 **Fixes**:
 
-- Better support for large files ( >250 MB) in the viewer. 
+- Support for large files ( >250 MB) in the viewer. 
 
 **New features**:
 
