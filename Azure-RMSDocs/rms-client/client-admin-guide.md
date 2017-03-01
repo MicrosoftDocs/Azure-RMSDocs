@@ -214,7 +214,11 @@ If you need to sign in as a different user to the one displayed, see [How do I s
 
 The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 
+If you see **This client is not licensed for Office Professional Plus**: The Azure Information Protection client has detected that the installed edition of Office does not support applying Rights Management protection. When this detection is made, labels that apply protection do not display on the Azure Information Protection bar.
+
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
+
+
 
 
 ## Next steps

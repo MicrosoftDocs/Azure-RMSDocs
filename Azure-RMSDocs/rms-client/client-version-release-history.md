@@ -42,6 +42,11 @@ Use the following information to see what’s new or changed in a release. The m
 
 **Released**: 03/15/2017
 
+**Change to requirements:**
+
+The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
+
+
 **Fixes**:
 
 - Better support for large files ( >250 MB) in the viewer. 
