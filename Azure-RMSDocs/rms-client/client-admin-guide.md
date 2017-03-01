@@ -162,20 +162,9 @@ For reliable integration with Office applications, the Azure Information Protect
 
 If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
 
-For example: **AzInfoProtection.exe DowngradeDotNetRequirement=True**
+For example: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions.
-
-## To uninstall the Azure Information Protection client
-
-You can use any of these options:
-
-- Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
-
-- Rerun the executable (for example, **AzInfoProtection.exe**), and from the **Modify Setup** page, click **Uninstall**. 
-
-- Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
-
 
 ## Additional checks and troubleshooting
 
@@ -210,7 +199,7 @@ More information about the **Reset** option:
 
 Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
-If you need to sign in as a different user to the one displayed, see [How do I sign in as a different user?](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user).
+If you need to sign in as a different user to the one displayed, see [How do I sign in as a different user?](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user)
 
 The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 
@@ -218,8 +207,15 @@ If you see **This client is not licensed for Office Professional Plus**: The Azu
 
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
 
+## To uninstall the Azure Information Protection client
 
+You can use any of these options:
 
+- Use Control Panel to uninstall a program: Click **Microsoft Azure Information Protection** > **Uninstall**
+
+- Rerun the executable (for example, **AzInfoProtection.exe**), and from the **Modify Setup** page, click **Uninstall**. 
+
+- Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
