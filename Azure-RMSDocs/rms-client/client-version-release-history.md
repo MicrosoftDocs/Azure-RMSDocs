@@ -49,6 +49,8 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 **Fixes**:
 
+- Support for mapped drives when classifying and protecting files.
+
 - Support for large files ( >250 MB) in the viewer. 
 
 **New features**:
@@ -57,7 +59,7 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
     
 - PDF files now support labels that apply classification-only.
 
-- The viewer now supports search, zoom, and rotate for PDF files.
+- For PDF files, the viewer now supports options such as search, zoom, and rotate. To use these options, right-click on the file when it is displayed in the viewer.
 
 
 ## Version 1.3.155.2
@@ -104,7 +106,7 @@ This client version is the [General Availability release](https://blogs.technet.
 
 - Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
 
-    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#Additional-checks-and-troubleshooting) section from the admin guide.
+    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
 
 ## Version 1.1.23.0
 
