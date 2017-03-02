@@ -161,7 +161,7 @@ You can use any of these options:
 - Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
 
 
-## To verify installation, connection status, or send feedback
+## Additional checks To verify installation, connection status, or send feedback
 
 1. Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**.
 

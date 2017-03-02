@@ -2,7 +2,7 @@
 # required metadata
 
 title: Quick start tutorial step 4  - AIP
-description: Step 4 of an introduction tutorial to quickly try out Azure Information Protection: See labeling & protection in action.
+description: Step 4 of an introduction tutorial to quickly try out Azure Information Protection - See labeling & protection in action.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
