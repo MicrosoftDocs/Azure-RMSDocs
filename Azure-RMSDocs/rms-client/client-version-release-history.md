@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,7 +82,7 @@ This client version is the [General Availability release](https://blogs.technet.
 
 - Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
 
-    For more information about this option, see the [To verify installation, connection status, or send feedback](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) section from the client installation documentation.
+    For more information about this option, see the [To verify installation, connection status, or send feedback](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) section from the client installation documentation.
 
 ## Version 1.1.23.0
 
