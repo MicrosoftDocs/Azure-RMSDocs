@@ -49,9 +49,11 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 **Fixes**:
 
-- Support for mapped drives when classifying and protecting files.
+- File Explorer, right-click support for mapped drives to classify and protecting files.
 
 - Support for large files ( >250 MB) in the viewer. 
+
+- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates.
 
 **New features**:
 
