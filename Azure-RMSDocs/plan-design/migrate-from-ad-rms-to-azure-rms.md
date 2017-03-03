@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,12 +64,6 @@ Before you start the migration to Azure Information Protection, make sure that t
         
         - Windows Server 2016 (x64)
         
-    - Cryptographic Mode 2:
-
-        - Your AD RMS servers and clients must be running in Cryptographic Mode 2 before you begin the migration to Azure Information Protection.
-        
-        Although the current server licensor certificate (SLC) key must be using Cryptographic Mode 2, previous keys that were configured for Cryptographic Mode 1 are supported by Azure Information Protection as archived keys. For more information about the cryptographic modes and how to move to Cryptographic Mode 2, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-        
     - All valid AD RMS topologies are supported:
     
         - Single forest, single RMS cluster
@@ -78,7 +72,7 @@ Before you start the migration to Azure Information Protection, make sure that t
         
         - Multiple forests, multiple RMS clusters
         
-    Note: By default, multiple RMS clusters migrate to a single Azure Information Protection tenant. If you want separate Azure Information Protection tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure Information Protection tenant.
+    Note: By default, multiple AD RMS clusters migrate to a single Azure Information Protection tenant. If you want separate Azure Information Protection tenants, you must treat them as different migrations. A key from one RMS cluster cannot be imported to more than one Azure Information Protection tenant.
 
 - **All requirements to run Azure Information Protection, including an Azure Information Protection tenant (not activated):**
 
@@ -109,7 +103,22 @@ Before you start the migration to Azure Information Protection, make sure that t
 	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
-Limitations:
+### Cryptographic mode considerations
+
+Although not a prerequisite for migration, we recommend that your AD RMS servers and clients are running in Cryptographic Mode 2 before you start the migration. 
+
+For more information about the different modes and how to upgrade, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+
+If your AD RMS cluster is in Cryptographic Mode 1 and you cannot upgrade it, you must re-key your Azure Information Protection tenant key when migration is complete. Re-keying creates a new tenant key that uses Cryptographic Mode 2. Using the Azure Rights Management service with Cryptographic Mode 1 is supported only during the migration process.
+
+To confirm the AD RMS cryptographic mode:
+ 
+- For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
+
+- For all supported versions of AD RMS: Use the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and **AD RMS admin** option to view the cryptographic mode in the **RMS service information**.
+
+
+### Migration limitations:
 
 -   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure Information Protection, Exchange Online does not currently support this configuration for the Rights Management service that is used by Azure Information Protection. If you want full IRM functionality with Exchange Online after you migrate to Azure Information Protection, your Azure Information Protection tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online when your Azure Information Protection tenant is managed by you (BYOK). For more information about using Exchange Online with the Azure Rights Management service, see [Step 6. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
 
@@ -197,7 +206,7 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 - **Step 9: Re-key your Azure Information Protection tenant key**
 
-    This step is optional but recommended if your chosen Azure Information Protection tenant key topology from step 2 is Microsoft-managed. This step is not applicable if your chosen Azure Information Protection tenant key topology is customer-managed (BYOK).
+    This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure Information Protection tenant key.
 
 
 ## Next steps
