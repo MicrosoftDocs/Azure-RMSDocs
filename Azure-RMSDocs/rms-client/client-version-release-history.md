@@ -49,11 +49,13 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 **Fixes**:
 
-- File Explorer, right-click support for mapped drives to classify and protecting files.
+- Support for mapped drives to classify and protecting files.
 
 - Support for large files ( >250 MB) in the viewer. 
 
-- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates.
+- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates in addition to applying labels that are configured to use AD RMS templates.
+
+- Because the Standard edition of Office does not support Azure Rights Management protection, the Azure Information Protection client no longer initializes the user environment for this service ("bootstrap the client") when this edition of Office is detected. Beginning with the previous release of the client, when this Office edition is detected, labels that are configured to apply Rights Management protection do not display on the Azure Information Protection bar and this information was added to the user guide: [Is the label that you expect to see not displayed on the bar?](../rms-client/client-classify-protect.md#is-the-label-that-you-expect-to-see-not-displayed-on-the-bar)
 
 **New features**:
 
