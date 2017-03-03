@@ -118,7 +118,7 @@ To confirm the AD RMS cryptographic mode:
 - For all supported versions of AD RMS: Use the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and **AD RMS admin** option to view the cryptographic mode in the **RMS service information**.
 
 
-### Migration limitations:
+### Migration limitations
 
 -   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure Information Protection, Exchange Online does not currently support this configuration for the Rights Management service that is used by Azure Information Protection. If you want full IRM functionality with Exchange Online after you migrate to Azure Information Protection, your Azure Information Protection tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online when your Azure Information Protection tenant is managed by you (BYOK). For more information about using Exchange Online with the Azure Rights Management service, see [Step 6. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) from these migration instructions.
 
