@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,12 +53,16 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 |Cryptographic controls|Use in Azure RMS|
 |-|-|
 |Algorithm: AES<br /><br />Key length: 128 bits and 256 bits [[1]](#footnote-1)|Documentation protection|
-|Algorithm: RSA<br /><br />Key length: 2048 bits|Key protection|
+|Algorithm: RSA<br /><br />Key length: 2048 bits [[2]](#footnote-2)|Key protection|
 |SHA-256|Certificate signing|
 
 ###### Footnote 1 
 
 256 bits is used by the Azure Information Protection client and the Rights Management sharing application for generic protection and native protection when the file has a .ppdf file name extension or is a protected text or image file (such as .ptxt or .pjpg).
+
+###### Footnote 2
+
+2048 bits is the default key length when the Azure Rights Management service is activated. The service supports 1024 bits during a migration if the AD RMS cluster cannot be upgraded to Cryptographic Mode 2.
 
 How the cryptographic keys are stored and secured:
 
