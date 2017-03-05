@@ -75,7 +75,10 @@ Azure Information Protection by default, uses RSA 2048 for all public key crypt
 
 Both Azure Information Protection and AD RMS use AES 128 for symmetric encryption.
 
-Azure Information Protection is compliant with FIPS 140-2 when your tenant key size is 2048-bits, which is the default when the Azure Rights Management service is activated. For more information about managing your tenant key, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
+Azure Information Protection is compliant with FIPS 140-2 when your tenant key size is 2048-bits, which is the default when the Azure Rights Management service is activated. 
+
+For more information about the cryptographic controls, see [Cryptographic controls used by Azure RMS: Algorithms and key length](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+
 
 ## Next steps
 If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
