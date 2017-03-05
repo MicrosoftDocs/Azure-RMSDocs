@@ -62,13 +62,19 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 ###### Footnote 2
 
-2048 bits is the default key length when the Azure Rights Management service is activated. The service supports 1024 bits during a migration if the AD RMS cluster cannot be upgraded to Cryptographic Mode 2.
+2048 bits is the active key length when the Azure Rights Management service is activated. 1024 bits is supported for the following scenarios:
+
+- During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1 and cannot be upgraded to Cryptographic Mode 2.
+
+- For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after the migration to Azure Rights Management.
+
+- If customers choose to bring their own key (BYOK) by using Azure Key Vault. We recommend but do not enforce a minimum key size of 2048 bits.
 
 How the cryptographic keys are stored and secured:
 
 - For each document or email that is protected by Azure RMS, Azure RMS creates a single AES key (the "content key"), and that key is embedded to the document, and persists through editions of the document. 
 
-- The content key is protected with the organization’s RSA key (the "Azure Information Protection tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by Azure RMS for the organization and this key can only be changed by an Azure Information Protection administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
+- The content key is protected with the organization’s RSA key (the "Azure Information Protection tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by the Azure Rights Management service for the organization and this key can only be changed by an Azure Information Protection administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
 
 	This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
