@@ -62,11 +62,11 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 ###### Footnote 2
 
-2048 bits is the active key length when the Azure Rights Management service is activated. 1024 bits is supported for the following scenarios:
+2048 bits is the active key length when the Azure Rights Management service is activated. 1024 bits is supported for the following optional scenarios:
 
 - During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1 and cannot be upgraded to Cryptographic Mode 2.
 
-- For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after the migration to Azure Rights Management.
+- For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after migrating to Azure Rights Management.
 
 - If customers choose to bring their own key (BYOK) by using Azure Key Vault. We recommend but do not enforce a minimum key size of 2048 bits.
 
