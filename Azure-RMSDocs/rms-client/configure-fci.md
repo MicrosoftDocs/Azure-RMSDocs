@@ -76,7 +76,7 @@ Follow these instructions to automatically protect all files in a folder, by usi
 
 At the end of these instructions, all files in your selected folder will be classified with the custom property of RMS, and these files will then be protected by Rights Management. For a more complex configuration that selectively protects some files and not others, you can then create or use a different classification property and rule, with a file management task that protects just those files.
 
-Note that if you make changes to the Rights Management template that you use for FCI, you must run `Get-RMSTemplate -Force` on the file server computer to get the updated template.
+Note that if you make changes to the Rights Management template that you use for FCI, you must run `Get-RMSTemplate -Force` on the file server computer to get the updated template. 
 
 ### Save the Windows PowerShell script
 
