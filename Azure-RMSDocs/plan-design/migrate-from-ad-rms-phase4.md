@@ -53,14 +53,17 @@ Monitor your AD RMS servers for activity, for example, by checking the [request
 After decommissioning your AD RMS servers, you might want to take the opportunity to review your templates in the Azure classic portal and consolidate them so that users have fewer to choose between, or reconfigure them, or even add new templates. This would be also a good time to publish the default templates. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
 ## Step 9. Re-key your Azure Information Protection tenant key
-This step is applicable only if your chosen tenant key topology is Microsoft-managed rather than customer-managed (BYOK with Azure Key Vault).
+This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
 
-This step is optional but recommended when your Azure Information Protection tenant key is managed by Microsoft and has been migrated from AD RMS. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
+This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
 
 When you re-key your Azure Information Protection tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure Information Protection tenant key as soon as the migration is complete.
 
-To re-key your Microsoft-managed Azure Information Protection tenant key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to re-key your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+To re-key your Azure Information Protection tenant key:
 
+- If your tenant key is managed by Microsoft: Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to re-key your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+
+- If your tenant key is managed by you (BYOK): Re-key your Azure Information Protection tenant key in Key Vault, and then run the Add-AadrmKeyVaultKey cmdlet again to specify the new key URL. 
 
 ## Next steps
 
