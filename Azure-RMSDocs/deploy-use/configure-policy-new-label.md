@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to create a new label | Azure Information Protection
+title: New Azure Information Protection label
 description: Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,8 +44,7 @@ Use the following instructions to add a new label to the Azure Information Prote
 	- To create a new label: Click **Add a new label**.
 
 	- To create a new sub-label: Right-click or select the context menu (**...**) for the label that you want to create a sub-label for, and then click **Add a sub-label**.
-
-
+    
      If the new label that you want to add will be in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.
 
 3. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.

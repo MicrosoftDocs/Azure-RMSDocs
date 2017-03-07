@@ -1,12 +1,12 @@
 ﻿---
 # required metadata
 
-title: What is Azure Information Protection? | Azure Information Protection
+title: What is Azure Information Protection?
 description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ After your content is classified (and optionally protected), you can then track 
 
 ## How labels apply classification
 
-You use Azure Information Protection labels to apply classifcation to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The persistent labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+You use Azure Information Protection labels to apply classifcation to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
 
 For example, the following email message has been classified as "Internal". This label is added as a footer to the email message, as a visual indicator for all recipients that it's intended for internal use and should not be sent outside the organization. This label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
@@ -50,7 +50,7 @@ For example, the following email message has been classified as "Internal". This
 
 The protection technology uses *Azure Rights Management* (often abbreviated to Azure RMS). This technology is integrated with other Microsoft cloud services and applications, such as Office 365 and Azure Active Directory. It can also be used with your own line-of-business applications and information protection solutions from software vendors, whether these applications and solutions are on-premises, or in the cloud.
 
-This protection technology uses encryption, identity, and authorization policies. Similarly to the persistent labels, protection that is applied by using Rights Management stays with the documents and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
+This protection technology uses encryption, identity, and authorization policies. Similarly to the labels that are applied, protection that is applied by using Rights Management stays with the documents and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
 
 For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and in addition, prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using *rights management templates*.
 
@@ -103,9 +103,9 @@ After a document has been protected, users and administrators can use a document
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Video overview
+- Video: "Top 5 Tips for Information Protection"
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
     In addition, Microsoft Ignite 2016 offers many on-demand sessions for Azure Information Protection:
 
@@ -122,8 +122,10 @@ After a document has been protected, users and administrators can use a document
 
 ## Next steps
 
+Read the blog post, [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
+
 Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-Know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
+Perhaps you know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

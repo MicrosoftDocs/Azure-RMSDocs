@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: On-premises server support for data protection | Azure Information Protection
+title: Server support for Azure RMS data protection  - AIP
 description: Identify the on-premises server products that can use the Azure Rights Management service from Azure Information Protection, by using the Rights Management connector.
 author: cabailey
 ms.author: cabailey

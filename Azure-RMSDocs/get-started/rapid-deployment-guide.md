@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Rapid deployment guide for Azure Rights Management | Azure Information Protection
+title: Rapid deployment guide for Azure RMS - AIP
 description: A guide to help you more quickly deploy and use the Azure Rights Management service to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
 author: cabailey
 ms.author: cabailey

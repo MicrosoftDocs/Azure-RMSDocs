@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection client administrator guide | Azure Information Protection
+title: Azure Information Protection client admin guide
 description: Instructions and information for admins on an enterprise network who are responsible for deploying the Azure Information Protection client for Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -84,7 +84,7 @@ In addition:
 
 - If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
-- The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). To confirm the version of Windows PowerShell that you are running, type **$PSVersionTable** in a PowerShell session.
+- The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type **$PSVersionTable** in a PowerShell session.
 
 - Computers running Windows 7 Service Pack 1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you are prompted to install it.
 
@@ -94,8 +94,10 @@ In addition:
 In addition to using the following instructions, the Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
 
 1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+    
+    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
-2. For a default installation, simply run the executable, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
+2. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
 
    Example to silently install the client: `AzInfoProtection.exe /quiet`
    
@@ -113,9 +115,11 @@ In addition to using the following instructions, the Azure Information Protectio
     
     - For other versions of Office, restart any Office applications and all instances of File Explorer. 
         
-5. You can confirm that the installation was successful by checking the install log file in the %temp% folder. This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. For example: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+5. You can confirm that the installation was successful by checking the install log file in the %temp% folder. This file has the following naming format: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.**
+    For example: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** If the installation failed, this log file contains details to help you identify and resolve any problems.
 
 ### Additional instructions for Office 2010 only
 
@@ -159,7 +163,7 @@ You can use any of these options:
 - Run the executable with **/uninstall**. For example: `AzInfoProtection.exe /uninstall`
 
 
-## To verify installation, connection status, or send feedback
+## Additional checks To verify installation, connection status, or send feedback
 
 1. Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**.
 

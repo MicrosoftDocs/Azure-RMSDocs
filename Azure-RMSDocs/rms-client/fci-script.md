@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI | Azure Information Protection
+title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,7 +65,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 3.1' 
+[String] $Script:Version = 'version 3.2' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -124,7 +124,6 @@ function Set-RMSConnection ($fappId, $fkey, $fbposId) {
     try {
                Set-RMSServerAuthentication -AppPrincipalId $fappId -Key $fkey -BposTenantId $fbposId
         Write-Host ("Information: " + "Connected to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")
-        Get-RMSTemplate
         $returnValue = $true
     } catch {
         Write-Host ("ERROR" + "During connection to Azure RMS Service with BposTenantId: $fbposId using AppPrincipalId: $fappId")

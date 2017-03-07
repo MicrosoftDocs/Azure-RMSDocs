@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Preparing for Azure Rights Management protection| Azure Information Protection
+title: Prepare for Azure Rights Management protection - AIP
 description: Check that you have everything ready to use the Azure Rights Management service, so that your organization can protect documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,6 +38,10 @@ Before you deploy Azure Information Protection for your organization, make sure 
 -   Mail-enabled groups in the cloud that you will use with Azure Information Protection. These can be built-in groups or manually created groups that contain users who will use protected documents and emails.
 
     If you have Exchange Online, you can create and use mail-enabled groups by using the Exchange admin center. If you have AD DS and are synchronizing to Azure AD, you can create and use mail-enabled groups that are either security groups or distribution groups.
+
+### Group membership caching
+
+For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership can take up to 3 hours to take effect, and this time period is subject to change. Remember to factor this delay into any changes or testing that you do when you use groups in your configuration of the Azure Rights Management service, such as configuring [custom templates](../deploy-use/configure-custom-templates.md) or when you use a group for the [super user feature](../deploy-use/configure-super-users.md). 
 
 ## Activate the Rights Management service for data protection
 When you are ready to start protecting documents and emails, activate the Rights Management service to enable this technology. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Helping users to protect files by Using the Azure Rights Management service| Azure Information Protection
+title: Help users protect files by using Azure RMS - AIP
 description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,6 +48,8 @@ After you have deployed and configured Azure Information Protection for your org
 -   **Help desk information:**
 
     One of the most useful tools for the help desk is the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Help desk operators can run it with the Azure RMS administrator option, and they can ask users to run it with the Azure RMS user option. This tool can not only help identify problems, but also fix problems that it finds, and if still not fixed, record trace logs.
+    
+    If users are running the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, unlike the RMS Analyzer, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
 
     If there are legitimate requests to have full rights access to protected documents, for example a request by the legal department or a manager after an employee has left the organization, make sure the help desk has processes to request this by using the Azure Rights Management [super user feature](configure-super-users.md).
 

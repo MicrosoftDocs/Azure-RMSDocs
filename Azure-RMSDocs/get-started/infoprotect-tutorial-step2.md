@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Quick start tutorial step 2 | Azure Information Protection
-description: Step 2 of an introduction tutorial to quickly try out Microsoft Azure Information Protection for your organization that should take you about 20 minutes.
+title: Quick start tutorial step 2  - AIP
+description: Step 2 of an introduction tutorial to quickly try out Azure Information Protection - Configure the policy.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,13 +70,13 @@ We'll now change the settings of one of the labels, **Confidential**:
 
 2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**.
 
-    Select the **Protection** option:
+    Select **Protect**, and then select the **Protection** option:
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png) 
     
-    This action opens the **Permissions** blade.
+    This action opens the **Protection** blade.
     
-3. In the **Permissions** blade, make sure that **Azure RMS** is selected, that **Select template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
+3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
     
     For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
     
@@ -84,7 +84,7 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-4. Click **Done** to save your changes and close the **Permissions** blade.
+4. Click **OK** to save your changes and close the **Protection** blade.
 
 5. Back on the **Label: Confidential** blade, locate the section **Set visual marking**:
     

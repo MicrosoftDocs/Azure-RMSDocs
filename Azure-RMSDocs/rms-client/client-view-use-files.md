@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: View and use protected files | Azure Information Protection
+title: View and use protected files with the AIP client
 description: Instructions to view and use a protected file that requires you to have the Azure Information Protection client installed.
 author: cabailey
 ms.author: cabailey

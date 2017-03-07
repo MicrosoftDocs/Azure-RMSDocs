@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configuring usage rights for Azure Rights Management | Azure Information Protection
+title: Configure usage rights for Azure Rights Management - AIP
 description: Understand and identify the specific rights that are used when you protect files or emails by using the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey

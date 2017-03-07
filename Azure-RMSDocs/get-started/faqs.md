@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Frequently asked questions for Azure Information Protection | Azure Information Protection
+title: FAQs for Azure Information Protection
 description: Some frequently asked questions about Azure Information Protection and its data protection service, Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,6 +42,14 @@ See the [subscription information](https://www.microsoft.com/en-us/cloud-platfor
 
 If you have an Office 365 subscription that includes Rights Management, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) from the **Features** page.
 
+## Does Azure Information Protection support on-premises and hybrid scenarios?
+
+Yes. Although Azure Information Protection is a cloud-based solution, it can classify, label, and protect documents and emails that are stored on-premises, as well as in the cloud.
+
+If you have Exchange Server, SharePoint Server, and Windows file servers, you can deploy the [Rights Management connector](../deploy-use/deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents. You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
+
+The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
+
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
 The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
@@ -49,6 +57,14 @@ The technical documentation does not contain information about upcoming releases
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 
 See [Compliance and supporting information for Azure Information Protection](../understand-explore/compliance.md).
+
+## How can I report a problem or send feedback for Azure Information Protection?
+
+For technical support, use your standard support channels or [contact Microsoft Support](information-support.md#to-contact-microsoft-support).
+
+For feedback such as suggestions for improvements or new features: In your Office application, on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. In the **Microsoft Azure Information Protection** dialog box, click **Send feedback**. This emails the Information Protection team, and automatically attaches log files from your PC. 
+
+We also invite you to engage with our engineering team, on their [Azure Information Protection Yammer site](https://www.yammer.com/askipteam/). 
 
 ## What do I do if my question isn’t here?
 

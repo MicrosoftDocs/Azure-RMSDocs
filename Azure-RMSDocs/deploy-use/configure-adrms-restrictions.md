@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: HYOK restrictions | Azure Information Protection
+title: HYOK restrictions for Azure Information Protection
 description: Identify the limitations, prerequisites, and recommendations if you select HYOK (AD RMS) protection with Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,7 +51,7 @@ In this HYOK scenario, the rights policies and the organization's private key th
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs".
 >
-> Even for the organizations that use this configuration, it will typically be suitable for 10% or less of your overall content. As guidance, use it only for documents or emails that match all the following criteria:
+> Even for the organizations that use this configuration, it will typically be suitable for less than 10% of all the content that needs to be protected content. As guidance, use it only for documents or emails that match all the following criteria:
 > 
 > - The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people.
 > 

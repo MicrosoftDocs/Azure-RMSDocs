@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to configure the policy settings | Azure Information Protection
+title: Configure Azure Information Protection policy settings
 description: Configure settings in the Azure Information Protection policy that apply to all users, all devices.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

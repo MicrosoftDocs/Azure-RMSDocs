@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Requirements for Azure Information Protection | Azure Information Protection
+title: Requirements for Azure Information Protection
 description: Identify the prerequisites to deploy Azure Information Protection for your organization.
 author: cabailey
 ms.author: cabailey

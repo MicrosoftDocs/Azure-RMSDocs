@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: What Do Admins and Users See? | Azure Information Protection
+title: What admins and users see with  Azure RMS - AIP
 description: See some typical examples of how administrators and users see and can use Azure Rights Management (Azure RMS) technology to help protect sensitive or confidential information.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -133,7 +133,7 @@ In this example, the administrator configures a policy to help keep the organiza
 
 The rules are configured so that email messages that contain this information and that are sent outside the organization automatically have rights protection applied by using an RMS template that restricts access to company employees only.
 
-Here, the rule is configured to use one of the default templates, **VanArsdel, Ltd – Confidential**, from our first example. But you can also see how the choice of templates includes any custom templates you’ve created, and a **No Do Forward** option that is specific to Exchange.
+Here, the rule is configured to use one of the default templates, **VanArsdel, Ltd – Confidential**, from our first example. But you can also see how the choice of templates includes any custom templates you’ve created, and a **Do Not Forward** option that is specific to Exchange.
 
 > [!NOTE]
 > If the configuration options you see are slightly different from the picture, you might need to first select  **More options** when you configure the rule. You can then select **Modify the message security** > **Apply rights protection**, and then select the RMS template.
