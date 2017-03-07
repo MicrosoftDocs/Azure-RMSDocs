@@ -34,9 +34,9 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Info
 
 ## Step 5. Reconfigure clients to use Azure Information Protection
 
-For Windows computers that use Office 2016:
+For Windows computers that use Office 2016 click-to-run desktop apps:
 
-- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest, but it is restricted to Office 2016 (or later).
+- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest, but it is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
     
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
@@ -54,9 +54,9 @@ See the following sections for more information about how to reconfigure Windows
 
 ## Client reconfiguration by using DNS redirection 
 
-This method is suitable only for Windows clients that run Office 2016 (or later).
+This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
 
-1. Create a DNS SRV record for clients, using the following format: 
+1. Create a DNS SRV record for clients in their forward lookup zone, using the following format: 
 
 	**_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>**
 
