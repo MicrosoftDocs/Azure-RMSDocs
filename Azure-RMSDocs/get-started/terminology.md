@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -70,6 +70,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |RMS connector|See *Rights Management connector*.|
 |RMS for individuals|A free subscription for a user to use [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] when their organization does not have a subscription to Office 365 or Azure Active Directory.|
 |RMS sharing app|See *Rights Management sharing application*.|
+|protection-only mode|An operational mode for the Azure Information Protection client when there is no Azure Information Protection policy to apply labels. In this mode, classification labels are not displayed but users can still apply Rights Management protection.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
 |tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] cryptographic functions that chain to this tenant key.|
 |unprotect|Remove rights management controls from files or email messages, which used encryption, identity, and access control policies to help secure your data.|
