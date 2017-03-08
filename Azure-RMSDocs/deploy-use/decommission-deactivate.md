@@ -62,22 +62,13 @@ Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement
 
 #### To deactivate Rights Management from the Office 365 admin center
 
-1.  [Sign in to Office 365 with your work or school account](https://portal.office.com/) that is an administrator for your Office 365 deployment.
+1. Go to the [Rights Management page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+    
+    If you are prompted to sign in, use an account that is a global administrator for Office 365.    
 
-2.  If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
+2. On the **rights management** page, click **deactivate**.
 
-    > [!TIP]
-    > For admin center help, see [About the Office 365 admin center - Admin Help](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
-
-3.  In the left pane, expand **SERVICE SETTINGS**.
-
-4.  Click **Rights Management**.
-
-5.  On the **RIGHTS MANAGEMENT** page, click **Manage**.
-
-6.  On the **rights management** page, click **deactivate**.
-
-7.  When prompted **Do you want to deactivate Rights Management?**, click **deactivate**.
+3.  When prompted **Do you want to deactivate Rights Management?**, click **deactivate**.
 
 You should now see **Rights Management is not activated** and the option to activate.
 
@@ -89,7 +80,7 @@ You should now see **Rights Management is not activated** and the option to acti
 
 3.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
 
-4.  Select the directory to manage for [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], click **DEACTIVATE**, and then confirm your action.
+4.  Make sure that your tenant name is selected, click **DEACTIVATE**, and then confirm your action.
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Inactive** and the **DEACTIVATE** option is replaced with **ACTIVATE**.
 
