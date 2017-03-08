@@ -43,15 +43,8 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership can take up to 3 hours to take effect, and this time period is subject to change. Remember to factor this delay into any changes or testing that you do when you use groups in your configuration of the Azure Rights Management service, such as configuring [custom templates](../deploy-use/configure-custom-templates.md) or when you use a group for the [super user feature](../deploy-use/configure-super-users.md). 
 
-## The Rights Management service must be activated
-
-This data protection service from Azure Information Protection must be activated before you can protect your organization's documents and emails: 
-
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after **March 31st, 2017**, the service is automatically activated for you. 
-
-- If your subscription was obtained before this date, you must activate the service yourself. 
-
-For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+## Activate the Rights Management service for data protection
+When you are ready to start protecting documents and emails, activate the Rights Management service to enable this technology. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
