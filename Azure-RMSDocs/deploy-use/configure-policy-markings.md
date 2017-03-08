@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,9 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark:
 
-The visual markings are applied to Word, Excel, and PowerPoint documents when the label is applied, and when the documented is saved. For email messages, the visual markings are applied when the email message is sent.
+The visual markings are applied to Word, Excel, and PowerPoint documents when the label is applied and when the documented is saved in these Office applications. For email messages, the visual markings are applied when the email message is sent from Outlook.
+
+Visual markings are not applied to documents when the label is applied by using File Explorer and the right-click action. Or when a document is classified by using PowerShell.
 
 Additional information about these visual markers:
 

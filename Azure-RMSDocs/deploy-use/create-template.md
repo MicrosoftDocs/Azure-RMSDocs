@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,16 +54,16 @@ Use the following procedures to create, configure, and publish custom templates 
 
     -   From the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081):
 
-        1.  In the left pane, click **ACTIVE DIRECTORY**.
+        1. In the left pane, click **ACTIVE DIRECTORY**.
 
-        2.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
+        2. From the **active directory** page, click **RIGHTS MANAGEMENT**.
 
-        3.  Select the directory to manage for Rights Management.
-
-        4.  If you have not already activated Rights Management, click **ACTIVATE** and confirm your action.
+        3. If the **RIGHTS MANAGEMENT STATUS** displays **Inactive**, click **ACTIVATE** and confirm your action.
 
             > [!NOTE]
-            > For more information, see [Activating Azure Rights Management](activate-service.md).
+            > For more information, see [Activating Azure Rights Management](activate-service.md)
+            >
+        4. When the **RIGHTS MANAGEMENT STATUS** displays **Active**, select the name of your Active Directory tenant.
 
 2.  Create a new template:
 
