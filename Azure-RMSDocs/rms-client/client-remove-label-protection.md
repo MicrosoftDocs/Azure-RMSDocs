@@ -6,7 +6,7 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,6 +77,5 @@ More how-to instructions from the Azure Information Protection user guide:
 
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
--   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
