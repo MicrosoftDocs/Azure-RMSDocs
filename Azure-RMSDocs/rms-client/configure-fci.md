@@ -6,7 +6,7 @@ description: Instructions to use the Rights Management (RMS) client with the RMS
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,7 +76,7 @@ Follow these instructions to automatically protect all files in a folder, by usi
 
 At the end of these instructions, all files in your selected folder will be classified with the custom property of RMS, and these files will then be protected by Rights Management. For a more complex configuration that selectively protects some files and not others, you can then create or use a different classification property and rule, with a file management task that protects just those files.
 
-Note that if you make changes to the Rights Management template that you use for FCI, you must run `Get-RMSTemplate -Force` on the file server computer to get the updated template. 
+Note that if you make changes to the Rights Management template that you use for FCI, you must run `Get-RMSTemplate -Force` on the file server computer to get the updated template. The updated template will then be used to protect new files. Existing files cannot be re-protected by FCI because the computer's local system account cannot scan the files after they have been protected. If the changes to the template are important enough to re-protect the files on the file server, you can do this by running the Protect-RMSFile cmdlet interactively with an account that has the Export or Full Control usage rights for the files.
 
 ### Save the Windows PowerShell script
 
