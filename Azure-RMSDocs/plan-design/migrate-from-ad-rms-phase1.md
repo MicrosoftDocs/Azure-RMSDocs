@@ -49,18 +49,6 @@ This step is a two-part process:
 
 ### Export the configuration data from AD RMS
 
-> [!IMPORTANT]
-> Before you do this procedure, first confirm that your AD RMS servers are running in Cryptographic Mode 2, which is a requirement for Azure Information Protection.
-> 
-> To confirm the cryptographic mode:
-> 
-> - For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
-> 
-> - For all supported versions of AD RMS: Use the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and **AD RMS admin** option to view the cryptographic mode in the **RMS service information**.
-> 
-> Make sure that the value for the cryptographic mode is **2**. If it is not, see the instructions to enable Cryptographic Mode 2 in [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
-
 Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this on licensing-only clusters.
 
 #### To export the configuration data (trusted publishing domain information)
