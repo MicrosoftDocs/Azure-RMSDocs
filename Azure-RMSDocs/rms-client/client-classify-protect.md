@@ -87,8 +87,6 @@ You can specify your own protection settings for documents rather than use the p
 2. In the **Microsoft Azure Information Protection** dialog box, specify the following:
 
     - **Protect with custom permissions**: Make sure that this is selected so that you can specify and apply your custom permissions. Clear this option to remove any custom permissions.
-
-    - **Protect with custom permissions**: Make sure that this is selected so that you can specify and apply your custom permissions. Clear this option to remove any custom permissions.
     
     - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select Select the level of access that you want specified people to have.
 
