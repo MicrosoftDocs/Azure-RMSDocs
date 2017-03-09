@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -245,7 +245,7 @@ First, if you need to authenticate to the Azure Rights Management service with a
 
 When prompted, enter the three identifiers as described in [Prerequisite 3: To protect or unprotect files without user interaction](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
-Before you can protect files, you need to get a list of the Rights Management templates to identify which one to use and its corresponding ID number. From the output, you can then copy the template ID:
+Before you can protect files, you must download the Rights Management templates to your computer and identify which one to use and its corresponding ID number. From the output, you can then copy the template ID:
 
 	Get-RMSTemplate
     
@@ -268,8 +268,7 @@ Your output might look similar to the following:
 
 Note that if you didn't run the Set-RMSServerAuthentication command, you will be authenticated to the Azure Rights Management service by using your own user account. If you are on a domain-joined computer, your current credentials will always be used automatically. If you are on a workgroup computer, you will be prompted to sign in to Azure and these credentials are then cached for subsequent commands. In this scenario, if you later need to sign in as a different user, use the `Clear-RMSAuthentication` cmdlet.
 
-Now you know the template ID, you can use it with the `Protect-RMSFile` cmdlet to protect a single file or all files in a folder. For example, if
-you want to protect a single file only and overwrite the original, by using the "Contoso, Ltd - Confidential" template:
+Now you know the template ID, you can use it with the `Protect-RMSFile` cmdlet to protect a single file or all files in a folder. For example, if you want to protect a single file only and overwrite the original, by using the "Contoso, Ltd - Confidential" template:
 
 	Protect-RMSFile -File C:\Test.docx -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -312,6 +311,7 @@ Your output might look similar to the following:
 	---------                             -------------
 	C:\Test.docx                          C:\Test.docx
 
+Note that if the Rights Management templates are changed, you must download them again with `Get-RMSTemplate -force`. 
 
 ## Active Directory Rights Management Services
 
