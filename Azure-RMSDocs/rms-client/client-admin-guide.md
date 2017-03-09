@@ -158,13 +158,15 @@ Example to install the client silently for Office 2010 and Azure RMS: `AzInfoPro
 
 ### More information about the DowngradeDotNetRequirement installation parameter
 
-For reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
+To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
 
 If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
 
 For example: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
-We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions.
+We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
+
+Also remember that if you use Windows Update to keep the Azure Information Protection client updated, you will need another software deployment mechanism to upgrade the client to later versions.
 
 ## Additional checks and troubleshooting
 
