@@ -29,12 +29,6 @@ ms.suite: ems
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
 
-## New for the February 2017 - SDK documentation update
->[!Note]  
-> The documentation updates in this section apply to the SDK download version 1.03102.0221.
- 
-- **Data collection** - application error and performance information collection is now available. This feature is controlled via a new property, *IPC_EI_DATA_COLLECTION_ENABLED* one of the [Environment properties](https://msdn.microsoft.com/en-us/library/hh535247.aspx), and can be administratively overridden. 
-
 ## February 2016 - SDK documentation update
 
 >[!Note]
