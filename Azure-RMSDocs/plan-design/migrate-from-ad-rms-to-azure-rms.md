@@ -49,6 +49,8 @@ Although not required, you might find it useful to read the following before you
 
 In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
 
+
+
 ## Prerequisites for migrating AD RMS to Azure Information Protection
 Before you start the migration to Azure Information Protection, make sure that the following prerequisites are in place and that you understand any limitations.
 
@@ -78,6 +80,8 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	See [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
 
+    Note that if you have clients that run Office 2010, you must install the Azure Information Protection client for cloud authentication. For later versions of Office, the Azure Information Protection client is required for classification and labeling, and optional but recommended if you want to only protect data. For more information, see the [Azure Information Protection client admin guide](../rms-client/client-admin-guide.md).
+
 	Although you must have an Azure Information Protection tenant before you can migrate from AD RMS, we recommend that the Rights Management service is not activated prior to the migration. The migration process includes this step after you have exported keys and templates from AD RMS and imported them to Azure Information Protection. However, if the Rights Management service is already activated, you can still migrate from AD RMS.
 
 
@@ -88,7 +92,6 @@ Before you start the migration to Azure Information Protection, make sure that t
 	- Mail-enabled groups in Azure Active Directory
 
 	See [Preparing for Azure Information Protection](prepare.md).
-
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
 
@@ -131,6 +134,24 @@ To confirm the AD RMS cryptographic mode:
 -   If you collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
 
     Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. For help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
+
+## Migration preparation if you collaborate with external partners
+
+Include your AD RMS partners in your planning phase for migration because they must also migrate to Azure Information Protection. Before you do any of the following migration steps, make sure that the following is in place:
+
+- They have an Azure Active Directory tenant that supports the Azure Rights Management service.  
+    
+    For example, they have an Office 365 E3 or E5 subscription, or an Enterprise Mobility + Security subscription, or a standalone subscription for Azure Information Protection.
+
+- Their Azure Rights Management service is not yet activated but they know their tenant URL.
+
+    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)), and then viewing their tenant information ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+
+- They provide you with the URLs for their AD RMS cluster and their Azure Rights Management tenant, so that you can add redirections for your clients as part of your migration.
+
+- They import their AD RMS key into the cloud 
+
+
 
 ## Overview of the steps for migrating AD RMS to Azure Information Protection
 

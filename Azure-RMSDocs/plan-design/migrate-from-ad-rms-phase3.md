@@ -33,6 +33,45 @@ ms.suite: ems
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 6 through 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
+## Step 6. Prepare your Exchange deployment for migration
+
+Make sure that you have your [Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
+
+If you have Exchange Online, run the following PowerShell commands:
+
+    ```
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+    ```
+
+    ```
+    Import-PSSession $Session
+    ```
+
+    ```
+	$irmConfig = Get-IRMConfiguration
+    ```
+
+    ```
+	$list = $irmConfig.LicensingLocation
+    ```
+
+    ```
+	$list += "<YourTenantURL>/_wmcs/licensing"
+    ```
+
+    ```
+	Set-IRMConfiguration -LicensingLocation $list
+    ```
+
+    ```
+	Set-IRMConfiguration -internallicensingenabled $false
+    ```
+
+    ```	
+    Set-IRMConfiguration -internallicensingenabled $true 
+    ```
+
+
 
 ## Step 6. Configure IRM integration for Exchange Online
 

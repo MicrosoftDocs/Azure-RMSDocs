@@ -32,13 +32,30 @@ ms.suite: ems
 Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 4 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Step 1: Download the Azure Rights Management Administration Tool
+## Step 1: Download the Azure Rights Management Administration Tool and identify your tenant URL
+
 Go to the Microsoft Download Center and download the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the Azure Rights Management administration module for Windows PowerShell. Azure Rights Management (Azure RMS) is the service that provides the data protection for Azure Information Protection.
 
 Install the tool. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least 2.5.0.0: `(Get-Module aadrm -ListAvailable).Version`
+
+To complete some of the migration instructions, you will need to know your tenant URL so that you can substitute it for when you see references to *&lt;YourTenantURL&gt;*. Your Azure Information Protection tenant URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
+
+For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+
+### To identify your Azure Information Protection tenant URL
+
+1. Connect to the Azure Rights Management service and when prompted, enter the credentials for your tenant's global administrator:
+
+	Connect-AadrmService
+
+2. Get your tenant's configuration:
+
+	Get-AadrmConfiguration
+
+3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. What remains is your Azure Information Protection tenant URL.
 
 ## Step 2. Export configuration data from AD RMS and import it to Azure Information Protection
 This step is a two-part process:
