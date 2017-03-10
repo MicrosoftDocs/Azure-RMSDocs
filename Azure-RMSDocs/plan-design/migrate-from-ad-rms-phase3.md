@@ -37,39 +37,27 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 Make sure that you have your [Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
 
-If you have Exchange Online, run the following PowerShell commands:
+**If you have Exchange Online**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
 
-    ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-    ```
-
-    ```
-    Import-PSSession $Session
-    ```
-
-    ```
 	$irmConfig = Get-IRMConfiguration
-    ```
-
-    ```
 	$list = $irmConfig.LicensingLocation
-    ```
-
-    ```
 	$list += "<YourTenantURL>/_wmcs/licensing"
-    ```
-
-    ```
 	Set-IRMConfiguration -LicensingLocation $list
-    ```
-
-    ```
 	Set-IRMConfiguration -internallicensingenabled $false
-    ```
-
-    ```	
     Set-IRMConfiguration -internallicensingenabled $true 
-    ```
+
+**If you have Exchange on-premises**: Run the following PowerShell commands either one by one, or in a script: 
+
+	$irmConfig = Get-IRMConfiguration
+	$list = $irmConfig.LicensingLocation
+	$list += "<YourTenantURL>/_wmcs/licensing"
+	Set-IRMConfiguration -LicensingLocation $list
+	Set-IRMConfiguration -internallicensingenabled $false
+	Set-IRMConfiguration -RefreshServerCertificates
+	Set-IRMConfiguration -internallicensingenabled $true
+	IISReset
+
+
 
 
 
