@@ -186,7 +186,7 @@ The following table displays RMS-enlightened solutions from software vendors.
 |Halocore|Secude|Protects files that are exported from SAP environments.|
 |MaaS 360|IBM|Integration to consume and protect documents.|
 |Mobiliya|Mobiliya|Secures documents from EMC’s Documentum repositories.
-|Ramessys|Ramessys|Integration for Chemcart and Documentum
+|Ramessys|Ramessys|Integration for Chemcart and Documentum.
 |Sealpath|Sealpath Technologies|Integration with CAD design tools, such as AutoCAD and Siemens Jt2GO.
 |SecRMM|Sqaudra Technologies |Document protection for removable media.
 |Security Sheriff|Crptzone |Access management on SharePoint and protects documents, based on their classification and access permissions.
