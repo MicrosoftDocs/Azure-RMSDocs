@@ -135,6 +135,23 @@ To complete Step 2, choose and select the instructions for your migration path:
 - [Software-protected key to HSM-protected key](migrate-softwarekey-to-hsmkey.md)
 
 
+# Step x. Prepare for client migration
+
+For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script.
+
+1. Create a group, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Office 365 or Azure Active Directory. Do not assign any users to this group at this time. when users are migrated during a later step, you will add them to the group.
+
+    Make a note of this group's object ID. To do this, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. Or you can copy it from the Azure portal.
+
+2. Configure this group for onboarding controls. To do use, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+
+	Connect-Aadrmservice
+
+    Then configure this group for onboarding controls:
+
+	Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
+
+
 ## Step 3. Activate your Azure Information Protection tenant
 This step requires you to activate the Azure Rights Management service. Instructions are fully covered in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
 

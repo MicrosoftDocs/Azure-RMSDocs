@@ -32,6 +32,14 @@ ms.suite: ems
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover step 5 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
+## Step 5. Prepare clients for migration
+
+For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script.
+
+1. Create a new Active Directory security group, named **AIPMigrated**. Do not assign any 
+
+
+
 ## Step 5. Reconfigure clients to use Azure Information Protection
 
 For Windows computers that use Office 2016 click-to-run desktop apps:

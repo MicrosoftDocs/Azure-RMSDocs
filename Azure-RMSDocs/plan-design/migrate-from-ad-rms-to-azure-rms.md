@@ -202,30 +202,28 @@ The migration steps can be divided into 4 phases that can be done at different t
 [**PHASE 3: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
 
-- **Step 6: Configure IRM integration with Exchange Online**
+- **Step 6: Prepare your Exchange deployment for migration**
 
-    This step is required if you want to use Exchange Online with the Azure Rights Management service from Azure Information Protection.
+    This step is required if you currently use the IRM feature of Exchange Online or Exchange on-premises to protect emails.
 
 
-- **Step 7: Deploy the RMS connector**
+- **Step 7: Configure IRM integration for Exchange Online**
 
-    This step is required if you want to use any of the following on-premises services with the Azure Rights Management service to protect Office documents and emails:
+    This step completes the AD RMS migration configuration for Exchange Online.
 
-	- Exchange Server (for example, transport rules and Outlook Web Access)
+- **Step 8: Configure IRM integration for Exchange Server and SharePoint Server**
 
-	- SharePoint Server
-
-	- Windows Server that runs File Classification Infrastructure (FCI)
+    This step completes the AD RMS migration configuration for Exchange or SharePoint on-premises, which requires deploying the Rights Management connector.
 
 
 [**PHASE 4: POST MIGRATION TASKS**](migrate-from-ad-rms-phase4.md )
 
-- **Step 8: Decommission AD RMS**
+- **Step 9: Decommission AD RMS**
 
     When you have confirmed that all clients are using Azure Information Protection and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
 
 
-- **Step 9: Re-key your Azure Information Protection tenant key**
+- **Step 10: Re-key your Azure Information Protection tenant key**
 
     This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure Information Protection tenant key.
 
