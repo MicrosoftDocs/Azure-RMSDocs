@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/13/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -31,11 +31,13 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use the following table to identify the applications that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection. 
+Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection. 
 
-For these applications, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications are also known as RMS-enlightened.
+For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened".
 
 Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
+
+## RMS-enlightened applications
 
 Information about the table columns:
 
@@ -85,7 +87,7 @@ For more information, see the following post on the Office blog: [OWA for Androi
 For more information, see the following post on the Enterprise and Mobility Blog: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 
-## More information about Azure RMS support for Office
+### More information about Azure RMS support for Office
 
 Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). The following Office client editions support protecting files and emails by using Azure RMS:
 
@@ -107,7 +109,7 @@ Azure RMS with Office Professional Plus 2010 or Office Professional 2010:
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
 
-## More information about the Azure Information Protection app for iOS and Android
+### More information about the Azure Information Protection app for iOS and Android
 
 The Azure Information Protection app for iOS and Android replaces the RMS sharing app for these devices. It provides the same functionality and in addition, supports rights-protected email messages and rights-protected PDF files on SharePoint Online.
 
@@ -116,7 +118,7 @@ If your iOS and Android devices are enrolled by Microsoft Intune, you can deploy
 For more information, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md).
 
 
-## More information about the Azure Information Protection client for Windows
+### More information about the Azure Information Protection client for Windows
 
 This client now replaces the Rights Management sharing application for Windows. 
 
@@ -130,7 +132,7 @@ For more information, see the following resources:
 
 Download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
-## More information about the Rights Management sharing application
+### More information about the Rights Management sharing application
 
 This application is being replaced by the Azure Information Protection client. It is still required for Mac computers and Windows Phone mobile devices. 
 
@@ -145,7 +147,7 @@ For more information, see the following resources:
 Download the app for Mac computers and for Windows Phone using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
-## More information about other applications that support Azure Information Protection
+### More information about other applications that support Azure Information Protection
 
 In addition to the applications in the table, any application that supports the APIs for the Azure Rights Management service can be integrated with Azure Information Protection, which includes:
 
@@ -155,7 +157,7 @@ In addition to the applications in the table, any application that supports the 
 
 For more information, see the [Azure Information Protection Developer's Guide](../develop/developers-guide.md).
 
-## Applications that are not supported by Azure RMS
+### Applications that are not supported by Azure RMS
 
 The following applications that are not currently supported by Azure RMS include the following:
 
@@ -169,6 +171,20 @@ In addition, the RMS sharing application and the Azure Information Protection cl
 
 -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
+## RMS-enlightened solutions from software vendors
+
+|Product|Vendor|Description|
+|-------------------------------|---------------------------|-----------------|
+|Absolute|Absolute|Data loss prevention (DLP) to protect content.|
+|Content Locker|VMware|Stores, consumes, and creates protected content.|
+|Controle|TakeControle|eDiscovery by using labeling and protection.|
+|Halocore|Secude|Protects files that are exported from SAP environments.|
+|MaaS 360|IBM|Integration to consume and protect documents.|
+|Mobiliya|Mobiliya|Secures documents from EMC’s Documentum repositories.
+|Ramessys|Ramessys|Integration for Chemcart and Documentum
+|Sealpath|Sealpath Technologies|Integration with CAD design tools, such as AutoCAD and Siemens Jt2GO.
+|SecRMM|Sqaudra Technologies |Document protection for removable media.
+|Security Sheriff|Crptzone |Access management on SharePoint and protects documents, based on their classification and access permissions.
 
 
 ## Next steps
