@@ -39,6 +39,8 @@ Unless stated otherwise, the supported capabilities apply to both Azure RMS and 
 
 ## RMS-enlightened applications
 
+The following table displays RMS-enlightened client applications from Microsoft and software vendors.
+
 Information about the table columns:
 
 -   **Protected PDF**: Files that have a .ppdf file name extension and that are automatically created when you use the RMS sharing application to share Office files and PDF files by email. The RMS sharing application, the Azure Information Protection app for iOS and Android, and the Azure Information Protection client for Windows include a reader for protected PDF files. Previously, if you created PDF files that you protected by using Azure RMS or AD RMS, you can continue to read these files on Windows, iOS, and Android devices by using Foxit Reader and Nitro Pro.
@@ -171,7 +173,10 @@ In addition, the RMS sharing application and the Azure Information Protection cl
 
 -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
-## RMS-enlightened solutions from software vendors
+## RMS-enlightened solutions
+
+The following table displays RMS-enlightened solutions from software vendors.
+
 
 |Product|Vendor|Description|
 |-------------------------------|---------------------------|-----------------|
