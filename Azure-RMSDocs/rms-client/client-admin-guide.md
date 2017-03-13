@@ -86,7 +86,9 @@ In addition:
 
 - The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type **$PSVersionTable** in a PowerShell session.
 
-- Computers running Windows 7 Service Pack 1 require [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), which can be installed after the client is installed. If this update is required and not installed, you are prompted to install it.
+- Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
+    
+    If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
 > [!NOTE]
 > Installation requires local administrative permissions.
@@ -94,8 +96,14 @@ In addition:
 The Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
 
 1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+    
+    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
+<<<<<<< HEAD
 2. For a default installation, simply run the executable, **AzInfoProtection.exe**. However, to see installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
+=======
+2. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
+>>>>>>> 53faa08456d342aef09233a55605ba68a3b3eab2
 
     Example to silently install the client: `AzInfoProtection.exe /quiet`
     
