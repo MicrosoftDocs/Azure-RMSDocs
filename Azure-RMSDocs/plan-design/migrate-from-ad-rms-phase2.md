@@ -34,13 +34,18 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Info
 
 ## Step 5. Prepare clients for migration
 
-For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script.
+For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. 
+
+If you cannot migrate all users at the same time, deploy a pre-migration script to all Windows computers.
+
+You can use Group Policy or another software deployment mechanism to deploy this script.
+
 
 1. Create a new Active Directory security group, named **AIPMigrated**. Do not assign any 
 
 
 
-## Step 5. Reconfigure clients to use Azure Information Protection
+## Step 6. Reconfigure clients to use Azure Information Protection
 
 For Windows computers that use Office 2016 click-to-run desktop apps:
 
@@ -119,32 +124,6 @@ This method is suitable for all Windows clients and should be used if they do no
     > The instructions include replacing example addresses of **adrms** and **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
     >
     > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net**:443**.
-
-3. If users have Office 2016: The scripts are not yet updated to include configuration for Office 2016, so if you will deploy this script for users who have this version of Office, you must manually update the scripts:
-
-	- For **CleanUpRMS.cmd** - search for the line `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` and immediately below it, add the following line:
-
-			reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
-
-	- For **Redirect_Onprem.cmd** - search for the line `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F` and immediately below it, add the following two lines:
-
-			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
-
-			reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
-
-	Optional: The scripts do not reference Office 2016 in the comments. If you want to update the comments to reflect these additions for Office 2016, make the following changes to **Redirect_Onprem.cmd**:
-
-	- Search for `::     or MSIPC (Office 2013) with on-premises AD RMS` and replace this with the following:
-	
-			::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
-
-	- Search for `echo Redirect SCP for Office 2013` and replace this with the following:
-	
-			echo Redirect SCP for Office versions based on MSIPC
-
-	- Search for `echo Redirect MSIPC for Office 2013` and replace with the following:
-	
-			echo Redirect MSIPC for Office versions based on MSIPC
 
 4.  On the Windows client computers, run these scripts with elevated privileges in the user’s context.
 
