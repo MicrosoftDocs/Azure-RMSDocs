@@ -56,7 +56,7 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
 
-1. Create a DNS SRV record for clients in their forward lookup zone, using the following format: 
+1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: 
 
 	**_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>**
 
