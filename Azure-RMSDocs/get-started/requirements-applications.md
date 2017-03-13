@@ -189,7 +189,7 @@ The following table displays RMS-enlightened solutions from software vendors.
 |Ramessys|Ramessys|Integration for Chemcart and Documentum.
 |Sealpath|Sealpath Technologies|Integration with CAD design tools, such as AutoCAD and Siemens Jt2GO.
 |SecRMM|Sqaudra Technologies |Document protection for removable media.
-|Security Sheriff|Crptzone |Access management on SharePoint and protects documents, based on their classification and access permissions.
+|Security Sheriff|CryptZone |Access management on SharePoint and protects documents, based on their classification and access permissions.
 
 
 ## Next steps
