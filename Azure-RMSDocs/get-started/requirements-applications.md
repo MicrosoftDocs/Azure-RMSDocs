@@ -177,6 +177,8 @@ In addition, the RMS sharing application and the Azure Information Protection cl
 
 The following table displays RMS-enlightened solutions from software vendors.
 
+If you are a software vendor and have a solution for this table that is not listed, register it with Azure AD. For more information, see [How to register and RMS enable your app with Azure AD](/develop/authentication-integration.md).
+
 
 |Product|Vendor|Description|
 |-------------------------------|---------------------------|-----------------|
