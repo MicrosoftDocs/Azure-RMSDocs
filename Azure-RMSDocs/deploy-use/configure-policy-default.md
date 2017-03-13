@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,18 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 >*Applies to: Azure Information Protection*
 
-Use the following information to understand how the default policy for Azure Information Protection is configured. If you modify the default policy, you can reference these values to return your policy to the defaults.
+Use the following information to understand how the default policy for Azure Information Protection is configured.  
+
+There are different versions of the default policy, which reflect when revisions are made to the Azure Information Protection policy. New versions are applied to new tenants only.  
+
+You can reference these values to return your policy to the defaults, or update your policy to the latest values.
+
+## Current default policy
+
+This version of the default policy applies 
+
+
+
 
 ## Information Protection bar
 
