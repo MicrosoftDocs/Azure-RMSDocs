@@ -56,7 +56,7 @@ For more information about HYOK and to make sure that you understand its limitat
 
 ## Where can I find information about 3rd party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing very rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications#rms-enlightened-solutions) list and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
+Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing very rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications.md#rms-enlightened-solutions) list and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
@@ -115,7 +115,7 @@ An Azure AD Premium feature lets you configure dynamic membership for groups by 
 You might have seen references or demos for Azure Information Protection that sends protected emails to gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is released as public preview.
 
 ## What devices and which file types are supported by Azure RMS?
-For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table in [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md).
+For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
 
 The Azure Rights Management service can support all file types. For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and some other application file types, Azure Rights Management provides native protection that includes both encryption and enforcement of rights (permissions). For all other applications and file types, generic protection provides file encapsulation and authentication to verify if a user is authorized to open the file.
 
