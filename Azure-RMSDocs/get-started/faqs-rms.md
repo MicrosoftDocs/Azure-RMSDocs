@@ -110,7 +110,7 @@ For more information about custom templates, see [Configuring custom templates f
 ## Does Azure RMS work with dynamic groups in Azure AD?
 An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with the Azure Rights Management service. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
 
-## How do I send a protected email to a gmail or Hotmail account?
+## How do I send a protected email to a Gmail or Hotmail account?
 
 You might have seen references or demos for Azure Information Protection that sends protected emails to gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is released as public preview.
 
