@@ -61,12 +61,12 @@ This version of the default policy applies to tenants that can use Azure Informa
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Confidential \ All Employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ All Employees|Highly Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Confidential \ All Employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Highly Confidential \ All Employees|Highly Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
 ### Global settings
