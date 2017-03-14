@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ You can reference the following values to return your policy to the defaults, or
 
 ## Current default policy
 
-This version of the default policy applies to tenants that can use Azure Information Protection from March 17, 2017.
+This version of the default policy applies to tenants that can use Azure Information Protection from March 20, 2017.
 
 ### Information Protection bar
 
@@ -63,7 +63,7 @@ This version of the default policy applies to tenants that can use Azure Informa
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 |Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ All Employees|Highly Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Highly Confidential \ All Employees|Highly confidential data that allows all employees view, edit, and reply permissions to this content. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 |Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
@@ -76,7 +76,7 @@ This version of the default policy applies to tenants that can use Azure Informa
 |Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
 
 
-## Default policy from 1 October 2016 through March 16, 2017
+## Default policy from 1 October 2016 through March 19, 2017
 
 
 ### Information Protection bar
