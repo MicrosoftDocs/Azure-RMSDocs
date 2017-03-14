@@ -44,7 +44,7 @@ This version of the default policy applies to tenants that can use Azure Informa
 |Setting|Value|
 |-------------------------------|---------------------------|
 |Title|Sensitivity|
-|Tooltip|Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business.|
+|Tooltip|The current label for this content. This setting identifies the risk to the business if this content is shared with unauthorized people inside or outside the organization.|
 
 ### Labels
 
