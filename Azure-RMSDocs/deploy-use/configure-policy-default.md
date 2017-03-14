@@ -78,7 +78,7 @@ This version of the default policy applies to tenants that can use Azure Informa
 |Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
 
 
-## Default policy from September 2016 through March 16, 2017
+## Default policy from 1 October 2016 through March 16, 2017
 
 
 ### Information Protection bar
