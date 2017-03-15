@@ -40,7 +40,7 @@ When you use the Azure Rights Management service of Azure Information Protection
 |Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />- For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
 |Office 2016 for Mac|Automatically refreshed - no additional steps required.|
-|Azure Information Protection app for iOS and Android<br /><br />RMS sharing app for mobile devices|Automatically refreshed - no additional steps required.|
+|RMS sharing app for mobile devices|Automatically refreshed - no additional steps required.|
 
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
