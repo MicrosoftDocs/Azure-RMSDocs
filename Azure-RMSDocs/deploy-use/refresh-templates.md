@@ -38,7 +38,7 @@ When you use the Azure Rights Management service of Azure Information Protection
 |Office 365|Automatically refreshed - no additional steps required.|
 |Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office applications opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - Every 24 hours.<br /><br /> Additionally, because the Azure Information Protection client is tightly integrated with Office, any refreshed templates for Office 2016, Office 2013, or Office 2010 will also be refreshed for the Azure Information Protection client.|
 |Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than this schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Automatically refreshed when users log off, log on, and wait up to 1 hour.<br /><br />To force a refresh sooner than this, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010 |Automatically refreshed when users log off, log on, and wait up to one hour.<br /><br />When the Azure Information Protection client is installed, templates can be refreshed without having to wait up to one hour.|
 |Office 2016 for Mac|Automatically refreshed within 30 minutes.|
 
 For mobile devices that use the RMS sharing application, templates are automatically downloaded (and refreshed if necessary) without additional configuration required.
@@ -160,26 +160,6 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 2.  Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3.  Restart your Office applications and instances of File Explorer.
-
-## Office 2010 only: How to force a refresh for a changed custom template
-By editing the registry and manually running a scheduled task on the computers that have Office 2010, you can force an immediate refresh of the templates.
-
-> [!WARNING]
-> If you use the Registry Editor incorrectly, you might cause serious problems that might require you to reinstall the operating system. Microsoft cannot guarantee that you can solve problems that result from using the Registry Editor incorrectly. Use the Registry Editor at your own risk.
-
-
-### To force an immediate refresh
-
-1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following table to locate the registry path to delete this registry value data.
-
-	**Registry path:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-	**Type:** REG_SZ
-
-	**Value:** lastUpdatedTime
-
-
-2.  Manually run the **AD RMS Rights Policy Template Management (Automated)** scheduled task. For more information, see [AD RMS Policy Template Considerations](https://technet.microsoft.com/library/dd996658.aspx).
 
 
 ## See also
