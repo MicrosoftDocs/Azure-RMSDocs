@@ -122,7 +122,7 @@ To sign in as a different user, you must currently edit the registry:
 
 Additionally:
 
-- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry and before re-opening your Office application. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
+- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
