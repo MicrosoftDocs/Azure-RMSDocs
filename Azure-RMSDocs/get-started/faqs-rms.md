@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -112,7 +112,7 @@ An Azure AD Premium feature lets you configure dynamic membership for groups by 
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-You might have seen references or demos for Azure Information Protection that sends protected emails to gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is released as public preview.
+You might have seen references or demos for Azure Information Protection that sends protected emails to Gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is released as public preview.
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
