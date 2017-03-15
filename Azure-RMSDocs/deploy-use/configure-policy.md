@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,7 +57,14 @@ When you make any changes on an Azure Information Protection blade, click **Save
 
 When you have finished making the changes that you want, click **Publish**. 
 
-The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
+The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its latest Azure Information Protection policy. Additional triggers that refresh the policy on the client:
+
+- Right-click to classify and protect a file or folder.
+
+- Running the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).
+
+- Every 24 hours.
+
 
 ## Configuring your organization's policy
 
