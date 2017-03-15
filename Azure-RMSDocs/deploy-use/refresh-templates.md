@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,9 +36,12 @@ When you use the Azure Rights Management service of Azure Information Protection
 |--------------------------|---------------------------------------------|
 |Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Office 365|Automatically refreshed - no additional steps required.|
-|Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than this schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Refreshed when users log on.<br /><br />To force a refresh, ask or force users to log off and log back on again. Or, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
-For mobile devices that use the RMS sharing application, templates are automatically downloaded (and refreshed if necessary) without additional configuration required.
+|Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - Every 24 hours.<br /><br /> Additionally, because the Azure Information Protection client is tightly integrated with Office, any refreshed templates for Office 2016 or Office 2013 will also be refreshed for the Azure Information Protection client.|
+|Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />- For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010|Refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.<br /><br />To force a refresh, ask or force users to sign out and back in again. Or, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2016 for Mac|Automatically refreshed - no additional steps required.|
+|Azure Information Protection app for iOS and Android<br /><br />RMS sharing app for mobile devices|Automatically refreshed - no additional steps required.|
+
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
 If you have already configured Information Rights Management (IRM) for Exchange Online, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.

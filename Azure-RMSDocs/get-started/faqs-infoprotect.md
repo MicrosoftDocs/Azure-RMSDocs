@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -121,6 +121,8 @@ To sign in as a different user, you must currently edit the registry:
 2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
 
 Additionally:
+
+- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry and before re-opening your Office application. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
