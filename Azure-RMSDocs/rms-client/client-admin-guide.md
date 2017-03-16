@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -99,11 +99,7 @@ The Azure Information Protection client is also included in the Microsoft Update
     
     If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
-<<<<<<< HEAD
-2. For a default installation, simply run the executable, **AzInfoProtection.exe**. However, to see installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
-=======
 2. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
->>>>>>> 53faa08456d342aef09233a55605ba68a3b3eab2
 
     Example to silently install the client: `AzInfoProtection.exe /quiet`
     
