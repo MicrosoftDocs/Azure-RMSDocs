@@ -69,7 +69,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
-### Global settings
+### Settings
 
 |Setting|Value|
 |-------------------------------|---------------------------|
@@ -77,7 +77,6 @@ Note that descriptions in this policy refer to data that requires protection, an
 |Select the default label|None|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
 |For email messages with attachments, apply a label that matches the highest classification of those attachments|Off|
-
 
 ## Default policy from 1 October 2016 through March 19, 2017
 
@@ -108,7 +107,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |Secret \ My Group|This data includes sensitive business information - permitted for employee groups only.|**Enabled**: On <br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
-### Global settings
+### Settings
 
 |Setting|Value|
 |-------------------------------|---------------------------|

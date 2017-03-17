@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 >*Applies to: Azure Information Protection*
 
-In addition to the Information Protection bar title and tooltip, there are four settings in the Azure Information Protection policy that apply to all users, all devices:
+In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that apply to all users, all devices:
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-settings.png)
 
@@ -55,6 +55,8 @@ To configure these settings:
     ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
 
     This option is not applicable for sub-labels.
+
+    - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message when it is sent. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. Users can accept the recommendation or dismiss it. When you set this option to **On**, users are informed which label will be automatically applied when the email is sent, without the option to remove this label before sending the email.  
 
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
