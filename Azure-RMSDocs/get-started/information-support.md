@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ The following sections provide information about support and troubleshooting opt
 
 If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
 
-You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses for Azure Information Protection in an eligible plan. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses for Azure Information Protection in an eligible plan. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 For other customers, use the following support channels, depending on how you obtained Azure Information Protection:
 

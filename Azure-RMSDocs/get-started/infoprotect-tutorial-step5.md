@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -99,7 +99,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
     ![Information banner for custom protection](../media/information-banner-custom-protection.png)
 
-2.  On the **Home** tab, click **Protect** > **Track and revoke**:
+2.  On the **Home** tab, click **Protect** > **Track and Revoke**:
 
     ![Track usage option](../media/track-usage-callout.png)
 

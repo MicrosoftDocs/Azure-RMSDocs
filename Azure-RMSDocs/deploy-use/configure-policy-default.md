@@ -31,6 +31,7 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 Use the following information to understand how the default policy for Azure Information Protection is configured.
 
+<<<<<<< HEAD
 When the default policy for Azure Information Protection is updated, new tenants are configured for the revised policy but these revisions are not applied to existing tenants that have Azure Information Protection.
 
 You can reference the following values to return your policy to the defaults, or update your policy to the latest values.
@@ -80,6 +81,10 @@ This version of the default policy applies to tenants that can use Azure Informa
 
 
 ### Information Protection bar
+=======
+
+## Information Protection bar
+>>>>>>> 0d87bc875c9e447ea1234a8e6c6369f1aabf10db
 
 |Setting|Value|
 |-------------------------------|---------------------------|
