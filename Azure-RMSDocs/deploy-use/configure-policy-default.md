@@ -76,6 +76,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |All documents and emails must have a label (applied automatically or by users)|Off|
 |Select the default label|None|
 |Users must provide justification to set a lower classification label, remove a label, or remove protection|Off|
+|For email messages with attachments, apply a label that matches the highest classification of those attachments|Off|
 
 
 ## Default policy from 1 October 2016 through March 19, 2017
