@@ -31,14 +31,15 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 Use the following information to understand how the default policy for Azure Information Protection is configured.
 
-<<<<<<< HEAD
-When the default policy for Azure Information Protection is updated, new tenants are configured for the revised policy but these revisions are not applied to existing tenants that have Azure Information Protection.
+When an organization gets a new subscription (paid or trial) that includes Azure Information Protection, the administrator sees the latest version of the Azure Information Protection default policy in the Azure portal. However, if you were already using the service before the default policy was revised, your earlier version of the default policy is not updated because you might have configured it and deployed into production.
 
 You can reference the following values to return your policy to the defaults, or update your policy to the latest values.
 
 ## Current default policy
 
-This version of the default policy applies to tenants that can use Azure Information Protection from March 20, 2017.
+This version of the default policy applies to tenants that get a subscription for Azure Information Protection from March 20, 2017.
+
+Note that descriptions in this policy refer to data that requires protection, and also to data tracking and revoking. The policy does not configure this protection for these labels, so you must take additional steps to fulfill this description. For example, configure the label to apply Azure RMS protection or use a data loss prevention (DLP) solution. Before you can track and revoke a document by using the document tracking site, the document must be protected by Azure RMS. 
 
 ### Information Protection bar
 
@@ -81,10 +82,6 @@ This version of the default policy applies to tenants that can use Azure Informa
 
 
 ### Information Protection bar
-=======
-
-## Information Protection bar
->>>>>>> 0d87bc875c9e447ea1234a8e6c6369f1aabf10db
 
 |Setting|Value|
 |-------------------------------|---------------------------|
