@@ -37,7 +37,7 @@ You can reference the following values to return your policy to the defaults, or
 
 ## Current default policy
 
-This version of the default policy applies to tenants that get a subscription for Azure Information Protection from March 20, 2017.
+This version of the default policy is from March 20, 2017.
 
 Note that descriptions in this policy refer to data that requires protection, and also to data tracking and revoking. The policy does not configure this protection for these labels, so you must take additional steps to fulfill this description. For example, configure the label to apply Azure RMS protection or use a data loss prevention (DLP) solution. Before you can track and revoke a document by using the document tracking site, the document must be protected by Azure RMS. 
 
