@@ -35,11 +35,11 @@ Classification and protection happens when you save the document, but before we 
 
 ## To manually change our default label
 
-On the Information Protection bar, select the last label to see how sub-labels display:
+On the Information Protection bar, select the last label and you see how sub-labels display:
 
 ![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labelsv2.png)
 
-Select one of these sub-labels, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
+Select one of these sub-labels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
 
 ![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selectedv2.png)
 
@@ -74,11 +74,11 @@ You'll see the **Sensitivity** value display **Not set**, which is what users se
 
 2. Save the document (use any file name, any location). 
 
-3. You now see the prompt: **It is recommended to label this file as Confidential**. Click **Change now**.
+3. You now see the prompt: **It is recommended to label this file as Confidential \ All Employees**. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
 
     ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
 
-    In addition to the document having the label set to Confidential, you'll immediately see the watermark of your organization name across the page, and the footer of **Sensitivity: Confidential** is also applied. 
+    In addition to the document having the label set to Confidential \ All Employees, you'll immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
     The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
 
