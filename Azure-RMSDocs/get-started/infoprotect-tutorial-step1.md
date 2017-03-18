@@ -30,7 +30,9 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->If you know that the Azure Rights Management service for your tenant is already activated, you can go straight to the [next step](infoprotect-tutorial-step2.md). If you're not sure whether it's activated or not, use the instructions in this step to check.
+>If you know that the Azure Rights Management service for your tenant is already activated, you can go straight to the [next step](infoprotect-tutorial-step2.md). 
+>
+>If you're not sure whether this service is activated or not, use the instructions in this step to check.
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate this service, which include using Windows PowerShell, and using the admin portals.
 

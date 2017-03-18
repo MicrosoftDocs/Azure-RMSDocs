@@ -48,27 +48,31 @@ Although Azure Information Protection comes with a default policy that you can u
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. Note that the last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
 
-    - With the default settings, the first two labels of **Personal** and **Public** do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
+    - With the default settings, some labels do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
-    In addition, there are some global policy settings that are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, emails are not automatically labeled based on their attachments, and the client is not configured for a custom help link:
+    In addition, there are some policy settings that are not set so that for example, all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
-## Changing the global settings for a default template and prompt for justification
+## Changing the settings for a default label and prompt for justification
 
-For our tutorial, we'll change a couple of those global policy settings so that you can see how they work:
+For our tutorial, we'll change a couple of those policy settings so that you can see how they work:
 
-1. For **Select the default label**, set this to **General**.
+1. For **Select the default label**, set this to **General**. 
+
+    If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
 2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this to **On**.
 
 ## Configuring a label for protection, a watermark, and a condition to prompt for classification
 
-We'll now change the settings of one of the sub-labels, **All Employees** from the **Confidential** main label:
+We'll now change the settings of one of the sub-labels, **All Employees** from the **Confidential** main label. 
 
-1. Make sure that the **Confidential** label is expanded, and then from that label, select **All Employees**. If you have an older version of the default policy and therefore your **Confidential** label does not have sub-labels, you can use the **Confidential** label instead, to continue this tutorial.
+If your **Confidential** label doesn't have sub-labels because you have an older version of the policy, you can use the **Confidential** label instead. The configuration steps will be the same but the name of the label blade will be **Confidential** instead of **All Employees**.
+
+1. Make sure that the **Confidential** label is expanded, and then from that label, select **All Employees**.
     
     In the new **Label: All Employees** blade, you now see the settings that are available for each label. 
 
@@ -90,7 +94,7 @@ We'll now change the settings of one of the sub-labels, **All Employees** from t
     
 4. Click **OK** to save your changes, which closes the **Protection** blade.
 
-5. Back on the **Label: Confidential** blade, locate the section **Set visual marking**:
+5. Back on the previous **Label: All Employees** blade, locate the section **Set visual marking**:
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
     
