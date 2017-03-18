@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,9 @@ If you prefer to navigate to this page from your Office 365 admin portal rather 
 
 2. On the **rights management** page, click **activate**.
 
-3. When prompted **Do you want to activate Rights Management?**, click **activate**.
+    ![Azure Information Protection quick start tutorial step 1 - activate the service](../media/info-protect-activate.png)
+
+3. When prompted **Do you want to activate Rights Management?**, click **activate** to confirm.
 
     You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
 
