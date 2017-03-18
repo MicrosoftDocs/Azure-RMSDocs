@@ -127,9 +127,15 @@ We'll now change the settings of one of the sub-labels, **All Employees** from t
     ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
 
 10. Click **Save** on this **Label: All Employees** blade. Then, on the **Policy: Global** blade, click **Save** again.
+    
+    At this point, your labels now show Azure RMS protection for the label you just configured:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
-
+    
+    And the settings are configured with your changes for the default label and justification:
+    
+    ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
+    
 11. Now we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
 
     ![Azure Information Protection quick start tutorial step 3 - publish the configured policy](../media/info-protect-publish.png)
