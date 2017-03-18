@@ -31,7 +31,7 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 Use the following information to understand how the default policy for Azure Information Protection is configured.
 
-When an administrator first connects to the Azure Information Protection service by using the Azure portal, the default policy for that tenant is created. Occasionally, the default policy is changed but if you were already using the service before the default policy was revised, your earlier version of the default policy is not updated because you might have configured it and deployed into production.
+When an administrator first connects to the Azure Information Protection service by using the Azure portal, the default policy for that tenant is created. Occasionally, Microsoft might make changes to the default policy but if you were already using the service before the default policy was revised, your earlier version of the default policy is not updated because you might have configured it and deployed into production.
 
 You can reference the following values to return your policy to the defaults, or update your policy to the latest values.
 
