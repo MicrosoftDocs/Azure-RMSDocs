@@ -6,7 +6,7 @@ description: Step 3 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,9 +52,9 @@ When the document loads, you should see two new things:
 
     Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
 
-- A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
+- A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **General**. 
     
-    ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts2.png)
+    ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
 
 You’re now ready to see Azure Information Protection in action.
 

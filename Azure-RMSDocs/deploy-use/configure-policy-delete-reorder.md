@@ -6,7 +6,7 @@ description: You can delete or re-order the labels that users see on the Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ When you delete a label that has been applied to documents and emails, and then 
 
 Before you delete a label, consider whether to disable it, instead. When you disable a label that has been applied to documents and emails, the applied label will not be removed from these documents and emails but it no longer displays as a label that users can select on the Information Protection bar. Disabling a label also lets you keep the original configuration for when you might want users to select the label at a later time, when you simply re-enable it.
 
-Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity so that users see the least sensitive label first and the most sensitive label last. The [default policy](configure-policy-default.md) uses this configuration.
+Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity so that users see the least sensitive label first and the most sensitive label last. The [default policy](configure-policy-default.md) uses this configuration and reflects the increasing sensitivity in the label names.
 
 > [!IMPORTANT]
 >If you configure [conditions](configure-policy-classification.md) for your labels that might apply to more than one label, you must order the labels from least sensitive to most sensitive. This ordering ensures that the most sensitive label is applied when the conditions are evaluated.

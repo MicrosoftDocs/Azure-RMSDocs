@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,9 +49,11 @@ To configure the Azure Information Protection policy:
 
     - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
 
+    - The option to automatically label an email message, based on its attachments.
+
     - The option to provide a custom help link for users.
 
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains the labels **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. These labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
 
 When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
 
