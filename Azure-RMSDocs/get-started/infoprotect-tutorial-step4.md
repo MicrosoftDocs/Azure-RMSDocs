@@ -76,7 +76,7 @@ You'll see the **Sensitivity** value display **Not set**, which is what users se
 
 3. You now see the prompt: **It is recommended to label this file as Confidential**. Click **Change now**.
 
-    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-now.png)
+    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
 
     In addition to the document having the label set to Confidential, you'll immediately see the watermark of your organization name across the page, and the footer of **Sensitivity: Confidential** is also applied. 
 
