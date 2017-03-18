@@ -41,12 +41,12 @@ Although Azure Information Protection comes with a default policy that you can u
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
 3.  On the Azure Information Protection blade, click **Global** and explore the **Policy: Global** blade, which shows the default Information Protection policy that's automatically created for your tenant.
-
-    Your default policy might look slightly different from one in this tutorial. If that's the case, you're using an older version of the default policy. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you can still use this tutorial, but be aware of these changes when you use the instructions that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
     
     On the **Policy: Global** blade, you'll notice the following:
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. Note that the last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
+    
+       > [!NOTE]Your default policy might look slightly different from one in this tutorial. If that's the case, you're using an older version of the default policy. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you can still use this tutorial, but be aware of these changes when you use the instructions that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-default-policy.md).
 
     - With the default settings, some labels do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
     
