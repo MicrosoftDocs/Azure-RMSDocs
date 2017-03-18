@@ -44,7 +44,7 @@ If you prefer to navigate to this page from your Office 365 admin portal rather 
     
     If you are prompted to sign in, use an account that is a global administrator for Office 365.
 
-2. On the **rights management** page, click **activate**.
+2. On the **rights management** page, click **activate**. If this button displays **deactivate**, the service is already activated and you can go straight to the [next step](infoprotect-tutorial-step2.md). 
 
     ![Azure Information Protection quick start tutorial step 1 - activate the service](../media/info-protect-activate.png)
 
