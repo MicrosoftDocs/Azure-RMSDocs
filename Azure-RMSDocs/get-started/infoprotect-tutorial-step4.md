@@ -39,7 +39,7 @@ On the Information Protection bar, select the last label to see how sub-labels d
 
 ![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labelsv2.png)
 
-Select one of the available sub-labels, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
+Select one of these sub-labels, and you will see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
 
 ![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selectedv2.png)
 
