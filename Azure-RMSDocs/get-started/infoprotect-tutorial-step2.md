@@ -92,9 +92,11 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-4. Click **OK** to save your changes, which closes the **Protection** blade.
-
-5. Back on the previous **Label: All Employees** blade, locate the section **Set visual marking**:
+4. Click **OK** to save your changes, which closes the **Protection** blade. You see your configuration reflected in the **Label: All Employees** blade:
+    
+    ![Azure Information Protection quick start tutorial step 3 - Azure RMS protection configured](../media/protection-bar-configured.png)
+    
+5. Now on the **Label: All Employees** blade, locate the section **Set visual marking**:
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
     
