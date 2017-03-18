@@ -50,7 +50,7 @@ When the document loads, you should see two new things:
 
 ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
 
-- On the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
+- On the **Home** tab, a new **Protection** group, with a button named **Protect**.
 
     Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
 
