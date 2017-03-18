@@ -120,7 +120,7 @@ We'll now change the settings of one of the sub-labels, **All Employees** from t
 
 8. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
     
-    ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommended.png)
+    ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommendedv2.png)
 
 9. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**:
     
