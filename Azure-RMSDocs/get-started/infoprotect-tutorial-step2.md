@@ -46,11 +46,12 @@ Although Azure Information Protection comes with a default policy that you can u
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. Note that the last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
     
-       > [!NOTE]Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you're probably using an older version of the default policy. Or, you might have edited it yourself, before you started the tutorial.
+       > [!NOTE]
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you're probably using an older version of the default policy. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-default-policy.md).
 
-    - With the default settings, some labels do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
+    - With the default configuration, some labels do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
