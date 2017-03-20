@@ -39,7 +39,7 @@ Use the following instructions to add a new label to the Azure Information Prote
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the new label that you want to add will apply to all users, do one of the following from the **Policy:Global** blade. 
+2. If the new label that you want to add will apply to all users, do one of the following from the **Policy: Global** blade. 
 
 	- To create a new label: Click **Add a new label**.
 

@@ -49,7 +49,7 @@ Use the following instructions to make these changes.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to delete, disable, or reorder applies to all users, do one of the following from the **Policy:Global** blade. 
+2. If the label that you want to delete, disable, or reorder applies to all users, do one of the following from the **Policy: Global** blade. 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 

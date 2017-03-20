@@ -40,7 +40,7 @@ To configure these settings:
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If these settings that you want to configure will apply to all users, configure the following global settings from the **Policy:Global** blade:
+2. If these settings that you want to configure will apply to all users, configure the following global settings from the **Policy: Global** blade:
 
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
 
