@@ -46,7 +46,7 @@ To configure these settings:
 
     If a label is not assigned when a user saves a document or sends an email, they are prompted to select a label. For example:
 
-    ![Azure Information Protection prompt if new classification is lower](../media/info-protect-enforce-label.png)
+    ![Azure Information Protection prompt if labeling is enforced](../media/info-protect-enforce-labelv2.png)
 
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
 
