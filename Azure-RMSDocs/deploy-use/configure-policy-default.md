@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ You can reference the following values to return your policy to the defaults, or
 
 ## Current default policy
 
-This version of the default policy is from March 20, 2017.
+This version of the default policy is from March 21, 2017.
 
 Note that descriptions in this policy refer to data that requires protection, and also to data tracking and revoking. The policy does not configure this protection for these labels, so you must take additional steps to fulfill this description. For example, configure the label to apply Azure RMS protection or use a data loss prevention (DLP) solution. Before you can track and revoke a document by using the document tracking site, the document must be protected by Azure RMS. 
 
@@ -80,7 +80,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |For email messages with attachments, apply a label that matches the highest classification of those attachments|Off|
 |Provide a custom URL for the Azure Information Protection client "Tell me more" web page|Blank|
 
-## Default policy prior to March 20, 2017
+## Default policy before March 21, 2017
 
 ### Labels
 
