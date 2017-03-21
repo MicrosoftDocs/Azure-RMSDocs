@@ -43,7 +43,7 @@ You use Azure Information Protection labels to apply classifcation to documents 
 
 For example, the following email message has been classified as "Internal". This label is added as a footer to the email message, as a visual indicator for all recipients that it's intended for internal use and should not be sent outside the organization. This label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
-![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footer-headerv2.png)
+![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
 
 
 ## How data is protected
