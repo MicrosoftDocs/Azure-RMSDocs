@@ -33,7 +33,7 @@ Azure Information Protection is a cloud-based solution that helps an organizatio
 
 The following picture shows an example of Azure Information Protection in action. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured, which classifies and optionally, protects the document. 
 
-![Example of recommended classification for Azure Information Protection](../media/change-nowv2.png)
+![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
