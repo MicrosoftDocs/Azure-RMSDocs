@@ -74,7 +74,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 Example showing the Azure Information Protection client add-on in an Office applications, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
-![Azure Information Protection bar with default policy](../media/word2016-calloutsv2)
+![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)
 
 ## How to install the Azure Information Protection client for users
 
