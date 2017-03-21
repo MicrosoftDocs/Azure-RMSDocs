@@ -40,7 +40,7 @@ In this step, you'll install the Azure Information Protection client so that the
 
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
-## Verify the installations
+## Verify the installation
 
 Verify that the installation was successful by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. 
 
