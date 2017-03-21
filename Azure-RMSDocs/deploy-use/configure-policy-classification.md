@@ -60,7 +60,7 @@ In this example, the user can click **Change now** to apply the recommended labe
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy:Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
+2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
 
      If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
 
