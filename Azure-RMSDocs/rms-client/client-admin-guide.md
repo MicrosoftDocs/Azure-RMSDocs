@@ -80,7 +80,7 @@ Example showing the Azure Information Protection client add-on in an Office appl
 
 Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-In addition:
+Additional prerequisites for the Azure Information Protection client:
 
 - The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a custom installation parameter.
 
