@@ -151,7 +151,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 		Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
 
-3. [Download the the following migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
+3. [Download the following migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
     
 - **CleanUpRMS.zip**
     
