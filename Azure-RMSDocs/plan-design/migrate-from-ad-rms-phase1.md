@@ -151,6 +151,10 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 	Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
 
+3. Now deploy the pre-migration script (**Pre-migration_script.cmd**) to all Windows computers to ensure that clients yet to be migrated continue to communicate with AD RMS even if they consume content that is protected by migrated clients.
+
+ You can use Group Policy or another software deployment mechanism to deploy this script.
+
 
 ## Step 3. Activate your Azure Information Protection tenant
 This step requires you to activate the Azure Rights Management service. Instructions are fully covered in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
