@@ -135,41 +135,62 @@ To complete Step 2, choose and select the instructions for your migration path:
 - [Software-protected key to HSM-protected key](migrate-softwarekey-to-hsmkey.md)
 
 
-# Step x. Prepare for client migration
+# Step 3. Prepare for client migration
 
 For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script.
 
-1. Create a group, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Office 365 or Azure Active Directory. Do not assign any users to this group at this time. when users are migrated during a later step, you will add them to the group.
+1. Create a group, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Office 365 or Azure Active Directory. Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
 
     Make a note of this group's object ID. To do this, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. Or you can copy it from the Azure portal.
 
-2. Configure this group for onboarding controls. To do use, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+2. Configure this group for onboarding controls. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
-	Connect-Aadrmservice
+		Connect-Aadrmservice
 
     Then configure this group for onboarding controls:
 
-	Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
+		Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
 
-3. Now deploy the pre-migration script (**Pre-migration_script.cmd**) to all Windows computers to ensure that clients yet to be migrated continue to communicate with AD RMS even if they consume content that is protected by migrated clients.
+3. [Download the the following migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
 
- You can use Group Policy or another software deployment mechanism to deploy this script.
+- **CleanUpRMS.zip**
+
+- **MigrateClient.zip**
+
+- **Redirect_OnPrem.zip**
+
+4. Extract **MigrateClient.zip** and follow the instructions in **Pre-migration_script.cmd** so it contains your AD RMS server name for **set OnPremRMSFQDN** and your Azure Information Protection tenant URL for **set CloudRMS**.
+
+    > [!IMPORTANT]
+    > The instructions include replacing example addresses of **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
+    >
+    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net**:443**.
 
 
-## Step 3. Activate your Azure Information Protection tenant
-This step requires you to activate the Azure Rights Management service. Instructions are fully covered in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
+5. Deploy this script to all Windows computers to ensure that when you start to migrate clients, clients yet to be migrated continue to communicate with AD RMS even if they consume content that is protected by migrated clients that are now using the Azure Rights Management service.
+
+    You can use Group Policy or another software deployment mechanism to deploy this script.
 
 
-> [!TIP]
-> If you have an Office 365 subscription, you can activate the Azure Rights Management service from the Office 365 admin center or the Azure classic portal. We recommend that you use the Azure classic portal because you will use this management portal to complete the next step.
+## Step 4. Activate the Azure Rights Management service
+
+Open a PowerShell session and run the following commands:
+
+1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+
+		Connect-Aadrmservice
+
+2. Activate the Azure Rights Management service:
+
+		Enable-Aadrmservice
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
 
-If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS_RUN_Elevated.cmd script on these computers, as described in Step 5. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
+If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS_RUN_Elevated.cmd script on these computers, as described in Step x. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
 
 In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
 
-## Step 4. Configure imported templates
+## Step 5. Configure imported templates
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
 Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
