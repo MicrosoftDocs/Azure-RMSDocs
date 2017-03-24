@@ -153,11 +153,11 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 3. [Download the following migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
     
-- **CleanUpRMS.zip**
+    - **CleanUpRMS.zip**
     
-- **MigrateClient.zip**
+    - **MigrateClient.zip**
     
-- **Redirect_OnPrem.zip**
+    - **Redirect_OnPrem.zip**
     
 4. Extract **MigrateClient.zip** and follow the instructions in **Pre-migration_script.cmd** so that it contains your AD RMS server names and your Azure Information Protection tenant URL.
 
