@@ -159,7 +159,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
     
 - **Redirect_OnPrem.zip**
     
-4. Extract **MigrateClient.zip** and follow the instructions in **Pre-migration_script.cmd** so it contains your AD RMS server name for **set OnPremRMSFQDN** and your Azure Information Protection tenant URL for **set CloudRMS**.
+4. Extract **MigrateClient.zip** and follow the instructions in **Pre-migration_script.cmd** so that it contains your AD RMS server names and your Azure Information Protection tenant URL.
 
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
