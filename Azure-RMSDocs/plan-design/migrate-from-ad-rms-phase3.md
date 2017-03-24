@@ -31,9 +31,9 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 6 through 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 7 through 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 6. Prepare your Exchange deployment for migration
+## Step 7. Prepare your Exchange deployment for migration
 
 Make sure that you have your [Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
 
@@ -58,7 +58,7 @@ Make sure that you have your [Azure Information Protection tenant URL](migrate-f
 	IISReset
 
 
-## Step 7. Configure IRM integration for Exchange Online
+## Step 8. Configure IRM integration for Exchange Online
 
 If you have previously imported your TDP from AD RMS to Exchange Online, you must remove this TDP to avoid conflicting templates and policies after you have migrated to Azure Information Protection. To do this, use the [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) cmdlet from Exchange Online.
 
@@ -83,7 +83,7 @@ If you chose an Azure Information Protection tenant key topology of **customer-m
 -   You will have reduced Rights Management protection functionality with Exchange Online, as described in the [BYOK pricing and restrictions](byok-price-restrictions.md) article.
 
 
-## Step 8. Configure IRM integration for Exchange Server and SharePoint Server
+## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
 
 If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you will need to deploy the Rights Management (RMS) connector, which acts as a communications interface (a relay) between your on-premises servers and the protection service for Azure Information Protection.
 
@@ -104,10 +104,10 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
     Substitute your own tenant URL for `<YourTenantURL>`.
 
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation 
-	$list += $list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
+		$irmConfig = Get-IRMConfiguration
+		$list = $irmConfig.LicensingLocation 
+		$list += $list += "<YourTenantURL>/_wmcs/licensing"
+		Set-IRMConfiguration -LicensingLocation $list
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
 

@@ -29,11 +29,11 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover step 5 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover step 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 When you cannot migrate all clients at once, run these procedures for batches of clients. For each client that you migrate, add them to the **AIPMigrated** group that you created earlier for onboarding controls.
 
-## Step 5. Reconfigure clients to use Azure Information Protection
+## Step 6. Reconfigure clients to use Azure Information Protection
 
 For Windows computers that use Office 2016 click-to-run desktop apps:
 
@@ -57,7 +57,7 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
 
-1. Create a DNS SRV record for clients in their forward lookup zone, using the following format: 
+1. Create a DNS SRV record in the forward lookup zone for the AD RMS cluster, using the following format: 
 
 	**_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>**
 
