@@ -177,12 +177,12 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 Open a PowerShell session and run the following commands:
 
 1. Connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
-
-		Connect-Aadrmservice
+    
+        Connect-Aadrmservice
 
 2. Activate the Azure Rights Management service:
-
-		Enable-Aadrmservice
+    
+        Enable-Aadrmservice
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
 
