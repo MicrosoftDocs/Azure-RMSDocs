@@ -48,13 +48,13 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 ### To identify your Azure Information Protection tenant URL
 
 1. Connect to the Azure Rights Management service and when prompted, enter the credentials for your tenant's global administrator:
-
-	Connect-AadrmService
-
+    
+		Connect-AadrmService
+    
 2. Get your tenant's configuration:
-
-	Get-AadrmConfiguration
-
+    
+		Get-AadrmConfiguration
+    
 3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. What remains is your Azure Information Protection tenant URL.
 
 ## Step 2. Export configuration data from AD RMS and import it to Azure Information Protection
