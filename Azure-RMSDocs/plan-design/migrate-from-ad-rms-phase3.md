@@ -102,7 +102,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read protected emails that are sent by using Azure Information Protection.
 
-    Substitute your own tenant URL for `<YourTenantURL>`.
+    Before you run these commands, substitute your own tenant URL for `<YourTenantURL>`.
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
