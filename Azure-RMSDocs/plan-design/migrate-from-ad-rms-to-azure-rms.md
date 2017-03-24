@@ -133,7 +133,7 @@ To confirm the AD RMS cryptographic mode:
 
 -   If you collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
 
-    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. For help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
+    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for preparation guidance and for additional help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
 
 ## Migration preparation if you collaborate with external partners
 
@@ -149,12 +149,9 @@ Include your AD RMS partners in your planning phase for migration because they m
 
 - They provide you with the URLs for their AD RMS cluster and their Azure Rights Management tenant, so that you can add redirections for your clients as part of your migration.
 
-- They import their AD RMS key into the cloud 
-
-
+- They import their AD RMS key into the cloud, as covered in this migration process, [Step 2. Export configuration data from AD RMS and import it to Azure Information Protection](migrate-from-ad-rms-phase1#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
 
 ## Overview of the steps for migrating AD RMS to Azure Information Protection
-
 
 The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
