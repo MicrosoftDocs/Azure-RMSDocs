@@ -145,9 +145,9 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 -   Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
 
-#### For Exchange only and multiple TPDs: Edit the registry
+#### For Exchange only: Edit the registry
 
--   On each Exchange Server, manually add the following registry keys for each additional configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
+-   On each Exchange Server, manually add the following registry keys for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
 
     When you make these registry edits, use the following instructions:
 
