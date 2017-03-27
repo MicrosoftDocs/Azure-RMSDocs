@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,11 +40,9 @@ Although Azure Information Protection comes with a default policy that you can u
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-3.  On the Azure Information Protection blade, click **Global** and explore the **Policy: Global** blade, which shows the default Information Protection policy that's automatically created for your tenant.
+3.  Explore the **Policy: Global** blade, which automatically opens and displays the default Information Protection policy that's automatically created for your tenant:
     
-    On the **Policy: Global** blade, you'll notice the following:
-    
-    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. Note that the last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
+    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
     
        > [!NOTE]
        > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you're probably using an older version of the default policy. Or, you might have edited it yourself, before you started the tutorial.
