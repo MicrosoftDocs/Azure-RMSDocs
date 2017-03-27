@@ -31,10 +31,10 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 11 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Step 9. Decommission AD RMS
+## Step 10. Decommission AD RMS
 
 Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP will prevent new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete and all connections should be going to the Azure Rights Management service. 
 
@@ -55,7 +55,7 @@ After decommissioning your AD RMS servers, you might want to take the opportunit
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have a different FQDN to the one that you used at the beginning of this migration.
 
-## Step 10. Re-key your Azure Information Protection tenant key
+## Step 11. Re-key your Azure Information Protection tenant key
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
 
 This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
