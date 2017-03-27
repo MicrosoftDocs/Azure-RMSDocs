@@ -65,7 +65,7 @@ Start a Windows PowerShell session and confirm the version of the installed mod
 (Get-Module AADRM –ListAvailable).Version
 ```
 
-Note: If this command fails, first run `Import-Module AADRM`
+Note: If this command fails, first run **Import-Module AADRM**.
 
 To see which cmdlets are available, type the following:
 
