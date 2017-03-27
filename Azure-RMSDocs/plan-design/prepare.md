@@ -45,7 +45,7 @@ For performance reasons, group membership is cached by the Azure Rights Manageme
 
 ### Considerations if email addresses change
 
-When you select users or groups by their display name for Azure Information Protection configuration, your selection saves and uses that object's email address. This means that if the email address changes after you have saved the configuration for Azure Information Protection, you must remove the group and select it again to save the updated email address.
+When you select users or groups by their display name for Azure Information Protection configuration, your selection saves and uses that object's email address. This means that if the email address is changed after you have configured Azure Information Protection, you must remove the user or group from your configuration, and select it again to save the updated email address.
 
 Configurations where you might select users or groups by their display name include custom Rights Management templates and Azure Information Protection scoped policies. Users can also select users and groups by their display name when they configure custom permissions with the Azure Information Protection client.
 
