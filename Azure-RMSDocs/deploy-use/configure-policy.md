@@ -37,7 +37,7 @@ To configure the Azure Information Protection policy:
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
-    You'll then see the **Azure Information Protection** blade, where you can open the **Global** policy that all users get. You can also optionally add and edit scoped policies. The **Global** Azure Information Protection policy contains the following elements that you can configure:
+    When the **Azure Information Protection** blade loads, it automatically opens the **Policy: Global** blade, for you to view and edit the global policy that all users get. However, you can also optionally add and edit scoped policies. Azure Information Protection policies contain the following elements that you can configure:
 
     - Labels that let you and users classify documents and emails.
 
