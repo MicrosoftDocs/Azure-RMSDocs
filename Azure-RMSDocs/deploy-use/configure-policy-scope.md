@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,10 @@ To configure a scoped policy for Azure Information Protection:
 
     On the initial **Azure Information Protection** blade, select **Add a new policy**. You'll then see the second blade that used to show the global policy refresh, so that you can now configure your new, scoped policy.
 
-3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only. 
+3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only.
+
+    > [!NOTE]
+    > If an email address changes for a user or group that you select after you save the scope: You must remove the user or group from the scope configuration, select it again, and save the change. For more information, see the [Considerations if email addresses change](/plan-design/prepare.md#considerations-if-email-addresses-change) section from the planning documentation. 
 
 4. Now create new labels or configure the scoped policy settings. The global policy is always applied first, so you can supplement the global policy with new labels and you can override the global settings. For example, the global policy might have no default label specified and you configure a different default label in different scoped policies for specific departments.
 
