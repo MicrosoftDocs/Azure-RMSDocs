@@ -73,7 +73,7 @@ To see which cmdlets are available, type the following:
 Get-Command -Module AADRM
 ```
 
-Use `the Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, and use the **-online** parameter to see the latest help on the Microsoft documentation site. For example:
+Use the `Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, and use the **-online** parameter to see the latest help on the Microsoft documentation site. For example:
 
 ```
 Get-Help Connect-AadrmService -online
