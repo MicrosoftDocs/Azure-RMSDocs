@@ -88,7 +88,7 @@ For more information:
 
 Before you can run any commands that configure the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] service, you must connect to the service by using the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet. 
 
-When you have finished running the configuration commands that you want, as a best practice, disconnect from the service by using the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, and you might find that you need to occasionally reconnect in a PowerShell session. 
+When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
 
 > [!NOTE]
 > If the Azure Rights Management service is not yet activated, you can do this after you have connected to the service, by using the [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) cmdlet.
