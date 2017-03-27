@@ -86,7 +86,7 @@ Use the following procedures to create, configure, and publish custom templates 
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
     > 
-    > If an email address changes after you select the user or group and you save the template: You must remove the user or group from this configuration, select it again, and save the change. For more information, see the [Considerations if email addresses change](/plan-design/prepare.md#considerations-if-email-addresses-change) section from the planning documentation. 
+    > If an email address changes after you select the user or group and you save the template: You must remove the user or group from this configuration, select it again, and save the change. For more information, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-if-email-addresses-change) section from the planning documentation. 
 
     As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching). 
     
