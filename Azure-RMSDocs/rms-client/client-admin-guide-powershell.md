@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -144,9 +144,7 @@ Windows PowerShell module:
 
 ##### To get the AppPrincipalId and Symmetric Key
 
-Create a new service principal by running the `New-MsolServicePrincipal` cmdlet from the MSOnline PowerShell module for Azure Active Directory, or the `New-AzureADServicePrincipal` from the newer Azure Active Directory version 2 PowerShell module. 
-
-The instructions that follow are for New-MsolServicePrincipal from the MSOnline PowerShell module for Azure Active Directory:
+Create a new service principal by running the `New-MsolServicePrincipal` cmdlet from the MSOnline PowerShell module for Azure Active Directory: 
 
 1. If this module is not already installed on your computer, see
 [Install the Azure AD Module](/powershell/azuread/#install-the-azure-ad-module).
@@ -159,8 +157,7 @@ The instructions that follow are for New-MsolServicePrincipal from the MSOnline 
     
     When prompted, enter your Azure AD tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-4. Run the New-MsolServicePrincipal cmdlet to create a new
-service principal:
+4. Run the New-MsolServicePrincipal cmdlet to create a new service principal:
     
     	New-MsolServicePrincipal
     
