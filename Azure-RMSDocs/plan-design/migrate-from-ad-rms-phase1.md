@@ -137,29 +137,28 @@ To complete Step 2, choose and select the instructions for your migration path:
 
 # Step 3. Prepare for client migration
 
-For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script.
+For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script. This step is required so that users who have not yet migrated can consume content that is now protected by Azure Rights Management.
 
-1. Create a group, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Office 365 or Azure Active Directory. Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
+1. Create a group, for example, named **AIPMigrated**. This group can be created in Active Directory and synchronized to the cloud, or it can be created in Office 365 or Azure Active Directory. Do not assign any users to this group at this time. At a later step, when users are migrated, you will add them to the group.
 
     Make a note of this group's object ID. To do this, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup) command. Or you can copy it from the Azure portal.
 
-2. Configure this group for onboarding controls. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+2. Configure this group for onboarding controls to allow only people in this group to use Azure Rights Management to protect content. To do this, in a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
 
 		Connect-Aadrmservice
 
     Then configure this group for onboarding controls:
 
-		Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId <group object ID>
+		Set-AadrmOnboardingControlPolicy –SecurityGroupObjectId <group object ID>
 
-3. [Download the following migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
+3. [Download the following file that contains client migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
     
-    - **CleanUpRMS.zip**
+    - **ClientMigration.zip**
     
-    - **MigrateClient.zip**
-    
-    - **Redirect_OnPrem.zip**
-    
-4. Extract **MigrateClient.zip** and follow the instructions in **Pre-migration_script.cmd** so that it contains your AD RMS server names and your Azure Information Protection tenant URL.
+4. Extract the files and follow the instructions in **PrepareClient.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
+
+To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the Cluster Details information, copy the server name from the Licensing value. For example: **rmscluster.contoso.com**.
+
 
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
