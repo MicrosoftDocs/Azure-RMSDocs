@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, users will still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use the Azure Rights Management service from Azure Information Protection.
+Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use the Azure Rights Management service from Azure Information Protection.
 
 Not sure whether this AD RMS migration is right for your organization?
 
@@ -147,7 +147,7 @@ Include your AD RMS partners in your planning phase for migration because they m
 
     They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)), and then viewing their tenant information ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
 
-- They provide you with the URLs for their AD RMS cluster and their Azure Information Protection tenant, so that you can add redirections for your clients as part of your migration.
+- They provide you with the URLs for their AD RMS cluster and their Azure Information Protection tenant, so that you can configure your migrated clients to redirect requests for their AD RMS protected content to their Azure RMS tenant. Instructions for client redirection are in step 6.
 
 - They import their AD RMS cluster root keys (SLC) into the cloud before you start to migrate users. Similarly, you must import your AD RMS cluster root keys before they start to migrate their users. Instructions for importing the key is covered in this migration process, [Step 2. Export configuration data from AD RMS and import it to Azure Information Protection](migrate-from-ad-rms-phase1#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
 
