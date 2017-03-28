@@ -157,7 +157,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
     
 4. Extract the files and follow the instructions in **PrepareClient.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
     
-    To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the Cluster Details information, copy the server name from the Licensing value. For example: **rmscluster.contoso.com**.
+    To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the **Cluster Details** information, copy the server name from the **Licensing** value from the extranet cluster URLs section. For example: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
     > The instructions include replacing example addresses of **adrms.contoso.com** with your AD RMS server addresses. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
@@ -182,7 +182,7 @@ Open a PowerShell session and run the following commands:
 
 **What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
 
-If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS_RUN_Elevated.cmd script on these computers, as described in Step x. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
+If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS.cmd script on these computers, as described in Step x. Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
 
 In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
 

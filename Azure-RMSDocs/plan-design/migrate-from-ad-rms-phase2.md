@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover step 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-When you cannot migrate all clients at once, run these procedures for batches of clients. For each client that you migrate, add them to the **AIPMigrated** group that you created earlier for onboarding controls.
+When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that want to migrate, add the user to the **AIPMigrated** group that you created earlier.
 
 ## Step 6. Reconfigure clients to use Azure Information Protection
 
@@ -98,65 +98,32 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
 This method is suitable for all Windows clients and should be used if they do not run Office 2016 but an earlier version.
 
-1. Extract the migration scripts from **CleanUpRMS.zip** and **Redirect_Onprem.zip** that you downloaded previously.
+1. Return to the migration scripts,**MigrateClient.cmd** and **CleanUpRMS.cmd**, which you extracted previously.
 
     These scripts reset the configuration on Windows computers so that they will use the Azure Rights Management service rather than AD RMS.
 
-2.  Follow the instructions in the redirection script (**Redirect_OnPrem.cmd**) to modify the script to point to your new Azure Information Protection tenant.
+2.  Follow the instructions in the MigrateClient.cmd script to modify the script to point to your tenant's Azure Rights Management service URL and your server names for your AD RMS cluster extranet licensing URL and AD RMS cluster intranet licensing URL.
 
     > [!IMPORTANT]
-    > As before, be careful not to introduce additional spaces before or after your addresses, and include the port number **443** if necessary. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. 
+    > As before, be careful not to introduce additional spaces before or after your addresses, and include the port number **443** if it is used. For example: https://rms.treyresearch.net:443/_wmcs/licensing. 
 
-4.  On the Windows client computers, run the edited **Redirect_OnPrem.cmd** script and **CleanUpRMS_RUN_Elevated.cmd** script with elevated privileges in the user’s context.
+    If you need to retrieve your Azure Information Protection tenant URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url).
+
+
+4.  Run **CleanUpRMS.cmd** and then **MigrateClient.cmd** on the client computers that the members of the AIPMigrated group use. For example, create a Group Policy to run these scripts and assign it to this group.
 
 
 #### Changes made by the migration scripts
-This section documents the changes that the migration scripts make. You can use this information for reference purposes only, or for troubleshooting, or if you prefer to make these changes yourself.
 
-CleanUpRMS_RUN_Elevated.cmd:
+CleanUpRMS.cmd:
 
--   Delete the contents of the %userprofile%\AppData\Local\Microsoft\DRM and %userprofile%\AppData\Local\Microsoft\MSIPC folders, including any subfolders and any files with long file names.
+-  Delete the contents of all registry keys and folders used by the AD RMS client to store its configuration. This includes the location of the client's AD RMS cluster.
 
--   Delete the contents of the following registry keys:
+MigrateClient.cmd:
 
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
+-   Configures the client to bootstrap against Azure RMS.
 
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM
-
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation
-
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\WoW6432Node\Microsoft\MSIPC\ServiceLocation
-
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
-
--   Add the following registry values:
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServer
-
-Redirect_OnPrem.cmd:
-
--   Create the following registry values for each URL supplied as a parameter under each of the following locations:
-
-    -   HKEY_CURRENT_USER\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_CURRENT_USER\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_LOCAL_MACHINE\Software\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_LOCAL_MACHINE\Software\WoW6432Node\Microsoft\Office\(11.0|12.0|14.0)\Common\DRM\LicenseServerRedirection
-
-    -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
-
-    Each entry has a REG_SZ value of **https://OldRMSserverURL/_wmcs/licensing** with the data in the following format: **https://&lt;YourTenantURL&gt;/_wmcs/licensing**.
-
-    > [!NOTE]
-    > If you need to retrieve your Azure Information Protection tenant URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url).
+-  Configures the client to connect to your Azure Rights Management service to get licenses for content that is protected by AD RMS. 
 
 
 ## Next steps
