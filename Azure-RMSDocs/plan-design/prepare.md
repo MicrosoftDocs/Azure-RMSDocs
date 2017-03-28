@@ -6,7 +6,7 @@ description: Check that you have everything ready to use the Azure Rights Manage
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,9 @@ For performance reasons, group membership is cached by the Azure Rights Manageme
 
 ### Considerations if email addresses change
 
-When you select users or groups by their display name for Azure Information Protection configuration, your selection saves and uses that object's email address. This means that if the email address is changed after you have configured Azure Information Protection, you must remove the user or group from your configuration, and select it again to save the updated email address.
+When you select users or groups by their display name for Azure Information Protection configuration, your selection saves and uses that object's email address. If the email address is later changed, your selected users will not be successfully authorized.
+
+If email addressed are changed, either add the old email address as a proxy address to the user or group (recommended), or remove the user or group from your configuration, and select it again to save the updated email address.
 
 Configurations where you might select users or groups by their display name include custom Rights Management templates and Azure Information Protection scoped policies. Users can also select users and groups by their display name when they configure custom permissions with the Azure Information Protection client.
 
