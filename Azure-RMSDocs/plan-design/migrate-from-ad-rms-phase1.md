@@ -160,10 +160,8 @@ For most migrations, it is not practical to migrate all clients at once, so you 
     To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the Cluster Details information, copy the server name from the Licensing value. For example: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
-    > The instructions include replacing example addresses of **adrms.contoso.com** with the addresses of your own AD RMS servers. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
+    > The instructions include replacing example addresses of **adrms.contoso.com** with your AD RMS server addresses. When you do this, be careful that there are no additional spaces before or after your addresses, which will break the migration script and is very hard to identify as the root cause of the problem. Some editing tools automatically add a space after pasting text.
     >
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net**:443**.
-
 
 5. Deploy this script to all Windows computers to ensure that when you start to migrate clients, clients yet to be migrated continue to communicate with AD RMS even if they consume content that is protected by migrated clients that are now using the Azure Rights Management service.
 
