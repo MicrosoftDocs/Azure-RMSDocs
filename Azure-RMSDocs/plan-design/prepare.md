@@ -47,7 +47,7 @@ For performance reasons, group membership is cached by the Azure Rights Manageme
 
 When you configure usage rights for users or groups and select them by their display name, your selection saves and uses that object's email address. If the email address is later changed, your selected users will not be successfully authorized.
 
-If email addresses are changed, we recommend you add the old email address as a proxy (alternative) address to the user or group, so that usage rights that were assigned previously are retained. If you cannot do that, you must remove the user or group from your configuration, and select it again to save the updated email address so that newly protected content uses the new email address.
+If email addresses are changed, we recommend you add the old email address as a proxy email address (also known as an alias or alternate email address) to the user or group, so that usage rights that were assigned previously are retained. If you cannot do that, you must remove the user or group from your configuration, and select it again to save the updated email address so that newly protected content uses the new email address.
 
 Custom Rights Management templates are an example of where you might select users or groups by the display name to assign usage rights. Users can also select users and groups by their display name when they configure custom permissions with the Azure Information Protection client.
 
