@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -207,13 +207,58 @@ More information about the **Reset** option:
 
 Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
-If you need to sign in as a different user to the one displayed, see [How do I sign in as a different user?](../get-started/faqs-infoprotect.md#how-do-i-sign-in-as-a-different-user)
+If you need to sign in as a different user to the one displayed, see the[Sign in as a different user](#sign-in-as-a-different-user) section on this page.
 
 The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 
 If you see **This client is not licensed for Office Professional Plus**: The Azure Information Protection client has detected that the installed edition of Office does not support applying Rights Management protection. When this detection is made, labels that apply protection do not display on the Azure Information Protection bar.
 
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
+
+## Custom configurations
+
+Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
+
+### Sign in as a different user
+
+In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, you might need to do so as an administrator if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
+
+You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
+
+Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
+
+To sign in as a different user:
+
+1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
+
+2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
+
+Additionally:
+
+- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
+
+- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+
+- If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
+
+## Hide the Classify and Protect menu option in Windows File Explorer
+
+You can configured this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
+
+Create the following DWORD value name (with any value data):
+
+**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
+
+## Support for disconnected computers
+
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computer that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
+
+Locate the following value name and set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer.
+
 
 ## To uninstall the Azure Information Protection client
 
