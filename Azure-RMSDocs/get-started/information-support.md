@@ -86,7 +86,7 @@ Troubleshooting:
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
+- For the Azure Information Protection client for Windows: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 
