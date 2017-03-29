@@ -241,7 +241,7 @@ Additionally:
 
 - If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
 
-## Hide the Classify and Protect menu option in Windows File Explorer
+### Hide the Classify and Protect menu option in Windows File Explorer
 
 You can configured this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
 
@@ -249,7 +249,7 @@ Create the following DWORD value name (with any value data):
 
 **HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
 
-## Support for disconnected computers
+### Support for disconnected computers
 
 By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computer that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
 
