@@ -107,7 +107,7 @@ https://\<Azure RMS URL\>/_wmcs/licensing
 **Data:**
 
 
-- https://\<AD RMS Exranet Licensing URL\/_wmcs/licensing
+- https://\<AD RMS Extranet Licensing URL>\/_wmcs/licensing
 
 
 ---
