@@ -1,17 +1,17 @@
 ---
 # required metadata
 
-title: Migrate AD RMS-Azure Information Protection - phase 3
-description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering steps 6 through 7 from Migrating from AD RMS to Azure Information Protection
+title: Migrate AD RMS-Azure Information Protection - Phase 3
+description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step x from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
+ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 
 
 # optional metadata
@@ -25,311 +25,46 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Migration phase 3 - supporting services configuration
+# Migration phase 3 - client-side configuration
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
+Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 7 through 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that want to migrate, add the user to the **AIPMigrated** group that you created earlier.
 
-## Step 7. Prepare your Exchange deployment for migration
+## Step 6. Reconfigure clients to use Azure Information Protection
 
-If you are using Exchange on-premises or Exchange online, you might have previously integrated Exchange with your AD RMS deployment. In this step you will configure them to use the existing AD RMS configuration to support content protected by Azure RMS. 
+This step uses migration scripts to reconfigure AD RMS clients. The scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
 
-Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands. Run these sets of commands once for each Exchange organization.
+**CleanUpRMS.cmd**:
 
-**If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
+-  Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
 
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation
-	$list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
-	Set-IRMConfiguration -internallicensingenabled $false
-    Set-IRMConfiguration -internallicensingenabled $true 
+**MigrateClient.cmd**:
 
-**If you have integrated Exchange on-premises with AD RMS**: Run the following PowerShell commands either one by one, or in a script: 
+-   Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
 
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation
-	$list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
-	Set-IRMConfiguration -internallicensingenabled $false
-	Set-IRMConfiguration -RefreshServerCertificates
-	Set-IRMConfiguration -internallicensingenabled $true
-	IISReset
+-  Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
 
-<For Exchange on-premises only>
 
-On each Exchange server, add the following registry values.
+### Client reconfiguration by using registry edits
 
+1. Return to the migration scripts,**MigrateClient.cmd** and **CleanUpRMS.cmd**, which you extracted previously.
 
-For Exchange 2013 and Exchange 2016:
+2.  Follow the instructions in **MigrateClient.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL.
 
+    > [!IMPORTANT]
+    > As before, be careful not to introduce additional spaces before or after your addresses.
+    > 
+    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
 
-**Registry path:**
+    If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<Azure RMS URL\>/_wmcs/licensing
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
-
----
-
-For Exchange 2010:
-
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<Azure RMS URL\>/_wmcs/licensing
-
-**Data:**
-
-
-- https://\<AD RMS Extranet Licensing URL>\/_wmcs/licensing
-
-
----
-
-
-After running these commands, if your Exchange servers were configured to support content that was protected by AD RMS, they will also support content protected by Azure RMS after the migration. They will continue to use AD RMS to support protected content until a later step in the migration.
-
-
-## Step 8. Configure IRM integration for Exchange Online
-
-If you have previously imported your TDP from AD RMS to Exchange Online, you must remove this TDP to avoid conflicting templates and policies after you have migrated to Azure Information Protection. To do this, use the [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) cmdlet from Exchange Online.
-
-If you chose an Azure Information Protection tenant key topology of **Microsoft managed**:
-
-1. Use the instructions in the [Exchange Online: IRM configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure Information Protection, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full Azure Rights Management protection functionality with Exchange Online.
-
-2. In addition to the standard configuration to enable IRM for Exchange Online, run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
-
-    Substitute your own organization domain name for `<yourcompany.domain>`.
-
-    	$irmConfig = Get-IRMConfiguration
-    	$list = $irmConfig.LicensingLocation
-    	$list += "https://adrms.<yourcompany.domain>/_wmcs/licensing"
-    	Set-IRMConfiguration -LicensingLocation $list
-    	Set-IRMConfiguration -internallicensingenabled $false
-    	Set-IRMConfiguration -internallicensingenabled $true
-
-
-If you chose an Azure Information Protection tenant key topology of **customer-managed (BYOK)**:
-
--   You will have reduced Rights Management protection functionality with Exchange Online, as described in the [BYOK pricing and restrictions](byok-price-restrictions.md) article.
-
-
-## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
-
-If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you will need to deploy the Rights Management (RMS) connector, which acts as a communications interface (a relay) between your on-premises servers and the protection service for Azure Information Protection.
-
-This steps covers installing and configuring the connector, disabling IRM for Exchange and SharePoint, and configuring these servers to use the connector. Finally, if you have imported AD RMS data configuration files (.xml) into Azure Information Protection that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
-
-> [!NOTE]
-> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](../get-started/requirements-servers.md).
-
-#### Install and configure the RMS connector
-
-Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions. 
-
-### Disable IRM on Exchange Servers and remove AD RMS configuration
-
-1.  On each Exchange server, locate the following folder and delete all the entries in that folder: \ProgramData\Microsoft\DRM\Server\S-1-5-18
-
-2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
-
-    Before you run these commands, substitute your own Azure Rights Management service URL for `<YourTenantURL>`.
-
-		$irmConfig = Get-IRMConfiguration
-		$list = $irmConfig.LicensingLocation 
-		$list += $list += "<YourTenantURL>/_wmcs/licensing"
-		Set-IRMConfiguration -LicensingLocation $list
-
-3.  Now disable IRM features for messages that are sent to internal recipients:
-
-    ```
-    Set-IRMConfiguration -InternalLicensingEnabled $false
-    ```
-
-4. Then use the same cmdlet to disable IRM in Microsoft Office Outlook Web App and in Microsoft Exchange ActiveSync:
-
-    ```
-    Set-IRMConfiguration -ClientAccessServerEnabled $false
-    ```
-
-5.  Finally, use the same cmdlet to clear any cached certificates:
-
-    ```
-    Set-IRMConfiguration -RefreshServerCertificates
-    ```
-
-6.  On each Exchange Server, now reset IIS, for example, by running a command prompt as an administrator and typing **iisreset**.
-
-### Disable IRM on SharePoint Servers and remove AD RMS configuration
-
-1.  Make sure that there are no documents checked out from RMS-protected libraries. If there are, they will be become inaccessible at the end of this procedure.
-
-2.  On the SharePoint Central Administration Web site, in the **Quick Launch** section, click **Security**.
-
-3.  On the **Security** page, in the **Information Policy** section, click **Configure information rights management**.
-
-4.  On the **Information Rights Management** page, in the **Information Rights Management** section, select **Do not use IRM on this server**, then click **OK**.
-
-5.  On each of the SharePoint Server computers, delete the contents of the folder \ProgramData\Microsoft\MSIPC\Server\*&lt;SID of the account running SharePoint Server&gt;*.
-
-#### Configure Exchange and SharePoint to use the connector
-
-1. Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
-
-    If you have Exchange, go to the next step. If you have SharePoint Server only, go straight to [Next steps](#next-steps) to continue the migration. 
-
-2. On each Exchange Server, manually add the registry keys in the next section for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
-
-    When you make these registry edits, use the following instructions:
-
-    -   Replace *ConnectorFQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
-
-    -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
-
-##### Registry edits for Exchange
-
-For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during preparation phase. These values were added to the following paths:
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-
-For Exchange 2013 and Exchange 2016 - registry edit 1:
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- http://\<connectorFQDN\>/_wmcs/licensing
-
-- https://\<connectorName\>/_wmcs/licensing
-
-
----
-
-For Exchange 2013 - registry edit 2:
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
-
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- http://\<connectorFQDN\>/_wmcs/licensing
-
-- https://\<connectorFQDN\>/_wmcs/licensing
-
----
-
-For Exchange 2010 - registry edit 1:
-
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- http://\<connectorFQDN\>/_wmcs/licensing
-
-- https://\<connectorName\>/_wmcs/licensing
-
-
----
-
-For Exchange 2010 - registry edit 2:
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
- 
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- http://\<connectorFQDN\>/_wmcs/licensing
-
-- https://\<connectorFQDN\>/_wmcs/licensing
-
----
+3.  Run **CleanUpRMS.cmd** and then **MigrateClient.cmd** on the client computers that are used by the members of the **AIPMigrated** group. For example, create a group policy object that runs these scripts and assign it to this user group.
 
 
 ## Next steps
-To continue the migration, go to [phase 4 -post migration tasks](migrate-from-ad-rms-phase4.md).
+To continue the migration, go to [phase 3 -supporting services configuration](migrate-from-ad-rms-phase3.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
