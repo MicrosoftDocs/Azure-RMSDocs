@@ -29,7 +29,9 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following set of instructions to  migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS, and newly protected content will use the Azure Rights Management service from Azure Information Protection.
+Use the following set of instructions to migrate your Active Directory Rights Management Services (AD RMS) deployment to Azure Information Protection. 
+
+After the migration, your AD RMS servers are no longer in use but users still have access to documents and email messages that your organization protected by using AD RMS. Newly protected content will use the Azure Rights Management service from Azure Information Protection.
 
 Not sure whether this AD RMS migration is right for your organization?
 
@@ -153,15 +155,25 @@ Include your AD RMS partners in your planning phase for migration because they m
 
 ## Overview of the steps for migrating AD RMS to Azure Information Protection
 
-The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
+The migration steps can be divided into 5 phases that can be done at different times, and by different administrators.
 
-[**PHASE 2: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase2.md)
+[**PHASE 1: MIGRATION PREPARATION**](migrate-from-ad-rms-phase1.md)
 
 - **Step 1: Download the Azure RMS Management Administration Tool and and identify your tenant URL**
 
-    The migration process requires you to run one or more of the  PowerShell cmdlets from the Azure RMS module that is installed with the Azure RMS Management Administration Tool. You will also need to know the URL for your Azure Information Protection tenant to complete many of the migration steps, and you can identity this value by using PowerShell.
+    The migration process requires you to run one or more of the  PowerShell cmdlets from the Azure RMS module that is installed with the Azure RMS Management Administration Tool. You will also need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
 
-- **Step 2. Export configuration data from AD RMS and import it to Azure Information Protection**
+- **Step 2. Prepare for client migration**
+
+     If you cannot migration all clients at once but will migrate them in batches, use onboarding controls and deploy a pre-migration script.
+
+- **Step 3: Prepare your Exchange deployment for migration**
+
+    This step is required if you currently use the IRM feature of Exchange Online or Exchange on-premises to protect emails.
+
+[**PHASE 2: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase2.md)
+
+- **Step 4. Export configuration data from AD RMS and import it to Azure Information Protection**
 
     You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd Windows PowerShell cmdlet. Additional steps might be needed, depending your on AD RMS key configuration:
 
@@ -177,15 +189,11 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 	    Centrally managed, password-based keys in AD RMS to customer-managed Azure Information Protection tenant key (the “bring your own key” or BYOK scenario). This requires the most configuration because you must first extract your software key and import it to an on-premises HSM, and then do the additional steps to transfer the key from your on-premises Thales HSM to an Azure Key Vault HSM and authorize the Azure Rights Management service to use the key vault that stores the key.
 
-- **Step 3. Prepare for client migration**
-
-     If you cannot migration all clients at once but will migrate them in batches, use onboarding controls and deploy a pre-migration script.
-
-- **Step 4. Activate the Azure Rights Management service**
+- **Step 5. Activate the Azure Rights Management service**
 
     If possible, do this step after the import process and not before.
 
-- **Step 5. Configure imported templates**
+- **Step 6. Configure imported templates**
 
     When you import your rights policy templates, their status is archived. If you want users to be able to see and use them, you must change the template status to published in the Azure classic portal.
 
@@ -193,7 +201,7 @@ The migration steps can be divided into 4 phases that can be done at different t
 [**PHASE 3: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
 
-- **Step 6: Reconfigure clients to use Azure Information Protection**
+- **Step 7: Reconfigure clients to use Azure Information Protection**
 
     Existing Windows computers must be reconfigured to use the Azure Information Protection service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
 
@@ -201,11 +209,6 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 
 [**PHASE 4: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase4.md)
-
-
-- **Step 7: Prepare your Exchange deployment for migration**
-
-    This step is required if you currently use the IRM feature of Exchange Online or Exchange on-premises to protect emails.
 
 
 - **Step 8: Configure IRM integration for Exchange Online**
