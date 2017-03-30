@@ -159,7 +159,7 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 [**PHASE 1: MIGRATION PREPARATION**](migrate-from-ad-rms-phase1.md)
 
-- **Step 1: Download the Azure RMS Management Administration Tool and and identify your tenant URL**
+- **Step 1: Download the Azure RMS Management Administration Tool and identify your tenant URL**
 
     The migration process requires you to run one or more of the  PowerShell cmdlets from the Azure RMS module that is installed with the Azure RMS Management Administration Tool. You will also need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
 
