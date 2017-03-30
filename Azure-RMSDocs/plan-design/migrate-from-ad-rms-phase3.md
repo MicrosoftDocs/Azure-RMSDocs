@@ -35,7 +35,7 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 ## Step 7. Prepare your Exchange deployment for migration
 
-Make sure that you have your [Azure Information Protection tenant URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-information-protection-tenant-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
+Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands.
 
 **If you have Exchange Online**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
 
@@ -94,15 +94,15 @@ This steps covers installing and configuring the connector, disabling IRM for Ex
 
 #### Install and configure the RMS connector
 
-Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet. 
+Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions. 
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
 1.  On each Exchange server, locate the following folder and delete all the entries in that folder: \ProgramData\Microsoft\DRM\Server\S-1-5-18
 
-2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read protected emails that are sent by using Azure Information Protection.
+2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
 
-    Before you run these commands, substitute your own tenant URL for `<YourTenantURL>`.
+    Before you run these commands, substitute your own Azure Rights Management service URL for `<YourTenantURL>`.
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
@@ -143,17 +143,19 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 #### Configure Exchange and SharePoint to use the connector
 
--   Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
+1. Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
 
-#### For Exchange only: Edit the registry
+    If you have Exchange, go to the next step. If you have SharePoint Server only, go straight to [Next steps](#next-steps) to continue the migration. 
 
--   On each Exchange Server, manually add the following registry keys for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
+2. On each Exchange Server, manually add the registry keys in the next section for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
 
     When you make these registry edits, use the following instructions:
 
     -   Replace *ConnectorFQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
+
+##### Registry edits for Exchange
 
 For Exchange 2013 - registry edit 1:
 
