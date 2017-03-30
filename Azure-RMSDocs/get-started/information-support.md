@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/29/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -85,6 +85,8 @@ Troubleshooting:
 - For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](../deploy-use/help-users.md).
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
+
+- For the Azure Information Protection client for Windows: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 

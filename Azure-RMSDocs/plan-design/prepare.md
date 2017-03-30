@@ -6,7 +6,7 @@ description: Check that you have everything ready to use the Azure Rights Manage
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,6 +42,14 @@ Before you deploy Azure Information Protection for your organization, make sure 
 ### Group membership caching
 
 For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership can take up to 3 hours to take effect, and this time period is subject to change. Remember to factor this delay into any changes or testing that you do when you use groups in your configuration of the Azure Rights Management service, such as configuring [custom templates](../deploy-use/configure-custom-templates.md) or when you use a group for the [super user feature](../deploy-use/configure-super-users.md). 
+
+### Considerations if email addresses change
+
+When you configure usage rights for users or groups and select them by their display name, your selection saves and uses that object's email address. If the email address is later changed, your selected users will not be successfully authorized.
+
+If email addresses are changed, we recommend you add the old email address as a proxy email address (also known as an alias or alternate email address) to the user or group, so that usage rights that were assigned previously are retained. If you cannot do that, you must remove the user or group from your configuration, and select it again to save the updated email address so that newly protected content uses the new email address.
+
+Custom Rights Management templates are an example of where you might select users or groups by the display name to assign usage rights. Users can also select users and groups by their display name when they configure custom permissions with the Azure Information Protection client.
 
 ## Activate the Rights Management service for data protection
 When you are ready to start protecting documents and emails, activate the Rights Management service to enable this technology. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
