@@ -229,13 +229,13 @@ Especially when you're using an administrator account, be sure to check the doma
 
 To sign in as a different user:
 
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
+1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value (and its associated value data).
 
 2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
 
 Additionally:
 
-- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
+- If you are using single sign-on, you will need to sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
