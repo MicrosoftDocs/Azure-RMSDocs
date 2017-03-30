@@ -71,7 +71,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     ```
 
 
-You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-5-activate-your-azure-information-protection-tenant).
+You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase2.md#step-5-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
