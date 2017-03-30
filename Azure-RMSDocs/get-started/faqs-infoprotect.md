@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -105,28 +105,6 @@ You can also configure transport rules to do the reverse mapping: When an Azure 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
-
-## How do I sign in as a different user?
-
-In a production environment, you wouldn't usually need to sign in as a different user when you're using the Azure Information Protection client. However, you might need to do so if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
-
-You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
-
-Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
-
-To sign in as a different user, you must currently edit the registry:
-
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
-
-2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
-
-Additionally:
-
-- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
-
-- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- If you want to delete the currently downloaded Azure Information Protection policy, you can do so by deleting the **Policy.msip** file from the %localappdata%\Microsoft\MSIP folder.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
