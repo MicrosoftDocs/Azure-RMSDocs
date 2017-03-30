@@ -134,7 +134,7 @@ To confirm the AD RMS cryptographic mode:
 
 -   If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
 
-    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for preparation guidance and for additional help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
+    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
 
 ## Migration planning if you collaborate with external partners
 
@@ -144,13 +144,13 @@ Include your AD RMS partners in your planning phase for migration because they m
     
     For example, they have an Office 365 E3 or E5 subscription, or an Enterprise Mobility + Security subscription, or a standalone subscription for Azure Information Protection.
 
-- Their Azure Rights Management service is not yet activated but they know their tenant URL.
+- Their Azure Rights Management service is not yet activated but they know their Azure Rights Management service URL.
 
-    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)), and then viewing their tenant information ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    They can get this information by installing the Azure Rights Management Tool, connecting to the service ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)), and then viewing their tenant information for the Azure Rights Management service ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
 
-- They provide you with the URLs for their AD RMS cluster and their Azure Rights Management service URL for their Information Protection tenant, so that you can configure your migrated clients to redirect requests for their AD RMS protected content to their Azure RMS tenant. Instructions for configuring client redirection are in step 7.
+- They provide you with the URLs for their AD RMS cluster and their Azure Rights Management service URL, so that you can configure your migrated clients to redirect requests for their AD RMS protected content to their tenant's Azure Rights Management service. Instructions for configuring client redirection are in step 7.
 
-- They import their AD RMS cluster root keys (SLC) into the cloud before you start to migrate users. Similarly, you must import your AD RMS cluster root keys before they start to migrate their users. Instructions for importing the key is covered in this migration process, [Step 4. Export configuration data from AD RMS and import it to Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
+- They import their AD RMS cluster root keys (SLC) into their tenant before you start to migrate your users. Similarly, you must import your AD RMS cluster root keys before they start to migrate their users. Instructions for importing the key is covered in this migration process, [Step 4. Export configuration data from AD RMS and import it to Azure Information Protection](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection). 
 
 ## Overview of the steps for migrating AD RMS to Azure Information Protection
 
@@ -174,7 +174,7 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 - **Step 4. Export configuration data from AD RMS and import it to Azure Information Protection**
 
-    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd Windows PowerShell cmdlet. Additional steps might be needed, depending your on AD RMS key configuration:
+    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd PowerShell cmdlet. Additional steps might be needed, depending on your AD RMS key configuration:
 
 	- **Software-protected key to software-protected key migration**:
 
@@ -199,16 +199,14 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 [**PHASE 3: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
-
 - **Step 7: Reconfigure clients to use Azure Information Protection**
 
-    Existing Windows computers must be reconfigured to use the Azure Information Protection service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
+    Existing Windows computers must be reconfigured to use the Azure Rights Management service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
 
-    In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS
+    In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS.
 
 
 [**PHASE 4: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase4.md)
-
 
 - **Step 8: Configure IRM integration for Exchange Online**
 
@@ -216,17 +214,20 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 - **Step 9: Configure IRM integration for Exchange Server and SharePoint Server**
 
-    This step completes the AD RMS migration configuration for Exchange or SharePoint on-premises, which requires deploying the Rights Management connector.
+    This step completes the AD RMS migration configuration for Exchange or SharePoint on-premises, and it requires deploying the Rights Management connector.
 
 
 [**PHASE 5: POST MIGRATION TASKS**](migrate-from-ad-rms-phase5.md )
 
 - **Step 10: Deprovision AD RMS**
 
-    When you have confirmed that all clients are using Azure Information Protection and no longer accessing the AD RMS servers, you can deprovision your AD RMS deployment.
+    When you have confirmed that all clients are using the Azure Rights Management service and are no longer accessing your AD RMS servers, you can deprovision your AD RMS deployment.
 
+- **Step 11: Remove onboarding controls**
 
-- **Step 11: Re-key your Azure Information Protection tenant key**
+    The onboarding controls that you configured during the preparation phase are no longer needed.
+
+- **Step 12: Re-key your Azure Information Protection tenant key**
 
     This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure Information Protection tenant key.
 

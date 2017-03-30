@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate AD RMS-Azure Information Protection - Phase 5
-description: Phase 5 of migrating from AD RMS to Azure Information Protection, covering steps 10 through 11 from Migrating from AD RMS to Azure Information Protection.
+description: Phase 5 of migrating from AD RMS to Azure Information Protection, covering steps 10 through 12 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -31,8 +31,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 11 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
-
+Use the following information for Phase 5 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 12 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 ## Step 10. Deprovison AD RMS
 
@@ -55,7 +54,24 @@ After decommissioning your AD RMS servers, you might want to take the opportunit
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 
-## Step 11. Re-key your Azure Information Protection tenant key
+## Step 11. Remove onboarding controls
+
+When all your existing clients have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process.
+
+Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment task you created to deploy the redirections.
+
+To remove the onboarding controls:
+
+1. In a PowerShell session, connect to the Azure Rights Management service and when prompted, specify your global admin credentials:
+
+		Connect-Aadrmservice
+
+2. Run the following command:
+
+		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -Force -Scope All
+
+
+## Step 12. Re-key your Azure Information Protection tenant key
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
 
 This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
