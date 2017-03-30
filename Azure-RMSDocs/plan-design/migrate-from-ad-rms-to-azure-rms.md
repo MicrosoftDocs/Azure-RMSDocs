@@ -210,11 +210,11 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 - **Step 8: Configure IRM integration for Exchange Online**
 
-    This step completes the AD RMS migration configuration for Exchange Online.
+    This step completes the AD RMS migration for Exchange Online to now use the Azure Rights Management service.
 
 - **Step 9: Configure IRM integration for Exchange Server and SharePoint Server**
 
-    This step completes the AD RMS migration configuration for Exchange or SharePoint on-premises, and it requires deploying the Rights Management connector.
+    This step completes the AD RMS migration for Exchange or SharePoint on-premises to now use the Azure Rights Management service, which requires deploying the Rights Management connector.
 
 
 [**PHASE 5: POST MIGRATION TASKS**](migrate-from-ad-rms-phase5.md )
