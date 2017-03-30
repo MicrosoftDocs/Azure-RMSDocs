@@ -93,7 +93,7 @@ To achieve this solution:
     
     ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
 
-Before you test this, remember that that's often a delay when you create or edit transport rules (for example, wait an hour). But when the rule is in effect, the following now happens when users use the Outlook web access app or a mobile device client that supports Rights Management protection: 
+Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). But when the rule is in effect, the following now happens when users use the Outlook web access app or a mobile device client that supports Rights Management protection: 
 
 - Users select the Exchange message classification and send the email.
 
