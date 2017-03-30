@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate AD RMS-Azure Information Protection - Phase 3
-description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step x from Migrating from AD RMS to Azure Information Protection.
+description: Phase 3 of migrating from AD RMS to Azure Information Protection, covering step 7 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -29,11 +29,11 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that want to migrate, add the user to the **AIPMigrated** group that you created earlier.
 
-## Step 6. Reconfigure clients to use Azure Information Protection
+## Step 7. Reconfigure clients to use Azure Information Protection
 
 This step uses migration scripts to reconfigure AD RMS clients. The scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
 
@@ -65,6 +65,6 @@ This step uses migration scripts to reconfigure AD RMS clients. The scripts rese
 
 
 ## Next steps
-To continue the migration, go to [phase 3 -supporting services configuration](migrate-from-ad-rms-phase3.md).
+To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase3.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate AD RMS-Azure Information Protection - Phase 1
-description: Phase 1 of migrating from AD RMS to Azure Information Protection, covering steps x though x from Migrating from AD RMS to Azure Information Protection.
+description: Phase 1 of migrating from AD RMS to Azure Information Protection, covering steps 1 though 3 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps x though x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
+Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 3 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
 
 
 ## Step 1: Download the Azure Rights Management Administration Tool and identify your tenant URL
@@ -89,7 +89,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
     You can use Group Policy or another software deployment mechanism to deploy this script.
 
-## Step 4. Prepare your Exchange deployment for migration
+## Step 3. Prepare your Exchange deployment for migration
 
 If you are using Exchange on-premises or Exchange online, you might have previously integrated Exchange with your AD RMS deployment. In this step you will configure them to use the existing AD RMS configuration to support content protected by Azure RMS. 
 
@@ -115,9 +115,7 @@ Make sure that you have your [Azure Rights Management service URL for your tenan
 	Set-IRMConfiguration -internallicensingenabled $true
 	IISReset
 
-<For Exchange on-premises only>
-
-On each Exchange server, add the following registry values.
+In addition, for Exchange on-premises, on each Exchange server, you must add registry values.
 
 
 For Exchange 2013 and Exchange 2016:
@@ -133,11 +131,9 @@ Reg_SZ
 
 **Value:**
 
-https://\<Azure RMS URL\>/_wmcs/licensing
+https://\<Your Tenant URL\>/_wmcs/licensing
 
 **Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
 - https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
@@ -158,7 +154,7 @@ Reg_SZ
 
 **Value:**
 
-https://\<Azure RMS URL\>/_wmcs/licensing
+https://\<Your Tenant URL\>/_wmcs/licensing
 
 **Data:**
 

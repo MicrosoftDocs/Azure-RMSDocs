@@ -33,87 +33,6 @@ ms.suite: ems
 
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps x through x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 7. Prepare your Exchange deployment for migration
-
-If you are using Exchange on-premises or Exchange online, you might have previously integrated Exchange with your AD RMS deployment. In this step you will configure them to use the existing AD RMS configuration to support content protected by Azure RMS. 
-
-Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands. Run these sets of commands once for each Exchange organization.
-
-**If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
-
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation
-	$list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
-	Set-IRMConfiguration -internallicensingenabled $false
-    Set-IRMConfiguration -internallicensingenabled $true 
-
-**If you have integrated Exchange on-premises with AD RMS**: Run the following PowerShell commands either one by one, or in a script: 
-
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation
-	$list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
-	Set-IRMConfiguration -internallicensingenabled $false
-	Set-IRMConfiguration -RefreshServerCertificates
-	Set-IRMConfiguration -internallicensingenabled $true
-	IISReset
-
-<For Exchange on-premises only>
-
-On each Exchange server, add the following registry values.
-
-
-For Exchange 2013 and Exchange 2016:
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<Azure RMS URL\>/_wmcs/licensing
-
-**Data:**
-
-One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
-
-- https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
-
----
-
-For Exchange 2010:
-
-
-
-**Registry path:**
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<Azure RMS URL\>/_wmcs/licensing
-
-**Data:**
-
-
-- https://\<AD RMS Extranet Licensing URL>\/_wmcs/licensing
-
-
----
-
-
-After running these commands, if your Exchange servers were configured to support content that was protected by AD RMS, they will also support content protected by Azure RMS after the migration. They will continue to use AD RMS to support protected content until a later step in the migration.
 
 
 ## Step 8. Configure IRM integration for Exchange Online
@@ -160,11 +79,11 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
 
-    Before you run these commands, substitute your own Azure Rights Management service URL for `<YourTenantURL>`.
+    Before you run these commands, substitute your own Azure Rights Management service URL for `<Your Tenant URL>`.
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
-		$list += $list += "<YourTenantURL>/_wmcs/licensing"
+		$list += $list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
@@ -209,7 +128,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
     When you make these registry edits, use the following instructions:
 
-    -   Replace *ConnectorFQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
+    -   Replace *Connector FQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
 
@@ -241,9 +160,9 @@ https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://\<connectorFQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<connectorName\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 
 ---
@@ -268,9 +187,9 @@ https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://\<connectorFQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<connectorFQDN\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 
@@ -294,9 +213,9 @@ https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://\<connectorFQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<connectorName\>/_wmcs/licensing
+- https://\<connector Name\>/_wmcs/licensing
 
 
 ---

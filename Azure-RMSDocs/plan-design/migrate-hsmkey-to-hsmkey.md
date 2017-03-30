@@ -32,7 +32,7 @@ ms.suite: ems
 
 These instructions are part of the [migration path from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md), and are applicable only if your AD RMS key is HSM-protected and you want to migrate to Azure Information Protection with a HSM-protected tenant key in Azure Key Vault. 
 
-If this is not your chosen configuration scenario, go back to [Step 2. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) and choose a different configuration.
+If this is not your chosen configuration scenario, go back to [Step 4. Export configuration data from AD RMS and import it to Azure RMS](migrate-from-ad-rms-phase1.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection) and choose a different configuration.
 
 > [!NOTE]
 > These instructions assume your AD RMS key is module-protected. This is the most typical case. 
@@ -96,6 +96,6 @@ These procedures are done by the administrator for Azure Information Protection.
     > [!NOTE]
     > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
 
-You’re now ready to go to [Step 3. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
+You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase1.md#step-5-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

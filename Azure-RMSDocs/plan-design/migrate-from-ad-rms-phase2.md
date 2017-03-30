@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate AD RMS-Azure Information Protection - Phase 2
-description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering steps x though x from Migrating from AD RMS to Azure Information Protection.
+description: Phase 2 of migrating from AD RMS to Azure Information Protection, covering steps 4 though 6 from Migrating from AD RMS to Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -29,35 +29,10 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps x though x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 2 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 4 though 6 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Step 1: Download the Azure Rights Management Administration Tool and identify your tenant URL
-
-Go to the Microsoft Download Center and download the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the Azure Rights Management administration module for Windows PowerShell. Azure Rights Management (Azure RMS) is the service that provides the data protection for Azure Information Protection.
-
-Install the tool. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
-
-> [!NOTE]
-> If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least 2.5.0.0: `(Get-Module aadrm -ListAvailable).Version`
-
-To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant so that you can substitute it for when you see references to *&lt;YourTenantURL&gt;*. Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
-
-For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
-
-### To identify your Azure Rights Management service URL
-
-1. Connect to the Azure Rights Management service and when prompted, enter the credentials for your tenant's global administrator:
-    
-		Connect-AadrmService
-    
-2. Get your tenant's configuration:
-    
-		Get-AadrmConfiguration
-    
-3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. What remains is your Azure Information Protection tenant URL.
-
-## Step 2. Export configuration data from AD RMS and import it to Azure Information Protection
+## Step 4. Export configuration data from AD RMS and import it to Azure Information Protection
 This step is a two-part process:
 
 1.  Export the configuration data from AD RMS by exporting the trusted publishing domains (TPDs) to an .xml file. This process is the same for all migrations.
@@ -136,7 +111,7 @@ To complete Step 2, choose and select the instructions for your migration path:
 
 
 
-## Step 4. Activate the Azure Rights Management service
+## Step 5. Activate the Azure Rights Management service
 
 Open a PowerShell session and run the following commands:
 
@@ -154,7 +129,7 @@ If your Azure Information Protection tenant is already activated and you can ide
 
 In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
 
-## Step 5. Configure imported templates
+## Step 6. Configure imported templates
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
 Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
@@ -237,6 +212,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 ## Next steps
-Go to [phase 2 - client-side configuration](migrate-from-ad-rms-phase2.md).
+Go to [phase 3 - client-side configuration](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
