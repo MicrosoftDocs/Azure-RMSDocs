@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/03/2017
+ms.date: 03/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -222,9 +222,9 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 [**PHASE 5: POST MIGRATION TASKS**](migrate-from-ad-rms-phase5.md )
 
-- **Step 10: Decommission AD RMS**
+- **Step 10: Deprovision AD RMS**
 
-    When you have confirmed that all clients are using Azure Information Protection and no longer accessing the AD RMS servers, you can decommission your AD RMS deployment.
+    When you have confirmed that all clients are using Azure Information Protection and no longer accessing the AD RMS servers, you can deprovision your AD RMS deployment.
 
 
 - **Step 11: Re-key your Azure Information Protection tenant key**

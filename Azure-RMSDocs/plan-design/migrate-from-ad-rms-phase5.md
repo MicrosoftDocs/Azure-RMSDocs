@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 03/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,7 +34,7 @@ ms.suite: ems
 Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 11 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Step 10. Decommission AD RMS
+## Step 10. Deprovison AD RMS
 
 Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP will prevent new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete and all connections should be going to the Azure Rights Management service. 
 

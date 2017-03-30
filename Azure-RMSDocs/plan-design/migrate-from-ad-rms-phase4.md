@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2017
+ms.date: 03/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,7 +83,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
-		$list += $list += "<Your Tenant URL>/_wmcs/licensing"
+		$list + "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
@@ -122,7 +122,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 1. Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
 
-    If you have Exchange, go to the next step. If you have SharePoint Server only, go straight to [Next steps](#next-steps) to continue the migration. 
+    If you have SharePoint Server only, go straight to [Next steps](#next-steps) to continue the migration. 
 
 2. On each Exchange Server, manually add the registry keys in the next section for each configuration data file (.xml) that you imported, to redirect the trusted publishing domain URLs to the RMS connector. These registry entries are specific to migration and are not added by the server configuration tool for Microsoft RMS connector.
 
