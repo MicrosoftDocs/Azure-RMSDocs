@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,8 +85,7 @@ To achieve this solution:
 
 2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
-    For the message header, you'll find the information to specify by inspecting the properties of an Office file that you classified by using your Azure Information Protection label. Identify the file property that has the format **MSIP_Label_<GUID>_Enabled** and specify this string for the message header, and then specify **True** for the header value. For example, your message header might look like this string: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
-
+    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Identify the header that has the format **msip_labels:MSIP_Label_<GUID>_Enabled=True;**. Then, for the message header, specify **MSIP_Label_<GUID>_Enabled** (for example: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**), and specify **True;** for the header value.
 
 The following now happens when users use the Outlook web access app or a mobile device client that supports rights management protection: 
 
