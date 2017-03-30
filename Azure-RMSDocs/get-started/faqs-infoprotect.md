@@ -73,6 +73,10 @@ When you use sub-labels, don't configure visual markings, protection, and condit
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
+## How can DLP solutions and other applications integrate with Azure Information Protection?
+
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
+
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
 Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the Azure Information Protection client applies the corresponding label settings for that classification.
@@ -105,33 +109,7 @@ If your Azure Information Protection labels apply rights management protection, 
 
 You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
 
-- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **Confidential**), and apply a message classification that maps to this label.
-
-## How can DLP solutions and other applications integrate with Azure Information Protection?
-
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
-
-## How do I sign in as a different user?
-
-In a production environment, you wouldn't usually need to sign in as a different user when you're using the Azure Information Protection client. However, you might need to do so if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
-
-You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
-
-Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
-
-To sign in as a different user, you must currently edit the registry:
-
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
-
-2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
-
-Additionally:
-
-- If you are using single sign-on, you will need to sign out of Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
-
-- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- If you want to delete the currently downloaded Azure Information Protection policy, you can do so by deleting the **Policy.msip** file from the %localappdata%\Microsoft\MSIP folder.
+- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
