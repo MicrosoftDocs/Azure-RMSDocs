@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate AD RMS-Azure Information Protection - phase 4
-description: Phase 4 of migrating from AD RMS to Azure Information Protection, covering steps x through x from Migrating from AD RMS to Azure Information Protection
+description: Phase 4 of migrating from AD RMS to Azure Information Protection, covering steps 8 through 9 from Migrating from AD RMS to Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -31,7 +31,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps x through x from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Use the following information for Phase 4 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 8 through 9 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
 
