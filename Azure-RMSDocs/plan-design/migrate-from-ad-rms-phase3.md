@@ -215,7 +215,14 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 ##### Registry edits for Exchange
 
-For Exchange 2013 - registry edit 1:
+For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during preparation phase. These values were added to the following paths:
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+
+For Exchange 2013 and Exchange 2016 - registry edit 1:
 
 
 **Registry path:**
