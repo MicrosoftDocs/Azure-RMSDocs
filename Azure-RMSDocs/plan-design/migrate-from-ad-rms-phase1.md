@@ -41,7 +41,7 @@ Install the tool. For instructions, see [Installing Windows PowerShell for Azure
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least 2.5.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
-To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant so that you can substitute it for when you see references to *&lt;YourTenantURL&gt;*. Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
+To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant so that you can substitute it for when you see references to *\<Your Tenant URL\>*. Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
 
 For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -55,7 +55,9 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
 		Get-AadrmConfiguration
     
-3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. What remains is your Azure Information Protection tenant URL.
+3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. 
+    
+    What remains is your Azure Rights Management service URL for you Azure Information Protection tenant, which is often shortened to *Your tenant URL* in the following migration instructions.
 
 ## Step 2. Prepare for client migration
 
