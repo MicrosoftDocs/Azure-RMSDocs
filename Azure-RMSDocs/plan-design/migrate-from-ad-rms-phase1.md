@@ -57,7 +57,7 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
 3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. What remains is your Azure Information Protection tenant URL.
 
-# Step 2. Prepare for client migration
+## Step 2. Prepare for client migration
 
 For most migrations, it is not practical to migrate all clients at once, so you will likely migrate clients in batches. This means that for a period of time, some clients will be using Azure Information Protection and some will still be using AD RMS. To support both pre-migrated and migrated users, use onboarding controls and deploy a pre-migration script. This step is required so that users who have not yet migrated can consume content that is now protected by Azure Rights Management.
 
