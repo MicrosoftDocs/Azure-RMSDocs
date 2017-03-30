@@ -155,7 +155,7 @@ Include your AD RMS partners in your planning phase for migration because they m
 
 The migration steps can be divided into 4 phases that can be done at different times, and by different administrators.
 
-[**PHASE 1: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase1.md)
+[**PHASE 2: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase2.md)
 
 - **Step 1: Download the Azure RMS Management Administration Tool and and identify your tenant URL**
 
@@ -190,7 +190,7 @@ The migration steps can be divided into 4 phases that can be done at different t
     When you import your rights policy templates, their status is archived. If you want users to be able to see and use them, you must change the template status to published in the Azure classic portal.
 
 
-[**PHASE 2: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase2.md)
+[**PHASE 3: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
 
 - **Step 6: Reconfigure clients to use Azure Information Protection**
@@ -200,7 +200,7 @@ The migration steps can be divided into 4 phases that can be done at different t
     In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS
 
 
-[**PHASE 3: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase3.md)
+[**PHASE 4: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase4.md)
 
 
 - **Step 7: Prepare your Exchange deployment for migration**
@@ -217,7 +217,7 @@ The migration steps can be divided into 4 phases that can be done at different t
     This step completes the AD RMS migration configuration for Exchange or SharePoint on-premises, which requires deploying the Rights Management connector.
 
 
-[**PHASE 4: POST MIGRATION TASKS**](migrate-from-ad-rms-phase4.md )
+[**PHASE 5: POST MIGRATION TASKS**](migrate-from-ad-rms-phase5.md )
 
 - **Step 10: Decommission AD RMS**
 
@@ -230,6 +230,6 @@ The migration steps can be divided into 4 phases that can be done at different t
 
 
 ## Next steps
-To start the migration, go to [Phase 1 - server-side configuration](migrate-from-ad-rms-phase1.md).
+To start the migration, go to [Phase 1 - preparation](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
