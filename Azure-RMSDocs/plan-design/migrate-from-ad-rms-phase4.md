@@ -134,7 +134,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 #### Registry edits for Exchange
 
-For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during preparation phase. These values were added to the following paths:
+For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during the preparation phase. These values were added to the following paths:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
@@ -228,6 +228,6 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 
 ## Next steps
-To continue the migration, go to [phase 4 -post migration tasks](migrate-from-ad-rms-phase4.md).
+To continue the migration, go to [phase 5 -post migration tasks](migrate-from-ad-rms-phase5.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
