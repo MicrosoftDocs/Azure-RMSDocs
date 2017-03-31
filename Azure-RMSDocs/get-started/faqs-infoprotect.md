@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,6 +73,10 @@ When you use sub-labels, don't configure visual markings, protection, and condit
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
+## How can DLP solutions and other applications integrate with Azure Information Protection?
+
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
+
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
 Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the Azure Information Protection client applies the corresponding label settings for that classification.
@@ -85,10 +89,15 @@ To achieve this solution:
 
 2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
-    For the message header, you'll find the information to specify by inspecting the properties of an Office file that you classified by using your Azure Information Protection label. Identify the file property that has the format **MSIP_Label_<GUID>_Enabled** and specify this string for the message header, and then specify **True** for the header value. For example, your message header might look like this string: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
+    
+    ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
 
-
-The following now happens when users use the Outlook web access app or a mobile device client that supports rights management protection: 
+Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). But when the rule is in effect, the following now happens when users use the Outlook web access app or a mobile device client that supports Rights Management protection: 
 
 - Users select the Exchange message classification and send the email.
 
@@ -100,11 +109,7 @@ If your Azure Information Protection labels apply rights management protection, 
 
 You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
 
-- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **Confidential**), and apply a message classification that maps to this label.
-
-## How can DLP solutions and other applications integrate with Azure Information Protection?
-
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
+- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
