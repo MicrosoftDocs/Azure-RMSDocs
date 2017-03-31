@@ -66,7 +66,7 @@ If you don’t want all users to be able to protect files immediately by using A
 For example, if you initially want only administrators in the “IT department” group (that has an object ID of fbb99ded-32a0-45f1-b038-38b519009503) to be able to protect content for testing purposes, use the following command:
 
 ```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503" -Scope All
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
 Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
@@ -74,8 +74,15 @@ Note that for this configuration option, you must specify a group; you cannot sp
 Alternatively, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
 ```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True
 ```
+
+When you no longer need to use onboarding controls, whether you used the group or licensing option, run:
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+```
+
 
 For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx) help.
 
