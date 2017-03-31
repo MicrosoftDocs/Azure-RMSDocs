@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -66,17 +66,25 @@ If you don’t want all users to be able to protect files immediately by using A
 For example, if you initially want only administrators in the “IT department” group (that has an object ID of fbb99ded-32a0-45f1-b038-38b519009503) to be able to protect content for testing purposes, use the following command:
 
 ```
-Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
-```
-Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command.
-
-Or, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
-
-```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
-For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx) help.
+Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for version 1.0 of the module, use the [Get-MsolGroup](/powershell/msonline/v1/get-msolgroup) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
+
+Alternatively, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True
+```
+
+When you no longer need to use onboarding controls, whether you used the group or licensing option, run:
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+```
+
+
+For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy) help.
 
 When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office clients the default templates that are automatically published when the Azure Rights Management service is activated, or custom templates that you might configure.  Server-side applications, such as Exchange, can implement their own per-user controls for Rights Management integration to achieve the same result.
 
@@ -86,8 +94,7 @@ Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_ri
 
 For example, you might want to use [custom templates](configure-custom-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](../rms-client/aip-client.md) that supports protecting all file types on all devices. 
 
-Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. 
-For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
+Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
