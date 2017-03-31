@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -66,11 +66,12 @@ If you don’t want all users to be able to protect files immediately by using A
 For example, if you initially want only administrators in the “IT department” group (that has an object ID of fbb99ded-32a0-45f1-b038-38b519009503) to be able to protect content for testing purposes, use the following command:
 
 ```
-Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503" -Scope All
 ```
-Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command.
 
-Or, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
+Note that for this configuration option, you must specify a group; you cannot specify individual users. To obtain the object ID for the group, you can use Azure AD PowerShell—for example, for [version 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) of the module, use the [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx) command. Or, you can copy the **Object ID** value of the group from the Azure portal.
+
+Alternatively, if you want to ensure that only users who are correctly licensed to use Azure Information Protection can protect content:
 
 ```
 Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
