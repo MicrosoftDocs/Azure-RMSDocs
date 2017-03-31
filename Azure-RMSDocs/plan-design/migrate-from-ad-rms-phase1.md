@@ -75,7 +75,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
 
-3. [Download the following file that contains client migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
+3. [Download the following file](https://go.microsoft.com/fwlink/?LinkId=524619) that contains client migration scripts:
     
     **ClientMigration.zip**
     
@@ -127,17 +127,11 @@ For Exchange 2013 and Exchange 2016:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**Type:**
+**Type:** Reg_SZ
 
-Reg_SZ
+**Value:** https://\<Your Tenant URL\>/_wmcs/licensing
 
-**Value:**
-
-https://\<Your Tenant URL\>/_wmcs/licensing
-
-**Data:**
-
-https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
+**Data:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 
 ---
@@ -149,17 +143,11 @@ For Exchange 2010:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Type:**
+**Type:** Reg_SZ
 
-Reg_SZ
+**Value:** https://\<Your Tenant URL\>/_wmcs/licensing
 
-**Value:**
-
-https://\<Your Tenant URL\>/_wmcs/licensing
-
-**Data:**
-
-https://\<AD RMS Extranet Licensing URL>\/_wmcs/licensing
+**Data:** https://\<AD RMS Extranet Licensing URL>/_wmcs/licensing
 
 
 ---
