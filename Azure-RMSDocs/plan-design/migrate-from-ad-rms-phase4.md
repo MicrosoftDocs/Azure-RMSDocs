@@ -69,17 +69,17 @@ This steps covers installing and configuring the connector, disabling IRM for Ex
 > [!NOTE]
 > Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](../get-started/requirements-servers.md).
 
-#### Install and configure the RMS connector
+### Install and configure the RMS connector
 
 Use the instructions in the [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md) article, and do steps 1 though 4. Do not start step 5 yet from the connector instructions. 
 
 ### Disable IRM on Exchange Servers and remove AD RMS configuration
 
-1.  On each Exchange server, locate the following folder and delete all the entries in that folder: \ProgramData\Microsoft\DRM\Server\S-1-5-18
+1.  On each Exchange server, locate the following folder and delete all the entries in that folder: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
 2. From one of the Exchange servers, run the following PowerShell commands to ensure that users will be able to read emails that are protected by using Azure Rights Management.
 
-    Before you run these commands, substitute your own Azure Rights Management service URL for `<Your Tenant URL>`.
+    Before you run these commands, substitute your own Azure Rights Management service URL for *\<Your Tenant URL>*.
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
