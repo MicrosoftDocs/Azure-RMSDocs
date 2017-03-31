@@ -45,7 +45,7 @@ If you chose an Azure Information Protection tenant key topology of **Microsoft 
 
 2. In addition to the standard configuration to enable IRM for Exchange Online, run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
 
-    Substitute your own organization domain name for `<yourcompany.domain>`.
+    Substitute your own organization domain name for *\<yourcompany.domain>*.
 
     	$irmConfig = Get-IRMConfiguration
     	$list = $irmConfig.LicensingLocation
