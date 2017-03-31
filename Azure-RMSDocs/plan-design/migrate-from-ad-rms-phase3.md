@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that want to migrate, add the user to the **AIPMigrated** group that you created earlier.
+When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
 
 ## Step 7. Reconfigure clients to use Azure Information Protection
 
