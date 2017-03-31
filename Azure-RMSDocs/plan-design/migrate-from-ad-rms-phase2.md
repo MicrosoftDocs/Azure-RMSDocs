@@ -102,7 +102,7 @@ Before you start these procedures, make sure that you can access the .xml files 
 > However you store these files, use security best practices to protect them because this data includes your private key.
 
 
-To complete Step 2, choose and select the instructions for your migration path: 
+To complete Step 4, choose and select the instructions for your migration path: 
 
 
 - [Software-protected key to software-protected key](migrate-softwarekey-to-softwarekey.md)
@@ -142,7 +142,7 @@ The template changes that you might need to make for this step:
 
 - If your templates in AD RMS used the **ANYONE** group, you must manually add the equivalent group and rights.
 
-## Procedure if you created custom templates before the migration
+### Procedure if you created custom templates before the migration
 
 If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
@@ -155,7 +155,7 @@ If you created custom templates before the migration, either before or after act
 You can then publish or archive these templates as you would any other template that you create after the migration.
 
 
-## Procedure if your templates in AD RMS used the **ANYONE** group
+### Procedure if your templates in AD RMS used the **ANYONE** group
 
 If your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure Information Protection; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
@@ -163,9 +163,9 @@ If  you're not sure whether your AD RMS templates include the ANYONE group, you 
 
 You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
 
--   Use the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the  [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet.
+-   Use the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet.
 
--   Use the [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) cmdlet to import this change back into Azure Information Protection.
+-   Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure Information Protection.
 
 > [!NOTE]
 > This "AllStaff" equivalent group isn't exactly the same as the ANYONE group in AD RMS:  The "AllStaff" group includes all users in your Azure tenant, whereas the ANYONE group includes all authenticated users, who could be outside your organization.
@@ -173,7 +173,7 @@ You can see your organization's automatically created group if you copy one of t
 > Because of this difference between the two groups, you might need to also add external users in addition to the "AllStaff" group. External email addresses for groups are not currently supported.
 
 
-### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
+#### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
 This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
 **Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
