@@ -118,7 +118,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 5.  On each of the SharePoint Server computers, delete the contents of the folder \ProgramData\Microsoft\MSIPC\Server\\<*SID of the account running SharePoint Server>*.
 
-#### Configure Exchange and SharePoint to use the connector
+### Configure Exchange and SharePoint to use the connector
 
 1. Return to the instructions for deploying the RMS connector: [Step 5: Configuring servers to use the RMS connector](../deploy-use/configure-servers-rms-connector.md)
 
@@ -128,11 +128,11 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
     When you make these registry edits, use the following instructions:
 
-    -   Replace *Connector FQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
+    -   Replace *connector FQDN* with the name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
     -   Use the HTTP or HTTPS prefix for the connector URL, depending on whether you have configured the connector to use HTTP or HTTPS to communicate with your on-premises servers.
 
-##### Registry edits for Exchange
+#### Registry edits for Exchange
 
 For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during preparation phase. These values were added to the following paths:
 
@@ -148,13 +148,9 @@ For Exchange 2013 and Exchange 2016 - registry edit 1:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
-**Type:**
+**Type:** Reg_SZ
 
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
+**Value:** https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
@@ -173,15 +169,9 @@ For Exchange 2013 - registry edit 2:
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
 
+**Type:** Reg_SZ
 
-**Type:**
-
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
+**Value:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
@@ -196,18 +186,13 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 For Exchange 2010 - registry edit 1:
 
 
-
 **Registry path:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
-**Type:**
+**Type:** Reg_SZ
 
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
+**Value:** https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
@@ -226,24 +211,18 @@ For Exchange 2010 - registry edit 2:
 **Registry path:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
- 
 
-**Type:**
+**Type:** Reg_SZ
 
-Reg_SZ
-
-**Value:**
-
-https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
-
+**Value:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
 **Data:**
 
 One of the following, depending on whether you are using HTTP or HTTPS from your Exchange server to the RMS connector:
 
-- http://\<connectorFQDN\>/_wmcs/licensing
+- http://\<connector FQDN\>/_wmcs/licensing
 
-- https://\<connectorFQDN\>/_wmcs/licensing
+- https://\<connector FQDN\>/_wmcs/licensing
 
 ---
 
