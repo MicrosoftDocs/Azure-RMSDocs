@@ -71,9 +71,9 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 		Connect-Aadrmservice
 
-    Then configure this group for onboarding controls, substituting your group object ID for the one in this example:
+    Then configure this group for onboarding controls, substituting your group object ID for the one in this example, and enter **Y** to confirm when you are prompted:
 
-		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
+		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
 
 3. [Download the following file that contains client migration scripts](https://go.microsoft.com/fwlink/?LinkId=524619):
     
