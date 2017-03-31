@@ -58,7 +58,7 @@ These procedures are done by the administrator for Azure Key Vault.
 
     When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service to use this key for its tenant key.
 
-2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](/powershell/resourcemanager/azurerm.keyvault/v2.7.0/set-azurermkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
     For example, if the key vault that you have created for Azure Information Protection is named contoso-byok-ky, and your resource group is named contoso-byok-rg, run the following command:
     
@@ -71,9 +71,9 @@ Now that you’ve prepared your HSM key in Azure Key Vault for the Azure Rights 
 
 These procedures are done by the administrator for Azure Information Protection.
 
-1.  On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx) cmdlet.
+1.  On the Internet-connect workstation and in the PowerShell session, connect to the Azure Rights Management service by using the [Connnect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet.
     
-    Then upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. 
+    Then upload the first exported trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration. 
     
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
     
@@ -87,14 +87,14 @@ These procedures are done by the administrator for Azure Information Protection.
 
 2.  When the command completes, repeat step 1 for each remaining .xml file that you created by exporting your trusted publishing domains. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. But for these files, set **-Active** to **false** when you run the Import command.  
 
-3.  Use the [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
+3.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
+    > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) Azure RMS cmdlet.
 
 You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

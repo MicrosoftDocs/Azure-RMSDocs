@@ -137,7 +137,7 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 1.  Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
-2. Upload the first .xml file, by using the [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) cmdlet. If you have more than one of these files because you had multiple trusted publishing domains, choose the file that corresponds to the HSM key you want to use with Azure Information Protection to protect content after the migration.
+2. Upload the first .xml file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. If you have more than one of these files because you had multiple trusted publishing domains, choose the file that corresponds to the HSM key you want to use with Azure Information Protection to protect content after the migration.
 
     To run this cmdlet, you will need the URL for the key that was identified in the previous step.
 
@@ -153,14 +153,14 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 
 
-3.  Use the [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
+3.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) Azure RMS cmdlet.
+    > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) Azure RMS cmdlet.
 
 
 You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

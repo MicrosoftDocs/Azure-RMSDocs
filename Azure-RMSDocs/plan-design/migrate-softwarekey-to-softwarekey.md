@@ -39,21 +39,21 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
 
 ## To import the configuration data to Azure Information Protection
 
-1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure Rights Management (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet. The Azure Rights Management service (Azure RMS) provides the protection service for Azure Information Protection.
+1.  On an Internet-connected workstation, download and install the Windows PowerShell module for Azure Rights Management (minimum version 2.5.0.0), which includes the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. The Azure Rights Management service (Azure RMS) provides the protection service for Azure Information Protection.
 
     > [!TIP]
     > If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm -ListAvailable).Version`
 
     For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
-2.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure RMS service:
+2.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure RMS service:
 
     ```
     Connect-AadrmService
     ```
     When prompted, enter your [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
 
-3.  Use the [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use with Azure Information Protection to protect content after the migration. Use the following command:
+3.  Use the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet to upload the first exported trusted publishing domain (.xml) file. If you have more than one .xml file because you had multiple trusted publishing domains, choose the file that contains the exported trusted publishing domain that you want to use with Azure Information Protection to protect content after the migration. Use the following command:
 
     ```
     Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
@@ -64,7 +64,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
 4.  When the command completes, repeat step 3 for each remaining .xml file that you created by exporting your trusted publishing domains. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. But for these files, set **-Active** to **false** when you run the Import command. For example: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
-5.  Use the [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) cmdlet to disconnect from the Azure Rights Management service:
+5.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
