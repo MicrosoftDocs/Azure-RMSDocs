@@ -39,18 +39,18 @@ This step uses migration scripts to reconfigure AD RMS clients. The scripts rese
 
 **CleanUpRMS.cmd**:
 
--  Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
+- Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
 
 **MigrateClient.cmd**:
 
--   Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
+- Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
 
 -  Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
 
 
 ### Client reconfiguration by using registry edits
 
-1. Return to the migration scripts,**MigrateClient.cmd** and **CleanUpRMS.cmd**, which you extracted previously.
+1. Return to the migration scripts, **CleanUpRMS.cmd** and **MigrateClient.cmd**, which you extracted previously.
 
 2.  Follow the instructions in **MigrateClient.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL.
 
