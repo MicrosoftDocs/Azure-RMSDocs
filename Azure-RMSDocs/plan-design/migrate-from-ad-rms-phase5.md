@@ -56,7 +56,7 @@ After decommissioning your AD RMS servers, you might want to take the opportunit
 
 ## Step 11. Remove onboarding controls
 
-When all your existing clients have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process.
+When all your existing clients have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process. 
 
 Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment task you created to deploy the redirections.
 
@@ -66,10 +66,15 @@ To remove the onboarding controls:
 
 		Connect-Aadrmservice
 
-2. Run the following command:
+2. Run the following command, and enter **Y** to confirm:
 
-		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
+		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
+3. Confirm that onboarding controls are no longer set:
+
+		Get-AadrmOnboardingControlPolicy
+
+    In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
 ## Step 12. Re-key your Azure Information Protection tenant key
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
