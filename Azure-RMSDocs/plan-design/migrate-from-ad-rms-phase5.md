@@ -68,7 +68,7 @@ To remove the onboarding controls:
 
 2. Run the following command:
 
-		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -Force -Scope All
+		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 
 
 ## Step 12. Re-key your Azure Information Protection tenant key
