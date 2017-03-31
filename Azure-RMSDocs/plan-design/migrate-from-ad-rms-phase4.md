@@ -116,7 +116,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 4.  On the **Information Rights Management** page, in the **Information Rights Management** section, select **Do not use IRM on this server**, then click **OK**.
 
-5.  On each of the SharePoint Server computers, delete the contents of the folder \ProgramData\Microsoft\MSIPC\Server\*&lt;SID of the account running SharePoint Server&gt;*.
+5.  On each of the SharePoint Server computers, delete the contents of the folder \ProgramData\Microsoft\MSIPC\Server\\<*SID of the account running SharePoint Server>*.
 
 #### Configure Exchange and SharePoint to use the connector
 
