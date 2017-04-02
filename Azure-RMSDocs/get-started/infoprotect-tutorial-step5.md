@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -67,7 +67,7 @@ You’re then ready to safely share this document by email.
 
     **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://aka.ms/rms-signup.** 
 
-    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-email.png)
+    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-emailv2.png)
 
     Click **Send**.
 
@@ -99,9 +99,9 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
     ![Information banner for custom protection](../media/information-banner-custom-protection.png)
 
-2.  On the **Home** tab, click **Protect** > **Track and revoke**:
+2.  On the **Home** tab, click **Protect** > **Track and Revoke**:
 
-    ![Track usage option](../media/track-usage-callout.png)
+    ![Track usage option](../media/track-usage-calloutv2.png)
 
     This takes you to the document tracking site.
 

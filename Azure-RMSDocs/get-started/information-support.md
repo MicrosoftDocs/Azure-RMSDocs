@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/30/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -54,11 +54,11 @@ The following sections provide information about support and troubleshooting opt
 
 If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
 
-You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses for Azure Information Protection in an eligible plan. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses for Azure Information Protection in an eligible plan. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 For other customers, use the following support channels, depending on how you obtained Azure Information Protection:
 
-- **Azure Information Protection Premium** (standalone): Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). To use this option, you must have an Azure subscription and an Azure support plan. For more information, see [Azure Support For Customers](https://azure.microsoft.com/support/plans/). 
+- **Azure Information Protection Premium** (standalone): Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
 
 - **Azure Information Protection with an Office 365 subscription**: See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
 
@@ -85,6 +85,8 @@ Troubleshooting:
 - For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](../deploy-use/help-users.md).
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
+
+- For the Azure Information Protection client for Windows: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
 
 - For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
 
