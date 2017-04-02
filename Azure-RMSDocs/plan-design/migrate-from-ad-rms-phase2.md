@@ -101,15 +101,11 @@ Before you start these procedures, make sure that you can access the .xml files 
 > [!NOTE]
 > However you store these files, use security best practices to protect them because this data includes your private key.
 
-
 To complete Step 4, choose and select the instructions for your migration path: 
-
 
 - [Software-protected key to software-protected key](migrate-softwarekey-to-softwarekey.md)
 - [HSM-protected key to HSM-protected key](migrate-hsmkey-to-hsmkey.md)
 - [Software-protected key to HSM-protected key](migrate-softwarekey-to-hsmkey.md)
-
-
 
 ## Step 5. Activate the Azure Rights Management service
 
@@ -130,11 +126,12 @@ If your Azure Information Protection tenant is already activated and you can ide
 In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
 
 ## Step 6. Configure imported templates
+
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
 Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
-In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure Information Protection, or create new templates at this time. Instead, wait until the migration process is complete and you have decommissioned the AD RMS servers.
+In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure Information Protection, or create new templates at this time. Instead, wait until the migration process is complete and you have deprovisioned the AD RMS servers.
 
 The template changes that you might need to make for this step:
 
@@ -146,14 +143,13 @@ The template changes that you might need to make for this step:
 
 If you created custom templates before the migration, either before or after activating the Azure Rights Management service, templates will not be available to users after the migration, even if they were set to **Published**. To make them available to users, you must first do the following: 
 
-1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
+1. Identify these templates and make a note of their template ID, by running the [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
 
-2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
+2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
-
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
