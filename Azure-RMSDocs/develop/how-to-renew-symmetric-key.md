@@ -27,7 +27,12 @@ ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 
 # How-to: Renew the Symmetric Key in Azure Information Protection
 
-This topic outlines the steps to renew the new symmetric key in Azure Information Protection. You will need to install the Azure Active Directory (Azure AD) PowerShell module, as outlined in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
+This topic outlines the steps to renew the new symmetric key in Azure Information Protection. 
+
+## Prerequisites
+
+* Azure Active Directory (Azure AD) PowerShell module must be installed as outlined in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
+
 
 ## What is a symmetric key?
 
@@ -39,7 +44,7 @@ In Azure Active Directory (Azure AD), when you create a service principal object
 
 You don't have to create a new service principal when the symmetric key associated with your application has expired. Instead, you can use the PowerShell commandlets provided by Microsoft Online Services (MSol) to issue a new symmetric key for an existing service principal.
 
-You can create a new service principal using the [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command.
+To illustrate this process, let's assume you have already created a new service principal using the [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command.
 
 ```
 New-MsolServicePrincipalCredential -ServicePrincipalName "SupportExampleApp"
