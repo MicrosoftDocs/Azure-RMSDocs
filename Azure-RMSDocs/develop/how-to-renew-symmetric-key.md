@@ -31,7 +31,7 @@ This topic outlines the steps to renew the new symmetric key in Azure Informatio
 
 ## Prerequisites
 
-* Azure Active Directory (Azure AD) PowerShell module must be installed as outlined in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
+* Azure Active Directory (Azure AD) PowerShell module must be installed as directed in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
 
 
 ## What is a symmetric key?
