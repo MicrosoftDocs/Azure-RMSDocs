@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How to renew a symmetric key in Azure Information Protection
+title: How to renew the symmetric key in Azure Information Protection
 description: This article describes the process of renewing a symmetric key in Azure Information Protection.
 keywords:
 author: kkanakas
@@ -25,9 +25,9 @@ ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 #ms.custom:
 ---
 
-# How-to: Renew a Symmetric Key in Azure Information Protection
+# How-to: Renew the Symmetric Key in Azure Information Protection
 
-This topic outlines the steps to renew a new symmetric key in Azure Information Protection. You will need to install the Azure Active Directory (Azure AD) PowerShell module, as outlined in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
+This topic outlines the steps to renew the new symmetric key in Azure Information Protection. You will need to install the Azure Active Directory (Azure AD) PowerShell module, as outlined in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
 
 ## What is a symmetric key?
 
@@ -96,7 +96,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-Once you have verified that the symmetric key is indeed associated with the right service principal, you can go ahead and update the service principals' authentication parameters with the new key. 
+Once you have verified that the symmetric key is indeed associated with the right service principal, you can go ahead and update the service principal's authentication parameters with the new key. 
 
 You can now remove the old symmetric key using the [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential) command and verify that the key is removed using the `Get-MsolServicePrincipalCredential` command.
 
