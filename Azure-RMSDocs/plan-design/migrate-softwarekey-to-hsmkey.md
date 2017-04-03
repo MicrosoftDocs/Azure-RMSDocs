@@ -119,19 +119,19 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
-1.  Azure Key Vault administrator: Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+Azure Key Vault administrator: Use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
-    -   [Step 4: Prepare your key for transfer](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
+- [Step 4: Prepare your key for transfer](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-    -   [Step 5: Transfer your key to Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+- [Step 5: Transfer your key to Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
 
-    Do not follow the steps to generate your key pair, because you already have the key. Instead, you will run a command to transfer this key (in our example, our KeyIdentifier parameter uses "contosobyok") from your on-premises HSM.
+Do not follow the steps to generate your key pair, because you already have the key. Instead, you will run a command to transfer this key (in our example, our KeyIdentifier parameter uses "contosobyok") from your on-premises HSM.
 
-    Before you transfer your key to Azure Key Vault, make sure that the KeyTransferRemote.exe utility returns **Result: SUCCESS** when you create a copy of your key with reduced permissions (step 4.1) and when you encrypt your key (step 4.3).
+Before you transfer your key to Azure Key Vault, make sure that the KeyTransferRemote.exe utility returns **Result: SUCCESS** when you create a copy of your key with reduced permissions (step 4.1) and when you encrypt your key (step 4.3).
 
-    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service from Azure Information Protection to use this key for its tenant key.
+When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service from Azure Information Protection to use this key for its tenant key.
 
-    Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
+Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
 ## Part 3: Import the configuration data to Azure Information Protection
 
