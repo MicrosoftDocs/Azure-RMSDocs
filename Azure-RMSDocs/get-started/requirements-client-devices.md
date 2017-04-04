@@ -6,7 +6,7 @@ description: Identify which devices support the Azure Rights Management service 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2017
+ms.date: 04/05/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
