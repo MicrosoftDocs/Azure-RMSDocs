@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -149,9 +149,9 @@ For more information about message encryption, see [Encryption in Office 365](ht
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 
 > [!NOTE]
-> IRM-protected libraries for SharePoint and OneDrive for Business support online download only unless you are using the older sync client, OneDrive for Business sync client (Groove.exe). The new [OneDrive sync client (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614) does not currently support Rights Management protection. 
+> IRM-protected libraries for SharePoint and OneDrive for Business do not currently support the new [OneDrive sync client (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614). To use IRM protection with your SharePoint libraries and OneDrive for Business, use the older sync client, OneDrive for Business sync client (Groove.exe). Both versions of the clients can run at the same time. For more information, see [Restrictions and limitations when you sync files and folders](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
 
-To enable the  information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
+To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
 -   [Set up Information Rights Management (IRM) in SharePoint admin center](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
 
