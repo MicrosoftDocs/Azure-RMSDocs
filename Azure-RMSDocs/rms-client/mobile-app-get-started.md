@@ -7,7 +7,7 @@ keywords: How to view emails or files with the Azure Information Protection app 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -41,7 +41,7 @@ From your mobile device, you will need to access one of the files that the app s
 
 - **A .ptxt or .pjpg or .ppng**: From a Windows computer, use the Azure Information Protection client to protect a text or image file and then send yourself this protected file as an email attachment. For the full list of file types that you can use for testing, see the [Supported file types for protection and their file name extensions](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) section from the Azure Information Protection client administration guide. 
 
-To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You'll then be prompted to sign in for your work or school account. After you're successfully authenticated, the Azure Information Protection app displays the email or file for you to read.
+To view these files in the Azure Information Protection viewer app, tap the email attachment or link. When you're prompted to select an app to open them with, select the **AIP Viewer** app. You will then be asked to sign in with your work or school account, or prompted to select a certificate. After these credentials are authenticated, the Azure Information Protection app displays the email or file for you to read.
 
 ## Next steps
 
