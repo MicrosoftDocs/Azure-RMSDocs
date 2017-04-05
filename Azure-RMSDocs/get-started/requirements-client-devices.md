@@ -43,7 +43,7 @@ The following computer operating systems support the Azure Rights Management s
 
 -   **Windows 10** (x86, x64)
 
--   **macOS**: Minimum version of mac 10.8 (Mountain Lion)
+-   **macOS**: Minimum version of macOS 10.8 (Mountain Lion)
 
 ## Mobile devices
 The following mobile device operating systems support the Azure Rights Management service:
