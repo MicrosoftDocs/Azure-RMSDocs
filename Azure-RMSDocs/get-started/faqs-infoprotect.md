@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,9 +57,9 @@ To configure the Azure Information Protection policy, you must sign in to the Az
 
 If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs a default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
-## Which options in the Azure portal are P1 or P2?
+## Which options in the Azure portal are P2?
 
-To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, as a general guide, the advanced features such as automatic classification and hold your own key (HYOK) are specific to the Azure Information Protection Premium 2 subscription.
+You can check which features are included in the **Azure Information Protection Premium 2** (P2 subscription vs. the **Azure Information Protection Premium 1** (P1) subscription by using the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, the options in the Azure portal that require a P2 subscription now have an information popup message to identify them.
 
 ## Can a file have more than one classification?
 
