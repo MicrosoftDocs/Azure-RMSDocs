@@ -83,7 +83,7 @@ The data protection can be applied automatically when a user selects a label tha
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection client, and that can also be classified. 
 
-When these file types are natively protected, the original file name extension is changed, and these files become read-only. For files that are generically protected, the original file name extension is always changed to .pfile.
+These file types are identified separately because when they are natively protected, the original file name extension is changed, and these files become read-only. Note that when files are generically protected, the original file name extension is always changed to .pfile.
 
 > [!WARNING]
 > If you have firewalls, web proxies, or security software that inspect and take action according to file name extensions, you might need to reconfigure these to support these new file name extensions.
