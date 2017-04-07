@@ -100,7 +100,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ## Videos
 
-Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
+Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
 These videos are from the Micorsoft 2016 Ignite conference
 
