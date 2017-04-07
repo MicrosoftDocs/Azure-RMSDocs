@@ -158,6 +158,6 @@ After running these commands, if your Exchange servers were configured to suppor
 
 
 ## Next steps
-Go to [phase 2 - client-side configuration](migrate-from-ad-rms-phase2.md).
+Go to [phase 2 - server-side configuration](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
