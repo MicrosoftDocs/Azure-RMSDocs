@@ -35,9 +35,9 @@ Use the following information for Phase 2 of migrating from AD RMS to Azure Info
 ## Step 4. Export configuration data from AD RMS and import it to Azure Information Protection
 This step is a two-part process:
 
-1.  Export the configuration data from AD RMS by exporting the trusted publishing domains (TPDs) to an .xml file. This process is the same for all migrations.
+1. Export the configuration data from AD RMS by exporting the trusted publishing domains (TPDs) to an .xml file. This process is the same for all migrations.
 
-2.  Import the configuration data to Azure Information Protection. There are different processes for this step, depending on your current AD RMS deployment configuration and your preferred topology for your Azure RMS tenant key.
+2. Import the configuration data to Azure Information Protection. There are different processes for this step, depending on your current AD RMS deployment configuration and your preferred topology for your Azure RMS tenant key.
 
 ### Export the configuration data from AD RMS
 
@@ -45,19 +45,19 @@ Do the following procedure on all AD RMS clusters, for all trusted publishing do
 
 #### To export the configuration data (trusted publishing domain information)
 
-1.  Log on the AD RMS cluster as a user with AD RMS administration permissions.
+1. Log on the AD RMS cluster as a user with AD RMS administration permissions.
 
-2.  From the AD RMS management console (**Active Directory Rights Management Services**), expand the AD RMS cluster name, expand **Trust Policies**, and then click **Trusted Publishing Domains**.
+2. From the AD RMS management console (**Active Directory Rights Management Services**), expand the AD RMS cluster name, expand **Trust Policies**, and then click **Trusted Publishing Domains**.
 
-3.  In the results pane, select the trusted publishing domain, and then, from the Actions pane, click **Export Trusted Publishing Domain**.
+3. In the results pane, select the trusted publishing domain, and then, from the Actions pane, click **Export Trusted Publishing Domain**.
 
-4.  In the **Export Trusted Publishing Domain** dialog box:
+4. In the **Export Trusted Publishing Domain** dialog box:
 
-    -   Click **Save As** and save to path and a file name of your choice. Make sure to specify **.xml** as the file name extension (this is not appended automatically).
+    - Click **Save As** and save to path and a file name of your choice. Make sure to specify **.xml** as the file name extension (this is not appended automatically).
 
-    -   Specify and confirm a strong password. Remember this password, because you will need it later, when you import the configuration data to Azure Information Protection.
+    - Specify and confirm a strong password. Remember this password, because you will need it later, when you import the configuration data to Azure Information Protection.
 
-    -   Do not select the checkbox to save the trusted domain file in RMS version 1.0.
+    - Do not select the checkbox to save the trusted domain file in RMS version 1.0.
 
 When you have exported all the trusted publishing domains, you’re ready to start the procedure to import this data to Azure Information Protection.
 
@@ -71,13 +71,13 @@ The exact procedures for this step depend on your current AD RMS deployment conf
 
 Your current AD RMS deployment will be using one of the following configurations for your server licensor certificate (SLC) key:
 
--   Password protection in the AD RMS database. This is the default configuration.
+- Password protection in the AD RMS database. This is the default configuration.
 
--   HSM protection by using a Thales hardware security module (HSM).
+- HSM protection by using a Thales hardware security module (HSM).
 
--   HSM protection by using a hardware security module (HSM) from a supplier other than Thales.
+- HSM protection by using a hardware security module (HSM) from a supplier other than Thales.
 
--   Password protected by using an external cryptographic provider.
+- Password protected by using an external cryptographic provider.
 
 > [!NOTE]
 > For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](http://technet.microsoft.com/library/jj651024.aspx).
@@ -155,13 +155,13 @@ You can then publish or archive these templates as you would any other template 
 
 If your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure Information Protection; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
-If  you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
 You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
 
--   Use the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet.
+- Use the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet.
 
--   Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure Information Protection.
+- Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure Information Protection.
 
 > [!NOTE]
 > This "AllStaff" equivalent group isn't exactly the same as the ANYONE group in AD RMS:  The "AllStaff" group includes all users in your Azure tenant, whereas the ANYONE group includes all authenticated users, who could be outside your organization.
