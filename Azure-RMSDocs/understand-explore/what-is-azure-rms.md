@@ -6,7 +6,7 @@ description: Azure Rights Management (Azure RMS) is the protection technology us
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ The following picture shows how Azure RMS works as a Rights Management solution 
 
 ![How Azure RMS works](../media/AzRMS_elements.png)
 
-You can use Azure RMS protection with different cloud subscriptions, and it supports multiple features. You'll find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) site.
+You can use Azure RMS protection with different cloud subscriptions, and it supports multiple features. You'll find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) site.
 
 ## Next steps
 
