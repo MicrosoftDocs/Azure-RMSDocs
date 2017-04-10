@@ -137,23 +137,25 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 1.  Azure Information Protection administrator: On the Internet-connected workstation and in the PowerShell session, copy over your new configuration data files (.xml) that have the SLC key removed after running the TpdUtil tool.
 
-2. Upload the first .xml file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. If you have more than one of these files because you had multiple trusted publishing domains, choose the file that corresponds to the HSM key you want to use with Azure Information Protection to protect content after the migration.
+2. Upload each .xml file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
-    To run this cmdlet, you will need the URL for the key that was identified in the previous step.
+    To run this cmdlet, you will need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
 
-    For example, using our key URL value from the previous step and a configuration data file of C:\contoso_keyless.xml, you would run:
+    For example, using a configuration data file of C:\contoso_keyless.xml and our key URL value from the previous step, first run the following to store the password:
+
+	**$TPD_Password = Read-Host -AsSecureString**
+
+   Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
-    When prompted, enter the password that you specified earlier for the configration data file, and confirm that you want to perform this action.
+    As part of this import, the SLC key is imported and automatically set as archived.
 
-    If you have more than one configuration data file, repeat this command for the remainder of these files. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2. But for these files, set **-Active** to **false** when you run the Import command.
+3. When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to identify the imported key that matches the currently active SLC key in AD RMS, which will become the active tenant key for your Azure Rights Management service.
 
-
-
-3.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
+4. Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
     ```
     Disconnect-AadrmService
@@ -163,7 +165,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
     > If you later need to confirm which key your Azure Information Protection tenant key is using in Azure Key Vault, use the [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) Azure RMS cmdlet.
 
 
-You’re now ready to go to [Step 5. Activate your Azure Information Protection tenant](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

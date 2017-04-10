@@ -93,7 +93,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |A subscription that supports Azure Information Protection.|For more information about the available subscriptions, see the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
 |You do not use RMS for individuals or Exchange Online.<br /><br /> Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
 |All the prerequisites listed for Key Vault BYOK, which includes a paid or trial Azure subscription for your existing Azure Information Protection tenant. |See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br /> The free Azure subscription that provides access to configure Azure Active Directory and configuration of Azure Rights Management custom templates (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use the [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
-|The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
+|The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.8.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -103,7 +103,7 @@ To generate and transfer your own tenant key to Azure Key Vault, follow the proc
 
 When the key is transferred to Key Vault, it is given a key ID in Key Vault, which is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell the Azure Rights Management service from Azure Information Protection to use this key, by specifying this URL.
 
-But before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) and grants permissions to the Azure Rights Management service principal, by using the GUID 00000012-0000-0000-c000-000000000000. For example:
+But before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, the Azure Key Vault administrator uses the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) and grants permissions to the Azure Rights Management service principal, by using the GUID 00000012-0000-0000-c000-000000000000. For example:
 
 	Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
@@ -111,16 +111,16 @@ You're now ready to configure Azure Information Protection to use this key as yo
 
 	Connect-AadrmService
 
-Then run the [Use-AadrmKeyVaultKey cmdlet](https://msdn.microsoft.com/library/azure/mt759829.aspx), specifying the key URL. For example:
+Then run the [Use-AadrmKeyVaultKey cmdlet](/powershell/module/aadrm/use-aadrmkeyvaultkey), specifying the key URL. For example:
 
 	Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
 > [!IMPORTANT]
 > In this example, "aaaabbbbcccc111122223333" is the version of the key to use. If you do not specify the version, the current version of the key is used without warning and the command appears to work. However, if your key in Key Vault is later updated (renewed), the Azure Rights Management service will stop working for your tenant, even if you run the Use-AadrmKeyVaultKey command again.
 >
->Make sure that you specify the key version, in addition to the key name when you run this command. You can use the Azure Key Vault cmd, [Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey), to get the version number of the current key. For example: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+>Make sure that you specify the key version, in addition to the key name when you run this command. You can use the Azure Key Vault cmd, [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey), to get the version number of the current key. For example: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-If you need to confirm that the key URL is set correctly in the Azure RMS service, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) to see the key URL.
+If you need to confirm that the key URL is set correctly in the Azure RMS service, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
 
 
 ## Next steps
@@ -128,23 +128,23 @@ If you need to confirm that the key URL is set correctly in the Azure RMS servic
 Now that you've planned for and if necessary, generated your tenant key, do the following:
 
 1.  Start to use your tenant key:
-
-    -   If you haven’t already done so, you must now activate the Rights Management service so that your organization can start to use Azure Information Protection. Users immediately start to use your tenant key (managed by Microsoft or managed by you in Azure Key Vault).
-
+    
+    - If you haven’t already done so, you must now activate the Rights Management service so that your organization can start to use Azure Information Protection. Users immediately start to use your tenant key (managed by Microsoft or managed by you in Azure Key Vault).
+    
         For more information about activation, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
-
-    -   If you had already activated the Rights Management service and then decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
-
-2.  Consider using usage logging, which logs every transaction that the Azure Rights Management service performs.
-
+        
+    - If you had already activated the Rights Management service and then decided to manage your own tenant key, users gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. Documents and files that were protected with the old tenant key remains accessible to authorized users.
+        
+2. Consider using usage logging, which logs every transaction that the Azure Rights Management service performs.
+    
     If you decided to manage your own tenant key, logging includes information about using your tenant key. See the following snippet from a log file displayed in Excel where the **KeyVaultDecryptRequest** and **KeyVaultSignRequest** request types show that the tenant key is being used.
-
+    
     ![log file in Excel where tenant key is being used](../media/RMS_Logging.png)
-
+    
     For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
-
+    
 3.  Maintain your tenant key.
-
+    
     For more information, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
