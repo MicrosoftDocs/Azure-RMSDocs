@@ -27,22 +27,20 @@ ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 
 # How-to: Renew the Symmetric Key in Azure Information Protection
 
-This topic outlines the steps to renew the new symmetric key in Azure Information Protection. 
+A **symmetric key** is a secret that encrypts and decrypts a message in symmetric-key cryptography.  
+
+In Azure Active Directory (Azure AD), when you create a service principal object to represent an application, the process also generates a 256-bit symmetric key to verify the application. This symmetric key is valid for one year by default. 
+
+The steps below outline how to renew the symmetric key. 
 
 ## Prerequisites
 
 * Azure Active Directory (Azure AD) PowerShell module must be installed as directed in the [Azure AD Powershell Reference](https://docs.microsoft.com/powershell/msonline/).
 
 
-## What is a symmetric key?
-
-A symmetric key is a secret that encrypts and decrypts a message in symmetric-key cryptography. Since the same key is used for both encryption and decryption, it is referred to as a **symmetric key**. 
-
-In Azure Active Directory (Azure AD), when you create a service principal object that represents an application, Azure AD also generates a 256-bit symmetric key to verify the application. This symmetric key is valid for one year by default. 
-
 ## Renewing the symmetric key after expiry
 
-You don't have to create a new service principal when the symmetric key associated with your application has expired. Instead, you can use the PowerShell commandlets provided by Microsoft Online Services (MSol) to issue a new symmetric key for an existing service principal.
+You don't have to create a new service principal when the symmetric key associated with your application has expired. Instead, you can use the [PowerShell commandlets](https://docs.microsoft.com/powershell/module/msonline) provided by Microsoft Online Services (MSol) to issue a new symmetric key for an existing service principal.
 
 To illustrate this process, let's assume you have already created a new service principal using the [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command.
 
@@ -101,9 +99,9 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-Once you have verified that the symmetric key is indeed associated with the right service principal, you can go ahead and update the service principal's authentication parameters with the new key. 
+Once you have verified that the symmetric key is indeed associated with the right service principal, you can update the service principal's authentication parameters with the new key. 
 
-You can now remove the old symmetric key using the [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential) command and verify that the key is removed using the `Get-MsolServicePrincipalCredential` command.
+You can then remove the old symmetric key using the [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential) command and verify that the key is removed using the `Get-MsolServicePrincipalCredential` command.
 
 ```
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
