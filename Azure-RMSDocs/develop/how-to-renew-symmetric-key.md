@@ -25,7 +25,7 @@ ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 #ms.custom:
 ---
 
-# How-to: Renew the Symmetric Key in Azure Information Protection
+# How-to: Renew the symmetric key in Azure Information Protection
 
 A **symmetric key** is a secret that encrypts and decrypts a message in symmetric-key cryptography.  
 
@@ -107,7 +107,7 @@ You can then remove the old symmetric key using the [`Remove-MsolServicePrincipa
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
 ```
 
-## Related Topics
+## Related topics
 
 * [How-to: enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell reference](https://docs.microsoft.com/powershell/msonline/)
