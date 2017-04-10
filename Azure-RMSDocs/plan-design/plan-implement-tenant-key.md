@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 03/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

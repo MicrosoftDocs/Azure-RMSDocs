@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -184,7 +184,7 @@ Use the **Help and Feedback** option to open the **Microsoft Azure Information P
 
 ### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
 
 Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources). 
 

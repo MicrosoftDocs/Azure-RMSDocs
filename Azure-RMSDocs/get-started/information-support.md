@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -36,7 +36,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |See recommended documentation for the service →|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |Provide feedback about the documentation or ask a question about the documentation →|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |Receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow Dan Plastina, who helps lead the Microsoft Information Protection team. See [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina)|
-|Check subscription information and what features are supported →|Use the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
+|Check subscription information and what features are supported →|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
 ## Information about new releases and updated documentation
@@ -58,13 +58,17 @@ You might be eligible for **FastTrack**: You can use the FastTrack Center Benefi
 
 For other customers, use the following support channels, depending on how you obtained Azure Information Protection:
 
-- **Azure Information Protection Premium** (standalone): Open a [support request in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
-
-- **Azure Information Protection with an Office 365 subscription**: See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
-
-- **Azure Information Protection with Enterprise Mobility + Security (EMS)**: If you also have Office 365, you can use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). For more information, see [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx).
-
-- **Azure Information Protection with Secure Productive Enterprise (SPE)**: Use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+- **Azure Information Protection** (standalone): 
+    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
+    
+- **Azure Information Protection with an Office 365 subscription**: 
+    - See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
+    
+- **Azure Information Protection with Enterprise Mobility + Security (EMS)**: 
+    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
+    
+- **Azure Information Protection with Secure Productive Enterprise (SPE)**: 
+    - Use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 For additional support options, ask your Microsoft contact. 
 
