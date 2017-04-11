@@ -79,8 +79,10 @@ These procedures are done by the administrator for Azure Information Protection.
     
     For example, using a configuration data file of C:\contoso-tpd1.xml and our key URL value from the previous step, first run the following to store the password:
     
-	**$TPD_Password = Read-Host -AsSecureString**
-
+    ```
+	$TPD_Password = Read-Host -AsSecureString
+    ```
+    
     Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
     
     ```
