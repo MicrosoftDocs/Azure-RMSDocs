@@ -52,7 +52,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
     For example, first run the following to store the password:
     
-		**$TPD_Password = Read-Host -AsSecureString**
+		$TPD_Password = Read-Host -AsSecureString
     
     Enter the password that you specified to export the first configuration data file. Then, using E:\contosokey1.xml as an example for that configuration file, run the following command and confirm that you want to perform this action:
     ```

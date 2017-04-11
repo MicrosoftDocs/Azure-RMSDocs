@@ -142,9 +142,11 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
     To run this cmdlet, you will need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
 
     For example, using a configuration data file of C:\contoso_keyless.xml and our key URL value from the previous step, first run the following to store the password:
-
-	**$TPD_Password = Read-Host -AsSecureString**
-
+    
+    ```
+	$TPD_Password = Read-Host -AsSecureString
+    ```
+    
    Enter the password that you specified to export the configuration data file. Then, run the following command and confirm that you want to perform this action:
 
     ```
