@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -51,7 +51,7 @@ Computers running Office 2010:
 
 Support for certificate-based authentication (CBA):
 
-- The Azure Information Protection app for Android supports certificate-based authentication when you have a minimum version of Android 5.0. For instructions to configure certificate-based authentication, see [Get started with certificate-based authentication in Azure Active Directory](/active-directory/active-directory-certificate-based-authentication-get-started).
+- The Azure Information Protection app for Android supports certificate-based authentication when you have a minimum version of Android 5.0. For instructions to configure certificate-based authentication, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
 
