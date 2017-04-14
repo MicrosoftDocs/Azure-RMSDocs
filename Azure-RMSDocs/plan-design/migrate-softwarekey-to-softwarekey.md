@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/14/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,7 +52,7 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     
     For example, first run the following to store the password:
     
-	**$TPD_Password = Read-Host -AsSecureString**
+		$TPD_Password = Read-Host -AsSecureString
     
     Enter the password that you specified to export the first configuration data file. Then, using E:\contosokey1.xml as an example for that configuration file, run the following command and confirm that you want to perform this action:
     ```
@@ -66,7 +66,6 @@ Use the following procedure to import the AD RMS configuration to Azure Informat
     ```
     Disconnect-AadrmService
     ```
-
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

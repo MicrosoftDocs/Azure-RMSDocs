@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/14/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
