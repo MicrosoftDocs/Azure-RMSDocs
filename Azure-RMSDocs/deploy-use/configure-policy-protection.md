@@ -91,7 +91,9 @@ Exchange does not have to be configured for information rights management (IRM) 
     
 7. Select **Do not forward** if you want to set this Outlook option for emails, **Select a predefined template** to use one of the default templates or a custom template that you've configured, or choose **Custom (Preview)** to define new protection settings in this portal. 
     
-    Note that the **Custom (Preview)** option has most configuration options that are currently in the Azure classic portal. In this preview release, you cannot configure a description for clients running in protection-only mode, or support multiple languages. However, it does let you easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. For more information about the permissions, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
+    Note that the **Custom (Preview)** option has most configuration options that are currently in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
+    
+    For more information about this preview configuration, see the blog post [Azure Information Protection unified administration now in Preview]. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
     
 8. If you selected **Select a predefined template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
     
