@@ -170,4 +170,3 @@ You’re now ready to go to [Step 5. Activate the Azure Rights Management servic
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-

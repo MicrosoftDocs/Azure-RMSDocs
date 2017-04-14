@@ -39,7 +39,7 @@ Go to the Microsoft Download Center and download the [Azure Rights Management Ad
 Install the tool. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!NOTE]
-> If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.8.0.0**: `(Get-Module aadrm -ListAvailable).Version`
+> If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`
 
 To complete some of the migration instructions, you will need to know the Azure Rights Management service URL for your tenant so that you can substitute it for when you see references to *\<Your Tenant URL\>*. Your Azure Rights Management service URL has the following format: **{GUID}.rms.[Region].aadrm.com**.
 
