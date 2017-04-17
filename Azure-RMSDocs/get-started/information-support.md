@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/17/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -59,13 +59,13 @@ You might be eligible for **FastTrack**: You can use the FastTrack Center Benefi
 For other customers, use the following support channels, depending on how you obtained Azure Information Protection:
 
 - **Azure Information Protection** (standalone): 
-    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
+    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. You will need to choose either **Subscription with technical support included** for the **Subscription** option (you have a paid Azure subscription) or **Technical support - Included** for the **Support plan**.
     
 - **Azure Information Protection with an Office 365 subscription**: 
     - See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal. 
     
 - **Azure Information Protection with Enterprise Mobility + Security (EMS)**: 
-    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type**, and **Subscription with technical support included** for the **Subscription** option.
+    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. You will need to choose either **Subscription with technical support included** for the **Subscription** option (you have a paid Azure subscription) or **Technical support - Included** for the **Support plan**.
     
 - **Azure Information Protection with Secure Productive Enterprise (SPE)**: 
     - Use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
