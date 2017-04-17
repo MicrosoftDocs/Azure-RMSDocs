@@ -46,7 +46,7 @@ If displaying this information is prohibited for your organization or is is proh
     
     For these group members, their activity related to documents that others have shared with them is not logged to the document tracking site. If the user who protected and shared a document is not in this group, that user will be able to access the document tracking site and see that their protected document was accessed and can revoke their document. However, that user will not see any user details (user name, time, location) of the group members. In addition, that user will not get email notifications from the group members when they open the protected document.
     
-    You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option for a subset of users. Or to selectively remove users, remove them from the group but be aware of [group caching](../plan-design/prepare#group-membership-caching). 
+    You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option for a subset of users. Or to selectively remove users, remove them from the group but be aware of [group caching](../plan-design/prepare.md#group-membership-caching). 
 
 
 To check whether document tracking is enabled for your organization: Run [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
