@@ -46,7 +46,7 @@ For these group members, their activity related to documents that others have sh
 
 You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group but be aware of [group caching](../plan-design/prepare.md#group-membership-caching). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
 
-For more information about each of these cmdlets, use the links provided. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+For more information about each of these cmdlets, use the links provided. For installation instructions for the PowerShell modue, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
 
 
 ## Destination URLs used by the document tracking site
@@ -55,11 +55,13 @@ The following URLs are used for document tracking and must be allowed on all dev
 
 -  `https://*.azurerms.com`
 
-- `https://ecn.dev.virtualearth.net`  This URL is for Bing maps to display the user location.
-
 - `https://*.microsoftonline.com`
 
 - `https://*.microsoftonline-p.com`
+
+- `https://ecn.dev.virtualearth.net`
+
+These URLs are standard for the Azure Rights Management service, with the exception of the virtualearth.net URL that is used for Bing maps to display the user location.
 
 ## Tracking and revoking documents for users
 
