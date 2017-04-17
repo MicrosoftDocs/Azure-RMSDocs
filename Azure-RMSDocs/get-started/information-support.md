@@ -60,7 +60,7 @@ For other customers, use the following support channels, depending on how you ob
 
 - Azure Information Protection (standalone): 
     
-    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. 
+    - Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. 
     
     When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. Choose either **Subscription with technical support included** for the **Subscription** option (you have a paid Azure subscription) or **Technical support - Included** for the **Support plan**.
     
@@ -70,7 +70,7 @@ For other customers, use the following support channels, depending on how you ob
     
 - Azure Information Protection with Enterprise Mobility + Security (EMS): 
     
-    - Create a **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. 
+    - Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal. 
     
     When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. Choose either **Subscription with technical support included** for the **Subscription** option (you have a paid Azure subscription) or **Technical support - Included** for the **Support plan**.
     
