@@ -30,25 +30,46 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
+If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. 
 
-To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+If displaying this information is prohibited for your organization or is is prohibited for a subset of users (for example, based on region) because of privacy requirements, you can use the following PowerShell cmdlets:
 
-> [!TIP]
-> If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+- To disable document tracking for all users in your organization: [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature)
 
-The following URLs are used for document tracking and must be allowed (for example, add them to your Trusted Sites if you're using Internet Explorer with Enhanced Security):
+    When users try to access the document tracking site, they see the following message: **Your administrator has disabled document tracking for your organization. Contact your administrator for details.**
+    
+    You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature).
 
--   https://&#42;.azurerms.com
+- To disable document tracking for a subset of users in your organization: [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/set-aadrmdonottrackusergroup)
 
--   https://ecn.dev.virtualearth.net
+    When you disable document tracking for a subset of users, you must specify a single group. However, the group can contain nested groups. These group members cannot access the document tracking site and they see the same message as when it's disabled for all users. 
+    
+    For these group members, their activity related to documents that others have shared with them is not logged to the document tracking site. If the user who protected and shared a document is not in this group, that user will be able to access the document tracking site and see that their protected document was accessed and can revoke their document. However, that user will not see any user details (user name, time, location) of the group members. In addition, that user will not get email notifications from the group members when they open the protected document.
+    
+    You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option for a subset of users. Or to selectively remove users, remove them from the group but be aware of [group caching](../plan-design/prepare#group-membership-caching). 
 
-    > [!NOTE]
-    > This URL is for Bing maps.
 
--   https://&#42;.microsoftonline.com
+To check whether document tracking is enabled for your organization: Run [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
--   https://&#42;.microsoftonline-p.com
+To check whether document tracking is exempt for a group: Run [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup)
+
+
+> [!IMPORTANT]
+> If you have users whose activity and location should not be tracked, add them to a group that is stored in Azure AD, and specify this group with the [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) cmdlet.
+
+To run these cmdlets, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) PowerShell module. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+
+The following URLs are used for document tracking and must be allowed (for example, add them to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security):
+
+-  `https://\*.azurerms.com`
+
+- `https://ecn.dev.virtualearth.net`
+
+    This virtualearth.net URL is for Bing maps to display user location.
+
+- `https://\*.microsoftonline.com`
+
+- `https://\*.microsoftonline-p.com`
 
 ## Tracking and revoking documents for users
 
