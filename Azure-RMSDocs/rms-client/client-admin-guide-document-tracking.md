@@ -34,13 +34,11 @@ If you have a [subscription that supports document tracking](https://www.microso
 
 If displaying this information is prohibited for your organization or is is prohibited for a subset of users (for example, based on region) because of privacy requirements, you can use the following PowerShell cmdlets:
 
-- To disable document tracking for all users in your organization: [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature)
+- **To disable document tracking for all users in your organization**: [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature)
 
-    When users try to access the document tracking site, they see the following message: **Your administrator has disabled document tracking for your organization. Contact your administrator for details.**
-    
-    You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature).
+    When users try to access the document tracking site, they see a message that their administrator has disabled document tracking. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature).
 
-- To disable document tracking for a subset of users in your organization: [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/set-aadrmdonottrackusergroup)
+- **To disable document tracking for a subset of users in your organization**: [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/set-aadrmdonottrackusergroup)
 
     When you disable document tracking for a subset of users, you must specify a single group. However, the group can contain nested groups. These group members cannot access the document tracking site and they see the same message as when it's disabled for all users. 
     
@@ -55,21 +53,21 @@ To check whether document tracking is exempt for a group: Run [Get-AadrmDoNotTra
 
 
 > [!IMPORTANT]
-> If you have users whose activity and location should not be tracked, add them to a group that is stored in Azure AD, and specify this group with the [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) cmdlet.
+> If you have a subset of users whose activity and location should not be tracked, add them to a group that is stored in Azure AD, and specify this group with the [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) cmdlet.
 
 To run these cmdlets, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) PowerShell module. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
 
-The following URLs are used for document tracking and must be allowed (for example, add them to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security):
+The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the Internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
 
--  `https://\*.azurerms.com`
+-  `https://*.azurerms.com`
 
 - `https://ecn.dev.virtualearth.net`
 
     This virtualearth.net URL is for Bing maps to display user location.
 
-- `https://\*.microsoftonline.com`
+- `https://*.microsoftonline.com`
 
-- `https://\*.microsoftonline-p.com`
+- `https://*.microsoftonline-p.com`
 
 ## Tracking and revoking documents for users
 
