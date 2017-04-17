@@ -30,9 +30,13 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, you can revoke access to these documents.
+If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
-If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management (AADRM) module for PowerShell. 
+## Privacy controls for your document tracking site
+
+If displaying all document tracking is prohibited in your organization because of privacy requirements, you can disable document tracking by using the [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) cmdlet. 
+
+This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. You can re-enable document tracking any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), and you can check whether document tracking is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management (AADRM) module for PowerShell. 
 
 When the document tracking site is enabled, by default, it shows information such as the email addresses of the people who attempted to access the protected documents, when these people tried to access them, and their location. Having this level of information can be very helpful to determine how the shared documents are used and whether they should be revoked if suspicious activity is seen. However, for privacy reasons, you might need to disable this user information for some or all users. 
 
