@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, you can revoke access to it.
+If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, you can revoke access to these documents.
 
 If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management (AADRM) module for PowerShell. 
 
@@ -51,9 +51,7 @@ The following URLs are used for document tracking and must be allowed on all dev
 
 -  `https://*.azurerms.com`
 
-- `https://ecn.dev.virtualearth.net`
-
-    This virtualearth.net URL is for Bing maps to display user location.
+- `https://ecn.dev.virtualearth.net`  This URL is for Bing maps to display the user location.
 
 - `https://*.microsoftonline.com`
 
