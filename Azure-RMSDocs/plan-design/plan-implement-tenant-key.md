@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/14/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,13 +36,14 @@ Use the information in this article to help you plan for and manage your Azure I
 
 **At a glance:** Use the following table as a quick guide to your recommended tenant key topology. Then, use the additional documentation for more information.
 
-If you deploy Azure Information Protection by using a tenant key that is managed by Microsoft, you can change to BYOK later. However, you cannot currently change your Azure Information Protection tenant key from BYOK to managed by Microsoft.
-
 |Business requirement|Recommended tenant key topology|
 |------------------------|-----------------------------------|
 |Deploy Azure Information Protection quickly and without requiring special hardware|Managed by Microsoft|
 |Need full IRM functionality in Exchange Online with the Azure Rights Management service|Managed by Microsoft|
 |Your keys are created by you and protected in a hardware security module (HSM)|BYOK<br /><br />Currently, this configuration will result in reduced IRM functionality in Exchange Online. For more information, see [BYOK pricing and restrictions](byok-price-restrictions.md).|
+
+If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
 Decide which tenant key topology is best for your organization. By default, Azure Information Protection generates your tenant key and manages most aspects of the tenant key lifecycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.

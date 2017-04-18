@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/14/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,16 +44,16 @@ Before you begin, make sure that your organization has a key vault that has been
 
 
 > [!TIP]
-> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## Part 1: Extract your SLC key from the configuration data and import the key to your on-premises HSM
 
-1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
 
-    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+    -   **Generate and transfer your tenant key – over the Internet**: [Step 2: Prepare your disconnected workstation](/azure/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
     Do not follow the steps to generate your tenant key, because you already have the equivalent in the exported configuration data (.xml) file. Instead, you will run a tool to extract this key from the file and import it to your on-premises HSM. The tool creates two files when you run it:
 
@@ -130,6 +130,12 @@ Do not follow the steps to generate your key pair, because you already have the 
 Before you transfer your key to Azure Key Vault, make sure that the KeyTransferRemote.exe utility returns **Result: SUCCESS** when you create a copy of your key with reduced permissions (step 4.1) and when you encrypt your key (step 4.3).
 
 When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service from Azure Information Protection to use this key for its tenant key.
+
+Then use the [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
+
+For example, if the key vault that you have created for Azure Information Protection is named contosorms-byok-kv, and your resource group is named contosorms-byok-rg, run the following command:
+    
+    Set-AzureRmKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to import your AD RMS configuration data.
 
