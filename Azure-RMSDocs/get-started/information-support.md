@@ -56,7 +56,7 @@ If you have Premier Support, visit the [portal for Premier Support customers](ht
 
 You might be eligible for **FastTrack**: You can use the FastTrack Center Benefit when you purchase at least 150 licenses for Azure Information Protection in an eligible plan. The FastTrack Center Benefit lets you work with Microsoft specialists to assess, remediate, and enable eligible services. For more information, see [FastTrack Center Benefit for Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
-For other customers, use the following support channels, depending on your subscription:
+For other customers, use the support channels in the following table, depending on your subscription for Azure Information Protection.
 
 |Subscription|Instructions|
 |----------------|---------------|
