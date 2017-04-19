@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -62,7 +62,7 @@ To continue, enter an account and password to configure the RMS connector.
 ## Entering credentials
 Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type **admin@contoso.com** and then specify the password for this account.
 
-There are some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication will fail for the RMS connector and you will see the error message That user name and password combination is not correct, even though you can successfully sign in using this account and password for other scenarios. If this applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+There are some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication will fail for the RMS connector and you will see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
 
 In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the “IT department” group, the account that you specify here must be a member of that group. If not, you will see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
