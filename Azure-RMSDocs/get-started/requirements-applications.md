@@ -192,7 +192,7 @@ If you are a software vendor and have a solution for this table that is not list
 |Sealpath|Sealpath Technologies|Integration with CAD design tools, such as AutoCAD and Siemens Jt2GO.
 |SecRMM|Sqaudra Technologies |Document protection for removable media.
 |Security Sheriff|CryptZone |Access management on SharePoint and protects documents, based on their classification and access permissions.
-
+|Symantec DLP|Symantec |Detection and monitoring for protected files.
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
