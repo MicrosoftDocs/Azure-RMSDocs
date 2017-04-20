@@ -41,9 +41,9 @@ In addition to native IRM support, these applications support the Azure Informat
 
 If you are ready to configure Office apps and the Azure Information Protection client:
 
-- To configure Office apps, see [Office apps: Configuration for clients](../deploy-use/configure-office-apps.md) 
+- To configure Office apps, see [Office apps: Configuration for clients](../deploy-use/configure-office-apps.md).
 
-- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](../deploy-use/configure-client.md) 
+- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](../deploy-use/configure-client.md).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can use information rights management (IRM) integration, which provides additional information protection solutions:
@@ -101,6 +101,6 @@ If you are ready to configure SharePoint for IRM:
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-If you are ready to start deployment, which includes configuring these applications services, see the [Azure Information Protection deployment roadmap](/plan-design/deployment-roadmap.md).
+If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](/plan-design/deployment-roadmap.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
