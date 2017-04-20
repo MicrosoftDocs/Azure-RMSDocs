@@ -37,7 +37,13 @@ These applications natively support Rights Management by using information right
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization, or control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured (directly by users or by applying a template) for when the file can no longer be accessed. For Outlook, users can choose the **Do Not Forward** option to help prevent data leakage, in addition to choosing a template.
 
-In addition to native IRM support, these applications support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md ). This bar displays labels that makes it easier for users to automatically apply Rights Management protection to documents and emails that contain sensitive data.
+In addition to native IRM support, these applications support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md). This bar displays labels that makes it easier for users to automatically apply Rights Management protection to documents and emails that contain sensitive data.
+
+If you are ready to configure Office apps and the Azure Information Protection client:
+
+- To configure Office apps, see [Office apps: Configuration for clients](../deploy-use/configure-office-apps.md) 
+
+- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](../deploy-use/configure-client.md) 
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can use information rights management (IRM) integration, which provides additional information protection solutions:
@@ -86,7 +92,7 @@ Although no longer new, the following post from the Office blog has some additio
 
 If you are ready to configure SharePoint for IRM:
 
-- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md##sharepoint-online-and-onedrive-for-business-irm-configuration).
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
 
 - For Sharepoint Server, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
@@ -94,5 +100,7 @@ If you are ready to configure SharePoint for IRM:
 ## Next steps
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
+
+If you are ready to start deployment, which includes configuring these applications services, see the [Azure Information Protection deployment roadmap](/plan-design/deployment-roadmap.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
