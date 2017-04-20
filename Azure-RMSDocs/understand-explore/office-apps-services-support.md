@@ -66,7 +66,7 @@ If you are ready to configure Exchange for IRM:
 ## SharePoint Online and SharePoint Server
 When you use SharePoint Online or SharePoint Server, you can use information rights management (IRM) integration, which lets administrators protect lists or libraries so that when a user checks-out a document, the file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
-For lists and libraries, information protection is always applied by an administrator, never an end user. And it is applied at the list or library level for all documents in that container, rather than on individual files.  If you use SharePoint Online, users can also apply IRM to their OneDrive for Business library.
+For lists and libraries, information protection is always applied by an administrator, never an end user. By default, you set the permissions at the site level, which are inherited by any list or library. But for more fine-grained control, you can set permissions at the list and library level. However, you cannot set permissions on individual files. If you use SharePoint Online, users can also apply IRM to their OneDrive for Business library.
 
 The IRM service must first be enabled for SharePoint. Then, you specify Information Rights Management for a library. In the case of SharePoint Online and OneDrive for Business, users can also specify Information Rights Management for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in templates.
 
@@ -75,13 +75,21 @@ If you use SharePoint Server, you can use the information protection features wi
 > [!NOTE]
 > Currently, there are some limitations when you use IRM with SharePoint:
 > 
-> - You cannot use the default or custom templates that you manage in the Azure classic portal.
+> - You cannot use the default or custom templates that you manage in the Azure classic portal. 
+> 
 > - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 
 
 Azure Rights Management applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
-For more information about using the Azure Rights Management service with SharePoint, see the following  post from the Office blog: [What’s New with Information Rights Management in SharePoint and SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Although no longer new, the following post from the Office blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+
+If you are ready to configure SharePoint for IRM:
+
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md##sharepoint-online-and-onedrive-for-business-irm-configuration).
+
+- For Sharepoint Server, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+
 
 ## Next steps
 
