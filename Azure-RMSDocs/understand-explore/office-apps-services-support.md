@@ -60,7 +60,7 @@ When you use Exchange Online or Exchange Server, you can use information rights 
 
 -   **Office 365 Message Encryption** that uses transport rules to send encrypted emails to people outside your company, and the email is read in a browser with an interface similar to the Outlook Web App. You can customize the disclaimer text and header text in your company’s encrypted emails, and even add your company logo. For more information, see [Office 365 Message Encryption](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) from the Office website.
 
-If you use Exchange Server, you can use the information protection features with the Azure Rights Management service by deploying the RMS connector, which acts as a relay between your on-premises servers and the Azure Rights Management service. .
+If you use Exchange Server, you can use the information protection features with the Azure Rights Management service by deploying the RMS connector, which acts as a relay between your on-premises servers and the Azure Rights Management service.
 
 If you are ready to configure Exchange for IRM:
 
