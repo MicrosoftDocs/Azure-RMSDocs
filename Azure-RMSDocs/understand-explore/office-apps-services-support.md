@@ -6,7 +6,7 @@ description: How end-user Office applications (such as the Word, Excel, PowerPoi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/20/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,16 +70,19 @@ If you are ready to configure Exchange for IRM:
 
 
 ## SharePoint Online and SharePoint Server
-When you use SharePoint Online or SharePoint Server, you can use information rights management (IRM) integration, which lets administrators protect lists or libraries so that when a user checks-out a document, the file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
-For lists and libraries, information protection is always applied by an administrator, never an end user. By default, you set the permissions at the site level, which are inherited by any list or library in that site. But for more fine-grained control, you can set permissions at the list and library level, which override any permissions at the site. However, you cannot set permissions on individual files. If you use SharePoint Online, users can also apply IRM to their OneDrive for Business library.
+When you use SharePoint Online or SharePoint Server, you can use information rights management (IRM) integration. This configuration lets administrators protect lists or libraries so that when a user checks-out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
-The IRM service must first be enabled for SharePoint. Then, you specify Information Rights Management for a library. In the case of SharePoint Online and OneDrive for Business, users can also specify Information Rights Management for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in templates.
+For SharePoint lists and libraries, information protection is always configured by an administrator, never an end user. You set the permissions at the site level, and these permissions, by default, are inherited by any list or library in that site. If you use SharePoint Online, users can also configure their OneDrive for Business library for IRM protection.
 
-If you use SharePoint Server, you can use the information protection features with the Azure Rights Management service by deploying the RMS connector, which acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+For more fine-grained control, you can configure a list or library in the site to stop inheriting permissions from its parent. You can then configure permissions at that level (list or library) and they are then referred to as "unique permissions". However, permissions are always set at the container level; you cannot set permissions on individual files. 
+
+The IRM service must first be enabled for SharePoint. Then, you specify Information Rights Management for a library. In the case of SharePoint Online and OneDrive for Business, users can also specify Information Rights Management for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
+
+If you use SharePoint Server, you can use the information protection features with the Azure Rights Management service by deploying the RMS connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
-> Currently, there are some limitations when you use IRM with SharePoint:
+> Currently, there are some limitations when you use SharePoint IRM:
 > 
 > - You cannot use the default or custom templates that you manage in the Azure classic portal. 
 > 
