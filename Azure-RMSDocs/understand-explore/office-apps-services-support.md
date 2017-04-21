@@ -75,11 +75,11 @@ When you use SharePoint Online or SharePoint Server, you can protect your docume
 
 For SharePoint lists and libraries, information protection is always configured by an administrator, never an end user. You set the permissions at the site level, and these permissions, by default, are inherited by any list or library in that site. If you use SharePoint Online, users can also configure their OneDrive for Business library for IRM protection.
 
-For more fine-grained control, you can configure a list or library in the site to stop inheriting permissions from its parent. You can then configure permissions at that level (list or library) and they are then referred to as "unique permissions". However, permissions are always set at the container level; you cannot set permissions on individual files. 
+For more fine-grained control, you can configure a list or library in the site to stop inheriting permissions from its parent. You can then configure IRM permissions at that level (list or library) and they are then referred to as "unique permissions". However, permissions are always set at the container level; you cannot set permissions on individual files. 
 
-The IRM service must first be enabled for SharePoint. Then, you specify Information Rights Management for a library. In the case of SharePoint Online and OneDrive for Business, users can also specify Information Rights Management for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
+The IRM service must first be enabled for SharePoint. Then, you specify IRM permissions for a library. In the case of SharePoint Online and OneDrive for Business, users can also specify IRM permissions for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
 
-If you use SharePoint Server, you can use the information protection features with the Azure Rights Management service by deploying the RMS connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
 > Currently, there are some limitations when you use SharePoint IRM:
@@ -89,7 +89,7 @@ If you use SharePoint Server, you can use the information protection features wi
 > - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 
 
-Azure Rights Management applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
+When you use IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
 Although no longer new, the following post from the Office blog has some additional information that you might find useful: [What’s New with Information Rights Management in SharePoint and SharePoint Online](https://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
