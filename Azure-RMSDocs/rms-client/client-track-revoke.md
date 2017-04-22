@@ -85,7 +85,7 @@ If you do not see these options in your Office applications, it’s likely that 
     ![Track and revoke icon from the Classify and protect - Azure Information Protection dialog box](../media/track-and-revoke.png)
 
 
-### Using a web browser track and revoke documents that you have registered
+### Using a web browser to track and revoke documents that you have registered
 
 After you have registered the protected document by using your Office apps or File Explorer, you can track and revoke these documents by using a supported web browser:
 
