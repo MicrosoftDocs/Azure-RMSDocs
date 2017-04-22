@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in the cloud and that they have one or more email addresses. 
+Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in the cloud and that they have one or more email addresses. The email address is a requirement for the data protection service, Azure Rights Management.
 
 You can create these users and groups directly in Office 365 with Exchange Online, or you can create them on-premises and synchronize them from Active Directory Domain Services (AD DS).
 
