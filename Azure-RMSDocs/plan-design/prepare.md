@@ -55,16 +55,32 @@ For more information about how the Azure AD proxyAddress attribute is populated,
 
 ## Confirming your users and groups are prepared
 
-You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management by verifying that the user or group has an email address assigned as one of the Azure AD **proxyaddresses** value. For example:
+You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management. Verify that the user or group has an email address assigned as an Azure AD **proxyaddresses** value. 
 
-For users:
+For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0):
 
-	get-msoluser | select display name, proxyaddresses
+1. Connect to the service and supply your global admin credentials:
 
-For groups:
+	Connect-MsolService
 
-	get-msolgroup | select displayname, proxyaddresses
+2. Run the following commands:
+    
+    - For users:
+        
+		get-msoluser | select display name, proxyaddresses
+        
+    - For groups:
+         
+		get-msolgroup | select displayname, proxyaddresses
 
+3. Confirm that the users and groups that you want to use with Azure Rights Management have one or more email addresses. For example:
+    
+    |Display Name|ProxyAddresses|
+    |-------------------|------------------------------|
+    |Ankur Roy|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
+    |Jagannath Reddy |{}|
+    
+    In this example, the user account for Ankur Roy can be used with the Azure Rights Management service but the user account for Jagannath Reddy cannot be used with the Azure Rights Management service.
 
 ## Considerations if email addresses change
 
