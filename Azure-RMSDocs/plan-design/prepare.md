@@ -31,21 +31,37 @@ ms.suite: ems
 
 Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in the cloud and that they have one or more email addresses. 
 
-You can use any type of group (for example, security, distribution, Office 365). The only requirement is that the group has an email address. This is often referred to as a mail-enabled group.
-
 You can create these users and groups directly in Office 365 with Exchange Online, or you can create them on-premises and synchronize them from Active Directory Domain Services (AD DS).
 
-The Azure Rights Management service from Azure Information Protection uses the email address to identify accounts. More specifically, it uses the **Azure AD proxyAddress** attribute, which stores all email addresses for an account. This attribute can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address to the user, it is also saved in this attribute.
+### Type of groups supported
+
+You can use any type of group (for example, security, distribution, Office 365). The only requirement is that the group has an email address. This is often referred to as a mail-enabled group.
+
+### Email address requirements
+
+The Azure Rights Management service from Azure Information Protection uses the email address to identify accounts. More specifically, it uses the **Azure AD proxyAddress** attribute, which stores all email addresses for an account. 
+
+This attribute can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address an Office 365 user, it is also saved in this attribute. It can also be populated by email addresses that are synchronized from on-premises accounts. 
+
+### Using accounts from Active Directory on-premises
 
 If you have accounts that are managed on-premises that you want to use with the Azure Rights Management service, you must synchronize these to Azure AD. For ease of deployment, we recommend that you use [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect). However, you can use any directory synchronization method that achieves the same result.
 
-When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized for the Azure Rights Management service, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. You'll see that the on-premises AD attributes of **mail** and **proxyAddresses** are both required for synchronization. Values from these on-premises attributes are synchronized to the Azure AD proxyAddress attribute. Providing the accounts have an email address in one or both of these attributes, you can use the synchronized account  with the Azure Rights Management service.
+When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized for the Azure Rights Management service, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. 
+
+From the attributes list for Azure Rights Management, you'll see that the on-premises AD attributes of **mail** and **proxyAddresses** are both required for synchronization. Values from these on-premises attributes are synchronized to the Azure AD proxyAddress attribute. Providing the accounts have an email address in one or both of these attributes, you can use the synchronized account with the Azure Rights Management service.
 
 For more information about how the Azure AD proxyAddress attribute is populated, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
-You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management by verifying the user or group has an email address assigned as one of the Azure AD **proxyaddresses** value. For example:
+### Confirming your users and groups are prepared
+
+You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management by verifying that the user or group has an email address assigned as one of the Azure AD **proxyaddresses** value. For example:
+
+For users:
 
 	get-msoluser | select display name, proxyaddresses
+
+For groups:
 
 	get-msolgroup | select displayname, proxyaddresses
 
