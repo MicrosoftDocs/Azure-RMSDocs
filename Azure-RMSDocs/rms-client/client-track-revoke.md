@@ -33,15 +33,15 @@ After you have protected your documents by using Azure Information Protection, y
 
 When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. You will also see each time they tried to access the document, and their location at the time. In addition:
 
--   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared, but authorized users will no longer be able to open it:
+- If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared, but authorized users will no longer be able to open it:
     
     ![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
 
--   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs:
+- If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs:
     
     ![Export to CSV icon in the document tracking site](../media/tracking-site-export-icon.png)
 
--   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed:
+- If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed:
     
     ![Export to CSV icon in the document tracking site](../media/tracking-site-settings-email.png)
 
@@ -49,7 +49,12 @@ When you access this site, sign in to track your documents. Providing your organ
     
     ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
-To track a protected document, it must be registered in the document tracking site. To do this, use either File Explorer, or your Office apps.
+> [!NOTE] 
+> Unless you are an administrator, you must be the document owner to track a protected document. You cannot track protected emails by using the document tracking site.
+
+> If your administrator has configured privacy controls for the document tracking site, you might not see all activity from users in your organization. However, you can always revoke access to the documents that you track.
+
+To track a document that you have protected, you must use your Windows computer to register it with the document tracking site. To do this, use either File Explorer, or your Office apps.
 
 ## Using Office to track or revoke the document
 
