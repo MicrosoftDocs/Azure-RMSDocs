@@ -43,7 +43,7 @@ When you synchronize your accounts, you do not need to synchronize all attribute
 
 For more information about how the Azure AD proxyAddress attribute is populated, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
-You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management and the email addresses that are assigned to that account. For example:
+You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management by verifying the user or group has an email address assigned as one of the Azure AD **proxyaddresses** value. For example:
 
 	get-msoluser | select display name, proxyaddresses
 
@@ -60,10 +60,10 @@ If you change the email address of a user or group, we recommend that you add th
 
 If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected. In this case, you must grant them access again.
 
-Note that it's rare for a group to change its email address and if you assign rights to a group rather than individual users, it doesn't matter if the user's email address changes. This is the most likely (and recommended) method for an administrator to configure usage rights. However, users are likely to configure custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
+Note that it's rare for a group to change its email address and if you assign rights to a group rather than individual users, it doesn't matter if the user's email address changes. The rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
 ## Activate the Rights Management service for data protection
-When you are ready to start protecting documents and emails, activate the Rights Management service to enable this technology. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+When you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
