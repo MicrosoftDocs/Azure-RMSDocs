@@ -88,7 +88,7 @@ If you change the email address of a user or group, we recommend that you add th
 
 If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected. In this case, you must grant them access again.
 
-Note that it's rare for a group to change its email address and if you assign rights to a group rather than individual users, it doesn't matter if the user's email address changes. The rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
+Note that it's rare for a group to change its email address and if you assign usage rights to a group rather to than individual users, it doesn't matter if the user's email address changes. In this scenario, the usage rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights that protect documents and emails. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
 ## Group membership caching by Azure Rights Management
 
