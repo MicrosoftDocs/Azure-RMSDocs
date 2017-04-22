@@ -60,18 +60,18 @@ You can use Azure AD PowerShell to confirm that an account can be used by Azure 
 For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0):
 
 1. Connect to the service and supply your global admin credentials:
-
+    
 	Connect-MsolService
-
+    
 2. Run the following commands:
     
     - For users:
         
-		get-msoluser | select display name, proxyaddresses
+			get-msoluser | select display name, proxyaddresses
         
     - For groups:
          
-		get-msolgroup | select displayname, proxyaddresses
+			get-msolgroup | select displayname, proxyaddresses
 
 3. Confirm that the users and groups that you want to use with Azure Rights Management have one or more email addresses. For example:
     
