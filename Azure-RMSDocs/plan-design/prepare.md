@@ -61,7 +61,7 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
 
 1. Connect to the service and supply your global admin credentials:
     
-	Connect-MsolService
+		Connect-MsolService
     
 2. Run the following commands:
     
