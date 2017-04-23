@@ -63,7 +63,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 - Right-click to classify and protect a file or folder.
 
-- Running the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).
+- Running the [PowerShell cmdlets](../rms-client/client-admin-guide-powershell.md) for labeling and protection (Get-AIPFileStatus, Set-AIPFileClassification, and Set-AIPFileLabel).
 
 - Every 24 hours.
 
