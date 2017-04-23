@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/24/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,17 +43,17 @@ Use the following information to see what’s new or changed for a GA release. T
 
 ## Version 1.6.101.0
 
-**Released**: 04/24/2017
+**Released**: 05/01/2017
 
 This version includes the latest version of the RMS client (MSIPC version 1.0.3102.0221)
 
 **Fixes**:
 
-- x
+- General fixes for stability.
 
 **New features**:
 
-- New PowerShell cmdlet, Set-AIPFileClassification. When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
+- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/azureinformationprotection/vlatest/set-aipfileclassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
 
 
 ## Version 1.4.21.0
