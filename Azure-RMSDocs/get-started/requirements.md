@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 |Requirement|More information|
 |---------------|--------------------|
-|A subscription for Azure Information Protection|Review the [subscription information](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to make sure that your organization's subscription includes the Azure Information Protection features that you want to use.|
+|A subscription for Azure Information Protection|Review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to make sure that your organization's subscription includes the Azure Information Protection features that you want to use.|
 |Azure Active Directory|Your organization must have an Azure Active Directory (Azure AD) to support user authentication for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.<br /><br />Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.<br /><br />For more information, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md).|
 |Client devices|Users must have client devices (computer or mobile device) that run an operating system that supports Azure Information Protection.<br /><br />The following devices support the Azure Information Protection client, which lets users classify and label their Office documents and emails:<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />When this client protects the data by using the Azure Rights Management service, the data can be consumed by the same devices (Windows, Mac, iOS, Android), that support the Azure Rights Management service. <br /><br />For details about the devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md).|
 |Applications|The Azure Information Protection client can label and protect files and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office suites:<br /><br /> - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)<br /><br />- Office Professional Plus 2016<br /><br />- Office Professional Plus 2013 with Service Pack 1<br /><br />- Office Professional Plus 2010 <br /><br />For information about which Office editions support the data protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).|

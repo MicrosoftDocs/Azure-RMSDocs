@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -55,23 +55,27 @@ The February release removes many previous limitations. For more information, se
 
 To configure the Azure Information Protection policy, you must sign in to the Azure portal as a global admin for Azure Active Directory.
 
-If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs the default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
+If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs a default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
-## Which options in the Azure portal are P1 or P2?
+## Which options in the Azure portal are P2?
 
-To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, as a general guide, the advanced features such as automatic classification and hold your own key (HYOK) are specific to the Azure Information Protection Premium 2 subscription.
+The options in the Azure portal that require a **Azure Information Protection Premium 2** (P2) subscription now have an information popup message to identify them. For more information about which features are included in the P1 and P1 subscriptions, see the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 ## Can a file have more than one classification?
 
 Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sub-label, this actually applies two labels at the same time; a primary label and a secondary label. By using sub-labels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
 
-For example, the label **Secret** might contain sub-labels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sub-labels. A user cannot select the **Secret** label by itself; only one of its sub-labels, such as **Legal**. As a result, the label that they see set is **Secret \ Legal**. The metadata for that file includes one custom text property for **Secret**, one custom text property for **Legal**, and another that contains both values (**Secret Legal**). 
+For example, the label **Confidential** might contain sub-labels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sub-labels. A user cannot select the **Confidential** label by itself; only one of its sub-labels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Legal**, and another that contains both values (**Confidential Legal**). 
 
 When you use sub-labels, don't configure visual markings, protection, and conditions at the primary label. When you use sub-levels, configure these setting on the sub-label only. If you configure these settings on the primary label and its sub-label, the settings at the sub-label take precedence.
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
+
+## How can DLP solutions and other applications integrate with Azure Information Protection?
+
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
@@ -85,10 +89,15 @@ To achieve this solution:
 
 2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
-    For the message header, you'll find the information to specify by inspecting the properties of an Office file that you classified by using your Azure Information Protection label. Identify the file property that has the format **MSIP_Label_<GUID>_Enabled** and specify this string for the message header, and then specify **True** for the header value. For example, your message header might look like this string: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
+    
+    ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
 
-
-The following now happens when users use the Outlook web access app or a mobile device client that supports rights management protection: 
+Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). But when the rule is in effect, the following now happens when users use the Outlook web access app or a mobile device client that supports Rights Management protection: 
 
 - Users select the Exchange message classification and send the email.
 
@@ -100,30 +109,7 @@ If your Azure Information Protection labels apply rights management protection, 
 
 You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
 
-- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **Confidential**), and apply a message classification that maps to this label.
+- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
-## How can DLP solutions and other applications integrate with Azure Information Protection?
-
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
-
-## How do I sign in as a different user?
-
-In a production environment, you wouldn't usually need to sign in as a different user when you're using the Azure Information Protection client. However, you might need to do so if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
-
-You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
-
-Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
-
-To sign in as a different user, you must currently edit the registry:
-
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value.
-
-2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
-
-Additionally:
-
-- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- If you want to delete the currently downloaded Azure Information Protection policy, you can do so by deleting the **Policy.msip** file from the %localappdata%\Microsoft\MSIP folder.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

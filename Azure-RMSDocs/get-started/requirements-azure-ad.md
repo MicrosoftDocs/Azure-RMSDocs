@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,13 @@ If you want to integrate your Azure AD directory with your on-premises AD forest
 
 Computers running Office 2010: 
 
+- These computers require the [Azure Information Protection client](../rms-client/aip-client.md) (recommended) or the [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
+
 - If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario will fail to authenticate users for Azure Information Protection.
+
+Support for certificate-based authentication (CBA):
+
+- The Azure Information Protection app for Android supports certificate-based authentication when you have a minimum version of Android 5.0. For instructions to configure certificate-based authentication, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
 
@@ -56,7 +62,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 -   Office 2013 (minimum version):
 
-    -   If you have Office 2013, you must also install the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). For more information about this update and how modern authentication brings Active Directory Authentication Library (ADAL)-based sign in to Office 2013, see [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) on the Office blog.
+    -   If you have Office 2013, you might need to install an additional update to support Active Directory Authentication Library (ADAL). For example, the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). For more information about this update and how modern authentication brings Active Directory Authentication Library (ADAL)-based sign in to Office 2013, see [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) on the Office blog.
 
 - Azure Information Protection client:
 
@@ -64,7 +70,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 -   Rights Management sharing application for Windows:
 
-    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see  [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
+    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 

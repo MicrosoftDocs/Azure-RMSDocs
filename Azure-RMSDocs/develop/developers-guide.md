@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Developer's Guide - AIP
@@ -81,6 +81,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [How to deploy your service app into a different tenant] (how-to-deploy-app.md)
 - [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
 - [How to use document tracking (user)](how-to-use-document-tracking.md)
+- [How to renew a symmetric key in Azure Information Protection](how-to-renew-symmetric-key.md)
 
 ### Security and authentication
 
@@ -100,7 +101,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ## Videos
 
-Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
+Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
 These videos are from the Micorsoft 2016 Ignite conference
 

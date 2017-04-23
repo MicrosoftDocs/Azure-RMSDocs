@@ -86,7 +86,7 @@ The RMS Client 2.1 is not a Windows operating system component. The client ships
 
 ### Creating your deployment package
 
-We recommend that you bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed other applications and solutions.
+We recommend that you bundle the RMS Client installer package with your application or solution using your preferred installation technology. The RMS Client can be freely redistributed with other applications and solutions.
 
 You can choose to install the RMS Client 2.1 interactively by starting the RMS Client 2.1 installer or silently installing it. The integration steps will be:
 
