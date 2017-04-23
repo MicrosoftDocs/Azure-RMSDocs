@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,15 +57,15 @@ To configure the Azure Information Protection policy, you must sign in to the Az
 
 If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs a default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 
-## Which options in the Azure portal are P1 or P2?
+## Which options in the Azure portal are P2?
 
-To check which features are included in the **Azure Information Protection Premium 1** (P1) subscription vs. the **Azure Information Protection Premium 2** (P2) subscription, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. However, as a general guide, the advanced features such as automatic classification and hold your own key (HYOK) are specific to the Azure Information Protection Premium 2 subscription.
+The options in the Azure portal that require a **Azure Information Protection Premium 2** (P2) subscription now have an information popup message to identify them. For more information about which features are included in the P1 and P1 subscriptions, see the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 ## Can a file have more than one classification?
 
 Users can select just one label at a time for each document or email, which often results in just one classification. However, if users select a sub-label, this actually applies two labels at the same time; a primary label and a secondary label. By using sub-labels, a file can have two classifications that denote a parent\child relationship for an additional level of control.
 
-For example, the label **Confidential** might contain sub-labels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sub-labels. A user cannot select the **Confidential** label by itself; only one of its sub-labels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Confidential**, and another that contains both values (**Confidential Legal**). 
+For example, the label **Confidential** might contain sub-labels such as **Legal** and **Finance**. You can apply different classification visual markings and different Rights Management templates to these sub-labels. A user cannot select the **Confidential** label by itself; only one of its sub-labels, such as **Legal**. As a result, the label that they see set is **Confidential \ Legal**. The metadata for that file includes one custom text property for **Confidential**, one custom text property for **Legal**, and another that contains both values (**Confidential Legal**). 
 
 When you use sub-labels, don't configure visual markings, protection, and conditions at the primary label. When you use sub-levels, configure these setting on the sub-label only. If you configure these settings on the primary label and its sub-label, the settings at the sub-label take precedence.
 
