@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,13 +41,15 @@ Use the following information to see what’s new or changed for a GA release. T
 > If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 
-## Version 1.6.101.0
+## Version 1.7.200.0
 
-**Released**: 05/01/2017
+**Released**: 05/15/2017
 
 This version includes the latest version of the RMS client (MSIPC version 1.0.3102.0221)
 
 **Fixes**:
+
+- All labeling and classification cmdlets are now supported on computers that are not connected to the Internet but have a valid Azure Information Protection policy.
 
 - General fixes for stability.
 
