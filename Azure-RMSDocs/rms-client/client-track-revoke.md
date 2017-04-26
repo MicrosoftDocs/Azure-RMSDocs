@@ -57,10 +57,10 @@ When you access this site, sign in to track your documents. Providing your organ
         
         ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
-Unless you are an administrator, you must be the document owner to track a protected document. You cannot track protected emails by using the document tracking site.
+Unless you are an administrator, you can track and revoke only the documents that you have protected. You cannot track your protected emails by using the document tracking site.
 
 > [!NOTE] 
-> If your administrator has configured privacy controls for the document tracking site, you might not see when users from your organization have accessed a document that you track. However, you can always revoke access to the documents that you track.
+> If your administrator has configured privacy controls for the document tracking site, you might not see when users from your organization have accessed a document that you track. An administrator can exempt all users or just some users. However, you can always revoke access to the documents that you track.
 
 To track a document that you have protected, you must use your Windows computer to register it with the document tracking site. To do this, use either File Explorer, or your Office apps.
 
