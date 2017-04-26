@@ -6,7 +6,7 @@ description: You can delete or re-order the labels that users see on the Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
