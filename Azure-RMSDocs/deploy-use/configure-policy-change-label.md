@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,7 +36,7 @@ For example, you can change a label or sub-label name, tooltip, color, order, wh
 To change a label, use the following instructions.
 
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
