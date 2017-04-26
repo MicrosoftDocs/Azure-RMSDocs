@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -218,6 +218,14 @@ Use the **Version** information to confirm which version of the client is instal
 ## Custom configurations
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
+
+### Support for AD RMS only computers
+
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. If you have installed the client on a computer that only communicates with an AD RMS cluster, you can prevent the client from attempting to connect to the service and prompting the user to sign in.
+
+Edit the registry, locate the following value name, and set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 ### Sign in as a different user
 
