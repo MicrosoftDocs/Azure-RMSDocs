@@ -113,7 +113,6 @@ These file types are identified separately because when they are natively protec
 |.jfif|.pjfif|
 |.jt|.pjt|
 
-
 The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. 
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
