@@ -79,15 +79,6 @@ You can change the default protection level that the Azure Information Protectio
 
 The data protection can be applied automatically when a user selects a label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
-#### File sizes supported
-
-Maximum file sizes supported by the Azure Information Protection client:
-
-- For Office files and natively protected PDF files: 1 GB
-
-- For all other files: Limited only by your available disk space
-
-
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection client, and that can also be classified. 
