@@ -6,7 +6,7 @@ description: Identify requirements or problems that your organization might have
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,8 +76,6 @@ For more information about these external certifications, see the [Azure Trust C
 
 ## Next steps
 
-To see what the Azure Rights Management service looks like, for administrators and for users, see [Azure RMS in action](what-admins-users-see.md).
-
-If you're interested in more technical information about how the Azure Rights Management service works, see [How does Azure RMS work?](how-does-it-work.md)
+For more technical information about how the Azure Rights Management service works, see [How does Azure RMS work?](how-does-it-work.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
