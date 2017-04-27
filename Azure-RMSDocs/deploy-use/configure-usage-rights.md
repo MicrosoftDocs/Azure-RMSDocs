@@ -106,7 +106,7 @@ A user wants to email some information to specific people in the Marketing depar
 
 ## Rights Management issuer and Rights Management owner
 
-When a document or email is protected by using the Azure Rights Management service, the account that protects that content automatically becomes the Rights Management issuer for that content. This account is logged as the **issuer** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs)). 
+When a document or email is protected by using the Azure Rights Management service, the account that protects that content automatically becomes the Rights Management issuer for that content. This account is logged as the **issuer** field in the [usage logs](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs). 
 
 The Rights Management issuer is always granted the Full Control usage right for the document or email, and in addition:
 
