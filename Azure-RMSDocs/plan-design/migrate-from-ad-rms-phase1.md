@@ -138,6 +138,17 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 ---
 
+Run the following PowerShell commands either one by one, or in a script
+
+	$irmConfig = Get-IRMConfiguration
+	$list = $irmConfig.LicensingLocation
+	$list += "<YourTenantURL>/_wmcs/licensing"
+	Set-IRMConfiguration -LicensingLocation $list
+	Set-IRMConfiguration -internallicensingenabled $false
+	Set-IRMConfiguration -RefreshServerCertificates
+	Set-IRMConfiguration -internallicensingenabled $true
+	IISReset
+
 
 After running these commands, if your Exchange servers were configured to support content that was protected by AD RMS, they will also support content protected by Azure RMS after the migration. They will continue to use AD RMS to support protected content until a later step in the migration.
 
