@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -103,7 +103,6 @@ These file types are identified separately because when they are natively protec
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
-
 
 The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. 
 
