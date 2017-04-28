@@ -78,7 +78,9 @@ To confirm users, use the following command:
     
 	Get-Msoluser | select DisplayName, UserPrincipalName, Proxyaddresses
         
-First, make sure that the user you want to use with Azure Rights Management is displayed. Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. 
+First, make sure that the user you want to use with Azure Rights Management is displayed. 
+
+Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. 
 
 If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for Azure Rights Management.
 
