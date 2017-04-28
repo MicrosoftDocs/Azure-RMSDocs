@@ -86,7 +86,7 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
     For example: 
     
     |Display Name|UserPrincipalName|ProxyAddresses|
-    |-------------------|------------------------------|
+    |-------------------|-------------------|------------------------------|
     |Jagannath Reddy |jagannathreddy@constoso.com|{}|
     |Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
     
