@@ -51,11 +51,11 @@ For example, you can use a mail-enabled security group, a distribution group, an
 
 ## Azure Rights Management requirements for users
 
-The Azure Rights Management service uses two attributes in Azure AD to authorize users: **Azure AD proxyAddress** and **UserPrincipalName**.
+The Azure Rights Management service uses two attributes in Azure AD to authorize users: **ProxyAddresses** and **UserPrincipalName**.
 
-The **Azure AD proxyAddress** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
+The Azure AD ProxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
 
-The **UserPrincipalName** attribute is used only when an account doesn't have values in the **Azure AD proxyAddress** attribute. For example, you create a user in the Azure portal, or a user for Office 365 that doesn't have a mailbox.
+The **UserPrincipalName** attribute is used only when an account doesn't have values in the Azure AD ProxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
 
 ## Using accounts from Active Directory on-premises for Azure Rights Management
@@ -65,7 +65,6 @@ If you have accounts that are managed on-premises that you want to use with the 
 When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized for the Azure Rights Management service, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. 
 
 From the attributes list for Azure Rights Management, you'll see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddress attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
-
 
 ## Confirming your users and groups are prepared for Azure Rights Management
 
