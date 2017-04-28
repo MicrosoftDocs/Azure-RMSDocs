@@ -37,7 +37,7 @@ There are different ways to create these users and groups, which include:
 
 - You create the users in the Azure portal.
 
-- You create the users and groups on-premises and synchronize them from Active Directory Domain Services (AD DS) to Azure AD.
+- You create the users and groups in your on-premises Active Directory and synchronize them to Azure AD.
 
 - You create the users and groups in another directory and synchronize them to Azure AD.
 
