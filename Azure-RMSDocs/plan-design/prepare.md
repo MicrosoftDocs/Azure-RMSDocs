@@ -6,7 +6,7 @@ description: Check that you have everything ready to use the Azure Rights Manage
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,19 +29,34 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in the cloud and that they have one or more email addresses. The email address is a requirement for the data protection service, Azure Rights Management.
+Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in Azure AD.
 
-You can create these users and groups directly in Office 365 with Exchange Online, or you can create them on-premises and synchronize them from Active Directory Domain Services (AD DS).
+There are different ways to create these users and groups, which include:
 
-## Group type supported by Azure Rights Management
+- You create the users in the Office 365 admin center, and the groups in Exchange Online admin center.
 
-You can use any type of group (for example, security, distribution, Office 365). The only requirement is that the group has an email address. This is often referred to as a mail-enabled group.
+- You create the users in the Azure portal.
 
-## Email address requirements for Azure Rights Management
+- You create the users and groups on-premises and synchronize them from Active Directory Domain Services (AD DS) to Azure AD.
 
-The Azure Rights Management service from Azure Information Protection uses the email address to identify accounts. More specifically, it uses the **Azure AD proxyAddress** attribute, which stores all email addresses for an account. 
+- You create the users and groups in another directory and synchronize them to Azure AD.
 
-This attribute can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address an Office 365 user, it is also saved in this attribute. It can also be populated by email addresses that are synchronized from on-premises accounts. 
+
+## Azure Rights Management requirements for groups
+
+To authorize members of a group, the Azure Rights Management service can use any type of group in Azure AD that has an email address. This is often referred to as a mail-enabled group.
+
+For example, you can use mail-enabled security group, a distribution group, and an Office 365 group.
+
+
+## Azure Rights Management requirements for users
+
+The Azure Rights Management service uses two attributes in Azure AD to authorize users: **Azure AD proxyAddress** and **UserPrincipalName**.
+
+The **Azure AD proxyAddress** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
+
+The **UserPrincipalName** attribute is used only when an account doesn't have values in the **Azure AD proxyAddress** attribute. For example, you create a user in the Azure portal, or a user for Office 365 that doesn't have a mailbox.
+
 
 ## Using accounts from Active Directory on-premises for Azure Rights Management
 
@@ -49,13 +64,12 @@ If you have accounts that are managed on-premises that you want to use with the 
 
 When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized for the Azure Rights Management service, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. 
 
-From the attributes list for Azure Rights Management, you'll see that the on-premises AD attributes of **mail** and **proxyAddresses** are both required for synchronization. Values from these on-premises attributes are synchronized to the Azure AD proxyAddress attribute. Providing the accounts have an email address in one or both of these attributes, you can use the synchronized account with the Azure Rights Management service.
+From the attributes list for Azure Rights Management, you'll see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddress attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
 
-For more information about how the Azure AD proxyAddress attribute is populated, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
 ## Confirming your users and groups are prepared for Azure Rights Management
 
-You can use Azure AD PowerShell to confirm that an account can be used by Azure Rights Management. Verify that the user or group has an email address assigned as an Azure AD **proxyaddresses** value. 
+You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Rights Management, and the email addresses that can be used to authorize them. 
 
 For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0):
 
@@ -63,24 +77,27 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
     
 		Connect-MsolService
     
-2. Run the following commands:
+2. To confirm users, use the following command:
     
-    - For users:
+		Get-Msoluser | select DisplayName, UserPrincipalName, Proxyaddresses
         
-			get-msoluser | select display name, proxyaddresses
-        
-    - For groups:
+    First, make sure that the user you want to use with Azure Rights Management is displayed. Then check whether the ProxyAddresses column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. If the ProxyAddresses column is not populated, the value in the UserPrincipalName will be used to authorize the user for Azure Rights Management.
+    
+    For example: 
+    
+    |Display Name|UserPrincipalName|ProxyAddresses|
+    |-------------------|------------------------------|
+    |Jagannath Reddy |jagannathreddy@constoso.com|{}|
+    |Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
+
+    
+    In this example, the user account for Jagannath Reddy will be authorized by jagannathreddy@constoso.com, and the user account for Ankur Roy can be authorized by using ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com but not jagannathreddy@constoso.com.
+
+3. To confirm groups, use the following command:
          
 			get-msolgroup | select displayname, proxyaddresses
-
-3. Confirm that the users and groups that you want to use with Azure Rights Management have one or more email addresses displayed in the **ProxyAddresses** column. For example:
     
-    |Display Name|ProxyAddresses|
-    |-------------------|------------------------------|
-    |Ankur Roy|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
-    |Jagannath Reddy |{}|
-    
-    In this example, the user account for Ankur Roy can be used with the Azure Rights Management service but the user account for Jagannath Reddy cannot be used with the Azure Rights Management service.
+    First, make sure that the group that you want to use with Azure Rights Management is displayed. Then check the email values in the ProxyAddresses column that can be used to authorize the group members for Azure Rights Management.
 
 ## Considerations for Azure Rights Management if email addresses change
 
