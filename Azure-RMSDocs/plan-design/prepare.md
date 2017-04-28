@@ -105,7 +105,7 @@ Make sure that the groups you want to use with Azure Rights Management is displa
 
 ## Considerations for Azure Rights Management if email addresses change
 
-If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, you ensure business continuity for any usage rights or other configurations that the Azure Rights Management service saved when the old email address was in use. 
+If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD ProxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations that the Azure Rights Management service saved when the old email address was in use. 
 
 If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected. In this case, you must grant them access again.
 
