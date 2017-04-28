@@ -71,7 +71,7 @@ Use the following table for a list of these permissions levels and a complete li
 
 ###### Footnote 1
 
-For the Azure Information Protection client for Windows, this right is currently required for the Azure Information Protection bar in Office apps.
+For the Azure Information Protection client for Windows, this right is currently required for the Information Protection bar in Office apps.
 
 ###### Footnote 2
 Not applicable to the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
