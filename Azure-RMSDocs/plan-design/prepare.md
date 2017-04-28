@@ -71,37 +71,34 @@ From the attributes list for Azure Rights Management, you'll see that for users,
 
 You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Rights Management, and the email addresses that can be used to authorize them. 
 
-For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0):
+For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0), first connect to the service and supply your global admin credentials:
 
-1. Connect to the service and supply your global admin credentials:
+	Connect-MsolService
     
-		Connect-MsolService
+To confirm users, use the following command:
     
-2. To confirm users, use the following command:
-    
-		Get-Msoluser | select DisplayName, UserPrincipalName, Proxyaddresses
+	Get-Msoluser | select DisplayName, UserPrincipalName, Proxyaddresses
         
-    First, make sure that the user you want to use with Azure Rights Management is displayed. Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for Azure Rights Management.
-    
-    For example: 
-    
-    |Display Name|UserPrincipalName|ProxyAddresses
-    |-------------------|-----------------|--------------------|
-    |Jagannath Reddy |jagannathreddy@constoso.com|{}|
-    |Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
-    
-    
-    In this example:
-    
-    - The user account for Jagannath Reddy will be authorized by **jagannathreddy@constoso.com**.
-            
-    -  The user account for Ankur Roy can be authorized by using **ankur.roy@constoso.com** and **ankur.roy@onmicrosoft.constoso.com**, but not **ankurroy@constoso.com**.
+First, make sure that the user you want to use with Azure Rights Management is displayed. Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for Azure Rights Management.
 
-3. To confirm groups, use the following command:
-         
-			get-msolgroup | select DisplayNname, ProxyAddresses
+For example: 
     
-    First, make sure that the group that you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
+|Display Name|UserPrincipalName|ProxyAddresses
+|-------------------|-----------------|--------------------|
+|Jagannath Reddy |jagannathreddy@constoso.com|{}|
+|Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
+
+In this example:
+
+- The user account for Jagannath Reddy will be authorized by **jagannathreddy@constoso.com**.
+
+-  The user account for Ankur Roy can be authorized by using **ankur.roy@constoso.com** and **ankur.roy@onmicrosoft.constoso.com**, but not **ankurroy@constoso.com**.
+
+To confirm groups, use the following command:
+         
+	get-msolgroup | select DisplayNname, ProxyAddresses
+
+Make sure that the group that you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
 
 ## Considerations for Azure Rights Management if email addresses change
 
