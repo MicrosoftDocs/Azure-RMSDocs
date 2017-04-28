@@ -89,9 +89,13 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
     |-------------------|------------------------------|
     |Jagannath Reddy |jagannathreddy@constoso.com|{}|
     |Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
-
     
-    In this example, the user account for Jagannath Reddy will be authorized by **jagannathreddy@constoso.com**. The user account for Ankur Roy can be authorized by using **ankur.roy@constoso.com** and **ankur.roy@onmicrosoft.constoso.com**, but not **jagannathreddy@constoso.com**.
+    
+    In this example:
+    
+    - The user account for Jagannath Reddy will be authorized by **jagannathreddy@constoso.com**.
+            
+    -  The user account for Ankur Roy can be authorized by using **ankur.roy@constoso.com** and **ankur.roy@onmicrosoft.constoso.com**, but not **ankurroy@constoso.com**.
 
 3. To confirm groups, use the following command:
          
