@@ -33,7 +33,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 There are different ways to create these users and groups, which include:
 
-- You create the users in the Office 365 admin center, and the groups in Exchange Online admin center.
+- You create the users in the Office 365 admin center, and the groups in the Exchange Online admin center.
 
 - You create the users in the Azure portal.
 
