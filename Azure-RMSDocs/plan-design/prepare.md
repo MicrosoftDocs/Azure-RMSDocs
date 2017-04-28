@@ -46,7 +46,7 @@ There are different ways to create these users and groups, which include:
 
 To authorize members of a group, the Azure Rights Management service can use any type of group in Azure AD that has an email address. This is often referred to as a mail-enabled group.
 
-For example, you can use mail-enabled security group, a distribution group, and an Office 365 group.
+For example, you can use a mail-enabled security group, a distribution group, and an Office 365 group.
 
 
 ## Azure Rights Management requirements for users
