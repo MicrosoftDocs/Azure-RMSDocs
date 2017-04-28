@@ -99,7 +99,7 @@ In this example:
 
 To confirm groups, use the following command:
          
-	Get-MsolGroup | select DisplayNname, ProxyAddresses
+	Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Make sure that the groups you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
 
