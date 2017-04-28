@@ -76,7 +76,7 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
     
 To confirm users, use the following command:
     
-	Get-Msoluser | select DisplayName, UserPrincipalName, Proxyaddresses
+	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
 First, make sure that the user you want to use with Azure Rights Management is displayed. 
 
@@ -99,7 +99,7 @@ In this example:
 
 To confirm groups, use the following command:
          
-	get-msolgroup | select DisplayNname, ProxyAddresses
+	Get-MsolGroup | select DisplayNname, ProxyAddresses
 
 Make sure that the group that you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
 
