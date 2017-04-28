@@ -78,7 +78,7 @@ To confirm users, use the following command:
     
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
-First, make sure that the user you want to use with Azure Rights Management is displayed. 
+First, make sure that the users you want to use with Azure Rights Management are displayed. 
 
 Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Rights Management. 
 
@@ -101,7 +101,7 @@ To confirm groups, use the following command:
          
 	Get-MsolGroup | select DisplayNname, ProxyAddresses
 
-Make sure that the group that you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
+Make sure that the groups you want to use with Azure Rights Management is displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Rights Management.
 
 ## Considerations for Azure Rights Management if email addresses change
 
