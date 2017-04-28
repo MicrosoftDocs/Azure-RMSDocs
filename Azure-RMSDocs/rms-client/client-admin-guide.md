@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -219,6 +219,16 @@ Use the **Version** information to confirm which version of the client is instal
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
 
+### Prevent sign-in prompts for AD RMS only computers
+
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by editing the registry:
+
+Locate the following value name, and then set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](../rms-client/client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
+
 ### Sign in as a different user
 
 In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, you might need to do so as an administrator if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
@@ -252,7 +262,6 @@ Create the following DWORD value name (with any value data):
 ### Support for disconnected computers
 
 By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computer that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
-
 Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
