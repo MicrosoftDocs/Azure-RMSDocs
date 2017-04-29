@@ -31,7 +31,7 @@ ms.suite: ems
 
 Before you deploy Azure Information Protection for your organization, make sure that you have accounts for users and groups in Azure AD for your organization's tenant.
 
-There are different ways to create these users and groups, which include:
+There are different ways to create these accounts for users and groups, which include:
 
 - You create the users in the Office 365 admin center, and the groups in the Exchange Online admin center.
 
@@ -67,15 +67,15 @@ There are three scenarios for using users and groups with Azure Information Prot
     
     - Onboarding controls to support a phased deployment.
 
-## Azure Information Protection requirements for users
+## Azure Information Protection requirements for user accounts
 
-For all three scenarios listed in the previous section, the requirements for users are the same. To authorize users, two attributes in Azure AD are used: **ProxyAddresses** and **UserPrincipalName**.
+For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **ProxyAddresses** and **UserPrincipalName**.
 
 The Azure AD ProxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
 
 The **UserPrincipalName** attribute is used only when an account doesn't have values in the Azure AD ProxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
-## Azure Information Protection requirements for groups
+## Azure Information Protection requirements for group accounts
 
 For assigning labels, and for assigning usage rights and access controls:
 
