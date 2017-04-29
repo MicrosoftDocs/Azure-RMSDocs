@@ -99,7 +99,7 @@ From the attributes list for Azure Rights Management, you'll see that for users,
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
-You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Information Protection, and the values that can be used to authorize them. 
+You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Information Protection and the values that can be used to authorize them. 
 
 For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0), first connect to the service and supply your global admin credentials:
 
@@ -136,11 +136,9 @@ Make sure that the groups you want to use with Azure Information Protection are 
 
 Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-​Msol​Group​Member](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0), or use your management portal. 
 
-For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups:
+For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
 	Get-MsolGroup | where {$_.GroupType -eq "Security"}
-
-For onboarding controls, you must specify the object ID. For delegated administration, if you want to use a security group instead of a mail-enabled group, you can specify the object ID or display name. If you prefer, you can also use the Azure portal to copy the values for the object ID and the display name.
 
 ## Considerations for Azure Information Protection if email addresses change
 
