@@ -52,7 +52,7 @@ There are three scenarios for using users and groups with Azure Information Prot
 - For assigning labels to users when you use labeling and classification. Only administrators select these groups:
     
     - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
-    
+        
 - For assigning usage rights and access controls when you use the Azure Rights Management service to protect documents and emails. Administrators and users can select these users and groups:
     
     - Usage rights determine whether a user can open a document or email and how they can use it. For example, whether they can only read it, or read and print it, or read and edit it. 
