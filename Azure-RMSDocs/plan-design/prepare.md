@@ -105,7 +105,7 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
 
 	Connect-MsolService
     
-Next, configure your PowerShell session so that it doesn't truncate the values that we'll be checking:
+Next, configure your PowerShell session so that it doesn't truncate the values to check:
 
     $Formatenumerationlimit =-1
 
