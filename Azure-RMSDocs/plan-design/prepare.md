@@ -105,7 +105,9 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
 
 	Connect-MsolService
     
-To confirm users, use the following command:
+To confirm users, run the following commands:
+
+    $Formatenumerationlimit =-1
     
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
@@ -135,6 +137,11 @@ To confirm groups, use the following command:
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Information Protection.
 
 Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-​Msol​Group​Member](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0), or use your management portal. 
+
+[TIP!]
+> You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
+> 
+> For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path useraccounts.csv`
 
 For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
