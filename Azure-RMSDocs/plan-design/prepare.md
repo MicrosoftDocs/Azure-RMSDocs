@@ -155,9 +155,9 @@ For the two service configuration scenarios that use security groups, you can us
 
 ## Considerations for Azure Information Protection if email addresses change
 
-If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD ProxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations that the Azure Rights Management service saved when the old email address was in use. 
+If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD ProxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations there were saved when the old email address was in use. 
 
-If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected. In this case, you must grant them access again.
+If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected, and other misconfigurations that used the old value. In this case, you must repeat the configuration to save the new email address. 
 
 Note that it's rare for a group to change its email address and if you assign usage rights to a group rather to than individual users, it doesn't matter if the user's email address changes. In this scenario, the usage rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights that protect documents and emails. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
