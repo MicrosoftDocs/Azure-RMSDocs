@@ -159,9 +159,9 @@ Note that it's rare for a group to change its email address and if you assign us
 
 ## Group membership caching by Azure Rights Management
 
-For performance reasons, group membership is cached by Azure Information Protection. This means that any changes to group membership in Azure AD can take up to 3 hours to take effect when these groups are used by Azure Information Protection, and this time period is subject to change. 
+For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership in Azure AD can take up to 3 hours to take effect when these groups are used by Azure Rights Management, and this time period is subject to change. 
 
-Remember to factor this delay into any changes or testing that you do when you use groups for Azure Information Protection, such as assigning usage rights or administration of the Azure Rights Management service. 
+Remember to factor this delay into any changes or testing that you do when you use groups for Azure Rights Management, such as assigning usage rights or configuring the Azure Rights Management service. 
 
 
 ## Next steps
