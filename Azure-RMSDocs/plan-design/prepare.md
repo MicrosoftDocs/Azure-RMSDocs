@@ -144,7 +144,7 @@ For the two administration scenarios that use security groups, you can use the f
 
 	Get-MsolGroup | where {$_.GroupType -eq "Security"}
 
-[!TIP]
+> [!TIP]
 > You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
 > 
 > For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
