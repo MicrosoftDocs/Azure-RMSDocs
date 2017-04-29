@@ -59,7 +59,7 @@ There are three scenarios for using users and groups with Azure Information Prot
     
     - Access controls include an expiry date and whether a connection to the Internet is required for access. 
 
-- For administration of the Azure Rights Management service to support specific scenarios, and therefore only administrators select these groups. Examples include configuring the following:
+- For configuring the Azure Rights Management service to support specific scenarios, and therefore only administrators select these groups. Examples include configuring the following:
     
     - Super users, so that designated services or people can open encrypted content if required for eDiscovery or data recovery.
     
@@ -83,7 +83,7 @@ For assigning labels, and for assigning usage rights and access controls:
     
     For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
-For administration of the Azure Rights Management service:
+For configuring the Azure Rights Management service:
 
 - You can use any type of group in Azure AD that has an email address, with one exception. That exception is when you configure onboarding controls to use a group, and that group must be a security group in Azure AD.
     
@@ -105,10 +105,12 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
 
 	Connect-MsolService
     
-To confirm users, run the following commands:
+Next, configure your PowerShell session so that it doesn't truncate the values that we'll be checking:
 
     $Formatenumerationlimit =-1
-    
+
+To confirm users, run the following command:
+
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
 Your first check is to make sure that the users you want to use with Azure Information Protection are displayed. 
