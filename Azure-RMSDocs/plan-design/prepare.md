@@ -132,6 +132,11 @@ In this example:
 
 -  The user account for Ankur Roy can be authorized by using **ankur.roy@contoso.com** and **ankur.roy@onmicrosoft.contoso.com**, but not **ankurroy@contoso.com**.
 
+> [!TIP]
+> You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
+> 
+> For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+
 To confirm groups, use the following command:
          
 	Get-MsolGroup | select DisplayName, ProxyAddresses
@@ -143,11 +148,6 @@ Then check that the groups contain the users (or other groups) that you want to 
 For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
 	Get-MsolGroup | where {$_.GroupType -eq "Security"}
-
-> [!TIP]
-> You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
-> 
-> For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ## Considerations for Azure Information Protection if email addresses change
 
