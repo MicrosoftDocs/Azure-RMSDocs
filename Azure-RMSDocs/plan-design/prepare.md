@@ -49,17 +49,17 @@ When you create users and groups by using the first three methods from this list
 
 There are three scenarios for using users and groups with Azure Information Protection:
 
-- For assigning labels to users when you use labeling and classification. Applicable for administrators only:
+- For assigning labels to users when you use labeling and classification. Only administrators select these groups:
     
-    -The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
+    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
 
-- For assigning usage rights and access controls when you use the Azure Rights Management service to protect documents and emails. Applicable for administrators and users:
+- For assigning usage rights and access controls when you use the Azure Rights Management service to protect documents and emails. Administrators and users can select these users and groups:
     
     - Usage rights determine whether a user can open a document or email and how they can use it. For example, whether they can only read it, or read and print it, or read and edit it. 
     
     - Access controls include an expiry date and whether a connection to the Internet is required for access. 
 
-- For administration of the Azure Rights Management service to support specific scenarios, and therefore applicable to administrators only. Examples include configuring the following:
+- For administration of the Azure Rights Management service to support specific scenarios, and therefore only administrators select these groups. Examples include configuring the following:
     
     - Super users, so that designated services or people can open encrypted content if required for eDiscovery or data recovery.
     
@@ -83,7 +83,7 @@ For assigning labels, and for assigning usage rights and access controls:
 
 For administration of the Azure Rights Management service:
 
-- With just one exception, you can always use any type of group in Azure AD that has an email address. That exception is when you configure onboarding controls to use a group, and that group must be a security group in Azure AD.
+- You can use any type of group in Azure AD that has an email address, with one exception. That exception is when you configure onboarding controls to use a group, and that group must be a security group in Azure AD.
     
 - In addition, you can also use a security group in Azure AD for delegated administration of the Azure Rights Management service.
 
@@ -107,7 +107,7 @@ To confirm users, use the following command:
     
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
-First, make sure that the users you want to use with Azure Information Protection are displayed. 
+Your first check is to make sure that the users you want to use with Azure Information Protection are displayed. 
 
 Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Information Protection. 
 
@@ -132,9 +132,11 @@ To confirm groups, use the following command:
 
 Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Information Protection.
 
-For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that might be needed to specify these groups:
+Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-​Msol​Group​Member](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0), or use your management portal. 
 
-	Get-MsolGroup | where {$_.GroupType -eq "Security"}	
+For the two administration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups:
+
+	Get-MsolGroup | where {$_.GroupType -eq "Security"}
 
 For onboarding controls, you must specify the object ID. For delegated administration, if you want to use a security group instead of a mail-enabled group, you can specify the object ID or display name. If you prefer, you can also use the Azure portal to copy the values for the object ID and the display name.
 
@@ -146,14 +148,16 @@ If you cannot do this, the user or group with the new email address risks being 
 
 Note that it's rare for a group to change its email address and if you assign usage rights to a group rather to than individual users, it doesn't matter if the user's email address changes. In this scenario, the usage rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights that protect documents and emails. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
-## Group membership caching by Azure Information Protection
+## Group membership caching by Azure Rights Management
 
-For performance reasons, group membership is cached by Azure Information Protection. This means that any changes to group membership can take up to 3 hours to take effect, and this time period is subject to change. Remember to factor this delay into any changes or testing that you do when you use groups in your configuration of the Azure Rights Management service, such as configuring [custom templates](../deploy-use/configure-custom-templates.md) or when you use a group for the [super user feature](../deploy-use/configure-super-users.md). 
+For performance reasons, group membership is cached by Azure Information Protection. This means that any changes to group membership in Azure AD can take up to 3 hours to take effect when these groups are used by Azure Information Protection, and this time period is subject to change. 
+
+Remember to factor this delay into any changes or testing that you do when you use groups for Azure Information Protection, such as assigning usage rights or administration of the Azure Rights Management service. 
 
 
 ## Next steps
 
-When you have confirmed that your users and groups can be used with the Azure Rights Management service, and you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+When you have confirmed that your users and groups can be used with Azure Information Protection, and you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
