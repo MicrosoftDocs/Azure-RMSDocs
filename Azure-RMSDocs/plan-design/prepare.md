@@ -109,7 +109,7 @@ Next, configure your PowerShell session so that it doesn't truncate the values:
 
     $Formatenumerationlimit =-1
 
-### Confirm user accounts
+### Confirm user accounts are ready for Azure Information Protection
 
 To confirm the user accounts, run the following command:
 
@@ -139,7 +139,7 @@ In this example:
 > 
 > For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
-### Confirm group accounts
+### Confirm group accounts are ready for Azure Information Protection
 
 To confirm group accounts, use the following command:
          
