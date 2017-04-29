@@ -79,7 +79,9 @@ The **UserPrincipalName** attribute is used only when an account doesn't have va
 
 For assigning labels, and for assigning usage rights and access controls:
 
-- You can use any type of group in Azure AD that has an email address. This is often referred to as a mail-enabled group. For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
+- You can use any type of group in Azure AD that has an email address. This is often referred to as a mail-enabled group. 
+    
+    For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
 For administration of the Azure Rights Management service:
 
