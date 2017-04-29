@@ -105,11 +105,13 @@ For example, using the V1 PowerShell module for Azure Active Directory, [M​SOn
 
 	Connect-MsolService
     
-Next, configure your PowerShell session so that it doesn't truncate the values to check:
+Next, configure your PowerShell session so that it doesn't truncate the values:
 
     $Formatenumerationlimit =-1
 
-To confirm users, run the following command:
+### Confirm user accounts
+
+To confirm the user accounts, run the following command:
 
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
         
@@ -137,7 +139,9 @@ In this example:
 > 
 > For example: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
-To confirm groups, use the following command:
+### Confirm group accounts
+
+To confirm group accounts, use the following command:
          
 	Get-MsolGroup | select DisplayName, ProxyAddresses
 
