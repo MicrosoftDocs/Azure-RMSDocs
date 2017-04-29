@@ -87,7 +87,7 @@ For administration of the Azure Rights Management service:
 
 - You can use any type of group in Azure AD that has an email address, with one exception. That exception is when you configure onboarding controls to use a group, and that group must be a security group in Azure AD.
     
-- In addition, you can also use a security group in Azure AD for delegated administration of the Azure Rights Management service.
+- You can use any group (with or without an email address) in Azure AD for delegated administration of the Azure Rights Management service.
 
 ## Using accounts from Active Directory on-premises for Azure Information Protection
 
