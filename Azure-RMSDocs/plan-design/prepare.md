@@ -134,6 +134,15 @@ In this example:
 
 -  The user account for Ankur Roy can be authorized by using **ankur.roy@contoso.com** and **ankur.roy@onmicrosoft.contoso.com**, but not **ankurroy@contoso.com**.
 
+In most cases, the value for UserPrincipalName will match one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
+
+1. Add the UPN value as another email address in Azure AD, so that it displays in the ProxyAddresses value. This lets the user be authorized for Azure Information Protection using that value.
+
+2. If the UPN is not routable (for example, **ankurroy.local**), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office. This solution is not supported for Office 2010.
+    
+    For more information, see [Configuring Alternate Login ID](Configuring Alternate Login ID) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+
+
 > [!TIP]
 > You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
 > 
