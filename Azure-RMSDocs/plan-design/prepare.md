@@ -71,7 +71,7 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. Azure Information Protection can use any value in this attribute if it's from a domain that has been added to Azure AD for your tenant (a "verified domain"). 
+The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. Azure Information Protection can use any value in this attribute if it contains a domain that has been added to Azure AD for your tenant (a "verified domain"). 
 
 The **userPrincipalName** attribute is used only when an account doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
@@ -79,7 +79,7 @@ The **userPrincipalName** attribute is used only when an account doesn't have va
 
 For assigning labels, and for assigning usage rights and access controls:
 
-- You can use any type of group in Azure AD that has an email address from a verified domain for your tenant. A group that has an email address is often referred to as a mail-enabled group. 
+- You can use any type of group in Azure AD that has an email address that contains a verified domain for your tenant. A group that has an email address is often referred to as a mail-enabled group. 
     
     For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
