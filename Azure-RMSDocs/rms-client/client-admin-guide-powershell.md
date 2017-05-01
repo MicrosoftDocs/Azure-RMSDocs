@@ -68,21 +68,27 @@ Before you start to use these cmdlets, see the additional prerequisites and inst
 Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
 
 
-### Prerequisites for AIP and Azure RMS
+### Prerequisites for Azure Information Protection and the Azure Rights Management service
 
 In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisite for the Azure Information Protection service and the Azure Rights Management data protection service:
 
 1. The Azure Rights Management service must be activated.
 
-2. To remove protection from files for others using your own account: The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
+2. To remove protection from files for others using your own account: 
+    
+    - The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
 
-3. To directly protect or unprotect files without user interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
+3. To directly protect or unprotect files without user interaction: 
+    
+    -Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
 
-4. For regions outside North America: Edit the registry for authentication to the service.
+4. For regions outside North America: 
+    
+    -Edit the registry for authentication to the service.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
-This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service. onfigured to apply the data protection.
+This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service to apply the data protection.
 
 If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -90,7 +96,7 @@ If your Azure Information Protection tenant is not activated, see the instructio
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
-You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
+You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
 
 #### Prerequisite 3: To protect or unprotect files without user interaction
 
