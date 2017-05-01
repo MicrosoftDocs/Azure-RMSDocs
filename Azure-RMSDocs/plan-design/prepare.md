@@ -71,7 +71,7 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
+The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. Azure Information Protection can use any value in this attribute if it contains a domain that has been added to Azure AD for your tenant (a "verified domain"). 
 
 The **userPrincipalName** attribute is used only when an account doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
@@ -79,15 +79,15 @@ The **userPrincipalName** attribute is used only when an account doesn't have va
 
 For assigning labels, and for assigning usage rights and access controls:
 
-- You can use any type of group in Azure AD that has an email address. This is often referred to as a mail-enabled group. 
+- You can use any type of group in Azure AD that has an email address that contains a verified domain for your tenant. A group that has an email address is often referred to as a mail-enabled group. 
     
     For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
 For configuring the Azure Rights Management service:
 
-- You can use any type of group in Azure AD that has an email address, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD.
+- You can use any type of group in Azure AD that has an email address from a verified domain, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD.
     
-- You can use any group (with or without an email address) in Azure AD for delegated administration of the Azure Rights Management service.
+- You can use any group (with or without an email address from a verified domain) in Azure AD for delegated administration of the Azure Rights Management service.
 
 ## Using accounts from Active Directory on-premises for Azure Information Protection
 
@@ -101,10 +101,13 @@ From the attributes list for Azure Rights Management, you'll see that for users,
 
 You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Information Protection and the values that can be used to authorize them. 
 
-For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0), first connect to the service and supply your global admin credentials:
+For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
 	Connect-MsolService
     
+
+Note: If this command doesn't work, you can run `Install-Module MSOnline` to install the MSOnline module.
+
 Next, configure your PowerShell session so that it doesn't truncate the values:
 
     $Formatenumerationlimit =-1
@@ -136,9 +139,11 @@ In this example:
 
 In most cases, the value for UserPrincipalName will match one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
 
-1. Add the UPN value as another email address in Azure AD, so that it displays in the ProxyAddresses value. This lets the user be authorized for Azure Information Protection using that value.
+1. If the domain name in the UPN value is verified for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
+    
+    If the domain name in the UPN value is not a verified domain for your tenant, it cannot be used with Azure Information Protection. However, the user can still be authorized as a member of a group when the group email address uses a verified domain name.
 
-2. If the UPN is not routable (for example, **ankurroy.contoso.local**), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
+2. If the UPN is not routable (for example, **ankurroy@contoso.local**), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
     
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
