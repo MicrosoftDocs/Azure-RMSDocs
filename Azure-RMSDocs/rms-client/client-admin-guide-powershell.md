@@ -155,8 +155,7 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
 > [!IMPORTANT]
 > Do not use the newer Azure AD PowerShell cmdlet, New-AzureADServicePrincipal, to create this service principal. The Azure Rights Management services does not support New-AzureADServicePrincipal. 
 
-1. If the MSOnline module is not already installed on your computer, see
-[Install the Azure AD Module](/powershell/azuread/#install-the-azure-ad-module).
+1. If the MSOnline module is not already installed on your computer, run `Install-Module MSOnline`.
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
