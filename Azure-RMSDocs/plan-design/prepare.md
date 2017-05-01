@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Preparing users and group for Azure Information Protection
+# Preparing users and groups for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
