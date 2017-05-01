@@ -69,11 +69,11 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 ## Azure Information Protection requirements for user accounts
 
-For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **ProxyAddresses** and **UserPrincipalName**.
+For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-The Azure AD ProxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
+The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts.
 
-The **UserPrincipalName** attribute is used only when an account doesn't have values in the Azure AD ProxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
+The **userPrincipalName** attribute is used only when an account doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
 ## Azure Information Protection requirements for group accounts
 
@@ -95,7 +95,7 @@ If you have accounts that are managed on-premises that you want to use with Azur
 
 When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. 
 
-From the attributes list for Azure Rights Management, you'll see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddress attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
+From the attributes list for Azure Rights Management, you'll see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddresses attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
@@ -164,7 +164,7 @@ For the two service configuration scenarios that use security groups, you can us
 
 ## Considerations for Azure Information Protection if email addresses change
 
-If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD ProxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations there were saved when the old email address was in use. 
+If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD proxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations there were saved when the old email address was in use. 
 
 If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected, and other misconfigurations that used the old value. In this case, you must repeat the configuration to save the new email address. 
 
@@ -179,7 +179,7 @@ Remember to factor this delay into any changes or testing that you do when you u
 
 ## Next steps
 
-When you have confirmed that your users and groups can be used with Azure Information Protection, and you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+When you have confirmed that your users and groups can be used with Azure Information Protection and you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
