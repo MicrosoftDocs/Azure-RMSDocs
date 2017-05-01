@@ -88,14 +88,14 @@ For example:
     
 |Display Name|UserPrincipalName|ProxyAddresses
 |-------------------|-----------------|--------------------|
-|Jagannath Reddy |jagannathreddy@constoso.com|{}|
-|Ankur Roy|ankurroy@constoso.com|{SMTP:ankur.roy@constoso.com, smtp: ankur.roy@onmicrosoft.constoso.com}|
+|Jagannath Reddy |jagannathreddy@contoso.com|{}|
+|Ankur Roy|ankurroy@contoso.com|{SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com}|
 
 In this example:
 
-- The user account for Jagannath Reddy will be authorized by **jagannathreddy@constoso.com**.
+- The user account for Jagannath Reddy will be authorized by **jagannathreddy@contoso.com**.
 
--  The user account for Ankur Roy can be authorized by using **ankur.roy@constoso.com** and **ankur.roy@onmicrosoft.constoso.com**, but not **ankurroy@constoso.com**.
+-  The user account for Ankur Roy can be authorized by using **ankur.roy@contoso.com** and **ankur.roy@onmicrosoft.contoso.com**, but not **ankurroy@contoso.com**.
 
 To confirm groups, use the following command:
          
