@@ -80,11 +80,11 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 3. To directly protect or unprotect files without user interaction: 
     
-    -Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
+    - Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
 
 4. For regions outside North America: 
     
-    -Edit the registry for authentication to the service.
+    - Edit the registry for authentication to the service.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
