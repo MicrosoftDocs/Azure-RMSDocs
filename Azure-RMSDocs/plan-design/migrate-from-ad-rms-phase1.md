@@ -97,8 +97,6 @@ If you are using Exchange on-premises or Exchange online, you might have previou
 
 Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands. 
 
-Run these sets of commands once for each Exchange organization.
-
 **If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
 
 	$irmConfig = Get-IRMConfiguration
@@ -108,9 +106,9 @@ Run these sets of commands once for each Exchange organization.
 	Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**If you have integrated Exchange on-premises with AD RMS**: First add registry values on each Exchange server, and then run PowerShell commands: 
+**If you have integrated Exchange on-premises with AD RMS**: For each Exchange organization, first add registry values on each Exchange server, and then run PowerShell commands: 
 
-For Exchange 2013 and Exchange 2016:
+Registry values for Exchange 2013 and Exchange 2016:
 
 **Registry path:**
 
@@ -124,7 +122,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 ---
 
-For Exchange 2010:
+Registry values For Exchange 2010:
 
 **Registry path:**
 
@@ -138,7 +136,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 ---
 
-Run the following PowerShell commands either one by one, or in a script
+PowerShell commands to run either one by one, or in a script
 
 	$irmConfig = Get-IRMConfiguration
 	$list = $irmConfig.LicensingLocation
@@ -150,7 +148,7 @@ Run the following PowerShell commands either one by one, or in a script
 	IISReset
 
 
-After running these commands, if your Exchange servers were configured to support content that was protected by AD RMS, they will also support content protected by Azure RMS after the migration. They will continue to use AD RMS to support protected content until a later step in the migration.
+After running these commands for Exchange Online or Exchange on-premises, if your Exchange deployment was configured to support content that was protected by AD RMS, it will also support content protected by Azure RMS after the migration. Your Exchange deployment will continue to use AD RMS to support protected content until a later step in the migration.
 
 
 ## Next steps
