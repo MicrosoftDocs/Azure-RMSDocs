@@ -142,7 +142,6 @@ In most cases, the value for UserPrincipalName will match one of the values in t
     
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
-
 > [!TIP]
 > You can use the Export-Csv cmdlet to export the results to a spreadsheet for easier sorting and searching. 
 > 
