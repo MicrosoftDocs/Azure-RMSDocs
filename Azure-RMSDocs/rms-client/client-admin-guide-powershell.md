@@ -68,7 +68,7 @@ Before you start to use these cmdlets, see the additional prerequisites and inst
 Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
 
 
-### Prerequisites for Azure Information Protection and the Azure Rights Management service
+### Prerequisites
 
 In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisite for the Azure Information Protection service and the Azure Rights Management data protection service:
 
@@ -324,7 +324,7 @@ Note that if the Rights Management templates are changed, you must download them
 Read this section before you start using the PowerShell commands to protect or unprotect files when your organization uses just Active Directory Rights Management Services.
 
 
-### Prerequisites for AD RMS
+### Prerequisites
 
 In addition to the prerequisites for installing the AzureInformationProtection module, your account must have Read and Execute permissions to access ServerCertification.asmx:
 
