@@ -138,7 +138,7 @@ In most cases, the value for UserPrincipalName will match one of the values in t
 
 1. Add the UPN value as another email address in Azure AD, so that it displays in the ProxyAddresses value. This lets the user be authorized for Azure Information Protection using that value.
 
-2. If the UPN is not routable (for example, **ankurroy.contoso.local**), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office. This solution is not supported for Office 2010.
+2. If the UPN is not routable (for example, **ankurroy.contoso.local**), configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. You must also set a registry key for Office.
     
     For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
