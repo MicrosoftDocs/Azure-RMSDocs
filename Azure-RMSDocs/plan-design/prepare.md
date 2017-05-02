@@ -69,9 +69,9 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 ## Azure Information Protection requirements for user accounts
 
-For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
+For all three scenarios listed in the previous section, the requirements for user accounts for your are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-- The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
+- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
     
     Azure Information Protection can use any value in this Azure AD proxyAddresses attribute if the domain has been added to the authenticating tenant (a "verified domain" for your tenant). For more information about verifying domains:
     
@@ -79,7 +79,7 @@ For all three scenarios listed in the previous section, the requirements for use
     
     - For office 365: [Add a domain and users to Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
 
-- The **userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
+- The **Azure AD userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
 ## Azure Information Protection requirements for group accounts
 
