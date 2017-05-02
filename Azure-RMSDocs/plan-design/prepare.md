@@ -85,6 +85,12 @@ For all three scenarios listed in the previous section, the requirements for use
 
 In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName for users in your tenant, Azure Information Protection also uses these attributes in the same way to authorize users from another tenant.
 
+For example, you can create a contact with an email address for another organization, add this contact to a group, and then assign the group usage rights to a document:
+
+- When the external user (contact) is authenticated by their Azure AD tenant, the email address used to assign the usage rights is checked by Azure Information Protection to make sure that the domain is verified for that tenant. 
+
+- If the user doesn't have an account in Azure AD for authentication, that user can sign up for [RMS for individuals](/understand-explore/rms-for-individuals.md), which creates the account the UPN value that authorizes the user.
+
 ## Azure Information Protection requirements for group accounts
 
 For assigning labels, and for assigning usage rights and access controls:
