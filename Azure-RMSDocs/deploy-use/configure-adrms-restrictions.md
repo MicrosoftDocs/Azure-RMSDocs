@@ -75,7 +75,7 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
     If the Do Not Forward option is applied by a label or manually by users, the option might be applied by your AD RMS deployment rather than the intended Azure Rights Management service. In this scenario, people that you share with externally will not be able to open email messages that have this Do Not Forward option applied.
 
-- Custom permissions that users can define are not supported either from within their Office app or when they right-click a file or folder. You must instruct users not to use custom permissions.
+- If users configure custom permissions when you use AD RMS (HYOK) protection and Azure RMS protection, the document or email is always protected by Azure Rights Management.
 
 - If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label will fail to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
