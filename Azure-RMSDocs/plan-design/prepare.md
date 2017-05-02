@@ -77,7 +77,7 @@ For all three scenarios listed in the previous section, the requirements for use
     
     - For Azure AD: [Add a custom domain name to Azure Active Directory](Add a custom domain name to Azure Active Directory)
     
-    - For office 365: [Add a domain and users to Office 365](https://support.office.com/article/Add-a-domain-and-users-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) 
+    - For office 365: [Add a domain and users to Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
 
 - The **userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
