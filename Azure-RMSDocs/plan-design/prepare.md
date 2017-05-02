@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -71,23 +71,29 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 For all three scenarios listed in the previous section, the requirements for user accounts are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. Azure Information Protection can use any value in this attribute if it contains a domain that has been added to Azure AD for your tenant (a "verified domain"). 
+- The Azure AD proxyAddresses attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
+    
+    Azure Information Protection can use any value in this Azure AD proxyAddresses attribute if the domain has been added to the authenticating tenant (a "verified domain" for your tenant). For more information about verifying domains:
+    
+    - For Azure AD: [Add a custom domain name to Azure Active Directory](Add a custom domain name to Azure Active Directory)
+    
+    - For office 365: [Add a domain and users to Office 365](https://support.office.com/article/Add-a-domain-and-users-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611) 
 
-The **userPrincipalName** attribute is used only when an account doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
+- The **userPrincipalName** attribute is used only when an account in your tenant doesn't have values in the Azure AD proxyAddresses attribute. For example, you create a user in the Azure portal, or create a user for Office 365 that doesn't have a mailbox.
 
 ## Azure Information Protection requirements for group accounts
 
 For assigning labels, and for assigning usage rights and access controls:
 
-- You can use any type of group in Azure AD that has an email address that contains a verified domain for your tenant. A group that has an email address is often referred to as a mail-enabled group. 
+- You can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group. 
     
     For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
 For configuring the Azure Rights Management service:
 
-- You can use any type of group in Azure AD that has an email address from a verified domain, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD.
+- You can use any type of group in Azure AD that has an email address from a verified domain in your tenant, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD for your tenant.
     
-- You can use any group (with or without an email address from a verified domain) in Azure AD for delegated administration of the Azure Rights Management service.
+- You can use any group in Azure AD (with or without an email address from a verified domain in your tenant) for delegated administration of the Azure Rights Management service.
 
 ## Using accounts from Active Directory on-premises for Azure Information Protection
 
