@@ -89,7 +89,7 @@ For example, you can create a contact with an email address for another organiza
 
 - When the external user (contact) is authenticated by their Azure AD tenant, the email address used to assign the usage rights is checked by Azure Information Protection to make sure that the domain is verified for that tenant. 
 
-- If the user doesn't have an account in Azure AD for authentication, that user can sign up for [RMS for individuals](/understand-explore/rms-for-individuals.md), which creates the account and the UPN value that authorizes the user for the assigned usage rights.
+- If the user doesn't have an account in Azure AD for authentication, that user can sign up for [RMS for individuals](/understand-explore/rms-for-individuals.md). This action creates a user account in Azure AD and populates the proxyAddresses attribute with the email address that was verified by the user during the sign up process, which also authorizes the user for the assigned usage rights.
 
 ## Azure Information Protection requirements for group accounts
 
