@@ -85,6 +85,12 @@ For all three scenarios listed in the previous section, the requirements for use
 
 In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName for users in your tenant, Azure Information Protection also uses these attributes in the same way to authorize users from another tenant.
 
+For example, you can create a contact with an email address for another organization, add this contact to a group, and then assign the group usage rights to a document:
+
+- When the external user (contact) is authenticated by their Azure AD tenant, the email address used to assign the usage rights is checked by Azure Information Protection to make sure that the domain is verified for that tenant. 
+
+- If the user doesn't have an account in Azure AD for authentication, that user can sign up for [RMS for individuals](/understand-explore/rms-for-individuals.md). This action creates a user account in Azure AD and populates the proxyAddresses attribute with the email address that was verified by the user during the sign up process, which also authorizes the user for the assigned usage rights.
+
 ## Azure Information Protection requirements for group accounts
 
 For assigning labels, and for assigning usage rights and access controls:
@@ -153,7 +159,7 @@ In this example:
 
 In most cases, the value for UserPrincipalName will match one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
 
-1. If the domain name in the UPN value is verified for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
+1. If the domain name in the UPN value is a verified domain for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
     
     If the domain name in the UPN value is not a verified domain for your tenant, it cannot be used with Azure Information Protection. However, the user can still be authorized as a member of a group when the group email address uses a verified domain name.
 
