@@ -75,7 +75,7 @@ For all three scenarios listed in the previous section, the requirements for use
     
     Azure Information Protection can use any value in this Azure AD proxyAddresses attribute if the domain has been added to the authenticating tenant (a "verified domain" for your tenant). For more information about verifying domains:
     
-    - For Azure AD: [Add a custom domain name to Azure Active Directory](Add a custom domain name to Azure Active Directory)
+    - For Azure AD: [Add a custom domain name to Azure Active Directory](/active-directory/active-directory-add-domain)
     
     - For office 365: [Add a domain and users to Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
 
