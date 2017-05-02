@@ -69,7 +69,7 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 ## Azure Information Protection requirements for user accounts
 
-For all three scenarios listed in the previous section, the requirements for user accounts for your are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
+For all three scenarios listed in the previous section, the requirements for user accounts for your tenant are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
 - The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
     
