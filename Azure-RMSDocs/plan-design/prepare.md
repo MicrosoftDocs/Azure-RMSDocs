@@ -159,7 +159,7 @@ In this example:
 
 In most cases, the value for UserPrincipalName will match one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
 
-1. If the domain name in the UPN value is verified for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
+1. If the domain name in the UPN value is a verified domain for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
     
     If the domain name in the UPN value is not a verified domain for your tenant, it cannot be used with Azure Information Protection. However, the user can still be authorized as a member of a group when the group email address uses a verified domain name.
 
