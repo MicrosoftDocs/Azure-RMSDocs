@@ -93,7 +93,7 @@ For configuring the Azure Rights Management service:
 
 - You can use any type of group in Azure AD that has an email address from a verified domain in your tenant, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD for your tenant.
     
-- You can use any group in Azure AD (with or without an email address from a verified domain in your tenant) for delegated administration of the Azure Rights Management service.
+- You can use any group in Azure AD (with or without an email address) from a verified domain in your tenant for delegated administration of the Azure Rights Management service.
 
 ## Using accounts from Active Directory on-premises for Azure Information Protection
 
