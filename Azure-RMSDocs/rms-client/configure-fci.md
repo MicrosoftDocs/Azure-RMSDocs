@@ -43,36 +43,36 @@ The instructions that follow are for Windows Server 2012 R2 or Windows Server 20
 ## Prerequisites for Azure Rights Management protection with Windows Server FCI
 Prerequisites for these instructions:
 
--   On each file server where you will run File Resource Manager with file classification infrastructure:
-
-    -   You have installed File Server Resource Manager as one of the role services for the File Services role.
-
-    -   You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
-
-    -   You have installed the AzureInformationProtection module and configured the prerequisites for Azure Rights Management. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal: **BposTenantId**, **AppPrincipalId**, and **Symmetric key**. 
-
-    -   If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
-
-    -   You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
-
--   You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email address. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this account configuration, see [Preparing for the Azure Rights Management service](../plan-design/prepare.md).
-
--   You have downloaded to the file server the Rights Management templates and identified the template ID that will protect the files. To do this, use the [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) cmdlet. This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
+-  On each file server where you will run File Resource Manager with file classification infrastructure:
+    
+    - You have installed File Server Resource Manager as one of the role services for the File Services role.
+    
+    - You have identified a local folder that contains files to protect with Rights Management. For example, C:\FileShare.
+    
+    - You have installed the AzureInformationProtection module and configured the prerequisites for Azure Rights Management. For more information, see [Using PowerShell with the Azure Information Protection client](client-admin-guide-powershell.md). Specifically, you have the following values to connect to the Azure Rights Management service by using a service principal: **BposTenantId**, **AppPrincipalId**, and **Symmetric key**. 
+    
+    - If you want to change the default level of protection (native or generic) for specific file name extensions, you have edited the registry as described in the [Changing the default protection level of files](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) section from the admin guide.
+    
+    - You have an Internet connection, with configured computer settings if required for a proxy server. For example: `netsh winhttp import proxy source=ie`
+    
+- You have synchronized your on-premises Active Directory user accounts with Azure Active Directory or Office 365, including their email addresses. This is required for all users that might need to access files after they are protected by FCI and the Azure Rights Management service. If you do not do this step (for example, in a test environment), users might be blocked from accessing these files. If you need more information about this requirement, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
+    
+- You have downloaded to the file server the Rights Management templates and identified the template ID that will protect the files. To do this, use the [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) cmdlet. This scenario does not support departmental templates so you must either use a template that is not configured for a scope, or the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 
 ## Instructions to configure File Server Resource Manager FCI for Azure Rights Management protection
 Follow these instructions to automatically protect all files in a folder, by using a PowerShell script as a custom task. Do these procedures in this order:
 
-1.  Save the PowerShell script
+1. Save the PowerShell script
 
-2.  Create a classification property for Rights Management (RMS)
+2. Create a classification property for Rights Management (RMS)
 
-3.  Create a classification rule (Classify for RMS)
+3. Create a classification rule (Classify for RMS)
 
-4.  Configure the classification schedule
+4. Configure the classification schedule
 
-5.  Create a custom file management task (Protect files with RMS)
+5. Create a custom file management task (Protect files with RMS)
 
-6.  Test the configuration by manually running the rule and task
+6. Test the configuration by manually running the rule and task
 
 At the end of these instructions, all files in your selected folder will be classified with the custom property of RMS, and these files will then be protected by Rights Management. For a more complex configuration that selectively protects some files and not others, you can then create or use a different classification property and rule, with a file management task that protects just those files.
 
@@ -83,8 +83,8 @@ Note that if you make changes to the Rights Management template that you use for
 1.  Copy the contents of the [Windows PowerShell script](fci-script.md) for Azure RMS protection by using File Server Resource Manager. Paste the contents of the script and  name the file **RMS-Protect-FCI.ps1** on your own computer.
 
 2.  Review the script and make the following changes:
-
-    -   Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) cmdlet to connect to the Azure Rights Management service:
+    
+    - Search for the following string and replace it with your own AppPrincipalId that you use with the [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) cmdlet to connect to the Azure Rights Management service:
 
         ```
         <enter your AppPrincipalId here>

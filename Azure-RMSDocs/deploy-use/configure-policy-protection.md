@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -61,7 +61,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 ## To configure a label for Rights Management protection
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
 
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
@@ -89,9 +89,13 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 9.
     
-7. Select either **Do not forward** if you want to set this Outlook option for emails, or **Select template**. 
+7. Select **Do not forward** if you want to set this Outlook option for emails, **Select a predefined template** to use one of the default templates or a custom template that you've configured, or choose **Custom (Preview)** to define new protection settings in this portal. 
     
-8. If you selected **Select template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
+    Note that the **Custom (Preview)** option has most configuration options that are currently in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
+    
+    For more information about this preview configuration, see the blog post [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
+    
+8. If you selected **Select a predefined template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
     
     If you select a **departmental template** or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     

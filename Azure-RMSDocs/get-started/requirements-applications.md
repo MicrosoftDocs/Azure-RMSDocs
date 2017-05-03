@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/14/2017
+ms.date: 04/20/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ Use the following tables to identify the applications and solutions that nativel
 
 For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened".
 
-Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, OS X, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
+Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
 ## RMS-enlightened applications
 
@@ -60,7 +60,6 @@ Information about the table columns:
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)<br /><br />Web browser when the document is shared with protected email (Azure RMS only) [[y]](#footnote-y)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser (Azure RMS only) [[x]](#footnote-x)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
 |**Windows Phone 8.1**|Office Mobile (AD RMS only)<br /><br />Web browser when the document is shared with protected email (Azure RMS only) [[y]](#footnote-y)|RMS sharing app [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4) <br /><br />Web browser (Azure RMS only) [[x]](#footnote-x)|RMS sharing app [[1]](#footnote-1): Text, images, pfile|
 |**Blackberry 10**|Web browser when the document is shared with protected email (Azure RMS only) [[y]](#footnote-y)|Not supported|Blackberry email [[4]](#footnote-4) <br /><br />Web browser (Azure RMS only) [[x]](#footnote-x)|Not supported|
-
 
 ###### Footnote 1
 Supports viewing protected content.
