@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Configure Exchange Online for indirect integration with Azure Rights Management service from Azure Information Protection. 
+title: Configure Exchange Online for indirect integration with the  Azure Rights Management service from Azure Information Protection 
+description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support the AzureRMSLicensingEnabled parameter. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -24,10 +25,13 @@ ms.suite: ems
 
 ---
 
-# Exchange Online configuration for Azure RMS - indirect integration
+# Exchange Online configuration for the Azure Rights Management service - indirect integration
 
 >*Applies to: Azure Information Protection, Office 365*
 
+Use these instructions only if your Office 365 tenant doesn't yet support the AzureRMSLicensingEnabled parameter. This might be the case if you've previously enabled IRM for Exchange Online. To check, you can run the Exchange Online PowerShell command `Get-IRMConfig`:
+
+- If you see **AzureRMSLicensingEnabled** in the results, do not use these instructions and instead, use [the Office instructions].
 
 ## Exchange Online: IRM Configuration
 To configure Exchange Online to support the Azure Rights Management service, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
@@ -128,14 +132,9 @@ Users can now protect their email messages by using the Azure Rights Management 
 
 As an Exchange administrator, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
-For detailed instructions to configure Exchange Online to enable IRM functionality, see the documentation in the Exchange library. For example:
-
--   [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx)
-
--   [Configure IRM to use Azure Rights Management](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)
 
 ### Office 365 Message Encryption
-Run the same steps as documented in the previous section, but if you don't want templates to be displayed, before step 6,  run the following command to prevent IRM templates from being available in the Outlook Web App and Outlook client: `Set-IRMConfiguration -ClientAccessServerEnabled $false`
+Run the same steps as documented in the previous section, but if you don't want templates to be displayed, before step 6, run the following command to prevent IRM templates from being available in the Outlook Web App and Outlook client: `Set-IRMConfiguration -ClientAccessServerEnabled $false`
 
 Then, you're ready to configure [transport rules](https://technet.microsoft.com/library/dd302432.aspx) to automatically modify the message security when recipients are located outside the organization, and select the **Apply Office 365 Message Encryption** option.
 
