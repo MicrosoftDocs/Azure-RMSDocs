@@ -86,9 +86,9 @@ Use the following procedures to create, configure, and publish custom templates 
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
     > 
-    > If an email address changes after you select the user or group and you save the template, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-if-email-addresses-change) section from the planning documentation. 
+    > If an email address changes after you select the user or group and you save the template, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation. 
 
-    As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching). 
+    As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). 
     
     If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. To grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see [How to copy a template](copy-template.md).
 
