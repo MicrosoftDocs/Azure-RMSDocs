@@ -6,7 +6,7 @@ description: Information resources for the Rights Management sharing application
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -92,7 +92,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	- Mail-enabled groups in Azure Active Directory
 
-	See [Preparing for Azure Information Protection](prepare.md).
+	See [Preparing users and groups for Azure Information Protection](prepare.md).
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
 
@@ -127,10 +127,6 @@ To confirm the AD RMS cryptographic mode:
 -   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure Information Protection, Exchange Online does not currently support this configuration for the Rights Management service that is used by Azure Information Protection. If you want full IRM functionality with Exchange Online after you migrate to Azure Information Protection, your Azure Information Protection tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online when your tenant key for Azure Information Protection is managed by you (BYOK). For more information about using Exchange Online with the Azure Rights Management service, see [Step 8. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online) from these migration instructions.
 
 -   If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
-
--   If you import your on-premises key to Azure Information Protection as archived (you do not set the TPD to be the active during the import process) and you migrate users in batches for a phased migration, content that is newly protected by the migrated users will not be accessible to users who remain on AD RMS. In this scenario, whenever  possible, keep the migration time short and migrate users in logical batches such that if they collaborate with one another, they are migrated together.
-
-    This limitation does not apply when you set the TPD to active during the import process, because all users will protect content by using the same key. We recommend this configuration because it lets you migrate all users independently and at your own pace.
 
 -   If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
 
@@ -174,7 +170,7 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 - **Step 4. Export configuration data from AD RMS and import it to Azure Information Protection**
 
-    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd PowerShell cmdlet. Additional steps might be needed, depending on your AD RMS key configuration:
+    You export the configuration data (keys, templates, URLs) from AD RMS to an XML file, and then upload that file to the Azure Rights Management service from Azure Information Protection, by using the Import-AadrmTpd PowerShell cmdlet. Then, identify which imported Server Licensor Certificate (SLC) key to use as your tenant key for the Azure Rights Management service. Additional steps might be needed, depending on your AD RMS key configuration:
 
 	- **Software-protected key to software-protected key migration**:
 
@@ -190,7 +186,7 @@ The migration steps can be divided into 5 phases that can be done at different t
 
 - **Step 5. Activate the Azure Rights Management service**
 
-    If possible, do this step after the import process and not before.
+    If possible, do this step after the import process and not before. Additional steps are required if the service was activated before the import.
 
 - **Step 6. Configure imported templates**
 

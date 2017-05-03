@@ -6,7 +6,7 @@ description: Instructions for admins to configure applications and services to s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,10 +57,6 @@ After you have deployed Azure Information Protection for your organization, use 
 
 
 To configure on-premises servers such as Exchange Server and SharePoint Server, see [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
-
-> [!TIP]
-> For high-level examples and screenshots of applications configured to use the Azure Rights Management service, see [Azure RMS in action: What administrators and users see](../understand-explore/what-admins-users-see.md).
-
 
 In addition to these applications and services, there are other applications that support the Rights Management APIs. This category includes line-of-business applications that are written in-house by using the Rights Management SDK, and applications from software vendors that are written by using the Rights Management SDK. For these applications, follow the instructions that are provided with the application.
 
