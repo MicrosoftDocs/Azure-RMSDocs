@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2017
+ms.date: 05/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,7 +49,7 @@ When you create users and groups by using the first three methods from this list
 
 There are three scenarios for using users and groups with Azure Information Protection:
 
-- **For assigning labels to users** when you use labeling and classification. Only administrators select these groups:
+- **For assigning labels to users** when you configure the Azure Information Protection policy so that labels can be applied to documents and emails. Only administrators can select these users and groups:
     
     - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.     
 
@@ -69,7 +69,13 @@ There are three scenarios for using users and groups with Azure Information Prot
 
 ## Azure Information Protection requirements for user accounts
 
-For all three scenarios listed in the previous section, the requirements for user accounts for your tenant are the same. To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
+For assigning labels:
+
+- All user accounts in Azure AD can be used to configure scoped policies, which assign additional labels to users.
+
+For assigning usage rights and access controls, and configuring the Azure Rights Management service:
+
+- To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
 - The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
     
@@ -85,15 +91,13 @@ For all three scenarios listed in the previous section, the requirements for use
 
 In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName for users in your tenant, Azure Information Protection also uses these attributes in the same way to authorize users from another tenant.
 
-For example, you can create a contact with an email address for another organization, add this contact to a group, and then assign the group usage rights to a document:
-
-- When the external user (contact) is authenticated by their Azure AD tenant, the email address used to assign the usage rights is checked by Azure Information Protection to make sure that the domain is verified for that tenant. 
-
-- If the user doesn't have an account in Azure AD for authentication, that user can sign up for [RMS for individuals](/understand-explore/rms-for-individuals.md). This action creates a user account in Azure AD and populates the proxyAddresses attribute with the email address that was verified by the user during the sign up process, which also authorizes the user for the assigned usage rights.
-
 ## Azure Information Protection requirements for group accounts
 
-For assigning labels, and for assigning usage rights and access controls:
+For assigning labels:
+
+- You can use any type of group in Azure AD to configure scoped policies that assign additional labels to group members.
+
+For assigning usage rights and access controls:
 
 - You can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group. 
     
@@ -103,7 +107,7 @@ For configuring the Azure Rights Management service:
 
 - You can use any type of group in Azure AD that has an email address from a verified domain in your tenant, with one exception. That exception is when you configure onboarding controls to use a group, which must be a security group in Azure AD for your tenant.
     
-- You can use any group in Azure AD (with or without an email address) from a verified domain in your tenant for delegated administration of the Azure Rights Management service.
+- You can use any type of group in Azure AD (with or without an email address) from a verified domain in your tenant for delegated administration of the Azure Rights Management service.
 
 ### Assigning usage rights and access controls to external groups
 
@@ -119,7 +123,7 @@ From the attributes list for Azure Rights Management, you'll see that for users,
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
-You can use Azure AD PowerShell to confirm that users and groups can be used by Azure Information Protection and the values that can be used to authorize them. 
+You can use Azure AD PowerShell to confirm that users and groups can be used with Azure Information Protection. You can also use PowerShell to confirm the values that can be used to authorize them. 
 
 For example, using the V1 PowerShell module for Azure Active Directory, [M​SOnline](/powershell/module/msonline/?view=azureadps-1.0), in a PowerShell session, first connect to the service and supply your global admin credentials:
 
@@ -140,9 +144,9 @@ To confirm the user accounts, run the following command:
         
 Your first check is to make sure that the users you want to use with Azure Information Protection are displayed. 
 
-Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Information Protection. 
+Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for the Azure Rights Management service. 
 
-If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for Azure Information Protection.
+If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for the Azure Rights Management service.
 
 For example: 
     
@@ -178,11 +182,11 @@ To confirm group accounts, use the following command:
          
 	Get-MsolGroup | select DisplayName, ProxyAddresses
 
-Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for Azure Information Protection.
+Make sure that the groups you want to use with Azure Information Protection are displayed. For the groups displayed, the email addresses in the **ProxyAddresses** column can be used to authorize the group members for the Azure Rights Management service.
 
 Then check that the groups contain the users (or other groups) that you want to use for Azure Information Protection. You can use PowerShell to do this (for example, [Get-​Msol​Group​Member](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)), or use your management portal. 
 
-For the two service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
+For the two Azure Rights Management service configuration scenarios that use security groups, you can use the following PowerShell command to find the object ID and display name that can be used to identify these groups. You can also use the Azure portal to find these groups and copy the values for the object ID and the display name:
 
 	Get-MsolGroup | where {$_.GroupType -eq "Security"}
 
