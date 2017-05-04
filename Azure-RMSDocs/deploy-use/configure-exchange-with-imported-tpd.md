@@ -25,23 +25,24 @@ ms.suite: ems
 
 ---
 
-# Exchange Online configuration for the Azure Rights Management service - indirect integration
+# Exchange Online IRM configuration when you have imported a trusted publishing domain
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use these instructions only if your Office 365 tenant doesn't yet support the AzureRMSLicensingEnabled parameter. This might be the case if you've previously enabled IRM for Exchange Online. To check, you can run the Exchange Online PowerShell command `Get-IRMConfig`:
+Use these instructions only if you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted.
 
-- If you see **AzureRMSLicensingEnabled** in the results, do not use these instructions and instead, use [the Office instructions].
+If neither of these conditions apply to you, do not use these instructions and instead, use [the Office instructions].
 
-## Exchange Online: IRM Configuration
+## Exchange Online IRM configuration if you have an imported TPD
+
 To configure Exchange Online to support the Azure Rights Management service, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
-> You cannot currently configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key. For more information, see [BYOK pricing and restrictions](../plan-design/byok-price-restrictions.md).
+> Until Microsoft migrates your Office 365 tenant, you cannot configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key. 
 >
 > If you try to configure Exchange Online when the Azure Rights Management service is using BYOK, the command to import the key (step 5, in the following procedure) fails with the error message **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
-The following steps provide a typical set of commands that you would run to enable Exchange Online to use the Azure Rights Management service:
+The following steps provide a typical set of commands that you would run to enable Exchange Online to use the Azure Rights Management service for this scenario:
 
 1.  If this is the first time that you have used Windows PowerShell for Exchange Online on your computer, you must configure Windows PowerShell to run signed scripts. Start your Windows PowerShell session by using the **Run as administrator** option, and then type:
 
@@ -125,7 +126,7 @@ The following steps provide a typical set of commands that you would run to enab
     Remove-PSSession $Session
     ```
 
-Users can now protect their email messages by using the Azure Rights Management service. For example,  in the Outlook Web App, select **Set permissions** from the extended menu (**...**), and then choose **Do Not Forward** or one of the available templates to apply information protection to the email message and any attachments. However, because the Outlook Web App caches the UI for a day, wait for this time period to elapse before you try applying information protection to email messages and after running these configuration commands. Before the UI updates to reflect the new configuration, you will not see any options from the **Set permissions** menu.
+Users can now protect their email messages by using the Azure Rights Management service. For example, in the Outlook Web App, select **Set permissions** from the extended menu (**...**), and then choose **Do Not Forward** or one of the available templates to apply information protection to the email message and any attachments. However, because the Outlook Web App caches the UI for a day, wait for this time period to elapse before you try applying information protection to email messages and after running these configuration commands. Before the UI updates to reflect the new configuration, you will not see any options from the **Set permissions** menu.
 
 > [!IMPORTANT]
 > If you create new [custom templates](configure-custom-templates.md) for Azure Rights Management or update the templates, each time, you must run the following Exchange Online PowerShell command (if necessary, run steps 2 and 3 first) to synchronize these changes to Exchange Online: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
