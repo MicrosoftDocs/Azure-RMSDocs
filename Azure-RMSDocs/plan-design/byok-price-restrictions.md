@@ -61,6 +61,12 @@ BYOK and usage logging work seamlessly with every application that integrates wi
 
 There is one exception: **If you enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS** you cannot use BYOK until your tenant is migrated by Microsoft to use Exchange Online message encryption. Customers who haven't yet enabled Exchange Online for Azure Rights Management can use BYOK without restrictions.
 
+>[!TIP]
+>If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key, using Exchange Online PowerShell, run `Get-IRMConfiguration`. If you see **AzureRMSLicensingEnabled** set to **True**, you can use BYOK with Exchange Online without any restrictions.
+
+Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
+
+
 ## Next steps
 
 If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
