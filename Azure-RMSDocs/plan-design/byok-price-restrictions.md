@@ -59,10 +59,12 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](/azur
 
 BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service (Azure RMS) that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests to the Azure Rights Management service.
 
-There is one exception: **If you enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS** you cannot use BYOK until your tenant is migrated by Microsoft to use Exchange Online message encryption. Customers who haven't yet enabled Exchange Online for Azure Rights Management can use BYOK without restrictions.
+There is one exception: **If you enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS** you cannot use BYOK with full Exchange functionality until your tenant is migrated by Microsoft. Customers who haven't yet enabled Exchange Online for Azure Rights Management can use BYOK without restrictions.
 
 >[!TIP]
->If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key, using Exchange Online PowerShell, run `Get-IRMConfiguration`. If you see **AzureRMSLicensingEnabled** set to **True**, you can use BYOK with Exchange Online without any restrictions.
+>If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key:
+>- Using Exchange Online PowerShell, run `Get-IRMConfiguration`. 
+>    If you see **AzureRMSLicensingEnabled** set to **True**, you can use BYOK with Exchange Online without any restrictions.
 
 Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
 
