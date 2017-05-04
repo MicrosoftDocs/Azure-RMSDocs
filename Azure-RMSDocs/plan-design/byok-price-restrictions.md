@@ -65,8 +65,7 @@ There is one exception: **If you enabled Exchange Online IRM by importing your t
 >If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key:
 >
 >>1. Using Exchange Online PowerShell, run `Get-IRMConfiguration`. 
->    
->2. If you see **AzureRMSLicensingEnabled** set to **True**, you can use BYOK with Exchange Online without any restrictions.
+> 2. If you see **AzureRMSLicensingEnabled** set to **True**, you can use BYOK with Exchange Online without any restrictions.
 
 Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
 
