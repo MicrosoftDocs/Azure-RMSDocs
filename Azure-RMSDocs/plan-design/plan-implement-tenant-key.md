@@ -36,6 +36,9 @@ Use the information in this article to help you plan for and manage your Azure I
 
 **At a glance:** Use the following table as a quick guide to your recommended tenant key topology. Then, use the additional documentation for more information.
 
+If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+
+
 |Business requirement|Recommended tenant key topology|
 |------------------------|-----------------------------------|
 |Deploy Azure Information Protection quickly and without requiring special hardware|Managed by Microsoft|
@@ -43,8 +46,6 @@ Use the information in this article to help you plan for and manage your Azure I
 
 ###### Footnote 1
 If you have already enabled Exchange Online for Azure Rights Management by using the Import-RMSTrustedPublishingDomain command, you cannot currently use BYOK. For more information, see [Restrictions when using BYOK](byok-price-restrictions.md#restrictions-when-using-byok).
-
-If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
 
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
