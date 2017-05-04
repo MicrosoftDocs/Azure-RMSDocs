@@ -88,10 +88,10 @@ For more information, see the following post on the Office blog: [OWA for Androi
 For more information, see the following post on the Enterprise and Mobility Blog: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 ###### Footnote x
-For the recipient using a social identity provider (for example, Google with a GMail account), when the protected email is sent from an organization's tenant that integrates directly with Exchange Online.
+When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses Exchange Online with message encryption.
 
 ###### Footnote y
-For the recipient using a social identity provider (for example, Google with a GMail account), when the document is attached to an email message that is protected by an organization's tenant that integrates directly with Exchange Online.
+When the recipient can't open a protected email that attaches the document and the message is sent from an organization that uses Exchange Online with message encryption.
 
 
 ### More information about Azure RMS support for Office

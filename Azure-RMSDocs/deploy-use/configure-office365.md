@@ -36,11 +36,9 @@ However, we recommend that you supplement these applications with the Azure Info
 ## Exchange Online: IRM Configuration
 For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
 
-To configure Exchange Online to use the Azure Rights Management service, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx):
+If you haven't previously configured Exchange Online to use the Azure Rights Management service, see [Office doc].
 
-- If your Office 365 tenant can integrate directly with the Azure Rights Management service (it supports the AzureRMSLicensingEnabled parameter), there's just one command to run. This is the case if you haven't yet enabled IRM for Exchange Online. For instructions, see [Office doc].
-
-- If your Office 365 tenant doesn't yet support the AzureRMSLicensingEnabled parameter, there are additional commands to run. For instructions, see [Configure Exchange Online for indirect integration with the  Azure Rights Management service from Azure Information Protection](configure-exo-indirect-integration.md).
+If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted, you must use a different configuration method until Microsoft migrates your tenant. For these configuration steps, see [Configure Exchange Online for indirect integration with the  Azure Rights Management service from Azure Information Protection](configure-exo-indirect-integration.md).
 
 After you have configured Exchange Online to use the Azure Rights Management service, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
