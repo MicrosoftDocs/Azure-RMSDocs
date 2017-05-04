@@ -60,7 +60,6 @@ If you have not already enabled Exchange Online for Azure Rights Management, you
 
 If you have previously enabled Exchange Online for Azure Rights Management, wait for Microsoft to migrate you tenant. For more information, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
 
-
 ## Where can I find information about 3rd party solutions that integrate with Azure RMS?
 
 Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing very rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications.md#rms-enlightened-solutions) list and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
