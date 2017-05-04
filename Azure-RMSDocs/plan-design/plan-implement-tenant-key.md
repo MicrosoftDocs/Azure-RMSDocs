@@ -39,9 +39,10 @@ Use the information in this article to help you plan for and manage your Azure I
 |Business requirement|Recommended tenant key topology|
 |------------------------|-----------------------------------|
 |Deploy Azure Information Protection quickly and without requiring special hardware|Managed by Microsoft|
-|Your keys are created by you and protected in a hardware security module (HSM)|BYOK|
+|Your keys are created by you and protected in a hardware security module (HSM)|BYOK [[1]](#footnote-1)|
 
-You can move between one tenant key topology to another with one exception: If you have already enabled Exchange Online for Azure Rights Management by using the Import-RMSTrustedPublishingDomain command, you cannot currently change your Azure Information Protection tenant key from Microsoft-managed to BYOK. Support for this scenario is coming.
+###### Footnote 1
+If you have already enabled Exchange Online for Azure Rights Management by using the Import-RMSTrustedPublishingDomain command, you cannot currently use BYOK. For more information, see [Restrictions when using BYOK](byok-price-restrictions.md#restrictions-when-using-byok).
 
 If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
 
