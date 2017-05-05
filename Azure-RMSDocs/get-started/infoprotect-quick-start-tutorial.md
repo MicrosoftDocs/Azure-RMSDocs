@@ -42,19 +42,21 @@ If you have any problems completing this tutorial, using Azure Information Prote
 
 To complete this tutorial, you will need the following:
 
-- A subscription that includes Azure Information Protection for classification, labeling, and protection. For example, **Enterprise Mobility + Security E5**. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that your subscription supports these features. For more information, see the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+- A subscription that includes Azure Information Protection for classification, labeling, and protection. For example, **Enterprise Mobility + Security E5**. 
+    
+    This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that your subscription supports these features. For more information, see the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
     
     If you don't have a subscription for these features, you can sign up for a free trial for [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     
 - A subscription for Office 365 that includes Exchange Online and Azure Rights Management. For example, **Office 365 Enterprise E5**. For more information, download the [Azure Information Protection licensing datasheet](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
     
-    - If you don't have a subscription for these features, you can sign up for a free trial for [Office 365 Enterprise E5](https://go.microsoft.com/fwlink/?LinkID=698279).
+    If you don't have a subscription for these features, you can sign up for a free trial for [Office 365 Enterprise E5](https://go.microsoft.com/fwlink/?LinkID=698279).
 
 - Access to a global administrator account for your tenant, and this account has a working mailbox in Exchange Online.
 
 - Exchange Online supports message encryption and is configured for Azure Rights Management:
     
-    - This configuration requires running some PowerShell commands that are listed in the [Office documentation]. Note that if you have previously configured Exchange Online for Azure Rights Management by importing a trusted publishing domain (TPD), you must wait for Microsoft to migrate your tenant and until that time, you won't be able to complete the final step of this tutorial. 
+    This configuration requires running some PowerShell commands that are listed in the [Office documentation]. Note that if you have previously configured Exchange Online for Azure Rights Management by importing a trusted publishing domain (TPD), you must wait for Microsoft to migrate your tenant and until that time, you won't be able to complete the final step of this tutorial. 
 
 - A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. 
 
