@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,6 +67,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 - Every 24 hours.
 
+When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time will vary, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of labels do not match your latest changes, allow up to 15 and then try again.
 
 ## Configuring your organization's policy
 
