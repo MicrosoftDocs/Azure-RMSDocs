@@ -65,7 +65,7 @@ The email experience for the two users:
 - For your coworker, she might be prompted to authenticate, but she can read the email message directly in her Outlook client or Outlook web app. When she opens the protected document, it opens in Protected View mode, as Word does for all emailed documents. Because it's now a protected document, it also has the protection banner that displays **DO NOT FORWARD**.
 
 - For the user with the personal email address, she sees a message to sign in using one of the popular social identify providers (such as Google and Microsoft), or apply for a one-time passcode:
--    
+    
     - If she signs in, the experience is exactly the same as the co-worker's.
     
     - If she applies for a one-time passcode and enters this, she can now read the email message in her web browser and when she opens the protected document, it also opens in the web browser.
