@@ -31,7 +31,7 @@ ms.suite: ems
 
 You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the file doesn't open, you can use the **Azure Information Protection Viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
+For Office documents, you must have Office installed on your device. For other documents, if the file doesn't automatically open, you can use the **Azure Information Protection Viewer** to open many different types of protected files. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
@@ -48,13 +48,11 @@ If the file doesn't open, you can use the **Azure Information Protection Viewer*
 
 Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
 
-If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you can apply for a free account that will accept your credentials so that you can open files that are protected by Rights Management:
+If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
 
--   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
-    
-    When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-    
--   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+- If you were sent a protected email, follow the instructions to sign in with your social identity provider (such as Google for a Gmail account) or apply for a one-time passcode.
+
+- You can apply for a free account that will accept your credentials so that you can open documents that are protected by Rights Management. To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469) and use your company email address rather than a personal email address. 
 
 ## To view and use a protected file
 
@@ -62,7 +60,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 
 2. If you see a page to **Sign in** or **Sign up**: Click **Sign in** and enter your credentials. If the protected file was sent to you as an attachment, be sure to specify the same email address that was used to send you the file.
     
-    If you do not have an account that is accepted, see the [Prompts for authentication](#prompts-for-authentication) section on this page. Sign up for a free account and return to these instructions.
+    If you do not have an account that is accepted, see the [Prompts for authentication](#prompts-for-authentication) section on this page.
 
 3. A read-only version of the file opens in the **Azure Information Protection Viewer**. If you have sufficient permissions, you can print the file, and edit it. 
 
@@ -75,7 +73,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-> If the protected file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
+> If the protected file does not open, you can use the **Run Diagnostics** option from **Protect** > **Help and Feedback** for the Azure Information Protection client to check for problems on your computer that might prevent a protected document from opening.
 
 
 ## Other instructions

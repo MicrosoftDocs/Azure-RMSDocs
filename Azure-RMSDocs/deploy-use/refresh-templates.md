@@ -44,7 +44,7 @@ When you use the Azure Rights Management service of Azure Information Protection
 
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
-If you have already configured Information Rights Management (IRM) for Exchange Online, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.
+If you have already configured Information Rights Management (IRM) for Exchange Online by importing your trusted publishing domain (TPD) from Azure RMS, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.
 
 > [!NOTE]
 > For more information about how to use Windows PowerShell in Exchange Online, see [Using PowerShell with Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
