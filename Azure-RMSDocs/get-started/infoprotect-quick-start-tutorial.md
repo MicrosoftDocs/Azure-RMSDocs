@@ -38,7 +38,7 @@ If you have any problems completing this tutorial, using Azure Information Prote
 ## Prerequisites 
 
 > [!IMPORTANT] 
-> This tutorial has some important prerequisites that might take some time to complete, such as applying for subscriptions. Make sure that you set aside time to ensure these prerequisites are met before you start the tutorial.
+> This tutorial has some important prerequisites that might take some time to complete, such as applying for subscriptions. Make sure that you set aside time to ensure that these prerequisites are met before you start the tutorial.
 
 To complete this tutorial, you will need the following:
 
