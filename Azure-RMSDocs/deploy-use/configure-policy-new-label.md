@@ -6,7 +6,7 @@ description: Although Azure Information Protection comes with default labels tha
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,6 +50,8 @@ Use the following instructions to add a new label to the Azure Information Prote
 3. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
 
 	> [!NOTE]
+	>New labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example: **#DAA520** If you need a reference for these codes, [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) from the MSDN documentation is a helpful starting point, and you'll find these codes in many picture editing programs such as Microsoft Paint, where you choose a custom color from a palette and it automatically displays the RGB values.
+	>
 	>For information about setting protection, see [How to configure a label to apply protection](configure-policy-protection.md).
 
 4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
