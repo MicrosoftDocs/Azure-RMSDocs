@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Quick start tutorial step 3 - AIP
-description: Step 3 of an introduction tutorial to quickly try out Azure Information Protection - Install the client.
+title: Quick start tutorial step 4  - AIP
+description: Step 3 of an introduction tutorial to quickly try out Azure Information Protection - See labeling & protection in action.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
+ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # optional metadata
 
@@ -25,43 +25,73 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 ---
 
-# Step 3: Install the client
+# Step 3: See classification, labeling, and protection in action 
 
 >*Applies to: Azure Information Protection*
 
-In this step, you'll install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications.
+Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
+
+Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
+
+## To manually change our default label
+
+On the Information Protection bar, select the last label and you see how sub-labels display:
+
+![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labelsv2.png)
+
+Select one of these sub-labels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
+
+![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selectedv2.png)
+
+On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
+
+![Azure Information Protection quick start tutorial step 4 - Edit Label icon](../media/info-protect-edit-label-selectedv2.png)
+
+This displays the available labels again.
+
+Now select the first label, **Personal**. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why are lowering the classification level:
+
+![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
+
+Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
+
+## To remove the classification completely
+
+On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
+
+![Azure Information Protection quick start tutorial step 4 - Delete Icon](../media/delete-icon-from-personalv2.png)
+
+This time when you are prompted, type "This document doesn't need classifying" and click **Confirm**.  
+
+You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
+
+![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-setv2.png)
 
 
-## Install the Azure Information Protection client
+## To see a recommendation prompt for labeling and automatic protection
 
-1. On a PC that has Office installed (but Word is not currently open), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
+1. In the Word document, type a valid credit card number, for example: **4242-4242-4242-4242**. 
 
-2. Run **AzInfoProtection.exe** and follow the prompts to install the client.
+2. Save the document (use any file name, any location). 
 
-    For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
+3. You now see a prompt to apply the label that you configured for protection when credit card numbers are detected. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
 
-## Verify the installation
+    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
 
-Verify that the installation was successful by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. 
+    In addition to the document now showing that our configured label is applied (for example, **Confidential \ All Employees**), you'll immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
-If this is the first time that you've installed the client, you'll see a **Congratulations** page with basic instructions. After you have read it, click **Close**.
+    The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
 
-When the document loads, you should see two new things:
+4. You can now close this document.
 
-![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
-
-- On the **Home** tab, a new **Protection** group, with a button named **Protect**.
-
-    Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
-
-- A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **General**. 
-
-You’re now ready to see Azure Information Protection in action.
+Now that you've seen classification, labeling, and protection in action, let's see how you can protect your documents even when they are shared with others in another organization. You can even track how they are being used and revoke access to them.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About installing the Azure Information Protection client|[Download and install the Azure Information Protection client](../rms-client/install-client-app.md)|
-|Admin instructions for the Azure Information Protection client|[Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md)|
+|Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
+
+
+
 
 
 >[!div class="step-by-step"]
