@@ -70,7 +70,7 @@ The email experience for the two users:
     
     - If she applies for a one-time passcode and enters this, she can now read the email message in her web browser and when she opens the protected document, it also opens in the web browser.
 
-For both users, because of the Do Not Forward option, they cannot forward the email to other users, and they cannot edit the document, even after selecting **Enable Editing** to close the Protected View message. Additionally, according to the displayed usage rights, the email and document cannot be saved or and text from it cannot be copied.
+For both users, because of the Do Not Forward option, they cannot forward the email to other users, and they cannot edit the document, even after selecting **Enable Editing** to close the Protected View message. Additionally, according to the displayed usage rights, the email and document cannot be saved and text from it cannot be copied.
 
 ## To track your protected document
 
