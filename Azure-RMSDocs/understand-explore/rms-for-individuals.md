@@ -36,7 +36,7 @@ Using the [Azure Information Protection client](../rms-client/client-user-guide.
 RMS for individuals is an example of self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](/active-directory/active-directory-self-service-signup) in the Azure Active Directory documentation. 
 
 > [!IMPORTANT]
-> This free subscription is one option to help ensure that authorized people can always read files that have been protected. Another option is to email documents by using Exchange Online and message encryption. This email solution works for all email addresses on all devices and is the recommended method to safely share information and documents by email.
+> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using Exchange Online and message encryption. This email solution works for all email addresses on all devices and is the recommended way to safely share information and documents by email with people outside your organization.
 
 
 ## Next steps
