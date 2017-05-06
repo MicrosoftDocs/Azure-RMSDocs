@@ -37,24 +37,37 @@ You’re then ready to safely share this document by email.
 
 ## To safely share your document by email
 
-1. Using Outlook, create a new email and in the **To:** box, add two entries for users who are willing to help with this test:
+1. In File Explorer, right-click your document and select **Classify and protect**. The **Classify and protect - Azure Information Protection** dialog box opens:
+
+    ![Azure Information Protection quick start tutorial step 5 - right-click classify and protect](../media/classify-protect-dialog.png)
+
+2. Select **Protect with custom permissions**, which displays additional options.
+
+3. For **Select permissions**, keep the default of **Viewer – View Only**.
+
+    With this setting, our recipients will be able to view the document but not edit or print it.
+
+4. For **Select users**, enter the addresses of both users. If you prefer, you can click the address book to select the co-worker's email address.
+
     
-    - A co-worker who also has an account in Office 365 or Azure Active Directory, so the email address is from your organization.
+    After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
+
+5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
+
+4. Back in File Explorer, right-click your file again, and this time, select **Send to** > **Mail recipient**. This action attaches your document to an email message with some default text that we will change.
+
+5. Before we change the default text, paste the email addresses that you specified earlier into the **To** box. 
+
+6. Optionally, type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
+
+7. Modify the default message description so that it's suitable for your recipients. For example:
     
-    - A personal email address, such as a Gmail or Hotmail account.
+	When you read this message, please open the document.
 
-2. Supply your choice of text for the **Subject** and email message. For example:
-    
-    - Subject: **I am sharing a protected document**
-    
-    - Message: **Please open the document.**
+8. On the **Message** tab, select **Do Not Forward**, and then send the email.
 
-3. Attach your selected document.
+Now you’ve sent your protected document, and protected the email so that it can't forwarded, you’re ready to ask your recipients to wait for it to arrive and then open it. 
 
-4. On the **Message** tab, select **Do Not Forward**, and then send the email. 
-
-
-Now you’ve sent your protected document, you’re ready to ask your recipients to wait for it to arrive and then open it. 
 
 ## Ask your recipients to open the emailed document
 
@@ -62,7 +75,7 @@ Your recipients can use many devices to read the protected document that you sen
 
 The email experience for the two users:
 
-- For your coworker, she might be prompted to authenticate, but she can read the email message directly in her Outlook client or Outlook web app. When she opens the protected document, it opens in Protected View mode, as Word does for all emailed documents. Because it's now a protected document, it also has the protection banner that displays **DO NOT FORWARD**.
+- For your coworker, she might be prompted to authenticate, but she can read the email message directly in her Outlook client or Outlook web app. When she opens the protected document, it opens in Protected View mode, as Word does for all emailed documents. Because it's now a protected document, it also has the protection banner that displays **VIEWER**.
 
 - For the user with the personal email address, she sees a message to sign in using one of the popular social identify providers (such as Google and Microsoft), or apply for a one-time passcode:
     
