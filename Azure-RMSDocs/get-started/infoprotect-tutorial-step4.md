@@ -44,11 +44,10 @@ You’re then ready to safely share this document by email.
 2. Select **Protect with custom permissions**, which displays additional options.
 
 3. For **Select permissions**, keep the default of **Viewer – View Only**.
-
+    
     With this setting, our recipients will be able to view the document but not edit or print it.
 
 4. For **Select users**, enter the addresses of both users. If you prefer, you can click the address book to select the co-worker's email address.
-
     
     After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
 
