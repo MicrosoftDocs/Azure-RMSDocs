@@ -65,7 +65,7 @@ You’re then ready to safely share this document by email.
 
 8. On the **Message** tab, select **Do Not Forward**, and then send the email.
 
-Now you’ve sent your protected document, and protected the email so that it can't forwarded, you’re ready to ask your recipients to wait for it to arrive and then open it. 
+Now you’ve sent your protected document, and protected the email so that it can't forwarded, you’re ready to ask your recipients to wait for it to arrive and then open the document you've shared. 
 
 
 ## Ask your recipients to open the emailed document
