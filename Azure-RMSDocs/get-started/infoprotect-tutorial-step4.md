@@ -61,7 +61,7 @@ You’re then ready to safely share this document by email.
 
 7. Modify the default message description so that it's suitable for your recipients. For example:
     
-	When you read this message, please open the document.
+		When you read this message, please open the document.
 
 8. On the **Message** tab, select **Do Not Forward**, and then send the email.
 
