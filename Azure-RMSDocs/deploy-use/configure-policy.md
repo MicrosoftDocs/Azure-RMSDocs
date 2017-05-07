@@ -37,7 +37,7 @@ The Azure Information Protection policy supports different levels of subscriptio
 
 - Azure Information Protection P2: Support for all features.
 
-- Azure Information Protection P1: Support for most features but not automatically classification or HYOK.
+- Azure Information Protection P1: Support for most features but not automatic classification or HYOK.
 
 - Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
 
