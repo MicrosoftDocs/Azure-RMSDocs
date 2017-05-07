@@ -30,6 +30,7 @@
 ### [Configure visual markings](configure-policy-markings.md)
 ### [Configure conditions](configure-policy-classification.md)
 ### [Configure scoped policies](configure-policy-scope.md)
+### [How to configure labels for different languages](configure-policy-languages.md)
 ## [Deploying the RMS connector](deploy-rms-connector.md)
 ### [Install and configure the connector](install-configure-rms-connector.md)
 ### [Configure servers](configure-servers-rms-connector.md)
