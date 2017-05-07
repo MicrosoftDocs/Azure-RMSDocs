@@ -33,18 +33,19 @@ To configure classification, labeling, and protection, you must configure the Az
 
 ## Subscription support
 
-The Azure Information Protection policy supports different levels of subscriptions that include:
+The Azure Information Protection policy supports different levels of subscriptions:
 
-- Azure Information Protection P2 (support for all features)
+- Azure Information Protection P2: Support for all features.
 
-- Azure Information Protection P1 (support for most features but not automatically classification or HYOK)
+- Azure Information Protection P1: Support for most features but not automatically classification or HYOK.
 
-- Office 365 that includes the Azure Rights Management service (support for protection but not classification and labeling)
+- Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
 
+When a configuration option requires a subscription that is not detected for your organization, you will see that option as unavailable in the Azure portal. 
 
-If a configuration option requires a subscription that is not detected for your organization, you will see that option as unavailable in the Azure portal.
+Options that require an Azure Information Protection P2 subscription are indicated with a popup message. If you have an Office 365 subscription that includes the Azure Rights Management service and a subscription for Azure Information Protection is not detected, only protection settings can be configured.
 
-If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their subscription does not support. When you configure options that some users are not licensed for, use scoped policies so that the unlicensed users are not configured to use these features.  
+If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their account is not licensed to use. When you configure options that not all users have a license for, use scoped policies so that the users are not configured to use features for which they do have a license.
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included).
 
