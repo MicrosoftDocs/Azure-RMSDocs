@@ -47,7 +47,7 @@ Options that require an Azure Information Protection P2 subscription are indicat
 
 If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their account is not licensed to use. When you configure options that not all users have a license for, use scoped policies so that the users are not configured to use features for which they do have a license.
 
-For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included).
+For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
 For more information about how to configure scoped policies, see [How to configure the policy for specific users by using scoped policies](configure-policy-scope.md).
 
