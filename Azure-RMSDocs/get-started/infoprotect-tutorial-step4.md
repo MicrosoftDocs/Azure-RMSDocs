@@ -47,7 +47,7 @@ You’re then ready to safely share this document by email.
     
     With this setting, our recipients will be able to view the document but not edit or print it.
 
-4. For **Select users**, enter the addresses of both users. If you prefer, you can click the address book to select the co-worker's email address.
+4. For **Select users**, enter the addresses of both users. If you prefer, you can click the address book to select the co-worker's email address. For the personal email address, enter it manually. For example, p.dover405@gmail.com.
     
     After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
 
@@ -59,9 +59,7 @@ You’re then ready to safely share this document by email.
 
 6. Optionally, type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
 
-7. Modify the default message description so that it's suitable for your recipients. For example:
-    
-		When you read this message, please open the document.
+7. Modify the default message description so that it's suitable for your recipients. For example: **When you read this message, please open the document.**
 
 8. On the **Message** tab, select **Do Not Forward**, and then send the email.
 
@@ -86,10 +84,14 @@ For both users, because of the Do Not Forward option, they cannot forward the em
 
 ## To track your protected document
 
-1.  In an Office app, on the **Home** tab, click **Protect** > **Track and Revoke**:
+1. Open the document that you protected and shared. The information banner confirms the custom protection settings that you specified:
+    
+    ![Information banner for custom protection](../media/information-banner-custom-protection.png) 
 
+2. On the **Home** tab, click **Protect** > **Track and Revoke**:
+    
     ![Track usage option](../media/track-usage-calloutv2.png)
-
+    
     This takes you to the document tracking site.
 
 2.  If you see the **Protect and share on your terms** page, click **Sign in** and supply your user name and password again.
