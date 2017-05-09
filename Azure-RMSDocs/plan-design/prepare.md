@@ -85,7 +85,7 @@ For all three scenarios listed in the previous section, the requirements for use
 
 In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName for users in your tenant, Azure Information Protection also uses these attributes in the same way to authorize users from another tenant.
 
-When an email is sent by using Exchange Online to a user who doesn't have an account in Azure AD, the user is first authenticated by using federation with a social identity provider or by using a one-time passcode. Then the email address specified in the protected email is used to authorize the user.
+When an email is sent by using Office 365 message protection to a user who doesn't have an account in Azure AD, the user is first authenticated by using federation with a social identity provider or by using a one-time passcode. Then the email address specified in the protected email is used to authorize the user.
 
 ## Azure Information Protection requirements for group accounts
 

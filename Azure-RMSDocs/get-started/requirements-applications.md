@@ -88,10 +88,10 @@ For more information, see the following post on the Office blog: [OWA for Androi
 For more information, see the following post on the Enterprise Mobility and Security blog: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 ###### Footnote 9
-When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses Exchange Online with message encryption. 
+When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses Office 365 message protection. 
 
 ###### Footnote 10
-When the recipient can't open a protected email that attaches the document and the message is sent from an organization that uses Exchange Online with message encryption. 
+When the recipient can't open a protected email that attaches the document and the message is sent from an organization that uses Office 365 message protection. 
 
 ### More information about Azure RMS support for Office
 

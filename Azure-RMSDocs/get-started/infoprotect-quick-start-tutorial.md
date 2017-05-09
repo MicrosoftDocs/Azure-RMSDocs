@@ -54,7 +54,7 @@ To complete this tutorial, you will need the following:
 
 - Access to a global administrator account for your tenant, and this account has a working mailbox in Exchange Online.
 
-- Exchange Online supports message encryption and is configured for Azure Rights Management:
+- Office 365 message protection:
     
     This configuration requires running some PowerShell commands that are listed in the [Office documentation]. Note that if you have previously configured Exchange Online for Azure Rights Management by importing a trusted publishing domain (TPD), you must wait for Microsoft to migrate your tenant and until that time, you won't be able to complete the final step of this tutorial. 
 

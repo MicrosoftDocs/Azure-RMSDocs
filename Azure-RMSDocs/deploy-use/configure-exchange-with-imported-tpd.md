@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Exchange Online for indirect integration with the  Azure Rights Management service from Azure Information Protection 
-description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support the AzureRMSLicensingEnabled parameter. 
+title: Configure Exchange Online IRM for the Azure Rights Management service from Azure Information Protection 
+description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support message protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin

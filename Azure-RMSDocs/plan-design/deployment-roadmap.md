@@ -105,9 +105,9 @@ Optionally, consider configuring the following:
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
     
-    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 3 for Exchange Online, and step 6 for Exchange on-premises. 
+    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM or message protection, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 2 for Exchange Online, and step 6 for Exchange on-premises. 
 
-2. Configure Office applications and services for IRM
+2. Configure Office applications and services
     
     Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -161,9 +161,9 @@ Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsm
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+- Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
--   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
+- Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
 ### Step 3: Install the client and configure applications and services for Rights Management
 
@@ -171,7 +171,7 @@ Optionally, consider configuring the following:
     
     Install the Azure Information Protection for users, to support Office 2010, to protect files other than Office documents and emails, and to track protected documents. Provide user training for this client. For more information, see [Azure Information Protection client for Windows](../rms-client/aip-client.md).
 
-2. Configure Office applications and services for IRM
+2. Configure Office applications and services
     
     Configure Office applications and services for the information rights management (IRM) features in SharePoint Online or Exchange Online. For more information, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
