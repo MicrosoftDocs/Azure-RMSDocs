@@ -31,7 +31,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection. 
+Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection.
 
 For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened".
 
@@ -64,8 +64,8 @@ Information about the table columns:
 ###### Footnote 1
 Supports viewing protected content.
 
-###### Footnote 2 
-Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business. 
+###### Footnote 2
+Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business.
 
 ###### Footnote 3
 If a recipient receives a protected email and is not using Exchange as the mail server or if the sender belongs to another organization, this content can be opened only in a rich email client, such as Outlook. This content cannot be opened from Outlook Web Access.
@@ -88,10 +88,10 @@ For more information, see the following post on the Office blog: [OWA for Androi
 For more information, see the following post on the Enterprise Mobility and Security blog: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
 
 ###### Footnote 9
-When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses Office 365 message protection. 
+When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses message protection in Office 365.
 
 ###### Footnote 10
-When the recipient can't open a protected email that attaches the document and the message is sent from an organization that uses Office 365 message protection. 
+When the recipient can't open a protected email that attaches the document and the message is sent from an organization that uses message protection in Office 365. 
 
 ### More information about Azure RMS support for Office
 
@@ -126,7 +126,7 @@ For more information, see the [FAQ for Microsoft Azure Information Protection ap
 
 ### More information about the Azure Information Protection client for Windows
 
-This client now replaces the Rights Management sharing application for Windows. 
+This client now replaces the Rights Management sharing application for Windows.
 
 For more information, see the following resources:
 
@@ -140,7 +140,7 @@ Download the relevant app by using the links on the [Microsoft Azure Information
 
 ### More information about the Rights Management sharing application
 
-This application is being replaced by the Azure Information Protection client. It is still required for Mac computers and Windows Phone mobile devices. 
+This application is being replaced by the Azure Information Protection client. It is still required for Mac computers and Windows Phone mobile devices.
 
 For more information, see the following resources:
 
@@ -172,7 +172,7 @@ The following applications that are not currently supported by Azure RMS include
 -   Microsoft OneDrive for Business for SharePoint Server 2013
 
 -   XPS Viewer
- 
+
 In addition, the RMS sharing application and the Azure Information Protection client has the following restrictions:
 
 -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
