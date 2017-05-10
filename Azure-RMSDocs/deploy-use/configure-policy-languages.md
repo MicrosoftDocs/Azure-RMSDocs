@@ -70,7 +70,7 @@ To configure labels to display in different languages, use the following instruc
     - To add another language or language locale, select **Add a new language/locale for translation** and repeat steps 3 and 4. 
     
     - If you change your mind about any language or language locale that you have added, select that entry from the list, and then click **Remove**.
-        
+    
     > [!NOTE]
     > Be sure to select the languages (and locales) that your users have for Office, and for Windows. In some cases, this might be two different selections per computer.
 
@@ -82,9 +82,9 @@ To configure labels to display in different languages, use the following instruc
 
 8. Edit each .xml file: For each string within  `<LocalizedText>` tags, provide the translations that you want for each chosen language or language locale. 
 
-9. When you have edited each .xml file, create a new compressed (zipped)folder (any name) that contains these files.
+9. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
 
-10. Return to the Azure portal blade and select **Import**. Note that if this option appears unavailable, first refresh the portal.
+10. Return to the Azure portal blade and select **Import**. Note that if this option is unavailable, first refresh the portal.
 
 8. ??To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**. ??
 
