@@ -68,11 +68,11 @@ To configure labels to display in different languages, use the following instruc
 5. On the next blade, you'll see your selected language or language locale added to a list:
     
     - To add another language or language locale, select **Add a new language/locale for translation** and repeat steps 3 and 4. 
-    
+        
+        > [!NOTE]
+        > Be sure to select the languages (and locales) that your users have for Office, and for Windows. In some cases, this might be two different selections per computer.
+        
     - If you change your mind about any language or language locale that you have added, select that entry from the list, and then click **Remove**.
-    
-    > [!NOTE]
-    > Be sure to select the languages (and locales) that your users have for Office, and for Windows. In some cases, this might be two different selections per computer.
 
 6. When all the languages or language locales you want to support are listed, select the box next to **LANGUAGE NAME** to select all the entries (or alternatively, select individual entries), and then click **Export** to save a local copy of the existing label names and descriptions to a file. 
     
