@@ -6,7 +6,7 @@ description: You can add support for different languages for the labels that use
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,27 +33,11 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 
 By default, the names and descriptions of labels support a single language that is displayed to all users in your organization. You can add support for different languages by selecting the ones that you need, export your current label names and descriptions to a file, edit the file to supply your translations, and then import the file back into your Azure Information Protection policy.
 
-In addition to selecting a language, for many languages, you can also select locales. For example, Spanish supports numerous locales that include Latin America, Argentina, Bolivia, and Chile. 
+In addition to selecting a language, you can also often select a locale for a language. For example, Spanish supports numerous locales that include Latin America, Argentina, Bolivia, and Chile.
 
-When you publish the updated policy and users download it, the language that users see for their label names and tooltips is determined by the following logic:
+Select the languages and locales that match your users' language setting for Office and Windows. These label names and descriptions then display in the Azure Information Protection bar in Office apps, and in the **Classify and protection - Azure Information Protection** dialog box, respectively. For more information about which language is chosen, see the [How the Azure Information Protection client determines the language to display](#how-the-azure-information-protection-client-determines-the-language-to- display) section on this page. 
 
-For the Azure Information Protection bar in Office apps:
-
-- When there is a direct match for the language and locale of their Office app, label names and descriptions display in that language and locale.
-
-- When there is a match for the language of their Office app but not a match for that language locale, label names and descriptions display in that language.
-
-- When there is no match for the language of their Office app, label names and descriptions display in the language you specified by default for all users. This language is typically English, which is the language used in the default policy.
-
-For the labels and tooltips that users see when they use right-click to classify and protect files or folders:
-
-- When there is a direct match for the language and locale of their operating system, label names and descriptions display in that language and locale.
-
-- When there is a match for the language of their operating system but not a match for that language locale, label names and descriptions display in that language.
-
-- When there is no match for the language of their operating system, label names and descriptions display in the language you specified by default for all users. This language is typically English, which is the language used in the default policy.
-
-To configure labels to display in different languages, use the following instructions.
+## To configure labels to display in different languages
 
 1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
@@ -85,8 +69,38 @@ To configure labels to display in different languages, use the following instruc
 9. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
 
 10. Return to the Azure portal blade and select **Import**. Note that if this option is unavailable, first refresh the portal.
+    
+    When the import completes, the localized label names and descriptions download to users after you next publish the Azure Information Protection policy. Currently, you must make a change in your policy (global or scoped policy) to re-publish the policy.
 
-8. ??To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**. ??
+## How the Azure Information Protection client determines the language to display
+
+When users download an Azure Information Protection policy that supports different languages, the language that users see for their label names and tooltips is determined by the following logic:
+
+**For the Azure Information Protection bar in Office apps:**
+
+- When there is a direct match for the language and locale of their Office app, label names and descriptions display in that language and locale.
+
+- When there is a match for the language of their Office app but not a match for that language locale, label names and descriptions display in that language.
+
+- When there is no match for the language of their Office app, label names and descriptions display in the language you specified by default for all users. This language is typically English, which is the language used in the default policy.
+
+**For the labels and tooltips that users see when they use right-click to classify and protect files or folders:**
+
+- When there is a direct match for the language and locale of their operating system, label names and descriptions display in that language and locale.
+
+- When there is a match for the language of their operating system but not a match for that language locale, label names and descriptions display in that language.
+
+- When there is no match for the language of their operating system, label names and descriptions display in the language you specified by default for all users. This language is typically English, which is the language used in the default policy.
+
+## When localized label names are not used
+
+In the following scenarios, localized label (and sub-label) names are not used. For consistency across your tenant, the default language is always used for the following:
+
+- Client usage logs
+
+- PowerShell (output from Get-AIPFileStatus)
+
+- Document metadata and email headers
 
 
 ## Next steps
