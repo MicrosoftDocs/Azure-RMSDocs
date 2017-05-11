@@ -81,9 +81,9 @@ The data protection can be applied automatically when a user selects a label tha
 
 ### File sizes supported for protection
 
-Maximum file sizes supported by the Azure Information Protection client:
+There are maximum file sizes that the Azure Information Protection client supports for protection.
 
-- For Office files
+- **For Office files:**
     
     |Office application|Maximum file size supported|
     |--------------------------------|-------------------------------------|
@@ -91,7 +91,7 @@ Maximum file sizes supported by the Azure Information Protection client:
     |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
     |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
 
-- For all other files: 1 GB
+- **For all other files**: 1 GB
 
 ### Supported file types for classification and protection
 
