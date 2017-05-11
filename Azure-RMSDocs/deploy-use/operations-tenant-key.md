@@ -48,6 +48,6 @@ After you have identified which topology you have implemented, select one of the
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)
 
-However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md).  
+However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
