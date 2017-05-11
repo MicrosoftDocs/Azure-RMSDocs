@@ -6,7 +6,7 @@ description: How end-user Office applications (such as the Word, Excel, PowerPoi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -72,6 +72,8 @@ If you are ready to configure Exchange for IRM:
 ## SharePoint Online and SharePoint Server
 
 When you use SharePoint Online or SharePoint Server, you can protect your documents by using information rights management (IRM). This configuration lets administrators protect lists or libraries so that when a user checks-out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
+
+By default, the protection is restricted to the person who downloads the document. But you can change this with a configuration option that extends the protection to all users who have access to the document on SharePoint, or to a group that you specify.
 
 For SharePoint lists and libraries, information protection is always configured by an administrator, never an end user. You set the permissions at the site level, and these permissions, by default, are inherited by any list or library in that site. If you use SharePoint Online, users can also configure their OneDrive for Business library for IRM protection.
 
