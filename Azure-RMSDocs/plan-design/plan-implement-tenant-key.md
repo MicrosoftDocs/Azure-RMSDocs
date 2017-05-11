@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,17 +32,20 @@ ms.suite: ems
 Use the information in this article to help you plan for and manage your Azure Information Protection tenant key. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 
 > [!NOTE]
-> The on-premises equivalent of the Azure Information Protection tenant key is known as the Server Licensor Certificate (SLC) key. Azure Information Protection maintains one or more keys for each organization that has a subscription for Azure Information Protection. Whenever keys are used for Azure Information Protection within an organization (such as user keys, computer keys, document encryption keys), they cryptographically chain to your Azure Information Protection tenant key.
+> The on-premises equivalent of the Azure Information Protection tenant key is known as the Server Licensor Certificate (SLC) key. Azure Information Protection maintains one or more keys for each organization that has a subscription for Azure Information Protection. Whenever keys are used for Azure Information Protection within an organization (such as user keys, computer keys, document encryption keys), they cryptographically chain to your Azure Information Protection tenant key, which acts as a root key for your organization.
 
 **At a glance:** Use the following table as a quick guide to your recommended tenant key topology. Then, use the additional documentation for more information.
+
+If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+
 
 |Business requirement|Recommended tenant key topology|
 |------------------------|-----------------------------------|
 |Deploy Azure Information Protection quickly and without requiring special hardware|Managed by Microsoft|
-|Need full IRM functionality in Exchange Online with the Azure Rights Management service|Managed by Microsoft|
-|Your keys are created by you and protected in a hardware security module (HSM)|BYOK<br /><br />Currently, this configuration will result in reduced IRM functionality in Exchange Online. For more information, see [BYOK pricing and restrictions](byok-price-restrictions.md).|
+|Your keys are created by you and protected in a hardware security module (HSM)|BYOK [[1]](#footnote-1)|
 
-If required, you can change your tenant key topology after deployment, by using the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+###### Footnote 1
+If you have already enabled Exchange Online for Azure Rights Management by using the Import-RMSTrustedPublishingDomain command, you cannot currently use BYOK. For more information, see [Restrictions when using BYOK](byok-price-restrictions.md#restrictions-when-using-byok).
 
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
@@ -92,8 +95,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |Requirement|More information|
 |---------------|--------------------|
 |A subscription that supports Azure Information Protection.|For more information about the available subscriptions, see the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
-|You do not use RMS for individuals or Exchange Online.<br /><br /> Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
-|All the prerequisites listed for Key Vault BYOK, which includes a paid or trial Azure subscription for your existing Azure Information Protection tenant. |See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br /> The free Azure subscription that provides access to configure Azure Active Directory and configuration of Azure Rights Management custom templates (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use the [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
+|All the prerequisites listed for Key Vault BYOK, which includes a paid or trial Azure subscription for your existing Azure Information Protection tenant. |See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br /> The free Azure subscription that provides access to configure Azure Active Directory and configuration of Azure Rights Management custom templates (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use [Azure Resource Manager](https://docs.microsoft.com/powershell/module/azurerm.resources/?view=azurermps-3.8.0) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
 |The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
