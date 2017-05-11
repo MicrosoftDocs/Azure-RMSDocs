@@ -54,9 +54,9 @@ To complete this tutorial, you will need the following:
 
 - Access to a global administrator account for your tenant, and this account has a working mailbox in Exchange Online.
 
-- Message protection in Office 365:
+- Message protection in Office 365.
 
-    This configuration requires running some PowerShell commands that are listed in the [Office documentation]. Note that if you have previously configured Exchange Online for Azure Rights Management by importing a trusted publishing domain (TPD), you must wait for Microsoft to migrate your tenant and until that time, you won't be able to complete the final step of this tutorial.
+    This configuration requires running some PowerShell commands that are listed in [Set up message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Note that if you have previously configured Exchange Online for Azure Rights Management by importing a trusted publishing domain (TPD), you must wait for Microsoft to migrate your tenant and until that time, you won't be able to complete the final step of this tutorial. In addition, you must [activate](..\deploy-use\activate-service.md) the Azure Rights Management service.
 
 - A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010.
 

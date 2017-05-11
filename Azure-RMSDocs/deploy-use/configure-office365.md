@@ -36,7 +36,7 @@ However, we recommend that you supplement these applications with the Azure Info
 ## Exchange Online: IRM Configuration
 For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
 
-If you haven't previously configured Exchange Online to use the Azure Rights Management service, see [Office doc].
+If you haven't previously configured Exchange Online to use the Azure Rights Management service, see [Set up message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted, you must use a different configuration method until Microsoft migrates your tenant. For these configuration steps, see [Exchange Online IRM configuration when you have imported a trusted publishing domain](configure-exchange-with-imported-tpd.md). In addition, you cannot use a customer-managed key (also known as bring your own key, or BYOK) until Microsoft migrates your tenant. For more information about this restriction, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
 
