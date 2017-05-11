@@ -6,7 +6,7 @@ description: Instructions to view and use a protected file that requires you to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
