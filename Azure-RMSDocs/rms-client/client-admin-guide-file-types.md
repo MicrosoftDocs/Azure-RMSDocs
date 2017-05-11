@@ -79,7 +79,7 @@ You can change the default protection level that the Azure Information Protectio
 
 The data protection can be applied automatically when a user selects a label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
-#### File sizes supported for protection
+### File sizes supported for protection
 
 Maximum file sizes supported by the Azure Information Protection client:
 
