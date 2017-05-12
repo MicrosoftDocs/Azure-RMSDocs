@@ -6,7 +6,7 @@ description: This scenario and supporting user documentation uses Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/11/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -57,13 +57,13 @@ For this scenario to work, the following must be in place:
 
 ### To configure the SharePoint library for IRM settings
 
-1.  After you have configured SharePoint to use the IRM service, navigate to your SharePoint library to protect with Azure RMS. In the **Settings** &gt; **Information Rights Management (IRM)** page for the site , in addition to selecting **Restrict permissions on this library on download**, and specifying a policy title for administrators and a policy descriptions for users, click **SHOW OPTIONS**.
+1.  After you have configured SharePoint to use the IRM service, navigate to your SharePoint library to protect with Azure RMS. In the **Settings** &gt; **Information Rights Management (IRM)** page for the site, in addition to selecting **Restrict permissions on this library on download**, and specifying a policy title for administrators and a policy descriptions for users, click **SHOW OPTIONS**.
 
 2.  Select the following:
 
     -   **Do not allow users to upload documents that do not support IRM**
 
-    -   Optional: **Allow group protection. Default group** and then specify the name of an additional group that might need to collaborate on documents stored in this library, but outside SharePoint. For example, the Sales group has Edit permissions to the site and somebody from this group downloads a document, saves it to disk, and emails it to a co-worker who is not in the Sales group. If the co-worker is in the group you specify here, she will automatically inherit the same permissions that are configured for the site and be able to edit the document.
+    -   Optional: **Allow group protection. Default group** and then specify the name of an additional group that might need to collaborate on documents stored in this library, but outside SharePoint. For example, the Sales group has Edit permissions to the site and somebody from this group downloads a document, saves it to disk, and emails it to a co-worker. The co-worker would only get access to the document (with Edit rights) if she is a member of the designed group.
 
         Without this option, only users that have access to the SharePoint library will be able to collaborate on these documents, and only by downloading the documents directly from SharePoint. In many cases, this restriction is appropriate.
 
