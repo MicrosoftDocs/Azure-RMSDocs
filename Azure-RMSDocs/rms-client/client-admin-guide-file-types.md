@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/08/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,6 +78,20 @@ The Azure Information Protection client supports protection at two different lev
 You can change the default protection level that the Azure Information Protection client applies. You can change the default level of native to generic, from generic to native, and even prevent the Azure Information Protection client from applying protection. For more information, see the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section in this article.
 
 The data protection can be applied automatically when a user selects a label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
+
+### File sizes supported for protection
+
+There are maximum file sizes that the Azure Information Protection client supports for protection.
+
+- **For Office files:**
+    
+    |Office application|Maximum file size supported|
+    |--------------------------------|-------------------------------------|
+    |Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32-bit: 512 MB<br /><br />64-bit: 512 MB
+    |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
+    |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
+
+- **For all other files**: 1 GB
 
 ### Supported file types for classification and protection
 
