@@ -80,7 +80,7 @@ You can specify your own protection settings for documents rather than use the p
     
     - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select the level of access that you want specified people to have.
 
-    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported. To safely share a document by using a personal email address, attach it to a protected email message.
+    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported.
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
@@ -142,7 +142,7 @@ The admin guide contains a full list of the file types supported and the files a
 
     - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
-    - **Select users**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported. To safely share a document by using a personal email address, attach it to a protected email message.
+    - **Select users**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported.
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
 
