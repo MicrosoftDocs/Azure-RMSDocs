@@ -2,125 +2,100 @@
 # required metadata
 
 title: Quick start tutorial step 4  - AIP
-description: Step 4 of an introduction tutorial to quickly try out Azure Information Protection - Share protected and track.
-keywords:
+description: Step 4 of an introduction tutorial to quickly try out Azure Information Protection - See labeling & protection in action.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
-ms.topic: get-started-article
+ms.date: 03/21/2017
+ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
+ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
-ms.suite: ems
+#ms.reviewer: eymanor
+#ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-
-# Step 4: See sharing of protected files in action and track your document 
+# Step 4: See classification, labeling, and protection in action 
 
 >*Applies to: Azure Information Protection*
 
-For this final step in the tutorial, you will need a Word document or Excel spreadsheet that you have already created and will send to somebody inside your organization and to somebody outside your organization by using their personal email address. For this tutorial, it doesn’t matter what text this document actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
+Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
 
-You’re then ready to safely share this document by email. 
+Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
 
-## To safely share your document by email
+## To manually change our default label
 
-1. In File Explorer, right-click your document and select **Classify and protect**. The **Classify and protect - Azure Information Protection** dialog box opens:
+On the Information Protection bar, select the last label and you see how sub-labels display:
 
-    ![Azure Information Protection quick start tutorial step 5 - right-click classify and protect](../media/classify-protect-dialog.png)
+![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labelsv2.png)
 
-2. Select **Protect with custom permissions**, which displays additional options.
+Select one of these sub-labels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
 
-3. For **Select permissions**, keep the default of **Viewer – View Only**.
-    
-    With this setting, our recipients will be able to view the document but not edit or print it.
+![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selectedv2.png)
 
-4. For **Select users**, enter the addresses of both users. If you prefer, you can click the address book to select the co-worker's email address. For the personal email address, enter it manually. For example, p.dover405@gmail.com.
-    
-    After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
+On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
 
-5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
+![Azure Information Protection quick start tutorial step 4 - Edit Label icon](../media/info-protect-edit-label-selectedv2.png)
 
-4. Back in File Explorer, right-click your file again, and this time, select **Send to** > **Mail recipient**. This action attaches your document to an email message with some default text that we will change.
+This displays the available labels again.
 
-5. Before we change the default text, paste the email addresses that you specified earlier into the **To** box. 
+Now select the first label, **Personal**. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why are lowering the classification level:
 
-6. Optionally, type your choice of subject in the **Subject** box, for example: **I am sharing a protected document**. 
+![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
 
-7. Modify the default message description so that it's suitable for your recipients. For example: **When you read this message, please open the document.**
+Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
 
-8. On the **Message** tab, select **Do Not Forward**, and then send the email.
+## To remove the classification completely
 
-Now you’ve sent your protected document, and protected the email so that it can't forwarded, you’re ready to ask your recipients to wait for it to arrive and then open the document you've shared. 
+On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
 
+![Azure Information Protection quick start tutorial step 4 - Delete Icon](../media/delete-icon-from-personalv2.png)
 
-## Ask your recipients to open the emailed document
+This time when you are prompted, type "This document doesn't need classifying" and click **Confirm**.  
 
-Your recipients can use many devices to read the protected document that you sent as an email attachment. The devices include iPads, iPhones, Android tablets and phones, Mac computers, as well as Windows computers. Because you sent an Office document, they must have Office installed to read it.
+You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 
-The email experience for the two users:
-
-- For your coworker, she might be prompted to authenticate, but she can read the email message directly in her Outlook client or Outlook web app. When she opens the protected document, it opens in Protected View mode, as Word does for all emailed documents. Because it's now a protected document, it also has the protection banner that displays **VIEWER**.
-
-- For the user with the personal email address, she sees a message to sign in using one of the popular social identify providers (such as Google and Microsoft), or apply for a one-time passcode:
-    
-    - If she signs in, the experience is exactly the same as the co-worker's.
-    
-    - If she applies for a one-time passcode and enters this, she can now read the email message in her web browser and when she opens the protected document, it also opens in the web browser.
-
-For both users, because of the Do Not Forward option, they cannot forward the email to other users, and they cannot edit the document, even after selecting **Enable Editing** to close the Protected View message. Additionally, according to the displayed usage rights, the email and document cannot be saved and text from it cannot be copied.
-
-## To track your protected document
-
-1. Open the document that you protected and shared. The information banner confirms the custom protection settings that you specified:
-    
-    ![Information banner for custom protection](../media/information-banner-custom-protection.png) 
-
-2. On the **Home** tab, click **Protect** > **Track and Revoke**:
-    
-    ![Track usage option](../media/track-usage-calloutv2.png)
-    
-    This takes you to the document tracking site.
-
-2.  If you see the **Protect and share on your terms** page, click **Sign in** and supply your user name and password again.
-
-3.  On the **Your shared documents** page, you should see the document name that you shared. If it's not displayed yet, wait a few minutes and try again. As you share additional protected documents, the list will grow.
-
-    From this page, you’ll see when you shared the document (when you sent the email with the protected attachment), the date of the last activity, and the name of the recipient you sent the email to. Click the document name for additional details.
-
-4.  On the new page, which has the name of the file that you clicked, you’ll see summary details for that document only, and a list of other options that are available for the document (**List**, **Timeline**, **Map**, **Settings**).
-
-    Click each option to explore different ways to track your protected document. Or, still on the **Summary** page, click **Open in Excel** to export the information to a spreadsheet, or click **Revoke access** to stop sharing the document.
-
-You can return to this site to track further activity for your protected document, or revoke access if necessary. You can even access the site from your mobile device or tablet, by using a browser with this link: [document tracking](http://go.microsoft.com/fwlink/?LinkId=529562)
+![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-setv2.png)
 
 
+## To see a recommendation prompt for labeling and automatic protection
+
+1. In the Word document, type a valid credit card number, for example: **4242-4242-4242-4242**. 
+
+2. Save the document (use any file name, any location). 
+
+3. You now see a prompt to apply the label that you configured for protection when credit card numbers are detected. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
+
+    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
+
+    In addition to the document now showing that our configured label is applied (for example, **Confidential \ All Employees**), you'll immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
+
+    The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
+
+4. You can now close this document.
+
+Now that you've seen classification, labeling, and protection in action, let's see how you can protect your documents even when they are shared with others in another organization. You can even track how they are being used and revoke access to them.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for protecting files that you can then safely share|[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
-|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../understand-explore/rms-for-individuals.md)|
-|About using the document tracking site|[Track and revoke your documents](../rms-client/client-track-revoke.md)
+|Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
 
 
-## Next Steps
 
-Now you've seen the default Azure Information Protection policy and how to customize it, and how labeling works for a Word document, try some of the other settings and see how they work in the other Office applications that support Azure Information Protection: Excel, PowerPoint, Outlook. If these applications were open when you installed the Azure Information Protection client, close and reopen them before you try using them with Azure Information Protection.
 
-Try sharing more documents and track how they are being used, and confirm how document revocation works.
 
-You might then find it useful to read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md). 
+>[!div class="step-by-step"]
+[&#171; Step 3](infoprotect-tutorial-step3.md)
+[Step 5 &#187;](infoprotect-tutorial-step5.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
