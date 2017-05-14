@@ -91,7 +91,7 @@ For more information, see the following post on the Enterprise Mobility and Secu
 When the recipient can't open a protected email by using their email client and the message is sent from an organization that uses message protection in Office 365.
 
 ###### Footnote 10
-When the recipient can't open a protected email that attaches a document that's automatically protected by email, and the message is sent from an organization that uses message protection in Office 365. Not all documents can be automatically protected by email. For a list of file types that can be protected in this way, see [Introduction to IRM for email messages](https://support.office.com/article/Introduction-to-IRM-for-email-messages-bb643d33-4a3f-4ac7-9770-fd50d95f58dc).
+When the recipient can't open a protected email that attaches a document that's automatically protected by email, and the message is sent from an organization that uses message protection in Office 365. For a list of file types that can be protected in this way, see [Introduction to IRM for email messages](https://support.office.com/article/Introduction-to-IRM-for-email-messages-bb643d33-4a3f-4ac7-9770-fd50d95f58dc).
 
 ### More information about Azure RMS support for Office
 
