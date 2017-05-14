@@ -53,6 +53,8 @@ Use the following instructions to add a new label to the Azure Information Prote
 
 4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
+5. If you want this new label name and description to display in different languages for users, follow the procedures in [How to configure labels for different languages](configure-policy-languages.md). 
+
 ## Next steps
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  

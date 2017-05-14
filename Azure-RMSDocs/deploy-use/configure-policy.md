@@ -56,21 +56,23 @@ For more information about how to configure scoped policies, see [How to configu
 1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
-
-    When the **Azure Information Protection** blade loads, it automatically opens the **Policy: Global** blade, for you to view and edit the global policy that all users get. However, you can also optionally add and edit scoped policies. Azure Information Protection policies contain the following elements that you can configure:
-
+    
+    The very first time you connect to the service, the **Quick start** page automatically opens. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    
+    The Azure Information Protection policy contain the following elements that you can configure:
+    
     - Labels that let you and users classify documents and emails.
-
+    
     - Title and tooltip for the Information Protection bar that users see in their Office applications.
-
+    
     - The option to enforce classification when users save documents and send emails.
-
+    
     - The option to set a default label as a starting point for classifying documents and emails.
-
+    
     - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
-
+    
     - The option to automatically label an email message, based on its attachments.
-
+    
     - The option to provide a custom help link for users.
 
 Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. These labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 

@@ -40,7 +40,7 @@ Although Azure Information Protection comes with a default policy that you can u
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-3.  Explore the **Policy: Global** blade, which automatically opens and displays the default Information Protection policy that's automatically created for your tenant:
+3. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's automatically created for your tenant:
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
     
