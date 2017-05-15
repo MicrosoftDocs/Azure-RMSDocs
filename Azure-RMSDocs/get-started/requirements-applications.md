@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
+ms.date: 05/17/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
