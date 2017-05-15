@@ -38,7 +38,7 @@ A simple application could be a command line tool built to encrypt a provided fi
 
 ### Server mode applications
 
-*Server mode* is meant for non-interactive applications that consume, protect or process RMS-protected content. An example would be a *Data Loss Prevention* application that runs as a service on a file server and automatically protects sensitive documents. See the [IpcDlp sample](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) for an example of this application type.
+*Server mode* is meant for non-interactive applications that consume, protect or process RMS-protected content. An example would be a *Data Loss Prevention* application that runs as a service on a file server and automatically protects sensitive documents. See the [IpcDlp sample](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) for an example of this application type.
 
 If your application uses the *server mode*, it should authenticate to the RMS server silently. Unlike the *client mode*, the RMS SDK 2.1 will not open a credential prompt when it fails to authenticate silently. Also, when running in *server mode*, no application manifest is needed.
 
