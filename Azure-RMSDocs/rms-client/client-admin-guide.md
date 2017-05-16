@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,9 +78,11 @@ Example showing the Azure Information Protection client add-on in an Office appl
 
 ## How to install the Azure Information Protection client for users
 
-Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
+Before you install the client, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-Additional prerequisites for the Azure Information Protection client:
+Then check the following prerequisites that might be needed for the Azure Information Protection client, listed next.
+
+### Additional prerequisites for the Azure Information Protection client
 
 - The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a custom installation parameter.
 
@@ -92,10 +94,14 @@ Additional prerequisites for the Azure Information Protection client:
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
-> [!NOTE]
+> [!IMPORTANT]
 > Installation requires local administrative permissions.
 
-The Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
+### To install the Azure Information Protection client for users
+
+The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog. 
+
+Use the following instructions when you're not using the Microsoft Update catalog.
 
 1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
@@ -131,7 +137,7 @@ The Azure Information Protection client is also included in the Microsoft Update
     
     In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** If the installation failed, this log file contains details to help you identify and resolve any problems.
 
-### More information about the ServiceLocation installation parameter
+#### More information about the ServiceLocation installation parameter
 
 When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the ServiceLocation parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
@@ -145,7 +151,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 Use the following procedure to identify the value to specify for the ServiceLocation parameter. 
 
-#### To identify the value to specify for the ServiceLocation parameter
+##### To identify the value to specify for the ServiceLocation parameter
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
@@ -162,7 +168,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
-### More information about the DowngradeDotNetRequirement installation parameter
+#### More information about the DowngradeDotNetRequirement installation parameter
 
 To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
 
