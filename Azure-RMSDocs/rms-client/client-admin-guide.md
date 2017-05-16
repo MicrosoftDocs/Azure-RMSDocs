@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
+ms.date: 05/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,8 +30,24 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
+Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). For example:
 
-Use the following information if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md).
+- Understand the different components of this client and whether you should install it
+
+- How to install the client for users, with information about prerequisites, installation options, and verification checks
+
+- How to accommodate custom configurations that might be needed
+
+- Locate the client files and usage logs
+
+- Identify the file types supported by the client
+
+- Configure and use the document tracking site for users
+
+- Use the client with PowerShell for command-line control
+
+
+## Technical overview of the Azure Information Protection client
 
 The Azure Information Protection client includes the following:
 
@@ -89,6 +105,8 @@ Then check the following prerequisites that might be needed for the Azure Inform
 - If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
 - The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type **$PSVersionTable** in a PowerShell session.
+
+- Computers running Office 2010 require Microsoft Online Services Sign-in Assistant, version **7.250.4303.0**. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
 
 - Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
     
