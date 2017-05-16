@@ -96,7 +96,7 @@ Example showing the Azure Information Protection client add-on in an Office appl
 
 Before you install the client, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-Then check the following prerequisites that might be needed for the Azure Information Protection client, listed next.
+Then check the additional prerequisites that might be needed for the Azure Information Protection client.
 
 ### Additional prerequisites for the Azure Information Protection client
 
