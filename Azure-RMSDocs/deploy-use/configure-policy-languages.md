@@ -41,9 +41,9 @@ Select the languages that match your users' language setting for Office and Wind
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Localization**.
+2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Languages**.
 
-3. On the Localization blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
+3. On the **Languages** blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
 
 4. Select your language, and select **OK**.
 
@@ -62,13 +62,13 @@ Select the languages that match your users' language setting for Office and Wind
 
 7. Extract the files from **exported localization.zip** so that you have  .xml files for each language that you selected for download. 
 
-8. Edit each .xml file: For each string within  `<LocalizedText>` tags, provide the translations that you want for each chosen language. 
+8. Edit each .xml file: For each string within `<LocalizedText>` tags, provide the translations that you want for each chosen language. 
 
 9. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
 
 10. Return to the Azure portal blade and select **Import**. Note that if this option is unavailable, first refresh the portal.
     
-    When the import completes, the localized label names and descriptions download to users after you next publish the Azure Information Protection policy. Currently, you must make a change in your policy (global or scoped policy) to re-publish the policy.
+    When the import completes, the localized label names and descriptions download to users after you next publish the Azure Information Protection policy. You can click **Publish** from the **Global policy** or **Scoped policies** blade.
 
 ## How the Azure Information Protection client determines the language to display
 
