@@ -101,15 +101,25 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 ### Additional prerequisites for the Azure Information Protection client
 
-- The full installation of the Azure Information Protection client by default, requires a minimum version of **Microsoft .NET Framework 4.6.2** and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a custom installation parameter.
+- **Microsoft .NET Framework 4.6.2**
+    
+    - The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a custom installation parameter.
 
-- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of **Microsoft .NET Framework 4.5.2** and if this is missing, the installer does not download or install it.
+- **Microsoft .NET Framework 4.5.2**
+    
+   - If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
-- The PowerShell module requires **Windows PowerShell version 4.0**, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
+- **Windows PowerShell version 4.0**
+    
+    - The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
 
-- Computers running Office 2010 require **Microsoft Online Services Sign-in Assistant version 7.250.4303.0**. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+- **Microsoft Online Services Sign-in Assistant version 7.250.4303.0**
+    
+    - Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
 
-- Computers running **Windows 7 Service Pack 1 require KB 2533623**. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
+- **KB 2533623**
+    
+    - Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
