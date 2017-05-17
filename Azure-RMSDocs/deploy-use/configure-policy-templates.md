@@ -45,7 +45,7 @@ Rights management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Right management templates for your tenant are displayed as labels and currently, configuration settings that are specific to classification and labeling remain available. 
+- Right management templates for your tenant are displayed as labels and currently, configuration settings that are specific to classification and labeling are also available. 
 
 
 ## Considerations for templates in the Azure portal
@@ -105,7 +105,7 @@ When you convert a template to a label:
 
 - The original template is no longer displayed under **Templates**. However, it remains available for the Azure Rights Management service, and retains the published or archived status to ensure service continuity.  
 
-There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels rather than maintaining them separately.
+There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
 Do not convert templates to labels if you need to maintain them for users or services that depend on rights management templates. For example:
 

@@ -56,7 +56,7 @@ Select the languages that match your users' language setting for Office and Wind
         
     - If you change your mind about any language that you have added, select that entry from the list, and then click **Remove**.
 
-6. When all the languages you want to support are listed, select the box next to **LANGUAGE NAME** to select all the entries (or alternatively, select individual entries), and then click **Export** to save a local copy of the existing label names and descriptions to a file. 
+6. When all the languages you want to support are listed, select the check box next to **LANGUAGE NAME** to select all the entries (or alternatively, select individual entries), and then click **Export** to save a local copy of the existing label names and descriptions to a file. 
     
     The downloaded file is named **exported localization.zip** and is saved in your local Downloads folder. It can also be accessed by selecting this file name on the status bar of the Azure portal.
 
@@ -66,7 +66,7 @@ Select the languages that match your users' language setting for Office and Wind
 
 9. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
 
-10. Return to the Azure portal blade and select **Import**. Note that if this option is unavailable, first refresh the portal.
+10. Return to the Azure portal blade and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     
     When the import completes, the localized label names and descriptions download to users after you next publish the Azure Information Protection policy. You can click **Publish** from the **Global policy** or **Scoped policies** blade.
 
