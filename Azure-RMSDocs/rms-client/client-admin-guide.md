@@ -233,14 +233,13 @@ For instructions to deploy the .msi by using Intune, see [Add apps with Microsof
     
     - For Windows 7 and Office 2010: KB 2627273 is installed
     
-    - For Windows 8 and Office 2010: KB2843630 is installed
+    - For Windows 8 and Office 2010: KB 2843630 is installed
     
     - For Windows 8.1 and Office 2010: KB 2843630 is installed
     
-    - For Office 2013: KB 3054941 (for Office 32-bit and Office 64-bit)
+    - For Office 2013: KB 3054941 is installed (for Office 32-bit and Office 64-bit)
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify installation parameters, which are fully documented in the previous section.  
-
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are fully documented in the executable installer instructions.  
 
 ## Additional checks and troubleshooting
 
