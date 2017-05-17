@@ -41,9 +41,7 @@ The Azure Information Protection policy supports different levels of subscriptio
 
 - Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
 
-When a configuration option requires a subscription that is not detected for your organization, you will see that option as unavailable in the Azure portal. 
-
-Options that require an Azure Information Protection P2 subscription are indicated with a popup message. If you have an Office 365 subscription that includes the Azure Rights Management service and a subscription for Azure Information Protection is not detected, only protection settings can be configured.
+Options that require an Azure Information Protection P2 subscription are now identified in the portal.
 
 If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their account is not licensed to use. When you configure options that not all users have a license for, use scoped policies so that the users are not configured to use features for which they do have a license.
 
@@ -115,6 +113,8 @@ Use the following information to help you configure your Azure Information Prote
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
 - [How to configure the policy for specific users by using scoped policies](configure-policy-scope.md)
+
+- [How to configure and manage templates](configure-policy-templates.md)
 
 - [How to configure labels for different languages](configure-policy-languages.md)
 
