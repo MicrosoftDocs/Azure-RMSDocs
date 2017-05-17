@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure labels for different languages
+title: Configure labels for different languages in Azure Information Protection
 description: You can add support for different languages for the labels that users see on the Information Protection bar, by specifying the languages in the Azure Information Protection policy and importing your translations.
 author: cabailey
 ms.author: cabailey
@@ -29,7 +29,8 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 
 >*Applies to: Azure Information Protection*
 
-[ Note: This feature is currently in preview.]
+>[!NOTE]
+>This feature is currently in preview.
 
 By default, the names and descriptions of labels support a single language that is displayed to all users in your organization. You can add support for different languages by selecting the ones that you need, export your current label names and descriptions to a file, edit the file to supply your translations, and then import the file back into your Azure Information Protection policy.
 
