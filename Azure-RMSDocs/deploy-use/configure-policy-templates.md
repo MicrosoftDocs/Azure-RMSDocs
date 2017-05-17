@@ -30,11 +30,11 @@ ms.suite: ems
 >*Applies to: Azure Information Protection*
 
 >[!NOTE]
->This functionality is currently in preview. For production environments, continue to create and manage [custom templates from the Azure classic portal](configure-custom-templates.md). 
+>This functionality is currently in preview. For custom templates that you use in production environments, continue to create and manage them from the [Azure classic portal](configure-custom-templates.md). 
 >
->If you test this preview capability with custom templates that you use in production, consider whether you have a recent backup of your templates. You can back up your custom templates by using the [Export-​Aadrm​Template](/powershell/module/aadrm/export-aadrmtemplate) PowerShell cmdlet, and if necessary, use the [Import-​Aadrm​Template](/powershell/module/aadrm/import-aadrmtemplate) to restore them. 
+>Before you test this preview capability with custom templates that you created in the Azure classic portal, consider whether you have a recent backup of your templates. You can back up your custom templates by using the [Export-​Aadrm​Template](/powershell/module/aadrm/export-aadrmtemplate) PowerShell cmdlet, and if necessary, use the [Import-​Aadrm​Template](/powershell/module/aadrm/import-aadrmtemplate) to restore them. 
 
-Rights management templates are now integrated with the Azure Information Protection policy. Templates that are not configured for a scope are included in the global policy, which is applied to all users. Departmental templates (templates that are configured for a scope) are included as a scoped policy.
+Rights management templates are now integrated with the Azure Information Protection policy. 
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
@@ -43,6 +43,7 @@ Rights management templates are now integrated with the Azure Information Protec
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
 - Right management templates for your tenant are displayed as labels and all configuration settings that are specific to classification and labeling are not available. 
+
 
 ## Considerations for templates in the Azure portal
 
@@ -62,7 +63,9 @@ Before you edit these templates or convert them to labels in the Azure portal, b
 
 - **Published** and **Archived** settings display as **Enabled**: **On** and **Enabled**: **Off** respectively on the **Label** blade.
 
-- You cannot set the Application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+- Departmental templates (templates that are configured for a scope) display in the Global policy but retain their scope configuration until you edit the template and save it. The equivalent of a scoped template in the Azure Information Protection policy is a scoped policy, so you must create a new [scoped policy](configure-policy-scope.md) for the same users and groups that was specified for the scoped template, and then recreate the template as a label in that scoped policy.
+    
+    In addition, you cannot set the Application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
 
 ## To configure the templates in the Azure Information Protection policy
@@ -81,7 +84,9 @@ Before you edit these templates or convert them to labels in the Azure portal, b
 
 4. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label name** and **Description**. Then, select **Protection** that has a value of **Azure RMS**, to open the **Protection** blade.
 
-5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
+5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring the protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
+    
+    Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
 6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
