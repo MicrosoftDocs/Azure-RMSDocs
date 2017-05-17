@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,9 +36,9 @@ For example:
 
 - Understand the different components of this client and whether you should install it
 
-- How to install the client for users, with information about prerequisites, installation options, and verification checks
+- How to install the client for users, with information about prerequisites, installation options and parameters, and verification checks
 
-- How to accommodate custom configurations that might be needed
+- How to accommodate custom configurations that often require editing the registry
 
 - Locate the client files and usage logs
 
@@ -126,13 +126,21 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
 
-### To install the Azure Information Protection client for users
+### Options to install the Azure Information Protection client for users
 
-The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog. 
+There are 3 options for installing the client for users:
 
-Use the following instructions when you're not using the Microsoft Update catalog.
+**Windows Update**: The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog.
 
-1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+**Run the executable for the client**: The recommended installation method that you can run interactively, or silently. This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites.
+
+**Deploy the Windows installer (.msi) for the client**: Supported for silent installs only, using Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer.
+
+### To install the Azure Information Protection client by using the executable installer
+
+Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using Intune.
+
+1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
@@ -208,6 +216,31 @@ For example: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
 
 Also remember that if you use Windows Update to keep the Azure Information Protection client updated, you will need another software deployment mechanism to upgrade the client to later versions.
+
+### To install the Azure Information Protection client by using the .msi installer
+
+For instructions to deploy the .msi by using Intune, see [Add apps with Microsoft Intune](/intune/deploy-use/add-apps). In addition, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+
+1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+    
+    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
+
+2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place:
+    
+    - For Office 2010: Microsoft Sign-In Assistant version 7.250.4303.0 is installed
+    
+    - For Windows 7 and Office 2010: KB 2627273 is not installed
+    
+    - For Windows 7 and Office 2010: KB 2627273 is installed
+    
+    - For Windows 8 and Office 2010: KB2843630 is installed
+    
+    - For Windows 8.1 and Office 2010: KB 2843630 is installed
+    
+    - For Office 2013: KB 3054941 (for Office 32-bit and Office 64-bit)
+
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify installation parameters, which are fully documented in the previous section.  
+
 
 ## Additional checks and troubleshooting
 
