@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
