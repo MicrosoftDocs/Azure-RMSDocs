@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,6 +79,20 @@ You can change the default protection level that the Azure Information Protectio
 
 The data protection can be applied automatically when a user selects a label that an administrator has configured, or users can specify their own custom protection settings by using [permission levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels). 
 
+### File sizes supported for protection
+
+There are maximum file sizes that the Azure Information Protection client supports for protection.
+
+- **For Office files:**
+    
+    |Office application|Maximum file size supported|
+    |--------------------------------|-------------------------------------|
+    |Word 2007 (supported by AD RMS only)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32-bit: 512 MB<br /><br />64-bit: 512 MB
+    |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
+    |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
+
+- **For all other files**: 1 GB
+
 ### Supported file types for classification and protection
 
 The following table lists a subset of file types that support native protection by the Azure Information Protection client, and that can also be classified. 
@@ -127,17 +141,19 @@ You can also force the Azure Information Protection client to block the protecti
 
 To configure the Azure Information Protection client to apply generic protection to all files that by default, would have native protection applied, make the following registry edits. Note if the FileProtection key does not exist, you must manually create it.
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: Create a new key named *.
+1. Create a new key named * for the following registry path, which denotes files with any file name extension:
+    
+    - For 32-bit version of Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    
+    - For 64-bit version of Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
-    This setting denotes files with any file name extension.
-
-2. In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
+2. In the newly added key (for example, HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
 
     This setting results in the Azure Information Protection client applying generic protection.
 
 These two settings result in the Azure Information Protection client applying generic protection to all files that have a file name extension. If this is your goal, no further configuration is required. However, you can define exceptions for specific file types, so that they are still natively protected. To do this, you must make three additional registry edits for each file type:
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: Add a new key that has the name of the file name extension (without the preceding period).
+1. For **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (32-bit Windows) or **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (64-bit Windows): Add a new key that has the name of the file name extension (without the preceding period).
 
     For example, for files that have a .docx file name extension, create a key named **DOCX**.
 

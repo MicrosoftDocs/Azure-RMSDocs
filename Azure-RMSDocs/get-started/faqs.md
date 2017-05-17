@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,6 +36,10 @@ These FAQ pages will be updated regularly, with new additions listed in the mont
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
 Azure Information Protection provides classification, labeling, and protection for an organization's documents and emails. The protection technology uses the Azure Rights Management service; now a component of Azure Information Protection.
+
+## What is the role of identity management for Azure Information Protection?
+
+A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
 See the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. 
