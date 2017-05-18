@@ -25,7 +25,6 @@ ms.suite: ems
 
 ---
 
-
 # Custom configurations for the Azure Information Protection client
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
