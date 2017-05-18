@@ -45,7 +45,7 @@ Rights management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Right management templates for your tenant are displayed as labels and currently, configuration settings that are specific to classification and labeling are also available. 
+- Rights management templates for your tenant are displayed as labels and currently, configuration settings that are specific to classification and labeling are also available. 
 
 
 ## Considerations for templates in the Azure portal
