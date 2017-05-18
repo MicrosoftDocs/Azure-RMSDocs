@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -438,6 +438,8 @@ that you want to research. For example:
 	Get-Help Get-RMSTemplate
 
 See the following for additional information that you might need to support the Azure Information Protection client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 

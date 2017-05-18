@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -190,6 +190,8 @@ To help prevent users from changing files that are critical for computer operati
 
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following for additional information that you might need to support this client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 
