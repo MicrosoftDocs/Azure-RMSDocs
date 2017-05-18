@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -98,6 +98,7 @@ For information about usage logging for the Azure Rights Management service, see
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Document tracking](client-admin-guide-document-tracking.md)
 
