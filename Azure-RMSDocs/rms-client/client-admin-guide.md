@@ -236,7 +236,7 @@ For instructions to deploy the .msi by using Intune, see [Add apps with Microsof
     |Windows 8.1 and Windows Server 2012 R2|Office 2010|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)|Install if KB 2843630 or KB 2919355 is not installed|
     |All supported versions|Office 2013|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)|Install|
 
-3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are fully documented in the executable installer instructions.  
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
 ## Additional checks and troubleshooting
 
