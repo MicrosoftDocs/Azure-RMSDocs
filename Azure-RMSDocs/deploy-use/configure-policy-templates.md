@@ -41,7 +41,7 @@ Rights management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Right management templates for your tenant are displayed in the new **Templates** section after the labels. You can convert these templates to labels or you can continue to manage them as templates that you include in the configuration of your labels. 
+- Rights management templates for your tenant are displayed in the new **Templates** section after the labels. You can convert these templates to labels or you can continue to manage them as separate templates and link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
@@ -95,25 +95,21 @@ Before you edit these templates or convert them to labels in the Azure portal, b
 
 ## To convert templates to labels
 
-When you have a subscription that includes classification, labeling, and protection, you can convert a template to a label. To do this, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option.
+When you have a subscription that includes classification, labeling, and protection, you can convert a template to a label. When you do this, the original template is retained but in the Azure portal, it now displays as included in a new label.
 
-When you convert a template to a label:
-
-- The name of the template is converted to a new label name, and the template description is converted to the label tooltip. If the template was published (**Enabled**: **On**) it now displays as this label to users when you next publish the Azure Information Protection policy.
-
-- The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
-
-- The original template is no longer displayed under **Templates**. However, it remains available for the Azure Rights Management service, and retains the published or archived status to ensure service continuity.  
+For example, if you convert a label named **Marketing** that grants usage rights to the marketing group, in the Azure portal it will display as a label named **Marketing** that has the same protection settings. If you now change the protection settings in this newly created label, you're changing them in the template and any user or service that uses this template will get the new protection settings with the next template refresh. 
 
 There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
-Do not convert templates to labels if you have users or services that depend on rights management templates and you want to maintain these templates by using the Azure portal. For example:
+To convert a template into a label, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option.
 
-- Users who have a subscription for protection only and do not have a subscription for classification and labeling.
+When you convert a template to a label:
 
-- Exchange Online DLP and mail flow rules that use Azure Rights Management protection.
+- The name of the template is converted to a new label name, and the template description is converted to the label tooltip. If the template was published, this setting maps to **Enabled**: **On** for the label, which now displays as this label to users when you next publish the Azure Information Protection policy. If the template was archived, this setting maps to **Enabled**: **Off** for the label and does not display as an available label to users.
 
-- The Rights Management connector for Windows Server FCI, or scripts that use the Protect-RMSFile cmdlet for protecting files non-interactively.
+- The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
+
+- The original template is no longer displayed under **Templates** and to edit it in the Azure portal, you now edit the label that was created. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
 
 
 ## Next steps
