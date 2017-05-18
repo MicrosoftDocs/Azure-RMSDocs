@@ -107,7 +107,7 @@ When you convert a template to a label:
 
 There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
-Do not convert templates to labels if you need to maintain them for users or services that depend on rights management templates. For example:
+Do not convert templates to labels if you have users or services that depend on rights management templates and you want to maintain these templates by using the Azure portal. For example:
 
 - Users who have a subscription for protection only and do not have a subscription for classification and labeling.
 
