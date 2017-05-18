@@ -68,7 +68,7 @@ Before you edit these templates or convert them to labels in the Azure portal, b
 
 - Departmental templates (templates that are configured for a scope) display in the Global policy. Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
-    In addition, you cannot currently set the Application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+    In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
 
 ## To configure the templates in the Azure Information Protection policy
@@ -97,15 +97,16 @@ Before you edit these templates or convert them to labels in the Azure portal, b
 
 When you have a subscription that includes classification, labeling, and protection, you can convert a template to a label. When you do this, the original template is retained but in the Azure portal, it now displays as included in a new label.
 
-For example, if you convert a label named **Marketing** that grants usage rights to the marketing group, in the Azure portal it will display as a label named **Marketing** that has the same protection settings. If you now change the protection settings in this newly created label, you're changing them in the template and any user or service that uses this template will get the new protection settings with the next template refresh. 
-
+For example, if you convert a label named **Marketing** that grants usage rights to the marketing group, in the Azure portal it now displays as a label named **Marketing** that has the same protection settings. If you change the protection settings in this newly created label, you're changing them in the template and any user or service that uses this template will get the new protection settings with the next template refresh. 
 There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
 To convert a template into a label, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option.
 
 When you convert a template to a label:
 
-- The name of the template is converted to a new label name, and the template description is converted to the label tooltip. If the template was published, this setting maps to **Enabled**: **On** for the label, which now displays as this label to users when you next publish the Azure Information Protection policy. If the template was archived, this setting maps to **Enabled**: **Off** for the label and does not display as an available label to users.
+- The name of the template is converted to a new label name, and the template description is converted to the label tooltip. 
+
+- If the status of the template was published, this setting maps to **Enabled**: **On** for the label, which now displays as this label to users when you next publish the Azure Information Protection policy. If the the status of the template was archived, this setting maps to **Enabled**: **Off** for the label and does not display as an available label to users.
 
 - The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
 
