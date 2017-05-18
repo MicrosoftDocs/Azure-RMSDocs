@@ -228,7 +228,7 @@ For instructions to deploy the .msi by using Intune, see [Add apps with Microsof
 2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place:
     
 |Operating system|Office version|Software|Action|
-|--------------------|--------------|----------------
+|--------------------|--------------|----------------|---------------------|
 |All supported versions|Office 2010|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)|Install|
 |Windows 7 and Windows Server 2008 R2|All supported versions|KB 2627273|Uninstall if installed|
 |Windows 7 and Windows server 2008 R2|Office 2010|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)|Install if KB 3125574 is not installed|
@@ -237,7 +237,7 @@ For instructions to deploy the .msi by using Intune, see [Add apps with Microsof
 |All supported versions|Office 2010|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)|Install|
 
 |Operating system|Office version|Software|Action|
-|-------------------------------|---------------------------|--------------|
+|---------------|---------------------|---------------------|---------------------|
 |All supported versions|Office 2010|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)|Install|
 
 
