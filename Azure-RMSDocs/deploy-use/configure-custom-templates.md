@@ -69,5 +69,9 @@ Use the following information to help you configure and use custom templates:
 
 -   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
 
+> [!TIP]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
+
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
