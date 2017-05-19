@@ -6,7 +6,7 @@ description: Sample script to copy and edit, as described in the instructions fo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2017
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,7 +65,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 3.2' 
+[String] $Script:Version = 'version 3.3' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -104,11 +104,11 @@ function Protect-File ($ffile, $ftemplateId, $fownermail) {
     [bool] $returnValue = $false
     try {
         If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
         } else {
-            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId -OwnerEmail $fownermail
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId -OwnerEmail $fownermail
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
         }
