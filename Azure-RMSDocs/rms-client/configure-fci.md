@@ -51,7 +51,7 @@ Prerequisites for these instructions:
     
     - You have installed the AzureInformationProtection PowerShell module and configured the prerequisites for this module to connect to the Azure Rights Management service.
     
-    The AzureInformationProtection PowerShell module is included with the Azure Information Protection client. For installation instructions, see [How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the Azure Information Protection admin guide. If required, you can install just the PowerShell module.
+    The AzureInformationProtection PowerShell module is included with the Azure Information Protection client. For installation instructions, see [How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the Azure Information Protection admin guide. If required, you can install just the PowerShell module by using the `PowerShellOnly=true` parameter.
     
     The [prerequisites for using this PowerShell module](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service) include activating the Azure Rights Management service, creating a service principal, and editing the registry if your tenant is outside North America. Before you start these instructions, make sure that you have values for your **BposTenantId**, **AppPrincipalId**, and **Symmetric key**, as documented in these prerequisites. 
     
