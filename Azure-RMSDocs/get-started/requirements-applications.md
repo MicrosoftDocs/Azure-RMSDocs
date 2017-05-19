@@ -43,7 +43,7 @@ The following table displays RMS-enlightened client applications from Microsoft 
 
 Information about the table columns:
 
-- **Protected PDF**: These files can have a .pdf or .ppdf file name extension. The Azure Information Protection client for Windows and the  RMS sharing app for Windows create a .ppdf file when they protect a PDF file, and they can both open .ppdf files. Azure Information Protection and the other readers can open protected .pdf files.
+- **Protected PDF**: These files can have a .pdf or .ppdf file name extension. 
 
 - **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached files that are not already protected. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients
 
