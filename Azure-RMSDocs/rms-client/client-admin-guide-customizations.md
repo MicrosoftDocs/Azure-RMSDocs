@@ -78,6 +78,38 @@ Locate the following value name and set the value data to **0**:
 
 Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an out of date policy file with the latest, published policy.
 
+## Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution
+
+Although Outlook on the web doesn't yet natively support Azure Information Protection classification and protection, you can use Exchange message classification to extend your Azure Information Protection labels to your mobile users.
+
+To achieve this solution: 
+
+1. Use the [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+
+2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
+
+    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
+    
+    ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
+
+Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). When the rule is in effect, the following now happens when users use Outlook on the web or a mobile device client that supports Rights Management protection: 
+
+- Users select the Exchange message classification and send the email.
+
+- The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
+
+- When recipients running the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+
+If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
+
+You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
+
+- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
+
 
 ## Next steps
 Now that you've customized the Azure Information Protection client, see the following for additional information that you might need to support this client:
