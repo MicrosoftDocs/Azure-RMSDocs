@@ -85,7 +85,7 @@ However, you can integrate the two solutions so that when users classify an emai
 
 You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
 
-For configuration steps, see [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](../rms-client/client-admin-guide-customizations.md#integrate-exchange-message-classification-with-azure-information-protection-for-a-mobile-device-labeling-solution). 
+For configuration steps, see [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](../rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution). 
 
 
 
