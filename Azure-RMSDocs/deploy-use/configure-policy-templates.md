@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection*
 
 >[!NOTE]
->This functionality is currently in preview and subject to frequent changes. For custom templates that you use in production environments, continue to create and manage them from the [Azure classic portal](configure-custom-templates.md). 
+>This functionality is currently in preview and subject to frequent changes.
 >
 >Before you test this preview capability with custom templates that you created in the Azure classic portal, consider whether you have a recent backup of your templates. You can back up your custom templates by using the [Export-​Aadrm​Template](/powershell/module/aadrm/export-aadrmtemplate) PowerShell cmdlet, and if necessary, use the [Import-​Aadrm​Template](/powershell/module/aadrm/import-aadrmtemplate) to restore them.
 >
@@ -58,11 +58,11 @@ Before you edit these templates or convert them to labels in the Azure portal, b
     
     - **Allow Macros** (common name) is automatically added. This usage right is required for the Azure Information Protection bar in Office apps.
     
-- Currently, the default templates are not displayed and cannot be edited or converted. However, they are still available to select for labels and by users and services.
+- Currently, the default templates are displayed but cannot be edited or converted. 
 
 - You cannot copy or delete a template. To remove a template, use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. 
 
-- Currently, templates that were configured for languages by using the Azure classic portal or PowerShell do not retain those languages for the name and descriptions.
+- Currently, templates that were configured for languages by using the Azure classic portal or PowerShell do not display those languages for the name and descriptions, but they are retained.
 
 - **Published** and **Archived** settings display as **Enabled**: **On** and **Enabled**: **Off** respectively on the **Label** blade.
 
