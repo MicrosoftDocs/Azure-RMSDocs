@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Custom configurations for the Azure Information Protection client
 
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
+Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the the Azure Information Protection client. 
 
 ## Prevent sign-in prompts for AD RMS only computers
 
