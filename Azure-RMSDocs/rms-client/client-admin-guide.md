@@ -229,7 +229,7 @@ For instructions to deploy the .msi by using Intune, see [Add apps with Microsof
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Not applicalbe|Windows 7|KB2627273 <br /><br /> Version number included in file name: 4|Uninstall|
+    |Not applicalbe|Windows 7|KB 2627273 <br /><br /> Version number included in file name: 4|Uninstall|
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
     |Office 2010|Windows 7|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB 3125574 is not installed|
     |Office 2010|Windows 8|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
