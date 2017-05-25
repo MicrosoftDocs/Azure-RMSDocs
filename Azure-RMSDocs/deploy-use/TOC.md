@@ -29,6 +29,7 @@
 ### [Configure visual markings](configure-policy-markings.md)
 ### [Configure conditions](configure-policy-classification.md)
 ### [Configure scoped policies](configure-policy-scope.md)
+### [Configure and manage templates](configure-policy-templates.md)
 ## [Deploying the RMS connector](deploy-rms-connector.md)
 ### [Install and configure the connector](install-configure-rms-connector.md)
 ### [Configure servers](configure-servers-rms-connector.md)
