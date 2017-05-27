@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,12 +89,14 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     In most cases, you will select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 9.
     
-7. Select **Do not forward** if you want to set this Outlook option for emails, **Select a predefined template** to use one of the default templates or a custom template that you've configured, or choose **Custom (Preview)** to define new protection settings in this portal. 
+7. Select one of the following options:
     
-    Note that the **Custom (Preview)** option has most configuration options that are currently in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
+    - **Do not forward**: To set this Outlook option for emails.
     
-    For more information about this preview configuration, see the blog post [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured.
     
+    - **Custom (Preview)** to define new protection settings in this portal.
+
 8. If you selected **Select a predefined template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
     
     If you select a **departmental template** or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
@@ -103,13 +105,26 @@ Exchange does not have to be configured for information rights management (IRM) 
     
         Note that all templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The Azure RMS templates that you can select will not be restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
             
-9. If you selected **Select template** for **HYOK (AD RMS)**: Provide the template GUID and licensing URL of your AD RMS cluster. [More information](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
+9. If you selected **Custom (Preview)** for **Azure RMS**, this option has most of the configuration options for [custom templates](configure-custom-templates.md) that you can configure in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
+    
+    For more information about this preview configuration, see the blog post [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). 
+    
+    For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
+    
+    Included in the **Custom (Preview)** option, check whether you want to make any changes to the following settings:
+    
+    |Setting|More information|Recommended setting
+    |-----------|--------------------|--------------------|
+    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+    |**Allow offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
 
-10. Click **OK** to close the **Protection** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
+10. If you selected **Select template** for **HYOK (AD RMS)**: Provide the template GUID and licensing URL of your AD RMS cluster. [More information](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
-10. On the **Label** blade, click **Save**.
+11. Click **OK** to close the **Protection** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
 
-11. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+12. On the **Label** blade, click **Save**.
+
+13. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Next steps
 
