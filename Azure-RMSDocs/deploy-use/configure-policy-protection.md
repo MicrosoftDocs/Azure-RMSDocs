@@ -39,20 +39,20 @@ When a document or email is protected by Rights Management, it is encrypted at r
 
 - Only users within your organization can open the company-confidential document or email.
 
-- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only read the document or email.
+- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only read this document or email.
 
-- Users cannot forward an email that contains news about an internal reorganization.
+- Users cannot forward an email or copy information from it that contains news about an internal reorganization.
 
 - The current price list that is sent to business partners cannot be opened after a specified date.
 
-For more information about Azure Rights Management templates and how to configure these usage rights and restrictions, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+For more information about Azure Rights Management templates and how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
 For more information about Azure Rights Management and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > To configure a label to apply Azure Rights Management protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
-Exchange does not have to be configured for information rights management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook Web Access, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for rights management protection. To configure Exchange to support these additional scenarios, see the following resources:
+Exchange does not have to be configured for information rights management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for rights management protection. To configure Exchange to support these additional scenarios, see the following resources:
 
 - For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
