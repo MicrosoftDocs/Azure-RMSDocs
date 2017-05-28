@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,7 +42,7 @@ For example, if you have a label named **Confidential** in the global policy, al
 
 To configure a scoped policy for Azure Information Protection:
 
-1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin.
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 

@@ -6,12 +6,12 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 
 # optional metadata
 
@@ -30,8 +30,27 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
+Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
-Use the following information if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md).
+For example:
+
+- Understand the different components of this client and whether you should install it
+
+- How to install the client for users, with information about prerequisites, installation options and parameters, and verification checks
+
+- How to accommodate custom configurations that often require editing the registry
+
+- Locate the client files and usage logs
+
+- Identify the file types supported by the client
+
+- Configure and use the document tracking site for users
+
+- Use the client with PowerShell for command-line control
+
+**Have a question that's not addressed by this documentation?** Visit our [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam). 
+
+## Technical overview of the Azure Information Protection client
 
 The Azure Information Protection client includes the following:
 
@@ -48,8 +67,6 @@ The Azure Information Protection client includes the following:
 The Azure Information Protection client is best suited to work with its Azure services; Azure Information Protection and its data protection service, Azure Rights Management. However, with some limitations, the Azure Information Protection client also works with the on-premises version of Rights Management, AD RMS. For a comprehensive comparison of features that are supported by Azure Information Protection and AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). 
 
 If you have AD RMS and want to migrate to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
-
-**Have a question that's not answered by this documentation?** Visit our [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam). 
 
 
 ## Should you deploy the Azure Information Protection client?
@@ -78,26 +95,52 @@ Example showing the Azure Information Protection client add-on in an Office appl
 
 ## How to install the Azure Information Protection client for users
 
-Before you install the client, check that you have the required operating system versions and applications for the Azure Information Protection client: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
+Before you install the client, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-Additional prerequisites for the Azure Information Protection client:
+Then check the additional prerequisites that might be needed for the Azure Information Protection client.
 
-- The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a custom installation parameter.
+### Additional prerequisites for the Azure Information Protection client
 
-- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
+- Microsoft .NET Framework 4.6.2
+    
+    The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
 
-- The PowerShell module requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type **$PSVersionTable** in a PowerShell session.
+- Microsoft .NET Framework 4.5.2
+    
+    If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
 
-- Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
+- Windows PowerShell version 4.0
+    
+    The PowerShell module for the client requires Windows PowerShell version 4.0, which might need to be installed on older operating systems. For more information, see [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx). The installer does not check or install this prerequisite for you. To confirm the version of Windows PowerShell that you are running, type `$PSVersionTable` in a PowerShell session.
+
+- Microsoft Online Services Sign-in Assistant 7.250.4303.0
+    
+    Computers running Office 2010 require Microsoft Online Services Sign-in Assistant version 7.250.4303.0. This version is included with the client installation. If you have a later version of the Sign-in Assistant, uninstall it before you install the Azure Information Protection client. For example, check the version and uninstall the Sign-in Assistant by using **Control Panel** > **Program and Features** > **Uninstall or change a program**.
+
+- KB 2533623
+    
+    Computers running Windows 7 Service Pack 1 require KB 2533623. For more information about this update, see [Microsoft Security Advisory: Insecure library loading could allow remote code execution](https://support.microsoft.com/en-us/kb/2533623). You might be able to install this update directly, or it might be superseded by another update that installs it for you.
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
-> [!NOTE]
-> Installation requires local administrative permissions.
+> [!IMPORTANT]
+> Installation of the Azure Information Protection client requires local administrative permissions.
 
-The Azure Information Protection client is also included in the Microsoft Update catalog, so that you can install and update the client by using any software update service that uses the catalog. 
+### Options to install the Azure Information Protection client for users
 
-1. Download the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+There are 3 options for installing the client for users:
+
+**Windows Update**: The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog.
+
+**Run the executable (.exe) version of the client**: The recommended installation method that you can run interactively, or silently. This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
+
+**Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only, using Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+
+### To install the Azure Information Protection client by using the executable installer
+
+Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using Intune.
+
+1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
@@ -131,7 +174,7 @@ The Azure Information Protection client is also included in the Microsoft Update
     
     In this log file, search for the following string: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** If the installation failed, this log file contains details to help you identify and resolve any problems.
 
-### More information about the ServiceLocation installation parameter
+#### More information about the ServiceLocation installation parameter
 
 When you install the client for users who have Office 2010 and they do not have local administrative permissions, specify the ServiceLocation parameter and the URL for your Azure Rights Management service. This parameter and value creates and sets the following registry keys:
 
@@ -145,7 +188,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
 
 Use the following procedure to identify the value to specify for the ServiceLocation parameter. 
 
-#### To identify the value to specify for the ServiceLocation parameter
+##### To identify the value to specify for the ServiceLocation parameter
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
@@ -162,7 +205,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
-### More information about the DowngradeDotNetRequirement installation parameter
+#### More information about the DowngradeDotNetRequirement installation parameter
 
 To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
 
@@ -173,6 +216,27 @@ For example: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
 
 Also remember that if you use Windows Update to keep the Azure Information Protection client updated, you will need another software deployment mechanism to upgrade the client to later versions.
+
+### To install the Azure Information Protection client by using the .msi installer
+
+For instructions to deploy the .msi by using Intune, see [Add apps with Microsoft Intune](/intune/deploy-use/add-apps). In addition, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+
+1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+    
+    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
+
+2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place:
+    
+    |Office version|Operating system|Software|Action|
+    |--------------------|--------------|----------------|---------------------|
+    |Office 2013|All supported versions|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
+    |Office 2010|Windows 8.1|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB 2843630 or KB 2919355 is not installed|
+    |Office 2010|Windows 8|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2010|Windows 7|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB 3125574 is not installed|
+    |Not applicalbe|Windows 7|KB 2627273 <br /><br /> Version number included in file name: 4|Uninstall|
+
+3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
 ## Additional checks and troubleshooting
 
@@ -215,49 +279,6 @@ If you see **This client is not licensed for Office Professional Plus**: The Azu
 
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
 
-## Custom configurations
-
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users. 
-
-### Sign in as a different user
-
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, you might need to do so as an administrator if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
-
-You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
-
-Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
-
-To sign in as a different user:
-
-1. Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value (and its associated value data).
-
-2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
-
-Additionally:
-
-- If you are using single sign-on, you will need to sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
-
-- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
-
-### Hide the Classify and Protect menu option in Windows File Explorer
-
-You can configured this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
-
-Create the following DWORD value name (with any value data):
-
-**HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
-
-### Support for disconnected computers
-
-By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computer that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
-
-Locate the following value name and set the value data to **0**:
-
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
-
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an out of date policy file with the latest, published policy.
 
 ## To uninstall the Azure Information Protection client
 
@@ -271,6 +292,8 @@ You can use any of these options:
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 

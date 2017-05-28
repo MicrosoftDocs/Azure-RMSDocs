@@ -92,7 +92,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 	- Mail-enabled groups in Azure Active Directory
 
-	See [Preparing for Azure Information Protection](prepare.md).
+	See [Preparing users and groups for Azure Information Protection](prepare.md).
 
 - **If you have used the Information Rights Management (IRM) functionality of Exchange Server** (for example, transport rules and Outlook Web Access) or SharePoint Server with AD RMS:
 

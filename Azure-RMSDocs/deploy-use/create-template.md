@@ -6,7 +6,7 @@ description: Instructions to create and manage custom templates in the Azure cla
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,6 +33,9 @@ ms.suite: ems
 
 You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the **advanced features** for Rights Management, which then redirects you to the Azure classic portal.
 
+> [!TIP]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
 You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for the Azure Rights Management service to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Use the following procedures to create, configure, and publish custom templates for Rights Management.
@@ -41,7 +44,7 @@ Use the following procedures to create, configure, and publish custom templates 
 
 1.  Depending on whether you sign in to the Office 365 admin center, or the Azure classic portal, do one of the following:
 
-    -   From the **Office 365 admin center**, navigation depends on whether you are using the Office 365 admin center preview (and what version), or the Office 365 classic admin center. However, for all versions, you can go directly to the [rights management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) page: 
+    -   From the **Office 365 admin center**, you can go directly to the [rights management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) page: 
 
         1.  In the **additional configuration** section, click **advanced features**.
 
@@ -86,9 +89,9 @@ Use the following procedures to create, configure, and publish custom templates 
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
     > 
-    > If an email address changes after you select the user or group and you save the template, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-if-email-addresses-change) section from the planning documentation. 
+    > If an email address changes after you select the user or group and you save the template, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation. 
 
-    As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching). 
+    As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). 
     
     If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. To grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see [How to copy a template](copy-template.md).
 

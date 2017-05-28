@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -115,7 +115,7 @@ When a user protects a document, the RMS client takes the following actions on a
 
 **What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad-hoc policy").   
 
-The attribute used to identify the selected users and groups is the Azure AD proxyAddress attribute, which stores all the email addresses for a user or group.
+The main Azure AD attribute used to identify the selected users and groups is the Azure AD ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
 
 The RMS client then uses the organization’s key that was obtained when the user environment was initialized and uses this key to encrypt the policy and the symmetric content key. The RMS client also signs the policy with the user’s certificate that was obtained when the user environment was initialized.
 
@@ -130,7 +130,7 @@ When a user wants to consume a protected document, the RMS client starts by requ
 
 ![RMS document consumption - step 1, user is authenticated and gets the list of rights](../media/AzRMS_documentconsumption1.png)
 
-**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Azure AD proxyAttribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](../plan-design/prepare.md#group-membership-caching).
+**What's happening in step 1**: The authenticated user sends the document policy and the user’s certificates to the Azure Rights Management service. The service decrypts and evaluates the policy, and builds a list of rights (if any) the user has for the document. To identify the user, the Azure AD ProxyAddresses attribute is used for the user's account and groups to which the user is a member. For performance reasons, group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). If the user account has no values for the Azure AD ProxyAddresses attribute, the value in the Azure AD UserPrincipalName is used instead.
 
 ![RMS document consumption - step 2, use license is returned to the client](../media/AzRMS_documentconsumption2.png)
 

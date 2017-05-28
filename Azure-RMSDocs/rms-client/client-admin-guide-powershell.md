@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -69,21 +69,27 @@ Before you start to use these cmdlets, see the additional prerequisites and inst
 Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the the Azure Rights Management service.
 
 
-### Prerequisites for AIP and Azure RMS
+### Prerequisites
 
 In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisite for the Azure Information Protection service and the Azure Rights Management data protection service:
 
 1. The Azure Rights Management service must be activated.
 
-2. To remove protection from files for others using your own account: The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
+2. To remove protection from files for others using your own account: 
+    
+    - The super user feature must be enabled for your organization and your account must be configured to be a super user for Azure Rights Management.
 
-3. To directly protect or unprotect files without user interaction: Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
+3. To directly protect or unprotect files without user interaction: 
+    
+    - Create a service principal account, run Set-RMSServerAuthentication, and consider making this service principal a super user for Azure Rights Management.
 
-4. For regions outside North America: Edit the registry for authentication to the service.
+4. For regions outside North America: 
+    
+    - Edit the registry for authentication to the service.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
-This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service. onfigured to apply the data protection.
+This prerequisite applies whether you apply the data protection by using labels or by directly connecting to the Azure Rights Management service to apply the data protection.
 
 If your Azure Information Protection tenant is not activated, see the instructions for [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -91,7 +97,7 @@ If your Azure Information Protection tenant is not activated, see the instructio
 
 Typical scenarios for removing protection from files for others include data discovery or data recovery. If you are using labels to apply the protection, you could remove the protection by setting a new label that doesn't apply protection or by removing the label. But you will more likely connect directly to the Azure Rights Management service to remove the protection.
 
-You must have Rights Management permissions to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
+You must have a Rights Management usage right to remove protection from files, or be a super user. For data discovery or data recovery, the super user feature is typically used. To enable this feature and configure your account to be a super user, see [Configuring super users for Azure Rights Management and Discovery Services or Data Recovery](../deploy-use/configure-super-users.md).
 
 #### Prerequisite 3: To protect or unprotect files without user interaction
 
@@ -145,10 +151,12 @@ Windows PowerShell module:
 
 ##### To get the AppPrincipalId and Symmetric Key
 
-Create a new service principal by running the `New-MsolServicePrincipal` cmdlet from the MSOnline PowerShell module for Azure Active Directory: 
+Create a new service principal by running the `New-MsolServicePrincipal` cmdlet from the MSOnline PowerShell module for Azure Active Directory and use the following instructions. 
 
-1. If this module is not already installed on your computer, see
-[Install the Azure AD Module](/powershell/azuread/#install-the-azure-ad-module).
+> [!IMPORTANT]
+> Do not use the newer Azure AD PowerShell cmdlet, New-AzureADServicePrincipal, to create this service principal. The Azure Rights Management services does not support New-AzureADServicePrincipal. 
+
+1. If the MSOnline module is not already installed on your computer, run `Install-Module MSOnline`.
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
@@ -202,7 +210,7 @@ Our example command would then look like the following:
 
 	Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means you can now protect and unprotect files by using your service principal.
+As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means that the client is now operating in "server mode". This message does not confirm that authentication was successful by using the values you supplied, but that the switch to server mode was successful.
 
 Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) but specify the **-ServicePrincipalId** parameter with your AppPrincipalId value.
 
@@ -316,7 +324,7 @@ Note that if the Rights Management templates are changed, you must download them
 Read this section before you start using the PowerShell commands to protect or unprotect files when your organization uses just Active Directory Rights Management Services.
 
 
-### Prerequisites for AD RMS
+### Prerequisites
 
 In addition to the prerequisites for installing the AzureInformationProtection module, your account must have Read and Execute permissions to access ServerCertification.asmx:
 
@@ -431,6 +439,8 @@ that you want to research. For example:
 	Get-Help Get-RMSTemplate
 
 See the following for additional information that you might need to support the Azure Information Protection client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 

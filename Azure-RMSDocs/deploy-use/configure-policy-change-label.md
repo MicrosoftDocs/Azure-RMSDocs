@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,7 +36,7 @@ For example, you can change a label or sub-label name, tooltip, color, order, wh
 To change a label, use the following instructions.
 
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
@@ -47,6 +47,8 @@ To change a label, use the following instructions.
 3. Whenever you make changes on a blade, click **Save** on that blade if you want to keep your changes.
 
 4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+
+5. If you changed the label name or description and you have configured these for additional languages, you must export your Azure Information Protection policy again, provide new translations, and import the changes. For more information, see [How to configure labels for different languages](configure-policy-languages.md).
 
 > [!TIP]
 >If you want to return one of the default labels to the default values, use the information in [The default Information Protection policy](configure-policy-default.md).
