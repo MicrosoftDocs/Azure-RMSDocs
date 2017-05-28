@@ -78,7 +78,7 @@ Some things to note:
 
 Now that custom templates are moving to the Azure portal (currently in preview), security admins as well as global admins can configure data protection settings for the Azure Rights Management service. 
 
-[!NOTE]
+>[!NOTE]
 > Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal, which supports security admins in addition to global admin access. This configuration option is currently in preview.
 > 
 > For more information, see the following blog post announcements: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) and [Azure Information Protection unified administration phase two](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
