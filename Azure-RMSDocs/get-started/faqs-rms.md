@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,6 +76,18 @@ Some things to note:
 
 - No administrator for Azure RMS (the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
 
+Now that custom templates are moving to the Azure portal (currently in preview), security admins as well as global admins can configure data protection settings for the Azure Rights Management service. 
+
+[!NOTE]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal, which supports security admins in addition to global admin access. This configuration option is currently in preview.
+> 
+> For more information, see the following blog post announcements: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) and [Azure Information Protection unified administration phase two](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
+
+## How do I create a new custom template in the Azure portal?
+
+Currently in preview, custom templates are moving to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
+
+For more information about configuring templates in the Azure portal, see [Configure and manage templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
@@ -107,8 +119,15 @@ To specify users from outside your organization, add them as contacts to a group
 
 For more information about custom templates, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
+> [!TIP]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. These new options make it easier to specify external users, so you no longer have to use PowerShell or groups that contain external users to do this. This functionality is currently in preview as described in the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). For documented instructions, see [To configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
+
 ## Does Azure RMS work with dynamic groups in Azure AD?
-An Azure AD Premium feature lets you configure dynamic membership for groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). When you create a security group in Azure AD, this group type supports dynamic membership but does not support an email address, and so cannot be used with the Azure Rights Management service. However, you can now create a new group type in Azure AD that supports both dynamic membership and is mail-enabled. When you add a new group in the Azure classic portal, you can choose the **GROUP TYPE** of **Office 365 “Preview”**. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
+An Azure AD Premium feature lets you configure dynamic membership for security groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). This group type does not support an email address, and so cannot be used with the Azure Rights Management service. 
+
+However, Office 365 groups support both dynamic group membership and are mail-enabled. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
+
+For more information about the requirements for users and groups that can be used with the Azure Rights Management service, see [Prepare users and groups for Azure Information Protection](../plan-design/prepare.md).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
@@ -122,7 +141,6 @@ The Azure Rights Management service can support all file types. For text, image,
 For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](../rms-client/client-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
-
 No. In this scenario, the associated temporary file doesn’t contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
 
 ## We really want to use BYOK with Azure Information Protection but learned that this isn’t compatible with Exchange Online—what’s your advice?
@@ -141,7 +159,7 @@ By default, as an Office 365 administrator, you don’t configure this; users do
 Just as a SharePoint site administrator enables and configures IRM for a SharePoint library that they own, OneDrive for Business is designed for users to enable and configure IRM for their own OneDrive for Business library. However, by using PowerShell, you can do this for them. For instructions, see the [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article.
 
 ## Do you have any tips or tricks for a successful deployment?
-After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple rights policies**.
+After overseeing many deployments and listening to our customers, partners, consultants, and support engineers – one of the biggest tips we can pass on from experience: **Design and deploy simple policies**.
 
 Because Azure Information Protection supports sharing securely with anyone, you can afford to be ambitious with your data protection reach. But be conservative with your rights policies. For many organizations, the biggest business impact comes from preventing data leakage by applying the default rights policy template that restricts access to people in your organization. Of course, you can get much more granular than that if you need to – prevent people from printing, editing etc. But keep the more granular restrictions as the exception for documents that really need high-level security, and don’t implement these more restrictive policies on day one, but plan for a more phased approach.
 

@@ -6,7 +6,7 @@ description: Currently in preview, you can now configure and manage rights manag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,6 +70,7 @@ Before you edit these templates or convert them to labels in the Azure portal, b
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
+- You do not create a new template from the **Templates** container; instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
 ## To configure the templates in the Azure Information Protection policy
 
@@ -111,6 +112,26 @@ When you convert a template to a label:
 - The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
 
 - The original template is no longer displayed under **Templates** and to edit it in the Azure portal, you now edit the label that was created. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
+
+## To create a new template
+
+When you create a new label with the protection setting of Azure RMS, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+
+1. If the new template that you want to create will apply to all users, from the **Policy: Global** blade, click  **Add a new label**.
+    
+     If the new template that you want to create will be a departmental template so that it applies to selected users only, first select or create a scoped policy from the initial **Azure Information Protection** blade.
+
+2. On the **Label** blade, keep the default of **Enabled**: **On** to publish this new template, or change this setting to **Off** to create the template as archived. Then enter a label name and description for the template name and description.
+
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection** to open the **Protection** blade:
+    
+     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
+
+4. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring these protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
+    
+    Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
+
+5. To make these templates available to applications and services, on the **Azure Information Protection** blade, click **Publish**.
 
 
 ## Next steps
