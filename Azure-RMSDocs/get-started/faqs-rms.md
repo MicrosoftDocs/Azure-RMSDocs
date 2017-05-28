@@ -76,12 +76,8 @@ Some things to note:
 
 - No administrator for Azure RMS (the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
 
-Now that custom templates are moving to the Azure portal (currently in preview), security admins as well as global admins can configure data protection settings for the Azure Rights Management service. 
-
 >[!NOTE]
-> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal, which supports security admins in addition to global admin access. This configuration option is currently in preview.
-> 
-> For more information, see the following blog post announcements: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) and [Azure Information Protection unified administration phase two](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal, which supports security admins in addition to global admin access. For more information, see the following blog post announcements: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) and [Azure Information Protection unified administration phase two](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
 
 ## How do I create a new custom template in the Azure portal?
 
