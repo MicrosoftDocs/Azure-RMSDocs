@@ -6,7 +6,7 @@ description: Currently in preview, you can now configure and manage rights manag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -92,6 +92,8 @@ Before you edit these templates or convert them to labels in the Azure portal, b
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
 6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+
+As with all changes to the Azure Information Protection policy, it can take up to 15 minutes for a computer running the Azure Information Protection client to complete downloading these templates. For information about how computers and services download and refresh templates, see [Refreshing templates for users and services](refresh-templates.md).
 
 ## To convert templates to labels
 
