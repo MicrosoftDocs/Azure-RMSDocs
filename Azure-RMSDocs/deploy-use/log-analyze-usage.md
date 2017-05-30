@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,7 @@ You can then use these Azure Rights Management service logs to support the foll
     If you have an information leak, you are likely to be asked who recently accessed specific documents and what information did a suspected person access recently. You can answer these type of questions when you use this logging because people who use protected content must always get a Rights Management license to open documents and pictures that are protected by the Azure Rights Management service, even if these files are moved by email or copied to USB drives or other storage devices. This means that you can use these logs as a definitive source of information for forensic analysis when you protect your data by using the Azure Rights Management service.
 
 > [!NOTE]
-> If you are interested only in the logging of administrative tasks for the Azure Rights Management service, and do not want to track how users are using the Rights Management service, you can use the [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell cmdlet for Azure Rights Management.
+> If you are interested only in the logging of administrative tasks for the Azure Rights Management service, and do not want to track how users are using the Rights Management service, you can use the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) Windows PowerShell cmdlet for Azure Rights Management.
 > 
 > You can also use the Azure classic portal for high-level usage reports that include **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**,
 
@@ -222,23 +222,23 @@ There are many request types for the Azure Rights Management service but the fol
 
 
 ## Windows PowerShell reference
-Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
+Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog). 
 
 Before this change, the following cmdlets were needed for Azure Rights Management usage logs, and are now deprecated:  
 
--   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
+-   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
+-   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629425.aspx)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](https://msdn.microsoft.com/library/azure/dn629423.aspx)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629419.aspx)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
 
 If you have logs in your own Azure storage from before the Azure Rights Management logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
 

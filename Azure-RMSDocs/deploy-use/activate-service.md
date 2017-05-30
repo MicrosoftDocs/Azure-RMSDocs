@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/24/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,15 +56,15 @@ Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement
 
 1. Install the Azure Rights Management Administration Tool, which installs the Azure Rights Management administration module. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
-2. From a PowerShell session, run [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx), and when prompted, provide the global administrator account details for your Azure Information Protection tenant.
+2. From a PowerShell session, run [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice), and when prompted, provide the global administrator account details for your Azure Information Protection tenant.
 
-3. Run [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx), which activates the Azure Rights Management service.
+3. Run [Enable-Aadrm](/powershell/module/aadrm/enable-aadrm), which activates the Azure Rights Management service.
 
 ## Configuring onboarding controls for a phased deployment
-If you don’t want all users to be able to protect files immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
+If you don’t want all users to be able to protect files immediately by using Azure Rights Management, you can configure user onboarding controls by using the [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) PowerShell command. You can run this command before or after you activate the Azure Rights Management service.
 
 > [!IMPORTANT]
-> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](http://go.microsoft.com/fwlink/?LinkId=257721).
+> To use this command, you must have at least version **2.1.0.0** of the [Azure Rights Management PowerShell module](https://go.microsoft.com/fwlink/?LinkId=257721).
 >
 > To check the version you have installed, run: **(Get-Module aadrm –ListAvailable).Version**
 
