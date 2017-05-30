@@ -1,4 +1,4 @@
---
+---
 # required metadata
 
 title: View and use protected documents with the AIP client
