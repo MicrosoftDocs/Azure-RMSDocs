@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Configuring and using document tracking for Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 If you have a [subscription that supports document tracking](https://www.microsoft.com/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking shows information such as email addresses of the people who attempted to access protected documents that users shared, when these people tried to access them, and their location. If displaying this information is prohibited in your organization because of privacy requirements, you can disable access to the document tracking site by using the  [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) cmdlet. You can re-enable access to the site at any time, by using the [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037), and you can check whether access is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037).
 
@@ -83,6 +83,8 @@ For more information about usage logging, see [Logging and analyzing usage of th
 
 ## Next steps
 Now that you've configured the document tracking site for the Azure Information Protection client, see the following for additional information that you might need to support this client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 

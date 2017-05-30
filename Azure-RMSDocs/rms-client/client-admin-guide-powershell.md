@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Using PowerShell with the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed so that you can manage the client by running commands that you can put into scripts for automation.
 
@@ -438,6 +438,8 @@ that you want to research. For example:
 	Get-Help Get-RMSTemplate
 
 See the following for additional information that you might need to support the Azure Information Protection client:
+
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 
