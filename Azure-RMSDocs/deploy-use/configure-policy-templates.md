@@ -92,7 +92,7 @@ Before you edit these templates or convert them to labels in the Azure portal, b
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
-6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+6. To make your changes available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
 
 ## To convert templates to labels
 
@@ -116,7 +116,7 @@ When you convert a template to a label:
 
 ## To create a new template
 
-When you create a new label with the protection setting of Azure RMS, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+When you create a new label with the protection setting of **Azure RMS**, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
 1. If the new template that you want to create will apply to all users, from the **Policy: Global** blade, click  **Add a new label**.
     
@@ -124,7 +124,7 @@ When you create a new label with the protection setting of Azure RMS, under the 
 
 2. On the **Label** blade, keep the default of **Enabled**: **On** to publish this new template, or change this setting to **Off** to create the template as archived. Then enter a label name and description for the template name and description.
 
-3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection** to open the **Protection** blade:
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
      ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
@@ -132,7 +132,7 @@ When you create a new label with the protection setting of Azure RMS, under the 
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
-5. To make these templates available to applications and services, on the **Azure Information Protection** blade, click **Publish**.
+5. To make these templates available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
 
 
 ## Next steps
