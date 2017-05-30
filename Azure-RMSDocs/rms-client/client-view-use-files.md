@@ -46,7 +46,7 @@ If the file doesn't open, you can use the **Azure Information Protection Viewer*
 
 ## Message.rpmsg as an email attachment
 
-If you see **message.rpmsg** as a file attachment in an email, this is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you will need an email application for Windows that supports Rights Management protection, such as Outlook if you have Office installed. Or you can use Outlook on the web.
+If you see **message.rpmsg** as a file attachment in an email, this is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you will need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
 
 However, if you have an iOS or Android device, you can use the Azure Information Protection app to open these protected email messages. You can download this app for these mobile devices from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
