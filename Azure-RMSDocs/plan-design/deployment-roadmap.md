@@ -181,7 +181,7 @@ Optionally, consider configuring the following:
 
 4. Protect files in bulk - as needed 
     
-    The PowerShell cmdlets that let you bulk protect or bulk unprotect multiple file types are automatically installed with the Azure Information Protection client. For more information, see [Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md) from the admin guide..
+    The PowerShell cmdlets that let you bulk protect or bulk unprotect multiple file types are automatically installed with the Azure Information Protection client. For more information, see [Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md) from the admin guide.
 
 5. Deploy the connector for on-premises servers
     
