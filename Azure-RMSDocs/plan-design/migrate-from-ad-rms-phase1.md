@@ -6,7 +6,7 @@ description: Phase 1 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 04/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 If you are using Exchange on-premises or Exchange online, you might have previously integrated Exchange with your AD RMS deployment. In this step you will configure them to use the existing AD RMS configuration to support content protected by Azure RMS. 
 
-Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands. Run these sets of commands once for each Exchange organization.
+Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *&lt;YourTenantURL&gt;* in the following commands. 
 
 **If you have integrated Exchange Online with AD RMS**: Open an Exchange Online PowerShell session and run the following PowerShell commands either one by one, or in a script:
 
@@ -106,22 +106,9 @@ Make sure that you have your [Azure Rights Management service URL for your tenan
 	Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**If you have integrated Exchange on-premises with AD RMS**: Run the following PowerShell commands either one by one, or in a script: 
+**If you have integrated Exchange on-premises with AD RMS**: For each Exchange organization, first add registry values on each Exchange server, and then run PowerShell commands: 
 
-	$irmConfig = Get-IRMConfiguration
-	$list = $irmConfig.LicensingLocation
-	$list += "<YourTenantURL>/_wmcs/licensing"
-	Set-IRMConfiguration -LicensingLocation $list
-	Set-IRMConfiguration -internallicensingenabled $false
-	Set-IRMConfiguration -RefreshServerCertificates
-	Set-IRMConfiguration -internallicensingenabled $true
-	IISReset
-
-In addition, for Exchange on-premises, on each Exchange server, you must add registry values.
-
-
-For Exchange 2013 and Exchange 2016:
-
+Registry values for Exchange 2013 and Exchange 2016:
 
 **Registry path:**
 
@@ -133,11 +120,9 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Data:** https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing
 
-
 ---
 
-For Exchange 2010:
-
+Registry values For Exchange 2010:
 
 **Registry path:**
 
@@ -149,12 +134,21 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Data:** https://\<AD RMS Extranet Licensing URL>/_wmcs/licensing
 
-
 ---
 
+PowerShell commands to run either one by one, or in a script
 
-After running these commands, if your Exchange servers were configured to support content that was protected by AD RMS, they will also support content protected by Azure RMS after the migration. They will continue to use AD RMS to support protected content until a later step in the migration.
+	$irmConfig = Get-IRMConfiguration
+	$list = $irmConfig.LicensingLocation
+	$list += "<YourTenantURL>/_wmcs/licensing"
+	Set-IRMConfiguration -LicensingLocation $list
+	Set-IRMConfiguration -internallicensingenabled $false
+	Set-IRMConfiguration -RefreshServerCertificates
+	Set-IRMConfiguration -internallicensingenabled $true
+	IISReset
 
+
+After running these commands for Exchange Online or Exchange on-premises, if your Exchange deployment was configured to support content that was protected by AD RMS, it will also support content protected by Azure RMS after the migration. Your Exchange deployment will continue to use AD RMS to support protected content until a later step in the migration.
 
 
 ## Next steps

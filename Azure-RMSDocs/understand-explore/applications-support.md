@@ -6,7 +6,7 @@ description: Understand how the most commonly used end-user applications (such a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,9 +40,6 @@ Templates make it easier for users (and administrators who configure policies) t
 For the cases where users must apply information protection themselves, be sure to provide them with instructions and guidance how and when to do this. The instructions should be specific for the application and versions that they use and how they use them, and the guidance for when and how to apply information protection should be appropriate for your business. For more information, see [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md).
 
 For information about how to configure these applications for the Azure Rights Management service from Azure Information Protection, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
-
-> [!TIP]
-> For examples and screenshots of applications using the Azure Rights Management service, see [Azure RMS in action: What administrators and users see](what-admins-users-see.md).
 
 Search services can integrate with Rights Management in different ways. For example: 
 

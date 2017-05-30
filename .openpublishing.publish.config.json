@@ -8,11 +8,11 @@
       "build_source_folder": "Azure-RMSDocs",
       "build_output_subfolder": "Azure-RMSDocs",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
     }
   ],
   "notification_subscribers": [
@@ -20,7 +20,7 @@
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/Azure-RMSDocs",
-  "git_repository_branch_open_to_public_contributors" : "master",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
@@ -30,5 +30,21 @@
       "branch": "master",
       "branch_mapping": {}
     }
-  ]
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "PDF"
+    ],
+    "master": [
+      "Publish",
+      "PDF"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
