@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure Information Protection client files and client usage logging
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 After you have installed the Azure Information Protection client, you might need to know where files are located and monitor how the client is being used.
 

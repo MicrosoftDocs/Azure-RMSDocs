@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Custom configurations for the Azure Information Protection client
 
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the the Azure Information Protection client. 
 
 ## Prevent sign-in prompts for AD RMS only computers
