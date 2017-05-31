@@ -31,7 +31,9 @@ ms.suite: ems
 
 You can often view a protected document by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the file doesn't open, you can use the **Azure Information Protection Viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
+If the files don't immediately open, try the **Azure Information Protection Viewer**. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
+
+The viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
@@ -44,6 +46,7 @@ If the file doesn't open, you can use the **Azure Information Protection Viewer*
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
+To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection Viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../get-started/requirements-applications.md#rms-enlightened-applications) table.  
 ## Message.rpmsg as an email attachment
 
 If you see **message.rpmsg** as a file attachment in an email, this is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you will need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
