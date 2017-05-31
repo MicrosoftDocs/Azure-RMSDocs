@@ -31,7 +31,7 @@ ms.suite: ems
 
 You can often view a protected document by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the files don't immediately open, try the **Azure Information Protection Viewer**. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
+If the files don't immediately open, the **Azure Information Protection Viewer** might be able to open it. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
 
 The viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
