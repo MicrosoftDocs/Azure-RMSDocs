@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/24/2017
+ms.date: 06/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -134,11 +134,11 @@ There are 3 options for installing the client for users:
 
 **Run the executable (.exe) version of the client**: The recommended installation method that you can run interactively, or silently. This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
-**Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only, using Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+**Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
 
 ### To install the Azure Information Protection client by using the executable installer
 
-Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using Intune.
+Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
 1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
@@ -219,7 +219,9 @@ Also remember that if you use Windows Update to keep the Azure Information Prote
 
 ### To install the Azure Information Protection client by using the .msi installer
 
-For instructions to deploy the .msi by using Intune, see [Add apps with Microsoft Intune](/intune/deploy-use/add-apps). In addition, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+For central deployment, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+
+If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
 1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
