@@ -273,7 +273,7 @@ More information about the **Reset** option:
 
 Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
-If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](#sign-in-as-a-different-user) section on this page.
+If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](client-admin-guide-customizations.md#sign-in-as-a-different-user) customization.
 
 The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 
