@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 06/02/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,16 +33,18 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this …|.. do this:|
 |----------------|---------------|
-|See recommended documentation for the service →|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
-|Provide feedback about the documentation or ask a question about the documentation →|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow Dan Plastina, who helps lead the Microsoft Information Protection team. See [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina)|
-|Check subscription information and what features are supported →|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
+|See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
+|Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|Receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Microsoft Information Protection team.|
+|Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
 ## Information about new releases and updated documentation
-The Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). These blog posts supplement the product documentation and support information.
+The Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
-At the end of each month, you'll see a summary of changes to the documentation, titled "**Azure Information Protection Documentation Update for \<month year>**". These posts have the content type tag of [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) and include documentation updates for new releases, and also corrections and clarifications for existing releases.
+You'll also find information about new functionality and previews on the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam), where you can also request new features.
+
+At the end of each month, we publish a blog post summary of changes to the documentation, titled "**Azure Information Protection Documentation Update for \<month year>**". These posts have the content type tag of [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) and include documentation updates for new releases, and also corrections and clarifications for existing releases.
 
 > [!TIP]
 > If you are developing applications that use Microsoft Rights Management services (Azure RMS or AD RMS), you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/).
@@ -92,10 +94,8 @@ Troubleshooting:
 
 ### Community resources
 
--   [Yammer: Azure Information Protection](https://www.yammer.com/AskIPTeam)
+We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam), which is where you'll get direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
 
--   [Forum: Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
-
--   [Forum: RMS for Users (applications)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
+If you don't have access to Yammer, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
