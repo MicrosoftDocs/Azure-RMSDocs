@@ -35,12 +35,12 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |----------------|---------------|
 |See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Receive tweets about Information Protection and announcements about documentation updates from the product group|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Microsoft Information Protection team.|
+|Receive tweets about Azure Information Protection and announcements about documentation updates from the product group|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Microsoft Information Protection team.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
 ## Information about new releases and updated documentation
-The Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
+The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
 You'll also find information about new functionality and previews on the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam), where you can also request new features.
 
