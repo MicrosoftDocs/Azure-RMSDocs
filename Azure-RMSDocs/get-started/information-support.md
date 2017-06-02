@@ -35,7 +35,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |----------------|---------------|
 |See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Receive tweets about Information Protection and announcements about documentation updates from the product group →|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Microsoft Information Protection team.|
+|Receive tweets about Information Protection and announcements about documentation updates from the product group|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Microsoft Information Protection team.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
