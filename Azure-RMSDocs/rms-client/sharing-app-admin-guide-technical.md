@@ -6,7 +6,7 @@ description: Technical details for admins on enterprise networks who are are res
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,7 +74,7 @@ For files that are generically protected, the original file name extension is al
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
