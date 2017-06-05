@@ -111,7 +111,7 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
     
-    Included in the **Custom (Preview)** option, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do no apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned while the super user feature is enabled.
+    Included in the **Custom (Preview)** option, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
     |Setting|More information|Recommended setting
     |-----------|--------------------|--------------------|
