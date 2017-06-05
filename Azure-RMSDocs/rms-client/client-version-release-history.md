@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,21 +41,17 @@ Use the following information to see what’s new or changed for a GA release. T
 > If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
 
-## Version 1.8.37.0
+## Version 1.7.210.0
 
-**Released**: 06/01/2017
+**Released**: 06/06/2017
 
 This version includes the latest version of the RMS client (MSIPC version 1.0.3132)
 
 **Fixes**:
 
-- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide. 
-
 - All labeling and classification cmdlets are now supported on computers that are not connected to the Internet but have a valid Azure Information Protection policy.
 
-- For consistency, an output parameter from the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet is changed from British English (**IsLabelled**) to American English (**IsLabeled**). If you have scripts or automated processes that look for this parameter, update the spelling for this parameter.
-
-- General fixes for stability.
+- General fixes for stability that include:
 
 **New features**:
 
