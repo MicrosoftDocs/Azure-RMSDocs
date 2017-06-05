@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,7 +64,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
-Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
+Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
 
 As these role names suggest, the first role grants permissions to run all administrative tasks for Azure Rights Management (without making them a global administrator for other cloud services) and the second role grants permissions to run only the Rights Management (RMS) connector.
 
@@ -103,7 +103,7 @@ Yes. Creating custom templates that end users (and administrators) can select fr
 
 To specify users from outside your organization, add them as contacts to a group that you select in the Azure classic portal when configuring your templates. To specify groups from outside your organization, you must use [Windows PowerShell module for Azure Rights Management](../deploy-use/install-powershell.md), which you can also use to specify individual external users and even all users from another organization:
 
--   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx) cmdlet (for a new template) or [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
+-   **Use a rights definition object to create or update a template**.    Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlet (for a new template) or [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you will need to define rights definition objects for the existing groups in the templates and not just the external users.
 
 For more information about custom templates, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
 
@@ -154,9 +154,9 @@ Yes. This message reflects the use license for that specific file. A use license
 
 If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user will continue to have access to the document for the duration of the use license. When the use license expires, the user must re-authenticate, at which point the user will be denied access because the document is now revoked.
 
-The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). This setting can be overridden by a more restrictive setting in a custom template. 
+The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, **Set-AadrmMaxUseLicenseValidityTime**. This setting can be overridden by a more restrictive setting in a custom template. 
 
-For more information and examples of how the use license works, see the detailed description for [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
+For more information and examples of how the use license works, see the detailed description for [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime).
 
 ## Can Rights Management prevent screen captures?
 By not granting the **Copy** [usage righ](../deploy-use/configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows Phone) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures, and browsers (for example, when used with Outlook Web App and Office Online) also cannot prevent screen captures.

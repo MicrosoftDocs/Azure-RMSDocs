@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -107,7 +107,7 @@ These file types are identified separately because when they are natively protec
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjpeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
