@@ -57,7 +57,7 @@ This version includes the MSIPC version 1.0.2217.1 of the client.
     
     - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
     
-    Also for these applications, to improve performance for Office 2016 and SharePoint Online and OneDrive for Business, apply automatic and recommended labeling when the file closes rather than when the file saves.
+    Also for these applications, to improve performance for Office 2016 and SharePoint Online and OneDrive for Business, apply automatic and recommended labeling when the file closes rather than when the file saves. Simillarly, if the setting **All documents and email must have a label** is enabled, this setting is applied only when the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option, when automatic and recommended labeling is applied or the user is prompted to select a label.
 
 **New features**:
 
