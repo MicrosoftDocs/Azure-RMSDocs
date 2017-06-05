@@ -45,7 +45,7 @@ Use the following information to see what’s new or changed for a GA release. T
 
 **Released**: 06/06/2017
 
-This version includes the latest version of the RMS client (MSIPC version 1.0.3132)
+This version includes the MSIPC version 1.0.2217.1 of the client.
 
 **Fixes**:
 
