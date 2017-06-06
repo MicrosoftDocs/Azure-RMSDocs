@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ In addition:
 
 - The Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, your computer must be restarted.
 
-- If you have Windows 7 SP1, the Azure Information Protection client requires a specific update [KB 2533623](https://support.microsoft.com/kb/2533623). If your PC needs this update but it is not installed, installation completes but you will see a message that you must install this update before you can use all features of the Azure Information Protection client. 
+- If you have Windows 7 SP1, the Azure Information Protection client requires a specific update, KB 2533623. If your PC needs this update but it is not installed, installation completes but with a message that the Azure Information Protection client requires this update. Until this update is installed, you won't be able to use all features of the Azure Information Protection client. 
 
 ## To download and install the Azure Information Protection client    
 

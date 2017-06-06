@@ -6,7 +6,7 @@ description: If you know or have previously deployed Active Directory Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,14 +68,17 @@ For more details and other differences, use the following table for a side-by-si
 |Supports multi-factor authentication (MFA) for computers and mobile devices.<br /><br />For more information, see the [Multi-factor authentication (MFA) and Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Supports smart card authentication if IIS is configured to request certificates.|
 |Supports Cryptographic Mode 2 without additional configuration, which provides stronger security for key lengths and encryption algorithms.<br /><br />For more information, see the [Cryptographic controls for signing and encryption](#cryptographic-controls-for-signing-and-encryption) section in this article, and [AD RMS Cryptographic Modes](http://go.microsoft.com/fwlink/?LinkId=266659).|Supports Cryptographic Mode 1 by default and requires additional configuration to support Cryptographic Mode 2 for stronger security.<br /><br />For more information, see the [Cryptographic controls for signing and encryption](#cryptographic-controls-for-signing-and-encryption) section in this article, and [AD RMS Cryptographic Modes](http://go.microsoft.com/fwlink/?LinkId=266659).|
 |Supports migration from AD RMS and if required, to AD RMS:<br /><br />- [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md)|Supports migration from Azure Information Protection and to Azure Information Protection:<br /><br />- [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md)<br /><br />- [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)|
-|Requires an Azure Information Protection license or Azure Rights Management license with  Office 365 to protect content. No license is required to consume content that has been protected by Azure Information Protection (includes users from another organization).<br /><br />For more information, see the [feature list](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|Requires an RMS license to protect content, and to consume  content that has been protected by AD RMS.<br /><br />For more information about licensing for AD RMS, see [Client Access Licenses and Management Licenses](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) for general information, but contact your Microsoft partner or Microsoft representative for specific information.|
+|Requires an Azure Information Protection license or Azure Rights Management license with  Office 365 to protect content. No license is required to consume content that has been protected by Azure Information Protection (includes users from another organization).<br /><br />For more information, see the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|Requires an RMS license to protect content, and to consume  content that has been protected by AD RMS.<br /><br />For more information about licensing for AD RMS, see [Client Access Licenses and Management Licenses](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) for general information, but contact your Microsoft partner or Microsoft representative for specific information.|
 
 ## Cryptographic controls for signing and encryption
-Azure Information Protection always uses RSA 2048 for all public key cryptography and SHA 256 for signing operations. In comparison, AD RMS supports RSA 1024 and RSA 2048, and SHA 1 or SHA 256 for signing operations.
+Azure Information Protection by default, uses RSA 2048 for all public key cryptography and SHA 256 for signing operations. In comparison, AD RMS supports RSA 1024 and RSA 2048, and SHA 1 or SHA 256 for signing operations.
 
 Both Azure Information Protection and AD RMS use AES 128 for symmetric encryption.
 
-Azure Information Protection is compliant with FIPS 140-2 when your tenant key is created and managed by Microsoft (the default), or if you manage your own tenant key (known as BYOK). For more information about managing your tenant key, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
+Azure Information Protection is compliant with FIPS 140-2 when your tenant key size is 2048-bits, which is the default when the Azure Rights Management service is activated. 
+
+For more information about the cryptographic controls, see [Cryptographic controls used by Azure RMS: Algorithms and key length](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+
 
 ## Next steps
 If you are looking to migrate from AD RMS to Azure Information Protection, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)

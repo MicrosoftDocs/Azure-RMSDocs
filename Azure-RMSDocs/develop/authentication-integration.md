@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: How to register and RMS enable your app with Azure AD | Azure RMS
+title: How to register your app with Azure AD - AIP
 description: Describes the basics of user authentication for your RMS-enabled app.
 keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -18,7 +18,7 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 #ROBOTS:
 audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -35,8 +35,8 @@ User authentication is an essential step to establish communication between your
 ## Registration via Azure portal
 Begin by following this guide for configuring your app's registration through the Azure portal, [Configure Azure RMS for ADAL authentication](adal-auth.md). Be sure to copy and save the **Client ID** and **Redirect Uri** from this process for use later.
 
-## Complete your Rights Managagment License Agreement (RMLA)
-Before you can deploy your application you must complete an RMLA with the Microsoft Rights Management team. For complete details, see the first section of the topic, [Deploy into production - Request a Production License Agreement](deploying-your-application.md).
+## Complete your Information Protection Integration Agreement (IPIA)
+Before you can deploy your application, you must complete an IPIA with the Microsoft Information Protection team. For complete details, see the first section of the topic, [Deploy into production](deploying-your-application.md).
 
 ## Implement user authentication for your app
 Each RMS API has a callback that must be implemented in order to enable the user's authentication. The RMS SDK 4.2 will then use your implementation of the callback when you do not provide an access token, when your access token needs to be refreshed or when the access token is expired.

@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Developing your application
+title: Developing your application - AIP
 description: Guidance thorugh a basic console app implementing document protection with AIP
 keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: What is Azure Information Protection?
@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,17 +33,17 @@ Azure Information Protection is a cloud-based solution that helps an organizatio
 
 The following picture shows an example of Azure Information Protection in action. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured, which classifies and optionally, protects the document. 
 
-![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
 ## How labels apply classification
 
-You use Azure Information Protection labels to apply classifcation to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
 
 For example, the following email message has been classified as "Internal". This label is added as a footer to the email message, as a visual indicator for all recipients that it's intended for internal use and should not be sent outside the organization. This label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
-![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footer-header.png)
+![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
 
 
 ## How data is protected
@@ -74,7 +74,7 @@ For more information about the Azure Rights Management protection, see [What is 
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture. The same bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-bar.png)
+![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-barv2.png)
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required, these labels can also automatically protect their documents and emails.
 

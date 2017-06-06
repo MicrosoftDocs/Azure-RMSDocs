@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,13 +42,13 @@ For example, if you have a label named **Confidential** in the global policy, al
 
 To configure a scoped policy for Azure Information Protection:
 
-1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin.
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
 
     On the initial **Azure Information Protection** blade, select **Add a new policy**. You'll then see the second blade that used to show the global policy refresh, so that you can now configure your new, scoped policy.
 
-3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only. 
+3. Specify a policy name and description that only administrators see in the Azure portal. The name must be unique to your tenant. Then click **Specify which users/groups get this policy** and in the subsequent blades, you can search and select the users and groups for this policy. The labels and settings that you configure in this scoped policy will be applied to these users only.
 
 4. Now create new labels or configure the scoped policy settings. The global policy is always applied first, so you can supplement the global policy with new labels and you can override the global settings. For example, the global policy might have no default label specified and you configure a different default label in different scoped policies for specific departments.
 
