@@ -61,7 +61,7 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
 
 **New features**:
 
-- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/azureinformationprotection/vlatest/set-aipfileclassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
+- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
 
 
 ## Version 1.4.21.0
