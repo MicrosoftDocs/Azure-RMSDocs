@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,14 +34,15 @@ When you install the Azure Information Protection client, PowerShell commands ar
 
 The cmdlets are installed with the PowerShell module **AzureInformationProtection**, which replaces the RMSProtection module that was installed with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
 
-The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool, and two new cmdlets that use the Azure Information Protection (AIP) service for labeling:
+The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool, and three new cmdlets that use the Azure Information Protection (AIP) service for labeling:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
-|[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
-|[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
+|[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
+|[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
+|[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 
-For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/azureinformationprotection/vlatest/aip).
+For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help, and for supported languages other than English.  
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 

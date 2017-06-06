@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/20/2017
+ms.date: 05/31/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -43,9 +43,9 @@ The following table displays RMS-enlightened client applications from Microsoft 
 
 Information about the table columns:
 
--   **Protected PDF**: Files that have a .ppdf file name extension and that are automatically created when you use the RMS sharing application to share Office files and PDF files by email. The RMS sharing application, the Azure Information Protection app for iOS and Android, and the Azure Information Protection client for Windows include a reader for protected PDF files. Previously, if you created PDF files that you protected by using Azure RMS or AD RMS, you can continue to read these files on Windows, iOS, and Android devices by using Foxit Reader and Nitro Pro.
+-   **Protected PDF**: These files can have a .pdf or .ppdf file name extension.
 
--   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached files. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
+-   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached Office files that are not already protected. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
 
 -   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](../rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
@@ -77,7 +77,7 @@ Uses Exchange ActiveSync IRM, which must be enabled by the Exchange administrato
 If a recipient receives a protected email and is not using Exchange as the mail server or if the sender belongs to another organization, this content can be opened only in a rich email client, such as Outlook. This content cannot be opened from Outlook Web Access or from mobile mail clients using Exchange Active Sync IRM.
 
 ###### Footnote 5
-Supports viewing and editing protected documents for iOS; supports viewing protected documents for Android. For more information, see the following post on the Office blog: [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
+Supports viewing and editing protected documents for iOS. For more information, see the following post on the Office blog: [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
 
 ###### Footnote 6
 For more information, see the Citrix [product documentation for WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html).

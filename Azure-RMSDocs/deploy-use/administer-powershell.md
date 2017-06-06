@@ -6,7 +6,7 @@ description: Learn how you can use the PowerShell module for the Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ However, you will need to use PowerShell for more advanced configurations, and a
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 
-For a complete list of the available cmdlets with more information about each one, see [Azure Rights Management Cmdlets](http://msdn.microsoft.com/library/azure/dn629398.aspx).
+For a complete list of the available cmdlets for this module, with more information about each one, see [AADRM](/powershell/module/aadrm/?view=azureipps#aadrm).
 
 > [!NOTE]
 > To install this PowerShell module, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
