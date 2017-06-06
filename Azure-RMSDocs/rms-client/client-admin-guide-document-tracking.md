@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ For these group members, their activity related to documents that others have sh
 
 When you use this configuration, all users can still use the document tracking site and revoke access to documents that they have protected. However, they will not see activity for the users who you have specified by using the Set-AadrmDoNotTrackUserGroup cmdlet.
 
-You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group, but be aware of [group caching](../plan-design/prepare.md#group-membership-caching). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
+You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group, but be aware of [group caching](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
 
 For more information about each of these cmdlets, use the links provided. For installation instructions for the PowerShell modue, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
 
