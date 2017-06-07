@@ -133,15 +133,9 @@ Open Outlook and create a profile by using your Office 365 work or school accoun
     
     This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
 
-To protect an email message or a document: 
+To protect an email message or a document: On the **Options** tab, click **Permissions** and choose an option or template that protects your email or document.
 
-- On the **Options** tab, click **Permissions** and choose an option or template that protects your email or document.
-
-To track a document after you have protected it: 
-
-1. From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](../rms-client/client-track-revoke.md).
-
-2. From the Mac computer, you can now use your browser go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
+To track a document after you have protected it: From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](../rms-client/client-track-revoke.md). Then, from your Mac computer, you can use your browser go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
