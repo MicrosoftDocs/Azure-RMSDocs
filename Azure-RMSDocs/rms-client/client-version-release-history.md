@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,6 +39,30 @@ Use the following information to see what’s new or changed for a GA release. T
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest GA release. If it is, then check the current preview version.
 >  
 > If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+
+## Version 1.7.210.0
+
+**Released**: 06/06/2017
+
+This version includes the MSIPC version 1.0.2217.1 of the RMS client.
+
+**Fixes**:
+
+- All labeling and classification cmdlets are now supported on computers that are not connected to the Internet but have a valid Azure Information Protection policy.
+
+- General fixes for stability that include:
+
+    - For Outlook: Fixes for crashes, high memory consumption, and display issues for menus.
+    
+    - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
+    
+    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users will not be prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
+
+**New features**:
+
+- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
+
 
 ## Version 1.4.21.0
 

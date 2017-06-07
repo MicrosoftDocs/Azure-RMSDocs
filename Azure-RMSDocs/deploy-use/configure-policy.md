@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,7 +85,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 - Right-click to classify and protect a file or folder.
 
-- Running the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).
+- Running the [PowerShell cmdlets](../rms-client/client-admin-guide-powershell.md) for labeling and protection (Get-AIPFileStatus, Set-AIPFileClassification, and Set-AIPFileLabel).
 
 - Every 24 hours.
 
