@@ -141,7 +141,7 @@ To track a document after you have protected it:
 
 1. From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](../rms-client/client-track-revoke.md).
 
-2. From the Mac computer, you can now use your browser go to the [document tracking site](https://track.azurerms.com) (https://track.azurerms.com) to track and revoke this document.
+2. From the Mac computer, you can now use your browser go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
 
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
