@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,6 +50,8 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
 **Fixes**:
 
 - All labeling and classification cmdlets are now supported on computers that are not connected to the Internet but have a valid Azure Information Protection policy.
+
+- For consistency, an output parameter from the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet is changed from British English (**IsLabelled**) to American English (**IsLabeled**). If you have scripts or automated processes that look for this parameter, update the spelling for this parameter.
 
 - General fixes for stability that include:
 
