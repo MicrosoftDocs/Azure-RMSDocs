@@ -37,7 +37,7 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels for different languages](configure-policy-languages.md).
+- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels for different languages](../deploy-use/configure-policy-languages.md).
 
 - There is no centralized logging for classification and labeling.
 
