@@ -124,11 +124,7 @@ When you create a new label with the protection setting of **Azure RMS**, under 
 
 2. On the **Label** blade, keep the default of **Enabled**: **On** to publish this new template, or change this setting to **Off** to create the template as archived. Then enter a label name and description for the template name and description.
 
-<<<<<<< HEAD
-3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection** to open the **Protection** blade:
-=======
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
->>>>>>> de0044742db45932ffa6ccc05f250a205e9f6f82
     
      ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
@@ -136,11 +132,7 @@ When you create a new label with the protection setting of **Azure RMS**, under 
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
-<<<<<<< HEAD
-5. To make these templates available to applications and services, on the **Azure Information Protection** blade, click **Publish**.
-=======
 5. To make these templates available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
->>>>>>> de0044742db45932ffa6ccc05f250a205e9f6f82
 
 
 ## Next steps
