@@ -92,13 +92,14 @@ Before you edit these templates or convert them to labels in the Azure portal, b
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
-6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+6. To make your changes available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
 
 ## To convert templates to labels
 
 When you have a subscription that includes classification, labeling, and protection, you can convert a template to a label. When you do this, the original template is retained but in the Azure portal, it now displays as included in a new label.
 
 For example, if you convert a label named **Marketing** that grants usage rights to the marketing group, in the Azure portal it now displays as a label named **Marketing** that has the same protection settings. If you change the protection settings in this newly created label, you're changing them in the template and any user or service that uses this template will get the new protection settings with the next template refresh. 
+
 There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
 To convert a template into a label, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option.
@@ -115,7 +116,7 @@ When you convert a template to a label:
 
 ## To create a new template
 
-When you create a new label with the protection setting of Azure RMS, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+When you create a new label with the protection setting of **Azure RMS**, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
 1. If the new template that you want to create will apply to all users, from the **Policy: Global** blade, click  **Add a new label**.
     
@@ -123,7 +124,11 @@ When you create a new label with the protection setting of Azure RMS, under the 
 
 2. On the **Label** blade, keep the default of **Enabled**: **On** to publish this new template, or change this setting to **Off** to create the template as archived. Then enter a label name and description for the template name and description.
 
+<<<<<<< HEAD
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection** to open the **Protection** blade:
+=======
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
+>>>>>>> de0044742db45932ffa6ccc05f250a205e9f6f82
     
      ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
 
@@ -131,10 +136,16 @@ When you create a new label with the protection setting of Azure RMS, under the 
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
+<<<<<<< HEAD
 5. To make these templates available to applications and services, on the **Azure Information Protection** blade, click **Publish**.
+=======
+5. To make these templates available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
+>>>>>>> de0044742db45932ffa6ccc05f250a205e9f6f82
 
 
 ## Next steps
+
+As with all changes to the Azure Information Protection policy, it can take up to 15 minutes for a computer running the Azure Information Protection client to complete downloading these templates. For information about how computers and services download and refresh templates, see [Refreshing templates for users and services](refresh-templates.md).
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
 

@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/24/2017
+ms.date: 06/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure Information Protection client administrator guide
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -81,7 +81,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
-- You want to just protect files by using File Explorer or by using Powershell commands.
+- You want to just protect files by using File Explorer or by using PowerShell commands.
 
 - You want users and administrators to be able to track and revoke protected documents.
 
@@ -134,11 +134,11 @@ There are 3 options for installing the client for users:
 
 **Run the executable (.exe) version of the client**: The recommended installation method that you can run interactively, or silently. This method has the most flexibility and it is recommended because the installer checks for many of the prerequisites, and can automatically install missing prerequisites. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)
 
-**Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only, using Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
+**Deploy the Windows installer (.msi) version of the client**: Supported for silent installs only that use a central deployment mechanism, such as group policy, Configuration Manager, and Microsoft Intune. This method is necessary for Windows 10 PCs that are managed by Intune and mobile device management (MDM) because for these computers, executable files are not supported for installation. However, when you use this installation method, you must manually check and install or uninstall the dependent software that the installer for the executable would perform for each computer. [Instructions](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)
 
 ### To install the Azure Information Protection client by using the executable installer
 
-Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using Intune.
+Use the following instructions to install the client when you're not using the Microsoft Update catalog, or deploying the .msi by using a central deployment method such as Intune.
 
 1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
@@ -219,22 +219,24 @@ Also remember that if you use Windows Update to keep the Azure Information Prote
 
 ### To install the Azure Information Protection client by using the .msi installer
 
-For instructions to deploy the .msi by using Intune, see [Add apps with Microsoft Intune](/intune/deploy-use/add-apps). In addition, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+For central deployment, use the following information that is specific to the .msi installation version of the Azure Information Protection client. 
+
+If you use Intune for your software deployment method, use these instructions together with [Add apps with Microsoft Intune](/intune/deploy-use/add-apps).
 
 1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
     If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
-2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place:
+2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |Office 2013|All supported versions|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)<br /><br /> Version number included in file name: v3|Install|
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |Office 2010|Windows 8.1|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB 2843630 or KB 2919355 is not installed|
-    |Office 2010|Windows 8|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB 2843630 or KB 2919355 is not installed|
+    |Office 2010|Windows 8 and Windows Server 2012|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     |Office 2010|Windows 7|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB 3125574 is not installed|
-    |Not applicalbe|Windows 7|KB 2627273 <br /><br /> Version number included in file name: 4|Uninstall|
+    |Not applicalbe|Windows 7|KB 2627273 <br /><br /> Version number included in file name: v4|Uninstall|
 
 3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
@@ -271,7 +273,7 @@ More information about the **Reset** option:
 
 Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
 
-If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](#sign-in-as-a-different-user) section on this page.
+If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](client-admin-guide-customizations.md#sign-in-as-a-different-user) customization.
 
 The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 

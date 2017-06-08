@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: View and use protected files with the AIP client
-description: Instructions to view and use a protected file that requires you to have the Azure Information Protection client installed.
+title: View and use protected documents with the AIP client
+description: Instructions to view and use a protected document that requires you to have the Azure Information Protection client installed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/10/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,9 +29,11 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
-You can often view a protected file by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
+You can often view a protected document by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-If the file doesn't open, you can use the **Azure Information Protection Viewer** to open it. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
+If the files don't immediately open, the **Azure Information Protection Viewer** might be able to open it. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
+
+The viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
@@ -43,6 +45,13 @@ If the file doesn't open, you can use the **Azure Information Protection Viewer*
 > - Active Directory Rights Management Services 
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
+
+To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection Viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../get-started/requirements-applications.md#rms-enlightened-applications) table.  
+## Message.rpmsg as an email attachment
+
+If you see **message.rpmsg** as a file attachment in an email, this is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you will need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
+
+However, if you have an iOS or Android device, you can use the Azure Information Protection app to open these protected email messages. You can download this app for these mobile devices from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
 ## Prompts for authentication
 
@@ -56,7 +65,7 @@ If your organization does not have a cloud-based account for you to use (for Off
     
 -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## To view and use a protected file
+## To view and use a protected document
 
 1. Open the protected file (for example, by double-clicking the file or attachment, or by clicking the link to the file). If you are prompted to select an app, select **Azure Information Protection Viewer**. 
 
