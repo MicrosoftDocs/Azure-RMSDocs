@@ -121,6 +121,22 @@ The Azure Rights Management service can support all file types. For text, image,
 
 For a list of file name extensions that are natively supported by Azure Rights Management, see [File types supported by the Azure Information Protection client](../rms-client/client-admin-guide-file-types.md). File name extensions not listed are supported by using the Azure Information Protection client that automatically applies generic protection to these files.
 
+## How do I configure a Mac computer to protect and track documents?
+
+First, make sure that you have installed Office for Mac by using the software installation link from https://portal.office.com. For full instructions, see [Download and install or reinstall Office 365 or Office 2016 on a PC or Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+
+Open Outlook and create a profile by using your Office 365 work or school account. Then, create a new message and do the following to configure Office so that it can protect documents and emails by using the Azure Rights Management service:
+
+1. In the new message, on the **Options** tab, click **Permissions**, and then click **Verify Credentials**.
+
+2. When prompted, specify your Office 365 work or school account details again, and select **Sign in**. 
+    
+    This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
+
+To protect an email message or a document: On the **Options** tab, click **Permissions** and choose an option or template that protects your email or document.
+
+To track a document after you have protected it: From a Windows computer that has the Azure Information Protection client installed, register the document with the document tracking site by using either an Office application or File Explorer. For instructions, see [Track and revoke your documents](../rms-client/client-track-revoke.md). From your Mac computer, you can now use your browser go to the document tracking site (https://track.azurerms.com) to track and revoke this document.
+
 ## When I open an RMS-protected Office document, does the associated temporary file become RMS-protected as well?
 
 No. In this scenario, the associated temporary file doesn’t contain data from the original document but instead, only what the user enters while the file is open. Unlike the original file, the temporary file is obviously not designed for sharing and would remain on the device, protected by local security controls, such as BitLocker and EFS.
