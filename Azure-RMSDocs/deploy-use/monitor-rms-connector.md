@@ -167,16 +167,6 @@ For example, if you regularly experience delays when protecting documents or ema
 
 If you have recently added new server accounts to use the connector, a good counter to check is **Time since last authorization policy update** to confirm that the connector has downloaded the list since you updated it, or whether you need to wait a little longer (up to 15 minutes).
 
-## RMS Analyzer
-
-Although this tool comes with "as-is" support, you can use the Rights Management Services Analyzer tool to help you monitor the health of the connector and identify any configuration issues. If you haven't already downloaded this tool, you can do so from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437). 
-
-Sign in to one of the servers that you configured for the RMS connector, using an account that you authorized to use the connector for that workload. For example, if you configured the RMS connector for Exchange, sign in on that server by using one of the accounts that you authorized for Exchange in the RMS connector configuration tool. Then run the RMS Analyzer tool with the **Run as administrator** option.
-
-When the tool loads, on the **Welcome** page, select the **Azure RMS connector** option. Enter your RMS connector URL as the active address, and click the green arrow. You should see your tenant details displayed, which confirms that the connector can connect successfully to the Azure Rights Management service. If this initial test fails, be sure to check for proxy server configuration and firewalls that might be blocking server traffic. After your tenant details successfully display, you can then continue to run the diagnostic tests for that server workload, which checks for things like supported version numbers, prerequisites, and registry settings.
-
-For additional information and instructions, see the **Details** and **Install Instructions** on the download page.
-
 ## Logging
 
 Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically created for the RMS connector.

@@ -90,8 +90,6 @@ Troubleshooting:
 
 - For the Azure Information Protection client for Windows: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
 
-- For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
-
 ### Community resources
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam), which is where you'll get direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
