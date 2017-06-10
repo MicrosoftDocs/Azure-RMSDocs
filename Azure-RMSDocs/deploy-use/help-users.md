@@ -50,13 +50,13 @@ After you have deployed and configured Azure Information Protection for your org
     
     If users are running the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
 
-    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this acess by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization, 
+    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization, 
 
     In  addition, some of the typical problems that users might report include the following categories:
 
     -   **Sign in help:**
 
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these are not currently supported by the Azure Rights Management service. Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they use  applications with the Azure Rights Management service.
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these accounts are not currently supported by the Azure Rights Management service. Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they use  applications with the Azure Rights Management service.
 
     -   **Problems protecting or consuming content:**
 
@@ -71,7 +71,7 @@ After you have deployed and configured Azure Information Protection for your org
 Use the following sections for application-specific information to help users protect sensitive documents and emails.
 
 ## Using information protection with the Azure Information Protection client
-The Azure Information Protection client (or the older application, RMS sharing application) is required for users to protect and consume protected documents and emails if they use Office 2010. However, the Azure Information Protection client is also recommended for all computers and mobile devices.
+If users have Office 2010, the Azure Information Protection client (or the older application, RMS sharing application) is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices.
 
 In addition to making it easier for users to protect important documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 
@@ -79,7 +79,7 @@ For instructions to use this client for Windows computers, see the [Azure Inform
 
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
-If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users will not see the Azure Information Protection bar in their Office desktop apps, the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
+If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps, the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
@@ -93,7 +93,7 @@ If you are using the Azure Rights Management service and have not installed the 
 3. Choose a template to quickly apply the appropriate usage rights, or select **Restrict Access** and select the usage rights yourself.
 
     > [!NOTE]
-    > If this is the first time that you use Rights Management, you connect to the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] service and you are prompted for credentials to configure the Office IRM client.
+    > If you have not previously used Rights Management on your computer, the **Restrict Access** option connects to the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] service and you are prompted for credentials to configure the Office IRM client. You can then choose a template or usage rights.
 
 3.  Save the document.
 

@@ -35,7 +35,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |----------------|---------------|
 |See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Receive tweets about Azure Information Protection and announcements about documentation updates from the product group|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Azure Information Protection team at Microsoft.|
+|Receive tweets from the product group about Azure Information Protection and announcements for documentation updates|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Azure Information Protection team at Microsoft.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
@@ -92,7 +92,7 @@ Troubleshooting:
 
 ### Community resources
 
-We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam), which is where you'll get direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
+We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
 
 If you don't have access to Yammer, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
