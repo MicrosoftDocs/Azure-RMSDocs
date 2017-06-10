@@ -84,7 +84,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-> If the protected file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
+> If the protected file does not open, use the Azure Information Protection **Help and Feedback** option, and select **Run Diagnostics**. After the tests finish, you can reset the client, which might resolve your problem.
 
 
 ## Other instructions

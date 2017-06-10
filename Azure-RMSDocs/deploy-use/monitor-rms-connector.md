@@ -29,24 +29,30 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
-After you have installed and configured the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
+After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
 ## Application event log entries
 
 The RMS connector uses the Application event log to record entries for the **Microsoft RMS connector**. 
 
-For example, Information events such as ID 1000 confirm that the connector service has started, ID 1002 when a server successfully connects to the RMS connector, and ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector. 
+For example, Information events such as:
+
+- ID 1000 confirm that the connector service has started
+
+- ID 1002 when a server successfully connects to the RMS connector
+- 
+- ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector 
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
 
-If the connector fails to connects to the Azure Rights Management service, you will most likely see Error 3001. For example, this might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
+If the connector fails to connect to the Azure Rights Management service, you will most likely see Error 3001. For example, this connection failure might be as a result of a DNS problem or lack of Internet access for one or more servers running the RMS connector. 
 
 > [!TIP]
 > When RMS connector servers can't connect to Azure Rights Management service, web proxy configurations are often the reason.
 
-As with all event log entries, drill into the message for more details.
+As with all event log entries, drill in to the message for more details.
 
-In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. For example, the connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
+In addition to checking the event log when you first deploy the connector, check for warnings and errors on an ongoing basis. The connector might be working as expected initially, but other administrators might change dependent configurations. For example, another administrator changes the web proxy server configuration so that RMS connector servers can no longer access the Internet (Error 3001) or removes a computer account from a group that you specified as authorized to use the connector (Warning 2001).
 
 ### Event log IDs and descriptions
 
@@ -90,7 +96,7 @@ Information **1004**
 
 **The list of authorized accounts has been updated.**
 
-This event is logged when the RMS connector has downloaded the latest list of accounts (existing accounts and any changes) that are authorized to use the RMS connector. This list is downloaded every fifteen minutes, providing the RMS connector can communicate with the Azure Rights Management service.
+This event is logged when the RMS connector has downloaded the latest list of accounts (existing accounts and any changes) that are authorized to use the RMS connector. This list is downloaded every 15 minutes, providing the RMS connector can communicate with the Azure Rights Management service.
 
 ----
 
@@ -106,7 +112,7 @@ Warning **2001**
 
 **Unauthorized access attempt to Microsoft RMS connector.**
 
-This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from the Azure Rights Management service. For example, the latest list is not yet downloaded (this happens every 15 minutes) or the account is missing from the list. 
+This event is logged when an account tries to connect to the RMS connector but fails. The most typical reason for this warning is because the account that makes the connection is not in the downloaded list of authorized accounts that the RMS connector downloads from the Azure Rights Management service. For example, the latest list is not yet downloaded (this event happens every 15 minutes) or the account is missing from the list. 
 
 Another reason can be if you installed the RMS connector on the same server that is configured to use the connector. For example, you install the RMS connector on a server that runs Exchange Server and you authorize an Exchange account to use the connector. This configuration is not supported because the RMS connector cannot correctly identify the account when it attempts to connect.
 
@@ -146,7 +152,7 @@ Error **3000**
 
 This event is logged each time the RMS connector encounters an unexpected error, with the details of the error in the event message.
 
-One possible cause can be identified by the text **The request failed with an empty response** in the event message. If you see this text, it might be because you have a network device that is doing SSL inspection on the packets between the on-premises servers and the RMS connector server. This is not supported and will result in a failed communication and this event log message.
+One possible cause can be identified by the text **The request failed with an empty response** in the event message. If you see this text, it might be because you have a network device that is doing SSL inspection on the packets between the on-premises servers and the RMS connector server. The Azure Rights Management service does not support this configuration and it results in a failed communication and this event log message.
 
 ----
 
@@ -154,7 +160,7 @@ Error **3001**
 
 **An exception occurred while downloading authorization information.**
 
-This event is logged if the RMS connector cannot download the latest list of accounts that are authorized to use the RMS connector, with the details of the error in the event message.
+This event is logged if the RMS connector cannot download the latest list of accounts that are authorized to use the RMS connector. Details of the error are in the event message.
 
 
 
@@ -162,18 +168,21 @@ This event is logged if the RMS connector cannot download the latest list of acc
 
 ## Performance counters
 
-When you install the RMS connector, it automatically creates **Microsoft Rights Management connector** performance counters that you might find useful to help you monitor the performance of using the Azure Rights Management service via the connector. 
-For example, if you regularly experience delays when protecting documents or emails, or when opening protected documents or emails, the performance counters can help you determine whether the delay is due to processing time on the connector, processing time from the Azure Rights Management service, or network delays. To help you identify where the delay is occurring, look for counters that include average counts for **Connector Processing Time**, **Service Response Time**, and **Connector Response Time**. For example: **Licensing Successful Batched Request Average Connector Response Time**.
+When you install the RMS connector, it automatically creates **Microsoft Rights Management connector** performance counters that you might find useful to help you monitor and improve the performance of using the Azure Rights Management service. 
+
+For example, you regularly experience delays when documents or emails are protected. Or, you experience delays when protected documents or emails are opened. For these cases, the performance counters can help you determine whether the delays are due to processing time on the connector, processing time from the Azure Rights Management service, or network delays. 
+
+To help you identify where the delay is occurring, look for counters that include average counts for **Connector Processing Time**, **Service Response Time**, and **Connector Response Time**. For example: **Licensing Successful Batched Request Average Connector Response Time**.
 
 If you have recently added new server accounts to use the connector, a good counter to check is **Time since last authorization policy update** to confirm that the connector has downloaded the list since you updated it, or whether you need to wait a little longer (up to 15 minutes).
 
 ## Logging
 
-Usage logging helps you identify when emails and documents are protected and consumed. When this is done by using the RMS connector, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0** that is automatically created for the RMS connector.
+Usage logging helps you identify when emails and documents are protected and consumed. When the RMS connector is used to protect and consume content, the user ID field in the logs contains the service principal name of **Aadrm_S-1-7-0**. This name is automatically created for the RMS connector.
 
 For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
 
-If you need more detailed logging for diagnosis purposes, you can use [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals and enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS. To do this:
+If you need more detailed logging for diagnosis purposes, you can use [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) from Windows Sysinternals. Enable tracing for the RMS connector by modifying the web.config file for the Default site in IIS:
 
 1. Locate the web.config file from **%programfiles%\Microsoft Rights Management connector\Web Service**.
 
@@ -181,7 +190,7 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
     	<trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
 
-3. Replace that line with the following:
+3. Replace that line with the following text:
 
     	<trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
 
