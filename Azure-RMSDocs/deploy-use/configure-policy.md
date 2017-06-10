@@ -55,9 +55,9 @@ For more information about how to configure scoped policies, see [How to configu
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The very first time you connect to the service, the **Quick start** page automatically opens. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    The first time you connect to the service, the **Quick start** page automatically opens. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
     
-    The Azure Information Protection policy contain the following elements that you can configure:
+    The Azure Information Protection policy contains the following elements that you can configure:
     
     - Labels that let you and users classify documents and emails.
     
@@ -90,7 +90,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 - Every 24 hours.
 
 >[!NOTE]
->When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time will vary, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of labels do not match your latest changes, allow up to 15 minutes and then try again.
+>When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time varies, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of your labels does not match your latest changes, allow up to 15 minutes and then try again.
 
 ### Configuring your organization's policy
 
