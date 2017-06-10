@@ -60,6 +60,8 @@ Additionally:
 - If you are using single sign-on, you will need to sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+    
+    Note that this tool has not be updated for the Azure Information Protection client, so do not use it for diagnostic purposes. If you do need help to identify problems with the Azure Information Protection client, use **Run Diagnostics** from the **Help and feedback** option. 
 
 - If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
 
