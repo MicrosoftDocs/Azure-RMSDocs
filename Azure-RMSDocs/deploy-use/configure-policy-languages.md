@@ -6,7 +6,7 @@ description: You can add support for different languages for the labels that use
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 >*Applies to: Azure Information Protection*
 
 >[!NOTE]
->This feature is currently in private preview, to be used in conjunction with a private preview version of the Azure Information Protection client.
+>This feature is currently in preview, to be used in conjunction with a private preview version of the Azure Information Protection client that you can request from the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam).
 
 By default, the names and descriptions of labels support a single language that is displayed to all users in your organization. You can add support for different languages by selecting the ones that you need, export your current label names and descriptions to a file, edit the file to supply your translations, and then import the file back into your Azure Information Protection policy.
 
