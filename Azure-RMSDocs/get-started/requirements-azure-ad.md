@@ -51,7 +51,7 @@ Computers running Office 2010:
 
 Support for certificate-based authentication (CBA):
 
-- The Azure Information Protection app for Android supports certificate-based authentication when you have a minimum version of Android 5.0. For instructions to configure certificate-based authentication, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
+- The Azure Information Protection apps for iOS and Android support certificate-based authentication. For instructions to configure certificate-based authentication, see [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Users' UPN value doesn't match their email address:
 
