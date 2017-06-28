@@ -1,26 +1,16 @@
 ﻿---
-# required metadata
-
-title: What's new and release notes | Azure RMS
+title: Azure RMS - What's new and release notes
 description: Outlines important changes and features in this new version of the RMS SDK.
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 06/28/2018
 ms.topic: article
-ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # What's new and release notes
@@ -38,7 +28,26 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
-### New for June 2016
+### New for June 2017
+
+- Your app can now set the logging level on the fly.
+- SDK now returns an error for a NULL access token.
+
+- This release adds a revocation API to revoke published content for iOS/OSX and Android SDKs.
+
+#### iOS / OSX API updates
+- MS UserPolicy revokeSerializedPolicyWithUserId
+
+#### Android API udpates
+- UserPolicy.revokeUserPolicy asynchronous
+- UserPolicy.revokeUserPolicy synchronous
+
+### October 2016 update
+
+- A few back-end bug fixes.
+- Bit code enablement.
+
+### June 2016 update
 
 - **Support for Modern Authentication** - this will bring Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
 - **Document Tracking support** - developers can now enable document tracking when protecting document in their apps 
@@ -46,7 +55,7 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 - Bug fixes
 
 
-### December 2015 Update
+### December 2015 update
 
 With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
