@@ -5,8 +5,9 @@ title: How-to enable your service application to work with cloud based RMS | Azu
 description: This topic outlines steps for setting up your service application to use Azure Rights Management.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,8 +39,8 @@ In order to use your Rights Management Services SDK 2.1 service application with
 
 ## Connecting to the Azure Rights Management Service
 
--   Call [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize).
--   Set [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
+-   Call [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx).
+-   Set [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 
         C++
         int mode = IPC_API_MODE_SERVER;
@@ -49,10 +50,10 @@ In order to use your Rights Management Services SDK 2.1 service application with
   **Note**  For more information, see [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 
      
--   The following steps are the setup for creating an instance of an [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) structure with the **pcCredential** ([**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) member populated with connection information from the Azure Rights Management Service.
--   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the **wszServicePrincipal**, **wszBposTenantId**, and **cbKey** parameters when you create an instance of an [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) structure.
+-   The following steps are the setup for creating an instance of an [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) structure with the *pcCredential*  ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) member populated with connection information from the Azure Rights Management Service.
+-   Use the information from your symmetric key service identity creation (see the prerequisites listed earlier in this topic) to set the *wszServicePrincipal*, *wszBposTenantId*, and *cbKey* parameters when you create an instance of an [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) structure.
 
-**Note** Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the [**IPC\_CONNECTION\_INFO**](/information-protection/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) parameter of [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) or [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
+**Note** - Due to an existing condition with our discovery service, if you are not in North America, symmetric key credentials are not accepted from other regions therefore, you must specify your tenant URLs directly. This is done through the *pConnectionInfo* parameter, type [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx), on functions  [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) or [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
 ## Generate a symmetric key and collect the needed information
 
@@ -61,22 +62,25 @@ In order to use your Rights Management Services SDK 2.1 service application with
 -   Install [Microsoft Online Sign-in Assistant](http://go.microsoft.com/fwlink/p/?LinkID=286152)
 -   Install [Azure AD Powershell Module](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
-**Note**  You must be a tenant administrator to use the Powershell cmdlets.
+**Note** - You must be a tenant administrator to use the Powershell cmdlets.
 
--   Start Powershell and run the following commands to generate a key
-            `Import-Module MSOnline`
-            `Connect-MsolService` (type-in your admin credentials)
-            `New-MsolServicePrincipal` (type-in a display name)
--   After it generates a symmetric key, it will output information about key including the key itself and **AppPrincipalId**.
+- Start Powershell and run the following commands to generate a key
 
+    `Import-Module MSOnline`
 
-    The following symmetric key was created as one was not supplied
-    ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+    `Connect-MsolService` (type-in your admin credentials)
 
-    DisplayName : RMSTestApp
-    ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
-    ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
-    AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
+    `New-MsolServicePrincipal` (type-in a display name)
+
+- After it generates a symmetric key, it will output information about the key including the key itself and an *AppPrincipalId*.
+
+      The following symmetric key was created as one was not supplied
+      ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+
+      DisplayName : RMSTestApp
+      ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
+      ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
+      AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
 ### Instructions to find out **TenantBposId** and **Urls**
@@ -91,22 +95,22 @@ In order to use your Rights Management Services SDK 2.1 service application with
     `Get-AadrmConfiguration`
 
 
--   Create an instance of an  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) and set a few members.
+- Create an instance of an  [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) and set a few members.
 
-    // Create a key structure.
-    IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
+      // Create a key structure.
+      IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
 
-    // Set each member with information from service creation.
-    symKey.wszBase64Key = "your service principal key";
-    symKey.wszAppPrincipalId = "your app principal identifier";
-    symKey.wszBposTenantId = "your tenent identifier";
+      // Set each member with information from service creation.
+      symKey.wszBase64Key = "your service principal key";
+      symKey.wszAppPrincipalId = "your app principal identifier";
+      symKey.wszBposTenantId = "your tenant identifier";
 
 
-For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
+For more information see, [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
--   Create an instance of an [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) structure containing your [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) instance.
+-   Create an instance of an [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) structure containing your [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) instance.
 
-**Note**  The *connectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
+**Note** - The *connectionInfo* members are set with URLs from the previous call to `Get-AadrmConfiguration` and noted here with those field names.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -132,7 +136,7 @@ For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-pro
 ### Identify a template and then encrypt
 
 -   Select a template to use for your encryption.
-    Call [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) passing in the same instance of [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
+    Call [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) passing in the same instance of [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
 
     PCIPC_TIL pTemplates = NULL;
@@ -146,9 +150,9 @@ For more information see, [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-pro
            &pTemplates);
 
 
--   With the template from earlier in this topic, call [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile), passing in the same instance of [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
+-   With the template from earlier in this topic, call [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx), passing in the same instance of [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
-Example use of [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile):
+Example use of [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx):
 
     LPCWSTR wszContentTemplateId = pTemplates->aTi[0].wszID;
     hr = IpcfEncryptFile(wszInputFilePath,
@@ -159,7 +163,7 @@ Example use of [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/fu
            NULL,
            &wszOutputFilePath);
 
-Example use of [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile):
+Example use of [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx):
 
     hr = IpcfDecryptFile(wszInputFilePath,
            IPCF_DF_FLAG_DEFAULT,
@@ -174,17 +178,16 @@ You have now completed the steps needed to enable your application to use Azure 
 * [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
-* [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
-* [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
-* [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
-* [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
-* [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-* [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
-* [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcCreateLicenseFromTemplateID**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromtemplateid)
- 
+* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
+* [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+* [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
+* [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
+* [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx)
+* [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx)
+* [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx)
+* [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)
+* [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
+* [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
+* [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

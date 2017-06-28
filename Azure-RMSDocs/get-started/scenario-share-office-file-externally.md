@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Share an Office file with users in another organization | Azure Information Protection
+title: AIP Scenario - Share Office files with external users
 description: This scenario and supporting user documentation uses Azure Rights Management protection so that users can safely email an Office file with people in another organization. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +55,7 @@ For the user instructions for this scenario to work, the following must be in pl
 |Azure Rights Management is activated|[Activating Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |The Rights Management sharing application is deployed to users’ computers that run Windows|[Automatic deployment for the Microsoft Rights Management sharing application](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Users have Outlook from Office 2013|If users have Office 2016 or Office 2010, replace the screen shot with an equivalent version so that the picture matches what users see.|
-|Your subscription for Azure Information Protection includes document tracking|If your subscription does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />Check the subscription information from the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
+|Your subscription for Azure Information Protection includes document tracking|If your subscription does not include document tracking and revocation, users will not be able to complete all steps in the user instructions. In this case, either purchase a subscription that does support these features, or modify the user instructions to remove the steps that use these features.<br /><br />Check the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 ## User documentation instructions
 Using the following template, copy and paste the user instructions into a communication for your end users, and make these modifications to reflect your environment:
@@ -157,3 +158,4 @@ Use the [document tracking portal](https://track.azurerms.com/) to track if and 
 
     -   Email: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

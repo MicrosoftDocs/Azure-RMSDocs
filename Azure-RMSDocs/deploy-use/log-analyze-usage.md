@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Logging and analyzing usage of the Azure Rights Management service | Azure Information Protection
+title: Log & analyze usage of the Azure RMS service - AIP
 description: Information and instructions how to use usage logging with Azure Rights Management (Azure RMS). 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,7 +48,7 @@ You can then use these Azure Rights Management service logs to support the foll
     If you have an information leak, you are likely to be asked who recently accessed specific documents and what information did a suspected person access recently. You can answer these type of questions when you use this logging because people who use protected content must always get a Rights Management license to open documents and pictures that are protected by the Azure Rights Management service, even if these files are moved by email or copied to USB drives or other storage devices. This means that you can use these logs as a definitive source of information for forensic analysis when you protect your data by using the Azure Rights Management service.
 
 > [!NOTE]
-> If you are interested only in the logging of administrative tasks for the Azure Rights Management service, and do not want to track how users are using the Rights Management service, you can use the [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) Windows PowerShell cmdlet for Azure Rights Management.
+> If you are interested only in the logging of administrative tasks for the Azure Rights Management service, and do not want to track how users are using the Rights Management service, you can use the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) Windows PowerShell cmdlet for Azure Rights Management.
 > 
 > You can also use the Azure classic portal for high-level usage reports that include **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**,
 
@@ -72,7 +73,7 @@ To download your usage logs, you will use the Azure Rights Management administra
 
 ### To download your usage logs by using PowerShell
 
-1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) cmdlet to connect to the Azure Rights Management service:
+1.  Start Windows PowerShell with the **Run as administrator** option and use the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet to connect to the Azure Rights Management service:
 
     ```
     Connect-AadrmService
@@ -105,7 +106,7 @@ By default, this cmdlet uses three threads to download the logs. If you have suf
 #### If you manually enabled Azure Rights Management usage logging before the logging change February 22, 2016
 
 
-If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) cmdlet to download your old logs. For example:
+If you used usage logging prior to the logging change, you will have usage logs in your configured Azure storage account. Microsoft will not copy these logs from your storage account to the new Azure Rights Management managed storage account as part of this logging change. You are responsible for managing the lifecycle of the previously generated logs and can use the [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) cmdlet to download your old logs. For example:
 
 - To download all available logs to your E:\logs folder: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -150,13 +151,15 @@ Each of the subsequent lines is a log record. The values of the fields are in th
 |result|String|'Success' if the request was served successful.<br /><br />The error type in single quotation marks if the request failed.|'Success'|
 |correlation-id|Text|GUID that is common between the RMS client log and server log for a given request.<br /><br />This value can be useful to help troubleshooting client issues.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|GUID, enclosed in curly braces that identifies the protected content (for example, a document).<br /><br />This field has a value only if request-type is AcquireLicense and is blank for all other request types.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|String|Email address of the owner of the document.|alice@contoso.com|
-|issuer|String|Email address of the document issuer.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|String|ID of the template used to protect the document.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|String|File name of the document that was protected. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.|TopSecretDocument.docx|
-|date-published|Date|Date when the document was protected.|2015-10-15T21:37:00|
+|owner-email|String|Email address of the owner of the document.<br /><br /> This field is blank if the request type is RevokeAccess.|alice@contoso.com|
+|issuer|String|Email address of the document issuer. <br /><br /> This field is blank if the request type is RevokeAccess.|alice@contoso.com (or) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|String|ID of the template used to protect the document. <br /><br /> This field is blank if the request type is RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|File name of a protected document that is tracked by using the Azure Information Protection client for Windows or the Rights Management sharing application for Windows. <br /><br />Currently, some files (such as Office documents) display as GUIDs rather than the actual file name.<br /><br /> This field is blank if the request type is RevokeAccess.|TopSecretDocument.docx|
+|date-published|Date|Date when the document was protected.<br /><br /> This field is blank if the request type is RevokeAccess.|2015-10-15T21:37:00|
 |c-info|String|Information about the client platform that is making the request.<br /><br />The specific string varies, depending on the application (for example, the operating system or the browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|IP address of the client that makes the request.|64.51.202.144|
+|admin-action|Bool|Whether an administrator has accessed the document tracking site in Administrator mode.|True|
+|acting-as-user|String|The email address of the user for whom an administrator is accessing the document tracking site. |'joe@contoso.com'|
 
 
 #### Exceptions for the user-id field
@@ -219,27 +222,28 @@ There are many request types for the Azure Rights Management service but the fol
 
 
 ## Windows PowerShell reference
-Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
+Starting February 2016, the only Windows PowerShell cmdlet that you need for Azure Rights Management usage logging is [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog). 
 
 Before this change, the following cmdlets were needed for Azure Rights Management usage logs, and are now deprecated:  
 
--   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
+-   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
+-   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629425.aspx)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](https://msdn.microsoft.com/library/azure/dn629423.aspx)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629419.aspx)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
 
 If you have logs in your own Azure storage from before the Azure Rights Management logging change, you can  download them with these older cmdlets, using Get-AadrmUsageLog and Get-AadrmUsageLogLastCounterValue, as before. But all new usage logs will write to the new Azure RMS storage and must be downloaded with Get-AadrmUserLog.
 
 For more information about using Windows PowerShell for the Azure Rights Management service, see [Administering the Azure Rights Management service by Using Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

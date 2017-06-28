@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI | Azure Information Protection
+title: PowerShell script for Azure RMS & FCI - AIP
 description: Sample script to copy and edit, as described in the instructions for RMS protection with Windows Server File Classification Infrastructure.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,9 +27,11 @@ ms.suite: ems
 
 # Windows PowerShell script for Azure RMS protection by using File Server Resource Manager FCI
 
->*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 This page contains the sample script to copy and edit, as described in [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
+
+This script uses a minimum version of **1.3.155.2** for the AzureInformationProtection module. Run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
 *&#42;&#42;Disclaimer&#42;&#42;: This sample script is not supported under any Microsoft standard support program or service. This sample*
 *script is provided AS IS without warranty of any kind.*
@@ -38,7 +41,7 @@ This page contains the sample script to copy and edit, as described in [RMS prot
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and AzureInformationProtection module minimum version 1.3.155.2.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -62,7 +65,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 1.0' 
+[String] $Script:Version = 'version 3.3' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -78,25 +81,22 @@ function Get-ScriptName(){
 
 function Check-Module{
 
-	param ([String]$Module = $(Throw "Module name not specified"))
+    param ([String]$Module = $(Throw "Module name not specified"))
 
-	[bool]$isResult = $False
+    [bool]$isResult = $False
 
-	#try to load the module
-	if (get-module -list -name $Module) {
-		import-module $Module
+    #try to load the module
+    if ((get-module -list -name $Module) -ne $nil)
+        {
 
-		if (get-module -name $Module ) {
+            $isResult = $True
+        } else 
+        
+        {
+            $isResult = $False
+        } 
 
-			$isResult = $True
-		} else {
-			$isResult = $False
-		} 
-
-	} else {
-			$isResult = $False
-	}
-	return $isResult
+    return $isResult
 }
 
 function Protect-File ($ffile, $ftemplateId, $fownermail) {
@@ -104,11 +104,11 @@ function Protect-File ($ffile, $ftemplateId, $fownermail) {
     [bool] $returnValue = $false
     try {
         If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
         } else {
-            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId -OwnerEmail $fownermail
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -DoNotPersistEncryptionKey All -TemplateID $ftemplateId -OwnerEmail $fownermail
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
         }
@@ -139,11 +139,11 @@ $Script:isScriptProcess = $True
 
 # Validate Azure RMS connection by checking the module and then connection
 if ($Script:isScriptProcess) {
- 		if (Check-Module -Module RMSProtection){
+ 		if (Check-Module -Module AzureInformationProtection){
     	$Script:isScriptProcess = $True
 	} else {
 
-		Write-Host ("The RMSProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
+		Write-Host ("The AzureInformationProtection module is not loaded") -foregroundcolor "yellow" -backgroundcolor "black"	        
 		$Script:isScriptProcess = $False
 	}
 }
@@ -177,3 +177,5 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 ---
 
 Back to [RMS protection with Windows Server File Classification Infrastructure](configure-fci.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

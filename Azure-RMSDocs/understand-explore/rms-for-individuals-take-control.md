@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: How administrators can control the accounts created for RMS for individuals | Azure Information Protection
+title: Control the accounts created for RMS for individuals - AIP
 description: How you can control the user accounts in Azure Active Directory if you do not want to convert your organization's RMS for individuals subscription to a paid subscription.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,3 +50,5 @@ To control the user accounts in the Azure directory, or to prevent users from si
 ## Next steps
 
 If users rather than administrators can create their accounts in Azure Active Directory for RMS for individuals, how can you find out if they have done this?  See  [How to find out if your users have signed up for RMS for individuals](rms-for-individuals-identify-sign-up.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

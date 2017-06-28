@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Rights Management Sharing Application for Windows | Azure Information Protection
+title: Rights Management Sharing Application for Windows - AIP
 description: Information resources for the Rights Management sharing application for Windows. This is free, downloadable application for organizations that use Active Directory Rights Management Services (AD RMS) or Azure Information Protection, and for organizations that don't have their own information protection infrastructure but want to consume content that has been protected by other organizations that use Azure Information Protection.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,6 +29,10 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
+> [!IMPORTANT]
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2018. 
+
+
 The Rights Management sharing application for Windows (also known as just “the RMS sharing app”) is a free, downloadable application for organizations that use [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) or [Azure Information Protection](../understand-explore/what-is-information-protection.md), and for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use the Azure Rights Management service from Azure Information Protection.
 
 -   [Rights Management sharing application: Version release history](sharing-app-version-release-history.md)
@@ -44,3 +49,4 @@ The Rights Management sharing application for Windows (also known as just “the
 ## See Also
 [FAQ for Rights Management Sharing Application for Windows](http://technet.microsoft.com/dn467883)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

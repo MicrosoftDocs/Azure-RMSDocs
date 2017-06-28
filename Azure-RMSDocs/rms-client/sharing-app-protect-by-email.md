@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Protect a file that you share by email by using the Rights Management sharing application | Azure Information Protection
+title: Share protected with the RMS sharing app - AIP
 description: Instructions how to safely share a document by email.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,7 +78,7 @@ In addition to sharing a protected file by using Outlook, you can also use these
 
     ![Email message for Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Are you wondering: [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    Are you wondering: [What’s the .ppdf file that’s automatically created?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 4.  Optional: You can change anything that you want in this email message. For example, you can add to or change the subject or text in the message.
 
@@ -95,3 +96,5 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

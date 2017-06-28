@@ -5,8 +5,9 @@ title: Configure Visual Studio | Azure RMS
 description: Instructions about how to configure a Visual Studio project to use the RMS SDK 2.1.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,6 +77,5 @@ These instructions apply to building a native 32-bit application.
 ## Related topics
 
 * [Install the SDK](install-the-rms-sdk.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

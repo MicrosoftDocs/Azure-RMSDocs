@@ -6,7 +6,7 @@ description: Three generations of the Rights Management SDK are now available.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -53,3 +53,5 @@ This collection of Microsoft supplied RMS code samples and developer support too
 | [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**UI libraries and sample app for iOS** at GitHub, so you can get started quickly and re-use our standard UI in your apps.|
 | [UI Library and Sample app](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**UI libraries and sample app for Android** at GitHub, so you can get started quickly and re-use our standard UI in your apps.|
 | [Android usage scenarios](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) and later versions of the 4.x SDK|**Java code examples** representing important development scenarios to get you accustomed to the RMS SDK. Examples include use of Microsoft Protected File format, custom protected file formats, and custom UI controls.|
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

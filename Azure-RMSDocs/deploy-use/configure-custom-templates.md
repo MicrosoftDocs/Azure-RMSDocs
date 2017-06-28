@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Configuring custom templates for the Azure Rights Management service| Azure Information Protection
+title: Configure custom templates for Azure RMS - AIP
 description: Information and instructions for admins to configure and manage usage rights templates. Templates make it easy for users and other admins to apply policies to sensitive files that restrict access to authorized users.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,7 +43,7 @@ When the Azure Rights Management service has been [activated](activate-service.m
 
     -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
 
-In addition, the [RMS sharing application](../rms-client/sharing-app-windows.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the [Do Not Forward option](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+In addition, the [Azure Information Protection client](../rms-client/aip-client.md) lets users define their own set of permissions. And, for the Outlook client and Outlook Web Access, users can select the [Do Not Forward option](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 For many organizations, the default templates might be sufficient. But if you want to create your own custom rights policy templates, you can do so. Reasons for creating a custom template include the following:
 
@@ -68,4 +69,9 @@ Use the following information to help you configure and use custom templates:
 
 -   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
 
+> [!TIP]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

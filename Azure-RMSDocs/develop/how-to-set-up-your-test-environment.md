@@ -5,8 +5,9 @@ title: Testing your application | Azure RMS
 description: Instructions on how to setup your application for testing.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,6 +55,5 @@ The guidance in this topic is not comprehensive. For detailed information about 
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

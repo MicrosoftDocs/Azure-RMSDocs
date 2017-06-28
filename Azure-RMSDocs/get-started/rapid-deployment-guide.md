@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Rapid deployment guide for Azure Information Protection | Azure Information Protection
-description: A guide to help you more quickly deploy and use Azure Information Protection to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
+title: Rapid deployment guide for Azure RMS - AIP
+description: A guide to help you more quickly deploy and use the Azure Rights Management service to protect your organization's data. Start by choosing from a list of specific scenarios to implement.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +29,10 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy and use Azure Information Protection by choosing from a list of specific scenarios to implement.
+Use this guide in addition to the configuration information in the **Deploy & Use** section, to help you more quickly deploy a protection-only solution that uses the Azure Rights Management service from Azure Information Protection. Choose from a list of specific scenarios to implement.
+
+> [!NOTE]
+> At this time, the guide contains scenarios for protection-only and does not contain scenarios for classification and protection or the Azure Information Protection client. 
 
 These scenarios contain both administrator instructions and accompanying end user documentation. Before you give the documentation (instructions or announcements) to your end users, you will need to first customize this documentation for your business requirements and existing work flows. An example set of instructions or an announcement show how the final end user documentation might look.
 
@@ -38,8 +42,7 @@ The scenarios listed here are a sample of the most popular ones. Because Azure I
 
 Before you roll out these solutions, you might want to send a broad announcement to end users, letting them know that some changes are coming to help protect company data, and that it might require some changes from them. An example communication is included after the following table.
 
-> [!NOTE]
-> If you have questions and comments about this guide, use the feedback mechanisms on this page, or send an email message to [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+If you have questions and comments about this guide, use the feedback mechanisms on this page, or send an email message to [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## Scenarios for Azure Information Protection
 To help you more quickly deploy Azure Information Protection to address specific business problems, choose the scenarios that most closely match your business goals, and adapt them where necessary.
@@ -149,3 +152,4 @@ One of this organization's most valuable assets is its data—the data that we g
 
 The solutions that we're implementing will help us safeguard our valuable data, and give you the tools to keep control of that data. Thank you for your cooperation while we implement these changes.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

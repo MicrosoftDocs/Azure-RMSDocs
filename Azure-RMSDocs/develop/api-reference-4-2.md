@@ -1,12 +1,13 @@
 ﻿---
 # required metadata
 
-title: API reference | Azure RMS
-description: The Microsoft Rights Management SDK 4.2 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
+title: API SDK 4.2 reference | Microsoft Docs
+description: Azure Information Protection SDK 4.2 supports several operating systems; Android, iOS, OS X, Linux, Windows Phone and Windows Store.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -24,25 +25,24 @@ ms.suite: ems
 
 ---
 
-# API reference
+# API SDK 4.2 reference
 
-The Microsoft Rights Management SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
+The Azure Information Protection SDK 4.2 supports several operating systems. For more information on specifics, see [What's new](release-notes.md).
 
 ### Apple
-- [iOS / OS X API reference](/information-protection/sdk/4.2/api/iOS/iOS) - API reference for the Apple iOS and OS X operating systems.
+- [iOS / OS X API reference](https://msdn.microsoft.com/library/dn758306.aspx) - API reference for the Apple iOS and OS X operating systems.
 
 ### Google
-- [Android namespaces](android-namespaces.md)
+- [Android namespaces](https://msdn.microsoft.com/library/dn758245.aspx)
 
 ### Linux
 - [Linux API reference](linux-c-api-reference.md) - API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### Microsoft
-- [Windows API Reference](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement) - API reference for the Windows Phone and Windows Store Applications SDKs.
+- [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx) - API reference for the Windows Phone and Windows Store Applications SDKs.
 
 ## Related topics
 
 * [Get started](get-started.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

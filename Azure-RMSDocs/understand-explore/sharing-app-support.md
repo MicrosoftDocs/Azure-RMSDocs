@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: RMS sharing application for Windows and mobile platforms | Azure Information Protection
+title: RMS sharing app for Windows and mobile platforms - AIP
 description: How the RMS sharing application supports Azure RMS as a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +30,10 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-The RMS sharing application is a free, downloadable application that is required to support Office 2010, but also recommended for Windows computers, Mac computers, and mobile devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support the Azure Rights Management service, which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) section from the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
+> [!IMPORTANT]
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](../rms-client/aip-client.md). Support for this older application will stop January 31, 2018. 
+ 
+The RMS sharing application is a downloadable application that supports Office 2010 for Windows computers, and used to be recommended for all Windows computers and mobile devices. It is still recommended for Mac computers and Windows Phone devices. One of its benefits is that it can apply generic protection for applications and files that do not natively support the Azure Rights Management service, which means that all files can be protected. For more information about the different protection levels, see the [Level of protection – native and generic](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) section from the [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md).
 
 When users protect their files by using the RMS sharing application, they can also track the documents that they protected, and if necessary, revoke access to them. They do this by using the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -41,7 +45,7 @@ For Windows computers, the RMS sharing application unobtrusively integrates with
 
 -   A viewer to open files that have been protected by the Azure Rights Management service. This viewer is automatically invoked when there is no other application installed that could open the protected file.
 
--   Backend configuration for Office 2010 that lets Word, Excel, PowerPoint, and Outlook from this suite work seamlessly with the Azure Rights Management service.
+-   Back-end configuration for Office 2010 that lets Word, Excel, PowerPoint, and Outlook from this suite work seamlessly with the Azure Rights Management service.
 
 Although the RMS sharing application for Windows can be downloaded and installed for a single computer by using the [Microsoft Rights Management page](http://go.microsoft.com/fwlink/?LinkId=303970), it also supports an enterprise deployment for silent installation and custom configuration. For more information, see the following resources:
 
@@ -61,3 +65,4 @@ The RMS sharing application for mobile devices supports the most commonly used m
 ## Next steps
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Track and revoke your documents when you use the RMS sharing application | Azure Information Protection
+title: Track and revoke documents with the RMS sharing app - AIP
 description: After you have protected your documents by using the RMS sharing application, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,7 +35,7 @@ After you have protected your documents by using the RMS sharing application, if
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
+When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
 
 -   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
 
@@ -109,3 +110,5 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

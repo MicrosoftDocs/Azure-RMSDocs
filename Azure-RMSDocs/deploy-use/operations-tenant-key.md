@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Operations for your Azure Rights Management tenant key | Azure Information Protection
+title: Operations for your Azure Information Protection tenant key
 description: Identify the different levels of control and responsibility that you have for your Azure Information Protection tenant key.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,10 +45,9 @@ The following table identifies which operations you can do, depending on the top
 
 After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure Information Protection tenant key:
 
-
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)
 
+However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

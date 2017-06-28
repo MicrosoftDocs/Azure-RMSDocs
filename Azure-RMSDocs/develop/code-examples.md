@@ -5,8 +5,9 @@ title: Code examples | Azure RMS
 description: RMS SDK 4.2 includes example code and working projects for some supported operating systems.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,9 +42,4 @@ These topics will introduce you to important code elements for the associated ve
 - [Linux code examples](linux-c-code-examples.md)
 - [iOS/OS X code examples](ios-os-x-code-examples.md)
 
-
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Helping users to protect files by Using the Azure Rights Management service| Azure Information Protection
+title: Help users protect files by using Azure RMS - AIP
 description: Information to help you provide guidance for users, administrators, and your help desk after you have deployed and configured the Azure Rights Management service from Azure Information Protection.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,6 +48,8 @@ After you have deployed and configured Azure Information Protection for your org
 -   **Help desk information:**
 
     One of the most useful tools for the help desk is the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Help desk operators can run it with the Azure RMS administrator option, and they can ask users to run it with the Azure RMS user option. This tool can not only help identify problems, but also fix problems that it finds, and if still not fixed, record trace logs.
+    
+    If users are running the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, unlike the RMS Analyzer, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
 
     If there are legitimate requests to have full rights access to protected documents, for example a request by the legal department or a manager after an employee has left the organization, make sure the help desk has processes to request this by using the Azure Rights Management [super user feature](configure-super-users.md).
 
@@ -66,20 +69,16 @@ After you have deployed and configured Azure Information Protection for your org
 
 Use the following sections for application-specific information to help users protect sensitive documents and emails.
 
-## Using information protection with the Rights Management sharing application
-The Rights Management (RMS) sharing application might be required for users to protect and consume protected content if they use Office 2010, but also recommended for all computers and mobile devices that support the Azure Rights Management service.
+## Using information protection with the Azure Information Protection client
+The Azure Information Protection client might be required for users to protect and consume protected documents and emails if they use Office 2010, but it also recommended for computers and mobile devices.
 
-In addition to making it easier for users to protect important documents, the RMS sharing application lets users track the documents that they have protected, and if necessary, revoke access to them.
+In addition to making it easier for users to protect important documents, the Azure Information Protection client lets users track the documents that they have protected, and if necessary, revoke access to them.
 
-For instructions to use this application for Windows computers, see the [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md).
+For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
 
-For mobile devices, see the [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> For a high-level example scenario with screenshots, see [Users safely share attachments with mobile users](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
-If you are using the Azure Rights Management service and have not installed the Rights Management sharing application, users will not see the **Share Protected** button on the ribbon or **Protect in-place** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to these.
+If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users will not see the Azure Information Protection bar in their Office desktop apps, the **Protect** button on the ribbon, or **Classify and protect** from File Explorer that makes it easier for them to protect files. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
@@ -117,4 +116,5 @@ Similarly to viewing a protected document, when the recipients receive the email
 
 Similarly to viewing a protected document, when the recipients receive the email message, they are first authenticated. If they are authorized to see the email message, it opens with the restricted usage rights that were specified for that user. For example, if you selected **Do Not Reply All**, the **REPLY ALL** option in the message window is not available.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

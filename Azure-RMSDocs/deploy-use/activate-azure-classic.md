@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: How to activate Azure Rights Management from the Azure classic portal | Azure Information Protection
+title: Activate Azure RMS with the Azure classic portal - AIP
 description: Activation instructions for the Azure Rights Management service when you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +46,7 @@ Use these instructions if you have access to the Azure portal. For example, you 
     > [!NOTE]
     >If you see an activation error, it might be because your service plan or product version does not include the Azure Rights Management service for Azure Information Protection.
     >
-    >To activate the Azure Rights Management service, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    >To activate the Azure Rights Management service, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For help with this issue, send an email message to [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
 The **RIGHTS MANAGEMENT STATUS** should now display **Active** and the **ACTIVATE** option is replaced with **DEACTIVATE**.
@@ -62,3 +63,5 @@ In addition to the **Active** status, which indicates that the Rights Management
 
 ## Next steps
 Back to [Activating Azure Rights Management](activate-service.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

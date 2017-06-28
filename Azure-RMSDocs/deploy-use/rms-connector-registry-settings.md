@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Registry settings for the RMS connector | Azure Information Protection
+title: Registry settings for the Rights Management connector - AIP
 description: Information about the registry settings on servers using the RMS connector. The recommended method to configure these settings is to use the server configuration tool for Microsoft RMS connector.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -220,3 +221,5 @@ Instructions for when you use these settings:
 
 
 Back to [Deploying the Azure Rights Management connector](deploy-rms-connector.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

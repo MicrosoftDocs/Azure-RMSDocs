@@ -1,12 +1,13 @@
 ---
 # required metadata
 
-title: Change permissions on files that have been protected by Rights Management | Azure Information Protection
+title: Change permissions on RMS-protected files - AIP
 description: When a file has been protected by Rights Management, you can change the permissions by re-protecting it and then specifying all the users that should have access to it, and what permissions you want to give them.
 keywords:
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -99,3 +100,5 @@ For examples for how you might use the Rights Management sharing application, an
 
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

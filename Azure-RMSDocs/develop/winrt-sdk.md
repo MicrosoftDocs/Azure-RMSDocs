@@ -5,8 +5,9 @@ title: Windows Store setup | Azure RMS
 description: Windows Store applications can use the Microsoft Rights Management SDK 4.2 to enable integrated information protection in their application.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -86,4 +87,6 @@ You are now ready to create your own new Windows Store apps.
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
-[Windows API Reference](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

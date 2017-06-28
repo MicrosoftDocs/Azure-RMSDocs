@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: BYOK pricing and restrictions | Azure Information Protection
+title: BYOK pricing & restrictions - Azure Information Protection
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 06/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,9 +30,9 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Organizations that have a subscription that includes Azure Information Protection can use customer-managed keys (BYOK) in Azure Key Vault and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
+Organizations that have a subscription that includes Azure Information Protection can configure their Azure Information Protection tenant to use a customer-managed key (BYOK) and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
-However, to use Azure Key Vault, you must have an Azure subscription that supports Key Vault with HSM-protected keys. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+The key must be stored in Azure Key Vault, which requires a paid (or trial) Azure subscription and you must use the Azure Key Vault Premium service tier to support HSM-protected keys. Using an HSM-protected key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
 When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription, to ensure that it's used by only the Azure Rights Management service. 
 
@@ -56,17 +57,13 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](https
 
 ## Restrictions when using BYOK
 
-If you have users who have signed up for a free account by using RMS for individuals, you cannot use BYOK or usage logging because this configuration does not have a tenant administrator to configure these features.
+BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service (Azure RMS) that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that work with Azure RMS by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests of Azure RMS.
 
-
-> [!NOTE]
-> For more information about RMS for individuals, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+There is one exception: Currently, **Azure RMS BYOK is not compatible with Exchange Online**:
 
 ![BYOK doesn't support Exchange Online](../media/RMS_BYOK_noExchange.png)
 
-BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service (Azure RMS) that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that work with Azure RMS by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests of Azure RMS.
-
-There is one exception: Currently, **Azure RMS BYOK is not compatible with Exchange Online**. If you want to use Exchange Online, we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. You have the option to move to BYOK later, for example, when Exchange Online does support Azure RMS BYOK. However, if you cannot wait, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange Online (unprotected emails and unprotected attachments remain fully functional):
+If you want to use Exchange Online, we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. You have the option to move to BYOK later, for example, when Exchange Online does support Azure RMS BYOK. However, if you cannot wait, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange Online (unprotected emails and unprotected attachments remain fully functional):
 
 -   Protected emails or protected attachments in Outlook Web Access cannot be displayed.
 
@@ -86,7 +83,8 @@ Sometimes, the Azure RMS BYOK  exception for Exchange Online is not a problem in
 
 ## Next steps
 
-If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
 If you've decided to stay with the default configuration where Microsoft manages your tenant key, see the [Next steps](plan-implement-tenant-key.md#next-steps) section of the Planning and implementing your Azure Rights Management tenant key article.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

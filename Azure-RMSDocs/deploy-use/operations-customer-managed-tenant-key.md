@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Customer-managed - tenant key lifecycle operations | Azure Information Protection
+title: Customer-managed - AIP tenant key lifecycle operations
 description: Information about the lifecycle operations that are relevant if you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,12 +47,12 @@ Re-keying is also known as rolling your key. Do not re-key your tenant key unles
 
 When you re-key your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure Information Protection retains your old tenant key so that it can issue licenses for old content.
 
-To re-key your tenant key, first re-key your Azure Information Protection tenant key in Key Vault. Then run the Add-AadrmKeyVaultKey cmdlet again, specifying the new key URL.
+To re-key your tenant key, first re-key your Azure Information Protection tenant key in Key Vault. Then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) cmdlet again, specifying the new key URL.
 
 ## Backup and recover your tenant key
 You are responsible for backing up your tenant key. If you generated your tenant key in a Thales HSM, to back up the key, just back up the Tokenized Key file, the World file, and the Administrator Cards.
 
-Because you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md) article, Key Vault will persist the Tokenized Key File, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault will not be able to retrieve it for you because it only has a non-recoverable copy.
+Because you transferred your key by following the procedures in the [Implementing bring your own key (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) section from the [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md) article, Key Vault will persist the Tokenized Key File, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault will not be able to retrieve it for you because it only has a non-recoverable copy.
 
 ## Export your tenant key
 If you use BYOK, you cannot export your tenant key from Azure Key Vault or Azure Information Protection. The copy in Azure Key Vault is non-recoverable. 
@@ -70,4 +71,5 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, then Microsoft will instruct all customers to renew their tenant keys.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

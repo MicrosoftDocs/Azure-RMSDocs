@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Configure work folders for persistent protection | Azure Information Protection
+title: AIP Scenario - Configure work folders for RMS protection
 description: This scenario and supporting user documentation uses Azure Rights Management protection to apply persistent protection to Office documents in Work Folders.  
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -125,3 +126,4 @@ If you configured the custom template as documented for this scenario, users wil
 > 
 > After a period of time, if you discover there are many such requests, you might decide to define your own custom template for this scenario that grants only specific users (such as managers or the help desk) the Co-Owner option while standard users are granted Co-Author or whatever [rights](../deploy-use/configure-usage-rights.md) you decide are suitable.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
