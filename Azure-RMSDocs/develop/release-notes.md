@@ -18,13 +18,15 @@ ms.suite: ems
 ## What's new
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 
--   [New for June 2016](#new-for-June-2016)
--   [December 2015 Update](#december-2015-update)
--   [July 2015 Update - Adds support for Linux / C++ development](#july-2015-update-adds-support-for-linux-c-developm)
--   [May 2015 Update - Adds logging control](#may-2015-update-adds-logging-control)
--   [February 2015 Update - Adds Windows Store application support](#february-2015-update-adds-windows-store-application-support)
+-   [New for June 2017](#new-for-june-2017)
+-   [October 2016 update](#October-2016-update)
+-   [June 2016 update](#new-for-June-2016)
+-   [December 2015 update](#december-2015-update)
+-   [July 2015 update - Adds support for Linux / C++ development](#july-2015-update-adds-support-for-linux-c-developm)
+-   [May 2015 update - Adds logging control](#may-2015-update-adds-logging-control)
+-   [February 2015 update - Adds Windows Store application support](#february-2015-update-adds-windows-store-application-support)
 -   [January 2015 Update - Adds WinPhone platform support](#january-2015-update-adds-winphone-platform-support)
--   [October 2014 Update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [October 2014 update - Upgrade to Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
