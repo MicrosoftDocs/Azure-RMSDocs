@@ -20,7 +20,7 @@ ms.suite: ems
 
 Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
 
--   [New for June 2017](#new-for-june-2017)
+-   [New for July 2017](#new-for-july-2017)
 -   [October 2016 update](#October-2016-update)
 -   [June 2016 update](#new-for-June-2016)
 -   [December 2015 update](#december-2015-update)
@@ -32,11 +32,11 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
-### New for June 2017
+### New for July 2017
 
-The udpates for our June release include incrementing the revision of the SDK, now 4.2.5.
+The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
-- Your app can now **set the logging level on the fly** with the Android SDK. The iOS SDK does not support logging level. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Your app can now **set the logging level on-the-fly** with the Android SDK. The iOS SDK does not support logging level. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
 - The SDK now returns an error for a NULL access token.
 
 - This release adds a revocation API to revoke published content for iOS/OSX and Android SDKs.
@@ -44,7 +44,7 @@ The udpates for our June release include incrementing the revision of the SDK, n
 #### iOS / OSX API updates
 - MS UserPolicy revokeSerializedPolicyWithUserId
 
-#### Android API udpates
+#### Android API updates
 - UserPolicy.revokeUserPolicy asynchronous
 - UserPolicy.revokeUserPolicy synchronous
 
@@ -55,7 +55,7 @@ The udpates for our June release include incrementing the revision of the SDK, n
 
 ### June 2016 update
 
-- **Support for Modern Authentication** - this will bring Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
+- **Support for Modern Authentication** - this brings Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card, and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
 - **Document Tracking support** - developers can now enable document tracking when protecting document in their apps
 - Performance improvements
 - Bug fixes
@@ -67,7 +67,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 -   Document tracking, RMS On-line only, for iOS/OS X and Android operating systems.
 
-    For details and usage guidance on iOS/OS X, see the [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) class which provides tracking information and the additional document tracking registration method on [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). There are similar additions for Android to [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) and [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
+    For details and usage guidance on iOS/OS X, see the [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) class, which provides tracking information and the additional document tracking registration method on [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). There are similar additions for Android to [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) and [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx).
 
     For a detailed description of the document tracking feature, see [How to: Use document tracking](how-to-use-document-tracking.md).
 
@@ -146,10 +146,10 @@ This section outlines information about the current and previous releases of the
 **AD RMS SDK 4.1 - iOS / OS X and Android platforms Global Availability Release**
 
 -   **AD RMS support** - IT administrators can use RMS enabled apps on mobile devices with the new AD RMS server's mobile device extensions.
--   **Offline Consumption** - end-users can access RMS protected data offline.
+-   **Offline Consumption** - end users can access RMS protected data offline.
 -   **Segregated Auth** - developers can use their own authentication library for Azure RMS and AD RMS (or use the recommended [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)).
 -   **Segregated UI** - developers can build their user interface to protect and consume RMS protected documents.
--   **Re-designed API** - developers can now enjoy a simple and transparent encryption and decryption API, which provides consistent RMS behaviors and user experience, with minimum effort.
+-   **Redesigned API** - developers can now enjoy a straightforward and transparent encryption and decryption API, which provides consistent RMS behaviors and user experience, with minimum effort.
 
 **Common to all platforms**
 
@@ -165,7 +165,7 @@ This section outlines information about the current and previous releases of the
 
     **Solution** - Make sure the application does not allow multi-instance calls to the Android API.
 
--   When I use the [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
+-   When I use the [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write( byte\[\] array, int offset, int length ) method with a length different from the *array.length* value, I am not able to consume the content later using the SDK.
 
     **Solution** - This is a known issue. To mitigate it, either always pass a *byte \[\]* array with the same length value as the length parameter, or use the [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array) method.
 
@@ -181,13 +181,13 @@ This section outlines information about the current and previous releases of the
 
 -   The RMS SDK 4.x does not show the network activity indicator.
 
-    This is a known optional behavior for iOS according to the Apple Human Interface Guidelines .
+    This is a known optional behavior for iOS according to the Apple Human Interface Guidelines.
 
 **OS X only**
 
 -   The RMS SDK 4.x does not show the network activity indicator.
 
-    This is a known optional behavior for OS X according to the Apple Human Interface Guidelines .
+    This is a known optional behavior for OS X according to the Apple Human Interface Guidelines.
 
 -   **Solution** - To create a multiple document interface (MDI) application using our OS X SDK, use the following guidance.
 
@@ -241,7 +241,7 @@ This section outlines information about the current and previous releases of the
 
 **OS x**
 
-**Q**: Sample app framework is adapted to Xcode 5, can I work with Xcode 4.6 ?
+**Q**: Sample app framework is adapted to Xcode 5, can I work with Xcode 4.6?
 
 **A**:The OS X SDK works with Xcode 4.6 and later only, as well as OS X 10.8 and later.
 
