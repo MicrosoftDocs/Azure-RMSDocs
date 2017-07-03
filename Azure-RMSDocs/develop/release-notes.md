@@ -36,8 +36,8 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 
 The udpates for our June release include incrementing the revision of the SDK, now 4.2.5.
 
-- Your app can now set the logging level on the fly.
-- SDK now returns an error for a NULL access token.
+- Your app can now **set the logging level on the fly** with the Android SDK. The iOS SDK does not support logging level. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- The SDK now returns an error for a NULL access token.
 
 - This release adds a revocation API to revoke published content for iOS/OSX and Android SDKs.
 
