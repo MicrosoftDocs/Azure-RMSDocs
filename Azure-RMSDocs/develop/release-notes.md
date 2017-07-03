@@ -1,10 +1,10 @@
 ﻿---
-title: Azure RMS - What's new and release notes
+title: What's new and release notes
 description: Outlines important changes and features in this new version of the RMS SDK.
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
@@ -14,7 +14,7 @@ ms.reviewer: kartikk
 ms.suite: ems
 ---
 
-# What's new and Release notes
+# What's new and release notes
 
 ## What's new
 
@@ -32,9 +32,9 @@ Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new l
 -   [Release notes](#release-notes)
 -   [Frequently asked questions](#frequently-asked-questions)
 
-Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this version of the RMS SDK.
-
 ### New for June 2017
+
+The udpates for our June release include incrementing the revision of the SDK, now 4.2.5.
 
 - Your app can now set the logging level on the fly.
 - SDK now returns an error for a NULL access token.
