@@ -18,7 +18,7 @@ ms.suite: ems
 
 ## What's new
 
-Microsoft Rights Management SDK 4.2 takes RMS application enablement to a new level of ease and flexibility. This topic outlines important changes and features in this new version of the RMS SDK.
+This topic outlines important changes and features in this new version of the RMS  SDK v4.x.
 
 -   [New for July 2017](#new-for-july-2017)
 -   [October 2016 update](#October-2016-update)
