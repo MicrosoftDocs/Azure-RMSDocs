@@ -5,8 +5,9 @@ title: Linux code examples | Azure RMS
 description: This topic introduces you to important scenarios and code elements for the Linux version of the RMS SDK.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -607,3 +608,4 @@ Description: Call **result-> accessToken()** method
 
 **Note**  Any of the authentication library methods may raise **rmsauth::Exception**
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

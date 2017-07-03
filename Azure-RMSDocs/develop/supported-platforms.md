@@ -6,8 +6,9 @@ description: This topic identifies the Rights Management Services SDK 2.1 su
 
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,11 +41,5 @@ This topic identifies the Rights Management Services SDK 2.1 supported clien
 
 **Note**  Use of the templates feature is supported beginning with Windows Server 2008.
 
- 
 
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

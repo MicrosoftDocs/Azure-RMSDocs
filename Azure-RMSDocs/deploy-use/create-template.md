@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Create, configure, and publish a custom template | Azure Information Protection
+title: Configure & publish an Azure RMS custom template
 description: Instructions to create and manage custom templates in the Azure classic portal. Templates make it easy for end users and other admins to apply appropriate policies that protect documents and emails.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,7 +33,10 @@ ms.suite: ems
 
 You create and manage custom templates in the Azure classic portal. You can do this directly from the Azure classic portal, or you can sign in to the Office 365 admin center, and choose the **advanced features** for Rights Management, which then redirects you to the Azure classic portal.
 
-You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for the Azure Rights Management service to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+> [!TIP]
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
+You must be a global administrator to create and manage templates in the Azure classic portal. If you have assigned the global administrator role for the Azure Rights Management service to other users, they can also create and manage templates, but must use [PowerShell](configure-templates-with-powershell.md). For more information, see [Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Use the following procedures to create, configure, and publish custom templates for Rights Management.
 
@@ -40,15 +44,9 @@ Use the following procedures to create, configure, and publish custom templates 
 
 1.  Depending on whether you sign in to the Office 365 admin center, or the Azure classic portal, do one of the following:
 
-    -   From the [Office 365 admin center](https://portal.office.com/):
+    -   From the **Office 365 admin center**, you can go directly to the [rights management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) page: 
 
-        1.  In the left pane, click **service settings**.
-
-        2.  From the **service settings** page, click **rights management**.
-
-        3.  In the **Protect your information** section, click **Manage**.
-
-        4.  In the **rights management** section, click **advanced features**.
+        1.  In the **additional configuration** section, click **advanced features**.
 
             > [!NOTE]
             > If the Rights Management service is not activated, first click **activate** and confirm your action. For more information, see [Activating Azure Rights Management](activate-service.md).
@@ -59,16 +57,16 @@ Use the following procedures to create, configure, and publish custom templates 
 
     -   From the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081):
 
-        1.  In the left pane, click **ACTIVE DIRECTORY**.
+        1. In the left pane, click **ACTIVE DIRECTORY**.
 
-        2.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
+        2. From the **active directory** page, click **RIGHTS MANAGEMENT**.
 
-        3.  Select the directory to manage for Rights Management.
-
-        4.  If you have not already activated Rights Management, click **ACTIVATE** and confirm your action.
+        3. If the **RIGHTS MANAGEMENT STATUS** displays **Inactive**, click **ACTIVATE** and confirm your action.
 
             > [!NOTE]
-            > For more information, see [Activating Azure Rights Management](activate-service.md).
+            > For more information, see [Activating Azure Rights Management](activate-service.md)
+            >
+        4. When the **RIGHTS MANAGEMENT STATUS** displays **Active**, select the name of your Active Directory tenant.
 
 2.  Create a new template:
 
@@ -90,20 +88,24 @@ Use the following procedures to create, configure, and publish custom templates 
 
     > [!NOTE]
     > The users or groups that you select must have an email address. In a production environment, this will nearly always be the case but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+    > 
+    > If an email address changes after you select the user or group and you save the template, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation. 
 
-    As a best practice, use groups rather than users, which simplifies management of the templates. If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. However, if you want to grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see [How to copy a template](copy-template.md).
+    As a best practice, use groups rather than users, which simplifies management of the templates. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). 
+    
+    If you have Active Directory on-premises and are synchronizing to Azure AD, you can use mail-enabled groups that are either security groups or distribution groups. To grant rights to all users in the organization, it will be more efficient to copy one of the default templates rather than specify multiple groups. For more information, see [How to copy a template](copy-template.md).
 
     > [!TIP]
     > You can add users from outside your organization ("external users") to the template by selecting a mail-enabled group that contains contacts from Office 365 or Exchange Online. This lets you assign rights to these users in the same way as you can assign rights to users in your organization. For example, you can prevent customers from editing a price list that you send them. Do not use this template configuration for protecting emails if users from outside your organization will read the protected emails by using the Outlook Web App.
     > 
-    > In addition, you can later add users from outside your organization to the template by using the [Windows PowerShell module for Azure Rights Management](install-powershell.md) and using one of the following methods:
+    > In addition, you can later add users from outside your organization to the template, by **specific users**, **groups**, or **all users from that organization**. To do this, use the [Windows PowerShell module for Azure Rights Management](install-powershell.md) and one of the following methods:
     > 
-    > -  **Use a rights definition object to update a template**:  Specify the external email addresses and their rights in a rights definition object, which you then use to update your template. You specify the rights definition object by using the [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) cmdlet to modify an existing template. However, if you're adding these users to an existing template, you will also need to define rights definition objects for the existing groups in the templates and not just the new, external users.
-    > -  **Export, edit, and import the updated template**:  Use the [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) cmdlet to export the template to a file that you can edit to add the external email addresses of these users and their rights to the existing groups and rights. Then use the [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) cmdlet to import this change back into Azure RMS.
+    > -  **Use a rights definition object to update a template**:  Specify the external users (by user email address, group email address, or by a domain for all users in that organization) and their rights in a rights definition object. Then use this rights definition object to update your template. You specify the rights definition object by using the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) cmdlet to create a variable and then supply this variable to the  -RightsDefinition parameter with the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet to modify an existing template. However, if you're adding these users to an existing template, you will also need to define rights definition objects for the existing groups in the templates and not just the new, external users.
+    > -  **Export, edit, and import the updated template**:  Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a file that you can edit to add the external users (by user email address, group email address, or by a domain for all users in that organization) and their rights to the existing groups and rights. Then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure RMS.
 
 3.  Click the Next button, and then assign one of the listed rights to your selected users and groups.
 
-    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support RMS might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
+    Use the displayed description for more information about each right (and for custom rights). More detailed  information is also available in [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support Rights Management might vary in how they implement these rights. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users. To make this template visible to only administrators for this testing, make this template a departmental template (step 6).
 
 4.  If you selected **Custom**, click the Next button, and then select those custom rights.
 
@@ -118,7 +120,7 @@ Use the following procedures to create, configure, and publish custom templates 
 
     More information about departmental templates: By default, all users in your Azure directory see all the published templates and they can then select them from applications when they want to protect content. If you want specific users only to see some of the published templates, you must scope the templates to these users. Then, only these users will be able to select these templates. Other users that you do not specify will not see the templates and therefore, cannot select them. This technique can make choosing the correct template easier for users, especially when you create templates that are designed to be used by specific groups or departments. Users then see only the templates that are designed for them.
 
-    For example, you've created a template for the Human Resources department that applies the Read-only permission to members of the Finance department. So that only members of the Human Resources department can apply this template when they use the Rights Management sharing application, you scope the template to the email-enabled group named HumanResources. Then, only members of this group see and can apply this template.
+    For example, you've created a template for the Human Resources department that applies the Read-only permission to members of the Finance department. So that only members of the Human Resources department can apply this template when they use the Azure Information Protection client, you scope the template to the email-enabled group named HumanResources. Then, only members of this group can apply this template. In addition, if users run the Azure Information Protection client in [protection-only mode](../rms-client/client-protection-only-mode.md), they will not see this template.
 
 7.  On the **TEMPLATE VISIBILITY** page, select the users and groups who will be able to see and select the template from the RMS-enlightened applications. As before, as a best practice, use groups rather than users, and the groups or users you select must have an email address.
 
@@ -126,7 +128,7 @@ Use the following procedures to create, configure, and publish custom templates 
 
     Why might you need to configure application compatibility? Not all applications can support departmental templates. To do so, the application must first authenticate with the RMS service before downloading the templates. If the authentication process does not occur, by default, none of the departmental templates are downloaded. You can override this behavior by specifying that all the departmental templates should download, by configuring application compatibility and selecting the **Show this template to all users when the applications do not support user identity** check box.
 
-    For example, if you do not configure application compatibility for the departmental template in our Human Resources example, only users in the Human Resources department see the departmental template when they use the RMS sharing application, but no users see the departmental template when they use Outlook Web Access (OWA) from Exchange Server 2013 because Exchange OWA and Exchange ActiveSync do not currently support departmental templates. If you override this default behavior by configuring application compatibility, only users in the Human Resources department see the departmental template when they use the RMS sharing application, but all users see the departmental template when they use Outlook Web Access (OWA). If users use OWA or Exchange ActiveSync from Exchange Online, either all users will see the departmental templates or no users will see the department templates, based on the template status (archival or published) in Exchange Online.
+    For example, if you do not configure application compatibility for the departmental template in our Human Resources example, only users in the Human Resources department see the departmental template when they use the Azure Information Protection client in [protection-only mode](../rms-client/client-protection-only-mode.md), but no users see the departmental template when they use Outlook Web Access (OWA) from Exchange Server 2013 because Exchange OWA and Exchange ActiveSync do not currently support departmental templates. If you override this default behavior by configuring application compatibility, only users in the Human Resources department see the departmental template when they use the Azure Information Protection client in protection-only mode, but all users see the departmental template when they use Outlook Web Access (OWA). If users use OWA or Exchange ActiveSync from Exchange Online, either all users will see the departmental templates or no users will see the department templates, based on the template status (archival or published) in Exchange Online.
 
     Office 2016 natively supports departmental templates, and so does Office 2013 starting with version 15.0.4727.1000, released in June 2015 as part of [KB 3054853](https://support.microsoft.com/kb/3054853).
 
@@ -146,10 +148,10 @@ Use the following procedures to create, configure, and publish custom templates 
 
     Then check whether you want to make any changes to the following settings:
 
-    |Setting|More information|
-    |-----------|--------------------|
-    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|
-    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|
+    |Setting|More information| Recommended setting
+    |-----------|--------------------|--------------------|
+    |**content expiration**|Define a date or number of days for this template when files that are protected by the template should not open. You can specify a date or specify a number of days starting from the time that the protection is applied to the file.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+    |**offline access**|Use this setting to balance any security requirements that you have against the requirement that users must be able to open protected files when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, users must be re-authenticated and their access is logged. When this happens, if their credentials are not cached, users are prompted to sign in before they can open the file.<br /><br />In addition to re-authentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same file if there are changes in the policy or group membership from when they last accessed the file.|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Content is available only with an Internet connection** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
 
 10. When you are confident that the template is configured appropriately for your users, click **PUBLISH** to make the template visible for users, and then click **SAVE**.
 
@@ -172,3 +174,5 @@ To make any changes to your template, select it, and then use the quick start st
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

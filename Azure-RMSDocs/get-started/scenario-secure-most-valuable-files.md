@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Scenario - Secure your most (few) valuable files | Azure Information Protection
+title: AIP Scenario - Secure your most (few) valuable files
 description: This scenario and supporting user documentation uses Azure Rights Management to manually and custom-protect a handful of files that you have identified as being your most valuable, which warrant the highest level of protection from unauthorized access. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -59,7 +60,7 @@ For this scenario, the following must be in place:
 |You have configured a custom template as described next|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
 |The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](../rms-client/install-sharing-app.md)|
 |Authorized users have a minimum version of Office 2013|If users have Office 2010, they must also install the Rights Management sharing application.|
-|Your Azure RMS subscription includes document tracking|If your subscription for Azure RMS does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](../deploy-use/log-analyze-usage.md) capabilities of Azure RMS, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />Check the subscription information from the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
+|Your Azure Information Protection subscription includes document tracking|If your subscription does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](../deploy-use/log-analyze-usage.md) capabilities of the Azure Rights Management service, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />Check the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 ### To configure the custom template
 
@@ -150,3 +151,4 @@ The following files now have a very high level of protection applied to them, so
 
 -   If you cannot access these files or if you notice suspicious changes in the files, call the 24-hour support escalation line that has been sent to you in a protected email message from the IT Department.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -5,8 +5,9 @@ title: Enabling email notification | Azure RMS
 description: Email notification allows for a protected content owner to be notified when his or her content is accessed.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +29,7 @@ ms.suite: ems
 
 Email notification allows for a protected content owner to be notified when his or her content is accessed.
 
-To setup your email notification for a given license, use [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the property type parameter, *dwPropID*, as [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) and the application data fields formatted as an [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
+To setup your email notification for a given license, use [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the property type parameter, *dwPropID*, as [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx) and the application data fields formatted as an [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
 
     C++
 
@@ -38,14 +39,14 @@ To setup your email notification for a given license, use [**IpcSetLicenseProper
 
     // lcid field set to 0 causes the default lcid to be used
 
-    propertyValuePairs[0] = {&quot;MS.Conetent.Name&quot;, 0, &quot;FinancialReport.docx&quot;};
-    propertyValuePairs[1] = {&quot;MS.Notify.Enabled&quot;,0 , &quot;true&quot;};
-    propertyValuePairs[2] = {&quot;MS.Notify.Culture&quot;,0 , “en-US”};
+    propertyValuePairs[0] = {"MS.Conetent.Name", 0, "FinancialReport.docx"};
+    propertyValuePairs[1] = {"MS.Notify.Enabled",0 , "true"};
+    propertyValuePairs[2] = {"MS.Notify.Culture",0 , “en-US”};
 
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-        
+
 
 The following table contains the application data fields, property name and value pairs, for RMS email notification.
 
@@ -62,9 +63,8 @@ The following table contains the application data fields, property name and valu
 
 ## Related topics
 
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
-* [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/information-protection/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA)
-* [**IPC\_NAME\_VALUE\_LIST**](/information-protection/sdk/2.1/api/win/structures#msipc_ipc_name_value_list)
- 
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
+- [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

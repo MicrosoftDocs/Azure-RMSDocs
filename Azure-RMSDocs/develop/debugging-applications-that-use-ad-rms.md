@@ -5,8 +5,9 @@ title: How-to debug a rights-enabled application | Azure RMS
 description: The following topic shows how to debug your application and use the Windows Event Log.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -69,10 +70,4 @@ For example, the following command will enable the MSIPC event log and set the l
 
 **Note**  In the Windows Event Viewer on the **View** menu, select **Show Analytic and Debug Logs** to make the MSIPC Debug log visible.
 
- 
-
-## Related topics
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

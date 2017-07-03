@@ -5,8 +5,9 @@ title: AD RMS Server | Azure RMS
 description: The server component of Rights Management Services (RMS) is implemented by a set of web services that run on Microsoft Internet Information Services.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,6 +57,4 @@ Of the many web services installed, the following are important for application 
 * [Activating a User](https://msdn.microsoft.com/library/Cc530378)
 * [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355)
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

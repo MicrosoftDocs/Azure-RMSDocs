@@ -5,8 +5,9 @@ title: Linux API reference | Azure RMS
 description: API reference for our Linux flavored operating system support is hosted on Github.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,9 +29,4 @@ ms.suite: ems
 
 API reference for our Linux flavored operating system support is hosted on Github - [RMS SDK for C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html). For more information, see [Get started](get-started.md).
 
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

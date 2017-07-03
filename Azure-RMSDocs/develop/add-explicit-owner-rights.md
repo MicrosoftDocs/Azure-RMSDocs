@@ -5,8 +5,9 @@ title: How-to add explicit owner rights | Azure RMS
 description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,14 +27,14 @@ ms.suite: ems
 
 # How-to: add explicit owner rights
 
-Your application should explicitly add "Owner" rights when creating a license from scratch ([**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+Your application should explicitly add "Owner" rights when creating a license from scratch using  [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx).
 
 ## Prerequisites
 
-When your application is creating a license handle using [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), it must also grant the owner full rights (permissions) explicitly.
+When your application is creating a license handle using [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), it must also grant the owner full rights (permissions) explicitly.
 
 >[!NOTE] 
-> Setting a user as "owner" using [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
+> Setting a user as "owner" using [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) with the **IPC\_LI\_OWNER** property does not grant the owner full permissions.
 
 The following example code only represents the steps involved in creating and adding the specific rights to a given license.
 
@@ -41,7 +42,7 @@ The following example code only represents the steps involved in creating and ad
  
 ## Step 1: Example scenario
 
-In this example, needed rights are added to a license created with [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). The example shows the creation and assignment of the rights to the license through a rights list.
+In this example, needed rights are added to a license created with [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). The example shows the creation and assignment of the rights to the license through a rights list.
 
 The following two rights are added to these users:
 
@@ -111,9 +112,8 @@ The following two rights are added to these users:
 
 ## Related topics
 
-* [Developer notes](developer-notes.md)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
- 
+- [Developer notes](developer-notes.md)
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

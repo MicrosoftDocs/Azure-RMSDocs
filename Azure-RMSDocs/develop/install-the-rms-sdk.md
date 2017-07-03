@@ -5,8 +5,9 @@ title: Install the SDK | Azure RMS
 description: This topic guides you through installing the developer tools.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,6 +45,5 @@ For more information on the files installed on your system by "setup\_sdk.exe", 
 ## Related topics
 
 * [Development environment files](sdk-elements.md)
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

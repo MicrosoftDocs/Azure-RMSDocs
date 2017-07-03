@@ -5,8 +5,9 @@ title: How to&#58; Enable error and performance logging | Azure RMS
 description: The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +29,15 @@ ms.suite: ems
 The Microsoft Rights Management SDK 4.2 manages diagnosis and performance logs upload through a single device property.
 
 ## Overview ##
-You can improve your users' experience and troubleshooting by enabling automatic diagnostics and performance logging upload to Microsoft. In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
+You can improve your users' experience and troubleshooting by enabling automatic diagnostics, performance, and telemetry logging data upload to Microsoft. 
+
+> [!IMPORTANT] 
+> In order to honor user privacy, you as the app developer, must ask the user to consent before enabling the automatic logging.
+
+> [!NOTE]
+> As example, here is a standard message Microsoft uses for logging notification: 
+>
+> *By turning on Error and Performance Logging, you are agreeing to send Error and Performance Data to Microsoft.  Microsoft will collect error and performance data over the internet (“Data”).  Microsoft uses this Data to provide and improve the quality, security and integrity of Microsoft products and services.  For example, we analyze performance and reliability, such as what features you use, how quickly the features respond, device performance, user interface interactions, and any problems you experience with the product.  Data will also include information about the configuration of your software like the software you are currently running, and the IP address.*  
 
 You will manager logging control through two properties.
 
@@ -83,7 +92,7 @@ Enable automatic logging
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-For more information on optional settings, see [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+For more information on optional settings, see [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Get current logging control flag setting
 
@@ -94,6 +103,4 @@ Get current logging control flag setting
 
 **Linux / C++** - This SDK has some basic logging that is not as extensive as that of the other platforms. For more information see the **Troubleshooting** section of the "README.md" at [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

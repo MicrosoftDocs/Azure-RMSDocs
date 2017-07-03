@@ -5,8 +5,9 @@ title: Rights Management Services SDK 2.1 | Azure RMS
 description: The RMS SDK 2.1 platform enables developers to build applications that leverage RMS or Azure RMS to provide information protection.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,6 +58,5 @@ For information about the run-time requirements for a particular programming ele
 * [RMS SDK 2.1 download page](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
 * [RMS FAQ](http://aka.ms/adrmsfaq )
- 
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

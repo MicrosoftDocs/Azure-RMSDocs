@@ -5,8 +5,9 @@ title: File API configuration | Azure RMS
 description: The File API's behavior can be configured through settings in the registry.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,13 +41,13 @@ For more information about supported file formats, see **File API File Support D
 
 The following sections describe the keys and key values that control encryption.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
 **Type**: Key
 
 **Description**: Contains general configuration for the File API.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **Type**: Key
 
@@ -59,7 +60,7 @@ The following sections describe the keys and key values that control encryption.
 Set the **Encryption** value in the key to specify protection behavior. If the **Encryption** value is not set, the default behavior for the file type is observed.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
 **Type**: REG_SZ
 
@@ -67,7 +68,7 @@ Set the **Encryption** value in the key to specify protection behavior. If the *
 
 - **Off**: Encryption is disabled.
 
-> [!Note] 
+> [!Note]
 > This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the **EXTRACT** right.
 
 - **Native**:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p*zzz*, where *zzz* is the original file extension. For example .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied is included below.
@@ -75,7 +76,7 @@ Set the **Encryption** value in the key to specify protection behavior. If the *
 - **Pfile**: PFile encryption is used. The encrypted file will have .pfile appended to the original extension. For example, after encryption, a .txt file, will have an extension of .txt.pfile.
 
 
-> [!Note] 
+> [!Note]
 > This setting has no bearing on Office file formats. For example, if the `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` value is set to &quot;Pfile”, .docx files will still be encrypted using native protection, and the encrypted file will still have a file extension of .docx.
 
 Setting any other value or setting no value results in default behavior.
@@ -86,7 +87,7 @@ Setting any other value or setting no value results in default behavior.
 -   **txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif files** Native encryption is enabled (xxx becomes pxxx)
 -   **All other files** Encryption is protected file (pfile) enabled (xxx become xxx.pfile)
 
-If encryption is attempted on a file type that is blocked, an [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes) error occurs.
+If encryption is attempted on a file type that is blocked, an [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx) error occurs.
 
 ### File API - File Support Details
 
@@ -152,8 +153,7 @@ HKEY_LOCAL_MACHINE
 
 ## Related topics
 
-* [Developer notes](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
- 
+- [Developer notes](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
 
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

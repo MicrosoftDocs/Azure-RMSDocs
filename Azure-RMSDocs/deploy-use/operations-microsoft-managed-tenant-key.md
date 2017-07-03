@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Microsoft-managed - tenant key lifecycle operations | Azure Information Protection
+title: Microsoft-managed - AIP tenant key lifecycle operations
 description: Information about the lifecycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -100,4 +101,5 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Re-keying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

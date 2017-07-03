@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Compliance and supporting information | Azure Information Protection
+title: Compliance & information for Azure Information Protection
 description: Supporting information for Azure Information Protection that includes legal, compliance, and SLAs.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,11 +39,13 @@ Azure Information Protection supports other services and also relies on other s
 
 ## Security, compliance, and auditing
 
-See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article. In addition:
+See the [Security, compliance, and regulatory requirements](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) section in the [What problems does Azure RMS solve?](../understand-explore/azure-rms-problems-it-solves.md) article, for information about specific certifications for the Azure Rights Management service. In addition:
 
 - For external certifications for Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
 - For FIPS 140 information: [FIPS 140 Validation](https://technet.microsoft.com/library/security/cc750357.aspx)
+
+For in-depth technical information about how the protection technology works, see [How does Azure RMS work?](../understand-explore/how-does-it-work.md) 
 
 ## Service level agreements
 
@@ -58,3 +61,4 @@ See the [Security, compliance, and regulatory requirements](../understand-explor
 
 - Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

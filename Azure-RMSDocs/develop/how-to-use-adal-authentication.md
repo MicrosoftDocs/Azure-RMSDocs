@@ -5,8 +5,9 @@ title: ADAL authentication for your RMS enabled application | Azure RMS
 description: Outlines the process for authentication with ADAL
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,14 +44,14 @@ This topic contains two approaches to authentication with corresponding code exa
 
   Use this approach if you want the RMS client to display an ADAL authentication prompt when authentication is necessary. For details on how to configure your application, see the section, "Internal authentication".
 
-  > [!Note] 
+  > [!Note]
   > If your application currently uses AD RMS SDK 2.1 with the sign-in assistant, we recommend that you use the internal authentication method as your application migration path.
 
 - **External authentication** - OAuth authentication managed by your application.
 
   Use this approach if you want your application to manage its own OAuth authentication. With this approach, the RMS client will exercise an application defined callback when authentication is necessary. For a detailed example, see "External authentication" at the end of this topic.
 
-  > [!Note] 
+  > [!Note]
   > External authentication does not imply the ability to change users; the RMS client always uses the default user for a given RMS tenant.
 
 ## Internal authentication
@@ -58,7 +59,7 @@ This topic contains two approaches to authentication with corresponding code exa
 1. Follow the Azure configuration steps in [Configure Azure RMS for ADAL authentication](adal-auth.md) then return to the following app initialization step.
 2. You are now ready to configure your application to use the internal ADAL authentication provided by the RMS SDK 2.1.
 
-To configure you RMS client, add a call to [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) right after calling [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) to configure the RMS client. Use the following code snippet as an example.
+To configure you RMS client, add a call to [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) right after calling [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) to configure the RMS client. Use the following code snippet as an example.
 
       C++
       IpcInitialize();
@@ -117,13 +118,15 @@ Use this code as an example of how to manage your own authentication tokens.
 
 ## Related topics
 
-* [Data types](/information-protection/sdk/2.1/api/win/data%20types)
-* [Environment properties](/information-protection/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
-* [IpcCreateOAuth2Token](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
-* [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [IPC_CREDENTIAL](/information-protection/sdk/2.1/api/win/IPC_CREDENTIAL)
-* [IPC_NAME_VALUE_LIST](/information-protection/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/information-protection/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
-* [IPC_PROMPT_CTX](/information-protection/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/information-protection/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
+- [Data types](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Environment properties](https://msdn.microsoft.com/library/hh535247.aspx)
+- [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
+- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
+- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+- [IPC_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
+- [IPC_NAME_VALUE_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
+- [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
+- [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
+- [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Refresh templates | Azure Information Protection
+title: Refresh Azure RMS templates - AIP
 description: When you use the Azure Rights Management service, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Refreshing templates for users
+# Refreshing templates for users and services
 
 >*Applies to: Azure Information Protection, Office 365*
 
@@ -33,11 +34,15 @@ When you use the Azure Rights Management service of Azure Information Protection
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
-|Exchange Online|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
-|Office 365|Automatically refreshed - no additional steps required.|
-|Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than this schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Refreshed when users log on.<br /><br />To force a refresh, ask or force users to log off and log back on again. Or, see the following section, [Office 2010 only: How to force a refresh for a changed custom template](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
-For mobile devices that use the RMS sharing application, templates are automatically downloaded (and refreshed if necessary) without additional configuration required.
+|Exchange Online<br /><br />Applicable for transport rules, DLP rules, and the Outlook web app|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - Every 24 hours.<br /><br /> Additionally, because the Azure Information Protection client is tightly integrated with Office, any refreshed templates for Office 2016 or Office 2013 will also be refreshed for the Azure Information Protection client.|
+|Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />- For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
+|Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
+|Office 2016 for Mac|Automatically refreshed - no additional steps required.|
+|RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
+
+When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 15 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
 If you have already configured Information Rights Management (IRM) for Exchange Online, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.
@@ -54,13 +59,13 @@ You must do this procedure each time you change a template.
     1.  Supply your Office 365 user name and password:
 
         ```
-        $Cred = Get-Credential
+        $UserCredential = Get-Credential
         ```
 
     2.  Connect to the Exchange Online service by running the following two commands:
 
         ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
         ```
 
         ```
@@ -155,38 +160,8 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 3.  Restart your Office applications and instances of File Explorer.
 
-## Office 2010 only: How to force a refresh for a changed custom template
-By editing the registry on the computers running Office 2010, you can set a value so that changed templates are refreshed on computers without waiting for users to log off and back on. You can also force an immediate refresh by deleting the existing data in a registry value.
-
-> [!WARNING]
-> If you use the Registry Editor incorrectly, you might cause serious problems that might require you to reinstall the operating system. Microsoft cannot guarantee that you can solve problems that result from using the Registry Editor incorrectly. Use the Registry Editor at your own risk.
-
-### To change the update frequency
-
-1.  Using a registry editor, create a new registry value named **UpdateFrequency** and define an integer value for the data, which specifies the frequency in days to download any changes to a downloaded template. Use the following table to locate the registry path to create this new registry value.
-
-	**Registry path:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-	**Type:** REG_DWORD
-
-	**Value:** UpdateFrequency
-
-2.  If you want to force an immediate refresh of the templates, go to the next procedure. Otherwise, restart your Office applications now.
-
-### To force an immediate refresh
-
-1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following table to locate the registry path to delete this registry value data.
-
-	**Registry path:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-	**Type:** REG_SZ
-
-	**Value:** lastUpdatedTime
-
-
-2.  Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
-
-3.  Restart your Office applications.
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

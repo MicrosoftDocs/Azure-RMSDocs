@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Download and install the Rights Management sharing application | Azure Information Protection
+title: Download & install the RMS sharing app - AIP
 description: Instructions to interactively install the RMS sharing application for Windows, so that you can safely share documents with others. 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -72,3 +73,4 @@ For examples for how you might use the Rights Management sharing application, an
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

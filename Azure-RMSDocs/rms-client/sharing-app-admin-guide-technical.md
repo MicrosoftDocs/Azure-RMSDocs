@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Technical overview for the Rights Management sharing application | Azure Information Protection
+title: Technical overview for the RMS sharing app - AIP
 description: Technical details for admins on enterprise networks who are are responsible for deploying the RMS sharing application for Windows.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,14 +74,13 @@ For files that are generically protected, the original file name extension is al
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -107,25 +107,25 @@ Similarly, you can force the RMS sharing application to apply native protection 
 
 You can also force the RMS sharing application to block the protection of files (not apply native protection or generic protection). For example, this might be required if you have an automated application or service that must be able to open a specific file to process its contents. When you block protection for a file type, users cannot use the RMS sharing application to protect a file that has that file type. When they try, they see a message that the administrator has prevented protection and they must cancel their action to protect the file.
 
-To configure the RMS sharing application to apply generic protection to all files that by default, would have native protection applied, make the following registry edits:
+To configure the RMS sharing application to apply generic protection to all files that by default, would have native protection applied, make the following registry edits. Note if the RmsSharingApp or FileProtection keys do not exist, you must manually create them.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Create a new key named *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Create a new key named *.
 
     This setting denotes files with any file name extension.
 
-2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
+2.  In the newly added key of HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\*, create a new string value (REG_SZ) named **Encryption** that has the data value of **Pfile**.
 
     This setting results in the RMS sharing application applying generic protection.
 
 These two settings result in the RMS sharing application applying generic protection to all files that have a file name extension. If this is your goal, no further configuration is required. However, you can define exceptions for specific file types, so that they are still natively protected. To do this, you must make three additional registry edits for each file type:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Add a new key that has the name of the file name extension (without the preceding period).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Add a new key that has the name of the file name extension (without the preceding period).
 
     For example, for files that have a .docx file name extension, create a key named **DOCX**.
 
-2.  In the newly added file type key (for example, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), create a new DWORD Value named **AllowPFILEEncryption** that has a value of **0**.
+2.  In the newly added file type key (for example, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), create a new DWORD Value named **AllowPFILEEncryption** that has a value of **0**.
 
-3.  In the newly added file type key (for example, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), create a new String Value named **Encryption** that has a value of **Native**.
+3.  In the newly added file type key (for example, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), create a new String Value named **Encryption** that has a value of **Native**.
 
 As a result of these settings, all files are generically protected except files that have a .docx file name extension, which are natively protected by the RMS sharing application.
 
@@ -142,3 +142,4 @@ You can make similar registry edits for other scenarios by changing the value of
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

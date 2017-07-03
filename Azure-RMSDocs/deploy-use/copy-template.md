@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Copy a template | Azure Information Protection
+title: Copy an Azure RMS template - AIP
 description: Instructions to copy a template, which is an easy way to create a new template that has very similar settings to an existing template.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,3 +41,5 @@ You can copy custom templates and the default templates. As a best practice, cop
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

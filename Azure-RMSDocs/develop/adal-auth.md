@@ -1,12 +1,13 @@
 ﻿---
 # required metadata
 
-title: Configure Azure RMS for ADAL authentication | Azure RMS
-description: Outlines the steps for configuring Azure RMS to use Azure ADAL based authentication
-keywords: authentication, RMS, ADAL
+title: Configure your app for ADAL authentication - AIP
+description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
+keywords: authentication, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,18 +26,18 @@ ms.suite: ems
 
 ---
 
-# Configure Azure RMS for ADAL authentication
+# Configure your app for ADAL authentication
 
-This topic describes the steps for configuring Azure ADAL based authentication.
+This topic describes the steps for configuring your app for Azure Active Directory Authentication Library (ADAL) based authentication.
 
-## Azure Authentication setup
+## Azure authentication setup
 
 You will need the following:
 
 - A [subscription for Microsoft Azure](https://azure.microsoft.com/en-us/) (a free trial is sufficient). For more information, see [How users sing up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
 - A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) account is sufficient).
 
-> [!NOTE] 
+> [!NOTE]
 > Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a *Work or school account*, rather than a *Microsoft account* (i.e. Hotmail).
 
 After signing up for Microsoft Azure:
@@ -74,7 +75,7 @@ After signing up for Microsoft Azure:
 ![Name your app](../media/TellUsInput.png)
 
 - Add a redirection URI and choose next.
-  The redirection URI needs to be a valid URI and unique to your directory. For example, you could use something like `com.mycompany.myapplication://authorize`.
+  The redirection URI needs to be a valid URI and unique to your directory. For example, you could use something like `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Add redirect URI](../media/RedirectURI.png)
 
@@ -82,19 +83,15 @@ After signing up for Microsoft Azure:
 
 ![Choose CONFIGURE](../media/ConfigYourApp.png)
 
->[!NOTE] 
+>[!NOTE]
 > Copy the **CLIENT ID** and **REDIRECT URI** and store them for future use when configuring the RMS client.
 
 - Browse to the bottom of your application settings and choose the **Add application** button under **permissions to other applications**.
 
->[!NOTE] 
+>[!NOTE]
 > The **Delegated Permissions** that are shown for Windows Azure Active Directory are correct by default – only one option should be selected and that option is **Sign in and read user profile**.
 
 ![Select Add application](../media/PermissionsToOtherBtn.png)
-
-- Now, add this GUID `00000012-0000-0000-c000-000000000000` to the **STARTING WITH** edit box and choose the check button.
-
-![Add GUID](../media/AddGUID.png)
 
 - Choose the plus button next to **Microsoft Rights Management**.
 
@@ -102,7 +99,7 @@ After signing up for Microsoft Azure:
 
 - Now, choose the check mark located on the bottom left corner of the dialog.
 
-![Choose check mark](../media/ChooseCheck.png)
+![Choose check mark](../media/choosecheck01.png)
 
 - You’re now ready to add a dependency to your application for Azure RMS. To add the dependency, select the new **Microsoft Rights Management Services** entry under **permissions to other applications** and choose the **Create and access protected content for users** checkbox under the **Delegated Permissions:** drop box.
 
@@ -111,3 +108,5 @@ After signing up for Microsoft Azure:
 - Save your application to persist the changes by choosing the **Save** icon located on the bottom, center of the portal.
 
 ![Select SAVE](../media/SaveApplication.png)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

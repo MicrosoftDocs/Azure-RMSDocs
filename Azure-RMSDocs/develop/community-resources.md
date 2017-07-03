@@ -1,12 +1,13 @@
 ﻿---
 # required metadata
 
-title: Community resources | Azure RMS
-description: AD RMS is well supported by a growing community of developers on multiple platforms.
+title: Developer community resources | Microsoft Docs
+description: Azure Information Protection is well supported by a growing community of developers on multiple platforms.
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,26 +29,20 @@ ms.suite: ems
 
 Active Directory Rights Management Services is well supported by a growing community of developers on multiple platforms.
 
-## AD RMS Community Resources
-
+## Developer's Blog
 The [RMS Developer's Corner (blog)](http://blogs.msdn.com/b/rms/) is the active hub for the information protection developer.
 
+## Microsoft Connect
 The Rights Management Services section on the Connect site is where you can find current deliverables and have the opportunity to offer feedback.
 
-**Note**  
-If you haven’t registered on Microsoft Connect, do the following:
+> [!NOTE]
+>
+>If you haven’t registered on Microsoft Connect, do the following:
+>
+>-   Navigate to [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
+>-   Sign in by using your Microsoft account
+>-   Click **Directory** on the command bar
+>-   Search for "Rights Management Services"
+>-   Click **Join** to register
 
--   Navigate to [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
--   Sign in by using your Microsoft account.
--   Click **Directory** on the command bar.
--   Search for **Rights Management Services**.
--   Click **Join** to register.
-
- 
-
- 
-
- 
-
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

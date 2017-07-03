@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: PowerShell reference for custom templates | Azure Information Protection
+title: PowerShell for Azure RMS custom templates - AIP
 description: Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +36,7 @@ Everything that you can do in the Azure classic portal to create and manage righ
 You can also use export and import to back up and restore your custom templates, As a best practice, regularly back up your custom templates, so that if you make a change that was not intended, you can easily revert to a previous version.
 
 > [!IMPORTANT]
-> To use Windows PowerShell to create and manage Azure Rights Management templates, you must have at least version 2.0.0.0 of the [Windows PowerShell module for Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
+> To use PowerShell to create and manage Azure Rights Management templates, you must have at least version 2.0.0.0 of the [Windows PowerShell module for Azure RMS](https://go.microsoft.com/fwlink/?LinkId=257721).
 > 
 > If you have previously installed this PowerShell module, run the following command in a PowerShell window to check the version number: `(Get-Module aadrm -ListAvailable).Version`
 
@@ -43,23 +44,25 @@ For installation instructions, see [Installing Windows PowerShell for Azure Righ
 
 The cmdlets that support creating and managing templates:
 
--   [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx)
+- [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 
--   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
+- [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)
 
--   [Get-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727079.aspx)
+- [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate)
 
--   [Get-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727081.aspx)
+- [Get-AadrmTemplateProperty](/powershell/module/aadrm/get-aadrmtemplateproperty)
 
--   [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
+- [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate)
 
--   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)
+- [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition)
 
--   [Remove-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727082.aspx)
+- [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate)
 
--   [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx)
+- [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty)
 
 
 
 ## See Also
 [Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

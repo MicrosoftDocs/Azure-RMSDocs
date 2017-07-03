@@ -1,11 +1,12 @@
 ---
 # required metadata
 
-title: Configuring the Azure Information Protection policy | Azure Information Protection
+title: Configure the Azure Information Protection policy
 description: Detailed information how to configure and publish the Azure Information Protection policy.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,5 +28,6 @@ ms.assetid: 38ecc425-9bab-4e70-9436-eccbef0e3113
 
 # Configuring the Azure Information Protection policy 
 
->*Applies to: Azure Information Protection preview*
+>*Applies to: Azure Information Protection*
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

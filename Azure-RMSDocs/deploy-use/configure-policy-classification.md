@@ -1,10 +1,12 @@
 ---
 # required metadata
 
-title: How to configure conditions for automatic and recommended classification | Azure Information Protection
+title: Configure conditions for an Azure Information Protection label
 description: When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,11 +56,13 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the **Azure Information Protection** blade, select the label that you want to configure for automatic or recommended classification.
+2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
+
+     If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
 
 3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
@@ -82,7 +86,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## Information about the built-in conditions
 
-During the preview period, you can select the following conditions:
+You can select the following conditions:
 
 - [SWIFT Code](#swift-code )
 
@@ -223,7 +227,8 @@ Examples for testing:
 
 ## Next steps
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organization-s-policy) section.  
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

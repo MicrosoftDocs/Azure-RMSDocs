@@ -6,8 +6,9 @@ description: Basic guidance for implementing document tracking of content as wel
 
 keywords:
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,8 +27,6 @@ experimental: true
 experiment_id: "priyamo-test-20160729"
 
 ---
-
-# Tracking content
 
 # How-to: enable document tracking and revocation
 
@@ -53,12 +52,12 @@ Use these APIs to add/update a content license with document tracking metadata.
 Operationally, only the **content name** and the **notification type** properties are required for document tracking.
 
 
-- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 
   We expect that you will set all of the metadata properties. Here they are, listed by type.
 
-  For more information, see [License metadata property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
+  For more information, see [License metadata property types](https://msdn.microsoft.com/library/dn974062.aspx).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -84,16 +83,16 @@ Operationally, only the **content name** and the **notification type** propertie
 
     Use to set the origination date of the file
 
-- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
 
 Use the appropriate one of these APIs to add the metadata to your file or stream.
 
-- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 
 Lastly, use this API to register your tracked document with the tracking system.
 
-- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
 ## 2. Register the document with the RMS service
@@ -144,7 +143,7 @@ Here's a code snippet showing an example of setting document tracking metadata a
 Adding a **Track Usage** UI item to your app is as simple as using one of the following URL formats:
 
 - Using Content ID
-  - Get the content ID by using [IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) or [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) if the license is serialized and use the license property **IPC_LI_CONTENT_ID**. For more information, see [License property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types).
+  - Get the content ID by using [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) or [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) if the license is serialized and use the license property **IPC_LI_CONTENT_ID**. For more information, see [License property types](https://msdn.microsoft.com/library/hh535287.aspx).
   - With the **ContentId** and **Issuer** metadata, use the following format: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Example - `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
@@ -157,14 +156,15 @@ The client simply needs to open a browser with the appropriate URL. The RMS Docu
 
 ## Related topics
 
-* [License metadata property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [Notification preference](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [Notification type](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [License metadata property types](https://msdn.microsoft.com/library/dn974062.aspx)
+* [Notification preference](https://msdn.microsoft.com/library/dn974063.aspx)
+* [Notification type](https://msdn.microsoft.com/library/dn974064.aspx)
+* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
- 
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
