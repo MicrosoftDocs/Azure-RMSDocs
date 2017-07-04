@@ -51,8 +51,8 @@ The update for our July release included incrementing the revision of the SDK, n
 
 ### October 2016 update
 
-- A few back-end bug fixes.
-- Bit code enablement.
+- Implement a few back-end bug fixes.
+- Enable bitcode for the Apple iOS/OSX SDK.
 
 ### June 2016 update
 
