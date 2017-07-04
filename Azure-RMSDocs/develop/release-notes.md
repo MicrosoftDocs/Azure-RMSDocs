@@ -42,6 +42,7 @@ The update for our July release included incrementing the revision of the SDK, n
 - This release adds a revocation API to revoke published content for iOS/OSX and Android SDKs.
 
 #### iOS / OSX API updates
+
 - MS UserPolicy revokeSerializedPolicyWithUserId
 
 #### Android API updates
@@ -59,7 +60,6 @@ The update for our July release included incrementing the revision of the SDK, n
 - **Document Tracking support** - developers can now enable document tracking when protecting document in their apps
 - Performance improvements
 - Bug fixes
-
 
 ### December 2015 update
 
