@@ -42,9 +42,9 @@ Select the languages that match your users' language setting for Office and Wind
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Languages**.
+2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Languages (Preview)**.
 
-3. On the **Languages** blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
+3. On the **Azure Information Protection - Languages (Preview)** blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
 
 4. Select your language, and select **OK**.
 
@@ -53,7 +53,7 @@ Select the languages that match your users' language setting for Office and Wind
     - To add another language, select **Add a new language for translation** and repeat steps 3 and 4. 
         
         > [!NOTE]
-        > Be sure to select the languages that your users have for Office, and for Windows. In some cases, this might be two different selections per computer.
+        > Be sure to select the languages that your users have for Office, and for Windows. In some cases, this might require two different selections per computer.
         
     - If you change your mind about any language that you have added, select that entry from the list, and then click **Remove**.
 
