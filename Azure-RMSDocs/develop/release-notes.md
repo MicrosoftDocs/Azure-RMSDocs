@@ -39,7 +39,7 @@ The update for our July release included incrementing the revision of the SDK, n
 - Your app can now **set the logging level on-the-fly** with the Android SDK. The iOS SDK does not support logging level. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
 - The SDK now returns an error for a NULL access token.
 
-- This release adds a revocation API to revoke published content for iOS/OSX and Android SDKs.
+- This release adds a new API to revoke published content for iOS/OSX and Android SDKs.
 
 #### iOS / OSX API updates
 
@@ -56,7 +56,7 @@ The update for our July release included incrementing the revision of the SDK, n
 
 ### June 2016 update
 
-- **Support for Modern Authentication** - this brings Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card, and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
+- **Support for Modern Authentication** - brings Active Directory Authentication Library (ADAL)-based sign-in to RMS enlightened apps. It enables sign-in features like Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with RMS client applications, smart card, and certificate-based authentication and it removes the need for RMS enlightened apps to use the basic authentication protocol.
 - **Document Tracking support** - developers can now enable document tracking when protecting document in their apps
 - Performance improvements
 - Bug fixes
@@ -95,7 +95,7 @@ With this release, the RMS SDK for devices is now at version 4.2 and adds:
 
 ### July 2015 Update - Adds support for Linux / C++ development
 
-This release adds the following:
+This release adds the following updates:
 
 -   RMS SDK 4.1 for Linux platforms
 
@@ -103,7 +103,7 @@ This release adds the following:
 
 ### May 2015 Update - Adds logging control
 
-This release adds support for the following:
+This release adds support for the following updates:
 
 -   iOS
 
@@ -121,7 +121,7 @@ This release adds support for the following:
 
 ### February 2015 Update - Adds Windows Store application support
 
-This release adds support for Windows Store applications and provides functional parity with the Windows Phone, Android and iOS/OS X release of the RMS SDK 4.1.
+This release adds support for Windows Store applications and provides functional parity with the Windows Phone, Android, and iOS/OS X release of the RMS SDK 4.1.
 
 ### January 2015 Update - Adds WinPhone platform support
 
@@ -159,7 +159,7 @@ This section outlines information about the current and previous releases of the
 
 -   When you use a sample app on an Amazon® Kindle device to view .ptxt attachments, you must first download the file before you view it.
 
-    **Solution** - This is a known issue and will be addressed later.
+    **Solution** - a known issue that will be addressed later.
 
 -   An application that uses the SDK may crash if multi-instance is allowed.
 
@@ -171,7 +171,7 @@ This section outlines information about the current and previous releases of the
 
 **iOS and OS X**
 
--   There are two dialects of Portuguese that our iOS and OS X SDKs support. Unfortunately, due to a bug, we do not currently support the 1st localization completely. Because of this bug, Portuguese is not fully supported. Most of the text is translated, but not the UI.
+-   There are two dialects of Portuguese that our iOS and OS X SDKs support. Unfortunately, due to a bug, we do not currently support the first localization completely. Because of this bug, Portuguese is not fully supported. Most of the text is translated, but not the UI.
 
     1. Portuguese
 
@@ -191,7 +191,7 @@ This section outlines information about the current and previous releases of the
 
 -   **Solution** - To create a multiple document interface (MDI) application using our OS X SDK, use the following guidance.
 
-    The following methods must not be run concurrently. In order to monitor for execution completion; use the completion block approach as noted.
+    The following methods must not be run concurrently. In order to monitor for execution completion, use the completion block approach as noted.
 
     - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
     - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
@@ -210,13 +210,13 @@ This section outlines information about the current and previous releases of the
 
 **Q**: How do I get new organizational tenants to try out the SDK and sample applications?
 
-**A**: To request credentials for Azure AD RMS test organizations, please send email to <rmcstbeta@microsoft.com>.
+**A**: To request credentials for Azure AD RMS test organizations, send email to <rmcstbeta@microsoft.com>.
 
 **Q**: I don’t see any test hierarchy discussion here in the documentation. Why?
 
 **A**: There is no test hierarchy concept with the new AD RMS SDKs. You will always work with the production hierarchy.
 
-**Q**: In the 2.1 version of the RMS SDK a generated manifest was needed for each application implementing information protection, is this still true for the 4.0 and later versions of the SDK?
+**Q**: In the 2.1 version of the RMS SDK, a generated manifest was needed for each application implementing information protection. Is this still true for the 4.0 and later versions of the SDK?
 
 **A**: No, manifests are no longer needed for the 3.0 and later versions of the Rights Management SDK.
 
