@@ -6,7 +6,7 @@ description: Scope and intent for Livefyre comments and sidebars for the Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,7 +40,7 @@ Livefyre comments and sidenotes should not be used for the following:
 
 - **Roadmap information**. For example, when a new release will be available or additional functionality is planned. For this information, visit the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) or if it is critical to your deployment, email [askipteam](mailto:%20askipteam@microsoft.com).
 
-- **Product feedback**. For example, suggestions for product improvements or a new feature. Instead, visit the [Yammer site for Information Protection](https://www.yammer.com/AskIPTeam) to engage with the engineering team.
+- **Product feedback**. For example, suggestions for product improvements or a new feature. Instead, visit the [User Voice site for Information Protection](https://msip.uservoice.com) to propose new capabilities, vote on ideas others have posted, and see the current status as triaged by the Azure Information Protection team.
 
 - **Documentation design feedback**. For example, you want to report a problem or request a few feature for all documentation pages on the docs.microsoft.com site. Instead, visit our [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
 
