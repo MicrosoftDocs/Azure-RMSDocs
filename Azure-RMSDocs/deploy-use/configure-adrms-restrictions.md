@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -103,7 +103,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - If you will share documents or emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2013 Pro Plus with Service 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
+- Users have a version of Office that is Office 2013 Pro Plus with Service Pack 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 is not supported for this scenario.
 
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
