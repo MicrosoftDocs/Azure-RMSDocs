@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/05/2017
+ms.date: 07/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,7 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     - **Select a predefined template**: To use one of the default templates or a custom template that you've configured.
     
-    - **Custom (Preview)** to define new protection settings in this portal.
+    - **Set permissions (Preview)** to define new protection settings in this portal.
 
 8. If you selected **Select a predefined template** for **Azure RMS**, click the drop down box and select the [template](../deploy-use/configure-custom-templates.md) that you want to use to protect documents and emails with this label.
     
@@ -105,13 +105,13 @@ Exchange does not have to be configured for information rights management (IRM) 
     
         Note that all templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The Azure RMS templates that you can select will not be restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
             
-9. If you selected **Custom (Preview)** for **Azure RMS**, this option has most of the configuration options for [custom templates](configure-custom-templates.md) that you can configure in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
+9. If you selected **Set permissions (Preview)** for **Azure RMS**, this option has most of the configuration options for [custom templates](configure-custom-templates.md) that you can configure in the Azure classic portal. In addition, you can easily add all users from your organization, and specify external email addresses for individual users or groups, or for all users in another organization when you specify a domain name. 
     
     For more information about this preview configuration, see the blog post [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). 
     
     For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
     
-    Included in the **Custom (Preview)** option, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
+    Included in the **Set permissions (Preview)** option, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
     |Setting|More information|Recommended setting
     |-----------|--------------------|--------------------|
