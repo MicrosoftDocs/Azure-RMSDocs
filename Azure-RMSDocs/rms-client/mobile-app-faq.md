@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -34,6 +34,12 @@ This page provides answers to frequently asked questions about the Azure Informa
 ## What can I do with the Azure Information Protection app?
 
 This app lets you view rights-protected email messages (.rpmsg files) if your email app doesn't natively support rights management data protection. This app also lets you view rights-protected PDF files, and pictures and text files that are rights-protected. Currently, you cannot use this app to create new protected email messages, reply to them, or create or edit protected files.
+
+## What file name extensions can this app open?
+
+This app can open rights-protected PDF files, which can have a **.pdf** or **.ppdf** file name extension. 
+
+Supported file name extensions for rights-protected text and picture files include **.ptxt**, **.pxml**, **.ptiff**, **.pjpg**, **.pjpeg**, and **.ppng**. For the full list, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
 
 ## Can I open PDF files that are in SharePoint protected libraries and OneDrive for Business?
 
