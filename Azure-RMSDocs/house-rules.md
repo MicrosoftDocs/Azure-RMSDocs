@@ -40,7 +40,7 @@ Livefyre comments and sidenotes should not be used for the following:
 
 - **Roadmap information**. For example, when a new release will be available or additional functionality is planned. For this information, visit the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) or if it is critical to your deployment, email [askipteam](mailto:%20askipteam@microsoft.com).
 
-- **Product feedback**. For example, suggestions for product improvements or a new feature. Instead, visit the [User Voice site for Information Protection](https://msip.uservoice.com) to propose new capabilities, vote on ideas others have posted, and see the current status as triaged by the Azure Information Protection team.
+- **Product feedback**. For example, suggestions for product improvements or a new feature. Instead, visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection to propose new capabilities, vote on ideas others have posted, and see the current status as triaged by the Azure Information Protection team. For general feedback, questions, and advice, visit the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam). 
 
 - **Documentation design feedback**. For example, you want to report a problem or request a new feature for all documentation pages on the docs.microsoft.com site. Instead, visit our [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
 
