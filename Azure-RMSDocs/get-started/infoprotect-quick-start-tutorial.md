@@ -6,7 +6,7 @@ description: An introduction tutorial to quickly try out Microsoft Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,7 +47,7 @@ To complete this tutorial, you will need the following:
 
 - A global administrator account to sign in to the Azure portal to configure the Azure Information Protection policy. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
 
-- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. 
+- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010. You must be signed in to your Office apps by using your cloud account.
 
 Let's get started.
 
