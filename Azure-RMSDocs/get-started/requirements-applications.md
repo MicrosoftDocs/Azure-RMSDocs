@@ -33,7 +33,7 @@ ms.suite: ems
 
 Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection. 
 
-For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened".
+For these applications and solutions, Rights Management support is tightly integrated by using the Rights Management APIs to support usage restrictions. These applications and solutions are also known as "RMS-enlightened."
 
 Unless stated otherwise, the supported capabilities apply to both Azure RMS and AD RMS. In addition, AD RMS support on iOS, Android, macOS, and Windows Phone 8.1 requires [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx).
 
@@ -45,9 +45,9 @@ Information about the table columns:
 
 -   **Protected PDF**: These files can have a .pdf or .ppdf file name extension.
 
--   **Email:** The email clients listed can protect the email message itself, which will automatically protect any attached Office files that are not already protected. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
+-   **Email:** The email clients that are listed can protect the email message itself, which automatically protects any attached Office files that are not already protected. In this scenario, the client’s preview feature can display the protected content (message and attachment) to authorized recipients. However, if an email message itself is not protected but the attachment is protected, the client’s preview feature cannot display the protected attachment to authorized recipients.
 
--   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, .and jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](../rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
+-   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, and .jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](../rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
@@ -169,7 +169,7 @@ The following applications that are not currently supported by Azure RMS include
 
 -   XPS Viewer
  
-In addition, the RMS sharing application and the Azure Information Protection client has the following restrictions:
+In addition, the RMS sharing application and the Azure Information Protection client have the following restrictions:
 
 -   For Windows computers: Requires a minimum version of Windows 7 Service Pack 1
 
