@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,7 +53,7 @@ When you access this site, sign in to track your documents. Providing your organ
 
 - If you want to track and revoke shared documents for others:
     
-    - Administrators for Azure Information Protection can track and revoke protected documents for others by clicking the Admin icon. Only administrators see this icon:
+    - Administrators for Azure Information Protection can click the Admin icon to track and revoke protected documents for users when those users have registered their documents with the document tracking site. Only administrators see this icon:
         
         ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
