@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2017
+ms.date: 07/10/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -99,11 +99,11 @@ Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook ap
 
 - Office Professional Plus 2013
 
-- Office Professional Plus 2010
+- Office Professional Plus 2010 with Service Pack 2
 
 All editions of Office (with the exception of Office 2007) support consuming protected content.
 
-Azure RMS with Office Professional Plus 2010 or Office Professional 2010:
+Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Professional 2010 with Service Pack 2:
 
 - Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows
 
