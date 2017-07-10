@@ -82,7 +82,7 @@ For the Office applications, Word, Excel, PowerPoint, and Outlook:
     
     - Your computer must be restarted to complete the installation.
     
-    For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
+For more information about how to install the Azure Information Protection client, see [Download and install the Azure Information Protection client](install-client-app.md).
 
 ## Using File Explorer to track or revoke the document
 
