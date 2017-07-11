@@ -47,7 +47,7 @@ Computers running Office 2010:
 
 - These computers require the [Azure Information Protection client](../rms-client/aip-client.md) (recommended) or the [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
 
-- If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario will fail to authenticate users for Azure Information Protection.
+- If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
 
 Support for certificate-based authentication (CBA):
 
@@ -55,7 +55,7 @@ Support for certificate-based authentication (CBA):
 
 Users' UPN value doesn't match their email address:
 
-- This is not a recommended configuration and if you cannot change the UPN value, configure alternate login ID for users and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+- This is not a recommended configuration. If you cannot change the UPN value, configure alternate login ID for users, and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
     When the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD proxyAddresses attribute. This lets the user be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. For more information about this and how user accounts are authorized, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
 
@@ -68,7 +68,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 -   Office 2013 (minimum version):
 
-    -   If you have Office 2013, you might need to install an additional update to support Active Directory Authentication Library (ADAL). For example, the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). For more information about this update and how modern authentication brings Active Directory Authentication Library (ADAL)-based sign in to Office 2013, see [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) on the Office blog.
+    -   If you have Office 2013, you might need to install an additional update to support Active Directory Authentication Library (ADAL). For example, the [June 9, 2015, update for Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). For more information about this update and how modern authentication brings Active Directory Authentication Library (ADAL)-based sign-in to Office 2013, see [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) on the Office blog.
 
 - Azure Information Protection client:
 
@@ -76,7 +76,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 -   Rights Management sharing application for Windows:
 
-    - You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
+    - You must have installed the minimum version of 1.0.1908.0, which you can confirm by using Control Panel > Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
