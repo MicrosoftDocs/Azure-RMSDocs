@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -76,7 +76,7 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 -   Rights Management sharing application for Windows:
 
-    -   You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
+    - You must have installed the minimum version of 1.0.1908.0, which can be confirmed by using Control Panel, Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
@@ -86,15 +86,17 @@ Then, configure your MFA solution:
 
 -   For Microsoft-managed tenants (you have Azure Active Directory or Office 365):
 
-    -   Configure Azure MFA to enforce MFA for users. For instructions, see [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) from the Multi-factor Authentication documentation.
+    - Configure Azure MFA to enforce MFA for users. For instructions, see [Getting started with Azure Multi-Factor Authentication in the cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) from the Multi-factor Authentication documentation.
 
         For more information about Azure MFA, see [What is Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
--   For federated tenants (you operate federation servers on-premises):
+- For federated tenants (you operate federation servers on-premises):
 
-    -   Configure your federation servers for Azure Active Directory or Office 365. For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](https://technet.microsoft.com/library/dn758113.aspx) on TechNet.
+    - Configure your federation servers for Azure Active Directory or Office 365. For example, if you are using AD FS, see [Configure Additional Authentication Methods for AD FS](https://technet.microsoft.com/library/dn758113.aspx) on TechNet.
 
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
+
+The Rights Management connector does not support MFA. If you deploy this connector for your on-premises servers, the connector requires an account that does not require MFA.
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
