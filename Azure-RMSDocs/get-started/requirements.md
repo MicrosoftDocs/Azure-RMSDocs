@@ -31,13 +31,13 @@ ms.suite: ems
 
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
-## A subscription for Azure Information Protection
+## Subscription for Azure Information Protection
 
 For classification, labeling, and protection, you must have an [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
 
-For protection-only, you must have an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).<br /><br /> 
+For protection-only, you must have an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site to make sure that your organization's subscription includes the Azure Information Protection features that you want to use.
+To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 > [!NOTE]
 > If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
@@ -56,7 +56,7 @@ For more information about the requirements for user and group accounts for auth
 
 Users must have client devices (computer or mobile device) that run an operating system that supports Azure Information Protection.
 
-The following devices support the Azure Information Protection client, which lets users classify and label their Office documents and emails:
+The following devices support the Azure Information Protection client, which lets users classify and label their documents and emails:
 
 - Windows 10 (x86, x64)
 
@@ -78,7 +78,7 @@ When the Azure Information Protection client protects the data by using the Azur
 
 ## Applications
 
-The Azure Information Protection client can label and protect files and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
+The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
 - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)
 
@@ -88,7 +88,7 @@ The Azure Information Protection client can label and protect files and emails b
 
 - Office Professional Plus 2010 with Service Pack 2
 
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only and labels that apply protection do not display on the Azure Information Protection bar. 
+Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Labels that apply protection do not display on the Azure Information Protection bar. 
 
 For information about which Office editions support the data protection service, see [Applications that support Azure Rights Management data protection](requirements-applications.md).
 
@@ -119,7 +119,7 @@ If you want to use the Azure Rights Management service from Azure Information Pr
 
 For information about the additional requirements for this scenario, see [On-premises servers that support Azure Rights Management data protection](requirements-servers.md).
 
-### Coexistence of AD RMS and Azure RMS
+### Coexistence of AD RMS with Azure RMS
 
 The following deployment scenario is not supported unless you are using AD RMS protection with Azure Information Protection (the "hold your own key" or HYOK configuration):
 
