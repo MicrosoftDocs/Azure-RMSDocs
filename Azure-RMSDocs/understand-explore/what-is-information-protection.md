@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: What is Azure Information Protection?
@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,7 +78,7 @@ Azure Information Protection integrates with end users' existing workflows when 
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required, these labels can also automatically protect their documents and emails.
 
-To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explore:
+To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explorer:
 
 ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
