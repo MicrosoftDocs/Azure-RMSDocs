@@ -41,7 +41,7 @@ After your content is classified (and optionally protected), you can then track 
 
 You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text. The clear text ensures that other services, such as data loss prevention solutions, can identify the classification and take appropriate action. 
 
-For example, the following email message has been classified as "Internal". This label is added as a footer to the email message. This footer is a visual indicator for all recipients that it's intended for internal use and should not be sent outside the organization. The label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
+For example, the following email message has been classified as "General". This label is added as a footer to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
 ![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
 
@@ -72,7 +72,7 @@ For more information about the Azure Rights Management protection, see [What is 
 
 ## Integration with end-user workflows
 
-Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture. The same bar is added to Excel, PowerPoint, and Outlook. For example:
+Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed an example from Word. The same bar is added to Excel, PowerPoint, and Outlook. For example:
 
 ![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-barv2.png)
 
