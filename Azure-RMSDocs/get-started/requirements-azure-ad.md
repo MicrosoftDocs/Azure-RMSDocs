@@ -96,7 +96,7 @@ Then, configure your MFA solution:
 
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
 
-The Rights Management connector does not support MFA. If you deploy this connector for your on-premises servers, the connector requires an account that does not require MFA.
+The Rights Management connector does not support MFA. If you deploy this connector for your on-premises servers, you must use an account for the connector that does not require MFA.
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
