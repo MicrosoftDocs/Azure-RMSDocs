@@ -77,9 +77,9 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
 - To authorize users, two attributes in Azure AD are used: **proxyAddresses** and **userPrincipalName**.
 
-- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox will automatically have an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
+- The **Azure AD proxyAddresses** attribute stores all email addresses for an account and can be populated in different ways. For example, a user in Office 365 that has an Exchange Online mailbox automatically has an email address that is stored in this attribute. If you assign an alternative email address for an Office 365 user, it is also saved in this attribute. It can also be populated by the email addresses that are synchronized from on-premises accounts. 
     
-    Azure Information Protection can use any value in this Azure AD proxyAddresses attribute if the domain has been added to your tenant (a "verified domain"). For more information about verifying domains:
+    Azure Information Protection can use any value in this Azure AD proxyAddresses attribute, providing the domain has been added to your tenant (a "verified domain"). For more information about verifying domains:
     
     - For Azure AD: [Add a custom domain name to Azure Active Directory](/active-directory/active-directory-add-domain)
     
@@ -119,7 +119,7 @@ If you have accounts that are managed on-premises that you want to use with Azur
 
 When you synchronize your accounts, you do not need to synchronize all attributes. For a list of the attributes that must be synchronized, see the [Azure RMS section](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) from the Azure Active Directory documentation. 
 
-From the attributes list for Azure Rights Management, you'll see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddresses attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
+From the attributes list for Azure Rights Management, you see that for users, the on-premises AD attributes of **mail**, **proxyAddresses**, and **userPrincipalName** are required for synchronization. Values for **mail** and **proxyAddresses** are synchronized to the Azure AD proxyAddresses attribute. For more information, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad)
 
 ## Confirming your users and groups are prepared for Azure Information Protection
 
@@ -146,7 +146,7 @@ Your first check is to make sure that the users you want to use with Azure Infor
 
 Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for the Azure Rights Management service. 
 
-If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** will be used to authorize the user for the Azure Rights Management service.
+If the **ProxyAddresses** column is not populated, the value in the **UserPrincipalName** is used to authorize the user for the Azure Rights Management service.
 
 For example: 
     
@@ -161,7 +161,7 @@ In this example:
 
 -  The user account for Ankur Roy can be authorized by using **ankur.roy@contoso.com** and **ankur.roy@onmicrosoft.contoso.com**, but not **ankurroy@contoso.com**.
 
-In most cases, the value for UserPrincipalName will match one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
+In most cases, the value for UserPrincipalName matches one of the values in the ProxyAddresses field. This is the recommended configuration but if you cannot change your UPN to match the email address, you must take the following steps:
 
 1. If the domain name in the UPN value is a verified domain for your Azure AD tenant, add the UPN value as another email address in Azure AD so that the UPN value can now be used to authorize the user account for Azure Information Protection.
     
@@ -192,7 +192,7 @@ For the two Azure Rights Management service configuration scenarios that use sec
 
 ## Considerations for Azure Information Protection if email addresses change
 
-If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD proxyAddresses attribute. This account administration ensure business continuity for any usage rights or other configurations there were saved when the old email address was in use. 
+If you change the email address of a user or group, we recommend that you add the old email address as a second email address (also known as a proxy address, alias, or alternate email address) to the user or group. When you do this, the old email address is added to the Azure AD proxyAddresses attribute. This account administration ensures business continuity for any usage rights or other configurations there were saved when the old email address was in use. 
 
 If you cannot do this, the user or group with the new email address risks being denied access to documents and emails that were previously protected, and other misconfigurations that used the old value. In this case, you must repeat the configuration to save the new email address. 
 
@@ -200,7 +200,7 @@ Note that it's rare for a group to change its email address and if you assign us
 
 ## Group membership caching by Azure Rights Management
 
-For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership in Azure AD can take up to 3 hours to take effect when these groups are used by Azure Rights Management, and this time period is subject to change. 
+For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership in Azure AD can take up to three hours to take effect when these groups are used by Azure Rights Management, and this time period is subject to change. 
 
 Remember to factor this delay into any changes or testing that you do when you use groups for Azure Rights Management, such as assigning usage rights or configuring the Azure Rights Management service. 
 

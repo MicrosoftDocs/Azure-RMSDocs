@@ -53,7 +53,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
-    In addition, there are some policy settings that are not set so that for example, all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
+    In addition, there are some policy settings that are not set. For example, all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
@@ -71,7 +71,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 We'll now change the settings of one of the sub-labels, **All Employees** from the **Confidential** main label. 
 
-If your **Confidential** label doesn't have sub-labels because you have an older version of the policy, you can use the **Confidential** label instead. The configuration steps will be the same but the name of the label blade will be **Confidential** instead of **All Employees**.
+If your **Confidential** label doesn't have sub-labels because you have an older version of the policy, you can use the **Confidential** label instead. The configuration steps are the same but the name of the label blade will be **Confidential** instead of **All Employees**.
 
 1. Make sure that the **Confidential** label is expanded, and then from that label, select **All Employees**.
     
@@ -85,11 +85,11 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     This action opens the **Protection** blade.
     
-3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select a predefined template** is also selected. Then, click the drop down box and choose the default template that lets all users in your organization view and edit protected content. 
+3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select a predefined template** is also selected. Then, click the drop-down box and choose the default template that lets all users in your organization view and edit protected content. 
     
     If you have recently activated the Azure Rights Management service, this template is named **Confidential \ All employees**. 
     
-    If the Azure Rights Management service was already activated before you started this tutorial, your default template might be named **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
+    If the Azure Rights Management service was already activated before you started this tutorial, your default template might be named **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you see and select **VanArsdel, Ltd - Confidential**: 
     
     ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-select-rms-template.png)
     
@@ -113,7 +113,7 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     a. **Choose the type of condition**: Keep the default of **Built-in**.
     
-    b. **Select built-in**: From the drop down, select **Credit Card Number**.
+    b. **Select built-in**: From the drop-down, select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     
@@ -123,7 +123,7 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     Click **Save** to return to the **Label: All Employees** blade.
 
-7. In the **Label: All Employees** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+7. In the **Label: All Employees** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
