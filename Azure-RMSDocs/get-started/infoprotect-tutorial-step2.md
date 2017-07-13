@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,9 +85,11 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     This action opens the **Protection** blade.
     
-3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select a predefined template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
+3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select a predefined template** is also selected. Then, click the drop down box and choose the default template that lets all users in your organization view and edit protected content. 
     
-    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
+    If you have recently activated the Azure Rights Management service, this template is named **Confidential \ All employees**. 
+    
+    If the Azure Rights Management service was already activated before you started this tutorial, your default template might be named **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
     
     ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-select-rms-template.png)
     
