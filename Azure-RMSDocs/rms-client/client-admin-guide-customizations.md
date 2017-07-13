@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,21 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the the Azure Information Protection client. 
+Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the the Azure Information Protection client.
+
+Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.
+
+### How to configure advanced client configuration settings in the portal
+
+1. Navigate to the **Azure Information Protection** blade, and on the initial  Azure Information Protection blade, select **Scoped policies**.
+
+2. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+    
+    You can configure advanced settings for the Global policy, as well as for scoped policies.
+
+3. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
+
+4. Click **Publish**, and make sure that users for this policy restart any Office applications that they had loaded.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
@@ -79,6 +93,44 @@ Locate the following value name and set the value data to **0**:
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an out of date policy file with the latest, published policy.
+
+## Hide the Do Not Forward button in Outlook
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It requires a minimum client version of **1.8.41.0 ** (currently in preview).
+
+When this setting is configured, it hides the **Do Not Forward** button in Outlook. It does not hide this option from Office menus.
+
+To configure this advanced setting:
+
+- Key: **DisableDNF**
+
+- Value: **True**
+
+## Make the Custom Permissions options unavailable to users
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When this setting is configured and published for clients, it doesn't hide the **Set custom permissions** options in Office applications and from File Explorer, but these options are unavailable for users to select. 
+
+To configure this advanced setting:
+
+- Key: **EnableCustomPermissions**
+
+- Value: **False**
+
+## Permanently hide the Azure Information Protection bar
+
+This configuration uses an advanced setting that you must configure in the Azure portal. It requires a minimum client version of **1.9.21.0** (currently in preview).
+
+When this setting is configured and published for clients and a user chooses to not show the Azure Information Protection bar, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
+
+Even though the Azure Information Protection bar is not displayed, users still sees any label recommendations that you have configured.
+
+To configure this advanced setting:
+
+- Key: **EnableBarHiding**
+
+- Value: **True**
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 

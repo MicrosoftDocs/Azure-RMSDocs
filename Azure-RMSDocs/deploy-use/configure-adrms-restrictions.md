@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/07/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,6 +74,8 @@ In addition to not supporting the listed benefits that you get when you use Azur
 - Do not use the **Do Not Forward** option when you configure a label for Azure RMS protection. You must also instruct users not to manually select this option in Outlook. 
 
     If the Do Not Forward option is applied by a label or manually by users, the option might be applied by your AD RMS deployment rather than the intended Azure Rights Management service. In this scenario, people that you share with externally cannot open email messages that have this Do Not Forward option applied.
+    
+    Beginning with version 1.9.21.0 of the Azure Information Protection client (currently in preview), the Do Not Forward option in Outlook always uses Azure RMS.
 
 - If users configure custom permissions when you use AD RMS (HYOK) protection and Azure RMS protection, the document or email is always protected by Azure Rights Management.
 
