@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the the Azure Information Protection client.
+Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.
 
@@ -71,7 +71,7 @@ To sign in as a different user:
 
 Additionally:
 
-- If you are using single sign-on, you will need to sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client will automatically authenticate by using your currently signed in user account.
+- If you are using single sign-on, you must sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client then automatically authenticates by using your currently signed in user account.
 
 - If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 
@@ -79,7 +79,7 @@ Additionally:
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
-You can configured this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
+You can configure this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
 
 Create the following DWORD value name (with any value data):
 
@@ -92,15 +92,15 @@ Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an out of date policy file with the latest, published policy.
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy.
 
 ## Hide the Do Not Forward button in Outlook
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It requires a minimum client version of **1.8.41.0 ** (currently in preview).
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It requires a minimum preview client version of **1.8.41.0**.
 
-When this setting is configured, it hides the **Do Not Forward** button in Outlook. It does not hide this option from Office menus.
+When you configure this setting, it hides the **Do Not Forward** button in Outlook. It does not hide this option from Office menus.
 
-To configure this advanced setting:
+To configure this advanced setting, enter the following strings:
 
 - Key: **DisableDNF**
 
@@ -110,9 +110,9 @@ To configure this advanced setting:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When this setting is configured and published for clients, it doesn't hide the **Set custom permissions** options in Office applications and from File Explorer, but these options are unavailable for users to select. 
+When you configure this setting and publish the policy for users, it doesn't hide the **Set custom permissions** options in Office applications and from File Explorer, but these options are unavailable for users to select. 
 
-To configure this advanced setting:
+To configure this advanced setting, enter the following strings:
 
 - Key: **EnableCustomPermissions**
 
@@ -120,13 +120,13 @@ To configure this advanced setting:
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an advanced setting that you must configure in the Azure portal. It requires a minimum client version of **1.9.21.0** (currently in preview).
+This configuration uses an advanced setting that you must configure in the Azure portal. It requires a minimum preview client version of **1.9.21.0**.
 
-When this setting is configured and published for clients and a user chooses to not show the Azure Information Protection bar, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
+When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
 Even though the Azure Information Protection bar is not displayed, users still sees any label recommendations that you have configured.
 
-To configure this advanced setting:
+To configure this advanced setting, enter the following strings:
 
 - Key: **EnableBarHiding**
 
@@ -142,7 +142,7 @@ To achieve this solution:
 
 2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
-    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
+    For the message header, you find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
@@ -156,7 +156,8 @@ Before you test this, remember that there is often a delay when you create or ed
 
 - The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
 
-- When recipients running the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+- 
+- the email in Outlook, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
 
 If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
 
