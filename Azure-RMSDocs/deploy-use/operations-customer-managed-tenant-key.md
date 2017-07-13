@@ -6,7 +6,7 @@ description: Information about the lifecycle operations that are relevant if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,7 +47,7 @@ Re-keying is also known as rolling your key. Do not re-key your tenant key unles
 
 When you re-key your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure Information Protection retains your old tenant key so that it can issue licenses for old content.
 
-To re-key your tenant key, first re-key your Azure Information Protection tenant key in Key Vault. Then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) cmdlet again, specifying the new key URL.
+To re-key your tenant key, first re-key your Azure Information Protection tenant key in Key Vault. Then run the [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet again, specifying the new key URL.
 
 ## Backup and recover your tenant key
 You are responsible for backing up your tenant key. If you generated your tenant key in a Thales HSM, to back up the key, just back up the Tokenized Key file, the World file, and the Administrator Cards.
