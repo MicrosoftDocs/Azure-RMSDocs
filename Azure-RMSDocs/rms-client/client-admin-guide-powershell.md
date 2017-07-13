@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -430,6 +430,60 @@ Your output might look similar to the following:
 	InputFile                             DecryptedFile
 	---------                             -------------
 	C:\Test.docx                          C:\Test.docx
+
+## How to label files non-interactively for Azure Information Protection
+
+By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, first run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
+
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+
+If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
+
+To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for 1 year, 2 years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
+
+After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created. If you want to use more than one account, each account must have its own applications registered in Azure AD and therefore you must run this cmdlet for each account.
+
+### To create and configure the Azure AD applications for Set-AIPAuthentication
+
+1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) 
+
+2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
+
+3. Select **New application registration**, to create your Web app /API application. On the **Create** label, specify the following values, and then click **Create**:
+    
+    - Name: **AIPOnBehalfOf**
+    
+    - Application Type: **Web app /API**
+    
+    - Sign-on URL: **http://localhost**
+    
+4. Select the application that you've just created, **AIPOnBehalfOf**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
+    
+    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+
+5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save** and copy the string for the **Value** that displayed. It's important that you save this string because it is not displayed again and cannot be retrieved.
+    
+    This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
+
+6. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
+    
+    - Name: **AIPClient**
+    
+    - Application Type: **Native**
+    
+    - Sign-on URL: **http://localhost**
+
+7. Select the application that you've just created, **AIPClient**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+    
+    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+
+8. On the **Settings** blade, select **Required permissions**. 
+
+9. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf** and select this value in the list box, and then click **Select**.
+
+10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+    
+    You've now completed the configuration of the two apps and have the values that you need to run Set-AIPAuthentication with parameters.
 
 
 ## Next steps
