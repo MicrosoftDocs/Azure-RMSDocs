@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -430,49 +430,6 @@ Your output might look similar to the following:
 	InputFile                             DecryptedFile
 	---------                             -------------
 	C:\Test.docx                          C:\Test.docx
-
-## How to label files non-interactively for Azure Information Protection
-
-By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, first run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then bootstrapped for the Azure Rights Management service and downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
-
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for unattended use. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
-
-- If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
-
-- If you run this cmdlet with parameters, the access token is valid for 1 year, 2 years, or never expires. The period depends on the your configuration of the web application that you create in Azure. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
-
-After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created. If you want to use more than one account, each account must have its own applications registered in Azure AD and therefore you must run this cmdlet for each account.
-
-### To create and configure the applications in Azure AD
-
-1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) 
-
-2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
-
-3. Select **New application registration**, to create your Web app /API application. On the **Create** label, specify the following values, and then click **Create**:
-    
-    - Name: **AIPOnBehalfOf**
-    
-    - Application Type: **Web app /API**
-    
-    - Sign-on URL: **http://localhost**
-    
-4. Select the application that you've just created, **AIPOnBehalfOf**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
-
-5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, never expires). Then select **Save** and copy the string for the **Value** that displayed. It's important that you save this string because it is not displayed again and cannot be retrieved.
-
-6. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
-    
-    - Name: **AIPClient**
-    
-    - Application Type: **Native**
-    
-    - Sign-on URL: **http://localhost**
-
-7. Select the application that you've just created, **AIPClient**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
-
-8. 
-
 
 
 ## Next steps
