@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,13 +95,13 @@ In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName 
 
 For assigning labels:
 
-- You can use any type of group in Azure AD to configure scoped policies that assign additional labels to group members.
+- To configure scoped policies that assign additional labels to group members, you can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group.
+    
+    For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
 For assigning usage rights and access controls:
 
 - You can use any type of group in Azure AD that has an email address that contains a verified domain for the user's tenant. A group that has an email address is often referred to as a mail-enabled group. 
-    
-    For example, you can use a mail-enabled security group, a distribution group (which can be static or dynamic), and an Office 365 group. You cannot use a security group (dynamic or static) because this group type doesn't have an email address.
 
 For configuring the Azure Rights Management service:
 

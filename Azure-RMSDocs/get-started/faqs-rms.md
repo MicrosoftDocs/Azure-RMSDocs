@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -180,9 +180,11 @@ Use the [super user feature](../deploy-use/configure-super-users.md), which lets
 
 ## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
 
-Yes. This message reflects the use license for that specific file. A use license is a per-document certificate that is granted to a user who opens a protected file or email message. This certificate contains that user's rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document's policy. When the validity period of the use license is expired and the user tries to open the file or email message, their user credentials must be resubmitted to the Azure Rights Management service. 
+Yes. This message reflects the use license for that specific file. A use license is a per-document certificate that is granted to a user who opens a protected file or email message. This certificate contains that user's rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document's policy. When the validity period of the use license is expired and a user tries to open the file or email message, their user credentials must be resubmitted to the Azure Rights Management service. 
 
 If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user will continue to have access to the document for the duration of the use license. When the use license expires, the user must re-authenticate, at which point the user will be denied access because the document is now revoked.
+
+The user who protected the document, the [Rights Management issuer](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) is exempt from this revocation and will always be able to access their documents. 
 
 The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, **Set-AadrmMaxUseLicenseValidityTime**. This setting can be overridden by a more restrictive setting in a custom template. 
 
