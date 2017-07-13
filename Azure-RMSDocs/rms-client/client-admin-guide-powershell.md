@@ -441,7 +441,7 @@ The first time you run this cmdlet, you are prompted to sign in for Azure Inform
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
-To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for one year, two years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
+To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for one year, two years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
 
 After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created. If you want to use more than one account, each account must have its own applications registered in Azure AD and therefore you must run this cmdlet for each account.
 
