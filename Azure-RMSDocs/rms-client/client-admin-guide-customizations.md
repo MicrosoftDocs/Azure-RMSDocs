@@ -35,15 +35,17 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
-1. Navigate to the **Azure Information Protection** blade, and on the initial  Azure Information Protection blade, select **Scoped policies**.
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
 
-2. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+2. On the initial  Azure Information Protection blade, select **Scoped policies**.
+
+3. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
     You can configure advanced settings for the Global policy, as well as for scoped policies.
 
-3. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
+4. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
 
-4. Click **Publish**, and make sure that users for this policy restart any Office applications that they had loaded.
+5. Click **Publish**, and make sure that users for this policy restart any Office applications that they had loaded.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
