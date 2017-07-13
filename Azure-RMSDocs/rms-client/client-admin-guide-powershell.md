@@ -447,7 +447,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
-1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/) 
+1. In a new browser window, sign in the [Azure portal](https://portal.azure.com/).
 
 2. For the Azure AD tenant that you use with Azure Information Protection, navigate to **Azure Active Directory** > **App registrations**. 
 
@@ -463,7 +463,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet.
 
-5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save** and copy the string for the **Value** that displayed. It's important that you save this string because it is not displayed again and cannot be retrieved.
+5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved.
     
     This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
 
@@ -481,18 +481,17 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 8. On the **Settings** blade, select **Required permissions**. 
 
-9. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf** and select this value in the list box, and then click **Select**.
+9. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
 
 10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
     
-    You've now completed the configuration of the two apps and have the values that you need to run Set-AIPAuthentication with parameters.
+    You've now completed the configuration of the two apps and you have the values that you need to run Set-AIPAuthentication with parameters.
 
 
 ## Next steps
-For cmdlet help when you are in a PowerShell session, use the Get-Help <cmdlet name> cmdlet, where <cmdlet name> is the name of the cmdlet
-that you want to research. For example: 
+For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
 
-	Get-Help Get-RMSTemplate
+	Get-Help Get-RMSTemplate -online
 
 See the following for additional information that you might need to support the Azure Information Protection client:
 
