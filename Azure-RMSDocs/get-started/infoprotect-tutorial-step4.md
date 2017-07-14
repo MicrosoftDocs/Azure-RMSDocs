@@ -31,7 +31,7 @@ ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 
 Now that you've got a Word document open with the Azure Information Protection client installed, you're ready to see how easy it is to start labeling and protecting your document, using the policy that we configured.
 
-Classification and protection happens when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
+Classification and protection happen when you save the document, but before we do that, we'll use our unsaved document to see how easy it is to apply and change labels.
 
 ## To manually change our default label
 
@@ -63,7 +63,7 @@ On the Information Protection bar, click the **Edit Label** icon again. But inst
 
 This time when you are prompted, type "This document doesn't need classifying" and click **Confirm**.  
 
-You'll see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
+You see the **Sensitivity** value display **Not set**, which is what users see initially if you don't set a default label:
 
 ![Azure Information Protection quick start tutorial step 4 - remove classification](../media/sensitivity-not-setv2.png)
 
@@ -78,7 +78,7 @@ You'll see the **Sensitivity** value display **Not set**, which is what users se
 
     ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
 
-    In addition to the document now showing that our configured label is applied (for example, **Confidential \ All Employees**), you'll immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
+    In addition to the document now showing that our configured label is applied (for example, **Confidential \ All Employees**), you immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
     The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
 
