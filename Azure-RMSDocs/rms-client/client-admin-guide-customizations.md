@@ -47,7 +47,7 @@ Some of these settings require editing the registry and some use advanced settin
 
 5. Click **Publish**, and make sure that users for this policy restart any Office applications that they had open.
 
-6. If you no longer need the setting: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**, and republish the modified policy.
+6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**, and republish the modified policy.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
