@@ -6,7 +6,7 @@ description: Step 4 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,7 +49,7 @@ On the Information Protection bar, click the **Edit Label** icon next to the cur
 
 This displays the available labels again.
 
-Now select the first label, **Personal**. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why are lowering the classification level:
+Now select the first label, **Personal**. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why you are lowering the classification level:
 
 ![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
 
