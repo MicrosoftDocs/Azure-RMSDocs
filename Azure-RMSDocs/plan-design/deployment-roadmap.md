@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -105,7 +105,7 @@ Optionally, consider configuring the following:
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
     
-    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 3 for Exchange Online, and step 6 for Exchange on-premises. 
+    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
 
 2. Configure Office applications and services for IRM
     
@@ -123,7 +123,7 @@ Optionally, consider configuring the following:
     
     If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
-### Step 4: Use and monitor your data protection solutions
+### Step 6: Use and monitor your data protection solutions
 You’re now ready to protect your data, and log how your company is using the labels that you've configured and the Rights Management data protection. For addition information to support this deployment phase, see the following:
 
 - [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md)
@@ -134,7 +134,7 @@ You’re now ready to protect your data, and log how your company is using the l
 
 If you're interested in automatically protecting files using File Classification Infrastructure on a Windows-based file server, see [RMS protection with Windows Server File Classification Infrastructure (FCI)](../rms-client/configure-fci.md).
 
-### Step 5: Administer the Rights Management service for your tenant account as needed
+### Step 7: Administer the Rights Management service for your tenant account as needed
 As you begin to use the Azure Rights Management service, you might find Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](../deploy-use/administer-powershell.md).
 
 
