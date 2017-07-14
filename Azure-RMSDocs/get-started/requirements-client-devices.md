@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use the following sections to identify which devices support the Azure Rights Management service, which provides data protection for Azure Information Protection.
+Use the following sections to identify which devices support the Azure Rights Management service. This service provides data protection for Azure Information Protection.
 
 ## Computers
 The following computer operating systems support the Azure Rights Management service:
