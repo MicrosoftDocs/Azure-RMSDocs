@@ -27,11 +27,13 @@ ms.suite: ems
 
 # Custom configurations for the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
-Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.
+Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download. 
+
+In addition, some settings might only be available in a preview version of the Azure Information Protection client. For these settings, a minimum client version is documented. For settings and configurations that are available in the general availability version of the client, no minimal client version number is documented.
 
 ### How to configure advanced client configuration settings in the portal
 
@@ -77,13 +79,13 @@ Additionally:
 
 - If you are using single sign-on, you must sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client then automatically authenticates by using your currently signed in user account.
 
-- If you want to reinitialize the environment for the Azure Rights Management service (also known as bootstrapping), you can do this by using the **Reset** option from the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+- If you want to reset the user settings for the Azure Rights Management service, you can do this by using the **Help and Feedback** option.
 
 - If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
-You can configure this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
+You can configure this advanced configuration by editing the registry. 
 
 Create the following DWORD value name (with any value data):
 
@@ -100,9 +102,9 @@ Make sure that the client has a valid policy file named **Policy.msip**, in the 
 
 ## Hide the Do Not Forward button in Outlook
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. It requires a minimum preview client version of **1.8.41.0**.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting also requires a preview version of the Azure Information Protection client that has a minimum version of **1.8.41.0**.
 
-When you configure this setting, it hides the **Do Not Forward** button in Outlook. It does not hide this option from Office menus.
+When you configure this setting, it hides the **Do Not Forward** button from the ribbon in Outlook. It does not hide this option from Office menus.
 
 To configure this advanced setting, enter the following strings:
 
@@ -110,11 +112,17 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Make the Custom Permissions options unavailable to users
+## Make the custom permissions options unavailable to users
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting and publish the policy for users, it doesn't hide the **Set custom permissions** options in Office applications and from File Explorer, but these options are unavailable for users to select. 
+When you configure this setting and publish the policy for users, the custom permissions options from the following locations becomes unavailable for users to select:
+
+- In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
+
+- From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
+
+This setting has no effect on custom permissions that you can configure from Office menu options. 
 
 To configure this advanced setting, enter the following strings:
 
@@ -124,11 +132,11 @@ To configure this advanced setting, enter the following strings:
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an advanced setting that you must configure in the Azure portal. It requires a minimum preview client version of **1.9.21.0**.
+This configuration uses an advanced setting that you must configure in the Azure portal. This setting also requires a preview version of the Azure Information Protection client that has a minimum version of **1.9.58.0 **.
 
-When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
+When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
-Even though the Azure Information Protection bar is not displayed, users still sees any label recommendations that you have configured.
+Even though the Azure Information Protection bar remains hidden, users can still select a label from the temporarily displayed bar if you have configured recommended classification, or when a document or email must have a label. The setting also has no effect on labels that you or others configure, such as manual or automatic classification, or setting a default label.
 
 To configure this advanced setting, enter the following strings:
 
