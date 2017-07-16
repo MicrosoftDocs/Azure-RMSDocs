@@ -33,7 +33,7 @@ Use the following information for advanced configurations that you might need fo
 
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download. 
 
-In addition, some settings might only be available in a preview version of the Azure Information Protection client. For these settings, a minimum client version is documented. For settings and configurations that are available in the general availability version of the client, no minimal client version number is documented.
+In addition, some settings might only be available in a preview version of the Azure Information Protection client. For these settings, a minimum client version is documented. For settings and configurations that are supported in the general availability version of the client, no minimal client version number is documented.
 
 ### How to configure advanced client configuration settings in the portal
 
