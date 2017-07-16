@@ -116,7 +116,7 @@ To configure this advanced setting, enter the following strings:
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting and publish the policy for users, the custom permissions options from the following locations becomes unavailable for users to select:
+When you configure this setting and publish the policy for users, the custom permissions options from the following locations become unavailable for users to select:
 
 - In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
 
