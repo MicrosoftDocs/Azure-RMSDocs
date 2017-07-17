@@ -485,7 +485,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
     
-    You've now completed the configuration of the two apps and you have the values that you need to run Set-AIPAuthentication with parameters.
+    You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](https://go.microsoft.com/fwlink/?linkid=851286) with parameters.
 
 
 ## Next steps

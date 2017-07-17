@@ -113,7 +113,7 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
 
-For the following Office client editions support protecting files and emails on macOS by using Azure RMS:
+The following Office client editions support protecting files and emails on macOS by using Azure RMS:
 
 - Office 365 ProPlus: Office 2016
 
