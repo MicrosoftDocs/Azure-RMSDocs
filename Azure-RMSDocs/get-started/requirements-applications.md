@@ -115,7 +115,7 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 
 For the following Office client editions support protecting files and emails on macOS by using Azure RMS:
 
-- Office 365 ProPlus
+- Office 365 ProPlus: Office 2016
 
 - Office 2016 for Mac
 
