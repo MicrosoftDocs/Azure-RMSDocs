@@ -28,7 +28,7 @@ ms.suite: ems
 
 # File types supported by the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 The Azure Information Protection client can apply the following to documents and emails:
 
@@ -91,7 +91,11 @@ There are maximum file sizes that the Azure Information Protection client suppor
     |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
     |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
 
-- **For all other files**: 1 GB
+- **For all other files**:
+    
+    - For the general availability version of the client: - 1 GB
+    
+    - For the preview client (minimum version of **1.8.41.0**): Limited only by available disk space and memory
 
 ### Supported file types for classification and protection
 
