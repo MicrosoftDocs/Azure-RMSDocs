@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -91,7 +91,9 @@ For more information, see the following post on the Enterprise and Mobility Blog
 
 ### More information about Azure RMS support for Office
 
-Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). The following Office client editions support protecting files and emails by using Azure RMS:
+Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). 
+
+The following Office client editions support protecting files and emails on Windows computers by using Azure RMS:
 
 - Office 365 ProPlus: Office 2016 and Office 2013
 
@@ -110,6 +112,12 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 - Not supported on Windows 10
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
+
+For the following Office client editions support protecting files and emails on macOS by using Azure RMS:
+
+- Office 365 ProPlus
+
+- Office 2016 for Mac
 
 ### More information about the Azure Information Protection app for iOS and Android
 
