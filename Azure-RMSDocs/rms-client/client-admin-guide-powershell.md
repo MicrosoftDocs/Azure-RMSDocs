@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -485,7 +485,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
     
-    You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](https://go.microsoft.com/fwlink/?linkid=851286) with parameters.
+    You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
 
 
 ## Next steps
