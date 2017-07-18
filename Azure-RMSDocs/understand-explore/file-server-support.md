@@ -6,7 +6,7 @@ description: How Windows Server File Classification Infrastructure can be used w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,7 +44,7 @@ For instructions to use the Windows PowerShell script for all file types, see [R
 
 
 ## Next steps
-Now you understand how applications and services support Azure RMS, you might be interested in comparing Azure RMS with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS). For a comparison of features, requirements, and security controls, see [Comparing Azure Rights Management and AD RMS](compare-azure-rms-ad-rms.md).
+Now that you understand how applications and services support Azure RMS, you might be interested in comparing Azure RMS with the on-premises version of Rights Management, Active Directory Rights Management Services (AD RMS). For a comparison of features, requirements, and security controls, see [Comparing Azure Rights Management and AD RMS](compare-azure-rms-ad-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
