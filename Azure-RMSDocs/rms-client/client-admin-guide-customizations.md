@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,7 +53,7 @@ In addition, some settings might only be available in a preview version of the A
 
 ## Prevent sign-in prompts for AD RMS only computers
 
-By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by editing the registry:
+By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service. For computers that only communicate with AD RMS, this configuration can result in a sign-in prompt for users that is not necessary. You can prevent this sign-in prompt by editing the registry:
 
 Locate the following value name, and then set the value data to **0**:
 
@@ -63,11 +63,11 @@ Regardless of this setting, the Azure Information Protection client follows the 
 
 ## Sign in as a different user
 
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, you might need to do so as an administrator if you have multiple tenants. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses.
+In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, as an administrator, you might need to sign in as a different user. For example, you have a test tenant in addition to the Office 365 or Azure tenant that your organization uses in production.
 
 You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, in the **Protection** group, click **Protect**, and then click **Help and feedback**. Your account name is displayed in the **Client status** section.
 
-Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of this can be failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
+Especially when you're using an administrator account, be sure to check the domain name of the signed in account that's displayed. For example, if you have an "admin" account in two different tenants, it can be easy to miss that you're signed in with the right account name but wrong domain. A symptom of using the wrong account includes failing to download the Azure Information Protection policy, or not seeing the labels or behavior that you expect.
 
 To sign in as a different user:
 
@@ -85,7 +85,7 @@ Additionally:
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
-You can configure this advanced configuration by editing the registry. 
+You can configure this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
 
 Create the following DWORD value name (with any value data):
 
@@ -94,6 +94,7 @@ Create the following DWORD value name (with any value data):
 ## Support for disconnected computers
 
 By default, the Azure Information Protection client automatically tries to connect to the Azure Information Protection service to download the latest Azure Information Protection policy. If you have computer that you know will not be able to connect to the Internet for a period of time, you can prevent the client from attempting to connect to the service by editing the registry. 
+
 Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
@@ -162,24 +163,23 @@ To achieve this solution:
     
     ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
 
-Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). When the rule is in effect, the following now happens when users use Outlook on the web or a mobile device client that supports Rights Management protection: 
+Before you test this configuration, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). When the rule is in effect, the following events now happen when users use Outlook on the web or a mobile device client that supports Rights Management protection: 
 
 - Users select the Exchange message classification and send the email.
 
 - The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
 
-- 
-- the email in Outlook, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+- When recipients view the email in Outlook and they have the Azure Information Protection client installed, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
 
-If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
+If your Azure Information Protection labels apply rights management protection, add this protection to the rule configuration: Selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
 
-You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
+You can also configure transport rules to do the reverse mapping. When an Azure Information Protection label is detected, set a corresponding Exchange message classification:
 
-- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
+- For each Azure Information Protection label: Create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
 
 ## Next steps
-Now that you've customized the Azure Information Protection client, see the following for additional information that you might need to support this client:
+Now that you've customized the Azure Information Protection client, see the following resources for additional information that you might need to support this client:
 
 - [Client files and usage logging](client-admin-guide-files-and-logging.md)
 
