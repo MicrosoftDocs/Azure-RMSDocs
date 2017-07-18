@@ -6,7 +6,7 @@ description: Information about the lifecycle operations that are relevant if Mic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,11 +74,11 @@ You can export your Azure Information Protection configuration and tenant key by
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    The output of this command should be two files: One contains the plaintext password for the password-protected TPD, and the other is the password-protected TPD itself. For cross-referencing purposes, both should have the same GUID as the public and private key files from when you ran the AadrmTpd.exe -createkey command:
+    The output of this command should be two files: One contains the plain text password for the password-protected TPD, and the other is the password-protected TPD itself. The files have a new GUID, for example:
+     
+    - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
-    -   Password-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt
-
-    -   ExportedTPD-FA29D0FE-5049-4C8E-931B-96C6152B0441.xml
+    - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
 
     Backup these files and store them safely to ensure that you can continue to decrypt content that is protected with this tenant key. In addition, if you are migrating to AD RMS, you can import this TPD file (the file that starts with **ExportedTDP**) to your AD RMS server.
 
