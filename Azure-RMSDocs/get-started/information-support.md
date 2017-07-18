@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2017
+ms.date: 07/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |----------------|---------------|
 |See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
 |Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Receive tweets about Azure Information Protection and announcements about documentation updates from the product group|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Azure Information Protection team at Microsoft.|
+|Receive tweets from the product group about Azure Information Protection and announcements for documentation updates|Follow [@DanPlastina](https://twitter.com/DanPlastina), who helps lead the Azure Information Protection team at Microsoft.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
@@ -90,11 +90,9 @@ Troubleshooting:
 
 - For the Azure Information Protection client for Windows: See the [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
 
-- For automated checks, automatic remediation, and tracing: Download and run the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437). For more information about this tool, see the **Details** and **Install Instructions** on the download page. 
-
 ### Community resources
 
-We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam), which is where you'll get direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
+We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team and the benefit of shared experience and knowledge from other admins and consultants.
 
 If you don't have access to Yammer, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
