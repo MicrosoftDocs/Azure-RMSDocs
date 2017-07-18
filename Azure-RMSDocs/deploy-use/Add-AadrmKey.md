@@ -1,47 +1,35 @@
 ---
 # required metadata
 
-title: Verifying Azure Rights Management - AIP
-description: Instructions to verify that the service is working as expected by protecting a file or email message by using one user account, and then attempting to open and use that protected content from another user account.
+title: Add-AadrmKey
+description: Help for Add-AadrmKey from the AADRM module.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
+ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 
 # optional metadata
 
-#ROBOTS:
+#ROBOTS: NOINDEX, NOFOLLOW
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
+ms.reviewer: aashishr
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Verifying the Azure Rights Management service
+# Add-AadrmKey
 
->*Applies to: Azure Information Protection, Office 365*
+This cmdlet is now removed from the latest version of the Azure Rights Management module, because the Azure Rights Management service uses Azure Key Vault for customer-managed keys.
 
-When the Azure Rights Management service of Azure Information Protection is activated and you have performed any additional configuration steps that are required for your organization, you can verify that this protection service is working as expected by protecting a file or email message by using one  user account, and then attempting to open and use that protected content from another user account.
+Instead, use [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey). For more information, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
-To do this testing, you can use the information in [Helping users to protect files by using the Azure Rights Management service](help-users.md).
-
-If your testing is unsuccessful, review the configuration steps in [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md), and use the [RMS Analyzer tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) to help identify and fix potential problems. You can also run this tool periodically, as a general health check.
-
-> [!TIP]
-> If you need additional help, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) section in the [Information and support for Azure Information Protection](../get-started/information-support.md) article.
-
-## Next steps
-
-You can monitor how your organization is using the Azure Rights Management service by using usage logging. For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
+In addition, update your version of the module so it is **2.9.0.0** or later. For instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
 
