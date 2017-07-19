@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,13 +38,13 @@ It’s a four-part procedure to import the AD RMS configuration to Azure Informa
 
 You must first extract your server licensor certificate (SLC) key from the AD RMS configuration data and transfer the key to an on-premises Thales HSM, next package and transfer your HSM key to Azure Key Vault, then authorize the Azure Rights Management service from Azure Information Protection to access your key vault, and then import the configuration data.
 
-Because your Azure Information Protection tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Information Protection. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
+Because your Azure Information Protection tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Information Protection. If Azure Key Vault is managed by a different administrator than you for your organization, you must co-ordinate and work with that administrator to complete these procedures.
 
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure Information Protection. This key vault will be configured to allow the Azure Rights Management service from Azure Information Protection to access it, so the keys that this key vault stores should be limited to Azure Information Protection keys only.
 
 
 > [!TIP]
-> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started). 
+> If you are doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started). 
 
 
 ## Part 1: Extract your SLC key from the configuration data and import the key to your on-premises HSM
@@ -79,16 +79,16 @@ Before you begin, make sure that your organization has a key vault that has been
 
     - The **/opem**: specifies the output file name for the PEM file, which contains the extracted key. The full parameter name is **OutPemFile**. If you do not specify this parameter, the output file defaults to the original file name with the suffix **_key**, and it is stored in the current folder.
 
-    - If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you will be prompted to specify it.
+    - If you don't specify the password when you run this command (by using the **TpdPassword** full parameter name or **pwd** short parameter name), you are prompted to specify it.
 
-3. On the same disconnected workstation, attach and configure your Thales HSM, according to your Thales documentation. You can now import your key into your attached Thales HSM by using the following command where you will need to substitute your own file name for ContosoTPD.pem:
+3. On the same disconnected workstation, attach and configure your Thales HSM, according to your Thales documentation. You can now import your key into your attached Thales HSM by using the following command where you need to substitute your own file name for ContosoTPD.pem:
 
     	generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
     > [!NOTE]
     >If you have more than one file, choose the file that corresponds to the HSM key you want to use in Azure RMS to protect content after the migration.
 
-    This will generate an output display similar to the following:
+    This generates an output display similar to the following:
 
     **key generation parameters:**
 
@@ -96,7 +96,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
     **application &nbsp;&nbsp;&nbsp;&nbsp;Application&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; simple**
 
-    **verify &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verify security of configration key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yes**
+    **verify &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verify security of configuration key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yes**
 
     **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
 
@@ -115,7 +115,7 @@ This output confirms that the private key is now migrated to your on-premises Th
 Now that your SLC key has been extracted and imported to your on-premises HSM, you’re ready to package the HSM-protected key and transfer it to Azure Key Vault.
 
 > [!IMPORTANT]
-> When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w:E" to securely delete all files from the E: drive.
+> When you have completed this step, securely erase these PEM files from the disconnected workstation to ensure that they cannot be accessed by unauthorized people. For example, run "cipher /w: E" to securely delete all files from the E: drive.
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
@@ -145,7 +145,7 @@ Now that you’ve transferred your HSM key to Azure Key Vault, you’re ready to
 
 2. Upload each .xml file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
 
-    To run this cmdlet, you will need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
+    To run this cmdlet, you need the password that you specified earlier for the configuration data file, and the URL for the key that was identified in the previous step.
 
     For example, using a configuration data file of C:\contoso_keyless.xml and our key URL value from the previous step, first run the following to store the password:
     

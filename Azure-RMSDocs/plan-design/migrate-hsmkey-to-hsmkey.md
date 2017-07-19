@@ -6,7 +6,7 @@ description: Instructions that are part of the migration path from AD RMS to Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,13 +39,13 @@ If this is not your chosen configuration scenario, go back to [Step 4. Export co
 
 It’s a two-part procedure to import your HSM key and AD RMS configuration to Azure Information Protection, to result in your Azure Information Protection tenant key that is managed by you (BYOK).
 
-Because your Azure Information Protection tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Information Protection. If Azure Key Vault is managed by a different administrator than you for your organization, you will need to co-ordinate and work with that administrator to complete these procedures.
+Because your Azure Information Protection tenant key will be stored and managed by Azure Key Vault, this part of the migration requires administration in Azure Key Vault, in addition to Azure Information Protection. If Azure Key Vault is managed by a different administrator than you for your organization, you must co-ordinate and work with that administrator to complete these procedures.
 
 Before you begin, make sure that your organization has a key vault that has been created in Azure Key Vault, and that it supports HSM-protected keys. Although it's not required, we recommend that you have a dedicated key vault for Azure Information Protection. This key vault will be configured to allow the Azure Rights Management service to access it, so the keys that this key vault stores should be limited to Azure Information Protection keys only.
 
 
 > [!TIP]
-> If you will be doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> If you are doing the configuration steps for Azure Key Vault and you are not familiar with this Azure service, you might find it useful to first review [Get started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
 ## Part 1: Transfer your HSM key to Azure Key Vault
@@ -56,7 +56,7 @@ These procedures are done by the administrator for Azure Key Vault.
 
     - Do not do the steps for **Generate your tenant key**, because you already have the equivalent from your AD RMS deployment. Instead, identify the key used by your AD RMS server from the Thales installation and use this key during the migration. Thales encrypted key files are usually named **key<*keyAppName*><*keyIdentifier*>** locally on the server.
 
-    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includeds the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator will need it to tell the Azure Rights Management service to use this key for its tenant key.
+    When the key uploads to Azure Key Vault, you see the properties of the key displayed, which includes the key ID. It will look similar to https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Make a note of this URL because the Azure Information Protection administrator needs it to tell the Azure Rights Management service to use this key for its tenant key.
 
 2. On the Internet-connected workstation, in a PowerShell session, use the [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to authorize the Azure Rights Management service principal to access the key vault that will store the Azure Information Protection tenant key. The permissions required are decrypt, encrypt, unwrapkey, wrapkey, verify, and sign.
     
@@ -75,7 +75,7 @@ These procedures are done by the administrator for Azure Information Protection.
     
     Then upload each trusted publishing domain (.xml) file, by using the [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) cmdlet. For example, you should have at least one additional file to import if you upgraded your AD RMS cluster for Cryptographic Mode 2.
     
-    To run this cmdlet, you will need the password that you specified earlier for each configuration data file, and the URL for the key that was identified in the previous step.
+    To run this cmdlet, you need the password that you specified earlier for each configuration data file, and the URL for the key that was identified in the previous step.
     
     For example, using a configuration data file of C:\contoso-tpd1.xml and our key URL value from the previous step, first run the following to store the password:
     
@@ -91,7 +91,7 @@ These procedures are done by the administrator for Azure Information Protection.
     
     As part of this import, the SLC key is imported and automatically set as archived.
 
-2.  When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key will become the active tenant key for your Azure Rights Management service.
+2.  When you have uploaded each file, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to specify which imported key matches the currently active SLC key in your AD RMS cluster. This key becomes the active tenant key for your Azure Rights Management service.
 
 3.  Use the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet to disconnect from the Azure Rights Management service:
 
