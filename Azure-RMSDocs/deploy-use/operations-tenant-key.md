@@ -6,7 +6,7 @@ description: Identify the different levels of control and responsibility that yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,7 +38,7 @@ The following table identifies which operations you can do, depending on the top
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
 |Revoke your tenant key|No (automatic)|Yes|
-|Re-key your tenant key|Yes|Yes|
+|Rekey your tenant key|Yes|Yes|
 |Backup and recover your tenant key|No|Yes|
 |Export your tenant key|Yes|No|
 |Respond to a breach|Yes|Yes|

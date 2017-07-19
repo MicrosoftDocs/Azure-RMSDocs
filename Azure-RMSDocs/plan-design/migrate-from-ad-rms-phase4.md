@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,7 +64,7 @@ If you chose an Azure Information Protection tenant key topology of **customer-m
 
 If you have used the Information Rights Management (IRM) functionality of Exchange Server or SharePoint Server with AD RMS, you will need to deploy the Rights Management (RMS) connector, which acts as a communications interface (a relay) between your on-premises servers and the protection service for Azure Information Protection.
 
-This steps covers installing and configuring the connector, disabling IRM for Exchange and SharePoint, and configuring these servers to use the connector. Finally, if you have imported AD RMS data configuration files (.xml) into Azure Information Protection that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
+This step covers installing and configuring the connector, disabling IRM for Exchange and SharePoint, and configuring these servers to use the connector. Finally, if you have imported AD RMS data configuration files (.xml) into Azure Information Protection that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
 
 > [!NOTE]
 > Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](../get-started/requirements-servers.md).
@@ -83,7 +83,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
-		$list + "<Your Tenant URL>/_wmcs/licensing"
+		$list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
