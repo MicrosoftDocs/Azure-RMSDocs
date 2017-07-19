@@ -443,7 +443,7 @@ If you run this cmdlet without parameters, the account acquires an access token 
 
 To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for one year, two years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
 
-After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created. If you want to use more than one account, each account must have its own applications registered in Azure AD and therefore you must run this cmdlet for each account.
+After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
