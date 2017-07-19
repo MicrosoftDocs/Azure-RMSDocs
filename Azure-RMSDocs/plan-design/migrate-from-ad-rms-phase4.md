@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,7 +83,7 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 		$irmConfig = Get-IRMConfiguration
 		$list = $irmConfig.LicensingLocation 
-		$list + "<Your Tenant URL>/_wmcs/licensing"
+		$list += "<Your Tenant URL>/_wmcs/licensing"
 		Set-IRMConfiguration -LicensingLocation $list
 
 3.  Now disable IRM features for messages that are sent to internal recipients:
