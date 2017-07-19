@@ -260,7 +260,9 @@ The **Export Logs** automatically collects and attaches log files for the Azure 
 
 For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
 
-More information about the **Reset** option:
+In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. 
+
+More information about the reset option for the general availability (GA) version of the Azure Information Protection client:
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
@@ -270,6 +272,34 @@ More information about the **Reset** option:
 
 - After you have reset the client, you must reinitialize the user environment, which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action also checks that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
 
+More information about the reset option for the current preview version of the Azure Information Protection client:
+
+- You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
+
+- Unless files are locked, this action deletes all the files in the following locations. This action includes deleting client certificates, rights management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
+    
+    -%localappdata%\Microsoft\DRM
+    
+    - %localapptata%\Microsoft\MSIPC
+    
+    -%localappdata%\Microsoft\Msip\Policy.msip
+    
+    -%localappdata%\Microsoft\Msip\TokenCache
+
+- The following registry keys and settings are deleted. If you configured settings for any of these registry keys, you must reconfigure them after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network:
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM    
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM    
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM    
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    
+
+- The currently signed in user is signed out.
 
 ### **Client status** section
 
