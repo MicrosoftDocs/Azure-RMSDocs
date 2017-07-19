@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,8 +56,6 @@ Classification-only is supported for the following file types. Additional file t
 - **Microsoft XPS**: .xps .oxps​
 
 - **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
-
-- **SolidWorks**: .sldprt, .slddrw, .sldasm​
 
 - **Autodesk Design Review 2013**: .dwfx​
 
