@@ -6,7 +6,7 @@ description: Step 4 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,9 +89,7 @@ Now that you've seen classification, labeling, and protection in action, let's s
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
-
-
-
+|Where the labeling activity is logging |[Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
 
 
 >[!div class="step-by-step"]
