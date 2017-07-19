@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -443,7 +443,7 @@ If you run this cmdlet without parameters, the account acquires an access token 
 
 To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for one year, two years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: A **Web app / API** application and a **native application**. The parameters for this cmdlet use values from these applications.
 
-After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created. If you want to use more than one account, each account must have its own applications registered in Azure AD and therefore you must run this cmdlet for each account.
+After you have run this cmdlet, you can run the labeling cmdlets in the context of the user account that you created.
 
 ### To create and configure the Azure AD applications for Set-AIPAuthentication
 
@@ -455,15 +455,17 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     - Name: **AIPOnBehalfOf**
     
+    If you prefer, specify a different name. It must be unique per tenant.
+    
     - Application Type: **Web app /API**
     
     - Sign-on URL: **http://localhost**
-    
-4. Select the application that you've just created, **AIPOnBehalfOf**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
+
+4. Select the application that you've just created, for example, **AIPOnBehalfOf**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
     
     This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet.
 
-5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved.
+5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
     
     This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
 
@@ -471,11 +473,13 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     - Name: **AIPClient**
     
+    If you prefer, specify a different name. It must be unique per tenant.
+    
     - Application Type: **Native**
     
     - Sign-on URL: **http://localhost**
 
-7. Select the application that you've just created, **AIPClient**, and on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+7. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
     
     This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet.
 
