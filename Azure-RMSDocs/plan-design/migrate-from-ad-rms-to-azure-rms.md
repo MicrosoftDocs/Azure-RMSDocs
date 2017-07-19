@@ -113,7 +113,7 @@ Although not a prerequisite for migration, we recommend that your AD RMS servers
 
 For more information about the different modes and how to upgrade, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
 
-If your AD RMS cluster is in Cryptographic Mode 1 and you cannot upgrade it, you must re-key your Azure Information Protection tenant key when migration is complete. Re-keying creates a new tenant key that uses Cryptographic Mode 2. Using the Azure Rights Management service with Cryptographic Mode 1 is supported only during the migration process.
+If your AD RMS cluster is in Cryptographic Mode 1 and you cannot upgrade it, you must rekey your Azure Information Protection tenant key when migration is complete. rekeying creates a new tenant key that uses Cryptographic Mode 2. Using the Azure Rights Management service with Cryptographic Mode 1 is supported only during the migration process.
 
 To confirm the AD RMS cryptographic mode:
  
@@ -223,7 +223,7 @@ The migration steps can be divided into 5 phases that can be done at different t
 
     The onboarding controls that you configured during the preparation phase are no longer needed.
 
-- **Step 12: Re-key your Azure Information Protection tenant key**
+- **Step 12: rekey your Azure Information Protection tenant key**
 
     This step is required if you were not running in Cryptographic Mode 2 before the migration, and optional but recommended for all migrations to help safeguard the security of your Azure Information Protection tenant key.
 

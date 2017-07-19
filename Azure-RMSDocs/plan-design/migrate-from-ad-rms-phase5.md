@@ -78,18 +78,18 @@ To remove the onboarding controls:
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
-## Step 12. Re-key your Azure Information Protection tenant key
-This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
+## Step 12. rekey your Azure Information Protection tenant key
+This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because rekeying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
 
-This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
+This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. rekeying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
 
-When you re-key your Azure Information Protection tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure Information Protection tenant key as soon as the migration is complete.
+When you rekey your Azure Information Protection tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but rekey your Azure Information Protection tenant key as soon as the migration is complete.
 
-To re-key your Azure Information Protection tenant key:
+To rekey your Azure Information Protection tenant key:
 
-- If your tenant key is managed by Microsoft: Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to re-key your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+- If your tenant key is managed by Microsoft: Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to rekey your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; rekeying your tenant key is a not a free-of-charge support service.
 
-- If your tenant key is managed by you (BYOK): In Azure Key Vault, re-key the key that you're using for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the new key URL. 
+- If your tenant key is managed by you (BYOK): In Azure Key Vault, rekey the key that you're using for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the new key URL. 
 
 For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 

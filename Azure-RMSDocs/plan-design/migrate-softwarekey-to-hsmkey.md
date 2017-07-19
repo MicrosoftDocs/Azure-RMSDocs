@@ -49,7 +49,7 @@ Before you begin, make sure that your organization has a key vault that has been
 
 ## Part 1: Extract your SLC key from the configuration data and import the key to your on-premises HSM
 
-1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+1.  Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key Vault, use the following steps in the [Implementing bring your own key (BYOK) for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azurekey-vault) section of the Azure Key Vault documentation:
 
     -   **Generate and transfer your key to Azure Key Vault HSM**: [Step 1: Prepare your Internet-connected workstation](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
@@ -119,11 +119,11 @@ Now that your SLC key has been extracted and imported to your on-premises HSM, y
 
 ## Part 2: Package and transfer your HSM key to Azure Key Vault
 
-Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key vault, use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) section of the Azure Key Vault documentation:
+Azure Key Vault administrator: For each exported SLC key that you want to store in Azure Key vault, use the following steps from the [Implementing bring your own key (BYOK) for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) section of the Azure Key Vault documentation:
 
 - [Step 4: Prepare your key for transfer](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-- [Step 5: Transfer your key to Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+- [Step 5: Transfer your key to Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azurekey-vault)
 
 Do not follow the steps to generate your key pair, because you already have the key. Instead, you will run a command to transfer this key (in our example, our KeyIdentifier parameter uses "contosobyok") from your on-premises HSM.
 
