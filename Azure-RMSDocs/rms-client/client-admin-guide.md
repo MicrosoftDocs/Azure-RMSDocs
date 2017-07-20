@@ -298,8 +298,8 @@ For diagnostic information and to reset the client, select **Run diagnostics**. 
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
     - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
-    
-    - The currently signed in user is signed out.
+
+- The currently signed in user is signed out.
 
 ### **Client status** section
 
