@@ -99,7 +99,16 @@ Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy.
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy.
+
+When you export the policy, this action downloads a zipped file with multiple versions of the policy that corresponds to different versions of the Azure Information Protection client. Unzip the file and use the following table to identify which policy file to copy to computers that have the Azure information protection client installed.
+
+|File name|Corresponding client version|
+|--------------------------|---------------------------------------------|
+|Policy1.1.msip |version 1.2.x|
+|Policy1.2.msip |version 1.3.x - 1.7.x|
+|Policy1.3.msip |version 1.8.x and later|
+
 
 ## Hide the Do Not Forward button in Outlook
 
