@@ -261,7 +261,7 @@ The **Export Logs** automatically collects and attaches log files for the Azure 
 For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
 
 > [!NOTE]
-> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. 
+> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. In addition, the behavior for this option has changed.
 
 More information about the reset option for the **general availability (GA) version** of the Azure Information Protection client:
 
