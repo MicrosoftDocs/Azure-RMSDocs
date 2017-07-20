@@ -261,13 +261,13 @@ The **Export Logs** automatically collects and attaches log files for the Azure 
 For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
 
 > [!NOTE]
-> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. In addition, the behavior for this option has [changed](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
+> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset Settings**. In addition, the behavior for this option has [changed](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
 
 #### More information about the reset option for the general availability (GA) version of the Azure Information Protection client
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
+- Unless files are locked, this action deletes all the files in **%LocalAppData%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
 
 - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configured settings for this registry key, you must reconfigure the registry settings after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network.
 
@@ -277,30 +277,29 @@ For diagnostic information and to reset the client, select **Run diagnostics**. 
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in the following locations. This action includes deleting client certificates, rights management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates and use licenses, rights management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
     
-    - %localappdata%\Microsoft\DRM
+    - %LocalAppData%\Microsoft\DRM
     
-    - %localapptata%\Microsoft\MSIPC
+    - %LocalAppData%\Microsoft\MSIPC
     
-    - %localappdata%\Microsoft\Msip\Policy.msip
+    - %LocalAppData%\Microsoft\MSIP\Policy.msip
     
-    - %localappdata%\Microsoft\Msip\TokenCache
+    - %LocalAppData%\Microsoft\MSIP\TokenCache
 
 - The following registry keys and settings are deleted. If you configured settings for any of these registry keys, you must reconfigure them after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network:
     
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
     - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
     
-
-- The currently signed in user is signed out.
+    - The currently signed in user is signed out.
 
 ### **Client status** section
 
