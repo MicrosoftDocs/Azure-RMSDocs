@@ -261,9 +261,9 @@ The **Export Logs** automatically collects and attaches log files for the Azure 
 For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
 
 > [!NOTE]
-> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. In addition, the behavior for this option has changed.
+> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset settings**. In addition, the behavior for this option has [changed](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
 
-More information about the reset option for the **general availability (GA) version** of the Azure Information Protection client:
+#### More information about the reset option for the general availability (GA) version of the Azure Information Protection client
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
@@ -273,7 +273,7 @@ More information about the reset option for the **general availability (GA) vers
 
 - After you have reset the client, you must reinitialize the user environment, which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action also checks that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
 
-More information about the reset option for the **current preview version** of the Azure Information Protection client:
+#### More information about the reset option for the current preview version of the Azure Information Protection client
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
