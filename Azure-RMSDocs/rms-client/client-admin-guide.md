@@ -267,7 +267,7 @@ For diagnostic information and to reset the client, select **Run diagnostics**. 
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in **%LocalAppData%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
+- Unless files are locked, this action deletes all the files in **%LocalAppData%\Microsoft\MSIPC**, which is where client certificates and Rights Management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
 
 - The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configured settings for this registry key, you must reconfigure the registry settings after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network.
 
@@ -277,7 +277,7 @@ For diagnostic information and to reset the client, select **Run diagnostics**. 
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates and use licenses, rights management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, Rights Management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
     
     - %LocalAppData%\Microsoft\DRM
     
