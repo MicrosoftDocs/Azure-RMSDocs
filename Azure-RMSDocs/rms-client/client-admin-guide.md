@@ -278,13 +278,13 @@ More information about the reset option for the current preview version of the A
 
 - Unless files are locked, this action deletes all the files in the following locations. This action includes deleting client certificates, rights management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
     
-    -%localappdata%\Microsoft\DRM
+    - %localappdata%\Microsoft\DRM
     
     - %localapptata%\Microsoft\MSIPC
     
-    -%localappdata%\Microsoft\Msip\Policy.msip
+    - %localappdata%\Microsoft\Msip\Policy.msip
     
-    -%localappdata%\Microsoft\Msip\TokenCache
+    - %localappdata%\Microsoft\Msip\TokenCache
 
 - The following registry keys and settings are deleted. If you configured settings for any of these registry keys, you must reconfigure them after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network:
     
