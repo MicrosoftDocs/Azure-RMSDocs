@@ -116,7 +116,10 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     As a best practice, use groups rather than users, which simplifies management of the label configuration. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
     
-    Then, select the permissions that you want to grant the selected users. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md).
+    Then, select the permissions that you want to grant the selected users. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
+    
+    >[!TIP]
+    >Consider adding the **Copy and extract content** permission and grant this to selected administrators or personnel in other roles that have responsibilities for information recovery. Granting these users this permission lets them remove protection if needed, from files and emails that will be protected by using this label and associated template. This ability to remove protection at the permission level provides more fine-grained control than the [super user feature](configure-super-users.md).
     
     Back on the **Protection** blade, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     

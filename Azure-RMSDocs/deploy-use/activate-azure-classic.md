@@ -29,8 +29,10 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
+> [!NOTE]
+>This functionality is moving to the Azure portal and is currently in preview. For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
-Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
+Use these instructions if you have access to the Azure classic portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
 
 > [!TIP]
 > Watch a 2-minute video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)

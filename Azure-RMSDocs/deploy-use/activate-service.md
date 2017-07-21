@@ -45,12 +45,13 @@ If you want to learn more about the Azure Rights Management service before you a
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
-For instructions how to activate the Rights Management service from your management portal, select whether you will use the Office 365 admin center or the Azure classic management portal:
-
+For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center, the Azure classic portal, or the Azure portal (this method is currently in preview):
 
 - [Office 365 admin center](activate-office365.md)
 
 - [Azure classic portal](activate-azure-classic.md)
+
+- [Azure portal](activate-azure.md)
 
 Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
