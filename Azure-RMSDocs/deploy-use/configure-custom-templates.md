@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-When the Azure Rights Management service has been [activated](activate-service.md), users are automatically able to use two default templates that make it easy for them to apply rights management policies to sensitive files that restrict access to authorized users in your organization. These two templates have the following rights policy restrictions:
+When the Azure Rights Management service has been [activated](activate-service.md), users are automatically able to use two default templates. These templates make it easy for them to apply rights management policies to sensitive files that restrict access to authorized users in your organization. The two templates have the following rights policy restrictions:
 
 -   Read-only viewing for the protected content
 
@@ -55,7 +55,7 @@ For many organizations, the default templates might be sufficient. But if you wa
 
 -   You want to configure additional options in a template that include an expiration date and whether the content can be accessed without an Internet connection.
 
-For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it. Although you will probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure. 
+For users to be able to select a custom template that contains settings such as these, you must first create a custom template, configure it, and then publish it. Although you probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure. 
 
 Use the following information to help you configure and use custom templates:
 
@@ -70,7 +70,7 @@ Use the following information to help you configure and use custom templates:
 -   [Use PowerShell to manage templates](configure-templates-with-powershell.md)
 
 > [!TIP]
-> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal. This functionality is currently in preview. For more information, see the following blog post announcement: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
