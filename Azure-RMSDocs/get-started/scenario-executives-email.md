@@ -55,12 +55,12 @@ For the instructions for this scenario to work, the following must be in place:
 |Your Azure Information Protection tenant key is managed by Microsoft; you are not using BYOK|[Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
 |One of these configurations:<br /><br />- Exchange Online is enabled for Azure Rights Management<br /><br />- The RMS connector is installed and configured for Exchange on-premises|For Exchange Online: See the [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) information.<br /><br />For Exchange on-premises: [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)|
-|You have configured a custom template as described next|[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)|
+|You have configured a custom template as described next|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
 |You have configured a transport protection rule for IRM, as described later in this article|For Exchange Online: [Mail flow or transport rules](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />For Exchange 2013: [Create a Transport Protection Rule](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />For Exchange 2010: [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### To configure the custom template for executives
 
-1.  In the Azure portal: Create a new template for Azure Rights Management, which contains these values and settings:
+1.  In the Azure classic portal: Create a new custom template for Azure Rights Management, which contains these values and settings:
 
     -   Name: **Executives**
 
