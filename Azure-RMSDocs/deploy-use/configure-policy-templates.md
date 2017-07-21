@@ -47,7 +47,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 ## Default templates
 
-when you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. These two templates have the following restrictions: 
+When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. These two templates have the following restrictions: 
 
 - Read or Modify permissions for the protected content
     
@@ -57,11 +57,21 @@ when you obtain your subscription for Azure Information Protection or for an Off
     
     - Specific permission: View Content
 
-If you recently obtained your subscription, the names of these templates are **Confidential \ All employees** and **Highly Confidential \ All employees**, respectively.
-
-If you obtained your subscription some time ago, the names of these templates are \**<organization name> - Confidential** and \**<organization name> - Confidential View Only** , respectively. 
-
 These templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](../understand-explore/applications-support.md) that can use Rights Management templates. 
+
+### Default template names
+
+If you recently obtained a subscription for Azure Information Protection, the names of your default templates are as follows:
+
+- **Confidential \ All employees** for Read or Modify permissions for the protected content.
+
+- **Highly Confidential \ All employees** for Read-only viewing for the protected content.
+
+If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, the names of your default templates are as follows::
+
+- **\<organization name> - Confidential** for Read or Modify permissions for the protected content.
+
+- **\<organization name> - Confidential View Only**, for Read-only viewing for the protected content. 
 
 >[!NOTE]
 >If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).

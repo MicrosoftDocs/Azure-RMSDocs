@@ -162,6 +162,6 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

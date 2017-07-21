@@ -57,14 +57,14 @@ For this scenario, the following must be in place:
 |---------------|--------------------------------|
 |You have prepared accounts and groups for Office 365 or Azure Active Directory:<br /><br />- A mail-enabled group named **Privileged access**, which contains the few people who should have access to these highly confidential documents<br /><br />- A mail-enabled group named **IT Compliance managers**, which contains people whose job includes eDiscovery, monitoring and auditing<br /><br />- A mail-enabled group named **RMS administrators**, and all administrators that will configure Azure RMS are members of this group|[Preparing for Azure Information Protection](../plan-design/deployment-roadmap.md)|
 |Azure Rights Management is activated|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
-|You have configured a custom template as described next|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
+|You have configured a custom template as described next|[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)|
 |The Rights Management sharing application is deployed to your Windows computer, so that you can protect these files in-place, as described in the next section|[Download and install the Rights Management sharing application](../rms-client/install-sharing-app.md)|
 |Authorized users have a minimum version of Office 2013|If users have Office 2010, they must also install the Rights Management sharing application.|
 |Your Azure Information Protection subscription includes document tracking|If your subscription does not include document tracking and revocation, you will not be able to use the document tracking site to see who is accessing these document and revoke access if necessary. In this case, either purchase a subscription that does support document tracking, or accept this limitation. You might also consider the [usage logging](../deploy-use/log-analyze-usage.md) capabilities of the Azure Rights Management service, which can provide information such as who accessed each file and when, to help you detect potential suspicious behavior.<br /><br />Check the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 ### To configure the custom template
 
-1.  In the Azure classic portal: Create a new custom template for Azure Rights Management, which contains these values and settings:
+1.  In the Azure portal: Create a new custom template for Azure Rights Management, which contains these values and settings:
 
     -   Name: **Privileged access**
 

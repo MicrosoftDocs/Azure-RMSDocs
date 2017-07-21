@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure Rights Management, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services. For example, in the Azure classic portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
+When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure templates or labels for Azure Rights Management protection, you select the usage rights that will then be automatically applied when the template or label is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
@@ -136,7 +136,7 @@ The Rights Management owner for a document or email is logged as the **owner-ema
 Note that the Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
 
 ## See Also
-[Configuring custom templates for the Azure Rights Management service](configure-custom-templates.md)
+[Configuring and managing templates in the Azure Information Protection policy](configure-policy-templates.md))
 
 [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md)
 

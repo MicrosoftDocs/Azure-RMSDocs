@@ -52,14 +52,14 @@ For this tutorial, we'll go straight to the activation page in the admin portal 
 
     You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
 
-    At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close this page.
+    At this time, do not click **advanced features**. Instead, you can close this page.
 
-That's all you need to do for this first step to complete this tutorial. For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to step 2.
+That's all you need to do for this first step to complete this tutorial. You're ready to go to step 2.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About activating Rights Management|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
-|About the default templates and how to create new, custom templates|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Introduction](infoprotect-quick-start-tutorial.md)
