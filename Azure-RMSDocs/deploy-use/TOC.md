@@ -5,6 +5,7 @@
 ## [Activating the service](activate-service.md)
 ### [Office 365 admin center](activate-office365.md)
 ### [Azure classic portal](activate-azure-classic.md)
+### [Azure portal](activate-azure.md)
 ## [Configuring custom templates](configure-custom-templates.md)
 ## [Configuring applications](configure-applications.md)
 ### [Office 365](configure-office365.md)
