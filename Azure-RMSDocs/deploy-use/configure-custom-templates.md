@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure and manage usa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,13 +33,13 @@ When the Azure Rights Management service has been [activated](activate-service.m
 
 -   Read-only viewing for the protected content
 
-    -   Display name: **&lt;organization name&gt; - Confidential View Only**
+    -   Display name: **&lt;organization name&gt; - Confidential View Only** or **Highly Confidential \ All employees**
 
     -   Specific permission: View Content
 
 -   Read or Modify permissions for the protected content
 
-    -   Display name: **&lt;organization name&gt; - Confidential**
+    -   Display name: **&lt;organization name&gt; - Confidential** or **Confidential \ All employees**
 
     -   Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
 
