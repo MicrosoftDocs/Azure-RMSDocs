@@ -79,31 +79,29 @@ If your **Confidential** label doesn't have sub-labels because you have an older
 
 2. Read the **Description** text for this label. It describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
-3. Locate the section **Set permissions for documents and emails containing this label**, and select **Protect** to open the **Protection** blade.
+3. Locate the section **Set permissions for documents and emails containing this label**.
     
-    If your **Protect** option looks like the following picture, your label is already configured for protection. This configuration happened automatically because the Azure Rights Management service was activated when your default Azure Information Protection policy was created for you. The label is configured to use the default template named **Confidential \ All employees**, which has been converted to a label.
+    If you see the following configuration, with the **Protect** option selected and **Azure RMS** displayed, your label is already configured for protection. This configuration happened automatically because the Azure Rights Management service was activated when your default Azure Information Protection policy was created for you. Because you don't need to configure the protection, go to step 5.
     
-    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-barv2.png) 
+    ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-    If your **Protect** option looks like the following, your label is not configured for protection. This configuration was not made automatically because the Azure Rights Management service was not activated when your default Azure Information Protection policy was created for you. Instead, we'll configure the label to use a default template.
+    However, if you see the **Not configured** option is selected, your label is not configured for protection. This configuration was not made automatically because the Azure Rights Management service was not activated when your default Azure Information Protection policy was created for you. You need to manually configure the label for protection, which is covered in the next step.
     
-    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-barv2.png) 
+3. To set the protection, click the **Protection** bar that currently displays just **Azure RMS**. In the **Protection** blade, you see that **Azure RMS** is selected, and that **Select a predefined template** is also selected. Click the drop-down box and choose the default template that lets all users in your organization view and edit protected content. 
     
-3. In the **Protection** blade, you see that **Azure RMS** is selected, that **Select a predefined template** is also selected. Then, click the drop-down box and choose the default template that lets all users in your organization view and edit protected content. 
+    When you have recently activated the Azure Rights Management service, this template is named **Confidential \ All employees**. 
     
-    If you have recently activated the Azure Rights Management service, this template is named **Confidential \ All employees**. 
-    
-    If the Azure Rights Management service was already activated before you started this tutorial, your default template might be named **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you see and select **VanArsdel, Ltd - Confidential**: 
+    However, if your Azure Rights Management service has been activated for some time before you started this tutorial, your default template might be named **\<your organization name> - Confidential**. For example, if your organization name is VanArsdel, Ltd, you see and select **VanArsdel, Ltd - Confidential**: 
     
     ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-select-rms-template.png)
     
     If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
     
-4. Click **OK** to save your changes, which closes the **Protection** blade. You see your configuration reflected in the **Label: All Employees** blade:
+4. Click **OK** to save your changes, which closes the **Protection** blade. You see the Protection bar updated in the **Label: All employees** blade. For example:
     
     ![Azure Information Protection quick start tutorial step 3 - Azure RMS protection configured](../media/protection-bar-configured.png)
     
-5. Now on the **Label: All Employees** blade, locate the section **Set visual marking**:
+5. Now on the **Label: All employees** blade, locate the section **Set visual marking**:
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
     
@@ -125,9 +123,9 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-configure-condition.png)
     
-    Click **Save** to return to the **Label: All Employees** blade.
+    Click **Save** to return to the **Label: All employees** blade.
 
-7. In the **Label: All Employees** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+7. In the **Label: All employees** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
