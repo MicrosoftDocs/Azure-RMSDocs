@@ -53,7 +53,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
-    In addition, there are some policy settings that are not set. For example, all documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
+    In addition, there are some policy settings that are not set. All documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
