@@ -49,7 +49,7 @@ Although Azure Information Protection comes with a default policy that you can u
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
 
-    - With the default configuration, some labels do not have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
+    - With the default configuration, some labels do not have visual markings configured (such as footer, header, watermark). Depending on your default policy, some labels might have protection set, or not.  
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
@@ -158,6 +158,7 @@ Now that you've had a look at the default policy and made some changes, the next
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
+|Configuration settings in the default policy|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 
 
 >[!div class="step-by-step"]
