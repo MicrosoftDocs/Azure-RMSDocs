@@ -101,23 +101,27 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
     
-        Note that all templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The Azure RMS templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
+        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The Azure RMS templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
             
 9. If you selected **Set permissions** for **Azure RMS**, this option lets you configure the same settings that you can configure in a template. 
     
-    Select **Add permissions**, and on the **Add permissions** first select the users and groups who will have rights to use the content that is protected by the selected label. Choose **Select from the list** to add all users from your organization or browse the directory. Or, choose **Enter details** to manually specify email addresses for individual users or groups (internal or external), or you can specify all users in another organization by entering a domain name from that organization. 
+    Select **Add permissions**, and on the **Add permissions** blade, first select the users and groups who will have rights to use the content that will be protected by the selected label:
     
+    - Choose **Select from the list** to add all users from your organization or browse the directory: .
+        
+        The users or groups must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        
+    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or to specify all users in another organization by entering a domain name from that organization: . 
+        
     >[!NOTE]
-    >The users or groups that you select must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
-    >
-    >If an email address changes after you select the user or group and you save your changes, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
+    >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
-    As a best practice, use groups rather than users, which simplify the administration overhead. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
+    As a best practice, use groups rather than users. This stratetegy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
     
     Then, select the permissions that you want to grant the selected users. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
     
     >[!TIP]
-    >Consider adding the **Copy and extract content** permission and grant this to selected administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label and associated template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
+    >Consider adding the **Copy and extract content** custom permission and grant this to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
     
     Back on the **Protection** blade, check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
