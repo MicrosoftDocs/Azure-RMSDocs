@@ -71,7 +71,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 We'll now change the settings of one of the sub-labels, **All employees** from the **Confidential** main label. 
 
-If your **Confidential** label doesn't have sub-labels because you have an older version of the policy, you can use the **Confidential** label instead. The configuration steps are the same but the name of the label blade will be **Confidential** instead of **All employees**.
+If your **Confidential** label doesn't have sub-labels because you have an older version of the policy, you can use the **Confidential** label instead. The configuration steps are the same but the name of the label blade is **Confidential** instead of **All employees**.
 
 1. Make sure that the **Confidential** label is expanded, and then from that label, select **All employees**.
     
@@ -107,7 +107,7 @@ If your **Confidential** label doesn't have sub-labels because you have an older
     
     ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-configure-watermark.png)
     
-    Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
+    Although you can change the size, color, and layout for watermarks, we'll leave these settings at the defaults for now.
     
 6. Locate the section **Configure conditions for automatically applying this label**:
     
