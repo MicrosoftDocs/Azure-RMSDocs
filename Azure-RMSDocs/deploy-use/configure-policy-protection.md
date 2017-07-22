@@ -107,18 +107,18 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     Select **Add permissions**, and on the **Add permissions** blade, first select the users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** to add all users from your organization or browse the directory: .
+    - Choose **Select from the list** to add all users from your organization or browse the directory.
         
         The users or groups must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
-    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or to specify all users in another organization by entering a domain name from that organization: . 
+    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, to specify all users in another organization by entering a domain name from that organization. 
         
     >[!NOTE]
     >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
     As a best practice, use groups rather than users. This stratetegy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
     
-    Then, select the permissions that you want to grant the selected users. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
+    When you have specified your users and groups, select the permissions to grant these users and groups. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
     
     >[!TIP]
     >Consider adding the **Copy and extract content** custom permission and grant this to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
