@@ -70,20 +70,22 @@ As these role names suggest, the first role grants permissions to run all admini
 
 Some things to note:
 
-- Only global administrators for Office 365 and global administrators for Azure AD can use the management portals (Office 365 admin center or Azure classic portal) to configure Azure RMS. Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell commands to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
+- Only global administrators for Office 365 and global administrators for Azure AD can use the Office 365 admin center or Azure classic portal to configure Azure RMS. If you use the Azure portal for Azure Information Protection, you can also sign in as a security admin.
+
+- Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell commands to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
 
 - If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure RMS, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
 
-- No administrator for Azure RMS (the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
+- No administrator for Azure RMS (for example, the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
 
 >[!NOTE]
-> Templates and new options for configuring Azure Rights Management protection are moving to the Azure portal, which supports security admins in addition to global admin access. For more information, see the following blog post announcements: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) and [Azure Information Protection unified administration phase two](https://blogs.technet.microsoft.com/enterprisemobility/2017/05/23/azure-information-protection-unified-administration-phase-two/).
+> Templates and new options for configuring Azure Rights Management protection have moved to the Azure portal, which supports security admins in addition to global admin access. 
 
 ## How do I create a new custom template in the Azure portal?
 
-Currently in preview, custom templates are moving to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
+Custom templates have moved to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
 
-For more information about configuring templates in the Azure portal, see [Configure and manage templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
+For more information about templates in the Azure portal, see [Configure and manage templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
@@ -122,7 +124,7 @@ For more information about the requirements for users and groups that can be use
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-You might have seen references or demos for Azure Information Protection that sends protected emails to Gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is released as public preview.
+You might have seen references or demos for Azure Information Protection that sends protected emails to Gmail or Hotmail accounts. This feature is still in private preview, so you will not find more information about it in this documentation until it is fully released.
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
