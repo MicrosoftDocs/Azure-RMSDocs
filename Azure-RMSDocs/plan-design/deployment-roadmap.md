@@ -95,7 +95,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
+-   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
@@ -161,7 +161,7 @@ Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsm
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
+-   Custom templates if the default templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 

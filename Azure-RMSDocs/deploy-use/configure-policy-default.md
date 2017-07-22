@@ -41,7 +41,7 @@ This version of the default policy is from July 31, 2017.
 
 This default policy is created only if the Azure Rights Management service was activated when the policy was created. If this service was not activated, the default policy does not configure protection for the sub-labels **Confidential \ All employees** and **Highly Confidential \ All employees**. In this case, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
 
-The protection applied to these sub-labels use default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates in the Azure Information Protection policy](configure-policy-templates.md).
+The protection applied to these sub-labels use default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ### Labels

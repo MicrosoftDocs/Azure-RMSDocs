@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Configuring and managing templates in the Azure Information Protection policy
+# Configuring and managing templates for Azure Information Protection
 
 >*Applies to: Azure Information Protection*
 
