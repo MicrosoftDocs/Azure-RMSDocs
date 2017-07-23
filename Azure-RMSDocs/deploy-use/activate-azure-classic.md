@@ -64,6 +64,6 @@ In addition to the **Active** status, which indicates that the Rights Management
 |**Unauthorized**|You do not have permissions to view the status of the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service. For example, your account is locked out or you are not the global administrator for the selected tenant.|
 
 ## Next steps
-Back to [Activating Azure Rights Management](activate-service.md).
+Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

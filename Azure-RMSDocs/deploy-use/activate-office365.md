@@ -57,6 +57,6 @@ You should now see **Rights management is activated** and the option to deactiva
 
 
 ## Next steps
-Back to [Activating Azure Rights Management](activate-service.md).
+Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
