@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -313,6 +313,11 @@ If you see **This client is not licensed for Office Professional Plus**: The Azu
 
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
 
+## Support for multiple languages
+
+The Azure Information Protection client supports all the client languages that Office supports. For example, menu options, dialog boxes, and messages are displayed in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the client for different languages. 
+
+However, the label names that users see are not automatically translated for either the [default policy](../deploy-use/configure-policy-default.md), or for label names that you specify. For users to see labels in different languages, you must provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 ## To uninstall the Azure Information Protection client
 
