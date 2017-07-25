@@ -125,15 +125,15 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
     
-    If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifier (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
     
-    - For Excel: `MSIP.ExcelAddin`
-        
+    - For Outlook: `MSIP.OutlookAddin`
+    
     - For Word: `MSIP.WordAddin`
     
+    - For Excel: `MSIP.ExcelAddin`
+    
     - For PowerPoint: `MSIP.PowerPointAddin`
-     
-    - For Outlook: `MSIP.OutlookAddin`
     
     Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
     
