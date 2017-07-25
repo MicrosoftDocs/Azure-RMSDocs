@@ -55,7 +55,7 @@ For more information about how to configure scoped policies, see [How to configu
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The first time you connect to the service, the **Quick start** page automatically opens. If you haven't yet [activated the Azure Rights Management service](activate-service.md), you are prompted to do so. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    The first time you connect to the service, the **Quick start** page automatically opens. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
     
     The Azure Information Protection policy contains the following elements that you can configure:
     
