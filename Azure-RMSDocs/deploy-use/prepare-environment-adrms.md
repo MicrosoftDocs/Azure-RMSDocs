@@ -33,27 +33,25 @@ Important guidance if you are already using Active Directory Rights Management S
 
 ## You see an option to activate Azure RMS when you configure Azure Information Protection
 
-Beginning with July 31, 2017: If the Azure Rights Management service for your tenant is not activated when you first use the Azure portal to configure your Azure Information Protection policy, you see a **Welcome** page with a **Launch Azure Information Protection** button.
+The **Azure Information Protection - RMS Settings (Preview)** blade has an option to activate the Azure Rights Management service (Azure RMS). 
 
-This page also has a check box (selected by default) to activate Azure Rights Management for you, so that the [default Azure Information Protection policy](configure-policy-default.md) that is automatically created for you can include labels that apply Azure Rights Management protection.
-
-If you are also using Active Directory Rights Management Services (AD RMS), cancel this check box. Activating Azure Rights Management when you also have AD RS isn't a compatible combination. This scenario isn't supported and has unreliable results, so it's important that you do not activate Azure Rights Management at this time. 
+If you are also using Active Directory Rights Management Services (AD RMS), do not select the **Activate** option. Activating Azure Rights Management when you also have AD RS isn't a compatible combination. This scenario isn't supported and has unreliable results, so it's important that you do not activate Azure Rights Management at this time. 
 
 When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start a migration process. One of the steps in the migration is to activate the service but you do this after you have exported configuration information from AD RMS to the Azure Rights Management service. This process ensures that documents and emails that were protected by AD RMS can still be opened.
 
-When you cancel the option to activate Azure Rights Management and then click **Launch Azure Information Protection** on the **Welcome** page, a default Azure Information Protection policy is still created for you. But it's a version of the default policy that does not include data protection and those configuration options will be unavailable to you until the Azure Rights Management service is activated.
+When the Azure Rights Management service isn't activated, you can still use Azure Information Protection for labels that apply classification only. A special default policy is created for you that does not include data protection and those configuration options will be unavailable to you until the Azure Rights Management service is activated.
 
 ### Step One: Configure your Azure Information Protection policy for classification and labeling - without protection
 
-After you have canceled the option to activate Azure Rights Management, you can view and configure the default policy, which does not include options for data protection.
+From the initial **Azure Information Protection** blade, select **Global policy** to view and configure your default policy that does not include options for data protection. For more information, see [Configuring Azure Information Protection policy](configure-policy.md).
 
 ### Step Two: Start planning for migration
 
-See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Follow the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 ### Step Three: Start to configure labels for protection
 
-After you have activated the Azure Rights Management service as part of the migration process, you can configure labels for data protection. However, if you migrate users in batches, make sure that labels that apply protection are scoped to migrated users only.
+After you have activated the Azure Rights Management service as part of the migration process, you can configure labels for data protection. However, if you migrate users in batches, make sure that labels that apply protection are [scoped](configure-policy-scope.md) to just the migrated users.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
