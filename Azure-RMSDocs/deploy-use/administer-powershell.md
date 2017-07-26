@@ -29,9 +29,9 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if you are a global administrator and the only configuration required for this service is to activate it (or deactivate), and configure Rights Management templates.
+Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if you are a global administrator or [security administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) and the only configuration required for this service is to activate it (or deactivate), and configure Rights Management templates.
 
-However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control and scripting.
+However, you will need to use PowerShell for more advanced configurations, and also if you are not a global administrator or security administrator but have been given permissions to administer the service by a global administrator. You might also prefer to use PowerShell for more efficient command-line control and scripting.
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 
