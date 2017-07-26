@@ -51,7 +51,7 @@ This default policy is created only if the Azure Rights Management service was a
 
 In this case, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017), with the exception that the **Recipients Only** sub-labels are created with no protection settings.
 
-When protection is applied to the All Employees sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ### Labels
