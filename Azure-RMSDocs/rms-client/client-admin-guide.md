@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/24/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -123,8 +123,25 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
+- Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
+    
+    If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    
+    - For Outlook: `MSIP.OutlookAddin`
+    
+    - For Word: `MSIP.WordAddin`
+    
+    - For Excel: `MSIP.ExcelAddin`
+    
+    - For PowerPoint: `MSIP.PowerPointAddin`
+    
+    Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
+    
+    For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
+
 
 ### Options to install the Azure Information Protection client for users
 
