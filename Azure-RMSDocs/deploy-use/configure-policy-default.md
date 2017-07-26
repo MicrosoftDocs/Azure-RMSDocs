@@ -45,9 +45,9 @@ This default policy is created only if the Azure Rights Management service was a
 
 - **Confidential \ Recipients Only**
 
-- **Highly Confidential \ All Employees**. 
+- **Highly Confidential \ All Employees** 
 
-- **Highly Confidential \ Recipients Only**. 
+- **Highly Confidential \ Recipients Only** 
 
 In this case, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017), with the exception that the **Recipients Only** sub-labels are created with no protection settings.
 
