@@ -39,9 +39,19 @@ You can reference the following values to return your policy to the defaults, or
 
 This version of the default policy is from July 31, 2017.
 
-This default policy is created only if the Azure Rights Management service was activated when the policy was created. If this service was not activated, the default policy does not configure protection for the sub-labels **Confidential \ All employees** and **Highly Confidential \ All employees**. In this case, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
+This default policy is created only if the Azure Rights Management service was activated when the policy was created. If this service was not activated, the default policy does not configure protection for the following sub-labels:
 
-The protection applied to these sub-labels use default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+- **Confidential \ All Employees**
+
+- **Confidential \ Recipients Only**
+
+- **Highly Confidential \ All Employees**. 
+
+- **Highly Confidential \ Recipients Only**. 
+
+In this case, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017), with the exception that the **Recipients Only** sub-labels are created with no protection settings.
+
+When protection is applied to the All Employees sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 
 ### Labels
@@ -59,16 +69,18 @@ The protection applied to these sub-labels use default templates that are automa
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Confidential \ All employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[1]](#footnote-1)|
+|Confidential \ All Employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ All employees|Highly confidential data that allows all employees view, edit, and reply permissions to this content. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[2]](#footnote-2)|
+|Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
+|Highly Confidential \ All Employees|Highly confidential data that allows all employees view, edit, and reply permissions to this content. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: None|
+|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
 
 ###### Footnote 1
-The protection settings use the default template, **Confidential \ All employees**.
+The protection settings use the default template, **Confidential \ All Employees**.
 
 ###### Footnote 2 
-The protection settings use the default template, **Highly Confidential \ All employees**.
+The protection settings use the default template, **Highly Confidential \ All Employees**.
 
 
 ### Information Protection bar
