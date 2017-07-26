@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,7 +78,7 @@ If you are using classification and protection, you can also use the [Set-AIPFil
 For more information about these cmdlets, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the Azure Information Protection client admin guide.
 
 > [!NOTE]
-> The AIP module replaces the RMS Protection PowerShell module that installed with the RMS Protection Tool. Both these modules are different from and supplements the main [Windows PowerShell module for Azure Rights Management](administer-powershell.md). The AIP module supports Azure Information Protection, the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
+> The AzureInformationProtection module replaces the RMS Protection PowerShell module that installed with the RMS Protection Tool. Both these modules are different from and supplements the main [Windows PowerShell module for Azure Rights Management](administer-powershell.md). The AzureInformationProtection module supports Azure Information Protection, the Azure Rights Management service (Azure RMS) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
