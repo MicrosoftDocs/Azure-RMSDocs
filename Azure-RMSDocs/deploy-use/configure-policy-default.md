@@ -49,7 +49,7 @@ This default policy is created only if the Azure Rights Management service was a
 
 - **Highly Confidential \ Recipients Only** 
 
-When these sub-labels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017), with the exception that the **Recipients Only** sub-labels are created with no protection settings.
+When these sub-labels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
 
 When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
@@ -74,7 +74,7 @@ When protection is applied to the **All Employees** sub-labels, the protection i
 |Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
 |Highly Confidential \ All Employees|Highly confidential data that allows all employees view, edit, and reply permissions to this content. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
+|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Highly Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
 
 ###### Footnote 1
 The protection settings use the default template, **Confidential \ All Employees**.
