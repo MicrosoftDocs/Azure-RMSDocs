@@ -42,14 +42,14 @@ Although Azure Information Protection comes with a default policy that you can u
 
 3. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's automatically created for your tenant:
     
-    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels: **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
+    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels that include **All Employees** and **Anyone (not protected)**, providing examples of how a classification can have subcategories.
     
        > [!NOTE]
-       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. If that's the case, you're probably using an older version of the default policy. Or, you might have edited it yourself, before you started the tutorial.
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Or you have an extra sub-label named **Recipients Only**. This is because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
 
-    - With the default configuration, some labels do not have visual markings configured (such as footer, header, watermark). Depending on your default policy, some labels might have protection set, or not.  
+    - With the default configuration, some labels do not have visual markings configured (such as a footer, header, watermark). Depending on your default policy, some labels might have protection set, or not. As an example:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
@@ -81,7 +81,7 @@ If your **Confidential** label doesn't have sub-labels because you have an older
 
 3. If protection is already configured for your label, go to step 5.
     
-    If protection is not configured for your label, locate the section **Set permissions for documents and emails containing this label**. Select **Protect** if it is not already selected, and then select the **Protection** bar:
+    If protection is not configured for your label, locate the section **Set permissions for documents and emails containing this label**. Select **Protect**, and then select the **Protection** bar:
     
     ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
