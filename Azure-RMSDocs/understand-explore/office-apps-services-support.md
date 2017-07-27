@@ -86,7 +86,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > [!NOTE]
 > Currently, there are some limitations when you use SharePoint IRM:
 > 
-> - You cannot use the default or custom templates that you manage in the Azure classic portal. 
+> - You cannot use the default or custom templates that you manage in the Azure portal. 
 > 
 > - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 

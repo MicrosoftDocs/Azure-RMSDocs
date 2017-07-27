@@ -32,7 +32,7 @@ ms.suite: ems
 >[!NOTE]
 >This functionality replaces configuring custom templates in the Azure classic portal.
 >
->Although you can still create and manage templates in the Azure classic portal, we do not recommend that you manage the same templates from the Azure classic portal and the Azure portal.
+>Although you can still create and manage templates in the Azure classic portal, we do not recommend that you manage the same templates from the Azure classic portal and the Azure portal. The implementation for configuring templates in these different portals has changed, so configuring the same template in different portals can result in an unreliable configuration.
 
 
 Rights Management templates are now integrated with the Azure Information Protection policy. 
@@ -65,9 +65,9 @@ You can also create your own custom templates. Although you probably require onl
 
 If you recently obtained a subscription for Azure Information Protection, the names of your default templates are as follows:
 
-- **Confidential \ All employees** for Read or Modify permissions for the protected content.
+- **Confidential \ All Employees** for Read or Modify permissions for the protected content.
 
-- **Highly Confidential \ All employees** for Read-only viewing for the protected content.
+- **Highly Confidential \ All Employees** for Read-only viewing for the protected content.
 
 If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, the names of your default templates are as follows::
 
@@ -93,7 +93,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - **Published** and **Archived** settings display as **Enabled**: **On** and **Enabled**: **Off** respectively on the **Label** blade. For templates that you want to retain but not be visible to users or services, set them to **Enabled**: **Off**.
 
-- You cannot copy or delete a template. When the template is converted to a label, you can delete the template by selecting **Not configured** for the **Set permissions for documents and emails containing this label** option. Or, you can delete the label.
+- You cannot copy or delete a template in the Azure portal. When the template is converted to a label, you can delete the template by selecting **Not configured** for the **Set permissions for documents and emails containing this label** option. Or, you can delete the label.
     
     If the template is not converted to a label, you can use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to delete the template. 
     
