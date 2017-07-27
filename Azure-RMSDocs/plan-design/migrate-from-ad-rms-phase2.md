@@ -41,7 +41,7 @@ This step is a two-part process:
 
 ### Export the configuration data from AD RMS
 
-Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this on licensing-only clusters.
+Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this procedure on licensing-only clusters.
 
 #### To export the configuration data (trusted publishing domain information)
 
@@ -69,7 +69,7 @@ For example, you will have multiple trusted publishing domains if you upgraded y
 ### Import the configuration data to Azure Information Protection
 The exact procedures for this step depend on your current AD RMS deployment configuration, and your preferred topology for your Azure Information Protection tenant key.
 
-Your current AD RMS deployment will be using one of the following configurations for your server licensor certificate (SLC) key:
+Your current AD RMS deployment is using one of the following configurations for your server licensor certificate (SLC) key:
 
 - Password protection in the AD RMS database. This is the default configuration.
 
@@ -95,10 +95,10 @@ If you use an
 |Current AD RMS deployment|Chosen Azure Information Protection tenant key topology|Migration instructions|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key** migration procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure Information Protection.|
-|HSM protection by using a Thales nShield hardware security module (HSM)[[1]](#footnote-1)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and three set of steps to first transfer the key from your on-premises HSM to the Azure Key Vault HSMs, then authorize the Azure Rights Management service from Azure Information Protection to use your tenant key, and finally to transfer your configuration data to Azure Information Protection.|
+|HSM protection by using a Thales nShield hardware security module (HSM)[[1]](#footnote-1)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and three sets of steps to first transfer the key from your on-premises HSM to the Azure Key Vault HSMs, then authorize the Azure Rights Management service from Azure Information Protection to use your tenant key, and finally to transfer your configuration data to Azure Information Protection.|
 |Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and four sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure Information Protection HSMs, next transfer your Key Vault data to Azure Information Protection, and finally to transfer your configuration data to Azure Information Protection.|
 |HSM protection by using a hardware security module (HSM) from a supplier other than Thales [[1]](#footnote-1)|Customer-managed (BYOK)|Contact the supplier for your HSM for instructions how to transfer your key from this HSM to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
-|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for you cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
+|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for your cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
 
 ###### Footnote 1
 If you cannot export your HSM-protected key, you can still migrate to Azure Information Protection by configuring your AD RMS cluster for a read-only mode. In this mode, previously protected content can still be opened but newly protected content uses a new tenant key that is managed by you (BYOK) or managed by Microsoft. For more information, see [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
@@ -127,11 +127,11 @@ Open a PowerShell session and run the following commands:
     
         Enable-Aadrmservice
 
-**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
+**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they are automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
 
 If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS.cmd script on these computers, as described in [Step 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
 
-In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
+In addition, if you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step. 
 
 ## Step 6. Configure imported templates
 
