@@ -53,15 +53,11 @@ When these sub-labels are not automatically configured for protection, the defau
 
 When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
-### More information about the Recipients Only sub-label
+#### More information about the Recipients Only sub-label
 
-When users choose this label in Outlook: 
+Users see this label in Outlook only. They do not see this label in Word, Excel, PowerPoint, or from File Explorer. 
 
-- The Outlook Do Not Forward option is automatically applied to the email. The recipients that the users specify cannot forward the email and cannot copy or print the contents, or save any attachments. 
-
-When users choose this label in Word, Excel, PowerPoint, or from File Explorer: 
-
-- Users are prompted to specify custom permissions where they specify the permissions, users, and optionally, an expiry date.
+When users select this label, the Outlook Do Not Forward option is automatically applied to the email. The recipients that the users specify cannot forward the email and cannot copy or print the contents, or save any attachments.
 
 
 ### Labels
@@ -81,10 +77,10 @@ When users choose this label in Word, Excel, PowerPoint, or from File Explorer:
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees|Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
+|Confidential \ Recipients Only|Confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
 |Highly Confidential \ All Employees|Highly confidential data that allows all employees view, edit, and reply permissions to this content. Data owners can track and revoke content.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: Azure RMS [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected)|Data that does not require protection. Use this option with care and with appropriate business  justification.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential<br /><br />**Conditions**: None<br /><br />**Protection**: None|
-|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (document and email)<br /><br />Classified as Highly Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
+|Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Highly Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Do not forward|
 
 ###### Footnote 1
 The protection settings use the default template, **Confidential \ All Employees**.
