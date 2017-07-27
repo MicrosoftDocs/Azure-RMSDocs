@@ -53,6 +53,16 @@ When these sub-labels are not automatically configured for protection, the defau
 
 When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
+### More information about the Recipients Only sub-label
+
+When users choose this label in Outlook: 
+
+- The Outlook Do Not Forward option is automatically applied to the email. The recipients that the users specify cannot forward the email and cannot copy or print the contents, or save any attachments. 
+
+When users choose this label in Word, Excel, PowerPoint, or from File Explorer: 
+
+- Users are prompted to specify custom permissions where they specify the permissions, users, and optionally, an expiry date.
+
 
 ### Labels
 
