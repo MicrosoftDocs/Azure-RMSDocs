@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2018. 
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2019. 
 
 Use the following information if you are responsible for the Microsoft Rights Management sharing application on an enterprise network, or if you want more technical information than is in the [Rights Management sharing application user guide](sharing-app-user-guide.md) or [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -52,7 +52,7 @@ The only prerequisites for installations are that the computers run a minimum ve
 
 3.  Extract the files from the compressed installation packages, for example, by double-clicking them. Then copy the extracted files to a network location that client computers can access.
 
-The setup packages for the RMS sharing application supports different deployment scenarios and includes the following:
+The setup packages for the RMS sharing application support different deployment scenarios and includes the following:
 
 |Description|Deployment scenario|
 |---------------|-----------------------|
@@ -195,7 +195,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     For example: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
-    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
+    If this command fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
 2.  Install the Office add-in by using the following commands, specifying an existing folder to create the log file:
 
@@ -213,7 +213,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     For example: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
-    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
+    If this command fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
 To verify success, see the [Verifying installation success](#verifying-installation-success) section in this article.
 
