@@ -33,6 +33,8 @@ The easiest way to classify and protect your documents and emails is when you ar
 
 However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
 
+If your label applies protection, the protected document is not suitable to be saved on SharePoint or OneDrive for Business. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
+
 ### Safely share a file with people outside your organization
 
 Files that are protected are safe to share with others. For example, you attach the file to an email.
@@ -42,8 +44,6 @@ If you regularly share files with people outside your organization, your adminis
 If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
 
 When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
-
-If your label applies protection, the protected document is not suitable to be saved on SharePoint or OneDrive for Business. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
 
 ## Using Office apps to classify and protect your documents and emails
 
