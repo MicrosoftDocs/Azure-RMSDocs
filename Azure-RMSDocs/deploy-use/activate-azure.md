@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection*
 
 
-Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal. This functionality is currently in preview.
+Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal. This activation method is currently in preview.
 
 1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
     
