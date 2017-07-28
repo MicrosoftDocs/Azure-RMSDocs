@@ -93,17 +93,17 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - **Published** and **Archived** settings display as **Enabled**: **On** and **Enabled**: **Off** respectively on the **Label** blade. For templates that you want to retain but not be visible to users or services, set them to **Enabled**: **Off**.
 
-- You cannot copy or delete a template in the Azure portal. When the template is converted to a label, you can delete the template by selecting **Not configured** for the **Set permissions for documents and emails containing this label** option. Or, you can delete the label.
+- You cannot copy or delete a template in the Azure portal. When the template is converted to a label, you can configure the label to stop using the template by selecting  **Not configured** for the **Set permissions for documents and emails containing this label** option. Or, you can delete the label. In both scenarios however, the template is not deleted and remains in an archived state.
     
-    If the template is not converted to a label, you can use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to delete the template. 
-    
-    However, if you delete a template that was used to protect content, that content can no longer be opened. Delete templates only if you are sure they were not used to protect documents or emails in production. As a precaution, you might want to consider first exporting the template as a back up, by using the [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
+    You could now delete the template by using the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. You can also use this PowerShell cmdlet for templates that are not converted to labels. However, if you delete a template that has been used to protect content, that content can no longer be opened. Delete templates only if you are sure they were not used to protect documents or emails in production. As a precaution, you might want to consider first exporting the template as a back up, by using the [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
 
 - Departmental templates (templates that are configured for a scope) display in the Global policy. Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
 - Currently, templates that you configured for multiple languages by using the Azure classic portal or PowerShell do not display those languages for the name and descriptions, but they are retained.
+
+- When you convert a template to a label, it can no longer be used by other labels. Do not convert templates that you want to use with more than one label.
 
 - You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
