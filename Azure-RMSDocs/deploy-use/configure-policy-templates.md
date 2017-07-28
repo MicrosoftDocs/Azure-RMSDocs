@@ -147,7 +147,7 @@ When you convert a template to a label:
 
 - The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
 
-- The original template is no longer displayed under **Templates** and to edit it in the Azure portal, you now edit the label that was created. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
+- The original template is no longer displayed under **Templates** and cannot be selected as a predefined template when you configure protection for a label. To edit this template in the Azure portal, you now edit the label that was created when you converted the template. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
 
 ## To create a new template
 

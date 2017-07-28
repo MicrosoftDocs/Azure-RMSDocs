@@ -51,11 +51,11 @@ When the Azure Rights Management service is activated, all users in your organiz
 
 For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center, the Azure classic portal, or the Azure portal (this method is currently in preview):
 
-- [Office 365 admin center](activate-office365.md)
+- [Office 365 admin center](activate-office365.md) - requires global admin account
 
-- [Azure classic portal](activate-azure-classic.md)
+- [Azure classic portal](activate-azure-classic.md) - requires global admin account
 
-- [Azure portal](activate-azure.md)
+- [Azure portal](activate-azure.md) - requires global admin account or [security admin account](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 
 Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
