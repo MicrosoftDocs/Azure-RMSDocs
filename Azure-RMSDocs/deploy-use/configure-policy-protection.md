@@ -56,6 +56,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 - For Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
+When the label applies protection, the protected document is not suitable to be saved on SharePoint or OneDrive for Business. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
 
 ## To configure a label for Rights Management protection
 
