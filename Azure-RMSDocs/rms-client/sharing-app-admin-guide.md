@@ -52,7 +52,7 @@ The only prerequisites for installations are that the computers run a minimum ve
 
 3.  Extract the files from the compressed installation packages, for example, by double-clicking them. Then copy the extracted files to a network location that client computers can access.
 
-The setup packages for the RMS sharing application supports different deployment scenarios and includes the following:
+The setup packages for the RMS sharing application support different deployment scenarios and includes the following:
 
 |Description|Deployment scenario|
 |---------------|-----------------------|
@@ -195,7 +195,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     For example: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
-    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
+    If this command fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
 2.  Install the Office add-in by using the following commands, specifying an existing folder to create the log file:
 
@@ -213,7 +213,7 @@ To verify success, see the [Verifying installation success](#verifying-installat
 
     For example: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
-    If this commands fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
+    If this command fails to run successfully, you will not see any error messages because of the **/quiet** parameter. To help you troubleshoot why the installation failed, rerun the command without /quiet to see any error messages.
 
 To verify success, see the [Verifying installation success](#verifying-installation-success) section in this article.
 

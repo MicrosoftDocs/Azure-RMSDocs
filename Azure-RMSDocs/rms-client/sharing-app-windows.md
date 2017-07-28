@@ -33,7 +33,7 @@ ms.suite: ems
 > **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2019. 
 
 
-The Rights Management sharing application for Windows (also known as just “the RMS sharing app”) is a free, downloadable application for organizations that use [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) or [Azure Information Protection](../understand-explore/what-is-information-protection.md), and for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use the Azure Rights Management service from Azure Information Protection.
+The Rights Management sharing application for Windows (also known as just “the RMS sharing app”) is a free, downloadable application for organizations that use [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) or [Azure Information Protection](../understand-explore/what-is-information-protection.md). This application is also for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use the Azure Rights Management service from Azure Information Protection.
 
 -   [Rights Management sharing application: Version release history](sharing-app-version-release-history.md)
 
