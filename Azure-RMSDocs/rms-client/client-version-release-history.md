@@ -147,7 +147,7 @@ General Availability.
 
 ## Next steps
 
-For more information about installing the client:
+For more information about installing and using the client:
 
 - For users: [Download and install the client](install-client-app.md)
 
