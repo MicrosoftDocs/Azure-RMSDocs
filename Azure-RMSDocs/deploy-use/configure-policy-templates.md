@@ -39,7 +39,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Rights Management templates that are not linked to labels for your tenant are displayed in the **Templates** section after the labels in the **Azure Information Protection - Global policy** blade. You can convert these templates to labels, or you can continue to manage them as separate templates and link to them when you configure protection for your labels. 
+- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Templates** section after the labels in the **Azure Information Protection - Global policy** blade. You can convert these templates to labels, or you can continue to manage them as separate templates and link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
