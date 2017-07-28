@@ -91,11 +91,11 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     - **Do not forward**: To set this Outlook option for emails.
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured.
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label.
     
     - **Set permissions** to define new protection settings in this portal.
 
-8. If you selected **Select a predefined template** for **Azure RMS**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label.
+8. If you selected **Select a predefined template** for **Azure RMS**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
     
     If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
