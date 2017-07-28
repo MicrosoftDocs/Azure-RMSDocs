@@ -43,7 +43,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Rights Management templates for your tenant are displayed in the **Azure Information Protection - Global policy** blade. You also see, but cannot configure, configuration settings that are specific to classification and labeling. 
+- Rights Management templates for your tenant are displayed in the **Azure Information Protection - Global policy** blade, in the **Templates** section. No labels are displayed. You also see configuration settings that are specific to classification and labeling but these either have no effect on your templates or cannot be configured. 
 
 ## Default templates
 
@@ -80,6 +80,8 @@ If you obtained your Azure Information Protection subscription some time ago, or
 >
 >You can manually convert templates, as explained in the later section, [To convert templates to labels](#to-convert-templates-to-labels), and then rename them if you want. Or they will be converted automatically for you if your default Azure Information Protection policy was recently created and the Azure Rights Management service for your tenant was activated at that time.
 
+Templates that are archived display as unavailable in the **Azure Information Protection - Global policy** blade. These templates cannot be selected for labels but they can be converted to labels.
+
 ## Considerations for templates in the Azure portal
 
 Before you edit these templates or convert them to labels, make sure that you are aware of the following changes and considerations. Because of implementation changes, the following list is especially important if you previously managed templates in the Azure classic portal.
@@ -103,7 +105,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - Currently, templates that you configured for multiple languages by using the Azure classic portal or PowerShell do not display those languages for the name and descriptions, but they are retained.
 
-- When you convert a template to a label, it can no longer be used by other labels. Do not convert templates that you want to use with more than one label.
+- When you convert or link a template to a label, it can no longer be used by other labels.
 
 - You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
