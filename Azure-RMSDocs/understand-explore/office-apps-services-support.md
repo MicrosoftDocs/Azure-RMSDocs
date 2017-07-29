@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-End-user Office applications and Office services (such as Exchange and SharePoint) can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and SharePoint. 
+End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and SharePoint. 
 
 ## Office applications: Word, Excel, PowerPoint, Outlook
 These applications natively support Rights Management by using information rights management (IRM) and let users apply protection to a saved document or to an email message to be sent. Users can apply templates or, for Word, Excel, and PowerPoint, users can choose customized settings for access, rights, and usage restrictions. 
