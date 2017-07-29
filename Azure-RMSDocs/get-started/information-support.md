@@ -42,7 +42,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 ## Information about new releases and updated documentation
 The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
-Each month, we publish the following [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) to help you keep up-to-date:
+Each month, we publish the following [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) to help keep you up-to-date:
 
 - A status update for what's new and what's coming. These posts are titled "**Azure Information Protection status update – \<month year>**"
 
