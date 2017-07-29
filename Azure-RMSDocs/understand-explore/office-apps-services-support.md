@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Office apps & services with Azure Information Protection
-description: How end-user Office applications (such as the Word, Excel, PowerPoint, and Outlook) and Office services (such as Exchange and SharePoint) can use the Azure Rights Management service to help protect your organization's data.
+title: How Office apps & services support Azure RMS from AIP
+description: How end-user Office applications such as Word and Outlook, and Office services such as Exchange and SharePoint, can use the Azure Rights Management service from AIP to help protect your organization's data.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Office applications and services
+# How Office applications and services work with Azure Rights Management 
 
 >*Applies to: Azure Information Protection, Office 365*
 

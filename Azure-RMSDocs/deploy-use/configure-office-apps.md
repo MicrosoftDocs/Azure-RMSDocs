@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office apps; Configuration for clients - AIP
+title: Configuration for clients to use Office apps with Azure RMS from AIP
 description: Information and instructions for admins to configure Office apps to work with the Azure Rights Management service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Office apps: Configuration for clients
+# Office apps: Configuration for clients to use the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 

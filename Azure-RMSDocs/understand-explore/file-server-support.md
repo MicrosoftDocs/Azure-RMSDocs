@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: File servers that use FCI - Azure Information Protection
+title: How file servers that use FCI support Azure RMS from AIP
 description: How Windows Server File Classification Infrastructure can be used with Azure RMS when you deploy the RMS connector to automatically protect Office documents.
 author: cabailey
 ms.author: cabailey
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# File servers that run Windows Server and use File Classification Infrastructure (FCI)
+# How File servers that run Windows Server and use File Classification Infrastructure (FCI) support Azure Rights Management
 
 >*Applies to: Azure Information Protection, Office 365*
 
