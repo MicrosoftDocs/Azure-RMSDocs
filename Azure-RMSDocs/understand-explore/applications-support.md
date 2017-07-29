@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How apps support Azure Rights Management - AIP
+title: How apps support Azure Rights Management from AIP
 description: Understand how the most commonly used end-user applications (such as the Office applications, Word, Excel, PowerPoint, and Outlook) and services (such as Exchange and SharePoint) can use the Azure Rights Management service from Azure Information Protection to help protect your organization's documents and emails. 
 author: cabailey
 ms.author: cabailey

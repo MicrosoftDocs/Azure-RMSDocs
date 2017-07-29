@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use this information to determine what you need to do so that Office apps that are used by your end users work with the Azure Rights Management service from Azure Information Protection.
+Use this information to determine what you need to do so that Office apps work with the Azure Rights Management service from Azure Information Protection.
 
 ## Office 2016 and Office 2013
 Because these later versions of Office natively support the Azure Rights Management service, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials. They can then can protect files and emails, and use files and emails that have been protected by others.

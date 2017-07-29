@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# How Office applications and services work with Azure Rights Management 
+# How Office applications and services support Azure Rights Management 
 
 >*Applies to: Azure Information Protection, Office 365*
 
