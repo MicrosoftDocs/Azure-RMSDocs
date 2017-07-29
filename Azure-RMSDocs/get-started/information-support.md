@@ -46,7 +46,7 @@ Each month, we publish the following [**Updates**](https://blogs.technet.microso
 
 - A status update for what's new and what's coming. These posts are titled "**Azure Information Protection status update – \<month year>**"
 
-- A summary of documentation changes that include updates for new releases, and also corrections and clarifications for existing releases. These posts are titled "**Azure Information Protection Documentation Update for \<month year>**". 
+- A summary of documentation changes that include documentation for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled "**Azure Information Protection Documentation Update for \<month year>**". 
 
 You'll also find information about new functionality and previews on the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam), where you can also ask questions about Azure Information Protection. To propose new features or vote for new features, visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection.
 
