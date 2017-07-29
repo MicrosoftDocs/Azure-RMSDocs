@@ -50,9 +50,6 @@ Each month, we publish the following [**Updates**](https://blogs.technet.microso
 
 You'll also find information about new functionality and previews on the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam), where you can also ask questions about Azure Information Protection. To propose new features or vote for new features, visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection.
 
-> [!TIP]
-> If you are developing applications that use Microsoft Rights Management services (Azure RMS or AD RMS), you might also be interested in the [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/).
-
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
 
