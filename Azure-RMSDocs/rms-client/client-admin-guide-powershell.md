@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ As with the RMSProtection module, the current release of the AzureInformationPro
 
 Before you start to use these cmdlets, see the additional prerequisites and instructions that corresponds to your deployment:
 
-- [Azure Information Protection service and Azure Rights Management service](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection and Azure Rights Management service](#azure-information-protection-service-and-azure-rights-management-service)
 
 	- Applicable if you use classification-only or classification with Rights Management protection: You have a subscription that includes Azure Information Protection (for example, Enterprise Mobility + Security).
 	- Applicable if you use protection-only with the Azure Rights Management service: You have a subscription that includes the Azure Rights Management service (for example, Office 365 E3 and Office 365 E5).
@@ -64,14 +64,14 @@ Before you start to use these cmdlets, see the additional prerequisites and inst
 	- Applicable if you use protection-only with the on-premises version of Azure Rights Management; Active Directory Rights Management Services (AD RMS).
 
 
-## Azure Information Protection service and Azure Rights Management service
+## Azure Information Protection and Azure Rights Management service
 
-Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection and the Azure Rights Management data protection service, or just the Azure Rights Management service.
+Read this section before you start using the PowerShell commands when your organization uses Azure Information Protection for classification and protection, or just the Azure Rights Management service for data protection.
 
 
 ### Prerequisites
 
-In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisites for the Azure Information Protection service and the Azure Rights Management data protection service:
+In addition to the prerequisites for installing the AzureInformationProtection module, there are additional prerequisites for Azure Information Protection labeling and the Azure Rights Management data protection service:
 
 1. The Azure Rights Management service must be activated.
 
@@ -101,7 +101,7 @@ You must have a Rights Management usage right to remove protection from files, o
 
 #### Prerequisite 3: To protect or unprotect files without user interaction
 
-Currently, you cannot apply labels non-interactively but you can connect directly to the Azure Rights Management service non-interactively to protect or unprotect files.
+You can connect directly to the Azure Rights Management service non-interactively to protect or unprotect files.
 
 You must use a service principal to connect to the Azure Rights Management service non-interactively, which you do by using the `Set-RMSServerAuthentication` cmdlet. You must do this for each Windows PowerShell session that runs cmdlets that directly connect to the Azure Rights Management service. Before you run this cmdlet, make sure that you have these three identifiers:
 
@@ -231,11 +231,15 @@ For authentication outside the Azure North America region, you must edit the reg
 
 4. For the **ServiceLocation** key, create two keys if they do not exist, named **EnterpriseCertification** and **EnterprisePublishing**. 
     
-    When you create these REG_SZ keys, do not change the Name of "(Default)", but edit them to set the Value data:
+    When you create these keys, do not change the Name of "(Default)", but edit them to set the Value data:
 
     - For **EnterpriseCertification**, paste your CertificationExtranetDistributionPointUrl value.
     
     - For **EnterprisePublishing**, paste your LicensingExtranetDistributionPointUrl value.
+    
+    For example, your registry entry for EnterpriseCertification should look similar to the following:
+    
+    ![Editing the registry for Azure Information Protection PowerShell module for regions outside North America](../media/registry-example-rmsprotection.png)
 
 5. Close the registry editor. There is no need to restart your computer. However, if you are using a service principal account rather than your own user account, you must run the Set-RMSServerAuthentication command after making this registry edit.
 
