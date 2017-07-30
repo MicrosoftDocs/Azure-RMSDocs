@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-When you install the Azure Information Protection client, PowerShell commands are automatically installed so that you can manage the client by running commands that you can put into scripts for automation.
+When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
 The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module replaces the RMSProtection module that installs with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
 
@@ -127,7 +127,7 @@ Windows PowerShell module:
     
     	Connect-AadrmService
     
-    When prompted, enter your Azure Information Protection tenant administrator credentials (typically, you use an account that is a global administrator for Azure Active Directory or Office 365).
+    When prompted, enter your Azure Information Protection tenant administrator credentials. Typically, you use an account that is a global administrator for Azure Active Directory or Office 365.
     
 4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
     
@@ -164,7 +164,7 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
     
     	Connect-MsolService
     
-    When prompted, enter your Azure AD tenant administrator credentials (typically, you will use an account that is a global administrator for Azure Active Directory or Office 365).
+    When prompted, enter your Azure AD tenant administrator credentials (typically, you use an account that is a global administrator for Azure Active Directory or Office 365).
 
 4. Run the New-MsolServicePrincipal cmdlet to create a new service principal:
     
@@ -195,7 +195,7 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
 
 5. From this output, make a note of the symmetric key and the AppPrincialId.
 
-    It is important that you make a copy of the symmetric key because you cannot retrieve it in full later so if you do not know it, you will have to create a new service principal the next time you need to authenticate to the Azure Rights Management service.
+    It is important that you make a copy of this symmetric key, now. You cannot retrieve this key later, so if you do not know it when you next need to authenticate to the Azure Rights Management service, you will have to create a new service principal.
 
 From these instructions and our examples, we have the three identifiers
 required to run Set-RMSServerAuthentication:
@@ -212,7 +212,7 @@ Our example command would then look like the following:
 
 As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means that the client is now operating in "server mode". This message does not confirm that authentication was successful by using the values you supplied, but that the switch to server mode was successful.
 
-Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md) but specify the **-ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
 For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
@@ -311,7 +311,7 @@ Your output might look similar to the following:
 	--------                              ------
 	\Server1\Documents\Test1.docx         Protected
 
-To unprotect a file, you must have Owner or Extract rights from when the file was protected, or you must be running the cmdlets as a super user. Then, use the Unprotect cmdlet. For example:
+To unprotect a file, you must have Owner or Extract rights from when the file was protected. Or, you must run the cmdlets as a super user. Then, use the Unprotect cmdlet. For example:
 
 	Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -415,7 +415,7 @@ Your output might look similar to the following:
 	\\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
 	\\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-When the file name extension does not change after RMS protection is applied, you can always use the Get-RMSFileStatus cmdlet later to check whether the file is protected. For example: 
+When the file name extension does not change after protection is applied, you can always use the Get-RMSFileStatus cmdlet later to check whether the file is protected. For example: 
 
 	Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
