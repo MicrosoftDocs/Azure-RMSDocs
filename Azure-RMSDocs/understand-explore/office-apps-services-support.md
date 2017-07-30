@@ -35,7 +35,7 @@ End-user Office applications and Office services can use the Azure Rights Manage
 ## Office applications: Word, Excel, PowerPoint, Outlook
 These applications natively support Azure Rights Management and let users apply protection to a saved document or to an email message to be sent. Users can apply templates to apply the protection. Or, for Word, Excel, and PowerPoint, users can choose customized settings for access, rights, and usage restrictions. 
 
-For example, users can configure a Word document so that it can be accessed only by people in your organization, or control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured (directly by users or by applying a template) for when the file can no longer be accessed. For Outlook, users can choose the **Do Not Forward** option to help prevent data leakage, in addition to choosing a template.
+For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
 In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md). This bar displays labels that makes it easier for users to automatically apply protection to documents and emails that contain sensitive data.
 
@@ -88,7 +88,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > 
 > - You cannot use the default or custom templates that you manage in the Azure portal. 
 > 
-> - Files that have a .PPDF file name extension for protected PDF files are not supported. Files that have .PDF file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 > 
 > - If you protect a file that you then upload to a SharePoint library or OneDrive for Business, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery.
 
