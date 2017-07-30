@@ -231,7 +231,7 @@ For authentication outside the Azure North America region, you must edit the reg
 
 4. For the **ServiceLocation** key, create two keys if they do not exist, named **EnterpriseCertification** and **EnterprisePublishing**. 
     
-    When you create these keys, do not change the Name of "(Default)", but edit them to set the Value data:
+    For the string value that's automatically created for these keys, do not change the Name of "(Default)", but edit the string to set the Value data:
 
     - For **EnterpriseCertification**, paste your CertificationExtranetDistributionPointUrl value.
     
