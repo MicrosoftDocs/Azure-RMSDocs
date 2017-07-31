@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Office 365&colon; Configure clients & online services - AIP
+title: Configuration for Office 365 clients and online services to use Azure RMS from AIP
 description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,11 +25,11 @@ ms.suite: ems
 
 ---
 
-# Office 365: Configuration for clients and online services
+# Office 365: Configuration for clients and online services to use the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
+Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials. Then, they can protect files and emails, and use files and emails that have been protected by others.
 
 However, we recommend that you supplement these applications with the Azure Information Protection client, so that users get the benefit of the Office add-in and support for additional file types. For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
@@ -130,7 +130,7 @@ The following steps provide a typical set of commands that you would run to enab
 Users can now protect their email messages by using the Azure Rights Management service. For example,  in the Outlook Web App, select **Set permissions** from the extended menu (**...**), and then choose **Do Not Forward** or one of the available templates to apply information protection to the email message and any attachments. However, because the Outlook Web App caches the UI for a day, wait for this time period to elapse before you try applying information protection to email messages and after running these configuration commands. Before the UI updates to reflect the new configuration, you will not see any options from the **Set permissions** menu.
 
 > [!IMPORTANT]
-> If you create new [custom templates](configure-custom-templates.md) for Azure Rights Management or update the templates, each time, you must run the following Exchange Online PowerShell command (if necessary, run steps 2 and 3 first) to synchronize these changes to Exchange Online: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
+> If you create or update [templates](configure-policy-templates.md) for Azure Rights Management, each time, you must run the following Exchange Ogit add .nline PowerShell command (if necessary, run steps 2 and 3 first) to synchronize these changes to Exchange Online: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
 
 As an Exchange administrator, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 

@@ -6,7 +6,7 @@ description: Activation instructions for the Azure Rights Management service whe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,8 +29,10 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
+> [!NOTE]
+>This functionality is moving to the Azure portal and is currently in preview. For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
-Use these instructions if you have access to the Azure portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
+Use these instructions if you have access to the Azure classic portal. For example, you have a subscription for the Enterprise Mobility Suite or have the Azure Information Protection Premium subscription.
 
 > [!TIP]
 > Watch a 2-minute video: [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
@@ -62,6 +64,6 @@ In addition to the **Active** status, which indicates that the Rights Management
 |**Unauthorized**|You do not have permissions to view the status of the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] service. For example, your account is locked out or you are not the global administrator for the selected tenant.|
 
 ## Next steps
-Back to [Activating Azure Rights Management](activate-service.md).
+Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
