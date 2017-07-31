@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -182,27 +182,27 @@ There are many request types for the Azure Rights Management service but the fol
 |AcquirePreLicense|A client, on behalf of the user, is requesting for a license for RMS-protected content.|
 |AcquireTemplates|A call was made to acquires templates based on template IDs|
 |AcquireTemplateInformation|A call was made to get the IDs of the template from the service.|
-|AddTemplate|A call is  made from the Azure classic portal to add a template.|
+|AddTemplate|A call is  made from the Azure portal to add a template.|
 |AllDocsCsv|A call is made from the document tracking site to download the CSV file from the **All Documents** page.|
 |BECreateEndUserLicenseV1|A call is  made from a mobile device to create an end-user license.|
 |BEGetAllTemplatesV1|A call is  made from a mobile device (back-end) to get all the templates.|
 |Certify|The client is certifying the content for protection.|
-|DeleteTemplateById|A call is  made from the Azure classic portal, to delete a template by template  ID.|
+|DeleteTemplateById|A call is  made from the Azure portal, to delete a template by template  ID.|
 |DocumentEventsCsv|A call is made from the document tracking site to download the .CSV file for a single document.|
-|ExportTemplateById|A call is  made from the Azure classic portal to export a template based on a template ID.|
+|ExportTemplateById|A call is  made from the Azure portal to export a template based on a template ID.|
 |FECreateEndUserLicenseV1|Similar to the AcquireLicense request but from mobile devices.|
 |FECreatePublishingLicenseV1|The same as Certify and GetClientLicensorCert combined, from mobile clients.|
 |FEGetAllTemplates|A call is  made, from a mobile device (front-end) to get the templates.|
 |FindServiceLocationsForUser|A call is made to query for URLs, which is used to call Certify or AcquireLicense.|
 |GetAllDocs|A call is made from the document tracking site to load the **all documents** page for a user, or search all documents for the tenant. Use this value with the admin-action and acting-as-admin fields:<br /><br />- admin-action is empty: A user views the **all documents** page for their own documents.<br /><br />- admin-action is true and acting-as-user is empty: An administrator views all documents for their tenant.<br /><br />- admin-action is true and acting-as-user is not empty: An administrator views the **all documents** page for a user.|
-|GetAllTemplates|A call is  made from the Azure classic portal, to get all the templates.|
+|GetAllTemplates|A call is  made from the Azure portal, to get all the templates.|
 |GetClientLicensorCert|The client is requesting a publishing certificate (that is later used to protect content) from a Windows-based computer.|
 |GetConfiguration|An Azure PowerShell cmdlet is called to get the configuration of the Azure RMS tenant.|
 |GetConnectorAuthorizations|A call  is made from the RMS connectors to get their configuration from the cloud.|
 |GetRecipients|A call is made from the document tracking site to navigate to the list view for a single document.|
 |GetSingle|A call is made from the document tracking site to navigate to a **single document** page.|
-|GetTenantFunctionalState|The Azure classic portal is checking whether the Azure Rights Management service is activated.|
-|GetTemplateById|A call is  made from the Azure classic portal to get a template by specifying a template ID.|
+|GetTenantFunctionalState|The Azure portal is checking whether the Azure Rights Management service is activated.|
+|GetTemplateById|A call is  made from the Azure portal to get a template by specifying a template ID.|
 |KeyVaultDecryptRequest|The client is attempting to decrypt the RMS-protected content. Applicable only for a customer-managed tenant key (BYOK) in Azure Key Vault.|
 |KeyVaultGetKeyInfoRequest|A call is made to verify that the key specified to be used in Azure Key Vault for the Azure Information Protection tenant key is accessible and not already used.|
 |KeyVaultSignDigest|A call is made when a customer-managed key (BYOK) in Azure Key Vault is used for signing purposes. This is called typically once per AcquireLicence (or FECreateEndUserLicenseV1), Certify, and GetClientLicensorCert (or FECreatePublishingLicenseV1).|
@@ -211,14 +211,14 @@ There are many request types for the Azure Rights Management service but the fol
 |LoadEventsForMap|A call is made from the document tracking site to navigate to the map view for a single document.|
 |LoadEventsForSummary|A call is made from the document tracking site to navigate to the timeline view for a single document.|
 |LoadEventsForTimeline|A call is made from the document tracking site to navigate to the map view for a single document.|
-|ImportTemplate|A call is  made from the Azure classic portal to import a template.|
+|ImportTemplate|A call is  made from the Azure portal to import a template.|
 |RevokeAccess|A call is made from the document tracking site to revoke a document.|
 |SearchUsers |A call is made from the document tracking site to search all users in a tenant.|
 |ServerCertify|A call is  made from an RMS-enabled client (such as SharePoint) to certify the server.|
 |SetUsageLogFeatureState|A call is  made to enable usage logging.|
 |SetUsageLogStorageAccount|A call is  made to specify the location of the Azure Rights Management service logs.|
 |UpdateNotificationSettings|A call is made from the document tracking site to change the notification settings for a single document.|
-|UpdateTemplate|A call is  made from the Azure classic portal to update an existing template.|
+|UpdateTemplate|A call is  made from the Azure portal to update an existing template.|
 
 
 ## Windows PowerShell reference

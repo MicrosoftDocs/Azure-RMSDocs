@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,18 +39,23 @@ When the Azure Rights Management service for Azure Information Protection is act
 If you want to learn more about the Azure Rights Management service before you activate the it—for example, what business problems it solves, some typical use cases, and how it works—see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes Azure Rights Management data protection. If not, you will not be able to activate Azure Rights Management.
->
-> You must have either an [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+> Do not activate the Azure Rights Management service if you have Active Directory Rights Management Services (AD RMS) deployed for your organization. [More information](prepare-environment-adrms.md)
+
+Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], make sure that your organization has a service plan that includes Azure Rights Management data protection. If not, you will not be able to activate Azure Rights Management. You must have one of the following:
+
+- An [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+
+- An [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
-For instructions how to activate the Rights Management service from your management portal, select whether you will use the Office 365 admin center or the Azure classic management portal:
+For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center, the Azure classic portal, or the Azure portal (this last method is currently in preview):
 
+- [**Office 365 admin center**](activate-office365.md) - requires global admin account
 
-- [Office 365 admin center](activate-office365.md)
+- [**Azure classic portal**](activate-azure-classic.md) - requires global admin account
 
-- [Azure classic portal](activate-azure-classic.md)
+- [**Azure portal**](activate-azure.md) - requires global admin account or [security admin account](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 
 Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
@@ -97,7 +102,7 @@ When you use these onboarding controls, all users in the organization can always
 ## Next steps
 Now that you’ve activated [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators. 
 
-For example, you might want to use [custom templates](configure-custom-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](../rms-client/aip-client.md) that supports protecting all file types on all devices. 
+For example, you might want to use [templates](configure-policy-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](../rms-client/aip-client.md) that supports protecting all file types on all devices. 
 
 Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
 

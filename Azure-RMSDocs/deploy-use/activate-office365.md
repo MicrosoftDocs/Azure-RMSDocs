@@ -6,7 +6,7 @@ description: Activation instructions for the Azure Rights Management service whe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,6 +57,6 @@ You should now see **Rights management is activated** and the option to deactiva
 
 
 ## Next steps
-Back to [Activating Azure Rights Management](activate-service.md).
+Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
