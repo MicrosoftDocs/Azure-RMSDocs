@@ -6,7 +6,7 @@ description: Information for admins about deploying the Rights Management (RMS) 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 > [!IMPORTANT]
-> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](../rms-client/aip-client.md). Support for this older application will stop January 31, 2018. 
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](../rms-client/aip-client.md). Support for this older application will stop January 31, 2019. 
  
 The RMS sharing application provides authentication support for Office 2010 and it integrates with Office applications by installing an Office add-in so that users can easily protect files and emails directly from the ribbon. This application also offers generic protection for files types that are not natively supported by the Azure Rights Management service, and a document tracking site for users to track and revoke files that they have protected.
 
