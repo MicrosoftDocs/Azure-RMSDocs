@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,10 +32,11 @@ ms.suite: ems
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download. 
-
 In addition, some settings might only be available in a preview version of the Azure Information Protection client. For these settings, a minimum client version is documented. For settings and configurations that are supported in the general availability version of the client, no minimal client version number is documented.
 
 ### How to configure advanced client configuration settings in the portal
+
+This configuration is currently in preview.
 
 1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
 
@@ -93,6 +94,8 @@ Additionally:
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
+This configuration option is currently in preview.
+
 You can configure this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
 
 Create the following DWORD value name (with any value data):
@@ -107,9 +110,24 @@ Locate the following value name and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Make sure that the client has a valid policy file named **Policy.msip**, in the **%localappdata%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy.
+Make sure that the client has a valid policy file named **Policy.msip**, in the **%LocalAppData%\Microsoft\MSIP** folder. If necessary, you can export the policy from the Azure portal and copy the exported file to the client computer. You can also use this method to replace an-out-of-date policy file with the latest, published policy.
+
+When you export the policy, this action downloads a zipped file with multiple versions of the policy that corresponds to different versions of the Azure Information Protection client:
+
+1. Unzip the file and use the following table to identify which policy file you need. 
+    
+    |File name|Corresponding client version|
+    |--------------------------|---------------------------------------------|
+    |Policy1.1.msip |version 1.2|
+    |Policy1.2.msip |version 1.3 - 1.7|
+    |Policy1.3.msip |version 1.8 and later|
+    
+2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure information protection client installed. 
+
 
 ## Hide the Do Not Forward button in Outlook
+
+This configuration option is currently in preview.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting also requires a preview version of the Azure Information Protection client that has a minimum version of **1.8.41.0**.
 
@@ -122,6 +140,8 @@ To configure this advanced setting, enter the following strings:
 - Value: **True**
 
 ## Make the custom permissions options unavailable to users
+
+This configuration option is currently in preview.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 

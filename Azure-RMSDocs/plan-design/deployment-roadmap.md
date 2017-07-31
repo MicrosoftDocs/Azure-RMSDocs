@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+-   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
@@ -161,7 +161,7 @@ Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsm
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+-   Custom templates if the default templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
