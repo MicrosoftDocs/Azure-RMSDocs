@@ -33,7 +33,7 @@ You now configure custom templates in the Azure portal. The ability to configure
 
 Although you can still create and manage templates in the Azure classic portal, because of differences in implementation, we do not recommend that you manage the same templates from the Azure classic portal and the Azure portal.
 
-Instructions for configuring templates in the Azure portal: [Configuring and managing templates in the Azure Information Protection policy](configure-policy-templates.md).
+Instructions for configuring templates in the Azure portal: [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
