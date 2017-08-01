@@ -85,7 +85,7 @@ Some things to note:
 
 Custom templates have moved to the Azure portal where you can continue to manage them as templates, or convert them to labels. To create a new template, create a new label and configure the data protection settings for Azure RMS. Under the covers, this creates a new template that can then be accessed by services and applications that integrate with Rights Management templates.
 
-For more information about templates in the Azure portal, see [Configure and manage templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
+For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
