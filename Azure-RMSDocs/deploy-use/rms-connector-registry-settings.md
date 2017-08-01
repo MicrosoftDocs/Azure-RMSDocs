@@ -53,7 +53,7 @@ Instructions for when you use these settings:
 
 -   *\<ConnectorFQDN>* is the load-balancing name that you defined in DNS for the connector. For example, **rmsconnector.contoso.com**.
 
--   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) section from the main instructions. The Microsoft RMS URLs always use HTTPS.
+-   Use the HTTPS prefix for the connector URL if you have configured the connector to use HTTPS to communicate with your on-premises servers. For more information, see the [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) section from the main instructions. The Azure Rights Management service URL always uses HTTPS.
 
 
 ## Exchange 2016 or Exchange 2013 registry settings
