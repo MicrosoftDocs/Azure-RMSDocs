@@ -57,7 +57,11 @@ For example: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
 3. Copy the value displayed for **LicensingIntranetDistributionPointUrl**, and from this string, remove `/_wmcs\licensing`. 
     
-    What remains is your Azure Rights Management service URL for you Azure Information Protection tenant, which is often shortened to *Your tenant URL* in the following migration instructions.
+    What remains is your Azure Rights Management service URL for your Azure Information Protection tenant. This value is often shortened to *Your tenant URL* in the following migration instructions.
+    
+    You can verify that you have the correct value by running the following PowerShell command:
+    
+            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 ## Step 2. Prepare for client migration
 
