@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -103,7 +103,7 @@ You must have a Rights Management usage right to remove protection from files, o
 
 You can connect directly to the Azure Rights Management service non-interactively to protect or unprotect files.
 
-You must use a service principal to connect to the Azure Rights Management service non-interactively, which you do by using the `Set-RMSServerAuthentication` cmdlet. You must do this for each Windows PowerShell session that runs cmdlets that directly connect to the Azure Rights Management service. Before you run this cmdlet, make sure that you have these three identifiers:
+You must use a service principal to connect to the Azure Rights Management service non-interactively, which you do by using the `Set-RMSServerAuthentication` cmdlet. You must do this for each Windows PowerShell session that runs cmdlets that directly connect to the Azure Rights Management service. Before you run this cmdlet, you must have these three identifiers:
 
 - BposTenantId
 
@@ -111,7 +111,28 @@ You must use a service principal to connect to the Azure Rights Management servi
 
 - Symmetric Key
 
-The next sections explain how to get these identifiers.
+You can use the following script to automatically get the values for the identifiers and run the Set-RMSServerAuthentication cmdlet. Or, you can manually get and specify the values.
+
+Script to automatically get the values and run Set-RMSServerAuthentication:
+
+````
+# Make sure that you have the AADRM and MSOnline modules installed
+
+$newServicePrincipalName="<new service principal name>"
+Connect-AadrmService
+$bposTenantID=(Get-AadrmConfiguration).BPOSId
+Disconnect-AadrmService
+New-MsolServicePrincipal -DisplayName $servicePrincipalName
+
+# Copy the value of the generated symmetric key
+
+$symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
+$appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $servicePrincipalName }).AppPrincipalId
+Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
+
+````
+
+The next sections explain how to manually get and specify these values.
 
 ##### To get the BposTenantId
 
@@ -197,8 +218,7 @@ Create a new service principal by running the `New-MsolServicePrincipal` cmdlet 
 
     It is important that you make a copy of this symmetric key, now. You cannot retrieve this key later, so if you do not know it when you next need to authenticate to the Azure Rights Management service, you will have to create a new service principal.
 
-From these instructions and our examples, we have the three identifiers
-required to run Set-RMSServerAuthentication:
+From these instructions and our examples, we have the three identifiers required to run Set-RMSServerAuthentication:
 
 - Tenant Id: **23976bc6-dcd4-4173-9d96-dad1f48efd42**
 
@@ -218,6 +238,9 @@ For more information about super users, see [Configuring super users for Azure R
 
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
+
+
+
 
 #### Prerequisite 4: For regions outside North America
 
