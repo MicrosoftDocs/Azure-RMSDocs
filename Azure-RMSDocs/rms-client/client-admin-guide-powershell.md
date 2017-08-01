@@ -111,9 +111,9 @@ You must use a service principal to connect to the Azure Rights Management servi
 
 - Symmetric Key
 
-You can use the following script to automatically get the values for the identifiers and run the Set-RMSServerAuthentication cmdlet. Or, you can manually get and specify the values.
+You can use the following PowerShell commands and commented instructions to automatically get the values for the identifiers and run the Set-RMSServerAuthentication cmdlet. Or, you can manually get and specify the values.
 
-Script to automatically get the values and run Set-RMSServerAuthentication:
+To automatically get the values and run Set-RMSServerAuthentication:
 
 ````
 # Make sure that you have the AADRM and MSOnline modules installed
@@ -132,7 +132,7 @@ Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -
 
 ````
 
-The next sections explain how to manually get and specify these values.
+The next sections explain how to manually get and specify these values, with more information about each one.
 
 ##### To get the BposTenantId
 
