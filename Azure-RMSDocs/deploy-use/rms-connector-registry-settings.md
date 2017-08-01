@@ -31,7 +31,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection, Office 365*
 
 
-Use the tables in the following sections only if you want to manually add or check registry settings on the servers running Exchange, SharePoint, or Windows Server. These registry settings configure the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
+Use the tables in the following sections only if you want to manually add or check registry settings on the servers that run Exchange, SharePoint, or Windows Server. These registry settings configure the servers to use the [RMS connector](deploy-rms-connector.md). The recommended method to configure these servers is to use the server configuration tool for Microsoft RMS connector.
 
 Instructions for when you use these settings:
 
