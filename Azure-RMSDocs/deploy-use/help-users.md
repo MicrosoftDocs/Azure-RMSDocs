@@ -33,7 +33,7 @@ After you have deployed and configured Azure Information Protection for your org
 
 -   **End-user information**
     
-    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [templates](../deploy-use/configure-policy-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
+    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [templates](configure-policy-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
     
     > [!TIP]
     > Example videos for end users:
@@ -62,7 +62,7 @@ After you have deployed and configured Azure Information Protection for your org
         
         Authentication and authorization rely on accounts and groups in Azure Active Directory. To confirm that a specific user or group can be authorized to consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
         
-        If users report that they can open protected content but don't have the rights that they need, the problem might be that the user is not in the correct group that's configured for a Rights Management template. Or, that the [template needs reconfiguring](configure-policy-template.md) for the user or group. 
+        If users report that they can open protected content but don't have the rights that they need, the problem might be that the user is not in the correct group that's configured for a Rights Management template. Or, that the [template needs reconfiguring](configure-policy-templates.md) for the user or group. 
         
         If the rights that users have are not as expected, check the description of them and any application-specific implementation from the [usage rights table](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
 
