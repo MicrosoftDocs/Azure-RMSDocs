@@ -42,11 +42,13 @@ After you have deployed and configured Azure Information Protection for your org
 
 -   **Administrator information**
     
-    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
+    Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. 
+    
+    For more information, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
     
 -   **Help desk information**
     
-    If users are running the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
+    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
     
     If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization, 
     
@@ -54,31 +56,33 @@ After you have deployed and configured Azure Information Protection for your org
     
     - **Sign in help**
         
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these accounts are not currently supported by the Azure Rights Management service. Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they use  applications with the Azure Rights Management service.
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these accounts are not currently supported by the Azure Rights Management service. 
+        
+        Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they have applications that use the Azure Rights Management service.
         
     - **Problems protecting or consuming content**
         
-        Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
         
         Authentication and authorization rely on accounts and groups in Azure Active Directory. To confirm that a specific user or group can be authorized to consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
         
-        If users report that they can open protected content but don't have the rights that they need, the problem might be that the user is not in the correct group that's configured for a Rights Management template. Or, that the [template needs reconfiguring](configure-policy-templates.md) for the user or group. 
+        If users report that they can open protected content but they don't have the rights that they need, the problem might be that the user is not in the correct group that's configured for a Rights Management template. Or, the problem might be that the [template needs reconfiguring](configure-policy-templates.md) for the user or group. 
         
-        If the rights that users have are not as expected, check the description of them and any application-specific implementation from the [usage rights table](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
+        If the rights that users have are not as expected, check the description of the rights and any application-specific implementation from the [usage rights table](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
 
-Use the following sections for application-specific information to help users protect sensitive documents and emails.
+Use the following sections for application-specific information to help users protect documents and emails.
 
 ## Using information protection with the Azure Information Protection client
 
-If users have Office 2010, the Azure Information Protection client (or the older application, RMS sharing application) is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices.
+If users have Office 2010, the Azure Information Protection client (or the older application, RMS sharing application) is required to protect and consume protected documents and emails. However, the Azure Information Protection client is also recommended for all computers and mobile devices that support this service.
 
-In addition to making it easier for users to protect important documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
+In addition to making it easier for users to protect documents and emails, the Azure Information Protection client lets users track the documents that they have protected. Tracked documents can also be revoked if the previously authorized users should no longer have access to them.
 
 For instructions to use this client for Windows computers, see the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
 
 
 ## Using information protection with Office 365, Office 2016, or Office 2013
-If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps, the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
+If you are using the Azure Rights Management service and have not installed the Azure Information Protection client, users do not see the Azure Information Protection bar in their Office desktop apps. They also don't see the **Protect** button on the ribbon, or **Classify and protect** from File Explorer. These additions make it easier for users to protect documents and emails. For these users, they must follow instructions similar to the steps that follow.
 
 > [!TIP]
 > To find application-specific help and instructions for using information protection with these applications, search for **IRM** and the application name and version.
@@ -104,9 +108,9 @@ The usage rights are displayed at the top of the document by using a restriction
 
 #### To protect an email message using Outlook 2013 and Exchange Online
 
-1.  Within Outlook, create a mail message addressed to a recipient within your organization.
+1.  Within Outlook, create a mail message that is addressed to a recipient within your organization.
 
-2.  From the **OPTIONS** tab,  click **Permission**, and then select an option. For example: **Do Not Forward**, **&lt;Company Name&gt; - Confidential** or **&lt;Company Name&gt; - Confidential View Only**.
+2.  From the **OPTIONS** tab,  click **Permission**, and then select an option. For example: **Do Not Forward**, or **\<Company Name>- Confidential**, or **\<Company Name> - Confidential View Only**.
 
 3.  Send the message.
 
@@ -118,7 +122,7 @@ For example, if the email message is protected by using the **Do Not Forward** o
 
 1.  Using Outlook on the web, create a mail message addressed to a recipient within your organization.
 
-2.  Click  **…**,  click **set permission**, and then select an option. For example: **Do Not Forward**, **Do Not Reply All**, **&lt;Company Name&gt; - Confidential** or **&lt;Company Name&gt; - Confidential View Only**.
+2.  Click  **…**,  click **set permission**, and then select an option. For example: **Do Not Forward** or **Do Not Reply All**. Or, **\<Company Name>- Confidential** or **\<Company Name> - Confidential View Only**.
 
 3.  Send the message.
 
