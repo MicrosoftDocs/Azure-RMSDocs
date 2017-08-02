@@ -46,7 +46,7 @@ For these group members, users cannot see any activity on the document tracking 
 
 When you use this configuration, all users can still use the document tracking site and revoke access to documents that they have protected. However, they do not see activity for the users who you have specified by using the Set-AadrmDoNotTrackUserGroup cmdlet.
 
-This setting affects ends users only. Administrators for Azure Information Protection can always track activities of all users, even when those users are specified by using Set-AadrmDoNotTrackUserGroup. For more information about how administrators can track documents for users, see the [Tracking and revoking documents for users](#tracking-and-revoking-documents-for-users) section.
+This setting affects end users only. Administrators for Azure Information Protection can always track activities of all users, even when those users are specified by using Set-AadrmDoNotTrackUserGroup. For more information about how administrators can track documents for users, see the [Tracking and revoking documents for users](#tracking-and-revoking-documents-for-users) section.
 
 You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group, but be aware of [group caching](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
 
