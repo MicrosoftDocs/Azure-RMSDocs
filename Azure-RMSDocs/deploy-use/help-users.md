@@ -33,7 +33,7 @@ After you have deployed and configured Azure Information Protection for your org
 
 -   **End-user information**
     
-    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [templates](configure-policy-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
+    Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [templates](../deploy-use/configure-policy-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
     
     > [!TIP]
     > Example videos for end users:
