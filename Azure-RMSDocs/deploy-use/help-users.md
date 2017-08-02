@@ -31,7 +31,7 @@ ms.suite: ems
 
 After you have deployed and configured Azure Information Protection for your organization, provide help and guidance for users, administrators, and your help desk:
 
--   **End-user information:**
+-   **End-user information**
     
     Let users know how and when to protect documents and emails that contain sensitive information. Whenever possible, provide this information for their existing work flows so that they can incorporate the additional steps to an already-familiar process rather than introducing new processes. Be sure to let them know the benefits (and the risks) that are specific to your business, as well as providing guidance for when they should protect files and emails. If you have configured [templates](configure-policy-templates.md), provide instructions about which one to select if the template name and description is not sufficient for them to choose the correct one.
     
@@ -40,11 +40,11 @@ After you have deployed and configured Azure Information Protection for your org
     > -   [Azure RMS user experience](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Administrator information:**
+-   **Administrator information**
     
     Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. For more information, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
     
--   **Help desk information:**
+-   **Help desk information**
     
     If users are running the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
     
@@ -52,11 +52,11 @@ After you have deployed and configured Azure Information Protection for your org
     
     In  addition, some of the typical problems that users might report include the following categories:
     
-    - **Sign in help:**
+    - **Sign in help**
         
         Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these accounts are not currently supported by the Azure Rights Management service. Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they use  applications with the Azure Rights Management service.
         
-    - **Problems protecting or consuming content:**
+    - **Problems protecting or consuming content**
         
         Make sure that users have the appropriate instructions for the applications that they use, and are using applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
         
