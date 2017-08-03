@@ -124,9 +124,9 @@ On the final page of the wizard, do the following, and then click **Finish**:
 
 If you need to uninstall the RMS connector, run the wizard again and select the uninstall option.
 
-If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date>.log** 
+If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date and time>.log** 
 
-As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803.log
+As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
 
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
