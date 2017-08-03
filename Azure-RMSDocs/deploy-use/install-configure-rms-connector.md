@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -123,6 +123,10 @@ On the final page of the wizard, do the following, and then click **Finish**:
 > -   From a web browser, connect to **http://&lt;connectoraddress&gt;/_wmcs/certification/servercertification.asmx**, replacing *&lt;connectoraddress&gt;* with the server address or name that has the RMS connector installed. A successful connection displays a **ServerCertificationWebService** page.
 
 If you need to uninstall the RMS connector, run the wizard again and select the uninstall option.
+
+If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date>.log** 
+
+As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803.log
 
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
