@@ -131,6 +131,9 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 6. To make your changes available to user applications and services, on the **Azure Information Protection** blade, click **Publish**.
 
+> [!NOTE]
+> You can also edit a template by using the **Edit Template** button on the **Protection** blade if you have configured a label to use a predefined template. Providing no other label also uses the selected template, this button converts the template into a label, and takes you to step 5. For more information about what happens when templates are converted to labels, see the next section.
+
 ## To convert templates to labels
 
 When you have a subscription that includes classification, labeling, and protection, you can convert a template to a label. When you do this, the original template is retained but in the Azure portal, it now displays as included in a new label.
