@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -334,7 +334,9 @@ Use the **Version** information to confirm which version of the client is instal
 
 ## Support for multiple languages
 
-The Azure Information Protection client supports all the client languages that Office supports. For example, menu options, dialog boxes, and messages are displayed in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the client for different languages. 
+The Azure Information Protection client supports the same languages that Office 365 supports. For a list of these languages, see the **Office 365, Exchange Online Protection, and Power BI** section from the [International availability](https://products.office.com/business/international-availability) page from Office.
+
+For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
 However, the label names that users see are not automatically translated for either the [default policy](../deploy-use/configure-policy-default.md), or for label names that you specify. For users to see labels in different languages, you must provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
