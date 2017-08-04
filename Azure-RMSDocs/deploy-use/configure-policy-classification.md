@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
  
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved.
 
-When you configure conditions, you can use predefined patterns, such as "Credit Card Number" or "USA Social Security Number (SSN)". Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. 
+When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. 
 
 How multiple conditions are evaluated when they apply to more than one label:
 
@@ -76,7 +76,7 @@ In this example, the user can click **Change now** to apply the recommended labe
         
         The option to match as a regular expression is currently in preview and requires the preview version of the Azure Information Protection client. The regular expressions use the Office 365 regex patterns. For more information, see [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) from the Office documentation. 
         
-    **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
+    **Example of the occurrences options**: You select the built-in social security number option, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
 5. On the **Label** blade, configure the following, and then click **Save**:
 
