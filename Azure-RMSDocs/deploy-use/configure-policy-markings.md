@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/7/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ When you assign a label to a document or email message, you can select several o
 
 The visual markings are applied to Word, Excel, and PowerPoint documents when the label is applied and when the documented is saved in these Office applications. For email messages, the visual markings are applied when the email message is sent from Outlook.
 
-Visual markings are not applied to documents when the label is applied by using File Explorer and the right-click action. Or when a document is classified by using PowerShell.
+Visual markings are not applied to documents when the label is applied by using File Explorer and the right-click action. Or, when a document is classified by using PowerShell.
 
 Additional information about these visual markers:
 
@@ -42,10 +42,14 @@ Additional information about these visual markers:
 - Watermarks apply to Word, Excel, and PowerPoint:
 
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
-
+    
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
+    
+	- Multi-lines are supported when you use the preview version of the client
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
+
+- When you use the preview version of the client, visual markers that you configure are not applied if there is already a visual marker of the same type. In addition, the visual marker is applied only once for documents, when the document is first saved. If a user then removes or modifies the visual marker, the label's visual marker is not reapplied unless the label is reapplied. 
 
 Use the following instructions to configure visual markings for a label.
 
