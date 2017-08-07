@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -109,18 +109,15 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 ### Cryptographic mode considerations
 
-Although not a prerequisite for migration, we recommend that your AD RMS servers and clients are running in Cryptographic Mode 2 before you start the migration. 
+If your AD RMS cluster is currently in Cryptographic Mode 1, do not upgrade the cluster to Cryptographic Mode 2 before you start the migration. Instead, migrate using Cryptographic Mode 1 and rekey your tenant key at the end of the migration, as one of the post migration tasks.
 
-For more information about the different modes and how to upgrade, see [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-
-If your AD RMS cluster is in Cryptographic Mode 1 and you cannot upgrade it, you must rekey your Azure Information Protection tenant key when migration is complete. rekeying creates a new tenant key that uses Cryptographic Mode 2. Using the Azure Rights Management service with Cryptographic Mode 1 is supported only during the migration process.
+Cryptographic Mode 1 is supported only during the migration process.
 
 To confirm the AD RMS cryptographic mode:
  
 - For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
 
 - For all supported versions of AD RMS: Use the [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) and **AD RMS admin** option to view the cryptographic mode in the **RMS service information**.
-
 
 ### Migration limitations
 
