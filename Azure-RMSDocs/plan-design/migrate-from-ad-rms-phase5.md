@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,11 +79,11 @@ To remove the onboarding controls:
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
 ## Step 12. rekey your Azure Information Protection tenant key
-This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because rekeying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
+This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1. Rekeying creates a new tenant key that uses RMS Cryptographic Mode 2. Cryptographic Mode 1 is supported for Azure Information Protection only during the migration process.
 
-This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. rekeying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
+Rekeying when the migration is complete also helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
 
-When you rekey your Azure Information Protection tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but rekey your Azure Information Protection tenant key as soon as the migration is complete.
+When you rekey your Azure Information Protection tenant key (also known as "rolling your key"), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but rekey your Azure Information Protection tenant key as soon as the migration is complete.
 
 To rekey your Azure Information Protection tenant key:
 
