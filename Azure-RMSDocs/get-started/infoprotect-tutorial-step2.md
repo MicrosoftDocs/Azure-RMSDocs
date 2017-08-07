@@ -36,11 +36,11 @@ Although Azure Information Protection comes with a default policy that you can u
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories.
     
        > [!NOTE]
-       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**. This is because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
 
-    - With the default configuration, some labels do not have visual markings configured (such as a footer, header, watermark). Depending on your default policy, some labels might have protection set, or not. As an example:
+    - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might have protection set, or not. As an example:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
@@ -60,7 +60,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 ## Creating a new label for protection, a watermark, and a condition to prompt for classification
 
-We'll now create a new sub-label for **All Employees**.
+We'll now create a new sub-label for **Confidential**.
 
 1. Right-click the **Confidential** label, and select **Add a sub-label**.
 
@@ -76,9 +76,9 @@ We'll now create a new sub-label for **All Employees**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is Vanarsdel, you see the following option to select:
     
-    This option automatically selects all the users in your organization who have an email address that can be used to assign permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
+    This option automatically selects all the users in your organization who can be granted permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
 
-6. By default, all permissions are granted. For this tutorial, keep this default. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
+6. You see by default, all permissions are granted. For this tutorial, keep this default. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
  
 7. Click **OK** to close this **Add permissions** blade. Then click **OK** on the **Protection** blade, which keeps the default settings for content expiration and offline access.
 
@@ -136,6 +136,8 @@ Now that you've had a look at the default policy and made some changes, the next
 |--------------------------------|--------------------------|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 |Configuration settings in the default policy|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
+|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights)|
 
 
 >[!div class="step-by-step"]
