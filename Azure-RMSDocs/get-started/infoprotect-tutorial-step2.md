@@ -31,12 +31,12 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Still in the Azure portal, on the initial Azure Information Protection blade, select **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's automatically created for your tenant:
+1. Still in the Azure portal, on the initial Azure Information Protection blade, select **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's created for your tenant:
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories.
     
        > [!NOTE]
-       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Or you do not have the sub-labels named **Recipients Only**. This is because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**. This is because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
 
@@ -64,7 +64,7 @@ We'll now create a new sub-label for **All Employees**.
 
 1. Right-click the **Confidential** label, and select **Add a sub-label**.
 
-2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: 
+2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information, which requires protection. All employees are granted full permissions**.
     
     This text describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
@@ -75,7 +75,6 @@ We'll now create a new sub-label for **All Employees**.
 4. In the **Protection** blade, make sure that **Azure RMS** is selected, and that **Set Permissions** is selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is Vanarsdel, you see the following option to select:
-    
     
     This option automatically selects all the users in your organization who have an email address that can be used to assign permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
 
