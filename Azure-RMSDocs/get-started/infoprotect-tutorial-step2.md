@@ -84,9 +84,9 @@ We'll now create a new sub-label for **Confidential**.
 
 8. Back on the **Sub-label** blade, location the **Set visual marking** section:
     
-    For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
+    For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential". 
     
-    Similarly, for the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
+    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
     
     Although you can change the appearance for these visual markers, we'll leave these settings at the defaults for now.
     
