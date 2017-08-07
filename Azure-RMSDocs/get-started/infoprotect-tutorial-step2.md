@@ -82,11 +82,11 @@ We'll now create a new sub-label for **All Employees**.
  
 7. Click **OK** to close this **Add permissions** blade. Then click **OK** on the **Protection** blade, which keeps the default settings for content expiration and offline access.
 
-8. Back on the **Sub-label** blade, location the **Set visual marking** section.:
+8. Back on the **Sub-label** blade, location the **Set visual marking** section:
     
     For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
     
-    Similary, for the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
+    Similarly, for the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
     
     Although you can change the appearance for these visual markers, we'll leave these settings at the defaults for now.
     
@@ -96,7 +96,7 @@ We'll now create a new sub-label for **All Employees**.
     
     a. **Choose the type of condition**: Keep the default of **Built-in**.
     
-    b. In the **Select built-in* search box*: Type **Credit Card Number**. Then select **Credit Card Number**.
+    b. In the **Select built-in** search box: Type **Credit Card Number**. Then select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     
