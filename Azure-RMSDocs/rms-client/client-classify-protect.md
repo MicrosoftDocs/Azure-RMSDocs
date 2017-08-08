@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -98,15 +98,6 @@ You can specify your own protection settings for documents rather than use the p
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
-
-
-### Keyboard shortcuts for the Azure Information Protection bar
-
-To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
-
-- Press **Ctrl** + **Shift** + **~** 
-
-Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
 
 ## Using File Explorer to classify and protect files
 
