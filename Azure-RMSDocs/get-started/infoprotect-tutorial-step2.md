@@ -56,7 +56,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this to **On**.
 
-## Creating a new label for protection, a watermark, and a condition to prompt for classification
+## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
 We'll now create a new sub-label for **Confidential**.
 
@@ -72,7 +72,7 @@ We'll now create a new sub-label for **Confidential**.
     
 4. In the **Protection** blade, make sure that **Azure RMS** is selected, and that **Set Permissions** is selected. Then select **Add permissions**.
 
-5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is Vanarsdel, you see the following option to select:
+5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
     ![Granting all members protection permissions for an Azure Information Protection label](../media/info-protect-protection-all-members.png) 
     
@@ -86,7 +86,7 @@ We'll now create a new sub-label for **Confidential**.
 
 7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
     
-     [Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
+     ![Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
     
     If you selected **Add permissions**, this opens the **Add permissions** blade again, for you to add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
