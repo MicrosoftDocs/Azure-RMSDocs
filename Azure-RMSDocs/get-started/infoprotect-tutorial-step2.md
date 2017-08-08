@@ -88,7 +88,7 @@ We'll now create a new sub-label for **Confidential**.
     
      ![Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
     
-    If you selected **Add permissions**, this opens the **Add permissions** blade again, for you to add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
+    If you select **Add permissions**, this opens the **Add permissions** blade again, so that you can dd more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
 8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade..
 
