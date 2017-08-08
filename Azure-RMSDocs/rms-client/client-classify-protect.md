@@ -99,15 +99,6 @@ You can specify your own protection settings for documents rather than use the p
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
 
-
-### Keyboard shortcuts for the Azure Information Protection bar
-
-To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
-
-- Press **Ctrl** + **Shift** + **~** 
-
-Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
-
 ## Using File Explorer to classify and protect files
 
 When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 
