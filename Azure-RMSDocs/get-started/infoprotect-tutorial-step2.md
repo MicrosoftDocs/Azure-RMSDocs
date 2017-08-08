@@ -40,9 +40,7 @@ Although Azure Information Protection comes with a default policy that you can u
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
 
-    - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might have protection set, or not. As an example:
-    
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
+    - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might have protection set, or not. 
     
     In addition, there are some policy settings that are not set. All documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
@@ -64,7 +62,7 @@ We'll now create a new sub-label for **Confidential**.
 
 1. Right-click the **Confidential** label, and select **Add a sub-label**.
 
-2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information, which requires protection. All employees are granted full permissions**.
+2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information, which requires protection.**.
     
     This text describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
@@ -76,15 +74,27 @@ We'll now create a new sub-label for **Confidential**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is Vanarsdel, you see the following option to select:
     
+    ![Granting all members protection permissions for an Azure Information Protection label](../media/info-protect-protection-all-members.png) 
+    
     This option automatically selects all the users in your organization who can be granted permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
 
-6. You see by default, all permissions are granted. For this tutorial, keep this default. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
- 
-7. Click **OK** to close this **Add permissions** blade. Then click **OK** on the **Protection** blade, which keeps the default settings for content expiration and offline access.
+6. For the permissions, select **Co-Author** from the preset options. You see how this permission level automatically grants all the permissions listed except for Full Control:
+    
+    ![Granting Co-Author protection permissions for an Azure Information Protection label](../media/info-protect-protection-co-author.png)
+    
+    You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Co-Author** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
+
+7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
+    
+     [Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
+    
+    If you selected **Add permissions**, this opens the **Add permissions** blade again, for you to add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
+
+8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade..
 
 8. Back on the **Sub-label** blade, location the **Set visual marking** section:
     
-    For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential". 
+    For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential**. 
     
     For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
     
@@ -96,7 +106,7 @@ We'll now create a new sub-label for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Built-in**.
     
-    b. In the **Select built-in** search box: Type **Credit Card Number**. Then select **Credit Card Number**.
+    b. In the **Select built-in** search box: Type **credit card number**. then, from the search results, select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     

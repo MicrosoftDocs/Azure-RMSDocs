@@ -72,15 +72,15 @@ You see the **Sensitivity** value display **Not set**, which is what users see i
 
 1. In the Word document, type a valid credit card number, for example: **4242-4242-4242-4242**. 
 
-2. Save the document (use any file name, any location). 
+2. Save the document locally (use any file name). 
 
 3. You now see a prompt to apply the label that you configured for protection when credit card numbers are detected. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
 
     ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
 
-    In addition to the document now showing that our configured label is applied (for example, **Confidential \ All Employees**), you immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
+    In addition to the document now showing that our configured label is applied (for example, **Confidential \ Finance**), you immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
-    The document is also protected with the Azure Rights Management template that you specified, which you can confirm when you click the **File** tab and view the information for **Protect Document**. If you used the default Confidential template, you'll see the information that the document is restricted to internal users (users outside your organization will not be able to open the document) and its contents cannot be copied or printed. As the owner of the document, you can copy from it and print it, but if you email it to another user in your organization, they won't be able to do these actions.
+    The document is also protected with the Azure Rights Management protection that you specified. You can confirm this protection when you click the **File** tab and view the information for **Protect Document**. 
 
 4. You can now close this document.
 
