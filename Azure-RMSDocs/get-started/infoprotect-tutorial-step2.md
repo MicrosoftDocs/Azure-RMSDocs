@@ -145,7 +145,7 @@ We'll now create a new sub-label for **Confidential**.
     
     ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
     
-14. Now that we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
+14. Now that we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
 
     ![Azure Information Protection quick start tutorial step 3 - publish the configured policy](../media/info-protect-publish.png)
 
@@ -155,14 +155,17 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Configuration settings in the default policy|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
+|About the default policy and different versions|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 |Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md)|
-|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights
+.md)|
+
 
 
 >[!div class="step-by-step"]
 [&#171; Step 1](infoprotect-tutorial-step1.md)
+
 [Step 3 &#187;](infoprotect-tutorial-step3.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
