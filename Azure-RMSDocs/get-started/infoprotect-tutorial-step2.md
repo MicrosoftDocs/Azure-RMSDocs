@@ -45,7 +45,7 @@ Although Azure Information Protection comes with a default policy that you can u
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories:
     
        > [!NOTE]
-       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
     
@@ -72,8 +72,10 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 We'll now create a new sub-label for **Confidential**.
 
 1. Right-click the **Confidential** label, and select **Add a sub-label**.
+    
+    If you do not have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
-2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information, which requires protection.**.
+2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information that is restricted to employees only**.
     
     This text describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
@@ -89,11 +91,11 @@ We'll now create a new sub-label for **Confidential**.
     
     This option automatically selects all the users in your organization who can be granted permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
 
-6. For the permissions, select **Co-Author** from the preset options. You see how this permission level automatically grants all the permissions listed except for Full Control:
+6. For the permissions, select **Reviewer** from the preset options. You see how this permission level automatically grants some permissions listed but not all permissions:
     
-    ![Granting Co-Author protection permissions for an Azure Information Protection label](../media/info-protect-protection-co-author.png)
+    ![Granting Co-Author protection permissions for an Azure Information Protection label](../media/info-protect-protection-reviewer.png)
     
-    You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Co-Author** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
+    You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Reviewer** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
 
 7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
     
