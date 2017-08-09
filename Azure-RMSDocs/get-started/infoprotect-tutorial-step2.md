@@ -33,7 +33,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. In the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. In the **Azure Information Protection** blade, click **Create**.
+2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. On the **Azure Information Protection** blade, click **Create**.
     
     This activates the service for your tenant and creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
     
@@ -79,11 +79,11 @@ We'll now create a new sub-label for **Confidential**.
     
     This text describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
-3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select the **Protection** bar:
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
     ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-4. In the **Protection** blade, make sure that **Azure RMS** is selected, and that **Set Permissions** is selected. Then select **Add permissions**.
+4. On the **Protection** blade, make sure that **Azure RMS** is selected, and that **Set Permissions** is selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
@@ -105,7 +105,7 @@ We'll now create a new sub-label for **Confidential**.
 
 8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade..
 
-8. Back on the **Sub-label** blade, location the **Set visual marking** section:
+8. Back on the **Sub-label** blade, locate the **Set visual marking** section:
     
     For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential**. 
     
@@ -115,7 +115,7 @@ We'll now create a new sub-label for **Confidential**.
     
 9. Locate the section **Configure conditions for automatically applying this label**:
     
-    Click **Add a new condition** and then, in the **Condition** blade, select the following:
+    Click **Add a new condition** and then, on the **Condition** blade, select the following:
     
     a. **Choose the type of condition**: Keep the default of **Built-in**.
     
@@ -129,7 +129,7 @@ We'll now create a new sub-label for **Confidential**.
     
     Click **Save** to return to the **Sub-label** blade.
 
-10. In the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
