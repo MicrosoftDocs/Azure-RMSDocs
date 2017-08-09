@@ -6,7 +6,7 @@ description: Currently in preview, you can now configure and manage rights manag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Templates** section after the labels in the **Azure Information Protection - Global policy** blade. You can convert these templates to labels, or you can continue to manage them as separate templates and link to them when you configure protection for your labels. 
+- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Templates** section after the labels in the **Azure Information Protection - Global policy** blade. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
@@ -76,7 +76,7 @@ If you obtained your Azure Information Protection subscription some time ago, or
 - **\<organization name> - Confidential View Only**, for Read-only viewing for the protected content. 
 
 >[!NOTE]
->If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).
+>If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).
 >
 >You can manually convert templates, as explained in the later section, [To convert templates to labels](#to-convert-templates-to-labels), and then rename them if you want. Or they will be converted automatically for you if your default Azure Information Protection policy was recently created and the Azure Rights Management service for your tenant was activated at that time.
 

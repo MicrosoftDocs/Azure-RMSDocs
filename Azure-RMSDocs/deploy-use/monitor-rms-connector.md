@@ -6,7 +6,7 @@ description: Information to help you monitor the connector and your organization
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,7 +40,7 @@ For example, Information events such as:
 - ID 1000 confirm that the connector service has started
 
 - ID 1002 when a server successfully connects to the RMS connector
-- 
+
 - ID 1004 each time the list of authorized accounts (each account is listed) is downloaded to the connector 
 
 If you have not configured the connector to use HTTPS, expect to see a Warning ID 2002 that a client is using a non-secure (HTTP) connection.
