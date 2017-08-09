@@ -77,7 +77,9 @@ You see the **Sensitivity** value display **Not set**, which is what users see i
 
     In addition to the document now showing that our configured label is applied (for example, **Confidential \ Finance**), you immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
-    The document is also protected with the permissions that you specified for this label. You can confirm that the document is protected by clicking the **File** tab and view the information for **Protect Document**. You see that the document is protected by **Confidential \ Finance** and the label description. Because of the protection configuration of the label, only employees can open the document and some actions are restricted for them. For example, because they do not have the Print and the Copy and extract content permissions, they cannot print the document or copy from it. Such restrictions help to prevent data loss. As the owner of the document, you can print it and copy from it, but if you email the document to another user in your organization, they cannot do these actions.
+    The document is also protected with the permissions that you specified for this label. You can confirm that the document is protected by clicking the **File** tab and view the information for **Protect Document**. You see that the document is protected by **Confidential \ Finance** and the label description. 
+    
+    Because of the protection configuration of the label, only employees can open the document and some actions are restricted for them. For example, because they do not have the Print and the Copy and extract content permissions, they cannot print the document or copy from it. Such restrictions help to prevent data loss. As the owner of the document, you can print it and copy from it, but if you email the document to another user in your organization, they cannot do these actions.
 
 4. You can now close this document.
 
