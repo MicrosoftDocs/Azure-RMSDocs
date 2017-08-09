@@ -69,7 +69,7 @@ You see the **Sensitivity** value display **Not set**, which is what users see i
 
 1. In the Word document, type a valid credit card number, for example: **4242-4242-4242-4242**. 
 
-2. Save the document (use any file name, any location). 
+2. Save the document locally, with any file name. 
 
 3. You now see a prompt to apply the label that you configured for protection when credit card numbers are detected. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
 
