@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/7/2017
+ms.date: 08/9/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,11 +45,18 @@ Additional information about these visual markers:
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
     
-	- Multi-lines are supported when you use the preview version of the client
+	- Multiple lines of text are supported when you use the preview version of the Azure Information Protection client.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
-- When you use the preview version of the client, visual markers that you configure are not applied if there is already a visual marker of the same type. In addition, the visual marker is applied only once for documents, when the document is first saved. If a user then removes or modifies the visual marker, the label's visual marker is not reapplied unless the label is reapplied. 
+- When visual markings are applied to documents:
+    
+    -For the general availability version of the Azure Information Protection client: When a document is labeled and the label is configured to apply visual markings, the visual markings are applied every time the document is saved. This action can replace manual edits that a user makes to a header, footer, or watermark.
+    
+    -  For the current preview version of the Azure Information Protection client: When a document is labeled and the label is configured to apply visual markings, the visual markings are applied only when the document is first saved, and only if the document doesn't already have the visual markings. 
+    
+    In addition, if a document already has a label applied, visual markings are not applied while the document is open. If a label with visual markings is applied to a document and a user then manually edits those visual markings, while the document is open, those manual edits are not replaced by the visual markings that are configured for the applied label. However, when the document is reopened, visual markings for the label are reapplied if the label is reapplied, and this action can replace manual edits that a user has made to a header, footer, or watermark.
+
 
 Use the following instructions to configure visual markings for a label.
 
