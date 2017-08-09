@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,18 +78,22 @@ To remove the onboarding controls:
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
-## Step 12. rekey your Azure Information Protection tenant key
-This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1. Rekeying creates a new tenant key that uses RMS Cryptographic Mode 2. Cryptographic Mode 1 is supported for Azure Information Protection only during the migration process.
+## Step 12. Rekey your Azure Information Protection tenant key
+This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1. Rekeying results in protection that uses RMS Cryptographic Mode 2. Cryptographic Mode 1 is supported for Azure Information Protection only during the migration process.
 
-Rekeying when the migration is complete also helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
+Even if your AD RMS deployment was using Cryptographic Mode 2, we still recommend you do this step because a new key helps to protect your tenant from potential security breaches to your AD RMS key.
 
-When you rekey your Azure Information Protection tenant key (also known as "rolling your key"), a new key is created and the original key is archived. However, moving from one key to another doesn’t happen immediately but over a few weeks. Because it's not immediate, do not wait until you suspect a breach to your original key but rekey your Azure Information Protection tenant key as soon as the migration is complete.
+When you rekey your Azure Information Protection tenant key (also known as "rolling your key"), a new key is created and the original key is archived. Alternatively, you can archive your currently active key and configure Azure Information Protection to use the the default key that was automatically created for your tenant.
+
+Moving from one key to another doesn’t happen immediately but over a few weeks. Because it's not immediate, do not wait until you suspect a breach to your original key but do this step as soon as the migration is complete.
 
 To rekey your Azure Information Protection tenant key:
 
-- If your tenant key is managed by Microsoft: Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to rekey your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; rekeying your tenant key is not a free-of-charge support service.
+- If your tenant key is managed by Microsoft: Run the PowerShell cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. 
+    
+    To create a new key, rather than use the default key that was automatically created for your tenant, you must contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support). Open an Azure Information Protection support case with a request to create a new root key for your tenant. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; creating a new key for your tenant is not a free-of-charge support service.
 
-- If your tenant key is managed by you (BYOK): In Azure Key Vault, rekey the key that you're using for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the new key URL. 
+- If your tenant key is managed by you (BYOK): In Azure Key Vault, Create a new key for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the URI for this new key. 
 
 For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 
