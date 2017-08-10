@@ -32,9 +32,9 @@ ms.suite: ems
 
 Organizations that have a subscription that includes Azure Information Protection can configure their Azure Information Protection tenant to use a customer-managed key (BYOK) and [log its usage](../deploy-use/log-analyze-usage.md) at no extra charge. 
 
-The key must be stored in Azure Key Vault, which requires a paid (or trial) Azure subscription and you must use the Azure Key Vault Premium service tier to support HSM-protected keys. Using an HSM-protected key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+The key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
-When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription, to ensure that it's used by only the Azure Rights Management service. 
+When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription. This configuration helps to ensure that it's used by only the Azure Rights Management service. 
 
 ## Benefits of using Azure Key Vault
 
@@ -54,7 +54,6 @@ In addition to managing keys, Azure Key Vault offers your security administrator
 
 For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
-
 ## Restrictions when using BYOK
 
 BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests to the Azure Rights Management service.
@@ -68,7 +67,6 @@ There is one exception: **If you enabled Exchange Online IRM by importing your t
 >2. If there is no value displayed for the **Select LicensingLocation** parameter, you can use BYOK with Exchange Online without any restrictions.
 
 Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
-
 
 ## Next steps
 

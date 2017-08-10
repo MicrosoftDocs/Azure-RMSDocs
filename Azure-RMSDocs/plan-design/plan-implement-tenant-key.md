@@ -33,7 +33,7 @@ Use the information in this article to help you plan for and manage your Azure I
 
 What is the Azure Information Protection tenant key?
 
-- Azure Information Protection maintains one or more keys for each organization that has a subscription for Azure Information Protection. Whenever keys are used for Azure Information Protection within an organization (such as user keys, computer keys, document encryption keys), these keys cryptographically chain to your Azure Information Protection tenant key . This tenant keyacts as a root key for your organization.
+- Azure Information Protection maintains one or more keys for each organization that has a subscription for Azure Information Protection. The Azure Information Protection tenant key acts as a root key for your organization. Whenever Azure Information Protection uses keys for your organization, these keys cryptographically chain to your Azure Information Protection tenant key. The keys include user keys, computer keys, and document encryption keys.
 
 - The on-premises equivalent of the Azure Information Protection tenant key is known as the Server Licensor Certificate (SLC) key. 
 
@@ -53,35 +53,35 @@ If you have already enabled Exchange Online for Azure Rights Management by using
 
 ## Choose your tenant key topology: Managed by Microsoft (the default) or managed by you (BYOK)
 
-Decide which tenant key topology is best for your organization. By default, Azure Information Protection generates your tenant key and manages most aspects of the tenant key life cycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
+Decide which tenant key topology is best for your organization. By default, Azure Information Protection generates a tenant key for you and manages most aspects of the tenant key life cycle. This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
-Alternatively, you might want complete control over your tenant key, which is possible when you use [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). You create the key, either directly in Key Vault or create it on-premises and transfer it to Key Vault. Then you configure Azure Information Protection to use that key.
+Alternatively, you might want complete control over your tenant key, which is possible when you use [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). You create the key, either directly in Key Vault, or create it on-premises and either transfer or import it to Key Vault. You then configure Azure Information Protection to use that key.
 
 To create your own key, you have the following options:
 
-- A key that you create on-premises and import to Key Vault:
+- A key that you create on-premises and transfer or import to Key Vault:
     
-    - An HSM-based key that you create on-premises and import to Key Vault as an HSM-based key
+    - An HSM-protected key that you create on-premises and transfer to Key Vault as an HSM-protected key.
     
-    - A software-based key that you create on-premises and import to Key Vault as an HSM-based key
+    - A software-protected key that you create on-premises and convert and then transfer to Key Vault as an HSM-protected key. This option is supported only when you [migrate from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
-    - A software-based key that you create on-premises and import to Key Vault as a software-based key
+    - A software-protected key that you create on-premises and import to Key Vault as a software-protected key. This option requires a .PFX certificate file.
 
 - A key that you create in Key Vault:
     
-    - An HSM-based key that you create in Key Vault
+    - An HSM-protected key that you create in Key Vault.
     
-    - A software-based key that you create in Key Vault
+    - A software-protected key that you create in Key Vault.
 
-Of these options, the most typical "bring your own key" scenario is an HSM-based key that you create on-premises and import to Key Vault as an HSM-based key. Although this option has the greatest administrative overheads, it might be required for your organization to comply with specific regulations. The HSMs that are used by Azzure Key Vault are FIPS 140-2 Level 2 validated.
+Of these options, the most typical "bring your own key" scenario is an HSM-protected key that you create on-premises and import to Key Vault as an HSM-protected key. Although this option has the greatest administrative overheads, it might be required for your organization to comply with specific regulations. The HSMs that are used by Azure Key Vault are FIPS 140-2 Level 2 validated.
 
 With this option, the following happens:
 
-1.  You generate your tenant key on your premises, in line with your IT policies and security policies. You keep the master key on-premises and you are responsible for backing it up.
+1. You generate your tenant key on your premises, in line with your IT policies and security policies. You keep the master key on-premises and you are responsible for backing it up.
 
-2.  You securely transfer a copy of this key from a hardware security module (HSM) in your possession to HSMs that are owned and managed by Microsoft, using Azure Key Vault. Throughout this process, your key never leaves the hardware protection boundary.
+2. You securely transfer a copy of this key from an HSM in your possession to HSMs that are owned and managed by Microsoft and Azure Key Vault. Throughout this process, your key never leaves the hardware protection boundary.
 
-3.  When you transfer your key to Microsoft, it stays protected by Azure Key Vault.
+3. When you transfer your key to Microsoft, it stays protected by Azure Key Vault.
 
 > [!NOTE]
 > As an additional protection measure, Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. When you manage your own tenant key, it is tied to the security domain of the region or instance in which your Azure Information Protection tenant is registered. For example, a tenant key from a European customer cannot be used in data centers in North America or Asia.
@@ -89,25 +89,26 @@ With this option, the following happens:
 Although it’s optional, you will also probably want to use the near real-time usage logs from Azure Information Protection to see exactly how and when your tenant key is being used.
 
 ## The tenant key life cycle
+
 If you decide that Microsoft should manage your tenant key, Microsoft handles most of the key life cycle operations. However, if you decide to manage your tenant key, you are responsible for many of the key life cycle operations and some additional procedures in Azure Key Vault.
 
 The following diagrams show and compares these two options. The first diagram shows how little administrator overheads there are for you in the default configuration when Microsoft manages the tenant key.
 
 ![Azure Information Protection tenant key lifecycle - managed by Microsoft, the default](../media/RMS_BYOK_cloud.png)
 
-The second diagram shows the additional steps required when you manage your own tenant key by using the most typical BYOK option: An HSM-based key that you create on-premises and import to Key Vault as an HSM-based key.
+The second diagram shows the additional steps required when you manage your own tenant key by using the most typical BYOK option: An HSM-protected key that you create on-premises and import to Key Vault as an HSM-protected key.
 
 ![Azure Information Protection tenant key lifecycle - managed by you, BYOK](../media/RMS_BYOK_onprem4.png)
 
-If you decide to let Microsoft manage your tenant key, there are two categories:
+If you decide to let Microsoft manage your tenant key: 
 
-- You currently have Active Directory Rights Management Services (AD RMS) and want to migrate to Azure Information Protection: See [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
+- Unless you are migrating from AD RMS, no further action is required for you to generate the key for your tenant and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).
 
-- You don't have AD RMS: No further action is required for you to generate the key for your tenant and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).  
+- If you currently have AD RMS and want to migrate to Azure Information Protection, use the migration instructions: [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 If you decide to manage your tenant key yourself, read the following sections for more information.
 
-## Implementing your Azure Information Protection tenant key
+## Implementing BYOK for your Azure Information Protection tenant key
 
 Use the information and procedures in this section if you have decided to generate and manage your tenant key; the bring your own key (BYOK) scenario:
 
@@ -122,19 +123,19 @@ See the following table for a list of additional prerequisites to use bring your
 
 |Requirement|More information|
 |---------------|--------------------|
-|Your Azure Information Protection tenant must have a subscription to Microsoft Azure. If you do not have one, you can sign up for a [free account](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> To use an HSM-based key, you must have the Azure Key Vault Premium service tier.|The free Azure subscription that provides access to configure Azure Active Directory (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use [Azure Resource Manager](https://docs.microsoft.com/powershell/module/azurerm.resources/?view=azurermps-3.8.0) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK.
-|To use an HSM-based key that you create on-premises|All the prerequisites listed for Key Vault BYOK.|See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using the software-key-to-hardware-key migration path, you must have a minimum version of 11.62 for the Thales firmware.|
+|Your Azure Information Protection tenant must have an Azure subscription. If you do not have one, you can sign up for a [free account](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> To use an HSM-protected key, you must have the Azure Key Vault Premium service tier.|The free Azure subscription that provides access to configure Azure Active Directory (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use [Azure Resource Manager](https://docs.microsoft.com/powershell/module/azurerm.resources/?view=azurermps-3.8.0) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK.
+|To use an HSM-protected key that you create on-premises: All the prerequisites listed for Key Vault BYOK.|See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using the software-key-to-hardware-key migration path, you must have a minimum version of 11.62 for the Thales firmware.|
 |The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
-Only Thales HSMs are supported for HSM-based keys. For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
+Only Thales HSMs are supported for HSM-protected keys. For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
 ### Instructions for BYOK
 
 Use the Azure Key Vault documentation to create a key vault and the key that you want to use for Azure Information Protection. For example, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).
 
-To create an HSM-based key on-premises and import it to Key Vault as an HSM-based key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+To create an HSM-protected key on-premises and import it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
-When your key imported or created in Key Vault, it is given a key ID in Key Vault. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You will need to tell the Azure Rights Management service from Azure Information Protection to use this key, by specifying this URL.
+A key that is stored in Key Vault has a key ID. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You must configure the Azure Rights Management service from Azure Information Protection to use this key, by specifying its URL.
 
 Before Azure Information Protection can use the key, the Azure Rights Management service must be authorized to use the key in your organization's key vault. To do this, use the Key Vault PowerShell cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) and grant permissions to the Azure Rights Management service principal, by using the GUID 00000012-0000-0000-c000-000000000000. For example:
 
@@ -156,7 +157,6 @@ Then run the [Use-AadrmKeyVaultKey cmdlet](/powershell/module/aadrm/use-aadrmkey
 If you need to confirm that the key URL is set correctly in the Azure RMS service, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
 
 Finally, if the Azure Rights Management service is already activated, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to tell Azure Rights Management to use this key as the active tenant key for your Azure Rights Management service. If you do not do this step, Azure Rights Management will continue to use the default Microsoft-managed key, that was automatically created when the service was activated.
-
 
 ## Next steps
 
