@@ -6,7 +6,7 @@ description: Identify the different levels of control and responsibility that yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,24 +29,25 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Azure Information Protection tenant key after it is implemented.
+Depending on your tenant key topology for Azure Information Protection, you have different levels of control and responsibility for your Azure Information Protection tenant key. The two key topologies are **Microsoft-managed** and **customer-managed**.
 
 When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
-The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
+The following table identifies the operations that you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
 
 |Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
 |Revoke your tenant key|No (automatic)|Yes|
-|Re-key your tenant key|Yes|Yes|
+|Rekey your tenant key|Yes|Yes|
 |Backup and recover your tenant key|No|Yes|
 |Export your tenant key|Yes|No|
 |Respond to a breach|Yes|Yes|
 
-After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure Information Protection tenant key:
-
+After you have identified which topology you have implemented, select one of the following links for more information about these operations for your Azure Information Protection tenant key:
 
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)
+
+However, if you want to create an Azure Information Protection tenant key by importing a trusted publishing domain (TPD) from Active Directory Rights Management Services, this import operation is part of the [migration from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

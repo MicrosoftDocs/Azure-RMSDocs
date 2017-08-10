@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 Azure Information Protection is a cloud-based solution that helps an organization to classify, label, and protect its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. 
 
-The following picture shows an example of Azure Information Protection in action. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured, which classifies and optionally, protects the document. 
+The following picture shows an example of Azure Information Protection in action. The administrator has configured rules to detect sensitive data (in this case, credit card information). When a user saves a Word document that contains credit card information, she sees a custom tooltip that recommends she applies a specific label that the administrator configured. This label classifies and optionally, depending on the configuration, protects the document. 
 
 ![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
@@ -39,9 +39,9 @@ After your content is classified (and optionally protected), you can then track 
 
 ## How labels apply classification
 
-You use Azure Information Protection labels to apply classifcation to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text so that other services (such as data loss prevention solutions) can identify the classification and take appropriate action. 
+You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable at all times, regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text. The clear text ensures that other services, such as data loss prevention solutions, can identify the classification and take appropriate action. 
 
-For example, the following email message has been classified as "Internal". This label is added as a footer to the email message, as a visual indicator for all recipients that it's intended for internal use and should not be sent outside the organization. This label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
+For example, the following email message has been classified as "General". This label is added as a footer to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
 ![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
 
@@ -52,33 +52,33 @@ The protection technology uses *Azure Rights Management* (often abbreviated to A
 
 This protection technology uses encryption, identity, and authorization policies. Similarly to the labels that are applied, protection that is applied by using Rights Management stays with the documents and emails, independently of the location—inside or outside your organization, networks, file servers, and applications. This information protection solution keeps you in control of your data, even when it is shared with other people.
 
-For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and in addition, prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using *rights management templates*.
+For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and also prevent them from being forwarded or prevent the use of the Reply All option. These protection tasks can be simplified and streamlined by using *rights management templates*.
 
 ### Rights management templates
 
 As soon as you activate the Azure Rights Management service, two default templates are created for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own custom templates that apply more restrictive controls.
 
-These templates can be part of a label's configuration, so that when a specific label is applied to a document (or email message), the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
+These templates can be part of a label's configuration, so that when a specific label is applied to a document or email message, the data is both classified and automatically protected. The templates can also be selected by users or administrators in products and services that support the Azure Rights Management technology.
 
 This example shows how you might select a template for a label when you configure the Azure Information Protection policy from the Azure portal:
 
 ![Example of selecting templates in the Azure portal](../media/info-protect-template-callout.png)
 
-The same templates can be selected from the Exchange admin center, to configure Exchange Online mail flow rules, which support the Azure Rights Management technology:
+The same templates can be selected from the Exchange admin center. For example, you can configure Exchange Online mail flow rules to use these templates because Exchange supports the Azure Rights Management technology:
 
 ![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
-## Integration with end user workflows
+## Integration with end-user workflows
 
-Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture. The same bar is added to Excel, PowerPoint, and Outlook. For example:
+Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
 ![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-barv2.png)
 
-This Information Protection bar makes it easy for end users to select labels for the correct classification, and where required, these labels can also automatically protect their documents and emails.
+This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
-To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explore:
+To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explorer:
 
 ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
