@@ -101,7 +101,7 @@ The second diagram shows the additional steps required when you manage your own 
 
 If you decide to let Microsoft manage your tenant key, there are two categories:
 
-- You currently have Active Directory Rights Management Services (AD RMS) and want to migrate to Azure Information Protection: See [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms). 
+- You currently have Active Directory Rights Management Services (AD RMS) and want to migrate to Azure Information Protection: See [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 - You don't have AD RMS: No further action is required for you to generate the key for your tenant and you can go straight to [Next steps](plan-implement-tenant-key.md#next-steps).  
 
