@@ -6,11 +6,7 @@ description: Understand the restrictions when you use customer-managed keys (kno
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< HEAD
-ms.date: 05/17/2017
-=======
 ms.date: 06/07/2017
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -61,7 +57,6 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](/azur
 
 ## Restrictions when using BYOK
 
-<<<<<<< HEAD
 BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests to the Azure Rights Management service.
 
 There is one exception: **If you enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS** you cannot use BYOK with full Exchange functionality until your tenant is migrated by Microsoft. Customers who haven't yet enabled Exchange Online for Azure Rights Management can use BYOK without restrictions.
@@ -71,34 +66,9 @@ There is one exception: **If you enabled Exchange Online IRM by importing your t
 >
 >1. Using Exchange Online PowerShell, run `Get-IRMConfiguration`. 
 >2. If there is no value displayed for the **Select LicensingLocation** parameter, you can use BYOK with Exchange Online without any restrictions.
-=======
-BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service (Azure RMS) that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that work with Azure RMS by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests of Azure RMS.
-
-There is one exception: Currently, **Azure RMS BYOK is not compatible with Exchange Online**:
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
 
-<<<<<<< HEAD
-=======
-If you want to use Exchange Online, we recommend that you deploy Azure RMS in the default key management mode now, where Microsoft generates and manages your key. You have the option to move to BYOK later, for example, when Exchange Online does support Azure RMS BYOK. However, if you cannot wait, another option is to deploy Azure RMS with BYOK now, with reduced RMS functionality for Exchange Online (unprotected emails and unprotected attachments remain fully functional):
-
--   Protected emails or protected attachments in Outlook Web Access cannot be displayed.
-
--   Protected emails on mobile devices that use Exchange ActiveSync IRM cannot be displayed.
-
--   Transport decryption (for example, to scan for malware) and journal  decryption is not possible, so protected emails and protected attachments will be skipped.
-
--   Transport protection rules and data loss prevention (DLP) that enforce IRM policies is not possible, so RMS protection cannot be applied by using these methods.
-
--   Server-based search for protected emails, so protected emails will be skipped.
-
-When you use Azure RMS BYOK with reduced RMS functionality for Exchange Online, RMS will work with email clients in Outlook on Windows and Mac, and on other email clients that don't use Exchange ActiveSync IRM.
-
-If you are migrating to Azure RMS from AD RMS, you might have imported your key as a trusted publishing domain (TPD) to Exchange Online (also called BYOK in Exchange terminology, which is separate from Azure Key Vault BYOK). In this scenario, you must remove the TPD from Exchange Online to avoid conflicting templates and policies. For more information, see [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) from the Exchange Online cmdlets library.
-
-Sometimes, the Azure RMS BYOK  exception for Exchange Online is not a problem in practice. For example, organizations that need BYOK and logging run their data applications (Exchange, SharePoint, Office) on-premises, and use Azure RMS for functionality that is not easily available with on-premises AD RMS (for example, collaboration with other companies and access from mobile clients). Both BYOK and logging work well in this scenario and allow the organization to have full control over their Azure RMS subscription.
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 ## Next steps
 
