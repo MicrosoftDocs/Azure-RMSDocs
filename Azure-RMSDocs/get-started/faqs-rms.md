@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -117,8 +117,11 @@ The authentication method for these accounts can vary, depending on how the admi
 
 If you email a protected document to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
 
-## As an administrator, can I grant permissions to external users (people from outside my company) to custom templates?
-Yes. When you convert a template to a label in the Azure portal, you can configure the [protection settings](../deploy-use/configure-policy-protection.md) to grant permissions to users and groups from outside your organization, and even all users in another organization. Or, you can do this configuration by using PowerShell.
+## Can I add external users (people from outside my company) to custom templates?
+
+Yes. When you convert a template to a label in the Azure portal, you can configure the [protection settings](../deploy-use/configure-policy-protection.md) to add permissions to users and groups from outside your organization, and even all users in another organization. Or, you can do this configuration by using PowerShell.
+
+For more information about converting custom templates to labels so that you can then easily add external users, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 For more information about converting custom templates to labels, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
