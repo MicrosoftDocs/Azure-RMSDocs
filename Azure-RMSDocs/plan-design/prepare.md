@@ -49,7 +49,6 @@ When you create users and groups by using the first three methods from this list
 
 There are three scenarios for using users and groups with Azure Information Protection:
 
-<<<<<<< HEAD
 - **For assigning labels to users** when you use labeling and classification. Only administrators select these groups:
 
     - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.     
@@ -163,7 +162,6 @@ To confirm the user accounts, run the following command:
 
 	Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
 
-<<<<<<< HEAD
 Your first check is to make sure that the users you want to use with Azure Information Protection are displayed.
 
 Then check whether the **ProxyAddresses** column is populated. If it is, the email values in this column can be used to authorize the user for Azure Information Protection.
