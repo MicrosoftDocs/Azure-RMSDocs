@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -108,14 +108,11 @@ The Azure Rights Management service always uses an Azure Active Directory accoun
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
-## Can I add external users (people from outside my company) to templates?
-Yes. Creating templates that end users (and administrators) can select from applications makes it quick and easily for them to apply information protection, using predefined policies that you specify. One of the settings in the template is who is able to access the content, and you can specify users and groups from within your organization, and users and groups from outside your organization. You can even specify all users in another organization.
+## Can I add external users (people from outside my company) to custom templates?
 
-You can do this configuration by using the Azure portal, when you configure the [protection settings](../deploy-use/configure-policy-protection.md). Or, you can do this configuration by using PowerShell. To use PowerShell:
+Yes. When you convert a template to a label in the Azure portal, you can configure the [protection settings](../deploy-use/configure-policy-protection.md) to add permissions to users and groups from outside your organization, and even all users in another organization. Or, you can do this configuration by using PowerShell.
 
--   **Use a rights definition object to create or update a template**.  Specify the external email addresses and their rights in a rights definition object, which you then use to create or update a template. You specify the rights definition object by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable and then supply this variable to the RightsDefinition parameter with the [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlet (for a new template) or [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet (if you're modifying an existing template). However, if you're adding these users to an existing template, you need to define rights definition objects for the existing groups in the templates and not just the external users.
-
-For more information about templates, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+For more information about converting custom templates to labels so that you can then easily add external users, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## Does Azure RMS work with dynamic groups in Azure AD?
 An Azure AD Premium feature lets you configure dynamic membership for security groups by specifying [attribute-based rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/). This group type does not support an email address, and so cannot be used with the Azure Rights Management service. However, Office 365 groups support both dynamic group membership and are mail-enabled. Because this group is mail-enabled, you can use it with Azure Rights Management protection.
