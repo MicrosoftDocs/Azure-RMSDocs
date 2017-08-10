@@ -6,7 +6,11 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
+<<<<<<< HEAD
 ms.date: 05/17/2017
+=======
+ms.date: 08/08/2017
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,8 +35,22 @@ ms.suite: ems
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-However, you can also classify and protect files by using **File Explorer**, which supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
+However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
 
+If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
+
+<<<<<<< HEAD
+=======
+### Safely share a file with people outside your organization
+
+Files that are protected are safe to share with others. For example, you attach the file to an email.
+
+If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
+
+If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
+
+When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 ## Using Office apps to classify and protect your documents and emails
 
@@ -60,7 +78,7 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
-- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and Feedback** and check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
+- If the missing label applies protection, you might have an edition of Office that does not support applying Rights Management protection. To verify, click **Protect** > **Help and Feedback**. In the dialog box, check if you have a message in the **Client status** section that says **This client is not licensed for Office Professional Plus.** 
 
 - The label might be in a scoped policy that doesn't include your account. Check with your help desk or administrator.
 
@@ -78,14 +96,23 @@ You can specify your own protection settings for documents rather than use the p
 
     - **Protect with custom permissions**: Make sure that this is selected so that you can specify and apply your custom permissions. Clear this option to remove any custom permissions.
     
+<<<<<<< HEAD
     - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select the level of access that you want specified people to have.
 
     - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported.
+=======
+    - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select the level of access that you want people to have.
+
+    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
+    
+    If you have the current preview version of the Azure Information Protection client, you can alternatively use the **Select users, groups, or organization** button. This button displays the **Select Users or Groups** dialog box for your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
         
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
+    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
 
+<<<<<<< HEAD
 ### Safely sharing by email
 
 When you share documents by email, you can attach the document to an email that you protect, and the document is automatically protected with the same restrictions that apply to the email.
@@ -105,6 +132,8 @@ To access the Azure Information Protection bar by using keyboard shortcuts, use 
 
 Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
 
+=======
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ## Using File Explorer to classify and protect files
 
 When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 
@@ -142,9 +171,17 @@ The admin guide contains a full list of the file types supported and the files a
 
     - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
+<<<<<<< HEAD
     - **Select users**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not supported.
+=======
+    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
+    
+    Alternatively, you can use the **Select users, groups, or organization** button to select users or groups from the Outlook address book. If you have the current preview version of the Azure Information Protection client, this button displays the **Select Users or Groups** dialog box for your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
         
-    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you specify. You will still be able to open the original file but after midnight (your current time zone), on the day that you select, the people that you specified will not be able to open the file.
+    - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
+    
+    Note that if this setting was previously configured by using custom permissions from an Office 2010 app, the specified expiry date does not display in this dialog box but the expiry date is still set. This is a display issue only for when the expiry date was configured in Office 2010.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 

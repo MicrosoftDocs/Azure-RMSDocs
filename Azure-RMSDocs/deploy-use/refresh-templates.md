@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Refreshing templates for users
+# Refreshing templates for users and services
 
 >*Applies to: Azure Information Protection, Office 365*
 
@@ -42,6 +42,7 @@ When you use the Azure Rights Management service of Azure Information Protection
 |Office 2016 for Mac|Automatically refreshed - no additional steps required.|
 |RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
 
+When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 15 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
 If you have already configured Information Rights Management (IRM) for Exchange Online by importing your trusted publishing domain (TPD) from Azure RMS, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.
@@ -161,6 +162,6 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

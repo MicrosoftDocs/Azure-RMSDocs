@@ -6,7 +6,11 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
+<<<<<<< HEAD
 ms.date: 05/17/2017
+=======
+ms.date: 06/07/2017
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +99,12 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |Requirement|More information|
 |---------------|--------------------|
 |A subscription that supports Azure Information Protection.|For more information about the available subscriptions, see the Azure Information Protection [Pricing page](https://go.microsoft.com/fwlink/?LinkId=827589).|
+<<<<<<< HEAD
 |All the prerequisites listed for Key Vault BYOK, which includes a paid or trial Azure subscription for your existing Azure Information Protection tenant. |See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br /> The free Azure subscription that provides access to configure Azure Active Directory and configuration of Azure Rights Management custom templates (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use [Azure Resource Manager](https://docs.microsoft.com/powershell/module/azurerm.resources/?view=azurermps-3.8.0) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
+=======
+|You do not use Exchange Online.<br /><br /> Or, if you use Exchange Online, you understand and accept the limitations of using BYOK with this configuration.|For more information about the restrictions and current limitations for BYOK, see [BYOK pricing and restrictions](byok-price-restrictions.md).<br /><br />**Important**: Currently, BYOK is not compatible with Exchange Online.|
+|All the prerequisites listed for Key Vault BYOK, which includes a paid or trial Azure subscription for your existing Azure Information Protection tenant. |See [Prerequisites for BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) from the Azure Key Vault documentation. <br /><br /> The free Azure subscription that provides access to configure Azure Active Directory and configuration of Azure Rights Management custom templates (**Access to Azure Active Directory**) is not sufficient to use Azure Key Vault. To confirm that you have an Azure subscription that you can use for BYOK, use the [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx) PowerShell cmdlets: <br /><br /> 1. Start an Azure PowerShell session with the **Run as administrator** option, and sign in as a global admin for your Azure Information Protection tenant with the following command: `Login-AzureRmAccount`<br /><br />2. Type the following and confirm that you see values displayed for your subscription name and ID, your Azure Information Protection tenant ID, and that the state is enabled: `Get-AzureRmSubscription`<br /><br />If no values are displayed and you are simply returned to the prompt, you do not have an Azure subscription that can be used for BYOK. <br /><br />**Note**: In addition to the BYOK prerequisites, if you are migrating from AD RMS to Azure Information Protection by using software key to hardware key, you must have a minimum version of 11.62 for the Thales firmware.|
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 |The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).

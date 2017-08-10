@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- Label names and tooltips are supported in one language only.
+- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels for different languages](../deploy-use/configure-policy-languages.md).
 
 - There is no centralized logging for classification and labeling.
 
@@ -59,7 +59,7 @@ If you select the option to install the demo policy when you install the [Azure 
 
 ## Which options in the Azure portal are P2?
 
-The options in the Azure portal that require a **Azure Information Protection Premium 2** (P2) subscription now have an information popup message to identify them. For more information about which features are included in the P1 and P1 subscriptions, see the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+The options in the Azure portal that require an **Azure Information Protection Premium 2** (P2) subscription now have an information popup message to identify them. For more information about which features are included in the P1 and P1 subscriptions, see the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 ## Can a file have more than one classification?
 
@@ -71,45 +71,22 @@ When you use sub-labels, don't configure visual markings, protection, and condit
 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
-No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or will retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
+No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties; in emails, this information is in the email headers.
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties. In emails, this information is in the email headers.
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 
-Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. However, you can integrate the two solutions so that when users classify an email using the Outlook web app and in some mobile mail applications, the Azure Information Protection classification and corresponding label markings is automatically added. Exchange adds the classification and the Azure Information Protection client applies the corresponding label settings for that classification.
+Exchange message classification is an older feature that can classify emails and it is implemented independently from Azure Information Protection classification. 
 
-Although the Outlook web app doesn't yet natively support Azure Information Protection classification and protection, you can use this same technique to use your labels with this email client in addition to the desktop Outlook client.
+However, you can integrate the two solutions so that when users classify an email by using Outlook on the web and by using some mobile mail applications, the Azure Information Protection classification and corresponding label markings are automatically added. 
 
-To achieve this solution: 
+You can use this same technique to use your labels with Outlook on the web and these mobile mail applications.
 
-1. Use the [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
+For configuration steps, see [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](../rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution). 
 
-2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
-
-    For the message header, you'll find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
-    
-    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
-    
-    Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
-    
-    ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
-
-Before you test this, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). But when the rule is in effect, the following now happens when users use the Outlook web access app or a mobile device client that supports Rights Management protection: 
-
-- Users select the Exchange message classification and send the email.
-
-- The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
-
-- When recipients running the Azure Information Protection client view the email in Outlook, they will see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
-
-If your Azure Information Protection labels apply rights management protection, add this to the rule configuration by selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
-
-You can also configure transport rules to do the reverse mapping: When an Azure Information Protection label is detected, set a corresponding Exchange message classification. To do this:
-
-- For each Azure Information Protection label, create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

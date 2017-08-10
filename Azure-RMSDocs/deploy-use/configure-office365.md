@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Office 365&colon; Configure clients & online services - AIP
+title: Configuration for Office 365 clients and online services to use Azure RMS from AIP
 description: Information and instructions for admins to configure Office 365 to work with the Azure Rights Management service from Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,11 +25,11 @@ ms.suite: ems
 
 ---
 
-# Office 365: Configuration for clients and online services
+# Office 365: Configuration for clients and online services to use the Azure Rights Management service
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook and the Outlook Web App. All users have to do is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials and they can protect files and emails, and use files and emails that have been protected by others.
+Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials. Then, they can protect files and emails, and use files and emails that have been protected by others.
 
 However, we recommend that you supplement these applications with the Azure Information Protection client, so that users get the benefit of the Office add-in and support for additional file types. For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
@@ -39,6 +39,7 @@ For information about how Exchange Online IRM works with the Azure Rights Manage
 If you haven't previously configured Exchange Online to use the Azure Rights Management service, see [Set up message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted, you must use a different configuration method until Microsoft migrates your tenant. For these configuration steps, see [Exchange Online IRM configuration when you have imported a trusted publishing domain](configure-exchange-with-imported-tpd.md). In addition, you cannot use a customer-managed key (also known as bring your own key, or BYOK) until Microsoft migrates your tenant. For more information about this restriction, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
+
 
 After you have configured Exchange Online to use the Azure Rights Management service, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 

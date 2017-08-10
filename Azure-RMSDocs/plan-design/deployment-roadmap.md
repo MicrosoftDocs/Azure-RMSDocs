@@ -6,7 +6,11 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
+<<<<<<< HEAD
 ms.date: 05/17/2017
+=======
+ms.date: 07/31/2017
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +99,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 Optionally, consider configuring the following:
 
--   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+-   Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 -   Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
@@ -105,7 +109,11 @@ Optionally, consider configuring the following:
     
     Modify your Azure Information Protection policy so that one or more labels apply Rights Management protection. For more information, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
     
+<<<<<<< HEAD
     Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM or message protection, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in step 2 for Exchange Online, and step 6 for Exchange on-premises. 
+=======
+    Note that users can apply labels in Outlook that apply Rights Management protection even if Exchange is not configured for information rights management (IRM). However, until Exchange is configured for IRM, your organization will not get the full functionality of using Azure Rights Management protection with Exchange. This additional configuration is included in the following list (2 for Exchange Online, and 5 for Exchange on-premises). 
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 2. Configure Office applications and services
     
@@ -123,7 +131,7 @@ Optionally, consider configuring the following:
     
     If you have on-premises services that you want to use with the Azure Rights Management service, install and configure the Rights Management connector. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
 
-### Step 4: Use and monitor your data protection solutions
+### Step 6: Use and monitor your data protection solutions
 You’re now ready to protect your data, and log how your company is using the labels that you've configured and the Rights Management data protection. For addition information to support this deployment phase, see the following:
 
 - [Helping users to protect files by using the Azure Rights Management service](../deploy-use/help-users.md)
@@ -134,7 +142,7 @@ You’re now ready to protect your data, and log how your company is using the l
 
 If you're interested in automatically protecting files using File Classification Infrastructure on a Windows-based file server, see [RMS protection with Windows Server File Classification Infrastructure (FCI)](../rms-client/configure-fci.md).
 
-### Step 5: Administer the Rights Management service for your tenant account as needed
+### Step 7: Administer the Rights Management service for your tenant account as needed
 As you begin to use the Azure Rights Management service, you might find Windows PowerShell useful to help script or automate administrative changes. For more information, see [Administering the Azure Rights Management service by using Windows PowerShell](../deploy-use/administer-powershell.md).
 
 
@@ -161,7 +169,11 @@ Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsm
 
 Optionally, consider configuring the following:
 
+<<<<<<< HEAD
 - Custom templates if the default rights policy templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+=======
+-   Custom templates if the default templates are not sufficient for your organization. You can do this step now, or later. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+>>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 - Usage logging so that you can monitor how your organization is using Rights Management. You can do this step now, or later. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
 
@@ -181,7 +193,7 @@ Optionally, consider configuring the following:
 
 4. Protect files in bulk - as needed 
     
-    The PowerShell cmdlets that let you bulk protect or bulk unprotect multiple file types are automatically installed with the Azure Information Protection client. For more information, see [Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md) from the admin guide..
+    The PowerShell cmdlets that let you bulk protect or bulk unprotect multiple file types are automatically installed with the Azure Information Protection client. For more information, see [Using PowerShell with the Azure Information Protection client](..\rms-client\client-admin-guide-powershell.md) from the admin guide.
 
 5. Deploy the connector for on-premises servers
     

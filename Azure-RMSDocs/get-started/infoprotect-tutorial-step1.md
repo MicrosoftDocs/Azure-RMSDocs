@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,9 +36,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate this service, which include using Windows PowerShell, and using the admin portals.
 
-For this tutorial, we'll go straight to the activation page in the admin portal for Office 365 administrators. This is the same page for the Office 365 classic portal and the Office 365 admin center preview. 
-
-If you prefer to navigate to this page from your Office 365 admin portal rather than go directly to the page, see the full instructions from [Activating Azure Rights Management](../deploy-use/activate-service.md). Also use these full instructions if you have access to the Azure portal but not the Office 365 admin portal.
+For this tutorial, we'll go straight to the activation page in the admin portal for Office 365 administrators. However, if you prefer to navigate to this page from your Office 365 admin portal rather than go directly to the page, see the full instructions from [Activating Azure Rights Management](../deploy-use/activate-service.md). Also use these full instructions if you have access to the Azure portal but not the Office 365 admin portal.
 
 ## To activate the Rights Management service
 
@@ -54,14 +52,14 @@ If you prefer to navigate to this page from your Office 365 admin portal rather 
 
     You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
 
-    At this time, do not click **advanced features**. This takes you to the Azure classic portal where you can configure custom templates, which are not needed for this tutorial. Instead, you can close this page.
+    At this time, do not click **advanced features**. Instead, you can close this page.
 
-That's all you need to do for this first step to complete this tutorial. For a production deployment, you probably will want to configure custom templates in addition to, or instead of the two default Azure Rights Management templates. But custom templates are not needed for this tutorial, so you're ready to go to step 2.
+That's all you need to do for this first step to complete this tutorial. You're ready to go to step 2.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About activating Rights Management|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
-|About the default templates and how to create new, custom templates|[Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Introduction](infoprotect-quick-start-tutorial.md)
