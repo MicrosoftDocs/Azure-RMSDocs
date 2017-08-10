@@ -6,11 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< HEAD
-ms.date: 05/17/2017
-=======
 ms.date: 05/30/2017
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,13 +31,9 @@ ms.suite: ems
 
 You can often view a protected document by simply opening it. For example, you might double-click an attachment in an email message or double-click a file from File Explorer, or you might click a link to a file.
 
-<<<<<<< HEAD
-For Office documents, you must have Office installed on your device. For other documents, if the file doesn't automatically open, you can use the **Azure Information Protection Viewer** to open many different types of protected files. This viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
-=======
 If the files don't immediately open, the **Azure Information Protection Viewer** might be able to open it. This viewer can open protected text files, protected image files, protected PDF files, and all files that have a **.pfile** file name extension.
 
 The viewer automatically installs as part of the Azure Information Protection client, or you can install it separately. You can install both the client and the viewer from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website. For more information about installing the client, see [Download and install the Azure Information Protection client](install-client-app.md).
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
 
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
@@ -90,12 +82,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-<<<<<<< HEAD
 > If the protected file does not open, you can use the **Run Diagnostics** option from **Protect** > **Help and Feedback** for the Azure Information Protection client to check for problems on your computer that might prevent a protected document from opening.
-=======
-> If the protected file does not open, use the Azure Information Protection **Help and Feedback** option, and select **Run Diagnostics**. After the tests finish, you can reset the client, which might resolve your problem.
->>>>>>> 29ad56b21282cde824f6da99e25c264d458f2b19
-
 
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
