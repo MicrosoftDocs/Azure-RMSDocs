@@ -70,7 +70,7 @@ Over the next few months, Microsoft will migrate Office 365 tenants so that they
 
 ## Next steps
 
-If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+If you've made the decision to manage your own key, go to [Implementing your Azure Rights Management tenant key](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 If you've decided to stay with the default configuration where Microsoft manages your tenant key, see the [Next steps](plan-implement-tenant-key.md#next-steps) section of the Planning and implementing your Azure Rights Management tenant key article.
 
