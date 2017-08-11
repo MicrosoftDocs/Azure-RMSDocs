@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,9 +50,9 @@ How multiple conditions are evaluated when they apply to more than one label:
 
 An example prompt for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
 
-![Azure Information Protection detection and recommendation](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection detection and recommendation](../media/info-protect-recommend-calloutsv2.png)
 
-In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by closing the bar.
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**.
 
 ## To configure recommended or automatic classification for a label
 
