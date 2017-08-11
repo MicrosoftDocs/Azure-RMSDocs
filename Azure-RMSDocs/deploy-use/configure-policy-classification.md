@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
  
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved.
 
-When you configure conditions, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
+When you configure conditions, you can use predefined patterns, such as "Credit card numbers" or "USA Social Security Number." Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
 How multiple conditions are evaluated when they apply to more than one label:
 
@@ -46,13 +46,13 @@ How multiple conditions are evaluated when they apply to more than one label:
 3. The last sub-label is applied.
 
 > [!TIP]
->For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration gives your users the ability to accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
+>For the best user experience and to ensure business continuity, we recommend that you start with user recommended classification, rather than automatic classification. This configuration lets your users accept the labeling or protection action, or override these suggestions if they are not suitable for their document or email message.
 
 An example prompt for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
 
-![Azure Information Protection detection and recommendation](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection detection and recommendation](../media/info-protect-recommend-calloutsv2.png)
 
-In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by closing the bar.
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**.
 
 ## To configure recommended or automatic classification for a label
 
@@ -60,7 +60,7 @@ In this example, the user can click **Change now** to apply the recommended labe
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
+2. If the label that you want to configure for automatic or recommended classification applies to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
 
      If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
 
@@ -68,11 +68,11 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 4. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
-    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
+    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
         For more information about the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
 
-    - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
+    - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
     **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
 
