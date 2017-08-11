@@ -36,10 +36,8 @@ In this step, you'll install the Azure Information Protection client so that the
 
 1. On a PC that has Office installed (but Word is not currently open), go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe**. This is the general availability version of the client that's supported on production networks. However, if you prefer to try the current preview version that has all the latest features and fixes, download **AzInfoProtection_PREVIEW_1.10.52.0.exe**.
     
-    You can use either version of the client for this tutorial but the pictures match the general availability version and the tutorial does not include features that are new in the preview version of the client.
-
 2. Run the executable that you've just downloaded, and follow the prompts to install the client.
-
+    
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
 ## Verify the installation
@@ -53,7 +51,7 @@ When the document loads, you should see two new things:
 ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
 
 - On the **Home** tab, a new **Protection** group, with a button named **Protect**.
-
+    
     Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
 
 - A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the labels that we saw in the Azure portal. 
