@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
  
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved.
 
-When you configure conditions, you can use predefined patterns, such as “Credit card numbers” or “USA Social Security Number”. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
+When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Information about the built-in conditions](#details-about-the-information-types) section.
 
 How multiple conditions are evaluated when they apply to more than one label:
 
@@ -50,9 +50,9 @@ How multiple conditions are evaluated when they apply to more than one label:
 
 An example prompt for when you configure a condition to apply a label as a recommended action, with a custom policy tip:
 
-![Azure Information Protection detection and recommendation](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection detection and recommendation](../media/info-protect-recommend-calloutsv2.png)
 
-In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by closing the bar.
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**.
 
 ## To configure recommended or automatic classification for a label
 
@@ -61,20 +61,22 @@ In this example, the user can click **Change now** to apply the recommended labe
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. If the label that you want to configure for automatic or recommended classification will apply to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. 
-
+    
      If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
 
 3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
-4. On the **Condition** blade, select **Built-in** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
+4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 
-    - For **Built-in**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
+    - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        For more information about the detection rules for these conditions and some examples, see the [Information about the built-in conditions](#information-about-the-built-in-conditions) section.
+        To use the full list of conditions, you must use the current preview version of the Azure Information Protection client. If you have the current general availability version of the client, the following five conditions only are supported: **SWIFT Code**, **Credit Card Number**, **ABA Routing Number**, **USA Social Security Number (SSN)**, and **International Banking Account Number (IBAN)**. [More information](##details-about-the-information-types)
 
-    - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurence should have a unique value to be included in the occurrence count.
+    - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-    **Example of the occurrences options**: You select the built-in social security number option and set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition would not be met; if you set this option to **Off**, the condition would be met.
+        If you have the current preview version of the Azure Information Protection client, the regular expressions use the Office 365 regex patterns. For more information, see [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) from the Office documentation. 
+        
+    **Example of the occurrences options**: You select the built-in social security number option, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
 5. On the **Label** blade, configure the following, and then click **Save**:
 
@@ -84,9 +86,11 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
-## Information about the built-in conditions
+## Details about the information types
 
-You can select the following conditions:
+If you have the current preview version of the Azure Information Protection client, the full list of information types are supported and use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) from the Office documentation. When Azure Information Protection evaluates these information types, it does not use the Office DLP confidence level setting but matches according to the lowest confidence.  
+
+If you have the current general availability version of the client, the following information types only are supported:
 
 - [SWIFT Code](#swift-code )
 
@@ -98,6 +102,7 @@ You can select the following conditions:
 
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
+See the following sections for more information about each of these information types for the general availability version of the client.
 
 ### SWIFT Code
 

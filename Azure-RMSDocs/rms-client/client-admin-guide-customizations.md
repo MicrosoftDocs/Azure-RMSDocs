@@ -143,6 +143,9 @@ To configure this advanced setting, enter the following strings:
 
 This configuration option is currently in preview.
 
+> [!IMPORTANT]
+> Do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
+
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 When you configure this setting and publish the policy for users, the custom permissions options from the following locations become unavailable for users to select:
