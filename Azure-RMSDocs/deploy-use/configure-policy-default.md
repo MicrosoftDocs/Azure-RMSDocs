@@ -53,6 +53,8 @@ When these sub-labels are not automatically configured for protection, the defau
 
 When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
+Beginning with August 30, 2017, this version of the default policy includes translated versions of the label names and descriptions. 
+
 #### More information about the Recipients Only sub-label
 
 Users see this label in Outlook only. They do not see this label in Word, Excel, PowerPoint, or from File Explorer. 

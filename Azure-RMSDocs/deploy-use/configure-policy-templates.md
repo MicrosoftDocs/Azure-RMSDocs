@@ -47,7 +47,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 ## Default templates
 
-When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. These two templates have the following restrictions: 
+When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. When these two templates are created, they have the following restrictions: 
 
 - Read or Modify permissions for the protected content
     
@@ -57,23 +57,30 @@ When you obtain your subscription for Azure Information Protection or for an Off
     
     - Specific permission: View Content
 
-These templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](../understand-explore/applications-support.md) that can use Rights Management templates.
+In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
+
+>[!NOTE]
+> You can change these settings, and the names of the default templates. This ability was not possible with the Azure classic portal and remains unsupported for PowerShell.
+
+These default templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](../understand-explore/applications-support.md) that can use Rights Management templates.
 
 You can also create your own custom templates. Although you probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure.
 
 ### Default template names
 
-If you recently obtained a subscription for Azure Information Protection, the names of your default templates are as follows:
+If you recently obtained a subscription for Azure Information Protection, your default templates are created with the following names:
 
 - **Confidential \ All Employees** for Read or Modify permissions for the protected content.
 
 - **Highly Confidential \ All Employees** for Read-only viewing for the protected content.
 
-If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, the names of your default templates are as follows::
+If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, your default templates are created with the following names:
 
 - **\<organization name> - Confidential** for Read or Modify permissions for the protected content.
 
 - **\<organization name> - Confidential View Only**, for Read-only viewing for the protected content. 
+
+You can rename these default templates when you use the Azure portal.
 
 >[!NOTE]
 >If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).
@@ -102,8 +109,6 @@ Before you edit these templates or convert them to labels, make sure that you ar
 - Departmental templates (templates that are configured for a scope) display in the Global policy. Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
-
-- Currently, templates that you configured for multiple languages by using the Azure classic portal or PowerShell do not display those languages for the name and descriptions, but they are retained.
 
 - When you convert or link a template to a label, it can no longer be used by other labels.
 
@@ -142,7 +147,9 @@ For example, if you convert a label named **Marketing** that grants usage rights
 
 There is no requirement to convert all your templates to labels, but when you do, the protection settings are fully integrated with the full functionality of labels so that you do not have to maintain the settings separately.
 
-To convert a template into a label, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option.
+To convert a template into a label, right-click the template, and select **Convert to label**. Alternatively, use the context-menu to select this option. 
+
+You can also convert a template to a label when you configure a label for protection and a predefined template, by using the **Edit Template** button. 
 
 When you convert a template to a label:
 

@@ -338,7 +338,7 @@ The Azure Information Protection client supports the same languages that Office 
 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
-However, the label names that users see are not automatically translated for either the [default policy](../deploy-use/configure-policy-default.md), or for label names that you specify. For users to see labels in different languages, you must provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
+However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy[(../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 ## To uninstall the Azure Information Protection client
 
