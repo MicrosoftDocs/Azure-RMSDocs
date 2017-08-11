@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ The easiest way to classify and protect your documents and emails is when you ar
 
 However, you can also classify and protect files by using **File Explorer**. This method supports additional file types and is a convenient way to classify and protect multiple files at once. This method supports protecting Office documents, PDF files, text and image files, and a wide range of other files. 
 
-If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive for Business. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
+If your label applies protection to a document, the protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
 
 ### Safely share a file with people outside your organization
 
@@ -93,20 +93,11 @@ You can specify your own protection settings for documents rather than use the p
 
     - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
     
-    If you have the current preview version of the Azure Information Protection client, you can also select users and groups from the address book.
+    If you have the current preview version of the Azure Information Protection client, you can alternatively use the **Select users, groups, or organization** button. This button displays the **Select Users or Groups** dialog box for your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
-
-
-### Keyboard shortcuts for the Azure Information Protection bar
-
-To access the Azure Information Protection bar by using keyboard shortcuts, use the following key combination:
-
-- Press **Ctrl** + **Shift** + **~** 
-
-Then, use the Tab key to select the labels and other controls on the bar (the **Hide Labels** icon and **Delete Label** icon), and the Enter key to select them.
 
 ## Using File Explorer to classify and protect files
 
@@ -145,7 +136,9 @@ The admin guide contains a full list of the file types supported and the files a
 
     - **Select permissions**: Select the level of access that you want people to have when you protect the selected file or files.
     
-    - **Select users**: Specify the people who should have the permissions you selected for your file or files. You might be able to select them from the address book (for example, people from your organization and contacts from other organizations). For other people, type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
+    - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
+    
+    Alternatively, you can use the **Select users, groups, or organization** button to select users or groups from the Outlook address book. If you have the current preview version of the Azure Information Protection client, this button displays the **Select Users or Groups** dialog box for your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
     
