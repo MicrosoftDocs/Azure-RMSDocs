@@ -87,7 +87,7 @@ Exchange does not have to be configured for information rights management (IRM) 
     
 7. Select one of the following options:
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates#to-convert-templates-to-labels).
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
     
     - **Set permissions**: To define new protection settings in this portal.
     
