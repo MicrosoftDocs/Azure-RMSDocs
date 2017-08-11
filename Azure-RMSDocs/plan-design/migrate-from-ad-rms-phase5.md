@@ -89,7 +89,7 @@ Moving from one key to another doesn’t happen immediately but over a few weeks
 
 To rekey your Azure Information Protection tenant key:
 
-- **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. When you run this cmdlet, sort the output so that the key that was automatically created for your tenant is listed first:
+- **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. The key that was automatically created for your tenant has the oldest creation date, so you can identify it by using the following command:
     
     	(Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
     
