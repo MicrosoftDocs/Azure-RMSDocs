@@ -117,9 +117,9 @@ We'll now create a new sub-label for **Confidential**.
     
     Click **Add a new condition** and then, on the **Condition** blade, select the following:
     
-    a. **Choose the type of condition**: Keep the default of **Built-in**.
+    a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. In the **Select built-in** search box: Type **credit card number**. then, from the search results, select **Credit Card Number**.
+    b. In the **Select information types** search box: Type **credit card number**. then, from the search results, select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     
