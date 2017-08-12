@@ -277,22 +277,7 @@ Use the **Send Us Feedback** link to send suggestions or requests to the Informa
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
-For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
-
-> [!NOTE]
-> In the preview version of the client, **Run diagnostics** is removed and replaced with **Reset Settings**. In addition, the behavior for this option has [changed](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
-
-#### More information about the reset option for the general availability (GA) version of the Azure Information Protection client
-
-- You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
-
-- Unless files are locked, this action deletes all the files in **%LocalAppData%\Microsoft\MSIPC**, which is where client certificates and Rights Management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
-
-- The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configured settings for this registry key, you must reconfigure the registry settings after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network.
-
-- After you have reset the client, you must reinitialize the user environment, which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action also checks that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
-
-#### More information about the reset option for the current preview version of the Azure Information Protection client
+The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service:
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
