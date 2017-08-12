@@ -46,31 +46,6 @@ Use the following information to see what’s new or changed for a GA release. T
 
 This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
-**Fixes**:
-
-Fixes for stability and for specific scenarios that include:
-
-- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide.
-
-- The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
-
-- Support for Exchange online mode.
-
-- Support for labeling and protection of files stored on SharePoint Server.
-
-- Watermarks now support multiple lines. In addition, visual markings are applied to a document on the first save only.
-
-- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see
-
-- Support for proxy authentication.
-
-Fixes for a better user experience, that include:
-
-- Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
-
-- The parent label is not displayed when all the sub-labels are configured for production and the client does not have an edition of Office that supports protection. This happens when Office Standard rather than Office Professional Plus is installed.
-
-
 **New features**:
 
 - Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../deploy-use/configure-policy-protection.md).
@@ -93,12 +68,39 @@ Fixes for a better user experience, that include:
 
 - For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), new parameters `-Owne`r and `-PreserveFileDetails`. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
 
+**Fixes**:
+
+Fixes for stability and for specific scenarios that include:
+
+- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide.
+
+- The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
+
+- Support for Exchange online mode.
+
+- Support for labeling and protection of files stored on SharePoint Server.
+
+- Watermarks now support multiple lines. In addition, visual markings are applied to a document on the first save only.
+
+- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see
+
+- Support for proxy authentication.
+
+Fixes for a better user experience, that include:
+
+- Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
+
+- The parent label is not displayed when all its sub-labels are configured for production and the client does not have an edition of Office that supports protection. 
 
 ## Version 1.7.210.0
 
 **Released**: 06/06/2017
 
 This version includes the MSIPC version 1.0.2217.1 of the RMS client.
+
+**New features**:
+
+- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
 
 **Fixes**:
 
@@ -114,11 +116,6 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
     
     Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
 
-**New features**:
-
-- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
-
-
 ## Version 1.4.21.0
 
 **Released**: 03/15/2017
@@ -126,16 +123,6 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
 **Change to requirements:**
 
 The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. For more information, see the [client installation section](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
-
-
-**Fixes**:
-
-- Support for mapped drives to classify and protecting files.
-
-- Support for large files (greater than 250 MB) in the Azure Information Protection client viewer. 
-
-- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates or AD RMS templates.
-
 
 **New features**:
 
@@ -145,6 +132,13 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 - For PDF files, the viewer now supports options such as search, zoom, and rotate. To use these options, right-click on the file when it is displayed in the viewer.
 
+**Fixes**:
+
+- Support for mapped drives to classify and protecting files.
+
+- Support for large files (greater than 250 MB) in the Azure Information Protection client viewer. 
+
+- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates or AD RMS templates.
 
 ## Version 1.3.155.2
 
@@ -178,6 +172,12 @@ This client version is the [General Availability release](https://blogs.technet.
 
 **Released**: 10/27/2016
 
+**New feature**:
+
+- Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
+
+    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
+
 **Fixes**:
 
 - Client installation completes when the Windows Update service is disabled.
@@ -186,11 +186,6 @@ This client version is the [General Availability release](https://blogs.technet.
 
 - Automatic classification works in Word for text in bundled text boxes.
 
-**New feature**:
-
-- Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
-
-    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
 
 ## Version 1.1.23.0
 
