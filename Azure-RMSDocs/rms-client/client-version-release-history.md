@@ -85,7 +85,7 @@ Fixes for a better user experience, that include:
 
 - Support for advanced client configurations that include the following:
     
-    - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customization.mds#hide-the-do-not-forward-button-in-outlook)
+    - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
     
     - [Make the custom permissions options unavailable to users](/rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
     
