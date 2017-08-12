@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - Single AD RMS root cluster.
     
-    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the version of the cryptographic mode of the AD RMS cluster, and its overall health, by using the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
     - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection.
     
