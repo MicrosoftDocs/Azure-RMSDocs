@@ -62,8 +62,6 @@ Fixes for stability and for specific scenarios that include:
 
 - The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see
 
-- Support for custom permissions for labels that are configured for HYOK.
-
 - Support for proxy authentication.
 
 Fixes for a better user experience, that include:
@@ -114,7 +112,7 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
     
     - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
     
-    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users will not be prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
+    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
 
 **New features**:
 
@@ -134,7 +132,7 @@ The previous version introduced the new prerequisite of Microsoft .NET Framework
 
 - Support for mapped drives to classify and protecting files.
 
-- Support for large files ( >250 MB) in the viewer. 
+- Support for large files (greater than 250 MB) in the Azure Information Protection client viewer. 
 
 - When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates or AD RMS templates.
 
@@ -164,7 +162,7 @@ Microsoft .NET Framework
 
 - A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
     
-    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and multiple file selection.
+    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and the section of multiple files.
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
     - Client usage logs that record information such as which label was applied, how, and by whom.
