@@ -74,29 +74,15 @@ Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement
 
 You should now see **Rights Management is not activated** and the option to activate.
 
-#### To deactivate Rights Management from the Azure classic portal
-
-1.  Sign in to the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081).
-
-2.  In the left pane, click **ACTIVE DIRECTORY**.
-
-3.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
-
-4.  Make sure that your tenant name is selected, click **DEACTIVATE**, and then confirm your action.
-
-The **RIGHTS MANAGEMENT STATUS** should now display **Inactive** and the **DEACTIVATE** option is replaced with **ACTIVATE**.
-
 #### To deactivate Rights Management from the Azure portal
 
-This method is currently in preview.
-
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, select **RMS Settings (Preview)**. 
+2. On the initial **Azure Information Protection** blade, select **RMS Settings**. 
 
-3.  On the **Azure Information Protection - RMS Settings (Preview)** blade, select **Deactivate**. Select **Yes** to confirm your choice.
+3.  On the **Azure Information Protection - RMS Settings** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 

@@ -29,22 +29,27 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 
 >*Applies to: Azure Information Protection*
 
->[!NOTE]
->This feature is currently in preview, to be used in conjunction with the **preview** version of the Azure Information Protection client that you can download from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
-By default, the names and descriptions of labels support a single language that is displayed to all users in your organization. You can add support for different languages by selecting the ones that you need, export your current label names and descriptions to a file, edit the file to supply your translations, and then import the file back into your Azure Information Protection policy.
+1. Select the languages that your users use. 
+
+2. Export your current label names and descriptions to a file.
+
+3. Edit the file to supply your translations.
+
+4. Import the file back into your Azure Information Protection policy.
 
 Select the languages that match your users' language setting for Office and Windows. These label names and descriptions then display in the Azure Information Protection bar in Office apps, and in the **Classify and protection - Azure Information Protection** dialog box, respectively. For more information about which language is chosen, see the [How the Azure Information Protection client determines the language to display](#how-the-azure-information-protection-client-determines-the-language-to- display) section on this page. 
 
 ## To configure labels to display in different languages
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Languages (Preview)**.
+2. On the initial **Azure Information Protection** blade, locate **MANAGE**, and then select **Languages**.
 
-3. On the **Azure Information Protection - Languages (Preview)** blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
+3. On the **Azure Information Protection - Languages** blade, locate the first language you want to add by either typing the name in the search box, or by scrolling through the list of available languages. 
 
 4. Select your language, and select **OK**.
 
