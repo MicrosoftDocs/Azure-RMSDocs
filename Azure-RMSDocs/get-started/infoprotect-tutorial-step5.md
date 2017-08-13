@@ -47,9 +47,11 @@ You’re then ready to safely share this document by email.
 
     With this setting, our recipients will be able to view the document but not edit or print it.
 
-4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
+4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. To specify more than one address, you use a semicolon or press Enter. 
 
-    Alternatively, click the address book to select a co-worker's email address:
+    Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses for this scenario. 
+
+    Alternatively, click the **Select users, groups, or organization** icon to select a co-worker's email address:
 
     ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](../media/protect-custom-permissions.png)  
     
@@ -101,7 +103,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 2.  On the **Home** tab, click **Protect** > **Track and Revoke**:
 
-    ![Track usage option](../media/track-usage-calloutv2.png)
+    ![Track usage option](../media/track-usage-calloutv3.png)
 
     This takes you to the document tracking site.
 
