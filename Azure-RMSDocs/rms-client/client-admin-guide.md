@@ -277,7 +277,9 @@ Use the **Send Us Feedback** link to send suggestions or requests to the Informa
 
 The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
-The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service:
+The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service.
+
+#### More information about the Reset Settings option
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
