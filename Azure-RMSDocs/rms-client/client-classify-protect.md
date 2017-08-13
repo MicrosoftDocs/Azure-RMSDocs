@@ -55,6 +55,9 @@ For example, the following picture shows that the document hasn't yet been label
 
 If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
 
+> [!TIP]
+> You can also select labels from the **Protect** button, on the **File** tab.
+
 In addition to manually selecting labels, labels can also be applied in the following ways:
 
 - Your administrator configured a default label, which you can keep or change.
