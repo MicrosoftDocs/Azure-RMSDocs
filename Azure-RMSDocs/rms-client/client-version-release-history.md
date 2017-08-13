@@ -82,7 +82,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Watermarks now support multiple lines. In addition, visual markings are applied to a document on the first save only.
 
-- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Rest Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset=settings-option) from the admin guide.
+- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset=settings-option) from the admin guide.
 
 - Support for proxy authentication.
 
