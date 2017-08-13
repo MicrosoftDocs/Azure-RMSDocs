@@ -31,16 +31,9 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
+1. Still in the Azure portal, select **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's created for your tenant.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. On the **Azure Information Protection** blade, click **Create**.
-    
-    This activates the service for your tenant and creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
-    
-    > [!TIP] 
-    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
-
-3. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's  created for your tenant:
+2. Spend a few minutes familiarizing yourself with the labels that are displayed:
     
     - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories:
     
@@ -53,7 +46,7 @@ Although Azure Information Protection comes with a default policy that you can u
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
     
-    In addition, there are some policy settings that are not set. All documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
+3. You also see that there are some policy settings that are not set. All documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
@@ -61,11 +54,11 @@ Although Azure Information Protection comes with a default policy that you can u
 
 For our tutorial, we'll change a couple of those policy settings so that you can see how they work:
 
-1. For **Select the default label**, set this to **General**. 
+1. For **Select the default label**, select **General**. 
 
     If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
-2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this to **On**.
+2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
 
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
@@ -103,7 +96,7 @@ We'll now create a new sub-label for **Confidential**.
     
     If you select **Add permissions**, this opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
-8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade..
+8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade.
 
 8. Back on the **Sub-label** blade, locate the **Set visual marking** section:
     
