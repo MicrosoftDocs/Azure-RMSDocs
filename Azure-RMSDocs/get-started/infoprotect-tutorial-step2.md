@@ -96,7 +96,7 @@ We'll now create a new sub-label for **Confidential**.
     
     If you select **Add permissions**, this opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
-8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade..
+8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade.
 
 8. Back on the **Sub-label** blade, locate the **Set visual marking** section:
     
