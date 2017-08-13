@@ -54,9 +54,9 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
 
-- Let users browse for users and groups when they specify custom permissions in Office apps by using the **Select Users or Groups** dialog box for your on-premises Active Directory. The same dialog box is now also used when users specify custom permissions by using File Explorer. To use this option, the computer must be connected to the internal network, the computer must be joined to the domain, and you must have an on-premises Active Directory.
+- A browse option for users and groups when users specify custom permissions in Office apps. The **Select users, groups, or organization** icon displays the **Select Users or Groups** dialog box for your on-premises Active Directory. The same dialog box is now also used when users specify custom permissions by using File Explorer. To use this browse option, the computer must be connected to the internal network, the computer must be joined to the domain, and you must have an on-premises Active Directory.
 
-- Support for advanced client configurations that include the following:
+- Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     
     - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
     
@@ -66,7 +66,7 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
 
-- For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), new parameters `-Owne`r and `-PreserveFileDetails`. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
+- For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), there are new parameters: **Owner** and **PreserveFileDetails**. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
 
 **Fixes**:
 
@@ -82,7 +82,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Watermarks now support multiple lines. In addition, visual markings are applied to a document on the first save only.
 
-- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see
+- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Rest Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset=settings-option) from the admin guide.
 
 - Support for proxy authentication.
 
