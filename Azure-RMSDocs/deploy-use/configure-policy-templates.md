@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure and manage templates in the Azure Information Protection policy
-description: Currently in preview, you can now configure and manage rights management templates from the Azure Information Protection policy. 
+title: Configure and manage templates for Azure Information Protection
+description: Configure and manage rights management templates from the Azure portal. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -51,11 +51,11 @@ When you obtain your subscription for Azure Information Protection or for an Off
 
 - Read or Modify permissions for the protected content
     
-    -Specific permissions: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
+    - **Specific permissions**: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
 
 - Read-only viewing for the protected content
     
-    - Specific permission: View Content
+    - **Specific permission**: View Content
 
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 
