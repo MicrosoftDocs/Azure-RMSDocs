@@ -31,11 +31,11 @@ ms.suite: ems
 
 Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal.
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
-    To open the Azure Information Protection balde, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If you have one of these subscriptions but see a message that a valid subscription cannot be found, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
+    To open the Azure Information Protection blade, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If you have one of these subscriptions but see a message that a valid subscription cannot be found, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
 
 2. From the initial Azure Information Protection blade, select **RMS Settings**.  
     
