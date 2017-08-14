@@ -38,7 +38,7 @@ When you cancel your subscription for Azure Information Protection, Azure Inform
 ## Rekey your tenant key
 Rekeying is also known as rolling your key. When you do this operation, Azure Information Protection stops using the existing tenant key to protect documents and emails, and starts to use a different key. Policies and templates are immediately resigned but this changeover is gradual for existing clients and services using Azure Information Protection. So for some time, some new content continues to be protected with the old tenant key.
 
-To rekey, you must configure the tenant key object to select the new key to use. Then, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible.
+To rekey, you must configure the tenant key object and specify the new key to use. Then, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible.
 
 Examples of when you might need to rekey for Azure Information Protection:
 
