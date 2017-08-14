@@ -54,7 +54,7 @@ The last example is applicable if you have migrated from Active Directory Rights
 
 To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet.
 
-To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to rekey your Azure Information Protection tenant key**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; creating a new tenant key that is Microsoft-managed, is a not a free-of-charge support service.
+To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to create a new, Microsoft-managed key for your tenant**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; creating a new Microsoft-managed key for Azure Information Protection is a not a free-of-charge support service.
 
 To change your key topology to be customer-managed (BYOK), see [Implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
