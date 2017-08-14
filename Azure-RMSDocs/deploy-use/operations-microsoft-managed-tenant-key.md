@@ -46,7 +46,7 @@ Examples of when you might need to rekey for Azure Information Protection:
 
 - Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
 
-- You believe the master copy of your tenant key (the copy in your possession) was compromised.
+- You believe the master copy of your tenant key is compromised.
 
 To rekey, you can either create a new key and instruct Azure Information Protection to use this new key. Or, when you already have more than one key that can be used for Azure Information Protection, you can select a different key to become your tenant key. 
 
