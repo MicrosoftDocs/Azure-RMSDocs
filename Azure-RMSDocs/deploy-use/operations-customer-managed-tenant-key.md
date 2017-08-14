@@ -40,13 +40,13 @@ When you cancel your subscription for Azure Information Protection, Azure Inform
 ## Rekey your tenant key
 Rekeying is also known as rolling your key. When you do this operation, Azure Information Protection stops using the existing tenant key to protect documents and emails, and starts to use a different key. Policies and templates are immediately resigned but this changeover is gradual for existing clients and services using Azure Information Protection. So for some time, some new content continues to be protected with the old tenant key.
 
-To rekey, you must configure the tenant key object and specify the new key to use. Then, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible..
+To rekey, you must configure the tenant key object and specify the new key to use. Then, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible.
 
 Examples of when you might need to rekey for Azure Information Protection:
 
 - Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
 
-- You believe the master copy of your tenant key (the copy in your possession) was compromised.
+- You believe the master copy of your tenant key (the copy in your possession) is compromised.
 
 To rekey, you can either create a new key in Azure Key Vault or use a different key that is already in Azure Key Vault. Then follow the same procedures that you did to implement BYOK for Azure Information Protection:
 
@@ -54,7 +54,7 @@ To rekey, you can either create a new key in Azure Key Vault or use a different 
 
 2. Configure Azure Information Protection to use the new key, by using the [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) cmdlet.
 
-3. Set this key object to be active, by using the run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
+3. Configure the tenant key object, by using the run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet.
 
 For more information about each of these steps, see [Implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
