@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft-managed - AIP tenant key lifecycle operations
-description: Information about the lifecycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
+title: Microsoft-managed - AIP tenant key life cycle operations
+description: Information about the life cycle operations that are relevant if Microsoft manages your tenant key for Azure Information Protection (the default).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -36,15 +36,27 @@ If Microsoft manages your tenant key for Azure Information Protection (the defau
 When you cancel your subscription for Azure Information Protection, Azure Information Protection stops using your tenant key and no action is needed from you.
 
 ## Rekey your tenant key
-Rekeying is also known as rolling your key. Do not rekey your tenant key unless it’s really necessary. Older clients, such as Office 2010, were not designed to handle key changes gracefully. In this scenario, you must clear the Rights Management state on computers by using Group Policy or an equivalent mechanism. However, there are some legitimate events that may force you to rekey your tenant key. For example:
+Rekeying is also known as rolling your key. When you do this operation, Azure Information Protection stops using the existing tenant key to protect documents and emails and starts to use a different key. Policies and templates are immediately resigned but this changeover is gradual for existing clients and services using Azure Information Protection. So for some time, some new content continues to be protected with the old tenant key.
 
--   Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
+By using the tenant key object, the previously used key is automatically marked as archived for Azure Information Protection. This configuration ensures that content that was protected by using this key remains accessible.
 
--   You believe the master copy of your tenant key (the copy in your possession) was compromised.
+Examples of when you might need to rekey for Azure Information Protection:
 
-You can rekey your tenant key by [contacting Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to rekey your Azure Information Protection tenant key**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; rekeying your tenant key is a not a free-of-charge support service.
+- You have migrated from Active Directory Rights Management Services (AD RMS) with a cryptographic mode 1 key. This mode is supported only during the migration phase. When the migration is complete, you must change to using a key that uses cryptographic mode 2.
 
-When you rekey your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for some time, some new content continues to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure Information Protection retains your old tenant key so that it can issue licenses for old content.
+- Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
+
+- You believe the master copy of your tenant key (the copy in your possession) was compromised.
+
+To rekey, you can either create a new key and instruct Azure Information Protection to use this new key. Or, when you already have more than one key that can be used for Azure Information Protection, you can select a different key to become your tenant key. 
+
+The last example is applicable if you have migrated from Active Directory Rights Management Services (AD RMS). In this scenario, you will have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
+
+To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet.
+
+To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to rekey your Azure Information Protection tenant key**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; creating a new tenant key that is Microsoft-managed, is a not a free-of-charge support service.
+
+To change your key topology to be customer-managed (BYOK), see [Implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
 ## Backup and recover your tenant key
 Microsoft is responsible for backing up your tenant key and no action is required from you.
