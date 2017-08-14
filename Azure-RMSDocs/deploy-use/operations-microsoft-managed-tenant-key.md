@@ -50,11 +50,11 @@ Examples of when you might need to rekey for Azure Information Protection:
 
 To rekey, you can either create a new key and instruct Azure Information Protection to use this new key. Or, when you already have more than one key that can be used for Azure Information Protection, you can select a different key to become your tenant key. 
 
-The last example is applicable if you have migrated from Active Directory Rights Management Services (AD RMS). In this scenario, you will have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
+The last example is applicable if you have migrated from Active Directory Rights Management Services (AD RMS). In this scenario, you have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
 
 To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet.
 
-To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to create a new, Microsoft-managed key for your tenant**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; creating a new Microsoft-managed key for Azure Information Protection is a not a free-of-charge support service.
+To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to create a new, Microsoft-managed key for your tenant**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; creating a new Microsoft-managed key for Azure Information Protection is not a free-of-charge support service.
 
 To change your key topology to be customer-managed (BYOK), see [Implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
@@ -66,7 +66,7 @@ You can export your Azure Information Protection configuration and tenant key by
 
 ### Step 1: Initiate export
 
-- [Cntact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
+- [Contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
 
 ### Step 2: Wait for verification
 
@@ -81,7 +81,7 @@ You can export your Azure Information Protection configuration and tenant key by
     ```
     This generates an RSA key pair and saves the public and private halves as files in the current folder. For example: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** and **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Respond to the email from CSS, attaching the file that has a name that starts with **PublicKey**. CSS will next send you a TPD file as an .xml file that is encrypted with your RSA key. Copy this file to the same folder as you ran the AadrmTpd tool originally, and run the tool again, using your file that starts with **PrivateKey** and the file from CSS. For example:
+    Respond to the email from CSS, attaching the file that has a name that starts with **PublicKey**. CSS next sends you a TPD file as an .xml file that is encrypted with your RSA key. Copy this file to the same folder as you ran the AadrmTpd tool originally, and run the tool again, using your file that starts with **PrivateKey** and the file from CSS. For example:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
