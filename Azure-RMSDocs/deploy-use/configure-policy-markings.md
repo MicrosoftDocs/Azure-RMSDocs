@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/9/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,11 +29,7 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 >*Applies to: Azure Information Protection*
 
-When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark:
-
-The visual markings are applied to Word, Excel, and PowerPoint documents when the label is applied and when the documented is saved in these Office applications. For email messages, the visual markings are applied when the email message is sent from Outlook.
-
-Visual markings are not applied to documents when the label is applied by using File Explorer and the right-click action. Or, when a document is classified by using PowerShell.
+When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 
 Additional information about these visual markers:
 
@@ -49,19 +45,23 @@ Additional information about these visual markers:
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
-### When visual markings are applied to documents
+## When visual markings are applied
 
- - For the general availability version of the Azure Information Protection client: 
+For email messages, the visual markings are applied when the email message is sent from Outlook.
+
+For documents, the visual markings are applied as follows:
+
+- **For the general availability version** of the Azure Information Protection client: 
     
     - In an Office app, the visual markings from a label are applied when the label is applied and whenever the document is saved. 
     
-    - When a document is labeled by using File Explorer, visual markings are not applied.
+    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
 
--  For the current preview version of the Azure Information Protection client: 
+- **For the current preview version** of the Azure Information Protection client: 
     
-    - In an Office app, the visual markings from a label are applied when the label is applied and when the document is first saved. If a user manually changes these markings after the first save, the label's markings are not reapplied until the document is reopened and first saved. 
+    - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved. If a user manually changes these markings, the label's markings are not reapplied until the document is reopened and first saved. 
     
-    - When a document is labeled by using File Explorer, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
+    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
 
 ## To configure visual markings for a label
 
