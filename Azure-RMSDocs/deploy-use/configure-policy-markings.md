@@ -55,11 +55,11 @@ For documents, the visual markings are applied as follows:
     
     - In an Office app, the visual markings from a label are applied when the label is applied and whenever the document is saved. 
     
-    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
+    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and whenever the document is saved.
 
 - **For the current preview version** of the Azure Information Protection client: 
     
-    - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved. If a user manually changes these markings, the label's markings are not reapplied until the document is reopened and first saved. 
+    - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
     
     - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
 
