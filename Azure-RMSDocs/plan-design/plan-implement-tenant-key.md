@@ -63,7 +63,7 @@ To create your own key, you have the following options:
     
     - An HSM-protected key that you create on-premises and transfer to Key Vault as an HSM-protected key.
     
-    - A software-protected key that you create on-premises and convert and then transfer to Key Vault as an HSM-protected key. This option is supported only when you [migrate from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
+    - A software-protected key that you create on-premises, convert, and then transfer to Key Vault as an HSM-protected key. This option is supported only when you [migrate from Active Directory Rights Management Services (AD RMS)](migrate-from-ad-rms-to-azure-rms.md).
 
     - A software-protected key that you create on-premises and import to Key Vault as a software-protected key. This option requires a .PFX certificate file.
 
@@ -73,7 +73,7 @@ To create your own key, you have the following options:
     
     - A software-protected key that you create in Key Vault.
 
-Of these options, the most typical "bring your own key" scenario is an HSM-protected key that you create on-premises and import to Key Vault as an HSM-protected key. Although this option has the greatest administrative overheads, it might be required for your organization to comply with specific regulations. The HSMs that are used by Azure Key Vault are FIPS 140-2 Level 2 validated.
+Of these options, the most typical "bring your own key" scenario is an HSM-protected key that you create on-premises and transfer to Key Vault as an HSM-protected key. Although this option has the greatest administrative overheads, it might be required for your organization to comply with specific regulations. The HSMs that are used by Azure Key Vault are FIPS 140-2 Level 2 validated.
 
 With this option, the following happens:
 
@@ -133,7 +133,7 @@ Only Thales HSMs are supported for HSM-protected keys. For more information abou
 
 Use the Azure Key Vault documentation to create a key vault and the key that you want to use for Azure Information Protection. For example, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).
 
-To create an HSM-protected key on-premises and import it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
 A key that is stored in Key Vault has a key ID. This key ID is a URL that contains the name of the key vault, the keys container, the name of the key, and the key version. For example: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. You must configure the Azure Rights Management service from Azure Information Protection to use this key, by specifying its URL.
 
