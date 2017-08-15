@@ -53,13 +53,13 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
 
 5. You now see whether the Azure Rights Management service is activated for your tenant. 
     
-    If the service is activated, you see the following confirmation:
-    
-    ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
-    
-    If the service is not activated, you see the following status and the option, **Activate**:
-    
-    ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
+    - If the service is activated, you see the following confirmation:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
+        
+    - If the service is not activated, you see this reflected in the status information, and the option to activate:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
 6. If the service isn't activated, select **Activate**. 
 
