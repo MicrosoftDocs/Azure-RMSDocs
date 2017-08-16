@@ -30,7 +30,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->Even if you have already activated the Azure Rights Management service for your tenant, complete this step that includes signing in to the Azure portal and creating the Azure Information Protection blade so that you are ready for step 2. 
+>Even if you have already activated the Azure Rights Management service for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2. 
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate this service, which include using Windows PowerShell, and using the admin portals.
 
@@ -44,14 +44,24 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
     
 3.  On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
     
-    This activates the service for your tenant and creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
     
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
 4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **RMS Settings**.  
 
-5. You now see whether the Azure Rights Management service is activated for your tenant. If it is not, select **Activate**, and then confirm your action. 
+5. You now see whether the Azure Rights Management service is activated for your tenant. 
+    
+    - If the service is activated, you see the following confirmation:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
+        
+    - If the service is not activated, you see this reflected in the status information, and the option to activate:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
+
+6. If the service isn't activated, select **Activate**. 
 
     When activation is complete, the information bar displays **Activation finished successfully**.
 

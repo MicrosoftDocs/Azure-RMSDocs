@@ -68,7 +68,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 ....
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
-        To use the full list of conditions, you must use the current preview version of the Azure Information Protection client. If you have the current general availability version of the client, the following five conditions only are supported: **SWIFT Code**, **Credit Card Number**, **ABA Routing Number**, **USA Social Security Number (SSN)**, and **International Banking Account Number (IBAN)**. [More information](##details-about-the-information-types)
+        To use the full list of conditions, you must use the current preview version of the Azure Information Protection client. If you have the current general availability version of the client, the following five conditions only are supported: **SWIFT Code**, **Credit Card Number**, **ABA Routing Number**, **USA Social Security Number (SSN)**, and **International Banking Account Number (IBAN)**. [More information](#details-about-the-information-types)
     
     - For **Custom**: Specify a name and phrase to match, which must exclude quotation marks and special characters. Then specify whether to match as a regular expression, use case sensitivity, and the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
