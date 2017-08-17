@@ -61,6 +61,9 @@ Decide which tenant key topology is best for your organization:
 
 - **Managed by you (BYOK)**: For complete control over your tenant key, use [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) with Azure Information Protection. For this tenant key topology, you create the key, either directly in Key Vault, or create it on-premises. If you create it on-premises, you next transfer or import this key into Key Vault. You then configure Azure Information Protection to use this key, and you manage it in Azure Key Vault.
     
+
+### More information about BYOK
+
 To create your own key, you have the following options:
 
 - A key that you create on-premises and transfer or import to Key Vault:
@@ -91,6 +94,8 @@ With this option, the following happens:
 > As an additional protection measure, Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. 
 
 Although it’s optional, you will also probably want to use the near real-time usage logs from Azure Information Protection to see exactly how and when your tenant key is being used.
+
+### When you have decided your tenant key topology
 
 If you decide to let Microsoft manage your tenant key: 
 
