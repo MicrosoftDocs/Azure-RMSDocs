@@ -55,11 +55,11 @@ If you have already enabled Exchange Online for Azure Rights Management by using
 
 Decide which tenant key topology is best for your organization:
 
-- **Microsoft-managed**: Azure Information Protection automatically generates a tenant key for your organization. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
+- **Managed by Microsoft**: Azure Information Protection automatically generates a tenant key for your organization. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
     
     This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
-- **Customer-managed (BYOK)**: For complete control over your tenant key, use [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) with Azure Information Protection. For this configuration, you create the key, either directly in Key Vault, or create it on-premises and transfer or import it to Key Vault. You then configure Azure Information Protection to use that key, and you manage it in Azure Key Vault.
+- **Managed by you (BYOK)**: For complete control over your tenant key, use [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) with Azure Information Protection. For this tenant key topology, you create the key, either directly in Key Vault, or create it on-premises. If you create it on-premises, you next transfer or import this key into Key Vault. You then configure Azure Information Protection to use this key, and you manage it in Azure Key Vault.
     
 To create your own key, you have the following options:
 
