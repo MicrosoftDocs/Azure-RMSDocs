@@ -144,9 +144,9 @@ Then run the [Use-AadrmKeyVaultKey cmdlet](/powershell/module/aadrm/use-aadrmkey
 >
 >Make sure that you specify the key version, in addition to the key name when you run this command. You can use the Azure Key Vault cmd, [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey), to get the version number of the current key. For example: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-If you need to confirm that the key URL is set correctly in the Azure RMS service, in Azure Key Vault, you can run [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
+If you need to confirm that the key URL is set correctly for Azure Information Protection: In Azure Key Vault, run [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) to see the key URL.
 
-Finally, if the Azure Rights Management service is already activated, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to tell Azure Rights Management to use this key as the active tenant key for your Azure Rights Management service. If you do not do this step, Azure Rights Management will continue to use the default Microsoft-managed key, that was automatically created when the service was activated.
+Finally, if the Azure Rights Management service is already activated, run [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) to tell Azure Information Protection to use this key as the active tenant key for the Azure Rights Management service. If you do not do this step, Azure Information Protection will continue to use the default Microsoft-managed key, that was automatically created for your tenant.
 
 ## Next steps
 
