@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -239,12 +239,9 @@ For more information about super users, see [Configuring super users for Azure R
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
 
-
-
-
 #### Prerequisite 4: For regions outside North America
 
-For authentication outside the Azure North America region, you must edit the registry as follows. If your Azure Information Protection tenant is in North America, do not do this step:
+When you use a service principal account to protect files outside the Azure North America region, you must edit the registry as follows. This registry edit is also needed to download templates. For all other scenarios, this configuration is not needed.
 
 1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
