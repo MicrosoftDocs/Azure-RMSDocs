@@ -41,9 +41,13 @@ The Azure Information Protection policy supports different levels of subscriptio
 
 - Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
 
-Options that require an Azure Information Protection P2 subscription are now identified in the portal.
+Options that require an Azure Information Protection P2 subscription are identified in the portal.
 
-If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their account is not licensed to use. When you configure options that not all users have a license for, use scoped policies so that the users are not configured to use features for which they do have a license.
+If you have a mix of subscriptions for users for your tenant, it is your responsibility to make sure that the Azure Information Protection policy that users download does not contain configuration options that their account is not licensed to use. When you configure options that not all users have a license for, use scoped policies so that the users are not configured to use features for which they do have a license:
+
+- **When you have a subset of users who have an Azure Information Protection P2 license**: Create and use one or more scoped policies for these users when you configure options for them that require an Azure Information Protection P2 license. Make sure that your global policy does not contain options that require an Azure Information Protection P2 license.
+
+- **When you have a subset of users who have an Office 365 license that includes the Azure Rights Management service and these users do not have an Azure Information Protection license**: Delete any labels in the global policy and then create and use one or more scoped policies for users who do have a license for Azure Information Protection.
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
