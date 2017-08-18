@@ -53,7 +53,6 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 - Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../deploy-use/configure-policy-classification.md).
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
-
 - A browse option for users and groups when users specify custom permissions in Office apps. The **Select users, groups, or organization** icon displays the **Select Users or Groups** dialog box for your on-premises Active Directory. The same dialog box is now also used when users specify custom permissions by using File Explorer. To use this browse option, the computer must be connected to the internal network, the computer must be joined to the domain, and you must have an on-premises Active Directory.
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
@@ -80,7 +79,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Support for labeling and protection of files stored on SharePoint Server.
 
-- Watermarks now support multiple lines. In addition, visual markings are applied to a document on the first save only.
+- Watermarks now support multiple lines. In addition, visual markings are now applied to a document on the [first save only](../deploy-use/configure-policy-markings.md#when-visual-markings-are-applied) rather than every time a document is saved.
 
 - The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) from the admin guide.
 
