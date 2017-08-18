@@ -28,16 +28,22 @@ ms.suite: ems
 
 # Protection-only mode for the Azure Information Protection client
 
-When you run the Azure Information Protection client without an Azure Information Protection policy, it displays in **protection-only** mode. For example, when you use Windows File Explorer, right-click, **Classify and protect**:
+When the Azure Information Protection client downloads an Azure Information Protection policy that has no labels for the user, it displays in **protection-only** mode. For example, when you use Windows File Explorer, right-click, **Classify and protect**:
 
 ![Protection-only mode](../media/protection-only-mode.png)
 
  This mode runs in the following scenarios:
 
 - Your organization does not have a subscription for Azure Information Protection (for classification and protection of data) but has a subscription for the Azure Rights Management service (for data protection with Office 365). 
-    - This is a supported scenario and you can use the Azure Information Protection client to protect files and view protected files.
+    
+    - You can use the Azure Information Protection client to protect files and view protected files. You can't label documents and emails.
+
+- Your organization has a subscription for Azure Information Protection for only a subset of users:
+    
+    - For this mix of subscriptions, it is the administrator's responsibility to configure the Azure Information Protection policy such that that only the subset of users can use labels. The remainder of users should be running the Azure Information Protection client in protection-only mode. 
 
 - Your organization has a subscription for Azure Information Protection but you cannot download the Azure Information Protection policy. 
+    
     - This can happen because of a misconfiguration or because your sign in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
 
 ## Limitations for protection-only mode
