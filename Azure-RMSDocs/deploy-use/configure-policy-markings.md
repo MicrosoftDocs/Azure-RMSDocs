@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,6 +44,8 @@ Additional information about these visual markers:
 	- Multiple lines of text are supported when you use the current preview version of the Azure Information Protection client.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
+
+- Visual markers support one language only.
 
 ## When visual markings are applied
 
