@@ -39,17 +39,17 @@ For mobile device clients and Mac computers:
 
 For Windows clients:
 
-- Use migration scripts to reconfigure AD RMS clients. The scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
+- Use the following migration scripts to reconfigure AD RMS clients. These scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
     
-    **CleanUpRMS.cmd**:
+    **CleanUpRMS.cmd**
     
     - Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
     
-    **MigrateClient.cmd**:
+    **MigrateClient.cmd**
     
     - Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
     
-    -  Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
+    - Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
 
 When you cannot migrate all your Windows clients at once, run the following procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
 
