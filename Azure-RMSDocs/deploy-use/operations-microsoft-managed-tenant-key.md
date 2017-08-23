@@ -42,7 +42,7 @@ To rekey, you must configure the tenant key object and specify the alternative k
 
 Examples of when you might need to rekey for Azure Information Protection:
 
-- You have migrated from Active Directory Rights Management Services (AD RMS) with a cryptographic mode 1 key. This mode is supported only during the migration phase. When the migration is complete, you must change to using a key that uses cryptographic mode 2.
+- You have migrated from Active Directory Rights Management Services (AD RMS) with a cryptographic mode 1 key. When the migration is complete, you want to change to using a key that uses cryptographic mode 2.
 
 - Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
 
