@@ -44,7 +44,7 @@ When you follow these instructions, you receive an email in response from Micros
 
 3. Click **Sign up**.
 
-    Microsoft uses your email address to check whether your organization already has a [paid subscription for Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If that's the case, you don’t need RMS for individuals so you are signed in immediately and the self-service sign up for RMS for individuals is canceled. If a paid subscription isn't found, you'll continue to the next step.
+    Microsoft uses your email address to check whether your organization already has a [subscription for Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 subscription that includes data protection by using Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If either of these subscriptions are found, you don’t need RMS for individuals. You are signed in immediately and the self-service sign up for RMS for individuals is canceled. If one of these subscriptions isn't found, you continue to the next step.
 
 4. Wait for a confirmation email message to be sent to the address that you supplied. It will be from the Office 365 Team (support@email.microsoftonline.com) and has the subject **Finish signing up for Microsoft Azure Information Protection**.
 
@@ -61,18 +61,18 @@ RMS for individuals uses a self-service sign-up process that is also used by oth
 
 This is what happens in the background when a user signs up for RMS for individuals and their organization does not have an Office 365 subscription or Azure subscription, and therefore, no directory in Azure to authenticate users:
 
-1. When the first user from an organization requests a subscription for RMS for individuals, the domain name supplied in their email address is checked to see whether it is already associated with an Azure tenant. If there is no existing tenant, a new tenant and Azure directory is automatically created for the organization, which contains an account for this first user. Unlike with a paid subscription for Azure, this first account is not a global administrator, but a standard user. The new account uses the email address and password that the user supplied.
+1. When the first user from an organization requests a subscription for RMS for individuals, the domain name supplied in their email address is checked to see whether it is already associated with an Azure tenant. If there is no existing tenant, a new tenant and Azure directory is automatically created for the organization, which contains an account for this first user. Unlike a paid or trial subscription for Azure, this first account is not a global administrator, but a standard user. The new account uses the email address and password that the user supplied.
 
     > [!NOTE]
     > Some domain names cannot be used to create the directory and therefore cannot be used for RMS for individuals.
 
-    If an existing tenant is found, it is checked to see whether it already has a subscription for Azure RMS. When no subscription is found, the free RMS for individuals subscription can be added.
+    If an existing tenant is found, it is checked to see whether it already has a subscription for Azure Information Protection. When no subscription is found, the free RMS for individuals subscription can be added.
 
-2. The organization is granted the RMS for individuals subscription. Now, this user can be authenticated by Azure and can then protect files and read files that others have protected by using Azure Rights Management. To protect and read protected files, the user must have an RMS-enlightened application, such as the free [Azure Information Protection client](../rms-client/aip-client.md).
+2. The organization is granted the RMS for individuals subscription. Now, this user can be authenticated by Azure and this user can then protect files and read files that others have protected by using the Azure Rights Management service. To protect and read protected files, the user must have an RMS-enlightened application, such as Office apps or the free [Azure Information Protection client](../rms-client/aip-client.md).
 
-3.  When the second user from the same organization requests an RMS for individuals subscription, a new user account is added to the previously created Azure directory, by using the organization’s RMS for individuals subscription. This second user can do everything that the first user could do (protect files and read protected files), but in addition, these two users can now more easily collaborate securely because they can quickly apply default templates to files that restrict access to accounts in their organization’s Azure directory.
+3. When the second user from the same organization requests an RMS for individuals subscription, a new user account is added to the previously created Azure directory, by using the organization’s RMS for individuals subscription. This second user can do everything that the first user could do (protect files and read protected files). But in addition, these two users can now more easily collaborate securely because they can quickly apply default templates to files that restrict access to accounts in their organization’s Azure directory.
 
-4. Subsequent users from the same organization follow the same pattern, adding user accounts (when new users sign up) to the organization’s Azure directory. The more accounts that are added to the directory, the more users can securely collaborate with co-workers and partners, and more easily prevent unauthorized people from reading their files when they should not have access to them.
+4. Subsequent users from the same organization follow the same pattern, adding user accounts to the organization’s Azure directory when they sign up. The more accounts that are added to the directory, the more users can securely collaborate with co-workers and partners, and more easily prevent unauthorized people from reading their files when they should not have access to them.
 
 Throughout this process, there is no charge to the organization and no work required from the IT department. However, the IT department could choose to do either of the following actions:
 
@@ -90,13 +90,13 @@ Throughout this process, there is no charge to the organization and no work requ
         
         - [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md)
         
-    - Perform e-discovery on company-owned data so that you can, if required, decrypt files that were protected by using Rights Management. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
+    - Perform e-discovery on company-owned data so that authorized users and services can, if required, decrypt files that were protected. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
     
-    - Log all activity for Rights Management as used in your organization. This is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
+    - Log activity to the Rights Management service. Logging is very powerful because not only can you monitor which files are being protected and who is successfully accessing those protected files, but you can also identify potentially suspicious behavior from unauthorized people who are trying to access protected files. For more information, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md).
     
-    - Provide users with the ability to track and revoke their protected documents, if these features are supported by your [subscription](https://www.microsoft.com/cloud-platform/azure-information-protection-features). For more information, see [Track and revoke your documents](../rms-client/client-track-revoke.md) from the [Azure Information Protection user guide](../rms-client/client-user-guide.md).
+    - Provide users with the ability to track and revoke their protected documents, if these features are supported by your subscription. For more information, see [Track and revoke your documents](../rms-client/client-track-revoke.md) from the [Azure Information Protection user guide](../rms-client/client-user-guide.md).
     
-    - Implement a bring your own key solution (BYOK) so that your tenant key for Azure Rights Management is generated on-premises according to your IT policies, and securely transferred to Microsoft by using a hardware security module (HSM). For more information, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
+    - Implement a bring your own key solution (BYOK) so that your tenant key for Azure Information Protection is created and managed by you. For more information, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
 
 ## Next steps
