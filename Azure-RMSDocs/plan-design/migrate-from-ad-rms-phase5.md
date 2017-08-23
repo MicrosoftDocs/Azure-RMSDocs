@@ -78,7 +78,7 @@ To remove the onboarding controls:
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
-## Step 12. rekey your Azure Information Protection tenant key
+## Step 12. Rekey your Azure Information Protection tenant key
 This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1. Rekeying creates a new tenant key that uses RMS Cryptographic Mode 2. Cryptographic Mode 1 is supported for Azure Information Protection only during the migration process.
 
 Rekeying when the migration is complete also helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.

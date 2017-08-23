@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 08/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,24 +31,29 @@ ms.suite: ems
 
 Use the following information for Phase 3 of migrating from AD RMS to Azure Information Protection. These procedures cover step 7 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-When you cannot migrate all clients at once, run these procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
-
 ## Step 7. Reconfigure clients to use Azure Information Protection
 
-This step uses migration scripts to reconfigure AD RMS clients. The scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
+For mobile device clients and Mac computers:
 
-**CleanUpRMS.cmd**:
+- Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
-- Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
+For Windows clients:
 
-**MigrateClient.cmd**:
+- Use the following migration scripts to reconfigure AD RMS clients. These scripts reset the configuration on Windows computers to use the Azure Rights Management service rather than AD RMS: 
+    
+    **CleanUpRMS.cmd**
+    
+    - Deletes the contents of all folders and registry keys used by the AD RMS client to store its configuration. This information includes the location of the client's AD RMS cluster.
+    
+    **MigrateClient.cmd**
+    
+    - Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
+    
+    - Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
 
-- Configures the client to initialize the user environment (bootstrap) for the Azure Rights Management service.
+When you cannot migrate all your Windows clients at once, run the following procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
 
--  Configures the client to connect to your Azure Rights Management service to get use licenses for content that is protected by your AD RMS cluster. 
-
-
-### Client reconfiguration by using registry edits
+### Windows client reconfiguration by using registry edits
 
 1. Return to the migration scripts, **CleanUpRMS.cmd** and **MigrateClient.cmd**, which you extracted previously.
 
@@ -61,8 +66,7 @@ This step uses migration scripts to reconfigure AD RMS clients. The scripts rese
 
     If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-3.  Run **CleanUpRMS.cmd** and then **MigrateClient.cmd** on the client computers that are used by the members of the **AIPMigrated** group. For example, create a group policy object that runs these scripts and assign it to this user group.
-
+3.  Run **CleanUpRMS.cmd** and then **MigrateClient.cmd** on the Windows client computers that are used by the members of the **AIPMigrated** group. For example, create a group policy object that runs these scripts and assign it to this user group.
 
 ## Next steps
 To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase3.md).
