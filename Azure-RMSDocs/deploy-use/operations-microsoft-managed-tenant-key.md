@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/14/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,13 +48,13 @@ Examples of when you might need to rekey for Azure Information Protection:
 
 - You believe the master copy of your tenant key is compromised.
 
-To rekey, you can either create a new key and instruct Azure Information Protection to use this new key. Or, when you already have more than one key that can be used for Azure Information Protection, you can select a different key to become your tenant key. 
+To rekey, you can select a different Microsoft-managed key to become your tenant key, but you cannot create a new Microsoft-managed key. To create a new key, you must change your key topology to be customer-managed (BYOK).
 
-The last example is applicable if you have migrated from Active Directory Rights Management Services (AD RMS). In this scenario, you have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
+You have more than one Microsoft-managed key if you migrated from Active Directory Rights Management Services (AD RMS) and chose the Microsoft-managed key topology for Azure Information Protection. In this scenario, you have at least two Microsoft-managed keys for your tenant. One key, or more, is the key or keys that you imported from AD RMS. You will also have the default key that was automatically created for your Azure Information Protection tenant.
 
-To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet.
+To select a different key to be your active tenant key for Azure Information Protection, use the [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) cmdlet from the AADRM module. To help you identify which key to use, use the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. You can identify the default key that was automatically created for your Azure Information Protection tenant by running the following command:
 
-To create a new Microsoft-managed key, [contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request to create a new, Microsoft-managed key for your tenant**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; creating a new Microsoft-managed key for Azure Information Protection is not a free-of-charge support service.
+	(Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
 To change your key topology to be customer-managed (BYOK), see [Implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
@@ -62,7 +62,7 @@ To change your key topology to be customer-managed (BYOK), see [Implementing you
 Microsoft is responsible for backing up your tenant key and no action is required from you.
 
 ## Export your tenant key
-You can export your Azure Information Protection configuration and tenant key by following the instructions in these three steps:
+You can export your Azure Information Protection configuration and tenant key by following the instructions in the following three steps:
 
 ### Step 1: Initiate export
 
@@ -96,12 +96,12 @@ You can export your Azure Information Protection configuration and tenant key by
 
 ### Step 4: Ongoing: Protect your tenant key
 
--   After you receive your tenant key, keep it well-guarded, because if somebody gets access to it, they can decrypt all documents that are protected by using that key.
+- After you receive your tenant key, keep it well-guarded, because if somebody gets access to it, they can decrypt all documents that are protected by using that key.
 
     If the reason for exporting your tenant key is because you no longer want to use Azure Information Protection, as a best practice, now deactivate the Azure Rights Management service from your Azure Information Protection tenant. Do not delay doing this after you receive your tenant key because this precaution helps to minimize the consequences if your tenant key is accessed by somebody who should not have it. For instructions, see [Decommissioning and deactivating Azure Rights Management](decommission-deactivate.md).
 
 ## Respond to a breach
-No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s well-protected, vulnerabilities might be found in current generation HSM technology or current key lengths and algorithms.
+No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s protected well, vulnerabilities might be found in current generation key technology or in current key lengths and algorithms.
 
 Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, then Microsoft will notify your Azure Information Protection tenant administrators by email by using the address that you supplied when you subscribed.
 
