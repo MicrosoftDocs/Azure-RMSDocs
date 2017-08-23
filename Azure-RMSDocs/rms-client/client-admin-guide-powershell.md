@@ -85,7 +85,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 4. For regions outside North America: 
     
-    - Edit the registry for authentication to the service.
+    - Edit the registry for service discovery.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
