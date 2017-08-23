@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -80,7 +80,7 @@ If you obtained your Azure Information Protection subscription some time ago, or
 
 - **\<organization name> - Confidential View Only**, for Read-only viewing for the protected content. 
 
-You can rename these default templates when you use the Azure portal.
+You can rename (and reconfigure) these default templates when you use the Azure portal.
 
 >[!NOTE]
 >If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).

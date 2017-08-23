@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -80,7 +80,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 5. If you selected **Protect**, now select **Protection** to open the **Protection** blade:
     
-    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
+    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png)
 
 6. On the **Protection** blade, select **Azure RMS** or **HYOK (AD RMS)**.     
     In most cases, select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 10.
