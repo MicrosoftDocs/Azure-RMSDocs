@@ -80,11 +80,11 @@ Throughout this process, there is no charge to the organization and no work requ
     
     For more information, see [How administrators can control the accounts created for RMS for individuals](rms-for-individuals-take-control.md).
 
-- **Manage Rights Management**: IT administrators can convert the RMS for individuals subscription for the organization to a paid subscription that includes Azure Rights Management. When they do this, the existing Azure directory and accounts are preserved for a seamless transition for existing users who were using RMS for individuals. Any files that users protected previously are still protected with the same policies, and the people that they granted permissions to use the files are still be able to use the files in the same way.
+- **Manage Rights Management**: IT administrators can convert the RMS for individuals subscription for the organization to a paid subscription that includes Azure Rights Management. When they do this, the existing Azure directory and accounts are preserved for a seamless transition for existing users who were using RMS for individuals. Any files that users protected previously are still protected with the same policies, and the people that they granted permissions to use the files are still able to use the files in the same way.
     
     When you take this course of action, your organization benefits by being able to integrate Rights Management into its workflows, services, and data stores. In addition, you can now manage Rights Management because you have control over your organization’s tenant key for Azure Rights Management. You can now do the following actions:
     
-    - Configure Exchange and SharePoint to support Azure Rights Management, even if these are running on-premises. Exchange and SharePoint are natively supported for the online services, and they are supported by a connector for the on-premises servers. For more information, see the following:
+    - Configure Exchange and SharePoint to support Azure Rights Management, even if these services are running on-premises. Exchange and SharePoint are natively supported for the online services, and they are supported by a connector for the on-premises servers. For more information, see the following:
     
         - The Exchange Online and SharePoint Online sections from [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md)
         
