@@ -6,7 +6,7 @@ description: Sign up instructions for this free account, and technical informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ To sign up for this free account, you request it by visiting the [Microsoft Azur
 
 ## To sign up for RMS for individuals
 
-1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+1.  Using a Windows or Mac computer, or a mobile device, go to the [Microsoft Azure Information Protection page](https://aka.ms/rms-signup).
 
 2.  Type in the email address that you use for your organization, such as **janetm@contoso.com** or **p.dover@fabrikam.com**.
 
