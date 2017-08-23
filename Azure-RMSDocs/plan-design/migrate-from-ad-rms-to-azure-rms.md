@@ -111,8 +111,6 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 If your AD RMS cluster is currently in Cryptographic Mode 1, do not upgrade the cluster to Cryptographic Mode 2 before you start the migration. Instead, migrate using Cryptographic Mode 1 and rekey your tenant key at the end of the migration, as one of the post migration tasks.
 
-Cryptographic Mode 1 is supported only during the migration process.
-
 To confirm the AD RMS cryptographic mode:
  
 - For Windows Server 2012 R2 and Windows 2012: AD RMS cluster properties > **General** tab. 
