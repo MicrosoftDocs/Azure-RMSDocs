@@ -6,7 +6,7 @@ description: Information about the lifecycle operations that are relevant if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,11 +26,11 @@ ms.suite: ems
 ---
 
 
-# Customer-managed: Tenant key life cycle operations
+# Customer-managed: Tenant key lifecycle operations
 
 >*Applies to: Azure Information Protection, Office 365*
 
-If you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario), use the following sections for more information about the life cycle operations that are relevant to this topology.
+If you manage your tenant key for Azure Information Protection (the bring your own key, or BYOK, scenario), use the following sections for more information about the lifecycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
 In Azure Key Vault, you can change the permissions on the key vault that contains your Azure Information Protection tenant key so that the Azure Rights Management service can no longer access the key. However, when you do this, nobody will be able to open documents and emails that you previously protected with the Azure Rights Management service.
@@ -40,9 +40,9 @@ When you cancel your subscription for Azure Information Protection, Azure Inform
 ## Rekey your tenant key
 Rekeying is also known as rolling your key. Do not rekey your tenant key unless it’s really necessary. Older clients, such as Office 2010, were not designed to handle key changes gracefully. In this scenario, you must clear the Rights Management state on computers by using Group Policy or an equivalent mechanism. However, there are some legitimate events that may force you to rekey your tenant key. For example:
 
-- Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
+-   Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
 
-- You believe the master copy of your tenant key (the copy in your possession) was compromised.
+-   You believe the master copy of your tenant key (the copy in your possession) was compromised.
 
 When you rekey your tenant key, new content is protected by using the new tenant key. This happens in a phased manner, so for a period of time, some new content will continue to be protected with the old tenant key. Previously protected content stays protected to your old tenant key. To support this scenario, Azure Information Protection retains your old tenant key so that it can issue licenses for old content.
 
