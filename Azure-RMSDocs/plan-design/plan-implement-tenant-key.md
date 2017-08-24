@@ -88,6 +88,7 @@ With this option, the following happens:
 3. The copy of the key is protected by Azure Key Vault.
 
 > [!NOTE]
+
 > As an additional protection measure, Azure Key Vault uses separate security domains for its data centers in regions such as North America, EMEA (Europe, Middle East and Africa), and Asia. Azure Key Vault also uses different instances of Azure, such as Microsoft Azure Germany, and Azure Government. 
 
 Although it’s optional, you will also probably want to use the near real-time usage logs from Azure Information Protection to see exactly how and when your tenant key is being used.

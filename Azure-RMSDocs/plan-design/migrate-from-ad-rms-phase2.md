@@ -84,9 +84,6 @@ Your current AD RMS deployment is using one of the following configurations for 
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK) and requires a hardware security module (HSM) from Thales. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
-> [!IMPORTANT]
-> Exchange Online is not currently compatible with BYOK in Azure Information Protection. If you want to use BYOK after your migration and plan to use Exchange Online, make sure that you understand how this configuration reduces IRM functionality for Exchange Online. Review  the information in [BYOK pricing and restrictions](byok-price-restrictions.md) to help you choose the best Azure Information Protection tenant key topology for your migration.
-
 Use the following table to identify which procedure to use for your migration. 
 
 |Current AD RMS deployment|Chosen Azure Information Protection tenant key topology|Migration instructions|

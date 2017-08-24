@@ -29,11 +29,11 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Depending on your tenant key topology (Microsoft-managed or customer-managed), you have different levels of control and responsibility for your Azure Information Protection tenant key after it is implemented.
+Depending on your tenant key topology for Azure Information Protection, you have different levels of control and responsibility for your Azure Information Protection tenant key. The two key topologies are **Microsoft-managed** and **customer-managed**.
 
 When you manage your own tenant key in Azure Key Vault, this is often referred to as bring your own key (BYOK). For more information about this scenario and how to choose between the two tenant key topologies, see [Planning and implementing your Azure Rights Management tenant key](../plan-design/plan-implement-tenant-key.md).
 
-The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
+The following table identifies the operations that you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
 
 |Life cycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
@@ -43,7 +43,7 @@ The following table identifies which operations you can do, depending on the top
 |Export your tenant key|Yes|No|
 |Respond to a breach|Yes|Yes|
 
-After you have identified which topology you have implemented, select one of the following for more information about these operations for your Azure Information Protection tenant key:
+After you have identified which topology you have implemented, select one of the following links for more information about these operations for your Azure Information Protection tenant key:
 
 - [Microsoft-managed tenant key](operations-microsoft-managed-tenant-key.md)
 - [Customer-managed tenant key](operations-customer-managed-tenant-key.md)

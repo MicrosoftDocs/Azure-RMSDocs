@@ -26,11 +26,11 @@ ms.suite: ems
 ---
 
 
-# Microsoft-managed: Tenant key lifecycle operations
+# Microsoft-managed: Tenant key life cycle operations
 
 >*Applies to: Azure Information Protection, Office 365*
 
-If Microsoft manages your tenant key for Azure Information Protection (the default), use the following sections for more information about the lifecycle operations that are relevant to this topology.
+If Microsoft manages your tenant key for Azure Information Protection (the default), use the following sections for more information about the life cycle operations that are relevant to this topology.
 
 ## Revoke your tenant key
 When you cancel your subscription for Azure Information Protection, Azure Information Protection stops using your tenant key and no action is needed from you.
@@ -70,11 +70,11 @@ You can export your Azure Information Protection configuration and tenant key by
 
 ### Step 2: Wait for verification
 
--   Microsoft verifies that your request to release your Azure Information Protection tenant key is legitimate. This process can take up to three weeks.
+- Microsoft verifies that your request to release your Azure Information Protection tenant key is legitimate. This process can take up to three weeks.
 
 ### Step 3: Receive key instructions from CSS
 
--   Microsoft Customer Support Services (CSS) sends you your Azure Information Protection configuration and tenant key encrypted in a password-protected file. This file has a **.tpd** file name extension. To do this, CSS first sends you (as the person who initiated the export) a tool by email. You must run the tool from a command prompt as follows:
+- Microsoft Customer Support Services (CSS) sends you your Azure Information Protection configuration and tenant key encrypted in a password-protected file. This file has a **.tpd** file name extension. To do this, CSS first sends you (as the person who initiated the export) a tool by email. You must run the tool from a command prompt as follows:
 
     ```
     AadrmTpd.exe -createkey
@@ -103,7 +103,7 @@ If the reason for exporting your tenant key is because you no longer want to use
 ## Respond to a breach
 No security system, no matter how strong, is complete without a breach response process. Your tenant key might be compromised or stolen. Even when it’s protected well, vulnerabilities might be found in current generation key technology or in current key lengths and algorithms.
 
-Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, then Microsoft will notify your Azure Information Protection tenant administrators by email by using the address that you supplied when you subscribed.
+Microsoft has a dedicated team to respond to security incidents in its products and services. As soon as there is a credible report of an incident, this team engages to investigate the scope, root cause, and mitigations. If this incident affects your assets, Microsoft will notify your Azure Information Protection tenant administrators by email, by using the email address that you supplied when you subscribed.
 
 If you have a breach, the best action that you or Microsoft can take depends on the scope of the breach; Microsoft will work with you through this process. The following table shows some typical situations and the likely response, although the exact response depends on all the information that is revealed during the investigation.
 
