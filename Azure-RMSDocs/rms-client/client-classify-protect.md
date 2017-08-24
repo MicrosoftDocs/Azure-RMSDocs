@@ -99,16 +99,6 @@ You can specify your own protection settings for documents rather than use the p
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
 
-### Safely sharing by email
-
-When you share Office documents by email, you can attach the document to an email that you protect, and the document is automatically protected with the same restrictions that apply to the email. 
-
-However, we recommend that you protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. Two benefits of protecting the document before you attach it to an email:
-
-- You can track and if necessary, revoke the document after you have emailed it.
-
-- You can apply different permissions to the document than to the email message.
-
 ## Using File Explorer to classify and protect files
 
 When you use File Explorer, you can quickly classify and protect a single file, multiple files, or a folder. 

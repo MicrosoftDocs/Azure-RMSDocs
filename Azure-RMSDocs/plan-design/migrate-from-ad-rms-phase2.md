@@ -6,7 +6,7 @@ description: Phase 2 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -84,6 +84,9 @@ Your current AD RMS deployment is using one of the following configurations for 
 
 The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK) and requires a hardware security module (HSM) from Thales. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
+> [!IMPORTANT]
+> Exchange Online is not currently compatible with BYOK in Azure Information Protection. If you want to use BYOK after your migration and plan to use Exchange Online, make sure that you understand how this configuration reduces IRM functionality for Exchange Online. Review  the information in [BYOK pricing and restrictions](byok-price-restrictions.md) to help you choose the best Azure Information Protection tenant key topology for your migration.
+
 Use the following table to identify which procedure to use for your migration. 
 
 |Current AD RMS deployment|Chosen Azure Information Protection tenant key topology|Migration instructions|
@@ -137,7 +140,9 @@ The template changes that you might need to make for this step:
 
 - If you created Azure Information Protection custom templates before the migration, you must manually export and import them.
 
-- If your templates in AD RMS used the **ANYONE** group, you must manually add the equivalent group and rights.
+- If your templates in AD RMS used the **ANYONE** group, you might need to add users or groups from outside your organization. 
+    
+    In AD RMS, the ANYONE group granted rights to all authenticated users. This group is automatically converted to all users in your Azure AD tenant. If you do not need to grant rights to any additional users, no further action is needed. But if you were using the ANYONE group to include external users, you must manually add these users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
@@ -153,24 +158,18 @@ You can then publish or archive these templates as you would any other template 
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
-If your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure Information Protection; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+If your templates in AD RMS used the **ANYONE** group, this group is automatically converted to use the group named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. This group contains all users from your Azure AD tenant.
 
-If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 
-You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
+If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-- Use the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet.
+You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** blade, choose **Enter details** to manually specify the email addresses for these users. 
 
-- Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure Information Protection.
-
-> [!NOTE]
-> This "AllStaff" equivalent group isn't exactly the same as the ANYONE group in AD RMS:  The "AllStaff" group includes all users in your Azure tenant, whereas the ANYONE group includes all authenticated users, who could be outside your organization.
-> 
-> Because of this difference between the two groups, you might need to also add external users in addition to the "AllStaff" group. External email addresses for groups are not currently supported.
-
+For more information about this configuration, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
 
 #### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
-This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
+This section contains the sample script to help you identify any AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
 **Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
