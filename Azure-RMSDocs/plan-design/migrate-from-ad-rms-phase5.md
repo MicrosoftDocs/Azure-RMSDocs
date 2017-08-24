@@ -100,6 +100,7 @@ To rekey your Azure Information Protection tenant key:
 
 For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
 
+
 ## Next steps
 
 Now that you have completed the migration, review the [deployment roadmap](deployment-roadmap.md) to identify any other deployment tasks that you might need to do.
