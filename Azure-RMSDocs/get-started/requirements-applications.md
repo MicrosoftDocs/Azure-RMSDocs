@@ -62,20 +62,20 @@ Information about the table columns:
 |**Blackberry 10**|Web browser [[2]](#footnote-2)|Not supported|Blackberry email [[4]](#footnote-4) <br /><br />Web browser [[2]](#footnote-2)|Not supported|
 
 
-####### Footnote 1
+###### Footnote 1
 Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business.
 
-####### Footnote 2
+###### Footnote 2
 For Office attachments that are protected by using Office 365 Message Encryption that is configured after September 5, 2017.
 
-####### Footnote 3
+###### Footnote 3
 If the sender and the recipient are part of the same organization. Or either of the following conditions:
 
 - The sender or the recipient are using Exchange Online.
 
 - The sender is using Exchange on-premises in a hybrid configuration. 
 
-####### Footnote 4
+###### Footnote 4
 Uses Exchange ActiveSync IRM, which must be enabled by the Exchange administrator. Users can view, reply, and reply all for protected email messages but users cannot protect new email messages.
  
 If the email application cannot render the message because the Exchange ActiveSync IRM is not enabled, the recipient can view the email in a web browser when the sender uses Exchange Online, or Exchange on-premises in a hybrid configuration. 
