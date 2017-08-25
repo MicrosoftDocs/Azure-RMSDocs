@@ -66,7 +66,7 @@ Information about the table columns:
 Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business.
 
 ###### Footnote 2
-For Office attachments that are protected by using Office 365 Message Encryption that is configured after September 5, 2017.
+For [Office attachments](https://support.office.com/article/Introduction-to-IRM-for-email-messages-bb643d33-4a3f-4ac7-9770-fd50d95f58dc) that are protected by using message protection in Office 365.
 
 ###### Footnote 3
 If the sender and the recipient are part of the same organization. Or either of the following conditions:
