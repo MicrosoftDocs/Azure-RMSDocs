@@ -52,34 +52,35 @@ Information about the table columns:
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online [[2a1]](#footnote-1)<br /><br />Web browser [[10d2]](#footnote-2)|Azure Information Protection client for Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web browser [[3b3]](#footnote-3)<br /><br />Windows Mail [[4c4]](#footnote-4) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
-|**iOS**|Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[2a1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web browser [[10d2]](#footnote-2)|Azure Information Protection app (viewing protected documents)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app (viewing protected email)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4c4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4c4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3b2]](#footnote-2)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2a1]](#footnote-1)<br /><br />Office Mobile (viewing protected documents) <br /><br />Web browser [[10d2]](#footnote-2)|Azure Information Protection app (viewing protected documents) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4c4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />GigaTrust App for Android [[4c4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4c4]](#footnote-4)<br /><br />Outlook for Android [[4c4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4c4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3b2]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
-|**macOS**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[2a1]](#footnote-1)<br /><br />Web browser [[10d4]](#footnote-4)|Foxit Reader<br /><br />RMS sharing app (viewing protected documents)|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac <br /><br />Web browser [[3b2]](#footnote-2)|RMS sharing app (viewing protected text, images, generically protected files)|
-|**Windows 10 Mobile**|Office Mobile apps (viewing protected documenting using Azure RMS) <br /><br />Web browser [[10d4]](#footnote-4)|Not supported|Citrix WorxMail <br /><br />Outlook Mail <br /><br />Web browser [[3b2]](#footnote-2)|Not supported|
-|**Windows RT**|Office 2013 RT<br /><br />Office Online [[2a1]](#footnote-1)<br /><br />Web browser [[10d4]](#footnote-4)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser [[3b2]](#footnote-2)<br /><br />Windows Mail [[4c4]](#footnote-4)|Siemens JT2Go: JT files|
-|**Windows Phone 8.1**|Office Mobile (AD RMS only)<br /><br />Web browser [[10d4]](#footnote-4)|RMS sharing app (viewing protected documents)|Outlook Mobile [[4c4]](#footnote-4) <br /><br />Web browser [[3b2]](#footnote-2)|RMS sharing app (viewing protected text, images, generically protected files)|
-|**Blackberry 10**|Web browser [[10d4]](#footnote-4)|Not supported|Blackberry email [[4c4]](#footnote-4) <br /><br />Web browser [[3b2]](#footnote-2)|Not supported|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection client for Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
+|**iOS**|Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app (viewing protected email)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (viewing protected documents) <br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
+|**macOS**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Foxit Reader<br /><br />RMS sharing app (viewing protected documents)|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac <br /><br />Web browser [[2]](#footnote-2)|RMS sharing app (viewing protected text, images, generically protected files)|
+|**Windows 10 Mobile**|Office Mobile apps (viewing protected documenting using Azure RMS) <br /><br />Web browser [[2]](#footnote-2)|Not supported|Citrix WorxMail <br /><br />Outlook Mail <br /><br />Web browser [[2]](#footnote-2)|Not supported|
+|**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser [[2]](#footnote-2)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
+|**Windows Phone 8.1**|Office Mobile (AD RMS only)<br /><br />Web browser [[2]](#footnote-2)|RMS sharing app (viewing protected documents)|Outlook Mobile [[4]](#footnote-4) <br /><br />Web browser [[2]](#footnote-2)|RMS sharing app (viewing protected text, images, generically protected files)|
+|**Blackberry 10**|Web browser [[2]](#footnote-2)|Not supported|Blackberry email [[4]](#footnote-4) <br /><br />Web browser [[2]](#footnote-2)|Not supported|
 
 
 ####### Footnote 1
 Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business.
 
-
 ####### Footnote 2
+For Office attachments that are protected by using Office 365 Message Encryption that is configured after September 5, 2017.
+
+####### Footnote 3
 If the sender and the recipient are part of the same organization. Or either of the following conditions:
 
 - The sender or the recipient are using Exchange Online.
 
 - The sender is using Exchange on-premises in a hybrid configuration. 
 
-####### Footnote 3
+####### Footnote 4
 Uses Exchange ActiveSync IRM, which must be enabled by the Exchange administrator. Users can view, reply, and reply all for protected email messages but users cannot protect new email messages.
  
 If the email application cannot render the message because the Exchange ActiveSync IRM is not enabled, the recipient can view the email in a web browser when the sender uses Exchange Online, or Exchange on-premises in a hybrid configuration. 
 
-####### Footnote 4
-For Office attachments that are protected by using Office 365 Message Encryption that is configured after September 5, 2017.
+
 
 ### More information about Azure RMS support for Office
 
