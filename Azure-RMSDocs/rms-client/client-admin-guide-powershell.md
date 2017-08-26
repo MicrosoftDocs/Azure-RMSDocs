@@ -103,7 +103,7 @@ You must have a Rights Management usage right to remove protection from files, o
 
 You can connect directly to the Azure Rights Management service non-interactively to protect or unprotect files.
 
-You must use a service principal to connect to the Azure Rights Management service non-interactively, which you do by using the `Set-RMSServerAuthentication` cmdlet. You must do this for each Windows PowerShell session that runs cmdlets that directly connect to the Azure Rights Management service. Before you run this cmdlet, you must have these three identifiers:
+You must use a service principal account to connect to the Azure Rights Management service non-interactively, which you do by using the `Set-RMSServerAuthentication` cmdlet. You must do this for each Windows PowerShell session that runs cmdlets that directly connect to the Azure Rights Management service. Before you run this cmdlet, you must have these three identifiers:
 
 - BposTenantId
 
@@ -230,9 +230,9 @@ Our example command would then look like the following:
 
 	Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means that the client is now operating in "server mode". This message does not confirm that authentication was successful by using the values you supplied, but that the switch to server mode was successful.
+As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
-Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
+Consider making this service principal account a super user: To ensure that this service principal account can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
 For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
@@ -269,7 +269,7 @@ It's more efficient to use labels to classify and protect files, because there a
 
 However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must typically run a series of cmdlets as described next.
 
-First, if you need to authenticate to the Azure Rights Management service with a service principal rather than use your own account, in a Powershell session, type:
+First, if you need to authenticate to the Azure Rights Management service with a service principal account rather than use your own account, in a PowerShell session, type:
 
 	Set-RMSServerAuthentication
 
@@ -350,7 +350,7 @@ Read this section before you start using the PowerShell commands to protect or u
 
 ### Prerequisites
 
-In addition to the prerequisites for installing the AzureInformationProtection module, your account must have Read and Execute permissions to access ServerCertification.asmx:
+In addition to the prerequisites for installing the AzureInformationProtection module, the account used to protect or unprotect files must have Read and Execute permissions to access ServerCertification.asmx:
 
 1. Log on to an AD RMS server.
 
@@ -366,7 +366,9 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 7. In the **Permissions for ServerCertification.asmx** dialog box, click **Add**. 
 
-8. Add your account name. If other AD RMS administrators will also use these cmdlets to protect and unprotect files, add their names as well.
+8. Add your account name. If other AD RMS administrators or service accounts will also use these cmdlets to protect and unprotect files, add those accounts as well. 
+    
+    To protect or unprotect files non-interactively, add the relevant computer account or accounts. For example, add the computer account of the Windows Server computer that is configured for File Classification Infrastructure and will use a PowerShell script to protect files. This scenario requires the current preview version of the Azure Information Protection client.
 
 9. In the **Allow** column, make sure that the **Read and Execute**, and the **Read** checkboxes are selected.
 
@@ -445,7 +447,7 @@ Your output might look similar to the following:
 	--------                              ------
 	\\Server1\Documents\Test1.docx        Protected
 
-To unprotect a file, you must have Owner or Extract rights from when the  file was protected, or be super user for AD RMS. Then, use the Unprotect cmdlet. For example:
+To unprotect a file, you must have Owner or Extract usage rights from when the  file was protected, or be super user for AD RMS. Then, use the Unprotect cmdlet. For example:
 
 	Unprotect-RMSFile C:\test.docx -InPlace
 
