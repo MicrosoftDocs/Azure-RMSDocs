@@ -35,7 +35,7 @@ When you manage your own tenant key in Azure Key Vault, this is often referred t
 
 The following table identifies which operations you can do, depending on the topology that you’ve chosen for your Azure Information Protection tenant key.
 
-|Lifecycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
+|Life cycle operation|Microsoft-managed (default)|Customer-managed (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
 |Revoke your tenant key|No (automatic)|Yes|
 |Rekey your tenant key|Yes|Yes|
