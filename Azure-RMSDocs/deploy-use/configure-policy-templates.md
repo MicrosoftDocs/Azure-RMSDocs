@@ -47,15 +47,19 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 ## Default templates
 
-When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. When these two templates are created, they have the following restrictions: 
+When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. When these two templates are created, they have the following permissions that are listed by the common name for the [usage rights](configure-usage-rights.md#usage-rights-and-descriptions ): 
 
-- Read or Modify permissions for the protected content
+- Read and modify permissions for the protected content. Specific usage rights:
     
-    - **Specific permissions**: View Content, Save File, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All
+    - **Templates created after September 2017**: View, Copy, Allow Macros, View Assigned Rights, Print, Forward, Reply, Reply All, Save, Edit Content, Edit Assigned Rights, Full Control, Save As.
+    
+    - **Templates created before September 2017**: View, Save As, Edit Content, View Assigned Rights, Allow Macros, Forward, Reply, Reply All.
 
-- Read-only viewing for the protected content
+- Read-only viewing for the protected content. Specific usage rights:
     
-    - **Specific permission**: View Content
+    - **Templates created after September 2017**: View, Copy, Allow Macros, View Assigned Rights, Print, Forward, Reply, Reply All, Save, Edit Content, Edit Assigned Rights. 
+    
+    - **Templates created before September 2017**: View.
 
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 
