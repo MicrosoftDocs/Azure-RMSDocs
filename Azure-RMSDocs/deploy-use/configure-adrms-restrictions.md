@@ -73,7 +73,7 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
 - Instruct users not to select **Do Not Forward** in Outlook, or provide specific guidance. 
 
-    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The menu options are **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
+    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
     
     When users select the Do Not Forward button, the choice of using Azure RMS or AD RMS is non-deterministic. When users select Do Not Forward from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to choose for their email message. For both scenarios, if AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages.
     
