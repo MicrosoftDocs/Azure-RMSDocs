@@ -71,11 +71,13 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
 - Does not support Office 2010 or Office 2007.
 
-- Instruct users not to manually select the **Do Not Forward** option in Outlook. 
+- Instruct users not to select **Do Not Forward** in Outlook, or provide specific guidance. 
 
-    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can select the Do Not Forward option manually by using the Outlook **Do Not Forward** button or menu option. When this Outlook option is applied manually by users, AD RMS might be used rather than the intended Azure Rights Management service. In this scenario, people that you share with externally cannot open email messages that have this Do Not Forward option applied.
+    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
     
-    The current preview version of the Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. This setting does not affect the Outlook **Do Not Forward** menu option. If you do not want this behavior, you can hide the **Do Not Forward** button in Outlook by configuring an [advanced client  setting](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
+    When users select the Do Not Forward button, the choice of using Azure RMS or AD RMS is non-deterministic. When users select Do Not Forward from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to choose for their email message. For both scenarios, if AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages.
+    
+    The current preview version of the Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide the **Do Not Forward** button in Outlook by configuring an [advanced client  setting](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
 
 - For the current general availability version of the Azure Information Protection client: If users configure custom permissions when you use AD RMS (HYOK) protection and Azure RMS protection, the document or email is always protected by Azure Rights Management. This limitation does not apply to the current preview version of the client.
 
