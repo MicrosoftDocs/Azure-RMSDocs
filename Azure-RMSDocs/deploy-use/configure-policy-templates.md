@@ -60,7 +60,7 @@ When you obtain your subscription for Azure Information Protection or for an Off
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 
 >[!NOTE]
-> You can change these settings, and the names of the default templates. This ability was not possible with the Azure classic portal and remains unsupported for PowerShell.
+> You can change these settings, and the names and descriptions of the default templates. This ability was not possible with the Azure classic portal and remains unsupported for PowerShell.
 
 These default templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](../understand-explore/applications-support.md) that can use Rights Management templates.
 
@@ -110,7 +110,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
-- When you convert or link a template to a label, it can no longer be used by other labels.
+- When you convert or link a template to a label, it can no longer be used by other labels and no longer displays under the **Templates** container.
 
 - You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
