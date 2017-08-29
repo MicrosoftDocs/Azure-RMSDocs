@@ -51,9 +51,9 @@ When you obtain your subscription for Azure Information Protection or for an Off
 
 - Read and modify permissions for the protected content. Specific usage rights:
     
-    - **Templates created after September 2017**: View, Open, Read | Save As, Export| Copy | Allow Macros | Print | Forward | Reply | Reply All | Save | Edit Content, Edit | Full Control
+    - **Templates created after September 2017**: View, Open, Read | Save As, Export | Copy | Allow Macros | Print | Forward | Reply | Reply All | Save | Edit Content, Edit | Full Control
     
-    - **Templates created before September 2017**: View, Open, Read | Save As, Export | Edit Content, Edit | Allow Macros | Forward |Reply | Reply All
+    - **Templates created before September 2017**: View, Open, Read | Save As, Export | Edit Content, Edit | Allow Macros | Forward | Reply | Reply All
 
 - Read-only viewing for the protected content. Specific usage rights:
     
