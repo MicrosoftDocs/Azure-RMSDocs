@@ -64,7 +64,7 @@ In addition, the templates are configured to allow offline access for seven days
 
 These default templates make it easy for you and others to immediately start protecting your organization's sensitive data. These templates can be used with Azure Information Protection labels, or by themselves with [applications and services](../understand-explore/applications-support.md) that can use Rights Management templates.
 
-You can also create your own custom templates by using PowerShell. Although you probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure.
+You can also create your own custom templates. Although you probably require only a few templates, you can have a maximum of 500 custom templates saved in Azure.
 
 ### Default template names
 
