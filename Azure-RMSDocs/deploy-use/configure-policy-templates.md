@@ -177,7 +177,7 @@ When you create a new label with the protection setting of **Azure RMS**, under 
 
 4. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
+     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png)
 
 5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring these protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     
