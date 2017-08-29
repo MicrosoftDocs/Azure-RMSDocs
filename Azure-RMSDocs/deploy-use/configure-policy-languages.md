@@ -25,7 +25,7 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 
 ---
 
-# How to configure labels for different languages in Azure Information Protection
+# How to configure labels and templates for different languages in Azure Information Protection
 
 >*Applies to: Azure Information Protection*
 
