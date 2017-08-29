@@ -56,15 +56,19 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## To configure recommended or automatic classification for a label
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.  
+2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
+    
+    If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
 
-3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
+3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, select the label to configure. 
 
-4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
+4. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
+
+5. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
 ....
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
@@ -76,13 +80,13 @@ In this example, the user can click **Change now** to apply the recommended labe
         
     **Example of the occurrences options**: You select the built-in social security number option, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique values only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
-5. On the **Label** blade, configure the following, and then click **Save**:
+6. On the **Label** blade, configure the following, and then click **Save**:
     
     - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
     
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
-6. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+7. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
 
 ## Details about the information types
 

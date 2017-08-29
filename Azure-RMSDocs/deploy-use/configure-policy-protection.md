@@ -58,13 +58,13 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 ## To configure a label for Rights Management protection
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
-
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
+    
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure will apply to all users, select **Global policy** from the initial **Azure Information Protection** blade. However, if the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, select **Scoped policies** instead, and select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade. However, if the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
 
-3. On the **Policy** blade, select the label that you want to configure, which opens the **Label** blade. 
+3. Select the label that you want to configure, which opens the **Label** blade. 
 
 4. On the **Label** blade, locate **Set permissions for documents and emails containing this label** and select one of the following options:
     
@@ -95,7 +95,7 @@ Exchange does not have to be configured for information rights management (IRM) 
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
-        If you choose the option for Word, Excel, PowerPoint, and File Explorer: This option requires the current preview version of the Azure Information Protection client. When this option is set and users have the preview client, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
+        If you choose the option for Word, Excel, PowerPoint, and File Explorer: This option requires the preview version of the Azure Information Protection client. When this option is set and users have the preview client, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
 
 8. If you selected **Select a predefined template** for **Azure RMS**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
     
