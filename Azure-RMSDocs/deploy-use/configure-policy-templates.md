@@ -114,7 +114,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
-- When you convert or link a template to a label, it can no longer be used by other labels and no longer displays under the **Templates** container.
+- When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Templates** section.
 
 - You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
@@ -181,7 +181,7 @@ When you create a new label with the protection setting of **Azure RMS**, under 
 
 4. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png)
+     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png)
 
 5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring these protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     
