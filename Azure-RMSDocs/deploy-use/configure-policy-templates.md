@@ -110,7 +110,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
-- When you convert or link a template to a label, it can no longer be used by other labels and no longer displays under the **Templates** container.
+- When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Templates** section.
 
 - You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 

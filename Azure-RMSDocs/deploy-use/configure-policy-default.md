@@ -85,10 +85,10 @@ When users select this label, the Outlook Do Not Forward option is automatically
 |Highly Confidential \ Recipients Only|Highly confidential data that requires protection and that can be viewed by the recipients only.|**Enabled**: On <br /><br />**Visual markings**: Footer (email)<br /><br />Classified as Highly Confidential <br /><br />**Conditions**: None<br /><br />**Protection**: Set user defined permissions (Preview), In Outlook apply Do Not Forward|
 
 ###### Footnote 1
-The protection settings use the default template, **Confidential \ All Employees**.
+The protection permissions match those in the [default template](configure-policy-templates.md#default-templates), **Confidential \ All Employees**.
 
 ###### Footnote 2 
-The protection settings use the default template, **Highly Confidential \ All Employees**.
+The protection permissions match those in the [default template](configure-policy-templates.md#default-templates), **Highly Confidential \ All Employees**.
 
 
 ### Information Protection bar
