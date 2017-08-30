@@ -36,11 +36,15 @@ In addition to the Information Protection bar title and tooltip, there are some 
 
 To configure these settings:
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If these settings that you want to configure will apply to all users, configure the following global settings from the **Policy: Global** blade:
+2. If the settings that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
+    
+    If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+
+3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, configure the settings:
     
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
         
@@ -61,8 +65,6 @@ To configure these settings:
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
         As an example, for your help desk, you might enter the Microsoft documentation page that includes information about installing and using the client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) or release version information (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternatively, you might publish your own webpage that includes information for users to contact your help desk, or a video that steps users through how to use the labels that you have configured.
-        
-         These settings can be overwritten for specified users when you have created a [scoped policy](configure-policy-scope.md). To configure these settings in a scoped policy, first select that scoped policy from the initial **Azure Information Protection** blade.
 
 3. To save your changes, click **Save**.
 
