@@ -44,7 +44,7 @@ Although the default labels for Azure Information Protection support multiple la
 
 You can also configure templates for different languages when either of the following conditions apply. This configuration is appropriate if users or administrators need to see the current template name and description in their localized language.
 
-- The template was created in the Azure classic portal or by using PowerShell, and the template is not converted to a label.
+- The template was created in the Azure classic portal or by using PowerShell, and the template is not linked to a label by using the **Select a predefined template** protection setting.
 
 - You do not have a subscription that supports labels, so you can only create and manage templates in the Azure portal.
 
