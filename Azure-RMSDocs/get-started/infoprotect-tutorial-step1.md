@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,29 +30,40 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->If you know that the Azure Rights Management service for your tenant is already activated, you can go straight to the [next step](infoprotect-tutorial-step2.md). 
->
->If you're not sure whether this service is activated or not, use the instructions in this step to check.
+>Even if you have already activated the Azure Rights Management service for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2. 
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate this service, which include using Windows PowerShell, and using the admin portals.
 
-For this tutorial, we'll go straight to the activation page in the admin portal for Office 365 administrators. However, if you prefer to navigate to this page from your Office 365 admin portal rather than go directly to the page, see the full instructions from [Activating Azure Rights Management](../deploy-use/activate-service.md). Also use these full instructions if you have access to the Azure portal but not the Office 365 admin portal.
+For this tutorial, we'll use the Azure portal, which is where you also configure labels for users. 
 
-## To activate the Rights Management service
+## To activate the Azure Rights Management service
 
-1. Open a new browser window and go directly to the [Rights Management activation page](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) for Office 365 administrators.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
+
+2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
-    If you are prompted to sign in, use an account that is a global administrator for Office 365.
+3.  On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
+    
+    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    
+    > [!TIP] 
+    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-2. On the **rights management** page, click **activate**. If this button displays **deactivate**, the service is already activated and you can go straight to the [next step](infoprotect-tutorial-step2.md). 
+4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **RMS Settings**.  
 
-    ![Azure Information Protection quick start tutorial step 1 - activate the service](../media/info-protect-activate.png)
+5. You now see whether the Azure Rights Management service is activated for your tenant. 
+    
+    - If the service is activated, you see the following confirmation:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
+        
+    - If the service is not activated, you see this reflected in the status information, and the option to activate:
+        
+        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-3. When prompted **Do you want to activate Rights Management?**, click **activate** to confirm.
+6. If the service isn't activated, select **Activate**. 
 
-    You should now see **Rights management is activated** and the option to deactivate (you might need to manually refresh the page)
-
-    At this time, do not click **advanced features**. Instead, you can close this page.
+    When activation is complete, the information bar displays **Activation finished successfully**.
 
 That's all you need to do for this first step to complete this tutorial. You're ready to go to step 2.
 
