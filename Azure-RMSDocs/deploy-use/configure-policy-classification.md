@@ -69,7 +69,6 @@ In this example, the user can click **Change now** to apply the recommended labe
 4. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
 5. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own, and then click **Save**:
-....
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
         To use the full list of conditions, you must use the current preview version of the Azure Information Protection client. If you have the current general availability version of the client, the following five conditions only are supported: **SWIFT Code**, **Credit Card Number**, **ABA Routing Number**, **USA Social Security Number (SSN)**, and **International Banking Account Number (IBAN)**. [More information](#details-about-the-information-types)
