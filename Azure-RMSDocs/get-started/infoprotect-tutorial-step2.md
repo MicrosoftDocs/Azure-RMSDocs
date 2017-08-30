@@ -153,8 +153,7 @@ Now that you've had a look at the default policy and made some changes, the next
 |About the default policy and different versions|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 |Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md)|
-|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights
-.md)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)|
 
 
 
