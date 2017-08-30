@@ -75,13 +75,13 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
     Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
     
-    When users select the Do Not Forward button, the choice of using Azure RMS or AD RMS is non-deterministic. When users select Do Not Forward from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to choose for their email message. For both scenarios, if AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages.
+    When users select the Do Not Forward button, Azure RMS or AD RMS could be used and the choice is non-deterministic. When users select **Do Not Forward** from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to select for their email message. For both scenarios, if AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages.
     
     The current preview version of the Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide the **Do Not Forward** button in Outlook by configuring an [advanced client  setting](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
 
 - For the current general availability version of the Azure Information Protection client: If users configure custom permissions when you use AD RMS (HYOK) protection and Azure RMS protection, the document or email is always protected by Azure Rights Management. This limitation does not apply to the current preview version of the client.
 
-- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer, which is supported for current preview version of the Azure Information Protection client: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK (AD RMS) protection. 
+- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer, which is supported with the current preview version of the Azure Information Protection client: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK (AD RMS) protection. 
 
 - If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
