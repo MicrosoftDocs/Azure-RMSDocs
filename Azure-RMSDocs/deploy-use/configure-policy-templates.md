@@ -74,9 +74,9 @@ You can also create your own custom templates. Although you probably require onl
 
 If you recently obtained a subscription for Azure Information Protection, your default templates are created with the following names:
 
-- **Confidential \ All Employees** for Read or Modify permissions for the protected content.
+- **Confidential \ All Employees** for read and modify permissions for the protected content.
 
-- **Highly Confidential \ All Employees** for Read-only viewing for the protected content.
+- **Highly Confidential \ All Employees** for read-only viewing for the protected content.
 
 If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, your default templates are created with the following names:
 
