@@ -137,7 +137,7 @@ The Rights Management owner for a document or email is logged as the **owner-ema
 Note that the Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
 
 ## See Also
-[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md))
+[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
 [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md)
 
