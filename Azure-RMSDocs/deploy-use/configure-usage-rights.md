@@ -81,7 +81,7 @@ Not included in the Azure Information Protection client for Windows. In this cli
 
 
 ## Rights included in the default templates
-The usage rights that are included with the default templates are listed in the following table. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
+The following table lists the usage rights that are included with the default templates. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
 
 |Display name|Usage rights included|
 |----------------|---------------------------------|
