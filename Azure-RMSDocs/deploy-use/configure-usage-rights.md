@@ -34,12 +34,12 @@ When you set protection on files or emails by using the Azure Rights Management 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 ## Usage rights and descriptions
-The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by the **Common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
+The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
 
 The **API Constant or Value** is the SDK name for an MSIPC API call, used when you write an RMS-enlightened application that checks for a usage right, or adds a usage right to a policy.
 
 
-|Right|Description|Implementation|
+|Usage right|Description|Implementation|
 |-------------------------------|---------------------------|-----------------|
 |Common name: **Edit Content, Edit** <br /><br />Encoding in policy: **DOCEDIT**|Allows the user to modify, rearrange, format or filter the content inside the application. It does not grant the right to save the edited copy.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Edit Content**<br /><br />Name in the Azure portal: Included in **Edit and save**<br /><br />Name in AD RMS templates: **Edit** <br /><br />API constant or value: Not applicable.|
 |Common name: **Save** <br /><br />Encoding in policy: **EDIT**|Allows the user to save the document in its current location.<br /><br />In Office applications, this right also allows the user to modify the document.|Office custom rights: As part of the **Change** and **Full Control** options. <br /><br />Name in the Azure classic portal: **Save File**<br /><br />Name in the Azure portal: Included in **Edit and save**<br /><br />Name in AD RMS templates: **Save** <br /><br />API constant or value: `IPC_GENERIC_WRITE L"EDIT"`|
@@ -58,9 +58,9 @@ The **API Constant or Value** is the SDK name for an MSIPC API call, used when y
 
 Some applications group usage rights together into permissions levels, to make it easier to select usage rights that are typically used together. These permissions levels help to abstract a level of complexity from users, so they can choose options that are role-based.  For example, **Reviewer** and **Co-Author**. Although these options often show users a summary of the rights, they might not include every right that is listed in the previous table.
 
-Use the following table for a list of these permissions levels and a complete list of the rights that they contain.
+Use the following table for a list of these permissions levels and a complete list of the usage rights that they contain. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
 
-|Permissions Level|Applications|Rights included (common name)|
+|Permissions level|Applications|Usage rights included|
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal <br /><br />Azure portal<br /><br /> Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Reply; Reply All; Allow Macros [[1]](#footnote-1)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app.|
 |Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Reply: Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Allow Macros [[1]](#footnote-1)|
@@ -81,9 +81,9 @@ Not included in the Azure Information Protection client for Windows. In this cli
 
 
 ## Rights included in the default templates
-The rights that are included with the default templates are as follows:
+The usage rights that are included with the default templates are listed in the following table. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
 
-|Display Name|Rights included (common name)|
+|Display name|Usage rights included|
 |----------------|---------------------------------|
 |\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|**Templates created after September 2017**:<br /><br /> View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit<br /><br />**Templates created before September 2017**: View, Open, Read|
 |\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|**Templates created after September 2017**: View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control<br /><br />**Templates created before September 2017**: View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
