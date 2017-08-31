@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,19 +37,15 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels for different languages](../deploy-use/configure-policy-languages.md).
+- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels and templates for different languages](../deploy-use/configure-policy-languages.md).
 
 - There is no centralized logging for classification and labeling.
 
-- Conditions for automatic classification must be phrases or patterns.
-
-- No labeling ability for Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
+- No labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
 
 - No classification and labeling integration with Exchange Online or SharePoint Online.
 
-- The SDK for partners and developers does not yet include classification and labeling.
-
-The February release removes many previous limitations. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Request new features and vote on requests by visiting the [User Voice site](https://msip.uservoice.com/) for Azure Information Protection.
 
 ## Do I need to be a global admin to configure classification and labels?
 
