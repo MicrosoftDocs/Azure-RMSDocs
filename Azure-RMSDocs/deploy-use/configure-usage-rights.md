@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,8 +85,9 @@ The rights that are included with the default templates are as follows:
 
 |Display Name|Rights included (common name)|
 |----------------|---------------------------------|
-|&lt;*organization name*&gt; *- Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read|
-|&lt;*organization name*&gt; *- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|**Templates created after September 2017**:<br /><br /> View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit<br /><br />**Templates created before September 2017**: View, Open, Read|
+|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|**Templates created after September 2017**: View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control<br /><br />**Templates created before September 2017**: View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
+
 
 ## Do Not Forward option for emails
 

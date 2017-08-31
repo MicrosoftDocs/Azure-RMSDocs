@@ -47,19 +47,7 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 ## Default templates
 
-When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. When these two templates are created, they have the following permissions that are listed by the common name for the [usage rights](configure-usage-rights.md#usage-rights-and-descriptions): 
-
-- Read and modify permissions for the protected content. Specific usage rights:
-    
-    - **Templates created after September 2017**: View, Open, Read | Save As, Export | Copy | Allow Macros | Print | Forward | Reply | Reply All | Save | Edit Content, Edit | Full Control
-    
-    - **Templates created before September 2017**: View, Open, Read | Save As, Export | Edit Content, Edit | Allow Macros | Forward | Reply | Reply All
-
-- Read-only viewing for the protected content. Specific usage rights:
-    
-    - **Templates created after September 2017**: View, Open, Read | Copy | Allow Macros | Print | Forward | Reply | Reply All | Save | Edit Content, Edit 
-    
-    - **Templates created before September 2017**: View, Open, Read
+When you obtain your subscription for Azure Information Protection or for an Office 365 subscription that includes the Azure Rights Management service, two default templates are automatically created for your tenant that restrict access to authorized users in your organization. When these two templates are created, they have the permissions that are listed in the [Configuring usage rights for Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates) documentation.
 
 In addition, the templates are configured to allow offline access for seven days and do not have an expiration date.
 
