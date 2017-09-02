@@ -89,7 +89,7 @@ Fixes for a better user experience, that include:
 
 - Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
 
-- The parent label is not displayed when all its sub-labels are configured for production and the client does not have an edition of Office that supports protection. 
+- The parent label is not displayed when all its sub-labels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Version 1.7.210.0
 
