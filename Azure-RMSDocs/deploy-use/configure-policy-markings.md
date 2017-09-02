@@ -41,7 +41,7 @@ Additional information about these visual markers:
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
     
-	- Multiple lines of text are supported when you use the current preview version of the Azure Information Protection client.
+	- Multiple lines of text are supported.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
