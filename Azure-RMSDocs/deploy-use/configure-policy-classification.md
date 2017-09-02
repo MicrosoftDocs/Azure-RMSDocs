@@ -79,7 +79,7 @@ In this example, the user can click **Change now** to apply the recommended labe
         
 6. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
     
-    **Example of the occurrences options**: You select the information type for the social security number, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique value only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
+    Example of the occurrences options: You select the information type for the social security number, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique value only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
 7. Back on the **Label** blade, configure the following, and then click **Save**:
     
