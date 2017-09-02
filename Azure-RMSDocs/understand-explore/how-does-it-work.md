@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,11 +64,13 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 2048-bits is the key length when the Azure Rights Management service is activated. 1024-bits is supported for the following optional scenarios:
 
-- During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1 and cannot be upgraded to Cryptographic Mode 2.
+- During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1.
+
+- After a migration from on-premises, if the AD RMS cluster was using Exchange Online.
 
 - For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after migrating to Azure Rights Management.
 
-- If customers choose to bring their own key (BYOK) by using Azure Key Vault. We recommend but do not enforce a minimum key size of 2048-bits.
+- If customers choose to bring their own key (BYOK) by using Azure Key Vault. Azure Information Protection supports key lengths of 1024-bits and 2048-bits. For higher security, we recommend a key length of 2048-bits.
 
 ### How the Azure RMS cryptographic keys are stored and secured
 
@@ -76,7 +78,7 @@ For each document or email that is protected by Azure RMS, Azure RMS creates a s
 
 The content key is protected with the organization’s RSA key (the "Azure Information Protection tenant key") as part of the policy in the document, and the policy is also signed by the author of the document. This tenant key is common to all documents and emails that are protected by the Azure Rights Management service for the organization and this key can only be changed by an Azure Information Protection administrator if the organization is using a tenant key that is customer-managed (known as "bring your own key", or BYOK). 
 
-This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
+This tenant key is protected in Microsoft’s online services, in a highly controlled environment and under close monitoring. When you use a customer-managed tenant key (BYOK), this security is enhanced by the use of an array of high-end hardware security modules (HSMs) in each Azure region, without the ability for the keys to be extracted, exported, or shared under any circumstances. For more information about the tenant key and BYOK, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
 Licenses and certificates that are sent to a Windows device are protected with the client’s device private key, which is created the first time a user on the device uses Azure RMS. This private key, in turn, is protected with DPAPI on the client, which protects these secrets by using a key derived from the user’s password. On mobile devices, the keys are used only one time, so because they are not stored on the clients, these keys don’t need to be protected on the device. 
 
@@ -138,7 +140,7 @@ When a user wants to consume a protected document, the RMS client starts by requ
 
 The re-encrypted content key is then embedded into an encrypted use license with the list of user rights, which is then returned to the RMS client.
 
-![RMS document consumption - step 3, document is decrypted and rights are endforced](../media/AzRMS_documentconsumption3.png)
+![RMS document consumption - step 3, document is decrypted and rights are enforced](../media/AzRMS_documentconsumption3.png)
 
 **What's happening in step 3**: Finally, the RMS client takes the encrypted use license and decrypts it with its own user private key. This lets the RMS client decrypt the document’s body as it is needed and render it on the screen.
 
@@ -157,7 +159,7 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 
 -   **Generic protection (.pfile)**: When the Azure Rights Management service generically protects a file, the flow is basically the same for content protection except that the RMS client creates a policy that grants all rights. When the file is consumed, it is decrypted before it is passed to the target application. This scenario lets you protect all files, even if they don’t natively support RMS.
 
--   **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device will always be able to read them even if the mobile device doesn’t have an app that natively supports protected Office files.
+-   **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device can always read them even if the mobile device doesn’t have an app that natively supports protected Office files.
 
 ## Next steps
 

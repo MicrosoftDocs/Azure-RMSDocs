@@ -35,12 +35,11 @@ For example, you can change a label or sub-label name, tooltip, color, order, wh
 
 To change a label, use the following instructions.
 
-
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. To change a label from the global policy so that it applies to all users, select the label to change from the **Policy: Global** blade, and then make your changes on the **Label** blade, and any subsequent blades as required. To change a label from a [scoped policy](configure-policy-scope.md) so that it applies to selected users, first select that policy on the initial **Azure Information Protection** blade.
+2. To change a label from the global policy so that it applies to all users, select the label to change from the **Azure Information Protection - Global policy** blade, and any subsequent blades as required. To change a label from a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select **Scoped policies** from the **POLICIES** menu selection. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
 
     The exception is if you want to reorder a label, which you do on the policy blade from the global policy or your selected scoped policy: Either right-click the label or select the context menu for the label, and then select the **Move up** or **Move down** options.
 
