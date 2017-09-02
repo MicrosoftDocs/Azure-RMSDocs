@@ -29,15 +29,15 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 >*Applies to: Azure Information Protection*
 
-You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied when you configure a label to use Rights Management protection for documents and emails, or the **Do not forward** option for Outlook email messages. 
+You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook. 
 
 ## How the protection works
 
-When a document or email is protected by Rights Management, it is encrypted at rest and in transit and can only be decrypted by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
+When a document or email is protected by Rights Management, it is encrypted at rest and in transit. It can then be decrypted only by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
 
 - Only users within your organization can open the company-confidential document or email.
 
-- Only users in the marketing department can edit and print the promotion announcement document or email while all other users in your organization can only read this document or email.
+- Only users in the marketing department can edit and print the promotion announcement document or email, while all other users in your organization can only read this document or email.
 
 - Users cannot forward an email or copy information from it that contains news about an internal reorganization.
 
@@ -50,7 +50,7 @@ For more information about the Azure Rights Management protection and how it wor
 
 When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery. 
 
-Exchange does not have to be configured for information rights management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for rights management protection. To configure Exchange to support these additional scenarios, see the following resources:
+Exchange does not have to be configured for Information Rights Management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for Rights Management protection. To configure Exchange to support these additional scenarios, see the following resources:
 
 - For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
