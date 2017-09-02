@@ -48,9 +48,9 @@ After you have deployed and configured Azure Information Protection for your org
     
 -   **Help desk information**
     
-    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
+    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option and reset the client. For more information about this option, see the admin guide: [More information about the Reset Settings option](../rms-client/client-admin-guide.md#more-information-about-the-reset-settings-option).
     
-    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization, 
+    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
     
     In  addition, some of the typical problems that users might report include the following categories:
     
