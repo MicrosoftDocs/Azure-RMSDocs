@@ -47,7 +47,7 @@ If you have a mix of subscriptions for users for your tenant, it is your respons
 
 - **When you have a mix of users who have Azure Information Protection P1 and P2 licenses**: For users who have a P2 license, create and use one or more [scoped policies](configure-policy-scope.md) when you configure options that require an Azure Information Protection P2 license. Make sure that your global policy does not contain options that require an Azure Information Protection P2 license.
 
-- **When you have a mix of users who have the Office 365 license and these users do not have an Azure Information Protection license, and users who do have an Azure Information Protection license**: Edit the registry as described in the admin guide for the following customization: [Configure protection-only mode when your organization has a mix of licenses](../rms-client/client-admin-guide.md#configure-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **When you have a mix of users who have the Office 365 license and these users do not have an Azure Information Protection license, and users who do have an Azure Information Protection license**: Edit the registry as described in the admin guide for the following customization: [Configure protection-only mode when your organization has a mix of licenses](../rms-client/client-admin-guide-customizations.md#configure-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
