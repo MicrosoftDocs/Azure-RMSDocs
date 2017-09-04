@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -91,6 +91,18 @@ Additionally:
 - If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
 
 - If you have the current preview version of the Azure Information Protection client, you can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
+
+## Configure protection-only mode when your organization has a mix of licenses
+
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows downloads the Rights Management templates and runs in [protection-only mode](../rms-client/client-protection-only-mode.md).
+
+However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. To comply with licensing requirements, edit the registry to prevent computers from downloading this policy when they do not have a license for Azure Information Protection. 
+
+Locate the following value name and set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
