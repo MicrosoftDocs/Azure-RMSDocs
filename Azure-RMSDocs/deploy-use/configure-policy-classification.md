@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
  
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved.
 
-When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see the [Details about the information types](#details-about-the-information-types) section.
+When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see step 5 in the [following procedure](#to-configure-recommended-or-automatic-classification-for-a-label).
 
 How multiple conditions are evaluated when they apply to more than one label:
 

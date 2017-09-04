@@ -148,7 +148,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     If you choose the option for Word, Excel, PowerPoint, and File Explorer: The label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values. Note that unless you have the preview version of the client (beginning with version 1.12.11.0), this option for File Explorer always uses Azure RMS protection rather than HYOK (AD RMS) protection.
 
-11. Click **OK** to close the **Protection** blade and see your choice of **Do not forward** or your chosen template display for the **Protection** option in the **Label** blade.
+11. Click **OK** to close the **Protection** blade and see your choice of **User defined** or your chosen template display for the **Protection** option in the **Label** blade.
 
 12. On the **Label** blade, click **Save**.
 
