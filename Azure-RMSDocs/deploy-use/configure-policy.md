@@ -58,7 +58,7 @@ For more information about the subscriptions, see [What subscription do I need f
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The first time you connect to the service, the **Quick start** page automatically opens. To configure the policy that all users get, click **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    The first time that you connect to the service, the **Azure Information Protection - Quick start** blade automatically opens. To configure the policy that all users get, from the **POLICIES** menu selection, select **Global policy** to open the **Azure Information Protection - Global policy** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
     
     The Azure Information Protection policy contains the following elements that you can configure:
     
@@ -80,7 +80,7 @@ Azure Information Protection comes with a [default policy](configure-policy-defa
 
 You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them. 
 
-When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings.
 
 When you have finished making the changes that you want, click **Publish**. 
 

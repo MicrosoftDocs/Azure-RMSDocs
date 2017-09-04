@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,7 +85,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 4. For regions outside North America: 
     
-    - Edit the registry for authentication to the service.
+    - Edit the registry for service discovery.
 
 #### Prerequisite 1: The Azure Rights Management service must be activated
 
@@ -230,7 +230,7 @@ Our example command would then look like the following:
 
 	Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-As shown in the previous command, you can supply the values with a single command, or just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, you see "**The RmsServerAuthentication is set to ON**", which means that the client is now operating in "server mode". This message does not confirm that authentication was successful by using the values you supplied, but that the switch to server mode was successful.
+As shown in the previous command, you can supply the values with a single command, which you would do in a script to run non-interactively. But for testing purposes, you can just type Set-RMSServerAuthentication, and supply the values one-by-one when prompted. When the command completes, the client is now operating in "server mode", which is suitable for non-interactive use such as scripts and Windows Server File Classification Infrastructure.
 
 Consider making this service principal a super user: To ensure that this service principal can always unprotect files for others, it can be configured to be a super user. In the same way as you configure a standard user account to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), but specify the **ServicePrincipalId** parameter with your AppPrincipalId value.
 
@@ -239,12 +239,9 @@ For more information about super users, see [Configuring super users for Azure R
 > [!NOTE]
 > To use your own account to authenticate to the Azure Rights Management service, there's no need to run Set-RMSServerAuthentication before you protect or unprotect files, or get templates.
 
-
-
-
 #### Prerequisite 4: For regions outside North America
 
-For authentication outside the Azure North America region, you must edit the registry as follows. If your Azure Information Protection tenant is in North America, do not do this step:
+When you use a service principal account to protect files and download templates outside the Azure North America region, you must edit the registry: 
 
 1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
