@@ -53,7 +53,6 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 - Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../deploy-use/configure-policy-classification.md).
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
-- A browse option for users and groups when users specify custom permissions in Office apps. The **Select users, groups, or organization** icon displays the **Select Users or Groups** dialog box for your on-premises Active Directory. The same dialog box is now also used when users specify custom permissions by using File Explorer. To use this browse option, the computer must be connected to the internal network, the computer must be joined to the domain, and you must have an on-premises Active Directory.
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     

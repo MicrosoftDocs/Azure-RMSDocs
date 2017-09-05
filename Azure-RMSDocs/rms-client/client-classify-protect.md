@@ -93,11 +93,9 @@ You can specify your own protection settings for documents rather than use the p
     - **Protect with custom permissions**: Make sure that this is selected so that you can specify and apply your custom permissions. Clear this option to remove any custom permissions.
     
     - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select the level of access that you want people to have.
-
+    
     - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
     
-    You can alternatively use the **Select users, groups, or organization** icon. This icon displays the **Select Users or Groups** dialog box for your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
-        
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
@@ -141,7 +139,7 @@ The admin guide contains a full list of the file types supported and the files a
     
     - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
     
-    Alternatively, you can use the **Select users, groups, or organization** icon to select users or groups from your on-premises Active Directory. If the users or groups that you want to specify are in Active Directory, you can search for and select them from this dialog box. To use this option, your computer must be connected to the internal network, your computer must be joined to the domain, and you must have an on-premises Active Directory. If any of these conditions are not met, you see the following message: **The program cannot open the required dialog box because no locations can be found.**
+    Alternatively, you can use the address book icon to select users or groups from the Outlook address book.
         
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
     
