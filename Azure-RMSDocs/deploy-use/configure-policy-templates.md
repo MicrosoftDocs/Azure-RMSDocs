@@ -110,9 +110,9 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set this by using PowerShell with the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
 
-- When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Templates** section.
+- When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Templates** or **Protection templates** section. This section is in the process of being renamed.
 
-- You do not create a new template from the **Templates** container. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
+- You do not create a new template from the **Templates** or **Protection templates** section. Instead, create a label that has the **Protect** setting, and configure the usage rights and settings from the **Protection** blade. For full instructions, see [To create a new template](#to-create-a-new-template).
 
 ## To configure the templates in the Azure Information Protection policy
 
@@ -126,11 +126,11 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, locate the template that you want to configure:
     
-    - When you have a subscription that includes classification, labeling, and protection: Expand **Templates** after your labels.
+    - When you have a subscription that includes classification, labeling, and protection: Expand **Templates** or **Protection templates** after your labels.
     
     - When you have a subscription that includes protection only: Templates display as labels.
 
-4. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label name** and **Description**. Then, select **Protection** that has a value of **Azure RMS**, to open the **Protection** blade.
+4. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label name** and **Description**. Then, select **Protection** that has a value of **Azure RMS** or **Azure (cloud key)**, to open the **Protection** blade.
 
 5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring the protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     
@@ -161,11 +161,11 @@ When you convert a template to a label:
 
 - The protection settings are retained, and you can edit these if required, and also add other label settings such as visual markers and conditions.
 
-- The original template is no longer displayed under **Templates** and cannot be selected as a predefined template when you configure protection for a label. To edit this template in the Azure portal, you now edit the label that was created when you converted the template. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
+- The original template is no longer displayed under **Templates** or **Protection templates** and cannot be selected as a predefined template when you configure protection for a label. To edit this template in the Azure portal, you now edit the label that was created when you converted the template. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
 
 ## To create a new template
 
-When you create a new label with the protection setting of **Azure RMS**, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+When you create a new label with the protection setting of **Azure RMS** or **Azure (cloud key)**, under the covers, this creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
 1. If the new template is for all users, stay on the **Azure Information Protection - Global policy** blade.
     
