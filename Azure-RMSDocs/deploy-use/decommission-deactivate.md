@@ -80,7 +80,7 @@ You should now see **Rights Management is not activated** and the option to acti
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, **RMS Settings** or **Protection activation**. This option is in the process of being renamed. 
+2. On the initial **Azure Information Protection** blade, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed. 
 
 3.  On the **Azure Information Protection - RMS Settings** or **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
