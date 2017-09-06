@@ -55,10 +55,10 @@ In addition to this usage logging, you also have the following logging options:
 |Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Web reports|High-level usage reports from the Azure classic portal: **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. <br /><br />To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**.|
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Client log files|Troubleshooting logs For the Azure Information Protection client,located in %localappdata%\Microsoft\MSIP. These files are designed for Microsoft Support.|
+|Client log files|Troubleshooting logs f or the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
 
 
-Use the following sections for more information about Azure Rights Management usage logging.
+Use the following sections for more information about usage logging for the Azure Rights Management service.
 
 ## How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure Rights Management service before February 2016 and to customers who activate the service after February 2016. 
