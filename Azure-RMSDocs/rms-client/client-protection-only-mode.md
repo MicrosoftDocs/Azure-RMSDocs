@@ -6,7 +6,7 @@ description: Information for users who run the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,19 +28,19 @@ ms.suite: ems
 
 # Protection-only mode for the Azure Information Protection client
 
-When the Azure Information Protection client downloads an Azure Information Protection policy that has no labels for the user, it displays in **protection-only** mode. For example, when you use Windows File Explorer, right-click, **Classify and protect**:
+When the Azure Information Protection client doesn't have labels to classify your documents and emails, it runs in **protection-only** mode. For example, in this mode, you might see the following when you use Windows File Explorer, right-click, **Classify and protect**:
 
 ![Protection-only mode](../media/protection-only-mode.png)
 
- This mode runs in the following scenarios:
+Protection-only mode runs in the following scenarios:
 
-- Your organization does not have a subscription for Azure Information Protection (for classification and protection of data) but has a subscription for the Azure Rights Management service (for data protection with Office 365). 
+- Your organization does not have a subscription for Azure Information Protection that includes classification and labeling features, but has a subscription for Office 365 that includes data protection by using the Azure Rights Management service. 
     
-    - You can use the Azure Information Protection client to protect files and view protected files. You can't label documents and emails.
+    - You can use the Azure Information Protection client to protect files and view protected files. You can't classify or label documents and emails.
 
 - Your organization has a subscription for Azure Information Protection for only a subset of users:
     
-    - For this mix of subscriptions, it is the administrator's responsibility to configure the Azure Information Protection policy such that that only the subset of users can use labels. The remainder of users should be running the Azure Information Protection client in protection-only mode. 
+    - For this mix of subscriptions, it is the administrator's responsibility to ensure that only the subset of users can use the classification and labeling features. The remainder of users should be running the Azure Information Protection client in protection-only mode. 
 
 - Your organization has a subscription for Azure Information Protection but you cannot download the Azure Information Protection policy. 
     
