@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use this information to help you understand how you can use usage logging for the Azure Rights Management service from Azure Information Protection. This service provides the data protection for your organization's documents and emails and it can log every request to it, which includes requests from users, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment.
+Use this information to help you understand how you can use usage logging for the Azure Rights Management service from Azure Information Protection. This service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
 You can then use these Azure Rights Management service logs to support the following business scenarios:
 
@@ -51,14 +51,14 @@ In addition to this usage logging, you also have the following logging options:
 
 |Logging option|Description|
 |----------------|---------------|
-|Admin log|Logs administrative tasks for the the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog). |
-|Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Admin log|Logs administrative tasks for the the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
 |Web reports|High-level usage reports from the Azure classic portal: **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. <br /><br />To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**.|
+|Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Client log files|Troubleshooting logs f or the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
 
 
-Use the following sections for more information about usage logging for the Azure Rights Management service.
+Use the following sections for more information about the usage logging for the Azure Rights Management service. 
 
 ## How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure Rights Management service before February 2016 and to customers who activate the service after February 2016. 
