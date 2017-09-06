@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -92,11 +92,13 @@ Additionally:
 
 - If you have the current preview version of the Azure Information Protection client, you can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
 
-## Configure protection-only mode when your organization has a mix of licenses
+## Enforce protection-only mode when your organization has a mix of licenses
 
-If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows downloads the Rights Management templates and runs in [protection-only mode](../rms-client/client-protection-only-mode.md).
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows automatically runs in [protection-only mode](../rms-client/client-protection-only-mode.md).
 
-However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. To comply with licensing requirements, edit the registry to prevent computers from downloading this policy when they do not have a license for Azure Information Protection. 
+However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
+
+If you have some users who do not have a license for Azure Information Protection but do have a license for Office 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
 
 Locate the following value name and set the value data to **0**:
 
