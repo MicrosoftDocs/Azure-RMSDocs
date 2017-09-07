@@ -153,9 +153,15 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 12. On the **Label** blade, click **Save**.
 
-13. On the **Azure Information Protection** blade, your label now displays high-level configuration information. For example, in the **MARKING** column, you see a check mark if you have configured visual markers. In the **PROTECTION** column, you see **Azure RMS** or a check mark if you have configured protection, and **Remove Protection** or an x mark to denote cancellation if you have configured a label to remove protection. 
+13. On the **Azure Information Protection** blade, use the **PROTECTION** column to confirm that your label now displays the protection setting that you want:
     
-    To make your changes available to users, click **Publish**.
+    -**Azure RMS** or **HYOK (AD RMS)**, or a check mark if you have configured protection. 
+    
+    - **Remove Protection** or an x mark to denote cancellation if you have configured a label to remove protection.
+    
+    - A blank field when protection is not set. 
+
+13. To make your changes available to users, click **Publish**.
 
 ## Next steps
 
