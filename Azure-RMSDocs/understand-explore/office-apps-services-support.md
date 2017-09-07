@@ -90,10 +90,9 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > 
 > - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 > 
-> - If you protect a file that you then upload to a SharePoint library or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP) solutions.
-> 
 > - Co-authoring is not supported. Because you must check out and download a document in an IRM-protected library, one person can edit it at a time.
 
+For libraries that are not IRM-protected, if you protect a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP) solutions.
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 
