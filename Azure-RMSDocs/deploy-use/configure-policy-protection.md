@@ -155,7 +155,7 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 13. On the **Azure Information Protection** blade, use the **PROTECTION** column to confirm that your label now displays the protection setting that you want:
     
-    -**Azure RMS** or **HYOK (AD RMS)**, or a check mark if you have configured protection. 
+    - **Azure RMS** or **HYOK (AD RMS)**, or a check mark if you have configured protection. 
     
     - **Remove Protection** or an x mark to denote cancellation if you have configured a label to remove protection.
     
