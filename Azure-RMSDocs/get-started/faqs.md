@@ -62,6 +62,20 @@ If you have Exchange Server, SharePoint Server, and Windows file servers, you c
 
 The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
 
+## I see Azure Information Protection is listed as an available cloud app for conditional access–how does this work?
+
+Yes, as a public preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
+
+When a user opens a document or email that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls and on selected platforms. For example, for your users to open protected emails and documents, you can configure the following settings:
+
+- Users must authenticate by using multi-factor authentication (MFA).
+
+- Mobile devices must be compliant with your Intune policies that contain settings such as minimum password length, the device must not be jailbroken, and a minimum operating system version.
+
+- Windows computers must be domain-joined.
+
+For more information and some walk-through examples, see the following blog post announcement:  Conditional Access policies for Azure Information Protection 
+
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
 The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
