@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,7 +89,13 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## Details about the information types
 
-If you have the current preview version of the Azure Information Protection client, the full list of information types are supported and use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) from the Office documentation. When Azure Information Protection evaluates these information types, it does not use the Office DLP confidence level setting but matches according to the lowest confidence.  
+If you have the current preview version of the Azure Information Protection client, the full list of information types you see in the portal are supported:
+
+- The information types use the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information about the information types that you can select, see [What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) from the Office documentation. 
+
+- The list of information types that you can select from the Azure portal is periodically updated to include any new Office DLP additions. However, the list excludes any custom sensitive information types that you have defined and uploaded as a rule package to the Office 365 Security & Compliance Center. 
+
+- When Azure Information Protection evaluates the information types that you select, it does not use the Office DLP confidence level setting but matches according to the lowest confidence.
 
 If you have the current general availability version of the client, the following information types only are supported:
 
