@@ -2,11 +2,11 @@
 # required metadata
 
 title: Activate Azure RMS with the Azure portal - AIP
-description: Activation instructions for the Azure Rights Management service to start protecting documents and emails.
+description: Instructions for protection activation in the Azure portal so that your organization can start to protect documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ Use these instructions if you want to activate the Azure Rights Management servi
     
     To open the Azure Information Protection blade, you must have either an [Azure Information Protection Premium plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) or an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). If you have one of these subscriptions but see a message that a valid subscription cannot be found, send an email message to [askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
 
-2. Locate the **MANAGE** menu options, and select select **RMS Settings**.  
+2. Locate the **MANAGE** menu options, and select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.
     
     Click **Activate**, and then confirm your action. 
 
