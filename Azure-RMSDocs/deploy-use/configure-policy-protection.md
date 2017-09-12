@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,8 +82,9 @@ Exchange does not have to be configured for information rights management (IRM) 
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png)
 
-6. On the **Protection** blade, select **Azure RMS** or **HYOK (AD RMS)**.     
-    In most cases, select **Azure RMS** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 10.
+6. On the **Protection** blade, select **Azure RMS** or **Azure (cloud key)**, or select **HYOK (AD RMS)**. The first option is in the process of being renamed.
+    
+    In most cases, select **Azure RMS** or **Azure (cloud key)** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 10.
     
 7. Select one of the following options:
     
@@ -97,15 +98,15 @@ Exchange does not have to be configured for information rights management (IRM) 
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: This option requires the preview version of the Azure Information Protection client. When this option is set and users have the preview client, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
 
-8. If you selected **Select a predefined template** for **Azure RMS**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
+8. If you selected **Select a predefined template** for **Azure RMS** or **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
     
     If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
     - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
         
-        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The Azure RMS templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
+        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
             
-9. If you selected **Set permissions** for **Azure RMS**, this option lets you configure the same settings that you can configure in a template. 
+9. If you selected **Set permissions** for **Azure RMS** or **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
@@ -152,7 +153,15 @@ Exchange does not have to be configured for information rights management (IRM) 
 
 12. On the **Label** blade, click **Save**.
 
-13. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+13. On the **Azure Information Protection** blade, use the **PROTECTION** column to confirm that your label now displays the protection setting that you want:
+    
+    - **Azure RMS** or **HYOK (AD RMS)**, or a check mark if you have configured protection. 
+    
+    - **Remove Protection** or an x mark to denote cancellation if you have configured a label to remove protection.
+    
+    - A blank field when protection is not set. 
+
+13. To make your changes available to users, click **Publish**.
 
 ## Next steps
 
