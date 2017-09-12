@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,15 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - Minimal version of Windows Server 2012 R2: Required for production environments but for testing or evaluation purposes, you can use a minimal version of Windows Server 2008 R2 with Service Pack 1.
     
-    - Single AD RMS root cluster. Or, for multiple AD RMS clusters in separate forests, delete the labels in the global policy and configure a [scoped policy](configure-policy-scope.md) for each cluster. Then, assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy. The result should be that each user has labels for one cluster only. 
+    - One of the following topologies:
+        
+        - Single forest with a single AD RMS root cluster. 
+        
+        - Multiple forest with independent AD RMS root clusters and users don't have access to the content that's protected by the users in the other forests.
+        
+        - Multiple forests with AD RMS clusters in each of them. Each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. On this this AD RMS cluster, you must import all the trusted user domains (TUDs) certificates from all the other AD RMS clusters. For more information about this topology, see [Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx).
+        
+        When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. Then, assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy. The result should be that each user has labels for one AD RMS cluster only. 
     
     - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
