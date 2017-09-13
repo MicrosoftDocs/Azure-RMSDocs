@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,7 +76,7 @@ We'll now create a new sub-label for **Confidential**.
     
     ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-4. On the **Protection** blade, make sure that **Azure RMS** is selected, and that **Set Permissions** is selected. Then select **Add permissions**.
+4. On the **Protection** blade, make sure that **Azure RMS** or **Azure (cloud key)** is selected. This option is in the process of being renamed. Make sure that **Set Permissions** is also selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
@@ -132,7 +132,7 @@ We'll now create a new sub-label for **Confidential**.
 
 13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
     
-    You now see your new sub-label, which is configured for visual markings and Azure RMS protection:
+    You now see your new sub-label, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
