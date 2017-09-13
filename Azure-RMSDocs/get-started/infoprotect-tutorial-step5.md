@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection

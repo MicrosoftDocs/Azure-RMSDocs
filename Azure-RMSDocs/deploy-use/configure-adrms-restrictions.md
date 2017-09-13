@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
