@@ -140,8 +140,25 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files will be discovered.
 
-
 ## Next steps
+
+You might find it useful to review other cmdlets for the Azure Information Protection scanner. The complete list of cmdlets for the scanner are the following:
+
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
+
+- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md)
+
+- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md)
+
+- [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration.md)
+
+- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner.md)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository.md)
+
+- [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner.md)
+
+- [Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 
 
