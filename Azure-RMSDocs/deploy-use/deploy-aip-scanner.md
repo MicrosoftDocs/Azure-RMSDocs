@@ -32,21 +32,22 @@ ms.suite: ems
 > [!NOTE]
 > This feature is currently in preview and subject to change.
 
-Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. 
+Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
+
+This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. 
 
 ## Overview of the Azure Information Protection scanner
 
-By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection. 
+By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
-
-
+You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
 ## Prerequisites for the Azure Information Protection scanner
 Before you install the Azure Information Protection scanner, make sure that the following requirements are in place.
 
 |Requirement|More information|
 |---------------|--------------------|
-|Windows Server 2016 or Windows Server 2012 R2 to run the scanner service:<br /><br />- 4 cores<br /><br />- 4 GB of RAM.|This server can a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
+|Windows Server 2016 or Windows Server 2012 R2 to run the scanner service:<br /><br />- 4 processes<br /><br />- 4 GB of RAM|This server can a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
 |SQL Server (local or remote instance) to store the scanner configuration:<br /><br />- SQL Server Express<br /><br />- SQL Server Standard<br /><br />- SQL Server Enterprise|SQL Server 2012 R2 is the minimum version for the listed editions.<br /><br />|
 |Active Directory account to run the scanner service|This account requires the following rights:<br /><br />- **Log on locally**<br /><br />- **Log on as a service** <br /><br />This account also requires access to the data stores:<br /><br />- **Read** permissions for discovery mode only (files are not classified or protected)<br /><br /> - **Read** and **Write** permissions to classify and protect files<br /><br />Additional account requirements for labels that apply or remove protection:<br /><br /> - It must be synchronized to Azure AD and have an email address. <br /><br />- It must be a [super user](/deploy-use/configure-super-users) for the Azure Rights Management service.|
 |The Azure Information Protection client is installed|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
@@ -59,7 +60,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and provide your account credentials when prompted: 
+3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner. Provide the scanner service account credentials when prompted: 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
@@ -71,9 +72,11 @@ Before you install the Azure Information Protection scanner, make sure that the 
     
     Do not close your PowerShell session.
 
-4. Verify that the service is now installed by using **Administrative Tools** > **Services**. The installed service is named **Azure Information Protection Scanner** and is configured to run by using the account that you created.
+4. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
+    
+    The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
 
-## Authenticate to the Azure Information Protection service by using an Azure AD token
+## Get an Azure AD token for the scanner service account to authenticate to the Azure Information Protection service
 
 1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign in, this token lets the scanner then run non-interactively.
     
@@ -91,13 +94,13 @@ The scanner now has a token to authenticate to Azure AD, which is valid for one 
 
 You're now ready to specify the data stores to scan. 
 
-## Specify data repositories for the Azure Information Protection scanner
+## Specify data stores for the Azure Information Protection scanner
 
-You use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to data repositories to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
+You use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
-SharePoint Server 2016 and SharePoint Server 2013 are supported.
+For SharePoint, SharePoint Server 2016 and SharePoint Server 2013 are supported.
 
-1. From the same Windows Server computer, in your PowerShell session, add your first data store to be scanned by running the following command:
+1. From the same Windows Server computer, in your PowerShell session, add your first data store by running the following command:
     
     ```
     Add-AIPScannerRepository -Path <path>
@@ -112,7 +115,7 @@ SharePoint Server 2016 and SharePoint Server 2013 are supported.
     
     	Get-AIPScannerRepository
 
-With the scanner's default configuration, you're now ready to run your first scan in discovery mode, to see in reports what files would be classified and protected.
+With the scanner's default configuration, you're now ready to run your first scan in discovery mode.
 
 ## Run a discovery cycle and view reports for the Azure Information Protection scanner
 
@@ -120,7 +123,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped.
 
-3. Review the reports that are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
+3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
     If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
@@ -142,7 +145,7 @@ This time, when the scanner has worked its way through all the files, it starts 
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
-Other cmdlets for the scanner include letting you change the service account and database for the scanner, getting the current settings for the scanner, and uninstalling it. The complete list of cmdlets for the scanner are the following:
+Other cmdlets for the scanner include letting you change the service account and database for the scanner, getting the current settings for the scanner, and uninstalling it. The scanner uses the following cmdlets:
 
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
 
@@ -158,7 +161,7 @@ Other cmdlets for the scanner include letting you change the service account and
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner.md)
 
-- [Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository.md)
 
 
 ## Next steps

@@ -27,7 +27,7 @@
 #### [Refresh templates for users](refresh-templates.md)
 #### [PowerShell reference](configure-templates-with-powershell.md)
 ### [Configure languages](configure-policy-languages.md)
-## [Deploying the Azure Information Protection scanner](deploy-aip-connector.md )
+## [Deploying the Azure Information Protection scanner](deploy-aip-connector.md)
 ## [Deploying the RMS connector](deploy-rms-connector.md)
 ### [Install and configure the connector](install-configure-rms-connector.md)
 ### [Configure servers](configure-servers-rms-connector.md)
