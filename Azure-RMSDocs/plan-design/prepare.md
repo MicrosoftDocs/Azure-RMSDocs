@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -109,7 +109,7 @@ For assigning usage rights and access controls, and configuring the Azure Rights
 
 In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName for users in your tenant, Azure Information Protection also uses these attributes in the same way to authorize users from another tenant.
 
-When an email is sent by using message protection in Office 365 to a user who doesn't have an account in Azure AD, the user is first authenticated by using federation with a social identity provider or by using a one-time passcode. Then the email address specified in the protected email is used to authorize the user.
+When an email is sent by using Office 365 Message Encryption with new capabilities to a user who doesn't have an account in Azure AD, the user is first authenticated by using federation with a social identity provider or by using a one-time passcode. Then the email address specified in the protected email is used to authorize the user.
 
 ## Azure Information Protection requirements for group accounts
 

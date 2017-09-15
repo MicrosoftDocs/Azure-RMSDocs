@@ -6,7 +6,7 @@ description: Information about RMS for individuals, a free self-service subscrip
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,7 +36,7 @@ Using the [Azure Information Protection client](../rms-client/client-user-guide.
 RMS for individuals is an example of a self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](/active-directory/active-directory-self-service-signup) in the Azure Active Directory documentation. 
 
 > [!IMPORTANT]
-> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using [message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). This email solution works for all email addresses on all devices and is the recommended way to safely share information and Office documents by email with people outside your organization. 
+> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). This email solution works for all email addresses on all devices and is the recommended way to safely share information and Office documents by email with people outside your organization. 
 
 ## Next steps
 See [How users sign up for RMS for individuals](rms-for-individuals-user-sign-up.md), for step-by-step instructions and a technical overview of what's happening in the background. 

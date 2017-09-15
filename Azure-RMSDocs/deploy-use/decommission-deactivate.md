@@ -6,7 +6,7 @@ description: Information and instructions if you decide you no longer want to us
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 You are always in control of whether your organization protects content by using the Azure Rights Management service from Azure Information Protection. If you decide you no longer want to use this information protection service, you have the assurance that you won’t be locked out of content that was previously protected.
 
-If you don’t need continued access to previously protected content, you simply deactivate the service and you can let your subscription for Azure Information Protection expire. For example, this would be appropriate for when you have completed testing Azure Information Protection before you deploy it in a production environment.
+If you don’t need continued access to previously protected content, deactivate the service and let your subscription for Azure Information Protection expire. For example, this would be appropriate for when you have completed testing Azure Information Protection before you deploy it in a production environment.
 
 However, if you have deployed Azure Information Protection in production and protected documents and emails, make sure that you have a copy of your Azure Information Protection tenant key before you deactivate the Azure Rights Management service. Make sure that you have a copy of your key before your subscription expires to ensure that you can retain access to content that was protected by Azure Rights Management after the service is deactivated. If you used the bring your own key solution (BYOK) where you generate and manage your own key in an HSM, you will already have your Azure Information Protection tenant key. But if it was managed by Microsoft (the default), see the instructions for exporting your tenant key in [Operations for your Azure Rights Management tenant key](operations-tenant-key.md) article.
 
@@ -43,16 +43,18 @@ When you have your Azure Information Protection tenant key, you can deploy Right
 |If this applies to you …|… do this:|
 |----------------------------|--------------|
 |You want all users to continue using Rights Management, but use an on-premises solution rather than using Azure Information Protection    →|Use the [Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) cmdlet to direct existing users to your on-premises deployment when they consume content protected after this change. Users will automatically use the AD RMS installation to consume the protected content.<br /><br />For users to consume content that was protected before this change, redirect your clients to the on-premises deployment by using the **LicensingRedirection** registry key for Office 2016 or Office 2013. For instructions, see the [service discovery section](../rms-client/client-deployment-notes.md) in the RMS client deployment notes, and the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|You want to stop using Rights Management technologies completely    →|Grant a designated administrator [super user rights](../deploy-use/configure-super-users.md) and give this person the [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256).<br /><br />This administrator can then use the tool to bulk-decrypt files in folders that were protected by the Azure Rights Management service. Files revert to being unprotected and can therefore be read without a Rights Management technology such as Azure Information Protection or AD RMS. Because this tool can be used with both the Azure Rights Management service from Azure Information Protection and AD RMS, you have the choice of decrypting files before or after you deactivate the Azure Rights Management service, or a combination.|
+|You want to stop using Rights Management technologies completely    →|Grant a designated administrator [super user rights](../deploy-use/configure-super-users.md) and install the [Azure Information Protection client](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) for this user.<br /><br />This administrator can then use the PowerShell module from this client to bulk-decrypt files in folders that were protected by the Azure Rights Management service. Files revert to being unprotected and can therefore be read without a Rights Management technology such as Azure Information Protection or AD RMS. Because this PowerShell module can be used with both the Azure Rights Management service from Azure Information Protection and AD RMS, you have the choice of decrypting files before or after you deactivate the Azure Rights Management service, or a combination.|
 |You are not able to identify all the files that were protected by the Azure Rights Management service from Azure Information Protection. Or, you want all users to be able to automatically read any protected files that were missed    →|Deploy a registry setting on all client computers by using the **LicensingRedirection** registry key for Office 2016 and Office 2013, as described in the [service discovery section](../rms-client/client-deployment-notes.md) in the RMS client deployment notes, and the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).<br /><br />Also deploy another registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|You want a controlled, manual recovery service for any files that were missed    →|Grant designated users in a data recovery group [super user rights](../deploy-use/configure-super-users.md) and give them the [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256) so that they can unprotect files when requested by standard users.<br /><br />On all computers, deploy the registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
+|You want a controlled, manual recovery service for any files that were missed    →|Grant designated users in a data recovery group [super user rights](../deploy-use/configure-super-users.md) and install the [Azure Information Protection client](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) for these users so that they can unprotect files when this action is requested by standard users.<br /><br />On all computers, deploy the registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
 For more information about the procedures in this table, see the following resources:
 
--   For information about AD RMS and deployment references, see [Active Directory Rights Management Services Overview](https://technet.microsoft.com/library/hh831364.aspx).
+- For information about AD RMS and deployment references, see [Active Directory Rights Management Services Overview](https://technet.microsoft.com/library/hh831364.aspx).
 
--   For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
+- For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
 
--   To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+
+- To use PowerShell with the Azure Information Protection client, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 When you are ready to deactivate the Azure Rights Management service for your organization, use the following instructions.
 
@@ -74,29 +76,15 @@ Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement
 
 You should now see **Rights Management is not activated** and the option to activate.
 
-#### To deactivate Rights Management from the Azure classic portal
-
-1.  Sign in to the [Azure classic portal](http://go.microsoft.com/fwlink/p/?LinkID=275081).
-
-2.  In the left pane, click **ACTIVE DIRECTORY**.
-
-3.  From the **active directory** page, click **RIGHTS MANAGEMENT**.
-
-4.  Make sure that your tenant name is selected, click **DEACTIVATE**, and then confirm your action.
-
-The **RIGHTS MANAGEMENT STATUS** should now display **Inactive** and the **DEACTIVATE** option is replaced with **ACTIVATE**.
-
 #### To deactivate Rights Management from the Azure portal
 
-This method is currently in preview.
-
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, select **RMS Settings (Preview)**. 
+2. On the initial **Azure Information Protection** blade, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed. 
 
-3.  On the **Azure Information Protection - RMS Settings (Preview)** blade, select **Deactivate**. Select **Yes** to confirm your choice.
+3.  On the **Azure Information Protection - RMS Settings** or **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 

@@ -2,11 +2,11 @@
 # required metadata
 
 title: Configure Exchange Online IRM for the Azure Rights Management service from Azure Information Protection 
-description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support message protection. 
+description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support the new capabilities in Office 365 Message Encryption. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use these instructions only if you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted.
 
-If neither of these conditions apply to you, do not use these instructions and instead, use instructions from [Set up message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+If neither of these conditions apply to you, do not use these instructions and instead, use instructions from [Setting up the new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 ## Exchange Online IRM configuration if you have an imported TPD
 

@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/05/2017
+ms.date: 09/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,9 +56,9 @@ When you use Exchange Online or Exchange Server, you can configure  information 
 
 -   **Transport rules** that an administrator configures to automatically apply protection templates to email messages. These rules are based on properties such as sender, recipient, message subject, and content. These rules are similar in concept to protection rules but do not let users remove the protection. The rules can be applied to Outlook on the web and to emails that are sent by mobile devices. In addition, these rules do not encrypt email messages before they are sent from the client. For more information, see [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx) in the Exchange library.
 
--   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages, and take actions to help prevent data loss for confidential or sensitive content. Examples of confidential or sensitive content include personal information or credit card information. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx) in the Exchange library.
+-   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages, and take actions to help prevent data loss for confidential or sensitive content. Examples of confidential or sensitive content include personal information or credit card information. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) in the Exchange library.
 
--   **Office 365 Message Encryption** that uses transport rules to send encrypted emails to people outside your company, and the email is read in a browser with an interface similar to Outlook on the web. You can customize the disclaimer text and header text in your company’s encrypted emails, and even add your company logo. For more information, see [Set up message protection in Office 365](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) from the Office website.
+-   **Office 365 Message Encryption** that uses transport rules to send encrypted emails to people outside your company, and the email is read in a browser with an interface similar to Outlook on the web. You can customize the disclaimer text and header text in your company’s encrypted emails, and even add your company logo. For more information, see [Setting up the new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) from the Office website.
 
 If you use Exchange on-premises, you can use the IRM features with the Azure Rights Management service by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Azure Rights Management service.
 
@@ -90,7 +90,9 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > 
 > - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
 > 
-> - If you protect a file that you then upload to a SharePoint library or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, and eDiscovery.
+> - Co-authoring is not supported. Because you must check out and download a document in an IRM-protected library, one person can edit it at a time.
+
+For libraries that are not IRM-protected, if you protect a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
 When you use SharePoint IRM protection, the Azure Rights Management service applies usage restrictions and data encryption for documents when they are downloaded from SharePoint, and not when the document is first created in SharePoint or uploaded to the library. For information about how documents are protected before they are downloaded, see [Data Encryption in OneDrive for Business and SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) from the SharePoint documentation.
 

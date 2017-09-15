@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -92,6 +92,20 @@ Additionally:
 
 - If you have the current preview version of the Azure Information Protection client, you can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
 
+## Enforce protection-only mode when your organization has a mix of licenses
+
+If your organization does not have any licenses for Azure Information Protection, but does have licenses for Office 365 that include the Azure Rights Management service for data protection, the Azure Information Protection client for Windows automatically runs in [protection-only mode](../rms-client/client-protection-only-mode.md).
+
+However, if your organization has a subscription for Azure Information Protection, by default all Windows computers can download the Azure Information Protection policy. The Azure Information Protection client does not do license checking and enforcement. 
+
+If you have some users who do not have a license for Azure Information Protection but do have a license for Office 365 that includes the Azure Rights Management service, edit the registry on these users' computers to prevent users from running the unlicensed classification and labeling features from Azure Information Protection.
+
+Locate the following value name and set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
+
 ## Hide the Classify and Protect menu option in Windows File Explorer
 
 This configuration option is currently in preview.
@@ -142,6 +156,9 @@ To configure this advanced setting, enter the following strings:
 ## Make the custom permissions options unavailable to users
 
 This configuration option is currently in preview.
+
+> [!IMPORTANT]
+> Do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
