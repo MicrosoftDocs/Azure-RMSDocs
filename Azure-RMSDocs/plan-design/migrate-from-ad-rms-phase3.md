@@ -36,6 +36,8 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 For mobile device clients and Mac computers:
 
 - Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
+    
+    When these DNS changes have propogated, these clients will automatically discover the Azure Rights Management service. However, they do cache the information from  AD RMS, so this process can take up to 30 days.
 
 For Windows clients:
 
