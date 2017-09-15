@@ -34,11 +34,9 @@ ms.suite: ems
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. 
 
+## Overview of the Azure Information Protection scanner
+
 By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection. 
-
-## Overview of the Microsoft Rights Management connector
-
-
 
 
 
@@ -48,46 +46,103 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 |Requirement|More information|
 |---------------|--------------------|
-|Windows Server 2016 or Windows Server 2012 R2:<br /><br />- A 64-bit physical or virtual computer running one of the following operating systems:  Windows Server 2016, Windows Server 2012 R2,  Windows Server 2012, or Windows Server 2008 R2.<br /><br />- At least 1 GB of RAM.<br /><br />- A minimum of 64 GB of disk space.<br /><br />- At least one network interface.<br /><br />- Access to the Internet via a firewall (or web proxy) that does not require authentication.<br /><br />- Must be in a forest or domain that trusts other forests in the organization that contain installations of Exchange or SharePoint servers that you want to use with the RMS connector.|For fault tolerance and high availability, you must install the RMS connector on a minimum of two computers.<br /><br />**Tip**: If you are using Outlook Web Access or mobile devices that use Exchange ActiveSync IRM and it is critical that you maintain access to emails and attachments that are protected by Azure RMS, we recommend that you deploy a load-balanced group of connector servers to ensure high availability.<br /><br />You do not need dedicated servers to run the connector but you must install it on a separate computer from the servers that will use the connector.<br /><br />**Important**: Do not install the connector on a computer that runs Exchange Server, SharePoint Server, or a file server that is configured for file classification infrastructure if you want to use the functionality from these services with Azure RMS. Also, do not install this connector on a domain controller.<br /><br />If you have server workloads that you want to use with the RMS connector but their servers are in domains that are not trusted by the domain from which you want to run the connector, you can install additional RMS connector servers in these untrusted domains or other domains in their forest. <br /><br />There is no limit to the number of connector servers that you can run for your organization and all connector servers installed in an organization share the same configuration. However, to configure the connector to authorize servers, you must be able to browse for the server or service accounts you want to authorize, which means that you must run the RMS administration tool in a forest from which you can browse those accounts.|
+|Windows Server 2016 or Windows Server 2012 R2 to run the scanner service:<br /><br />- 4 cores<br /><br />- 4 GB of RAM.|This server can a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
+|SQL Server (local or remote instance) to store the scanner configuration:<br /><br />- SQL Server Express<br /><br />- SQL Server Standard<br /><br />- SQL Server Enterprise|SQL Server 2012 R2 is the minimum version for the listed editions.<br /><br />|
+|Active Directory account to run the scanner service|This account requires the following rights:<br /><br />- **Log on locally**<br /><br />- **Log on as a service** <br /><br />This account also requires access to the data stores:<br /><br />- **Read** permissions for discovery mode only (files are not classified or protected)<br /><br /> - **Read** and **Write** permissions to classify and protect files<br /><br />Additional account requirements for labels that apply or remove protection:<br /><br /> - It must be synchronized to Azure AD and have an email address. <br /><br />- It must be a [super user](/deploy-use/configure-super-users) for the Azure Rights Management service.|
+|The Azure Information Protection client is installed|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
+|Configured labels that apply automatic classification, and optionally, protection.|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). |
 
 
+## Install the Azure Information Protection scanner
 
-|The Rights Management (RMS) service is activated|[Activating Azure Rights Management](activate-service.md)|
-|The Rights Management (RMS) service is activated|[Activating Azure Rights Management](activate-service.md)|
-|Directory synchronization between your on-premises Active Directory forests and Azure Active Directory|After RMS is activated, Azure Active Directory must be configured to work with the users and groups in your Active Directory database.<br /><br />**Important**: You must do this directory synchronization step for the RMS connector to work, even for a test network. Although you can use Office 365 and Azure Active Directory by using accounts that you manually create in Azure Active Directory, this connector requires that the accounts in Azure Active Directory are synchronized with Active Directory Domain Services; manual password synchronization is not sufficient.<br /><br />For more information, see the following resources:<br /><br />[Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect)<br /><br />[Hybrid Identity directory integration tools comparison](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|
-|Optional but recommended:<br /><br />Enable federation between your on-premises Active Directory and Azure Active Directory|You can enable identity federation between your on-premises directory and Azure Active Directory. This configuration enables a more seamless user experience by using single sign-on to the RMS service. Without single sign on, users are prompted for their credentials before they can use rights-protected content.<br /><br />For instructions to configure federation by using Active Directory Federation Services (AD FS) between Active Directory Domain Services and Azure Active Directory, see the [Checklist: Use AD FS to implement and manage single sign-on](http://technet.microsoft.com/library/jj205462.aspx) in the Windows Server library.|
-|A minimum of two member computers on which to install the RMS connector:<br /><br />- A 64-bit physical or virtual computer running one of the following operating systems:  Windows Server 2016, Windows Server 2012 R2,  Windows Server 2012, or Windows Server 2008 R2.<br /><br />- At least 1 GB of RAM.<br /><br />- A minimum of 64 GB of disk space.<br /><br />- At least one network interface.<br /><br />- Access to the Internet via a firewall (or web proxy) that does not require authentication.<br /><br />- Must be in a forest or domain that trusts other forests in the organization that contain installations of Exchange or SharePoint servers that you want to use with the RMS connector.|For fault tolerance and high availability, you must install the RMS connector on a minimum of two computers.<br /><br />**Tip**: If you are using Outlook Web Access or mobile devices that use Exchange ActiveSync IRM and it is critical that you maintain access to emails and attachments that are protected by Azure RMS, we recommend that you deploy a load-balanced group of connector servers to ensure high availability.<br /><br />You do not need dedicated servers to run the connector but you must install it on a separate computer from the servers that will use the connector.<br /><br />**Important**: Do not install the connector on a computer that runs Exchange Server, SharePoint Server, or a file server that is configured for file classification infrastructure if you want to use the functionality from these services with Azure RMS. Also, do not install this connector on a domain controller.<br /><br />If you have server workloads that you want to use with the RMS connector but their servers are in domains that are not trusted by the domain from which you want to run the connector, you can install additional RMS connector servers in these untrusted domains or other domains in their forest. <br /><br />There is no limit to the number of connector servers that you can run for your organization and all connector servers installed in an organization share the same configuration. However, to configure the connector to authorize servers, you must be able to browse for the server or service accounts you want to authorize, which means that you must run the RMS administration tool in a forest from which you can browse those accounts.|
+1. Using the account that you created to run the scanner, sign in to the Windows Server computer that will run the scanner.
 
+2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-## Steps to deploy the RMS connector
+3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner, and provide your account credentials when prompted: 
+    
+    ```
+    Install-AIPScanner -SqlServerInstance <database name>
+    ```
+    
+    For example, to use a named instance of AIPSCANNER on SERVER1, type `Install-AIPScanner -SQLSERVER1\AIPSCANNER`
+        
+    And if you're running SQL Server Express on this same server name: `Install-AIPScanner -SQLSERVER1\SQLEXPRESS`
+    
+    Do not close your PowerShell session.
 
-The connector does not automatically check all the [prerequisites](deploy-rms-connector.md#prerequisites-for-the-rms-connector) that it needs for a successful deployment, so make sure that these are in place before you start. The deployment requires you to install the connector, configure the connector, and then configure the servers that you want to use the connector. 
+4. Verify that the service is now installed by using **Administrative Tools** > **Services**. The installed service is named **Azure Information Protection Scanner** and is configured to run by using the account that you created.
 
--   **Step 1:**  [Installing the RMS connector](install-configure-rms-connector.md#installing-the-rms-connector)
+## Authenticate to the Azure Information Protection service by using an Azure AD token
 
--   **Step 2:**  [Entering credentials](install-configure-rms-connector.md#entering-credentials)
+1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign in, this token lets the scanner then run non-interactively.
+    
+    To create these applications, follow the instructions in [How to label files non-interactively for Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
--   **Step 3:**  [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector)
+2. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
+    
+    ```
+    Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
+    ```
 
--   **Step 4:**  [Configuring load balancing and high availability](install-configure-rms-connector.md#configuring-load-balancing-and-high-availability)
+3. When prompted, sign in, and then click **Accept**.
 
--   Optional: [Configuring the RMS connector to use HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https)
+The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the web app /API in Azure AD. When it expires, you must repeat steps 1 through 3.
 
--   Optional: [Configuring the RMS connector for a web proxy server](install-configure-rms-connector.md#configuring-the-rms-connector-for-a-web-proxy-server)
+You're now ready to specify the data stores to scan. 
 
--   Optional: [Installing the RMS connector administration tool on administrative computers](install-configure-rms-connector.md#installing-the-rms-connector-administration-tool-on-administrative-computers)
+## Specify data repositories for the Azure Information Protection scanner
 
--   **Step 5:**  [Configuring servers to use the RMS connector](configure-servers-rms-connector.md)
+You use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to data repositories to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
-    -   [Configuring an Exchange server to use the connector](configure-servers-rms-connector.md#configuring-an-exchange-server-to-use-the-connector)
+SharePoint Server 2016 and SharePoint Server 2013 are supported.
 
-    -   [Configuring a SharePoint server to use the connector](configure-servers-rms-connector.md#configuring-a-sharepoint-server-to-use-the-connector)
+1. From the same Windows Server computer, in your PowerShell session, add your first data store to be scanned by running the following command:
+    
+    ```
+    Add-AIPScannerRepository -Path <path>
+    ```
+    For example, `Add-AIPScannerRepository -Path \\NAS\Documents`
+    
+    For other examples, see the [online help](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) for this cmdlet.
 
-    -   [Configuring a file server for File Classification Infrastructure to use the connector](configure-servers-rms-connector.md#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
+2. Repeat this command for all the data stores that you want to scan. If you need to remove a data store that you added, use the [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository) cmdlet.
+
+3. Confirm that you have specified all the data stores correctly, by running the [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository) cmdlet:
+    
+    	Get-AIPScannerRepository
+
+With the scanner's default configuration, you're now ready to run your first scan in discovery mode, to see in reports what files would be classified and protected.
+
+## Run a discovery cycle and view reports for the Azure Information Protection scanner
+
+1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
+
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped.
+
+3. Review the reports that are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
+    
+    If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
+
+## Configure the Azure Information Protection scanner to apply classification and protection to discovered files
+
+In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, you need to run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
+
+1. On the Windows Server computer, in the PowerShell session, run the following command:
+    
+    	Set-AIPScannerConfiguration -ScanMode Enforce -Schedule Continuous
+    
+    There are other configuration settings that you might want to change. For example, whether file attributes are changed and what is logged in the reports. In addition, if your Azure Information Protection policy includes the setting that requires a justification message to lower the classification level or remove protection, specify that message by using this cmdlet. Use the [online help](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) for more information about each configuration setting. 
+
+2. Using **Administrative Tools** > **Services**, restart the **Azure Information Protection Scanner** service.
+
+3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
+
+This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files will be discovered.
 
 
 ## Next steps
 
-Go to Step 1: [Installing and configuring the Azure Rights Management connector](install-configure-rms-connector.md).
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
