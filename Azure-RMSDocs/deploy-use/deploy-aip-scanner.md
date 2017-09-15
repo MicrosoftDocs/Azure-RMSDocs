@@ -40,6 +40,8 @@ This scanner lets you discover, classify, and protect files on data stores that 
 
 By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
+The conditions use the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
+
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
 ## Prerequisites for the Azure Information Protection scanner
@@ -76,6 +78,8 @@ Before you install the Azure Information Protection scanner, make sure that the 
     
     The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
 
+Now that the scanner is installed, you need to get an Azure AD token for the service account to authenticate so that it can run unattended. 
+
 ## Get an Azure AD token for the scanner service account to authenticate to the Azure Information Protection service
 
 1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign in, this token lets the scanner then run non-interactively.
@@ -90,7 +94,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 3. When prompted, sign in, and then click **Accept**.
 
-The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the web app /API in Azure AD. When it expires, you must repeat steps 1 through 3.
+The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When it expires, you must repeat steps 1 through 3.
 
 You're now ready to specify the data stores to scan. 
 
@@ -127,6 +131,8 @@ With the scanner's default configuration, you're now ready to run your first sca
     
     If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
 
+When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
+
 ## Configure the Azure Information Protection scanner to apply classification and protection to discovered files
 
 In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, you need to run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
@@ -145,7 +151,7 @@ This time, when the scanner has worked its way through all the files, it starts 
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
-Other cmdlets for the scanner include letting you change the service account and database for the scanner, getting the current settings for the scanner, and uninstalling it. The scanner uses the following cmdlets:
+Other cmdlets for the scanner include changing the service account and database for the scanner, getting the current settings for the scanner, and uninstalling the scanner service. The scanner uses the following cmdlets:
 
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
 
