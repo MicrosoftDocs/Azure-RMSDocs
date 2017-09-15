@@ -140,9 +140,9 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files will be discovered.
 
-## Next steps
+## List of cmdlets for the Azure Information Protection scanner 
 
-You might find it useful to review other cmdlets for the Azure Information Protection scanner. The complete list of cmdlets for the scanner are the following:
+Other cmdlets for the scanner include letting you change the service account and database for the scanner, getting the current settings for the scanner, and uninstalling it. The complete list of cmdlets for the scanner are the following:
 
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
 
@@ -160,6 +160,10 @@ You might find it useful to review other cmdlets for the Azure Information Prote
 
 - [Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
+
+## Next steps
+
+You can also use PowerShell to interactively classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
