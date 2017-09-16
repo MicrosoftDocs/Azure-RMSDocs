@@ -44,7 +44,7 @@ This scanner lets you discover, classify, and protect files on the following dat
 
 ## Overview of the Azure Information Protection scanner
 
-When you have configured your Azure Information Protection policy for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
+When you have configured your [Azure Information Protection policy](configure-policy.md) for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
 Automatic classification uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
 
