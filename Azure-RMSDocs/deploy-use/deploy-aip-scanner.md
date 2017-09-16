@@ -44,13 +44,13 @@ This scanner lets you discover, classify, and protect files on the following dat
 
 ## Overview of the Azure Information Protection scanner
 
-By using conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
+When you have configured your Azure Information Protection policy for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
-The conditions use the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
+Automatic classification uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
-Note that the scanner does not discover and label in real-time. It systematically crawls through files on data stores that you specify and you can configure this cycle to run one time, or repeatedly.
+Note that the scanner does not discover and label in real-time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
 ## Prerequisites for the Azure Information Protection scanner
 Before you install the Azure Information Protection scanner, make sure that the following requirements are in place.
@@ -118,7 +118,7 @@ Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 
     
     	Add-AIPScannerRepository -Path <path>
     
-    For example, `Add-AIPScannerRepository -Path \\NAS\Documents`
+    For example: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     For other examples, see the [online help](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) for this cmdlet.
 
