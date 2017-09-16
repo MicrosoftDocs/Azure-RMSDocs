@@ -44,16 +44,18 @@ The conditions use the Office 365 built-in data loss prevention (DLP) sensitivit
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
+Note that the scanner does not discover and label in real-time. It systematically crawls through files on data stores that you specify and you can configure this cycle to run one time, or repeatedly.
+
 ## Prerequisites for the Azure Information Protection scanner
 Before you install the Azure Information Protection scanner, make sure that the following requirements are in place.
 
 |Requirement|More information|
 |---------------|--------------------|
-|Windows Server 2016 or Windows Server 2012 R2 to run the scanner service:<br /><br />- 4 processes<br /><br />- 4 GB of RAM|This server can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
-|SQL Server (local or remote instance) to store the scanner configuration:<br /><br />- SQL Server Express<br /><br />- SQL Server Standard<br /><br />- SQL Server Enterprise|SQL Server 2012 R2 is the minimum version for the listed editions.<br /><br />|
-|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD and requires the following rights:<br /><br />- **Log on locally**<br /><br />- **Log on as a service** <br /><br />This account also requires access to the data stores:<br /><br />- **Read** permissions for discovery mode only (files are not classified or protected)<br /><br /> - **Read** and **Write** permissions to classify and protect files<br /><br />Additional account requirements for labels that apply or remove protection:<br /><br /> - An email address from a verified domain in your Azure AD tenant. <br /><br />- A [super user](/deploy-use/configure-super-users) for the Azure Rights Management service to remove protection or reprotect files.|
-|The Azure Information Protection client is installed|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
-|Configured labels that apply automatic classification, and optionally, protection.|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). |
+|Windows Server computer to run the scanner service:<br /><br />- 4 processes<br /><br />- 4 GB of RAM|Windows Server 2016 or Windows Server 2012 R2.<br /><br />This server can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
+|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance|SQL Server 2012 R2 is the minimum version for the listed editions.<br /><br />- SQL Server Express<br /><br />- SQL Server Standard<br /><br />- SQL Server Enterprise|
+|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD, with the additional requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You can remove this right after you have confirmed that the scanner can discover, classify, and protect files.<br /><br />- **Log on as a service** right. This right is required for the installation, configuration, and operation of the scanner. <br /><br />- Access to the data repositories to scan: **Read** permissions for discovery mode only (files are not classified or protected). **Read** and **Write** permissions for applying labels that meet the conditions in the Azure Information Protection policy.<br /><br />- For labels that apply or remove protection: This account must be a [super user](/deploy-use/configure-super-users) for the Azure Rights Management service and have an email address from a verified domain for your tenant.|
+|The Azure Information Protection client is installed on the Windows Server computer|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
+|Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). |
 
 
 ## Install the Azure Information Protection scanner
@@ -106,9 +108,8 @@ For SharePoint, SharePoint Server 2016 and SharePoint Server 2013 are supported.
 
 1. From the same Windows Server computer, in your PowerShell session, add your first data store by running the following command:
     
-    ```
-    Add-AIPScannerRepository -Path <path>
-    ```
+    	Add-AIPScannerRepository -Path <path>
+    
     For example, `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     For other examples, see the [online help](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) for this cmdlet.
@@ -147,11 +148,11 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
 
-This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files will be discovered.
+This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
-Other cmdlets for the scanner include changing the service account and database for the scanner, getting the current settings for the scanner, and uninstalling the scanner service. The scanner uses the following cmdlets:
+Other cmdlets for the scanner let you change the service account and database for the scanner, get the current settings for the scanner, and uninstall the scanner service. The scanner uses the following cmdlets:
 
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
 
