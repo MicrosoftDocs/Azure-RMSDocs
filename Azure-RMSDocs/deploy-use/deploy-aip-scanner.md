@@ -110,7 +110,7 @@ You're now ready to specify the data stores to scan.
 
 ## Specify data stores for the Azure Information Protection scanner
 
-You use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
+Use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
 Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013.
 
@@ -164,24 +164,24 @@ Other cmdlets for the scanner let you change the service account and database fo
 
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
 
-- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md)
-
-- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md)
-
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration.md)
 
-- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner.md)
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository.md)
+
+- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md)
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository.md)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner.md)
 
-- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository.md)
+- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md)
+
+- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner.md)
 
 
 ## Next steps
 
-You can also use PowerShell to interactively classify and protect files. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
+You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
