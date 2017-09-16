@@ -53,7 +53,7 @@ The user configuration script (Migrate-User.cmd) configures user-level settings 
 
 - Use a logon script
 
-- Use group policy software installation to assign the script to the user
+- Use group policy software installation to publish the script for the user
 
 - Use a software deployment solution, such as Microsoft Intune or System Center Configuration Manager, to run the script in the context of the user
 
