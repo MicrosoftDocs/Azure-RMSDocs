@@ -34,7 +34,7 @@ ms.suite: ems
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
 
-This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. 
+This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on sites and libraries for SharePoint Server 2016 and SharePoint Server 2013. 
 
 ## Overview of the Azure Information Protection scanner
 
