@@ -112,7 +112,7 @@ You're now ready to specify the data stores to scan.
 
 You use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
-For SharePoint, SharePoint Server 2016 and SharePoint Server 2013 are supported.
+Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013.
 
 1. From the same Windows Server computer, in your PowerShell session, add your first data store by running the following command:
     
