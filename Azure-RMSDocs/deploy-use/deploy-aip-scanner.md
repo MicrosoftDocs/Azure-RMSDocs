@@ -38,7 +38,7 @@ This scanner lets you discover, classify, and protect files on data stores that 
 
 ## Overview of the Azure Information Protection scanner
 
-By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
+By using conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
 The conditions use the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
 
@@ -80,11 +80,11 @@ Before you install the Azure Information Protection scanner, make sure that the 
     
     The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
 
-Now that the scanner is installed, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. 
+Now that you have installed the scanner, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. 
 
 ## Get an Azure AD token for the scanner service account to authenticate to the Azure Information Protection service
 
-1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign in, this token lets the scanner then run non-interactively.
+1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign-in, this token lets the scanner then run non-interactively.
     
     To create these applications, follow the instructions in [How to label files non-interactively for Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
