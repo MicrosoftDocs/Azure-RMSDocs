@@ -90,6 +90,8 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 - Running the [PowerShell cmdlets](../rms-client/client-admin-guide-powershell.md) for labeling and protection (Get-AIPFileStatus, Set-AIPFileClassification, and Set-AIPFileLabel).
 
+- When the [Azure Information Protection Scanner](deploy-aip-scanner.md) service starts and at the start of each cycle when the scanning type is set to Full.
+
 - Every 24 hours.
 
 >[!NOTE]
