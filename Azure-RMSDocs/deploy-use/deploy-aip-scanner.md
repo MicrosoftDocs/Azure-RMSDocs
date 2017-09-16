@@ -51,14 +51,14 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |---------------|--------------------|
 |Windows Server 2016 or Windows Server 2012 R2 to run the scanner service:<br /><br />- 4 processes<br /><br />- 4 GB of RAM|This server can a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
 |SQL Server (local or remote instance) to store the scanner configuration:<br /><br />- SQL Server Express<br /><br />- SQL Server Standard<br /><br />- SQL Server Enterprise|SQL Server 2012 R2 is the minimum version for the listed editions.<br /><br />|
-|Active Directory account to run the scanner service|This account requires the following rights:<br /><br />- **Log on locally**<br /><br />- **Log on as a service** <br /><br />This account also requires access to the data stores:<br /><br />- **Read** permissions for discovery mode only (files are not classified or protected)<br /><br /> - **Read** and **Write** permissions to classify and protect files<br /><br />Additional account requirements for labels that apply or remove protection:<br /><br /> - It must be synchronized to Azure AD and have an email address. <br /><br />- It must be a [super user](/deploy-use/configure-super-users) for the Azure Rights Management service.|
+|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD and requires the following rights:<br /><br />- **Log on locally**<br /><br />- **Log on as a service** <br /><br />This account also requires access to the data stores:<br /><br />- **Read** permissions for discovery mode only (files are not classified or protected)<br /><br /> - **Read** and **Write** permissions to classify and protect files<br /><br />Additional account requirements for labels that apply or remove protection:<br /><br /> - An email address from a verified domain in your Azure AD tenant. <br /><br />- A [super user](/deploy-use/configure-super-users) for the Azure Rights Management service to remove protection or reprotect files.|
 |The Azure Information Protection client is installed|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
 |Configured labels that apply automatic classification, and optionally, protection.|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). |
 
 
 ## Install the Azure Information Protection scanner
 
-1. Using the account that you created to run the scanner, sign in to the Windows Server computer that will run the scanner.
+1. Using the service account that you created to run the scanner, sign in to the Windows Server computer that will run the scanner.
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
@@ -92,7 +92,7 @@ Now that the scanner is installed, you need to get an Azure AD token for the sca
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
 
-3. When prompted, sign in, and then click **Accept**.
+3. When prompted, sign in by using the service account credentials for Azure AD, and then click **Accept**.
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When it expires, you must repeat steps 1 through 3.
 
