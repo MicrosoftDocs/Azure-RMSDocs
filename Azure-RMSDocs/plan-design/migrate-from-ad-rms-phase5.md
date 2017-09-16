@@ -56,11 +56,35 @@ After you have deprovisioned your AD RMS servers, you might want to take the opp
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 
-## Step 11. Remove onboarding controls
+## Step 11. Reconfigure mobile device clients and Mac computers, and remove onboarding controls
 
-When all your existing clients have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process. 
+For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
-Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment task that you created to deploy the redirections.
+When these DNS changes have propogated, these clients will automatically discover and start to use the Azure Rights Management service. However, Mac computers that run Office Mac cache the information from AD RMS. For these computers, this process can take up to 30 days. 
+
+To force Mac computers to run the discovery process immediately, in the keychain, search for "adal" and delete all ADAL entries. Then, run the following commands on these computers:
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+When all your existing Windows computers have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process. 
+
+Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment method that you created to deploy the migration scripts.
 
 To remove the onboarding controls:
 
@@ -71,6 +95,8 @@ To remove the onboarding controls:
 2. Run the following command, and enter **Y** to confirm:
 
 		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Note that this command removes any license enforcement for the Azure Rights Management protection service, so that all computers can protect documents and emails.
 
 3. Confirm that onboarding controls are no longer set:
 
