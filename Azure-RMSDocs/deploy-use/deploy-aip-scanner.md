@@ -34,7 +34,13 @@ ms.suite: ems
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
 
-This scanner lets you discover, classify, and protect files on data stores that use the Common Internet File System (CIFS) protocol, and on sites and libraries for SharePoint Server 2016 and SharePoint Server 2013. 
+This scanner lets you discover, classify, and protect files on the following data stores:
+
+- Local folders on the Windows Server computer that runs the scanner.
+
+- UNC paths for network shares that use the Common Internet File System (CIFS) protocol.
+
+- Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013.
 
 ## Overview of the Azure Information Protection scanner
 
@@ -98,7 +104,7 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
 
 3. When prompted, sign in by using the service account credentials for Azure AD, and then click **Accept**.
 
-The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When it expires, you must repeat steps 1 through 3.
+The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 through 3.
 
 You're now ready to specify the data stores to scan. 
 
