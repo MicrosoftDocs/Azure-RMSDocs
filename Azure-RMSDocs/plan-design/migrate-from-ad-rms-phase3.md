@@ -69,9 +69,9 @@ When you cannot migrate all your Windows clients at once, run the following proc
 
 ### Windows client reconfiguration by using registry edits
 
-1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously.
+1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Follow the instructions in **MigrateClient.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
+2.  Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
 
     > [!IMPORTANT]
     > As before, be careful not to introduce additional spaces before or after your addresses.
