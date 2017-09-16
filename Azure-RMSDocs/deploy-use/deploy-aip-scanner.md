@@ -34,7 +34,7 @@ ms.suite: ems
 
 Use this information to learn about the Azure Information Protection scanner, and then how to successfully install, configure, and run it. 
 
-This scanner lets you discover, classify, and protect files on the following data stores:
+This scanner runs as a service on Windows Server and lets you discover, classify, and protect files on the following data stores:
 
 - Local folders on the Windows Server computer that runs the scanner.
 
