@@ -78,7 +78,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
     
     The installed service is named **Azure Information Protection Scanner** and is configured to run by using the scanner service account that you created.
 
-Now that the scanner is installed, you need to get an Azure AD token for the service account to authenticate so that it can run unattended. 
+Now that the scanner is installed, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. 
 
 ## Get an Azure AD token for the scanner service account to authenticate to the Azure Information Protection service
 
@@ -135,7 +135,7 @@ When you're ready to automatically label the files that the scanner discovers, c
 
 ## Configure the Azure Information Protection scanner to apply classification and protection to discovered files
 
-In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, you need to run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
+In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
 
 1. On the Windows Server computer, in the PowerShell session, run the following command:
     
