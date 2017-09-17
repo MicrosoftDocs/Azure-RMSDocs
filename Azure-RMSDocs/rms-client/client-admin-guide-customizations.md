@@ -172,6 +172,19 @@ To configure this advanced setting, enter the following strings:
 - Value: **True**
 
 
+## Enable recommended classification in Outlook
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **OutlookRecommendationEnabled**
+
+- Value: **True**
+
+
 ## Set a different default label for Outlook
 
 This configuration option is currently in preview and requires the current preview version of the client.
