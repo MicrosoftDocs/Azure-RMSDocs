@@ -159,7 +159,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an advanced setting that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
@@ -170,6 +170,24 @@ To configure this advanced setting, enter the following strings:
 - Key: **EnableBarHiding**
 
 - Value: **True**
+
+
+## Set a different default label for Outlook
+
+This configuration option is currently in preview and requires the current preview version of the client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, Outlook applies a different default label to the label that is configured in the Azure Information Protection policy for the setting **Select the default label**.
+
+To use this setting, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **OutlookDefaultLabel**
+
+- Value: \<**label ID**>
+
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 
