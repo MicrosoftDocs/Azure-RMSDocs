@@ -58,9 +58,11 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
     
     - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
     
-    - [Make the custom permissions options unavailable to users](/rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Make the custom permissions options unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
     
-    - [Permanently hide the Azure Information Protection bar](/rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    
+    -[Enable recommended classification in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
 - For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
 
