@@ -74,8 +74,6 @@ Fixes for stability and for specific scenarios that include:
 
 - The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
 
-- Support for Exchange online mode.
-
 - Support for labeling and protection of files stored on SharePoint Server.
 
 - Watermarks now support multiple lines. In addition, visual markings are now applied to a document on the [first save only](../deploy-use/configure-policy-markings.md#when-visual-markings-are-applied) rather than every time a document is saved.
