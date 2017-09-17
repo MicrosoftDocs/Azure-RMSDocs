@@ -187,7 +187,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Set a different default label for Outlook
 
-This configuration option is currently in preview and requires the current preview version of the client.
+This configuration option is currently in preview and requires the preview version of the client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
