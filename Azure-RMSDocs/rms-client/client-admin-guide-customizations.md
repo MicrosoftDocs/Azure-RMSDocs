@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,12 +31,9 @@ ms.suite: ems
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
-Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download. 
-In addition, some settings might only be available in a preview version of the Azure Information Protection client. For these settings, a minimum client version is documented. For settings and configurations that are supported in the general availability version of the client, no minimal client version number is documented.
+Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.  
 
 ### How to configure advanced client configuration settings in the portal
-
-This configuration is currently in preview.
 
 1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade.
 
@@ -72,11 +69,7 @@ Be sure to also check the domain name of the signed in account that's displayed.
 
 To sign in as a different user:
 
-1. Depending on the version of the Azure Information Protection client: 
-    
-    - For the general availability version of the Azure Information Protection client: Using a registry editor, navigate to **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** and delete the **TokenCache** value (and its associated value data).
-    
-    - For the current preview version of the Azure Information Protection client: Navigate to **%localappdata%\Microsoft\MSIP** and delete the **TokenCache** file.
+1. Navigate to **%localappdata%\Microsoft\MSIP** and delete the **TokenCache** file.
 
 2. Restart any open Office applications and sign in with your different user account. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and click **Sign in** from the updated **Client status** section.
 
@@ -86,11 +79,7 @@ Additionally:
 
 - If you are using single sign-on, you must sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client then automatically authenticates by using your currently signed in user account.
 
-- If you want to reset the user settings for the Azure Rights Management service, you can do this by using the **Help and Feedback** option.
-
-- If you want to delete the currently downloaded Azure Information Protection policy, delete the **Policy.msip** file from the **%localappdata%\Microsoft\MSIP** folder.
-
-- If you have the current preview version of the Azure Information Protection client, you can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
+- You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
@@ -107,10 +96,6 @@ Locate the following value name and set the value data to **0**:
 In addition, check that these computers do not have a file named **Policy.msip** in the **%LocalAppData%\Microsoft\MSIP** folder. If this file exists, delete it. This file contains the Azure Information Protection policy and might have downloaded before you edited the registry, or if the Azure Information Protection client was installed with the demo option.
 
 ## Hide the Classify and Protect menu option in Windows File Explorer
-
-This configuration option is currently in preview.
-
-You can configure this advanced configuration by editing the registry when you have a version of the Azure Information Protection client that is 1.3.0.0 or higher. 
 
 Create the following DWORD value name (with any value data):
 
@@ -141,9 +126,7 @@ When you export the policy, this action downloads a zipped file with multiple ve
 
 ## Hide the Do Not Forward button in Outlook
 
-This configuration option is currently in preview.
-
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting also requires a preview version of the Azure Information Protection client that has a minimum version of **1.8.41.0**.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you configure this setting, it hides the **Do Not Forward** button from the ribbon in Outlook. It does not hide this option from Office menus.
 
@@ -155,10 +138,8 @@ To configure this advanced setting, enter the following strings:
 
 ## Make the custom permissions options unavailable to users
 
-This configuration option is currently in preview.
-
 > [!IMPORTANT]
-> Do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
+> Unless you use the current preview version of the client, do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
@@ -178,7 +159,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an advanced setting that you must configure in the Azure portal. This setting also requires a preview version of the Azure Information Protection client that has a minimum version of **1.9.58.0**.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
@@ -189,6 +170,37 @@ To configure this advanced setting, enter the following strings:
 - Key: **EnableBarHiding**
 
 - Value: **True**
+
+
+## Enable recommended classification in Outlook
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+
+When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **OutlookRecommendationEnabled**
+
+- Value: **True**
+
+
+## Set a different default label for Outlook
+
+This configuration option is currently in preview and requires the preview version of the client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, Outlook applies a different default label to the label that is configured in the Azure Information Protection policy for the setting **Select the default label**.
+
+To use this setting, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **OutlookDefaultLabel**
+
+- Value: \<**label ID**>
+
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 
