@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,13 +34,15 @@ When you install the Azure Information Protection client, PowerShell commands ar
 
 The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module replaces the RMSProtection module that installs with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
 
-The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool, and three new cmdlets that use the Azure Information Protection (AIP) service for labeling:
+The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool. There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
+
 
 For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help, and for supported languages other than English.  
 
@@ -457,7 +459,7 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-Beginning with version 1.8.41.0 of the Azure Information Protection client (currently in preview), you can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 

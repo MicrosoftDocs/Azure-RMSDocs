@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/04/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,11 +49,14 @@ When the file is protected with your custom permissions, use your standard shari
 
 Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
 
-For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "Internal", click **Internal**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it.
+For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "General", click **General**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
 If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
+
+> [!TIP]
+> You can also select labels from the **Protect** button, on the **File** tab.
 
 In addition to manually selecting labels, labels can also be applied in the following ways:
 
@@ -90,9 +93,11 @@ You can specify your own protection settings for documents rather than use the p
     - **Protect with custom permissions**: Make sure that this is selected so that you can specify and apply your custom permissions. Clear this option to remove any custom permissions.
     
     - **Select permissions**: If you want to protect the file so that only you can access it, select **Only for me**. Otherwise, select the level of access that you want people to have.
-
+    
     - **Select users, groups, or organizations**: Specify the people who should have the permissions you selected for your file or files. Type their full email address, a group email address, or a domain name from the organization for all users in that organization. Note that personal email addresses are not currently supported.
         
+        If you have the current preview version of the client, you can also use the address book icon to select users or groups from the Outlook address book.
+    
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
