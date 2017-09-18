@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,7 +41,7 @@ Additional information about these visual markers:
     
 	- PowerPoint: Watermarks are applied to the master slide, as a background image.
     
-	- Multiple lines of text are supported when you use the current preview version of the Azure Information Protection client.
+	- Multiple lines of text are supported.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
@@ -53,17 +53,9 @@ For email messages, the visual markings are applied when the email message is se
 
 For documents, the visual markings are applied as follows:
 
-- **For the general availability version** of the Azure Information Protection client: 
-    
-    - In an Office app, the visual markings from a label are applied when the label is applied and whenever the document is saved. 
-    
-    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and whenever the document is saved.
+- In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
 
-- **For the current preview version** of the Azure Information Protection client: 
-    
-    - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
-    
-    - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
+- When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
 
 ## To configure visual markings for a label
 
@@ -81,9 +73,9 @@ Use the following instructions to configure visual markings for a label.
 
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, color, and alignment for the header.
 
-    - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, color, and alignment for the header.
+    - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, color, and alignment for the footer.
 
-    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the header.
+    - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, color, and layout for the watermark.
 
 4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
