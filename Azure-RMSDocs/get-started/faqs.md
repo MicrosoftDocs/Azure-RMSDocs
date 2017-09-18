@@ -66,15 +66,13 @@ The Azure Rights Management service automatically generates and manages XrML ce
 
 Yes, as a public preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
 
-When a user opens a document or email that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls and on selected platforms. For example, for your users to open protected emails and documents, you can configure the following settings:
+When a user opens a document or email that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that mobile devices must be compliant with your Intune policies that contain settings such as password requirements and a minimum operating system version.
 
-- Users must authenticate by using multi-factor authentication (MFA).
+For more information and some walk-through examples, see the following blog post announcement: Conditional Access policies for Azure Information Protection 
 
-- Mobile devices must be compliant with your Intune policies that contain settings such as minimum password length, the device must not be jailbroken, and a minimum operating system version.
+Additional information:
 
-- Windows computers must be domain-joined.
-
-For more information and some walk-through examples, see the following blog post announcement:  Conditional Access policies for Azure Information Protection 
+- You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
