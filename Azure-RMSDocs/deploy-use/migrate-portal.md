@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Used to the Azure classic portal for managing the Azure Rights Management service and need some help transitioning to the Azure portal? 
+Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
 
 Use the following information to help you get up and running quickly.
 
