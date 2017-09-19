@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Azure Information Protection*
 
 >[!NOTE]
->This functionality replaces configuring custom templates in the Azure classic portal.
+>This functionality replaces configuring custom templates in the Azure classic portal. For a quick how-to mapping, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 >
 >Although you can still create and manage templates in the Azure classic portal, we do not recommend that you manage the same templates from the Azure classic portal and the Azure portal. The implementation for configuring templates in these different portals has changed, so configuring the same template in different portals can result in an unreliable configuration.
 
