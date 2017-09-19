@@ -34,7 +34,7 @@ Used to the Azure classic portal for managing the Azure Rights Management servic
 
 Use the following information to help you get up and running quickly.
 
-|Task in the Azure classic portal|Use the Azure portal
+|Azure classic portal|How to do this in the Azure portal
 |-----------|--------------------|
 |Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 |Create a new template|Create a label that applies protection, and use **Set permissions** to define the permissions, expiration, and offline access. <br /><br />For more information, see [To create a new template](configure-policy-templates.md#to-create-a-new-template).
