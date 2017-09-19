@@ -61,6 +61,6 @@ The [PowerShell cmdlets](configure-templates-with-powershell.md) to create and m
 
 
 ## See also
-[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)
+For more detailed information, see [Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
