@@ -32,7 +32,9 @@ ms.suite: ems
 
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
 
-Use the following information to help you get up and running quickly.
+The Azure classic portal will be retired on November 30, 2017. For more information, see the blog post announcement: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
+
+Use the following information to help you get up and running quickly with the newer portal.
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
