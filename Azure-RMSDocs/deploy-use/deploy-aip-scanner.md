@@ -59,7 +59,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |---------------|--------------------|
 |Windows Server computer to run the scanner service:<br /><br />- 4 processes<br /><br />- 4 GB of RAM|Windows Server 2016 or Windows Server 2012 R2.<br /><br />This server can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this server has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
 |SQL Server to store the scanner configuration:<br /><br />- Local or remote instance|SQL Server 2012 R2 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
-|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD, with the following additional requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You can remove this right after you have confirmed that the scanner can discover, classify, and protect files.<br /><br />- **Log on as a service** right. This right is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permissions is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).|
+|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD, with the following additional requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You must grant this right but you can remove this right after you have confirmed that the scanner can discover, classify, and protect files.<br /><br />- **Log on as a service** right. This right is automatically granted during the scanner installation and it is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: You must grant **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permissions is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).|
 |The Azure Information Protection client is installed on the Windows Server computer|Currently, the Azure Information Protection scanner requires the preview version of the Azure Information Protection client.<br /><br />If preferred, you can install the client with just the PowerShell module (AzureInformationProtection) that is used to install and configure the scanner.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
 |Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/deploy-use/configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). |
 
@@ -70,7 +70,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner. Provide the scanner service account credentials when you are prompted: 
+3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner. When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password: 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
@@ -96,13 +96,13 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
     
     To create these applications, follow the instructions in [How to label files non-interactively for Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-2. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
+2. From the Windows Server computer, still signed in with the scanner service account, run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
 
-3. When prompted, sign in by using the service account credentials for Azure AD, and then click **Accept**.
+3. When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 through 3.
 
@@ -134,7 +134,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped.
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
