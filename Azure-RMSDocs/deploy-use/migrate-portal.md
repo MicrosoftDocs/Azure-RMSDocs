@@ -34,7 +34,7 @@ Used to the Azure classic portal for managing the Azure Rights Management servic
 
 Use the following information to help you get up and running quickly.
 
-|Azure classic portal|How to do this in the Azure portal
+|Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
 |Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 |Create a new template|Create a label that applies protection, and use **Set permissions** to define the permissions, expiration, and offline access. <br /><br />For more information, see [To create a new template](configure-policy-templates.md#to-create-a-new-template).
@@ -43,7 +43,7 @@ Use the following information to help you get up and running quickly.
 |Create a scoped template|Create a scoped policy and create a label in this scope that applies protection. <br /><br />For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md).
 |Copy a template|You can't copy a template in the Azure portal. If you want two labels to have the same protection settings, you must set the permissions on each label. <br /><br />For more information, see [To configure a label for Rights Management protection](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. You can delete the label and then use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
-|Multi-language support|From the **MANAGE** menu selection, select **Languages (Preview)** to export the customizable fields that include the template name and description. Translate the strings, and then import these into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
+|Multi-language support|From the **MANAGE** menu selection, select **Languages (Preview)** to export the customizable fields that include the template name and description. Translate the strings, and then import these strings into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
 |Rights Management web reports|Use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. However, look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) for a new, centralized reporting solution for Azure Information Protection. <br /><br />For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).
 
 
