@@ -46,7 +46,7 @@ Use the following information to help you get up and running quickly.
 |Rights Management web reports|Use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. <br /><br />For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).<br /><br />Tip: Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) for a new, centralized reporting solution for Azure Information Protection. 
 |Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
-Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.mdconsiderations-for-templates-in-the-azure-portal).
+Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
 
 New functionality in the Azure portal:
