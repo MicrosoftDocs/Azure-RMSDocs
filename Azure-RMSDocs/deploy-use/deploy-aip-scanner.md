@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
