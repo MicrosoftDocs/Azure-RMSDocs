@@ -90,6 +90,8 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
     
+    Tip: If you use the **Edit Template** button, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
+    
     - **Set permissions**: To define new protection settings in this portal.
     
     - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. 
