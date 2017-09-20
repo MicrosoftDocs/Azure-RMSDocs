@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/15/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,6 +45,8 @@ Examples of when you might need to rekey for Azure Information Protection:
 - You have migrated from Active Directory Rights Management Services (AD RMS) with a cryptographic mode 1 key. When the migration is complete, you want to change to using a key that uses cryptographic mode 2.
 
 - Your company has split into two or more companies. When you rekey your tenant key, the new company will not have access to new content that your employees publish. They can access the old content if they have a copy of the old tenant key.
+
+- You want to move from one key management topology to another.
 
 - You believe the master copy of your tenant key is compromised.
 
