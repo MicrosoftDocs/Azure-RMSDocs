@@ -33,9 +33,11 @@ ms.suite: ems
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
 
 > [!NOTE]
-> The Azure classic portal will be retired on **November 30, 2017**. For more information, see the blog post announcement: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
+> The Azure classic portal will be retired on **November 30, 2017**. For more information, see the blog post announcement, [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
 
-Use the following information to help you get up and running quickly with the newer portal.
+## How to do your familiar admin tasks in the newer portal
+
+Use the following information to help you transition quickly:
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
@@ -51,6 +53,8 @@ Use the following information to help you get up and running quickly with the ne
 
 Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
+
+## What else has changed
 
 New functionality in the Azure portal:
 
