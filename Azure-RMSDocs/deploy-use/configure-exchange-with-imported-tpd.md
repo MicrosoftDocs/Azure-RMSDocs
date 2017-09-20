@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Configure Exchange Online IRM for the Azure Rights Management service from Azure Information Protection 
-description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support the new capabilities in Office 365 Message Encryption. 
+title: Configure Exchange Online IRM for the Azure Rights Management service from Azure Information Protection
+description: Information and instructions for admins to configure Exchange Online for the Azure Rights Management service when the Office 365 tenant does not support the new capabilities in Office 365 Message Encryption.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -31,14 +31,14 @@ ms.suite: ems
 
 Use these instructions only if you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted.
 
-If neither of these conditions apply to you, do not use these instructions and instead, use instructions from [Setting up the new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+If neither of these conditions apply to you, do not use these instructions and instead, use instructions from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 ## Exchange Online IRM configuration if you have an imported TPD
 
 To configure Exchange Online to support the Azure Rights Management service, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
-> Until Microsoft migrates your Office 365 tenant, you cannot configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key. 
+> Until Microsoft migrates your Office 365 tenant, you cannot configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key.
 >
 > If you try to configure Exchange Online when the Azure Rights Management service is using BYOK, the command to import the key (step 5, in the following procedure) fails with the error message **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
