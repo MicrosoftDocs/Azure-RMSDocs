@@ -57,13 +57,13 @@ Before you edit your templates or convert them to labels in the Azure portal, se
 
 ## What else has changed
 
-**New functionality in the Azure portal**:
+New functionality in the Azure portal:
 
 - You can edit the [default templates](configure-policy-templates.md#default-templates) that are automatically created for your organization.
 
 - You can convert templates to labels, so that you manage a single object rather than manage a template and label independently. For instructions, see [To convert templates to labels](configure-policy-templates.md#to-convert-templates-to-labels).
 
-**Support for the security admin role**: Whereas you had to sign in to the Azure classic portal as a global admin to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has the global admin or security admin role. 
+Support for the security admin role: Whereas you had to sign in to the Azure classic portal as a global admin to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has the global admin or security admin role. 
 
 The [PowerShell cmdlets](configure-templates-with-powershell.md) to create and manage templates, and to activate or deactive the service remain supported without changes.
 
