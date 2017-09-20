@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/15/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection

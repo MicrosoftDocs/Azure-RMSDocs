@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Exchange Onlin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/15/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -15,7 +15,7 @@ ms.assetid:
 
 # optional metadata
 
-#ROBOTS:
+#ROBOTS: NOINDEX, NOFOLLOW
 #audience:
 #ms.devlang:
 ms.reviewer: esaggese
