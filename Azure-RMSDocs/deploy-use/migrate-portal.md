@@ -37,7 +37,7 @@ Used to the Azure classic portal for managing the Azure Rights Management servic
 
 ## How to do your familiar admin tasks
 
-Use the following information to help you transition quickly:
+Use the following information to help you quickly transition to the newer portal:
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
