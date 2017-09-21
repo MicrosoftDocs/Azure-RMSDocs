@@ -72,6 +72,8 @@ For more information and some walk-through examples, see the following blog post
 
 Additional information:
 
+- For Windows computers: For the current preview release, Outlook must not be installed. Open protected files from locations such as SharePoint, OneDrive, or Outlook on the web.
+
 - You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
