@@ -83,7 +83,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
     
     **ClientMigration.zip**
     
-4. Extract the files and follow the instructions in **PrepareClient.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
+4. Extract the files and follow the instructions in **Prepare-Client.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
     
     To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the **Cluster Details** information, copy the server name from the **Licensing** value from the extranet cluster URLs section. For example: **rmscluster.contoso.com**.
 

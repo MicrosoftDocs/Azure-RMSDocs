@@ -45,7 +45,7 @@ The client configuration script (Migrate-Client.cmd) configures computer-level s
 
 - Use group policy software installation to assign the script to the computer
 
-- Use a software deployment solution, such as Microsoft Intune or System Center Configuration Manager, to run the script on the computer 
+- Use a software deployment solution, such as System Center Configuration Manager, to run the script on the computer 
 
 - Use a logon script if the user has local administrator privileges
 
@@ -55,7 +55,7 @@ The user configuration script (Migrate-User.cmd) configures user-level settings 
 
 - Use group policy software installation to publish the script for the user to run
 
-- Use a software deployment solution, such as Microsoft Intune or System Center Configuration Manager, to make the script available for the user to run
+- Use a software deployment solution, such as System Center Configuration Manager, to make the script available for the user to run
 
 - Ask the user to run the script when they are signed in to their computer
 
