@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -49,15 +49,15 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed. 
+4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **Protection activation**. 
 
 5. You now see whether the Azure Rights Management service is activated for your tenant. 
     
-    - If the service is activated, you see confirmation such as the following:
+    - If the service is activated, you see the following confirmation:
         
         ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - If the service is not activated, you see this reflected in the status information, and the option to activate. For example:
+    - If the service is not activated, you see this reflected in the status information, and the option to activate:
         
         ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
