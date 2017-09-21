@@ -41,23 +41,23 @@ For Windows computers, use two migration scripts to reconfigure AD RMS clients:
 
 The client configuration script (Migrate-Client.cmd) configures computer-level settings in the registry, which means that it must run in a security context that can make those changes. This typically means one of the following methods:
 
-- Use group policy to run the script as a computer startup script
+- Use group policy to run the script as a computer startup script.
 
-- Use group policy software installation to assign the script to the computer
+- Use group policy software installation to assign the script to the computer.
 
-- Use a software deployment solution, such as System Center Configuration Manager [packages and programs](/sccm/apps/deploy-use/packages-and-programs), to run the script on the computer 
+- Use a software deployment solution to deploy the script to the computers. For example, use System Center Configuration Manager [packages and programs](/sccm/apps/deploy-use/packages-and-programs). In the properties of the package and program, under **Run mode**, specify that the script runs with administrative permissions on the device. 
 
-- Use a logon script if the user has local administrator privileges
+- Use a logon script if the user has local administrator privileges.
 
 The user configuration script (Migrate-User.cmd) configures user-level settings and cleans up the client license store. This means that this script must run in the context of the actual user. For example:
 
-- Use a logon script
+- Use a logon script.
 
-- Use group policy software installation to publish the script for the user to run
+- Use group policy software installation to publish the script for the user to run.
 
-- Use a software deployment solution, such as System Center Configuration Manager [packages and programs](/sccm/apps/deploy-use/packages-and-programs), to deploy the script to the users. In the properties of the package and program, under **Run mode**, specify that the script runs with the permissions of the user you deployed it to. 
+- Use a software deployment solution to deploy the script to the users. For example, use System Center Configuration Manager [packages and programs](/sccm/apps/deploy-use/packages-and-programs). In the properties of the package and program, under **Run mode**, specify that the script runs with the permissions of the user. 
 
-- Ask the user to run the script when they are signed in to their computer
+- Ask the user to run the script when they are signed in to their computer.
 
 The two scripts include a version number and do not rerun until this version number is changed. This means that you can leave the scripts in place until the migration is complete. However, if you do make changes to the scripts that you want computers and users to rerun on their Windows computers, update the following line in both scripts to a higher value:
 
