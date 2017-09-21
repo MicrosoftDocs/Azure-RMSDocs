@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -116,8 +116,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 ## To configure the templates in the Azure Information Protection policy
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
-    
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. If the template that you want to configure is for all users, stay on the **Azure Information Protection - Global policy** blade.
@@ -126,11 +125,11 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, locate the template that you want to configure:
     
-    - When you have a subscription that includes classification, labeling, and protection: Expand **Templates** or **Protection templates** after your labels.
+    - When you have a subscription that includes classification, labeling, and protection: Expand **Protection templates** after your labels.
     
     - When you have a subscription that includes protection only: Templates display as labels.
 
-4. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label name** and **Description**. Then, select **Protection** that has a value of **Azure RMS** or **Azure (cloud key)**, to open the **Protection** blade.
+4. Select the template, and on the **Label** blade, you can change the template name and description if required, by editing the **Label name** and **Description**. Then, select **Protection** that has a value of **Azure (cloud key)**, to open the **Protection** blade.
 
 5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring the protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     

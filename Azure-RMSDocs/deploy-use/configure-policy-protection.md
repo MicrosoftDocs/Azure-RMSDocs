@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ You can protect your most sensitive documents and emails by using a Rights Manag
 
 ## How the protection works
 
-When a document or email is protected by Rights Management, it is encrypted at rest and in transit. It can then be decrypted only by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
+When a document or email is protected by a Rights Management service, it is encrypted at rest and in transit. It can then be decrypted only by authorized users. This encryption stays with the document or email, even if it is renamed. In addition, you can configure usage rights and restrictions, such as the following examples:
 
 - Only users within your organization can open the company-confidential document or email.
 
@@ -82,9 +82,9 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png)
 
-6. On the **Protection** blade, select **Azure RMS** or **Azure (cloud key)**, or select **HYOK (AD RMS)**. The first option is in the process of being renamed.
+6. On the **Protection** blade, select **Azure (cloud key)** or **HYOK (AD RMS)**.
     
-    In most cases, select **Azure RMS** or **Azure (cloud key)** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 10.
+    In most cases, select **Azure (cloud key)** for your permission settings. Do not select **HYOK (AD RMS)** unless you have read and understood the prerequisites and restrictions that accompany this "*hold your own key*" (HYOK) configuration. For more information, see [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md). To continue the configuration for HYOK (AD RMS), go to step 10.
     
 7. Select one of the following options:
     
@@ -100,7 +100,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
 
-8. If you selected **Select a predefined template** for **Azure RMS** or **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
+8. If you selected **Select a predefined template** for **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
     
     If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
@@ -108,7 +108,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
             
-9. If you selected **Set permissions** for **Azure RMS** or **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
+9. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
@@ -157,9 +157,9 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 13. On the **Azure Information Protection** blade, use the **PROTECTION** column to confirm that your label now displays the protection setting that you want:
     
-    - **Azure RMS** or **HYOK (AD RMS)**, or a check mark if you have configured protection. 
+    - A check mark if you have configured protection. 
     
-    - **Remove Protection** or an x mark to denote cancellation if you have configured a label to remove protection.
+    - An x mark to denote cancellation if you have configured a label to remove protection.
     
     - A blank field when protection is not set. 
 
