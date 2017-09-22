@@ -66,7 +66,7 @@ The Azure Rights Management service automatically generates and manages XrML ce
 
 Yes, as a public preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
 
-When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that mobile devices must be compliant with your Intune policies that contain settings such as password requirements and a minimum operating system version.
+When a user opens a document that is protected by Azure Information Protection, administrators can now block or grant access to users in their tenant, based on the standard conditional access controls. Requiring multi-factor authentication (MFA) is one of the most commonly requested conditions. Another one is that devices must be [compliant with your Intune policies](/intune/conditional-access-intune-common-ways-use) so that for example, mobile devices meet your password requirements and a minimum operating system version, and computers must be domain-joined.
 
 For more information and some walk-through examples, see the following blog post announcement: Conditional Access policies for Azure Information Protection 
 
