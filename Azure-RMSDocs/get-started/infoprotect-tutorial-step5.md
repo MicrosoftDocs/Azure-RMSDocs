@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -47,9 +47,11 @@ You’re then ready to safely share this document by email.
 
     With this setting, our recipients will be able to view the document but not edit or print it.
 
-4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses. 
+4. For **Select users**, type one or more business email addresses, as you would do when you send a document to someone that your organization does business with. To specify more than one address, you use a semicolon or press Enter. 
 
-    Alternatively, click the address book to select a co-worker's email address:
+    Make sure that you specify a business email address, such as **janetm@contoso.com** or **p.dover@fabrikam.com** because currently, Azure Information Protection doesn’t support personal email addresses for this scenario. 
+
+    Alternatively, click the **Select users, groups, or organization** icon to select a co-worker's email address:
 
     ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](../media/protect-custom-permissions.png)  
     
@@ -67,7 +69,7 @@ You’re then ready to safely share this document by email.
 
     **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://aka.ms/rms-signup.** 
 
-    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-email.png)
+    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-emailv2.png)
 
     Click **Send**.
 
@@ -99,9 +101,9 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
     ![Information banner for custom protection](../media/information-banner-custom-protection.png)
 
-2.  On the **Home** tab, click **Protect** > **Track and revoke**:
+2.  On the **Home** tab, click **Protect** > **Track and Revoke**:
 
-    ![Track usage option](../media/track-usage-callout.png)
+    ![Track usage option](../media/track-usage-calloutv3.png)
 
     This takes you to the document tracking site.
 
@@ -132,6 +134,6 @@ Now you've seen the default Azure Information Protection policy and how to custo
 
 Try sharing more documents and track how they are being used, and confirm how document revocation works.
 
-You might then find it useful to read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md). 
+You might then find it useful to return to the **Quick start** page in the Azure portal, read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

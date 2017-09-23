@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,76 +31,88 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin for your tenant.
+1. Still in the Azure portal, select **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's created for your tenant.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. In the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. In the **Azure Information Protection** blade, click **Create**.
-
-    This creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
-
-    > [!TIP] 
-    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
-
-3.  On the Azure Information Protection blade, click **Global** and explore the **Policy: Global** blade, which shows the default Information Protection policy that's automatically created:
+2. Spend a few minutes familiarizing yourself with the labels that are displayed:
     
-    - Labels for classification: **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. Read the tooltip for each to understand how the labels are intended to be used. Note that **Secret** has two sub-labels: **All-Employees** and **My-Group**, which provides an example of how a classification can have subcategories.
-
-    - With the default settings, the **Internal**, **Confidential**, and **Secret** labels have visual markings configured (such as footer, header, watermark) and none of the labels have protection set: 
+    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labels.png)
+       > [!NOTE]
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
+       > 
+       > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
     
-    In addition, there are some global policy settings that are not set so that all documents and emails are not required to have a label, there is no default label, users do not have to provide justification when they change labels, and the client is not configured for a custom help link:
+    - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might also have protection set. For example: 
+    
+    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
+    
+3. You also see that there are some policy settings that are not set. All documents and emails are not required to have a label, there is no default label, and users do not have to provide justification when they change labels:
     
     ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
 
-## Changing the global settings for a default template and prompt for justification
+## Changing the settings for a default label and prompt for justification
 
-For our tutorial, we'll change a couple of those global policy settings so that you can see how they work:
+For our tutorial, we'll change a couple of those policy settings so that you can see how they work:
 
-1. For **Select the default label**, set this to **Internal**.
+1. For **Select the default label**, select **General**. 
 
-2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this to **On**.
+    If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
-## Configuring a label for protection, a watermark, and a condition to prompt for classification
+2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
 
-We'll now change the settings of one of the labels, **Confidential**:
+## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
-1. Click the **Confidential** label. 
-    
-    In the new **Label: Confidential** blade, you now see the settings that are available for each label. 
+We'll now create a new sub-label for **Confidential**.
 
-2. In the **Label: Confidential** blade, locate the section **Set permissions for documents and emails containing this label**.
+1. Right-click the **Confidential** label, and select **Add a sub-label**.
+    
+    If you do not have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
-    Select **Protect**, and then select the **Protection** option:
+2. On the **Sub-label** blade, specify the label name of **Finance** and add the following description: **Confidential data that contains financial information that is restricted to employees only**.
     
-    ![Configure protection for an Azure Information Protection label](../media/info-protect-protection-bar.png) 
-    
-    This action opens the **Protection** blade.
-    
-3. In the **Protection** blade, make sure that **Azure RMS** is selected, that **Select template** is also selected, and then click the drop down box and select the default template **\<your organization name> - Confidential**.     
-    
-    For example, if your organization name is VanArsdel, Ltd, you will see and select **VanArsdel, Ltd - Confidential**: 
-    
-    ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-select-rms-template.png)
-    
-    If you have disabled this default Azure Rights Management template, select an alternative template. However, if you select a departmental template, make sure that your account is included in the scope.
-    
-4. Click **OK** to save your changes and close the **Protection** blade.
+    This text describes how the selected label is intended to be used and it is visible to users as a tooltip, to help them decide which label to select.
 
-5. Back on the **Label: Confidential** blade, locate the section **Set visual marking**:
+3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd**: 
+    ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-    ![Azure Information Protection quick start tutorial step 3 - set Azure RMS protection](../media/step2-configure-watermark.png)
+4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Make sure that **Set Permissions** is also selected. Then select **Add permissions**.
+
+5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
-    Although you can change the size, color, and layout for watermarks, we'll leave these at the defaults for now.
+    ![Granting all members protection permissions for an Azure Information Protection label](../media/info-protect-protection-all-members.png) 
     
-6. Locate the section **Configure conditions for automatically applying this label**:
+    This option automatically selects all the users in your organization who can be granted permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
+
+6. For the permissions, select **Reviewer** from the preset options. You see how this permission level automatically grants some permissions listed but not all permissions:
     
-    Click **Add a new condition** and then, in the **Condition** blade, select the following:
+    ![Granting Co-Author protection permissions for an Azure Information Protection label](../media/info-protect-protection-reviewer.png)
     
-    a. **Choose the type of condition**: Keep the default of **Built-in**.
+    You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Reviewer** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
+
+7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
     
-    b. **Select built-in**: From the drop down, select **Credit Card Number**.
+     ![Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
+    
+    If you select **Add permissions**, this opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
+
+8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade.
+
+8. Back on the **Sub-label** blade, locate the **Set visual marking** section:
+    
+    For the **Documents with this label have a footer** setting, click **On**, and then for the **Text** box, type **Classified as Confidential**. 
+    
+    For the **Documents with this label have a watermark** setting, click **On**, and then for the **Text** box, type your organization name. For example, **VanArsdel, Ltd** 
+    
+    Although you can change the appearance for these visual markers, we'll leave these settings at the defaults for now.
+    
+9. Locate the section **Configure conditions for automatically applying this label**:
+    
+    Click **Add a new condition** and then, on the **Condition** blade, select the following:
+    
+    a. **Choose the type of condition**: Keep the default of **Information Types**.
+    
+    b. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     
@@ -108,25 +120,29 @@ We'll now change the settings of one of the labels, **Confidential**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-configure-condition.png)
     
-    Click **Save** to return to the **Label: Confidential** blade.
+    Click **Save** to return to the **Sub-label** blade.
 
-7. In the **Label: Confidential** blade, you'll see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
+10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
     ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
 
-8. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip:
+11. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip. 
+
+12. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
+
+13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
     
-    ![Azure Information Protection quick start tutorial step 3 - Recommended classification](../media/step2-keep-recommended.png)
+    You now see your new sub-label, which is configured for visual markings and protection. For example:
 
-9. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**:
+    ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
-    ![Azure Information Protection quick start tutorial step 3 - type notes](../media/step2-type-notes.png)
+    You also see that the settings are configured with your changes for the default label and justification:
+    
+    ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
+    
+14. Now that we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
 
-10. Click **Save** on this **Label: Confidential** blade. Then, on the **Policy: Global** blade, click **Save** again.
-
-    ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configured.png)
-
-11. Now we've made our changes and saved them, we want to make them available to users, so on the initial **Azure Information Protection** blade, click **Publish**, and click **Yes** to confirm.
+    ![Azure Information Protection quick start tutorial step 3 - publish the configured policy](../media/info-protect-publish.png)
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
@@ -134,7 +150,11 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
+|About the default policy and different versions|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 |About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
+|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)|
+
 
 
 >[!div class="step-by-step"]

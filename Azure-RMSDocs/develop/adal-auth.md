@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Configure your app for ADAL authentication | Microsoft Docs
+title: Configure your app for ADAL authentication - AIP
 description: Steps for configuring Azure Information Protection app to use Azure ADAL based authentication
 keywords: authentication, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -75,7 +75,7 @@ After signing up for Microsoft Azure:
 ![Name your app](../media/TellUsInput.png)
 
 - Add a redirection URI and choose next.
-  The redirection URI needs to be a valid URI and unique to your directory. For example, you could use something like `com.mycompany.myapplication://authorize`.
+  The redirection URI needs to be a valid URI and unique to your directory. For example, you could use something like `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Add redirect URI](../media/RedirectURI.png)
 

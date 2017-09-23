@@ -1,12 +1,12 @@
-﻿---
+---
 # required metadata
 
-title: Azure Information Protection Developer's Guide | Microsoft Docs
+title: Developer's Guide - AIP
 description: Developers can use Azure Information Protection to protect and manage files of all types
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,9 +78,10 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 - [How to enable document tracking and revocation (service)](tracking-content.md)
 - [How to deploy your client](../rms-client/client-deployment-notes.md)
+- [How to deploy your service app into a different tenant] (how-to-deploy-app.md)
 - [How to install and configure an RMS Server (service)](how-to-install-and-configure-an-rms-server.md)
 - [How to use document tracking (user)](how-to-use-document-tracking.md)
-
+- [How to renew a symmetric key in Azure Information Protection](how-to-renew-symmetric-key.md)
 
 ### Security and authentication
 
@@ -100,7 +101,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ## Videos
 
-Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)
+Microsoft's Dan Plastina provides this [Introduction to Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
 These videos are from the Micorsoft 2016 Ignite conference
 

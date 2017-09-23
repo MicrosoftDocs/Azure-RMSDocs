@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,41 +25,79 @@ ms.suite: ems
 
 ---
 
-# Configuring Azure Information Protection policy
+# Configuring the Azure Information Protection policy
 
 >*Applies to: Azure Information Protection*
 
 To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-To configure the Azure Information Protection policy:
+## Subscription support
 
-1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a global admin.
+Azure Information Protection supports different levels of subscriptions:
+
+- Azure Information Protection P2: Support for all classification, labeling, and protection features.
+
+- Azure Information Protection P1: Support for most classification, labeling, and protection features, but not automatic classification or HYOK.
+
+- Office 365 that includes the Azure Rights Management service: Support for protection but not classification and labeling.
+
+Options that require an Azure Information Protection P2 subscription are identified in the portal.
+
+If your organization has a mix of subscriptions, it is your responsibility to make sure that users do not use features that their account is not licensed to use. The Azure Information Protection client does not do license checking and enforcement. When you configure options that not all users have a license for, use scoped policies or a registry setting to ensure that your organization stays in compliance with your licenses:
+
+- **When your organization has a mix of Azure Information Protection P1 and Azure Information Protection P2 licenses**: For users who have a P2 license, create and use one or more [scoped policies](configure-policy-scope.md) when you configure options that require an Azure Information Protection P2 license. Make sure that your global policy does not contain options that require an Azure Information Protection P2 license.
+
+- **When your organization has a subscription for Azure Information Protection but some users have only a license for Office 365 that includes the Azure Rights Management service**: For the users who do not have a license for Azure Information Protection, edit the registry on their computers so they do not download the Azure Information Protection policy. For instructions, see the admin guide for the following customization: [Enforce protection-only mode when your organization has a mix of licenses](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+
+For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
+
+
+## How to configure the Azure Information Protection policy
+
+1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
 
 2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
-
-    You'll then see the **Azure Information Protection** blade, where you can open the **Global** policy that all users get. You can also optionally add and edit scoped policies. The **Global** Azure Information Protection policy contains the following elements that you can configure:
-
+    
+    The first time that you connect to the service, the **Azure Information Protection - Quick start** blade automatically opens. To configure the policy that all users get, from the **POLICIES** menu selection, select **Global policy** to open the **Azure Information Protection - Global policy** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    
+    The Azure Information Protection policy contains the following elements that you can configure:
+    
     - Labels that let you and users classify documents and emails.
-
+    
     - Title and tooltip for the Information Protection bar that users see in their Office applications.
-
+    
     - The option to enforce classification when users save documents and send emails.
-
+    
     - The option to set a default label as a starting point for classifying documents and emails.
-
+    
     - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
-
+    
+    - The option to automatically label an email message, based on its attachments.
+    
     - The option to provide a custom help link for users.
 
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains the labels **Personal**, **Public**, **Internal**, **Confidential**, and **Secret**. You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels.
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. These labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 
-When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. 
+You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them.
+
+You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
+
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings.
 
 When you have finished making the changes that you want, click **Publish**. 
 
-The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its Azure Information Protection policy.
+The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its latest Azure Information Protection policy. Additional triggers that refresh the policy on the client:
 
-## Configuring your organization's policy
+- Right-click to classify and protect a file or folder.
+
+- Running the [PowerShell cmdlets](../rms-client/client-admin-guide-powershell.md) for labeling and protection (Get-AIPFileStatus, Set-AIPFileClassification, and Set-AIPFileLabel).
+
+- Every 24 hours.
+
+>[!NOTE]
+>When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time varies, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of your labels does not match your latest changes, allow up to 15 minutes and then try again.
+
+### Configuring your organization's policy
 
 Use the following information to help you configure your Azure Information Protection policy:
 
@@ -80,6 +118,10 @@ Use the following information to help you configure your Azure Information Prote
 - [How to configure conditions for automatic and recommended classification](configure-policy-classification.md)
 
 - [How to configure the policy for specific users by using scoped policies](configure-policy-scope.md)
+
+- [How to configure and manage templates](configure-policy-templates.md)
+
+- [How to configure labels for different languages](configure-policy-languages.md)
 
 ## Next steps
 

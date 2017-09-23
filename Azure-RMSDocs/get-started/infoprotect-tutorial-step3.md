@@ -6,7 +6,7 @@ description: Step 3 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,13 +34,13 @@ In this step, you'll install the Azure Information Protection client so that the
 
 ## Install the Azure Information Protection client
 
-1. On a PC that has Office installed (but Word is not currently open), [download the Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) from the Microsoft download center. 
-
-2. Run **AzInfoProtection.exe** and follow the prompts to install the client.
-
+1. On a PC that has Office installed (but Word is not currently open), go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe**.
+    
+2. Run the executable that you've just downloaded, and follow the prompts to install the client.
+    
     For this tutorial, it doesn't matter whether you select the option to install a demo policy, because our policy that we've just configured will be downloaded from Azure and replace the demo policy if installed. However, you could use the demo policy option if you just wanted to experience the default labels without connecting to Azure Information Protection. 
 
-## Verify the installations
+## Verify the installation
 
 Verify that the installation was successful by opening Word and a new, blank document (do not save it at this time). If you are prompted to enter your user name and password, enter the details for your global administrator account. 
 
@@ -48,13 +48,13 @@ If this is the first time that you've installed the client, you'll see a **Congr
 
 When the document loads, you should see two new things:
 
-- On the **Home** tab, a new **Protection** group, with a button labeled **Protect**.
+![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
 
-    Click **Protect** > **Help and feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
-
-- A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the default label that we configured of **Internal**. 
+- On the **Home** tab, a new **Protection** group, with a button named **Protect**.
     
-    ![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2013-callouts2.png)
+    Click **Protect** > **Help and Feedback**, and in the **Microsoft Azure Information Protection** dialog box, confirm your client status. It should display **Connected as** and your user name. In addition, you should also see a recent time and date for the last connection and when the Information Protection policy was installed. Verify that your displayed user name is correct for your tenant.
+
+- A new bar under the ribbon; the Information Protection bar. It displays the title of **Sensitivity**, and the labels that we saw in the Azure portal. 
 
 You’re now ready to see Azure Information Protection in action.
 

@@ -1,0 +1,179 @@
+{
+    "redirections": [
+        {
+            "source_path": "Azure-RMSDocs/deploy-use/activate-office365-preview.md",
+            "redirect_url": "/information-protection/deploy-use/activate-office365",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/quick-start-tutorial.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/requirements-azure-rms.md",
+            "redirect_url": "requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/requirements-subscriptions.md",
+            "redirect_url": "https://www.microsoft.com/en-us/cloud-platform/azure-information-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/tutorial-step1.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step1",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/tutorial-step2.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/tutorial-step3.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/tutorial-step4.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/aip-software-license-terms.md",
+            "redirect_url": "/legal/information-protection/software-license-terms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/get-started/tutorial-step5.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step5",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-adrms-restrictions.md",
+            "redirect_url": "/information-protection/deploy-use/configure-adrms-restrictions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-change-label.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-change-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-classification.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-classification",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-default.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-default",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-delete-reorder.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-delete-reorder",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-new-label.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-new-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-protection.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-settings.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy-markings.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy-markings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/configure-policy.md",
+            "redirect_url": "/information-protection/deploy-use/configure-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/faq.md",
+            "redirect_url": "/information-protection/get-started/faqs-infoprotect",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/info-protect-client.md",
+            "redirect_url": "/information-protection/rms-client/info-protect-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/infoprotect-quick-start-tutorial.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step1.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step1",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step2.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step2",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step3.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/infoprotect-tutorial-step4.md",
+            "redirect_url": "/information-protection/get-started/infoprotect-tutorial-step4",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/requirements-azure-infoprotect.md",
+            "redirect_url": "/information-protection/get-started/requirements-azure-rms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/what-is-information-protection-oldpreview.md",
+            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/information-protection/what-is-information-protection.md",
+            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/understand-explore/azure-rights-management.md",
+            "redirect_url": "/information-protection/understand-explore/what-is-information-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/understand-explore/azure-rms-aka.md",
+            "redirect_url": "aka",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/understand-explore/compare-azure-rms-ad-rms.md",
+            "redirect_url": "compare-on-premise",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/info-protect-client.md",
+            "redirect_url": "https://docs.microsoft.com/information-protection/rms-client/client-admin-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "Azure-RMSDocs/rms-client/privacy-statement-rms-enlightened-applications.md",
+            "redirect_url": "https://www.microsoft.com/en-us/privacystatement/OnlineServices/Default.aspx",
+            "redirect_document_id": false
+        }
+    ]
+}

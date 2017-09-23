@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure Information Protection client files and client usage logging
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 After you have installed the Azure Information Protection client, you might need to know where files are located and monitor how the client is being used.
 
@@ -84,6 +84,11 @@ The client logs user activity to the local Windows **Applications and Services**
     
     - System (for sign in and download policy)
     
+    - DefaultAutomatic
+        
+        This **DefaultAutomatic** source action is for the preview client only, and refers to the label that is set by using the **Select the default label** in the Azure Information Protection policy.
+
+    
 - Label before and after action ​
     
 - Protection before and after action​
@@ -98,6 +103,7 @@ For information about usage logging for the Azure Rights Management service, see
 ## Next steps
 Now that you've identified all the log files associated with the Azure Information Protection client, see the following for additional information that you might need to support this client:
 
+- [Customizations](client-admin-guide-customizations.md)
 
 - [Document tracking](client-admin-guide-document-tracking.md)
 

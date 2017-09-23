@@ -6,7 +6,7 @@ description: Identify the on-premises server products that can use the Azure Rig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/22/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -51,6 +51,8 @@ To use this connector, you must configure directory synchronization between your
     -   Office SharePoint Server 2010
 
 -   **File servers that run Windows Server and use File Classification Infrastructure (FCI)**:
+
+    -   Windows Server 2016
 
     -   Windows Server 2012 R2
 

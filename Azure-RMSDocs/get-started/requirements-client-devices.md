@@ -6,7 +6,7 @@ description: Identify which devices support the Azure Rights Management service 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/06/2017
+ms.date: 07/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use the following sections to identify which devices support the Azure Rights Management service, which provides data protection for Azure Information Protection.
+Use the following sections to identify which devices support the Azure Rights Management service. This service provides data protection for Azure Information Protection.
 
 ## Computers
 The following computer operating systems support the Azure Rights Management service:
@@ -43,7 +43,7 @@ The following computer operating systems support the Azure Rights Management s
 
 -   **Windows 10** (x86, x64)
 
--   **Mac OS X**: Minimum version of Mac OS X 10.8 (Mountain Lion)
+-   **macOS**: Minimum version of macOS 10.8 (Mountain Lion)
 
 ## Mobile devices
 The following mobile device operating systems support the Azure Rights Management service:
@@ -52,9 +52,7 @@ The following mobile device operating systems support the Azure Rights Managem
 
 -   **Android phones and tablets**: Minimum version of Android 4.4
 
--   **iPhone and iPad**: Minimum version of iOS 7.0
-     
-    Exception: The Azure Information Protection client for iOS and Android has a minimum version of iOS 8.
+-   **iPhone and iPad**: Minimum version of iOS 8.0
 
 -   **Windows tablets**: Windows 10 Mobile and Windows 8.1 RT
 

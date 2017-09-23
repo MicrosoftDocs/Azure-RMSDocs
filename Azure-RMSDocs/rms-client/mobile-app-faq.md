@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -53,7 +53,7 @@ If you have these versions or higher, you can install the app to run on your mob
 
 ## How do I get started with the viewer app?
 
-After you've installed the app, you don't need to do anything more at that point. Wait until you get a protected email or file that you want to view, and then choose the **AIP Viewer** to open it. You will then be asked to sign in with your work or school account. After your credentials are authenticated, you can then read the contents.
+After you've installed the app, you don't need to do anything more at that point. Wait until you get a protected email or file that you want to view, and then choose the **AIP Viewer** to open it. You will then be asked to sign in with your work or school account, or prompted to select a certificate. After these credentials are authenticated, you can then read the contents.
 
 However, if you don't want to wait, you can use the following instructions to send yourself a protected email or file to view: [Get started with the Microsoft Azure Information Protection app for iOS and Android](mobile-app-get-started.md) 
 ## What credentials should I use to sign in to this app?
@@ -66,7 +66,9 @@ Not yet. Today, you can sign up only with your business email address (work or s
 
 ## Which file extensions can I open with this app?
 
-You can open .rpmsg, .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
+You can open .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml, and several other text and image file formats.
+
+For the full list of text and image file name extensions, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
 
 ##  How do I provide feedback about this app?
 
