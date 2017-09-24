@@ -139,7 +139,7 @@ The region is identifiable from **rms.na.aadrm.com**.
 
 Use the following table to identify which Azure region or instance is recommended to minimize network latency.
 
-|Azure region or instance|Recommended location|
+|Azure region or instance|Recommended location for your key vault|
 |---------------|--------------------|
 |na.aadrm.com|**North Central US** or **East US**|
 |eu.aadrm.com|**North Europe** or **West Europe**|
