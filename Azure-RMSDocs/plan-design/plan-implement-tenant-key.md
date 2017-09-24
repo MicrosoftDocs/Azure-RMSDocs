@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -120,6 +120,33 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 |The Azure Rights Management administration module for Windows PowerShell.|For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />If you have previously installed this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
+
+### Planning for your key vault location
+
+When you create a key vault to contain the key to be used as your tenant key for Azure Information, you must specify a location. This location is an Azure region, or Azure instance.
+
+Make your choice first for compliance, and then to minimize network latency:
+
+- If you have chosen the BYOK key topology for compliance reasons, those compliance requirements might mandate the Azure region or Azure instance that stores your Azure Information Protection tenant key.
+
+- Because all cryptographic calls for protection chain to your Azure Information Protection tenant key, you want to minimize the network latency that these calls incur. To do that, create your key vault in the same Azure region or instance as your Azure Information Protection tenant.
+
+If you need to check which Azure region or instance your Azure Information Protection tenant is in, use the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
+
+	LicensingIntranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+
+The region is identifiable from **rms.na.aadrm.com**.
+
+Use the following table to identify which Azure region or instance is recommended to minimize network latency.
+
+|Azure region or instance|Recommended location|
+|---------------|--------------------|
+|na.aadrm.com|**North Central US** or **East US**|
+|eu.aadrm.com|**North Europe** or **West Europe**|
+|ap.aadrm.com​|**East Asia** or **Southeast Asia**|
+|sa.aadrm.com|**West US** or **East US**|
+|govus.aadrm.com​|**Central US** or **East US 2**|
+
 
 ### Instructions for BYOK
 
