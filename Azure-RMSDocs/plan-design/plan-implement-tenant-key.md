@@ -152,7 +152,7 @@ Use the following table to identify which Azure region or instance is recommende
 
 Use the Azure Key Vault documentation to create a key vault and the key that you want to use for Azure Information Protection. For example, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).
 
-Make sure that the key length is 2048-bits (recommended) or 1024-bits. Other key lengths are not supported by Azure Information Protection.
+Make sure that the key length is 2048 bits (recommended) or 1024 bits. Other key lengths are not supported by Azure Information Protection.
 
 To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
