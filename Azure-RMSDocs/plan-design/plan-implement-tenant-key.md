@@ -133,7 +133,7 @@ Make your choice first for compliance, and then to minimize network latency:
 
 If you need to check which Azure region or instance your Azure Information Protection tenant is in, use the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
 
-	LicensingIntranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+	LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
 The region is identifiable from **rms.na.aadrm.com**.
 
