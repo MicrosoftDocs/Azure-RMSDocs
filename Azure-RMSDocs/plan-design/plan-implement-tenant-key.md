@@ -121,7 +121,7 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
-### Planning for your key vault location
+### Choosing your key vault location
 
 When you create a key vault to contain the key to be used as your tenant key for Azure Information, you must specify a location. This location is an Azure region, or Azure instance.
 
@@ -131,21 +131,21 @@ Make your choice first for compliance, and then to minimize network latency:
 
 - Because all cryptographic calls for protection chain to your Azure Information Protection tenant key, you want to minimize the network latency that these calls incur. To do that, create your key vault in the same Azure region or instance as your Azure Information Protection tenant.
 
-If you need to check which Azure region or instance your Azure Information Protection tenant is in, use the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
+To identify the location of your Azure Information Protection tenant, use the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
 
 	LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-The region is identifiable from **rms.na.aadrm.com**.
+The region is identifiable from **rms.na.aadrm.com**, and for this example, it is in North America.
 
 Use the following table to identify which Azure region or instance is recommended to minimize network latency.
 
 |Azure region or instance|Recommended location for your key vault|
 |---------------|--------------------|
-|na.aadrm.com|**North Central US** or **East US**|
-|eu.aadrm.com|**North Europe** or **West Europe**|
-|ap.aadrm.com​|**East Asia** or **Southeast Asia**|
-|sa.aadrm.com|**West US** or **East US**|
-|govus.aadrm.com​|**Central US** or **East US 2**|
+|rms.**na**.aadrm.com|**North Central US** or **East US**|
+|rms.**eu**.aadrm.com|**North Europe** or **West Europe**|
+|rms.**ap**.aadrm.com​|**East Asia** or **Southeast Asia**|
+|rms.**sa**.aadrm.com|**West US** or **East US**|
+|rms.**govus**.aadrm.com​|**Central US** or **East US 2**|
 
 
 ### Instructions for BYOK
