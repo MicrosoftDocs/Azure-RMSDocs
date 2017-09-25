@@ -217,6 +217,8 @@ Error **912**
 
 **Unknown error has occurred.**
 
+Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if this event continues to be logged. 
+
 ----
 
 Error **914**
@@ -226,8 +228,6 @@ Error **914**
 This event is logged when the Azure Information Protection client does not have a valid policy file in %localappdata%\Microsoft\MSIP. 
 
 Make sure that firewalls are not blocking the required connectivity to the Internet. For more information, see the [Firewalls and network infrastructure](../get-started/requirements.md#firewalls-and-network-infrastructure) requirements for Azure Information Protection. If Internet connectivity is not possible, follow the instructions for supporting [disconnected computers](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).
-
-----
 
 
 ## Next steps
