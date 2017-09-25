@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Configuring Azure Information Protection policy
+# Configuring the Azure Information Protection policy
 
 >*Applies to: Azure Information Protection*
 
@@ -78,7 +78,9 @@ For more information about the subscriptions, see [What subscription do I need f
 
 Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. These labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 
-You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them. 
+You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them.
+
+You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
 
 When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings.
 
