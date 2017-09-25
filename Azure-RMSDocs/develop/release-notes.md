@@ -4,7 +4,7 @@ description: Outlines important changes and features in this new version of the 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 07/03/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
@@ -14,7 +14,7 @@ ms.reviewer: kartikk
 ms.suite: ems
 ---
 
-# What's new and release notes
+# What's new and Release notes
 
 ## What's new
 
@@ -36,18 +36,9 @@ This topic outlines important changes and features in this new version of the RM
 
 The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
-- Your app can now **set the logging level on-the-fly** with the Android SDK. The iOS SDK does not support logging level. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- The iOS SDK does not support logging level. 
 - The SDK now returns an error for a NULL access token.
-
-- This release adds a new API to revoke published content for iOS/OSX and Android SDKs.
-
-#### iOS / OSX API updates
-
-- MS UserPolicy revokeSerializedPolicyWithUserId
-
-#### Android API updates
-- UserPolicy.revokeUserPolicy asynchronous
-- UserPolicy.revokeUserPolicy synchronous
 
 ### October 2016 update
 
