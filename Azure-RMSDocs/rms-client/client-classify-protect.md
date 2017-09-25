@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,7 +40,6 @@ If your label applies protection to a document, the protected document is not su
 Files that are protected are safe to share with others. For example, you attach the file to an email.
 
 If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
-
 If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
 
 When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
@@ -101,6 +100,16 @@ You can specify your own protection settings for documents rather than use the p
     - **Expire access**: Select this option only for time-sensitive files so that the people you specified will not be able to open your selected file or files after a date that you set. You will still be able to open the original file but after midnight (your current time zone), on the day that you set, the people that you specified will not be able to open the file.
 
 5. Click **Apply** and wait for the **Custom permissions applied** message. Then click **Close**.
+
+### Safely sharing by email
+
+When you share Office documents by email, you can attach the document to an email that you protect, and the document is automatically protected with the same restrictions that apply to the email. 
+
+However, we recommend that you protect the document first, and then attach it to the email. Protect the email as well if the email message contains sensitive information. Two benefits of protecting the document before you attach it to an email:
+
+- You can track and if necessary, revoke the document after you have emailed it.
+
+- You can apply different permissions to the document than to the email message.
 
 ## Using File Explorer to classify and protect files
 

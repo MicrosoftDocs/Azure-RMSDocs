@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -72,13 +72,13 @@ For more information and some walk-through examples, see the following blog post
 
 Additional information:
 
-- For Windows computers: For the current preview release, Outlook must not be installed. Open protected files from locations such as SharePoint, OneDrive, or Outlook on the web.
+- For Windows computers: For the current preview release, the conditional access policies for Azure Information Protection are evaluated when the [user environment is initialized](../understand-explore/how-does-it-work.md#initializing-the-user-environment) (this process is also known as bootstrapping), and then every 30 days.
 
 - You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
-The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [@DanPlastina](https://twitter.com/DanPlastina) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 

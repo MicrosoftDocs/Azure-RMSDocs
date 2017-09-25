@@ -191,15 +191,17 @@ This configuration option is currently in preview and requires the preview versi
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, Outlook applies a different default label to the label that is configured in the Azure Information Protection policy for the setting **Select the default label**.
+When you configure this setting, Outlook doesn't apply the default label that is configured in the Azure Information Protection policy for the setting **Select the default label**. Instead, Outlook can apply a different label, or no label.
 
-To use this setting, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+
+So that Outlook doesn't apply the default label, specify **None**.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **OutlookDefaultLabel**
 
-- Value: \<**label ID**>
+- Value: \<**label ID**> or **None**
 
 
 ## Integration with Exchange message classification for a mobile device labeling solution

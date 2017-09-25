@@ -76,7 +76,7 @@ We'll now create a new sub-label for **Confidential**.
     
     ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-4. On the **Protection** blade, make sure that **Azure RMS** or **Azure (cloud key)** is selected. This option is in the process of being renamed. Make sure that **Set Permissions** is also selected. Then select **Add permissions**.
+4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Make sure that **Set Permissions** is also selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
@@ -112,7 +112,7 @@ We'll now create a new sub-label for **Confidential**.
     
     a. **Choose the type of condition**: Keep the default of **Information Types**.
     
-    b. In the **Select information types** search box: Type **credit card number**. then, from the search results, select **Credit Card Number**.
+    b. In the **Select information types** search box: Type **credit card number**. Then, from the search results, select **Credit Card Number**.
     
     c. **Minimum number of occurrences**: Keep the default of **1**.
     
