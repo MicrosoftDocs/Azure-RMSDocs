@@ -6,7 +6,7 @@ description: You can delete or re-order the labels that users see on the Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ You can delete or re-order the labels that users see on the Information Protecti
 
 When you delete a label that has been applied to documents and emails, and then publish the Azure Information Protection policy, that label will be automatically removed from these documents or emails when they are next opened by the Azure Information Protection client.
 
-However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates**. These templates can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
+However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates**. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
 
 - Convert the template to a label. 
     
