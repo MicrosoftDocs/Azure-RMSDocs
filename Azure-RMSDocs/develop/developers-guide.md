@@ -118,6 +118,17 @@ These videos are from the Micorsoft 2016 Ignite conference
 - [Supported platforms](supported-platforms.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
 
+### Message protocol and file formats
+
+- [Client-to-Server Protocol](https://msdn.microsoft.com/library/cc243191.aspx)
+- [Rights-Managed Email Object Protocol](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
+- [Compound File Binary File Format](https://msdn.microsoft.com/library/dd942138.aspx)
+
+#### Rights Managed email message
+
+- [.MSG File Format (Part 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [.MSG File Format (Part 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+
 ### API reference
 
 - [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
