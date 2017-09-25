@@ -6,7 +6,7 @@ description: Information to help you install and configure the Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 1.  Identify the computers (minimum of two) that will run the RMS connector. They must meet the minimum specification listed in the prerequisites.
 
     > [!NOTE]
-    > You will install a single RMS connector (consisting of multiple servers for high availability) per tenant (Office 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
+    > You install a single RMS connector (consisting of multiple servers for high availability) per tenant (Office 365 tenant or Azure AD tenant). Unlike Active Directory RMS, you do not have to install an RMS connector in each forest.
 
 2.  Download the source files for the RMS connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
 
@@ -62,9 +62,11 @@ To continue, enter an account and password to configure the RMS connector.
 ## Entering credentials
 Before you can configure the RMS connector, you must enter credentials for an account that has sufficient privileges to configure the RMS connector. For example, you might type **admin@contoso.com** and then specify the password for this account.
 
-There are some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication will fail for the RMS connector and you will see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+This account must not require multi-factor authentication (MFA) because the Microsoft Rights Management administration tool does not support MFA for this account. 
 
-In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the “IT department” group, the account that you specify here must be a member of that group. If not, you will see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+The connector also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+
+In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
 You can use an account that has one of the following privileges:
 
@@ -105,7 +107,7 @@ You can use an account that has one of the following privileges:
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 
--   An empty table of servers that are authorized to use the connector to communicate with Azure RMS. You will add servers to this table later.
+-   An empty table of servers that are authorized to use the connector to communicate with Azure RMS. You add servers to this table later.
 
 -   A set of security tokens for the connector, which authorize operations with Azure RMS. These tokens are downloaded from Azure RMS and installed on the local computer in the registry. They are protected by using the data protection application programming interface (DPAPI) and the Local System account credentials.
 
@@ -122,6 +124,10 @@ On the final page of the wizard, do the following, and then click **Finish**:
 
 If you need to uninstall the RMS connector, run the wizard again and select the uninstall option.
 
+If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date and time>.log** 
+
+As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
 
@@ -129,9 +135,9 @@ To define these servers, run the RMS connector administration tool and add entri
 
 When you authorize these servers, be aware of the following considerations:
 
--   Servers that you add will be granted special privileges. All accounts that you specify for the Exchange Server role in the connector configuration will be granted the [super user role](configure-super-users.md) in Azure RMS, which gives them access to all content for this RMS tenant. The super user feature is automatically enabled at this point, if necessary. To avoid the security risk of elevation of privileges, be careful to specify only the accounts that are used by your organization’s Exchange servers. All servers configured as SharePoint servers or file servers that use FCI will be granted regular user privileges.
+- Servers that you add are granted special privileges. All accounts that you specify for the Exchange Server role in the connector configuration are granted the [super user role](configure-super-users.md) in Azure RMS, which gives them access to all content for this RMS tenant. The super user feature is automatically enabled at this point, if necessary. To avoid the security risk of elevation of privileges, be careful to specify only the accounts that are used by your organization’s Exchange servers. All servers configured as SharePoint servers or file servers that use FCI are granted regular user privileges.
 
--   You can add multiple servers as a single entry by specifying an Active Directory security or distribution group, or a service account that is used by more than one server. When you use this configuration, the group of servers will share the same RMS certificates and will all be considered owners for content that any of them have protected. To minimize administrative overheads, we recommend that you use this configuration of a single group rather than individual servers to authorize your organization’s Exchange servers or a SharePoint server farm.
+- You can add multiple servers as a single entry by specifying an Active Directory security or distribution group, or a service account that is used by more than one server. When you use this configuration, the group of servers shares the same RMS certificates and are all be considered owners for content that any of them have protected. To minimize administrative overheads, we recommend that you use this configuration of a single group rather than individual servers to authorize your organization’s Exchange servers or a SharePoint server farm.
 
 On the **Servers allowed to utilize the connector** page, click **Add**.
 
@@ -187,7 +193,7 @@ Use the following settings to configure the NLB cluster:
 
 -   Distribution method: Equal
 
-This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you will use later, when you configure the on-premises servers to use Azure RMS.
+This name that you define for the load-balanced system (for the servers running the RMS connector service) is your organization’s RMS connector name that you use later, when you configure the on-premises servers to use Azure RMS.
 
 ## Configuring the RMS connector to use HTTPS
 > [!NOTE]
@@ -195,7 +201,7 @@ This name that you define for the load-balanced system (for the servers running 
 
 Although the use of TLS or SSL is optional for the RMS connector, we recommend it for any HTTP-based security-sensitive service. This configuration authenticates the servers running the connector to your Exchange and SharePoint servers that use the connector. In addition, all data that is sent from these servers to the connector is encrypted.
 
-To enable the RMS connector to use TLS, on each server that runs the RMS connector, install a server authentication certificate that contains the name that you will use for the connector. For example, if your RMS connector name that you defined in DNS is **rmsconnector.contoso.com**, deploy a server authentication certificate that contains **rmsconnector.contoso.com** in the certificate subject as the common name. Or, specify **rmsconnector.contoso.com** in the certificate alternative name as the DNS value. The certificate does not have to include the name of the server. Then in IIS, bind this certificate to the Default Web Site.
+To enable the RMS connector to use TLS, on each server that runs the RMS connector, install a server authentication certificate that contains the name that you use for the connector. For example, if your RMS connector name that you defined in DNS is **rmsconnector.contoso.com**, deploy a server authentication certificate that contains **rmsconnector.contoso.com** in the certificate subject as the common name. Or, specify **rmsconnector.contoso.com** in the certificate alternative name as the DNS value. The certificate does not have to include the name of the server. Then in IIS, bind this certificate to the Default Web Site.
 
 If you use the HTTPS option, ensure that all servers that run the connector have a valid server authentication certificate that chains to a root CA that your Exchange and SharePoint servers trust. In addition, if the certification authority (CA) that issued the certificates for the connector servers publishes a certificate revocation list (CRL), the Exchange and SharePoint servers must be able to download this CRL.
 
@@ -204,7 +210,7 @@ If you use the HTTPS option, ensure that all servers that run the connector have
 >
 > -   If you use Active Directory Certificate Services (AD CS) and an enterprise certification authority (CA) to deploy these server authentication certificates, you can duplicate and then use the Web Server certificate template. This certificate template uses **Supplied in the request** for the certificate subject name, which means that you can provide the FQDN of the RMS connector name for the certificate subject name or subject alternative name when you request the certificate.
 > -   If you use a stand-alone CA or purchase this certificate from another company, see [Configuring Internet Server Certificates (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
-> -   To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) in the in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
+> -   To configure IIS to use the certificate, see [Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) in the [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) documentation library on TechNet.
 
 ## Configuring the RMS connector for a web proxy server
 If your connector servers are installed in a network that does not have direct Internet connectivity and requires manual configuration of a web proxy server for outbound Internet access, you must configure the registry on these servers for the RMS connector.

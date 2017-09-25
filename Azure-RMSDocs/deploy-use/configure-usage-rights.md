@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure custom templates for Azure Rights Management, you select the usage rights that will then be automatically applied when the template is selected by users, administrators, or configured services. For example, in the Azure classic portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
+When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure templates or labels for Azure Rights Management protection, you select the usage rights that will then be automatically applied when the template or label is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
@@ -85,14 +85,14 @@ The rights that are included with the default templates are as follows:
 
 |Display Name|Rights included (common name)|
 |----------------|---------------------------------|
-|&lt;*organization name*&gt; *- Confidential View Only*|View, Open, Read|
-|&lt;*organization name*&gt; *- Confidential*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
+|&lt;*organization name*&gt; *- Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read|
+|&lt;*organization name*&gt; *- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## Do Not Forward option for emails
 
 Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have one additional information rights protection option for emails: **Do Not Forward**. 
 
-Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure classic portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
+Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
 When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
 
@@ -136,7 +136,7 @@ The Rights Management owner for a document or email is logged as the **owner-ema
 Note that the Rights Management owner is independent from the Windows file system Owner. They are often the same but can be different, even if you don't use the SDKs or PowerShell.
 
 ## See Also
-[Configuring custom templates for the Azure Rights Management service](configure-custom-templates.md)
+[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
 [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md)
 

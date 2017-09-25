@@ -2,11 +2,11 @@
 # required metadata
 
 title: PowerShell for Azure RMS custom templates - AIP
-description: Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+description: Everything that you can do in the Azure portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+Everything that you can do in the Azure portal to create and manage templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 
 You can also use export and import to back up and restore your custom templates, As a best practice, regularly back up your custom templates, so that if you make a change that was not intended, you can easily revert to a previous version.
 
@@ -63,6 +63,6 @@ The cmdlets that support creating and managing templates:
 
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

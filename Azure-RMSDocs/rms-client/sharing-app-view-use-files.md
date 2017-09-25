@@ -6,7 +6,7 @@ description: Instructions to view and use a protected file, which requires you t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -76,9 +76,6 @@ How the file opens depends on how it was protected, which you can tell by lookin
 
 
 For a complete list of file name extensions that the Rights Management services support, see the [Supported file types and file name extensions](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) sections in the [Rights Management sharing application administrator guide](sharing-app-admin-guide.md). If your file name extension is not listed, use a web search to see if it is a file name extension that is supported by another application.
-
-> [!NOTE]
-> If, after confirming that the file is protected by Rights Management, and the file does not open, download and use the [RMS Analyzer tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Follow the instructions in the tool to check for problems on your computer that might prevent a protected document from opening.
 
 ## To use files that have been protected (for example, edit and print the file)
 If, after opening the protected file, you want to do more than just read it (for example, edit, copy, and print it), follow the instructions according to the file name extension:

@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/01/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure Information Protection client administrator guide
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Use the information in this guide if you are responsible for the Azure Information Protection client on an enterprise network, or if you want more technical information than is in the [Azure Information Protection client user guide](client-user-guide.md). 
 
@@ -89,7 +89,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
 
-Example showing the Azure Information Protection client add-on in an Office applications, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
+Example showing the Azure Information Protection client add-on in an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
 ![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)
 
@@ -123,12 +123,29 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
+- Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
+    
+    If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
+    
+    - For Outlook: `MSIP.OutlookAddin`
+    
+    - For Word: `MSIP.WordAddin`
+    
+    - For Excel: `MSIP.ExcelAddin`
+    
+    - For PowerPoint: `MSIP.PowerPointAddin`
+    
+    Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
+    
+    For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
 
+
 ### Options to install the Azure Information Protection client for users
 
-There are 3 options for installing the client for users:
+There are three options for installing the client for users:
 
 **Windows Update**: The Azure Information Protection client is included in the Microsoft Update catalog, so that you can install and update this client by using any software update service that uses the catalog.
 
@@ -142,7 +159,7 @@ Use the following instructions to install the client when you're not using the M
 
 1. Download the executable version Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
-    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
+    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
 2. For a default installation, simply run the executable, for example, **AzInfoProtection.exe**. However, to see the installation options, first run the executable with **/help**: `AzInfoProtection.exe /help`
 
@@ -155,7 +172,9 @@ Use the following instructions to install the client when you're not using the M
     - **ServiceLocation**: Use this parameter if you are installing the client on computers that run Office 2010 and your users are not local administrators on their computers or you do not want them to be prompted. [More information](#more-information-about-the-servicelocation-installation-parameter) 
     
     - **DowngradeDotNetRequirement**: Use this parameter to bypass the requirement for Microsoft Framework .NET version 4.6.2. [More information](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-
+    
+    - **AllowTelemetry=0**: Use this parameter to disable the install option **Help improve Azure Information Protection by sending usage statistics to Microsoft**. 
+    
 3. If you are installing interactively, select the option to install a **demo policy** if you cannot connect to Office 365 or Azure Active Directory, but want to see and experience the client side of Azure Information Protection by using a local policy for demonstration purposes. When your client connects to an Azure Information Protection service, this demo policy is replaced with your organization's Azure Information Protection policy.
     
 4. To complete the installation: 
@@ -200,14 +219,14 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 3. From the value, remove **/_wmcs/licensing** from this string. For example: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    The remaining string is the the value to specify for your ServiceLocation parameter.
+    The remaining string is the value to specify for your ServiceLocation parameter.
 
 Example to install the client silently for Office 2010 and Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
 
 #### More information about the DowngradeDotNetRequirement installation parameter
 
-To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation will then require the computer to restart.
+To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation then requires the computer to restart.
 
 If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
 
@@ -215,7 +234,7 @@ For example: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 We recommend that you use this parameter with caution, and with the knowledge that there are reported issues with Office applications hanging when the Azure Information Protection client is used with this older version of the Microsoft .NET Framework. If you do experience hanging problems, upgrade to the recommended version before you try other troubleshooting solutions. 
 
-Also remember that if you use Windows Update to keep the Azure Information Protection client updated, you will need another software deployment mechanism to upgrade the client to later versions.
+Also remember that if you use Windows Update to keep the Azure Information Protection client updated, you must have another software deployment mechanism to upgrade the client to later versions.
 
 ### To install the Azure Information Protection client by using the .msi installer
 
@@ -225,18 +244,20 @@ If you use Intune for your software deployment method, use these instructions to
 
 1. Download the .msi version of the Azure Information Protection client from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
-    If there is a prevew version available, keep this version for testing only. It is not intended for end users in a production environment. 
+    If there is a preview version available, keep this version for testing only. It is not intended for end users in a production environment. 
 
-2. For each computer that will run the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
+2. For each computer that runs the .msi file, you must make sure that the following software dependencies are in place. For example, package these with the .msi version of the client or only deploy to computers that meet these dependencies:
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Office 2013|All supported versions|[KB 3054941](https://www.microsoft.com/en-us/download/details.aspx?id=49337)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2016|All supported versions|64-bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32-bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> Version: 1.0|Install|
+    |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
-    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB 2843630 or KB 2919355 is not installed|
-    |Office 2010|Windows 8 and Windows Server 2012|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    |Office 2010|Windows 7|[KB 2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB 3125574 is not installed|
-    |Not applicalbe|Windows 7|KB 2627273 <br /><br /> Version number included in file name: v4|Uninstall|
+    |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
+    |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
+    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
+    |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
+    
 
 3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
@@ -250,37 +271,61 @@ Use the **Help and Feedback** option to open the **Microsoft Azure Information P
 
 ### **Help and Feedback** section
 
-The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but can be configured for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
+The **Tell me more link** by default, goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website but you can configure it for a custom URL as one of the [policy settings](../deploy-use/configure-policy-settings.md) in the Azure Information Protection policy.
 
 Use the **Send Us Feedback** link to send suggestions or requests to the Information Protection team. Do not use this option for technical support but instead, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources). 
 
-The **Export Logs** is to automatically collect and attach log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
+The **Export Logs** automatically collects and attaches log files for the Azure Information Protection client if you have been asked to send these to Microsoft Support. This option can also be used by end users to send these log files to your help desk.
 
-For diagnostic information and to reset the client, select **Run diagnostics**. When the diagnostics tests finish, click **Copy Results** to paste the information into an email that you can send to Microsoft Support, or end users can send to your help desk. When the tests finish, you can also reset the client.
+The **Reset Settings** signs out the user, deletes the currently downloaded Azure Information Protection policy, and resets the user settings for the Azure Rights Management service.
 
-More information about the **Reset** option:
+#### More information about the Reset Settings option
 
 - You do not have to be a local administrator to use this option and this action is not logged in the Event Viewer. 
 
-- Unless files are locked, this action deletes all the files in **%localappdata%\Microsoft\MSIPC**, which is where client certificates and rights management templates are stored. It does not delete the Azure Information Protection policy, or the client log files, or sign out the user.
+- Unless files are locked, this action deletes all the files in the following locations. These files include client certificates, Rights Management templates, the Azure Information Protection policy, and the cached user credentials. The client log files are not deleted.
+    
+    - %LocalAppData%\Microsoft\DRM
+    
+    - %LocalAppData%\Microsoft\MSIPC
+    
+    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    
+    - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- The following registry key and settings are deleted: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. If you configure settings for this registry key (for example, settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network), you must reconfigure the registry settings after you reset the client.
+- The following registry keys and settings are deleted. If you configured settings for any of these registry keys, you must reconfigure them after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network:
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
-- After you have reset the client, you must re-initialize the user environment, which will download certificates for the client and the latest templates. To do this, close all instances of Office and then restart an Office application. This action will also check that you have downloaded the latest Azure Information Protection policy. Do not run the diagnostics tests again until you have done this.
-
+- The currently signed in user is signed out.
 
 ### **Client status** section
 
-Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory and that belongs to a tenant that is configured for Azure Information Protection.
+Use the **Connected as** value to confirm that the displayed user name identifies the account to be used for Azure Information Protection authentication. This user name must match an account used for Office 365 or Azure Active Directory. The account must also belong to a tenant that is configured for Azure Information Protection.
 
 If you need to sign in as a different user to the one displayed, see the [Sign in as a different user](client-admin-guide-customizations.md#sign-in-as-a-different-user) customization.
 
-The **Last connection** displays when the client last connected to your organization's Azure Information Protection service and can be used with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
+The **Last connection** displays when the client last connected to your organization's Azure Information Protection service. You can use this information with the **Information Protection policy was installed on** date and time to confirm when the Azure Information Protection policy was last installed or updated. When the client connects to the service, it automatically downloads the latest policy if it finds changes from its current policy, and also every 24 hours. If you have made policy changes after the displayed time, close and reopen the Office application.
 
 If you see **This client is not licensed for Office Professional Plus**: The Azure Information Protection client has detected that the installed edition of Office does not support applying Rights Management protection. When this detection is made, labels that apply protection do not display on the Azure Information Protection bar.
 
 Use the **Version** information to confirm which version of the client is installed. You can check whether this is the latest release version and the corresponding fixes and new features by clicking the **What's New** link, to read the [Version release history](client-version-release-history.md) for the client.
 
+## Support for multiple languages
+
+The Azure Information Protection client supports the same languages that Office 365 supports. For a list of these languages, see the **Office 365, Exchange Online Protection, and Power BI** section from the [International availability](https://products.office.com/business/international-availability) page from Office.
+
+For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
+
+However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
 
 ## To uninstall the Azure Information Protection client
 

@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # File types supported by the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 The Azure Information Protection client can apply the following to documents and emails:
 
@@ -56,8 +56,6 @@ Classification-only is supported for the following file types. Additional file t
 - **Microsoft XPS**: .xps .oxps​
 
 - **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
-
-- **SolidWorks**: .sldprt, .slddrw, .sldasm​
 
 - **Autodesk Design Review 2013**: .dwfx​
 
@@ -91,7 +89,7 @@ There are maximum file sizes that the Azure Information Protection client suppor
     |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
     |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
 
-- **For all other files**: 1 GB
+- **For all other files**: Limited only by available disk space and memory.
 
 ### Supported file types for classification and protection
 

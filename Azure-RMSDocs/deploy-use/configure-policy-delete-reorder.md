@@ -45,11 +45,15 @@ Order the labels so that users see them in a logical progression in the Informat
 
 Use the following instructions to make these changes.
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin, and then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to delete, disable, or reorder applies to all users, do one of the following from the **Policy: Global** blade. 
+2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
+    
+    If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+
+3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, do one or more of the following actions. 
 
     - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
 
@@ -57,9 +61,7 @@ Use the following instructions to make these changes.
 
     - To re-order a label: Right-click or select the context menu (**...**) for the label that you want to re-order, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
 
-     If the label that you want to delete, disable, or reorder is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, first select that scoped policy from the initial **Azure Information Protection** blade.
-
-3. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
 
 ## Next steps
 
