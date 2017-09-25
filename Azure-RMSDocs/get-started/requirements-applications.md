@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -106,7 +106,7 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
 
-- Does not support overriding template protection with custom permissions that a user selects. In this scenario, the original protection must first be removed before custom permissions can be applied.
+- Does not support overriding template protection with custom permissions that a user selects with the Azure Information Protection client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
