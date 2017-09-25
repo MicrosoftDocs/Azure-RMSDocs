@@ -44,7 +44,9 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 ## Overview of the Azure Information Protection scanner
 
-When you have configured your [Azure Information Protection policy](configure-policy.md) for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
+When you have configured your [Azure Information Protection policy](configure-policy.md) for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection:
+
+![Azure Information Protection scanner overview](../media/infoprotect-scanner.png)
 
 Automatic classification uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
 
@@ -134,7 +136,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped. Look for the informational event ID **911**.
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped. Look for the informational event ID **913**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -154,9 +156,9 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 2. Using **Administrative Tools** > **Services**, restart the **Azure Information Protection Scanner** service.
 
-3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
+3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied. This time, event ID **911** is logged.
 
-This time, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
+Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
@@ -177,6 +179,55 @@ Other cmdlets for the scanner let you change the service account and database fo
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner.md)
+
+
+## Event log IDs and descriptions
+
+Use the following sections to identify the possible event IDs and descriptions for the scanner.
+
+-----
+
+Information **910**
+
+**Scanner cycle started.**
+
+This event is logged when the scanner service is started and begins to scan for files in the data repositories that you specified.
+
+----
+
+Information **911**
+
+**Scanner cycle finished.**
+
+This event is logged when the scanner is configured to run continuously rather than one time, and the scanner has finished scanning the data repositories that you specified. A new cycle starts automatically.
+
+----
+
+Information **913**
+
+**Scanner is stopped because scanner is set to Never.**
+
+This event is logged when the scanner is configured to run one time rather than continuously, and the scanner has finished scanning the data repositories that you specified. The service does not run again automatically. 
+
+To scan the files again, you must manually start the service. To change this behavior so that the scanner runs continuously, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md) cmdlet and set the **Schedule** parameter to **Continuous**.
+
+----
+
+Error **912**
+
+**Unknown error has occurred.**
+
+----
+
+Error **914**
+
+**Service was automatically stopped due to bad configuration: policy file is missing or corrupted.**
+
+This event is logged when the Azure Information Protection client does not have a valid policy file in %localappdata%\Microsoft\MSIP. 
+
+Make sure that firewalls are not blocking the required connectivity to the Internet. For more information, see the [Firewalls and network infrastructure](../get-started/requirements.md#firewalls-and-network-infrastructure) requirements for Azure Information Protection. If Internet connectivity is not possible, follow the instructions for supporting [disconnected computers](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+----
 
 
 ## Next steps
