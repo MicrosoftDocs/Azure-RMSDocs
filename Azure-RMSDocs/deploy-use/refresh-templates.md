@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ When you use the Azure Rights Management service of Azure Information Protection
 When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 15 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
 
 ## Exchange Online only: How to configure Exchange to download changed custom templates
-If you have already configured Information Rights Management (IRM) for Exchange Online by importing your trusted publishing domain (TPD) from Azure RMS, custom templates will not automatically update for users until Microsoft enables your tenant for the new Exchange Online capabilities. Until then, you must make manually configure Exchange to download changed custom templates by using Windows PowerShell in Exchange Online.
+If you have already configured Information Rights Management (IRM) for Exchange Online by importing your trusted publishing domain (TPD) from Azure RMS, custom templates will not automatically update for users until Microsoft enables your tenant for the new Exchange Online capabilities. Until then, you must manually configure Exchange to download changed custom templates by using Windows PowerShell in Exchange Online.
 
 > [!NOTE]
 > For more information about how to use Windows PowerShell in Exchange Online, see [Using PowerShell with Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
@@ -56,8 +56,7 @@ To check whether your tenant has been updated for the new Exchange Online capabi
 
 2. If there is no value displayed for the **LicensingLocation** parameter, Exchange Online has the new capabilities and templates refresh automatically.
 
-
-To configure Exchange to download changed custom templates, you must do this procedure each time you change a template.
+To configure Exchange to download changed custom templates, you must do the following procedure each time you change a template:
 
 ### To update templates for Exchange Online
 
