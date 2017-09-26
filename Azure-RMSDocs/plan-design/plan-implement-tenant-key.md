@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -121,11 +121,38 @@ See the following table for a list of prerequisites for bring your own key (BYOK
 
 For more information about Thales HSMs and how they are used with Azure Key Vault, see the [Thales website](https://www.thales-esecurity.com/msrms/cloud).
 
+### Choosing your key vault location
+
+When you create a key vault to contain the key to be used as your tenant key for Azure Information, you must specify a location. This location is an Azure region, or Azure instance.
+
+Make your choice first for compliance, and then to minimize network latency:
+
+- If you have chosen the BYOK key topology for compliance reasons, those compliance requirements might mandate the Azure region or Azure instance that stores your Azure Information Protection tenant key.
+
+- Because all cryptographic calls for protection chain to your Azure Information Protection tenant key, you want to minimize the network latency that these calls incur. To do that, create your key vault in the same Azure region or instance as your Azure Information Protection tenant.
+
+To identify the location of your Azure Information Protection tenant, use the [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)​ PowerShell cmdlet and identify the region from the URLs. For example:
+
+	LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+
+The region is identifiable from **rms.na.aadrm.com**, and for this example, it is in North America.
+
+Use the following table to identify which Azure region or instance is recommended to minimize network latency.
+
+|Azure region or instance|Recommended location for your key vault|
+|---------------|--------------------|
+|rms.**na**.aadrm.com|**North Central US** or **East US**|
+|rms.**eu**.aadrm.com|**North Europe** or **West Europe**|
+|rms.**ap**.aadrm.com​|**East Asia** or **Southeast Asia**|
+|rms.**sa**.aadrm.com|**West US** or **East US**|
+|rms.**govus**.aadrm.com​|**Central US** or **East US 2**|
+
+
 ### Instructions for BYOK
 
 Use the Azure Key Vault documentation to create a key vault and the key that you want to use for Azure Information Protection. For example, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).
 
-Make sure that the key length is 2048-bits (recommended) or 1024-bits. Other key lengths are not supported by Azure Information Protection.
+Make sure that the key length is 2048 bits (recommended) or 1024 bits. Other key lengths are not supported by Azure Information Protection.
 
 To create an HSM-protected key on-premises and transfer it to your key vault as an HSM-protected key, follow the procedures in [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
