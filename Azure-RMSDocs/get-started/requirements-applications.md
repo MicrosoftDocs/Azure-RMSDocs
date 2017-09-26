@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 09/22/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -66,7 +66,7 @@ Information about the table columns:
 Supports viewing protected documents when an unprotected document is uploaded to a protected library in SharePoint Online and OneDrive for Business.
 
 ###### Footnote 2
-For [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are protected by using Office 365 Message Encryption with new capabilities as described in the following Office documentation: [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+For [Office attachments](https://support.office.com/article/Introduction-to-IRM-for-email-messages-bb643d33-4a3f-4ac7-9770-fd50d95f58dc) that are protected by using Office 365 Message Encryption with new capabilities as described in the following Office documentation: [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
 ###### Footnote 3
 If the sender and the recipient are part of the same organization. Or either of the following conditions:
@@ -100,13 +100,11 @@ All editions of Office (with the exception of Office 2007) support consuming pro
 
 Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Professional 2010 with Service Pack 2:
 
-- Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
+- Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows
 
-- Not supported on Windows 10.
+- Not supported on Windows 10
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
-
-- Does not support overriding template protection with custom permissions that a user selects with the Azure Information Protection client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
