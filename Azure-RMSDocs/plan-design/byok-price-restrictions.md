@@ -6,7 +6,7 @@ description: Understand the restrictions when you use customer-managed keys (kno
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,7 +64,7 @@ There is one exception: **If you enabled Exchange Online IRM by importing your t
 >If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key:
 >
 >1. Using Exchange Online PowerShell, run `Get-IRMConfiguration`. 
->2. If there is no value displayed for the **Select LicensingLocation** parameter, you can use BYOK with Exchange Online without any restrictions.
+>2. If there is no value displayed for the **LicensingLocation** parameter, you can use BYOK with Exchange Online without any restrictions.
 
 Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
 
