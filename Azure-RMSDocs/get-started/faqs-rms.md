@@ -58,7 +58,7 @@ For more information about HYOK and to make sure that you understand its limitat
 
 If you have not already enabled Exchange Online for Azure Rights Management, you can now use BYOK. For more information, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md##exchange-online-irm-configuration).
 
-If you have previously enabled Exchange Online for Azure Rights Management, wait for Microsoft to migrate your tenant. For more information, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
+If you have previously enabled Exchange Online for Azure Rights Management, Microsoft must first migrate your tenant to support the new capabilities. For more information, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 

@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/26/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,9 +33,10 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this …|.. do this:|
 |----------------|---------------|
-|See recommended documentation for the service|Use the [Azure Information Protection Documentation](https://docs.microsoft.com/information-protection/) starting page.|
-|Provide feedback about the documentation or ask a question about the documentation|Email [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback).|
-|Receive tweets from the product group about Azure Information Protection and announcements for documentation updates|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
+|See the most frequently used documentation|Read the top five pages: <br /><br />[Get started - AIP app for iOS & Android ](../rms-client/mobile-app-get-started.md) <br /><br /> [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br /><br />[Activating Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Requirements for Azure Information Protection](../get-started/requirements.md)|
+|Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
+|Request a new feature or change of functionality|Visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection|
+|Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
 
@@ -48,7 +49,7 @@ Each month, we publish the following [**Updates**](https://blogs.technet.microso
 
 - A summary of documentation changes that include documentation for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**" 
 
-You can also find information about new functionality and previews on the [Azure Information Protection Yammer site](https://www.yammer.com/AskIPTeam), where you can also ask questions about Azure Information Protection. To propose new features or vote for new features, visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection.
+You can also find information about new functionality and previews on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), where you can also ask questions about Azure Information Protection. To propose new features or vote for new features, visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection.
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
