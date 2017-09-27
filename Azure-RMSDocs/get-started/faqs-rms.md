@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -132,7 +132,9 @@ For most scenarios, you can use any group type in Azure AD that has an email add
 
 When you use Exchange Online and the Azure Rights Management service, you just send the email. The recipient will see an option to sign in to their Gmail or Hotmail account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
-To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and message encryption. For more information, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+For more information about the new capabilities that makes supporting all email accounts possible, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
