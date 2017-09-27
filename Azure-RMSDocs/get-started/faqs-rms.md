@@ -115,7 +115,7 @@ By default, the Azure Rights Management service uses an Azure Active Directory a
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
-If you email a protected document to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
+If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
 
 ## Can I add external users (people from outside my company) to custom templates?
 
@@ -130,11 +130,13 @@ For most scenarios, you can use any group type in Azure AD that has an email add
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-When you use Exchange Online and the Azure Rights Management service, you just send the email. The recipient will see an option to sign in to their Gmail or Hotmail account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
+When you use Exchange Online and the Azure Rights Management service, you just send the email as a protected message. Emails can be protected by selecting the Do Not Forward option, by selecting an Azure Information Protection label that applies protection from Azure Rights Management, or the protection can be applied by Exchange Online transport rules.
+
+The recipient will see an option to sign in to their Gmail or Hotmail account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
 To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
-For more information about the new capabilities that makes supporting all email accounts possible, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+For more information about the new capabilities that support all email accounts, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
