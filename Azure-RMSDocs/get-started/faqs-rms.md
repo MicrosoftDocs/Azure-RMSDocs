@@ -56,9 +56,9 @@ For more information about HYOK and to make sure that you understand its limitat
 
 ## Can I now use BYOK with Exchange Online?
 
-If you have not already enabled Exchange Online for Azure Rights Management, you can now use BYOK. For more information, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md##exchange-online-irm-configuration).
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
 
-If you have previously enabled Exchange Online for Azure Rights Management, Microsoft must first migrate your tenant to support the new capabilities. For more information, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
+For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
@@ -128,11 +128,11 @@ For more information about converting custom templates to labels, see [Configuri
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
-## How do I send a protected email to a Gmail or Hotmail account?
+## How do I send a protected email to a Gmail or Microsoft account?
 
 When you use Exchange Online and the Azure Rights Management service, you just send the email as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook Do Not Forward option, select an Azure Information Protection label that applies protection from Azure Rights Management, or the protection can be applied by Exchange Online transport rules.
 
-The recipient will see an option to sign in to their Gmail or Hotmail account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
+The recipient will see an option to sign in to their Gmail, Yahoo, or Microsoft account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
 To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
