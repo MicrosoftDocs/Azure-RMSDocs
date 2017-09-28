@@ -128,7 +128,7 @@ For more information about converting custom templates to labels, see [Configuri
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
-## How do I send a protected email to a Gmail or Microsoft account?
+## How do I send a protected email to a Gmail or Hotmail account?
 
 When you use Exchange Online and the Azure Rights Management service, you just send the email as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook Do Not Forward option, select an Azure Information Protection label that applies protection from Azure Rights Management, or the protection can be applied by Exchange Online transport rules.
 
