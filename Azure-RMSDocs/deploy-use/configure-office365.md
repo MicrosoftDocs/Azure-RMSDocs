@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,7 +38,7 @@ For information about how Exchange Online IRM works with the Azure Rights Manage
 
 To configure Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), use the same set of instructions to enable the new capabilities in Exchange Online.
+If you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD) from the Azure Rights Management Service, use the same set of instructions to enable the new capabilities in Exchange Online.
 
 After you have configured Exchange Online to use the Azure Rights Management service, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
