@@ -6,7 +6,7 @@ description: You can delete or re-order the labels that users see on the Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/26/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,23 +29,11 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 
 >*Applies to: Azure Information Protection*
 
-You can delete or re-order the labels that users see on the Information Protection bar by selecting these actions in the Azure Information Protection policy.
+You can delete or re-order the labels that users see on the Information Protection bar by configuring this in the Azure Information Protection policy.
 
 ![Delete or reorder labels in the Azure Information Protection policy](../media/info-protect-contextmenu.png)
 
 When you delete a label that has been applied to documents and emails, and then publish the Azure Information Protection policy, that label will be automatically removed from these documents or emails when they are next opened by the Azure Information Protection client.
-
-However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates**. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
-
-- Convert the template to a label. 
-    
-    This action is recommended because if required, you can then change the name of the template and modify the protection settings.
-
-- Use PowerShell to rename the template or delete it.
-    
-    Before you do these action, consider whether other admins or services are using the template and identify it by its current name. Delete a template only if you don't need to open documents or emails that were protected by the template.
-
-For more information about managing protection templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 Before you delete a label, consider whether to disable it, instead. When you disable a label that has been applied to documents and emails, the applied label will not be removed from these documents and emails but it no longer displays as a label that users can select on the Information Protection bar. Disabling a label also lets you keep the original configuration for when you might want users to select the label at a later time, when you simply re-enable it.
 
