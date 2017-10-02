@@ -6,7 +6,7 @@ description: Step 3 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,7 +34,7 @@ In this step, you'll install the Azure Information Protection client so that the
 
 ## Install the Azure Information Protection client
 
-1. On a PC that has Office installed (but Word is not currently open), go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe**. This is the general availability version of the client that's supported on production networks. However, if you prefer to try the current preview version that has all the latest features and fixes, download **AzInfoProtection_PREVIEW_1.10.52.0.exe**.
+1. On a PC that has Office installed (but Word is not currently open), go to the [Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and download **AzInfoProtection.exe**.
     
 2. Run the executable that you've just downloaded, and follow the prompts to install the client.
     

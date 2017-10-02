@@ -2,11 +2,11 @@
 # required metadata
 
 title: Decommission & deactivate Azure RMS
-description: Information and instructions if you decide you no longer want to use this information protection service from Azure Information Protection.
+description: Information and instructions if you decide you no longer want to use the cloud-based protection service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Decommissioning and deactivating Azure Rights Management
+# Decommissioning and deactivating protection for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
@@ -82,9 +82,9 @@ You should now see **Rights Management is not activated** and the option to acti
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed. 
+2. On the initial **Azure Information Protection** blade, select **Protection activation**. 
 
-3.  On the **Azure Information Protection - RMS Settings** or **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
+3.  On the **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 
