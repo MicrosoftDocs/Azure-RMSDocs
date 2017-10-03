@@ -100,11 +100,13 @@ All editions of Office (with the exception of Office 2007) support consuming pro
 
 Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Professional 2010 with Service Pack 2:
 
-- Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows
+- Requires the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
 
-- Not supported on Windows 10
+- Not supported on Windows 10.
 
 - Does not support forms-based authentication for federated user accounts. These accounts must use Windows Integrated Authentication.
+
+- Does not support overriding template protection with custom permissions that a user selects with the Azure Information Protection client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
