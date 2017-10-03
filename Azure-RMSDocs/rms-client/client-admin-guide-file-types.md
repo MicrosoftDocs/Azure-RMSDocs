@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -184,6 +184,22 @@ To help prevent users from changing files that are critical for computer operati
     - Program Files (\Program Files and \Program Files (x86))
     - \ProgramData 
     - \AppData (for all users)
+
+### Files that cannot be protected by default
+
+Any file that is password-protected cannot be natively protected by the Azure Information Protection client. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
+
+Additionally, the Azure Information Protection client cannot natively protect PDF files in either of the following circumstances:
+
+- A PDF file that is form-based.
+
+- A protected PDF file that has a .PDF file name extension. 
+    
+    The Azure Information Protection client can protect an unprotected PDF file, and reprotect a protected PDF file that has a .ppdf file name extension.
+
+As a workaround for these files, you could generically protect them by following the instructions in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section. However, this method changes the protection level for all files that have a .pdf file name extension, at the computer level. You cannot define generic protection for only the files that meet the listed criteria.
+
+If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again.
 
 
 ## Next steps
