@@ -124,6 +124,7 @@ $newServicePrincipalName="<new service principal name>"
 Connect-AadrmService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
 Disconnect-AadrmService
+Connect-MsolService
 New-MsolServicePrincipal -DisplayName $servicePrincipalName
 
 # Copy the value of the generated symmetric key
