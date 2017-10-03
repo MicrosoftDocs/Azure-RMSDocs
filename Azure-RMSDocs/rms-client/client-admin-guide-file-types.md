@@ -189,11 +189,11 @@ To help prevent users from changing files that are critical for computer operati
 
 Any file that is password-protected cannot be natively protected by the Azure Information Protection client. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
 
-Additionally, the Azure Information Protection client cannot natively protect PDF files in either of the following circumstances:
+Additionally, the Azure Information Protection client for Windows cannot natively protect (or unprotect) PDF files in either of the following circumstances:
 
 - A PDF file that is form-based.
 
-- A protected PDF file that has a .PDF file name extension. 
+- A protected PDF file that has a .pdf file name extension. 
     
     The Azure Information Protection client can protect an unprotected PDF file, and reprotect a protected PDF file that has a .ppdf file name extension.
 
