@@ -105,7 +105,9 @@ After a document has been protected, users and administrators can use a document
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
-In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements, see [What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522)  sessions that are tagged for Azure Information Protection on the Ignite website. However, we recommend you start with the following sessions:
+In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+
+You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) the sessions that are tagged for Azure Information Protection on the Ignite website. However, we recommend that you start with the following sessions:
 
 - [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397)
 
