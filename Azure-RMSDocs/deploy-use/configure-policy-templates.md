@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,13 +64,13 @@ If you recently obtained a subscription for Azure Information Protection, your d
 
 - **Confidential \ All Employees** for read and modify permissions for the protected content.
 
-- **Highly Confidential \ All Employees** for read-only viewing for the protected content.
+- **Highly Confidential \ All Employees** for read-only permission for the protected content.
 
 If you obtained your Azure Information Protection subscription some time ago, or if you don't have an Azure Information Protection subscription but have an Office 365 subscription that includes Azure Rights Management, your default templates are created with the following names:
 
-- **\<organization name> - Confidential** for Read or Modify permissions for the protected content.
+- **\<organization name> - Confidential** for read or modify permissions for the protected content.
 
-- **\<organization name> - Confidential View Only**, for Read-only viewing for the protected content. 
+- **\<organization name> - Confidential View Only**, for read-only permission for the protected content. 
 
 You can rename (and reconfigure) these default templates when you use the Azure portal.
 
