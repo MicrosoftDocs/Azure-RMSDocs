@@ -2,11 +2,11 @@
 # required metadata
 
 title: Quick start tutorial step 1 - AIP
-description: Step 1 of an introduction tutorial to quickly try out Azure Information Protection - Activate the Azure Rights Management service.
+description: Step 1 of an introduction tutorial to quickly try out Azure Information Protection - Activate the protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,14 +25,14 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 ---
 
-# Step 1: Activate the Rights Management service
+# Step 1: Activate protection
  
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
 >Even if you have already activated the Azure Rights Management service for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2. 
 
-When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate this service, which include using Windows PowerShell, and using the admin portals.
+When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate protection, which include using Windows PowerShell, and using the admin portals.
 
 For this tutorial, we'll use the Azure portal, which is where you also configure labels for users. 
 
@@ -49,7 +49,7 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **RMS Settings**.  
+4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **Protection activation**. 
 
 5. You now see whether the Azure Rights Management service is activated for your tenant. 
     

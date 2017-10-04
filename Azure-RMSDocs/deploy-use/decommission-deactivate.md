@@ -2,11 +2,11 @@
 # required metadata
 
 title: Decommission & deactivate Azure RMS
-description: Information and instructions if you decide you no longer want to use this information protection service from Azure Information Protection.
+description: Information and instructions if you decide you no longer want to use the cloud-based protection service from Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Decommissioning and deactivating Azure Rights Management
+# Decommissioning and deactivating protection for Azure Information Protection
 
 >*Applies to: Azure Information Protection, Office 365*
 
@@ -43,16 +43,18 @@ When you have your Azure Information Protection tenant key, you can deploy Right
 |If this applies to you …|… do this:|
 |----------------------------|--------------|
 |You want all users to continue using Rights Management, but use an on-premises solution rather than using Azure Information Protection    →|Use the [Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) cmdlet to direct existing users to your on-premises deployment when they consume content protected after this change. Users will automatically use the AD RMS installation to consume the protected content.<br /><br />For users to consume content that was protected before this change, redirect your clients to the on-premises deployment by using the **LicensingRedirection** registry key for Office 2016 or Office 2013. For instructions, see the [service discovery section](../rms-client/client-deployment-notes.md) in the RMS client deployment notes, and the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|You want to stop using Rights Management technologies completely    →|Grant a designated administrator [super user rights](../deploy-use/configure-super-users.md) and give this person the [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256).<br /><br />This administrator can then use the tool to bulk-decrypt files in folders that were protected by the Azure Rights Management service. Files revert to being unprotected and can therefore be read without a Rights Management technology such as Azure Information Protection or AD RMS. Because this tool can be used with both the Azure Rights Management service from Azure Information Protection and AD RMS, you have the choice of decrypting files before or after you deactivate the Azure Rights Management service, or a combination.|
+|You want to stop using Rights Management technologies completely    →|Grant a designated administrator [super user rights](../deploy-use/configure-super-users.md) and install the [Azure Information Protection client](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) for this user.<br /><br />This administrator can then use the PowerShell module from this client to bulk-decrypt files in folders that were protected by the Azure Rights Management service. Files revert to being unprotected and can therefore be read without a Rights Management technology such as Azure Information Protection or AD RMS. Because this PowerShell module can be used with both the Azure Rights Management service from Azure Information Protection and AD RMS, you have the choice of decrypting files before or after you deactivate the Azure Rights Management service, or a combination.|
 |You are not able to identify all the files that were protected by the Azure Rights Management service from Azure Information Protection. Or, you want all users to be able to automatically read any protected files that were missed    →|Deploy a registry setting on all client computers by using the **LicensingRedirection** registry key for Office 2016 and Office 2013, as described in the [service discovery section](../rms-client/client-deployment-notes.md) in the RMS client deployment notes, and the **LicenseServerRedirection** registry key for Office 2010, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).<br /><br />Also deploy another registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|You want a controlled, manual recovery service for any files that were missed    →|Grant designated users in a data recovery group [super user rights](../deploy-use/configure-super-users.md) and give them the [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256) so that they can unprotect files when requested by standard users.<br /><br />On all computers, deploy the registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
+|You want a controlled, manual recovery service for any files that were missed    →|Grant designated users in a data recovery group [super user rights](../deploy-use/configure-super-users.md) and install the [Azure Information Protection client](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) for these users so that they can unprotect files when this action is requested by standard users.<br /><br />On all computers, deploy the registry setting to prevent users from protecting new files by setting **DisableCreation** to **1**, as described in [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
 For more information about the procedures in this table, see the following resources:
 
--   For information about AD RMS and deployment references, see [Active Directory Rights Management Services Overview](https://technet.microsoft.com/library/hh831364.aspx).
+- For information about AD RMS and deployment references, see [Active Directory Rights Management Services Overview](https://technet.microsoft.com/library/hh831364.aspx).
 
--   For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
+- For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
 
--   To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+
+- To use PowerShell with the Azure Information Protection client, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 When you are ready to deactivate the Azure Rights Management service for your organization, use the following instructions.
 
@@ -80,9 +82,9 @@ You should now see **Rights Management is not activated** and the option to acti
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. On the initial **Azure Information Protection** blade, select **RMS Settings**. 
+2. On the initial **Azure Information Protection** blade, select **Protection activation**. 
 
-3.  On the **Azure Information Protection - RMS Settings** blade, select **Deactivate**. Select **Yes** to confirm your choice.
+3.  On the **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 

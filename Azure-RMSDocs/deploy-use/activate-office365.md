@@ -6,7 +6,7 @@ description: Activation instructions for the Azure Rights Management service whe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use these instructions if you have access to the Azure Rights Management service from the Office 365 admin center. For example, you have a subscription for Office 365 E3 or Office 365 E5.
 
-1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365 with your work or school account](https://portal.office.com/) that has the global administrator role for your Office 365 deployment.
+1. After you have signed up for an Office 365 plan that includes Rights Management, [sign in to Office 365](https://portal.office.com/) with your work or school account that has the global administrator role for your Office 365 deployment.
 
 2. If the Office 365 admin center does not automatically display, select the app launcher icon in the upper-left and choose **Admin**. The **Admin** tile appears only to Office 365 administrators.
 
@@ -42,7 +42,7 @@ Use these instructions if you have access to the Azure Rights Management service
 
     - To navigate: **Settings** > **Services & add-ins** > **Microsoft Azure Information Protection** > **Manage Microsoft Azure Information Protection settings**
 
-    - To search: In the search box on the **Home** page, type **Information Protection**, and from the search results, click **Microsoft Azure Information Protection**, and then **Manage Microsoft Azure Information Protection settings**. 
+    - To search: In the search box on the **Home** page, type **rights management**, and from the search results, click **Azure rights management settings**, and then **Manage Microsoft Azure Information Protection settings**. 
     
     > [!NOTE]
     >If you navigate to this option, depending on your display, you might need to scroll to see this option. However, if it is not listed on the page and it is not returned in the search results, it might be because your service plan does not include the Azure Rights Management service for Azure Information Protection.

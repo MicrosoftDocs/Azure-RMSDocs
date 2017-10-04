@@ -45,7 +45,7 @@ To complete this tutorial, you need the following:
   > [!TIP] 
   > If you need to apply for a subscription, do this in advance because this process can sometimes take a while to complete.
 
-- A global administrator account or security administrator account to sign in to the Azure portal to configure the Azure Information Protection policy. This account must also have an email address and a working email service, such as Exchange Online.
+- A global administrator account or security administrator account to sign in to the Azure portal to activate protection and configure the Azure Information Protection policy. This account must also have an email address and a working email service, such as Exchange Online.
 
 - A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010 with Service Pack 2. 
     

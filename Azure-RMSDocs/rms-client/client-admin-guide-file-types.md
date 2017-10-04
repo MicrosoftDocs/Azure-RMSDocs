@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -89,11 +89,7 @@ There are maximum file sizes that the Azure Information Protection client suppor
     |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
     |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
 
-- **For all other files**:
-    
-    - For the general availability version of the client: - 1 GB
-    
-    - For the preview client (minimum version of **1.8.41.0**): Limited only by available disk space and memory
+- **For all other files**: Limited only by available disk space and memory.
 
 ### Supported file types for classification and protection
 
@@ -188,6 +184,22 @@ To help prevent users from changing files that are critical for computer operati
     - Program Files (\Program Files and \Program Files (x86))
     - \ProgramData 
     - \AppData (for all users)
+
+### Files that cannot be protected by default
+
+Any file that is password-protected cannot be natively protected by the Azure Information Protection client. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
+
+Additionally, the Azure Information Protection client for Windows cannot natively protect (or unprotect) PDF files in either of the following circumstances:
+
+- A PDF file that is form-based.
+
+- A protected PDF file that has a .pdf file name extension. 
+    
+    The Azure Information Protection client can protect an unprotected PDF file, and reprotect a protected PDF file that has a .ppdf file name extension.
+
+As a workaround for these files, you could generically protect them by following the instructions in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section. However, this method changes the protection level for all files that have a .pdf file name extension, at the computer level. You cannot define generic protection for only the files that meet the listed criteria.
+
+If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again.
 
 
 ## Next steps
