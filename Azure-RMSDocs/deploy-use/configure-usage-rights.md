@@ -85,8 +85,8 @@ The following table lists the usage rights that are included with the default te
 
 |Display name|Usage rights included|
 |----------------|---------------------------------|
-|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|**Templates created after September 2017**:<br /><br /> View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit<br /><br />**Templates created before September 2017**: View, Open, Read|
-|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|**Templates created after September 2017**: View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control<br /><br />**Templates created before September 2017**: View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
+|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|**Templates created October 5, 2017 to current date**:<br /><br /> View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit<br /><br />**Templates created before October 5, 2017**: <br /><br />View, Open, Read|
+|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|**Templates created October 5, 2017 to current date**: <br /><br />View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control<br /><br />**Templates created before October 5, 2017**: <br /><br />View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
 
 
 ## Do Not Forward option for emails
