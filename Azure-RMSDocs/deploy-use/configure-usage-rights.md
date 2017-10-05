@@ -81,13 +81,14 @@ Not included in the Azure Information Protection client for Windows. In this cli
 
 
 ## Rights included in the default templates
-The following table lists the usage rights that are included with the default templates. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
+The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
 
-|Display name|Usage rights included|
-|----------------|---------------------------------|
-|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|**Templates created October 5, 2017 to current date**:<br /><br /> View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit<br /><br />**Templates created before October 5, 2017**: <br /><br />View, Open, Read|
-|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|**Templates created October 5, 2017 to current date**: <br /><br />View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control<br /><br />**Templates created before October 5, 2017**: <br /><br />View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
+These default templates are created when your subscription was purchased, and the names and usage rights can be [changed in the Azure portal](configure-policy-templates.md). 
 
+|Display name of template|Usage rights October 5, 2017 to current date|Usage rights before October 5, 2017|
+|----------------|--------------------|----------|
+|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
+|\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
 
 ## Do Not Forward option for emails
 
