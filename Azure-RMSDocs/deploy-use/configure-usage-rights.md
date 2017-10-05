@@ -83,7 +83,7 @@ Not included in the Azure Information Protection client for Windows. In this cli
 ## Rights included in the default templates
 The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
 
-These default templates are created when your subscription was purchased, and the names and usage rights can be [changed in the Azure portal](configure-policy-templates.md). 
+These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal. 
 
 |Display name of template|Usage rights October 5, 2017 to current date|Usage rights before October 5, 2017|
 |----------------|--------------------|----------|
