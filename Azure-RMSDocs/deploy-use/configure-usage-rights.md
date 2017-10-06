@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,7 +85,7 @@ The following table lists the usage rights that are included when the default te
 
 These default templates are created when your subscription was purchased, and the names and usage rights can be [changed](configure-policy-templates.md) in the Azure portal. 
 
-|Display name of template|Usage rights October 5, 2017 to current date|Usage rights before October 5, 2017|
+|Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
 |----------------|--------------------|----------|
 |\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
 |\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; Allow Macros; Forward; Reply; Reply All|
