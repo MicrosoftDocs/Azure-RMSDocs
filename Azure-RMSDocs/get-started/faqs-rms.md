@@ -99,7 +99,7 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document. 
 
-- When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Only if you cannot wait for the use license to expire must you reprotect the document, which effectively creates a new version of the document and a new use license for the user.
+- When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
 If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right. 
 
