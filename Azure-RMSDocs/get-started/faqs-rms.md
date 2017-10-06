@@ -93,7 +93,7 @@ Custom templates have moved to the Azure portal where you can continue to manage
 
 For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-## I've protected a document and now want to grant addition usage rights or add users—do I need to reprotect the document?
+## I've protected a document and now want to change the usage rights or users—do I need to reprotect the document?
 
 If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save and publish these changes:
 
