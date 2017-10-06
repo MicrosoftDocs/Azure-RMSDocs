@@ -139,15 +139,21 @@ Note that the Rights Management owner is independent from the Windows file syste
 
 ## Rights Management use license
 
-When a user opens a document or email that has been protected by Azure Rights Management, a Rights Management use license is granted to that user. This use license is a certificate that contains the user's usage rights for the document or email message, and the encryption key that was used to encrypt the content. The use license also contains an expiry date if this has been set in addition to the usage rights, and how long the use license is valid.
+When a user opens a document or email that has been protected by Azure Rights Management, a Rights Management use license for that content is granted to the user. This use license is a certificate that contains the user's usage rights for the document or email message, and the encryption key that was used to encrypt the content. The use license also contains an expiry date if this has been set, and how long the use license is valid.
 
 For the duration of the use license, the user is not re-authenticated or re-authorized. This lets the user continue to open the protected document or email without an Internet connection. When the use license validity period expires, the next time the user accesses the protected document or email, the user must be re-authenticated and re-authorized. 
 
-When you use a label or a template to define your protection settings (users and their usage rights), you can change these settings in your label or template without having to reprotect the content. If the user has already accessed the content, the changes take effect after their use license has expired. However, if you use custom permissions (also known as an ad-hoc rights policy) to define protection settings, and need to change these settings after protecting a document or email, you must reprotect that content for the new permissions to be effective.
+When documents and email messages are protected by using a label or a template that defines the protection settings, you can change these settings in your label or template without having to reprotect the content. If the user has already accessed the content, the changes take effect after their use license has expired. However, when users apply custom permissions (also known as an ad-hoc rights policy) and these permissions need to change after the document or email is protected, that content must be protected again with the new permissions. Custom permissions for an email message are implemented with the Do Not Forward option.
 
-The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime). When you configure a label or template in the Azure portal, the use license validity period takes its value from the **Allow offline access setting**. When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
+The default use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime). You can configure a more restrictive setting for when protection is applied by using a label or template:
 
-For more information and guidance to configure this setting in the Azure portal, see the table in step 9 from [How to configure a label for Rights Management protection](configure-policy-protection.md).
+- When you configure a label or template in the Azure portal, the use license validity period takes its value from the **Allow offline access setting**. 
+    
+    For more information and guidance to configure this setting in the Azure portal, see the table in step 9 from [How to configure a label for Rights Management protection](configure-policy-protection.md).
+
+- When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
+    
+    For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
 
 
 ## See Also
