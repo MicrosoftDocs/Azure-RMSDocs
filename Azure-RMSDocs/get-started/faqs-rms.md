@@ -101,6 +101,8 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
+Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be small delay before the changes take effect because group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) by the Azure Rights Management service.
+
 If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right. 
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
