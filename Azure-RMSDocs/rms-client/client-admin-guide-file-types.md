@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ Classification-only is supported for the following file types. Additional file t
 
 - **Adobe Portable Document Format**: .pdf​
 
-- **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
+- **Microsoft Visio**: .vsd, .vdw, .vst​
 
 - **Microsoft Project**: .mpp, .mpt​
 
@@ -116,13 +116,15 @@ These file types are identified separately because when they are natively protec
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. 
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
 |File types supported by Office|File types supported by Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdx<br /><br />.vsdm<br /><br />.vssx<br /><br />.vssm<br /><br />.vstx<br /><br />.vstm<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### Changing the default protection level of files
 You can change how the Azure Information Protection client protects files by editing the registry. For example, you can force files that support native protection to be generically protected by the Azure Information Protection client.
