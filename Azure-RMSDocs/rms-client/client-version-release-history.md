@@ -54,7 +54,7 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
 
-- Native protection for the following Visio file types: .vsdx, .vsdm, .vssx, .vssm, .vstx, .vstm
+- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     
