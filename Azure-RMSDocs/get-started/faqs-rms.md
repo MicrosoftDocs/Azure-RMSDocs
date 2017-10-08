@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -93,7 +93,7 @@ Custom templates have moved to the Azure portal where you can continue to manage
 
 For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-## I've protected a document and now want to change the usage rights or users—do I need to reprotect the document?
+## I've protected a document and now want to change the usage rights or add users—do I need to reprotect the document?
 
 If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save and publish these changes:
 
@@ -101,7 +101,7 @@ If the document was protected by using a label or template, there's no need to r
 
 - When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
-Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be small delay before the changes take effect because group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) by the Azure Rights Management service.
+Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) by the Azure Rights Management service.
 
 If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right. 
 
@@ -146,7 +146,7 @@ The recipient will see an option to sign in to their Gmail, Yahoo, or Microsoft 
 
 To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
-For more information about the new capabilities that support all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
+For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
