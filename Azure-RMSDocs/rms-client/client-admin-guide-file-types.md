@@ -55,7 +55,7 @@ Classification-only is supported for the following file types. Additional file t
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
 - **Microsoft XPS**: .xps .oxps​
 
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
+- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff​
 
 - **Autodesk Design Review 2013**: .dwfx​
 
