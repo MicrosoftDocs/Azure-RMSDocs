@@ -42,17 +42,18 @@ Use the following information to check which file types are supported, the diffe
 
 ## File types supported for classification only
 
-Classification-only is supported for the following file types. Additional file types support classification when they are also protected (see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
+The following file types can be classified even when they are not protected.
 
 - **Adobe Portable Document Format**: .pdf​
 
-- **Microsoft Visio**: .vsd, .vdw, .vst​
+- **Microsoft Visio**: vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
 
 - **Microsoft Project**: .mpp, .mpt​
 
 - **Microsoft Publisher**: .pub​
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
+
 - **Microsoft XPS**: .xps .oxps​
 
 - **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff​
@@ -62,6 +63,12 @@ Classification-only is supported for the following file types. Additional file t
 - **Adobe Photoshop**: .psd​
 
 - **Digital Negative**: .dng
+
+Additional file types support classification when they are also protected (see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
+
+For example, in the current [default policy](../deploy-use/configure-default-policy.md), the **General** label applies classification and does not apply protection. You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt. 
+
+Also in the current default policy, the **Confidential \ All Employees** applies classification and protection. You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
 
 ## File types supported for protection
 
