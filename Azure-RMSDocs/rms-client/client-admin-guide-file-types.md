@@ -64,7 +64,7 @@ The following file types can be classified even when they are not protected.
 
 - **Digital Negative**: .dng
 
-Additional file types support classification when they are also protected (see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
+Additional file types support classification when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
 
 For example, in the current [default policy](../deploy-use/configure-default-policy.md), the **General** label applies classification and does not apply protection. You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt. 
 
