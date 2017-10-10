@@ -114,6 +114,8 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 - [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy](https://myignite.microsoft.com/videos/53453)
 
+- [Encryption key management strategies for compliance](https://myignite.microsoft.com/videos/53455)
+
 - [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities](https://myignite.microsoft.com/videos/53230)
 
 
