@@ -46,7 +46,7 @@ The following file types can be classified even when they are not protected.
 
 - **Adobe Portable Document Format**: .pdf​
 
-- **Microsoft Visio**: vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
+- **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst​
 
 - **Microsoft Project**: .mpp, .mpt​
 
