@@ -6,7 +6,7 @@ description: Understand the restrictions when you use customer-managed keys (kno
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,15 +58,7 @@ For more information about Azure Key Vault, see [What is Azure Key Vault?](/azur
 
 BYOK and usage logging work seamlessly with every application that integrates with the Azure Rights Management service that is used by Azure Information Protection. This includes cloud services such as SharePoint Online, on-premises servers that run Exchange and SharePoint that use the Azure Rights Management service by using the RMS connector, and client applications such as Office 2016 and Office 2013. You will get key usage logs regardless of which application makes requests to the Azure Rights Management service.
 
-There is one exception: **If you enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS** you cannot use BYOK with full Exchange functionality until your tenant is migrated by Microsoft. Customers who haven't yet enabled Exchange Online for Azure Rights Management can use BYOK without restrictions.
-
->[!TIP]
->If you have Exchange Online and you're not sure whether you can use BYOK for your Azure Information Protection tenant key:
->
->1. Using Exchange Online PowerShell, run `Get-IRMConfiguration`. 
->2. If there is no value displayed for the **Select LicensingLocation** parameter, you can use BYOK with Exchange Online without any restrictions.
-
-Over the next few months, Microsoft will migrate Office 365 tenants so that they can then use BYOK with Exchange Online.
+If you have previously enabled Exchange Online IRM by importing your trusted publishing domain (TPD) from Azure RMS, follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection.
 
 ## Next steps
 

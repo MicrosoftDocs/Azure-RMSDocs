@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -118,8 +118,6 @@ To confirm the AD RMS cryptographic mode:
 - For Windows Server 2008 R2: Check whether the [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) hotfix is installed. If it is not, your AD RMS cluster is running in Cryptographic Mode 1.
 
 ### Migration limitations
-
--   Although the migration process supports migrating your server licensing certificate (SLC) key to a hardware security module (HSM) for Azure Information Protection, Exchange Online does not currently support this configuration for the Rights Management service that is used by Azure Information Protection. If you want full IRM functionality with Exchange Online after you migrate to Azure Information Protection, your Azure Information Protection tenant key must be [managed by Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). Alternatively, you can run IRM with reduced functionality in Exchange Online when your tenant key for Azure Information Protection is managed by you (BYOK). For more information about using Exchange Online with the Azure Rights Management service, see [Step 8. Configure IRM integration for Exchange Online](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online) from these migration instructions.
 
 -   If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
