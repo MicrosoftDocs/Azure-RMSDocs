@@ -97,6 +97,8 @@ After a document has been protected, users and administrators can use a document
 
 - Download the client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
+- Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
 - FAQs: [Frequently asked questions for Azure Information Protection](../get-started/faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
@@ -111,6 +113,8 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 - [Accelerate Azure information protection deployment and adoption](https://myignite.microsoft.com/videos/53454)
 
 - [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy](https://myignite.microsoft.com/videos/53453)
+
+- [Encryption key management strategies for compliance](https://myignite.microsoft.com/videos/53455)
 
 - [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities](https://myignite.microsoft.com/videos/53230)
 
