@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,9 +56,9 @@ For more information about HYOK and to make sure that you understand its limitat
 
 ## Can I now use BYOK with Exchange Online?
 
-If you have not already enabled Exchange Online for Azure Rights Management, you can now use BYOK. For more information, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md##exchange-online-irm-configuration).
+Yes, you can now use BYOK with Exchange Online when you follow the instructions in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). These instructions enable the new capabilities in Exchange Online that support using BYOK for Azure Information Protection, as well as the new Office 365 Message Encryption.
 
-If you have previously enabled Exchange Online for Azure Rights Management, wait for Microsoft to migrate your tenant. For more information, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
+For more information about this change, see the blog announcement: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801)
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
@@ -93,6 +93,18 @@ Custom templates have moved to the Azure portal where you can continue to manage
 
 For more information about templates in the Azure portal, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
+## I've protected a document and now want to change the usage rights or add users—do I need to reprotect the document?
+
+If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save and publish these changes:
+
+- When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document. 
+
+- When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
+
+Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) by the Azure Rights Management service.
+
+If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right. 
+
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
 
@@ -115,7 +127,7 @@ By default, the Azure Rights Management service uses an Azure Active Directory a
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
-If you email a protected document to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
+If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
 
 ## Can I add external users (people from outside my company) to custom templates?
 
@@ -123,16 +135,18 @@ Yes. When you convert a template to a label in the Azure portal, you can configu
 
 For more information about converting custom templates to labels so that you can then easily add external users, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-For more information about converting custom templates to labels, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
-
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-When you use Exchange Online and the Azure Rights Management service, you just send the email. The recipient will see an option to sign in to their Gmail or Hotmail account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
+When you use Exchange Online and the Azure Rights Management service, you just send the email as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook Do Not Forward option, select an Azure Information Protection label that applies protection from Azure Rights Management, or the protection can be applied by Exchange Online transport rules.
 
-To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and message encryption. For more information, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+The recipient will see an option to sign in to their Gmail, Yahoo, or Microsoft account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
+
+To support this scenario, Exchange Online must be enabled for the Azure Rights Management service and the new capabilities in Office 365 Message Encryption. For more information about this configuration, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+For more information about the new capabilities that include supporting all email accounts on all devices, see the following blog post: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## What devices and which file types are supported by Azure RMS?
 For a list of devices that support the Azure Rights Management service, see [Client devices that support Azure Rights Management data protection](../get-started/requirements-client-devices.md). Because not all supported devices can currently support all Rights Management capabilities, be sure to also check the table for [RMS-enlighted applications](../get-started/requirements-applications.md#rms-enlightened-applications).
@@ -181,15 +195,13 @@ Use the [super user feature](../deploy-use/configure-super-users.md), which gran
 
 ## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
 
-Yes. This message reflects the use license for that specific file. A use license is a per-document certificate that is granted to a user who opens a protected file or email message. This certificate contains that user's rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document's policy. When the validity period of the use license is expired and a user tries to open the file or email message, their user credentials must be resubmitted to the Azure Rights Management service. 
+Yes. This message reflects the [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) for that specific file. 
 
 If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user continues to have access to the document for the duration of the use license. When the use license expires, the user must reauthenticate, at which point the user is denied access because the document is now revoked.
 
 The user who protected the document, the [Rights Management issuer](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) is exempt from this revocation and is always able to access their documents. 
 
-The default value for the use license validity period for a tenant is 30 days and you can configure this value by using the PowerShell cmdlet, **Set-AadrmMaxUseLicenseValidityTime**. This setting can be overridden by a more restrictive setting in a template. 
-
-For more information and examples of how the use license works, see the detailed description for [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime).
+The default value for the use license validity period for a tenant is 30 days and this setting can be overridden by a more restrictive setting in a label or template. For more information about the use license and how to configure it, see the [Rights Management use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) documentation.
 
 ## Can Rights Management prevent screen captures?
 By not granting the **Copy** [usage right](../deploy-use/configure-usage-rights.md), Rights Management can prevent screen captures from many of the commonly used screen capture tools on Windows platforms (Windows 7, Windows 8.1, Windows 10, Windows Phone) and Android. However, iOS and Mac devices do not allow any app to prevent screen captures, and browsers (for example, when used with Outlook Web App and Office Online) also cannot prevent screen captures.

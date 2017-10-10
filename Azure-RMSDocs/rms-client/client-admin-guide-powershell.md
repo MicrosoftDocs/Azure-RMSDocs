@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,7 +41,7 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|For a shared folder, identify all files with a specific label.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 
 In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview), uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
@@ -126,6 +126,7 @@ $newServicePrincipalName="<new service principal name>"
 Connect-AadrmService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
 Disconnect-AadrmService
+Connect-MsolService
 New-MsolServicePrincipal -DisplayName $servicePrincipalName
 
 # Copy the value of the generated symmetric key
