@@ -217,6 +217,8 @@ Error **912**
 
 **Unknown error has occurred.**
 
+More information is logged in the detailed report that is stored in %localappdata%\Microsoft\MSIP\Scanner\Reports\DetailedReport_YYYY_MM_DD_HH_MM.csv.
+
 Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if this event continues to be logged. 
 
 ----
