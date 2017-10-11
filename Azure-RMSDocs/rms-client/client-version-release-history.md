@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,6 +53,8 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 - Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../deploy-use/configure-policy-classification.md).
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
+
+- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     

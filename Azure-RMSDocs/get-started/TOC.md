@@ -11,7 +11,7 @@
 ## [Information and support](information-support.md)
 ## [Terminology](terminology.md)
 ## [Quick start tutorial](infoprotect-quick-start-tutorial.md)
-### [Step 1: Activate the service](infoprotect-tutorial-step1.md)
+### [Step 1: Activate protection](infoprotect-tutorial-step1.md)
 ### [Step 2: Configure and publish policy](infoprotect-tutorial-step2.md)
 ### [Step 3: Install the client](infoprotect-tutorial-step3.md)
 ### [Step 4: See it in action - labeling, classification, protection](infoprotect-tutorial-step4.md)

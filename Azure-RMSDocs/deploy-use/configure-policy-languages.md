@@ -30,7 +30,7 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 >*Applies to: Azure Information Protection*
 
 >[!NOTE]
->This feature is currently in preview, to be used in conjunction with the current **preview** version of the Azure Information Protection client that you can download from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+>This feature is currently in preview.
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
