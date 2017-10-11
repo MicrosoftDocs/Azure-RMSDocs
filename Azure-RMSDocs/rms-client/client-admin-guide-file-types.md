@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,7 +42,7 @@ Use the following information to check which file types are supported, the diffe
 
 ## File types supported for classification only
 
-Classification-only is supported for the following file types. Additional file types support classification when they are also protected (see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
+The following file types can be classified even when they are not protected.
 
 - **Adobe Portable Document Format**: .pdf​
 
@@ -53,15 +53,22 @@ Classification-only is supported for the following file types. Additional file t
 - **Microsoft Publisher**: .pub​
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot​
+
 - **Microsoft XPS**: .xps .oxps​
 
-- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff​
+- **Images**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi. png, .tif, .tiff​
 
 - **Autodesk Design Review 2013**: .dwfx​
 
 - **Adobe Photoshop**: .psd​
 
 - **Digital Negative**: .dng
+
+Additional file types support classification when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
+
+For example, in the current [default policy](../deploy-use/configure-policy-default.md), the **General** label applies classification and does not apply protection. You could apply the **General** label to a file named sales.pdf but you could not apply this label to a file named sales.txt. 
+
+Also in the current default policy, the **Confidential \ All Employees** applies classification and protection. You could apply this label to a file named sales.pdf and a file named sales.txt. You could also apply just protection to these files, without classification.
 
 ## File types supported for protection
 
@@ -116,13 +123,15 @@ These file types are identified separately because when they are natively protec
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. 
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
 |File types supported by Office|File types supported by Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### Changing the default protection level of files
 You can change how the Azure Information Protection client protects files by editing the registry. For example, you can force files that support native protection to be generically protected by the Azure Information Protection client.
