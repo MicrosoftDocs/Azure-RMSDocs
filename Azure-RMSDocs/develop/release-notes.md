@@ -1,6 +1,6 @@
 ﻿---
 title: What's new and release notes
-description: Outlines important changes and features in this new version of the RMS SDK.
+description: Outlines important changes and features in this and previous versions.
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin

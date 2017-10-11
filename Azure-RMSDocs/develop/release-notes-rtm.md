@@ -1,8 +1,8 @@
 ﻿---
 # required metadata
 
-title: Release notes | Azure RMS
-description:
+title: Release notes
+description: SDK updates by revision and other developer information.
 keywords:
 author: bruceperlerms
 ms.author: bruceper
@@ -28,6 +28,11 @@ ms.suite: ems
 # Release notes
 
 This topic contains important information about this and previous releases of the RMS SDK 2.1.
+
+## October 2017 - update
+
+- Addition of two new APIs for environment inintialization and uninitialization. For details, see [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) and [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Visio file types are now supported. For more details, see [File API configuration](file-api-configuration.md).
 
 ## February 2016 - SDK documentation update
 
