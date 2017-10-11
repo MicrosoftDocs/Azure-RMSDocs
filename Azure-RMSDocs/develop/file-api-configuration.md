@@ -33,7 +33,7 @@ The File API provides two kinds of protection; native protection and PFile prote
 -   **Native protection** - the file is protected to an AD RMS format based on its MIME type (file name extension).
 -   **PFile protection** - the file is protected to the AD RMS Protected File (PFile) format.
 
-For more information about supported file formats, see **File API File Support Details** in this topic.
+For more information about supported file formats, see **File API File Support Details** in this article.
 
 ## Key/Key Value types and descriptions
 
@@ -55,7 +55,7 @@ The following sections describe the keys and key values that control encryption.
 - To specify files that do not have an extension, use '.'
 - Do not specify the '.' character when specifying the key for a specific file extension; for example, use `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` to specify settings for .txt files. (Do not use `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Set the **Encryption** value in the key to specify protection behavior. If the **Encryption** value is not set, the default behavior for the file type is observed.
+To specify the protection behavior, set the **Encryption** value in the key. If the **Encryption** value is not set, the default behavior for the file type is observed.
 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
@@ -69,7 +69,7 @@ Set the **Encryption** value in the key to specify protection behavior. If the *
 > [!Note]
 > This setting has no bearing on decryption. Any encrypted file, whether encrypted using Native or Pfile protection, can be decrypted, as long as the user has the **EXTRACT** right.
 
-- **Native**:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p*zzz*, where *zzz* is the original file extension. For example, .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied is included below.
+- **Native**:  Native encryption is used. For Office files the encrypted file will have the same extension as the original file. For example, a file with the .docx file extension will be encrypted to a file with an extension of .docx. For other files that can have native protection applied, the file will be encrypted to a file with an extension of the format p*zzz*, where *zzz* is the original file extension. For example, .txt files will be encrypted to a file with an extension of .ptxt. A list of file extensions that can have native protection applied follows.
 
 - **Pfile**: PFile encryption is used. The encrypted file will have .pfile appended to the original extension. For example, after encryption, a .txt file, will have an extension of .txt.pfile.
 
@@ -95,7 +95,7 @@ Native support can be added for any file type (extension). For instance, any ext
 
 -   File extensions: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, xltm, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx, and vstm. 
 -   Protection type = Native (default): sample.docx is encrypted to sample.docx
--   Protection type = Pfile: For Office files have the same effect as Native.
+-   Protection type = Pfile: For Office files, has the same effect as Native.
 -   Off: Disables encryption.
 
 **PDF files**
@@ -149,7 +149,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## Related topics
+## Related articles
 
 - [Developer notes](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
