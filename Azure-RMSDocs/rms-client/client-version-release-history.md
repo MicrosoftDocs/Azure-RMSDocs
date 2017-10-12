@@ -156,7 +156,7 @@ Microsoft .NET Framework
 
 - A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
     
-    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and the section of multiple files.
+    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and the selection of multiple files.
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
     - Client usage logs that record information such as which label was applied, how, and by whom.

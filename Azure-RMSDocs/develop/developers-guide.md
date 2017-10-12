@@ -4,7 +4,7 @@ description: Developers can use Azure Information Protection to protect and mana
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
@@ -14,13 +14,13 @@ ms.reviewer: kartikk
 ---
 # Azure Information Protection Developer's Guide
 
-This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service. The intent of this guide is allow developers who want to leverage the rights management system to build different types of applications for a range of supported platforms.
+This guide will orient you to tools for extending and integrating with Azure Information Protection’s rights management service.
 
->The current Azure Information Protection SDK has the rights management component and the classification and labelling are under development.
+>The current Azure Information Protection SDK has the rights management component. A classification and labeling component are under development.
 
 ## Service Applications
 
-Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud based business solution. Data Loss Prevention (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
+Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud-based business solution. Data Loss Prevention (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
 
 - [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
 - [C# Managed API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
@@ -34,15 +34,12 @@ Service applications provide capabilities to protect information when exporting 
 
 ## PowerShell guides
 
-These scripts, generally used by Azure Rights management administrators, are useful for developing and testing your service applications.
-
-- [Azure Rights Management Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
-- [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type
+Used by Azure Rights management administrators, PowerShell cmdlets are also useful for developing and testing your service applications. For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
 
 ## User applications
 
 User applications can be built with either the RMS SDK 2.1 or the RMS SDK 4.2.
-The 4.2 version is REST client based with operating system specific APIs for several popular OSs; iOS/OSX, Android, Linux, Windows. The 2.1 version is used for building native Windows based applications.
+The 4.2 version is REST client based with operating system specific APIs for several popular OSs; iOS/OSX, Android, Linux, Windows. The 2.1 version is used for building native Windows-based applications.
 
 ### User application development guides
 
@@ -100,11 +97,11 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 [Introduction to Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
-These videos are from the Micorsoft 2016 Ignite conference
+These videos are from the Microsoft 2016 Ignite conference
 
 - [Email security inside your org](https://myignite.microsoft.com/videos/2787)
 - [Adopt a comprehensive identity-driven solution for protecting and sharing data securely](https://myignite.microsoft.com/videos/2784)
-- [Learn how classification, labeling and protection delivers persistent data protection](https://myignite.microsoft.com/videos/2786)
+- [Learn how classification, labeling and, protection delivers persistent data protection](https://myignite.microsoft.com/videos/2786)
 
 ## Other resources
 
@@ -134,7 +131,7 @@ These videos are from the Micorsoft 2016 Ignite conference
 
 ### See also
 
-- [Developer terminlogy](terms.md)
+- [Developer terminology](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
