@@ -6,7 +6,7 @@ description: Phase 1 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/27/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,13 +77,13 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
     Then configure this group for onboarding controls, substituting your group object ID for the one in this example, and enter **Y** to confirm when you are prompted:
 
-		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501"
+		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
 
 3. [Download the following file](https://go.microsoft.com/fwlink/?LinkId=524619) that contains client migration scripts:
     
-    **ClientMigration.zip**
+    **Migration-Scripts.zip**
     
-4. Extract the files and follow the instructions in **PrepareClient.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
+4. Extract the files and follow the instructions in **Prepare-Client.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
     
     To locate this name: From the Active Directory Rights Management Services console, click the cluster name. From the **Cluster Details** information, copy the server name from the **Licensing** value from the extranet cluster URLs section. For example: **rmscluster.contoso.com**.
 
