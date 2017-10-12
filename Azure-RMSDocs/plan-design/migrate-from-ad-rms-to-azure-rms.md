@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -188,12 +188,9 @@ The migration steps can be divided into five phases that can be done at differen
 
 [**PHASE 3: CLIENT-SIDE CONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
-- **Step 7: Reconfigure clients to use Azure Information Protection**
+- **Step 7: Reconfigure Windows computers to use Azure Information Protection**
 
     Existing Windows computers must be reconfigured to use the Azure Rights Management service instead of AD RMS. This step applies to computers in your organization, and to computers in partner organizations if you have collaborated with them while you were running AD RMS.
-
-    In addition, if you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS.
-
 
 [**PHASE 4: SUPPORTING SERVICES CONFIGURATION**](migrate-from-ad-rms-phase4.md)
 
@@ -210,13 +207,15 @@ The migration steps can be divided into five phases that can be done at differen
 
 - **Step 10: Deprovision AD RMS**
 
-    When you have confirmed that all clients are using the Azure Rights Management service and are no longer accessing your AD RMS servers, you can deprovision your AD RMS deployment.
+    When you have confirmed that all Windows computers are using the Azure Rights Management service and are no longer accessing your AD RMS servers, you can deprovision your AD RMS deployment.
 
-- **Step 11: Remove onboarding controls**
+- **Step 11: Reconfigure mobile device clients and Mac computers, and remove onboarding controls**
 
+    If you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
+    
     The onboarding controls that you configured during the preparation phase are no longer needed.
 
-- **Step 12: rekey your Azure Information Protection tenant key**
+- **Step 12: Rekey your Azure Information Protection tenant key**
 
     This step is recommended if you were not running in Cryptographic Mode 2 before the migration.
 
