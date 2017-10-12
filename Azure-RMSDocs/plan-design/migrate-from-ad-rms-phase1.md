@@ -81,7 +81,7 @@ For most migrations, it is not practical to migrate all clients at once, so you 
 
 3. [Download the following file](https://go.microsoft.com/fwlink/?LinkId=524619) that contains client migration scripts:
     
-    **ClientMigration.zip**
+    **Migration-Scripts.zip**
     
 4. Extract the files and follow the instructions in **Prepare-Client.cmd** so that it contains the server name for your AD RMS cluster extranet licensing URL. 
     
