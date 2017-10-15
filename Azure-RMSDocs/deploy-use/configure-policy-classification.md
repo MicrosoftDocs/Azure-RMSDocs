@@ -33,12 +33,11 @@ When you configure conditions for a label, you can automatically assign a label 
 
 - Automatic classification applies to Word, Excel, and PowerPoint when files are saved, and apply to Outlook when emails are sent. You cannot use automatic classification for files that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information scanner with the OverrideLabel parameter set to on.
     
-    If you have the current preview version of the Azure Information Protection client: Automatic classification runs continuously in the background, instead of running when these documents are saved or an email is sent.
+    If you have the current preview version of the Azure Information Protection client: For documents, automatic classification runs [continuously in the background](#more-information-about-background-checking), instead of running when these documents are saved. There is no change to how automatic classification works for emails.
 
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved. You can use recommended classification for files that were previously labeled, with or without a higher classification.
     
-    If you have the current preview version of the Azure Information Protection client: Recommended classification runs continuously in the background, instead of running when these documents are saved. Because of this background operation, recommended classification also works when users are composing an email message.
-
+    If you have the current preview version of the Azure Information Protection client: For documents, recommended classification runs [continuously in the background](#more-information-about-background-checking), instead of running when these documents are saved.
 
 When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see step 5 in the [following procedure](#to-configure-recommended-or-automatic-classification-for-a-label).
 
@@ -97,6 +96,12 @@ In this example, the user can click **Change now** to apply the recommended labe
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
 8. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
+
+### More information about background checking
+
+If you have the current preview version of the Azure Information Protection client, for documents, this client continuously checks the content for matches. This checking is not real-time but runs periodically as a background task if the document is modified. 
+
+To help preserve battery life, the checking process runs less frequently when a laptop runs on battery rather than plugged in.
 
 ## Next steps
 
