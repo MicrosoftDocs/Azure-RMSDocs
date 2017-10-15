@@ -35,7 +35,7 @@ When you configure conditions for a label, you can automatically assign a label 
     
     If you have the current preview version of the Azure Information Protection client: For documents, automatic classification runs [continuously in the background](#more-information-about-background-checking), instead of running when these documents are saved. There is no change to how automatic classification works for emails.
 
-- Recommended classification applies to Word, Excel, and PowerPoint when files are saved. You can use recommended classification for files that were previously labeled, with or without a higher classification.
+- Recommended classification applies to Word, Excel, and PowerPoint when files are saved. You can use recommended classification for files that were previously labeled, with or without a higher classification. You cannot use recommended classification for emails.
     
     If you have the current preview version of the Azure Information Protection client: For documents, recommended classification runs [continuously in the background](#more-information-about-background-checking), instead of running when these documents are saved.
 
