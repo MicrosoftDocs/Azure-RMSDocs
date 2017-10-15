@@ -99,7 +99,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ### More information about background checking
 
-If you have the current preview version of the Azure Information Protection client, for documents, this client continuously checks the content for matches. This enables automatic and recommended classification for documents that are stored in SharePoint Online. 
+If you have the current preview version of the Azure Information Protection client, for documents, the client continuously checks the content for matches. This behavior enables automatic and recommended classification for documents that are stored in SharePoint Online. 
 
 The content checking is not real-time but runs periodically as a background task if the document is modified. To help preserve battery life, the checking process runs less frequently when a laptop runs on battery rather than plugged in.
 
