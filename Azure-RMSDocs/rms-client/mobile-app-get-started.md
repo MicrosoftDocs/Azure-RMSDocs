@@ -7,7 +7,7 @@ keywords: How to view emails or files with the Azure Information Protection app 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -29,9 +29,14 @@ ms.suite: ems
 
 *Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
-Most users will typically use the Azure Information Protection app automatically when they need to open a protected email or file. But if you are an admin who wants to test the app for your users, or simply want to try it out before you need it, you can use the following instructions.
+Before you use the instructions on this page, make sure that you've read the [FAQs for the Azure Information Protection app for iOS and Android](mobile-app-faq.md). That page explains what the app is for, which devices are supported, and basic information about how to use the app.
 
-From your mobile device, you will need to access one of the files that the app supports to see the viewer in action. For example:
+Most users will typically use the Azure Information Protection app when they need to open a protected email or file. But if you are an admin who wants to test the app for your users, or simply want to try it out before you need it, you can use the following instructions.
+
+> [!NOTE]
+> You do not first open the app and then select documents and emails to view. Instead, you open your document or email, and then select this app to view your document or email.
+
+To use the following instructions, you need access from your mobile device to one of the files that the app supports. For example:
 
 - **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
     
@@ -45,8 +50,8 @@ To view these files in the Azure Information Protection viewer app, tap the emai
 
 ## Next steps
 
-If you have other questions about this app, check whether they are addressed in the [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md). 
+If you have other questions about this app that are not addressed in the [FAQs for Azure Information Protection app for iOS and Android](mobile-app-faq.md), visit our [Yammer site](https://www.yammer.com/AskIPTeam).
 
-For other questions, visit our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+For technical support, see the resources listed in our [House rules](../includes/houserules.md) page.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
