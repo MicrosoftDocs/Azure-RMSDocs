@@ -35,6 +35,8 @@ Most users will typically use the Azure Information Protection app when they nee
 
 > [!NOTE]
 > You do not first open the app and then select documents and emails to view. Instead, you open your document or email, and then select this app to view your document or email.
+>
+> Similarly, do not try to sign in to the app until you are prompted.
 
 To use the following instructions, you need access from your mobile device to one of the files that the app supports. For example:
 
