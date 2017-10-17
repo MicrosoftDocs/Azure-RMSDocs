@@ -62,7 +62,7 @@ If you have Exchange Server, SharePoint Server, and Windows file servers, you c
 
 The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
 
-## I see Azure Information Protection is listed as an available cloud app for conditional access–how does this work?
+## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
 Yes, as a public preview offering, you can now configure Azure AD conditional access for Azure Information Protection.
 
