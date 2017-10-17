@@ -76,6 +76,8 @@ Additional information:
 
 - You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
+- We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection blade in the Azure portal.
+
 
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
 
