@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,7 +44,9 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 
-For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help, and for supported languages other than English.  
+In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview), uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
+
+For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help.  
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
