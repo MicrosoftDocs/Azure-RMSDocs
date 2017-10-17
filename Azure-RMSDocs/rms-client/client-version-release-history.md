@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,6 +53,8 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 - Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../deploy-use/configure-policy-classification.md).
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
+
+- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     
@@ -154,7 +156,7 @@ Microsoft .NET Framework
 
 - A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
     
-    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and the section of multiple files.
+    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and the selection of multiple files.
     - A viewer for protected documents (includes protected PDF for SharePoint).
     - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
     - Client usage logs that record information such as which label was applied, how, and by whom.

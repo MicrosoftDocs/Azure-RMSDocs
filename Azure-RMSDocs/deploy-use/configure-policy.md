@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -93,6 +93,9 @@ The Azure Information Protection client checks for any changes whenever a suppor
 - Running the [PowerShell cmdlets](../rms-client/client-admin-guide-powershell.md) for labeling and protection (Get-AIPFileStatus, Set-AIPFileClassification, and Set-AIPFileLabel).
 
 - Every 24 hours.
+
+- For the [Azure Information Protection Scanner](deploy-aip-scanner.md): When the service starts, and every hour.
+
 
 >[!NOTE]
 >When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time varies, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of your labels does not match your latest changes, allow up to 15 minutes and then try again.

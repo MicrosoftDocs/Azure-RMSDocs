@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -102,6 +102,8 @@ Example: If you specify the string `Document: ${item.name}  Classification: ${it
 This setting is currently in preview.
 
 Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markers. Otherwise, the font that will be used is non-deterministic. 
+
+If you have the preview version of the Azure Information Protection client, and the font specified is not available, the client falls back to using the Calibri font.
 
 ### Setting the font color
 

@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,9 +65,11 @@ For more information about each of these steps:
 - To rekey, changing to a key that Microsoft manages for you, see the [Rekey your tenant key](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) section for Microsoft-managed operations.
 
 ## Backup and recover your tenant key
-You are responsible for backing up your tenant key. If you generated your tenant key in a Thales HSM, to back up the key, just back up the Tokenized Key file, the World file, and the Administrator Cards.
+Because you are managing your tenant key, you are responsible for backing up the key that Azure Information Protection uses. 
 
-Because you transferred your key by following the procedures in [Implementing BYOK for your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key), Key Vault will persist the Tokenized Key File, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
+If you generated your tenant key on premises, in a Thales HSM: To back up the key, back up the tokenized key file, the world file, and the administrator cards. When you transfer your key to Azure Key Vault, the service saves the tokenized key file, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
+
+Azure Key Vault has a [backup cmdlet](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) that you can use to backup a key by downloading it and storing it in a file. Because the downloaded content is encrypted, it cannot be used outside Azure Key Vault. 
 
 ## Export your tenant key
 If you use BYOK, you cannot export your tenant key from Azure Key Vault or Azure Information Protection. The copy in Azure Key Vault is non-recoverable. 

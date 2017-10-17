@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,10 +36,9 @@ However, we recommend that you supplement these applications with the Azure Info
 ## Exchange Online: IRM Configuration
 For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
 
-If you haven't previously configured Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+To configure Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted, you must use a different configuration method until Microsoft migrates your tenant. For these configuration steps, see [Exchange Online IRM configuration when you have imported a trusted publishing domain](configure-exchange-with-imported-tpd.md). In addition, you cannot use a customer-managed key (also known as bring your own key, or BYOK) until Microsoft migrates your tenant. For more information about this restriction, see [Restrictions when using BYOK](../plan-design/byok-price-restrictions.md#restrictions-when-using-byok).
-
+If you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD) from the Azure Rights Management Service, use the same set of instructions to enable the new capabilities in Exchange Online.
 
 After you have configured Exchange Online to use the Azure Rights Management service, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
@@ -50,7 +49,7 @@ For information about how SharePoint Online IRM works with the Azure Rights Mana
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 
 > [!NOTE]
-> IRM-protected libraries for SharePoint and OneDrive for Business do not currently support the new [OneDrive sync client (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614). To use IRM protection with your SharePoint libraries and OneDrive for Business, use the older sync client, OneDrive for Business sync client (Groove.exe). Both versions of the clients can run at the same time. For more information, see [Restrictions and limitations when you sync files and folders](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
+> IRM-protected libraries for SharePoint and OneDrive for Business require the [preview version](https://support.office.com/article/6778d4de-b5f8-423c-af43-a1b2449e9b99) of the new OneDrive sync client (OneDrive.exe). Or, use the older sync client, OneDrive for Business sync client (Groove.exe). Both versions of the clients can run at the same time. For more information, see [Restrictions and limitations when you sync files and folders](https://support.microsoft.com/help/3125202/restrictions-and-limitations-when-you-sync-files-and-folders).
 
 To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
