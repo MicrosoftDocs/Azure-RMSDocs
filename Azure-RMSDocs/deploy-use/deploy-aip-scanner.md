@@ -72,7 +72,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
-3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner. When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password: 
+3. Run the [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) cmdlet, specifying your SQL Server instance on which to create a database for the Azure Information Protection scanner. When you are prompted, provide the credentials for the scanner service account (\<domain\user name>) and password: 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
@@ -164,21 +164,21 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 Other cmdlets for the scanner let you change the service account and database for the scanner, get the current settings for the scanner, and uninstall the scanner service. The scanner uses the following cmdlets:
 
-- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository.md)
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository)
 
-- [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration.md)
+- [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
-- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository.md)
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
-- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner.md)
+- [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
-- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository.md)
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
 
-- [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner.md)
+- [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
-- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md)
+- [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner.md)
+- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
 ## Event log IDs and descriptions
@@ -209,7 +209,7 @@ Information **913**
 
 This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection Scanner service has been manually restarted since the computer started.  
 
-To scan the files again, you must manually start the service. To change this behavior so that the scanner runs continuously, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration.md) cmdlet and set the **Schedule** parameter to **Continuous**.
+To scan the files again, you must manually start the service. To change this behavior so that the scanner runs continuously, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and set the **Schedule** parameter to **Continuous**.
 
 ----
 
