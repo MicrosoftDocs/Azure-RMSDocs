@@ -84,9 +84,9 @@ The client logs user activity to the local Windows **Applications and Services**
     
     - System (for sign in and download policy)
     
-    - DefaultAutomatic
+    - Default
         
-        This **DefaultAutomatic** source action is for the preview client only, and refers to the label that is set by using the **Select the default label** in the Azure Information Protection policy.
+        This **Default** source action is for the preview client only, and refers to the label that is set by using the **Select the default label** in the Azure Information Protection policy.
 
     
 - Label before and after action ​
