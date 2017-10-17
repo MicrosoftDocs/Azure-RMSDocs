@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 10/17/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -190,6 +190,7 @@ If you are a software vendor and have a solution for this table that is not list
 |Absolute|Absolute|Data loss prevention (DLP) to protect content.|
 |Content Locker|VMware|Stores, consumes, and creates protected content.|
 |Controle|TakeControle|eDiscovery by using labeling and protection.|
+|Forcepoint|Forcepoint DLP|Endpoint data loss prevention (DLP) solution to enforce an organization’s data security policies.|
 |Halocore|Secude|Protects files that are exported from SAP environments.|
 |MaaS 360|IBM|Integration to consume and protect documents.|
 |Mobiliya|Mobiliya|Secures documents from EMC’s Documentum repositories.
