@@ -132,19 +132,3 @@ Control and help secure email, documents, and sensitive data that you share outs
         </div>
     </li>  
 </ul>
-
-<h2>Solutions</h2>
-<ul class="panelContent cardsW">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <p><a href="/enterprise-mobility-security/solutions/infoprotect-secure-classify-scenario">Secure data using classification, labeling, and protection</a></p>
-                        <p><a href="/enterprise-mobility-security/solutions/share-sensitive-data">Share sensitive data internally and externally</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>  
-</ul>
