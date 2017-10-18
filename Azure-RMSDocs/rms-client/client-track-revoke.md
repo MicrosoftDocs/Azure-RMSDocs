@@ -57,7 +57,7 @@ When you access this site, sign in to track your documents. When your organizati
         
         ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
         
-        Note: If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
+        If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Unless you are an administrator, you can track and revoke only the documents that you have protected. You cannot track your protected emails by using the document tracking site.
 
