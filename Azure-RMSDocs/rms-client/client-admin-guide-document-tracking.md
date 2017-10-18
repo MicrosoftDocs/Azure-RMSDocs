@@ -73,7 +73,8 @@ When users sign in to the document tracking site, they can track and revoke docu
 
 ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
-If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents yourself. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
+> [!NOTE] 
+> If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents yourself. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Actions that you take in Administrator mode are audited and logged in the usage log files, and you must confirm to continue. For more information about this logging, see the next section.
 
