@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,6 +56,8 @@ When you access this site, sign in to track your documents. When your organizati
     - Administrators for Azure Information Protection can click the Admin icon to track and revoke protected documents for users when those users have registered their documents with the document tracking site. Only administrators see this icon:
         
         ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
+        
+        If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Unless you are an administrator, you can track and revoke only the documents that you have protected. You cannot track your protected emails by using the document tracking site.
 
