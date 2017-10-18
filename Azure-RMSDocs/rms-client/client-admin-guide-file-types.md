@@ -210,13 +210,13 @@ As a workaround to protect these files, you could generically protect them by fo
 
 If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again.
 
-### Limitations for container files, such as .pst and .zip files
+### Limitations for container files, such as .zip files
 
-Container files are files that include other files, with typical examples being .pst files that contain email messages, and .zip files that contain compressed files. Other examples include .rar, .7z, and .msg.
+Container files are files that include other files, with a typical example being .zip files that contain compressed files. Other examples include .rar, .7z, and .msg.
 
-You can classify and protect a container file, but the classification and protection is not applied to each file inside the container.
+You can classify and protect these container files, but the classification and protection is not applied to each file inside the container.
 
-If have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
+If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
 ## Next steps
 Now that you've identified the file types supported by the Azure Information Protection client, see the following for additional information that you might need to support this client:
