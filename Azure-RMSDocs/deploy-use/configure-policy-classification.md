@@ -107,7 +107,9 @@ The content classification is not real-time but runs periodically as a backgroun
 
 ## Next steps
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
+Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  
+
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
