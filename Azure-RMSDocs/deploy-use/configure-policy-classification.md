@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,6 +38,8 @@ When you configure conditions for a label, you can automatically assign a label 
 - Recommended classification applies to Word, Excel, and PowerPoint when files are saved. You can use recommended classification for files that were previously labeled, with or without a higher classification. You cannot use recommended classification for emails.
     
     If you have the current preview version of the Azure Information Protection client: For documents, recommended classification runs [continuously in the background](#more-information-about-running-continuously), instead of running when these documents are saved.
+
+Note that you cannot use this configuration and a user-defined permission for the same label. The user defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions. When a label is configured for conditions and user-defined permissions, the content is checked for the conditions and the user-defined permission setting is not applied:
 
 When you configure conditions, you can use predefined patterns, such as **Credit Card Number** or **USA Social Security Number (SSN)**. Or, you can define a custom string or pattern as a condition for automatic classification. These conditions apply to the body text in documents and emails, and to headers and footers. For more information about the conditions, see step 5 in the [following procedure](#to-configure-recommended-or-automatic-classification-for-a-label).
 
