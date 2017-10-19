@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/19/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -96,7 +96,11 @@ There are maximum file sizes that the Azure Information Protection client suppor
     |Excel 2007 (supported by AD RMS only)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-bit: 2 GB<br /><br />64-bit: Limited only by available disk space and memory|
     |PowerPoint 2007 (supported by AD RMS only)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-bit: Limited only by available disk space and memory<br /><br />64-bit: Limited only by available disk space and memory
 
-- **For all other files**: Limited only by available disk space and memory.
+- **For all other files**: 
+    
+    - To protect these files: File size is limited only by available disk space and memory.
+    
+    - To open these files in the Azure Information Protection viewer: Maximum file size supported is 20 MB.
 
 ### Supported file types for classification and protection
 
