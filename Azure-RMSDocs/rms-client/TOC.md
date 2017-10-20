@@ -8,6 +8,7 @@
 ### [Azure Information Protection client](aip-client.md)
 #### [Azure Information Protection client: Version release history](client-version-release-history.md)
 #### [Azure Information Protection client administrator guide](client-admin-guide.md)
+##### [Install the client for users](client-admin-guide-install.md)
 ##### [Customizations](client-admin-guide-customizations.md)
 ##### [Client files and usage logging](client-admin-guide-files-and-logging.md)
 ##### [Document tracking](client-admin-guide-document-tracking.md)

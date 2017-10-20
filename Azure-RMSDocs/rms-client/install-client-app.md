@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -74,7 +74,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [How to install the Azure Information Protection client for users](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
+See [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the [admin guide](client-admin-guide.md ).
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
