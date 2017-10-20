@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,6 +77,8 @@ Additional information:
 - You might want to fine-tune how often your conditional access policies get evaluated. You can do this by configuring the token lifetime. For more information, see [Configurable token lifetimes in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
 - We recommend that you do not add administrator accounts to your conditional access policies because these accounts will not be able to access the Azure Information Protection blade in the Azure portal.
+
+- If you use a lot of cloud apps for conditional access, you might not see **Microsoft Azure Information Protection** displayed in the list to select. In this case, use the search box at the top of the list. Start typing "Microsoft Azure Information Protection" to filter the available apps. Providing you have a supported subscription, you'll then see **Microsoft Azure Information Protection** to select. 
 
 
 ## What’s the difference between labels in Azure Information Protection and labels in Office 365?
