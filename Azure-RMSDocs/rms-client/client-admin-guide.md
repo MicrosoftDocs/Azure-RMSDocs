@@ -97,7 +97,7 @@ Example showing the Azure Information Protection client add-on in an Office appl
 
 ![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)
 
-## Installing and supporting the client
+## Installing and supporting the Azure Information Protection client
 
 You can install the Azure Information Protection client by using Windows Update, an executable, or a Windows installer file. For more information about each choice, and instructions, see [Install the Azure Information Protection client for users](client-admin-guide-install.md).  
 
