@@ -93,7 +93,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You run Office 2010 and want to protect documents and email messages by using the Azure Rights Management service.
 
-Example showing the Azure Information Protection client add-on in an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
+Example showing the Azure Information Protection client add-in for an Office application, displaying the classification labels for your organization, and the new **Protect** button on the ribbon:
 
 ![Azure Information Protection bar with default policy](../media/word2016-calloutsv2.png)
 
