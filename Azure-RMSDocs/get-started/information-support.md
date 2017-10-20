@@ -90,7 +90,7 @@ Troubleshooting:
 
 - If you have deployed the Rights Management connector for your on-premises servers: See the [monitoring](../deploy-use/monitor-rms-connector.md) information, which includes details about event log entries, performance counters, and logging.
 
-- For the Azure Information Protection client for Windows: See the [Installation checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) section from the administrator guide.
+- For the Azure Information Protection client for Windows: See the [Installation checks and troubleshooting](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) section from the administrator guide.
 
 ### Community resources
 
