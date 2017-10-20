@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -122,7 +122,7 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
 
 **Change to requirements:**
 
-The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. For more information, see the [client installation section](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
+The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. For more information, see [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the admin guide.
 
 **New features**:
 
@@ -176,7 +176,7 @@ This client version is the [General Availability release](https://blogs.technet.
 
 - Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
 
-    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
+    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#installation-checks-and-troubleshooting) section from the admin guide.
 
 **Fixes**:
 

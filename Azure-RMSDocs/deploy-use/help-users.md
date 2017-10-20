@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,7 @@ After you have deployed and configured Azure Information Protection for your org
     
 -   **Help desk information**
     
-    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option for information such as whether the edition of Office is unable to support protection, and the currently signed in user account. You can also use this option to collect log files and reset the client. For more information, see the admin guide: [Additional checks and troubleshooting](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting).
+    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option for information such as whether the edition of Office is unable to support protection, and the currently signed in user account. You can also use this option to collect log files and reset the client. For more information, see the admin guide: [Install checks and troubleshooting](../rms-client/client-admin-guide.md#install-checks-and-troubleshooting).
     
     If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
     
