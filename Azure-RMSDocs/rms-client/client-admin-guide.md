@@ -62,7 +62,7 @@ The Azure Information Protection client includes the following:
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview) that runs as a service on Windows Server and lets you discover, classify, and protect files on data stores.
+    This module includes cmdlets to install and configure the Azure Information Protection scanner (currently in preview) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
@@ -81,7 +81,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
-- You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises, such as network shares and SharePoint Server. Note that this [scanner service](../deploy-use/deploy-aip-scanner.md) is currently in preview.
+- You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises, such as network shares and SharePoint Server. Note that this scanner service is currently in preview.
 
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
@@ -330,6 +330,14 @@ The Azure Information Protection client supports the same languages that Office 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
 However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
+
+## How to install the Azure Information Protection scanner
+
+The current preview version of the Azure Information Protection client includes the Azure Information Protection scanner. The PowerShell module that is included with the client has cmdlets to install and configure the scanner.
+
+To install the client for the scanner, follow the same instructions in the preceding sections. Note that if you do not need all the components of the client, such as the Office add-in and viewer, you can install just the PowerShell module. For example, you can run the executable with `PowerShellOnly=true /quiet`.
+
+After you have installed the client, you're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md).
 
 ## To uninstall the Azure Information Protection client
 
