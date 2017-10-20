@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,13 +54,15 @@ For example:
 
 The Azure Information Protection client includes the following:
 
-- An Office add-on, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options.
+- An Office add-in, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options. For Outlook, a **Do Not Forward** button is also added to the ribbon.
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
 - A viewer to display protected files when a native application cannot open it.
 
-- A PowerShell module to apply and remove classification labels and protection from files.
+- A PowerShell module to apply and remove classification labels and protection from files. 
+    
+    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview) that runs as a service on Windows Server and lets you discover, classify, and protect files on data stores.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
@@ -78,6 +80,8 @@ Deploy the Azure Information Protection client if any of the following applies:
 - You want to classify (and optionally, protect) documents and email messages by using File Explorer, which supports additional file types, multi-select, and folders.
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
+
+- You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises, such as network shares and SharePoint Server. Note that this [scanner service](../deploy-use/deploy-aip-scanner.md) is currently in preview.
 
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 

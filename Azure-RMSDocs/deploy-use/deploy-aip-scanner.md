@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,7 @@ When you have configured your [Azure Information Protection policy](configure-po
 
 ![Azure Information Protection scanner overview](../media/infoprotect-scanner.png)
 
-Automatic classification uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns.
+Automatic classification uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](../rms-client/client-admin-guide-file-types.md).
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
