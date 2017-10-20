@@ -32,7 +32,7 @@ ms.suite: ems
 
 Before you install the Azure Information Protection client on your enterprise network, check that computers have the required operating system versions and applications for Azure Information Protection: [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md). 
 
-Then check the additional prerequisites that might be needed for the Azure Information Protection client.
+Then check the additional prerequisites that might be needed for the Azure Information Protection client, as documented in the next section. Not all the prerequisites are checked by the installation program.
 
 ## Additional prerequisites for the Azure Information Protection client
 
