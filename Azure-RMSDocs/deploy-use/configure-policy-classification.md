@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,9 +42,9 @@ An example prompt for when you configure a condition to apply a label as a recom
 In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**.
 
 > [!IMPORTANT]
->Do not configure a label for conditions and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
+>Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
 >
->When a label is configured for conditions and user-defined permissions, the content is checked for the conditions and the user-defined permission setting is not applied.
+>When a label is configured for automatic classification and user-defined permissions, the content is checked for the conditions and the user-defined permission setting is not applied. You can use recommended classification and user-defined permissions.
 
 ## How automatic or recommended labels are applied
 
