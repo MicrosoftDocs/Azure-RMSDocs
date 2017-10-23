@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# File types supported by the Azure Information Protection client
+# Admin Guide: File types supported by the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -99,6 +99,8 @@ There are maximum file sizes that the Azure Information Protection client suppor
 - **For all other files**: 
     
     - To protect these files: File size is limited only by available disk space and memory.
+    
+    - To open these files in the Azure Information Protection viewer: Maximum file size supported for text-based files (.ptxt and .pxml) is 20 MB. For picture-based files and PDF files, the maximum file size is limited only by memory.
 
 ### Supported file types for classification and protection
 
