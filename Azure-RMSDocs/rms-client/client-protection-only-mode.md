@@ -6,7 +6,7 @@ description: Information for users who run the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-# Protection-only mode for the Azure Information Protection client
+# User Guide: Protection-only mode for the Azure Information Protection client
 
 When the Azure Information Protection client doesn't have labels to classify your documents and emails, it runs in **protection-only** mode. For example, in this mode, you might see the following when you use Windows File Explorer, right-click, **Classify and protect**:
 

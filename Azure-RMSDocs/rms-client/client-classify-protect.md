@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Classify and protect a file or email by using Azure Information Protection
+# User Guide: Classify and protect a file or email by using Azure Information Protection
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
@@ -171,5 +171,8 @@ The classification and protection that you specified stays with the file, even i
 More how-to instructions from the Azure Information Protection user guide:
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+
+## Additional information for administrators    
+See [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

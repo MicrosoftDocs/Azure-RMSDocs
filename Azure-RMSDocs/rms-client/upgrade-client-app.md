@@ -6,7 +6,7 @@ description: Instructions for users who have upgraded from the RMS sharing appli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/23/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-# Tasks that you used to do with the RMS sharing application
+# User Guide: Tasks that you used to do with the RMS sharing application
 
 Recently upgraded from the Rights Management sharing application (also known as just the "RMS sharing app") to the Azure Information Protection client? 
 

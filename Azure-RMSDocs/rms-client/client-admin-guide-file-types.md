@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# File types supported by the Azure Information Protection client
+# Admin Guide: File types supported by the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
