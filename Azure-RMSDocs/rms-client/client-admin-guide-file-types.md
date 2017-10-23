@@ -99,6 +99,8 @@ There are maximum file sizes that the Azure Information Protection client suppor
 - **For all other files**: 
     
     - To protect these files: File size is limited only by available disk space and memory.
+    
+    - To open these files in the Azure Information Protection viewer: Maximum file size supported for text-based files (.ptxt and .pxml) is 20 MB. For picture-based files and PDF files, the maximum file size is limited only by memory.
 
 ### Supported file types for classification and protection
 
