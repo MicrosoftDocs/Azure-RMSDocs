@@ -6,7 +6,7 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/01/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Remove labels and protection from files and emails that have been labeled by Azure Information Protection or protected by Rights Management
+# User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection or protected by Rights Management
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 

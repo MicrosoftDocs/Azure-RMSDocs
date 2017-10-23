@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Download and install the Azure Information Protection client
+# User Guide: Download and install the Azure Information Protection client
 
 If your administrator does not install the Azure Information Protection client for you, you can do this yourself. You must be a local administrator for your PC to install this client so that it can label and protect your documents and emails.
 
@@ -74,7 +74,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the [admin guide](client-admin-guide.md ).
+See [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the [admin guide](client-admin-guide.md).
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
