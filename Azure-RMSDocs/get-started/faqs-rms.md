@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -140,7 +140,7 @@ For most scenarios, you can use any group type in Azure AD that has an email add
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-When you use Exchange Online and the Azure Rights Management service, you just send the email as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook Do Not Forward option, select an Azure Information Protection label that applies protection from Azure Rights Management, or the protection can be applied by Exchange Online transport rules.
+When you use Exchange Online and the Azure Rights Management service, you just send the email to the user as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook Do Not Forward button or menu option. Or, you can select an Azure Information Protection label that automatically applies Do Not Forward for you, and classifies the email. 
 
 The recipient will see an option to sign in to their Gmail, Yahoo, or Microsoft account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
