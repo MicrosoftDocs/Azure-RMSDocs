@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -99,8 +99,6 @@ There are maximum file sizes that the Azure Information Protection client suppor
 - **For all other files**: 
     
     - To protect these files: File size is limited only by available disk space and memory.
-    
-    - To open these files in the Azure Information Protection viewer: Maximum file size supported is 20 MB.
 
 ### Supported file types for classification and protection
 
