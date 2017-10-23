@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Custom configurations for the Azure Information Protection client
+# Admin Guide: Custom configurations for the Azure Information Protection client
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
