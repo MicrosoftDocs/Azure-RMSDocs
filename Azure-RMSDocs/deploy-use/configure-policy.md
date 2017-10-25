@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,14 +51,30 @@ If your organization has a mix of subscriptions, it is your responsibility to ma
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## To access the Azure Information Protection blade for the first time
+
+1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
+
+2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
+    
+3. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
+    
+    This action creates the **Azure Information Protection** blade for your tenant so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    
+    > [!TIP] 
+    > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
+
+4. You see the **Quick start** page that automatically opens the first time you connect to the service. Browse the suggested resources, or use the other menu options. To configure the labels that users can select, use the following procedure.
+
+Next time you access the **Azure Information Protection** blade, it automatically selects the **POLICIES** > **Global policy** option so that you can configure labels for all users. You can return to the **Quick start** page by selecting it from the **GENERAL** menu.
 
 ## How to configure the Azure Information Protection policy
 
-1. In a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
+1. Make sure that you are signed in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
 
-2. Navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
+2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The first time that you connect to the service, the **Azure Information Protection - Quick start** blade automatically opens. To configure the policy that all users get, from the **POLICIES** menu selection, select **Global policy** to open the **Azure Information Protection - Global policy** blade. This blade automatically opens for subsequent connections to the service for you to view and edit the global policy that all users get. 
+    The **Azure Information Protection - Global policy** blade automatically opens for you to view and edit the global policy that all users get. 
     
     The Azure Information Protection policy contains the following elements that you can configure:
     
@@ -76,7 +92,9 @@ For more information about the subscriptions, see [What subscription do I need f
     
     - The option to provide a custom help link for users.
 
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. These labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sub-labels to provide subcategories, when needed. When a label is configured for sub-labels, users cannot select the main label but must select one of the sub-labels.
+
+The Azure Information Protection labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 
 You can use the default labels without changes, or you can customize them, or you can delete them, and you can create new labels. For more information, use the links in the next section to help you locate the relevant options and how to configure them.
 
