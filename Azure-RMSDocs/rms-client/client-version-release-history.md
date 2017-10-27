@@ -40,7 +40,7 @@ Use the following information to see what’s new or changed for a GA release. T
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.10.56.0
+### Versions later than 1.10.56.0
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
 
