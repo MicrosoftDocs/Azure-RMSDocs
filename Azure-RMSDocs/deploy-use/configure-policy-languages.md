@@ -6,7 +6,7 @@ description: You can add support for different languages for the labels that use
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,9 +28,6 @@ ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 # How to configure labels and templates for different languages in Azure Information Protection
 
 >*Applies to: Azure Information Protection*
-
->[!NOTE]
->This feature is currently in preview.
 
 Although the default labels for Azure Information Protection support multiple languages, you must configure support for label names and descriptions that you specify. This configuration requires you to do the following:
 
@@ -56,11 +53,11 @@ Select the languages that match your users' language setting for Office and Wind
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **MANAGE** menu selection, select **Languages (Preview)**.
+2. From the **MANAGE** menu selection, select **Languages**.
 
-3. On the **Azure Information Protection - Languages (Preview)** blade, select **Add a new language for translation**. Select the languages that you want to add and then select **OK**. You can either type the name of the language in the search box, or scroll through the list of available languages
+3. On the **Azure Information Protection - Languages** blade, select **Add a new language for translation**. Select the languages that you want to add and then select **OK**. You can either type the name of the language in the search box, or scroll through the list of available languages
 
-4. Your selected languages now display on the **Azure Information Protection - Languages (Preview)** blade:
+4. Your selected languages now display on the **Azure Information Protection - Languages** blade:
     
     - To add another language, select **Add a new language for translation** and repeat the previous step. 
         
@@ -79,7 +76,7 @@ Select the languages that match your users' language setting for Office and Wind
 
 8. When you have edited each .xml file, create a new compressed (zipped) folder that contains these files. The compressed folder can have any name, but must have a .zip extension.
 
-9. Return to the **Azure Information Protection - Languages (Preview)** blade, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
+9. Return to the **Azure Information Protection - Languages** blade, and select **Import**. Note that if this option is unavailable, first clear the check box for **LANGUAGE NAME** or the check boxes for the individually selected languages.
     
     When the import completes, the localized names and descriptions download to users after you next publish the Azure Information Protection policy. You can click **Publish** from the **Global policy** or **Scoped policies** blade.
 
