@@ -33,12 +33,18 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 Preview versions should not be deployed for end users on production networks. Instead, use preview versions to see and try new functionality or fixes that are coming in the next GA version. 
 
-Use the following information to see what’s new or changed for a GA release. The most current release is listed first. For changes in the current preview version, see the information on the download page.
+Use the following information to see what’s new or changed for a GA release. The most current release is listed first. 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest GA release. If it is, then check the current preview version.
 >  
-> If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+> For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Versions later than 1.10.56.0
+
+If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
+
+For changes in the current preview version, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 ## Version 1.10.56.0
 
