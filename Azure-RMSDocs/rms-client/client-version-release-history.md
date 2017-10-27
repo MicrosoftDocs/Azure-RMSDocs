@@ -44,7 +44,7 @@ Use the following information to see what’s new or changed for a GA release. T
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
 
-For what's new or changed in the current preview version since the GA version, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+For what's new or changed in the current preview version since the current GA version, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 ## Version 1.10.56.0
 
