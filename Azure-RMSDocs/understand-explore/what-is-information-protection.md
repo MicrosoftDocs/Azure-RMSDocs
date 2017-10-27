@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: What is Azure Information Protection?
@@ -101,7 +101,7 @@ After a document has been protected, users and administrators can use a document
 
 - FAQs: [Frequently asked questions for Azure Information Protection](../get-started/faqs.md)
 
-- Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
+- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 
 In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
