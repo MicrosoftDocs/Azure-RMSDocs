@@ -173,11 +173,11 @@ For each example, on your \<*label name*> blade, select **Protect** and then sel
 
 ### Example 1: Label that applies Do Not Forward to send a protected email to a Gmail account
 
-This label is available only in Outlook and is suitable when Exchange Online is configured for the new capabilities in Office 365 Message Encryption. Instruct users to select this label when they need to send a protected email to people using a Gmail account (or any other email account outside your organization). 
+This label is available only in Outlook and is suitable when Exchange Online is configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Instruct users to select this label when they need to send a protected email to people using a Gmail account (or any other email account outside your organization). 
 
 Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email so that recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. 
 
-1. On the **Protection** blade, select **Azure (cloud key)**.
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Select **Set user defined permissions (Preview)**.
 
@@ -192,44 +192,60 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 This label is suitable for sharing (read-only) very sensitive documents that always require an Internet connection to view it. If revoked, users will not be able to view the document the next time they try to open it.
 
-1. On the **Protection** blade, select **Azure (cloud key)**.
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Select **Set permissions**.
+2. Make sure that **Set permissions** is selected, and then select **Add permissions**.
 
-3. Select **Add permissions**.
+3. On the **Add permissions** blade, select **Enter details**.
 
-4. On the **Add permissions** blade, select **Enter details**.
+4. Enter the name of a domain from the other organization, for example, **fabrikam.com**. Then select **Add**.
 
-5. Enter the name of a domain from the other organization, for example, **fabrikam.com**. Then select **Add**.
+5. From **Choose permissions from preset**, select **Viewer**, and then select **OK**.
 
-6. Ensure that **Viewer** is selected, and select **OK**.
+6. Back on the **Protection** blade, for **Allow offline access setting**, select **Never**.
 
-7. Back on the **Protection** blade, select **Never** for the **Allow offline access setting**, and select **OK**.
-
-8. Click **OK** on the **Protection** blade, and then publish your changes.
+7. Click **OK** on the **Protection** blade, and then publish your changes.
 
 
 ### Example 3: Add external users to an existing label
 
-The new users that you add will be able open documents and emails that have already been protected with this label in additional to content that is newly protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
+The new users that you add will be able open documents and emails that have already been protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
 
-1. On the **Protection** blade, select **Azure (cloud key)**.
+1. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
     
-2. Select **Set permissions**.
+2. Ensure that **Set permissions** is selected, and then select **Add permissions**.
 
-3. Select **Add permissions**, .
+3. On the **Add permissions** blade, select **Enter details**.
 
-4. On the **Add permissions** blade, select **Enter details**.
+4. Enter the email address of the first user (or group) to add, and then select **Add**.
 
-5. Enter the email address of the first user (or group) to add, and then select **Add**.
+5. Select the permissions for this user (or group).
 
-6. Select the permissions for this user (or group).
+6. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, click **OK**.
 
-7. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, select **OK**.
+7. Click **OK** on the **Protection** blade, and then publish your changes.
 
-8. Back on the **Protection** blade, select **Never** for the **Allow offline access setting**, and select **OK**.
+### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
-9. Click **OK** on the **Protection** blade, and then publish your changes.
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. If you specify external users who do not have an account in Azure AD, be sure to instruct your users that this label should not be used for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
+When your users type the email addresses in the **To** box, the addresses must be for the same users that you specify in this label. Because users can belong to groups and have more than one email address, the email address that they specify does not have to exactly match the email address that you specify for the permissions, although this is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
+
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+    
+2. Make sure **Set permissions** is selected, and select **Add permissions**.
+
+3. On the **Add permissions** blade, to grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users, select **Enter details** and type the email address of the user, or Azure AD group.
+    
+    To specify additional users or group, repeat this step.
+
+4. For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant. 
+    
+    Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**. 
+
+5. Click OK on the Add permissions blade, 
+
+5. Click **OK** on the **Protection** blade, and then publish your changes.
 
 ## Next steps
 
