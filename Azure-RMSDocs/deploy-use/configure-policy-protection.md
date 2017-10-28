@@ -192,6 +192,8 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 This label is suitable for sharing (read-only) very sensitive documents that always require an Internet connection to view it. If revoked, users will not be able to view the document the next time they try to open it.
 
+This label is not suitable for emails.
+
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Make sure that **Set permissions** is selected, and then select **Add permissions**.
@@ -221,7 +223,7 @@ The new users that you add will be able open documents and emails that have alre
 
 5. Select the permissions for this user (or group).
 
-6. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, click **OK**.
+6. Repeat steps 4 and 5 for each user (or group) that you want to add to this label. Then click **OK**.
 
 7. Click **OK** on the **Protection** blade, and then publish your changes.
 
