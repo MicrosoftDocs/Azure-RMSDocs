@@ -165,6 +165,72 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 13. To make your changes available to users, click **Publish**.
 
+## Example configurations
+
+Use the following examples to help you configure a label for some typical scenarios that apply protection.
+
+For each example, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
+
+### Label that applies Do Not Forward to send a protected email to a Gmail account, using the new capabilities in Office 365 Message Encryption
+
+1. On the **Protection** blade, select **Azure (cloud key)**.
+    
+2. Select **Set user defined permissions (Preview)**.
+
+3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
+
+4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
+
+5. Click **OK** on the **Protection** blade, and then publish your changes.
+
+This label is available only in Outlook. Instruct users to select it when they need to send a protected email to people using a Gmail account. 
+
+Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email so that recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. 
+
+### Label that restricts read-only to all users in another organization, and supports immediate revocation
+
+1. On the **Protection** blade, select **Azure (cloud key)**.
+    
+2. Select **Set permissions**.
+
+3. Select **Add permissions**, .
+
+4. On the **Add permissions** blade, select **Enter details**.
+
+5. Enter the name of a domain from the other organization, for example, **fabrikam.com**. Then select **Add**.
+
+5. Ensure that **Viewer** is selected, and select **OK**.
+
+6. Back on the **Protection** blade, select **Never** for the **Allow offline access setting**, and select **OK**.
+
+7. Click **OK** on the **Protection** blade, and then publish your changes.
+
+This label is suitable for sharing (read-only) very sensitive documents that always require an Internet connection to view it. If revoked, users will not be able to view the document the next time they try to open it.
+
+
+### Add external users to an existing label
+
+1. On the **Protection** blade, select **Azure (cloud key)**.
+    
+2. Select **Set permissions**.
+
+3. Select **Add permissions**, .
+
+4. On the **Add permissions** blade, select **Enter details**.
+
+5. Enter the email address of the first user (or group) to add, and then select **Add**.
+
+6. Select the permissions for this user (or group).
+
+7. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, select ****OK.
+
+8. Back on the **Protection** blade, select **Never** for the **Allow offline access setting**, and select **OK**.
+
+9. Click **OK** on the **Protection** blade, and then publish your changes.
+
+The new users that you have added will be able open documents and emails that are protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
+
+
 ## Next steps
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
