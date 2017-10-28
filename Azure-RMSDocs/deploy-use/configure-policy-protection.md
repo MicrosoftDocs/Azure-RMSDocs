@@ -227,9 +227,10 @@ The new users that you add will be able open documents and emails that have alre
 
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
-This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. If you specify external users who do not have an account in Azure AD, be sure to instruct your users that this label should not be used for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment. 
+If you specify external users who do not have an account in Azure AD, be sure to instruct your users that this label should not be used for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
 
-When your users type the email addresses in the **To** box, the addresses must be for the same users that you specify in this label. Because users can belong to groups and have more than one email address, the email address that they specify does not have to exactly match the email address that you specify for the permissions, although this is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
+When your users type the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to exactly match the email address that you specify for the permissions, although this is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
@@ -237,15 +238,17 @@ When your users type the email addresses in the **To** box, the addresses must b
 
 3. On the **Add permissions** blade, to grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users, select **Enter details** and type the email address of the user, or Azure AD group.
     
-    To specify additional users or group, repeat this step.
+    Repeat this step to specify additional users who should have the same permissions.
 
 4. For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant. 
     
     Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**. 
 
-5. Click OK on the Add permissions blade, 
+5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 
-5. Click **OK** on the **Protection** blade, and then publish your changes.
+6. Click **OK** on the **Add permissions** blade. 
+
+7. Click **OK** on the **Protection** blade, and then publish your changes.
 
 ## Next steps
 
