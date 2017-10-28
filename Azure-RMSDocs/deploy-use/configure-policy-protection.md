@@ -171,7 +171,7 @@ Use the following examples to help you configure a label for some typical scenar
 
 For each example, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
 
-### Label that applies Do Not Forward to send a protected email to a Gmail account, using the new capabilities in Office 365 Message Encryption
+### Example 1: Label that applies Do Not Forward to send a protected email to a Gmail account
 
 1. On the **Protection** blade, select **Azure (cloud key)**.
     
@@ -183,11 +183,11 @@ For each example, on your \<*label name*> blade, select **Protect** and then sel
 
 5. Click **OK** on the **Protection** blade, and then publish your changes.
 
-This label is available only in Outlook. Instruct users to select it when they need to send a protected email to people using a Gmail account. 
+This label is available only in Outlook and is suitable when Exchange Online is configured for the new capabilities in Office 365 Message Encryption. Instruct users to select this label when they need to send a protected email to people using a Gmail account (or any other email account outside your organization).. 
 
 Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email so that recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. 
 
-### Label that restricts read-only to all users in another organization, and supports immediate revocation
+### Example 2: Label that restricts read-only permission to all users in another organization, and supports immediate revocation
 
 1. On the **Protection** blade, select **Azure (cloud key)**.
     
@@ -208,7 +208,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 This label is suitable for sharing (read-only) very sensitive documents that always require an Internet connection to view it. If revoked, users will not be able to view the document the next time they try to open it.
 
 
-### Add external users to an existing label
+### Example 3: Add external users to an existing label
 
 1. On the **Protection** blade, select **Azure (cloud key)**.
     
@@ -222,13 +222,13 @@ This label is suitable for sharing (read-only) very sensitive documents that alw
 
 6. Select the permissions for this user (or group).
 
-7. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, select ****OK.
+7. Repeat steps 5 and 6 for each user (or group) that you want to add to this label. Then, select **OK**.
 
 8. Back on the **Protection** blade, select **Never** for the **Allow offline access setting**, and select **OK**.
 
 9. Click **OK** on the **Protection** blade, and then publish your changes.
 
-The new users that you have added will be able open documents and emails that are protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
+The new users that you have added will be able open documents and emails that have already been protected with this label in additional to content that is newly protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
 
 
 ## Next steps
