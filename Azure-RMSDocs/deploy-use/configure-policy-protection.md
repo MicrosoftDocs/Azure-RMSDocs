@@ -88,27 +88,19 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
 7. Select one of the following options:
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Tip: If you use the **Edit Template** button, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
-    
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
+    
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tip: If you use the **Edit Template** button, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
-8. If you selected **Select a predefined template** for **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
-    
-    If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
-    
-    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
-        
-        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
-            
-9. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
+8. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
@@ -140,6 +132,14 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     When you have finished configuring the permissions, click **OK**. 
     
     This grouping of settings creates a custom template for the Azure Rights Management service. These templates can be used with applications and services that integrate with Azure Rights Management. For information about how computers and services download and refresh these templates, see [Refreshing templates for users and services](refresh-templates.md).
+
+9. If you selected **Select a predefined template** for **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
+    
+    If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+        
+        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
 
 10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**, and then specify the licensing URL of your AD RMS cluster.
     
