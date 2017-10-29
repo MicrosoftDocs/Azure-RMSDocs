@@ -167,7 +167,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 ## Example configurations
 
-Use the following examples to help you configure a label for some typical scenarios that apply protection.
+You can use the **All Employees** and **Recipients Only** sub-labels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) as examples how to configure labels that apply protection. Then use the following supplemental examples to help you configure labels for different scenarios. 
 
 For each example, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
 
