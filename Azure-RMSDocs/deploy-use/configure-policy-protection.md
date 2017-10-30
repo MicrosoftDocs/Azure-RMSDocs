@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -88,27 +88,19 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
 7. Select one of the following options:
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Tip: If you use the **Edit Template** button, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
-    
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
+    
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. This template must be published (not archived) and must not be linked already to another label. When you select this option, you can use the **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tip: If you use the **Edit Template** button, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
-8. If you selected **Select a predefined template** for **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
-    
-    If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
-    
-    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
-        
-        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
-            
-9. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
+8. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
@@ -141,6 +133,14 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     This grouping of settings creates a custom template for the Azure Rights Management service. These templates can be used with applications and services that integrate with Azure Rights Management. For information about how computers and services download and refresh these templates, see [Refreshing templates for users and services](refresh-templates.md).
 
+9. If you selected **Select a predefined template** for **Azure (cloud key)**, click the drop-down box and select the [template](../deploy-use/configure-policy-templates.md) that you want to use to protect documents and emails with this label. You do not see archived templates or templates that are already selected for another label.
+    
+    If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
+    
+    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+        
+        Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
+
 10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**, and then specify the licensing URL of your AD RMS cluster.
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
@@ -164,6 +164,93 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     - A blank field when protection is not set. 
 
 13. To make your changes available to users, click **Publish**.
+
+## Example configurations
+
+The **All Employees** and **Recipients Only** sub-labels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
+
+For each example that follows, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
+
+### Example 1: Label that applies Do Not Forward to send a protected email to a Gmail account
+
+This label is available only in Outlook and is suitable when Exchange Online is configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Instruct users to select this label when they need to send a protected email to people using a Gmail account (or any other email account outside your organization). 
+
+Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email so that recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. 
+
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+    
+2. Select **Set user defined permissions (Preview)**.
+
+3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
+
+4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
+
+5. Click **OK** on the **Protection** blade, and then publish your changes.
+
+
+### Example 2: Label that restricts read-only permission to all users in another organization, and that supports immediate revocation
+
+This label is suitable for sharing (read-only) very sensitive documents that always require an Internet connection to view it. If revoked, users will not be able to view the document the next time they try to open it.
+
+This label is not suitable for emails.
+
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+    
+2. Make sure that **Set permissions** is selected, and then select **Add permissions**.
+
+3. On the **Add permissions** blade, select **Enter details**.
+
+4. Enter the name of a domain from the other organization, for example, **fabrikam.com**. Then select **Add**.
+
+5. From **Choose permissions from preset**, select **Viewer**, and then select **OK**.
+
+6. Back on the **Protection** blade, for **Allow offline access setting**, select **Never**.
+
+7. Click **OK** on the **Protection** blade, and then publish your changes.
+
+
+### Example 3: Add external users to an existing label
+
+The new users that you add will be able open documents and emails that have already been protected with this label. The permissions that you grant these users can be different from the permissions that the existing users have.
+
+1. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
+    
+2. Ensure that **Set permissions** is selected, and then select **Add permissions**.
+
+3. On the **Add permissions** blade, select **Enter details**.
+
+4. Enter the email address of the first user (or group) to add, and then select **Add**.
+
+5. Select the permissions for this user (or group).
+
+6. Repeat steps 4 and 5 for each user (or group) that you want to add to this label. Then click **OK**.
+
+7. Click **OK** on the **Protection** blade, and then publish your changes.
+
+### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
+
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment. 
+If you specify external users who do not have an account in Azure AD, be sure to instruct your users that this label should not be used for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
+When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to exactly match the email address that you specify for the permissions, although this is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
+
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+    
+2. Make sure **Set permissions** is selected, and select **Add permissions**.
+
+3. On the **Add permissions** blade, to grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users, select **Enter details** and type the email address of the user, or Azure AD group.
+    
+    Repeat this step to specify additional users who should have the same permissions.
+
+4. For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant. 
+    
+    Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**. 
+
+5. To specify additional users who should have different permissions, repeat steps 3 and 4.
+
+6. Click **OK** on the **Add permissions** blade. 
+
+7. Click **OK** on the **Protection** blade, and then publish your changes.
 
 ## Next steps
 
