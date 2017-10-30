@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -174,6 +174,8 @@ To configure this advanced setting, enter the following strings:
 
 ## Enable recommended classification in Outlook
 
+This configuration option is currently in preview and is subject to change.
+
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
@@ -187,7 +189,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Set a different default label for Outlook
 
-This configuration option is currently in preview and requires the preview version of the client.
+This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
