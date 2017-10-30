@@ -211,7 +211,7 @@ This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, you can automatically classify (and optionally, protect) a document, based on existing properties in the document's metadata. For example, a custom property that has been set from another classification solution, or a property that is used by SharePoint Online.
+When you configure this setting, you can automatically classify (and optionally, protect) a document, using existing properties in the document's metadata. For example, a custom property that has been set from another classification solution, or a property that is used by SharePoint Online.
 
 As a result of this configuration, when a document without an Azure Information Protection label is opened by a user in an Office app, the document is automatically labeled to match the corresponding property value.
 
