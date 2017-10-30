@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -204,6 +204,30 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Automatically label a document by using an existing document property
+
+This configuration option is currently in preview and is subject to change. 
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, you can automatically classify (and optionally, protect) a document, based on existing properties in the document's metadata. For example, a custom property that has been set from another classification solution, or a property that is used by SharePoint Online.
+
+As a result of this configuration, when a document without an Azure Information Protection label is opened by a user in an Office app, the document is automatically labeled to match the corresponding property value.
+
+This configuration requires you to specify two advanced settings that work together. The first is named **SyncPropertyName**, where the name of your Azure Information Protection bar title must be the same as the property name in the metadata that contains the classification value.
+
+By default, the Azure Information Protection bar title is **Sensitivity**. If the custom property that you want to use for automatic labeling has a different name, you must change the Azure Information Protection bar title in the Azure Information Protection policy.
+
+To configure this advanced setting, enter the following strings:
+
+- Key 1: **SyncPropertyName**
+
+- Key 1 Value: \<**property name**> 
+
+- Key 2: **SyncPropertyState**
+
+- Key 2 Value: **OneWay**
 
 
 ## Integration with Exchange message classification for a mobile device labeling solution
