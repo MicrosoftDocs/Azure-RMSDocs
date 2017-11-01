@@ -83,6 +83,6 @@ When you cannot migrate all your Windows clients at once, run the following proc
 3. Using the instructions at the beginning of this step, configure your script deployment methods to run **Migrate-Client.cmd** and **Migrate-User.cmd** on the Windows client computers that are used by the members of the AIPMigrated group. 
 
 ## Next steps
-To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase3.md).
+To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase4.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
