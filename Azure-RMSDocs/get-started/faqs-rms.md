@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -131,9 +131,21 @@ If you protect an email with an Office document attachment to a user who doesn't
 
 ## Can I add external users (people from outside my company) to custom templates?
 
-Yes. When you convert a template to a label in the Azure portal, you can configure the [protection settings](../deploy-use/configure-policy-protection.md) to add permissions to users and groups from outside your organization, and even all users in another organization. Or, you can do this configuration by using PowerShell.
+Yes. The [protection settings](../deploy-use/configure-policy-protection.md) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. Do not add accounts from social identities (such as Gmail and Microsoft) unless the template will be used for sending email using the [new capabilities from Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-For more information about converting custom templates to labels so that you can then easily add external users, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Note that if you have Azure Information Protection labels, you must first convert your custom template to a label before you can configure these protection settings in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+
+Alternatively, you can add external users to custom templates (and labels) by using PowerShell. This configuration requires you to use a rights definition object that you use to update your template:
+
+1. Specify the external email addresses and their rights in a rights definition object, by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable.
+
+2. Supply this variable to the RightsDefinition parameter with the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+    
+    Note that if you're adding users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new, external users. You might find **Example 3: Add new users and rights to a custom template** helpful for this scenario. 
+
+## Example 3: Add new users and rights to a custom template
+
+
 
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
