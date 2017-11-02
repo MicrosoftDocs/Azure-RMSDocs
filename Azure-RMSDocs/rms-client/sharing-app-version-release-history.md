@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Rights Management sha
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,8 +33,8 @@ The Azure Information Protection team regularly updates the Rights Management sh
 
 Versions before January 1, 2015 are not listed.
 
-> [!NOTE]
-> If you have feedback or a question about the RMS sharing application, send an email message to [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!IMPORTANT]
+> **End of support notification**: The Rights Management sharing application for Windows is being replaced by the [Azure Information Protection client](aip-client.md). Support for this older application will stop January 31, 2019. 
 
 ## Version 1.0.2217.0
 

@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/08/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -77,6 +77,6 @@ In the app, go to **Settings** > **Send feedback**.
 
 ## My question has not been answered—what should I do?
 
-Post your question to our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
