@@ -32,9 +32,9 @@ ms.suite: ems
 
 If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information that is documented, you want to report an inaccuracy in the documentation, or you can’t find the information that you need. 
 
-Before you post your comment, make sure that it's relevant to the page where you are posting. These posts are public and visible to everybody. If your post is not relevant or it is outside the scope of our house rules (see the following list), expect it to be deleted.
+Before you post your comment, make sure that it's relevant to the page where you are posting. These posts are public and visible to everybody. If your post is not relevant to the page, or it is outside the scope of our house rules (see the following list), expect it to be deleted.
  
-Livefyre comments and sidenotes should not be used for the following:
+Do not use Livefyre comments and sidenotes for the following:
  
 - **Technical support**. For example, a feature isn’t working and you have checked any requirements and followed the documentation instructions. Or, you have a question about licensing. Instead, [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support) or use your standard support channels. Alternatively, engage with the community on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
