@@ -74,12 +74,9 @@ When you use File Explorer, you can quickly classify a single file, multiple fil
 
 When you select a folder, all the files in that folder and any subfolders it has are automatically selected for the classification that you set. However, new files that you create in that folder or subfolders are not automatically classified.
 
-When you use File Explorer to classify your files, if one or more of the labels appear dimmed, the files that you selected do not support classification.
+When you use File Explorer to classify your files, if one or more of the labels appear dimmed, the files that you selected do not support classification without also protecting them.
 
-Some files are automatically excluded from classification, because changing them might stop your PC from running. Although you can select these files, they are skipped as an excluded folder or file. Examples include executable files and your Windows folder.
-
-The admin guide contains a full list of the file types supported and the files and folders that are automatically excluded: [File types supported by the Azure Information Protection client](client-admin-guide-file-types.md).
-
+The admin guide contains a full list of the file types that support classification without protection: [File types supported for classification only](client-admin-guide-file-types.md#file-types-supported-for-classification-only).
 
 ### To classify a file by using File Explorer
 
@@ -97,7 +94,7 @@ The admin guide contains a full list of the file types supported and the files a
     
     If you selected a label, click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
-If you change your mind about the classification, or later need to modify your settings, simply repeat this process with your new classification choice.
+If you change your mind about the label you chose, simply repeat this process and choose a different label.
 
 The classification that you specified stays with the file, even if you email the file or save it to another location. 
 ## Other instructions
