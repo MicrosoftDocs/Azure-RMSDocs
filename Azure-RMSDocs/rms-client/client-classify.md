@@ -88,16 +88,14 @@ The admin guide contains a full list of the file types supported and the files a
     ![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. In the **Classify and protect - Azure Information Protection** dialog box, use the labels as you would do in an Office application, which sets the classification as defined by your administrator. 
-
-    - If none of the labels can be selected (they appear dimmed): The selected file does not support classification. For example:
-
+    
+    If none of the labels can be selected (they appear dimmed): The selected file does not support classification. For example:
+    
     ![No labels available in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-dimmed.png)
 
 3. If you selected a file that does not support classification, click **Close**. You cannot classify this file without also protecting it.
     
     If you selected a label, click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
-
-The selected file or files are now classified, according to your selections. 
 
 If you change your mind about the classification, or later need to modify your settings, simply repeat this process with your new classification choice.
 
