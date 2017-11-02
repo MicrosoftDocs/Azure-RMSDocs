@@ -16,6 +16,7 @@
 ##### [PowerShell commands](client-admin-guide-powershell.md)
 #### [Azure Information Protection user guide](client-user-guide.md)
 ##### [Download and install the client](install-client-app.md)
+##### [Classify a file or email](client-classify.md)
 ##### [Classify and protect a file or email](client-classify-protect.md)
 ##### [Track and revoke your documents](client-track-revoke.md)
 ##### [Open files that have been protected](client-view-use-files.md)
