@@ -30,7 +30,7 @@ ms.suite: ems
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 > [!NOTE]
-> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-instructions](client-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
+> Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](client-classify-protect.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
 
 The easiest way to classify and protect your documents and emails is when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
