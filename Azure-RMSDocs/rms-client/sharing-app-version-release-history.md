@@ -11,6 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 
 # optional metadata
