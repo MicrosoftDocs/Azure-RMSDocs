@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Classify by using Azure Information Protection
+title: Classify files & emails by using Azure Information Protection
 description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: xxxxxx
+ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 
 # optional metadata
 
