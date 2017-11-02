@@ -82,9 +82,9 @@ Before you install the Azure Information Protection scanner, make sure that the 
         
     - For a default instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - For a named instance: `Install-AIPScanner -SQLSERVER1\AIPSCANNER`
+    - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
-    - For SQL Server Express: `SQLSERVER1\SQLEXPRESS`
+    - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
 
 4. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
     
