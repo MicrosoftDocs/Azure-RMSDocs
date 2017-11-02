@@ -6,7 +6,7 @@ description: The Azure Information Protection client for Windows helps you keep 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,6 +37,8 @@ All you need is a computer that runs at least Windows 7 with Service Pack 1. 
 ## What do you want to do?
 
 - [Download and install the Azure Information Protection client](install-client-app.md)
+
+- [Classify a file or email](client-classify.md)
 
 - [Classify and protect a file or email](client-classify-protect.md)
 
