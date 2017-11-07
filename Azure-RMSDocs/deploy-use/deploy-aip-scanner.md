@@ -209,9 +209,9 @@ Information **913**
 
 **Scanner is stopped because scanner is set to Never.**
 
-This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection Scanner service has been manually restarted since the computer started.  
+This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection scanner service has been manually restarted since the computer started.  
 
-To scan the files again, you must manually start the service. To change this behavior so that the scanner runs continuously, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and set the **Schedule** parameter to **Continuous**.
+To scan the files again, you must set the schedule to **OneTime** or **Continuous**, and then manually restart the service. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
 
 ----
 
