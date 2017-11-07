@@ -215,7 +215,7 @@ When you configure this setting, you can classify (and optionally, protect) an O
 
 As a result of this configuration, when a document without an Azure Information Protection label is opened and saved by a user in an Office app, the document is then labeled to match the corresponding property value. 
 
-This configuration requires you to specify two advanced settings that work together. The first is named **SyncPropertyName**, which is the custom property name that has been set from the other classification solution, or a property that is used by SharePoint. The second is named **SyncPropertyState** and must be set to OneWay.
+This configuration requires you to specify two advanced settings that work together. The first is named **SyncPropertyName**, which is the custom property name that has been set from the other classification solution, or a property that is set by SharePoint. The second is named **SyncPropertyState** and must be set to OneWay.
 
 To configure this advanced setting, enter the following strings:
 
