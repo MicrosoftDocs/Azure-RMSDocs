@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -136,7 +136,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped. Look for the informational event ID **911**.
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the service is stopped. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -185,7 +185,7 @@ Other cmdlets for the scanner let you change the service account and database fo
 
 ## Event log IDs and descriptions
 
-Use the following sections to identify the possible event IDs and descriptions for the scanner.
+Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
 
 -----
 
