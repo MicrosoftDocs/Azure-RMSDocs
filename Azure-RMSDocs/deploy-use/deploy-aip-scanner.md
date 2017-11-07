@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -136,7 +136,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
 
-2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the Windows **Application** event log, **Azure Information Protection Scanner**, to confirm when the service is stopped. Look for the informational event ID **911**.
+2. Wait for the scanner to complete its cycle. When the scanner has crawled through all the files in the data stores that you specified, the service stops. You can use the local Windows **Applications and Services** event log, **Azure Information Protection**, to confirm when the service is stopped. Look for the informational event ID **911**.
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
@@ -185,7 +185,7 @@ Other cmdlets for the scanner let you change the service account and database fo
 
 ## Event log IDs and descriptions
 
-Use the following sections to identify the possible event IDs and descriptions for the scanner.
+Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
 
 -----
 
@@ -209,9 +209,9 @@ Information **913**
 
 **Scanner is stopped because scanner is set to Never.**
 
-This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection Scanner service has been manually restarted since the computer started.  
+This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection scanner service has been manually restarted since the computer started.  
 
-To scan the files again, you must manually start the service. To change this behavior so that the scanner runs continuously, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and set the **Schedule** parameter to **Continuous**.
+To scan the files again, you must set the schedule to **OneTime** or **Continuous**, and then manually restart the service. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
 
 ----
 
