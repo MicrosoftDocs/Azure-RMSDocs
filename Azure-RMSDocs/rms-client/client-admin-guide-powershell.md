@@ -525,7 +525,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 > [!TIP]
 > If Set-AIPAuthentication is not successful and you used existing apps rather than creating new apps by using the preceding instructions, you might need to reset the required permissions for your apps. This might also be the case if you followed the instructions to create new apps for Set-AIPAuthentication, but then modified the app settings.
-> To reset the required permissions, for both apps, use the following configuration steps: **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
+> To reset the required permissions, for both apps, use the following configuration steps: Select **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
 > Alternatively, create new apps by using the preceding instructions.
 
 ## Next steps
