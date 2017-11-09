@@ -6,7 +6,7 @@ description: Guidance if you have Azure Rights Management with AD RMS deployed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,9 +31,9 @@ ms.suite: ems
 
 Important guidance if you are already using Active Directory Rights Management Services (AD RMS) and the following scenario applies:
 
-## You see an option to activate Azure RMS when you configure Azure Information Protection
+## You see an option to activate protection when you configure Azure Information Protection
 
-The **Azure Information Protection - RMS Settings** blade has an option to activate the Azure Rights Management service (Azure RMS). 
+The **Azure Information Protection - Protection activation** blade has an option to activate the Azure Rights Management service (Azure RMS). 
 
 If you are also using Active Directory Rights Management Services (AD RMS), do not select the **Activate** option. Activating Azure Rights Management when you also have AD RS isn't a compatible combination. This scenario isn't supported and has unreliable results, so it's important that you do not activate Azure Rights Management at this time. 
 
