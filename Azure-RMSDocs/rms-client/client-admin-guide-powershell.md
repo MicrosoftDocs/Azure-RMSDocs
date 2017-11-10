@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -522,6 +522,13 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
 
+
+> [!TIP]
+> If Set-AIPAuthentication is not successful and you used existing apps rather than creating new apps by using the preceding instructions, you might need to reset the required permissions for your apps. This might also be the case if you followed the instructions to create new apps for Set-AIPAuthentication, but then modified the app settings.
+> 
+> To reset the required permissions, for both apps, use the following configuration steps: Select **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
+> 
+> Alternatively, create new apps by using the preceding instructions.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
