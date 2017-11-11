@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -161,6 +161,14 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
+
+## When files are rescanned
+
+For the first scan cycle, the scanner inspects all files in the configured repositories and then for subsequent scans, only new or modified files are inspected. 
+
+You can force the scanner to inspect all files again by running [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) with the `Type` parameter set to **Full**. This configuration is useful when you want the reports to include all files and it is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
+
+In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner checks for changes to the policy every hour and when the service starts.
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
