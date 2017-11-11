@@ -162,7 +162,7 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
 
-## When files are rescanned
+## When files are rescanned by the Azure Information Protection scanner
 
 For the first scan cycle, the scanner inspects all files in the configured repositories and then for subsequent scans, only new or modified files are inspected. 
 
