@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 Preview versions should not be deployed for end users on production networks. Instead, use preview versions to see and try new functionality or fixes that are coming in the next GA version. 
 
-Use the following information to see what’s new or changed for a GA release. The most current release is listed first. 
+Use the following information to see what’s new or changed for a release. The most current release is listed first. 
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest GA release. If it is, then check the current preview version.
@@ -42,9 +42,40 @@ Use the following information to see what’s new or changed for a GA release. T
 
 ## Versions later than 1.10.56.0
 
-If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
+If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
 
-For what's new or changed in the current preview version since the last GA version of the client, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+The current preview version is **1.17.16.0** and has the following changes since the current GA version of the client:
+
+**New features**:
+
+- For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
+
+**Fixes**:
+
+Fixes for stability and for specific scenarios that include:
+
+- Prevent Outlook hanging when Outlook reminders are used.
+
+- Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
+
+- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information]( ) 
+
+- Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
+
+- Prevent Office crashes after the Azure Information Protection client is upgraded.
+
+- For Office apps, improve performance and memory consumption.
+
+- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+
+Fixes for a better user experience, that include:
+
+- Support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. Applies to File Explorer, right-click to classify and protect files, to the Azure Information Protection Viewer, and to the Click-to-Run version of Office 2016.
+
 
 ## Version 1.10.56.0
 
