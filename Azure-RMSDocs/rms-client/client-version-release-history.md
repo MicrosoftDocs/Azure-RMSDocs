@@ -62,6 +62,8 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 Fixes for stability and for specific scenarios that include:
 
+- Files that have an.xml file name extension can now be inspected for recommended or automatic classification.
+
 - Prevent Outlook hanging when Outlook reminders are used.
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
