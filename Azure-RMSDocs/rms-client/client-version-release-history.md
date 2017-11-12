@@ -44,9 +44,13 @@ Use the following information to see what’s new or changed for a release. The 
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
 
-The current preview version is **1.17.16.0** and has the following changes since the current GA version of the client:
+The current preview version is **1.17.16.0** and has the following changes since the current GA version of the client.
+
+This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 **New features**:
+
+- The preview of the Azure Information Protection scanner: The PowerShell module that is included with the client has cmdlets to install and configure the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
 
 - For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
 
@@ -62,7 +66,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
 
-- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information]( ) 
+- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customization.mds#make-the-custom-permissions-options-unavailable-to-users) 
 
 - Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
 
