@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,9 +35,9 @@ After the migration, your AD RMS servers are no longer in use but users still ha
 
 Not sure whether this AD RMS migration is right for your organization?
 
--   For an introduction to Azure Information Protection, see [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)
+- For an introduction to Azure Information Protection, see [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)
 
--   For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
+- For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
 ## Recommended reading before you migrate to Azure Information Protection
 
@@ -119,10 +119,10 @@ To confirm the AD RMS cryptographic mode:
 
 ### Migration limitations
 
--   If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
+- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
 
--   If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
-
+- If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
+    
     Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
 
 ## Migration planning if you collaborate with external partners
@@ -153,11 +153,11 @@ The migration steps can be divided into five phases that can be done at differen
 
 - **Step 2. Prepare for client migration**
 
-     If you cannot migrate all clients at once and will migrate them in batches, use onboarding controls and deploy a pre-migration script.
+    If you cannot migrate all clients at once and will migrate them in batches, use onboarding controls and deploy a pre-migration script. However, if you will migrate everything at the same time rather than do a phased migration, you can skip this step.
 
 - **Step 3: Prepare your Exchange deployment for migration**
 
-    This step is required if you currently use the IRM feature of Exchange Online or Exchange on-premises to protect emails.
+    This step is required if you currently use the IRM feature of Exchange Online or Exchange on-premises to protect emails. However, if you will migrate everything at the same time rather than do a phased migration, you can skip this step.
 
 [**PHASE 2: SERVER-SIDE CONFIGURATION FOR AD RMS**](migrate-from-ad-rms-phase2.md)
 
@@ -213,7 +213,7 @@ The migration steps can be divided into five phases that can be done at differen
 
     If you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
     
-    The onboarding controls that you configured during the preparation phase are no longer needed.
+    The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
 
 - **Step 12: Rekey your Azure Information Protection tenant key**
 
