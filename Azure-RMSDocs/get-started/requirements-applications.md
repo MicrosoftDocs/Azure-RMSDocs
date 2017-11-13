@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2017
+ms.date: 11/10/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -63,7 +63,7 @@ Information about the table columns:
 
 
 ###### Footnote 1
-To view documents that are stored in SharePoint Online and OneDrive for Business, the documents must be unprotected before they are uploaded to a protected library.
+Supported only with SharePoint Online and OneDrive for Business, and the documents are unprotected before they are uploaded to a protected library.
 
 ###### Footnote 2
 For [Office attachments](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are protected by using [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).

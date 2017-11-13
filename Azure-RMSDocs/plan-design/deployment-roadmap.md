@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use the following steps to prepare for, implement, and manage Azure Information Protection for your organization.
+Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization.
 
 However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 

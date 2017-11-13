@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -464,11 +464,14 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner, currently in preview.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+> [!NOTE]
+> If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
+
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
@@ -522,6 +525,13 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
 
+
+> [!TIP]
+> If Set-AIPAuthentication is not successful and you used existing apps rather than creating new apps by using the preceding instructions, you might need to reset the required permissions for your apps. This might also be the case if you followed the instructions to create new apps for Set-AIPAuthentication, but then modified the app settings.
+> 
+> To reset the required permissions, for both apps, use the following configuration steps: Select **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
+> 
+> Alternatively, create new apps by using the preceding instructions.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 

@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection*
 
-The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. The client is included in the Microsoft Update Catalog (category: **Azure Information Protection**) and you can always download the latest general availability (GA) release version and the upcoming version (the preview version) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. The client is included in the Microsoft Update Catalog (category: **Azure Information Protection**) and you can always download the latest general availability (GA) release version and the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 Preview versions should not be deployed for end users on production networks. Instead, use preview versions to see and try new functionality or fixes that are coming in the next GA version. 
 

@@ -6,11 +6,12 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 
 # optional metadata
@@ -62,7 +63,7 @@ For more information about this change, see the blog announcement: [Office 365 M
 
 ## Where can I find information about third-party solutions that integrate with Azure RMS?
 
-Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications.md#rms-enlightened-solutions) list and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. However, if you have a specific question, send an email message to the Information Protection team: askipteam@microsoft.com.
+Many software vendors already have solutions or are implementing solutions that integrate with Azure Rights Management—and the list is growing rapidly. You might find it useful to check the [RMS-englightened solutions](requirements-applications.md#rms-enlightened-solutions) list and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. Also check the [developer's guide](../develop/developers-guide.md) and post any specific integration questions on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 ## Is there a management pack or similar monitoring mechanism for the RMS connector?
 
@@ -111,8 +112,6 @@ Absolutely, and the nice thing is, users will be able to seamlessly protect and 
 ## If I use this protection for my production environment, is my company then locked into the solution or risk losing access to content that we protected with Azure RMS?
 No, you always remain in control of your data and can continue to access it, even if you decide to no longer use the Azure Rights Management service. For more information, see [Decommissioning and deactivating Azure Rights Management](../deploy-use/decommission-deactivate.md).
 
-However, before you decommission your Azure Rights Management service, we would like to hear from you and understand why you made this decision. If Azure Rights Management protection does not fulfill your business requirements, check with us in case new functionality is planned for the near-future or if there are alternatives. Send an email message to [AskIPTeam@Microsoft.com](mailto:askipteam@microsoft.com?subject=Planning%20to%20decommission%20Azure%20RMS) and we’ll be happy to discuss your technical and business requirements.
-
 ## Can I control which of my users can use Azure RMS to protect content?
 Yes, the Azure Rights Management service has user onboarding controls for this scenario. For more information, see the [Configuring onboarding controls for a phased deployment](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) section in the [Activating Azure Rights Management](../deploy-use/activate-service.md) article.
 
@@ -131,9 +130,17 @@ If you protect an email with an Office document attachment to a user who doesn't
 
 ## Can I add external users (people from outside my company) to custom templates?
 
-Yes. When you convert a template to a label in the Azure portal, you can configure the [protection settings](../deploy-use/configure-policy-protection.md) to add permissions to users and groups from outside your organization, and even all users in another organization. Or, you can do this configuration by using PowerShell.
+Yes. The [protection settings](../deploy-use/configure-policy-protection.md) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. Unless the template will be used exclusively for sending email using the [new capabilities from Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), do not add accounts from social identities (such as Gmail and Microsoft) or other accounts that are not in Azure AD.
 
-For more information about converting custom templates to labels so that you can then easily add external users, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Note that if you have Azure Information Protection labels, you must first convert your custom template to a label before you can configure these protection settings in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
+
+Alternatively, you can add external users to custom templates (and labels) by using PowerShell. This configuration requires you to use a rights definition object that you use to update your template:
+
+1. Specify the external email addresses and their rights in a rights definition object, by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable.
+
+2. Supply this variable to the RightsDefinition parameter with the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
+    
+    When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) section for the cmdlet. 
 
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
