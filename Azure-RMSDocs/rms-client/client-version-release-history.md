@@ -50,7 +50,7 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 **New features**:
 
-- The preview of the Azure Information Protection scanner: The PowerShell module that is included with the client has cmdlets to install and configure the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
+- The preview of the Azure Information Protection scanner: The PowerShell module that is included with the client has preview cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
 
 - For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
 
@@ -61,6 +61,12 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 **Fixes**:
 
 Fixes for stability and for specific scenarios that include:
+
+- Prevent labeling while editing a cell in Excel, which previously caused text corruption in that cell. 
+
+- Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
+
+- Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
 
 - Files that have an.xml file name extension can now be inspected for recommended or automatic classification.
 
