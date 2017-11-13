@@ -464,11 +464,14 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner, currently in preview.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+> [!NOTE]
+> If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
+
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
