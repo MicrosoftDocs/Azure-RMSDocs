@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -205,6 +205,33 @@ To configure this advanced setting, enter the following strings:
 
 - Value: \<**label ID**> or **None**
 
+## Label an Office document by using an existing custom property
+
+This configuration option is currently in preview and is subject to change. 
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, you can classify (and optionally, protect) an Office document when it has an existing custom property with a value that matches one of your label names. This  custom property can be set from another classification solution, or can be set as a property by SharePoint.
+
+As a result of this configuration, when a document without an Azure Information Protection label is opened and saved by a user in an Office app, the document is then labeled to match the corresponding property value. 
+
+This configuration requires you to specify two advanced settings that work together. The first is named **SyncPropertyName**, which is the custom property name that has been set from the other classification solution, or a property that is set by SharePoint. The second is named **SyncPropertyState** and must be set to OneWay.
+
+To configure this advanced setting, enter the following strings:
+
+- Key 1: **SyncPropertyName**
+
+- Key 1 Value: \<**property name**> 
+
+- Key 2: **SyncPropertyState**
+
+- Key 2 Value: **OneWay**
+
+As example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Confidential**. Documents are stored in SharePoint and have one of these values set for the Classification property.
+
+To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
+
+Now, when a user opens and saves one of these Office documents, it will be labeled  **Public**, **General**, or **Confidential** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 
