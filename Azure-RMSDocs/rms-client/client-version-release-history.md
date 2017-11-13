@@ -33,11 +33,11 @@ The Azure Information Protection team regularly updates the Azure Information Pr
 
 **Lifecycle policy**: 
 
-- The client versions are supported for a period of 12 months from the date of general availability (GA) release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+- The general availability (GA) versions of the client are supported for a period of 12 months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 - Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
-You can download the latest GA release version and the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). These versions are also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can deploy the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.  
+You can download the latest GA release version and the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). These versions are also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can deploy the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 Use the following information to see what’s new or changed for a supported GA release. The most current release is listed first. 
 
