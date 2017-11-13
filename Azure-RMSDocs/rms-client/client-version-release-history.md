@@ -39,9 +39,9 @@ The general availability (GA) versions of the client are supported for a period 
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
-### Version history
+### Release history
 
-Use the following information to see what’s new or changed for a supported GA release. The most current release is listed first. 
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
 
 
 > [!NOTE]
