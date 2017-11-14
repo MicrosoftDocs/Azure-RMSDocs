@@ -31,8 +31,9 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that apply to all users, all devices:
 
-![Azure Information Protection policy global settings](../media/info-protect-policy-default-settingsv2.png)
+![Azure Information Protection policy global settings](../media/info-protect-policy-default-settingsv3.png)
 
+Your policy settings might have different default values, depending on when you purchased your subscription for Azure Information Protection. Some settings might also have been set by a custom client setting.
 
 To configure these settings:
 
@@ -46,13 +47,13 @@ To configure these settings:
 
 3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, configure the settings:
     
-    - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option). 
+    - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
+        
+    - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
         If a label is not assigned when a user saves a document or sends an email, they are prompted to select a label. For example:
         
         ![Azure Information Protection prompt if labeling is enforced](../media/info-protect-enforce-labelv2.png)
-        
-    - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
         
     - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.  
         
@@ -61,6 +62,21 @@ To configure these settings:
         This option is not applicable for sub-labels.
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **On**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
+    
+    - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, they must select labels from the Protect button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
+    
+    - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the Outlook ribbon in addition to selecting it from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not show this button but instead, configure a label for a user defined permission for Outlook. This protection setting is functionally the same as selecting Do Not Forward but when it is included with a label, emails are classified as well as protected.
+    
+    - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you have included with a label configuration. the custom permissions options from the following locations become unavailable for users to select:
+
+- In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
+
+- From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
+
+This setting has no effect on custom permissions that you can configure from Office menu options. 
+
+
+
 
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
