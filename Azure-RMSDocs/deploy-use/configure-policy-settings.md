@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -63,21 +63,18 @@ To configure these settings:
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **On**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
     
-    - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, they must select labels from the Protect button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
+    - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
     
-    - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the Outlook ribbon in addition to selecting it from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not show this button but instead, configure a label for a user defined permission for Outlook. This protection setting is functionally the same as selecting Do Not Forward but when it is included with a label, emails are classified as well as protected.
+    - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting it from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, configure a label for a user defined permission for Outlook. This protection setting is functionally the same as selecting Do Not Forward but when it is included with a label, emails are classified as well as protected.
     
-    - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you have included with a label configuration. the custom permissions options from the following locations become unavailable for users to select:
-
-- In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
-
-- From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
-
-This setting has no effect on custom permissions that you can configure from Office menu options. 
-
-
-
-
+    - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. The custom permissions options are available from the following locations:
+        
+        - In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
+        
+        - From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
+    
+    Note that this setting has no effect on custom permissions that you can configure from Office menu options. 
+    
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
         As an example, for your help desk, you might enter the Microsoft documentation page that includes information about installing and using the client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) or release version information (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternatively, you might publish your own webpage that includes information for users to contact your help desk, or a video that steps users through how to use the labels that you have configured.
