@@ -33,7 +33,7 @@ In addition to the Information Protection bar title and tooltip, there are some 
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-default-settingsv3.png)
 
-Your policy settings might have different default values, depending on when you purchased your subscription for Azure Information Protection. Some settings might also have been set by a custom client setting.
+Note that your policy settings might have different default values, depending on when you purchased your subscription for Azure Information Protection. Some settings might also be set by a [custom client setting](../rms-client/client-admin-guide-cusotmizations.md).
 
 To configure these settings:
 
@@ -65,7 +65,11 @@ To configure these settings:
     
     - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
     
+    When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. 
+    
     - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting it from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, configure a label for a user defined permission for Outlook. This protection setting is functionally the same as selecting Do Not Forward but when it is included with a label, emails are classified as well as protected.
+    
+    This policy setting can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
     - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. The custom permissions options are available from the following locations:
         
@@ -73,7 +77,7 @@ To configure these settings:
         
         - From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
     
-    Note that this setting has no effect on custom permissions that you can configure from Office menu options. 
+    Note that this policy setting has no effect on custom permissions that you can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations#make-the-custom-permissions-options-avaialble-or-unavailable-to-users ).
     
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         

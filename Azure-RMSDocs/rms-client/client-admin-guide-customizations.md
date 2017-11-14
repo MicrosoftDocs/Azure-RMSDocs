@@ -124,26 +124,26 @@ When you export the policy, this action downloads a zipped file with multiple ve
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure information protection client installed. 
 
 
-## Hide the Do Not Forward button in Outlook
+## Hide or show the Do Not Forward button in Outlook
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal.
 
-When you configure this setting, it hides the **Do Not Forward** button from the ribbon in Outlook. It does not hide this option from Office menus.
+When you configure this setting, it hides or shows the **Do Not Forward** button on the ribbon in Outlook. This setting has no effect on the Do Not Forward option from Office menus.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **DisableDNF**
 
-- Value: **True**
+- Value: **True** to hide the button, or **False** to show the button
 
-## Make the custom permissions options unavailable to users
+## Make the custom permissions options available or unavailable to users
 
 > [!IMPORTANT]
 > Unless you use the current preview version of the client, do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
 
-When you configure this setting and publish the policy for users, the custom permissions options from the following locations become unavailable for users to select:
+When you configure this setting and publish the policy for users, the custom permissions options from the following locations become available for users to select, or unavailable so that users can't select their own protection settings:
 
 - In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
 
@@ -155,11 +155,11 @@ To configure this advanced setting, enter the following strings:
 
 - Key: **EnableCustomPermissions**
 
-- Value: **False**
+- Value: **True** to make this option available, or **False** to make this option unavailable
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Use it only when the [policy setting](../deploy-use/configure-policy-setting.md) **Display the Information Protection bar in Office apps** is set to **On**.
 
 When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
