@@ -33,7 +33,7 @@ In addition to the Information Protection bar title and tooltip, there are some 
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-default-settingsv3.png)
 
-Note that your policy settings might have different default values, depending on when you purchased your subscription for Azure Information Protection. Some settings might also be set by a [custom client setting](../rms-client/client-admin-guide-cusotmizations.md).
+Note that your policy settings might have different default values, depending on when you purchased your subscription for Azure Information Protection. Some settings might also be set by a [custom client setting](../rms-client/client-admin-guide-customizations.md).
 
 To configure these settings:
 
@@ -77,7 +77,7 @@ To configure these settings:
         
         - From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
     
-    Note that this policy setting has no effect on custom permissions that you can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations#make-the-custom-permissions-options-avaialble-or-unavailable-to-users ).
+    Note that this policy setting has no effect on custom permissions that you can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users ).
     
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
