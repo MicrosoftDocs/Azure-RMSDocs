@@ -138,24 +138,18 @@ To configure this advanced setting, enter the following strings:
 
 ## Make the custom permissions options available or unavailable to users
 
-> [!IMPORTANT]
-> Unless you use the current preview version of the client, do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
-
 The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
 
-When you configure this setting and publish the policy for users, the custom permissions options from the following locations become available for users to select, or unavailable so that users can't select their own protection settings:
-
-- In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
-
-- From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
-
-This setting has no effect on custom permissions that you can configure from Office menu options. 
+When you configure this setting and publish the policy for users, the custom permissions options become available for users to select their own protection settings, or unavailable so that users can't select their own protection settings unless prompted.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **EnableCustomPermissions**
 
-- Value: **True** to make this option available, or **False** to make this option unavailable
+- Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
+
+> [!IMPORTANT]
+> Unless you use the current preview version of the client, do not set this option to **False** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 ## Permanently hide the Azure Information Protection bar
 
