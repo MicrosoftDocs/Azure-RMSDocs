@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/28/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,7 +44,7 @@ Use the following information to see what’s new or changed for a release. The 
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
 
-The current preview version is **1.17.16.0** and has the following changes since the current GA version of the client.
+The current preview version is **1.18.9.0 ** and has the following changes since the current GA version of the client.
 
 This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
@@ -62,13 +62,11 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 Fixes for stability and for specific scenarios that include:
 
-- Prevent labeling while editing a cell in Excel, which previously caused text corruption in that cell. 
-
 - Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
 
 - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
 
-- Files that have an.xml file name extension can now be inspected for recommended or automatic classification.
+- Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
 
 - Prevent Outlook hanging when Outlook reminders are used.
 
@@ -111,7 +109,7 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
     
     - [Make the custom permissions options unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
     
-    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Enable recommended classification in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
