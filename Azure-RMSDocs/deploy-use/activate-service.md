@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 11/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,9 @@ ms.suite: ems
 > This configuration information is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
 >
 > For example, for Office applications, click the Help icon and enter search terms such as **Rights Management** or **IRM**. For the Azure Information Protection client for Windows, see the [Azure Information Protection client user guide](../rms-client/client-user-guide.md).
- 
+>
+> For technical support and other questions about the service, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information.
+
 When the Azure Rights Management service for Azure Information Protection is activated for your tenant, your organization can start to protect important data by using applications and services that support this information protection solution. Administrators can also manage and monitor protected files and emails that your organization owns. This service must be enabled before you can begin to use the information rights management (IRM) features within Office, SharePoint, and Exchange, and protect any sensitive or confidential file.
 
 If you want to learn more about the Azure Rights Management service before you activate the it—for example, what business problems it solves, some typical use cases, and how it works—see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
