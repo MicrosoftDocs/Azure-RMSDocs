@@ -73,7 +73,7 @@ No. When you label an email message that has attachments, those attachments do n
 
 Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. 
 
-- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents (.pdf), this metadata is stored in the following custom property that can be used with DLP solutions: **MSIP_Label_<GUID>_Enabled = True**  
+- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents (.pdf), this metadata is stored in the following custom property: **MSIP_Label_<GUID>_Enabled = True**  
 
 - In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_<GUID>_Enabled=True;**  
 
