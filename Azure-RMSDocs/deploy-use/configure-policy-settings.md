@@ -76,13 +76,13 @@ To configure these settings:
         > [!IMPORTANT]
         > Unless you use the current preview version of the client, do not use the  **Off** setting if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
         
-        The custom permissions options are available from the following locations:
+        Note that this policy setting has no effect on custom permissions that users can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
+        
+        The custom permissions options are available for users from the following locations:
         
         - In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
         
         - From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
-            
-        Note that this policy setting has no effect on custom permissions that you can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
     
     - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page**: Users see this link in the **Microsoft Azure Information Protection** dialog box, **Help and Feedback** section, when they select **Protect** > **Help and feedback** from the **Home** tab in their Office applications. By default, this link goes to the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) website. You can enter an HTTP or HTTPS (recommended) URL if you want this link to go to an alternative web page. No check is made to verify that the custom URL entered is accessible or displays correctly on all devices.
         
