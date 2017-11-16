@@ -131,5 +131,13 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
     
     Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
 
+## Next steps
+
+For more information about installing and using the client: 
+
+- For users: [Download and install the client](install-client-app.md)
+
+- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
