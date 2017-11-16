@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/21/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,16 +48,13 @@ When the file is protected with your custom permissions, use your standard shari
 
 ## Using Office apps to classify and protect your documents and emails
 
-Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
+Use the Azure Information Protection bar or the **Protect** button on the ribbon to select one of the labels that has been configured for you. 
 
-For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "General", click **General**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
+For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set** on the Azure Information Protection bar. To set a label, such as "General", click **General**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
 If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
-
-> [!TIP]
-> You can also select labels from the **Protect** button, on the **File** tab.
 
 In addition to manually selecting labels, labels can also be applied in the following ways:
 
