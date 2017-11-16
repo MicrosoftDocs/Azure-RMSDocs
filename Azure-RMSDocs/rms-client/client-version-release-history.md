@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection client&colon; Version release history and lifecycle policy
+title: Azure Information Protection client&colon; Version release history and support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
