@@ -74,7 +74,7 @@ To configure these settings:
     - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. When this setting is off, the custom permissions options are not available for users to select.
         
         > [!IMPORTANT]
-        > Unless you use the current preview version of the client, make sure that this option is not set to **Off** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
+        > Unless you use the current preview version of the client, do not use the  **Off** setting if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
         
         The custom permissions options are available from the following locations:
         
