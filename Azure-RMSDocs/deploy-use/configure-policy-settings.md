@@ -78,9 +78,9 @@ To configure these settings:
         
         Note that this policy setting has no effect on custom permissions that users can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
         
-        The custom permissions options are available for users from the following locations:
+        The custom permissions options are located in the following places:
         
-        - In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
+        - In Office applications: From the ribbon, **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
         
         - From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
     
