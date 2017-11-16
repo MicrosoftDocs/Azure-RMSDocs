@@ -51,11 +51,11 @@ To configure these settings:
         
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
-        If a label is not assigned when a user saves a document or sends an email, they are prompted to select a label. For example:
+        If a label is not assigned when users save a document or sends an email, they are prompted to select a label. For example:
         
         ![Azure Information Protection prompt if labeling is enforced](../media/info-protect-enforce-labelv2.png)
         
-    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Application** > **Microsoft Azure Information Protection**.  
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
         
         ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
         
@@ -65,7 +65,7 @@ To configure these settings:
     
     - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
     
-    When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. 
+    When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by  clearing the **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button.
     
     - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting it from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, [configure a label for protection](configure-policy-protection.md) and a user defined permission for Outlook. This protection setting is functionally the same as selecting Do Not Forward but when it is included with a label, emails are classified as well as protected.
     
