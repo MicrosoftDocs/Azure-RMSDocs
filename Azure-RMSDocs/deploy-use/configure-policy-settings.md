@@ -29,7 +29,7 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 >*Applies to: Azure Information Protection*
 
-In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that apply to all users, all devices:
+In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that you can configure independently from the labels:
 
 ![Azure Information Protection policy global settings](../media/info-protect-policy-default-settingsv3.png)
 
