@@ -6,7 +6,7 @@ description: Scope and intent for Livefyre comments and sidebars for the Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,9 @@ Before you post your comment, make sure that it's relevant to the page where you
  
 Do not use Livefyre comments and sidenotes for the following:
  
-- **Technical support**. For example, a feature isn’t working and you have checked any requirements and followed the documentation instructions. Or, you have a question about licensing. Instead, [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support) or use your standard support channels. Alternatively, engage with the community on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
+- **Questions about subscriptions for your organization**. For example, whether your existing subscriptions support a feature that you want to use and you have checked the [subscription requirements for Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection). Instead, contact your Microsoft Technical Account Manager or [Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support).
+
+- **Technical support**. For example, a feature isn’t working and you have checked any requirements and followed the documentation instructions. You have also checked that you're using a [supported version](./rms-client/client-version-release-history.md#servicing-information-and-timelines) of the Azure Information Protection client. Instead, [contact Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support) or use your standard support channels. Alternatively, engage with the community on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam).
 
 - **Roadmap information**. For example, when a new release will be available or additional functionality is planned. For this information, visit the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) or ask about it on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam). You can also check the [User Voice site](https://msip.uservoice.com) for Azure Information Protection and use this resource to request new features.
 
