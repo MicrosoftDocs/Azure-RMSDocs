@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ For example:
 
 The Azure Information Protection client includes the following:
 
-- An Office add-in, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options. For Outlook, a **Do Not Forward** button is also added to the ribbon.
+- An Office add-in, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options. For Outlook, a **Do Not Forward** button is also available for the ribbon.
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
