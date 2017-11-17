@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
