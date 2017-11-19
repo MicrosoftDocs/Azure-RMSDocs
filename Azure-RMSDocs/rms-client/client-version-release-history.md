@@ -67,7 +67,7 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../deploy-use/configure-policy-protection.md).
 
-- Labels support multi-languages. Beginning with August 30, 2017, the [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection](..deploy-use/configure-policy-languages.md).
+- Labels support multi-languages. Beginning with August 30, 2017, the [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
 
