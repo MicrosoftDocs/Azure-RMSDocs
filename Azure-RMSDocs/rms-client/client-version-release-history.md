@@ -35,7 +35,7 @@ You can download the latest GA release version and the current preview version f
 
 ### Servicing information and timelines
 
-The general availability (GA) versions of the Azure Information Protection client are supported for a period of 6 months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+The general availability (GA) versions of the Azure Information Protection client are supported for a period of six months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
@@ -107,7 +107,7 @@ Fixes for a better user experience, that include:
 
 - Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
 
-- The parent label is not displayed when all its sub-labels are configured for protection and the client does not have an edition of Office that supports protection. 
+- The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Version 1.7.210.0
 
