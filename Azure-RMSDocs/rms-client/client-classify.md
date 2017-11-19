@@ -6,7 +6,7 @@ description: Instructions how to classify your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,9 @@ In addition to manually selecting labels, labels can also be applied in the foll
 ##### Don't see this Information Protection bar in your Office apps?
 
 - You might not have the Azure Information Protection client [installed](install-client-app.md).
- 
+
+- You have the client installed, but your administrator has configured a setting that doesn't display the bar. Instead, select labels from the **Protect** button, on the **File** tab from the Office ribbon. 
+
 ##### Is the label that you expect to see not displayed on the bar? 
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.

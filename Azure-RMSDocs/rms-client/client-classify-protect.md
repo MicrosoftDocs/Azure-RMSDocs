@@ -70,7 +70,7 @@ Possible reasons:
 
 - You don't have the Azure Information Protection client [installed](install-client-app.md).
 
-- You have the client installed, but your administrator has configured a setting that doesn't display the bar. Instead, select labels from the **Protect** button, on the **File** tab. 
+- You have the client installed, but your administrator has configured a setting that doesn't display the bar. Instead, select labels from the **Protect** button, on the **File** tab from the Office ribbon. 
 
 - Your client is running in [protection-only mode](client-protection-only-mode.md).
  
