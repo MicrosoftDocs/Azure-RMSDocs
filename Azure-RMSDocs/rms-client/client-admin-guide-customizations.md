@@ -221,6 +221,8 @@ To configure this advanced setting, enter the following strings:
 
 - Key 2 Value: **OneWay**
 
+Use these keys and corresponding values for only one custom property.
+
 As example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Confidential**. Documents are stored in SharePoint and have one of these values set for the Classification property.
 
 To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
