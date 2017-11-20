@@ -43,7 +43,6 @@ Preview versions should not be deployed for end users on production networks. In
 
 Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
 
-
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
@@ -75,11 +74,11 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     
-    - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Hide or show the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Make the custom permissions options unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Make the custom permissions options available or unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Enable recommended classification in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
