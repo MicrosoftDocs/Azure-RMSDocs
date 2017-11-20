@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,14 +35,13 @@ You can download the latest GA release version and the current preview version f
 
 ### Servicing information and timelines
 
-The general availability (GA) versions of the Azure Information Protection client are supported for a period of 6 months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+The general availability (GA) versions of the Azure Information Protection client are supported for a period of six months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
 ### Release history
 
 Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
-
 
 > [!NOTE]
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
@@ -67,17 +66,19 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 
 - Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../deploy-use/configure-policy-protection.md).
 
+- Labels support multiple languages. Beginning with August 30, 2017, the [default policy](../deploy-use/configure-policy-default.md) includes support for multiple languages that this version of the client displays to users. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
+
 - Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
 
 - Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
 
 - Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
     
-    - [Hide the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Hide or show the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Make the custom permissions options unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Make the custom permissions options available or unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Enable recommended classification in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
@@ -105,7 +106,7 @@ Fixes for a better user experience, that include:
 
 - Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
 
-- The parent label is not displayed when all its sub-labels are configured for protection and the client does not have an edition of Office that supports protection. 
+- The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Version 1.7.210.0
 
@@ -130,6 +131,14 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
     - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
     
     Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
+
+## Next steps
+
+For more information about installing and using the client: 
+
+- For users: [Download and install the client](install-client-app.md)
+
+- For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
