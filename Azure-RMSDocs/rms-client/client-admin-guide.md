@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ For example:
 
 The Azure Information Protection client includes the following:
 
-- An Office add-in, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options. For Outlook, a **Do Not Forward** button is also added to the ribbon.
+- An Office add-in, that installs the Azure Information Protection bar for users to select classification labels, and a **Protect** button on the ribbon for additional options. For Outlook, a **Do Not Forward** button is also available for the ribbon.
 
 - Windows File Explorer, right-click options for users to apply classification labels and protection to files.
 
@@ -135,7 +135,9 @@ The **Reset Settings** signs out the user, deletes the currently downloaded Azur
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- The following registry keys and settings are deleted. If you configured settings for any of these registry keys, you must reconfigure them after you reset the client. For example, you configured settings for redirection to your Azure Information Protection tenant because you are migrating from AD RMS and still have a Service Connection Point on your network:
+- The following registry keys and settings are deleted. If the settings for any of these registry keys have custom values, these must be reconfigured after you reset the client. 
+    
+    Typically for enterprise networks, these settings are configured by using group policy, in which case they are automatically reapplied when group policy is refreshed on the computer. However, there might be some settings that are configured one time with a script, or manually configured. In these cases, you must take additional steps to reconfigure these settings. As an example, computers might run a script one time to configure settings for redirection to Azure Information Protection because you are migrating from AD RMS and still have a Service Connection Point on your network. After resetting the client, the computer must run this script again.
     
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     

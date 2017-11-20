@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ Client logs files and currently installed policy file:
 
 ## Usage logging for the Azure Information Protection client
 
-The client logs user activity to the local Windows **Applications and Services** event log, **Azure Information Protection**. The events include the following information:
+The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 
 - Date, client version, policy ID
 
