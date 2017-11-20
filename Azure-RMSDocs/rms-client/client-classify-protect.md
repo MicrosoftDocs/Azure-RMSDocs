@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,23 +42,19 @@ If your label applies protection to a document, the protected document is not su
 
 Files that are protected are safe to share with others. For example, you attach the file to an email.
 
-If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. 
-If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
+If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
 
 When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
 
 ## Using Office apps to classify and protect your documents and emails
 
-Use the Azure Information Protection bar and select one of the labels that has been configured for you. 
+Use the Azure Information Protection bar or the **Protect** button on the ribbon to select one of the labels that has been configured for you. 
 
-For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set**. To set a label, such as "General", click **General**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
+For example, the following picture shows that the document hasn't yet been labeled because the **Sensitivity** shows **Not set** on the Azure Information Protection bar. To set a label, such as "General", click **General**. If you're not sure which label to apply to the current document or email, use the label tooltips to learn more about each label and when to apply it. 
 
 ![Azure Information Protection bar example](../media/info-protect-bar-not-set-callout.png)
 
 If a label is already applied to the document and you want to change it, you can select a different label. If the labels are not displayed on the bar, first click the **Edit Label** icon, next to the current label value.
-
-> [!TIP]
-> You can also select labels from the **Protect** button, on the **File** tab.
 
 In addition to manually selecting labels, labels can also be applied in the following ways:
 
@@ -70,9 +66,17 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 ##### Don't see this Information Protection bar in your Office apps?
 
-- You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
+Possible reasons:
+
+- You don't have the Azure Information Protection client [installed](install-client-app.md).
+
+- You have the client installed, but your administrator has configured a setting that doesn't display the bar. Instead, select labels from the **Protect** button, on the **File** tab from the Office ribbon. 
+
+- Your client is running in [protection-only mode](client-protection-only-mode.md).
  
-##### Is the label that you expect to see not displayed on the bar? 
+##### Is the label that you expect to see not displayed? 
+
+Possible reasons:
 
 - If your administrator has recently configured a new label for you, try closing all instances of your Office app and reopening it. This action checks for changes to your labels.
 
@@ -82,11 +86,13 @@ In addition to manually selecting labels, labels can also be applied in the foll
 
 ### Set custom permissions for a document
 
-You can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label.
+If allowed by your administrator, you can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label.
 
 1. On the **Home** tab, in the **Protection** group, click **Protect** > **Custom Permissions**:
 
     ![Custom Permisisons option](../media/custom-permissions-callout.png)
+    
+    If you cannot select **Custom Permissions**, your administrator does not allow you to use this option.
     
     Note that any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
 
@@ -143,7 +149,9 @@ The admin guide contains a full list of the file types supported and the files a
     
     ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
     
-3. If you want to specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label, select **Protect with custom permissions**.
+3. If allowed by your adminsitrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
+    
+    If you cannot select **Protect with custom permissions**, your administrator does not allow you to use this option.
     
     Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
 
