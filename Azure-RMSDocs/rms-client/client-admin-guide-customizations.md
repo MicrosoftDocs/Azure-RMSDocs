@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -124,46 +124,40 @@ When you export the policy, this action downloads a zipped file with multiple ve
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure information protection client installed. 
 
 
-## Hide the Do Not Forward button in Outlook
+## Hide or show the Do Not Forward button in Outlook
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal.
 
-When you configure this setting, it hides the **Do Not Forward** button from the ribbon in Outlook. It does not hide this option from Office menus.
+When you configure this setting, it hides or shows the **Do Not Forward** button on the ribbon in Outlook. This setting has no effect on the Do Not Forward option from Office menus.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **DisableDNF**
 
-- Value: **True**
+- Value: **True** to hide the button, or **False** to show the button
 
-## Make the custom permissions options unavailable to users
+## Make the custom permissions options available or unavailable to users
 
-> [!IMPORTANT]
-> Unless you use the current preview version of the client, do not use this option if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
+The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
-
-When you configure this setting and publish the policy for users, the custom permissions options from the following locations become unavailable for users to select:
-
-- In Office applications: **Home** tab > **Protection** group > **Protect** > **Custom Permissions**
-
-- From File Explorer: Right-click > **Classify and protect** > **Custom permissions**
-
-This setting has no effect on custom permissions that you can configure from Office menu options. 
+When you configure this setting and publish the policy for users, the custom permissions options become available for users to select their own protection settings, or unavailable so that users can't select their own protection settings unless prompted.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **EnableCustomPermissions**
 
-- Value: **False**
+- Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
+
+> [!IMPORTANT]
+> Unless you use the current preview version of the client, do not set this option to **False** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 ## Permanently hide the Azure Information Protection bar
 
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. Use it only when the [policy setting](../deploy-use/configure-policy-settings.md) **Display the Information Protection bar in Office apps** is set to **On**.
 
 When you configure this setting and publish the policy for users, and a user chooses to not show the Azure Information Protection bar in their Office applications, the bar remains hidden. This happens when the user clears the  **Show Bar** option from the **Home** tab, **Protection** group, **Protect** button. This setting has no effect if the user closes the bar by using the **Close this bar** icon.
 
-Even though the Azure Information Protection bar remains hidden, users can still select a label from the temporarily displayed bar if you have configured recommended classification, or when a document or email must have a label. The setting also has no effect on labels that you or others configure, such as manual or automatic classification, or setting a default label.
+Even though the Azure Information Protection bar remains hidden, users can still select a label from the temporarily displayed bar if you have configured recommended classification, or when a document or email must have a label. 
 
 To configure this advanced setting, enter the following strings:
 
@@ -226,6 +220,8 @@ To configure this advanced setting, enter the following strings:
 - Key 2: **SyncPropertyState**
 
 - Key 2 Value: **OneWay**
+
+Use these keys and corresponding values for only one custom property.
 
 As example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Confidential**. Documents are stored in SharePoint and have one of these values set for the Classification property.
 
