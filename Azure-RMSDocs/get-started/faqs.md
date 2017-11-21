@@ -88,13 +88,15 @@ Today, you apply and manage these labels separately but Microsoft is working tow
 
 ## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 
-You can use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](../deploy-use/deploy-rms-connector.md) (Office documents only) or a [PowerShell script](../rms-client/configure-fci.md) (all file types). Or, you can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md), currently in preview. The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+For a while, you've been able to use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](../deploy-use/deploy-rms-connector.md) (Office documents only) or a [PowerShell script](../rms-client/configure-fci.md) (all file types). 
+
+You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md), currently in preview. The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
 
 The main differences between these two solutions:
 
 |Windows Server FCI|Azure Information Protection scanner|
 |--------------------------------|-------------------------------------|
-|Supported data stores: <br /><br />- Local folders on Windows Server|Supported data stores: <br /><br />- Local folders on Windows Server<br /><br />- Network file shares (Windows file shares or network-attached storage)<br /><br />- Sites and libraries on SharePoint Server 2016 and SharePoint Server 2013|
+|Supported data stores: <br /><br />- Local folders on Windows Server|Supported data stores: <br /><br />- Local folders on Windows Server<br /><br />- Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013|
 |Operational mode: <br /><br />- Real time|Operational mode: <br /><br />- Systematically crawls the data stores, and you can configure this cycle to run once, or repeatedly|
 
 Currently, there is a difference in setting the [Rights Management owner](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for files that are protected on a local folder or network share. By default, for both solutions, the Rights Management owner is set to the account that protects the file but you can override this setting:
