@@ -1,3 +1,3 @@
 ---
-redirect_url: /information-protection//deploy-use/activate-azure
+redirect_url: /information-protection/deploy-use/activate-azure
 ---
