@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -209,11 +209,13 @@ The migration steps can be divided into five phases that can be done at differen
 
     When you have confirmed that all Windows computers are using the Azure Rights Management service and are no longer accessing your AD RMS servers, you can deprovision your AD RMS deployment.
 
-- **Step 11: Reconfigure mobile device clients and Mac computers, and remove onboarding controls**
+- **Step 11: Complete client migration tasks**
 
     If you have deployed the [mobile device extension](http://technet.microsoft.com/library/dn673574.aspx) to support mobile devices such as iOS phones and iPads, Android phones and tablets, Windows phone, and Mac computers, you must remove the SRV records in DNS that redirected these clients to use AD RMS. 
     
     The onboarding controls that you configured during the preparation phase are no longer needed. However, if you did not use onboarding controls because you chose to migrate everything at the same time rather than do a phased migration, you can skip the instructions to remove the onboarding controls.
+    
+    If your Windows computers are running Office 2010, check whether you need to disable the **AD RMS Rights Policy Template Management (Automated)** task.
 
 - **Step 12: Rekey your Azure Information Protection tenant key**
 
