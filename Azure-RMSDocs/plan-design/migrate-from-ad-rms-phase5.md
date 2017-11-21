@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,7 +56,7 @@ After you have deprovisioned your AD RMS servers, you might want to take the opp
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 
-## Step 11. Reconfigure mobile device clients and Mac computers, and remove onboarding controls
+## Step 11. Complete client migration tasks
 
 For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
@@ -103,6 +103,8 @@ To remove the onboarding controls:
 		Get-AadrmOnboardingControlPolicy
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
+
+Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights Policy Template Management (Automated)** task in the Windows Task Scheduler library, disable this task because it is not used by the Azure Information Protection client. This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
 
 ## Step 12. Rekey your Azure Information Protection tenant key
 

@@ -6,7 +6,7 @@ description: Instructions for users to install the Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,7 +65,8 @@ After you have installed the Azure Information Protection client by using the pr
 
 2. In the **Microsoft Azure Information Protection** dialog box, click **OK**.
 
-3. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.   
+3. If you see a **User Access Control** dialog box, click **Yes** so that the Azure Information Protection client can update the registry.
+
 Your installation is now complete and you can use Azure Information Protection to label and protect your documents and emails.
 
 ## Other instructions    
