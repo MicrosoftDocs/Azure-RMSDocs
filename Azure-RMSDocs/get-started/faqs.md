@@ -97,7 +97,7 @@ The main differences between these two solutions:
 |Windows Server FCI|Azure Information Protection scanner|
 |--------------------------------|-------------------------------------|
 |Supported data stores: <br /><br />- Local folders on Windows Server|Supported data stores: <br /><br />- Local folders on Windows Server<br /><br />- Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013|
-|Operational mode: <br /><br />- Real time|Operational mode: <br /><br />- Systematically crawls the data stores, and you can configure this cycle to run once, or repeatedly|
+|Operational mode: <br /><br />- Real time|Operational mode: <br /><br />- Systematically crawls the data stores and this cycle can run once, or repeatedly|
 
 Currently, there is a difference in setting the [Rights Management owner](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for files that are protected on a local folder or network share. By default, for both solutions, the Rights Management owner is set to the account that protects the file but you can override this setting:
 
