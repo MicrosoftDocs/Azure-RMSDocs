@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,11 +33,11 @@ ms.suite: ems
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
 
 > [!NOTE]
-> The Azure classic portal will be retired on **November 30, 2017**. For more information, see the blog post announcement, [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
+> The Azure classic portal was retired on **November 30, 2017**. For more information, see the blog post announcement, [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/).
 
 ## How to do your familiar admin tasks
 
-Use the following information to help you quickly transition to the newer portal:
+Use the following information to help you quickly transition to the current portal:
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
