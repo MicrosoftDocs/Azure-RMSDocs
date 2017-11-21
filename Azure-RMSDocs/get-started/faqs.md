@@ -105,7 +105,7 @@ Currently, there is a difference in setting the [Rights Management owner](../dep
 
 - For the Azure Information Protection scanner: You can set the Rights Management owner to be a single account for all files, but you cannot dynamically set the Rights Management owner for each file. To set the account, specify the **-DefaultOwner** optional parameter for the [scanner configuration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters).
 
-When the scanner protects files on SharePoint, the Rights Management owner is dynamically set for each file by using the SharePoint author value.
+When the scanner protects files on SharePoint sites and libraries, the Rights Management owner is dynamically set for each file by using the SharePoint author value.
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
