@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,6 +85,27 @@ Additional information:
 Labels in Azure Information Protection let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud. This classification and protection is independent of where the content is stored or how it is moved. [Labels in Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) let you classify documents and emails for auditing and retention when that content is in Office 365 services. 
 
 Today, you apply and manage these labels separately but Microsoft is working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection. This same labeling schema and store will also be available for software vendors. For more information, see the Microsoft Ignite 2017 session, [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397).
+
+## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
+
+For a while, you've been able to use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](../deploy-use/deploy-rms-connector.md) (Office documents only) or a [PowerShell script](../rms-client/configure-fci.md) (all file types). 
+
+You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md), currently in preview. The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+
+The main differences between these two solutions:
+
+|Windows Server FCI|Azure Information Protection scanner|
+|--------------------------------|-------------------------------------|
+|Supported data stores: <br /><br />- Local folders on Windows Server|Supported data stores: <br /><br />- Local folders on Windows Server<br /><br />- Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013|
+|Operational mode: <br /><br />- Real time|Operational mode: <br /><br />- Systematically crawls the data stores and this cycle can run once, or repeatedly|
+
+Currently, there is a difference in setting the [Rights Management owner](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for files that are protected on a local folder or network share. By default, for both solutions, the Rights Management owner is set to the account that protects the file but you can override this setting:
+
+- For Windows Server FCI: You can set the Rights Management owner to be a single account for all files, or dynamically set the Rights Management owner for each file. To dynamically set the Rights Management owner, use the **-OwnerMail [Source File Owner Email]** parameter and value. This configuration retrieves the user's email address from Active Directory by using the user account name in the file's Owner property.
+
+- For the Azure Information Protection scanner: You can set the Rights Management owner to be a single account for all files, but you cannot dynamically set the Rights Management owner for each file. To set the account, specify the **-DefaultOwner** optional parameter for the [scanner configuration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters).
+
+When the scanner protects files on SharePoint sites and libraries, the Rights Management owner is dynamically set for each file by using the SharePoint author value.
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
