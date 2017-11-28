@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -169,6 +169,48 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 You can force the scanner to inspect all files again by running [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) with the `-Type` parameter set to **Full**. This configuration is useful when you want the reports to include all files and it is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
 In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour and when the service starts.
+
+## Optimizing the performance of the Azure Information Protection scanner
+
+To maximize the scanner performance:
+
+- **Have a high speed and reliable network connection between the scanner computer and the scanned data store**
+    
+    For example, place the scanner computer in the same LAN, or (preferred) in the same network segment as the scanned data store.
+    
+    The quality of the network connection affects the scanner performance because to inspect the files, the scanner transfers the contents of the files to the computer running the scanner service. When you reduce (or eliminate) the number of network hops this data has to travel, you also reduce the load on your network. 
+
+- **Make sure the scanner computer has available processor resources**
+    
+    Inspecting the file contents for a match against your configured conditions, and encrypting and decrypting files are processor-intensive actions. Monitor typical scanning cycles for your specified data stores to identify whether a lack of processor resources is negatively affecting the scanner performance.
+    
+- **Do not scan local folders on the computer running the scanner service**
+    
+    If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
+
+Other factors that affect the scanner performance:
+
+- The current load and response times of the data stores that contain the files to scan
+
+- Whether the scanner runs in discovery mode or enforce mode
+    
+    Discovery mode typically has a higher scanning rate than enforce mode because discovery requires a single file read action, whereas enforce mode requires read and write actions.
+
+- You change the conditions in the Azure Information Protection
+    
+    Your first scan cycle when the scanner must inspect every file will obviously take longer than subsequent scan cycles that by default, inspect only new and changed files. However, if you change the conditions in the Azure Information Protection policy, all files are scanned again, as described in the [preceding section](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+
+- Your chosen logging level
+    
+    You can choose between **Debug**, **Info**, **Error** and **Off** for the scanner reports. **Off** results in the best performance; **Debug** considerably slows down the scanner and should be used only for troubleshooting. For more information, see the *ReportLevel* parameter for the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
+
+- The files themselves:
+    
+    - Office files are more quickly scanned than PDF files.
+    
+    - Unprotected files are quicker to scan than protected files.
+    
+    - Large files obviously take longer to scan than small files.
 
 ## List of cmdlets for the Azure Information Protection scanner 
 
