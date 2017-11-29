@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/28/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,6 +85,8 @@ Before you install the Azure Information Protection scanner, make sure that the 
     - For a named instance: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
     - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    
+    For more detailed examples, see the [online help](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples) for this cmdlet.
 
 4. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
     
