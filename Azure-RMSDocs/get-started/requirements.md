@@ -48,7 +48,7 @@ Your organization must have an Azure Active Directory (Azure AD) to support user
 
 Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.
 
-Conditional access is supported for protected documents, currently in preview. For more information, see the following FAQ: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+Conditional access is supported in preview for documents protected by Azure Information Protection. For more information, see the following FAQ: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 For more information about authentication requirements, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md). 
 
