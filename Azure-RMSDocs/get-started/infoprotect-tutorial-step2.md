@@ -62,7 +62,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 3. In addition, locate the setting **Make the custom permissions option available to users**. If it is set to **Off**, change this to **On**.
     
-    You might not need to change this setting. The default setting depends on when you obtained your subscription. We will use custom permissions later in the tutorial to share a protected document with a user that you specify when you right-click the file.
+    You might not need to change this setting because the default depends on when you obtained your subscription. We will use custom permissions later in the tutorial to share a protected document with a user that you specify when you right-click the file from File Explorer.
 
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
