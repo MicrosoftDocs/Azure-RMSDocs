@@ -61,6 +61,8 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
 
 3. In addition, locate the setting **Make the custom permissions option available to users**. If it is set to **Off**, change this to **On**.
+    
+    You might not need to change this setting. The default setting depends on when you obtained your subscription. We will use custom permissions later in the tutorial to share a protected document with a user that you specify when you right-click the file.
 
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
@@ -153,7 +155,7 @@ Now that you've had a look at the default policy and made some changes, the next
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
 |About the default policy and different versions|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
-|About the configuration options for the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
+|About configuring the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
 |Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md)|
 |Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)|
 
