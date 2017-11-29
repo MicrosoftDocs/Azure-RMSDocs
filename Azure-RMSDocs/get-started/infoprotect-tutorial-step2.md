@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -59,6 +59,8 @@ For our tutorial, we'll change a couple of those policy settings so that you can
     If you don't have this label because you have an older version of the policy, choose **Internal** as the equivalent label.
 
 2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
+
+3. In addition, locate the setting **Make the custom permissions option available to users**. If it is set to **Off**, change this to **On**.
 
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
