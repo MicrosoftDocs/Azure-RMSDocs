@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -47,6 +47,8 @@ To make sure that your organization's subscription includes the Azure Informatio
 Your organization must have an Azure Active Directory (Azure AD) to support user authentication and authorization for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
 Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.
+
+Conditional access is supported for protected documents, currently in preview. For more information, see the following FAQ: [I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 For more information about authentication requirements, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md). 
 
