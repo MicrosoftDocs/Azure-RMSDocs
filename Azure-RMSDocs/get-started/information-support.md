@@ -96,7 +96,7 @@ Troubleshooting:
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
 
-Check out the fast-growing [Tech Community](https:/techcommunity.microsoft.com), where you'll find technical questions/answers, and posts specific to [Azure Information Protection](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection).
+Check out the fast-growing [Tech Community](https:/techcommunity.microsoft.com), that has an [Azure Information Protection space](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) to ask questions and share information.
 
 If you don't have access to these sites, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
