@@ -33,7 +33,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this …|.. do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages:<br /><br /> [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br /><br />[Get started - AIP app for iOS & Android ](../rms-client/mobile-app-get-started.md) <br /><br />[Activating Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Requirements for Azure Information Protection](../get-started/requirements.md)|
+|See the most frequently used documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br />- [Get started - AIP app for iOS & Android ](../rms-client/mobile-app-get-started.md) <br />- [Activating Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requirements for Azure Information Protection](../get-started/requirements.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
