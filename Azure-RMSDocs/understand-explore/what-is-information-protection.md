@@ -92,7 +92,7 @@ After a document has been protected, users and administrators can use a document
 
 When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
 
-For example, a user wants to send sensitive information in an email to a personal email account such as Gmail, Hotmail, or Outlook.com. The email should be encrypted at rest and in transit, and be opened only by the recipient.
+For example, a user wants to send sensitive information in an email to a personal email account that uses **Gmail**, **Hotmail**, or their **Microsoft** account. The email should be encrypted at rest and in transit, and be read only by the recipient.
 
 This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipient cannot open the protected email in their native email client, they can use a one-time password to read the email in a browser.
 
