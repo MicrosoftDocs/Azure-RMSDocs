@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,9 +33,9 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this …|.. do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages: <br /><br />[Get started - AIP app for iOS & Android ](../rms-client/mobile-app-get-started.md) <br /><br /> [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br /><br />[Activating Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Requirements for Azure Information Protection](../get-started/requirements.md)|
+|See the most frequently used documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br />- [Get started - AIP app for iOS & Android ](../rms-client/mobile-app-get-started.md) <br />- [Activating Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requirements for Azure Information Protection](../get-started/requirements.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
-|Request a new feature or change of functionality|Visit the [User Voice site](https://msip.uservoice.com) for Azure Information Protection|
+|Request a new feature or change of functionality|Visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
 |Check subscription information and what features are supported|Use the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.|
 
@@ -96,6 +96,8 @@ Troubleshooting:
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
 
-If you don't have access to Yammer, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Check out the fast-growing [Tech Community](https:/techcommunity.microsoft.com), that has an [Azure Information Protection space](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) to ask questions and share information.
+
+If you don't have access to these sites, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
