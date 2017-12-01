@@ -54,13 +54,13 @@ This protection technology uses encryption, identity, and authorization policies
 
 For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and also prevent them from being forwarded or prevent the use of the Reply All option. 
 
-These protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. However, the same protection settings can also be used by applications and services that support protection, but not labeling. For these applications and services, the protection settings are surfaced as *Rights Management templates*.
+These protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. However, the same protection settings can also be used by applications and services that support protection, but not labeling. For these applications and services, the protection settings become available as *Rights Management templates*.
 
 ### Rights Management templates
 
 As soon as you activate the Azure Rights Management service, two default templates are available for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own protection settings that apply more restrictive controls.
 
-When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then use that template with applications and services that support Azure Rights Management.
+When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then additionally use that template with applications and services that support Azure Rights Management.
 
 For example, from the Exchange admin center, you can configure Exchange Online mail flow rules to use these templates:
 
