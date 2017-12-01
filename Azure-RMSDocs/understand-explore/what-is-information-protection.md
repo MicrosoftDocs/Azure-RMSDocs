@@ -68,7 +68,7 @@ For example, from the Exchange admin center, you can configure Exchange Online m
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
-## Integration with end-user workflows
+## Integration with end-user workflows for documents and emails
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
