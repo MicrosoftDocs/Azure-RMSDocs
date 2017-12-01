@@ -88,6 +88,17 @@ After a document has been protected, users and administrators can use a document
 
 ![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
 
+### Additional integration for email
+
+When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
+
+For example, a user wants to send sensitive information in an email to a personal email account such as Gmail, Hotmail, or Outlook.com. The email should be encrypted at rest and in transit, and be opened only by the recipient.
+
+This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipient cannot open the protected email in their native email client, they can use a one-time password to read the email in a browser.
+
+For the user sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, you can integrate this do not forward functionality into a label that the user selects, so that the email is classified as well as protected. Or you can automatically provide the protection with mail flow rules.
+
+When you attach Office documents to these emails, these documents are automatically protected as well.
 
 ## Resources for Azure Information Protection
 
