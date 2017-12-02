@@ -6,7 +6,7 @@ description: Phase 2 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 12/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -145,7 +145,7 @@ If you created custom templates before the migration, either before or after act
 
 2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
 
