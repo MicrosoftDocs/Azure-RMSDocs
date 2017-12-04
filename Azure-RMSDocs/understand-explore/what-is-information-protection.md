@@ -98,7 +98,7 @@ This scenario requires the [new capabilities from Office 365 Message Encryption]
 
 For example a Gmail user might see the following in an email message:
 
-![Recipient experience for OME](../media/ome-message.png)
+![Gmail recipient experience for OME and AIP](../media/ome-message.png)
 
 For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, you can integrate this do not forward functionality into a label that users select, so that the email is classified as well as protected. Or you can automatically provide the protection with mail flow rules.
 
