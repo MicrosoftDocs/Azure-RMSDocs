@@ -94,7 +94,7 @@ When you use Azure Information Protection with Exchange Online, you get an addit
 
 For example, users need to send sensitive information in an email to personal email accounts that uses **Gmail**, **Hotmail**, or a **Microsoft** account. Or, to a user who doesn't have an account for Office 365 or in Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
-This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the email in a browser.
+This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
 For example a Gmail user might see the following in an email message:
 
