@@ -86,7 +86,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
     
     - For SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
-    Use the online help for this cmdlet if you need more [detailed examples](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples).
+    Use the online help for this cmdlet if you need more [detailed examples](/powershell/module/azureinformationprotection/install-aipscanner#examples).
 
 4. Verify that the service is now installed by using **Administrative Tools** > **Services**. 
     
