@@ -97,11 +97,11 @@ You can use the following variables in the text string for your header, footer, 
 
 Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
-## Setting different visual markings for different apps
+## Set different visual markings for Word, Excel, PowerPoint, and Outlook
 
 This setting is currently in preview and requires the preview version of the Azure Information Protection client.
 
-By default, the visual markings that you specify are applied to Word, Excel, PowerPoint, and Outlook. You can specify that visual marking is applied to just one, two, or three of these Office apps instead of all of them. To do this, use an "**If.App**" statement in the text string and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, which is necessary if you want to specify more than one in the same If.App statement.
+By default, the visual markings that you specify are applied to Word, Excel, PowerPoint, and Outlook. However, you can specify visual markings per Office application type when you use an "**If.App**" statement in the text string and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, which is necessary if you want to specify more than one in the same If.App statement.
 
 Use the following syntax:
 
