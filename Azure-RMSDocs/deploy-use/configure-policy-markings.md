@@ -107,6 +107,8 @@ Use the following syntax:
 
 	${If.App.<application type>}<your visual markings text> ${If.End}
 
+This syntax in this statement is case-sensitive.
+
 Examples:
 
 - Set header text for Word documents only
