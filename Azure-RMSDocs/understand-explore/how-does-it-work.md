@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-One important thing to understand about how Azure RMS works is that the Rights Management service (and Microsoft) does not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
+An important thing to understand about how the Azure Rights Management service (Azure RMS) from Azure Information Protection works, is that this data protection service (and Microsoft) does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
 - The data is encrypted at the application level and includes a policy that defines the authorized use for that document.
 
@@ -47,7 +47,7 @@ For a detailed description of what’s happening, see the [Walkthrough of how Az
 For technical details about the algorithms and key lengths that Azure RMS uses, see the next section.
 
 ## Cryptographic controls used by Azure RMS: Algorithms and key lengths
-Even if you don't need to know yourself how RMS works, you might be asked about the cryptographic controls that it uses, to make sure that the security protection is industry-standard.
+Even if you don't need to know in detail how this technology works, you might be asked about the cryptographic controls that it uses. For example, to confirm that the security protection is industry-standard.
 
 
 |Cryptographic controls|Use in Azure RMS|
@@ -62,15 +62,15 @@ Even if you don't need to know yourself how RMS works, you might be asked about 
 
 ###### Footnote 2
 
-2048-bits is the key length when the Azure Rights Management service is activated. 1024-bits is supported for the following optional scenarios:
+2048 bits is the key length when the Azure Rights Management service is activated. 1024 bits is supported for the following optional scenarios:
 
 - During a migration from on-premises if the AD RMS cluster is running in Cryptographic Mode 1.
 
 - After a migration from on-premises, if the AD RMS cluster was using Exchange Online.
 
-- For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after migrating to Azure Rights Management.
+- For archived keys that were created on-premises before the migration, so that content that was previously protected by AD RMS can continue to be opened by the Azure Rights Management service post migration.
 
-- If customers choose to bring their own key (BYOK) by using Azure Key Vault. Azure Information Protection supports key lengths of 1024-bits and 2048-bits. For higher security, we recommend a key length of 2048-bits.
+- If customers choose to bring their own key (BYOK) by using Azure Key Vault. Azure Information Protection supports key lengths of 1024 bits and 2048 bits. For higher security, we recommend a key length of 2048 bits.
 
 ### How the Azure RMS cryptographic keys are stored and secured
 
@@ -115,7 +115,7 @@ When a user protects a document, the RMS client takes the following actions on a
 
 ![RMS document protection - step 2, policy is created](../media/AzRMS_documentprotection2.png)
 
-**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad-hoc policy").   
+**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad hoc policy").   
 
 The main Azure AD attribute used to identify the selected users and groups is the Azure AD ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
 
