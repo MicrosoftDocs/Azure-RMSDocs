@@ -97,7 +97,7 @@ You can use the following variables in the text string for your header, footer, 
 
 Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
-## Set different visual markings for Word, Excel, PowerPoint, and Outlook
+## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
 This setting is currently in preview and requires the preview version of the Azure Information Protection client.
 
