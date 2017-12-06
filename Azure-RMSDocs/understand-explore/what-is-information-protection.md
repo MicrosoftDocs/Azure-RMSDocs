@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -100,7 +100,11 @@ For example a Gmail user might see the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](../media/ome-message.png)
 
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, you can integrate this do not forward functionality into a label that users select, so that the email is classified as well as protected. Or you can automatically provide the protection with mail flow rules.
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, you can integrate this do not forward functionality into a label that users select, so that the email is classified as well as protected:
+
+![Selecting a label configured for Do Not Foward](../media/recipients-only-label.png)
+
+Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
 
 When you attach Office documents to these emails, these documents are automatically protected as well.
 
