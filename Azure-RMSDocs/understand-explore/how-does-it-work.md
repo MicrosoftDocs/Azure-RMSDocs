@@ -30,7 +30,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-An important thing to understand about how the Azure Rights Management service (Azure RMS) from Azure Information Protection works, is that this data protection service (and Microsoft) does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
+An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
 - The data is encrypted at the application level and includes a policy that defines the authorized use for that document.
 
