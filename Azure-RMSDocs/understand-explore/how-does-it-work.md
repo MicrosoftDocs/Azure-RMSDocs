@@ -115,7 +115,7 @@ When a user protects a document, the RMS client takes the following actions on a
 
 ![RMS document protection - step 2, policy is created](../media/AzRMS_documentprotection2.png)
 
-**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad-hoc policy").   
+**What's happening in step 2**: The RMS client then creates a certificate that includes a policy for the document that includes the [usage rights](../deploy-use/configure-usage-rights.md) for users or groups, and other restrictions, such as an expiration date. These settings can be defined in a template that an administrator previously configured, or specified at the time the content is protected (sometimes referred to as an "ad hoc policy").   
 
 The main Azure AD attribute used to identify the selected users and groups is the Azure AD ProxyAddresses attribute, which stores all the email addresses for a user or group. However, if a user account doesn't have any values in the AD ProxyAddresses attribute, the user's UserPrincipalName value is used instead.
 
