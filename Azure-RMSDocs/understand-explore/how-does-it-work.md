@@ -47,7 +47,7 @@ For a detailed description of what’s happening, see the [Walkthrough of how Az
 For technical details about the algorithms and key lengths that Azure RMS uses, see the next section.
 
 ## Cryptographic controls used by Azure RMS: Algorithms and key lengths
-Even if you don't need to know yourself how this technology works, you might be asked about the cryptographic controls that it uses. For example, to confirm that the security protection is industry-standard.
+Even if you don't need to know in detail how this technology works, you might be asked about the cryptographic controls that it uses. For example, to confirm that the security protection is industry-standard.
 
 
 |Cryptographic controls|Use in Azure RMS|
