@@ -68,7 +68,7 @@ Even if you don't need to know in detail how this technology works, you might be
 
 - After a migration from on-premises, if the AD RMS cluster was using Exchange Online.
 
-- For archived keys that were created on-premises before the migration so that content that was protected by AD RMS can continue to be opened after migrating to Azure Rights Management.
+- For archived keys that were created on-premises before the migration, so that content that was previously protected by AD RMS can continue to be opened by the Azure Rights Management service post migration.
 
 - If customers choose to bring their own key (BYOK) by using Azure Key Vault. Azure Information Protection supports key lengths of 1024 bits and 2048 bits. For higher security, we recommend a key length of 2048 bits.
 
