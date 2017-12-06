@@ -101,7 +101,7 @@ Example: If you specify the string `Document: ${item.name}  Classification: ${it
 
 This setting is currently in preview and requires the preview version of the Azure Information Protection client.
 
-By default, the visual markings that you specify are applied to Word, Excel, PowerPoint, and Outlook. However, you can specify visual markings per Office application type when you use an "**If.App**" statement in the text string and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, which is necessary if you want to specify more than one in the same If.App statement.
+By default, the visual markings that you specify are applied across Word, Excel, PowerPoint, and Outlook. However, you can specify visual markings per Office application type when you use an "If.App" variable statement in the text string, and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, which is necessary if you want to specify more than one in the same If.App statement.
 
 Use the following syntax:
 
@@ -119,28 +119,13 @@ Examples:
 
 - **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint:**
     
-    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential.${If.End}`
+    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
     
     In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
 
 - **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, PowerPoint, and Outlook:**
     
     `${If.App.WP}This content is ${If.End}Confidential`
-    
-    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel and Outlook, the label applies the watermark text "Confidential"
-
-
-Examples:
-
-- Set header text for Word documents only: `${If.App.Word}This Word document is sensitive${If.End}`
-    
-    In Word document headers only, the label applies the header text "This Word document is sensitive". No header text is applied to other Office applications.
-
-- Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint: `${If.App.WXO}This content is confidential.${If.End}${If.App.PowerPoint}This presentation is confidential.${If.End}`
-    
-    In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
-
-- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, PowerPoint, and Outlook:** `${If.App.WP}This content is${If.End}Confidential`
     
     In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel and Outlook, the label applies the watermark text "Confidential"
 
