@@ -6,7 +6,7 @@ description: Understand the restrictions when you use customer-managed keys (kno
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,7 +34,11 @@ Organizations that have a subscription that includes Azure Information Protectio
 
 The key must be stored in Azure Key Vault, which requires an Azure subscription. To use an HSM-protected key, you must use the Azure Key Vault Premium service tier. Using a key in Azure Key Vault incurs a monthly charge. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
-When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key with a dedicated subscription. This configuration helps to ensure that it's used by only the Azure Rights Management service. 
+When you use Azure Key Vault for your Azure Information Protection tenant key, we recommend that you use a dedicated key vault for this key to help ensure that it's used by only the Azure Rights Management service. This configuration ensures that calls by other services do not result in exceeding the [service limits](/azure/key-vault/key-vault-service-limits) for the key vault, which could throttle the response times for the Azure Rights Management service.  
+
+In addition, because each service that uses Azure Key Vault typically has different key management requirements, we recommend a separate Azure subscription for this key vault to help safeguard against misconfiguration. 
+
+However, if you want to share an Azure subscription with other services that use Azure Key Vault, make sure that the subscription shares a common set of administrators. This precaution means that the administrators who use that subscription have a good understanding of all the keys that they have access to, so that they are less likely to misconfigure them. For example, a single Azure subscription if the administrators for your Azure Information Protection tenant key are the same people who administer keys for Office 365 Customer Key and CRM Online. But if the administrators who manage the keys for Customer Key or CRM Online are not the same people who administer your Azure Information Protection tenant key, then we recommend a separate Azure subscription for Azure Information Protection.
 
 ## Benefits of using Azure Key Vault
 
