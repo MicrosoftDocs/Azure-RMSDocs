@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 01/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,7 +30,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->Even if you have already activated the Azure Rights Management service for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2. 
+>Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2.
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate protection, which include using Windows PowerShell, and using the admin portals.
 
