@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2017
+ms.date: 12/07/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -96,8 +96,6 @@ Troubleshooting:
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
 
-Check out the fast-growing [Tech Community](https:/techcommunity.microsoft.com), that has an [Azure Information Protection space](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) to ask questions and share information.
-
-If you don't have access to these sites, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+If you don't have access to this site, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
