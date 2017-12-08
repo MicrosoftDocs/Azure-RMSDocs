@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
