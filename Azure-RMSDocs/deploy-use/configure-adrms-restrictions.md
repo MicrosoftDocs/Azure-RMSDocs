@@ -53,13 +53,13 @@ In this HYOK scenario, the rights policies and the organization's private key th
 >
 > Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents or emails that match all the following criteria:
 > 
-> -The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people.
+> - The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people.
 > 
-> -The content is never shared outside the organization.
+> - The content is never shared outside the organization.
 > 
-> -The content is only consumed on the internal network.
+> - The content is only consumed on the internal network.
 > 
-> -The content does not need to be consumed on Mac computers or mobile devices.
+> - The content does not need to be consumed on Mac computers or mobile devices.
 
 Users are not aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions and limitations that come with AD RMS protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply AD RMS protection. 
 
