@@ -96,7 +96,7 @@ For example, users need to send sensitive information to personal email accounts
 
 This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
-For example a Gmail user might see the following in an email message:
+For example a Gmail user sees the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](../media/ome-message.png)
 
