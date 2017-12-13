@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,7 +48,7 @@ To configure these settings:
 3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, configure the settings:
     
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
-        
+    
     - **All documents and emails must have a label**: When you set this option to **On**, all saved documents and sent emails must have a label applied. The labeling might be manually assigned by a user, automatically as a result of a [condition](configure-policy-classification.md), or be assigned by default (by setting the **Select the default label** option).
         
         If a label is not assigned when users save a document or sends an email, they are prompted to select a label. For example:
@@ -64,12 +64,15 @@ To configure these settings:
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **On**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
     
     - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
-    
-    When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by  clearing the **Show Bar** option from the **Protect** button.
+        
+        > [!IMPORTANT]
+        > This setting is in preview and requires the current preview version of the Azure Information Protection client.
+        
+        When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by clearing the **Show Bar** option from the **Protect** button.
     
     - **Add the Do Not Forward button to the Outlook ribbon**: When this setting is on, users can select this button from the **Protection** group on the Outlook ribbon in addition to selecting the **Do Not Forward** option from Outlook menus. To help ensure that users classify their emails as well as protect them, you might prefer to not add this button but instead, [configure a label for protection](configure-policy-protection.md) and a user defined permission for Outlook. This protection setting is functionally the same as selecting the **Do Not Forward** button, but when this functionality is included with a label, emails are classified as well as protected.
     
-    This policy setting can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
+        This policy setting can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
     - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. When this setting is off, the custom permissions options are not available for users to select.
         
