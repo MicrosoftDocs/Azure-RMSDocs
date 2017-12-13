@@ -66,7 +66,7 @@ To configure these settings:
     - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
         
         > [!IMPORTANT]
-        > This setting is curently in preview and requires the current preview version of the Azure Information Protection client.
+        > This setting is in preview and requires the current preview version of the Azure Information Protection client.
         
         When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by clearing the **Show Bar** option from the **Protect** button.
     
