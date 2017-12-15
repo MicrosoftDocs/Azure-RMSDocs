@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/15/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -65,6 +65,8 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
+|Rights Management issuer|The account that protected a document or email.|
+|Rights Management owner|The account that retains full control of a protected document or email by being automatically granted the Rights Management Full Control usage right and is exempt from any expiry date or offline setting.|
 |Rights Management services|The generic term that applies to both the cloud version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) and the on-premises version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
 |Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
 |RMS|See *Rights Management services*.|
