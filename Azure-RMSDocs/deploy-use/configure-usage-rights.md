@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 12/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,8 +77,7 @@ For the Azure Information Protection client for Windows, this right is currently
 Not applicable to the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
 
 ###### Footnote 3
-Not included in the Azure Information Protection client for Windows. In this client, the Export usage right includes the ability to remove protection.
-
+Included when users choose Co-Author when they select custom permissions from the Azure Information Protection client or Rights Management sharing application. Not included when administrators choose Co-Author from the Azure management portals.
 
 ## Rights included in the default templates
 The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
