@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2017
+ms.date: 12/04/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # RMS client deployment notes
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Vista*
+>*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 7 with SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
 The Rights Management Service client (RMS client) version 2 is also known as the MSIPC client. It is software for Windows computers that communicates with Microsoft Rights Management services on-premises or in the cloud to help protect access to and usage of information as it flows through applications and devices, within the boundaries of your organization, or outside  those managed boundaries. 
 
@@ -69,7 +69,7 @@ The RMS client is supported with the following operating systems:
 |Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 with minimum of SP1|
-|Windows Server 2008 (AD RMS only)|Windows Vista with minimum of SP2 (AD RMS only)|
+
 
 ### Which processors or platforms support the  RMS client?
 The  RMS client is supported on x86 and x64 computing platforms.
