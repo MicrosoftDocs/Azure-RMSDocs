@@ -62,7 +62,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     For computers running Windows 7 Service Pack 1, install **vc_redist.x86.exe** from the following download page: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
     
-    The client installation does not check for this file but it is needed for the Azure Information Protection client to classify and protect PDF files.
+    The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
 
 - Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
     
