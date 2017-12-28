@@ -47,8 +47,6 @@ In addition, the Principal Group PM Manager for Information and Threat Protectio
 
 A summary of documentation changes are published each month to the [Azure Information Protection technical blog](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These documentation updates include documentation for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**" 
 
-You can also find information about new functionality and previews on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam), where you can also ask questions about Azure Information Protection. To propose new features or vote for new features, visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection.
-
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
 
