@@ -45,7 +45,7 @@ The Azure Information Protection product team posts announcements about new rele
 
 In addition, the Principal Group PM Manager for Information and Threat Protection publishes regular [Updates](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) to help keep you up-to-date.
 
-A summary of documentation changes are published each month to the [Azure Information Protection technical blog](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**" 
+A summary of documentation changes are published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**" 
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
