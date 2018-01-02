@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/18/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
