@@ -22,7 +22,7 @@ This guide will orient you to tools for extending and integrating with Azure Inf
 
 Service applications provide capabilities to protect information when exporting from an enterprise content management system, a business application, or a cloud-based business solution. Data Loss Prevention (DLP) and Cloud Application Security (CAS) applications are examples of service applications. Our SDK for developing service applications is available through two programming models.
 
-- [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
+- [C++](https://www.microsoft.com/download/details.aspx?id=38397)
 - [C# Managed API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 ### Examples of service applications
@@ -79,7 +79,7 @@ Each of the following topics presents specific guidance for an aspect of impleme
 
 ### Security and authentication
 
-- [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [How to configure your app service application to use Azure Active Directory login](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [How to use Azure Active Directory Authentication (ADAL) authentication](how-to-use-adal-authentication.md)
 - [Configuring Azure RMS for authentication (service)](adal-auth.md)
 - [How to set the API security mode (service)](setting-the-api-security-mode-api-mode.md)
@@ -107,7 +107,7 @@ These videos are from the Microsoft 2016 Ignite conference
 
 - [Security best practice guide](security-guidelines.md)
 - [RMS Developer's Corner (blog)](https://blogs.msdn.microsoft.com/rms/)
-- [Frequently Asked Questions for Azure Information Protection](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
+- [Frequently Asked Questions for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/faqs)
 
 ### Support articles
 
@@ -128,17 +128,17 @@ These videos are from the Microsoft 2016 Ignite conference
 
 ### API reference
 
-- [Windows API Reference](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
+- [Windows API Reference](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Windows SDK Error Codes](https://msdn.microsoft.com/library/hh535248.aspx)
 - [Windows Phone and Windows Store API reference](https://msdn.microsoft.com/library/dn891914.aspx)
-- [iOS/OSX API reference](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
-- [Android API reference](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
+- [iOS/OSX API reference](https://msdn.microsoft.com/library/dn758306.aspx)
+- [Android API reference](https://msdn.microsoft.com/library/dn758245.aspx)
 - [Linux API reference](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### Previous versions
 
-- [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) is the first version of the RMS SDK.
-- [AD RMS Scripting Tool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
+- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) is the first version of the RMS SDK.
+- [AD RMS Scripting Tool](https://msdn.microsoft.com/library/bb968797.aspx) is an administrative tool for an AD RMS installation.
 
 ### See also
 
