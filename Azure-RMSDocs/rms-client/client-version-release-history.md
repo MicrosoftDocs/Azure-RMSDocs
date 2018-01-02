@@ -54,7 +54,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 **New features**:
 
-- The [Azure Information Protection scanner](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/25/azure-information-protection-scanner-in-public-preview/): The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
+- The Azure Information Protection scanner, which was [previously in preview](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/25/azure-information-protection-scanner-in-public-preview/): The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
 
 - For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
 
