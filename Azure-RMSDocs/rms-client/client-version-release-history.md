@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2017
+ms.date: 12/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ You can download the latest GA release version and the current preview version f
 
 ### Servicing information and timelines
 
-Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. Unsupported versions of the client are not included on this page. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+The general availability (GA) versions of the Azure Information Protection client are supported for a period of six months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
@@ -48,11 +48,44 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.10.56.0
+## Version 1.20.1.0
 
-If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
+**Released**: 01/17/2018
 
-For what's new or changed in the current preview version since the last GA version of the client, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+**New features**:
+
+- The [Azure Information Protection scanner](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/25/azure-information-protection-scanner-in-public-preview/): The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
+
+- For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- Support for the new [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users cannot select labels from the Azure Information Protection bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon.
+
+- A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
+
+**Fixes**:
+
+Fixes for stability and for specific scenarios that include:
+
+- Prevent Outlook hanging when Outlook reminders are used.
+
+- Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
+
+- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+
+- Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
+
+- Prevent Office crashes after the Azure Information Protection client is upgraded.
+
+- For Office apps, improve performance and memory consumption.
+
+- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+
+Fixes for a better user experience, that include:
+
+- Support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. Applies to File Explorer, right-click to classify and protect files, to the Azure Information Protection Viewer, and to the Click-to-Run version of Office 2016.
+
 
 ## Version 1.10.56.0
 
