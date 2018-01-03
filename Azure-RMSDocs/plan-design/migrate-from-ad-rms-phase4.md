@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,11 +37,9 @@ Use the following information for Phase 4 of migrating from AD RMS to Azure Info
 
 ## Step 8. Configure IRM integration for Exchange Online
 
-If you have previously imported your TDP from AD RMS to Exchange Online, you must remove this TDP to avoid conflicting templates and policies after you have migrated to Azure Information Protection. To do this, use the [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx) cmdlet from Exchange Online.
+Independently from the Azure Information Protection tenant key topology that you chose, do the following:
 
-If you chose an Azure Information Protection tenant key topology of **Microsoft managed**:
-
-1. Use the instructions in the [Exchange Online: IRM configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) section in the [Office 365: Configuration for clients and online services](../deploy-use/configure-office365.md) article. This section includes typical commands to run that connects to the Exchange Online service, imports the tenant key from Azure Information Protection, and enables IRM functionality for Exchange Online. After you complete these steps, you will have full Azure Rights Management protection functionality with Exchange Online.
+1. To configure Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
 
 2. In addition to the standard configuration to enable IRM for Exchange Online, run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
 
@@ -53,11 +51,6 @@ If you chose an Azure Information Protection tenant key topology of **Microsoft 
     	Set-IRMConfiguration -LicensingLocation $list
     	Set-IRMConfiguration -internallicensingenabled $false
     	Set-IRMConfiguration -internallicensingenabled $true
-
-
-If you chose an Azure Information Protection tenant key topology of **customer-managed (BYOK)**:
-
--   You will have reduced Rights Management protection functionality with Exchange Online, as described in the [BYOK pricing and restrictions](byok-price-restrictions.md) article.
 
 
 ## Step 9. Configure IRM integration for Exchange Server and SharePoint Server

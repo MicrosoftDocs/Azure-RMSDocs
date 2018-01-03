@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,8 +64,8 @@ Use the following table for a list of these permissions levels and a complete li
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal <br /><br />Azure portal<br /><br /> Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Reply; Reply All; Allow Macros [[1]](#footnote-1)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Reply: Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Allow Macros [[1]](#footnote-1)|
-|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export [[3]](#footnote-3); Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2)|
-|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Allow Macros; Save As, Export; Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Full Control|
+|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; Allow Macros; Save As, Export [[3]](#footnote-3); Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2)|
+|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; Allow Macros; Save As, Export; Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Full Control|
 
 ----
 
@@ -77,8 +77,7 @@ For the Azure Information Protection client for Windows, this right is currently
 Not applicable to the Azure Information Protection client for Windows or the Rights Management sharing application for Windows.
 
 ###### Footnote 3
-Not included in the Azure Information Protection client for Windows. In this client, the Export usage right includes the ability to remove protection.
-
+Not included in the Azure portal or the Azure Information Protection client for Windows.
 
 ## Rights included in the default templates
 The following table lists the usage rights that are included when the default templates are created. The usage rights are listed by their [common name](#usage-rights-and-descriptions).
