@@ -108,14 +108,14 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - Choose **Select from the list** to add all users from your organization or browse the directory.
         
-        The users or groups must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        The users or groups must have an email address. In a production environment, this is nearly always the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, to specify all users in another organization by entering a domain name from that organization. Do not put domain names from social providers that support personal email accounts. For example, do not enter **gmail.com**, **hotmail.com**, or **outlook.com**.
         
     >[!NOTE]
     >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
-    As a best practice, use groups rather than users. This stratetegy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
+    As a best practice, use groups rather than users. This strategy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
     
     When you have specified the first set of users and groups, select the permissions to grant these users and groups. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
     
@@ -169,7 +169,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 ## Example configurations
 
-The **All Employees** and **Recipients Only** sub-labels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
+The **All Employees** and **Recipients Only** sublabels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
 
 For each example that follows, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
 
@@ -183,7 +183,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
     
 2. Select **Set user defined permissions (Preview)**.
 
-3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
+3. Make sure that the following option is selected: **In Outlook apply Do Not Forward**.
 
 4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
