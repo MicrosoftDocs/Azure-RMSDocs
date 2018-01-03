@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/02/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,6 +32,9 @@ ms.suite: ems
 When you set protection on files or emails by using the Azure Rights Management service from Azure Information Protection and you do not use a template, you must configure the usage rights yourself. In addition, when you configure templates or labels for Azure Rights Management protection, you select the usage rights that will then be automatically applied when the template or label is selected by users, administrators, or configured services. For example, in the Azure portal you can select roles that configure a logical grouping of usage rights, or you can configure the individual rights.
 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
+
+> [!NOTE] 
+> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018. After this date, if you attempt to use this portal, you will be automatically redirected to the new Azure portal. To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
 ## Usage rights and descriptions
 The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
