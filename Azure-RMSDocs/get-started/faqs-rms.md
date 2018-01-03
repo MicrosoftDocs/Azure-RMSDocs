@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -104,7 +104,9 @@ If the document was protected by using a label or template, there's no need to r
 
 Alternatively, if you have already configured a group for the required permissions, you can change the group membership to include or exclude users and there is no need to change the label or template. There might be a small delay before the changes take effect because group membership is [cached](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) by the Azure Rights Management service.
 
-If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right. 
+If the document was protected by using custom permissions, you cannot change the permissions for the existing document. You must protect the document again and specify all the users and all the usage rights that are required for this new version of the document. To reprotect a protected document, you must have the Full Control usage right.
+
+Tip: To check whether a document was protected by a template or by using custom permission, use the [Get-AIPFile​Status](.powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet. You always see a template description of **Restricted Access** for custom permissions, with a unique template ID that is not displayed when you run [Get-RMSTemplate](.powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## I have a hybrid deployment of Exchange with some users on Exchange Online and others on Exchange Server—is this supported by Azure RMS?
 Absolutely, and the nice thing is, users will be able to seamlessly protect and consume protected emails and attachments across the two Exchange deployments. For this configuration, [activate Azure RMS](../deploy-use/activate-service.md) and [enable IRM for Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), then [deploy and configure the RMS connector](../deploy-use/deploy-rms-connector.md) for Exchange Server.
