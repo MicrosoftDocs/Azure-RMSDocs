@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Developing your application - AIP
@@ -40,9 +40,9 @@ Getting Azure set up for this app requires you to create a Tenant ID, a Symmetri
 
 ### Azure AD Tenant configuration
 
-To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating Azure Rights Management](https://docs.microsoft.com/en-us/information-protection/deploy-use/activate-service).
+To configure the Azure AD environment for Azure Information Protection, follow the guidance in [Activating Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Once the service is activated you will need PowerShell components for the next steps. Follow [Administering the Azure Rights Management service by using Windows PowerShell](https://docs.microsoft.com/en-us/information-protection/deploy-use/administer-powershell) to accomplish this.
+Once the service is activated you will need PowerShell components for the next steps. Follow [Administering the Azure Rights Management service by using Windows PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) to accomplish this.
 
 ### Getting your Tenant ID
 

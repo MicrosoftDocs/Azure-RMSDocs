@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,13 +54,13 @@ This protection technology uses encryption, identity, and authorization policies
 
 For example, you can configure a report document or sales forecast spreadsheet so that it can be accessed only by people in your organization, and control whether that document can be edited, or restricted to read-only, or prevent it from being printed. You can configure emails similarly, and also prevent them from being forwarded or prevent the use of the Reply All option. 
 
-These protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. However, the same protection settings can also be used by applications and services that support protection, but not labeling. For these applications and services, the protection settings are surfaced as *Rights Management templates*.
+These protection settings can be part of your label configuration, so that users both classify and protect documents and emails simply by applying a label. However, the same protection settings can also be used by applications and services that support protection, but not labeling. For these applications and services, the protection settings become available as *Rights Management templates*.
 
 ### Rights Management templates
 
 As soon as you activate the Azure Rights Management service, two default templates are available for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own protection settings that apply more restrictive controls.
 
-When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then use that template with applications and services that support Azure Rights Management.
+When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then additionally use that template with applications and services that support Azure Rights Management.
 
 For example, from the Exchange admin center, you can configure Exchange Online mail flow rules to use these templates:
 
@@ -68,7 +68,7 @@ For example, from the Exchange admin center, you can configure Exchange Online m
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
-## Integration with end-user workflows
+## Integration with end-user workflows for documents and emails
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
@@ -88,6 +88,25 @@ After a document has been protected, users and administrators can use a document
 
 ![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
 
+### Additional integration for email
+
+When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
+
+For example, users need to send sensitive information to personal email accounts that uses **Gmail**, **Hotmail**, or a **Microsoft** account. Or, to users who don't have an account for Office 365 or in Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
+
+This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
+
+For example a Gmail user sees the following in an email message:
+
+![Gmail recipient experience for OME and AIP](../media/ome-message.png)
+
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
+
+![Selecting a label configured for Do Not Foward](../media/recipients-only-label.png)
+
+Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
+
+When you attach Office documents to these emails, these documents are automatically protected as well.
 
 ## Resources for Azure Information Protection
 
