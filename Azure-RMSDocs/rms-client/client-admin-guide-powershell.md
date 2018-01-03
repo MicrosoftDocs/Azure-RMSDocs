@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -497,13 +497,15 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 4. Select the application that you've just created, for example, **AIPOnBehalfOf**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
     
-    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
 
-5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
+5. Back on the **Settings** blade, select **Required permissions**. On the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
+
+6. Back on the **Settings** blade again, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
     
     This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
 
-6. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
+7. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
     
     - Name: **AIPClient**
     
@@ -513,25 +515,19 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     - Sign-on URL: **http://localhost**
 
-7. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+8. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
     
-    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
 
-8. On the **Settings** blade, select **Required permissions**. 
+9. On the **Settings** blade, select **Required permissions**. 
 
-9. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
+10. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
 
-10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+11. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+
+12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-    You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
-
-
-> [!TIP]
-> If Set-AIPAuthentication is not successful and you used existing apps rather than creating new apps by using the preceding instructions, you might need to reset the required permissions for your apps. This might also be the case if you followed the instructions to create new apps for Set-AIPAuthentication, but then modified the app settings.
-> 
-> To reset the required permissions, for both apps, use the following configuration steps: Select **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
-> 
-> Alternatively, create new apps by using the preceding instructions.
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
