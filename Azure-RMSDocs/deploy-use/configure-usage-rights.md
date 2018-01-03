@@ -34,7 +34,9 @@ When you set protection on files or emails by using the Azure Rights Management 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 > [!NOTE] 
-> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018. After this date, if you attempt to use this portal, you will be automatically redirected to the new Azure portal. To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
+> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018. After this date, if you attempt to use this portal, you will be automatically redirected to the new Azure portal.
+>
+> To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
 ## Usage rights and descriptions
 The following table lists and describes the usage rights that Rights Management supports, and how they are used and interpreted. They are listed by their **common name**, which is typically how you might see the usage right displayed or referenced, as a more friendly version of the single-word value that is used in the code (the **Encoding in policy** value). 
