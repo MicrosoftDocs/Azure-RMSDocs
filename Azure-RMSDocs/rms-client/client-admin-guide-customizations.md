@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -194,8 +194,6 @@ To configure this advanced setting, enter the following strings:
 - Value: \<**label ID**> or **None**
 
 ## Label an Office document by using an existing custom property
-
-This configuration option is currently in preview and is subject to change. 
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
