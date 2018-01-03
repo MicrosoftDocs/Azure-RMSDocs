@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/78/2018
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,11 +83,6 @@ Fixes for stability and for specific scenarios that include:
 - For Office apps, improve performance and memory consumption.
 
 - When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
-
-Fixes for a better user experience, that include:
-
-- Support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. Applies to File Explorer, right-click to classify and protect files, to the Azure Information Protection Viewer, and to the Click-to-Run version of Office 2016.
-
 
 ## Version 1.10.56.0
 
