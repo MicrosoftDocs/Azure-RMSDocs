@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,19 +48,6 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## How automatic or recommended labels are applied
 
-**For the general availability version of the Azure Information Protection client:**
-
-- Automatic classification applies to Word, Excel, and PowerPoint when documents are saved, and apply to Outlook when emails are sent. 
-    
-    You cannot use automatic classification for documents and emails that were previously manually labeled, or previously automatically labeled with a higher classification. 
-
-- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook.
-    
-    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
-
-
-**For the current preview version of the Azure Information Protection client:**
-
 - Automatic classification applies to Word, Excel, PowerPoint, and Outlook. For documents, automatic classification runs [continuously in the background](#more-information-about-running-continuously). For Outlook, automatic classification runs when emails are sent. 
     
     You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
@@ -71,13 +58,11 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 #### More information about running continuously
 
-The current preview version of the Azure Information Protection client periodically checks documents for the condition rules that you specify. This behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
+The Azure Information Protection client periodically checks documents for the condition rules that you specify. This behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
 
 The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified. 
 
 ### How multiple conditions are evaluated when they apply to more than one label
-
-For the general availability version of the Azure Information Protection client and the current preview client:
 
 1. The labels are ordered for evaluation, according to their position that you specify in the policy: The label positioned first has the lowest position (least sensitive) and the label positioned last has the highest position (most sensitive).
 

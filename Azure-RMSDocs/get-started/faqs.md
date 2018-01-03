@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -90,7 +90,7 @@ Today, you apply and manage these labels separately but Microsoft is working tow
 
 For a while, you've been able to use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](../deploy-use/deploy-rms-connector.md) (Office documents only) or a [PowerShell script](../rms-client/configure-fci.md) (all file types). 
 
-You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md), currently in preview. The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
 
 The main differences between these two solutions:
 

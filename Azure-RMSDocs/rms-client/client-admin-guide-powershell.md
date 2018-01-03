@@ -44,7 +44,7 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 
-In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview), uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
+In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
 
 For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help.  
 
@@ -373,7 +373,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 8. Add your account name. If other AD RMS administrators or service accounts will also use these cmdlets to protect and unprotect files, add those accounts as well. 
     
-    To protect or unprotect files non-interactively, add the relevant computer account or accounts. For example, add the computer account of the Windows Server computer that is configured for File Classification Infrastructure and will use a PowerShell script to protect files. This scenario requires the current preview version of the Azure Information Protection client.
+    To protect or unprotect files non-interactively, add the relevant computer account or accounts. For example, add the computer account of the Windows Server computer that is configured for File Classification Infrastructure and will use a PowerShell script to protect files.
 
 9. In the **Allow** column, make sure that the **Read and Execute**, and the **Read** checkboxes are selected.
 
@@ -464,7 +464,7 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner, currently in preview.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 

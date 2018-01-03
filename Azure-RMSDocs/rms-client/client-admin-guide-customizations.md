@@ -148,8 +148,6 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
 
-> [!IMPORTANT]
-> Unless you use the current preview version of the client, do not set this option to **False** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 ## Permanently hide the Azure Information Protection bar
 
@@ -168,8 +166,6 @@ To configure this advanced setting, enter the following strings:
 
 ## Enable recommended classification in Outlook
 
-This configuration option is currently in preview and is subject to change.
-
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
@@ -182,8 +178,6 @@ To configure this advanced setting, enter the following strings:
 
 
 ## Set a different default label for Outlook
-
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
