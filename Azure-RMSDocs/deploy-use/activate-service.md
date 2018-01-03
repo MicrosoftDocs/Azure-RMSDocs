@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/01/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,9 +43,9 @@ When the Azure Rights Management service for Azure Information Protection is act
 
 When you have a service plan that includes Azure Rights Management, you might not have to activate the service:
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after **January 1st, 2018**, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
+- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained in or after **January 2018**, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
-- If your subscription was obtained before this date, you must activate the service yourself. 
+- If your subscription was obtained before this month, you must activate the service yourself. 
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 

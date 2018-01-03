@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/01/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
