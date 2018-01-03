@@ -39,11 +39,11 @@ Important guidance if you are already using Active Directory Rights Management S
 
 If your subscription that includes Azure Rights Management was purchased during or after January 2018, the Azure Rights Management service is activated by default. If you are also using Active Directory Rights Management Services (AD RMS), this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you deactivate the Azure Rights Management service as soon as possible. 
 
-When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. One of the steps in the migration is to re-activate the service but you do this after you have exported configuration information from AD RMS to the Azure Rights Management service. This ensures that documents and emails that were protected by AD RMS can still be opened.
+When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. One of the steps in the migration is to activate the service again, but you do this step after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
 
 Your first step is to deactivate the Azure Rights Management service.
 
-### Step One: Deactivate Azure Rights Management
+### Step 1: Deactivate Azure Rights Management
 Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 > [!TIP]
@@ -57,7 +57,7 @@ Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement
 
 2. On the **rights management** page, click **deactivate**.
 
-3.  When prompted **Do you want to deactivate Rights Management?**, click **deactivate**.
+3.  When you see the prompt **Do you want to deactivate Rights Management?** click **deactivate**.
 
 You should now see **Rights Management is not activated** and the option to activate.
 
@@ -75,7 +75,7 @@ You should now see **Rights Management is not activated** and the option to acti
 
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 
-### Step Two: Start planning for migration
+### Step 2: Start planning for migration
 
 See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
@@ -89,15 +89,15 @@ When you are ready to move computers from AD RMS to the Azure Rights Management 
 
 When the Azure Rights Management service isn't activated, you can still use Azure Information Protection for labels that apply classification only. A special default policy is created for you that does not include data protection and those configuration options remain unavailable until the Azure Rights Management service is activated.
 
-### Step One: Configure your Azure Information Protection policy for classification and labeling - without protection
+### Step 1: Configure your Azure Information Protection policy for classification and labeling - without protection
 
 From the initial **Azure Information Protection** blade, select **Global policy** to view and configure your default policy that does not include options for data protection. For more information, see [Configuring Azure Information Protection policy](configure-policy.md).
 
-### Step Two: Start planning for migration
+### Step 2: Start planning for migration
 
 See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-### Step Three: Start to configure labels for protection
+### Step 3: Start to configure labels for protection
 
 After you have activated the Azure Rights Management service as part of the migration process, you can configure labels for data protection. However, if you migrate users in batches, make sure that labels that apply protection are scoped to migrated users only.
 
