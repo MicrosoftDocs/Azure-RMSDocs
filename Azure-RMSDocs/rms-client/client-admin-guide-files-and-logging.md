@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -85,9 +85,6 @@ The client logs user activity to the local Windows event log **Applications and 
     - System (for sign in and download policy)
     
     - Default
-        
-        This **Default** source action is for the preview client only, and refers to the label that is set by using the **Select the default label** in the Azure Information Protection policy.
-
     
 - Label before and after action ​
     
