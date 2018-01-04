@@ -80,11 +80,9 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
-- For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for multiple monitors
+- For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
     
-    If you have opted in to the Office Insiders program and you are running Office version 16.0.8628.2010 or later (Click-to-Run), the Azure Information Protection bar might display outside the Office applications. This can happen if you’re using multiple monitors that have different scaling settings. For example, you have a 4K monitor and a standard monitor. Until this configuration is supported, you must enable legacy support for multiple monitors in Office apps.  
-    
-    To enable this legacy support in Office apps: **File** > **General** > **User Interface options**:
+    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. To configure the Office applications: **File** > **General** > **User Interface options**:
     
     - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
         
