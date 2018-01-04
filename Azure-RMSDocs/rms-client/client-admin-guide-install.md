@@ -86,7 +86,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     To disable this feature in Office apps: **File** > **General** > **User Interface options**:
     
-    - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, set this to **Optimize for compatibility (application restart required)** instead. 
+    - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
         
     - If you see that the option **Use best settings for my display** is selected, remove this selection.
 
