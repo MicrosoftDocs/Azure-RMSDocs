@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Rights Management Sharing Application for Windows
+# Rights Management Sharing Application for Windows (deprecated)
 
 >*Applies to: Active Directory Rights Management Services, Azure Information Protection*
 
