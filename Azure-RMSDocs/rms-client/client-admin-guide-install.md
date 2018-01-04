@@ -82,7 +82,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - For multiple monitors and Office versions 16.0.8828.2010 and later (Click-to-Run): Do not use the DDPI feature
     
-    Recent builds of Office include support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. This configuration is not compatible with the Azure Information Protection client and can result in the Azure Information Protection bar displaying outside the Office app.
+    Recent builds of Office include support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. Currently, this configuration is not compatible with the Azure Information Protection client and can result in the Azure Information Protection bar displaying outside the Office app.
     
     To disable this feature in Office apps: **File** > **General** > **User Interace options**:
     
