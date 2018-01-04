@@ -107,11 +107,12 @@ The RMS client stores licenses on the local disk and also caches some  informati
 
 |Description|Client Mode Paths|Server Mode Paths|
 |---------------|---------------------|---------------------|
-|License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*<SID>*\|
-|Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*<SID>*\|
-|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \*<SID>*|
+|License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\*\<SID\>*\|
+|Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\Templates\*\<SID\>*\|
+|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> *\<SID\>*|
+
 > [!NOTE]
-> *\<SID\>* is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account,    replace *<SID>* with the value of the well-known SID for that account (S-1-5-20).
+> *\<SID\>* is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account, replace *\<SID\>* with the value of the well-known SID for that account (S-1-5-20).
 
 ### Windows registry settings for the RMS client
 You can use Windows registry keys to set or modify some RMS client configurations. For example, as an administrator for RMS-enlightened applications that communicate with AD RMS servers, you might want to update the enterprise service location (override the AD RMS server that is currently selected for publishing) depending on the client computer's current location within your Active Directory topology. Or, you might  want to enable  RMS tracing at the client computer, to help troubleshoot a problem with an RMS-enlightened application. Use the following table to identify the registry settings that you can change for the RMS client.
