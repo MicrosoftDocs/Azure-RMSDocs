@@ -3,7 +3,7 @@
 # [Plan & Design](/information-protection/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/information-protection/deploy-use/activate-service)
 # [Deploy & Use the Client](use-client.md)
-## [Client deployment options](use-client.md)
+## [Client deployment solutions](use-client.md)
 ### [Azure Information Protection client](aip-client.md)
 #### [Azure Information Protection client: Version release history](client-version-release-history.md)
 #### [Azure Information Protection client administrator guide](client-admin-guide.md)
