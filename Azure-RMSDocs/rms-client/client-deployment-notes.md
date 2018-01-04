@@ -134,7 +134,7 @@ Templates make it easy for users and administrators to quickly apply Rights Mana
 
 **Client Mode:** %localappdata%\Microsoft\MSIPC\UnmanagedTemplates
 
-**Server Mode:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\<SID\>\
+**Server Mode:** %allusersprofile%\Microsoft\MSIPC\Server\UnmanagedTemplates\\<SID\>
 
 When you use this folder, there is no special naming convention required except that the templates should be issued by the RMS server or service and they must have the  .xml file name extension. For example, Contoso-Confidential.xml or Contoso-ReadOnly.xml are valid names.
 
