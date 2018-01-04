@@ -50,7 +50,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Version 1.20.1.0
 
-**Released**: 01/17/2018
+**Released**: 01/09/2018
 
 If you have the last preview version of the client installed (1.15.7.0), you must first uninstall it before installing this GA version. 
 
