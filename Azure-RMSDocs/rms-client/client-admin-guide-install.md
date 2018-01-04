@@ -80,7 +80,7 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
-- For Office versions 16.0.8828.2010 and later (Click-to-Run): Do not use the DDPI feature
+- For Office versions 16.0.8217.1000 and later (Click-to-Run): Do not use the DDPI feature
     
     Recent builds of Office include support for sharp graphics and text for dynamic dot per inch (DDPI) monitors. Currently, this configuration is not compatible with the Azure Information Protection client and can result in the Azure Information Protection bar displaying outside the Office app.
     
