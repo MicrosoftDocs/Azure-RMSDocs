@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/17/2018
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,13 +52,15 @@ Use the following information to see what’s new or changed for a supported rel
 
 **Released**: 01/17/2018
 
+If you have the last preview version of the client installed (1.15.7.0), you must first uninstall it before installing this GA version. 
+
 **New features**:
 
-- The Azure Information Protection scanner, which was [previously in preview](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/25/azure-information-protection-scanner-in-public-preview/): The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
+- The Azure Information Protection scanner: The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
 
 - For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
 
-- Support for the [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users cannot select labels from the Azure Information Protection bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon.
+- Support for the [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
 
 - A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 

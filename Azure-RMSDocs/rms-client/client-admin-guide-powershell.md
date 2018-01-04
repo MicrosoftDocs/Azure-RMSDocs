@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
