@@ -145,7 +145,7 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
    
-    REG_DWORD: AllowTrustedServersOnly
+    REG_DWORD:AllowTrustedServersOnly
     
     **Value:** If a non-zero value is specified, the RMS client trusts only the specified servers that are configured in the TrustedServers list and the  Azure  Rights Management service.
 
@@ -153,7 +153,7 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
     
-    REG_SZ: *\<URL_or_HostName>*
+    REG_SZ:*\<URL_or_HostName>*
     
     **Value:** The string values in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**, the RMS client uses SSL or TLS to contact the specified AD RMS server.
 
@@ -213,25 +213,24 @@ As an alternative to using an SCP or where an SCP does not exist, you can config
 
 #### To enable client-side AD RMS service discovery by using the Windows registry
 
-1.  Open the Windows registry editor, Regedit.exe:
+1. Open the Windows registry editor, Regedit.exe:
+    
+    - On the client computer, in the Run window, type **regedit**, and then press Enter to open the Registry Editor.
 
-    -   On the client computer, in the Run window, type **regedit**, and then press Enter to open the Registry Editor.
-
-2.  In Registry Editor, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
+2. In Registry Editor, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
     > [!IMPORTANT]
-    > If you are running a 32-bit application on a 64-bit computer, the path is as follows: 
-    > **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > If you are running a 32-bit application on a 64-bit computer, the path is as follows: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
-3.  To create the ServiceLocation subkey, right-click **MSIPC**, point to **New**, click **Key**, and then type **ServiceLocation**.
+3. To create the ServiceLocation subkey, right-click **MSIPC**, point to **New**, click **Key**, and then type **ServiceLocation**.
 
-4.  To create the EnterpriseCertification subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterpriseCertification**.
+4. To create the EnterpriseCertification subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterpriseCertification**.
 
-5.  To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey. When the **Edit String** dialog box appears, for **Value data**, type \<http or https>://*AD RMS_cluster_name*/_wmcs/Certification, and then click **OK**.
+5. To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey. When the **Edit String** dialog box appears, for **Value data**, type **\<http or https>:///<AD RMS_cluster_name>/_wmcs/Certification**, and then click **OK**.
 
-6.  To create the EnterprisePublishing subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type EnterprisePublishing.
+6. To create the EnterprisePublishing subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterprisePublishing**.
 
-7.  To set the enterprise publishing URL, double-click **(Default)** under the **EnterprisePublishing** subkey. When the **Edit String** dialog box appears, for **Value data**, type \<http or https>://*AD RMS_cluster_name*/_wmcs/Licensing, and then click **OK**.
+7. To set the enterprise publishing URL, double-click **(Default)** under the **EnterprisePublishing** subkey. When the **Edit String** dialog box appears, for **Value data**, type **\<http or https>:///AD RMS_cluster_name>/_wmcs/Licensing**, and then click **OK**.
 
 8.  Close Registry Editor.
 
