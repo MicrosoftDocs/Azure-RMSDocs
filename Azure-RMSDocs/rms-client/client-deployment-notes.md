@@ -241,9 +241,7 @@ In some cases, you might need to redirect traffic during service discovery, for 
 
 #### To enable RMS licensing redirection by using the Windows registry
 
-1.  Open the Windows registry editor, Regedit.exe:
-
-    -   On the client computer, in the Run window, type **regedit**, and then press Enter to open Registry Editor.
+1.  Open the Windows registry editor, Regedit.exe.
 
 2.  In Registry Editor, navigate to one of the following:
 
