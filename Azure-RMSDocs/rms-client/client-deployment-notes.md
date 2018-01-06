@@ -257,12 +257,12 @@ In some cases, you might need to redirect traffic during service discovery, for 
 
     For example, to redirect licensing from a server at Contoso.com to one at Fabrikam.com, you might enter the following values:
 
-    **Name:** https://contoso.com/_wmcs/licensing
+    **Name:** `https://contoso.com/_wmcs/licensing`
 
-    **Value:** https://fabrikam.com/_wmcs/licensing
-
+    **Value:** `https://fabrikam.com/_wmcs/licensing`
+    
     > [!NOTE]
-    > If the old licensing server has both intranet and extranet URLs specified, a new name and value mapping must be set for both these URLs under the LicensingRedirection key.
+    > If the old licensing server has both intranet and extranet URLs specified, a new name and value mapping must be set for both these URLs under the **LicensingRedirection** key.
 
 5.  Repeat the previous step for all servers that need to be redirected.
 
