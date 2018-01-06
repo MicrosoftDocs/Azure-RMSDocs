@@ -219,18 +219,18 @@ As an alternative to using an SCP or where an SCP does not exist, you can config
 
 2. In Registry Editor, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
-    > [!IMPORTANT]
+    > [!NOTE]
     > If you are running a 32-bit application on a 64-bit computer, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3. To create the ServiceLocation subkey, right-click **MSIPC**, point to **New**, click **Key**, and then type **ServiceLocation**.
 
 4. To create the EnterpriseCertification subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterpriseCertification**.
 
-5. To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey. When the **Edit String** dialog box appears, for **Value data**, type **\<http or https>:///<AD RMS_cluster_name>/_wmcs/Certification**, and then click **OK**.
+5. To set the enterprise certification URL, double-click the **(Default)** value, under the **EnterpriseCertification** subkey. When the **Edit String** dialog box appears, for **Value data**, type **<http or https>://<AD RMS_cluster_name>/_wmcs/Certification**, and then click **OK**.
 
 6. To create the EnterprisePublishing subkey, right-click **ServiceLocation**, point to **New**, click **Key**, and then type **EnterprisePublishing**.
 
-7. To set the enterprise publishing URL, double-click **(Default)** under the **EnterprisePublishing** subkey. When the **Edit String** dialog box appears, for **Value data**, type **\<http or https>:///<AD RMS_cluster_name>/_wmcs/Licensing**, and then click **OK**.
+7. To set the enterprise publishing URL, double-click **(Default)** under the **EnterprisePublishing** subkey. When the **Edit String** dialog box appears, for **Value data**, type **<http or https>://<AD RMS_cluster_name>/_wmcs/Licensing**, and then click **OK**.
 
 8.  Close Registry Editor.
 
