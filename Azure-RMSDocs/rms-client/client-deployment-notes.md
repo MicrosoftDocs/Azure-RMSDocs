@@ -220,7 +220,7 @@ As an alternative to using an SCP or where an SCP does not exist, you can config
 2. In Registry Editor, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
     > [!IMPORTANT]
-    > If you are running a 32-bit application on a 64-bit computer, the path is as follows: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > If you are running a 32-bit application on a 64-bit computer, navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3. To create the ServiceLocation subkey, right-click **MSIPC**, point to **New**, click **Key**, and then type **ServiceLocation**.
 
