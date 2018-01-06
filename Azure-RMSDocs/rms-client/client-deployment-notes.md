@@ -144,15 +144,17 @@ The RMS client can be limited to using only specific trusted AD RMS servers by 
 **To enable limiting RMS client to use only trusted AD RMS servers**
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
+   
     REG_DWORD: AllowTrustedServersOnly
-
+    
     **Value:** If a non-zero value is specified, the RMS client trusts only the specified servers that are configured in the TrustedServers list and the  Azure  Rights Management service.
 
 **To add members to the list of trusted AD RMS servers**
 
 -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\TrustedServers\
-    REG_SZ: *<URL_or_HostName>*
-
+    
+    REG_SZ: *\<URL_or_HostName>*
+    
     **Value:** The string values in this registry key location can be either DNS domain name format (for example, **adrms.contoso.com**) or full URLs to trusted AD RMS servers (for example, **https://adrms.contoso.com**). If a specified URL starts with **https://**, the RMS client uses SSL or TLS to contact the specified AD RMS server.
 
 ## RMS service discovery
