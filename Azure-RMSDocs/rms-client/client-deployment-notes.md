@@ -195,10 +195,10 @@ You can register and delete an SCP after AD RMS is installed by using the follow
 #### To enable AD RMS service discovery by registering an SCP in Active Directory
 
 1.  Open the Active Directory Management Services console at the AD RMS server:
+    
+    - For Windows Server 2012 R2 or Windows Server 2012, in Server Manager, select **Tools** > **Active Directory Rights Management Services**.
 
-    -   If you are using Windows Server 2008 R2 or Windows Server 2008, click **Start**, click **Administrative Tools**, and then click **Active Directory Rights Management Services**.
-
-    -   If you are using Windows Server 2012 R2 or Windows Server 2012, in Server Manager, click **Tools**, and then click **Active Directory Rights Management Services**.
+    - For Windows Server 2008 R2, select **Start** > **Administrative Tools** > **Active Directory Rights Management Services**.
 
 2.  In the AD RMS console right-click the AD RMS cluster, and then click **Properties**.
 
