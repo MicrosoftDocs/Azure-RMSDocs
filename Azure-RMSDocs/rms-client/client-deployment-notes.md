@@ -42,7 +42,7 @@ The RMS client can be freely redistributed and bundled with other applications a
 -   Make the RMS client a prerequisite for your application. With this option, you might need to provide users with additional instructions for them to obtain, install, and update their computers with the client before they can use your application.
 
 ## Installing the RMS client
-The RMS client is contained in an installer executable file named **setup_msipc_***<arch>***.exe**, where *<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer does not run on a 64-bit Windows installation.
+The RMS client is contained in an installer executable file named **setup_msipc_\<arch>.exe**, where *\<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer does not run on a 64-bit Windows installation.
 
 > [!NOTE]
 > You must have elevated privileges to install the RMS client, such as a member of the Administrators group on the local computer.
