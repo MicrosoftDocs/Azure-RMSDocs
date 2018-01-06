@@ -200,7 +200,7 @@ You can register and delete an SCP after AD RMS is installed by using the follow
 
     - For Windows Server 2008 R2, select **Start** > **Administrative Tools** > **Active Directory Rights Management Services**.
 
-2.  In the AD RMS console right-click the AD RMS cluster, and then click **Properties**.
+2.  In the AD RMS console, right-click the AD RMS cluster, and then click **Properties**.
 
 3.  Click the **SCP** tab.
 
