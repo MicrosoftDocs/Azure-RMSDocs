@@ -181,7 +181,7 @@ To perform service discovery, the RMS client checks the following:
 > [!NOTE]
 > There are three important exceptions for this service discovery flow:
 > 
-> - Mobile devices are best suited to use a cloud service, so by default they use service discovery for the Azure Rights Management service (https://discover.aadrm.com). To override this so that mobile devices use AD RMS rather than the Azure Rights Management service, you must specify SRV records in DNS and install the mobile device extension as documented in [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
+> - Mobile devices are best suited to use a cloud service, so by default they use service discovery for the Azure Rights Management service (https://discover.aadrm.com). To override this default so that mobile devices use AD RMS rather than the Azure Rights Management service, specify SRV records in DNS and install the mobile device extension as documented in [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
 > - When the Rights Management service is invoked by an Azure Information Protection label, service discovery is not performed. Instead, the URL is specified directly in the label setting that is configured in the Azure Information Protection policy.  
 
