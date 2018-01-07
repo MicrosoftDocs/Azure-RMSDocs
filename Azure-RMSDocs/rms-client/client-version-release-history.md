@@ -48,11 +48,13 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.20.1.0
+## Version 1.20.2.0
 
 **Released**: 01/09/2018
 
 If you have the last preview version of the client installed (1.15.7.0), you must first uninstall it before installing this GA version. 
+
+This version includes the MSIPC version 1.0.3274.0818 of the RMS client.
 
 **New features**:
 
@@ -77,7 +79,6 @@ Fixes for stability and for specific scenarios that include:
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
 
 - You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
-
 - Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
 
 - Prevent Office crashes after the Azure Information Protection client is upgraded.
