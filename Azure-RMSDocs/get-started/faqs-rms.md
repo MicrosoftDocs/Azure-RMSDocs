@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,7 +77,7 @@ As these role names suggest, the first role grants permissions to run all admini
 
 Some things to note:
 
-- Only global administrators for Office 365 and global administrators for Azure AD can use the Office 365 admin center or Azure classic portal to configure Azure RMS. If you use the Azure portal for Azure Information Protection, you can also sign in as a security admin.
+- Only global administrators for Office 365 and global administrators for Azure AD can use the Office 365 admin center to configure Azure RMS. If you use the Azure portal for Azure Information Protection, you can sign in as a global administrator or as a security admin.
 
 - Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell commands to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
 
