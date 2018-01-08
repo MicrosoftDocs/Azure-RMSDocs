@@ -32,8 +32,9 @@ ms.suite: ems
 
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
 
-The Azure classic portal retired **January 08, 2018**. After this date, if you attempt to use this portal, you will be automatically redirected to the new Azure portal. 
-For more information, see the blog post announcement, [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). For the temporary extension to the original retirement date, see [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+The Azure classic portal retired **January 08, 2018**. After this date, you will not be able to manage the Azure Rights Management service and custom templates from the classic portal. If you try to access the classic portal, you see a link that takes you to the new Azure portal. 
+
+For more information about the classic portal retirement, see the blog post announcement: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). For the temporary extension to the original retirement date, see [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## How to do your familiar admin tasks
 
