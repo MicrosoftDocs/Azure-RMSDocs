@@ -109,7 +109,7 @@ The RMS client stores licenses on the local disk and also caches some  informati
 |---------------|---------------------|---------------------|
 |License store location|%localappdata%\Microsoft\MSIPC|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*\\|
 |Template store location|%localappdata%\Microsoft\MSIPC\Templates|%allusersprofile%\Microsoft\MSIPC\Server\\*\<SID\>*\\|
-|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\<*SID*\>|
+|Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\*\<SID*\>|
 
 > [!NOTE]
 > *\<SID*> is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account, replace *\<SID\>* with the value of the well-known SID for that account (S-1-5-20).
