@@ -6,7 +6,7 @@ description: Information about installation, supported operating systems, regist
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,7 +42,7 @@ The RMS client can be freely redistributed and bundled with other applications a
 - Make the RMS client a prerequisite for your application. With this option, you might need to provide users with additional instructions for them to obtain, install, and update their computers with the client before they can use your application.
 
 ## Installing the RMS client
-The RMS client is contained in an installer executable file named **setup_msipc_*\<arch\>*.exe**, , where *\<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer does not run on a 64-bit Windows installation.
+The RMS client is contained in an installer executable file named **setup_msipc_*\<arch\>*.exe**, where *\<arch>* is either **x86** (for 32-bit client computers) or **x64** (for 64-bit client computers). The 64-bit (x64) installer package installs both a 32-bit runtime executable for compatibility with 32-bit applications that run on a 64-bit operating system installation, as well as a 64-bit runtime executable for supporting native 64-bit applications. The 32-bit (x86) installer does not run on a 64-bit Windows installation.
 
 > [!NOTE]
 > You must have elevated privileges to install the RMS client, such as a member of the Administrators group on the local computer.
@@ -112,7 +112,7 @@ The RMS client stores licenses on the local disk and also caches some  informati
 |Registry location|HKEY_CURRENT_USER<br /> \Software<br /> \Classes<br /> \Local Settings<br /> \Software<br /> \Microsoft<br /> \MSIPC|HKEY_CURRENT_USER<br /> \Software<br /> \Microsoft<br /> \MSIPC<br /> \Server<br /> \\<*SID*\>|
 
 > [!NOTE]
-> \<*SID*\> is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account, replace *\<SID\>* with the value of the well-known SID for that account (S-1-5-20).
+> *\<SID*> is the secure identifier (SID) for the account under which the server application is running. For example, if the application is running under the built-in Network Service account, replace *\<SID\>* with the value of the well-known SID for that account (S-1-5-20).
 
 ### Windows registry settings for the RMS client
 You can use Windows registry keys to set or modify some RMS client configurations. For example, as an administrator for RMS-enlightened applications that communicate with AD RMS servers, you might want to update the enterprise service location (override the AD RMS server that is currently selected for publishing) depending on the client computer's current location within your Active Directory topology. Or, you might  want to enable  RMS tracing at the client computer, to help troubleshoot a problem with an RMS-enlightened application. Use the following table to identify the registry settings that you can change for the RMS client.
