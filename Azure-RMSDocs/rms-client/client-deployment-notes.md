@@ -75,7 +75,7 @@ The RMS client is supported with the following operating systems:
 The  RMS client is supported on x86 and x64 computing platforms.
 
 ### Where is the  RMS client installed?
-By default, the RMS client is installed in %ProgramFiles%\Active Directory Rights Management Services Client 2.<minor version number>.
+By default, the RMS client is installed in %ProgramFiles%\Active Directory Rights Management Services Client 2.\<minor version number>.
 
 ### What files  are associated with the RMS client software?
 The following files  are installed as part of the  RMS client software:
