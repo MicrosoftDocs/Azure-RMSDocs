@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,6 +58,12 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     If this update is required and not installed, the client installation warns you that it must be installed. This update can be installed after the client is installed but some actions will be blocked and the message is displayed again.  
 
+- Visual C++ Redistributable for Visual Studio 2015 (32-bit version)
+    
+    For computers running Windows 7 Service Pack 1, install **vc_redist.x86.exe** from the following download page: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    
+    The client installation does not check for this prerequisite but it is needed for the Azure Information Protection client to classify and protect PDF files.
+
 - Do not disable the **Microsoft Azure Information Protection** add-in for Office applications
     
     If you have configured the group policy setting **List of managed add-ins**, add the Microsoft Azure Information Protection add-in for Office applications by specifying the following programmatic identifiers (ProgID) for Azure Information Protection, and set the option to **1: The add-in is always enabled**.
@@ -73,6 +79,14 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
+- For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
+    
+    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. To configure the Office applications: **File** > **General** > **User Interface options**:
+    
+    - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
+        
+    - If you see that the option **Use best settings for my display** is selected, remove this selection.
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
@@ -191,8 +205,8 @@ If you use Intune for your software deployment method, use these instructions to
     |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
     |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
+    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
     |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
-    
 
 3. For a default installation, run the .msi with **/quiet**, for example, `AzInfoProtection.msi /quiet`. However, you might need to specify additional installation parameters that are documented in the [executable installer instructions](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
