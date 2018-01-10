@@ -6,7 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,7 +82,9 @@ If your organization does not have a cloud-based account for you to use (for Off
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-> If the protected file does not open, you can use the **Run Diagnostics** option from **Protect** > **Help and Feedback** for the Azure Information Protection client to check for problems on your computer that might prevent a protected document from opening.
+> If the protected file does not open, try the **Reset Settings** option from the **Help and Feedback** dialog box. 
+> 
+> [More information about the Reset Settings option](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:
