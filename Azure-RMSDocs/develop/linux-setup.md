@@ -2,8 +2,8 @@
 title: Linux setup 
 description: Several flavors of Linux operating systems can now use Rights Management SDK 4.x.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
