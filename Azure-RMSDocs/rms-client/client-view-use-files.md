@@ -82,7 +82,7 @@ If your organization does not have a cloud-based account for you to use (for Off
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-> If the protected file does not open and you have the full Azure Information Protection client installed, try the **Reset Settings** option.  To access this option, from an Office app, select the **Protect** button > **Help and Feedback** > **Reset Settings**. 
+> If the protected file does not open and you have the full Azure Information Protection client installed, try the **Reset Settings** option. To access this option, from an Office app, select the **Protect** button > **Help and Feedback** > **Reset Settings**. 
 > 
 > [More information about the Reset Settings option](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
