@@ -38,11 +38,11 @@ The viewer automatically installs as part of the Azure Information Protection cl
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
 > 
-> Azure Information Protection
+>-Azure Information Protection
 > 
 >-Azure Rights Management
 > 
-> Active Directory Rights Management Services 
+>-Active Directory Rights Management Services 
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
