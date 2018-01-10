@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/18/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,7 +34,7 @@ When you set protection on files or emails by using the Azure Rights Management 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 > [!NOTE] 
-> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018. After this date, if you attempt to use this portal, you will be automatically redirected to the new Azure portal.
+> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018.
 >
 > To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
@@ -57,6 +57,8 @@ The **API Constant or Value** is the SDK name for an MSIPC API call, used when y
 |Common name: **Reply All** <br /><br />Encoding in policy: **REPLYALL**|Enables the **Reply All** option in an email client, but doesn’t allow the user to add recipients to the **To** or **Cc** lines.<br /><br />When you grant this right, also grant the **Edit Content, Edit** right (common name) to ensure that the original email is part of the forwarded email message and not an attachment. This right is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|Office custom rights: Not applicable.<br /><br />Name in the Azure classic portal: **Reply All**<br /><br />Name in the Azure portal: **Reply all**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |Common name: **View, Open, Read** <br /><br />Encoding in policy: **VIEW**|Allows the user to open the document and see the content.|Office custom rights: As the **Read** custom policy, **View** option.<br /><br />Name in the Azure classic portal: **View**<br /><br />Name in the Azure portal: **View content**<br /><br />Name in AD RMS templates: **Reply All** <br /><br />API constant or value: `IPC_GENERIC_READ L"VIEW"`|
 |Common name: **Copy** <br /><br />Encoding in policy: **EXTRACT**|Enables options to copy data (including screen captures) from the document into the same or another document.<br /><br />In some applications, it also allows the whole document to be saved in unprotected form.|Office custom rights: As the **Allow users with Read access to copy content** custom policy option.<br /><br />Name in the Azure classic portal: **Copy and Extract content**<br /><br />Name in the Azure portal: **Copy and extract content**<br /><br />Name in AD RMS templates: **Extract** <br /><br />API constant or value: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
+|Common name: **View Rights** <br /><br />Encoding in policy: **VIEWRIGHTSDATA**|Allows the user to see the policy that is applied to the document.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **View Assigned Rights**<br /><br />Name in the Azure portal: View Rights (VIEWRIGHTSDATA).<br /><br />Name in AD RMS templates: **View Rights** <br /><br />API constant or value: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
+|Common name: **Change Rights** <br /><br />Encoding in policy: **EDITRIGHTSDATA**|Allows the user to change the policy that is applied to the document. Includes including removing protection.|Office custom rights: Not implemented.<br /><br />Name in the Azure classic portal: **Change Rights**<br /><br />Name in the Azure portal: Edit Rights (EDITRIGHTSDATA).<br /><br />Name in AD RMS templates: **Edit Rights** <br /><br />API constant or value: `PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Common name: **Allow Macros** <br /><br />Encoding in policy: **OBJMODEL**|Enables the option to run macros or perform other programmatic or remote access to the content in a document.|Office custom rights: As the **Allow Programmatic Access** custom policy option. Not a per-recipient setting.<br /><br />Name in the Azure classic portal: **Allow Macros**<br /><br />Name in the Azure portal: Included in all rights that you can select because this right is required for the Azure Information Protection bar in Office apps.<br /><br />Name in AD RMS templates: **Allow Macros** <br /><br />API constant or value: Not implemented.|
 
 ## Rights included in permissions levels
@@ -69,8 +71,8 @@ Use the following table for a list of these permissions levels and a complete li
 |---------------------|----------------|---------------------------------|
 |Viewer|Azure classic portal <br /><br />Azure portal<br /><br /> Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Reply; Reply All; Allow Macros [[1]](#footnote-1)<br /><br />Note: For emails, use Reviewer rather than this permission level to ensure that an email reply is received as an email message rather than an attachment. Reviewer is also required when you send an email to another organization that uses the Outlook client or Outlook web app. Or, for users in your organization that are exempt from using the Azure Rights Management service because you have implemented [onboarding controls](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Reviewer|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Reply: Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Allow Macros [[1]](#footnote-1)|
-|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; Allow Macros; Save As, Export [[3]](#footnote-3); Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2)|
-|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; Allow Macros; Save As, Export; Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Full Control|
+|Co-Author|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export [[3]](#footnote-3); Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2)|
+|Co-Owner|Azure classic portal <br /><br />Azure portal<br /><br />Rights Management sharing application for Windows<br /><br />Azure Information Protection client for Windows|View, Open, Read; Save; Edit Content, Edit; Copy; View Rights; Change Rights; Allow Macros; Save As, Export; Print; Reply [[2]](#footnote-2); Reply All [[2]](#footnote-2); Forward [[2]](#footnote-2); Full Control|
 
 ----
 
