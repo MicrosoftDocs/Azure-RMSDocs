@@ -1,8 +1,9 @@
-﻿---
+# required metadata
+
 title: What's new and release notes
 description: Outlines important changes and features in this and previous versions.
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 09/25/2017
 ms.topic: article

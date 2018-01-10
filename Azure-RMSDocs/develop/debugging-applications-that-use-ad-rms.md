@@ -4,8 +4,8 @@
 title: How-to debug a rights-enabled application | Azure RMS
 description: The following topic shows how to debug your application and use the Windows Event Log.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
