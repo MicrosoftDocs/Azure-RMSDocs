@@ -78,7 +78,7 @@ Use the following table for a list of these permissions levels and a complete li
 
 ###### Footnote 1
 
-Included only in the Azure portal.
+Included in the Azure portal only.
 
 ###### Footnote 2
 
