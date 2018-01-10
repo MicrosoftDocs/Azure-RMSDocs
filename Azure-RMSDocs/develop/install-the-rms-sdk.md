@@ -4,8 +4,8 @@
 title: Install the SDK | Azure RMS
 description: This topic guides you through installing the developer tools.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article

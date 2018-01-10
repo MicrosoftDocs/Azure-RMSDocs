@@ -3,8 +3,8 @@
 
 title: Developer's Guide - AIP
 description: Developers can use Azure Information Protection to protect and manage files of all types
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: article

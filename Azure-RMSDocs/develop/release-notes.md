@@ -3,8 +3,8 @@
 
 title: What's new and release notes | Azure RMS
 description: Outlines important changes and features in this new version of the RMS SDK.
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
