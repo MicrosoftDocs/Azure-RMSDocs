@@ -6,7 +6,7 @@ description: An introduction tutorial to quickly try out Microsoft Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,9 +45,11 @@ To complete this tutorial, you need the following:
   > [!TIP] 
   > If you need to apply for a subscription, do this in advance because this process can sometimes take a while to complete.
 
-- A global administrator account to sign in to the Azure portal to configure the Azure Information Protection policy. This account must also have an email address and a working email service (for example, Exchange Online or Exchange Server).
+- A global administrator account or security administrator account to sign in to the Azure portal to activate protection and configure the Azure Information Protection policy. This account must also have an email address and a working email service, such as Exchange Online.
 
-- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010 with Service Pack 2. You must be signed in to your Office apps by using your cloud account.
+- A computer running Windows (minimum of Windows 7 with Service Pack 1), and which has installed either Office 365 ProPlus with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010 with Service Pack 2. 
+    
+    To use these applications with Azure Information Protection, you must have an [Office 365 subscription that includes using the Azure Rights Management service](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). For example, an Office 365 E3 or Office 365 E5 subscription. Using a license from this subscription, you must be signed in to your Office apps.
 
 Let's get started.
 

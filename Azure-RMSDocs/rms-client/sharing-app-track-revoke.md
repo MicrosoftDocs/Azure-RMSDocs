@@ -6,7 +6,7 @@ description: After you have protected your documents by using the RMS sharing ap
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -44,6 +44,8 @@ When you access this site, sign in to track your documents. Providing your organ
 -   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
 
 - If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke documents for others by clicking the Admin icon. Only administrators see this icon.
+    
+    Note: If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 -   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 

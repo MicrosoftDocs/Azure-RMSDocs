@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use this information to help you understand how you can use usage logging for the Azure Rights Management service from Azure Information Protection. This service provides the data protection for your organization's documents and emails and it can log every request to it, which includes requests from users, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment.
+Use this information to help you understand how you can use usage logging for the Azure Rights Management service from Azure Information Protection. This service provides the data protection for your organization's documents and emails and it can log every request to it. These requests include when users protect documents and email and also consume this content, actions performed by your administrators for this service, and actions performed by Microsoft operators to support your Azure Information Protection deployment. 
 
 You can then use these Azure Rights Management service logs to support the following business scenarios:
 
@@ -47,12 +47,17 @@ You can then use these Azure Rights Management service logs to support the foll
 
     If you have an information leak, you are likely to be asked who recently accessed specific documents and what information did a suspected person access recently. You can answer these type of questions when you use this logging because people who use protected content must always get a Rights Management license to open documents and pictures that are protected by the Azure Rights Management service, even if these files are moved by email or copied to USB drives or other storage devices. This means that you can use these logs as a definitive source of information for forensic analysis when you protect your data by using the Azure Rights Management service.
 
-> [!NOTE]
-> If you are interested only in the logging of administrative tasks for the Azure Rights Management service, and do not want to track how users are using the Rights Management service, you can use the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) Windows PowerShell cmdlet for Azure Rights Management.
-> 
-> You can also use the Azure classic portal for high-level usage reports that include **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**,
+In addition to this usage logging, you also have the following logging options:
 
-Use the following sections for more information about Azure Rights Management usage logging.
+|Logging option|Description|
+|----------------|---------------|
+|Admin log|Logs administrative tasks for the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
+|Client log files|Troubleshooting logs f or the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
+
+
+Use the following sections for more information about the usage logging for the Azure Rights Management service. 
 
 ## How to enable Azure Rights Management usage logging
 Starting February 2016, Azure Rights Management usage logging is enabled by default for all customers. This applies to customers who activated their Azure Rights Management service before February 2016 and to customers who activate the service after February 2016. 

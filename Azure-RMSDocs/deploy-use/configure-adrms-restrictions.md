@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,13 +53,13 @@ In this HYOK scenario, the rights policies and the organization's private key th
 >
 > Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents or emails that match all the following criteria:
 > 
-> - The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people.
+> **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
-> - The content is never shared outside the organization.
+> **The content is never shared outside the organization**
 > 
-> - The content is only consumed on the internal network.
+> **The content is only consumed on the internal network**
 > 
-> - The content does not need to be consumed on Mac computers or mobile devices.
+> **The content does not need to be consumed on Mac computers or mobile device**
 
 Users are not aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions and limitations that come with AD RMS protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply AD RMS protection. 
 
@@ -71,13 +71,15 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
 - Does not support Office 2010 or Office 2007.
 
-- Do not use the **Do Not Forward** option when you configure a label for Azure RMS protection. You must also instruct users not to manually select this option in Outlook. 
+- Instruct users not to select **Do Not Forward** in Outlook, or provide specific guidance. 
 
-    If the Do Not Forward option is applied by a label or manually by users, the option might be applied by your AD RMS deployment rather than the intended Azure Rights Management service. In this scenario, people that you share with externally cannot open email messages that have this Do Not Forward option applied.
+    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
     
-    Beginning with version 1.9.58.0 of the Azure Information Protection client (currently in preview), the **Do Not Forward** button in Outlook always uses Azure RMS. This setting does not affect the Outlook **Do Not Forward** menu option or the **Do Not Forward** option when you configure a label for protection. If you do not want this behavior, you can hide the **Do Not Forward** button in Outlook by configuring an [advanced client  setting](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
+    The Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide this button by setting the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** to **Off**. 
+    
+    When users select **Do Not Forward** from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to select for their email message. If AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages
 
-- If users configure custom permissions when you use AD RMS (HYOK) protection and Azure RMS protection, the document or email is always protected by Azure Rights Management.
+- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK (AD RMS) protection. This limitation does not apply to the current preview version of the client.
 
 - If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
@@ -91,7 +93,15 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - Minimal version of Windows Server 2012 R2: Required for production environments but for testing or evaluation purposes, you can use a minimal version of Windows Server 2008 R2 with Service Pack 1.
     
-    - Single AD RMS root cluster.
+    - One of the following topologies:
+        
+        - Single forest with a single AD RMS root cluster. 
+        
+        - Multiple forests with independent AD RMS root clusters and users don't have access to the content that's protected by the users in the other forests.
+        
+        - Multiple forests with AD RMS clusters in each of them. Each AD RMS cluster shares a licensing URL that points to the same AD RMS cluster. On this AD RMS cluster, you must import all the trusted user domain (TUD) certificates from all the other AD RMS clusters. For more information about this topology, see [Trusted User Domain](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        
+    When you have multiple AD RMS clusters in separate forests, delete any labels in the global policy that apply HYOK (AD RMS) protection and configure a [scoped policy](configure-policy-scope.md) for each cluster. Then, assign users for each cluster to their scoped policy, making sure that you do not use groups that would result in a user being assigned to more than one scoped policy. The result should be that each user has labels for one AD RMS cluster only. 
     
     - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
@@ -117,9 +127,11 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
 
 ## Locating the information to specify AD RMS protection with an Azure Information Protection label
 
-When you configure a label for **HYOK (AD RMS)** protection, you must specify the template GUID and licensing URL of your AD RMS cluster. You can find both these values from the Active Directory Rights Management Services console:
+When you configure a label for **HYOK (AD RMS)** protection, you must specify the licensing URL of your AD RMS cluster. In addition, you must specify either a template that you've configured for the permissions to grant users, or let users define the permissions and users. 
 
-- To locate the template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
+You can find the template GUID and licensing URL values from the Active Directory Rights Management Services console:
+
+- To locate a template GUID: Expand the cluster and click **Rights Policy Templates**. From the **Distributed Rights Policy Templates** information, you can then copy the GUID from the template you want to use. For example: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - To locate the licensing URL: Click the cluster name. From the **Cluster Details** information, copy the **Licensing** value minus the **/_wmcs/licensing** string. For example: https://rmscluster.contoso.com 
     

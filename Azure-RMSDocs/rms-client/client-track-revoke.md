@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Track and revoke your documents when you use Azure Information Protection
+# User Guide: Track and revoke your documents when you use Azure Information Protection
 
 >*Applies to: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
@@ -56,6 +56,8 @@ When you access this site, sign in to track your documents. When your organizati
     - Administrators for Azure Information Protection can click the Admin icon to track and revoke protected documents for users when those users have registered their documents with the document tracking site. Only administrators see this icon:
         
         ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
+        
+        If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Unless you are an administrator, you can track and revoke only the documents that you have protected. You cannot track your protected emails by using the document tracking site.
 
@@ -116,5 +118,8 @@ After you have registered the protected document by using your Office apps or Fi
 More how-to instructions from the Azure Information Protection user guide:
 
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+
+## Additional information for administrators    
+See [Configuring and using document tracking for Azure Information Protection](client-admin-guide-document-tracking.md) from the [admin guide](client-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

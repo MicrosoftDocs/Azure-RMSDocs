@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,19 +37,13 @@ Try our quick start tutorial to see this working in just a few minutes: [Quick s
 
 Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) and our [Yammer site](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all) for when additional classification features and capabilities become available. There are a few limitations with the current release, which include the following:
 
-- Label names and tooltips are supported in one language only. However, multi-language support is now in preview. For more information, see [How to configure labels for different languages](../deploy-use/configure-policy-languages.md).
-
 - There is no centralized logging for classification and labeling.
 
-- Conditions for automatic classification must be phrases or patterns.
-
-- No labeling ability for Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
+- No labeling ability in Office apps for mobile devices (iOS and Android) and Mac computers, or the Office web apps (Office Online).
 
 - No classification and labeling integration with Exchange Online or SharePoint Online.
 
-- The SDK for partners and developers does not yet include classification and labeling.
-
-The February release removes many previous limitations. For more information, see the [blog post announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Request new features and vote on requests by visiting the [User Voice site](https://msip.uservoice.com/) for Azure Information Protection.
 
 ## Do I need to be a global admin to configure classification and labels?
 
@@ -75,7 +69,13 @@ No. When you label an email message that has attachments, those attachments do n
 
 ## How can DLP solutions and other applications integrate with Azure Information Protection?
 
-Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. In files, this metadata is stored in custom properties. In emails, this information is in the email headers.
+Because Azure Information Protection uses persistent metadata for classification, which includes a clear text label, this information can be read by DLP solutions and other applications. 
+
+- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents (.pdf), this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**  
+
+- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;**  
+
+To identify the GUID for a label, locate the Label ID value on the Label blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the GUID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the GUID of just a sub-label and not the parent label.
 
 ## How is Azure Information Protection classification for emails different from Exchange message classification?
 

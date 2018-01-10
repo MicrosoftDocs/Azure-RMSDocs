@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Information Protection client&colon; Version release history
-description: See what's new or changed in a release of the Azure Information Protection client for Windows. 
+title: Azure Information Protection client&colon; Version release history and support policy
+description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,27 +25,98 @@ ms.suite: ems
 
 ---
 
-# Azure Information Protection client: Version release history
+# Azure Information Protection client: Version release history and support policy
 
 >*Applies to: Azure Information Protection*
 
-The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. The client is included in the Microsoft Update Catalog (category: **Azure Information Protection**) and you can always download the latest  general availability (GA) release version and the upcoming version (the preview version) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
-Preview versions should not be deployed for end users on production networks. Instead, use preview versions to see and try new functionality or fixes that are coming in the next GA version. 
+You can download the latest GA release version and the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). These versions are also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can deploy the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
-Use the following information to see what’s new or changed for a GA release. The most current release is listed first. For information about the current preview version, see the information on the download page.
+### Servicing information and timelines
+
+Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. Unsupported versions of the client are not included on this page. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+
+Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
+
+### Release history
+
+Use the following information to see what’s new or changed for a supported release of the Azure Information Protection client for Windows. The most current release is listed first. 
 
 > [!NOTE]
-> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, first check that it is not a problem with the latest GA release. If it is, then check the current preview version.
+> Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
-> If the problem remains, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+> For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
+## Versions later than 1.10.56.0
+
+If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes. 
+
+For what's new or changed in the current preview version since the last GA version of the client, see the **Details** section on the [download page](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+
+## Version 1.10.56.0
+
+**Released**: 09/18/2017
+
+This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
+
+**New features**:
+
+- Support for the new Office 365 DLP conditions that you can configure for a label. For more information, see [Configure conditions for an Azure Information Protection label](../deploy-use/configure-policy-classification.md).
+
+- Support for labels that are configured for user-defined actions. For Outlook, this label automatically applies the Outlook Do Not Forward option. For Word, Excel, PowerPoint, and File Explorer, this label prompts the user to specify custom permissions. For more information, see [Configure an Azure Information Protection label for protection](../deploy-use/configure-policy-protection.md).
+
+- Labels support multiple languages. Beginning with August 30, 2017, the [default policy](../deploy-use/configure-policy-default.md) includes support for multiple languages that this version of the client displays to users. For users to see labels in their preferred language from a default policy before this date, and for labels that you configure, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md).
+
+- Labels are displayed from the **Protect** button on the Office ribbon, in addition to displaying on the Information Protection bar. 
+
+- Native protection for the following Visio file types: .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx
+
+- Support for advanced client configurations that you configure in the Azure portal. These configurations include the following:
+    
+    - [Hide or show the Do Not Forward button in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
+    
+    - [Make the custom permissions options available or unavailable to users](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
+    
+    - [Permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
+    
+    - [Enable recommended classification in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
+
+- For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
+
+- For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), there are new parameters: **Owner** and **PreserveFileDetails**. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
+
+**Fixes**:
+
+Fixes for stability and for specific scenarios that include:
+
+- Support for generically protecting large files that previously could cause corruption if larger than 1 GB. Now, the file size is limited only by available hard disk space and available memory. For more information about file size limitations, see [File sizes supported for protection](client-admin-guide-file-types.md#file-sizes-supported-for-protection) from the admin guide.
+
+- The Azure Information Protection client viewer opens protected PDF (.ppdf) files as view-only.
+
+- Support for labeling and protection of files stored on SharePoint Server.
+
+- Watermarks now support multiple lines. In addition, visual markings are now applied to a document on the [first save only](../deploy-use/configure-policy-markings.md#when-visual-markings-are-applied) rather than every time a document is saved.
+
+- The **Run Diagnostics** option in the **Help and Feedback** dialog box is replaced with **Reset Settings**. The behavior for this action has changed to include signing out the user and deleting the Azure Information Protection policy. For more information, see [More information about the Reset Settings option](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) from the admin guide.
+
+- Support for proxy authentication.
+
+Fixes for a better user experience, that include:
+
+- Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
+
+- The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
 
 ## Version 1.7.210.0
 
 **Released**: 06/06/2017
 
 This version includes the MSIPC version 1.0.2217.1 of the RMS client.
+
+**New features**:
+
+- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
 
 **Fixes**:
 
@@ -59,95 +130,11 @@ This version includes the MSIPC version 1.0.2217.1 of the RMS client.
     
     - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
     
-    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users will not be prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
-
-**New features**:
-
-- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
-
-
-## Version 1.4.21.0
-
-**Released**: 03/15/2017
-
-**Change to requirements:**
-
-The previous version introduced the new prerequisite of Microsoft .NET Framework 4.6.2 for the full client. Although not recommended, you can bypass this prerequisite with a custom installation parameter, **DowngradeDotNetRequirement**. For more information, see the [client installation section](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) from the admin guide.
-
-
-**Fixes**:
-
-- Support for mapped drives to classify and protecting files.
-
-- Support for large files ( >250 MB) in the viewer. 
-
-- When HYOK is configured, Outlook can apply labels that are configured to use Azure Rights Management templates or AD RMS templates.
-
-
-**New features**:
-
-- The ability to set custom permissions from your Office application, which lets you set protection just for you, for external groups, or all users in another organization. For more information, see [Set custom permissions for a document](client-classify-protect.md#set-custom-permissions-for-a-document) from the user guide.
-    
-- PDF files now support labels that apply classification-only.
-
-- For PDF files, the viewer now supports options such as search, zoom, and rotate. To use these options, right-click on the file when it is displayed in the viewer.
-
-
-## Version 1.3.155.2
-
-**Released**: 02/08/2017
-
-**New requirements**:
-
-Microsoft .NET Framework
-
-- This version of the Azure Information Protection client requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install it. A computer restart might be required after the Azure Information Protection client installation is complete.
-
-- If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
-
-**New features**:
-
-- A new, unified client that combines the features from the Rights Management sharing application for Windows with the Azure Information Protection client. Includes:
-    
-    - Integration with Windows File Explorer (right-click) to apply labels and protection. Supports additional file formats and multiple file selection.
-    - A viewer for protected documents (includes protected PDF for SharePoint).
-    - PowerShell cmdlets to get and set labels for files that are stored locally or on network shares. These cmdlets install with the cmdlets that previously shipped with the RMS Protection Tool (RMSProtection module).
-    - Client usage logs that record information such as which label was applied, how, and by whom.
-
-This client version is the [General Availability release](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/) of the preview client that was first announced in December 2016. For more information about this version of the client, see the following guides:
-
-- [Azure Information Protection client administrator guide](client-admin-guide.md)
-
-- [Azure Information Protection user guide](client-user-guide.md)
-
-
-## Version 1.2.4.0
-
-**Released**: 10/27/2016
-
-**Fixes**:
-
-- Client installation completes when the Windows Update service is disabled.
-
-- In Office 2016, when you save a document and an applied label is configured for a header or footer, the cursor does not jump to the header or footer.
-
-- Automatic classification works in Word for text in bundled text boxes.
-
-**New feature**:
-
-- Diagnostic tests and a reset option that a user can run from the Office application when the Azure Information Protection client is installed: On the **Home** tab, in the **Protection** group, click **Protect**, click **Help and feedback**, and then click **Run diagnostics**. 
-
-    For more information about this option, see the [Additional checks and troubleshooting](client-admin-guide.md#additional-checks-and-troubleshooting) section from the admin guide.
-
-## Version 1.1.23.0
-
-**Released**: 10/01/2016
-
-General Availability.
+    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
 
 ## Next steps
 
-For more information about installing and using the client:
+For more information about installing and using the client: 
 
 - For users: [Download and install the client](install-client-app.md)
 

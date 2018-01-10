@@ -1,13 +1,13 @@
 ﻿---
 # required metadata
 
-title: Release notes | Azure RMS
-description:
+title: Release notes
+description: SDK updates by revision and other developer information.
 keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,14 +27,19 @@ ms.suite: ems
 
 # Release notes
 
-This topic contains important information about this and previous releases of the RMS SDK 2.1.
+This article contains important information about this and previous releases of the RMS SDK 2.1.
+
+## October 2017 - update
+
+- Addition of two new APIs for environment inintialization and uninitialization. For information, see [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) and [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Visio file types are now supported. For more information, see [File API configuration](file-api-configuration.md).
 
 ## February 2016 - SDK documentation update
 
 >[!Note]
 > The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
-- **Improved authentication flow** - using OAuth2 token based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
+- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
@@ -42,7 +47,7 @@ This topic contains important information about this and previous releases of th
  - Install the RMS 2.1 client without requiring administrative privileges to the machine
  - Certify your application for Windows 10
 
-- **Support for Microsoft Online Sign-in Assistant (SIA) with the RMS SDK is being removed.** We will continue to support the use of SIA for 6 months after which time support will stop.
+- **Support for Microsoft Online Sign-in Assistant (SIA) with the RMS SDK is being removed.** We will continue to support the use of SIA for six months after which time support will stop.
 
 
 ## December 2015 update
@@ -53,11 +58,11 @@ This topic contains important information about this and previous releases of th
 
 - Many updates to improve error messaging and troubleshooting experience.
 - Note also that the [Supported platforms](supported-platforms.md) listing is also updated.
-- The need for the pre-production environment and the use of an application manifests has been removed from the RMS SDK 2.1. These sections of this developer documentation set have been removed and the overall documentation simplified and reorganized.
+- The need for the pre-production environment and the use of an application manifest has been removed from the RMS SDK 2.1. These sections of this developer documentation set have been removed and the overall documentation simplified and reorganized.
 
 ## May 2015 update
 
--   **Service apps and cloud based RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) needs three pieces of information; symmetric key, **AppPrincipalId** and **TenantBposId**. The topic for this has been updated to provide guidance on processing this information. For this update, see the revised version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Service apps and cloud based RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) needs three pieces of information; symmetric key, **AppPrincipalId**, and **TenantBposId**. The article for this has been updated to provide guidance on processing this information. For this update, see the revised version of [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## April 2015 update
 
@@ -73,7 +78,7 @@ This topic contains important information about this and previous releases of th
 ## January 2015 update
 
 -   **Supported protected file (pfile) size increase** - Now supports pfile sizes greater than one gigabyte (1 GB). For more information on pfiles, see [Supported File Formats](supported-file-formats.md).
--   **Improved logging for better diagnostics** - Logging levels will show **ERROR** or **WARNING** for messages that should be reviewed. All other messages, including exceptions which are still displayed, will be logged as **INFO**.
+-   **Improved logging for better diagnostics** - Logging levels will show **ERROR** or **WARNING** for messages that should be reviewed. All other messages, including exceptions, which are still displayed, will be logged as **INFO**.
 
     We chose this approach so that you won't lose any details. Now, only the important messages are shown with level as WARNING.
 
@@ -83,18 +88,18 @@ This topic contains important information about this and previous releases of th
 ## October 2014 update
 
 -   Default behaviors for the File API component of SDK have been updated. For more information, see [File API configuration](file-api-configuration.md).
--   Email notification, a new feature, is described in the Developer notes topic, [Enabling email notification](how-to-enable-email-notification.md).
+-   Email notification, a new feature, is described in the Developer notes article, [Enabling email notification](how-to-enable-email-notification.md).
 
 ## July 2014 update
 
-The File API components of SDK has been extended and offers the following features:
+The File API component of SDK has been extended and offers the following features:
 
 -   Identifies which protector to use.
 -   Provides RMS protection at the granularity level of a file.
 
     Functions added in this release:
 
-    **Note** - Further supporting data types and structures, not listed here, have been added for the File API extensions. All topics that have been updated for this release are marked as **preliminary and subject to change**.
+    **Note** - Further supporting data types and structures, not listed here, have been added for the File API extensions. All articles that have been updated for this release are marked as **preliminary and subject to change**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -137,7 +142,7 @@ The File API components of SDK has been extended and offers the following featur
 
       - All files, except system files and Office files can be protected using RMS Protected File format (PFile).
 
-    The file API is implemented via the following four new functions: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) and [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    The file API is implemented via the following four new functions: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), and [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
 

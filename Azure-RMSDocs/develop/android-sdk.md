@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Android setup | Azure RMS
@@ -131,14 +131,14 @@ Our UI library provides re-usable UI for consumption and protection operations f
 
 -   You can verify the manifest step by viewing the manifest in the text editor view. Make sure the following lines appear:
 
-
+   ```
     <uses-sdk
          android:minSdkVersion="15"
          android:targetSdkVersion="19"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission/>
-
+   ```
 
 **Note**  The SDK uses the *android.support.v4*
 

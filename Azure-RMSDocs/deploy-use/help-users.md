@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ After you have deployed and configured Azure Information Protection for your org
     
     > [!TIP]
     > Example videos for end users:
-    > -   [Azure RMS user experience](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
+    > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Azure RMS Document Tracking and Revocation](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Administrator information**
@@ -48,9 +48,9 @@ After you have deployed and configured Azure Information Protection for your org
     
 -   **Help desk information**
     
-    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback**, **Run Diagnostics** option, and afterwards, reset the client. However, reset doesn't sign out the user or rebootstrap the client, and there is no automatic remediation.
+    If users have the Azure Information Protection client, help desk operators can ask them to use the **Help and Feedback** option for information such as whether the edition of Office is unable to support protection, and the currently signed in user account. You can also use this option to collect log files and reset the client. For more information, see the admin guide: [Install checks and troubleshooting](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
-    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization, 
+    If there are legitimate requests to have full rights access to protected documents, make sure the help desk has processes to request this access by using the Azure Rights Management [super user feature](configure-super-users.md). For example, these requests might be from the legal department or a manager after an employee has left the organization.
     
     In  addition, some of the typical problems that users might report include the following categories:
     
