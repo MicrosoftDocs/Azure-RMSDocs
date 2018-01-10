@@ -93,7 +93,7 @@ These default templates are created when your subscription was purchased, and th
 
 |Display name of template|Usage rights October 6, 2017 to current date|Usage rights before October 6, 2017|
 |----------------|--------------------|----------|
-|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
+|\<*organization name> - Confidential View Only* <br /><br />or<br /><br /> *Highly Confidential \ All Employees*|View, Open, Read; Copy; View Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit|View, Open, Read|
 |\<*organization name>- Confidential* <br /><br />or <br /><br />*Confidential \ All Employees*|View, Open, Read; Save As, Export; Copy; View Rights; Change Rights; Allow Macros; Print; Forward; Reply; Reply All; Save; Edit Content, Edit; Full Control|View, Open, Read; Save As, Export; Edit Content, Edit; View Rights; Allow Macros; Forward; Reply; Reply All|
 
 ## Do Not Forward option for emails
