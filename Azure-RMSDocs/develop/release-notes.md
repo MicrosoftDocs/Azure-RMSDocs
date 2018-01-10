@@ -1,4 +1,5 @@
-﻿---
+# required metadata
+
 title: What's new and release notes
 description: Outlines important changes and features in this and previous versions.
 author: lleonard-msft
