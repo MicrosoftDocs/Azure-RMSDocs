@@ -85,8 +85,6 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - After you edit or convert a template and save the Azure Information Protection policy, the following changes are made to the original [usage rights](configure-usage-rights.md). If required, you can add or remove individual usage rights by using the Azure portal. Or, use PowerShell with the [New-​Aadrm​Rights​Definition](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Set-​Aadrm​Template​Property](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlets.
     
-    - **Save As, Export** (common name) is removed.
-    
     - **Allow Macros** (common name) is automatically added. This usage right is required for the Azure Information Protection bar in Office apps.
 
 - **Published** and **Archived** settings display as **Enabled**: **On** and **Enabled**: **Off** respectively on the **Label** blade. For templates that you want to retain but not be visible to users or services, set these templates to **Enabled**: **Off**.
