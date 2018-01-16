@@ -90,7 +90,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user defined permissions**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
@@ -143,7 +143,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
 
-10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**, and then specify the licensing URL of your AD RMS cluster.
+10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions**, and then specify the licensing URL of your AD RMS cluster.
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -181,7 +181,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Select **Set user defined permissions (Preview)**.
+2. Select **Set user defined permissions**.
 
 3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
 
