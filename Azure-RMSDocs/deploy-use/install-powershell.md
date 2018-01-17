@@ -6,7 +6,7 @@ description: Instructions to install Windows PowerShell for the Azure Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 |Requirement|More information|
 |---------------|--------------------|
 |A version of Windows that supports the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module|Check the list of supported operating systems in the **System Requirements** section of the [download page for the Azure Rights Management Administration Tool](http://go.microsoft.com/fwlink/?LinkId=257721).|
-|Minimum version of Windows PowerShell: 2.0<br /><br /> |By default, most Windows operating systems install with at least version 2.0 of Windows PowerShell. If you need to install this minimum supported version, see [Install Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tip: You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. <br /><br /> If you have this minimum version, you will need to manually load the module in your PowerShell session by running `Import-Module AADRM` before you can use any cmdlet from the Rights Management administration module. When you have Windows PowerShell v3 and later, the module loads automatically and you do not need this extra command.|
+|Minimum version of Windows PowerShell: 2.0<br /><br /> |By default, most Windows operating systems install with at least version 2.0 of Windows PowerShell. If you need to install this minimum supported version, see [Install Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tip: You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. <br /><br /> If you have this minimum version, you need to manually load the module in your PowerShell session by running `Import-Module AADRM` before you can use any cmdlet from the Rights Management administration module. When you have Windows PowerShell v3 and later, the module loads automatically and you do not need this extra command.|
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module uses.|
 
 > [!NOTE]
@@ -50,9 +50,9 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 
 ## How to install the Rights Management administration module
 
-1.  Go to the Microsoft Download Center and [download the Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] administration module for Windows PowerShell.
+1. Go to the Microsoft Download Center and locate the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] administration module for Windows PowerShell.
 
-2.  From the local folder where you downloaded and saved the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] installer file, double-click the executable file that you downloaded for your platform (WindowsAzureADRightsManagementAdministration_x64 or WindowsAzureADRightsManagementAdministration_x86.exe) to start the Azure AD Rights Management Administration Setup Wizard.
+2. Download and save the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] installer file, **WindowsAzureADRightsManagementAdministration_x64**. Then double-click this file to start the Azure AD Rights Management Administration Setup Wizard.
 
 3.  Complete the wizard.
 
