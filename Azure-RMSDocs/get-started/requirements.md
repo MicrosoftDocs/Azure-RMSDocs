@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/18/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -104,10 +104,15 @@ In addition to the information in the Office article, specific to Azure Informat
 
 - Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.
 
-- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with Azure RMS.
-
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
+- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
+    
+    - Tip: Because of how Chrome displays secure connections in the address bar, you can use this browser to quickly check whether your client connection is terminated before it reaches the Azure Rights Management service. Enter the following URL into the browser address bar: `https://admin.na.aadrm.com/admin/admin.svc` 
+    
+        Don't worry about what the browser window displays. Instead, click the padlock in the address bar to view the site information. The site information lets you see the issuing certification authority (CA). If the certificate is not issued by a Microsoft CA, it is very likely your client-to-service connection is being terminated and needs reconfiguration on your firewall. The following picture shows an example of a Microsoft issuing CA. If you see an internal CA issued the certificate, this configuration is not compatible with Azure Information Protection.
+        
+        ![Checking the issued certificate for Azure Information Protection connections](../media/certificate-checking.png)
 
 ### On-premises servers
 
