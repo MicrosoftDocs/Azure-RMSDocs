@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/18/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -104,10 +104,14 @@ In addition to the information in the Office article, specific to Azure Informat
 
 - Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.
 
-- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with Azure RMS.
-
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
+- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with Azure RMS.
+    
+    Tip: Because of how Chrome displays secure connections in the address bar, you can use this browser to check whether your client connection is terminated before it goes out onto the Internet. Enter the following URL into the browser address bar: `https://admin.na.aadrm.com/admin/admin.svc` Don't worry about what the browser window displays. Instead, click the padlock in the address bar to view the site information. The site information lets you see which certification authority (CA) issued the certificate for the URL. If the certificate is not issued by a Microsoft CA, such as the one you see in the following picture, it is very likely your client-to-service connection is being terminated. If you see an internal CA issued the certificate, this configuration is not compatible with Azure Information Protection.
+    
+    ![Checking the issued certificate for Azure Information Protection connections](../media/certificate-checking.png)
+    
 
 ### On-premises servers
 
