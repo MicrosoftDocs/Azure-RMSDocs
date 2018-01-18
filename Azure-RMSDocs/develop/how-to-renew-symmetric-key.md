@@ -109,5 +109,5 @@ Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcb
 
 ## Related topics
 
-* [How-to: enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md)
+* [How-to: enable your service application to work with cloud-based RMS](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell reference](https://docs.microsoft.com/powershell/msonline/)
