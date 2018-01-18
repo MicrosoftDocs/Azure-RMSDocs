@@ -4,9 +4,9 @@
 title: How to renew the symmetric key in Azure Information Protection
 description: This article describes the process of renewing a symmetric key in Azure Information Protection.
 keywords:
-author: kkanakas
+author: lleonard-msft
 manager: mbaldwin
-ms.author: kartikk
+ms.author: alleonar
 ms.date:  03/27/2017
 ms.topic: article
 ms.prod:
@@ -82,7 +82,7 @@ The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX6
 You can use the [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) command to verify that the new symmetric key is associated with the correct service principal as shown. Note that the command lists all the keys that are currently associated with the service principal.
 
 ```
-Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues true
+Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
 
 Type : Symmetric
 Value :
