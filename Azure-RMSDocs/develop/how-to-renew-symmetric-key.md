@@ -31,7 +31,7 @@ A **symmetric key** is a secret that encrypts and decrypts a message in symmetri
 
 In Azure Active Directory (Azure AD), when you create a service principal object to represent an application, the process also generates a 256-bit symmetric key to verify the application. This symmetric key is valid for one year by default. 
 
-The steps below outline how to renew the symmetric key. 
+The following steps show how to renew the symmetric key. 
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-The symmetric key created in the above example expires on 3/22/2018 at 3:27:53PM. In order to continue using the service principal beyond this time, you would have to renew the symmetric key. You can do this using the [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command. 
+This symmetric key expires on 3/22/2018 at 3:27:53PM. To use the service principal beyond this time, you need to renew the symmetric key. To do so, use the [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) command. 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -79,7 +79,7 @@ This creates a new symmetric key for the specified **AppPrincipalId**.
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-You can use the [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) command to verify that the new symmetric key is associated with the correct service principal as shown. Note that the command lists all the keys that are currently associated with the service principal.
+You can use the [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) command to verify that the new symmetric key is associated with the correct service principal as shown. Notice that the command lists all keys that currently associated with the service principal.
 
 ```
 Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
