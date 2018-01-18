@@ -27,9 +27,9 @@ ms.suite: ems
 
 # Android code examples
 
-This topic demonstrates how to use code elements for the Android version of the RMS SDK.
+This article shows how to code elements for the Android version of the RMS SDK.
 
-**Note**  In the example code and descriptions that follow, the term MSIPC (Microsoft Information Protection and Control) refers to the client process.
+**Note** In this article, The term _MSIPC_ (Microsoft Information Protection and Control) refers to the client process.
 
 
 ## Using the Microsoft Rights Management SDK 4.2 - key scenarios
@@ -48,7 +48,7 @@ The *MSIPCSampleApp* sample application is available for use with this SDK for t
 
     **Source**: *MsipcAuthenticationCallback.java*
 
-    **Description**: Instantiate a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) object, through its create method which implements service authentication using the [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) near the end of the following example code section.
+    **Description**: Instantiate a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) object and implement service authentication.  Use the [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) near the end of the following example code section.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -529,7 +529,7 @@ This scenario begins with getting a list of templates, selecting the first one t
     }
     ```
 
-### Scenario: Create a custom protected file using a custom (ad-hoc) policy
+### Scenario: Create a custom protected file using a custom policy
 
 - **Step 1**: With an email address provided by the user, create a policy descriptor.
 
