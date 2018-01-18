@@ -535,7 +535,7 @@ This scenario begins with getting a list of templates, selecting the first one t
 
     **Source**: *MsipcTaskFragment.java*
 
-    **Description**: In practice the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Description**: In practice, the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
 
     ``` java
       // create userRights list
