@@ -471,7 +471,11 @@ By default, when you run the cmdlets for labeling, the commands run in your own 
 > [!NOTE]
 > If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
+
+For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as batch job**. For more information, see the following sections. 
+
+When the token expires, run the cmdlet again to acquire a new token.
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
@@ -527,7 +531,64 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppKey* and *NativeAppId*.
+
+
+### Specify and use the Token parameter for Set-AIPAuthentication
+
+Use the following additional instructions to avoid the initial interactive sign-in for the service account that labels and protects files. 
+
+These instructions include the following steps:
+
+1. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
+
+2. Create a PowerShell script that runs Set-AIPAuthentication again, this time specifying the token parameter and value.
+
+3. Create a task that runs the PowerShell script in the context of the service account that will run the labeling cmdlets. Make sure that this account has the **Log on as batch job** right.
+
+4. Confirm that the token is saved for the service account, and delete the PowerShell script.
+
+
+#### Step 1: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
+
+1. On your own computer and in the context of your own user account, open a new Windows PowerShell session.
+
+2. Using the instructions in the preceding section to get the values for *WebAppKey* and *NativeAppId*, run the following command:
+    
+        (Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >).token | clip
+
+#### Step 2: Create a PowerShell script that runs Set-AIPAuthentication with the token parameter and value
+
+1. On your computer, create a new PowerShell script named Set-aipauthentication.ps1 that contains the following command. For \*\<token value>*, paste the value from the clipboard.
+    
+         Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application > -token <token value>
+
+2. Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the computer that will run the labeling commands. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: `Set-ExecutionPolicy RemoteSigned`. However, this configuration lets all unsigned scripts run when they are stored on this computer (less secure).
+    
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
+
+3. Copy this PowerShell script to the computer that will run the labeling commands, and delete the original on your computer. For example, the PowerShell script is copied to a file server on C:\Scripts\Set-aipauthentication.ps1
+
+#### Step 3: Create a task that runs the PowerShell script
+
+1. Make sure that the service account that will run the labeling commands has the **Grant the Log on as batch job** right. 
+
+2. On the computer that will run the labeling commands, open Task Scheduler and create a new task that the service account runs whether the user is logged on or not, with the following values for the **Actions**:
+    
+    - **Action**: **Start a program**
+    - **Program/script**: Powershell.exe
+    - **Add arguments (optional)**: -NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Set-aipauthentication.ps1}" 
+    
+    For the argument line, specify your own path and file name, if different from the example.
+
+3. Manually run this task.
+
+#### Step 4: Confirm that the token is saved and delete the PowerShell script
+
+1. For the service account profile, confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder. This value is protected by the service account.
+
+2. Delete the PowerShell script that contains the token value (for example,Set-aipauthentication.ps1).
+
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
