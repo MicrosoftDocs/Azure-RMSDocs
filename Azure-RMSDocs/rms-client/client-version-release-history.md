@@ -78,9 +78,6 @@ Fixes for stability and for specific scenarios that include:
 
 - Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
 
-**Additional**:
-
-- For the Azure Information Protection scanner cmdlet, [Set-AIPScanner​Configuration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration), the OverrideLabel parameter no longer has an option named AppliedByScanner. If you configured the scanner with the OverrideLabel parameter set to AppliedByScanner and update the client with this preview version, the parameter reverts to the default value of Off.
 
 ## Version 1.10.56.0
 
