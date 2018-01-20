@@ -571,7 +571,7 @@ These instructions include the following steps:
 
 #### Step 3: Create a task that runs the PowerShell script
 
-1. Make sure that the service account that will run the labeling commands has the **Grant the Log on as batch job** right. 
+1. Make sure that the service account that will run the labeling commands has the **Log on as a batch job** right. 
 
 2. On the computer that will run the labeling commands, open Task Scheduler and create a new task that the service account runs whether the user is logged on or not, with the following values for the **Actions**:
     
@@ -588,7 +588,8 @@ These instructions include the following steps:
 1. For the service account profile, confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder. This value is protected by the service account.
 
 2. Delete the PowerShell script that contains the token value (for example,Set-aipauthentication.ps1).
-
+    
+    Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 
