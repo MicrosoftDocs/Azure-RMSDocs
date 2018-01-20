@@ -587,11 +587,11 @@ These instructions include the following steps:
 
 2. On the computer that will run the labeling commands, open Task Scheduler and create a new task that the service account runs whether the user is logged on or not, with the following values for the **Actions**:
     
-    - **Action**: **Start a program**
-    - **Program/script**: Powershell.exe
-    - **Add arguments (optional)**: -NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Set-aipauthentication.ps1}" 
+    - **Action**: `Start a program`
+    - **Program/script**: `Powershell.exe`
+    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Set-aipauthentication.ps1}"` 
     
-    For the argument line, specify your own path and file name, if different from the example.
+    For the argument line, specify your own path and file name, if these are different from the example.
 
 3. Manually run this task.
 
