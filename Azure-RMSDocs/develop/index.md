@@ -4,7 +4,7 @@
 title: RMS Developer's Guide | Azure RMS
 description: Three generations of the Rights Management SDK are now available.
 keywords:
-author: bruceperlerms
+author: lleonard-msft
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article

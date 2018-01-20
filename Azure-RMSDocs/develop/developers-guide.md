@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection Developer's Guide
 description: Developers can use Azure Information Protection to protect and manage files of all types
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -93,15 +93,9 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [How to use built in rights (user)](built-in-rights-usage-restriction-reference.md)
 - [How to enable error and performance logging (user)](enabling-logging.md)
 
-## Videos
+## Introduction and datasheets
 
 [Introduction to Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-These videos are from the Microsoft 2016 Ignite conference
-
-- [Email security inside your org](https://myignite.microsoft.com/videos/2787)
-- [Adopt a comprehensive identity-driven solution for protecting and sharing data securely](https://myignite.microsoft.com/videos/2784)
-- [Learn how classification, labeling and, protection delivers persistent data protection](https://myignite.microsoft.com/videos/2786)
 
 ## Other resources
 

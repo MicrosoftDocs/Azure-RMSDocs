@@ -4,8 +4,8 @@
 title: Release notes
 description: SDK updates by revision and other developer information.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
