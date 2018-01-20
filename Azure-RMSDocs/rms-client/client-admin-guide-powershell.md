@@ -540,28 +540,40 @@ Use the following additional instructions to avoid the initial interactive sign-
 
 These instructions include the following steps:
 
-1. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
+1. Create a PowerShell script on your local computer.
 
-2. Create a PowerShell script that runs Set-AIPAuthentication again, this time specifying the token parameter and value.
+2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
+
+2. Modify the PowerShell script.
 
 3. Create a task that runs the PowerShell script in the context of the service account that will run the labeling cmdlets. Make sure that this account has the **Log on as batch job** right.
 
 4. Confirm that the token is saved for the service account, and delete the PowerShell script.
 
 
-#### Step 1: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
+#### Step 1: Create a PowerShell script on your local computer
 
-1. On your own computer and in the context of your own user account, open a new Windows PowerShell session.
+1. On your computer, create a new PowerShell script named Set-aipauthentication.ps1.
 
-2. Using the instructions in the preceding section to get the values for *WebAppKey* and *NativeAppId*, run the following command:
+2. Copy and paste the following command into this script:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you will specify later. 
+
+#### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
+
+1. Open a new Windows PowerShell session.
+
+2. Using the same values as you specified in the script, run the following command:
     
         (Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >).token | clip
-
-#### Step 2: Create a PowerShell script that runs Set-AIPAuthentication with the token parameter and value
-
-1. On your computer, create a new PowerShell script named Set-aipauthentication.ps1 that contains the following command. For \*\<token value>*, paste the value from the clipboard.
     
-         Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application > -token <token value>
+    For example: `(Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -webAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -nativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### Step 3: Modify the PowerShell script to supply the token
+
+1. In your PowerShell script, specify the token value by pasting the string from the clipboard.
 
 2. Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the computer that will run the labeling commands. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: `Set-ExecutionPolicy RemoteSigned`. However, this configuration lets all unsigned scripts run when they are stored on this computer (less secure).
     
@@ -569,7 +581,7 @@ These instructions include the following steps:
 
 3. Copy this PowerShell script to the computer that will run the labeling commands, and delete the original on your computer. For example, the PowerShell script is copied to a file server on C:\Scripts\Set-aipauthentication.ps1
 
-#### Step 3: Create a task that runs the PowerShell script
+#### Step 4: Create a task that runs the PowerShell script
 
 1. Make sure that the service account that will run the labeling commands has the **Log on as a batch job** right. 
 
