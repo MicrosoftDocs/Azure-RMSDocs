@@ -536,17 +536,15 @@ You've now completed the configuration of the two apps and you have the values t
 
 ### Specify and use the Token parameter for Set-AIPAuthentication
 
-Use the following additional instructions to avoid the initial interactive sign-in for the service account that labels and protects files. 
-
-These instructions include the following steps:
+Use the following additional steps and instructions to avoid the initial interactive sign-in for the service account that labels and protects files. 
 
 1. Create a PowerShell script on your local computer.
 
 2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
 
-2. Modify the PowerShell script.
+2. Modify the PowerShell script to include the token.
 
-3. Create a task that runs the PowerShell script in the context of the service account that will run the labeling cmdlets. Make sure that this account has the **Log on as batch job** right.
+3. Create a task that runs the PowerShell script in the context of the service account that will run the labeling cmdlets.
 
 4. Confirm that the token is saved for the service account, and delete the PowerShell script.
 
@@ -559,17 +557,19 @@ These instructions include the following steps:
     
          Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
 
-3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you will specify later. 
-
+3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you specify later. 
+    
+    For example: Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
+    
 #### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
 
-1. Open a new Windows PowerShell session.
+1. Open a Windows PowerShell session.
 
 2. Using the same values as you specified in the script, run the following command:
     
-        (Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >).token | clip
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
     
-    For example: `(Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -webAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -nativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+    For example: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### Step 3: Modify the PowerShell script to supply the token
 
@@ -599,7 +599,7 @@ These instructions include the following steps:
 
 1. For the service account profile, confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder. This value is protected by the service account.
 
-2. Delete the PowerShell script that contains the token value (for example,Set-aipauthentication.ps1).
+2. Delete the PowerShell script that contains the token value (for example, Set-aipauthentication.ps1).
     
     Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
