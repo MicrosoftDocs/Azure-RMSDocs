@@ -536,7 +536,7 @@ You've now completed the configuration of the two apps and you have the values t
 
 ### Specify and use the Token parameter for Set-AIPAuthentication
 
-Use the following additional steps and instructions to avoid the initial interactive sign-in for the service account that labels and protects files. 
+Use the following additional steps and instructions to avoid the initial interactive sign-in for the service account that labels and protects files: 
 
 1. Create a PowerShell script on your local computer.
 
@@ -559,7 +559,7 @@ Use the following additional steps and instructions to avoid the initial interac
 
 3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you specify later. 
     
-    For example: Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
+    For example: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
     
 #### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
 
