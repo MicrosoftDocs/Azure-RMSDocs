@@ -52,9 +52,9 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
 
-The current preview version is **1.21.0.0** and has the following changes since the current GA version of the client.
+The current preview version is **1.21.10.0** and has the following changes since the current GA version of the client.
 
-This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
+This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 **New features**:
 
@@ -67,10 +67,14 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
     - Support for a completely non-interactive authentication method, for service accounts that cannot be temporarily granted the **Log On Locally** right. This authentication method requires you to use the new *Token* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), and run a PowerShell script as a task. [More information](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
     
     - The [Set-AIPScanner​Configuration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) *OverrideLabel* parameter no longer has an option named **AppliedByScanner**. If you previously configured the scanner with the OverrideLabel parameter set to AppliedByScanner and update the client with this preview version, the parameter reverts to the default value of Off.
+    
+    - The output of [Get-AipScannerConfiguration](/powershell/module/azureinformationprotection/Get-AipScannerConfiguration) now includes the scan type (Full or Incremental).
 
 **Fixes**:
 
 Fixes for stability and for specific scenarios that include:
+
+- For Office versions 16.0.8628.2010 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside Office applications.
 
 - Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
 

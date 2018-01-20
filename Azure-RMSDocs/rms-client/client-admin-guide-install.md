@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,6 +81,8 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
 - For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
+    
+    Note: This prerequiste is not required for the current preview version of the Azure Information Protection client. 
     
     To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. To configure the Office applications: **File** > **Options** > **General** > **User Interface options**:
     
