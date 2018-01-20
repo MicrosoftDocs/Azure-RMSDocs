@@ -62,7 +62,7 @@ The Azure Information Protection client includes the following:
 
 - A PowerShell module to apply and remove classification labels and protection from files. 
     
-    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
+    This module includes cmdlets to install and configure the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) that runs as a service on Windows Server. This service lets you discover, classify, and protect files on data stores such as network shares and SharePoint Server libraries.
 
 - The Rights Management client that communicates with Azure Rights Management (Azure RMS) or Active Directory Rights Management Services (AD RMS).
 
@@ -81,7 +81,7 @@ Deploy the Azure Information Protection client if any of the following applies:
 
 - You want to run scripts that classify (and optionally, protect) documents by using PowerShell commands.
 
-- You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises. This scanner service is currently in preview.
+- You want to run a service that discovers, classifies (and optionally, protects) files that are stored on-premises.
 
 - You want to view protected documents when a native application to display the file is not installed or cannot open these documents.
 
