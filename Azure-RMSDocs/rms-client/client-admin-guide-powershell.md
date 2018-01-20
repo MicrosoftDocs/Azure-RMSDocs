@@ -573,7 +573,7 @@ Use the following additional steps and instructions to avoid the initial interac
 
 #### Step 3: Modify the PowerShell script to supply the token
 
-1. In your PowerShell script, specify the token value by pasting the string from the clipboard.
+1. In your PowerShell script, specify the token value by pasting the string from the clipboard, and save the file.
 
 2. Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the computer that will run the labeling commands. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: `Set-ExecutionPolicy RemoteSigned`. However, this configuration lets all unsigned scripts run when they are stored on this computer (less secure).
     
