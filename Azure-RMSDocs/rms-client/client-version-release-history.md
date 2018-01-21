@@ -70,6 +70,8 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
 
+- Support for a completely non-interactive authentication method, for service accounts that use PowerShell and that cannot be granted the **Log On Locally** right. This authentication method requires you to use the new *Token* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), and run a PowerShell script as a task. [More information](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+
 - New parameter, *IntegratedAuth* for [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). This parameter supports server mode for AD RMS, which is needed for AD RMS to support Windows Server FCI.
 
 
@@ -84,6 +86,9 @@ Fixes for stability and for specific scenarios that include:
 - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
 
 - Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
+
+- The viewer can now open protected txt files (.ptxt) larger than 20 MB. 
+
 - Prevent Outlook hanging when Outlook reminders are used.
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
