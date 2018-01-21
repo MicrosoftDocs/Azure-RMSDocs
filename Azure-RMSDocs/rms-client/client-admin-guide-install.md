@@ -82,7 +82,9 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
     
-    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. To configure the Office applications: **File** > **Options** > **General** > **User Interface options**:
+    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
+    
+    To configure the Office applications for this requirement: **File** > **Options** > **General** > **User Interface options**:
     
     - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
         
