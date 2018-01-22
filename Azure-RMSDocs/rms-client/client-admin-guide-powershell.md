@@ -539,6 +539,9 @@ When you run this command for the first time, you are prompted to sign in, which
 
 ### Specify and use the Token parameter for Set-AIPAuthentication
 
+> [!NOTE]
+> This option is in preview and requires the current preview version of the Azure Information Protection client.
+
 Use the following additional steps and instructions to avoid the initial interactive sign-in for the service account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. 
 
 1. Create a PowerShell script on your local computer.
