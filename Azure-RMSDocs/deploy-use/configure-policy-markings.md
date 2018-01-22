@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/18/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
