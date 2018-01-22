@@ -551,7 +551,7 @@ Use the following additional steps and instructions to avoid the initial interac
 
 #### Step 1: Create a PowerShell script on your local computer
 
-1. On your computer, create a new PowerShell script named Set-aipauthentication.ps1.
+1. On your computer, create a new PowerShell script named Aipauthentication.ps1.
 
 2. Copy and paste the following command into this script:
     
@@ -579,7 +579,7 @@ Use the following additional steps and instructions to avoid the initial interac
     
     For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
-3. Copy this PowerShell script to the computer that will run the labeling commands, and delete the original on your computer. For example, the PowerShell script is copied to a file server on C:\Scripts\Set-aipauthentication.ps1
+3. Copy this PowerShell script to the computer that will run the labeling commands, and delete the original on your computer. For example, the PowerShell script is copied to a file server on C:\Scripts\Aipauthentication.ps1
 
 #### Step 4: Create a task that runs the PowerShell script
 
@@ -589,7 +589,7 @@ Use the following additional steps and instructions to avoid the initial interac
     
     - **Action**: `Start a program`
     - **Program/script**: `Powershell.exe`
-    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Set-aipauthentication.ps1}"` 
+    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
     
     For the argument line, specify your own path and file name, if these are different from the example.
 
@@ -599,7 +599,7 @@ Use the following additional steps and instructions to avoid the initial interac
 
 1. For the service account profile, confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder. This value is protected by the service account.
 
-2. Delete the PowerShell script that contains the token value (for example, Set-aipauthentication.ps1).
+2. Delete the PowerShell script that contains the token value (for example, Aipauthentication.ps1).
     
     Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
