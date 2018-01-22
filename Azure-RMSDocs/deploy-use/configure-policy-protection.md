@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2017
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -128,7 +128,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     |Setting|More information|Recommended setting
     |-----------|--------------------|--------------------|
-    |**content expiration**|Define a date or number of days for this template when documents or emails that are protected by the template should not open for the selected users. You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+    |**content expiration**|Define a date or number of days for when documents or emails that are protected by these settings should not open for the selected users. You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
     |**Allow offline access**|Use this setting to balance any security requirements that you have (includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](../rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
     
     When you have finished configuring the permissions, click **OK**. 
@@ -143,7 +143,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
 
-10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions**, and then specify the licensing URL of your AD RMS cluster.
+10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**, and then specify the licensing URL of your AD RMS cluster.
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -181,7 +181,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Select **Set user defined permissions**.
+2. Select **Set user defined permissions (Preview)**.
 
 3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
 

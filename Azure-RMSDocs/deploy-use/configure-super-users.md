@@ -6,7 +6,7 @@ description: Understand and implement the super user feature of the Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
