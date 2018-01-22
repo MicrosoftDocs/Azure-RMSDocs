@@ -46,11 +46,11 @@ When a document or email is protected by a Rights Management service, it is encr
 For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
-When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP). 
+When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP). 
 
-Exchange does not have to be configured for Information Rights Management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for Rights Management protection. To configure Exchange to support these additional scenarios, see the following resources:
+Exchange does not have to be configured for Information Rights Management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To configure Exchange to support these additional scenarios, see the following resources:
 
 - For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
@@ -90,7 +90,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
@@ -108,21 +108,21 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - Choose **Select from the list** to add all users from your organization or browse the directory.
         
-        The users or groups must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, to specify all users in another organization by entering a domain name from that organization. Do not put domain names from social providers that support personal email accounts. For example, do not enter **gmail.com**, **hotmail.com**, or **outlook.com**.
         
     >[!NOTE]
     >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
-    As a best practice, use groups rather than users. This stratetegy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). 
+    As a best practice, use groups rather than users. This strategy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). 
     
     When you have specified the first set of users and groups, select the permissions to grant these users and groups. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
     
     If required, you can now add a second set of users and groups with usage rights. Repeat until you have specified all the users and groups with their respective permissions.
 
     >[!TIP]
-    >Consider adding the **Copy and extract content** custom permission and grant this to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
+    >Consider adding the **Copy and extract content** custom permission and grant this permission to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
     
     For all the users and groups that you specified, on the **Protection** blade, now check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
@@ -139,7 +139,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
-    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
         
         Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
 
@@ -147,7 +147,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    The user defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    The user defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
     
     If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
     
@@ -169,7 +169,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 ## Example configurations
 
-The **All Employees** and **Recipients Only** sub-labels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
+The **All Employees** and **Recipients Only** sublabels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
 
 For each example that follows, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
 
@@ -183,7 +183,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
     
 2. Select **Set user defined permissions (Preview)**.
 
-3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
+3. Make sure that the following option is selected: **In Outlook apply Do Not Forward**.
 
 4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
@@ -198,7 +198,7 @@ This label is not suitable for emails.
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Make sure that **Set permissions** is selected, and then select **Add permissions**.
+2. Make sure that the **Set permissions** option is selected, and then select **Add permissions**.
 
 3. On the **Add permissions** blade, select **Enter details**.
 
