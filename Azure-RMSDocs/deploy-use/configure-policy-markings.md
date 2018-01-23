@@ -123,11 +123,11 @@ Examples:
     
     In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
 
-- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, PowerPoint, and Outlook:**
+- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint:**
     
     `${If.App.WP}This content is ${If.End}Confidential`
     
-    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel and Outlook, the label applies the watermark text "Confidential"
+    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential".
 
 ### Setting the font name
 
