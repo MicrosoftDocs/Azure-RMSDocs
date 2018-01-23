@@ -127,7 +127,7 @@ Examples:
     
     `${If.App.WP}This content is ${If.End}Confidential`
     
-    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential".
+    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential". In Outlook, the label doesn't any watermark text because watermarks are not supported for Outlook.
 
 ### Setting the font name
 
