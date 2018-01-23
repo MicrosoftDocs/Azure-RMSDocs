@@ -52,7 +52,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
 
-The current preview version is **1.21.10.0** and has the following changes since the current GA version of the client.
+The current preview version is **1.21.202.0** and has the following changes since the current GA version of the client.
 
 This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
