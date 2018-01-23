@@ -81,6 +81,8 @@ Fixes for stability and for specific scenarios that include:
 
 - For Office versions 16.0.8628.2010 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside Office applications.
 
+- When two organization using Azure Information Protection share labeled documents and emails, their own labels are retained and not replaced by the other organization's labels.
+
 - Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
 
 - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
@@ -102,6 +104,8 @@ Fixes for stability and for specific scenarios that include:
 - For Office apps, improve performance and memory consumption.
 
 - When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+
+- For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
 
 ## Version 1.10.56.0
