@@ -82,7 +82,7 @@ To classify and protect additional file types, and to support multiple files at 
 
 When users select the **Classify and protect** menu option from File Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
 
-Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do this are automatically included with the client, although you can also install the PowerShell module separately.
+Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do these actions are automatically included with the client, although you can also install the PowerShell module separately.
 
 After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents:
 
@@ -102,7 +102,7 @@ For example a Gmail user sees the following in an email message:
 
 For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
 
-![Selecting a label configured for Do Not Foward](../media/recipients-only-label.png)
+![Selecting a label configured for Do Not Forward](../media/recipients-only-label.png)
 
 Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
 
