@@ -49,11 +49,11 @@ Before you begin, make sure that you have reviewed and checked the [prerequisite
 
     -   If you later want to configure the connector from a 32-bit computer, also download RMSConnectorAdminToolSetup_x86.exe.
 
-    -   If you want to use the server configuration tool for the RMS connector, to automate the configuration of registry settings on you on-premises servers, also download GenConnectorConfig.ps1.
+    -   If you want to use the server configuration tool for the RMS connector, to automate the configuration of registry settings on your on-premises servers, also download GenConnectorConfig.ps1.
 
 3.  On the computer on which you want to install the RMS connector, run **RMSConnectorSetup.exe** with Administrator privileges.
 
-4.  On the Welcome page of the Microsoft Rights Management Connector Setup page, select **Install Microsoft Rights Management connector on the computer**, and then click **Next**.
+4.  On the Welcome page of the Microsoft Rights Management Connector Setup, select **Install Microsoft Rights Management connector on the computer**, and then click **Next**.
 
 5.  Read and agree to the RMS connector license terms, and then click **Next**.
 
@@ -64,9 +64,9 @@ Before you can configure the RMS connector, you must enter credentials for an ac
 
 This account must not require multi-factor authentication (MFA) because the Microsoft Rights Management administration tool does not support MFA for this account. 
 
-The connector also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
+The connector also has some character restrictions for this password. You cannot use a password that has any of the following characters: Ampersand ( **&** ); left angle bracket ( **[** ); right angle bracket ( **]** ); straight quotation ( **"** ); and apostrophe ( **'** ). If your password has any of these characters, authentication fails for the RMS connector and you see the error message **That user name and password combination is not correct**, even though you can successfully sign in using this account and password for other scenarios. If this scenario applies to your password, either use a different account with a password that does not have any of these special characters, or reset your password so it doesn't have any of these special characters.
 
-In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
+In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), make sure that the account you specify is able to protect content. For example, if you restricted the ability to protect content to the "IT department" group, the account that you specify here must be a member of that group. If not, you will see the error message: **The attempt to discover the location of the administration service and organization failed. Make sure Microsoft Rights Management service is enabled for your organization.**
 
 You can use an account that has one of the following privileges:
 
@@ -103,7 +103,7 @@ You can use an account that has one of the following privileges:
     >     ```
     >     For example, type: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
-    >     Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here, as well.
+    >     Although these commands assign the connector administrator role, you could also use the GlobalAdministrator role here as well.
 
 During the RMS connector installation process, all prerequisite software is validated and installed, Internet Information Services (IIS) is installed if not already present, and the connector software is installed and configured. In addition, Azure RMS is prepared for configuration by creating the following:
 
@@ -126,7 +126,7 @@ If you need to uninstall the RMS connector, run the wizard again and select the 
 
 If you experience any problems during the installation, check the installation log: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<date and time>.log** 
 
-As an example, your install log might look similar to C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
+As an example, your install log path might look similar to `C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log`
 
 ## Authorizing servers to use the RMS connector
 When you have installed the RMS connector on at least two computers, you are ready to authorize the servers and services that you want to use the RMS connector. For example, servers running Exchange Server 2013 or SharePoint Server 2013.
