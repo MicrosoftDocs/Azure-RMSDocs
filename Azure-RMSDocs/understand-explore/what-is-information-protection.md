@@ -140,8 +140,8 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 Read the blog post, [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
 
-Perhaps you know Azure Information Protection by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
+Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
