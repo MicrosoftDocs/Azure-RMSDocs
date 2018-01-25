@@ -142,6 +142,6 @@ Read the blog post, [Azure Information Protection: Ready, set, protect!](https:/
 
 Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
 
-Perhaps you know Azure Information Protection by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
+Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
