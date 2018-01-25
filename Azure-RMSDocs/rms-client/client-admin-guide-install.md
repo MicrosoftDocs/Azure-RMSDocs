@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -84,13 +84,15 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     Note: This prerequiste is not required for the current preview version of the Azure Information Protection client. 
     
-    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
+    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, you might need to enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
     
     To configure the Office applications for this requirement: **File** > **Options** > **General** > **User Interface options**:
     
     - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
         
     - If you see that the option **Use best settings for my display** is selected, remove this selection.
+    
+    - If you see neither of these options, no additional configuration is required.
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
