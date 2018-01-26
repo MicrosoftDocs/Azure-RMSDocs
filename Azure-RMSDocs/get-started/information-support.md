@@ -76,7 +76,7 @@ Try the **Azure Information Protection support bot**, currently in beta:
 - Type **feedback** to let us know whether this bot is helpful.
 
 
-<iframe width="560" height="400" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
+<iframe width="560" height="500" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
 
 
 On-demand videos:
