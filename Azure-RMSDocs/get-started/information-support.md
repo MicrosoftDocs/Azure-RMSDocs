@@ -68,7 +68,7 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-Try the **Azure Information Protection support bot**, currently in beta:
+Try the **Azure Information Protection help bot**, currently in beta:
 
 - See if the bot knows the answer to your question because it's been asked before.
 - Ask the bot to search the docs for you.
@@ -76,7 +76,7 @@ Try the **Azure Information Protection support bot**, currently in beta:
 - Type **feedback** to let us know whether this bot is helpful.
 
 
-<iframe width="560" height="400" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
+<iframe width="560" height="450" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
 
 
 On-demand videos:
