@@ -68,7 +68,7 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-Try the [Azure Information Protection help bot](support-bot.md), currently in beta.
+Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
 
 On-demand videos:
 
