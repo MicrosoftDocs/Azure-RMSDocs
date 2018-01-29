@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -218,11 +218,11 @@ If you cannot do this, the user or group with the new email address risks being 
 
 Note that it's rare for a group to change its email address and if you assign usage rights to a group rather to than individual users, it doesn't matter if the user's email address changes. In this scenario, the usage rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights that protect documents and emails. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
-## Group membership caching by Azure Rights Management
+## Group membership caching by Azure Information Protection
 
-For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership in Azure AD can take up to three hours to take effect when these groups are used by Azure Rights Management, and this time period is subject to change. 
+For performance reasons, Azure Information Protection caches group membership. This means that any changes to group membership in Azure AD can take up to three hours to take effect when these groups are used by Azure Information Protection and this time period is subject to change. 
 
-Remember to factor this delay into any changes or testing that you do when you use groups for Azure Rights Management, such as assigning usage rights or configuring the Azure Rights Management service.
+Remember to factor this delay into any changes or testing that you do when you use groups for granting usage rights or configuring the Azure Rights Management service, or when you configure scoped policies.
 
 
 ## Next steps

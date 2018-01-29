@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,11 +46,11 @@ When a document or email is protected by a Rights Management service, it is encr
 For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. If you have not yet done this, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+> To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
-When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following for protected files: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP). 
+When the label applies protection, a protected document is not suitable to be saved on SharePoint or OneDrive. These locations do not support the following features for protected files: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP). 
 
-Exchange does not have to be configured for Information Rights Management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you will not get the full functionality of using Azure Rights Management protection with Exchange. For example, users will not be able to view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you will not be able to configure Exchange Online DLP for Rights Management protection. To configure Exchange to support these additional scenarios, see the following resources:
+Exchange does not have to be configured for Information Rights Management (IRM) before users can apply labels in Outlook to protect their emails. However, until Exchange is configured for IRM, you do not get the full functionality of using Azure Rights Management protection with Exchange. For example, users cannot view protected emails on mobile phones or with Outlook on the web, protected emails cannot be indexed for search, and you cannot configure Exchange Online DLP for Rights Management protection. To configure Exchange to support these additional scenarios, see the following resources:
 
 - For Exchange Online, see the instructions for [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
@@ -90,7 +90,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
@@ -108,28 +108,28 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     - Choose **Select from the list** to add all users from your organization or browse the directory.
         
-        The users or groups must have an email address. In a production environment, this is nearly always be the case, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
-    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, to specify all users in another organization by entering a domain name from that organization. Do not put domain names from social providers that support personal email accounts. For example, do not enter **gmail.com**, **hotmail.com**, or **outlook.com**.
+    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering a domain name from that organization. When you enter just a domain name, do not enter domain names from social providers that support personal email accounts. For example, do not enter **gmail.com**, **hotmail.com**, or **outlook.com**.
         
     >[!NOTE]
     >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
     
-    As a best practice, use groups rather than users. This stratetegy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management ). 
+    As a best practice, use groups rather than users. This strategy keeps your configuration simpler and makes it less likely that you have to update your label configuration later and then reprotect content. However, if you make changes to the group, keep in mind that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). 
     
     When you have specified the first set of users and groups, select the permissions to grant these users and groups. For more information about the permissions that you can select, see [Configuring usage rights for Azure Rights Management](configure-usage-rights.md). However, applications that support this protection might vary in how they implement these permissions. Consult their documentation and do your own testing with the applications that users use to check the behavior before you deploy the template for users.
     
     If required, you can now add a second set of users and groups with usage rights. Repeat until you have specified all the users and groups with their respective permissions.
 
     >[!TIP]
-    >Consider adding the **Copy and extract content** custom permission and grant this to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
+    >Consider adding the **Copy and extract content** custom permission and grant this permission to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
     
     For all the users and groups that you specified, on the **Protection** blade, now check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
     |Setting|More information|Recommended setting
     |-----------|--------------------|--------------------|
-    |**content expiration**|Define a date or number of days for this template when documents or emails that are protected by the template should not open for the selected users. You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
-    |**Allow offline access**|Use this setting to balance any security requirements that you have (includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is re-evaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](../rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
+    |**content expiration**|Define a date or number of days for when documents or emails that are protected by these settings should not open for the selected users. You can specify a date or specify a number of days starting from the time that the protection is applied to the content.<br /><br />When you specify a date, it is effective midnight, in your current time zone.|**Content never expires** unless the content has a specific time-bound requirement.|
+    |**Allow offline access**|Use this setting to balance any security requirements that you have (includes access after revocation) with the ability for the selected users to open protected content when they don't have an Internet connection.<br /><br />If you specify that content is not available without an Internet connection or that content is only available for a specified number of days, when that threshold is reached, these users must be reauthenticated and their access is logged. When this happens, if their credentials are not cached, the users are prompted to sign in before they can open the document or email.<br /><br />In addition to reauthentication, the policy and the user group membership is reevaluated. This means that users could experience different access results for the same document or email if there are changes in the policy or group membership from when they last accessed the content. That could include no access if the document has been [revoked](../rms-client/client-track-revoke.md).|Depending on how sensitive the content is:<br /><br />- **Number of days the content is available without an Internet connection** = **7** for sensitive business data that could cause damage to the business if shared with unauthorized people. This recommendation offers a balanced compromise between flexibility and security. Examples include contracts, security reports, forecast summaries, and sales account data.<br /><br />- **Never** for very sensitive business data that would cause damage to the business if it was shared with unauthorized people. This recommendation prioritizes security over flexibility, and ensures that if the document is revoked, all authorized users immediately cannot open the document. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|
     
     When you have finished configuring the permissions, click **OK**. 
     
@@ -139,15 +139,15 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     
     If you select a **departmental template**, or if you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment):
     
-    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection will still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
+    - Users who are outside the configured scope of the template or who are excluded from applying Azure Rights Management protection still see the label but cannot apply it. If they select the label, they see the following message: **Azure Information Protection cannot apply this label. If this problem persists, contact your administrator.**
         
         Note that all published templates are always shown, even if you are configuring a scoped policy. For example, you are configuring a scoped policy for the Marketing group. The templates that you can select are not restricted to templates that are scoped to the Marketing group and it's possible to select a departmental template that your selected users cannot use. For ease of configuration and to minimize troubleshooting, consider naming the departmental template to match the label in your scoped policy. 
 
-10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**, and then specify the licensing URL of your AD RMS cluster.
+10. If you selected **HYOK (AD RMS)**, select either **Set AD RMS templates details** or **Set user defined permissions (Preview)**. Then specify the licensing URL of your AD RMS cluster.
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    The user defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and will not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    The user defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
     
     If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
     
@@ -169,7 +169,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 ## Example configurations
 
-The **All Employees** and **Recipients Only** sub-labels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
+The **All Employees** and **Recipients Only** sublabels from the **Confidential** and **High Confidential** labels from the [default policy](configure-policy-default.md) provide examples of how you can configure labels that apply protection. You can also use the following examples to help you configure protection for different scenarios. 
 
 For each example that follows, on your \<*label name*> blade, select **Protect** and then select **Protection** to open the **Protection** blade.
 
@@ -177,13 +177,13 @@ For each example that follows, on your \<*label name*> blade, select **Protect**
 
 This label is available only in Outlook and is suitable when Exchange Online is configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Instruct users to select this label when they need to send a protected email to people using a Gmail account (or any other email account outside your organization). 
 
-Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email so that recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. 
+Your users type the Gmail email address in the **To** box.  Then, they select the label and the Do Not Forward option is automatically added to the email. The result is that recipients cannot forward the email, or print it, copy from it, or save attachments, or save the email as a different name. 
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Select **Set user defined permissions (Preview)**.
 
-3. Make sure that the following options is selected: **In Outlook apply Do Not Forward**.
+3. Make sure that the following option is selected: **In Outlook apply Do Not Forward**.
 
 4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
@@ -198,7 +198,7 @@ This label is not suitable for emails.
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Make sure that **Set permissions** is selected, and then select **Add permissions**.
+2. Make sure that the **Set permissions** option is selected, and then select **Add permissions**.
 
 3. On the **Add permissions** blade, select **Enter details**.
 
@@ -232,15 +232,15 @@ The new users that you add will be able open documents and emails that have alre
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
 This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment. 
-If you specify external users who do not have an account in Azure AD, be sure to instruct your users that this label should not be used for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+If you specify external users who do not have an account in Azure AD, be sure to instruct your users not to use this label for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
 
-When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to exactly match the email address that you specify for the permissions, although this is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
+When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
-3. On the **Add permissions** blade, to grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users, select **Enter details** and type the email address of the user, or Azure AD group.
+3. On the **Add permissions** blade: To grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users or if you prefer to type the email address, select **Enter details** and type the email address of the user, or Azure AD group.
     
     Repeat this step to specify additional users who should have the same permissions.
 
