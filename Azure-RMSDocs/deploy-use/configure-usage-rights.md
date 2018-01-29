@@ -34,7 +34,7 @@ When you set protection on files or emails by using the Azure Rights Management 
 Use this article to help you configure the usage rights you want for the application you’re using and understand how these rights are interpreted by applications.
 
 > [!NOTE] 
-> For completeness, this article includes values from the Azure classic portal, which retired January 08, 2018.
+> For completeness, this article includes values from the Azure classic portal, which was retired January 08, 2018.
 >
 > To help you migrate to the new portal, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
