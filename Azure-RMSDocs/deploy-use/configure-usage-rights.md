@@ -102,7 +102,7 @@ These default templates are created when your subscription was purchased, and th
 
 ## Do Not Forward option for emails
 
-Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have one additional information rights protection option for emails: **Do Not Forward**. 
+Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have an additional information rights protection option for emails: **Do Not Forward**. 
 
 Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
@@ -118,6 +118,14 @@ A user wants to email some information to specific people in the Marketing depar
 
 > [!NOTE] 
 > Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
+
+## Encrypt-only option for emails
+
+When Exchange Online is configured for the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-only**.
+
+Currently, this option is rolling out to tenants for Outlook on the web, and the latest Outlook 2016 clients display the encrypted message inline. Other email clients display a link to read the protected message.
+
+When this option is granted, all usage rights except Full Control are granted to recipients. This combination of usage rights means that the recipients, after they are authorized, have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
 
 ## Rights Management issuer and Rights Management owner
 
