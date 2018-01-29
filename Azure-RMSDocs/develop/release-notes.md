@@ -1,3 +1,4 @@
+---
 # required metadata
 
 title: What's new and release notes
