@@ -68,7 +68,7 @@ This configuration is done by the SharePoint site administrator.
 After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library can then be configured for Rights Management protection.  Users can configure this for themselves by using the **Settings** icon in their OneDrive. Although administrators cannot configure Rights Management for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
-> For more information about configuring OneDrive for Business, see the Office documentation, [Set up OneDrive for Business in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
+> For more information about configuring OneDrive for Business, see the Office documentation, [Enable users to sync IRM-protected files with the OneDrive sync client ](https://support.office.com/en-us/article/6778d4de-b5f8-423c-af43-a1b2449e9b99).
 
 #### Configuration for users
 Give users these instructions so that they can configure their OneDrive for Business and IRM-protect their business files.
