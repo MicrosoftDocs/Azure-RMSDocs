@@ -2,16 +2,16 @@
 # required metadata
 
 title: Help bot for Azure Information Protection
-description: Resources for administrators, which includes information about new releases, support options, and how to contact Microsoft to report a problem. 
+description: Help bot for Azure Information Protection to help answer your questions, search the docs, or open a support ticket if you need technical support. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 01/30/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: xxx
+ms.assetid: 98105d30-ff81-4b9c-9f41-9e9ffd6e7aa6
 
 # optional metadata
 
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Help bot for Azure Information Protection (beta)
+# Help bot for Azure Information Protection
 
 Try the **Azure Information Protection help bot**, currently in beta:
 

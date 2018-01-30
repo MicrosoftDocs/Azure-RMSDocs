@@ -9,7 +9,7 @@
 ### [FAQs for classification and labeling](faqs-infoprotect.md)
 ### [FAQs for data protection](faqs-rms.md)
 ## [Information and support](information-support.md)
-### [Fast support](help-bot.md)
+### [Fast help](help-bot.md)
 ## [Terminology](terminology.md)
 ## [Quick start tutorial](infoprotect-quick-start-tutorial.md)
 ### [Step 1: Activate protection](infoprotect-tutorial-step1.md)
