@@ -199,7 +199,7 @@ Finally, for the remaining file types, the scanner applies the default label in 
 |Tiff|.tif; .tiff|
 |Photoshop|.psdv|
 |DigitalNegative|.dng|
-|Pfile|.pfile; |
+|Pfile|.pfile|
 
 Note that when a label applies generic protection to documents, the file name extension changes to .pfile and the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
 
