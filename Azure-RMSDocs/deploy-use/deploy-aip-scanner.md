@@ -201,7 +201,7 @@ Finally, for the remaining file types, the scanner applies the default label in 
 |DigitalNegative|.dng|
 |Pfile|.pfile|
 
-Note that when a label applies generic protection to documents, the file name extension changes to .pfile and the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
+Note that when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
 
 For more information about the different levels of protection for different file types, and how to control the protection behavior, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
 
