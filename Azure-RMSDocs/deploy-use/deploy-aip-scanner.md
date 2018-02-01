@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -165,6 +165,46 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 3. As before, monitor the event log and the reports to see which files were labeled, what classification was applied, and whether protection was applied.
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
+
+
+## How files are scanned by the Azure Information Protection scanner
+
+The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), such as executables and system files.
+
+Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
+
+|Application type|File type|
+|--------------------------------|-------------------------------------|
+|Word|.docx; .docm; .dotm; .dotx|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|Project|.mpp; .mpt|
+|PDF|.pdf|
+|Text|.txt; .xml; .csv|
+
+
+Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy.
+
+|Application type|File type|
+|--------------------------------|-------------------------------------|
+|Project|.mpp; .mpt|
+|Publisher|.pub|
+|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
+|XPS|.xps; .oxps; .dwfx|
+|Solidworks|.sldprt; .slddrw; .sldasm|
+|Jpeg |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
+|Png |.png|
+|Gif|.gif|
+|Bitmap|.bmp; .giff|
+|Tiff|.tif; .tiff|
+|Photoshop|.psdv|
+|DigitalNegative|.dng|
+|Pfile|.pfile|
+
+Note that when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
+
+For more information about the different levels of protection for different file types, and how to control the protection behavior, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
+
 
 ## When files are rescanned by the Azure Information Protection scanner
 
