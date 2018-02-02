@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -59,6 +59,15 @@ Locate the following value name, and then set the value data to **0**:
 
 Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](../rms-client/client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
 
+## Suppress the initial "Congratulations!" welcome page
+
+When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint or Outlook, a **Congratulations!** page displays with short instructions how to select labels. You can suppress this page by editing the registry.
+
+Locate the following value name, and set the value data to **0**:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+
+
 ## Sign in as a different user
 
 In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection client. However, as an administrator, you might need to sign in as a different user during a testing phase. 
@@ -80,6 +89,7 @@ Additionally:
 - If you are using single sign-on, you must sign out from Windows and sign in with your different user account after editing the registry. The Azure Information Protection client then automatically authenticates by using your currently signed in user account.
 
 - You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded Azure Information Protection policy.
+
 
 ## Enforce protection-only mode when your organization has a mix of licenses
 
