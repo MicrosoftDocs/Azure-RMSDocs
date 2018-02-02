@@ -44,7 +44,7 @@ Protection-only mode runs in the following scenarios:
 
 - Your organization has a subscription for Azure Information Protection but you cannot download the Azure Information Protection policy. 
     
-    - This can happen because of a misconfiguration or because your sign in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
+    - This can happen because of a misconfiguration or because your sign-in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
 
 - Your organization uses Active Directory Rights Management Services (AD RMS) only. 
 
