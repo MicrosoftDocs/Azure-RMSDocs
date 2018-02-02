@@ -61,7 +61,7 @@ Regardless of this setting, the Azure Information Protection client follows the 
 
 ## Suppress the initial "Congratulations!" welcome page
 
-When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint or Outlook, a **Congratulations!** page displays with short instructions how to select labels. You can suppress this page by editing the registry.
+When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint or Outlook, a **Congratulations!** page displays with short instructions how to use the new Information Protection bar to select labels. You can suppress this page by editing the registry.
 
 Locate the following value name, and set the value data to **0**:
 
