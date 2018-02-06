@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 01/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -41,11 +41,9 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 
 ## Information about new releases and updates
-The Azure Information Protection product team posts announcements about new releases to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
+The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
-In addition, the Principal Group PM Manager for Information and Threat Protection publishes regular [Updates](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) to help keep you up to date.
-
-A summary of documentation changes are published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+A summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
@@ -60,15 +58,17 @@ For other customers, use the support channels in the following table, depending 
 
 |Subscription|Instructions|
 |----------------|---------------|
-|Azure Information Protection (standalone)|Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
-|Azure Information Protection and an Office 365 subscription<br /><br />Azure Rights Management with an Office 365 subscription|See [Contact Office 365 for business support – Admin Help](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for telephone numbers and how to contact Support by using the Office 365 admin portal.|
-|Azure Information Protection with Enterprise Mobility + Security (EMS)|Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
-|Azure Information Protection with Microsoft 365 Enterprise|Use the [Office 365 support channels](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
+|Azure Information Protection (standalone)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
+|Azure Information Protection and an Office 365 subscription<br /><br />Azure Rights Management with an Office 365 subscription|See [Contact support for business products - Admin Help](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) for information about how to contact Support by using the Office 365 admin portal, and for contact telephone numbers.|
+|Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Select **New support request** from [Help + support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) in the Azure portal.<br /><br />2. When you are prompted, on the **Basics** blade, choose **Technical** for the **Issue type** and **Information Protection** for the service. <br /><br />3. In addition, make sure that one of the following options are selected:<br /><br />- **Subscription with technical support included**: You see this option if you have a paid or trial subscription for Azure.<br /><br /> - **Technical support - Included**: You see this option if you don't have an Azure subscription.|
+|Azure Information Protection with Microsoft 365 Enterprise|Use the [Office 365 support channels](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 For additional support options, ask your Microsoft contact. 
 
 
 ### Self-help
+
+Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
 
 On-demand videos:
 
@@ -92,6 +92,6 @@ Troubleshooting:
 
 We recommend the [Yammer site for Azure Information Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Information Protection team in addition to the benefit of shared experience and knowledge from other admins and consultants.
 
-If you don't have access to this site, try the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+If you don't have access to this site, try the [Tech Community space for Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection), or the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

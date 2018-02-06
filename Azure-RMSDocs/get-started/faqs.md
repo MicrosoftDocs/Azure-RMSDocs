@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -90,7 +90,7 @@ Today, you apply and manage these labels separately but Microsoft is working tow
 
 For a while, you've been able to use Windows Server File Classification Infrastructure to classify documents and then protect them by using the [Rights Management connector](../deploy-use/deploy-rms-connector.md) (Office documents only) or a [PowerShell script](../rms-client/configure-fci.md) (all file types). 
 
-You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md), currently in preview. The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
+You can now use the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md). The scanner uses the Azure Information Protection client and your Azure Information Protection policy to label documents (all file types) so that these documents are then classified and optionally, protected.
 
 The main differences between these two solutions:
 
@@ -103,7 +103,7 @@ Currently, there is a difference in setting the [Rights Management owner](../dep
 
 - For Windows Server FCI: You can set the Rights Management owner to be a single account for all files, or dynamically set the Rights Management owner for each file. To dynamically set the Rights Management owner, use the **-OwnerMail [Source File Owner Email]** parameter and value. This configuration retrieves the user's email address from Active Directory by using the user account name in the file's Owner property.
 
-- For the Azure Information Protection scanner: You can set the Rights Management owner to be a single account for all files, but you cannot dynamically set the Rights Management owner for each file. To set the account, specify the **-DefaultOwner** optional parameter for the [scanner configuration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters).
+- For the Azure Information Protection scanner: You can set the Rights Management owner to be a single account for all files on a specified data store, but you cannot dynamically set the Rights Management owner for each file. To set the account, specify the **-DefaultOwner** parameter for the [data repository profile](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters).
 
 When the scanner protects files on SharePoint sites and libraries, the Rights Management owner is dynamically set for each file by using the SharePoint author value.
 
