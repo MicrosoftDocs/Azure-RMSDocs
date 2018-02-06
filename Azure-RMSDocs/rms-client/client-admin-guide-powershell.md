@@ -473,11 +473,7 @@ By default, when you run the cmdlets for labeling, the commands run in your own 
 
 The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
 
-<<<<<<< HEAD
 For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as batch job**. For more information, see the following sections. 
-=======
-For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as a batch job**. For more information, see the following sections. 
->>>>>>> 2e9b2ecb79ddbbbf2b5dc62663359be0f1cf5ab2
 
 When the token expires, run the cmdlet again to acquire a new token.
 
@@ -535,14 +531,7 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-<<<<<<< HEAD
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppKey* and *NativeAppId*.
 
-
-### Specify and use the Token parameter for Set-AIPAuthentication
-
-Use the following additional steps and instructions to avoid the initial interactive sign-in for the service account that labels and protects files: 
-=======
 You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -598,18 +587,6 @@ Use the following additional steps and instructions to avoid the initial interac
     
     For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
 
-3. 3.Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to C:\Scripts\Aipauthentication.ps1 on a Windows Server computer.
-
-#### Step 4: Create a task that runs the PowerShell script
-
-1. Make sure that the service account that will run the labeling commands has the **Log on as a batch job** right. 
-
-2. On the computer that will run the labeling commands, open Task Scheduler and create a new task that the service account runs whether the user is logged on or not, with the following values for the **Actions**:
-    
-    - **Action**: `Start a program`
-    - **Program/script**: `Powershell.exe`
-    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Set-aipauthentication.ps1}"` 
-=======
 3. Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to C:\Scripts\Aipauthentication.ps1 on a Windows Server computer.
 
 #### Step 4: Create a task that runs the PowerShell script
@@ -621,7 +598,6 @@ Use the following additional steps and instructions to avoid the initial interac
     - **Action**: `Start a program`
     - **Program/script**: `Powershell.exe`
     - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
->>>>>>> 2e9b2ecb79ddbbbf2b5dc62663359be0f1cf5ab2
     
     For the argument line, specify your own path and file name, if these are different from the example.
 
@@ -629,15 +605,9 @@ Use the following additional steps and instructions to avoid the initial interac
 
 #### Step 4: Confirm that the token is saved and delete the PowerShell script
 
-<<<<<<< HEAD
-1. For the service account profile, confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder. This value is protected by the service account.
-
-2. Delete the PowerShell script that contains the token value (for example, Set-aipauthentication.ps1).
-=======
 1. Confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder for the service account profile. This value is protected by the service account.
 
 2. Delete the PowerShell script that contains the token value (for example, Aipauthentication.ps1).
->>>>>>> 2e9b2ecb79ddbbbf2b5dc62663359be0f1cf5ab2
     
     Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
