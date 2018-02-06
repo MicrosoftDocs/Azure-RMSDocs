@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,6 +81,8 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
 - For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
+    
+    Note: This prerequiste is not required for the current preview version of the Azure Information Protection client. 
     
     To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, you might need to enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
     
@@ -208,7 +210,7 @@ If you use Intune for your software deployment method, use these instructions to
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
     |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
+    |Office 2010|Windows 7 and Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
     |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
     |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
 
