@@ -32,7 +32,7 @@ ms.suite: ems
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
-The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
+The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets that were previously in the RMS Protection Tool. There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
@@ -42,7 +42,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 
-In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
+In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview), uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
 
 For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help.  
 
@@ -462,7 +462,7 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner, currently in preview.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 
@@ -471,7 +471,7 @@ By default, when you run the cmdlets for labeling, the commands run in your own 
 
 The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
 
-For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as batch job**. For more information, see the following sections. 
+For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as a batch job**. For more information, see the following sections. 
 
 When the token expires, run the cmdlet again to acquire a new token.
 
@@ -529,7 +529,6 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-
 You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -541,7 +540,7 @@ When you run this command for the first time, you are prompted to sign in, which
 ### Specify and use the Token parameter for Set-AIPAuthentication
 
 > [!NOTE]
-> This option requires the general availability (GA) version of the Azure Information Protection scanner, or the current preview version of the Azure Information Protection client.
+> This option is in preview and requires the current preview version of the Azure Information Protection client.
 
 Use the following additional steps and instructions to avoid the initial interactive sign-in for an account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. For example, this might be the case for your service account that runs the Azure Information Protection scanner.
 
@@ -549,11 +548,12 @@ Use the following additional steps and instructions to avoid the initial interac
 
 2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
 
-3. Modify the PowerShell script to include the token.
+2. Modify the PowerShell script to include the token.
 
-4. Create a task that runs the PowerShell script in the context of the service account that will label and protect files.
+3. Create a task that runs the PowerShell script in the context of the service account that will label and protect files.
 
-5.Confirm that the token is saved for the service account, and delete the PowerShell script.
+4. Confirm that the token is saved for the service account, and delete the PowerShell script.
+
 
 #### Step 1: Create a PowerShell script on your local computer
 
