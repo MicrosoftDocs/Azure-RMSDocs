@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,9 +51,24 @@ If your organization has a mix of subscriptions, it is your responsibility to ma
 
 For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## Signing in to the Azure portal
+
+To sign in to the Azure portal to configure and manage Azure Information Protection:
+
+Use the following link: https://portal.azure.com
+
+Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+
+- **Information Protection Administrator** (currently in preview)
+
+- **Security Administrator**
+
+- **Global Administrator / Company Administrator**
+
+
 ## To access the Azure Information Protection blade for the first time
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
+1. Sign in to the Azure portal.
 
 2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
