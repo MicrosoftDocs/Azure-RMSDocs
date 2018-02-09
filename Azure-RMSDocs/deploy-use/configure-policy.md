@@ -53,17 +53,17 @@ For more information about the subscriptions, see [What subscription do I need f
 
 ## Signing in to the Azure portal
 
-To sign in to the Azure portal to configure and manage Azure Information Protection:
+To sign in to the Azure portal, to configure and manage Azure Information Protection:
 
-Use the following link: https://portal.azure.com
+- Use the following link: https://portal.azure.com
 
-Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+- Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+    
+    - **Information Protection Administrator** (currently in preview)
 
-- **Information Protection Administrator** (currently in preview)
+    - **Security Administrator**
 
-- **Security Administrator**
-
-- **Global Administrator / Company Administrator**
+    - **Global Administrator / Company Administrator**
 
 
 ## To access the Azure Information Protection blade for the first time
