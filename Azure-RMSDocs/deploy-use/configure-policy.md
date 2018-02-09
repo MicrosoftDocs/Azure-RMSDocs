@@ -85,7 +85,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 ## How to configure the Azure Information Protection policy
 
-1. Make sure that you are signed in to the [Azure portal](https://portal.azure.com) as a security admin or global admin.
+1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Information Protection Administrator, Security Administrator, or Global Administration. See the [preceding section](#signing-in-to-the-azure-portal) for more information about these administrative roles.
 
 2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
