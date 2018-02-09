@@ -47,7 +47,7 @@ Request new features and vote on requests by visiting the [User Voice site](http
 
 ## Do I need to be a global admin to configure classification and labels?
 
-To configure the Azure Information Protection policy, you no longer have to sign in to the Azure portal as a global admin for Azure Active Directory. You can also now use an account that has a security admin role.
+With the newly introduced Information Protection Administrator role, this question is now answered on the main FAQ page: [Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 If you select the option to install the demo policy when you install the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), you don't need to sign in to the portal to see and try out the labeling functionality. The demo policy locally installs a default policy for Azure Information Protection, so you can try labeling documents and emails, but you won't be able to change or add new labels without signing in to the Azure portal. 
 

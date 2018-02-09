@@ -71,7 +71,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
-With the newly introduced Information Protection Administrator role, this question (and answer) has now moved: [Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
+With the newly introduced Information Protection Administrator role, this question (and answer) has now moved to the main FAQ page: [Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 ## How do I create a new custom template in the Azure portal?
 
