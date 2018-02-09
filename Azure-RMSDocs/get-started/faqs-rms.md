@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -71,22 +71,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
-Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
-
-As these role names suggest, the first role grants permissions to run all administrative tasks for Azure Rights Management (without making them a global administrator for other cloud services) and the second role grants permissions to run only the Rights Management (RMS) connector.
-
-Some things to note:
-
-- Only global administrators for Office 365 and global administrators for Azure AD can use the Office 365 admin center to configure Azure RMS. If you use the Azure portal for Azure Information Protection, you can sign in as a global administrator or as a security admin.
-
-- Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell commands to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
-
-- If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure RMS, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
-
-- No administrator for Azure RMS (for example, the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
-
->[!NOTE]
-> Templates and new options for configuring Azure Rights Management protection have moved to the Azure portal, which supports security admins in addition to global admin access. 
+With the newly introduced Information Protection Administrator role, this question (and answer) has now moved: [Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?](faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators)
 
 ## How do I create a new custom template in the Azure portal?
 
