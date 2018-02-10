@@ -31,7 +31,7 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 
 Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 
-You can add a new label, or add a new sub-label to an existing label when you need a further level of classification. For example, the last label in the [default policy](configure-policy-default.md), contains sub-labels.
+You can add a new label, or add a new sublabel to an existing label when you need a further level of classification. For example, the last label in the [default policy](configure-policy-default.md), contains sublabels.
 
 Use the following instructions to add a new label to the Azure Information Protection policy.
 
@@ -47,7 +47,7 @@ Use the following instructions to add a new label to the Azure Information Prote
     
     - To create a new label: Click **Add a new label**.
     
-    - To create a new sub-label: Right-click or select the context menu (**...**) for the label that you want to create a sub-label for, and then click **Add a sub-label**.
+    - To create a new sublabel: Right-click or select the context menu (**...**) for the label that you want to create a sublabel for, and then click **Add a sub-label**.
 
 4. On the **Label** or **Sub-label** blade, select the options that you want for this new label, and then click **Save**.
     
