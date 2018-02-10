@@ -55,7 +55,7 @@ To configure these settings:
         
         ![Azure Information Protection prompt if labeling is enforced](../media/info-protect-enforce-labelv2.png)
         
-    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and its justification reason are logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
         
         ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
         

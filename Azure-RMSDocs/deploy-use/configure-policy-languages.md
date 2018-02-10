@@ -98,7 +98,7 @@ When users download an Azure Information Protection policy that supports differe
 
 ## When localized label names are not used
 
-In the following scenarios, localized label (and sub-label) names are not used. For consistency across your tenant, the default language is always used for the following:
+In the following scenarios, localized label (and sublabel) names are not used. For consistency across your tenant, the default language is always used for the following:
 
 - Client usage logs
 

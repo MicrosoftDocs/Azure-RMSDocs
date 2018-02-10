@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if all your configuration can be done in the Azure portal or the Office 365 portal. However, you will need to use PowerShell for some advanced configurations and you might also prefer to use PowerShell for more efficient command-line control and scripting.
+Do you need to use PowerShell to administer the Azure Rights Management service for Azure Information Protection? You might not need to if all your configuration can be done in the Azure portal or the Office 365 portal. However, you need to use PowerShell for some advanced configurations and you might also prefer to use PowerShell for more efficient command-line control and scripting.
 
 The table in the next section includes some of the advanced configuration scenarios that use PowerShell. When the configuration can also be completed without using PowerShell, this information is also included in the table.
 

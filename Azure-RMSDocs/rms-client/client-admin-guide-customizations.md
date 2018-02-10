@@ -61,7 +61,7 @@ Regardless of this setting, the Azure Information Protection client follows the 
 
 ## Suppress the initial "Congratulations!" welcome page
 
-When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint or Outlook, a **Congratulations!** page displays with short instructions how to use the new Information Protection bar to select labels. You can suppress this page by editing the registry.
+When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint, or Outlook, a **Congratulations!** page displays with short instructions how to use the new Information Protection bar to select labels. You can suppress this page by editing the registry.
 
 Locate the following value name, and set the value data to **0**:
 
@@ -199,7 +199,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 When you configure this setting, Outlook doesn't apply the default label that is configured in the Azure Information Protection policy for the setting **Select the default label**. Instead, Outlook can apply a different default label, or no label.
 
-To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
 So that Outlook doesn't apply the default label, specify **None**.
 
@@ -237,7 +237,7 @@ As example, you have a SharePoint column named **Classification** that has possi
 
 To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
 
-Now, when a user opens and saves one of these Office documents, it will be labeled  **Public**, **General**, or **Confidential** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
+Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Confidential** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 

@@ -83,7 +83,7 @@ For the general availability version of the Azure Information Protection client 
 
 2. The most sensitive label is applied.
  
-3. The last sub-label is applied.
+3. The last sublabel is applied.
 
 
 ## To configure recommended or automatic classification for a label

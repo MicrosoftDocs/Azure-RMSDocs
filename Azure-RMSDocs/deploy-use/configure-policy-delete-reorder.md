@@ -43,7 +43,7 @@ However, if the label applied protection, that protection is not removed. The pr
 
 - Use PowerShell to rename the template or delete it.
     
-    Before you do these actions, sconsider whether other admins or services are using the template and identify it by its current name. Delete a template only if you don't need to open documents or emails that were protected by the template.
+    Before you do these actions, consider whether other admins or services are using the template and identify it by its current name. Delete a template only if you don't need to open documents or emails that were protected by the template.
 
 For more information about managing protection templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 

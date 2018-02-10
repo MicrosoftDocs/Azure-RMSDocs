@@ -107,7 +107,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
     
     - The option to provide a custom help link for users.
 
-Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sub-labels to provide subcategories, when needed. When a label is configured for sub-labels, users cannot select the main label but must select one of the sub-labels.
+Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels.
 
 The Azure Information Protection labels can be used with the full range of data that an organization typically creates and stores, from the lowest classification of personal data, to the highest classification of highly confidential data. 
 
