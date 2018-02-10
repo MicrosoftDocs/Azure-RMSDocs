@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/12/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -155,7 +155,7 @@ Windows PowerShell module:
     
 4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
     
-    The following is an example of output from Get-AadrmConfiguration:
+    An example of output from Get-AadrmConfiguration:
     
 		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
 		
@@ -536,7 +536,7 @@ You've now completed the configuration of the two apps and you have the values t
 
 Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
 
-When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the instructions in the following section so that the service account can authenticate by using a token.
+When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the instructions in the following section so that the service account can authenticate by using a token.
 
 ### Specify and use the Token parameter for Set-AIPAuthentication
 
