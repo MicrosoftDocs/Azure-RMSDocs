@@ -30,17 +30,17 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal? 
+Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal?
 
-The Azure classic portal retired **January 08, 2018**. After this date, you will not be able to manage the Azure Rights Management service and custom templates from the classic portal. If you try to access the classic portal, you see a link that takes you to the new Azure portal. 
+The Azure classic portal retired **January 08, 2018**. After this date, you will not be able to manage the Azure Rights Management service and custom templates from the classic portal. If you try to access the classic portal, you see a link that takes you to the new Azure portal.
 
-For more information about the classic portal retirement, see the blog post announcement: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). For the temporary extension to the original retirement date, see [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
+For more information about the classic portal retirement, see the blog post announcement: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). For the temporary extension to the original retirement date, see [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/).
 
 ## How to do your familiar admin tasks
 
 Use the following information to help you quickly transition to the current portal.
 
-However, customers who have a subscription for Office 365 US Government (Government Community Cloud) currently cannot use the Azure portal and instead, must use [PowerShell](configure-templates-with-powershell.md) to manage their templates. 
+However, customers who have a subscription for Office 365 US Government (Government Community Cloud) currently cannot use the Azure portal and instead, must use [PowerShell](configure-templates-with-powershell.md) to manage their templates.
 
 
 |Azure classic portal|How to do this task in the Azure portal
@@ -53,7 +53,7 @@ However, customers who have a subscription for Office 365 US Government (Governm
 |Copy a template|You can't copy a template in the Azure portal. If you want two labels to have the same protection settings, you must set the permissions on each label. <br /><br />For more information, see [To configure a label for Rights Management protection](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. However, you can delete the label and then use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
 |Multi-language support|From the **MANAGE** menu selection, select **Languages** to export the customizable fields that include the template name and description. Translate the strings, and then import these strings into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
-|Rights Management web reports|Use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. <br /><br />For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).<br /><br />Tip: Look out for announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) for a new, centralized reporting solution for Azure Information Protection. 
+|Rights Management web reports|Use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. <br /><br />For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).<br /><br />Tip: Look out for announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) for a new, centralized reporting solution for Azure Information Protection.
 |Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
 Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
@@ -67,7 +67,7 @@ New functionality in the Azure portal:
 
 - You can convert templates to labels, so that you manage a single object rather than manage a template and label independently. For instructions, see [To convert templates to labels](configure-policy-templates.md#to-convert-templates-to-labels).
 
-Support for the security admin role: Whereas you had to sign in to the Azure classic portal as a global admin to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has the global admin or security admin role. 
+Support for the security admin role: Whereas you had to sign in to the Azure classic portal as a global admin to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has the global admin or security admin role.
 
 The PowerShell cmdlets to create and manage templates, and to activate or deactivate the service remain supported without changes.
 
