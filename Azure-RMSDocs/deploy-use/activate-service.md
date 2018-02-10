@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,9 +53,9 @@ When the Azure Rights Management service is activated, all users in your organiz
 
 For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center or the Azure portal:
 
-- [**Office 365 admin center**](activate-office365.md) - requires Global Administrator account
+- [Office 365 admin center](activate-office365.md) - requires Global Administrator account
 
-- [**Azure portal**](activate-azure.md) - requires Azure Information Protection Administrator account (currently in preview), or Global Administrator account, or Security Administrator account. [More information about these administrative roles[(azure/active-directory/active-directory-assign-admin-roles)
+- [Azure portal](activate-azure.md) - requires Global Administrator account, or Azure Information Protection Administrator account (currently in preview), or Security Administrator account. [More information about these administrative roles](azure/active-directory/active-directory-assign-admin-roles)
 
 Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
