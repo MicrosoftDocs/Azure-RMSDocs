@@ -30,10 +30,10 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here. 
+Have a question about the data protection service, Azure Rights Management, from Azure Information Protection? See if it's answered here.
 
 ## Do files have to be in the cloud to be protected by Azure Rights Management?
-No, this is a common misconception. The Azure Rights Management service (and Microsoft) does not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure. 
+No, this is a common misconception. The Azure Rights Management service (and Microsoft) does not see or store your data as part of the information protection process. Information that you protect is never sent to or stored in Azure unless you explicitly store it in Azure or use another cloud service that stores it in Azure.
 
 For more information, see [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to understand how a secret cola formula that is created and stored on-premises is protected by the Azure Rights Management service but remains on-premises.
 
@@ -47,9 +47,9 @@ These encryption technologies are complementary and using them requires enabling
 
 **Bring your own key** (BYOK) in the context of Azure Information Protection, is when you create your own key on-premises for Azure Rights Management protection. You then transfer that key to a hardware security module (HSM) in Azure Key Vault where you continue to own and manage your key. If you didn't do this, Azure Rights Management protection would use a key that is automatically created and managed for you in Azure. This default configuration is referred to as "Microsoft-managed" rather than "customer-managed" (the BYOK option).
 
-For more information about BYOK and whether you should choose this key topology for your organization, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
+For more information about BYOK and whether you should choose this key topology for your organization, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
-**Hold your own key** (HYOK) in the context of Azure Information Protection, is for a few organizations that have a subset of documents or emails that cannot be protected by a key that is stored in the cloud. For these organizations, this restriction applies even if they created the key and manage it, using BYOK. The restriction can often be because of regulatory or compliance reasons and the HYOK configuration should be applied to "Top Secret" information only, that will never be shared outside the organization, will only be consumed on the internal network, and does not need to be accessed from mobile devices. 
+**Hold your own key** (HYOK) in the context of Azure Information Protection, is for a few organizations that have a subset of documents or emails that cannot be protected by a key that is stored in the cloud. For these organizations, this restriction applies even if they created the key and manage it, using BYOK. The restriction can often be because of regulatory or compliance reasons and the HYOK configuration should be applied to "Top Secret" information only, that will never be shared outside the organization, will only be consumed on the internal network, and does not need to be accessed from mobile devices.
 
 For these exceptions (typically less than 10% of all the content that needs to be protected), organizations can use an on-premises solution, Active Directory Rights Management Services, to create the key that remains on-premises. With this solution, computers get their Azure Information Protection policy from the cloud, but this identified content can be protected by using the on-premises key.
 
@@ -71,7 +71,7 @@ Although the Rights Management connector logs information, warning, and error me
 
 ## Do you need to be a global admin to configure Azure RMS, or can I delegate to other administrators?
 
-Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**. 
+Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for the Azure Rights Management service. However, if you want to assign administrative permissions to other users, you can do so by using the Azure RMS PowerShell cmdlet, [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). You can assign this administrative role by user account, or by group. There are two roles available: **Global Administrator** and **Connector Administrator**.
 
 As these role names suggest, the first role grants permissions to run all administrative tasks for Azure Rights Management (without making them a global administrator for other cloud services) and the second role grants permissions to run only the Rights Management (RMS) connector.
 
@@ -81,12 +81,12 @@ Some things to note:
 
 - Users that you assign the global administrator role for Azure RMS must use Azure RMS PowerShell commands to configure Azure RMS. To help you find the right cmdlets for specific tasks, see [Administering Azure Rights Management by Using Windows PowerShell](../deploy-use/administer-powershell.md).
 
-- If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure RMS, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group. 
+- If you have configured [onboarding controls](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), this configuration does not affect the ability to administer Azure RMS, except the RMS connector. For example, if you have configured onboarding controls such that the ability to protect content is restricted to the “IT department” group, the account that you use to install and configure the RMS connector must be a member of that group.
 
-- No administrator for Azure RMS (for example, the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md). 
+- No administrator for Azure RMS (for example, the tenant's global admin or an Azure RMS global administrator) can automatically remove protection from documents or emails that were protected by Azure RMS. Only users who are assigned super users for Azure RMS can do this, and when the super user feature is enabled. However, the tenant's global administrator and any Azure RMS global administrator can assign users as super users, including their own account. They can also enable the super user feature. These actions are recorded in the Azure RMS administrator log. For more information, see the security best practices section in [Configuring super users for Azure Rights Management and discovery services or data recovery](../deploy-use/configure-super-users.md).
 
 >[!NOTE]
-> Templates and new options for configuring Azure Rights Management protection have moved to the Azure portal, which supports security admins in addition to global admin access. 
+> Templates and new options for configuring Azure Rights Management protection have moved to the Azure portal, which supports security admins in addition to global admin access.
 
 ## How do I create a new custom template in the Azure portal?
 
@@ -98,7 +98,7 @@ For more information about templates in the Azure portal, see [Configuring and m
 
 If the document was protected by using a label or template, there's no need to reprotect the document. Modify the label or template by making your changes to the usage rights or add new groups (or users), and then save and publish these changes:
 
-- When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document. 
+- When a user hasn't accessed the document before you made the changes, the changes take effect as soon as the user opens the document.
 
 - When a user has already accessed the document, these changes take effect when their [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) expires. Reprotect the document only if you cannot wait for the use license to expire. Reprotecting effectively creates a new version of the document, and therefore a new use license for the user.
 
@@ -141,15 +141,15 @@ Alternatively, you can add external users to custom templates (and labels) by us
 1. Specify the external email addresses and their rights in a rights definition object, by using the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a variable.
 
 2. Supply this variable to the RightsDefinition parameter with the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet.
-    
-    When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) section for the cmdlet. 
+
+    When you add users to an existing template, you must define rights definition objects for the existing users in the templates, in addition to the new users. For this scenario, you might find helpful **Example 3: Add new users and rights to a custom template** from the [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) section for the cmdlet.
 
 ## What type of groups can I use with Azure RMS?
 For most scenarios, you can use any group type in Azure AD that has an email address. This rule of thumb always applies when you assign usage rights but there are some exceptions for administering the Azure Rights Management service. For more information, see [Azure Information Protection requirements for group accounts](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## How do I send a protected email to a Gmail or Hotmail account?
 
-When you use Exchange Online and the Azure Rights Management service, you just send the email to the user as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook **Do Not Forward** button or menu option. Or, you can select an Azure Information Protection label that automatically applies Do Not Forward for you, and classifies the email. 
+When you use Exchange Online and the Azure Rights Management service, you just send the email to the user as a protected message. For example, you can select the new **Protect** button in the command bar in Outlook on the Web, use the Outlook **Do Not Forward** button or menu option. Or, you can select an Azure Information Protection label that automatically applies Do Not Forward for you, and classifies the email.
 
 The recipient will see an option to sign in to their Gmail, Yahoo, or Microsoft account, and then be able to read the protected email. Alternatively, they can choose the option for a one-time passcode to read the email in a browser.
 
@@ -172,8 +172,8 @@ Open Outlook and create a profile by using your Office 365 work or school accoun
 
 1. In the new message, on the **Options** tab, click **Permissions**, and then click **Verify Credentials**.
 
-2. When prompted, specify your Office 365 work or school account details again, and select **Sign in**. 
-    
+2. When prompted, specify your Office 365 work or school account details again, and select **Sign in**.
+
     This downloads the Azure Rights Management templates and **Verify Credentials** is now replaced with options that include **No Restrictions**, **Do Not Forward**, and any Azure Rights Management templates that are published for your tenant. You can now cancel this new message.
 
 To protect an email message or a document: On the **Options** tab, click **Permissions** and choose an option or template that protects your email or document.
@@ -186,7 +186,7 @@ No. In this scenario, the associated temporary file doesn’t contain data from 
 ## A feature I am looking for doesn’t seem to work with SharePoint protected libraries—is support for my feature planned?
 Currently, SharePoint supports RMS-protected documents by using IRM protected libraries, which do not support Rights Management templates, document tracking, and some other capabilities. For more information, see the [SharePoint Online and SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) section in the [Office applications and services](../understand-explore/office-apps-services-support.md) article.
 
-If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
+If you are interested in a specific capability that isn't yet supported, be sure to keep an eye on announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
 ## How do I configure One Drive for Business in SharePoint Online, so that users can safely share their files with people inside and outside the company?
 By default, as an Office 365 administrator, you don’t configure this; users do.
@@ -204,11 +204,11 @@ Use the [super user feature](../deploy-use/configure-super-users.md), which gran
 
 ## When I test revocation in the document tracking site, I see a message that says people can still access the document for up to 30 days—is this time period configurable?
 
-Yes. This message reflects the [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) for that specific file. 
+Yes. This message reflects the [use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) for that specific file.
 
 If you revoke a file, that action can be enforced only when the user authenticates to the Azure Rights Management service. So if a file has a use license validity period of 30 days and the user has already opened the document, that user continues to have access to the document for the duration of the use license. When the use license expires, the user must reauthenticate, at which point the user is denied access because the document is now revoked.
 
-The user who protected the document, the [Rights Management issuer](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) is exempt from this revocation and is always able to access their documents. 
+The user who protected the document, the [Rights Management issuer](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) is exempt from this revocation and is always able to access their documents.
 
 The default value for the use license validity period for a tenant is 30 days and this setting can be overridden by a more restrictive setting in a label or template. For more information about the use license and how to configure it, see the [Rights Management use license](../deploy-use/configure-usage-rights.md#rights-management-use-license) documentation.
 
@@ -224,5 +224,3 @@ As these examples demonstrate, even if all platforms and all software supported 
 Despite its name and appearance, **Do Not Forward** is not the opposite of the Forward right, or a template. It is actually a set of rights that include restricting copying, printing, and saving attachments, in addition to restricting the forwarding of emails. The rights are dynamically applied to users via the chosen recipients, and not statically assigned by the administrator. For more information, see the [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) section in [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-

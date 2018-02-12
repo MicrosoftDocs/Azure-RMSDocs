@@ -31,7 +31,7 @@ ms.suite: ems
 
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
-These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates).
+These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates).
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
@@ -109,7 +109,7 @@ When the scanner protects files on SharePoint sites and libraries, the Rights Ma
 
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
-The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 
