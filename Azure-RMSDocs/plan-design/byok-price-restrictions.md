@@ -56,7 +56,7 @@ Other benefits of using Azure Key Vault for your Azure Information Protection te
 
 In addition to managing keys, Azure Key Vault offers your security administrators the same management experience to store, access, and manage certificates and secrets (such as passwords) for other services and applications that use encryption. 
 
-For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://blogs.technet.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
+For more information about Azure Key Vault, see [What is Azure Key Vault?](/azure/key-vault/key-vault-whatis) and visit the [Azure Key Vault team blog](https://cloudblogs.microsoft.com/kv/) for the latest information and to learn how other services use this technology.
 
 ## Restrictions when using BYOK
 
