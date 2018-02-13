@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -219,7 +219,11 @@ If you use Intune for your software deployment method, use these instructions to
 
 ## How to install the Azure Information Protection scanner
 
-The current preview version of the Azure Information Protection client includes the Azure Information Protection scanner. The PowerShell module that is included with the client has cmdlets to install and configure the scanner.
+Currently, the general availability (GA) version of the Azure Information Protection scanner is a separate download named **AzInfoProtectionScanner.exe** on the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Subsequent releases of the scanner will be included in the Azure Information Protection client.
+
+The current preview version of the Azure Information Protection client also includes the Azure Information Protection scanner. 
+
+The PowerShell module that is included with the scanner and preview client has cmdlets to install and configure the scanner.
 
 To install the client for the scanner, follow the same instructions in the preceding sections. Note that if you do not need all the components of the client, such as the Office add-in and viewer, you can install just the PowerShell module. For example, you can run the executable with `PowerShellOnly=true /quiet`.
 
