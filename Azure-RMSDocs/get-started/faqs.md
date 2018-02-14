@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -84,6 +84,12 @@ Yes. Although Azure Information Protection is a cloud-based solution, it can cla
 If you have Exchange Server, SharePoint Server, and Windows file servers, you can deploy the [Rights Management connector](../deploy-use/deploy-rms-connector.md) so that these on-premises servers can use the Azure Rights Management service to protect your emails and documents. You can also synchronize and federate your Active Directory domain controllers with Azure AD for a more seamless authentication experience for users, for example, by using [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/).
 
 The Azure Rights Management service automatically generates and manages XrML certificates as required, so it doesn’t use an on-premises PKI. For more information about how Azure Rights Management uses certificates, see the [Walkthrough of how Azure RMS works: First use, content protection, content consumption](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) section in the [How does Azure RMS work?](../understand-explore/how-does-it-work.md) article.
+
+## What types of data can Azure Information Protection classify and protect?
+
+Azure Information Protection can classify and protect email messages and documents, whether they are located on-premises or in the cloud. These documents include Word documents, Excel spreadsheets, PowerPoint presentations, PDF documents, text-based files, and image files. For a list of the document types supported, see the list of [file types supported](../rms-client/client-admin-guide-file-types.md) in the admin guide.
+
+Azure Information Protection cannot classify and protect structured data such as database files, calendar items, PowerBI reports, Yammer posts, Sway content, and OneNote notebooks.
 
 ## I see Azure Information Protection is listed as an available cloud app for conditional access—how does this work?
 
