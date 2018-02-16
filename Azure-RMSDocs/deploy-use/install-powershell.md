@@ -62,7 +62,6 @@ To install the AADRM module, start a PowerShell session and type:
 
 	Install-Module -Name AADRM
 
-The AADRM PowerShell module is now installed.
 
 ### To install the AADRM module from the Microsoft Download Center
 
@@ -70,9 +69,7 @@ The AADRM PowerShell module is now installed.
 
 2. Download and save the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] installer file, **WindowsAzureADRightsManagementAdministration_x64**. Then double-click this file to start the Azure AD Rights Management Administration Setup Wizard.
 
-3.  Complete the wizard.
-
-The AADRM PowerShell module is now installed.
+3.  Complete the wizard, which installs the AADRM PowerShell module.
 
 ## Next steps
 Start a Windows PowerShell session and confirm the version of the installed module. This check is particularly important if you upgraded from an older version:
