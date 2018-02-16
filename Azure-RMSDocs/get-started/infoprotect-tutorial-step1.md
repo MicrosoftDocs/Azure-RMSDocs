@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,7 +38,9 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
 
 ## To activate the Azure Rights Management service
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a global admin or security admin for your tenant.
+1. Sign in to the [Azure portal](https://portal.azure.com) by using the global admin account for your tenant. 
+    
+    If you are not the global admin, you can use one of the following [administrative roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **Information Protection Administrator** or **Security Administrator**.
 
 2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     

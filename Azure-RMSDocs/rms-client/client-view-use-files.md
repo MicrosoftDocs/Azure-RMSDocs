@@ -6,7 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,24 +38,24 @@ The viewer automatically installs as part of the Azure Information Protection cl
 > [!NOTE]
 > Although installing the client provides more functionality, it requires local administrator permissions and the full functionality requires a corresponding service for your organization:
 > 
-> - Azure Information Protection
+>-Azure Information Protection
 > 
-> - Azure Rights Management
+>-Azure Rights Management
 > 
-> - Active Directory Rights Management Services 
+>-Active Directory Rights Management Services 
 > 
 > Install the viewer if you have been sent a protected document by somebody from another organization or if you do not have local administrator permissions to your PC.
 
 To be able to open a protected document, the application must be "RMS-enlightened". Office apps and the Azure Information Protection Viewer are examples of RMS-enlightened applications. To see a list of applications by type and supported devices, see the [RMS-enlightened applications](../get-started/requirements-applications.md#rms-enlightened-applications) table.  
 ## Message.rpmsg as an email attachment
 
-If you see **message.rpmsg** as a file attachment in an email, this file is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you will need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
+If you see **message.rpmsg** as a file attachment in an email, this file is not a protected document but a protected email message that displays as an attachment. You can't use the Azure Information Protection Viewer for Windows to view this protected email message on your Windows PC. Instead, you need an email application for Windows that supports Rights Management protection, such as Office Outlook. Or you can use Outlook on the web.
 
 However, if you have an iOS or Android device, you can use the Azure Information Protection app to open these protected email messages. You can download this app for these mobile devices from the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
 
 ## Prompts for authentication
 
-Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this by checking your user name and password. In some cases, this might be cached and you will not see a prompt that asks for your credentials. In other cases, you will be prompted to supply your credentials.
+Before you can view the protected file, the Rights Management service that was used to protect the file must first confirm that you are authorized to view the file. The service does this confirmation by checking your user name and password. In some cases, these credentials might be cached and you do not see a prompt that asks you to sign in. In other cases, you are prompted to supply your credentials.
 
 If your organization does not have a cloud-based account for you to use (for Office 365 or Azure) and does not use an equivalent on-premises version (AD RMS), you have two options:
 
@@ -78,11 +78,15 @@ If your organization does not have a cloud-based account for you to use (for Off
     For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. To edit the file, click **Save As**, which lets you save the file without protection to its original file name extension. You can then edit the file by using the application that's associated with that file type.
+    
+    If you later use File Explorer to right-click this newly saved file and try to protect it again, you will not be able to do so. This known issue is addressed in the current preview version of the Azure Information client. For the preview client, choosing **Save As** removes the label in addition to the protection. When you then right-click the file, you can reapply the label, which in turn reapplies protection.
 
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
 > [!TIP]
-> If the protected file does not open, you can use the **Run Diagnostics** option from **Protect** > **Help and Feedback** for the Azure Information Protection client to check for problems on your computer that might prevent a protected document from opening.
+> If the protected file does not open and you have the full Azure Information Protection client installed, try the **Reset Settings** option. To access this option, from an Office app, select the **Protect** button > **Help and Feedback** > **Reset Settings**. 
+> 
+> [More information about the Reset Settings option](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## Other instructions
 More how-to instructions from the Azure Information Protection user guide:

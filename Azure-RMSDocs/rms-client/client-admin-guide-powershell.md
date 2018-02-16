@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,9 +32,7 @@ ms.suite: ems
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
-The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module replaces the RMSProtection module that installs with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
-
-The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool. There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
+The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
@@ -44,13 +42,13 @@ The AzureInformationProtection module includes all the Rights Management cmdlets
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 
-In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) (currently in preview), uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
+In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
 
 For a list of all the cmdlets and their corresponding help, see [AzureInformationProtection Module](/powershell/module/azureinformationprotection). Within a PowerShell session, type `Get-Help <cmdlet name> -online` to see the latest help.  
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
-As with the RMSProtection module, the current release of the AzureInformationProtection module has the following limitations:
+The current release of the AzureInformationProtection module has the following limitations:
 
 - You can unprotect Outlook personal folders (.pst files), but you cannot currently natively protect these files or other container files by using this PowerShell module.
 
@@ -157,7 +155,7 @@ Windows PowerShell module:
     
 4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
     
-    The following is an example of output from Get-AadrmConfiguration:
+    An example of output from Get-AadrmConfiguration:
     
 		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
 		
@@ -270,7 +268,7 @@ When you use a service principal account to protect files and download templates
 
 ### Example scenarios for using the cmdlets for Azure Information protection and the Azure Rights Management service
 
-It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
+It's more efficient to use labels to classify and protect files, because there are just two cmdlets that you need, which can be run by themselves or together: [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) and  [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Use the help for both these cmdlets for more information and examples.
 
 However, to protect or unprotect files by directly connecting to the Azure Rights Management service, you must typically run a series of cmdlets as described next.
 
@@ -464,14 +462,18 @@ Your output might look similar to the following:
 
 ## How to label files non-interactively for Azure Information Protection
 
-You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner, currently in preview.
+You can run the labeling cmdlets non-interactively by using the **Set-AIPAuthentication** cmdlet. Non-interactive operation is also required for the Azure Information Protection scanner.
 
 By default, when you run the cmdlets for labeling, the commands run in your own user context in an interactive PowerShell session. To run them unattended, create a new Azure AD user account for this purpose. Then, in the context of that user, run the Set-AIPAuthentication cmdlet to set and store credentials by using an access token from Azure AD. This user account is then authenticated and bootstrapped for the Azure Rights Management service. The account downloads the Azure Information Protection policy and any Rights Management templates that the labels use.
 
 > [!NOTE]
 > If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
+
+For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as batch job**. For more information, see the following sections. 
+
+When the token expires, run the cmdlet again to acquire a new token.
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
@@ -497,13 +499,15 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 4. Select the application that you've just created, for example, **AIPOnBehalfOf**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade. 
     
-    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+    This value is used for the `WebAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
 
-5. On the **Settings** blade, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
+5. Back on the **Settings** blade, select **Required permissions**. On the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
+
+6. Back on the **Settings** blade again, select **Keys**. Add a new key by specifying a description and your choice of duration (1 year, 2 years, or never expires). Then select **Save**, and copy the string for the **Value** that is displayed. It's important that you save this string because it is not displayed again and it cannot be retrieved. As with any key that you use, store the saved value securely and restrict access to it.
     
     This value is used for the `WebAppKey` parameter when you run the Set-AIPAuthentication cmdlet.
 
-6. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
+7. Back on the **App registrations** blade, select **New application registration**, to create your native application. On the **Create** label, specify the following values, and then click **Create**:
     
     - Name: **AIPClient**
     
@@ -513,25 +517,97 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
     
     - Sign-on URL: **http://localhost**
 
-7. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
+8. Select the application that you've just created, for example, **AIPClient**. Then, on the **Settings** blade, select **Properties**. From the **Properties** blade, copy the value for the **Application ID**, and then close this blade.
     
-    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet.
+    This value is used for the `NativeAppId` parameter when you run the Set-AIPAuthentication cmdlet. Paste and save it for later reference.
 
-8. On the **Settings** blade, select **Required permissions**. 
+9. On the **Settings** blade, select **Required permissions**. 
 
-9. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
+10. On the **Required permissions** blade, click **Add**, and then click **Select an API**. In the search box, type **AIPOnBehalfOf**. Select this value in the list box, and then click **Select**.
 
-10. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+11. On the **Enable Access** blade, select **AIPOnBehalfOf**, click **Select**, and then click **Done**.
+
+12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-    You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
 
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
 
-> [!TIP]
-> If Set-AIPAuthentication is not successful and you used existing apps rather than creating new apps by using the preceding instructions, you might need to reset the required permissions for your apps. This might also be the case if you followed the instructions to create new apps for Set-AIPAuthentication, but then modified the app settings.
-> 
-> To reset the required permissions, for both apps, use the following configuration steps: Select **All settings** > **Required permissions** > **Grant Permissions**, and click **Yes** to confirm.
-> 
-> Alternatively, create new apps by using the preceding instructions.
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
+
+When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the instructions in the following section so that the service account can authenticate by using a token.
+
+### Specify and use the Token parameter for Set-AIPAuthentication
+
+> [!NOTE]
+> This option requires the general availability (GA) version of the Azure Information Protection scanner, or the current preview version of the Azure Information Protection client.
+
+Use the following additional steps and instructions to avoid the initial interactive sign-in for an account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. For example, this might be the case for your service account that runs the Azure Information Protection scanner.
+
+1. Create a PowerShell script on your local computer.
+
+2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
+
+3. Modify the PowerShell script to include the token.
+
+4. Create a task that runs the PowerShell script in the context of the service account that will label and protect files.
+
+5.Confirm that the token is saved for the service account, and delete the PowerShell script.
+
+#### Step 1: Create a PowerShell script on your local computer
+
+1. On your computer, create a new PowerShell script named Aipauthentication.ps1.
+
+2. Copy and paste the following command into this script:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you specify later. 
+    
+    For example: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
+
+1. Open a Windows PowerShell session.
+
+2. Using the same values as you specified in the script, run the following command:
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    For example: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### Step 3: Modify the PowerShell script to supply the token
+
+1. In your PowerShell script, specify the token value by pasting the string from the clipboard, and save the file.
+
+2. Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the computer that will run the labeling commands. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: `Set-ExecutionPolicy RemoteSigned`. However, this configuration lets all unsigned scripts run when they are stored on this computer (less secure).
+    
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
+
+3. Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to C:\Scripts\Aipauthentication.ps1 on a Windows Server computer.
+
+#### Step 4: Create a task that runs the PowerShell script
+
+1. Make sure that the service account that will label and protect files has the **Log on as a batch job** right.
+
+2. On the computer that will label and protect files, open Task Scheduler and create a new task. Configure this task to run as the service account that will label and protect files, and then configure the following values for the **Actions**:
+    
+    - **Action**: `Start a program`
+    - **Program/script**: `Powershell.exe`
+    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    For the argument line, specify your own path and file name, if these are different from the example.
+
+3. Manually run this task.
+
+#### Step 4: Confirm that the token is saved and delete the PowerShell script
+
+1. Confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder for the service account profile. This value is protected by the service account.
+
+2. Delete the PowerShell script that contains the token value (for example, Aipauthentication.ps1).
+    
+    Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 

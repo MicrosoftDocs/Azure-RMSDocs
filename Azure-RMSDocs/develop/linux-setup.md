@@ -2,8 +2,8 @@
 title: Linux setup 
 description: Several flavors of Linux operating systems can now use Rights Management SDK 4.x.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -34,8 +34,8 @@ Libraries and samples have been successfully compiled on Windows and OSX as well
  
 ## How to build and use
 
-- [How to build libs and sample apps](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
-- [How to install and use app on user systems](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
+- [How to build libs and sample apps](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
+- [How to install and use app on user systems](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
 ## See Also
 

@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,7 +82,7 @@ To classify and protect additional file types, and to support multiple files at 
 
 When users select the **Classify and protect** menu option from File Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
 
-Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do this are automatically included with the client, although you can also install the PowerShell module separately.
+Power users (and administrators) might find using PowerShell commands more efficient for managing and setting classification and protection for multiple files. The PowerShell commands to do these actions are automatically included with the client, although you can also install the PowerShell module separately.
 
 After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents:
 
@@ -102,7 +102,7 @@ For example a Gmail user sees the following in an email message:
 
 For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
 
-![Selecting a label configured for Do Not Foward](../media/recipients-only-label.png)
+![Selecting a label configured for Do Not Forward](../media/recipients-only-label.png)
 
 Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
 
@@ -121,7 +121,7 @@ When you attach Office documents to these emails, these documents are automatica
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 
-In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
 You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) the sessions that are tagged for Azure Information Protection on the Ignite website. However, we recommend that you start with the following sessions:
 
@@ -138,10 +138,10 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 ## Next steps
 
-Read the blog post, [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
+Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
 
-Perhaps you know Azure Information Protection or Azure Rights Management by another name? See [our list of alternative terms for the service](azure-rms-aka.md).
+Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

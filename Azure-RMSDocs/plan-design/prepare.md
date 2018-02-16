@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,32 +43,15 @@ There are different ways to create these accounts for users and groups, which in
 
 - You create the users and groups in another directory and synchronize them to Azure AD.
 
-<<<<<<< HEAD
-
-### Considerations if email addresses change
-=======
 When you create users and groups by using the first three methods from this list, they are automatically created in Azure AD, and Azure Information Protection can use these accounts directly. However, many enterprise networks use an on-premises directory to create and manage users and groups. Azure Information Protection cannot use these accounts directly; you must synchronize them to Azure AD.
->>>>>>> c8bc5e8b61522fee6a5c1ed30d220218420eb9c8
 
 ## How users and groups are used by Azure Information Protection
 
 There are three scenarios for using users and groups with Azure Information Protection:
 
 - **For assigning labels to users** when you use labeling and classification. Only administrators select these groups:
-
-<<<<<<< HEAD
-
-## The Rights Management service must be activated
-
-This data protection service from Azure Information Protection must be activated before you can protect your organization's documents and emails: 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after **March 31st, 2017**, the service is automatically activated for you. 
-
-- If your subscription was obtained before this date, you must activate the service yourself. 
-
-For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
-=======
-    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.     
->>>>>>> c8bc5e8b61522fee6a5c1ed30d220218420eb9c8
+    
+    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
 
 - **For assigning usage rights and access controls** when you use the Azure Rights Management service to protect documents and emails. Administrators and users can select these users and groups:
 
@@ -235,18 +218,18 @@ If you cannot do this, the user or group with the new email address risks being 
 
 Note that it's rare for a group to change its email address and if you assign usage rights to a group rather to than individual users, it doesn't matter if the user's email address changes. In this scenario, the usage rights are assigned to the group email address and not individual user email addresses. This is the most likely (and recommended) method for an administrator to configure usage rights that protect documents and emails. However, users might more typically assign custom permissions for individual users. Because you cannot always know whether a user account or group has been used to grant access, it's safest to always add the old email address as a second email address.
 
-## Group membership caching by Azure Rights Management
+## Group membership caching by Azure Information Protection
 
-For performance reasons, group membership is cached by the Azure Rights Management service. This means that any changes to group membership in Azure AD can take up to three hours to take effect when these groups are used by Azure Rights Management, and this time period is subject to change. 
+For performance reasons, Azure Information Protection caches group membership. This means that any changes to group membership in Azure AD can take up to three hours to take effect when these groups are used by Azure Information Protection and this time period is subject to change. 
 
-Remember to factor this delay into any changes or testing that you do when you use groups for Azure Rights Management, such as assigning usage rights or configuring the Azure Rights Management service.
+Remember to factor this delay into any changes or testing that you do when you use groups for granting usage rights or configuring the Azure Rights Management service, or when you configure scoped policies.
 
 
 ## Next steps
 
 When you have confirmed that your users and groups can be used with Azure Information Protection and you are ready to start protecting documents and emails, check whether you need to activate the Azure Rights Management service. This service must be activated before you can protect your organization's documents and emails: 
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after 1st January, 2018, the service is automatically activated for you. 
+- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after 20th February, 2018, the service is automatically activated for you. 
 
 - If your subscription was obtained before this date, you must activate the service yourself. 
 
