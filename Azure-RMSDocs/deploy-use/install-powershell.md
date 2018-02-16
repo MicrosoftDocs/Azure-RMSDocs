@@ -50,11 +50,11 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 
 ## How to install the AADRM module
 
-The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time will still be available on the the Microsoft Download Center. 
+The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time will still be available on the Microsoft Download Center. 
 
 ### To install the AADRM module from the PowerShell Gallery
 
-If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Follow the instructions for the gallery requirements, which includes installing the PowerShellGet module and the NuGet provider.
+If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
 
 To see details about the AADRM module on the PowerShell Gallery, visit the AADRM page.
 
@@ -62,6 +62,7 @@ To install the AADRM module, start a PowerShell session and type:
 
 	Install-Module -Name AADRM
 
+The AADRM PowerShell module is now installed.
 
 ### To install the AADRM module from the Microsoft Download Center
 
@@ -71,7 +72,7 @@ To install the AADRM module, start a PowerShell session and type:
 
 3.  Complete the wizard.
 
-Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] is now installed.
+The AADRM PowerShell module is now installed.
 
 ## Next steps
 Start a Windows PowerShell session and confirm the version of the installed module. This check is particularly important if you upgraded from an older version:
