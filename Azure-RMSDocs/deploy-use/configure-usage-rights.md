@@ -119,7 +119,7 @@ A user wants to email some information to specific people in the Marketing depar
 > [!NOTE] 
 > Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
 
-## Encrypt-only option for emails
+## Encrypt Only option for emails
 
 When Exchange Online is configured for the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-only**.
 
