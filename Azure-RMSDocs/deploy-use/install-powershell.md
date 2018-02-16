@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Install PowerShell for Azure Rights Management - AIP
+title: Install PowerShell for AADRM - AIP
 description: Instructions to install Windows PowerShell for the Azure Rights Management service from Azure Information Protection. The name of this module is AADRM.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,11 +25,11 @@ ms.suite: ems
 
 ---
 
-# Installing Windows PowerShell for Azure Rights Management
+# Installing Windows PowerShell for the AADRM module
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Use the following information to help you install the Windows PowerShell module for the Azure Rights Management service from Azure Information Protection.
+Use the following information to help you install the Windows PowerShell module for the Azure Rights Management service from Azure Information Protection. The name of this module is AADRM.
 
 You can use this PowerShell module to administer the Azure Rights Management service from the command line by using any computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
 
@@ -48,7 +48,22 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 > If you had a previous version of the Rights Management administration module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
 
 
-## How to install the Rights Management administration module
+## How to install the AADRM module
+
+The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time will still be available on the the Microsoft Download Center. 
+
+### To install the AADRM module from the PowerShell Gallery
+
+If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Follow the instructions for the gallery requirements, which includes installing the PowerShellGet module and the NuGet provider.
+
+To see details about the AADRM module on the PowerShell Gallery, visit the AADRM page.
+
+To install the AADRM module, start a PowerShell session and type:
+
+	Install-Module -Name AADRM
+
+
+### To install the AADRM module from the Microsoft Download Center
 
 1. Go to the Microsoft Download Center and locate the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] administration module for Windows PowerShell.
 
