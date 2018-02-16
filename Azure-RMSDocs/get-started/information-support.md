@@ -41,9 +41,9 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 
 ## Information about new releases and updates
-The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
+The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
-A summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+A summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
@@ -68,16 +68,7 @@ For additional support options, ask your Microsoft contact.
 
 ### Self-help
 
-Try the **Azure Information Protection help bot**, currently in beta:
-
-- See if the bot knows the answer to your question because it's been asked before.
-- Ask the bot to search the docs for you.
-- Ask the bot to help open a support ticket for you.
-- Type **feedback** to let us know whether this bot is helpful.
-
-
-<iframe width="560" height="475" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
-
+Try the [Azure Information Protection help bot](help-bot.md), currently in beta.
 
 On-demand videos:
 

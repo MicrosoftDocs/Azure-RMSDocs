@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,11 +37,11 @@ Scoped policies, just like labels, are ordered in the Azure portal. If a user is
 
 Because a scoped policy always inherits the labels and settings and from the global policy, the labels from the global policy are displayed when you create or edit a scoped policy. However, you cannot edit the labels from the global policy when you edit a scoped policy. You can however, add sublabels to these inherited labels.
 
-For example, if you have a label named **Confidential** in the global policy, all users see this label. You cannot remove or re-order it with a scoped policy. But you might want to create a scoped policy for the Marketing department that adds a new sublabel to Confidential, so that these users see **Confidential \ Promotions**. You also create another scoped policy for the Sales department that adds a new sublabel to Confidential, so that these users see **Confidential \ Partners**. Each sublabel can then be configured for different settings and the sublabel is visible only to the users in the respective departments.
+For example, if you have a label named **Confidential** in the global policy, all users see this label. You cannot remove or reorder it with a scoped policy. But you might want to create a scoped policy for the Marketing department that adds a new sublabel to Confidential, so that these users see **Confidential \ Promotions**. You also create another scoped policy for the Sales department that adds a new sublabel to Confidential, so that these users see **Confidential \ Partners**. Each sublabel can then be configured for different settings and the sublabel is visible only to the users in the respective departments.
 
 To configure a scoped policy for Azure Information Protection:
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
 
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 

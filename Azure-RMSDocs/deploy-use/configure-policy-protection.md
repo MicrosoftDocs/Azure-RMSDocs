@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,7 +58,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 ## To configure a label for Rights Management protection
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
@@ -110,7 +110,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
-    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering a domain name from that organization. When you enter just a domain name, do not enter domain names from social providers that support personal email accounts. For example, do not enter **gmail.com**, **hotmail.com**, or **outlook.com**.
+    - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
     >[!NOTE]
     >If an email address changes after you select the user or group, see the [Considerations if email addresses change](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) section from the planning documentation.
@@ -231,7 +231,8 @@ The new users that you add will be able open documents and emails that have alre
 
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
-This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment. 
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment.
+
 If you specify external users who do not have an account in Azure AD, be sure to instruct your users not to use this label for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
@@ -240,7 +241,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
-3. On the **Add permissions** blade: To grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users or if you prefer to type the email address, select **Enter details** and type the email address of the user, or Azure AD group.
+3. On the **Add permissions** blade: To grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users or if you prefer to type the email address, select **Enter details** and type the email address of the user, or Azure AD group, or a domain name.
     
     Repeat this step to specify additional users who should have the same permissions.
 

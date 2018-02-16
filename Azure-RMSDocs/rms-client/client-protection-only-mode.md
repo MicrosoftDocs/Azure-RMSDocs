@@ -6,7 +6,7 @@ description: Information for users who run the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -42,9 +42,16 @@ Protection-only mode runs in the following scenarios:
     
     - For this mix of subscriptions, it is the administrator's responsibility to ensure that only the subset of users can use the classification and labeling features. The remainder of users should be running the Azure Information Protection client in protection-only mode. 
 
+- Your organization has a subscription for Azure Information Protection but you do not have any labels configured for you.
+    
+    - This can happen when all the labels in the global policy are disabled and your account is not added to a scoped policy. This might be because your IT department has just started to roll out Azure Information Protection but not yet provided you with labels to classify your documents and emails. In the meantime, you can use the Azure Information Protection client to protect files and view protected files.
+
 - Your organization has a subscription for Azure Information Protection but you cannot download the Azure Information Protection policy. 
     
-    - This can happen because of a misconfiguration or because your sign in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
+    - This can happen because of a misconfiguration or because your sign-in is not successful. Contact your help desk or administrator but in the meantime, you might be able to use the Azure Information Protection client to protect files and view protected files.
+
+- Your organization uses Active Directory Rights Management Services (AD RMS) only. 
+
 
 ## Limitations for protection-only mode
 

@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -51,17 +51,19 @@ Before you activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmana
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
+## Choosing your activation method
+
 For instructions how to activate the Rights Management service from your management portal, select whether to use the Office 365 admin center or the Azure portal:
 
-- [**Office 365 admin center**](activate-office365.md) - requires global admin account
+- [Office 365 admin center](activate-office365.md) - requires Global Administrator account
 
-- [**Azure portal**](activate-azure.md) - requires global admin account or [security admin account](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
+- [Azure portal](activate-azure.md) - does not require Global Administrator account
 
 Alternatively, you can use PowerShell to activate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
 
 1. Install the Azure Rights Management Administration Tool, which installs the Azure Rights Management administration module. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
 
-2. From a PowerShell session, run [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice), and when prompted, provide the global administrator account details for your Azure Information Protection tenant.
+2. From a PowerShell session, run [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice), and when prompted, provide the Global Administrator account details for your Azure Information Protection tenant.
 
 3. Run [Enable-Aadrm](/powershell/module/aadrm/enable-aadrm), which activates the Azure Rights Management service.
 
