@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -106,7 +106,7 @@ Exchange clients and services (for example, the Outlook client, the Outlook Web 
 
 Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
-When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
+When the **Do Not Forward** option is applied to an email, the email is encrypted and recipients must be authenticated. Then, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
 
 There's an important distinction between applying the **Do Not Forward** option and applying a template that doesn't grant the Forward right to an email: The **Do Not Forward** option uses a dynamic list of authorized users that is based on the user's chosen recipients of the original email; whereas the rights in the template have a static list of authorized users that the administrator has previously specified. What's the difference? Let's take an example: 
 
@@ -125,7 +125,7 @@ When Exchange Online is configured for the new capabilities for Office 365 Messa
 
 Currently, this option is rolling out to tenants for Outlook on the web, and the latest Outlook 2016 clients display the encrypted message inline. Other email clients display a link to read the protected message.
 
-When this option is granted, all usage rights except Full Control are granted to recipients. This combination of usage rights means that the recipients, after they are authorized, have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
+When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except Full Control. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
 
 ## Rights Management issuer and Rights Management owner
 
