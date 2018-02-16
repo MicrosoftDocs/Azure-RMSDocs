@@ -31,7 +31,7 @@ ms.suite: ems
 
 Important guidance if you are already using Active Directory Rights Management Services (AD RMS) and either of the following scenarios apply:
 
-- [Your subscription that includes Azure Rights Management was purchased in or after February 2018](#your-subscription-was-purchased-during-or-after-februrary-2018).
+- [Your subscription that includes Azure Rights Management was purchased in or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
 
 - [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to activate-azure-rights-management-when-you-configure-azure-information-protection)
 
@@ -63,7 +63,7 @@ You should now see **Rights Management is not activated** and the option to acti
 
 #### To deactivate Rights Management from the Azure portal
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
     For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
