@@ -54,10 +54,6 @@ When the Azure Information Protection client for Windows is installed and it doe
 
 If you currently use the Rights Management sharing application for Windows, we recommend that you replace this application with the Azure Information Protection client. Support for the sharing application will end January 31, 2019. To help with the transition, see [Tasks that you used to do with the RMS sharing application](../rms-client/upgrade-client-app.md).
 
-## Is Azure Information Protection suitable for my country?
-
-Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../understand-explore/compliance.md#suitability-for-different-countries).
-
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
@@ -143,6 +139,10 @@ When the scanner protects files on SharePoint sites and libraries, the Rights Ma
 ## I’ve heard a new release is going to be available soon, for Azure Information Protection—when will it be released?
 
 The technical documentation does not contain information about upcoming releases. For this type of information and for release announcements, check the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) and get the latest updates from [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter. If it’s an Office release that you’re interested in, be sure to also check the [Office blog](https://blogs.office.com/).
+
+## Is Azure Information Protection suitable for my country?
+
+Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../understand-explore/compliance.md#suitability-for-different-countries).
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 
