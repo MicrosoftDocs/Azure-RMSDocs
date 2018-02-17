@@ -50,7 +50,7 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 
 ## How to install the AADRM module
 
-The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time will still be available on the Microsoft Download Center. 
+The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time will also still be available on the Microsoft Download Center. 
 
 ### To install the AADRM module from the PowerShell Gallery
 
