@@ -36,7 +36,7 @@ Use the following information for Phase 1 of migrating from AD RMS to Azure Info
 
 Install the AADRM module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
 
-For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+For instructions, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
 
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`

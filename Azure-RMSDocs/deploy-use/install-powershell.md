@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Installing Windows PowerShell for the AADRM module
+# Installing the AADRM PowerShell module
 
 >*Applies to: Azure Information Protection, Office 365*
 
