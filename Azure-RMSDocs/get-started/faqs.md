@@ -56,7 +56,7 @@ If you currently use the Rights Management sharing application for Windows, we r
 
 ## Is Azure Information Protection suitable for my country?
 
-Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](compliance.md#suitability-for-different-countries).
+Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../understand-explore/compliance.md#suitability-for-different-countries).
 
 ## Do you need to be a global admin to configure Azure Information Protection, or can I delegate to other administrators?
 
