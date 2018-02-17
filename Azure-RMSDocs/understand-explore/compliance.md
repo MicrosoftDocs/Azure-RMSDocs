@@ -41,11 +41,11 @@ However, some relevant information that can help your legal adviser make a deter
 
 - All encryption keys used by Azure Information Protection are protected with a customer-specific root key that uses RSA 2048 bits. RSA 1024 but is also supported for backwards compatibility. [More information](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a Thales HSM by using "[bring your own key](../plan-design/plan-implement-tenant-key.md)(BYOK). Azure Information Protection also supports limited functionality with an on-premises key by using "[hold your own key](../deploy-use/configure-adrms-restrictions.md)" (HYOk) for content that is affected by requirements that indicate that it should not be protected with a cloud-based key.
+- Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a Thales HSM by using "[bring your own key](../plan-design/plan-implement-tenant-key.md) (BYOK). Azure Information Protection also supports limited functionality with an on-premises key by using "[hold your own key](../deploy-use/configure-adrms-restrictions.md)" (HYOk) for content that is affected by requirements that indicate that it should not be protected with a cloud-based key.
 
 - The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys and policies always remain within the region in which is originally deployed.
  
-- Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. All content encryption and decryption operations are performed in-place in the client device, or for service-based rendering, within the service that’s rendering the content. [More information](../understand-explore/how-does-it-work.md).
+- Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. Content encryption and decryption operations are performed in-place in the client device. Or, for service-based rendering, these operations are performed within the service that’s rendering the content. [More information](../understand-explore/how-does-it-work.md)
 
 ## Legal and privacy
 
