@@ -43,9 +43,9 @@ This table lists the prerequisites to install and use Windows PowerShell for [!
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] administration module uses.|
 
 > [!NOTE]
-> Starting with version 2.5.0.0 of the Rights Management administration module, the Microsoft Online Services Sign-In Assistant is no longer required.
+> Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
 > 
-> If you had a previous version of the Rights Management administration module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
+> If you had a previous version of the AADRM module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
 
 
 ## How to install the AADRM module
@@ -92,7 +92,6 @@ Use the `Get-Help <cmdlet_name>` command to see the Help for a specific cmdlet, 
 Get-Help Connect-AadrmService -online
 ```
 
-
 For more information:
 
 -   Full list of cmdlets available: [AADRM Module](/powershell/aadrm/vlatest/rightsmanagement)
@@ -100,7 +99,6 @@ For more information:
 -   List of main configuration scenarios that support  PowerShell: [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md)
 
 Before you can run any commands that configure the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] service, you must connect to the service by using the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet. 
-
 When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
 
 > [!NOTE]
