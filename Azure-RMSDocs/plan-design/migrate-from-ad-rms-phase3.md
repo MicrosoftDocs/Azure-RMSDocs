@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,64 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 ## Step 7. Reconfigure Windows computers to use Azure Information Protection
 
-For Windows computers, use two migration scripts to reconfigure AD RMS clients:
+For Windows computers that use Office 2016 click-to-run desktop apps:
+
+- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest, but it is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
+    
+    This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
+
+- For Windows computers that don't use Office 2016:
+    
+    You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office 2016 and other versions of Office, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
+    
+    The registry changes are made easier for you by editing and deploying scripts that you can download. 
+
+See the following sections for more information about how to reconfigure Windows clients.
+
+## Client reconfiguration by using DNS redirection 
+
+This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
+
+1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: 
+
+	**_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>**
+
+	For this record, specify the port number that your AD RMS cluster is using (for example, 443) and your own cluster name (for example, rmsserver.contoso.com). 
+
+	If you use the DNS Server role on Windows Server, use the following tables as a guide for the SRV record properties in the DNS Manager console:
+
+	|Field|Value|  
+	|-----------|-----------|  
+	|**Domain**|_tcp.contoso.com|  
+	|**Service**|_rmsredir|  
+	|**Protocol**|_http|  
+	|**Priority**|0|  
+	|**Weight**|0|  
+	|**Port number**|443|  
+	|**Host offering this service**|rmsserver.contoso.com|  
+
+2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
+
+    a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
+
+    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **publish.asmx**
+
+    c. Right-click **publish.asmx** > **Properties** > **Edit**
+
+    d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and the specify a group that contains the users that you want to redirect.
+    
+    Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
+    
+    e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
+
+    f. To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following, which will prompt the client running Office 2016 to look for the SRV record:
+    
+    **Error message 401.3: You do not have permissions to view this diectory or page using the credentials you supplied (access denied due to Access Control Lists).**
+
+
+## Client reconfiguration by using registry edits
+
+This method is suitable for all Windows clients and should be used if they do not run Office 2016 but an earlier version. This method uses two migration scripts to reconfigure AD RMS clients:
 
 - Migrate-Client.cmd
 
@@ -67,7 +124,7 @@ The user configuration script is designed to run after the client configuration 
 
 When you cannot migrate all your Windows clients at once, run the following procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
 
-### Windows client reconfiguration by using registry edits
+### Modifying the scripts for registry edits
 
 1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
