@@ -35,7 +35,7 @@ Use the following information for Phase 3 of migrating from AD RMS to Azure Info
 
 For Windows computers that use Office 2016 click-to-run desktop apps:
 
-- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest, but it is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
+- You can reconfigure these clients to use Azure Information Protection by using DNS redirection. This is the preferred method for client migration because it is the simplest. However, this method is restricted to Office 2016 (or later) click-to-run desktop apps for Windows computers.
     
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
@@ -77,15 +77,15 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
     c. Right-click **publish.asmx** > **Properties** > **Edit**
 
-    d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and the specify a group that contains the users that you want to redirect.
+    d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
     
     Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following, which will prompt the client running Office 2016 to look for the SRV record:
+    f. To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following error message, which prompts the client running Office 2016 to look for the SRV record:
     
-    **Error message 401.3: You do not have permissions to view this diectory or page using the credentials you supplied (access denied due to Access Control Lists).**
+    **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
 
 ## Client reconfiguration by using registry edits
@@ -120,7 +120,7 @@ The two scripts include a version number and do not rerun until this version num
 
 	SET Version=20170427
 
-The user configuration script is designed to run after the client configuration script, and uses the version number in this check. It will stop if the client configuration script with the same version has not run. This check ensures that the two scripts are run in the right sequence. 
+The user configuration script is designed to run after the client configuration script, and uses the version number in this check. It stops if the client configuration script with the same version has not run. This check ensures that the two scripts run in the right sequence. 
 
 When you cannot migrate all your Windows clients at once, run the following procedures for batches of clients. For each user who has a Windows computer that you want to migrate in your batch, add the user to the **AIPMigrated** group that you created earlier.
 
@@ -129,12 +129,12 @@ When you cannot migrate all your Windows clients at once, run the following proc
 1. Return to the migration scripts, **Migrate-Client.cmd** and **Migrate-User.cmd**, which you extracted previously when you downloaded these scripts in the [preparation phase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
 2.  Follow the instructions in **Migrate-Client.cmd** to modify the script so that it contains your tenant's Azure Rights Management service URL, and also your server names for your AD RMS cluster extranet licensing URL and intranet licensing URL. Then, increment the script version, which was previously explained. A good practice for tracking script versions is to use today’s date in the following format: YYYYMMDD
-
+    
     > [!IMPORTANT]
     > As before, be careful not to introduce additional spaces before or after your addresses.
     > 
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You’ll find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
-
+    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
+    
     If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Using the instructions at the beginning of this step, configure your script deployment methods to run **Migrate-Client.cmd** and **Migrate-User.cmd** on the Windows client computers that are used by the members of the AIPMigrated group. 
