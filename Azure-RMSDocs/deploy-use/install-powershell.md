@@ -55,7 +55,7 @@ The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readm
 
 If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Follow the instructions for the gallery requirements, which include installing the PowerShellGet module and the NuGet provider.
 
-To see details about the AADRM module on the PowerShell Gallery, visit the AADRM page.
+To see details about the AADRM module on the PowerShell Gallery, visit the [AADRM page](https://www.powershellgallery.com/packages/AADRM).
 
 To install the AADRM module, start a PowerShell session and type:
 
