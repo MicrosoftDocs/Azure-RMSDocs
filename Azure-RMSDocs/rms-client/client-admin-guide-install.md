@@ -166,7 +166,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
