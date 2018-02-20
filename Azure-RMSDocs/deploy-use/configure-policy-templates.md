@@ -105,7 +105,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
-    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. If the template that you want to configure is for all users, stay on the **Azure Information Protection - Global policy** blade.
     
