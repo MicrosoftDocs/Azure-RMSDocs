@@ -36,7 +36,7 @@ The table in the next section includes some of the advanced configuration scenar
 For a complete list of the available cmdlets for this module, with more information about each one, see [AADRM](/powershell/module/aadrm/?view=azureipps#aadrm).
 
 > [!NOTE]
-> To install this PowerShell module, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+> To install this PowerShell module, see [Installing the AADRM PowerShell module](install-powershell.md).
 
 In addition to this service-side PowerShell module, the Azure Information Protection client installs a supplemental PowerShell module, **AzureInformationProtection**. This client module supports classifying and protecting multiple files so that, for example, you can bulk-protect all files in a folder. For more information, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) from the admin guide.
 
