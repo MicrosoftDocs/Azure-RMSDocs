@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,11 +70,11 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 1. Sign in to the Azure portal.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
+2. On the hub menu, click **Create a resource**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
 3. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
     
-    This action creates the **Azure Information Protection** blade for your tenant so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    This action creates the **Azure Information Protection** blade for your tenant so that the next time you sign in to the portal, you can select the service from the hub **All services** list. 
     
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
