@@ -29,7 +29,7 @@ ms.suite: ems
 
 Try the **Azure Information Protection help bot**, currently in beta:
 
-- See if the bot knows the answer to your question about Azure Information Protection, because it's been asked before.
+- See if the bot knows the answer to your question about Azure Information Protection, because somebody else has asked the same question.
 - Ask the bot to search the Azure Information Protection docs for you.
 - Ask the bot to help open an Azure Information Protection support ticket for you.
 - Type **#feedback** to let us know whether this bot is helpful.
