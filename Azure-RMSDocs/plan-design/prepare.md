@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -229,9 +229,9 @@ Remember to factor this delay into any changes or testing that you do when you u
 
 When you have confirmed that your users and groups can be used with Azure Information Protection and you are ready to start protecting documents and emails, check whether you need to activate the Azure Rights Management service. This service must be activated before you can protect your organization's documents and emails: 
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained after 20th February, 2018, the service is automatically activated for you. 
+- Beginning with February 2018: If your subscription that includes Azure Rights Management or Azure Information Protection was obtained during or after this month, the service is automatically activated for you. 
 
-- If your subscription was obtained before this date, you must activate the service yourself. 
+- If your subscription was obtained before February 2018: You must activate the service yourself. 
 
 For more information, which includes checking the activation status, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
