@@ -38,7 +38,7 @@ The Azure Information Protection client can apply the following to documents and
 
 - Protection only
 
-Use the following information to check which file types are supported, the different levels of protection and how to change the default protection level, and which files are automatically excluded (skipped) from classification and protection.
+Use the following information to check which file types the Azure Information Protection client supports, understand the different levels of protection and how to change the default protection level, and to identify which files are automatically excluded (skipped) from classification and protection.
 
 ## File types supported for classification only
 
@@ -105,7 +105,7 @@ The Azure Information Protection client supports protection at two different lev
 |Type of protection|Native|Generic|
 |----------------------|----------|-----------|
 |Description|For text, image, Microsoft Office (Word, Excel, PowerPoint) files, .pdf files, and other application file types that support a Rights Management service, native protection provides a strong level of protection that includes both encryption and enforcement of rights (permissions).|For all other applications and file types, generic protection provides a level of protection that includes both file encapsulation using the .pfile file type and authentication to verify if a user is authorized to open the file.|
-|Protection|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy set by the content owner when files are protected are fully enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
+|Protection|Files protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for those who receive the file through email or are given access to it through file or share permissions.<br /><br />- Additionally, usage rights and policy set by the content owner when files are protected are fully enforced when the content is rendered in either the Azure Information Protection viewer (for protected text and image files) or the associated application (for all other supported file types).|File protection is enforced in the following ways:<br /><br />- Before protected content is rendered, successful authentication must occur for people who are authorized to open the file and given access to it. If authorization fails, the file does not open.<br /><br />- Usage rights and policy set by the content owner are displayed to inform authorized users of the intended usage policy.<br /><br />- Audit logging of authorized users opening and accessing files occurs. However, usage rights are not enforced.|
 |Default for file types|This is the default level of protection for the following file types:<br /><br />- Text and image files<br /><br />- Microsoft Office (Word, Excel, PowerPoint) files<br /><br />- Portable document format (.pdf)<br /><br />For more information, see the following section, [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection).|This is the default protection for all other file types (such as .vsdx, .rtf, and so on) that are not supported by native protection.|
 
 You can change the default protection level that the Azure Information Protection client applies. You can change the default level of native to generic, from generic to native, and even prevent the Azure Information Protection client from applying protection. For more information, see the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section in this article.
@@ -137,7 +137,7 @@ The following table lists a subset of file types that support native protection 
 These file types are identified separately because when they are natively protected, the original file name extension is changed, and these files become read-only. Note that when files are generically protected, the original file name extension is always changed to .pfile.
 
 > [!WARNING]
-> If you have firewalls, web proxies, or security software that inspect and take action according to file name extensions, you might need to reconfigure these to support these new file name extensions.
+> If you have firewalls, web proxies, or security software that inspect and take action according to file name extensions, you might need to reconfigure these network devices and software to support these new file name extensions.
 
 |Original file name extension|Protected file name extension|
 |--------------------------------|-------------------------------------|
@@ -174,9 +174,9 @@ Reasons for why you might want to do this:
 
 - To accommodate security systems that take action on files by their file name extension and can be reconfigured to accommodate the .pfile file name extension but cannot be reconfigured to accommodate multiple file name extensions for native protection.
 
-Similarly, you can force the Azure Information Protection client to apply native protection to files that by default, would have generic protection applied. This might be appropriate if you have an application that supports the RMS APIs – for example, a line-of-business application written by your internal developers or an application purchased from an independent software vendor (ISV).
+Similarly, you can force the Azure Information Protection client to apply native protection to files that by default, would have generic protection applied. This action might be appropriate if you have an application that supports the RMS APIs. For example, a line-of-business application written by your internal developers or an application purchased from an independent software vendor (ISV).
 
-You can also force the Azure Information Protection client to block the protection of files (not apply native protection or generic protection). For example, this might be required if you have an automated application or service that must be able to open a specific file to process its contents. When you block protection for a file type, users cannot use the Azure Information Protection client to protect a file that has that file type. When they try, they see a message that the administrator has prevented protection and they must cancel their action to protect the file.
+You can also force the Azure Information Protection client to block the protection of files (not apply native protection or generic protection). For example, this action might be required if you have an automated application or service that must be able to open a specific file to process its contents. When you block protection for a file type, users cannot use the Azure Information Protection client to protect a file that has that file type. When they try, they see a message that the administrator has prevented protection and they must cancel their action to protect the file.
 
 To configure the Azure Information Protection client to apply generic protection to all files that by default, would have native protection applied, make the following registry edits. Note if the FileProtection key does not exist, you must manually create it.
 
@@ -200,7 +200,7 @@ These two settings result in the Azure Information Protection client applying ge
 
 3. In the newly added file type key (for example, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**), create a new String Value named **Encryption** that has a value of **Native**.
 
-As a result of these settings, all files are generically protected except files that have a .docx file name extension, which are natively protected by the Azure Information Protection client.
+As a result of these settings, all files are generically protected except files that have a .docx file name extension. These files are natively protected by the Azure Information Protection client.
 
 Repeat these three steps for other file types that you want to define as exceptions because they support native protection and you do not want them to be generically protected by the Azure Information Protection client.
 
@@ -212,7 +212,7 @@ You can make similar registry edits for other scenarios by changing the value of
 
 - **Off**: Block protection
 
-For additional information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". 
+For more information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". 
 
 ## File types that are excluded from classification and protection by the Azure Information Protection client
 
@@ -251,7 +251,7 @@ You can classify and protect these container files, but the classification and p
 If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet.
 
 ## Next steps
-Now that you've identified the file types supported by the Azure Information Protection client, see the following for additional information that you might need to support this client:
+Now that you've identified the file types supported by the Azure Information Protection client, see the following resources for additional information that you might need to support this client:
 
 - [Customizations](client-admin-guide-customizations.md)
 
