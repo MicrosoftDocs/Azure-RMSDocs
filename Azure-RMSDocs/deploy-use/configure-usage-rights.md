@@ -121,9 +121,9 @@ A user wants to email some information to specific people in the Marketing depar
 
 ## Encrypt Only option for emails
 
-When Exchange Online is configured for the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-only**.
+When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt Only**.
 
-Currently, this option is rolling out to tenants for Outlook on the web, and the latest Outlook 2016 clients display the encrypted message inline. Other email clients display a link to read the protected message.
+This option is being deployed to tenants who use Exchange Online, initially just for Outlook on the web and as another rights protection option for a transport rule. Email clients display the encrypted message inline, or a link to Outlook on the web, or a link to read the protected message.
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except Full Control. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
 
