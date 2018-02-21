@@ -50,7 +50,7 @@ If you need to manually enable the super user feature, use the PowerShell cmdlet
 Although using a group for your super users is easier to manage, be aware that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AadrmSuperUser, rather than adding the user to an existing group that you have configured by using Set-AadrmSuperUserGroup.
 
 > [!NOTE]
-> If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+> If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], see [Installing the AADRM PowerShell module](install-powershell.md).
 
 Security best practices for the super user feature:
 

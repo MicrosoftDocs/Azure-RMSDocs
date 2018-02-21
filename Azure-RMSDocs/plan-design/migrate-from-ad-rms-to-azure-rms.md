@@ -6,7 +6,7 @@ description: Instructions to migrate your Active Directory Rights Management Ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -147,9 +147,9 @@ The migration steps can be divided into five phases that can be done at differen
 
 [**PHASE 1: MIGRATION PREPARATION**](migrate-from-ad-rms-phase1.md)
 
-- **Step 1: Download the Azure RMS Management Administration Tool and identify your tenant URL**
+- **Step 1: Install the AADRM PowerShell module and identify your tenant URL**
 
-    The migration process requires you to run one or more of the  PowerShell cmdlets from the Azure RMS module that is installed with the Azure RMS Management Administration Tool. You also need to know your tenant's Azure Rights Management service URL to complete many of the migration steps. You can identity this value by using PowerShell.
+    The migration process requires you to run one or more of the PowerShell cmdlets from the AADRM module. You will need to know your tenant's Azure Rights Management service URL to complete many of the migration steps, and you can identity this value by using PowerShell.
 
 - **Step 2. Prepare for client migration**
 

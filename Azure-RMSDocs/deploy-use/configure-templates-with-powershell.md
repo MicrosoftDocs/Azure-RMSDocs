@@ -40,7 +40,7 @@ You can also use export and import to back up and restore your custom templates,
 > 
 > If you have previously installed this PowerShell module, run the following command in a PowerShell window to check the version number: `(Get-Module aadrm -ListAvailable).Version`
 
-For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+For installation instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
 
 The cmdlets that support creating and managing templates:
 

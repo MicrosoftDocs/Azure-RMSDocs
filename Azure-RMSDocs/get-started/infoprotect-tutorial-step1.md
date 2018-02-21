@@ -42,11 +42,11 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
     
     If you are not the global admin, you can use one of the following [administrative roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **Information Protection Administrator** or **Security Administrator**.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
+2. On the hub menu, click **Create a resource**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
 3.  On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
     
-    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **All services** list. 
     
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
