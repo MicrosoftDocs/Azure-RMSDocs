@@ -6,7 +6,7 @@ description: Use these steps to prepare for, implement, and manage Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -91,7 +91,7 @@ When users are comfortable labeling documents and emails, you're ready to start 
 
 3. If you are currently using on-premises Rights Management services: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Activate the Azure Rights Management service so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+4. Make sure that the Azure Rights Management service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 Optionally, consider configuring the following:
 
@@ -157,7 +157,7 @@ Before you begin using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsm
 
 4. If you are currently using on-premises Rights Management services: Perform a migration to move the keys, templates, and URLs to the cloud. For more information, see [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Activate Rights Management so that you can begin to use the service. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+5. Make sure that the Azure Rights Management service is activated so that you can begin to protect documents and emails. If a phased deployment is required, configure user onboarding controls to restrict usage to specific users. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 Optionally, consider configuring the following:
 
