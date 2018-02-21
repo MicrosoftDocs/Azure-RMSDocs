@@ -30,7 +30,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2.
+>Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you're ready for step 2.
 
 When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails. You can also track how these protected documents are used when you share them with others. 
 
