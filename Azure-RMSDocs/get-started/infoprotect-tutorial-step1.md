@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -30,11 +30,11 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 >*Applies to: Azure Information Protection*
 
 > [!NOTE]
->Even if you have already activated the Azure Rights Management service for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you are ready for step 2. 
+>Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you're ready for step 2.
 
-When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails, and track how protected documents are used when you share them with others. There are different ways that you can activate protection, which include using Windows PowerShell, and using the admin portals.
+When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails. You can also track how these protected documents are used when you share them with others. 
 
-For this tutorial, we'll use the Azure portal, which is where you also configure labels for users. 
+There are different ways that you can activate protection. You can use PowerShell and the admin portals. But for this tutorial, we use the Azure portal, which is where you also configure labels for users. 
 
 ## To activate the Azure Rights Management service
 
@@ -42,11 +42,11 @@ For this tutorial, we'll use the Azure portal, which is where you also configure
     
     If you are not the global admin, you can use one of the following [administrative roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal): **Information Protection Administrator** or **Security Administrator**.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
+2. On the hub menu, click **Create a resource**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
 3.  On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
     
-    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **All services** list. 
     
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
