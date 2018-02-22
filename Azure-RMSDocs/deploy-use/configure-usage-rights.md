@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -102,11 +102,11 @@ These default templates are created when your subscription was purchased, and th
 
 ## Do Not Forward option for emails
 
-Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have one additional information rights protection option for emails: **Do Not Forward**. 
+Exchange clients and services (for example, the Outlook client, the Outlook Web Access app, and Exchange transport rules) have an additional information rights protection option for emails: **Do Not Forward**. 
 
 Although this option appears to users (and Exchange administrators) as if it's a default Rights Management template that they can select, **Do Not Forward** is not a template. That explains why you cannot see it in the Azure portal when you view and manage templates for Azure Rights Management. Instead, the **Do Not Forward** options is a set of rights that is dynamically applied by users to their email recipients.
 
-When the **Do Not Forward** option is applied to an email, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
+When the **Do Not Forward** option is applied to an email, the email is encrypted and recipients must be authenticated. Then, the recipients cannot forward it, or print it, copy from it, or save attachments or save as a different name. For example, in the Outlook client, the Forward button is not available, the **Save As**, **Save Attachment**, and **Print** menu options are not available, and you cannot add or change recipients in the **To**, **Ccc**, or **Bcc** boxes.
 
 There's an important distinction between applying the **Do Not Forward** option and applying a template that doesn't grant the Forward right to an email: The **Do Not Forward** option uses a dynamic list of authorized users that is based on the user's chosen recipients of the original email; whereas the rights in the template have a static list of authorized users that the administrator has previously specified. What's the difference? Let's take an example: 
 
@@ -118,6 +118,14 @@ A user wants to email some information to specific people in the Marketing depar
 
 > [!NOTE] 
 > Use **Do Not Forward** when it's important that only the recipients that the sender chooses should see the information in the email. Use a template for emails to restrict rights to a group of people that the administrator specifies in advance, independently from the sender's chosen recipients.
+
+## Encrypt-Only option for emails
+
+When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
+
+This option is being deployed to tenants who use Exchange Online, initially just for Outlook on the web and as another rights protection option for a transport rule. For more information, see the following blog post announcement from the Office team: [Encrypt only now available in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+
+When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except Full Control. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
 
 ## Rights Management issuer and Rights Management owner
 
