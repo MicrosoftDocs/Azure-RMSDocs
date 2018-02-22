@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,8 +50,8 @@ When you create users and groups by using the first three methods from this list
 There are three scenarios for using users and groups with Azure Information Protection:
 
 - **For assigning labels to users** when you use labeling and classification. Only administrators select these groups:
-
-    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.     
+    
+    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
 
 - **For assigning usage rights and access controls** when you use the Azure Rights Management service to protect documents and emails. Administrators and users can select these users and groups:
 
@@ -227,6 +227,12 @@ Remember to factor this delay into any changes or testing that you do when you u
 
 ## Next steps
 
-When you have confirmed that your users and groups can be used with Azure Information Protection and you are ready to start protecting documents and emails, activate the Rights Management service to enable this data protection service. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
+When you have confirmed that your users and groups can be used with Azure Information Protection and you are ready to start protecting documents and emails, check whether you need to activate the Azure Rights Management service. This service must be activated before you can protect your organization's documents and emails: 
+
+- Beginning with February 2018: If your subscription that includes Azure Rights Management or Azure Information Protection was obtained during or after this month, the service is automatically activated for you. 
+
+- If your subscription was obtained before February 2018: You must activate the service yourself. 
+
+For more information, which includes checking the activation status, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
