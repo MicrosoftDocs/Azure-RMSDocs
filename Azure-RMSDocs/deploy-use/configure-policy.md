@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -127,7 +127,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 
 - Every 24 hours.
 
-- For the [Azure Information Protection Scanner](deploy-aip-scanner.md): When the service starts, and every hour.
+- For the [Azure Information Protection Scanner](deploy-aip-scanner.md): When the service starts (if the policy is older than an hour), and every hour during operation.
 
 
 >[!NOTE]

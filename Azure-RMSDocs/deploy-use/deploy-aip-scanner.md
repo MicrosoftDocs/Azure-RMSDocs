@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -209,7 +209,10 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again by running [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) with the `-Type` parameter set to **Full**. This configuration is useful when you want the reports to include all files and it is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
-In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour and when the service starts.
+In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.
+
+> [!TIP]
+> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **%LocalAppData%\Microsoft\MSIP\Policy.msip**, and restart the Azure Information Scanner service.
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
