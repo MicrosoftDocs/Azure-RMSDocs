@@ -6,7 +6,7 @@ description: Although Azure Information Protection comes with default labels tha
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,6 +32,8 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 
 You can add a new label, or add a new sublabel to an existing label when you need a further level of classification. For example, the last label in the [default policy](configure-policy-default.md), contains sublabels.
+
+When you create the first sublabel for a label, users can no longer select the original, parent label. If necessary, create a new sublabel to recreate the parent label settings so that users can apply the same settings.
 
 Use the following instructions to add a new label to the Azure Information Protection policy.
 
