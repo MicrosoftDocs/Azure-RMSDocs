@@ -31,7 +31,9 @@ ms.suite: ems
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Protection settings for Azure Information Protection are contained in protection templates. Everything that you can do in the Azure portal to create and manage protection settings, you can do from the command line by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+Protection settings for Azure Information Protection are contained in protection templates. Everything that you can do in the Azure portal to create and manage protection settings, you can do from the command line by using PowerShell. 
+
+In addition, you can export and import protection templates. These two actions let you copy protection templates between tenants or perform bulk edits of complex properties, such as multilingual names and descriptions.
 
 You can also use export and import to back up and restore your protection templates. As a best practice, regularly back up your templates, so that if you make a change that was not intended, you can easily revert to a previous version.
 
