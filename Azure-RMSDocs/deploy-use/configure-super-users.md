@@ -64,6 +64,8 @@ It doesn't matter when you enable the super user feature or when you add users a
 
 - If you do not need the super user feature for everyday services, enable the feature only when you need it, and disable it again by using the [Disable-AadrmSuperUserFeature](/powershell/module/aadrm/disable-aadrmsuperuserfeature) cmdlet.
 
+### Example auditing for the super user feature
+
 The following log extract shows some example entries from using the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) cmdlet. 
 
 In this example, the administrator for Contoso Ltd confirms that the super user feature is disabled, adds Richard Simone as a super user, checks that Richard is the only super user configured for the Azure Rights Management service, and then enables the super user feature so that Richard can now decrypt some files that were protected by an employee who has now left the company.
