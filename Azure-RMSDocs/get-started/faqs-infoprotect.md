@@ -65,7 +65,7 @@ When you use sublabels, don't configure visual markings, protection, and conditi
 
 ## How do I prevent somebody from removing or changing a label?
 
-Although there’s a [policy setting](../deploy-use/configure-policy-setting.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](../deploy-use/configure-usage-rights.md). 
+Although there’s a [policy setting](../deploy-use/configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](../deploy-use/configure-usage-rights.md). 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
