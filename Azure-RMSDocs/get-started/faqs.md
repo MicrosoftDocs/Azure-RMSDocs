@@ -149,7 +149,6 @@ Different countries have different requirements and regulations. To help you ans
 To see how Azure Information Protection can help you meet the General Data Protection Regulation (GDPR), see the following blog post announcement, with video: [Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
 
 ## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
-
 See [Compliance and supporting information for Azure Information Protection](../understand-explore/compliance.md).
 
 ## How can I report a problem or send feedback for Azure Information Protection?
