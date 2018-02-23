@@ -6,7 +6,7 @@ description: Have a question that is specifically about classification and label
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -63,6 +63,9 @@ For example, the label **Confidential** might contain sublabels such as **Legal*
 
 When you use sublabels, don't configure visual markings, protection, and conditions at the primary label. When you use sub-levels, configure these setting on the sublabel only. If you configure these settings on the primary label and its sublabel, the settings at the sublabel take precedence.
 
+## How do I prevent somebody from removing or changing a label?
+
+Although there’s a [policy setting](../deploy-use/configure-policy-setting.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](../deploy-use/configure-usage-rights.md). 
 ## When an email is labeled, do any attachments automatically get the same labeling?
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
