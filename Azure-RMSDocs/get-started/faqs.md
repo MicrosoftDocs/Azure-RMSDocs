@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -144,8 +144,11 @@ The technical documentation does not contain information about upcoming releases
 
 Different countries have different requirements and regulations. To help you answer this question for your organization, see [Suitability for different countries](../understand-explore/compliance.md#suitability-for-different-countries).
 
-## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
+## How can Azure Information Protection help with GDPR?
 
+To see how Azure Information Protection can help you meet the General Data Protection Regulation (GDPR), see the following blog post announcement, with video: [Microsoft 365 provides an information protection strategy to help with the GDPR](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr).
+
+## Where can I find supporting information for Azure Information Protection—such as legal, compliance, and SLAs?
 See [Compliance and supporting information for Azure Information Protection](../understand-explore/compliance.md).
 
 ## How can I report a problem or send feedback for Azure Information Protection?
