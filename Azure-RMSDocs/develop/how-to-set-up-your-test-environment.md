@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Testing your application | Azure RMS
@@ -47,13 +47,13 @@ You can test with either Azure RMS or an RMS server running on Windows Server an
 
 ## Remarks
 
-The guidance in this topic is not comprehensive. For detailed information about how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
+The guidance in this topic is not comprehensive. For detailed information about how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 ### Related topics
 
 * [How-to install and configure an RMS server](how-to-install-and-configure-an-rms-server.md)
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
 * [Install the SDK](install-the-rms-sdk.md)
-* [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
+* [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

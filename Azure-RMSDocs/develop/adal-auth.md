@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Configure your app for ADAL authentication - AIP
@@ -34,8 +34,8 @@ This topic describes the steps for configuring your app for Azure Active Directo
 
 You will need the following:
 
-- A [subscription for Microsoft Azure](https://azure.microsoft.com/en-us/) (a free trial is sufficient). For more information, see [How users sing up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
-- A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/en-us/library/dn592127.aspx) account is sufficient).
+- A [subscription for Microsoft Azure](https://azure.microsoft.com/) (a free trial is sufficient). For more information, see [How users sing up for RMS for individuals](../understand-explore/rms-for-individuals-user-sign-up.md)
+- A subscription for Microsoft Azure Rights Management (a free [RMS for Individuals](https://technet.microsoft.com/library/dn592127.aspx) account is sufficient).
 
 > [!NOTE]
 > Ask your IT Admin whether or not you have a subscription for Microsoft Azure Rights Management and, have your IT Admin perform the steps below. If your organization does not have a subscription, you should have your IT admin create one. Also, your IT Admin should subscribe with a *Work or school account*, rather than a *Microsoft account* (i.e. Hotmail).
