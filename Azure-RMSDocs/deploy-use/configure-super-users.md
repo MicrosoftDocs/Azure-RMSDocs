@@ -60,13 +60,13 @@ It doesn't matter when you enable the super user feature or when you add users a
 
 - Restrict and monitor the administrators who are assigned a global administrator for your Office 365 or Azure Information Protection tenant, or who are assigned the GlobalAdministrator role by using the [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) cmdlet. These users can enable the super user feature and assign users (and themselves) as super users, and potentially decrypt all files that your organization protects.
 
-- To see which users and service accounts are individually assigned as super users, use the [Get-AadrmSuperUser cmdlet](/powershell/module/aadrm/get-aadrmsuperuser). To see whether a super user group is configured, use the [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperusergroup) cmdlet and your standard user management tools to check which users are a member of this group. Like all administration actions, enabling or disabling the super feature, and adding or removing super users are logged and can be audited by using the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) command. When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
+- To see which users and service accounts are individually assigned as super users, use the [Get-AadrmSuperUser cmdlet](/powershell/module/aadrm/get-aadrmsuperuser). To see whether a super user group is configured, use the [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperusergroup) cmdlet and your standard user management tools to check which users are a member of this group. Like all administration actions, enabling or disabling the super feature, and adding or removing super users are logged and can be audited by using the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) command. See the next section for an example. When super users decrypt files, this action is logged and can be audited with [usage logging](log-analyze-usage.md).
 
 - If you do not need the super user feature for everyday services, enable the feature only when you need it, and disable it again by using the [Disable-AadrmSuperUserFeature](/powershell/module/aadrm/disable-aadrmsuperuserfeature) cmdlet.
 
 ### Example auditing for the super user feature
 
-The following log extract shows some example entries from using the Get-AadrmAdminLog cmdlet. 
+The following log extract shows some example entries from using the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) cmdlet. 
 
 In this example, the administrator for Contoso Ltd confirms that the super user feature is disabled, adds Richard Simone as a super user, checks that Richard is the only super user configured for the Azure Rights Management service, and then enables the super user feature so that Richard can now decrypt some files that were protected by an employee who has now left the company.
 
