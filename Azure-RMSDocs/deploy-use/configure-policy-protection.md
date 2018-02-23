@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -69,10 +69,14 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 4. On the **Label** blade, locate **Set permissions for documents and emails containing this label** and select one of the following options:
     
     - **Not configured**: Select this option if the label is currently configured to apply protection and you no longer want the selected label to apply protection. Then go to step 11.
+        
+        The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
     
     - **Protect**: Select this option to apply protection, and then go to step 5.
     
     - **Remove Protection**: Select this option to remove protection if a document or email is protected. Then go to step 11.
+        
+        The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
         
         Note that for users to apply a label that has this option, they must have permissions to remove Rights Management protection. This requirement means that users must have the **Export** or **Full Control** [usage right](../deploy-use/configure-usage-rights.md). Or, they must be the Rights Management owner (which automatically grants the Full Control usage right), or be a [super user for Azure Rights Management](../deploy-use/configure-super-users.md). The default Azure Rights Management templates do not include the usage rights that let users remove protection. 
         
@@ -122,7 +126,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
     If required, you can now add a second set of users and groups with usage rights. Repeat until you have specified all the users and groups with their respective permissions.
 
     >[!TIP]
-    >Consider adding the **Copy and extract content** custom permission and grant this permission to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
+    >Consider adding the **Save As, Export (EXPORT)** custom permission and grant this permission to data recovery administrators or personnel in other roles that have responsibilities for information recovery. If needed, these users can then remove protection from files and emails that will be protected by using this label or template. This ability to remove protection at the permission level for a document or email provides more fine-grained control than the [super user feature](configure-super-users.md).
     
     For all the users and groups that you specified, on the **Protection** blade, now check whether you want to make any changes to the following settings. Note that these settings, as with the permissions, do not apply to the [Rights Management issuer or Rights Management owner](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), or any [super user](configure-super-users.md) that you have assigned.
     
