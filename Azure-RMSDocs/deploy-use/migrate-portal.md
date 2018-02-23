@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ However, customers who have a subscription for Office 365 US Government (Governm
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
-|Access the configuration settings for the first time|1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**.<br /><br />3. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.<br /><br />This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **More services** list.
+|Access the configuration settings for the first time|1. [Sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. On the hub menu, click **Create a resource**, and then, from the **MARKETPLACE** list, select **Security + Identity**.<br /><br />3. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.<br /><br />This action creates the **Azure Information Protection** blade so that the next time you sign in to the portal, you can select the service from the hub **All services** list.
 |Create a new template|Create a label that applies protection, and use **Set permissions** to define the permissions, expiration, and offline access. <br /><br />Under the covers, this configuration creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.<br /><br />For more information, see [To create a new template](configure-policy-templates.md#to-create-a-new-template).
 |Edit the template properties: <br /><br />- Template name and description<br /><br />- Usage rights, content expiration, and offline access settings|If you haven't already done so, [convert the template to a label](configure-policy-templates.md#to-convert-templates-to-labels), and then do the following<br /><br />1. Change the label name and description<br /><br />2. Change the protection settings on the label to update the permissions, expiration, and offline access settings.<br /><br />For more information, see [To configure a label for Rights Management protection](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Archive a template|Set the label status to **Disabled**.

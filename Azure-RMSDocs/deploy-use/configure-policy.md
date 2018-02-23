@@ -70,11 +70,11 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 1. Sign in to the Azure portal.
 
-2. On the hub menu, click **New**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
+2. On the hub menu, click **Create a resource**, and then, from the **MARKETPLACE** list, select **Security + Identity**. 
     
 3. On the **Security + Identify** blade, from the **FEATURED APPS** list, select **Azure Information Protection**. Then, on the **Azure Information Protection** blade, click **Create**.
     
-    This action creates the **Azure Information Protection** blade for your tenant so that the next time you sign in to the portal, you can select the service from the hub **More services** list. 
+    This action creates the **Azure Information Protection** blade for your tenant so that the next time you sign in to the portal, you can select the service from the hub **All services** list. 
     
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
@@ -87,7 +87,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Information Protection Administrator, Security Administrator, or Global Administration. See the [preceding section](#signing-in-to-the-azure-portal) for more information about these administrative roles.
 
-2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **More services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
+2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
     The **Azure Information Protection - Global policy** blade automatically opens for you to view and edit the global policy that all users get. 
     
