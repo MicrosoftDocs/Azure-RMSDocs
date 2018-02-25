@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/22/2018
+ms.date: 02/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -39,8 +39,14 @@ For protection-only, you must have an [Office 365 plan that includes Rights Mana
 
 To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
-> [!NOTE]
-> If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+> [!TIP]
+> Looking to see if your Office 365 subscription supports the new capabilities from Office 365 Message Encryption, to send protected emails to personal email addresses? Check the following resources:
+>
+> - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+>
+> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+
+If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 ## Azure Active Directory
 
