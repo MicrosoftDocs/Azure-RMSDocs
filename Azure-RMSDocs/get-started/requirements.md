@@ -33,14 +33,14 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 ## Subscription for Azure Information Protection
 
-- **For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
+**For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
 
-- **For protection-only**: You must have an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**For protection-only**: You must have an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 > [!TIP]
-> Looking to see if your Office 365 subscription supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+> Looking to see if your Office 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
 > [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
