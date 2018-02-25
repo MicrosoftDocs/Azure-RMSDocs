@@ -40,11 +40,11 @@ For protection-only, you must have an [Office 365 plan that includes Rights Mana
 To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
 
 > [!TIP]
-> Looking to see if your Office 365 subscription supports the new capabilities from Office 365 Message Encryption, to send protected emails to personal email addresses? Check the following resources:
+> Looking to see if your Office 365 subscription supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
 >
-> - [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
-> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
 
 If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
