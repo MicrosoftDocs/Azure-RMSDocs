@@ -37,7 +37,7 @@ Important guidance if you are already using Active Directory Rights Management S
 
 ## Your subscription was purchased during or after February 2018
 
-If your subscription that includes Azure Rights Management was purchased during or after Februrary 2018, the Azure Rights Management service is activated by default. If you are also using Active Directory Rights Management Services (AD RMS), this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you deactivate the Azure Rights Management service as soon as possible. 
+Towards the end of February 2018, new subscriptions that include Azure Information Protection now activate the Azure Rights Management service by default. If this service is automatically activated for you and you are also using Active Directory Rights Management Services (AD RMS), this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you deactivate the Azure Rights Management service as soon as possible. 
 
 When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. One of the steps in the migration is to activate the service again, but you do this step after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
 
