@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid:  6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
+ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 
 # optional metadata
 
