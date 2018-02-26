@@ -43,7 +43,7 @@ When the Azure Rights Management service for Azure Information Protection is act
 
 When you have a service plan that includes Azure Rights Management, you might not have to activate the service:
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained in or after **February 2018**, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
+- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of **February 2018** or later, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
 - If your subscription was obtained before this month, you must activate the service yourself. 
 
