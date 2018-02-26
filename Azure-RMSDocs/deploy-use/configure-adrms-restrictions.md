@@ -137,7 +137,7 @@ You can find the template GUID and licensing URL values from the Active Director
 
 ## Next steps
 
-To read more information about this feature and guidance for when to use it, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
+To read more information about this feature and guidance for when to use it, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
 To configure a label for AD RMS protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 
 

@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,9 +32,7 @@ ms.suite: ems
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
-The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module replaces the RMSProtection module that installs with the RMS Protection Tool. If you have the RMSProtection tool installed when you install the Azure Information Protection client, the RMSProtection module is automatically uninstalled.
-
-The AzureInformationProtection module includes all the Rights Management cmdlets from the RMS Protection Tool. There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
+The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
@@ -50,7 +48,7 @@ For a list of all the cmdlets and their corresponding help, see [AzureInformatio
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
-As with the RMSProtection module, the current release of the AzureInformationProtection module has the following limitations:
+The current release of the AzureInformationProtection module has the following limitations:
 
 - You can unprotect Outlook personal folders (.pst files), but you cannot currently natively protect these files or other container files by using this PowerShell module.
 
@@ -145,7 +143,7 @@ Run the Get-AadrmConfiguration cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
-[Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+[Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
 
 2. Start Windows PowerShell with the **Run as Administrator** option.
 
@@ -157,7 +155,7 @@ Windows PowerShell module:
     
 4. Run `Get-AadrmConfiguration` and make a copy of the BPOSId value.
     
-    The following is an example of output from Get-AadrmConfiguration:
+    An example of output from Get-AadrmConfiguration:
     
 		    BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
 		
@@ -471,7 +469,11 @@ By default, when you run the cmdlets for labeling, the commands run in your own 
 > [!NOTE]
 > If you use [scoped policies](../deploy-use/configure-policy-scope.md), remember that you might need to add this account to your scoped policies.
 
-The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. When the token expires, run the cmdlet again to acquire a new token:
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. Specify the user account name and password that you created for the unattended user. After that, this account can then run the labeling cmdlets non-interactively until the authentication token expires. 
+
+For the user account to be able to sign in interactively this first time, the account must have the **Log on locally** right. This right is standard for user accounts but your company policies might prohibit this configuration for service accounts. If that's the case, you can run Set-AIPAuthentication with the *Token* parameter so that authentication completes without the sign-in prompt. You can run this command as a scheduled task and grant the account the lower right of **Log on as batch job**. For more information, see the following sections. 
+
+When the token expires, run the cmdlet again to acquire a new token.
 
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
@@ -527,7 +529,82 @@ After you have run this cmdlet, you can run the labeling cmdlets in the context 
 
 12. Back on the **Required permissions** blade, select **Grant Permissions**, click **Yes** to confirm, and then close this blade.
     
-You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with parameters.
+
+You've now completed the configuration of the two apps and you have the values that you need to run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) with the parameters *WebAppId*, *WebAppKey* and *NativeAppId*. For example:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Run this command in the context of the account that will label and protect the documents non-interactively. For example, a user account for your PowerShell scripts or the service account to run the Azure Information Protection scanner.  
+
+When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the instructions in the following section so that the service account can authenticate by using a token.
+
+### Specify and use the Token parameter for Set-AIPAuthentication
+
+Use the following additional steps and instructions to avoid the initial interactive sign-in for an account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. For example, this might be the case for your service account that runs the Azure Information Protection scanner.
+
+1. Create a PowerShell script on your local computer.
+
+2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
+
+3. Modify the PowerShell script to include the token.
+
+4. Create a task that runs the PowerShell script in the context of the service account that will label and protect files.
+
+5.Confirm that the token is saved for the service account, and delete the PowerShell script.
+
+#### Step 1: Create a PowerShell script on your local computer
+
+1. On your computer, create a new PowerShell script named Aipauthentication.ps1.
+
+2. Copy and paste the following command into this script:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Using the instructions in the preceding section, modify this command by specifying your own values for the **WebAppId**, **WebAppkey**, and **NativeAppId** parameters. At this time, you do not have the value for the **Token** parameter, which you specify later. 
+    
+    For example: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### Step 2: Run Set-AIPAuthentication to get an access token and copy it to the clipboard
+
+1. Open a Windows PowerShell session.
+
+2. Using the same values as you specified in the script, run the following command:
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    For example: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### Step 3: Modify the PowerShell script to supply the token
+
+1. In your PowerShell script, specify the token value by pasting the string from the clipboard, and save the file.
+
+2. Sign the script. If you do not sign the script (more secure), you must configure Windows PowerShell on the computer that will run the labeling commands. For example, run a Windows PowerShell session with the **Run as Administrator** option, and type: `Set-ExecutionPolicy RemoteSigned`. However, this configuration lets all unsigned scripts run when they are stored on this computer (less secure).
+    
+    For more information about signing Windows PowerShell scripts, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in the PowerShell documentation library.
+
+3. Copy this PowerShell script to the computer that will label and protect files, and delete the original on your computer. For example, you copy the PowerShell script to C:\Scripts\Aipauthentication.ps1 on a Windows Server computer.
+
+#### Step 4: Create a task that runs the PowerShell script
+
+1. Make sure that the service account that will label and protect files has the **Log on as a batch job** right.
+
+2. On the computer that will label and protect files, open Task Scheduler and create a new task. Configure this task to run as the service account that will label and protect files, and then configure the following values for the **Actions**:
+    
+    - **Action**: `Start a program`
+    - **Program/script**: `Powershell.exe`
+    - **Add arguments (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    For the argument line, specify your own path and file name, if these are different from the example.
+
+3. Manually run this task.
+
+#### Step 4: Confirm that the token is saved and delete the PowerShell script
+
+1. Confirm that the token is now stored in the %localappdata%\Microsoft\MSIP folder for the service account profile. This value is protected by the service account.
+
+2. Delete the PowerShell script that contains the token value (for example, Aipauthentication.ps1).
+    
+    Optionally, delete the task. If your token expires, you must repeat this process, in which case it might be more convenient to leave the configured task so that it's ready to rerun when you copy over the new PowerShell script with the new token value.
 
 ## Next steps
 For cmdlet help when you are in a PowerShell session, type `Get-Help <cmdlet name> cmdlet`, and use the -online parameter to read the most up-to-date information. For example: 

@@ -4,8 +4,8 @@
 title: Developer community resources | Microsoft Docs
 description: Azure Information Protection is well supported by a growing community of developers on multiple platforms.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article

@@ -6,7 +6,11 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
+<<<<<<< HEAD
 ms.date: 01/09/2018
+=======
+ms.date: 02/06/2018
+>>>>>>> fe0c71c6081488ec3735d6671fd5c78fc1fe3369
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,6 +54,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Version 1.20.2.0
 
+<<<<<<< HEAD
 **Released**: 01/09/2018
 
 If you have the last preview version of the client installed (1.15.7.0), you must first uninstall it before installing this GA version. 
@@ -86,6 +91,65 @@ Fixes for stability and for specific scenarios that include:
 - For Office apps, improve performance and memory consumption.
 
 - When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+=======
+If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
+
+The current preview version is **1.21.203.0** and has the following changes since the current GA version of the client.
+
+This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
+
+**New features**:
+
+- The Azure Information Protection scanner: The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
+
+- For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- You can now set different visual markings for Word, Excel, PowerPoint, and Outlook by using an "If.App" variable statement in the text string, and identify the application type. [More information](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- Support for the [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
+
+- A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
+
+- Support for a completely non-interactive authentication method, for service accounts that use PowerShell and that cannot be granted the **Log on locally** right. This authentication method requires you to use the new *Token* parameter with [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication), and run a PowerShell script as a task. [More information](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+
+- New parameter, *IntegratedAuth* for [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). This parameter supports server mode for AD RMS, which is needed for AD RMS to support Windows Server FCI.
+
+
+**Fixes**:
+
+Fixes for stability and for specific scenarios that include:
+
+- For Office versions 16.0.8628.2010 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside Office applications.
+
+- When two organization using Azure Information Protection share labeled documents and emails, their own labels are retained and not replaced by the other organization's labels.
+
+- Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
+
+- Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
+
+- Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
+
+- The viewer can now open protected text-based files (.ptxt and .pxml) larger than 20 MB. 
+
+- Prevent Outlook hanging when Outlook reminders are used.
+
+- Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
+
+- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+
+- Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
+
+- Prevent Office crashes after the Azure Information Protection client is upgraded.
+
+- For Office apps, improve performance and memory consumption.
+
+- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+
+- For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
+
+>>>>>>> fe0c71c6081488ec3735d6671fd5c78fc1fe3369
 
 ## Version 1.10.56.0
 

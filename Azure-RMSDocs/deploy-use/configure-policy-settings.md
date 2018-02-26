@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -37,9 +37,9 @@ Note that your policy settings might have different default values, depending on
 
 To configure these settings:
 
-1. If you haven't already done so, in a new browser window, sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
-    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. If the settings that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
     
@@ -55,7 +55,7 @@ To configure these settings:
         
         ![Azure Information Protection prompt if labeling is enforced](../media/info-protect-enforce-labelv2.png)
         
-    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and their justification reason is logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection**: When you set this option to **On** and a user does any of these actions (for example, change the **Public** label to **Personal**), the user is prompted to provide an explanation for this action. For example, the user might explain that the document no longer contains sensitive information. The action and its justification reason are logged in their local Windows event log: **Applications and Services Logs** > **Azure Information Protection**.  
         
         ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
         

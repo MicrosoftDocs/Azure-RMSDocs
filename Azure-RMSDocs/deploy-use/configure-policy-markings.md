@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -61,9 +61,9 @@ For documents, the visual markings are applied as follows:
 
 Use the following instructions to configure visual markings for a label.
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade. 
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
     
-    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
     
@@ -97,9 +97,37 @@ You can use the following variables in the text string for your header, footer, 
 
 Example: If you specify the string `Document: ${item.name}  Classification: ${item.label}` for the **General** label footer, the footer text applied to a documented named project.docx will be **Document: project.docx  Classification: General**.
 
-### Setting the font name
+## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
-This setting is currently in preview.
+By default, the visual markings that you specify are applied across Word, Excel, PowerPoint, and Outlook. However, you can specify visual markings per Office application type when you use an "If.App" variable statement in the text string, and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, and abbreiwhich is necessary if you want to specify more than one in the same If.App statement.
+
+Use the following syntax:
+
+	${If.App.<application type>}<your visual markings text> ${If.End}
+
+This syntax in this statement is case-sensitive.
+
+Examples:
+
+- **Set header text for Word documents only:**
+    
+    `${If.App.Word}This Word document is sensitive ${If.End}`
+    
+    In Word document headers only, the label applies the header text "This Word document is sensitive". No header text is applied to other Office applications.
+
+- **Set footer text for Word, Excel, and Outlook, and different footer text for PowerPoint:**
+    
+    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
+    
+    In Word, Excel, and Outlook, the label applies the footer text "This content is confidential." In PowerPoint, the label applies the footer text "This presentation is confidential."
+
+- **Set specific watermark text for Word and PowerPoint, and then watermark text for Word, Excel, and PowerPoint:**
+    
+    `${If.App.WP}This content is ${If.End}Confidential`
+    
+    In Word and PointPoint, the label applies the watermark text "This content is Confidential". In Excel, the label applies the watermark text "Confidential". In Outlook, the label doesn't any watermark text because watermarks as visual markings are not supported for Outlook.
+
+### Setting the font name
 
 Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markers. 
 

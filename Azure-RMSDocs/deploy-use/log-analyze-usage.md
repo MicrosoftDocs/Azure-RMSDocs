@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,7 +52,6 @@ In addition to this usage logging, you also have the following logging options:
 |Logging option|Description|
 |----------------|---------------|
 |Admin log|Logs administrative tasks for the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Web reports|High-level usage reports from the Azure classic portal: **RMS summary**, **RMS active users**, **RMS device platforms**, and **RMS application usage**. <br /><br />To access these reports from the Azure classic portal, click **Active Directory**, select and open a directory, and then click **REPORTS**.|
 |Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Client log files|Troubleshooting logs f or the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
@@ -75,7 +74,7 @@ The Azure Rights Management service writes logs to your Azure storage account as
 
 It can take a while for logs to appear in your storage account after an Azure Rights Management action. Most logs appear within 15 minutes. We recommend that you download the logs to local storage, such as a local folder, a database, or a map-reduce repository.
 
-To download your usage logs, you will use the Azure Rights Management administration module for Windows PowerShell. For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+To download your usage logs, you will use the Azure Rights Management administration module for Windows PowerShell. For installation instructions, see [Installing the AADRM PowerShell module](install-powershell.md). If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### To download your usage logs by using PowerShell
 

@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection

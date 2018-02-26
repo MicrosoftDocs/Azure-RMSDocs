@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,11 +57,11 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |Requirement|More information|
 |---------------|--------------------|
 |Windows Server computer to run the scanner service:<br /><br />- 4 processors<br /><br />- 4 GB of RAM|Windows Server 2016 or Windows Server 2012 R2. <br /><br />Note: For testing or evaluation purposes in a non-production environment, you can use a Windows client operating system that is [supported by the Azure Information Protection client](../get-started/requirements.md#client-devices).<br /><br />This computer can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned. <br /><br />Make sure that this computer has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. Or, you must configure it as a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
-|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
-|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD, with the following additional requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You must grant this right to the service account but you can remove this right after you have confirmed that the scanner can discover, classify, and protect files.<br /><br />- **Log on as a service** right. This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: You must grant **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permission is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).|
+|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance<br /><br />- Sysadmin role to install the scanner|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />The account that installs the scanner requires permissions to write to the master database (must be a member of the db_datawriter role). The installation process grants the db-owner role to the service account that runs the scanner. Alternately, you can manually create the AzInfoProtectionScanner database before you install the scanner, and assign the db-owner role to the scanner service account.|
+|Service account to run the scanner service|This account must be an Active Directory account that is synchronized to Azure AD, with the following additional requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You must grant this right to the service account but you can remove this right after you have confirmed that the scanner can discover, classify, and protect files. <br /><br />Note: If internal policies do not allow service accounts to have this right, but service accounts can be granted the **Log on as a batch job** right, you can meet this requirement with additional configuration. For instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.<br /><br />- **Log on as a service** right. This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: You must grant **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permission is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).|
 |The Azure Information Protection client is installed on the Windows Server computer|You must install the full client for the scanner. Do not install the client with just the PowerShell module.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md).|
 |Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](configure-policy-protection.md).<br /><br />These labels can be in the global policy, or one or more [scoped policies](configure-policy-scope.md).|
-
+|If all files in one or more data repositories must have a label:<br /><br />- A default label configured as a policy setting|For more information about how to configure the default label setting, see [How to configure the policy settings for Azure Information Protection](configure-policy-settings.md).<br /><br />This default label setting must be in the global policy or a scoped policy for the scanner. However, this default label setting can be overridden by a different default label that you configure at the data repository level.|
 
 ## Install the Azure Information Protection scanner
 
@@ -163,13 +163,56 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
 
+
+## How files are scanned by the Azure Information Protection scanner
+
+The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), such as executables and system files.
+
+Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
+
+|Application type|File type|
+|--------------------------------|-------------------------------------|
+|Word|.docx; .docm; .dotm; .dotx|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|Project|.mpp; .mpt|
+|PDF|.pdf|
+|Text|.txt; .xml; .csv|
+
+
+Finally, for the remaining file types, the scanner applies the default label in the Azure Information Protection policy.
+
+|Application type|File type|
+|--------------------------------|-------------------------------------|
+|Project|.mpp; .mpt|
+|Publisher|.pub|
+|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
+|XPS|.xps; .oxps; .dwfx|
+|Solidworks|.sldprt; .slddrw; .sldasm|
+|Jpeg |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
+|Png |.png|
+|Gif|.gif|
+|Bitmap|.bmp; .giff|
+|Tiff|.tif; .tiff|
+|Photoshop|.psdv|
+|DigitalNegative|.dng|
+|Pfile|.pfile|
+
+Note that when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
+
+For more information about the different levels of protection for different file types, and how to control the protection behavior, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
+
+
 ## When files are rescanned by the Azure Information Protection scanner
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
 You can force the scanner to inspect all files again by running [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) with the `-Type` parameter set to **Full**. This configuration is useful when you want the reports to include all files and it is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
-In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour and when the service starts.
+In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.
+
+> [!TIP]
+> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **%LocalAppData%\Microsoft\MSIP\Policy.msip**, and restart the Azure Information Scanner service.
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
@@ -230,6 +273,8 @@ Other cmdlets for the scanner let you change the service account and database fo
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

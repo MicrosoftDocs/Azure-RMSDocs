@@ -1,8 +1,10 @@
-﻿---
+---
+# required metadata
+
 title: What's new and release notes
 description: Outlines important changes and features in this and previous versions.
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 09/25/2017
 ms.topic: article
@@ -36,7 +38,7 @@ This topic outlines important changes and features in this new version of the RM
 
 The update for our July release included incrementing the revision of the SDK, now 4.2.5.
 
-- Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging)
+- Android SDK: Your app can now **set the logging level on-the-fly** with the Android SDK. For more information, see [How to: Enable error and performance logging](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - The iOS SDK does not support logging level. 
 - The SDK now returns an error for a NULL access token.
 

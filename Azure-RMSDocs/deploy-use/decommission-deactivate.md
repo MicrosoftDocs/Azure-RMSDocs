@@ -6,7 +6,7 @@ description: Information and instructions if you decide you no longer want to us
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ You are always in control of whether your organization protects content by using
 
 If you don’t need continued access to previously protected content, deactivate the service and let your subscription for Azure Information Protection expire. For example, this would be appropriate for when you have completed testing Azure Information Protection before you deploy it in a production environment.
 
-However, if you have deployed Azure Information Protection in production and protected documents and emails, make sure that you have a copy of your Azure Information Protection tenant key before you deactivate the Azure Rights Management service. Make sure that you have a copy of your key before your subscription expires to ensure that you can retain access to content that was protected by Azure Rights Management after the service is deactivated. If you used the bring your own key solution (BYOK) where you generate and manage your own key in an HSM, you will already have your Azure Information Protection tenant key. But if it was managed by Microsoft (the default), see the instructions for exporting your tenant key in [Operations for your Azure Rights Management tenant key](operations-tenant-key.md) article.
+However, if you have deployed Azure Information Protection in production and protected documents and emails, make sure that you have a copy of your Azure Information Protection tenant key before you deactivate the Azure Rights Management service. Make sure that you have a copy of your key before your subscription expires to ensure that you can retain access to content that was protected by Azure Rights Management after the service is deactivated. If you used the bring your own key solution (BYOK) where you generate and manage your own key in an HSM, you already have your Azure Information Protection tenant key. But if it was managed by Microsoft (the default), see the instructions for exporting your tenant key in [Operations for your Azure Rights Management tenant key](operations-tenant-key.md) article.
 
 > [!TIP]
 > Even after your subscription expires, your Azure Information Protection tenant remains available for consuming content for an extended period. However, you will no longer be able to export your tenant key.
@@ -52,7 +52,7 @@ For more information about the procedures in this table, see the following resou
 
 - For instructions to import your Azure Information Protection tenant key as a TPD file, see [Add a Trusted Publishing Domain](https://technet.microsoft.com/library/cc771460.aspx).
 
-- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+- To install the Windows PowerShell module for Azure Rights Management, to set the migration URL, see [Installing the AADRM PowerShell module](install-powershell.md).
 
 - To use PowerShell with the Azure Information Protection client, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
@@ -78,9 +78,9 @@ You should now see **Rights Management is not activated** and the option to acti
 
 #### To deactivate Rights Management from the Azure portal
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
-    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
 2. On the initial **Azure Information Protection** blade, select **Protection activation**. 
 

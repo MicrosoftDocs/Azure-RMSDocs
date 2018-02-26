@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/26/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -80,6 +80,20 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
 
+- For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
+    
+    Note: This prerequiste is not required for the current preview version of the Azure Information Protection client. 
+    
+    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, you might need to enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
+    
+    To configure the Office applications for this requirement: **File** > **Options** > **General** > **User Interface options**:
+    
+    - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
+        
+    - If you see that the option **Use best settings for my display** is selected, remove this selection.
+    
+    - If you see neither of these options, no additional configuration is required.
+
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
 
@@ -152,7 +166,7 @@ Use the following procedure to identify the value to specify for the ServiceLoca
 
 1. From a PowerShell session, first run [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) and specify your administrator credentials to connect to the Azure Rights Management service. Then run [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+    If you haven’t already installed the PowerShell module for the Azure Rights Management service, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
 
 2. From the output, identify the **LicensingIntranetDistributionPointUrl** value.
 
@@ -191,12 +205,12 @@ If you use Intune for your software deployment method, use these instructions to
     
     |Office version|Operating system|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Office 2016|All supported versions|64-bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32-bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> Version: 1.0|Install|
+    |Office 2016|All supported versions|64-bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32-bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Install|
     |Office 2013|All supported versions|64-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32-bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version: 1.0|Install|
     |Office 2010|All supported versions|[Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Install|
     |Office 2010|Windows 8.1 and Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install if KB2843630 or KB2919355 is not installed|
     |Office 2010|Windows 8 and Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Version number included in file name: v3|Install|
-    |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
+    |Office 2010|Windows 7 and Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Version number included in file name: v3|Install if KB3125574 is not installed|
     |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Install|
     |Not applicable|Windows 7|KB2627273 <br /><br /> Version number included in file name: v4|Uninstall|
 
@@ -205,7 +219,11 @@ If you use Intune for your software deployment method, use these instructions to
 
 ## How to install the Azure Information Protection scanner
 
-The current preview version of the Azure Information Protection client includes the Azure Information Protection scanner. The PowerShell module that is included with the client has cmdlets to install and configure the scanner.
+Currently, the general availability (GA) version of the Azure Information Protection scanner is a separate download named **AzInfoProtectionScanner.exe** on the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Subsequent releases of the scanner will be included in the Azure Information Protection client.
+
+The current preview version of the Azure Information Protection client also includes the Azure Information Protection scanner. 
+
+The PowerShell module that is included with the scanner and preview client has cmdlets to install and configure the scanner.
 
 To install the client for the scanner, follow the same instructions in the preceding sections. Note that if you do not need all the components of the client, such as the Office add-in and viewer, you can install just the PowerShell module. For example, you can run the executable with `PowerShellOnly=true /quiet`.
 

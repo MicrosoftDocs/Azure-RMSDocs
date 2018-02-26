@@ -6,7 +6,7 @@ description: Instructions for protection activation in the Azure portal so that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,9 +32,9 @@ ms.suite: ems
 
 Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal.
 
-1. If you haven't already done so, open a new browser window and sign in to the [Azure portal](https://portal.azure.com) as a security admin or global admin. Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
     
-    For example, on the hub menu, click **More services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
+    For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
     
     If you haven't accessed the Azure Information Protection blade before, see the one-time [additional steps](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) to add this blade to the portal.
     
