@@ -6,11 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< HEAD
-ms.date: 01/09/2018
-=======
-ms.date: 02/06/2018
->>>>>>> fe0c71c6081488ec3735d6671fd5c78fc1fe3369
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +35,7 @@ You can download the latest GA release version and the current preview version f
 
 ### Servicing information and timelines
 
-The general availability (GA) versions of the Azure Information Protection client are supported for a period of six months from the date of their release. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
+Each general availability (GA) version of the Azure Information Protection client is supported for up to six months after the release of the subsequent GA version. Unsupported versions of the client are not included on this page. Fixes and new functionality are always applied to the latest GA version and will not be applied to older GA versions.
 
 Preview versions should not be deployed for end users on production networks. Instead, use the latest preview version to see and try new functionality or fixes that are coming in the next GA version. Preview versions that are not current are not supported.
 
@@ -52,49 +48,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.20.2.0
+## Version 1.21.205.0
 
-<<<<<<< HEAD
-**Released**: 01/09/2018
-
-If you have the last preview version of the client installed (1.15.7.0), you must first uninstall it before installing this GA version. 
-
-This version includes the MSIPC version 1.0.3274.0818 of the RMS client.
-
-**New features**:
-
-- The Azure Information Protection scanner: The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
-
-- For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
-
-- Support for the [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
-
-- A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
-
-- For Office apps, when you specify custom permissions, you can now browse and select users from an address book icon. This option brings parity to the user experience when you specify custom permissions by using File Explorer.
-
-- New parameter, -IntegratedAuth for [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). This parameter supports server mode for AD RMS, which is needed for AD RMS to support Windows Server FCI.
-
-**Fixes**:
-
-Fixes for stability and for specific scenarios that include:
-
-- Prevent Outlook hanging when Outlook reminders are used.
-
-- Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
-
-- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
-- Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
-
-- Prevent Office crashes after the Azure Information Protection client is upgraded.
-
-- For Office apps, improve performance and memory consumption.
-
-- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
-=======
-If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
-
-The current preview version is **1.21.203.0** and has the following changes since the current GA version of the client.
+**Released**: 03/06/2018
 
 This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
@@ -149,7 +105,6 @@ Fixes for stability and for specific scenarios that include:
 
 - For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
->>>>>>> fe0c71c6081488ec3735d6671fd5c78fc1fe3369
 
 ## Version 1.10.56.0
 
@@ -182,7 +137,6 @@ This version includes the MSIPC version 1.0.3219.0619 of the RMS client.
 - For PowerShell, support to label files non-interactively by using the new PowerShell cmdlets, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) and [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). For more information how to use these cmdlets, see the [PowerShell section](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) of the admin guide.
 
 - For the PowerShell cmdlets, [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), there are new parameters: **Owner** and **PreserveFileDetails**. These parameters let you specify an email address for the Owner custom property, and leave the date unchanged for documents that you label.
-
 
 **Fixes**:
 
