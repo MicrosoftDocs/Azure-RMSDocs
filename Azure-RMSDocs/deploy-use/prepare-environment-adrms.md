@@ -31,7 +31,7 @@ ms.suite: ems
 
 Important guidance if you are already using Active Directory Rights Management Services (AD RMS) and either of the following scenarios apply:
 
-- [Your subscription that includes Azure Rights Management was purchased in or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
+- [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
 
 - [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to activate-azure-rights-management-when-you-configure-azure-information-protection)
 
