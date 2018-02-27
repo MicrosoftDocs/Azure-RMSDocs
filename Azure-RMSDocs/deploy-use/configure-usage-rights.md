@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -123,7 +123,7 @@ A user wants to email some information to specific people in the Marketing depar
 
 When Exchange Online uses the new capabilities for Office 365 Message Encryption, a new email option becomes available: **Encrypt-Only**.
 
-This option is being deployed to tenants who use Exchange Online, initially just for Outlook on the web and as another rights protection option for a transport rule. For more information, see the following blog post announcement from the Office team: [Encrypt only now available in Office 365 Message Encryption](https://aka.ms/omefeb2018).
+This option is being deployed to tenants who use Exchange Online, initially just for Outlook on the web and as another rights protection option for a transport rule. For more information, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except Full Control. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
 
