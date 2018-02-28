@@ -111,7 +111,7 @@ Give users these instructions so that they can configure their OneDrive for Busi
 
 1.  In OneDrive, click the **Settings** icon, to open the Settings menu, and then click **Site Contents**.
 
-2.  Hover on the **Documents** tile, chose the ellipses (**...**), and then click **SETTINGS.**
+2.  Hover on the **Documents** tile, choose the ellipses (**...**), and then click **SETTINGS.**
 
 3.  On the **Settings** page, in the **Permissions and Management** section, click **Information Rights Management**.
 
