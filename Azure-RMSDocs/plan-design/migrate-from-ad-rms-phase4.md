@@ -39,7 +39,7 @@ Use the following information for Phase 4 of migrating from AD RMS to Azure Info
 
 Independently from the Azure Information Protection tenant key topology that you chose, do the following:
 
-1. To configure Exchange Online to use the Azure Rights Management service, run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) command. From the output, check whether **AzureRMSLicensingEnabled** is set to **True**:
+1. To enable Exchange Online to use the Azure Rights Management service, run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) command. From the output, check whether **AzureRMSLicensingEnabled** is set to **True**:
     
     - If AzureRMSLicensingEnabled is set to **True**, no further configuration is needed. 
     
