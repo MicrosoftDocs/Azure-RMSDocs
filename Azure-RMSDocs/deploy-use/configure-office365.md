@@ -50,15 +50,17 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
    
     In the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
 
-3. Connect to the Exchange Online service by running the following two commands:
+3. Connect to the Exchange Online service by first setting a variable:
     
     	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    
+    Then run the following command:
     
     	Import-PSSession $Session
 
 4. Run the following command:
     
-	Get-IRMConfiguration
+    	Get-IRMConfiguration
     
     From the output, locate the **AzureRMSLicensingEnabled** value:
     
