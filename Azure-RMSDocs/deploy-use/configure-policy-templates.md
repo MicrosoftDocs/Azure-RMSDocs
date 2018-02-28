@@ -95,7 +95,7 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 - Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
-    In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set the application compatibility setting by using the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
+    In addition, you cannot set the application compatibility setting for a departmental template by using the Azure portal. If necessary, you can set this application compatibility setting by using the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
 - When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Protection templates** section. 
 
