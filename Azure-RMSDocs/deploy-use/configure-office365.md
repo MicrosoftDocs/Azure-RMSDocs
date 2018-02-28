@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -36,11 +36,47 @@ However, we recommend that you supplement these applications with the Azure Info
 ## Exchange Online: IRM Configuration
 For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
 
-To configure Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+Exchange Online might already be enabled to use the Azure Rights Management service. To check, run the following commands:
 
-If you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD) from the Azure Rights Management Service, use the same set of instructions to enable the new capabilities in Exchange Online.
+1. If this is the first time that you have used Windows PowerShell for Exchange Online on your computer, you must configure Windows PowerShell to run signed scripts. Start your Windows PowerShell session by using the **Run as administrator** option, and then type:
+    
+    	Set-ExecutionPolicy RemoteSigned
 
-After you have configured Exchange Online to use the Azure Rights Management service, you can now configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
+2. In your Windows PowerShell session, sign in to Exchange Online by using an account that is enabled for remote Shell access. By default, all accounts that are created in Exchange Online are enabled for remote Shell access but this can be disabled  (and enabled) by using the [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) command.
+    
+    To sign in, type:
+    
+    	$Cred = Get-Credential
+   
+    In the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
+
+3. Connect to the Exchange Online service by first setting a variable:
+    
+    	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    
+    Then run the following command:
+    
+    	Import-PSSession $Session
+
+4. Run the following command:
+    
+    	Get-IRMConfiguration
+    
+    From the output, locate the **AzureRMSLicensingEnabled** value:
+    
+    - If AzureRMSLicensingEnabled is set to **True**, Exchange Online is already enabled for the Azure Rights Management service. 
+    
+    - If AzureRMSLicensingEnabled is set **False**, run the commands in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+
+5. To test that Exchange Online is configured successfully, run the following command:
+    ```
+    Test-IRMConfiguration -Sender <user email address>
+    ```
+    For example: **Test-IRMConfiguration -Sender  adams@contoso.com**
+    
+    This command runs a series of checks that includes verifying connectivity to the service, retrieving the configuration, retrieving URIs, licenses, and any templates. In the Windows PowerShell session, you will see the results of each and at the end, if everything passes these checks: **OVERALL RESULT: PASS**
+
+When Exchange Online is enabled to use the Azure Rights Management service, you can configure features that apply information protection automatically, such as [transport rules](https://technet.microsoft.com/library/dd302432.aspx), [data loss prevention (DLP) policies](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx), and [protected voice mail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
 ## SharePoint Online and OneDrive for Business: IRM Configuration
 
@@ -75,7 +111,7 @@ Give users these instructions so that they can configure their OneDrive for Busi
 
 1.  In OneDrive, click the **Settings** icon, to open the Settings menu, and then click **Site Contents**.
 
-2.  Hover on the **Documents** tile, chose the ellipses (**...**), and then click **SETTINGS.**
+2.  Hover on the **Documents** tile, choose the ellipses (**...**), and then click **SETTINGS.**
 
 3.  On the **Settings** page, in the **Permissions and Management** section, click **Information Rights Management**.
 
