@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,9 +39,13 @@ Use the following information for Phase 4 of migrating from AD RMS to Azure Info
 
 Independently from the Azure Information Protection tenant key topology that you chose, do the following:
 
-1. To configure Exchange Online to use the Azure Rights Management service, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+1. Run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) command. From the output, check whether **AzureRMSLicensingEnabled** is set to **True**:
+    
+    - If AzureRMSLicensingEnabled is set to **True**, no further configuration is needed. 
+    
+    - If AzureRMSLicensingEnabled is set **False**, run the commands in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
 
-2. In addition to the standard configuration to enable IRM for Exchange Online, run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
+2. Run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
 
     Substitute your own organization domain name for *\<yourcompany.domain>*.
 
