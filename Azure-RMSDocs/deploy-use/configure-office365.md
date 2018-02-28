@@ -41,14 +41,16 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
 1. If this is the first time that you have used Windows PowerShell for Exchange Online on your computer, you must configure Windows PowerShell to run signed scripts. Start your Windows PowerShell session by using the **Run as administrator** option, and then type:
     
     	Set-ExecutionPolicy RemoteSigned
+    
+    Press **Y** to confirm.
 
 2. In your Windows PowerShell session, sign in to Exchange Online by using an account that is enabled for remote Shell access. By default, all accounts that are created in Exchange Online are enabled for remote Shell access but this can be disabled  (and enabled) by using the [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) command.
     
-    To sign in, type:
+    To sign in, first type:
     
     	$Cred = Get-Credential
    
-    In the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
+    Then, in the **Windows PowerShell credential request** dialog box, supply your Office 365 user name and password.
 
 3. Connect to the Exchange Online service by first setting a variable:
     
@@ -58,7 +60,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     
     	Import-PSSession $Session
 
-4. Run the following command:
+4. Run the [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) command to view your Exchange Online configuration for the protection service:
     
     	Get-IRMConfiguration
     
