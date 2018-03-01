@@ -104,7 +104,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 - **If you want to manage your own Azure Information Protection tenant key by using an HSM-protected key**:
 
-	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+	- This optional configuration requires Azure Key Vault and an Azure subscription that supports Key Vault with HSM-protected keys. For more information, see the [Azure Key Vault Pricing page](https://azure.microsoft.com/pricing/details/key-vault/). 
 
 
 ### Cryptographic mode considerations
