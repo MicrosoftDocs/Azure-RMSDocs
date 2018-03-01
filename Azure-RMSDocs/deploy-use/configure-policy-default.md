@@ -6,7 +6,7 @@ description: Understand how the default policy for Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ You can reference the following values to return your policy to the defaults, or
 
 This version of the default policy is from July 31, 2017.
 
-This default policy is created only if the Azure Rights Management service was activated when the policy was created. If this service was not activated, the default policy does not configure protection for the following sub-labels:
+This default policy is created only if the Azure Rights Management service was [activated](activate-service.md) when the policy was created. If this service was not activated, the default policy does not configure protection for the following sublabels:
 
 - **Confidential \ All Employees**
 
@@ -49,13 +49,13 @@ This default policy is created only if the Azure Rights Management service was a
 
 - **Highly Confidential \ Recipients Only** 
 
-When these sub-labels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
+When these sublabels are not automatically configured for protection, the default policy remains the same as the [previous default policy](#default-policy-before-july-31-2017).
 
-When protection is applied to the **All Employees** sub-labels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
+When protection is applied to the **All Employees** sublabels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
 Beginning with August 30, 2017, this version of the default policy includes multi-language versions of the label names and descriptions. 
 
-#### More information about the Recipients Only sub-label
+#### More information about the Recipients Only sublabel
 
 Users see this label in Outlook only. They do not see this label in Word, Excel, PowerPoint, or from File Explorer. 
 
@@ -73,7 +73,7 @@ When users select this label, the Outlook Do Not Forward option is automatically
 |Highly Confidential|Very sensitive business data that would cause damage to the business if it was shared with unauthorized people. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|**Enabled**: On <br /><br />**Color**: Red<br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
-### Sub-labels
+### Sublabels
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|
@@ -126,7 +126,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |Highly Confidential|Very sensitive business data that would cause damage to the business if it was shared with unauthorized people. Examples include employee and customer information, passwords, source code, and pre-announced financial reports.|**Enabled**: On <br /><br />**Color**: Red<br /><br />**Visual markings**: Off<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
-### Sub-labels
+### Sublabels
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|
@@ -166,7 +166,7 @@ Note that descriptions in this policy refer to data that requires protection, an
 |Secret|This data includes highly sensitive information for the business that must be protected. Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports.|**Enabled**: On <br /><br />**Color**: Red<br /><br />**Visual markings**: Footer (document and email):<br /><br /> Sensitivity: Secret<br /><br />**Conditions**: None<br /><br />**Protection**: None|
 
 
-### Sub-labels
+### Sublabels
 
 |Label|Tooltip|Settings|
 |-------------------------------|---------------------------|-----------------|

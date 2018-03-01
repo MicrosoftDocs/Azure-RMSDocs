@@ -13,7 +13,6 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 
-
 # optional metadata
 
 #ROBOTS:

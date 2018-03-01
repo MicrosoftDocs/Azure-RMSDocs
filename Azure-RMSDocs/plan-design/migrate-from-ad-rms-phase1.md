@@ -6,7 +6,7 @@ description: Phase 1 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -32,11 +32,11 @@ ms.suite: ems
 Use the following information for Phase 1 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 1 though 3 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) and prepare your environment for migration without any impact to your users.
 
 
-## Step 1: Download the Azure Rights Management Administration Tool and identify your tenant URL
+## Step 1: Install the AADRM PowerShell module and identify your tenant URL
 
-Go to the Microsoft Download Center and download the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the Azure Rights Management administration module for Windows PowerShell. Azure Rights Management (Azure RMS) is the service that provides the data protection for Azure Information Protection.
+Install the AADRM module so that you can configure and manage the service that provides the data protection for Azure Information Protection.
 
-Install the tool. For instructions, see [Installing Windows PowerShell for Azure Rights Management](../deploy-use/install-powershell.md).
+For instructions, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md).
 
 > [!NOTE]
 > If you have previously downloaded this Windows PowerShell module, run the following command to check that your version number is at least **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`

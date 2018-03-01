@@ -6,7 +6,7 @@ description: Help bot for Azure Information Protection to help answer your quest
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 02/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -29,10 +29,10 @@ ms.suite: ems
 
 Try the **Azure Information Protection help bot**, currently in beta:
 
-- See if the bot knows the answer to your question because it's been asked before.
-- Ask the bot to search the docs for you.
-- Ask the bot to help open a support ticket for you.
-- Type **feedback** to let us know whether this bot is helpful.
+- See if the bot knows the answer to your question about Azure Information Protection, because somebody else has asked the same question.
+- Ask the bot to search the Azure Information Protection docs for you.
+- Ask the bot to help open an Azure Information Protection support ticket for you.
+- Type **#feedback** to let us know whether this bot is helpful.
 
 
 <iframe width="560" height="475" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>

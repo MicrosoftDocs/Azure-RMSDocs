@@ -6,7 +6,7 @@ description: Identify requirements or problems that your organization might have
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,7 @@ Azure RMS is the protection technology used by [Azure Information Protection](wh
 |Support for commonly used devices, not just Windows computers|√ [Supported devices](../get-started/requirements-client-devices.md) include:<br /><br />- Windows computers and phones<br /><br />- Mac computers<br /><br />- iOS tablets and phones<br /><br />- Android tablets and phones|
 |Support for business-to-business collaboration|√ Because Azure Rights Management is a cloud service, there’s no need to explicitly configure trusts with other organizations before you can share protected content with them. If they already have an Office 365 or an Azure AD directory, collaboration across organizations is automatically supported. If they do not, users can sign up for the free [RMS for individuals](rms-for-individuals.md) subscription.|
 |Support for on-premises services, as well as Office 365|√  In addition to working [seamlessly with Office 365](office-apps-services-support.md), you can also use Azure Rights Management with the following on-premises services when you deploy the [RMS connector](../deploy-use/deploy-rms-connector.md):<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- Windows Server running File Classification Infrastructure|
-|Easy activation|√ [Activating the Rights Management service](../deploy-use/activate-service.md) for users requires just a couple of clicks in your management portal. Or, if you prefer command-line control, just two PowerShell commands.|
+|Easy activation|√ For new subscriptions, activation is automatic. For existing subscriptions, [activating the Rights Management service](../deploy-use/activate-service.md) requires just a couple of clicks in your management portal. Or, if you prefer command-line control, just two PowerShell commands.|
 |Ability to scale across your organization, as needed|√ Because Azure Rights Management runs as a cloud service with the Azure elasticity to scale up and out, you don’t have to provision or deploy additional on-premises servers.|
 |Ability to create simple and flexible policies|√ [Customized protection templates](../deploy-use/configure-policy-templates.md) provide a quick and easy solution for administrators to apply policies, and for users to apply the correct level of protection for each document and restrict access to people inside your organization.<br /><br />For example, for a company-wide strategy paper to be shared with all employees, you could apply a read-only policy to all internal employees. Then, for a more sensitive document, such as a financial report, you could restrict access to executives only.|
 |Broad application support|√ Azure Rights Management has tight integration with Microsoft Office applications and services, and extends support for other applications by using the [Azure Information Protection client](../rms-client/aip-client.md ).<br /><br />√ The [Azure Information Protection SDKs](../develop/developers-guide.md) provide your internal developers and software vendors with APIs to write custom applications that support Azure Information Protection.<br /><br />For more information, see [Other applications that support the Rights Management APIs](api-support.md).|
