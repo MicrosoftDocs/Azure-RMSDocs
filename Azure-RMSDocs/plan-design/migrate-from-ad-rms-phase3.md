@@ -50,7 +50,7 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps. 
 
-You must also know your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *\<your tenant URL\>* in the following instructions.
+Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *\<your tenant URL\>* in the following instructions.
 
 1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: **_rmsredir._http._tcp.\<your tenant URL\>.**
     
@@ -80,7 +80,7 @@ You must also know your [Azure Rights Management service URL for your tenant](mi
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to that file directly from a browser. You should see the following error message, which prompts the client running Office 2016 to look for the SRV record:
+    f. To confirm this configuration is working as expected, try to connect to the publish.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 2016 to look for the SRV record:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
