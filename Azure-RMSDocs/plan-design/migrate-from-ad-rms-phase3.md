@@ -56,7 +56,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
     
     This record requires you to specify your own [tenant URL](migrate-from-ad-rms-phase1.md#step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url).
     
-    If you use the DNS Server role on Windows Server, use the following table as a guide for the SRV record properties in the DNS Manager console. The fields for **Priority**, **Weight**, and **Port** number are not used.
+    If you use the DNS Server role on Windows Server, use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
 	|Field|Value|  
 	|-----------|-----------|  
@@ -65,7 +65,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 	|**Protocol**|_http|  
 	|**Priority**|0|  
 	|**Weight**|0|  
-	|**Port number**|80|  
+	|**Port number**|443|  
 	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
