@@ -51,13 +51,13 @@ See the following sections for more information about how to reconfigure Windows
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
 
 1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: 
-
-	**_rmsredir._http._tcp.\<portnumber\>\<RMSClusterFQDN\>**
-
-	For this record, specify the port number that your AD RMS cluster is using (for example, 443) and your own cluster name (for example, rmsserver.contoso.com). 
-
-	If you use the DNS Server role on Windows Server, use the following tables as a guide for the SRV record properties in the DNS Manager console:
-
+    
+	**_rmsredir._http._tcp.\<tenantURL\>**
+    
+    This record requires you to specify your own [tenant URL](migrate-from-ad-rms-phase1.md#step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url).
+    
+    If you use the DNS Server role on Windows Server, use the following table as a guide for the SRV record properties in the DNS Manager console. The fields for **Priority**, **Weight**, and **Port** number are not used.
+    
 	|Field|Value|  
 	|-----------|-----------|  
 	|**Domain**|_tcp.contoso.com|  
@@ -65,8 +65,8 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 	|**Protocol**|_http|  
 	|**Priority**|0|  
 	|**Weight**|0|  
-	|**Port number**|443|  
-	|**Host offering this service**|rmsserver.contoso.com|  
+	|**Port number**|80|  
+	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
 
