@@ -52,9 +52,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
 You must also know your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *\<your tenant URL\>* in the following instructions.
 
-1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: 
-    
-	**_rmsredir._http._tcp.\<your tenant URL\>.**
+1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: **_rmsredir._http._tcp.\<your tenant URL\>.**
     
     If you use the DNS Server role on Windows Server, use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
