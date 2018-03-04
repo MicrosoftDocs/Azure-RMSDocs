@@ -48,13 +48,13 @@ See the following sections for more information about how to reconfigure Windows
 
 ## Client reconfiguration by using DNS redirection 
 
-This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps.
+This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps. 
+
+You must also know your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *\<your tenant URL\>* in the following instructions.
 
 1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: 
     
 	**_rmsredir._http._tcp.\<your tenant URL\>.**
-    
-    This record requires you to specify your own [tenant URL](migrate-from-ad-rms-phase1.md#step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url).
     
     If you use the DNS Server role on Windows Server, use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
