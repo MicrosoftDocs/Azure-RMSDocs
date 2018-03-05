@@ -1,5 +1,6 @@
 ---
 layout: LandingPage
+ms.topic: landing-page
 ---
 # Azure Information Protection Documentation
 
