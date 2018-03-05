@@ -50,9 +50,17 @@ See the following sections for more information about how to reconfigure Windows
 
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps. 
 
-Make sure that you have your [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) so that you can substitute this value for *\<your tenant URL\>* in the following instructions.
+1. Create a DNS SRV record using the following format:
+    
+    **_rmsredir._http._\<AD RMS cluster domain>. \<TTL> IN SRV \<priority> \<weight> \<port> \<your tenant URL\>.**
+    
+    For \<AD RMS cluster domain>, specify the domain name of your AD RMS extranet licensing domain, if this is specified on your AD RMS cluster. If no extranet licensing FQDN is specified, use the domain name of the intranet licensing domain.
+    
+    The \<port> number is ignored.
+    
+    For \<your tenant URL\>, specify your own [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-1. Create the following DNS SRV record in the same domain as the AD RMS extranet licensing FQDN, using the following format: **_rmsredir._http._tcp.\<your tenant URL\>.**
+4. in the same domain as the AD RMS extranet licensing FQDN, using the following format: **_rmsredir._http._tcp.\<your tenant URL\>.**
     
     If you use the DNS Server role on Windows Server, use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
