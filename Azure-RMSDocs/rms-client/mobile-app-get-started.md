@@ -7,7 +7,7 @@ keywords: How to view emails or files with the Azure Information Protection app 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 03/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
