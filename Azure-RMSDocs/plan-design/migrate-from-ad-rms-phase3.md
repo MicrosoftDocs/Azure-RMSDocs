@@ -52,9 +52,9 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
 1. Create a DNS SRV record using the following format:
     
-    	_rmsredir._http._<AD RMS cluster domain>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
+    	_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
     
-    For *\<AD RMS cluster domain>*, specify the domain name of your AD RMS extranet licensing domain, if this is specified on your AD RMS cluster. If no extranet licensing FQDN is specified, use the domain name of the intranet licensing FQDN.
+    For *\<AD RMS cluster>*, specify your AD RMS cluster name.
     
     The *\<port>* number is ignored.
     
