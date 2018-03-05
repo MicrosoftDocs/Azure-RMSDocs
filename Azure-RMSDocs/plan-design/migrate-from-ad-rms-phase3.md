@@ -69,7 +69,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 	|**Protocol**|_http|  
 	|**Priority**|0|  
 	|**Weight**|0|  
-	|**Port number**|443|  
+	|**Port number**|80|  
 	|**Host offering this service**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Set a deny permission for the Office 2016 users on the AD RMS publishing endpoint:
