@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ For Windows computers that use Office 2016 click-to-run desktop apps:
 
 See the following sections for more information about how to reconfigure Windows clients.
 
-## Client reconfiguration by using DNS redirection 
+## Client reconfiguration by using DNS redirection
 
 This method is suitable only for Windows clients that run Office 2016 (or later) click-to-run desktop apps. 
 
@@ -54,7 +54,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
     
     	_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
     
-    For *\<AD RMS cluster>*, specify your AD RMS cluster name.
+    For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
     
     The *\<port>* number is ignored.
     
@@ -64,7 +64,7 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
     
 	|Field|Value|  
 	|-----------|-----------|  
-	|**Domain**|_tcp.contoso.com|  
+	|**Domain**|_tcp.rmscluster.contoso.com|  
 	|**Service**|_rmsredir|  
 	|**Protocol**|_http|  
 	|**Priority**|0|  
