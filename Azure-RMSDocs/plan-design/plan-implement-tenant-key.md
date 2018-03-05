@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,7 +53,7 @@ Decide which tenant key topology is best for your organization. By default, Azur
 
 Decide which tenant key topology is best for your organization:
 
-- **Managed by Microsoft**: Azure Information Protection automatically generates a tenant key for your organization. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
+- **Managed by Microsoft**: Microsoft automatically generates a tenant key for your organization and this key is used exclusively for Azure Information Protection. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
     
     This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
