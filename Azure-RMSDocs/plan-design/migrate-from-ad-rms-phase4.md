@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,6 +58,10 @@ Independently from the Azure Information Protection tenant key topology that you
     	Set-IRMConfiguration -internallicensingenabled $false
     	Set-IRMConfiguration -internallicensingenabled $true
 
+3. Make sure that you have a DNS SRV record for your AD RMS cluster, so that Exchange Online can redirect to Azure Information Protection when needed. If you did not create the DNS SRV record for client reconfiguration in step 7, create this record now to support Exchange Online. [Instructions](plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection).
+
+> [!IMPORTANT]
+> Because you cannot control the selection of recipients that users select for protected emails, make sure that all users and mail-enabled groups in your organization have an account in Azure AD that can be used with Azure Information Protection. [More information](../plan-design/prepare.md)
 
 ## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
 
