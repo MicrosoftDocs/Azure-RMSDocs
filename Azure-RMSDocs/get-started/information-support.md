@@ -33,7 +33,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this ...|...do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages:<br /><br /> - [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md)<br /> - [How to activate Azure Rights Management from the Office 365 admin center](../deploy-use/activate-office365.md)<br />- [Activating Azure Rights Management](../deploy-use/activate-service.md) <br />- [Requirements for Azure Information Protection](requirements.md)<br />- [Get started - AIP app for iOS & Android](../rms-client/mobile-app-get-started.md)|
+|See the most frequently used documentation|Read the top five pages:<br /><br /> - [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md)<br /> - [How to activate Azure Rights Management from the Office 365 admin center](../deploy-use/activate-office365.md)<br />- [Activating Azure Rights Management](../deploy-use/activate-service.md) <br />- [Requirements for Azure Information Protection](requirements.md)<br />- [Get started with the Microsoft Azure Information Protection app for iOS and Android](../rms-client/mobile-app-get-started.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
