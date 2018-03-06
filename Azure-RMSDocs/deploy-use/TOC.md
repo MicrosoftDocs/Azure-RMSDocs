@@ -19,7 +19,7 @@
 ### [Delete or reorder a label](configure-policy-delete-reorder.md)
 ### [Change a label](configure-policy-change-label.md)
 ### [Configure protection](configure-policy-protection.md)
-#### [HYOK restrictions](configure-adrms-restrictions.md)
+#### [HYOK](configure-adrms-restrictions.md)
 ### [Configure visual markings](configure-policy-markings.md)
 ### [Configure conditions](configure-policy-classification.md)
 ### [Configure scoped policies](configure-policy-scope.md)
