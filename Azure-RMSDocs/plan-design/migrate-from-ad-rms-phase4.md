@@ -47,18 +47,7 @@ Independently from the Azure Information Protection tenant key topology that you
     
     - If AzureRMSLicensingEnabled is set **False**, run the commands in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
 
-2. Run the following PowerShell commands to ensure that users will be able to read emails that were sent by using AD RMS protection.
-
-    Substitute your own organization domain name for *\<yourcompany.domain>*.
-
-    	$irmConfig = Get-IRMConfiguration
-    	$list = $irmConfig.LicensingLocation
-    	$list += "https://adrms.<yourcompany.domain>/_wmcs/licensing"
-    	Set-IRMConfiguration -LicensingLocation $list
-    	Set-IRMConfiguration -internallicensingenabled $false
-    	Set-IRMConfiguration -internallicensingenabled $true
-
-3. Make sure that you have a DNS SRV record for your AD RMS cluster, so that Exchange Online can redirect to Azure Information Protection when needed. If you did not create the DNS SRV record for client reconfiguration in step 7, create this record now to support Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+2. To ensure that users will be able to read emails that were sent by using AD RMS protection, make sure that you have a DNS SRV record for your AD RMS cluster. If you did not create the DNS SRV record for client reconfiguration in step 7, create this record now to support Exchange Online. [Instructions](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
 
 > [!IMPORTANT]
 > Because you cannot control which recipients migrated users might select for protected emails, make sure that all users and mail-enabled groups in your organization have an account in Azure AD that can be used with Azure Information Protection. [More information](prepare.md)
