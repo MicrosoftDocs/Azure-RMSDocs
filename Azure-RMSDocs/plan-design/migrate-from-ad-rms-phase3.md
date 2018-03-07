@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,15 +52,17 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
 1. Create a DNS SRV record using the following format:
     
-    	_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
+    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
     
     For *\<AD RMS cluster>*, specify the FQDN of your AD RMS cluster. For example, **rmscluster.contoso.com**.
+    
+    Alternatively, if you have just one AD RMS cluster in that domain, you can specify just the domain name of the AD RMS cluster. In our example, that would be **contoso.com**. When you specify the domain name in this record, the redirection applies to any and all AD RMS clusters in that domain.
     
     The *\<port>* number is ignored.
     
     For *\<your tenant URL\>*, specify your own [Azure Rights Management service URL for your tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
     
-    If you use the DNS Server role on Windows Server, use the following table as an example how to specify the SRV record properties in the DNS Manager console.
+    If you use the DNS Server role on Windows Server, you can use the following table as an example how to specify the SRV record properties in the DNS Manager console.
     
 	|Field|Value|  
 	|-----------|-----------|  
