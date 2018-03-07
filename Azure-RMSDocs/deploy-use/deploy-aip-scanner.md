@@ -214,7 +214,7 @@ In addition, all files are inspected when the scanner downloads an Azure Informa
 > [!TIP]
 > If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **%LocalAppData%\Microsoft\MSIP\Policy.msip**, and restart the Azure Information Scanner service.
 > 
-> In addition, if you changed protection settings in the policy, wait 15 minutes from when you saved the protection settings before you restart the service.
+> If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
 If the scanner downloaded a policy that had no automatic conditions configured, a copy of the policy file is saved in **%LocalAppData%\Microsoft\MSIP\Scanner**. You must delete the Policy.msip file in this folder before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
