@@ -38,7 +38,7 @@ For Windows computers that use Office 2016 click-to-run desktop apps:
     
     This method requires you to create a new SRV record, and set an NTFS deny permission for users on the AD RMS publishing endpoint.
 
-- For Windows computers that don't use Office 2016:
+- For Windows computers that don't use Office 2016 click-to-run:
     
     You cannot use DNS redirection and instead, must use registry edits. If you have a mix of Office 2016 and other versions of Office, you can use this single method for all Windows computers, or a combination of DNS redirection and editing the registry. 
     
