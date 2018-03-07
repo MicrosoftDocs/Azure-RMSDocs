@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/05/2018
+ms.date: 03/07/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -43,7 +43,9 @@ Use the following resources to help you learn about, deploy, and support Azure I
 ## Information about new releases and updates
 The Azure Information Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). These blog posts supplement the product documentation and support information.
 
-A summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). Previous summaries were published on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+In addition, a summary of documentation changes is published each month to the [Azure Information Protection technical blog](https://aka.ms/AIPblog). These documentation updates include information for any new releases, updates to support statements, and also corrections and clarifications for existing releases. These posts are titled: "**Azure Information Protection Documentation Update for \<month year>**".
+
+Previous summaries were published on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). 
 
 ## Support options and community resources
 The following sections provide information about support and troubleshooting options, and community resources.
