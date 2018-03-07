@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if Mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -111,9 +111,9 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Rekey your tenant key. See the [Rekey your tenant key](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) section in this article.|
+|Your tenant key is leaked.|Rekey your tenant key. See the [Rekey your tenant key](#rekey-your-tenant-key) section in this article.|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
-|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
+|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

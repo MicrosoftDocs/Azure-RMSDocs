@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,10 +83,10 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Rekey your tenant key. See [Rekey your tenant key](#rkey-your-tenant-key).|
+|Your tenant key is leaked.|Rekey your tenant key. See [Rekey your tenant key](#rekey-your-tenant-key).|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
-|Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, Microsoft will instruct all customers to renew their tenant keys.|
-|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
+|Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, Microsoft will instruct all customers to rekey their tenant keys.|
+|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
