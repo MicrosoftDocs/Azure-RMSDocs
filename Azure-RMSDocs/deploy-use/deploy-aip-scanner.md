@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -212,11 +212,11 @@ You can force the scanner to inspect all files again by running [Set-AIPScannerC
 In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.  
 
 > [!TIP]
-> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **%LocalAppData%\Microsoft\MSIP\Policy.msip**, and restart the Azure Information Scanner service.
+> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner**. Then restart the Azure Information Scanner service.
 > 
 > If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
-If the scanner downloaded a policy that had no automatic conditions configured, a copy of the policy file is saved in **%LocalAppData%\Microsoft\MSIP\Scanner**. You must delete the Policy.msip file in this folder before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
+If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** file before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
