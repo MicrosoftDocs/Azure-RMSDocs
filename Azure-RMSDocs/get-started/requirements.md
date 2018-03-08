@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/26/2018
+ms.date: 03/07/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -37,7 +37,7 @@ Before you deploy Azure Information Protection for your organization, make sure 
 
 **For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the feature list from the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
 
 > [!TIP]
 > Looking to see if your Office 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
