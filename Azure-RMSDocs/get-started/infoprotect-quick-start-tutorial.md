@@ -6,7 +6,7 @@ description: An introduction tutorial to quickly try out Microsoft Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,7 +38,7 @@ If you have any problems completing this tutorial, using Azure Information Prote
 ## Prerequisites 
 To complete this tutorial, you need the following:
 
-- A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that you have a subscription to support these features for this tutorial. For more information, see the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+- A subscription that includes Azure Information Protection for classification, labeling, and protection. This tutorial includes some of the advanced features, such as automated data classification with user recommendations, and the document tracking site. Make sure that you have a subscription to support these features for this tutorial. For more information, see the feature list from the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
     
     If you don't have a subscription for these features, you can sign up for a free trial for [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     
