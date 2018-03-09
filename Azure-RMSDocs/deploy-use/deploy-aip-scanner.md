@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -216,7 +216,7 @@ In addition, all files are inspected when the scanner downloads an Azure Informa
 > 
 > If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
 
-If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** file before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
+If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner** before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
