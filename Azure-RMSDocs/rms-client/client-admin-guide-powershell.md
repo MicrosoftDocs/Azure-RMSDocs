@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -545,6 +545,8 @@ When you run this command for the first time, you are prompted to sign in, which
 
 Use the following additional steps and instructions to avoid the initial interactive sign-in for an account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. For example, this might be the case for your service account that runs the Azure Information Protection scanner.
 
+High-level steps:
+
 1. Create a PowerShell script on your local computer.
 
 2. Run Set-AIPAuthentication to get an access token and copy it to the clipboard.
@@ -553,7 +555,7 @@ Use the following additional steps and instructions to avoid the initial interac
 
 4. Create a task that runs the PowerShell script in the context of the service account that will label and protect files.
 
-5.Confirm that the token is saved for the service account, and delete the PowerShell script.
+5. Confirm that the token is saved for the service account, and delete the PowerShell script.
 
 #### Step 1: Create a PowerShell script on your local computer
 
