@@ -57,7 +57,7 @@ When these sublabels are not automatically configured for protection, the defaul
 
 When protection is applied to the **All Employees** sublabels, the protection is configured by using the default templates that are automatically converted to labels in the Azure portal. For more information about these templates, see [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md).
 
-Beginning with August 30, 2017, this version of the default policy includes multi-language versions of the label names and descriptions. 
+Starting August 30, 2017, this version of the default policy includes multi-language versions of the label names and descriptions. 
 
 #### More information about the Recipients Only sublabel
 
