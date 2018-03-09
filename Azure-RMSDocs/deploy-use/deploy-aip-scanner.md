@@ -107,9 +107,9 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
         Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
         ```
         
-        When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**
+        When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
     
-    - If your scanner service account cannot be granted the **Log on locally** right for the installation: Follow the instructions in the [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) section from the admin guide. 
+    - If your scanner service account cannot be granted the **Log on locally** right for the installation: Follow the instructions in the [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) section from the admin guide. 
     
 
 The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 through 3.
