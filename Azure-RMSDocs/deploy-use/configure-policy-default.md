@@ -39,7 +39,7 @@ You can reference the following values to return your policy to the defaults, or
 
 This version of the default policy is from July 31, 2017.
 
-This default policy is created when the Azure Rights Management service is activated, which is the case for new tenants starting **February 2018**. For more information, see the blog post announcement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
+This default policy is created when the Azure Rights Management service is activated, which is the case for new tenants starting February 2018. For more information, see the blog post announcement [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection).
 
 This default policy is also created if you have manually [activated the service](activate-service.md) before the policy was created. 
 
