@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,11 +65,11 @@ For in-depth technical information about how the protection technology works, se
 
 ## Service level agreements
 
-- Service level agreement for Azure Information Protection, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- [SLA for Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
+- [SLA for Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
 
--   Service level agreement for Azure Active Directory: [Service Level Agreements](http://azure.microsoft.com/support/legal/sla/)
+- [SLA for Azure Key Vault](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
 
 ## Documentation
 
