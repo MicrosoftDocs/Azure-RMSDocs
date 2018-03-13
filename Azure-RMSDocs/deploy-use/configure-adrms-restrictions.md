@@ -105,10 +105,14 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
-    - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection.
+    - Each AD RMS server is configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - The AD RMS servers are configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url)   
-
+    - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. 
+    
+        - If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. 
+        
+        - If you are installing the AD RMS cluster from scratch, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
+    
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
     - Configured rights templates.
