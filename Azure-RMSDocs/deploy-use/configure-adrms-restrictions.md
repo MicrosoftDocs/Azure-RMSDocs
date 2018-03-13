@@ -107,7 +107,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection.
     
-    - The AD RMS servers are configured for the certification URL.    
+    - The AD RMS servers are configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url)   
 
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
@@ -137,11 +137,11 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
     
     - For AD RMS clusters using SSL/TLS:
 
-	    https<://<server_name>/_wmcs/certification/certification.asmx
+	        https<://<server name>/_wmcs/certification/certification.asmx
     
     - For AD RMS clusters not using SSL/TLS (testing networks only):
         
-        http<://<server_name>/_wmcs/certification/certification.asmx
+            http<://<server name>/_wmcs/certification/certification.asmx
 
 2. Restart IIS.
 
