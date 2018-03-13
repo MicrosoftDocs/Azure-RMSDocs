@@ -141,11 +141,11 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
     
     - For AD RMS clusters using SSL/TLS:
 
-	        https<://<server_name>/_wmcs/certification/certification.asmx
+	        https<://<cluster_name>/_wmcs/certification/certification.asmx
     
     - For AD RMS clusters not using SSL/TLS (testing networks only):
         
-            http<://<server_name>/_wmcs/certification/certification.asmx
+            http<://<cluster_name>/_wmcs/certification/certification.asmx
 
 2. Restart IIS.
 
