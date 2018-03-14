@@ -173,7 +173,6 @@ The default use license validity period for a tenant is 30 days and you can conf
     
     For more information and guidance to configure this setting by using PowerShell, see the help for each cmdlet.
 
-
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
