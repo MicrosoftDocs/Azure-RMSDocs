@@ -111,7 +111,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
         - If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. 
         
-        - If you are installing the AD RMS cluster from scratch, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
+        - If you are installing a new AD RMS cluster for HYOK, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
     
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
