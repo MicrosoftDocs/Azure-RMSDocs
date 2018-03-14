@@ -62,7 +62,7 @@ When the account is created, the final page displays links to download the Azure
 Now your account is created, if you're prompted to sign in to read protected files, enter the same email address and password that you used to create the account for RMS for the individuals.
 
 > [!IMPORTANT]
-> Although you can now also protect files with this account, do not do so until your organization has a [trial or paid subscription](https://azure.microsoft.com/pricing/details/information-protection/) for Azure Information Protection. If you protect files and emails by using this free subscription and then your organization takes control over your account, previously protected content might become inaccessible.
+> Although you can now also protect files with this account, do not do so until your organization has a [trial or paid subscription](https://azure.microsoft.com/pricing/details/information-protection/) for Azure Information Protection. If you protect files and emails by using this free subscription and then your organization takes control of your account, previously protected content might become inaccessible.
 
 
 ## Next steps
