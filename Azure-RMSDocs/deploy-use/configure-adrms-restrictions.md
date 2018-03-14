@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -105,7 +105,13 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     
     - [Cryptographic Mode 2](https://technet.microsoft.com/library/hh867439.aspx): You can confirm the mode by checking the AD RMS cluster properties, **General** tab.
     
-    - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection.
+    - Each AD RMS server is configured for the certification URL. [Instructions](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+    
+    - A service connection point (SCP) is not registered in Active Directory: An SCP is not used when you use AD RMS protection with Azure Information Protection. 
+    
+        - If you have a registered an SCP for your AD RMS deployment, you must remove it so that [service discovery](../rms-client/client-deployment-notes.md#rms-service-discovery) is successful for Azure Rights Management protection. 
+        
+        - If you are installing a new AD RMS cluster for HYOK, skip the step to register the SCP during the configuration of the first node. For each additional node, make sure that the server is configured for the certification URL before you add the AD RMS role and join the existing cluster.
     
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
@@ -124,6 +130,24 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
 
+
+## Configuring AD RMS servers to locate the certification URL
+
+1. On each AD RMS server in the cluster, create the following registry entry:
+
+    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
+    
+    For the \<string value>, specify one of the following:
+    
+    - For AD RMS clusters using SSL/TLS:
+
+	        https://<cluster_name>/_wmcs/certification/certification.asmx
+    
+    - For AD RMS clusters not using SSL/TLS (testing networks only):
+        
+            http://<cluster_name>/_wmcs/certification/certification.asmx
+
+2. Restart IIS.
 
 ## Locating the information to specify AD RMS protection with an Azure Information Protection label
 
