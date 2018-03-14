@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/13/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -141,11 +141,11 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
     
     - For AD RMS clusters using SSL/TLS:
 
-	        https<://<cluster_name>/_wmcs/certification/certification.asmx
+	        https://<cluster_name>/_wmcs/certification/certification.asmx
     
     - For AD RMS clusters not using SSL/TLS (testing networks only):
         
-            http<://<cluster_name>/_wmcs/certification/certification.asmx
+            http://<cluster_name>/_wmcs/certification/certification.asmx
 
 2. Restart IIS.
 
