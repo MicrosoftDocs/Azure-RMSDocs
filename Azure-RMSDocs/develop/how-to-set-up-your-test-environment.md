@@ -31,13 +31,11 @@ Here, you learn how to prepare for application testing.
 
 ## Instructions
 
-### Step 1: Setup for testing
-
 You can test with either Azure RMS or an RMS server running on Windows Server.  Begin testing with Azure RMS and test with RMS Server (if required for your deployment).
 
-1. For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication.md).
-2. For testing with RMS Server, see [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md).
-3. To install the developer runtime:
+- For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication.md).
+- For testing with RMS Server, see [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md).
+- To install the developer runtime:
 
    You must have the Rights Management Service Client 2.1 installed on the computer on which you will be testing your application.
    - To test your application on a computer other than your development computer, install the RMS Client 2.1 on that computer from the [AD RMS Client download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
@@ -49,7 +47,7 @@ You can test with either Azure RMS or an RMS server running on Windows Server.  
 
 This guidance is not comprehensive. To learn how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
-### Related topics
+## Related topics
 
 * [How-to install and configure an RMS server](how-to-install-and-configure-an-rms-server.md)
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
