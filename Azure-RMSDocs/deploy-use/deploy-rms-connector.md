@@ -58,7 +58,7 @@ You can use the RMS connector even if some of your users are connecting to onlin
 
 If you manage your own tenant key for Azure RMS (the bring your own key, or BYOK scenario), the RMS connector and the on-premises servers that use it do not access the hardware security module (HSM) that contains your tenant key. This is because all cryptographic operations that use the tenant key are performed in Azure RMS, and not on-premises.
 
-If you want to learn more about this scenario where you manage your tenant key, see [Planning and implementing your Azure Rights Management tenant key](../plan-design\plan-implement-tenant-key.md).
+If you want to learn more about this scenario where you manage your tenant key, see [Planning and implementing your Azure Information Protection tenant key](../plan-design\plan-implement-tenant-key.md).
 
 ## Prerequisites for the RMS connector
 Before you install the RMS connector, make sure that the following requirements are in place.
