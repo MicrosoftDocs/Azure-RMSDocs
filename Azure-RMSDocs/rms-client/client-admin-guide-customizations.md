@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/19/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -209,9 +209,92 @@ To configure this advanced setting, enter the following strings:
 
 - Value: \<**label ID**> or **None**
 
+## Migrate labels from Secure Islands and other labeling solutions
+
+This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, you can change Secure Islands labels on Office documents and PDF documents to Azure Information Protection labels. You can use the same configuration to change labels from other solutions when these labels are on Office documents. 
+
+As a result of this configuration, the label migration happens as follows:
+
+- For Office documents: When the document is opened in the desktop app, the new label is shown as set and is applied when the document is saved.
+
+- For File Explorer: In the Azure Information Protection dialog box, the new label is shown as set and is applied when the user selects **Apply**. If the user selects **Cancel**, the new label is not applied.
+
+- For PowerShell: Set-AIPFileLabel applies the new label. Get-AIPFileStatus doesn't display the new label until it is set by another method.
+
+- For the Azure Information Protection scanner: Discovery reports when the new label would be set and the new label can be applied with the enforce mode.
+
+This configuration requires you to specify an advanced client setting named **LabelbyCustomProperty** for each Azure Information Protection label that you want to use instead of the old label. Then for each entry, set the value by using the following syntax:
+
+`[Azure Information Protection label ID],["Migration rule name"],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal.
+
+Specify your choice of a migration rule name. Use a description that helps you to identify how one or more labels from your previous labeling solution should be migrated to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
+
+### Example 1: One-to-one mapping of same label name
+
+Documents that have a Secure Islands label "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+
+In this example:
+
+- The Azure Information Protection label of **Confidential** has a label ID of 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+
+- The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c,"Secure Islands label contains Confidential",Classification,Confidential|
+
+
+### Example 2: Many-to-one mapping of label names
+
+You have two Secure Islands labels that contain the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
+
+In this example:
+
+- The Azure Information Protection label **General** has a label ID of 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+
+-The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
+
+
+### Example 3: One-to-one mapping for a different label name
+
+Documents labeled as "Sensitive" by Secure Islands should be labeled as "Highly Confidential" by Azure Information Protection
+
+In this example:
+
+- The Azure Information Protection label **Highly Confidential** has a label ID of 3e9df74d-3168-48af-8b11-037e3021813f.
+
+- The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f,"Secure Islands label contains Sensitive",Classification,Sensitive|
+
+
 ## Label an Office document by using an existing custom property
 
-This configuration option is currently in preview and is subject to change. 
+This configuration option is currently in preview and is subject to change.
+
+> [!NOTE]
+> If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
