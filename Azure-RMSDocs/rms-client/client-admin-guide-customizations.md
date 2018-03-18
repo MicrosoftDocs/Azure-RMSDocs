@@ -233,7 +233,7 @@ This configuration requires you to specify an advanced client setting named **La
 
 The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
-Specify your choice of a migration rule name. Use a description that helps you to identify how one or more labels from your previous labeling solution should be migrated to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
+Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be migrated to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 
 ### Example 1: One-to-one mapping of same label name
 
@@ -278,7 +278,7 @@ In this example:
 
 - The Azure Information Protection label **General** has a label ID of 2beb8fe7-8293-444c-9768-7fdc6f75014d.
 
--The Secure Islands label is stored in the custom property named **Classification**.
+- The Secure Islands label is stored in the custom property named **Classification**.
 
 The advanced client setting:
 
