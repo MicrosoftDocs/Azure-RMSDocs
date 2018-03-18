@@ -229,9 +229,9 @@ As a result of this configuration, the label migration happens as follows:
 
 This configuration requires you to specify an advanced client setting named **LabelbyCustomProperty** for each Azure Information Protection label that you want to use instead of the old label. Then for each entry, set the value by using the following syntax:
 
-`[Azure Information Protection label ID],["Migration rule name"],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal.
+The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
 Specify your choice of a migration rule name. Use a description that helps you to identify how one or more labels from your previous labeling solution should be migrated to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 
