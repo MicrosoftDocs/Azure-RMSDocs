@@ -100,7 +100,7 @@ The Rights Management connector and the Azure Information Protection scanner do 
 
 - The account that installs and configures the connector.
 
-- The service principal account in Azure AD, **Aadrm_S-1-7-0**, that the connector creates for authentication.
+- The service principal account in Azure AD, **Aadrm_S-1-7-0**, that the connector creates.
  
 - The service account that runs the scanner.
 
