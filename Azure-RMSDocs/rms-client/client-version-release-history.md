@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -161,30 +161,6 @@ Fixes for a better user experience, that include:
 - Email validation when users specify custom permissions. Also, multiple email addresses can now be specified by pressing Enter.
 
 - The parent label is not displayed when all its sublabels are configured for protection and the client does not have an edition of Office that supports protection. 
-
-## Version 1.7.210.0
-
-**Released**: 06/06/2017
-
-This version includes the MSIPC version 1.0.2217.1 of the RMS client.
-
-**New features**:
-
-- New PowerShell cmdlet, [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). When you run this cmdlet, it inspects the file contents and automatically applies labels to unlabeled files, according to the conditions that you specify in the Azure Information Protection policy.
-
-**Fixes**:
-
-- All labeling and classification cmdlets are now supported on computers that are not connected to the Internet but have a valid Azure Information Protection policy.
-
-- For consistency, an output parameter from the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) cmdlet is changed from British English (**IsLabelled**) to American English (**IsLabeled**). If you have scripts or automated processes that look for this parameter, update the spelling for this parameter.
-
-- General fixes for stability that include:
-
-    - For Outlook: Fixes for crashes, high memory consumption, and display issues for menus.
-    
-    - For Word, Excel, and PowerPoint: Fixes for high CPU usage, display issues when saving large Excel files, or the application stops responding. 
-    
-    Also for these applications, to improve performance for Office 2016 with SharePoint Online and OneDrive for Business, automatic and recommended labeling is applied when the file closes rather than when the file saves (automatically saves or the user chooses to save). Similarly, if the setting **All documents and email must have a label** is enabled, users are not prompted to select a label until the file closes. The exception is for Word 2016 and Excel 2016 and the user selects the **Save As** option. Then, this action triggers these labeling behaviors if they are configured. 
 
 ## Next steps
 
