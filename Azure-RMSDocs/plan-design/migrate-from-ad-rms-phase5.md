@@ -124,7 +124,7 @@ To rekey your Azure Information Protection tenant key:
 
 - **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the URI for this new key. 
 
-For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
+For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Information Protection tenant key](../deploy-use/operations-tenant-key.md).
 
 
 ## Next steps
