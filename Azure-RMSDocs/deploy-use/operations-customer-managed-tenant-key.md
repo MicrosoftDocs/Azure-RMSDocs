@@ -6,7 +6,7 @@ description: Information about the life cycle operations that are relevant if yo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,9 +67,9 @@ For more information about each of these steps:
 ## Backup and recover your tenant key
 Because you are managing your tenant key, you are responsible for backing up the key that Azure Information Protection uses. 
 
-If you generated your tenant key on premises, in a Thales HSM: To back up the key, back up the tokenized key file, the world file, and the administrator cards. When you transfer your key to Azure Key Vault, the service saves the tokenized key file, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
+If you generated your tenant key on premises, in a Thales HSM: To back up the key, back up the tokenized key file, the world file, and the administrator cards. When you transfer your key to Azure Key Vault, the service saves the tokenized key file, to protect against failure of any service nodes. This file is bound to the security world for the specific Azure region or instance. However, do not consider this tokenized key file to be a full backup. For example, if you ever need a plain text copy of your key to use outside a Thales HSM, Azure Key Vault cannot retrieve it for you, because it has only a non-recoverable copy.
 
-Azure Key Vault has a [backup cmdlet](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) that you can use to backup a key by downloading it and storing it in a file. Because the downloaded content is encrypted, it cannot be used outside Azure Key Vault. 
+Azure Key Vault has a [backup cmdlet](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey) that you can use to back up a key by downloading it and storing it in a file. Because the downloaded content is encrypted, it cannot be used outside Azure Key Vault. 
 
 ## Export your tenant key
 If you use BYOK, you cannot export your tenant key from Azure Key Vault or Azure Information Protection. The copy in Azure Key Vault is non-recoverable. 
@@ -83,10 +83,10 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 
 |Incident description|Likely response|
 |------------------------|-------------------|
-|Your tenant key is leaked.|Rekey your tenant key. See [Rekey your tenant key](#rkey-your-tenant-key).|
+|Your tenant key is leaked.|Rekey your tenant key. See [Rekey your tenant key](#rekey-your-tenant-key).|
 |An unauthorized individual or malware got rights to use your tenant key but the key itself did not leak.|Rekeying your tenant key does not help here and requires root-cause analysis. If a process or software bug was responsible for the unauthorized individual to get access, that situation must be resolved.|
-|Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, Microsoft will instruct all customers to renew their tenant keys.|
-|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to renew their tenant keys.|
+|Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, Microsoft will instruct all customers to rekey their tenant keys.|
+|Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

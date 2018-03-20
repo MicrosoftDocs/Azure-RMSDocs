@@ -6,7 +6,11 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
+<<<<<<< .merge_file_a12596
 ms.date: 03/06/2018
+=======
+ms.date: 03/09/2018
+>>>>>>> .merge_file_a14128
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,7 +68,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 ## Install the Azure Information Protection scanner
 
-1. Using the service account that you created to run the scanner, sign in to the Windows Server computer that will run the scanner.
+1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
 
 2. Open a Windows PowerShell session with the **Run as an administrator** option.
 
@@ -98,15 +102,17 @@ Now that you have installed the scanner, you need to get an Azure AD token for t
     
     To create these applications, follow the instructions in [How to label files non-interactively for Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-2. From the Windows Server computer, still signed in with the scanner service account, run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
+2. From the Windows Server computer, if your scanner service account has been granted the **Log on locally** right for the installation: Sign in with this account and start a PowerShell session. Run [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specifying the values that you copied from the previous step:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
+    
+    When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
+    
+    If your scanner service account cannot be granted the **Log on locally** right for the installation: Follow the instructions in the [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) section from the admin guide. 
 
-3. When prompted, specify the password for your service account credentials for Azure AD, and then click **Accept**.
-
-The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 through 3.
+The scanner now has a token to authenticate to Azure AD, which is valid for one year, two years, or never expires, according to your configuration of the **Web app /API** in Azure AD. When the token expires, you must repeat steps 1 and 2.
 
 You're now ready to specify the data stores to scan. 
 
@@ -208,10 +214,14 @@ For the first scan cycle, the scanner inspects all files in the configured data 
 
 You can force the scanner to inspect all files again by running [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) with the `-Type` parameter set to **Full**. This configuration is useful when you want the reports to include all files and it is typically used when the scanner runs in discovery mode. When a full scan is complete, the scan type automatically changes to incremental so that for subsequent scans, only new or modified files are scanned.
 
-In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.
+In addition, all files are inspected when the scanner downloads an Azure Information Protection policy that has new or changed conditions. The scanner refreshes the policy every hour, and when the service starts and the policy is older than one hour.  
 
 > [!TIP]
-> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **%LocalAppData%\Microsoft\MSIP\Policy.msip**, and restart the Azure Information Scanner service.
+> If you need to refresh the policy sooner than this one hour interval, for example, during a testing period: Manually delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner**. Then restart the Azure Information Scanner service.
+> 
+> If you changed protection settings in the policy, also wait 15 minutes from when you saved the protection settings before you restart the service.
+
+If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner** before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
