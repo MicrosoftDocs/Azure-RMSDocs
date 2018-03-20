@@ -235,7 +235,7 @@ The label ID value is displayed on the **Label** blade, when you view or configu
 
 Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 
-### Example 1: One-to-one mapping of same label name
+### Example 1: One-to-one mapping of the same label name
 
 Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
 
