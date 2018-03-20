@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -215,25 +215,25 @@ This configuration option is currently in preview and is subject to change. In a
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, you can change Secure Islands labels on Office documents and PDF documents to Azure Information Protection labels. You can use the same configuration to change labels from other solutions when these labels are on Office documents. 
+For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
 
-As a result of this configuration, the label migration happens as follows:
+As a result of this configuration option, the new Azure Information Protection label is applied by the Azure Information Protection client as follows:
 
-- For Office documents: When the document is opened in the desktop app, the new label is shown as set and is applied when the document is saved.
+- For Office documents: When the document is opened in the desktop app, the new Azure Information Protection label is shown as set and is applied when the document is saved.
 
-- For File Explorer: In the Azure Information Protection dialog box, the new label is shown as set and is applied when the user selects **Apply**. If the user selects **Cancel**, the new label is not applied.
+- For File Explorer: In the Azure Information Protection dialog box, the new Azure Information Protection label is shown as set and is applied when the user selects **Apply**. If the user selects **Cancel**, the new label is not applied.
 
-- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applies the new label. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't display the new label until it is set by another method.
+- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applies the new Azure Information Protection label. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't display the new Azure Information Protection label until it is set by another method.
 
-- For the Azure Information Protection scanner: Discovery reports when the new label would be set and the new label can be applied with the enforce mode.
+- For the Azure Information Protection scanner: Discovery reports when the new Azure Information Protection label would be set and this label can be applied with the enforce mode.
 
-This configuration requires you to specify an advanced client setting named **LabelbyCustomProperty** for each Azure Information Protection label that you want to use instead of the old label. Then for each entry, set the value by using the following syntax:
+This configuration requires you to specify an advanced client setting named **LabelbyCustomProperty** for each Azure Information Protection label that you want to map to the old label. Then for each entry, set the value by using the following syntax:
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
 The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
 
-Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be migrated to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
+Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
 
 ### Example 1: One-to-one mapping of same label name
 
