@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 03/20/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -45,6 +45,8 @@ To make sure that your organization's subscription includes the Azure Informatio
 > [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
 > [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+>
+> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
