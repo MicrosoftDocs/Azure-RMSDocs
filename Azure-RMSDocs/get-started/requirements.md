@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2018
+ms.date: 03/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -53,6 +53,8 @@ If you have questions about subscriptions or licensing, do not post them on this
 ## Azure Active Directory
 
 Your organization must have an Azure Active Directory (Azure AD) to support user authentication and authorization for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+
+Single sign-on (SSO) is supported for Azure Information Protection, so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
 
 Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.
 
