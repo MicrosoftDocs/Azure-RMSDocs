@@ -54,7 +54,7 @@ If you have questions about subscriptions or licensing, do not post them on this
 
 Your organization must have an Azure Active Directory (Azure AD) to support user authentication and authorization for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.
 
-Single sign-on is supported for Azure Information Protection, so that users are not repeatedly prompted for authentication. If you use another vendor solution for federation, check with that vendor how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
+Single sign-on (SSO) is supported for Azure Information Protection, so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
 
 Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.
 
