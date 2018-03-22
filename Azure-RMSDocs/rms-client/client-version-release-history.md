@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/27/2018
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,9 +48,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Version 1.21.205.0
+## Version 1.26.5.0
 
-**Released**: 04/??/2018
+**Released**: 04/10/2018
 
 This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
@@ -81,14 +81,21 @@ Fixes for stability and for specific scenarios that include:
 
 - When two organization using Azure Information Protection share labeled documents and emails, their own labels are retained and not replaced by the other organization's labels.
 
-- Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
+- For Excel:
+        
+    - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
+        
+    - Support for cells that contain cross-references, which previously caused text corruption in that cell.
+    
+    - Support for typing Japanese, Chinese, or Korean characters, which previously closed a window so these characters couldn't be selected.
+    
+    - Support for comments, which previously closed the comment while it was being typed.
 
-- Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
+- For PowerPoint: Support for coauthoring, which previously could cause data loss.
 
 - Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
 
 - The viewer can now open protected text-based files (.ptxt and .pxml) larger than 20 MB. 
-
 - Prevent Outlook hanging when Outlook reminders are used.
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
