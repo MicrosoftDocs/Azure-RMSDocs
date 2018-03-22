@@ -6,11 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< .merge_file_a15068
-ms.date: 03/06/2018
-=======
-ms.date: 03/15/2018
->>>>>>> .merge_file_a01164
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection

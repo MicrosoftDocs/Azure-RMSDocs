@@ -6,11 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< .merge_file_a18800
-ms.date: 01/09/2018
-=======
-ms.date: 03/14/2018
->>>>>>> .merge_file_a14712
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection

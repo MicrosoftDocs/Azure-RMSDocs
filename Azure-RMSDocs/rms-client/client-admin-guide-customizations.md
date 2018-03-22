@@ -6,11 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-<<<<<<< .merge_file_a17708
-ms.date: 03/06/2018
-=======
-ms.date: 03/20/2018
->>>>>>> .merge_file_a15220
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -209,8 +205,6 @@ To configure this advanced setting, enter the following strings:
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
-
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
@@ -288,14 +282,9 @@ The advanced client setting:
 
 ## Label an Office document by using an existing custom property
 
-<<<<<<< .merge_file_a17708
-=======
-This configuration option is currently in preview and is subject to change.
-
 > [!NOTE]
 > If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 
 
->>>>>>> .merge_file_a15220
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 When you configure this setting, you can classify (and optionally, protect) an Office document when it has an existing custom property with a value that matches one of your label names. This  custom property can be set from another classification solution, or can be set as a property by SharePoint.
