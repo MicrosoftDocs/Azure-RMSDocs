@@ -28,7 +28,7 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 # Hold your own key (HYOK) requirements and restrictions for AD RMS protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 When you protect your most sensitive documents and emails, you typically do this by applying Azure Rights Management (Azure RMS) protection to benefit from the following:
 
