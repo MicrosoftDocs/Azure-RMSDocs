@@ -54,15 +54,10 @@ When you use this configuration, all users can still use the document tracking s
 
 This setting affects end users only. Administrators for Azure Information Protection can always track activities of all users, even when those users are specified by using Set-AadrmDoNotTrackUserGroup. For more information about how administrators can track documents for users, see the [Tracking and revoking documents for users](#tracking-and-revoking-documents-for-users) section.
 
-<<<<<<< HEAD
+
 ### Logging information from the document tracking site
 
 When you have at least version **2.12.?.?** of the AADRM module, you can use the following cmdlets to download logging information from the document tracking site:
-=======
-You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group, but be aware of [group caching](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
-
-For more information about each of these cmdlets, use the links provided. For installation instructions for the PowerShell module, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
->>>>>>> 8a5c4e8b4c6167c58ee8e2d68b9c71ca9211b9bf
 
 - [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
     
