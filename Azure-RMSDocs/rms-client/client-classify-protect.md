@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 03/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,11 +40,14 @@ If your label applies protection to a document, the protected document is not su
 
 ### Safely share a file with people outside your organization
 
-Files that are protected are safe to share with others. For example, you attach the file to an email.
+Files that are protected are safe to share with others. For example, you attach a protected document to an email.
 
-If you regularly share files with people outside your organization, your administrator might have configured a label for you that sets protection such that these people can read it. Alternatively, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a file before you share it. If you set your own custom permissions and the file is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.  
+Before you share files with people outside your organization, check with your help desk or administrator how to protect files for external users.
 
-When the file is protected with your custom permissions, use your standard sharing mechanism to share the file. If this is the first time that these people that you are sharing with have received a protected file, they might need instructions to view it. For these people, you can copy and past the following message: **I've protected this file with Microsoft Azure Information Protection. For first time use, see these [instructions](https://aka.ms/rms-signup).**
+For example, if your organization regularly communicates with people in another organization, your administrator might have configured labels that sets protection such that these people can read and use protected documents. Then, select these labels to classify and protect the documents to share.
+
+Alternatively, if the external users have [business-to-business (B2B) accounts](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) created for them, you can use your [Office app to set custom permissions](#set-custom-permissions-for-a-document) or use [File Explorer to set custom permissions](#using-file-explorer-to-classify-and-protect-files) for a document before you share it. If you set your own custom permissions and the document is already protected for internal use, first make a copy of it to retain the original permissions. Then use the copy to set the custom permissions.
+
 
 ## Using Office apps to classify and protect your documents and emails
 
