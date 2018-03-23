@@ -27,7 +27,7 @@ ms.suite: ems
 
 # User Guide: Classify and protect a file or email by using Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 > [!NOTE]
 > Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](client-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.

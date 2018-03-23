@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Information Protection client: Version release history and support policy
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
