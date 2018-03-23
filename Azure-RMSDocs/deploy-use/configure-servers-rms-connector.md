@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -205,7 +205,7 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 
 ### To configure SharePoint servers to use the connector
 
-1. Make sure that the SharePoint servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
+1. Make sure that the SharePoint servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that your SharePoint servers can use the RMS connector.
 
 2.  On the SharePoint servers that communicate with the RMS connector, do one of the following:
 
@@ -237,7 +237,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
 ### To configure file servers to use the connector
 
-1.  Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that Exchange can use the RMS connector.
+1.  Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that your file servers can use the RMS connector.
 
 2.  On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 

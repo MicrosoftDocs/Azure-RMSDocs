@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: PowerShell for Azure RMS custom templates - AIP
-description: Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+title: PowerShell for protection templates - Azure Information Protection
+description: Everything that you can do in the Azure portal to create and manage protection templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,22 +27,19 @@ ms.suite: ems
 
 
 
-# PowerShell reference for custom templates
+# PowerShell reference for protection templates
 
 >*Applies to: Azure Information Protection, Office 365*
 
-Everything that you can do in the Azure classic portal to create and manage rights management templates, you can do from the command line, by using PowerShell. In addition, you can export and import templates, so that you can copy templates between tenants or perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+Protection settings for Azure Information Protection are saved in protection templates. Everything that you can do in the Azure portal to create and manage protection settings, you can do from the command line by using PowerShell. 
 
-You can also use export and import to back up and restore your custom templates, As a best practice, regularly back up your custom templates, so that if you make a change that was not intended, you can easily revert to a previous version.
+In addition, you can export and import protection templates. These two actions let you copy protection templates between tenants or do bulk edits of complex properties, such as multilingual names and descriptions.
 
-> [!IMPORTANT]
-> To use PowerShell to create and manage Azure Rights Management templates, you must have at least version 2.0.0.0 of the [Windows PowerShell module for Azure RMS](https://go.microsoft.com/fwlink/?LinkId=257721).
-> 
-> If you have previously installed this PowerShell module, run the following command in a PowerShell window to check the version number: `(Get-Module aadrm -ListAvailable).Version`
+You can also use export and import to back up and restore your protection templates. As a best practice, regularly back up your templates. Then, if you make a change to the protection settings that wasn't intended, you can easily revert to a previous version.
 
-For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
+For installation instructions, see [Installing the AADRM PowerShell module](install-powershell.md).
 
-The cmdlets that support creating and managing templates:
+The cmdlets that support creating and managing protection templates:
 
 - [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 
@@ -63,6 +60,6 @@ The cmdlets that support creating and managing templates:
 
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+[Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

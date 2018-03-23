@@ -1,11 +1,11 @@
-﻿---
+---
 # required metadata
 
 title: Android code examples | Azure RMS
 description: This topic will introduce you to important code elements for the Android version of the RMS SDK.
 keywords:
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -27,27 +27,30 @@ ms.suite: ems
 
 # Android code examples
 
-This topic will introduce you to important code elements for the Android version of the RMS SDK.
+This article shows how to code elements for the Android version of the RMS SDK.
 
-**Note**  In the example code and descriptions that follow, we use the term MSIPC (Microsoft Information Protection and Control) to reference the client process.
+**Note** In this article, The term _MSIPC_ (Microsoft Information Protection and Control) refers to the client process.
 
 
 ## Using the Microsoft Rights Management SDK 4.2 - key scenarios
 
-Following are code examples from a larger sample application representing development scenarios important to your orientation to this SDK. These demonstrate; use of Microsoft Protected File format referred to as protected file, use of custom protected file formats, and use of custom UI controls.
+These code samples are taken from a larger sample application representing development scenarios important to your orientation to this SDK. They show how to use:
 
+- The Microsoft Protected File format, also called a _protected file_.
+- Custom protected file formats
+- Custom user interface (UI) controls
 
-
-The sample application, *MSIPCSampleApp*, is available for use with this SDK for the Android operating system. See [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) on GitHub for access to this sample application.
+The *MSIPCSampleApp* sample application is available for use with this SDK for the Android operating system. To learn more, see [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
 ### Scenario: Consume an RMS protected file
 
--   **Step 1**: Create a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)
+- **Step 1**: Create a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
 
     **Source**: *MsipcAuthenticationCallback.java*
 
-    **Description**: Instantiate a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) object, through its create method which implements service authentication using the [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) near the end of the following example code section.
+    **Description**: Instantiate a [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) object and implement service authentication.  Use the [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) to get a token by passing an instance of **AuthenticationRequestCallback**, as the parameter *mRmsAuthCallback*, to the MSIPC API. See the call to [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) near the end of the following example code section.
 
+    ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
         {
             CreationCallback<ProtectedFileInputStream> protectedFileInputStreamCreationCallback =
@@ -105,15 +108,16 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
                 …
             }
         }
+    ```
 
-
--   **Step 2**: Setup authentication using the Active Directory Authentication Library (ADAL).
+- **Step 2**: Set up authentication using the Active Directory Authentication Library (ADAL).
 
     **Source**: *MsipcAuthenticationCallback.java*.
 
-    **Description**: In this step you will see ADAL used to implement an [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) with example authentication parameters. For more information on using ADAL, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Description**: This step uses ADAL to implement an [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) with example authentication parameters. To learn more, see the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
+    ``` java
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback
         {
 
@@ -185,13 +189,13 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
 
                             );
                       }
+    ```
 
-
--   **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) method.
+- **Step 3**: Check if the **Edit** right exists for this user with this content via the [UserPolicy.accessCheck](https://msdn.microsoft.comlibrary/dn790885.aspx) method.
 
     **Source**: *TextEditorFragment.java*
 
-
+    ``` java
          //check if user has edit rights and apply enforcements
                 if (!mUserPolicy.accessCheck(EditableDocumentRights.Edit))
                 {
@@ -200,18 +204,18 @@ The sample application, *MSIPCSampleApp*, is available for use with this SDK for
                     mTextEditor.setEnabled(false);
                     …
                 }
+    ```
 
 
 ### Scenario: Create a new protected file using a template
 
 This scenario begins with getting a list of templates, selecting the first one to create a policy, then creates and writes to the new protected file.
 
--   **Step 1**: Get list of templates via a [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) object.
+- **Step 1**: Get list of templates via a [TemplateDescriptor](https://msdn.microsoft.com/library/dn790871.aspx) object.
 
     **Source**: *MsipcTaskFragment.java*
 
-
-
+    ``` java
     CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>()
       {
           @Override
@@ -247,14 +251,13 @@ This scenario begins with getting a list of templates, selecting the first one t
       {
               …
       }
+    ```
 
-
--    **Step 2**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) using the first template in the list.
+- **Step 2**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) using the first template in the list.
 
     **Source**: *MsipcTaskFragment.java*
 
-
-
+    ``` java
       CreationCallback<UserPolicy> userPolicyCreationCallback = new CreationCallback<UserPolicy>()
       {
           @Override
@@ -292,13 +295,13 @@ This scenario begins with getting a list of templates, selecting the first one t
       {
               …
       }
+    ```
 
-
--    **Step 3**: Create a [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) and write content to it.
+-  **Step 3**: Create a [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx) and write content to it.
 
     **Source**: *MsipcTaskFragment.java*
 
-
+    ``` java
     private void createPTxt(final byte[] contentToProtect)
         {
              …
@@ -355,16 +358,16 @@ This scenario begins with getting a list of templates, selecting the first one t
                  …
             }
         }
-
+    ```
 
 
 ### Scenario: Open a custom protected file
 
--   **Step 1**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from a *serializedContentPolicy*.
+- **Step 1**: Create a [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from a *serializedContentPolicy*.
 
     **Source**: *MsipcTaskFragment.java*
 
-
+    ``` java
     CreationCallback<UserPolicy> userPolicyCreationCallbackFromSerializedContentPolicy = new CreationCallback<UserPolicy>()
             {
                 @Override
@@ -417,15 +420,14 @@ This scenario begins with getting a list of templates, selecting the first one t
     {
       ...
     }
+    ```
 
 
-
--    **Step 2**: Create a [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) using the [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from **Step 1**.
+- **Step 2**: Create a [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) using the [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from **Step 1**.
 
     **Source**: *MsipcTaskFragment.java*
 
-
-
+    ``` java
       CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>()
       {
          @Override
@@ -490,13 +492,13 @@ This scenario begins with getting a list of templates, selecting the first one t
     {
       ...
     }
+    ```
 
-
--    **Step 3**: Read content from the [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) into *mDecryptedContent* then close.
+- **Step 3**: Read content from the [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx) into *mDecryptedContent* then close.
 
     **Source**: *MsipcTaskFragment.java*
 
-
+    ``` java
     @Override
     public void onSuccess(CustomProtectedInputStream customProtectedInputStream)
     {
@@ -525,18 +527,17 @@ This scenario begins with getting a list of templates, selecting the first one t
         ...
       }
     }
+    ```
 
+### Scenario: Create a custom protected file using a custom policy
 
-### Scenario: Create a custom protected file using a custom (ad-hoc) policy
-
--   **Step 1**: With an email address provided by the user, create a policy descriptor.
+- **Step 1**: With an email address provided by the user, create a policy descriptor.
 
     **Source**: *MsipcTaskFragment.java*
 
-    **Description**: In practice the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
+    **Description**: In practice, the following objects would be created by using user inputs from the device interface; [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) and [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
 
-
-
+    ``` java
       // create userRights list
       UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),
         Arrays.asList( CommonRights.View, EditableDocumentRights.Print));
@@ -548,26 +549,24 @@ This scenario begins with getting a list of templates, selecting the first one t
                                                              usersRigthsList);
       policyDescriptor.setOfflineCacheLifetimeInDays(10);
       policyDescriptor.setContentValidUntil(new Date());
+    ```
 
 
-
--    **Step 2**: Create a custom [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from the policy descriptor, *selectedDescriptor*.
+- **Step 2**: Create a custom [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) from the policy descriptor, *selectedDescriptor*.
 
     **Source**: *MsipcTaskFragment.java*
 
-
+    ``` java
        mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,
-                                              mEmailId, mRmsAuthCallback,
-                                              UserPolicyCreationFlags.NONE,
-                                              userPolicyCreationCallback);
+         mEmailId, mRmsAuthCallback, UserPolicyCreationFlags.NONE, userPolicyCreationCallback);
+    ```
 
 
-
--   **Step 3**: Create and write content to the [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) and then close.
+- **Step 3**: Create and write content to the [CustomProtectedOutputStream](https://msdn.microsoft.com/library/dn758274.aspx) and then close.
 
     **Source**: *MsipcTaskFragment.java*
 
-
+    ``` java
     File file = new File(filePath);
         final OutputStream outputStream = new FileOutputStream(file);
         CreationCallback<CustomProtectedOutputStream> customProtectedOutputStreamCreationCallback = new CreationCallback<CustomProtectedOutputStream>()
@@ -631,5 +630,6 @@ This scenario begins with getting a list of templates, selecting the first one t
         {
           …
         }
+    ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

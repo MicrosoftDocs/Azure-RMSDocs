@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,8 +34,8 @@ When you use the Azure Rights Management service of Azure Information Protection
 
 |Application or service|How templates are refreshed after changes|
 |--------------------------|---------------------------------------------|
-|Exchange Online<br /><br />Applicable for transport rules, DLP rules, and the Outlook web app|Manual configuration required to refresh templates.<br /><br />For the configuration steps, see the following section, [Exchange Online only: How to configure Exchange to download changed custom templates](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
-|Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - Every 24 hours.<br /><br /> Additionally, because the Azure Information Protection client is tightly integrated with Office, any refreshed templates for Office 2016 or Office 2013 will also be refreshed for the Azure Information Protection client.|
+|Exchange Online<br /><br />Applicable for transport rules and the Outlook web app |Automatically refreshed within an hour - no additional steps required.<br /><br />This is the case if you are using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). If you have previously configured Exchange Online to use the Azure Rights Management service by importing your trusted publishing domain (TPD), use the same set of instructions to enable the new capabilities in Exchange Online.|
+|Azure Information Protection client|Automatically refreshed whenever the Azure Information Protection policy is refreshed on the client:<br /><br /> - When an Office application opens that supports the Azure Information Protection bar. <br /><br /> - When you right-click to classify and protect a file or folder. <br /><br /> - When you run the PowerShell cmdlets for labeling and protection (Get-AIPFileStatus and Set-AIPFileLabel).<br /><br /> - When the Azure Information Protection Scanner service starts and the local policy is older than one hour. In addition, the scanner service checks for changes every hour and uses these changes for the next scan cycle.<br /><br /> - Every 24 hours.<br /><br /> Additionally, because the Azure Information Protection client is tightly integrated with Office, any refreshed templates for Office 2016 or Office 2013 will also be refreshed for the Azure Information Protection client.|
 |Office 2016 and Office 2013<br /><br />RMS sharing application for Windows|Automatically refreshed - on a schedule:<br /><br />- For these later versions of Office: The default refresh interval  is every 7 days.<br /><br />- For the RMS sharing application for Windows: Starting with version 1.0.1784.0, the default refresh interval is every 1 day. Prior versions have a default refresh interval of every 7 days.<br /><br />To force a refresh sooner than the schedule, see the following section, [Office 2016, Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Automatically refreshed when users sign out from Windows, sign back in, and wait up to 1 hour.|
 |Exchange on-premises with the Rights Management connector<br /><br />Applicable for transport rules and the Outlook web app|Automatically refreshed - no additional steps required. However, the Outlook web app caches the UI for a day.|
@@ -43,67 +43,6 @@ When you use the Azure Rights Management service of Azure Information Protection
 |RMS sharing app for Mac computers|Automatically refreshed - no additional steps required.|
 
 When client applications need to download templates (initially or refreshed for changes), be prepared to wait up to 15 minutes before the download is complete and the new or updated templates are fully operational. The actual time will vary, according to factors such as the size and complexity of the template configuration, and the network connectivity. 
-
-## Exchange Online only: How to configure Exchange to download changed custom templates
-If you have already configured Information Rights Management (IRM) for Exchange Online, custom templates will not download for users until you make the following changes by using Windows PowerShell in Exchange Online.
-
-> [!NOTE]
-> For more information about how to use Windows PowerShell in Exchange Online, see [Using PowerShell with Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
-
-You must do this procedure each time you change a template.
-
-### To update templates for Exchange Online
-
-1.  Using Windows PowerShell in Exchange Online, connect to the service:
-
-    1.  Supply your Office 365 user name and password:
-
-        ```
-        $UserCredential = Get-Credential
-        ```
-
-    2.  Connect to the Exchange Online service by running the following two commands:
-
-        ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-        ```
-
-        ```
-        Import-PSSession $Session
-        ```
-
-2.  Use the [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) cmdlet to re-import your trusted publishing domain (TPD) from Azure RMS:
-
-    ```
-    Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
-    ```
-    For example, if your TPD name is **RMS Online - 1** (a typical name for many organizations), enter: **Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates -RMSOnline**
-
-    > [!NOTE]
-    > To verify your TPD name, you can use the [Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx) cmdlet.
-
-3.  To confirm that the templates have imported successfully, wait a few minutes and then run the [Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) cmdlet and set the Type to All. For example:
-
-    ```
-    Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
-    ```
-    > [!TIP]
-    > It's useful to keep a copy of the output so that you can easily copy the template names or GUIDs if you later archive a template.
-
-4.  For each imported template that you want to be available in the Outlook Web App, you must use the [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) cmdlet and set the Type to Distributed:
-
-    ```
-    Set-RMSTemplate -Identity "<name  or GUID of the template>" -Type Distributed
-    ```
-    Because Outlook Web Access caches the UI for 24 hours, users might not see the new template for up to a day.
-
-In addition, if you archive a template (custom or default) and use Exchange Online with Office 365, users will continue to see the archived templates if they use the Outlook Web App or mobile devices that use the Exchange ActiveSync Protocol.
-
-So that users no longer see these templates, connect to the service by using Windows PowerShell in Exchange Online, and then use the [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) cmdlet by running the following command:
-
-```
-Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
-```
 
 ## Office 2016,  Office 2013, and RMS sharing application for Windows: How to force a refresh for a changed custom template
 By editing the registry on the computers running Office 2016, Office 2013, or the Rights Management (RMS) sharing application for Windows, you can change the automatic schedule so that changed templates are refreshed on computers more frequently than their default value. You can also force an immediate refresh by deleting the existing data in a registry value.
@@ -139,22 +78,24 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
 
-	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<*MicrosoftRMS_FQDN*>\Template
+	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
 	**Type:** REG_SZ
 
 	**Value:** LastUpdatedTime
 
 	> [!TIP]
-	    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+	> In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
 
-    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing Windows PowerShell for Azure Rights Management](install-powershell.md).
-    > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
+    > Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
+    >
+    > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
+    >
+    > For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
     > 
-    >     For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-    > 3.  From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
-    > 
-    >     **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+    > From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
+    >
+    >**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 2.  Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
 
@@ -162,6 +103,6 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 
 ## See Also
-[Configure custom templates for Azure Rights Management](configure-custom-templates.md)
+[Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

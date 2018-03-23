@@ -7,11 +7,12 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 
 # optional metadata
@@ -66,7 +67,9 @@ Not yet. Today, you can sign up only with your business email address (work or s
 
 ## Which file extensions can I open with this app?
 
-You can open .rpmsg, .pdf, .ppdf, .pjpg, .ptxt, and several other text and image file formats.
+You can open .rpmsg, .pdf, .ppdf, .pjpg, .pjpeg, .ptiff, .ppng, .ptxt, .pxml, and several other text and image file formats.
+
+For the full list of text and image file name extensions, see the first table in the [Supported file types for classification and protection](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) section from the admin guide.
 
 ##  How do I provide feedback about this app?
 
@@ -75,6 +78,6 @@ In the app, go to **Settings** > **Send feedback**.
 
 ## My question has not been answered—what should I do?
 
-Post your question to our [Yammer site](https://www.yammer.com/AskIPTeam), or [send an email to the Information Protection team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

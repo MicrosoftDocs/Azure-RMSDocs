@@ -6,7 +6,7 @@ description: Supporting information for Azure Information Protection that inclu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,6 +31,22 @@ ms.suite: ems
 
 Azure Information Protection supports other services and also relies on other services. If you’re looking for information that is related to Azure Information Protection but not about how to use the Azure Information Protection service, check the following resources:
 
+## Suitability for different countries
+
+Given the variability between laws and regulations in different countries, different use cases and scenarios, and the varying requirements between different business sectors, you will need to consult your legal adviser to help you answer whether Azure Information Protection is suitable for your country.
+
+However, some relevant information that can help your legal adviser make a determination:
+
+- Azure Information Protection uses AES 256 and AES 128 to encrypt documents. [More information](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+
+- All encryption keys used by Azure Information Protection are protected with a customer-specific root key that uses RSA 2048 bits. RSA 1024 but is also supported for backwards compatibility. [More information](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+
+- Customer-specific root keys are either managed by Microsoft or provisioned by the customer in a Thales HSM by using "[bring your own key](../plan-design/plan-implement-tenant-key.md)" (BYOK). Azure Information Protection also supports limited functionality with an on-premises key by using "[hold your own key](../deploy-use/configure-adrms-restrictions.md)" (HYOK) for content that is affected by requirements that indicate that it should not be protected with a cloud-based key.
+
+- The Azure Information Protection service is hosted in regional data centers across the globe. Azure Information Protection keys and policies always remain within the region in which is originally deployed.
+ 
+- Azure Information Protection does not transmit document contents from clients to the Azure Information Protection service. Content encryption and decryption operations are performed in-place in the client device. Or, for service-based rendering, these operations are performed within the service that’s rendering the content. [More information](../understand-explore/how-does-it-work.md)
+
 ## Legal and privacy
 
 - For Microsoft Azure agreement information: [Microsoft Azure Agreement](http://azure.microsoft.com/support/legal/subscription-agreement/)
@@ -49,11 +65,11 @@ For in-depth technical information about how the protection technology works, se
 
 ## Service level agreements
 
-- Service level agreement for Azure Information Protection, by selected region: [Download from the Product Licensing Search page](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- [SLA for Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-	- For  example, click **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)** to download the March 2016 service level agreement for North America.
+- [SLA for Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
 
--   Service level agreement for Azure Active Directory: [Service Level Agreements](http://azure.microsoft.com/support/legal/sla/)
+- [SLA for Azure Key Vault](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
 
 ## Documentation
 

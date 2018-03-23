@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,9 +33,9 @@ ms.suite: ems
 
 Use the following information for Phase 5 of migrating from AD RMS to Azure Information Protection. These procedures cover steps 10 through 12 from [Migrating from AD RMS to Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## Step 10. Deprovison AD RMS
+## Step 10. Deprovision AD RMS
 
-Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP will prevent new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete and all connections should be going to the Azure Rights Management service. 
+Remove the Service Connection Point (SCP) from Active Directory to prevent computers from discovering your on-premises Rights Management infrastructure. This is optional for the existing clients that you migrated because of the redirection that you configured in the registry (for example, by running the migration script). However, removing the SCP prevents new clients and potentially RMS-related services and tools from finding the SCP when the migration is complete. At this point, all computer connections should go to the Azure Rights Management service. 
 
 To remove the SCP, make sure that you are logged in as a domain enterprise administrator, and then use the following procedure:
 
@@ -47,20 +47,44 @@ To remove the SCP, make sure that you are logged in as a domain enterprise admin
 
 4. Select **Remove Current SCP**, and then click **OK**.
 
-Now monitor your AD RMS servers for activity, for example, by checking the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [auditing of user access to protected content](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Now monitor your AD RMS servers for activity. For example, check the [requests in the System Health report](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx), the [ServiceRequest table](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) or [audit user access to protected content](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
 
-When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these server. If you’re using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time to make sure that there are no reported problems that might require restarting these servers to ensure service continuity while you investigate why clients are not using Azure Information Protection.
+When you have confirmed that RMS clients are no longer communicating with these servers and that clients are successfully using Azure Information Protection, you can remove the AD RMS server role from these servers. If you’re using dedicated servers, you might prefer the cautionary step of first shutting down the servers for a period of time. This gives you time to make sure that there are no reported problems that might require you to restart these servers for service continuity while you investigate why clients are not using Azure Information Protection.
 
-After you have deprovisioned your AD RMS servers, you might want to take the opportunity to review your templates in the Azure classic portal and consolidate them so that users have fewer to choose between, or reconfigure them, or even add new templates. This would be also a good time to publish the default templates. For more information, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+After you have deprovisioned your AD RMS servers, you might want to take the opportunity to review your templates in the Azure portal. For example, convert them to labels, consolidate them so that users have fewer to choose between, or reconfigure them. This would be also a good time to publish the default templates. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 >[!IMPORTANT]
 > At the end of this migration, your AD RMS cluster cannot be used with Azure Information Protection and the hold your own key (HYOK) option. If you decide to use HYOK for an Azure Information Protection label, because of the redirections that are now in place, the AD RMS cluster that you use must have different licensing URLs to the ones in the clusters that you migrated.
 
-## Step 11. Remove onboarding controls
+## Step 11. Complete client migration tasks
 
-When all your existing clients have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process. 
+For mobile device clients and Mac computers: Remove the DNS SRV records that you created when you deployed the [AD RMS mobile device extension](http://technet.microsoft.com/library/dn673574.aspx).
 
-Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment task you created to deploy the redirections.
+When these DNS changes have propogated, these clients will automatically discover and start to use the Azure Rights Management service. However, Mac computers that run Office Mac cache the information from AD RMS. For these computers, this process can take up to 30 days. 
+
+To force Mac computers to run the discovery process immediately, in the keychain, search for "adal" and delete all ADAL entries. Then, run the following commands on these computers:
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+When all your existing Windows computers have migrated to Azure Information Protection, there's no reason to continue to use onboarding controls and maintain the **AIPMigrated** group that you created for the migration process. 
+
+Remove the onboarding controls first, and then you can delete the **AIPMigrated** group and any software deployment method that you created to deploy the migration scripts.
 
 To remove the onboarding controls:
 
@@ -71,6 +95,8 @@ To remove the onboarding controls:
 2. Run the following command, and enter **Y** to confirm:
 
 		Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Note that this command removes any license enforcement for the Azure Rights Management protection service, so that all computers can protect documents and emails.
 
 3. Confirm that onboarding controls are no longer set:
 
@@ -78,20 +104,28 @@ To remove the onboarding controls:
 
     In the output, **License** should show **False**, and there is no GUID displayed for the **SecurityGroupOjbectId**
 
-## Step 12. Re-key your Azure Information Protection tenant key
-This step is required when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1, because re-keying creates a new tenant key that uses RMS Cryptographic Mode 2. Using Azure RMS with Cryptographic Mode 1 is supported only during the migration process.
+Finally, if you are using Office 2010 and you have enabled the **AD RMS Rights Policy Template Management (Automated)** task in the Windows Task Scheduler library, disable this task because it is not used by the Azure Information Protection client. This task is typically enabled by using group policy and supports an AD RMS deployment. You can find this task in the following location: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
 
-This step is optional but recommended when migration is complete even if you were running in RMS Cryptographic Mode 2. Re-keying in this scenario helps to protect your Azure Information Protection tenant key from potential security breaches to your AD RMS key.
+## Step 12. Rekey your Azure Information Protection tenant key
 
-When you re-key your Azure Information Protection tenant key (also known as “rolling your key”), a new key is created and the original key is archived. However, because moving from one key to another doesn’t happen immediately but over a few weeks, do not wait until you suspect a breach to your original key but re-key your Azure Information Protection tenant key as soon as the migration is complete.
+This step is recommended when migration is complete if your AD RMS deployment was using RMS Cryptographic Mode 1. Rekeying results in protection that uses RMS Cryptographic Mode 2. 
 
-To re-key your Azure Information Protection tenant key:
+Even if your AD RMS deployment was using Cryptographic Mode 2, we still recommend you do this step because a new key helps to protect your tenant from potential security breaches to your AD RMS key.
 
-- If your tenant key is managed by Microsoft: Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) and open an **Azure Information Protection support case with a request to re-key your Azure Information Protection key after migration from AD RMS**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process will take several days to confirm. Standard support charges apply; re-keying your tenant key is a not a free-of-charge support service.
+When you rekey your Azure Information Protection tenant key (also known as "rolling your key"), the currently active key is archived and Azure Information Protection starts to use a different key that you specify. This different key could be a new key that you create in Azure Key Vault, or the default key that was automatically created for your tenant.
 
-- If your tenant key is managed by you (BYOK): In Azure Key Vault, re-key the key that you're using for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the new key URL. 
+Moving from one key to another doesn’t happen immediately but over a few weeks. Because it's not immediate, do not wait until you suspect a breach to your original key but do this step as soon as the migration is complete.
 
-For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Rights Management tenant key](../deploy-use/operations-tenant-key.md).
+To rekey your Azure Information Protection tenant key:
+
+- **If your tenant key is managed by Microsoft**: Run the PowerShell cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) and specify the key identifier for the key that was automatically created for your tenant. You can identify the value to specify by running the [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) cmdlet. The key that was automatically created for your tenant has the oldest creation date, so you can identify it by using the following command:
+    
+    	(Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+
+- **If your tenant key is managed by you (BYOK)**: In Azure Key Vault, repeat your key creation process for your Azure Information Protection tenant, and then run the [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) cmdlet again to specify the URI for this new key. 
+
+For more information about managing your Azure Information Protection tenant key, see [Operations for your Azure Information Protection tenant key](../deploy-use/operations-tenant-key.md).
+
 
 ## Next steps
 

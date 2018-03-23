@@ -6,7 +6,7 @@ description: Phase 2 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/02/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -41,7 +41,7 @@ This step is a two-part process:
 
 ### Export the configuration data from AD RMS
 
-Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this on licensing-only clusters.
+Do the following procedure on all AD RMS clusters, for all trusted publishing domains that have protected content for your organization. You do not need to run this procedure on licensing-only clusters.
 
 #### To export the configuration data (trusted publishing domain information)
 
@@ -69,7 +69,7 @@ For example, you will have multiple trusted publishing domains if you upgraded y
 ### Import the configuration data to Azure Information Protection
 The exact procedures for this step depend on your current AD RMS deployment configuration, and your preferred topology for your Azure Information Protection tenant key.
 
-Your current AD RMS deployment will be using one of the following configurations for your server licensor certificate (SLC) key:
+Your current AD RMS deployment is using one of the following configurations for your server licensor certificate (SLC) key:
 
 - Password protection in the AD RMS database. This is the default configuration.
 
@@ -82,21 +82,21 @@ Your current AD RMS deployment will be using one of the following configurations
 > [!NOTE]
 > For more information about using hardware security modules with AD RMS, see [Using AD RMS with Hardware Security Modules](http://technet.microsoft.com/library/jj651024.aspx).
 
-The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK) and requires a hardware security module (HSM) from Thales. For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
+The two Azure Information Protection tenant key topology options are: Microsoft manages your tenant key (**Microsoft-managed**) or you manage your tenant key (**customer-managed**) in Azure Key Vault. When you manage your own Azure Information Protection tenant key, it’s sometimes referred to as “bring your own key” (BYOK). For more information, see [Planning and implementing your Azure Information Protection tenant key](plan-implement-tenant-key.md) article.
 
-> [!IMPORTANT]
-> Exchange Online is not currently compatible with BYOK in Azure Information Protection. If you want to use BYOK after your migration and plan to use Exchange Online, make sure that you understand how this configuration reduces IRM functionality for Exchange Online. Review  the information in [BYOK pricing and restrictions](byok-price-restrictions.md) to help you choose the best Azure Information Protection tenant key topology for your migration.
-
-Use the following table to identify which procedure to use for your migration. Combinations that are not listed are not supported.
+Use the following table to identify which procedure to use for your migration. 
 
 |Current AD RMS deployment|Chosen Azure Information Protection tenant key topology|Migration instructions|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password protection in the AD RMS database|Microsoft-managed|See the **Software-protected key to software-protected key** migration procedure after this table.<br /><br />This is the simplest migration path and requires only that you transfer your configuration data to Azure Information Protection.|
-|HSM protection by using a Thales nShield hardware security module (HSM)|Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and three set of steps to first transfer the key from your on-premises HSM to the Azure Key Vault HSMs, then authorize the Azure Rights Management service from Azure Information Protection to use your tenant key, and finally to transfer your configuration data to Azure Information Protection.|
+|HSM protection by using a Thales nShield hardware security module (HSM) |Customer-managed (BYOK)|See the **HSM-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and three sets of steps to first transfer the key from your on-premises HSM to the Azure Key Vault HSMs, then authorize the Azure Rights Management service from Azure Information Protection to use your tenant key, and finally to transfer your configuration data to Azure Information Protection.|
 |Password protection in the AD RMS database|Customer-managed (BYOK)|See the **Software-protected key to HSM-protected key** migration procedure after this table.<br /><br />This requires the Azure Key Vault BYOK toolset and four sets of steps to first extract your software key and import it to an on-premises HSM, then transfer the key from your on-premises HSM to the Azure Information Protection HSMs, next transfer your Key Vault data to Azure Information Protection, and finally to transfer your configuration data to Azure Information Protection.|
-|HSM protection by using a hardware security module (HSM) from a supplier other than Thales|Customer-managed (BYOK)|Contact the supplier for you HSM for instructions how to transfer your key from this HSM to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
-|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for you cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
-Before you start these procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the Internet-connected workstation.
+|HSM protection by using a hardware security module (HSM) from a supplier other than Thales |Customer-managed (BYOK)|Contact the supplier for your HSM for instructions how to transfer your key from this HSM to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
+|Password protected by using an external cryptographic provider|Customer-managed (BYOK)|Contact the supplier for your cryptographic provider for instructions how to transfer your key to a Thales nShield hardware security module (HSM). Then follow the instructions for the **HSM-protected key to HSM-protected key** migration procedure after this table.|
+
+If you have an HSM-protected key that you cannot export, you can still migrate to Azure Information Protection by configuring your AD RMS cluster for a read-only mode. In this mode, previously protected content can still be opened but newly protected content uses a new tenant key that is managed by you (BYOK) or managed by Microsoft. For more information, see [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
+
+Before you start these key migration procedures, make sure that you can access the .xml files that you created earlier when you exported the trusted publishing domains. For example, these might be saved to a USB thumb drive that you move from the AD RMS server to the Internet-connected workstation.
 
 > [!NOTE]
 > However you store these files, use security best practices to protect them because this data includes your private key.
@@ -117,19 +117,15 @@ Open a PowerShell session and run the following commands:
 
 2. Activate the Azure Rights Management service:
     
-        Enable-Aadrmservice
+        Enable-Aadrm
 
-**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, users might have already used Azure Information Protection to protect content with an automatically generated tenant key (and the default templates) rather than your existing keys (and templates) from AD RMS. This is unlikely to happen on computers that are well-managed on your intranet, because they will be automatically configured for your AD RMS infrastructure. But it can happen on workgroup computers or computers that infrequently connect to your intranet. Unfortunately, it’s also difficult to identify these computers, which is why we recommend you do not activate the service before you import the configuration data from AD RMS.
-
-If your Azure Information Protection tenant is already activated and you can identify these computers, make sure that you run the CleanUpRMS.cmd script on these computers, as described in [Step 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). Running this script forces them to reinitialize the user environment, so that they download the updated tenant key and imported templates.
-
-In addition, if you have created custom templates that you want to use after the migration, you must export and import these. This procedure is covered in the next step. 
+**What if your Azure Information Protection tenant is already activated?** If the Azure Rights Management service is already activated for your organization, and you have created custom templates that you want to use after the migration, you must export and import these templates. This procedure is covered in the next step. 
 
 ## Step 6. Configure imported templates
 
 Because the templates that you imported have a default state of **Archived**, you must change this state to be **Published** if you want users to be able to use these templates with the Azure Rights Management service.
 
-Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure classic portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring custom templates for the Azure Rights Management service](../deploy-use/configure-custom-templates.md).
+Templates that you import from AD RMS look and behave just like custom templates that you can create in the Azure portal. To change imported templates to be published so that users can see them and select them from applications, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 In addition to publishing your newly imported templates, there are just two important changes for the templates that you might need to make before you continue with the migration. For a more consistent experience for users during the migration process, do not make additional changes to the imported templates and do not publish the two default templates that come with Azure Information Protection, or create new templates at this time. Instead, wait until the migration process is complete and you have deprovisioned the AD RMS servers.
 
@@ -137,7 +133,9 @@ The template changes that you might need to make for this step:
 
 - If you created Azure Information Protection custom templates before the migration, you must manually export and import them.
 
-- If your templates in AD RMS used the **ANYONE** group, you must manually add the equivalent group and rights.
+- If your templates in AD RMS used the **ANYONE** group, you might need to add users or groups from outside your organization. 
+    
+    In AD RMS, the ANYONE group granted rights to all authenticated users. This group is automatically converted to all users in your Azure AD tenant. If you do not need to grant rights to any additional users, no further action is needed. But if you were using the ANYONE group to include external users, you must manually add these users and the rights that you want to grant them.
 
 ### Procedure if you created custom templates before the migration
 
@@ -147,30 +145,24 @@ If you created custom templates before the migration, either before or after act
 
 2. Export the templates by using the Azure RMS PowerShell cmdlet, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
 
-3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/aadrm/vlatest/Import-AadrmTpd).
+3. Import the templates by using the Azure RMS PowerShell cmdlet, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
 
 You can then publish or archive these templates as you would any other template that you create after the migration.
 
 ### Procedure if your templates in AD RMS used the **ANYONE** group
 
-If your templates in AD RMS used the **ANYONE** group, this group is automatically removed  when you import the templates to Azure Information Protection; you must manually add the equivalent group or users and the same rights to the imported templates. The equivalent group for Azure Information Protection is named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+If your templates in AD RMS used the **ANYONE** group, this group is automatically converted to use the group named **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com**. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. This group contains all users from your Azure AD tenant.
 
-If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see  [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+When you manage templates and labels in the Azure portal, this group displays as your tenant's domain name in Azure AD. For example, this group might look like the following for Contoso: **contoso.onmicrosoft.com**. To add this group, the option displays **Add \<organization name> - All members**.
 
-You can see your organization's automatically created group if you copy one of the default rights policy templates in the Azure classic portal, and then identify the **USER NAME** on the **RIGHTS** page. However, you cannot use the classic portal to add this group to a template that was manually created or imported and instead must use one of the following Azure RMS PowerShell options:
+If you're not sure whether your AD RMS templates include the ANYONE group, you can use the following sample Windows PowerShell script to identify these templates. For more information about using Windows PowerShell with AD RMS, see [Using Windows PowerShell to Administer AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-- Use the [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) PowerShell cmdlet to define the "AllStaff" group and rights as a rights definition object, and run this command again for each of the other groups or users already granted rights in the original template in addition to the ANYONE group. Then add all these rights definition objects to the templates by using the [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) cmdlet.
+You can easily add external users to templates when you convert these templates to labels in the Azure portal. Then, on the **Add permissions** blade, choose **Enter details** to manually specify the email addresses for these users. 
 
-- Use the [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) cmdlet to export the template to a .XML file that you can edit to add the "AllStaff" group and rights to the existing groups and rights, and then use the [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) cmdlet to import this change back into Azure Information Protection.
-
-> [!NOTE]
-> This "AllStaff" equivalent group isn't exactly the same as the ANYONE group in AD RMS:  The "AllStaff" group includes all users in your Azure tenant, whereas the ANYONE group includes all authenticated users, who could be outside your organization.
-> 
-> Because of this difference between the two groups, you might need to also add external users in addition to the "AllStaff" group. External email addresses for groups are not currently supported.
-
+For more information about this configuration, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md).
 
 #### Sample Windows PowerShell script to identify AD RMS templates that include the ANYONE group
-This section contains the sample script to help you identify AD RMS templates that have the ANYONE group defined, as described in the preceding section.
+This section contains the sample script to help you identify any AD RMS templates that have the ANYONE group defined, as described in the preceding section.
 
 **Disclaimer:** This sample script is not supported under any Microsoft standard support program or service. This sample script is provided AS IS without warranty of any kind.
 
@@ -208,6 +200,6 @@ Remove-PSDrive MyRmsAdmin -force
 
 
 ## Next steps
-Go to [phase 3 - client-side configuration](migrate-from-ad-rms-phase2.md).
+Go to [phase 3 - client-side configuration](migrate-from-ad-rms-phase3.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
