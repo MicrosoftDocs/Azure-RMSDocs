@@ -27,7 +27,7 @@ ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 
 # Quick start tutorial for Azure Information Protection 
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Use this tutorial to quickly try out Azure Information Protection with just 5 steps that should take you about 20 minutes. This tutorial is designed to be a self-guided demo to quickly show case some of the features and functionality that Azure Information Protection offers. It does not include all the available features and is not intended to be a deployment guide for your organization. If you are looking to deploy Azure Information Protection for your organization, see the [deployment roadmap documentation](../plan-design/deployment-roadmap.md). 
 

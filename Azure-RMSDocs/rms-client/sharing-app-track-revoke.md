@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Track and revoke your documents when you use the RMS sharing application
 
->*Applies to: Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 After you have protected your documents by using the RMS sharing application, if your organization is using Azure Information Protection rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
