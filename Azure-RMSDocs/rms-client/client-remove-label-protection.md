@@ -27,7 +27,7 @@ ms.suite: ems
 
 # User Guide: Remove labels and protection from files and emails that have been labeled by Azure Information Protection or protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 When the [Azure Information Protection client is installed on your computer](install-client-app.md), you can remove classification labels and protection from files and emails.
 

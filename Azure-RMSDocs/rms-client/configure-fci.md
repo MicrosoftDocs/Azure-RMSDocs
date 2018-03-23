@@ -27,7 +27,7 @@ ms.suite: ems
 
 # RMS protection with Windows Server File Classification Infrastructure (FCI)
 
->*Applies to: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 Use this article for instructions and a script to use the Azure Information Protection client and PowerShell to configure File Server Resource Manager and File Classification Infrastructure (FCI).
 

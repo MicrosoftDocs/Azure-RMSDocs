@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Information Protection client for Windows
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 The Azure Information Protection client for Windows is a free, downloadable client for organizations that use [Azure Information Protection](../understand-explore/what-is-information-protection.md) to classify and protect documents and emails, or use a Rights Management service to protect their data. This client also has a viewer for organizations that don’t have their own information protection infrastructure but want to consume content that has been protected by other organizations that use a Rights Management service from Microsoft.
 

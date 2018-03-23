@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Admin Guide: Using PowerShell with the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 

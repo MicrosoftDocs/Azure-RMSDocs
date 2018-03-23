@@ -27,7 +27,7 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate protection
  
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
 >Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you're ready for step 2.
