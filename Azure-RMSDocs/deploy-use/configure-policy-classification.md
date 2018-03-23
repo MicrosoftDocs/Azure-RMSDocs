@@ -27,7 +27,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 

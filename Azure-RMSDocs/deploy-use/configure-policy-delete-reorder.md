@@ -27,7 +27,7 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 
 # How to delete or reorder a label for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 You can delete or reorder the labels that users see on the Information Protection bar by selecting these actions in the Azure Information Protection policy.
 

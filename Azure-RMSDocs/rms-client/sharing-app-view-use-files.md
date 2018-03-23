@@ -27,7 +27,7 @@ ms.suite: ems
 
 # View and use files that have been protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When the [Rights Management (RMS) sharing application is installed on your computer](install-sharing-app.md), you view a protected file by simply double-clicking it. The file might be an attachment in an email message, or you might see it when you use File Explorer.
 
