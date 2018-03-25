@@ -72,7 +72,9 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
     
-    - **Protect**: Select this option to apply protection, and then go to step 5.
+    - **Protect**: Select this option to apply protection, and then go to step 5 to configure protection settings.
+    
+    Note: You could save a new label at this stage without further configuration. If you do, the label is configured to apply protection such that only the person who applies the label can open the document or email with no usage restrictions. In some cases, this might be the required outcome, so that a user can save a file to any location and be assured that only they can open it. If this outcome matches your requirement and others are not required to collaborate on the protected content, go straight to step to 12 instead of step 5.
     
     - **Remove Protection**: Select this option to remove protection if a document or email is protected. Then go to step 11.
         
