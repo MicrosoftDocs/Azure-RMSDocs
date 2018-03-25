@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -125,7 +125,9 @@ When Exchange Online uses the new capabilities for Office 365 Message Encryption
 
 This option is being deployed to tenants who use Exchange Online, initially just for Outlook on the web and as another rights protection option for a mail flow rule. For more information, see the following blog post announcement from the Office team: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018).
 
-When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except Full Control. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy, print, and forward the email. Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed.
+When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
+
+Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without protection.
 
 ## Rights Management issuer and Rights Management owner
 
