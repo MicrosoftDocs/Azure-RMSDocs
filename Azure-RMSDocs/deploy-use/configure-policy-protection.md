@@ -256,7 +256,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
     Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**.
     
-    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**, and then select all permissions except **Save As, Export (EXport)*** and **Full Control (OWNER)**.
+    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**, and then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 
