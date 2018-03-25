@@ -127,7 +127,7 @@ This option is being deployed to tenants who use Exchange Online, initially just
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
-Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without protection.
+Similarly, any Office documents that are attached and automatically protected can be saved, copied, and printed. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection.
 
 ## Rights Management issuer and Rights Management owner
 
