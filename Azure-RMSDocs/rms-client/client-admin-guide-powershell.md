@@ -250,7 +250,7 @@ When you use a service principal account to protect files and download templates
 
 2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor.
 
-3. Navigate to the following path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation'. 
+3. Navigate to the following path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
     
     If you do not see the **MSIPC** key or **ServiceLocation** key, create them.
 
