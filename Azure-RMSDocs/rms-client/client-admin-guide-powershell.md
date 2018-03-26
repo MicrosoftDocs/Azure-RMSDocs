@@ -248,9 +248,11 @@ When you use a service principal account to protect files and download templates
 
 1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
-2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor, and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
-
-3. If you do not see the keys **MSIPC** or **ServiceLocation** in the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft** path, create these, so that your registry path shows `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`.
+2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor, and navigate to the following path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+    
+    The MSIPC key is automatically created the first time ythe client makes a connection to the protection service. If the MSIPC key doesn't yet exist, create it.
+    
+3. If you do not see a **ServiceLocation** key, create it, so that your registry path shows `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`.
 
 4. For the **ServiceLocation** key, create two keys if they do not exist, named **EnterpriseCertification** and **EnterprisePublishing**. 
     
