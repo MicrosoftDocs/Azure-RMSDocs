@@ -250,7 +250,7 @@ When you use a service principal account to protect files and download templates
 
 2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor, and navigate to the following path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
     
-    The MSIPC key is automatically created the first time ythe client makes a connection to the protection service. If the MSIPC key doesn't yet exist, create it.
+    The MSIPC key is automatically created the first time the client makes a connection to the protection service. If the MSIPC key doesn't yet exist, create it.
     
 3. If you do not see a **ServiceLocation** key, create it, so that your registry path shows `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`.
 
