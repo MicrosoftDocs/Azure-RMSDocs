@@ -81,7 +81,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 4. You see the **Quick start** page that automatically opens the first time you connect to the service. Browse the suggested resources, or use the other menu options. To configure the labels that users can select, use the following procedure.
 
-Next time you access the **Azure Information Protection** blade, it automatically selects the **POLICIES** > **Global policy** option so that you can configure labels for all users. You can return to the **Quick start** page by selecting it from the **GENERAL** menu.
+Next time you access the **Azure Information Protection** blade, it automatically selects the **Labels** option so that you can view and configure labels for all users. You can return to the **Quick start** page by selecting it from the **GENERAL** menu.
 
 ## How to configure the Azure Information Protection policy
 
@@ -89,21 +89,29 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 2. If necessary, navigate to the **Azure Information Protection** blade: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. From the results, select **Azure Information Protection**. 
     
-    The **Azure Information Protection - Global policy** blade automatically opens for you to view and edit the global policy that all users get. 
+    The **Azure Information Protection - Labels** blade automatically opens for you to view and edit the available labels. The labels can be made available to all users, selected users, or no users by adding or removing them from a policy.
+
+3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
-    The Azure Information Protection policy contains the following elements that you can configure:
+    An Azure Information Protection policy contains the following elements that you can configure:
     
-    - Labels that let you and users classify documents and emails.
+    - Which labels are included that let administrators and users classify documents and emails.
     
     - Title and tooltip for the Information Protection bar that users see in their Office applications.
     
-    - The option to enforce classification when users save documents and send emails.
-    
     - The option to set a default label as a starting point for classifying documents and emails.
+     
+    - The option to enforce classification when users save documents and send emails.
     
     - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
     
     - The option to automatically label an email message, based on its attachments.
+
+    - The option to control whether the the Information Protection bar is displayed in Office applications.
+
+    - The option to control whether the Do Not Forward button is displayed in Outlook.
+    
+    - The option to let users specify their own permissions for documents.
     
     - The option to provide a custom help link for users.
 
@@ -115,9 +123,7 @@ You can use the default labels without changes, or you can customize them, or yo
 
 You can create any number of labels. However, when they start to get too many for users to easily see and select the right label, create scoped policies so that users see only the labels that are relevant to them. There is an upper limit for labels that apply protection, which is 500.
 
-When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings.
-
-When you have finished making the changes that you want, click **Publish**. 
+When you make any changes on an Azure Information Protection blade, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make change changes to labels that are added to policies, those changes are automatically published. There's no separate publish option.
 
 The Azure Information Protection client checks for any changes whenever a supported Office application starts, and downloads the changes as its latest Azure Information Protection policy. Additional triggers that refresh the policy on the client:
 

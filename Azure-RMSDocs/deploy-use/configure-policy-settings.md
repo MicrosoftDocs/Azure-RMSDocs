@@ -41,11 +41,11 @@ To configure these settings:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the settings that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
+2. From the **CLASSIFICATIONS** menu options, select **Policies**. If the settings that you want to configure will apply to all users, select **Global**.
     
-    If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+    If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, select your scoped policy instead.
 
-3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, configure the settings:
+3. From the **Policy** blade, configure the settings:
     
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
     
@@ -59,7 +59,7 @@ To configure these settings:
         
         ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
         
-        This option is not applicable for sub-labels.
+        This option is not applicable for sublabels.
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **On**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
     
@@ -91,9 +91,7 @@ To configure these settings:
         
         As an example, for your help desk, you might enter the Microsoft documentation page that includes information about installing and using the client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) or release version information (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternatively, you might publish your own webpage that includes information for users to contact your help desk, or a video that steps users through how to use the labels that you have configured.
 
-3. To save your changes, click **Save**.
-
-4. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
+3. To save your changes and make them available to users, click **Save**.
 
 ## Next steps
 

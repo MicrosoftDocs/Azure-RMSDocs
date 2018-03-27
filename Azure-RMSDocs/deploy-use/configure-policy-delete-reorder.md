@@ -2,7 +2,7 @@
 # required metadata
 
 title: Delete or reorder an Azure Information Protection label
-description: You can delete or reorder the labels that users see on the Information Protection bar by configuring this in the Azure Information Protection policy.
+description: You can delete or reorder the Azure Information Protection labels that users see.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -29,13 +29,13 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-You can delete or reorder the labels that users see on the Information Protection bar by selecting these actions in the Azure Information Protection policy.
+You can delete or reorder the Azure Information Protection labels that users see in their Office applications by selecting these actions for the labels.
 
 ![Delete or reorder labels in the Azure Information Protection policy](../media/info-protect-contextmenu.png)
 
-When you delete a label that has been applied to documents and emails, and then publish the Azure Information Protection policy, that label is automatically removed from these documents or emails when they are next opened by the Azure Information Protection client.
+When you delete a label that has been applied to documents and emails, that label is automatically removed from these documents or emails when they are next opened by the Azure Information Protection client.
 
-However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates**. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
+However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates** section. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
 
 - Convert the template to a label. 
     
@@ -61,19 +61,13 @@ Use the following instructions to make these changes.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
-    
-    If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+2. From the **CLASSIFICATIONS** > **Labels** menu option, on the **Azure Information Protection - Labels** blade,, do one or more of the following actions: 
 
-3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, do one or more of the following actions: 
+    - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **OK** to confirm. 
 
-    - To delete a label: Right-click or select the context menu (**...**) for the label that you want to delete, click **Delete this label**, and click **Yes** to confirm. Then click **Save**. 
+    - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, select **Off**, and then click **Save**.
 
-    - To disable a label: Select the label that you want to disable. On the **Label** blade, for **Enabled**, click **Off**, and then click **Save**.
-
-    - To reorder a label: Right-click or select the context menu (**...**) for the label that you want to reorder, click **Move up** or **Move down** until the label is in the order that you want. Then click **Save**. 
-
-4. To make your changes available to users, on the **Azure Information Protection** blade, click **Publish**.
+    - To reorder a label: Right-click or select the context menu (**...**) for the label that you want to reorder, click **Move up** or **Move down** until the label is in the order that you want.  
 
 ## Next steps
 
