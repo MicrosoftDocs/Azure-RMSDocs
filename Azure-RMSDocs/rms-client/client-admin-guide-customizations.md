@@ -37,17 +37,17 @@ Some of these settings require editing the registry and some use advanced settin
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. On the initial  Azure Information Protection blade, select **Scoped policies**.
+2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
 
-3. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
     You can configure advanced settings for the Global policy, as well as for scoped policies.
 
 4. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
 
-5. Click **Publish**, and make sure that users for this policy restart any Office applications that they had open.
+5. Make sure that users for this policy restart any Office applications that they had open.
 
-6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**, and republish the modified policy.
+6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
