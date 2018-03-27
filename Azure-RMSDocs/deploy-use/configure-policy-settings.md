@@ -41,7 +41,7 @@ To configure these settings:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** menu options, select **Policies**. If the settings that you want to configure will apply to all users, select **Global**.
+2. From the **CLASSIFICATIONS** > **Policies** menu option: If the settings that you want to configure will apply to all users, select **Global**.
     
     If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, select your scoped policy instead.
 

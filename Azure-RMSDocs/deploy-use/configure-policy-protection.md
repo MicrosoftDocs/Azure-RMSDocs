@@ -56,7 +56,7 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
 
 - For Exchange on-premises, you must deploy the [RMS connector and configure your Exchange servers](../deploy-use/deploy-rms-connector.md). 
 
-## To configure a label for Rights Management protection
+## To configure a label for protection settings
 
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade. 
     
