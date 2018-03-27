@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Monitor the Azure Rights Management connector
 
->*Applies to: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
 
 After you install and configure the RMS connector, you can use the following methods and information to help you monitor the connector and your organization’s use of the Azure Rights Management service from Azure Information Protection.
 
