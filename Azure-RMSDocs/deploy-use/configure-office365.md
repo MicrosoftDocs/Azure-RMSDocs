@@ -87,7 +87,7 @@ For information about how SharePoint Online IRM works with the Azure Rights Mana
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 
 > [!NOTE]
-> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe). For more information, see [Enable users to sync IRM-protected files with the OneDrive sync client](https://support.office.com/en-us/article/6778d4de-b5f8-423c-af43-a1b2449e9b99).
+> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe). For more information, see [Deploy the new OneDrive sync client in an enterprise environment](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
 To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
@@ -111,7 +111,7 @@ After you have enabled the IRM service for SharePoint Online, users' OneDrive fo
 #### Configuration for users
 Give users the following instructions so that they can configure their OneDrive for Business to protect their business files.
 
-1. Go to the [OneDrive website](https://go.microsoft.com/fwlink/p/?LinkID=251869). You might need to sign in with your work or school account.
+1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://portal.office.com/onedrive).
 
 2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
