@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -202,7 +202,7 @@ To help prevent users from changing files that are critical for computer operati
 
 ### Files that cannot be protected by default
 
-Any file that is password-protected cannot be natively protected by the Azure Information Protection client. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
+Any file that is password-protected cannot be natively protected by the Azure Information Protection client unless the file is currently open in the application that applies the protection. You most often see PDF files that are password-protected but other applications, such as Office apps, also offer this functionality.
 
 Additionally, the Azure Information Protection client for Windows can view the following files but cannot natively protect or unprotect PDF files in either of the following circumstances:
 
