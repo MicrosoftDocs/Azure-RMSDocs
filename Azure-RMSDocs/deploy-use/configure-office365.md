@@ -103,7 +103,7 @@ After you have enabled the IRM service for SharePoint, site owners can IRM-prote
 This configuration is done by the SharePoint site administrator.
 
 ### Configuring IRM for OneDrive for Business
-After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
+After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for them by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
 > For more information about configuring OneDrive for Business, see the Office documentation, [Set up OneDrive for Business in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
