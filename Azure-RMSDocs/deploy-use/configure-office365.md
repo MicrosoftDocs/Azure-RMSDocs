@@ -103,19 +103,19 @@ After you have enabled the IRM service for SharePoint, site owners can IRM-prote
 This configuration is done by the SharePoint site administrator.
 
 ### Configuring IRM for OneDrive for Business
-After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library can then be configured for Rights Management protection.  Users can configure this for themselves by using the **Settings** icon in their OneDrive. Although administrators cannot configure Rights Management for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
+After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
 > For more information about configuring OneDrive for Business, see the Office documentation, [Set up OneDrive for Business in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
 
 #### Configuration for users
-Give users these instructions so that they can configure their OneDrive for Business and IRM-protect their business files.
+Give users the following instructions so that they can configure their OneDrive for Business to protect their business files.
 
 1. Go to the [OneDrive website](https://go.microsoft.com/fwlink/p/?LinkID=251869). You might need to sign in with your work or school account.
 
 2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
-3. Select the **Settings** icon, and if the **Ribbon** display **Off**, select this setting to turn the ribbon on.
+3. Select the **Settings** icon. In the **Settings** pane, if the **Ribbon** is set to **Off**, select this setting to turn the ribbon on.
 
 4. To configure all OneDrive for Business files to be protected, select the **LIBRARY** tab from the ribbon, and then select **Library Settings**. To select all files in a specific folder to be protected, first select that folder.
 
