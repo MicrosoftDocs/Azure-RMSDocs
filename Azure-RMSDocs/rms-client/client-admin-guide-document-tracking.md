@@ -57,7 +57,7 @@ This setting affects end users only. Administrators for Azure Information Protec
 
 ### Logging information from the document tracking site
 
-When you have at least version **2.12.?.?** of the AADRM module, you can use the following cmdlets to download logging information from the document tracking site:
+When you have a minimum version of **2.13.0.0** for the AADRM module, you can use the following cmdlets to download logging information from the document tracking site:
 
 - [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
     
