@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -111,13 +111,17 @@ After you have enabled the IRM service for SharePoint Online, users' OneDrive fo
 #### Configuration for users
 Give users these instructions so that they can configure their OneDrive for Business and IRM-protect their business files.
 
-1.  In OneDrive, click the **Settings** icon, to open the Settings menu, and then click **Site Contents**.
+1. Go to the [OneDrive website](https://go.microsoft.com/fwlink/p/?LinkID=251869). You might need to sign in with your work or school account.
 
-2.  Hover on the **Documents** tile, choose the ellipses (**...**), and then click **SETTINGS.**
+2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
-3.  On the **Settings** page, in the **Permissions and Management** section, click **Information Rights Management**.
+3. Select the **Settings** icon, and if the **Ribbon** display **Off**, select this setting to turn the ribbon on.
 
-4.  On the **Information Rights Management Settings** page, select **Restrict permissions on this library on download** check box, specify your choice of  name and a description for the permissions, and optionally, click **SHOW OPTIONS** to configure optional configurations, and then click **OK**.
+4. To configure all OneDrive for Business files to be protected, select the **LIBRARY** tab from the ribbon, and then select **Library Settings**. To select all files in a specific folder to be protected, first select that folder.
+
+5. On the **Documents > Settings** page, in the **Permissions and Management** section, select **Information Rights Management**.
+
+6. On the **Information Rights Management Settings** page, select **Restrict permissions on this library on download** check box. Specify your choice of  name and a description for the permissions, and optionally, click **SHOW OPTIONS** to configure optional configurations, and then click **OK**.
 
     For more information about the configuration options, see the instructions in [Apply Information Rights Management to a list or library](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) from the Office documentation.
 
