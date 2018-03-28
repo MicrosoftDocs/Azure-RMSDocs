@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: How-to enable your service application to work with cloud based RMS | Azure RMS
@@ -35,7 +35,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 ## Prerequisites
 
 -   RMS SDK 2.1 must be installed and configured. For more information, see [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
--   You must [create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) by using the symmetric key option, or through other means, and record the key information from that process.
+-   You must [create a service identity via ACS](https://msdn.microsoft.com/library/gg185924.aspx) by using the symmetric key option, or through other means, and record the key information from that process.
 
 ## Connecting to the Azure Rights Management Service
 
@@ -85,7 +85,7 @@ In order to use your Rights Management Services SDK 2.1 service application with
 
 ### Instructions to find out **TenantBposId** and **Urls**
 
--   Install [Azure RMS powershell module](https://technet.microsoft.com/en-us/library/jj585012.aspx).
+-   Install [Azure RMS powershell module](https://technet.microsoft.com/library/jj585012.aspx).
 -   Start Powershell and run the following commands to get the RMS configuration of the tenant.
 
     `Import-Module aadrm`
@@ -175,9 +175,9 @@ You have now completed the steps needed to enable your application to use Azure 
 
 ## Related topics
 
-* [Getting started with Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [Getting started with Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
 * [Getting started with RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
-* [Create a service identity via ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [Create a service identity via ACS](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
