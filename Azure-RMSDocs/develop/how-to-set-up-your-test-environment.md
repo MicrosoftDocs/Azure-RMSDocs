@@ -27,29 +27,27 @@ ms.suite: ems
 
 # Testing your application
 
-This topic contains instructions about how to set up for your application testing.
+Here, you learn how to prepare for application testing.
 
 ## Instructions
 
-### Step 1: Setup for testing
+You can test with either Azure RMS or an RMS server running on Windows Server.  Begin testing with Azure RMS and test with RMS Server (if required for your deployment).
 
-You can test with either Azure RMS or an RMS server running on Windows Server and, we suggest you begin your testing on Azure RMS then, if its required for your deployment, test with RMS Server.
-
-1. For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication.md).
-2. For testing with RMS Server, see [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md).
-3. The following describes how to install the developer runtime.
+- For testing with Azure RMS, see [How-to: use ADAL authentication](how-to-use-adal-authentication.md).
+- For testing with RMS Server, see [How-to: install and configure an RMS server](how-to-install-and-configure-an-rms-server.md).
+- To install the developer runtime:
 
    You must have the Rights Management Service Client 2.1 installed on the computer on which you will be testing your application.
-   - If you will be testing your application on a computer other than your development computer, you can install the RMS Client 2.1 on that computer from the [AD RMS Client download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
-   - If you will be testing your application on your development computer then you should have already installed the Rights Management Services SDK 2.1. The RMS Client 2.1 will have been silently installed at this time.
+   - To test your application on a computer other than your development computer, install the RMS Client 2.1 on that computer from the [AD RMS Client download page](http://www.microsoft.com/en-us/download/details.aspx?id=38396).
+   - Your development computer should have the Rights Management Services SDK 2.1, which was previously installed.
 
-    For information about how to install the RMS SDK 2.1, see [Install the SDK](install-the-rms-sdk.md).
+   For help installing RMS SDK 2.1, see [Install the SDK](install-the-rms-sdk.md).
 
 ## Remarks
 
-The guidance in this topic is not comprehensive. For detailed information about how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+This guidance is not comprehensive. To learn how to configure the RMS Client 2.1, see [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
-### Related topics
+## Related topics
 
 * [How-to install and configure an RMS server](how-to-install-and-configure-an-rms-server.md)
 * [How-to: use ADAL authentication](how-to-use-adal-authentication.md)
