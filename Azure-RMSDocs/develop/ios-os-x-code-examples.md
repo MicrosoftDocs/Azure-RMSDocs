@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: iOS/OS X code examples | Azure RMS
@@ -222,7 +222,7 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
 -   **Step 1**: With an email address provided by the user, create a policy descriptor.
 
-    **Description**: In practice the following objects would be created by using user inputs from the device interface; [MSUserRights](https://msdn.microsoft.com/en-us/library/dn790811.aspx) and [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
+    **Description**: In practice the following objects would be created by using user inputs from the device interface; [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) and [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx).
 
         + (void)policyDescriptor
         {
