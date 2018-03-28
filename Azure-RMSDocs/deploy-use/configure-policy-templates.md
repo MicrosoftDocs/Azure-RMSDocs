@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configuring and managing templates for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 >[!NOTE]
 >This functionality replaces configuring custom templates in the Azure classic portal. The classic portal is now retired, so you must use the Azure portal. For a quick how-to mapping, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
@@ -37,11 +37,11 @@ Rights Management templates are now integrated with the Azure Information Protec
 
 **When you have a subscription that includes classification, labeling, and protection (Azure Information Protection P1 or P2):**
 
-- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after the labels in the **Azure Information Protection - Global policy** blade. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
+- Rights Management templates that are not integrated with your labels for your tenant are displayed in the **Protection templates** section after the labels in the **Azure Information Protection - All - cross policy view** blade. You can convert these templates to labels, or you can link to them when you configure protection for your labels. 
 
 **When you have a subscription that includes protection only (an Office 365 subscription that includes the Azure Rights Management service):**
 
-- Rights Management templates for your tenant are displayed in the **Azure Information Protection - Global policy** blade, in the **Protection templates** section. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
+- Rights Management templates for your tenant are displayed in the **Azure Information Protection - All - cross policy view** blade, in the **Protection templates** section. No labels are displayed. You also see configuration settings that are specific to classification and labeling, but these settings either have no effect on your templates or cannot be configured. 
 
 ## Default templates
 
@@ -73,11 +73,11 @@ If you obtained your subscription some time ago, your default templates are crea
 You can rename (and reconfigure) these default templates when you use the Azure portal.
 
 >[!NOTE]
->If you don't see your default templates in the **Azure Information Protection - Global policy** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes Azure RMS protection. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).
+>If you don't see your default templates in the **Azure Information Protection - All - cross policy view** blade, they are converted to labels, or linked to a label. They still exist as templates, but in the Azure portal, you see them as part of a label configuration that includes protection settings for a cloud key. You can always confirm what templates your tenant has, by running the [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) from the [AADRM PowerShell module](administer-powershell.md).
 >
 >You can manually convert templates, as explained in the later section, [To convert templates to labels](#to-convert-templates-to-labels), and then rename them if you want. Or they are converted automatically for you if your default Azure Information Protection policy was recently created and the Azure Rights Management service for your tenant was activated at that time.
 
-Templates that are archived display as unavailable in the **Azure Information Protection - Global policy** blade. These templates cannot be selected for labels but they can be converted to labels.
+Templates that are archived display as unavailable in the **Azure Information Protection - All - cross policy view** blade. These templates cannot be selected for labels but they can be converted to labels.
 
 ## Considerations for templates in the Azure portal
 
@@ -93,9 +93,9 @@ Before you edit these templates or convert them to labels, make sure that you ar
     
     You could now delete the template by using the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet. You can also use this PowerShell cmdlet for templates that are not converted to labels. However, if you delete a template that has been used to protect content, that content can no longer be opened. Delete templates only if you are sure they were not used to protect documents or emails in production. As a precaution, you might want to consider first exporting the template as a backup, by using the [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate) cmdlet. 
 
-- Departmental templates (templates that are configured for a scope) display in the global policy. Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
+- Currently, if you edit and save a departmental template, it removes the scope configuration. The equivalent of a scoped template in the Azure Information Protection policy is a [scoped policy](configure-policy-scope.md). If you convert the template to a label, you can select an existing scope.
     
-    In addition, you cannot currently set the application compatibility setting for a departmental template. If necessary, you can set the application compatibility setting by using the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
+    In addition, you cannot set the application compatibility setting for a departmental template by using the Azure portal. If necessary, you can set this application compatibility setting by using the [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet and the *EnableInLegacyApps* parameter.
 
 - When you convert or link a template to a label, it can no longer be used by other labels. In addition, this template no longer displays in the **Protection templates** section. 
 
@@ -103,15 +103,11 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 ## To configure the templates in the Azure Information Protection policy
 
-1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection** blade.
+1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection - All - cross policy view** blade.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the template that you want to configure is for all users, stay on the **Azure Information Protection - Global policy** blade.
-    
-    If the template that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
-
-3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, locate the template that you want to configure:
+2. From the **Azure Information Protection - All - cross policy view** blade, locate the template that you want to configure:
     
     - When you have a subscription that includes classification, labeling, and protection: Expand **Protection templates** after your labels.
     
@@ -122,8 +118,8 @@ Before you edit these templates or convert them to labels, make sure that you ar
 5. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring the protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
-
-6. To make your changes available to user applications and services, on the initial **Azure Information Protection** blade, click **Publish**.
+    
+    There's no need to click **Publish** for this change.
 
 > [!NOTE]
 > You can also edit a template by using the **Edit Template** button on the **Protection** blade if you have configured a label to use a predefined template. Providing no other label also uses the selected template, this button converts the template into a label, and takes you to step 5. For more information about what happens when templates are converted to labels, see the next section.
@@ -152,9 +148,9 @@ When you convert a template to a label:
 
 ## To create a new template
 
-When you create a new label with the protection setting of **Azure RMS** or **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
+When you create a new label with the protection setting of **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
-1. If the new template is for all users, stay on the **Azure Information Protection - Global policy** blade.
+1. If the new template is for all users, navigate to the **Azure Information Protection - Global policy** blade.
     
      If the new template will be a departmental template so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then create or select your [scoped policy](configure-policy-scope.md) from the **Azure Information Protection - Scoped polices** blade.
 
@@ -170,12 +166,12 @@ When you create a new label with the protection setting of **Azure RMS** or **Az
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
 
-6. To make these templates available to user applications and services, on the initial **Azure Information Protection** blade, click **Publish**.
+6. On the initial **Azure Information Protection** blade, click **Publish**.
 
 
 ## Next steps
 
-As with all changes to the Azure Information Protection policy, it can take up to 15 minutes for a computer running the Azure Information Protection client to complete downloading these templates. For information about how computers and services download and refresh templates, see [Refreshing templates for users and services](refresh-templates.md).
+It can take up to 15 minutes for a computer running the Azure Information Protection client to get these changed settings. For information about how computers and services download and refresh templates, see [Refreshing templates for users and services](refresh-templates.md).
 
 Everything that you can configure in the Azure portal to create and manage your templates, you can do by using PowerShell. In addition, PowerShell provides more options that are not available in the portal. For more information, see [PowerShell reference for protection templates](configure-templates-with-powershell.md). 
 

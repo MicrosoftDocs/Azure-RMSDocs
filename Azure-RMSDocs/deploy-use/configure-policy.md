@@ -6,7 +6,7 @@ description: To configure classification, labeling, and protection, you must con
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configuring the Azure Information Protection policy
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 To configure classification, labeling, and protection, you must configure the Azure Information Protection policy. This policy is then downloaded to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -59,7 +59,7 @@ To sign in to the Azure portal, to configure and manage Azure Information Protec
 
 - Use an account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Information Protection Administrator** (currently in preview)
+    - **Information Protection Administrator**
 
     - **Security Administrator**
 

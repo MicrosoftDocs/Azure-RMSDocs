@@ -27,7 +27,7 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 # How to change or customize an existing label for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 You can change or refine any of the labels that users see on the Information Protection bar, by configuring them in the Azure Information Protection policy.
 

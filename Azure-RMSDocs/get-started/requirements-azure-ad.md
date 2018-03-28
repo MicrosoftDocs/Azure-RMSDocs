@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Active Directory requirements for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure portal, where, for example, you can configure and manage Rights Management templates.
 
@@ -96,7 +96,13 @@ Then, configure your MFA solution:
 
         For more information about this scenario, see  [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) on the Office blog.
 
-The Rights Management connector does not support MFA. If you deploy this connector for your on-premises servers, you must use an account for the connector that does not require MFA.
+The Rights Management connector and the Azure Information Protection scanner do not support MFA. If you deploy the connector or scanner, the following accounts must not require MFA:
+
+- The account that installs and configures the connector.
+
+- The service principal account in Azure AD, **Aadrm_S-1-7-0**, that the connector creates.
+ 
+- The service account that runs the scanner.
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).

@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Admin Guide: Custom configurations for the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
@@ -209,9 +209,91 @@ To configure this advanced setting, enter the following strings:
 
 - Value: \<**label ID**> or **None**
 
+## Migrate labels from Secure Islands and other labeling solutions
+
+This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client or the Azure Information Protection scanner.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
+
+As a result of this configuration option, the new Azure Information Protection label is applied by the Azure Information Protection client as follows:
+
+- For Office documents: When the document is opened in the desktop app, the new Azure Information Protection label is shown as set and is applied when the document is saved.
+
+- For File Explorer: In the Azure Information Protection dialog box, the new Azure Information Protection label is shown as set and is applied when the user selects **Apply**. If the user selects **Cancel**, the new label is not applied.
+
+- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applies the new Azure Information Protection label. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) doesn't display the new Azure Information Protection label until it is set by another method.
+
+- For the Azure Information Protection scanner: Discovery reports when the new Azure Information Protection label would be set and this label can be applied with the enforce mode.
+
+This configuration requires you to specify an advanced client setting named **LabelbyCustomProperty** for each Azure Information Protection label that you want to map to the old label. Then for each entry, set the value by using the following syntax:
+
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. To specify a sublabel, the parent label must be in the same scope, or in the global policy.
+
+Specify your choice of a migration rule name. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to an Azure Information Protection label. The name displays in the scanner reports and in Event Viewer. 
+
+### Example 1: One-to-one mapping of the same label name
+
+Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+
+In this example:
+
+- The Azure Information Protection label of **Confidential** has a label ID of 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+
+- The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c,"Secure Islands label is Confidential",Classification,Confidential|
+
+### Example 2: One-to-one mapping for a different label name
+
+Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
+
+In this example:
+
+- The Azure Information Protection label **Highly Confidential** has a label ID of 3e9df74d-3168-48af-8b11-037e3021813f.
+
+- The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f,"Secure Islands label is Sensitive",Classification,Sensitive|
+
+
+### Example 3: Many-to-one mapping of label names
+
+You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by Azure Information Protection.
+
+In this example:
+
+- The Azure Information Protection label **General** has a label ID of 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+
+- The Secure Islands label is stored in the custom property named **Classification**.
+
+The advanced client setting:
+
+    
+|Name|Value|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
+
+
 ## Label an Office document by using an existing custom property
 
-This configuration option is currently in preview and is subject to change. 
+This configuration option is currently in preview and is subject to change.
+
+> [!NOTE]
+> If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
@@ -241,13 +323,13 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 ## Integration with Exchange message classification for a mobile device labeling solution
 
-Although Outlook on the web doesn't yet natively support Azure Information Protection classification and protection, you can use Exchange message classification to extend your Azure Information Protection labels to your mobile users.
+Although Outlook on the web doesn't yet natively support Azure Information Protection classification and protection, you can use Exchange message classification to extend your Azure Information Protection labels to your mobile users when they use Outlook on the web. Outlook Mobile does not support Exchange message classification.
 
 To achieve this solution: 
 
 1. Use the [New-MessageClassification](https://technet.microsoft.com/library/bb124400) Exchange PowerShell cmdlet to create message classifications with the Name property that maps to your label names in your Azure Information Protection policy. 
 
-2. Create an Exchange transport rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
+2. Create an Exchange mail flow rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
     For the message header, you find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
     
@@ -255,9 +337,9 @@ To achieve this solution:
     
     Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
     
-    ![Example Exchange Online transport rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
+    ![Example Exchange Online mail flow rule that sets the message header for a specific Azure Information Protection label](../media/exchange-rule-for-message-header.png)
 
-Before you test this configuration, remember that there is often a delay when you create or edit transport rules (for example, wait an hour). When the rule is in effect, the following events now happen when users use Outlook on the web or a mobile device client that supports Rights Management protection: 
+Before you test this configuration, remember that there is often a delay when you create or edit mail flow rules (for example, wait an hour). When the rule is in effect, the following events now happen when users use Outlook on the web or a mobile device client that supports Exchange ActiveSync IRM: 
 
 - Users select the Exchange message classification and send the email.
 
@@ -265,11 +347,11 @@ Before you test this configuration, remember that there is often a delay when yo
 
 - When recipients view the email in Outlook and they have the Azure Information Protection client installed, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
 
-If your Azure Information Protection labels apply rights management protection, add this protection to the rule configuration: Selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
+If your Azure Information Protection labels apply protection, add this protection to the rule configuration: Selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
 
-You can also configure transport rules to do the reverse mapping. When an Azure Information Protection label is detected, set a corresponding Exchange message classification:
+You can also configure mail flow rules to do the reverse mapping. When an Azure Information Protection label is detected, set a corresponding Exchange message classification:
 
-- For each Azure Information Protection label: Create a transport rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
+- For each Azure Information Protection label: Create a mail flow rule that is applied when the **msip_labels** header includes the name of your label (for example, **General**), and apply a message classification that maps to this label.
 
 
 ## Next steps

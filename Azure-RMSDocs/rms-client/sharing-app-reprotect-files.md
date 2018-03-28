@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Change permissions on files that have been protected by Rights Management
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 When a file has been protected by Rights Management, you can change the permissions by re-protecting it and then specifying all the users that should have access to it, and what permissions you want to give them.
 

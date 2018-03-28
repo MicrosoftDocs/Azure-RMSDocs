@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Activating Azure Rights Management
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > This configuration information is for administrators who are responsible for a service that applies to all users in an organization. If you are looking for user help and information to use the Rights Management functionality for a specific application or how to open a file or email that is rights-protected, use the help and guidance that accompanies your application.
@@ -43,7 +43,7 @@ When the Azure Rights Management service for Azure Information Protection is act
 
 When you have a service plan that includes Azure Rights Management, you might not have to activate the service:
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained in or after **February 2018**, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
+- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of **February 2018** or later, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
 - If your subscription was obtained before this month, you must activate the service yourself. 
 

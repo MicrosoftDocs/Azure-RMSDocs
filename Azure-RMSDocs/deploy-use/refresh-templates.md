@@ -6,7 +6,7 @@ description: When you use the Azure Rights Management service, templates are aut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/16/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Refreshing templates for users and services
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 When you use the Azure Rights Management service of Azure Information Protection, templates are automatically downloaded to client computers so that users can select them from their applications. However, you might need to take additional steps if you make changes to the templates:
 
@@ -78,22 +78,24 @@ By editing the registry on the computers running Office 2016, Office 2013, or th
 
 1.  Using a registry editor, delete the data for the **LastUpdatedTime** value. For example, the data might display **2015-04-20T15:52**; delete 2015-04-20T15:52 so that no data is displayed. Use the following information to locate the registry path to delete this registry value data.
 
-	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<*MicrosoftRMS_FQDN*>\Template
+	**Registry path:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
 	**Type:** REG_SZ
 
 	**Value:** LastUpdatedTime
 
 	> [!TIP]
-	    > In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
+	> In the registry path, <*MicrosoftRMS_FQDN*> refers to your Microsoft RMS service FQDN. If you want to verify this value:
 
-    > 1.  Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
-    > 2.  From the output, identify the **LicensingIntranetDistributionPointUrl** value.
+    > Run the [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) cmdlet for Azure RMS. If you haven't already installed the Windows PowerShell module for Azure RMS, see [Installing the AADRM PowerShell module](install-powershell.md).
     >
-    >     For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-    > 3.  From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
+    > From the output, identify the **LicensingIntranetDistributionPointUrl** value.
     >
-    >     **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+    > For example: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    > 
+    > From the value, remove **https://** and **/_wmcs/licensing** from this string. The remaining value is your Microsoft RMS service FQDN. In our example, the Microsoft RMS service FQDN would be the following value:
+    >
+    >**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 2.  Delete the following folder and all files it contains: **%localappdata%\Microsoft\MSIPC\Templates**
 

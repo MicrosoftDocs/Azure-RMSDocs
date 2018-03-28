@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,11 +27,11 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
-These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates).
+These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).
 
 ## What's the difference between Azure Information Protection and Azure Rights Management?
 
@@ -42,9 +42,9 @@ Azure Information Protection provides classification, labeling, and protection f
 A user must have a valid user name and password to access content that is protected by Azure Information Protection. To read more about how Azure Information Protection helps to secure your data, see [The role of Azure Information Protection in securing data](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## What subscription do I need for Azure Information Protection and what features are included?
-See the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site. 
+See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/en-us/pricing/details/information-protection) page. 
 
-If you have an Office 365 subscription that includes Rights Management, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) from the **Features** page.
+If you have an Office 365 subscription that includes Rights Management, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), which also includes some frequently asked questions for licensing.
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
@@ -58,7 +58,7 @@ If you currently use the Rights Management sharing application for Windows, we r
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
 
-- **Information Protection Administrator** (currently in preview): This Azure Active Directory administrator role lets an administrator configure all aspects of Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the [PowerShell cmdlets from the AADRM module](../deploy-use/administer-powershell.md). 
+- **Information Protection Administrator**: This Azure Active Directory administrator role lets an administrator configure all aspects of Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the [PowerShell cmdlets from the AADRM module](../deploy-use/administer-powershell.md). 
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -113,7 +113,7 @@ Additional information:
 
 Labels in Azure Information Protection let you apply a consistent classification and protection policy for documents and emails whether they are on-premises or in the cloud. This classification and protection is independent of where the content is stored or how it is moved. [Labels in Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) let you classify documents and emails for auditing and retention when that content is in Office 365 services. 
 
-Today, you apply and manage these labels separately but Microsoft is working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection. This same labeling schema and store will also be available for software vendors. For more information, see the Microsoft Ignite 2017 session, [Protecting complete data lifecycle using Microsoft information protection capabilities](https://myignite.microsoft.com/videos/55397).
+Today, you apply and manage these labels separately but Microsoft is working towards a comprehensive and unified labeling strategy for multiple services that include Azure Information Protection, Office 365, Microsoft Cloud App Security, and Windows Information Protection. You might have heard this strategy referred to as "Microsoft Information Protection" (MIP). This same labeling schema and store will also be available for software vendors. For more information, see the blog post, [Consistent labeling and protection policies coming to Office 365 and Azure Information Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553).
 
 ## What’s the difference between Windows Server FCI and the Azure Information Protection scanner?
 

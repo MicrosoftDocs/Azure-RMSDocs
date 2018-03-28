@@ -27,7 +27,7 @@ ms.suite: ems
 
 # How applications support the Azure Rights Management service
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following information to help you understand how the most commonly used end-user applications and services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s documents and emails. These applications include Word, Excel, PowerPoint, and Outlook. The services include Exchange and SharePoint.
 

@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Tasks that you used to do with the Azure classic portal
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Used to the Azure classic portal for managing the Azure Rights Management service, and need some help transitioning to the Azure portal?
 
@@ -54,7 +54,7 @@ However, customers who have a subscription for Office 365 US Government (Governm
 |Delete a template|Deleting templates can result in inaccessible data, so the Azure portal doesn't support this action. However, you can delete the label and then use the PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) cmdlet to remove the template. <br /><br />For more information, see [How to delete or reorder a label for Azure Information Protection](configure-policy-delete-reorder.md).
 |Multi-language support|From the **MANAGE** menu selection, select **Languages** to export the customizable fields that include the template name and description. Translate the strings, and then import these strings into the portal. <br /><br />For more information, see [How to configure labels and templates for different languages in Azure Information Protection](configure-policy-languages.md).
 |Rights Management web reports|Use the PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) cmdlet to download usage logs for the Azure Rights Management service. You can then use this data to create customized reports. <br /><br />For more information, see [Logging and analyzing usage of the Azure Rights Management service](log-analyze-usage.md).<br /><br />Tip: Look out for announcements on the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) for a new, centralized reporting solution for Azure Information Protection.
-|Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **RMS Settings** or **Protection activation**. This option is in the process of being renamed.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
+|Activate and deactivate the Rights Management service|From the **MANAGE** menu options, select **Protection activation**.<br /><br />For more information, see [How to activate Azure Rights Management from the Azure portal](activate-azure.md).
 
 Before you edit your templates or convert them to labels in the Azure portal, see [Considerations for templates in the Azure portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -67,7 +67,7 @@ New functionality in the Azure portal:
 
 - You can convert templates to labels, so that you manage a single object rather than manage a template and label independently. For instructions, see [To convert templates to labels](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Support for other admin roles: Whereas you had to sign in to the Azure classic portal as a Global Administrator to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has any of the following administrative roles: Global Administrator, Security Administrator, or Information Protection Administrator. For more information about each of these roles, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
+- Support for other admin roles: Whereas you had to sign in to the Azure classic portal as a Global Administrator to configure Azure Rights Management, you can sign in to the Azure portal to configure Azure Information Protection by using an account that has any of the following administrative roles: **Global Administrator**, **Security Administrator**, or **Information Protection Administrator**. For more information about each of these roles, see the [Available roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) section from the Azure Active Directory documentation.
 
 The PowerShell cmdlets to create and manage templates, and to activate or deactivate the service, remain supported without changes.
 

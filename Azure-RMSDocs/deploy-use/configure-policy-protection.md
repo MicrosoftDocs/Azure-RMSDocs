@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 
 # How to configure a label for Rights Management protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook. 
 
@@ -72,7 +72,9 @@ Exchange does not have to be configured for Information Rights Management (IRM) 
         
         The previously configured protection settings are retained as an archived protection template, and will be displayed again if you change the option back to **Protect**. You do not see this template in the Azure portal but if necessary, you can still manage the template by using [PowerShell](configure-templates-with-powershell.md). This behavior means that content remains accessible if it has this label with the previously applied protection settings.
     
-    - **Protect**: Select this option to apply protection, and then go to step 5.
+    - **Protect**: Select this option to apply protection, and then go to step 5 to configure protection settings.
+    
+    Note: You could save a new label at this stage without further configuration. If you do, the label is configured to apply protection such that only the person who applies the label can open the document or email with no usage restrictions. In some cases, this might be the required outcome, so that a user can save a file to any location and be assured that only they can open it. If this outcome matches your requirement and others are not required to collaborate on the protected content, go straight to step to 12 instead of step 5.
     
     - **Remove Protection**: Select this option to remove protection if a document or email is protected. Then go to step 11.
         
@@ -239,6 +241,9 @@ This label cannot be restricted to Outlook but does provide less restrictive con
 
 If you specify external users who do not have an account in Azure AD, be sure to instruct your users not to use this label for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
 
+> [!NOTE]
+> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, you can use this example to configure a label with the same set of usage rights.
+
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
@@ -249,9 +254,11 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
     Repeat this step to specify additional users who should have the same permissions.
 
-4. For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant. 
+4. For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
     
-    Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**. 
+    Note: Do not select **Viewer** for emails and if you do select **Custom**, make sure that you include **Edit and Save**.
+    
+    To select the same permissions that match the new **Encrypt-Only** option from Exchange Online, select **Custom**. Then select all permissions except **Save As, Export (EXPORT)** and **Full Control (OWNER)**.
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 

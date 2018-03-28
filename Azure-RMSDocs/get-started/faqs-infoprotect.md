@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Frequently asked questions about classification and labeling in Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Have a question about Azure Information Protection that is specifically about classification and labeling?  See if it's answered here. 
 
@@ -66,7 +66,8 @@ When you use sublabels, don't configure visual markings, protection, and conditi
 ## How do I prevent somebody from removing or changing a label?
 
 Although there’s a [policy setting](../deploy-use/configure-policy-settings.md) that requires users to state why they are lowering a classification label, removing a label, or removing protection, this setting does not prevent these actions. To prevent users from removing or changing a label, the content must already be protected and the protection permissions do not grant the user the Export or Full Control [usage right](../deploy-use/configure-usage-rights.md). 
-## When an email is labeled, do any attachments automatically get the same labeling?
+
+# When an email is labeled, do any attachments automatically get the same labeling?
 
 No. When you label an email message that has attachments, those attachments do not inherit the same label. The attachments remain either without a label or retain a separately applied label. However, if the label for the email applies protection, that protection is applied to the attachments.
 

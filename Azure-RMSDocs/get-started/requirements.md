@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/22/2018
+ms.date: 03/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -27,24 +27,34 @@ ms.suite: ems
 
 # Requirements for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
 ## Subscription for Azure Information Protection
 
-For classification, labeling, and protection, you must have an [Azure Information Protection plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
+**For classification, labeling, and protection**: You must have an [Azure Information Protection plan](https://azure.microsoft.com/pricing/details/information-protection/). 
 
-For protection-only, you must have an [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**For protection-only**: You must have an [Office 365 plan that includes Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Information Protection site.
+To make sure that your organization's subscription includes the Azure Information Protection features that you want to use, review the feature list from the [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection) page.
 
-> [!NOTE]
-> If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
+> [!TIP]
+> Looking to see if your Office 365 plan or Exchange Online standalone plan supports the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801), to send protected emails to personal email addresses? For example, Gmail, Yahoo, and Microsoft. Check the following resources:
+>
+> [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+>
+> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+>
+> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+
+If you have questions about subscriptions or licensing, do not post them on this page but instead, contact your Microsoft Account Manager or [Microsoft Support](information-support.md#to-contact-microsoft-support).
 
 ## Azure Active Directory
 
 Your organization must have an Azure Active Directory (Azure AD) to support user authentication and authorization for Azure Information Protection. In addition, if you want to use your user accounts from your on-premises directory (AD DS), you must also configure directory integration.
+
+Single sign-on (SSO) is supported for Azure Information Protection, so that users are not repeatedly prompted for their credentials. If you use another vendor solution for federation, check with that vendor how to configure it for Azure AD. WS-Trust is a common requirement for these solutions to support single sign-on. 
 
 Multi-factor authentication (MFA) is supported with Azure Information Protection when you have the required client software and correctly configured MFA supporting infrastructure.
 

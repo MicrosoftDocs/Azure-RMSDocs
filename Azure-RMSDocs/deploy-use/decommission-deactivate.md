@@ -27,13 +27,13 @@ ms.suite: ems
 
 # Decommissioning and deactivating protection for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 You are always in control of whether your organization protects content by using the Azure Rights Management service from Azure Information Protection. If you decide you no longer want to use this information protection service, you have the assurance that you won’t be locked out of content that was previously protected.
 
 If you don’t need continued access to previously protected content, deactivate the service and let your subscription for Azure Information Protection expire. For example, this would be appropriate for when you have completed testing Azure Information Protection before you deploy it in a production environment.
 
-However, if you have deployed Azure Information Protection in production and protected documents and emails, make sure that you have a copy of your Azure Information Protection tenant key before you deactivate the Azure Rights Management service. Make sure that you have a copy of your key before your subscription expires to ensure that you can retain access to content that was protected by Azure Rights Management after the service is deactivated. If you used the bring your own key solution (BYOK) where you generate and manage your own key in an HSM, you already have your Azure Information Protection tenant key. But if it was managed by Microsoft (the default), see the instructions for exporting your tenant key in [Operations for your Azure Rights Management tenant key](operations-tenant-key.md) article.
+However, if you have deployed Azure Information Protection in production and protected documents and emails, make sure that you have a copy of your Azure Information Protection tenant key before you deactivate the Azure Rights Management service. Make sure that you have a copy of your key before your subscription expires to ensure that you can retain access to content that was protected by Azure Rights Management after the service is deactivated. If you used the bring your own key solution (BYOK) where you generate and manage your own key in an HSM, you already have your Azure Information Protection tenant key. But if it was managed by Microsoft (the default), see the instructions for exporting your tenant key in [Operations for your Azure Information Protection tenant key](operations-tenant-key.md) article.
 
 > [!TIP]
 > Even after your subscription expires, your Azure Information Protection tenant remains available for consuming content for an extended period. However, you will no longer be able to export your tenant key.

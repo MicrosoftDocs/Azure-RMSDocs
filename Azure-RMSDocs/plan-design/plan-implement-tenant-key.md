@@ -6,7 +6,7 @@ description: Information to help you plan for and manage your Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Planning and implementing your Azure Information Protection tenant key
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the information in this article to help you plan for and manage your Azure Information Protection tenant key. For example, instead of Microsoft managing your tenant key (the default), you might want to manage your own tenant key to comply with specific regulations that apply to your organization. Managing your own tenant key is also referred to as bring your own key, or BYOK.
 
@@ -53,7 +53,7 @@ Decide which tenant key topology is best for your organization. By default, Azur
 
 Decide which tenant key topology is best for your organization:
 
-- **Managed by Microsoft**: Azure Information Protection automatically generates a tenant key for your organization. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
+- **Managed by Microsoft**: Microsoft automatically generates a tenant key for your organization and this key is used exclusively for Azure Information Protection. By default, Microsoft uses this key for your tenant and manages most aspects of your tenant key life cycle. 
     
     This is the simplest option with the lowest administrative overheads. In most cases, you do not even need to know that you have a tenant key. You just sign up for Azure Information Protection and the rest of the key management process is handled by Microsoft.
 
