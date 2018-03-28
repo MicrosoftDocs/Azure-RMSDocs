@@ -102,7 +102,7 @@ The Azure Information Protection client can label and protect documents and emai
 
 - Office Professional Plus 2010 with Service Pack 2
 
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Labels that apply protection do not display on the Azure Information Protection bar or from the Protect button on the Office ribbon. 
+Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button on the Office ribbon. 
 
 The Azure Information Protection client does not support multiple versions of Office on the same computer. This client also does not support switching user accounts in Office.
 
