@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -86,7 +86,7 @@ Possible reasons:
 
 ### Set custom permissions for a document
 
-If allowed by your administrator, you can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label.
+If allowed by your administrator, you can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label. This option is specific to documents and is not available with Outlook.
 
 1. On the **Home** tab, in the **Protection** group, click **Protect** > **Custom Permissions**:
 
