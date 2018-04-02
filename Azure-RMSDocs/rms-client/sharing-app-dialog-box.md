@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Dialog box options for the Rights Management sharing application
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 with SP1, Windows 8, Windows 8.1*
 
 Use this information to help you specify the options in the RMS sharing application **add protection** dialog box or the **share protected** dialog box. You will see this dialog box when you [protect a file to share](sharing-app-protect-by-email.md) or you [protect a file in place](sharing-app-protect-in-place.md) and choose custom permissions.
 

@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # How Office applications and services support Azure Rights Management 
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 End-user Office applications and Office services can use the Azure Rights Management service from Azure Information Protection to help protect your organization’s data. These Office applications are Word, Excel, PowerPoint, and Outlook. The Office services are Exchange and SharePoint. The Office configurations that support the Azure Rights Management service often use the term **information rights management (IRM)**.
 
@@ -107,7 +107,7 @@ If you are ready to configure SharePoint for IRM:
 
 ## Next steps
 
-If you have Office 365, you might be interested in reviewing [File Protection Solutions in Office 365](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Office 365.
+If you have Office 365, you might be interested in reviewing [File Protection Solutions in Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect), which provides recommended capabilities for protecting files in Office 365.
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 

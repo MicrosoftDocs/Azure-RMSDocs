@@ -27,7 +27,7 @@ ms.suite: ems
 
 # The client side of Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Azure Information Protection provides a client-server solution that helps to protect an organization's documents and emails:
 

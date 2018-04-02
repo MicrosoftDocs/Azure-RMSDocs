@@ -27,7 +27,7 @@ ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 
 # How to create a new label for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Although Azure Information Protection comes with default labels that you can customize, you can also create your own labels that users see on the Information Protection bar.
 

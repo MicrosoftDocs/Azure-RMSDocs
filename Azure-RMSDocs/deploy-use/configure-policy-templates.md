@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configuring and managing templates for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 >[!NOTE]
 >This functionality replaces configuring custom templates in the Azure classic portal. The classic portal is now retired, so you must use the Azure portal. For a quick how-to mapping, see [Tasks that you used to do with the Azure classic portal](migrate-portal.md).

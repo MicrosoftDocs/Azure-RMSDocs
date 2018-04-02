@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/10/2018
+ms.date: 03/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Requirements for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Before you deploy Azure Information Protection for your organization, make sure that you have the following prerequisites. 
 
@@ -95,6 +95,8 @@ When the Azure Information Protection client protects the data by using the Azur
 The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
 - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)
+    
+    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -102,7 +104,7 @@ The Azure Information Protection client can label and protect documents and emai
 
 - Office Professional Plus 2010 with Service Pack 2
 
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Labels that apply protection do not display on the Azure Information Protection bar. 
+Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button on the Office ribbon. 
 
 The Azure Information Protection client does not support multiple versions of Office on the same computer. This client also does not support switching user accounts in Office.
 
@@ -117,6 +119,8 @@ Use the instructions in this Office article to keep up-to-date with changes to t
 In addition to the information in the Office article, specific to Azure Information Protection:
 
 - Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.
+
+- Allow HTTPS traffic on TCP 443 to **mobile.pipe.aria.microsoft.com**.
 
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 

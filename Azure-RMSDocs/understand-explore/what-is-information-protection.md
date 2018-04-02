@@ -27,7 +27,7 @@ ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 
 # What is Azure Information Protection?
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Azure Information Protection (sometimes referred to as AIP) is a cloud-based solution that helps an organization to classify, label, and protect its documents and emails. This can be done automatically by administrators who define rules and conditions, manually by users, or a combination where users are given recommendations. 
 

@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 
@@ -48,19 +48,15 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 ## How automatic or recommended labels are applied
 
-- Automatic classification applies to Word, Excel, PowerPoint, and Outlook. For documents, automatic classification runs [continuously in the background](#more-information-about-running-continuously). For Outlook, automatic classification runs when emails are sent. 
+- Automatic classification applies to Word, Excel, and PowerPoint when documents are saved, and apply to Outlook when emails are sent. 
     
-    You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
+    You cannot use automatic classification for documents and emails that were previously manually labeled, or previously automatically labeled with a higher classification. 
 
-- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs [continuously in the background](#more-information-about-running-continuously). You cannot use recommended classification for Outlook.
+- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook.
     
     You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
 
-#### More information about running continuously
-
-The Azure Information Protection client periodically checks documents for the condition rules that you specify. This behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
-
-The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified. 
+You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. This configuration requires an [advanced client setting](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview.
 
 ### How multiple conditions are evaluated when they apply to more than one label
 
