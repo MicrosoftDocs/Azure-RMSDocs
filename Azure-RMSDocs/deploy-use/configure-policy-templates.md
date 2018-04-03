@@ -162,7 +162,7 @@ When you create a new label with the protection setting of **Azure (cloud key)**
     
     a. From the **CLASSIFICATIONS** > **Policies** menu option, select **Policies**.
     
-    b. Select **Add a new policy** and then, on the **Policy** blade, specify a name for the scope of users, and a description. Then, use the option **Select which users or groups get this policy. Groups must be email-enabled.** to select the subset of users.
+    b. Select **Add a new policy** and then, on the **Policy** blade, specify a name for the scope of users, and a description. Then use the following option to select the subset of users: **Select which users or groups get this policy. Groups must be email-enabled.**
     
     Alternatively, if a policy already exists for your subset of users, select that policy instead from the **Policy** blade.
     
