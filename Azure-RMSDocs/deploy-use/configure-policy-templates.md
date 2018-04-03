@@ -155,6 +155,21 @@ When you create a new label with the protection setting of **Azure (cloud key)**
 4. On the **Protection** blade, you can change the permissions, content expiration, and offline access settings. For more information about configuring these protection settings, see [How to configure a label for Rights Management protection](configure-policy-protection.md)
     
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
+    
+    On the **Azure Information Protection - Labels** blade, you now see your new label displayed with the **PROTECTION** column to indicate that it contains protection settings. These protection settings display as templates to applications and services that support the Azure Rights Management service.
+
+5. If the newly created template should not be available to all users, you must add the newly created label to a policy other than the Global policy:
+    
+    a. From the **CLASSIFICATIONS** > **Policies** menu option, select **Policies**.
+    
+    b. Select **Add a new policy** and then, on the **Policy** blade, specify a name for the scope of users, and a description. Then, use the option **Select which users or groups get this policy. Groups must be email-enabled.** to select the subset of users.
+    
+    Alternatively, if a policy already exists for your subset of users, select that policy instead from the **Policy** blade.
+    
+    c. From the **Policy** blade, select **Add or remove labels**. Then, on the **Policy: Add or remove labels** blade, select the newly created label that contains your protection settings, and click **OK**.
+    
+    d. Back on the **Policy** blade, click **Save**.  
+
 
 ## Next steps
 
