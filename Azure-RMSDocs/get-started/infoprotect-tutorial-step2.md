@@ -136,7 +136,7 @@ We'll now create a new sublabel for **Confidential**.
 
 13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
     
-    You now see your new sub-label, which is configured for visual markings and protection. For example:
+    You now see your new sublabel, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
