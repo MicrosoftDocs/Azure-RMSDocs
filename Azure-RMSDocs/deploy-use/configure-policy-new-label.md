@@ -41,7 +41,7 @@ Use the following instructions to add a new label that can then be added to an A
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Labels** menu option, on the **Azure Information Protection - Labels** blade, do one of the following actions:
+2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, do one of the following actions:
     
     - To create a new label: Click **Add a new label**.
     

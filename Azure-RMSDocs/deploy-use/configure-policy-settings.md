@@ -41,11 +41,11 @@ To configure these settings:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. From the **CLASSIFICATIONS** > **Policies** menu option: If the settings that you want to configure will apply to all users, select **Global**.
+2. From the **CLASSIFICATIONS** > **Policies** menu option: On the **Azure Information Protection - Policies** blade, select **Global** if the settings that you want to configure will apply to all users.
     
     If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, select your scoped policy instead.
 
-3. From the **Policy** blade, configure the settings:
+3. On the **Policy** blade, configure the settings:
     
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
     
