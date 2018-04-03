@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -71,9 +71,11 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 #### More information about running continuously
 
-The current preview version of the Azure Information Protection client periodically checks documents for the condition rules that you specify. This behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
+By default, the current preview version of the Azure Information Protection client periodically checks documents for the condition rules that you specify. This behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
 
-The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified. 
+The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
+
+You can change this behavior so that the Azure Information Protection client applies automatic and recommended labels the same way as the general availability version of the client. This configuration requires an [advanced client setting](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background).
 
 ### How multiple conditions are evaluated when they apply to more than one label
 

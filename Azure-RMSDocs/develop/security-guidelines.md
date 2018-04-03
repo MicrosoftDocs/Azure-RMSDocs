@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Security Best Practices | Microsoft Information Protection
@@ -21,8 +21,8 @@ ms.reviewer: kartikk
 The Azure Information Protection (AIP) Software Development Kit (SDK) provides a robust system for publishing and consuming protected information of all types. To help an AIP   system be as strong as possible, AIP enabled applications must be built using AIP    best practices. AIP enabled applications share responsibility for helping to maintain the security of this ecosystem. Identifying security risks and providing mitigations for those risks introduced during application development helps to minimize the likelihood of a less secure software implementation.
 
 Best practices for implementing applications by using the Azure Information Protection Software Development Kit (SDK) include the following categories of suggestions:
-- [Threat Models and Mitigations](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
-- [Security Attacks](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
+- [Threat Models and Mitigations](https://msdn.microsoft.com/library/aa362751.aspx)
+- [Security Attacks](https://msdn.microsoft.com/library/aa362736.aspx)
 
 This information supplements the legal agreement that must be signed in order to obtain the digital certificates needed to implement applications using the AIP SDK.
 

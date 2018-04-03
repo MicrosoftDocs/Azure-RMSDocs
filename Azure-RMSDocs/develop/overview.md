@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Overview - RMS SDK 4.2 | Azure RMS
@@ -58,7 +58,7 @@ Use the [Get started](get-started.md) guide to begin your protected information 
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Get started](get-started.md)
-* [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
+* [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx)
 * [GitHub account](https://github.com/AzureAD/)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
