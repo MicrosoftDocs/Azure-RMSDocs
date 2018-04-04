@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 04/04/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -122,7 +122,7 @@ In addition to the information in the Office article, specific to Azure Informat
 
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
-- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
+- Do not terminate the TLS client-to-service connections (for example, to do packet-level inspection) to the Azure Rights Management service. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
     
     - Tip: Because of how Chrome displays secure connections in the address bar, you can use this browser to quickly check whether your client connection is terminated before it reaches the Azure Rights Management service. Enter the following URL into the browser address bar: `https://admin.na.aadrm.com/admin/admin.svc` 
     
