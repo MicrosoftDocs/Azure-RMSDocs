@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/14/2018
+ms.date: 04/05/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,10 +46,10 @@ However, a few organizations might need to protect a small subset of documents a
 
 This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section.
 
-In this HYOK scenario, the rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with AD RMS is never sent to the cloud.
+In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with AD RMS is never sent to the cloud.
 
 > [!NOTE]
-> Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs."
+> Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs."  
 >
 > Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents or emails that match all the following criteria:
 > 
@@ -61,9 +61,37 @@ In this HYOK scenario, the rights policies and the organization's private key th
 > 
 > **The content does not need to be consumed on Mac computers or mobile device**
 
-Users are not aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions and limitations that come with AD RMS protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply AD RMS protection. 
+Users are not aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions and limitations that come with AD RMS protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
 
-[Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply AD RMS protection see labels that are configured for AD RMS protection. 
+[Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply HYOK protection see labels that are configured for HYOK protection. 
+
+## Supported scenarios for HYOK
+
+The following tables lists the supported scenarios for protecting content by using labels that are configured for HYOK, and opening (consuming) content that's protected by HYOK.
+
+|Platform|Application|Supported|
+|----------------------|----------|-----------|
+|Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection Viewer|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection scanner|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Rights Management sharing app|Protection: Yes<br /><br />Consumption: Yes|
+|MacOS|Office for Mac Protection <br /><br /> - Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Office for Mac<br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
+|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|iOS|Office Mobile <br /><br />-Outlook|Protection: No<br /><br />Consumption: Yes|
+|iOS|Azure Information Protection Viewer|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
+|Android|Azure Information Protection Viewer|Protection: No<br /><br />Consumption: Yes|
+|Web|Outlook on the web|Protection: No<br /><br />Consumption: Yes|
+|Web|Office Online|Protection: No<br /><br />Consumption: Yes|
+|Universal|Office Universal apps|Protection: No<br /><br />Consumption: Yes|
+
 
 ## Additional limitations when using HYOK
 
@@ -71,17 +99,15 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
 - Does not support Office 2010 or Office 2007.
 
-- Instruct users not to select **Do Not Forward** in Outlook, or provide specific guidance. 
+- If you must use **Do Not Forward** for emails, use it only with labels. 
 
-    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
+    You can configure a label for **Do Not Forward** to use HYOK rather than the Azure Rights Management service, but users can also directly select Do Not Forward themselves from within Outlook. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. These Outlook options are not supported for HYOK.
     
     The Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide this button by setting the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** to **Off**. 
-    
-    When users select **Do Not Forward** from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to select for their email message. If AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages
 
-- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK (AD RMS) protection. This limitation does not apply to the current preview version of the client.
+- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK protection. This limitation does not apply to the current preview version of the client.
 
-- If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
+- If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies AD RMS protection.
 
