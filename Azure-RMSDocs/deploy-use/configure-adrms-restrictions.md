@@ -49,17 +49,15 @@ This configuration is sometimes referred to as "hold your own key" (HYOK) and it
 In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with HYOK is never sent to the cloud.
 
 > [!NOTE]
-> Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs."  
+> Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to if that data is by Azure RMS.
 >
-> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents or emails that match all the following criteria:
+> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents that match all the following criteria:
 > 
-> **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
+> - **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
-> **The content is never shared outside the organization**
+> - **The content is never shared outside the organization**
 > 
-> **The content is only consumed on the internal network**
-> 
-> **The content does not need to be consumed on Mac computers or mobile devices**
+> - **The content is only consumed on the internal network**
 
 Users are not aware when a label uses HYOK protection rather than Azure RMS protection. Because of the restrictions and limitations that come with HYOK protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
 
