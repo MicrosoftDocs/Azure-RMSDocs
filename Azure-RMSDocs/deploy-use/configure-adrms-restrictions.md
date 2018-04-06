@@ -30,7 +30,7 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-When you protect your most sensitive documents and emails, you typically do this by applying Azure Rights Management (Azure RMS) protection to benefit from the following:
+When you protect your most sensitive documents and emails, you typically do this by applying a cloud-based key that uses Azure Rights Management (Azure RMS) protection to benefit from the following:
 
 - No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution.
 
@@ -40,26 +40,26 @@ When you protect your most sensitive documents and emails, you typically do this
 
 - Document tracking, revocation, and email notification for sensitive documents that you have shared.
 
-Azure RMS protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with Azure RMS is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
+A cloud-based key protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with this cloud-based key is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
 
 However, a few organizations might need to protect a small subset of documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons.  
 
 This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section.
 
-In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with HYOK is never sent to the cloud.
+In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with the cloud-based key protection, information that you protect with HYOK is never sent to the cloud.
 
 > [!NOTE]
-> Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to if that data is by Azure RMS.
+> Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data is protected by a cloud-based key.
 >
 > Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
 > 
 > - **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
-> - **The content is never shared outside the organization**
+> - **The content is not shared outside the organization**
 > 
 > - **The content is only consumed on the internal network**
 
-Users are not aware when a label uses HYOK protection rather than Azure RMS protection. Because of the restrictions and limitations that come with HYOK protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
+Users are not aware when a label uses HYOK protection rather than cloud-based protection. Because of the restrictions and limitations that come with HYOK protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
 
 [Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply HYOK protection see labels that are configured for HYOK protection. 
 
@@ -94,15 +94,15 @@ The following table lists the supported scenarios for protecting content by usin
 
 ## Additional limitations when using HYOK
 
-In addition to not supporting the listed benefits that you get when you use Azure RMS protection, using HYOK protection with Azure Information Protection labels has the following limitations:
+In addition to not supporting the listed benefits that you get when you use cloud-based protection, using HYOK protection with Azure Information Protection labels has the following limitations:
 
 - Does not support Office 2010 or Office 2007.
 
-- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes data loss prevention (DLP) solutions, malware scanners, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, only Outlook 2016 and Outlook 2013 can display protected emails to users. Because of these limitations, we do not recommend that you use HYOK protection for emails.
+- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, only Outlook 2016 and Outlook 2013 on Windows computers can display protected emails to users. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
 
-- If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK protection. This limitation does not apply to the current preview version of the client.
+- If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using cloud-based protection rather than HYOK protection. This limitation does not apply to the current preview version of the client.
 
-- If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
+- If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies cloud-based protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies HYOK protection.
 
@@ -145,7 +145,7 @@ Check that your AD RMS deployment meets the following requirements to provide HY
 - Users have a version of Office that is Office 2013 Pro Plus with Service Pack 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
 
 > [!IMPORTANT]
-> To fulfill the high assurance that HYOK protection offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
+> To fulfill the high assurance that HYOK protection offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only managed devices. 
 > 
 > We also recommend that your AD RMS cluster uses a hardware security module (HSM), so that the private key for your Server Licensor Certificate (SLC) cannot be exposed or stolen if your AD RMS deployment should ever be breached or compromised. 
 
@@ -184,7 +184,7 @@ You can find the template GUID and licensing URL values from the Active Director
 
 ## Next steps
 
-To read more information about this feature and guidance for when to use it, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
+To read more information about this feature, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
 
 To configure a label for HYOK protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 
 
