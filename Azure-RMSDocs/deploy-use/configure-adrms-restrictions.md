@@ -81,16 +81,16 @@ The following tables lists the supported scenarios for protecting content by usi
 |MacOS|Office for Mac<br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
-|iOS|Office Mobile <br /><br />-Outlook|Protection: No<br /><br />Consumption: Yes|
+|iOS|Office Mobile <br /><br />-Outlook|Protection: No<br /><br />Consumption: No|
 |iOS|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
-|Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: No|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
 |Android|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
-|Web|Outlook on the web|Protection: No<br /><br />Consumption: Yes|
-|Web|Office Online|Protection: No<br /><br />Consumption: Yes|
-|Universal|Office Universal apps|Protection: No<br /><br />Consumption: Yes|
+|Web|Outlook on the web|Protection: No<br /><br />Consumption: No|
+|Web|Office Online|Protection: No<br /><br />Consumption: No|
+|Universal|Office Universal apps|Protection: No<br /><br />Consumption: No|
 
 
 ## Additional limitations when using HYOK
