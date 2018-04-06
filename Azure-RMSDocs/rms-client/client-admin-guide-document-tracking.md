@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 
 # Admin Guide: Configuring and using document tracking for Azure Information Protection
 
