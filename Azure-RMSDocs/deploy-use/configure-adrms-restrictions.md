@@ -97,17 +97,13 @@ The following table lists the supported scenarios for protecting content by usin
 
 ## Additional limitations when using HYOK
 
-In addition to not supporting the listed benefits that you get when you use Azure RMS protection, using HYOK protection with Azure Information Protection has the following limitations:
+In addition to not supporting the listed benefits that you get when you use Azure RMS protection, using HYOK protection with Azure Information Protection labels has the following limitations:
 
 - Does not support Office 2010 or Office 2007.
 
-- Restrict use of **Do Not Forward** as part of a label configuration. 
+- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes data loss prevention (DLP) solutions, malware scanners, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
 
-    You can configure a label for **Do Not Forward** to use HYOK rather than the Azure Rights Management service, but users can also directly select Do Not Forward themselves from within Outlook. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. These Outlook options are not supported for HYOK.
-    
-    The Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide this button by setting the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** to **Off**. 
-
-- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK protection. This limitation does not apply to the current preview version of the client.
+- If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK protection. This limitation does not apply to the current preview version of the client.
 
 - If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
