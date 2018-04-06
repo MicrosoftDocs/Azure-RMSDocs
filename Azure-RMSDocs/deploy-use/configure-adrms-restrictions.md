@@ -73,21 +73,21 @@ The following tables lists the supported scenarios for protecting content by usi
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
-|Windows|Azure Information Protection Viewer|Protection: Yes<br /><br />Consumption: Yes|
-|Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with File Explorer|Protection: Yes applicable<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes||Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection scanner|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Rights Management sharing app|Protection: Yes<br /><br />Consumption: Yes|
-|MacOS|Office for Mac Protection <br /><br /> - Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Office for Mac <br /><br /> - Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Office for Mac<br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |iOS|Office Mobile <br /><br />-Outlook|Protection: No<br /><br />Consumption: Yes|
-|iOS|Azure Information Protection Viewer|Protection: No<br /><br />Consumption: Yes|
+|iOS|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
-|Android|Azure Information Protection Viewer|Protection: No<br /><br />Consumption: Yes|
+|Android|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Web|Outlook on the web|Protection: No<br /><br />Consumption: Yes|
 |Web|Office Online|Protection: No<br /><br />Consumption: Yes|
 |Universal|Office Universal apps|Protection: No<br /><br />Consumption: Yes|
