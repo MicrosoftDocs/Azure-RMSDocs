@@ -98,7 +98,7 @@ In addition to not supporting the listed benefits that you get when you use clou
 
 - Does not support Office 2010 or Office 2007.
 
-- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
+- Many Exchange services and supporting applications will not be able to decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality for encrypted email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
 
 - If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using cloud-based protection rather than HYOK protection. This limitation does not apply to the current preview version of the client.
 
