@@ -73,7 +73,7 @@ The following tables lists the supported scenarios for protecting content by usi
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection client with Office 2016 and Office 3013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
-|Windows|Azure Information Protection client with File Explorer|Protection: Yes applicable<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with File Explorer|Protection: Yes <br /><br />Consumption: Yes|
 |Windows|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes||Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection scanner|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Rights Management sharing app|Protection: Yes<br /><br />Consumption: Yes|
