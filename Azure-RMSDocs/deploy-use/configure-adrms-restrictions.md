@@ -102,7 +102,7 @@ In addition to not supporting the listed benefits that you get when you use Azur
 
 - Does not support Office 2010 or Office 2007.
 
-- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes data loss prevention (DLP) solutions, malware scanners, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
+- Many Exchange services and supporting applications cannot decrypt HYOK-protected emails to inspect the contents and take action on them. This loss of functionality includes data loss prevention (DLP) solutions, malware scanners, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, only Outlook 2016 and Outlook 2013 can display protected emails to users. Because of these limitations, we do not recommend that you use HYOK protection for emails.
 
 - If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK protection. This limitation does not apply to the current preview version of the client.
 
