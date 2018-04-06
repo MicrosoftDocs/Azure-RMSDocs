@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -208,6 +208,20 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Turn off classification running continuously in the background
+
+This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, the preview version of the Azure Information Protection client doesn't periodically check documents for the condition rules that you specify. Instead, automatic and recommended labels are applied in the [same way as the general availability version of the Azure Information Protection client](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). This setting might be needed for performance reasons.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **RunPolicyInBackground**
+
+- Value: **False**
 
 ## Migrate labels from Secure Islands and other labeling solutions
 

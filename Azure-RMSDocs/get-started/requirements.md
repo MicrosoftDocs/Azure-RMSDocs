@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 04/04/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -93,6 +93,8 @@ When the Azure Information Protection client protects the data by using the Azur
 The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
 
 - Office 365 ProPlus with 2016 apps or 2013 apps (Click-to-Run or Windows Installer-based installation)
+    
+    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -100,7 +102,7 @@ The Azure Information Protection client can label and protect documents and emai
 
 - Office Professional Plus 2010 with Service Pack 2
 
-Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Labels that apply protection do not display on the Azure Information Protection bar. 
+Other editions of Office cannot protect documents and emails by using a Rights Management service. For these editions, Azure Information Protection is supported for classification only. Consequently, labels that apply protection do not display to users on the Azure Information Protection bar or from the **Protect** button on the Office ribbon. 
 
 The Azure Information Protection client does not support multiple versions of Office on the same computer. This client also does not support switching user accounts in Office.
 
@@ -116,9 +118,11 @@ In addition to the information in the Office article, specific to Azure Informat
 
 - Allow HTTPS traffic on TCP 443 to **api.informationprotection.azure.com**.
 
+- Allow HTTPS traffic on TCP 443 to **mobile.pipe.aria.microsoft.com**.
+
 - If you use a web proxy that requires authentication, you must configure it to use integrated Windows authentication with the user's Active Directory logon credentials.
 
-- Do not terminate the TLS client-to-service connection (for example, to do packet-level inspection). Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
+- Do not terminate the TLS client-to-service connections (for example, to do packet-level inspection) to the Azure Rights Management service. Doing so breaks the certificate pinning that RMS clients use with Microsoft-managed CAs to help secure their communication with the Azure Rights Management service.
     
     - Tip: Because of how Chrome displays secure connections in the address bar, you can use this browser to quickly check whether your client connection is terminated before it reaches the Azure Rights Management service. Enter the following URL into the browser address bar: `https://admin.na.aadrm.com/admin/admin.svc` 
     
