@@ -51,7 +51,7 @@ In this HYOK scenario, the usage rights policies and the organization's private 
 > [!NOTE]
 > Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to if that data is by Azure RMS.
 >
-> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents that match all the following criteria:
+> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
 > 
 > - **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
@@ -77,7 +77,7 @@ The following table lists the supported scenarios for protecting content by usin
 |Windows|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
 |Windows|Azure Information Protection scanner|Protection: Yes<br /><br />Consumption: Yes|
-|Windows|Rights Management sharing app|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Office for Mac <br /><br /> - Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Office for Mac<br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
 |MacOS|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
