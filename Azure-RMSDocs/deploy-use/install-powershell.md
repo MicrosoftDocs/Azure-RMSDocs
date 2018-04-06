@@ -49,7 +49,7 @@ This table lists the prerequisites to install and use the AADRM PowerShell modul
 
 ## How to install the AADRM module
 
-The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time is also available on the Microsoft Download Center. 
+The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time, an older version of the module remains available on the Microsoft Download Center. This older version does not include the new cmdlets [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog) and [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog). 
 
 ### To install the AADRM module from the PowerShell Gallery
 
