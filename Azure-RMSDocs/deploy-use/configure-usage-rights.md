@@ -165,7 +165,7 @@ Note that the Rights Management owner is independent from the Windows file syste
 
 When a user opens a document or email that has been protected by Azure Rights Management, a Rights Management use license for that content is granted to the user. This use license is a certificate that contains the user's usage rights for the document or email message, and the encryption key that was used to encrypt the content. The use license also contains an expiry date if this has been set, and how long the use license is valid.
 
-A valid use license is needed to open the content in addition to the user's rights account certificate (RAC), which is a certificate that's granted to a user when the [environment is first initialized](../understand-explore/how-does-it-work.md#initializing-the-user-environment), and then renewed every 31 days.
+A user must have a valid use license to open the content in addition to their rights account certificate (RAC), which is a certificate that's granted when the [user environment is initialized](../understand-explore/how-does-it-work.md#initializing-the-user-environment), and then renewed every 31 days.
 
 For the duration of the use license, the user is not reauthenticated or reauthorized for the content. This lets the user continue to open the protected document or email without an Internet connection. When the use license validity period expires, the next time the user accesses the protected document or email, the user must be reauthenticated and reauthorized. 
 
