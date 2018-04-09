@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 - Local folders on the Windows Server computer that runs the scanner.
 
-- UNC paths for network shares that use the Common Internet File System (CIFS) protocol.
+- UNC paths for network shares that use the Server Message Block (SMB) protocol.
 
 - Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013.
 
@@ -43,7 +43,7 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 When you have configured your [Azure Information Protection policy](configure-policy.md) for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection:
 
-![Azure Information Protection scanner overview](../media/infoprotect-scanner.png)
+![Azure Information Protection scanner architecture overview](../media/infoprotect-scanner.png)
 
 The scanner can inspect any files that Windows can index, by using iFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](../rms-client/client-admin-guide-file-types.md).
 
