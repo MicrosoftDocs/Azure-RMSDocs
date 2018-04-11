@@ -25,24 +25,28 @@ ms.suite: ems
 
 ---
 
-# Exchange Online IRM configuration when you have imported a trusted publishing domain
+# Exchange Online IRM configuration to import a trusted publishing domain
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Use these instructions only if you have previously configured Exchange Online for IRM by importing your trusted publishing domain (TPD), and you need to be able to decrypt emails that were previously encrypted.
+Use these instructions only if your tenant is not able to use the new capabilities of Office 365 Message Encryption. To confirm, run the Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx) command and see check whether you have an **AzureRMSLicensingEnabled** parameter. If you see this parameter, your tenant can use the new capabilities of Office 365 Message Encryption:
 
-If neither of these conditions apply to you, do not use these instructions and instead, use instructions from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
+- If **AzureRMSLicensingEnabled** is set to **True**, your tenant is already using new capabilities of Office 365 Message Encryption and you should not use the instructions in the next section.
 
-## Exchange Online IRM configuration if you have an imported TPD
+- If **AzureRMSLicensingEnabled** is set **False**, your tenant supports new capabilities of Office 365 Message Encryption but is not yet configured. To configure your tenant for these new capabilities, see [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
 
-To configure Exchange Online to support the Azure Rights Management service, you must configure the information rights management (IRM) service for Exchange Online. To do this, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
+Only if your tenant cannot support the new capabilities of Office 365 Message Encryption, use the instructions that follow.
+
+## Exchange Online IRM configuration
+
+To configure Exchange Online IRM, you use Windows PowerShell (no need to install a separate module), and run [PowerShell commands for Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
-> Until Microsoft migrates your Office 365 tenant, you cannot configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key.
+> Until Microsoft migrates your Office 365 tenant to support the new capabilities, you cannot configure Exchange Online to support the Azure Rights Management service if you are using a customer-managed tenant key (BYOK) for Azure Information Protection, rather than the default configuration of a Microsoft-managed tenant key.
 >
 > If you try to configure Exchange Online when the Azure Rights Management service is using BYOK, the command to import the key (step 5, in the following procedure) fails with the error message **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
-The following steps provide a typical set of commands that you would run to enable Exchange Online to use the Azure Rights Management service for this scenario:
+The following steps provide a typical set of commands that you would run to enable Exchange Online IRM:
 
 1.  If this is the first time that you have used Windows PowerShell for Exchange Online on your computer, you must configure Windows PowerShell to run signed scripts. Start your Windows PowerShell session by using the **Run as administrator** option, and then type:
 
