@@ -60,13 +60,13 @@ In addition, use HYOK protection only when you have to, and for just the documen
 
 > [!NOTE]
 > 
-> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
+> Even for the organizations that use HYOK protection, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
 > 
-> - **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
+> **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
-> - **The content is not shared outside the organization**
+> **The content is not shared outside the organization**
 > 
-> - **The content is only consumed on the internal network**
+> **The content is only consumed on the internal network**
 
 Users are not aware when a label uses HYOK protection rather than cloud-based protection. Because of the restrictions and limitations that come with HYOK protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
 
