@@ -48,7 +48,7 @@ This configuration is sometimes referred to as "hold your own key" (HYOK) and it
 
 In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with the cloud-based key protection, information that you protect with HYOK is never sent to the cloud.
 
-Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment options:
+Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment configurations:
 
 - For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
 
