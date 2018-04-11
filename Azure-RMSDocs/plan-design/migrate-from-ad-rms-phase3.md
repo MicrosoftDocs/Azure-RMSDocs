@@ -6,7 +6,7 @@ description: Phase 3 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -78,17 +78,17 @@ This method is suitable only for Windows clients that run Office 2016 (or later)
 
     a. On one of your AD RMS servers in the cluster, start the Internet Information Services (IIS) Manager console.
 
-    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **publish.asmx**
+    b. Navigate to **Default Web Site** > **_wmcs** > **licensing** > **licensing.asmx**
 
-    c. Right-click **publish.asmx** > **Properties** > **Edit**
+    c. Right-click **licensing.asmx** > **Properties** > **Edit**
 
-    d. In the **Permissions for publish.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
+    d. In the **Permissions for licensing.asmx** dialog box, either select **Users** if you want to set redirection for all users, or click **Add** and then specify a group that contains the users that you want to redirect.
     
     Even if all your users are using Office 2016, you might prefer to initially specify a subset of users for a phased migration.
     
     e. For your selected group, select **Deny** for the **Read & Execute** and the **Read** permission, and then click **OK** twice.
 
-    f. To confirm this configuration is working as expected, try to connect to the publish.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 2016 to look for the SRV record:
+    f. To confirm this configuration is working as expected, try to connect to the licensing.asmx file directly from a browser. You should see the following error message, which triggers the client running Office 2016 to look for the SRV record:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).**
 
@@ -138,7 +138,7 @@ When you cannot migrate all your Windows clients at once, run the following proc
     > [!IMPORTANT]
     > As before, be careful not to introduce additional spaces before or after your addresses.
     > 
-    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https:// rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
+    > In addition, if your AD RMS servers use SSL/TLS server certificates, check whether the licensing URL values include the port number **443** in the string. For example: https://rms.treyresearch.net:443/_wmcs/licensing. You can find this information in the Active Directory Rights Management Services console when you click the cluster name and view the **Cluster Details** information. If you see the port number 443 included in the URL, include this value when you modify the script. For example, https://rms.treyresearch.net:**443**. 
     
     If you need to retrieve your Azure Rights Management service URL for *&lt;YourTenantURL&gt;*, refer back to [To identify your Azure Rights Management service URL](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
