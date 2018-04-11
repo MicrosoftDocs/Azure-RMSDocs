@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2018
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,9 +48,18 @@ This configuration is sometimes referred to as "hold your own key" (HYOK) and it
 
 In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with the cloud-based key protection, information that you protect with HYOK is never sent to the cloud.
 
+Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment options:
+
+- For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
+
+- For more information about the AD RMS deployment requirements, see the [Requirements for AD RMS to support HYOK](#requirements-for-ad-rms-to-support-hyok) section.
+
+- For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+In addition, use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data is protected by a cloud-based key.
+
 > [!NOTE]
-> Use this configuration only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data is protected by a cloud-based key.
->
+> 
 > Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
 > 
 > - **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
@@ -106,9 +115,9 @@ In addition to not supporting the listed benefits that you get when you use clou
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies HYOK protection.
 
-## Requirements for HYOK
+## Requirements for AD RMS to support HYOK
 
-Check that your AD RMS deployment meets the following requirements to provide HYOK protection for Azure Information Protection.
+An AD RMS deployment must meet the following requirements to provide HYOK protection for Azure Information Protection labels.
 
 - AD RMS configuration:
     
