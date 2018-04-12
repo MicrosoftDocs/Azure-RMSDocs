@@ -44,12 +44,12 @@ This table lists the prerequisites to install and use the AADRM PowerShell modul
 > [!NOTE]
 > Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
 > 
-> If you had a previous version of the AADRM module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
+> If you installed a previous version of the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version of the AADRM module.
 
 
 ## How to install the AADRM module
 
-The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time, an older version of the module remains available on the Microsoft Download Center. This older version does not include the new cmdlets [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog) and [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog). 
+The AADRM module has moved to the [PowerShell Gallery](/powershell/gallery/readme) and is no longer available from the Microsoft Download Center. 
 
 ### To install the AADRM module from the PowerShell Gallery
 
@@ -61,14 +61,6 @@ To install the AADRM module, start a PowerShell session and type:
 
 	Install-Module -Name AADRM
 
-
-### To install the AADRM module from the Microsoft Download Center
-
-1. Go to the Microsoft Download Center and locate the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] administration module for Windows PowerShell.
-
-2. Download and save the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] installer file, **WindowsAzureADRightsManagementAdministration_x64**. Then double-click this file to start the Azure AD Rights Management Administration Setup Wizard.
-
-3.  Complete the wizard, which installs the AADRM PowerShell module.
 
 ## Next steps
 In a Windows PowerShell session, confirm the version of the installed module. This check is particularly important if you upgraded from an older version:
