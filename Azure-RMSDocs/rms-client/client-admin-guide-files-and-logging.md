@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/09/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection

@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 04/17/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
