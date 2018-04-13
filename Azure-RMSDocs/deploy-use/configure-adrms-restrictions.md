@@ -30,6 +30,10 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+Use the following information to understand what HYOK protection is for Azure Information, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
+
+## Cloud-based protection vs. HYOK
+
 When you protect your most sensitive documents and emails by using Azure Information Protection, you typically do this by applying a cloud-based key that uses Azure Rights Management (Azure RMS) protection to benefit from the following:
 
 - No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution.
