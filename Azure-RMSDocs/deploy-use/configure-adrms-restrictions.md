@@ -52,16 +52,6 @@ When your data is protected by a cloud-based key, other cloud-based services and
 
 However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling. Or it might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and the content cannot be decrypted by Azure Information Protection or reasoned over by other services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
 
-HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in a following section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
-
-Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer featur  I ce parity with AD RMS, and does not support all AD RMS deployment configurations:
-
-- For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
-
-- For more information about the AD RMS deployment requirements, see the [Requirements for AD RMS to support HYOK](#requirements-for-ad-rms-to-support-hyok) section.
-
-- For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
-
 ## HYOK guidance and best practices
 
 Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Integrating services and applications cannot reason over HYOK-protected data.
@@ -123,7 +113,19 @@ In addition to not supporting the listed benefits that you get when you use clou
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies HYOK protection.
 
-## Requirements for AD RMS to support HYOK
+## Implementing HYOK
+
+HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in a following section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
+
+Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer featur  I ce parity with AD RMS, and does not support all AD RMS deployment configurations:
+
+- For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
+
+- For more information about the AD RMS deployment requirements, see the [Requirements for AD RMS to support HYOK](#requirements-for-ad-rms-to-support-hyok) section.
+
+- For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+### Requirements for AD RMS to support HYOK
 
 An AD RMS deployment must meet the following requirements to provide HYOK protection for Azure Information Protection labels.
 
@@ -171,7 +173,7 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
 
 
-## Configuring AD RMS servers to locate the certification URL
+### Configuring AD RMS servers to locate the certification URL
 
 1. On each AD RMS server in the cluster, create the following registry entry:
 
@@ -189,7 +191,7 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
 
 2. Restart IIS.
 
-## Locating the information to specify AD RMS protection with an Azure Information Protection label
+### Locating the information to specify AD RMS protection with an Azure Information Protection label
 
 When you configure a label for **HYOK (AD RMS)** protection, you must specify the licensing URL of your AD RMS cluster. In addition, you must specify either a template that you've configured for the permissions to grant users, or let users define the permissions and users. 
 
