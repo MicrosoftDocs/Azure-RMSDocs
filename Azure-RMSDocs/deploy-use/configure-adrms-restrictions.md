@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/11/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,13 +40,15 @@ When you protect your most sensitive documents and emails, you typically do this
 
 - Document tracking, revocation, and email notification for sensitive documents that you have shared.
 
-A cloud-based key protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with this cloud-based key is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
+A cloud-based key protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
-However, a few organizations might need to protect a small subset of documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons.  
+The information that you protect with this cloud-based key is not sent to the cloud during the protection process. Documents and emails that you protect could be stored in the cloud or on-premises. For more information about how the protection process works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
 
-This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section.
+When the data is protected by a cloud-based key (managed by Microsoft or BYOK), other cloud-based services and applications for your tenant can integrate with Azure Information Protection. This integration ensures that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
-In this HYOK scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with the cloud-based key protection, information that you protect with HYOK is never sent to the cloud.
+However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling, or might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and cannot be decrypted by Azure Information Protection or reasoned over by the services that integrate with Azure Information Protection. This key management option is supported by Azure Information Protection, and it is referred to as ‘hold-your-own-key’ or HYOK. 
+
+HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
 
 Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment configurations:
 
