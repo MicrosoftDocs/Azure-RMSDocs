@@ -2,7 +2,7 @@
 # required metadata
 
 title: HYOK protection for Azure Information Protection
-description: Identify the limitations, prerequisites, and recommendations if you select HYOK (AD RMS) protection with Azure Information Protection.
+description: Overview of HYOK (AD RMS) protection with Azure Information Protection, its supported scenarios, limitations, prerequisites, and recommendations.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -26,11 +26,11 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 ---
 
-# Hold your own key (HYOK) protection - requirements and restrictions
+# Hold your own key (HYOK) protection for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Use the following information to understand what HYOK protection is for Azure Information, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
+Use the following information to understand what HYOK protection is for Azure Information Protection, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
 
 ## Cloud-based protection vs. HYOK
 
