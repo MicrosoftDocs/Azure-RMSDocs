@@ -62,7 +62,7 @@ Do not confuse HYOK and Azure Information Protection with using a full deploymen
 
 - For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data is protected by a cloud-based key. Integrating services and applications cannot reason over this data.
+Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Integrating services and applications cannot reason over HYOK-protected data.
 
 > [!NOTE]
 > 
