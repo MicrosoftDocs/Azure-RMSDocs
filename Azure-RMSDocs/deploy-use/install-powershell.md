@@ -62,7 +62,7 @@ To install the AADRM module, start a PowerShell session and type:
 	Install-Module -Name AADRM
 
 
-However, if you have a previous version installed, updating it by typing:
+If you have a previous version of the AADRM module installed from the Gallery, update it to the latest by typing:
 
 	Update-Module -Name AADRM
 
