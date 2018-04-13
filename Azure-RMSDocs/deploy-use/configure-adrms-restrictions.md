@@ -30,7 +30,7 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Use the following information to understand what HYOK protection is for Azure Information Protection, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
+Use the following information to understand what hold your own key (HYOK) protection is for Azure Information Protection, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
 
 ## Cloud-based protection vs. HYOK
 
@@ -50,7 +50,7 @@ The information that you protect with this cloud-based key is not sent to the cl
 
 When the data is protected by a cloud-based key (managed by Microsoft or BYOK), other cloud-based services and applications for your tenant can integrate with Azure Information Protection. This integration ensures that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
-However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling, or it might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and cannot be decrypted by Azure Information Protection or reasoned over by the services that integrate with Azure Information Protection. This key management option is supported by Azure Information Protection, and it is referred to as ‘hold-your-own-key’ or HYOK. 
+However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling. Or it might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and cannot be decrypted by Azure Information Protection or reasoned over by other services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
 
 HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
 
