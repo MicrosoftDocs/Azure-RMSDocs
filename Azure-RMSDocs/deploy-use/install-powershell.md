@@ -41,10 +41,11 @@ This table lists the prerequisites to install and use the AADRM PowerShell modul
 |Minimum version of Windows PowerShell: 3.0|You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. <br /><br /> If you need to install a later version of Windows PowerShell, see [Upgrading existing Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the AADRM module uses.|
 
+Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
+
 > [!NOTE]
-> Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
 > 
-> If you installed a previous version of the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version of the AADRM module.
+> If you installed a version of the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version of the AADRM module from the PowerShell Gallery.
 
 
 ## How to install the AADRM module
