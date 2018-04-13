@@ -6,7 +6,7 @@ description: Instructions to install Windows PowerShell for the Azure Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/09/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
