@@ -48,19 +48,21 @@ A cloud-based key protects your organization's documents and emails by using a p
 
 The information that you protect with this cloud-based key is not sent to the cloud during the protection process. Documents and emails that you protect could be stored in the cloud or on-premises. For more information about how the protection process works for this cloud-based key, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
 
-When the data is protected by a cloud-based key, other cloud-based services and applications for your tenant can integrate with Azure Information Protection. This integration ensures that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
+When your data is protected by a cloud-based key, other cloud-based services and applications for your tenant can integrate with Azure Information Protection. This integration ensures that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
 However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling. Or it might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and the content cannot be decrypted by Azure Information Protection or reasoned over by other services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
 
 HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in a following section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
 
-Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment configurations:
+Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer featur  I ce parity with AD RMS, and does not support all AD RMS deployment configurations:
 
 - For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
 
 - For more information about the AD RMS deployment requirements, see the [Requirements for AD RMS to support HYOK](#requirements-for-ad-rms-to-support-hyok) section.
 
 - For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+## HYOK guidance and best practices
 
 Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Integrating services and applications cannot reason over HYOK-protected data.
 
