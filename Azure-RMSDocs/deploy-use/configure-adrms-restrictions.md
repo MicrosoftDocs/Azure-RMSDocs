@@ -115,15 +115,15 @@ In addition to not supporting the listed benefits that you get when you use clou
 
 ## Implementing HYOK
 
-HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in a following section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
+HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
 
 Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment configurations:
 
 - For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
 
-- For more information about the AD RMS deployment requirements, see the following section.
-
 - For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+- For more information about the AD RMS deployment requirements, see the next section.
 
 ### Requirements for AD RMS to support HYOK
 
