@@ -335,6 +335,21 @@ To label an Office document with one of these classification values, set **SyncP
 
 Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Confidential** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
 
+## Run the scanner in low integrity mode
+
+This configuration option is currently in preview and is subject to change. It also requires the current preview version of the Azure Information Protection scanner.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When the service account that runs the scanner has only the rights documented in the [scanner prerequisites](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), this setting is not necessary and is not recommended because it negatively affects performance. However, if you run the scanner with an account that has privileged rights (such as a local administrator account), you can use the following advanced client setting to help protect the computer running the scanner. The setting forces the Azure Information Protection scanner to run in a [low integrity level](https://msdn.microsoft.com/library/bb625957.aspx). This setting provides higher security isolation, but at the cost of performance.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **ProcessUsingLowIntegrity**
+
+- Value: **True**
+
+
 ## Integration with Exchange message classification for a mobile device labeling solution
 
 Although Outlook on the web doesn't yet natively support Azure Information Protection classification and protection, you can use Exchange message classification to extend your Azure Information Protection labels to your mobile users when they use Outlook on the web. Outlook Mobile does not support Exchange message classification.
