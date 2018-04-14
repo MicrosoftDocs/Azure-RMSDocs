@@ -39,7 +39,7 @@ An example prompt for when you configure a condition to apply a label as a recom
 
 ![Azure Information Protection detection and recommendation](../media/info-protect-recommend-calloutsv2.png)
 
-In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**.
+In this example, the user can click **Change now** to apply the recommended label, or override the recommendation by selecting **Dismiss**. If the user chooses to dismiss the recommendation and the condition still applies when the document is next opened, the label recommendation is displayed again. 
 
 > [!IMPORTANT]
 >Do not configure a label for automatic classification and a user-defined permission. The user-defined permissions option is a [protection setting](configure-policy-protection.md) that lets users specify who should be granted permissions.
