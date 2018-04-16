@@ -53,7 +53,9 @@ Use the following instructions to add a new label that can then be added to an A
     
     Note that new labels are automatically assigned the color black. Choose a distinguishing color from the list of colors, or enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. If you need a reference for these codes, [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) from the MSDN documentation is a helpful starting point, and you'll find these codes in many picture editing programs such as Microsoft Paint, where you choose a custom color from a palette and it automatically displays the RGB values.
 
-5. To make your new label available to users: From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new label, select **Add or remove labels**, select the label from the **Policy: Add or remove labels blade**, select **OK**, and then **Save**.
+5. To make your new label available to users: From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new label, select **Add or remove labels**, select the label from the **Policy: Add or remove labels blade**, select **OK**, and then select **Save**.
+    
+    For more information about adding labels, see [How to add or remove a label](configure-policy-add-remove-label.md).
 
 6. If you want this new label name and description to display in different languages for users: Follow the procedures in [How to configure labels for different languages](configure-policy-languages.md). 
 

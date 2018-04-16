@@ -149,6 +149,8 @@ Use the following information to help you configure your Azure Information Prote
 
 - [How to create a new label](configure-policy-new-label.md)
 
+- [How to add or remove a label](configure-policy-add-remove-label.md)
+ 
 - [How to delete or reorder a label](configure-policy-delete-reorder.md)
 
 - [How to change or customize an existing label](configure-policy-change-label.md)
