@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # How does Azure RMS work? Under the hood
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 An important thing to understand about how Azure RMS works, is that this data protection service from Azure Information Protection, does not see or store your data as part of the protection process. Information that you protect is never sent to or stored in Azure, unless you explicitly store it in Azure or use another cloud service that stores it in Azure. Azure RMS simply makes the data in a document unreadable to anyone other than authorized users and services:
 
@@ -104,7 +104,9 @@ When the user’s account is federated with Azure Active Directory, this authe
 
 **What's happening in step 2**: After the user is authenticated, the connection is automatically redirected to the organization’s Azure Information Protection tenant, which issues certificates that let the user authenticate to the Azure Rights Management service in order to consume protected content and to protect content offline.
 
-A copy of the user’s certificate is stored in Azure so that if the user moves to another device, the certificates are created by using the same keys.
+One of these certificates is the rights account certificate, often abbreviated to RAC. This certificate authenticates the user to Azure Active Directory and is valid for 31 day. The certificate is automatically renewed by the RMS client, providing the user account is still in Azure Active Directory and the account is enabled. This certificate is not configurable by an administrator. 
+
+A copy of this certificate is stored in Azure so that if the user moves to another device, the certificates are created by using the same keys.
 
 ### Content protection
 When a user protects a document, the RMS client takes the following actions on an unprotected document:

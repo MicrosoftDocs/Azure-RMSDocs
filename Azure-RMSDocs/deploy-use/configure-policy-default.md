@@ -27,7 +27,7 @@ ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 
 # The default Azure Information Protection policy
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Use the following information to understand how the default policy for Azure Information Protection is configured.
 

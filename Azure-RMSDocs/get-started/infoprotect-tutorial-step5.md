@@ -29,7 +29,7 @@ ms.suite: ems
 
 # Step 5: See sharing of protected files in action and track your document 
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 For this final step in the tutorial, locate a Word document or Excel spreadsheet that you have already created and will send to a partner or co-worker. For this tutorial, it doesn’t matter what text it actually contains, but you will want it to contain some text so you can more easily confirm that the authorized recipient could read it.
 

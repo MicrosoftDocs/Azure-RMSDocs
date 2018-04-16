@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Release notes
@@ -39,7 +39,7 @@ This article contains important information about this and previous releases of 
 >[!Note]
 > The feature documentation updates in this section apply to the SDK download dated 12/11/2015.
 
-- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
+- **Improved authentication flow** - using OAuth2 token-based authentication via the [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). For more information on this process and the API extensions for it, see [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md).
 
 - **Update to ADAL** - By updating your application to use ADAL authentication rather than the Microsoft Online Sign-in Assistant, you and your customers will be able to:
 
@@ -126,7 +126,7 @@ The File API component of SDK has been extended and offers the following feature
 
     For more information on supported file types, see [File API configuration](file-api-configuration.md).
 
--   **Windows 7 SP1 and Windows Server 2008 R2 SP1 machines** without the update, [KB2533623](https://support.microsoft.com/en-us/kb/2533623), may have the following error protecting any office file "The parameter is incorrect. Error code 0x80070057". If you see this, please install the update and try again. If you’re still seeing issues, please contact RMS SDK Beta Feedback alias <rmcstbeta@microsoft.com>.
+-   **Windows 7 SP1 and Windows Server 2008 R2 SP1 machines** without the update, [KB2533623](https://support.microsoft.com/kb/2533623), may have the following error protecting any office file "The parameter is incorrect. Error code 0x80070057". If you see this, please install the update and try again. If you’re still seeing issues, please contact RMS SDK Beta Feedback alias <rmcstbeta@microsoft.com>.
 
     **Note**  As of the April 2015 release, a check has been added to the installation process for this KB.
 
@@ -144,7 +144,7 @@ The File API component of SDK has been extended and offers the following feature
 
     The file API is implemented via the following four new functions: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx), and [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
-    The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
+    The File API requires that the Rights Management Service Client 2.1 be installed on the client computer and that the computer have connectivity to an RMS server. For more information on RMS server, RMS client, and their functionality, see the TechNet content for [IT Pro documentation for RMS](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
 -   **Issue**: When creating a license from scratch, ownership rights must be granted explicitly.
 

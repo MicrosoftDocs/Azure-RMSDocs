@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Admin Guide: Custom configurations for the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
@@ -208,6 +208,20 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Turn off classification running continuously in the background
+
+This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, the preview version of the Azure Information Protection client doesn't periodically check documents for the condition rules that you specify. Instead, automatic and recommended labels are applied in the [same way as the general availability version of the Azure Information Protection client](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). This setting might be needed for performance reasons.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **RunPolicyInBackground**
+
+- Value: **False**
 
 ## Migrate labels from Secure Islands and other labeling solutions
 

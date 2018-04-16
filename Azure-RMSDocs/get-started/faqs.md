@@ -6,7 +6,7 @@ description: Some frequently asked questions about Azure Information Protection 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2018
+ms.date: 04/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Frequently asked questions for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Have a question about Azure Information Protection, or about the Azure Rights Management service (Azure RMS)? See if it's answered here.
 
@@ -44,7 +44,7 @@ A user must have a valid user name and password to access content that is protec
 ## What subscription do I need for Azure Information Protection and what features are included?
 See the subscription information and feature list on the [Azure Information Protection pricing](https://azure.microsoft.com/en-us/pricing/details/information-protection) page. 
 
-If you have an Office 365 subscription that includes Rights Management, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), which also includes some frequently asked questions for licensing.
+If you have an Office 365 subscription that includes Azure Rights Management data protection, download the [Azure Information Protection licensing datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf), which also includes some frequently asked questions for licensing.
 
 ## Is the Azure Information Protection client only for subscriptions that include classification and labeling?
 
@@ -58,7 +58,7 @@ If you currently use the Rights Management sharing application for Windows, we r
 
 Global administrators for an Office 365 tenant or Azure AD tenant can obviously run all administrative tasks for Azure Information Protection. However, if you want to assign administrative permissions to other users, you have the following options:
 
-- **Information Protection Administrator**: This Azure Active Directory administrator role lets an administrator configure all aspects of Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the [PowerShell cmdlets from the AADRM module](../deploy-use/administer-powershell.md). 
+- **Information Protection Administrator**: This Azure Active Directory administrator role lets an administrator configure all aspects of Azure Information Protection but not other services. An administrator with this role can activate and deactivate the Azure Rights Management protection service, configure protection settings and labels, and configure the Azure Information Protection policy. In addition, an administrator with this role can run all the PowerShell cmdlets for the [Azure Information Protection client](../rms-client/client-admin-guide-powershell.md) and from the [AADRM module](../deploy-use/administer-powershell.md). 
     
     To assign a user to this administrative role, see [Assign a user to administrator roles in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 

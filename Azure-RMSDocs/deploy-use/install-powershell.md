@@ -6,7 +6,7 @@ description: Instructions to install Windows PowerShell for the Azure Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Installing the AADRM PowerShell module
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following information to help you install the Windows PowerShell module for the Azure Rights Management service from Azure Information Protection. The name of this module is AADRM.
 
@@ -41,15 +41,16 @@ This table lists the prerequisites to install and use the AADRM PowerShell modul
 |Minimum version of Windows PowerShell: 3.0|You can confirm the version of Windows PowerShell that you are running by typing `$PSVersionTable` in a PowerShell session. <br /><br /> If you need to install a later version of Windows PowerShell, see [Upgrading existing Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
 |Minimum version of the Microsoft .NET Framework: 4.5<br /><br />Note: This version of the Microsoft .NET Framework is included with the later operating systems, so you should  need to manually install it only if your client operating system is less than Windows 8.0 or your server operating system is less than Windows Server 2012.|If the minimum version of the  Microsoft .NET Framework is not already installed, you can download [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653).<br /><br />This minimum version of the Microsoft .NET Framework is required for some of the classes that the AADRM module uses.|
 
+Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
+
 > [!NOTE]
-> Starting with version 2.5.0.0 of the AADRM module, the Microsoft Online Services Sign-In Assistant is no longer required.
 > 
-> If you had a previous version of the AADRM module installed, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version.
+> If you installed a version of the AADRM module with the Azure Rights Management Administration Tool, use **Programs and Features** to uninstall **Windows Azure AD Rights Management Administration** before you install the latest version of the AADRM module from the PowerShell Gallery.
 
 
 ## How to install the AADRM module
 
-The AADRM module is moving to the [PowerShell Gallery](/powershell/gallery/readme), but for a limited time is also available on the Microsoft Download Center. 
+The AADRM module has moved to the [PowerShell Gallery](/powershell/gallery/readme) and is no longer available from the Microsoft Download Center. 
 
 ### To install the AADRM module from the PowerShell Gallery
 
@@ -62,13 +63,10 @@ To install the AADRM module, start a PowerShell session and type:
 	Install-Module -Name AADRM
 
 
-### To install the AADRM module from the Microsoft Download Center
+If you have a previous version of the AADRM module installed from the Gallery, update it to the latest by typing:
 
-1. Go to the Microsoft Download Center and locate the [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), which contains the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] administration module for Windows PowerShell.
+	Update-Module -Name AADRM
 
-2. Download and save the [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] installer file, **WindowsAzureADRightsManagementAdministration_x64**. Then double-click this file to start the Azure AD Rights Management Administration Setup Wizard.
-
-3.  Complete the wizard, which installs the AADRM PowerShell module.
 
 ## Next steps
 In a Windows PowerShell session, confirm the version of the installed module. This check is particularly important if you upgraded from an older version:

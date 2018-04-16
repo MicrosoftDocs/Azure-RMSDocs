@@ -27,7 +27,7 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 # How to configure a label for visual markings for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 

@@ -29,7 +29,7 @@ ms.suite: ems
 
 # House rules for comments on the Azure Information Protection documentation
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information that is documented, you want to report an inaccuracy in the documentation, or you can’t find the information that you need. 
 

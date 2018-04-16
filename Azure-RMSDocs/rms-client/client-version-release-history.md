@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Information Protection client&colon; Version release history and support policy
+title: Azure Information Protection client - Version release history and support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Information Protection client: Version release history and support policy
 
->*Applies to: Azure Information Protection*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 

@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # User Guide: Classify and protect a file or email by using Azure Information Protection
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1*
 
 > [!NOTE]
 > Use these instructions to help you classify and protect your documents and emails. If you need to only classify and not protect your documents and emails, see the [classify-only instructions](client-classify.md). If you are not sure which set of instructions to use, check with your administrator or help desk.
@@ -86,7 +86,7 @@ Possible reasons:
 
 ### Set custom permissions for a document
 
-If allowed by your administrator, you can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label.
+If allowed by your administrator, you can specify your own protection settings for documents rather than use the protection settings that your administrator might have included with your selected label. This option is specific to documents and is not available with Outlook.
 
 1. On the **Home** tab, in the **Protection** group, click **Protect** > **Custom Permissions**:
 
