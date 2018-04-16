@@ -121,6 +121,8 @@ For the general availability version of the Azure Information Protection client 
     
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
+When you clicked **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
+
 ## Next steps
 
 Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  

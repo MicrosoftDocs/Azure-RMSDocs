@@ -44,6 +44,8 @@ To change a label, use the following instructions:
     The exception is if you want to reorder a label: Instead of selecting the label, either right-click the label or select the context menu for the label. Then, select the **Move up** or **Move down** options.
 
 3. Whenever you make changes on a new blade, click **Save** on that blade if you want to keep your changes.
+    
+    When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 4. If you changed the label display name or description and you have configured these for additional languages: Export your Azure Information Protection policy again, provide new translations, and import the changes. For more information, see [How to configure labels for different languages](configure-policy-languages.md).
 

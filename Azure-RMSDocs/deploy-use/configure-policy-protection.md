@@ -171,6 +171,8 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     - A blank field when protection is not set. 
 
+When you clicked **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
+
 
 ## Example configurations
 

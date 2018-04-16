@@ -93,6 +93,8 @@ To configure these settings:
 
 3. To save your changes and make them available to users, click **Save**.
 
+When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
+
 ## Next steps
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  

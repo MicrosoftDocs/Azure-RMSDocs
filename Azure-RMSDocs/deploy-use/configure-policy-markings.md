@@ -74,6 +74,9 @@ Use the following instructions to configure visual markings for a label.
     - To configure a footer: For **Documents with this label have a footer**, select **On** if you want a footer, and **Off** if you do not. If you select **On**, then specify the footer text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the footer.
     
     - To configure a watermark: For **Documents with this label have a watermark**, select **On** if you want a watermark, and **Off** if you do not. If you select **On**, then specify the watermark text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the watermark.
+    
+When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
+
 
 ## Using variables in the text string
 

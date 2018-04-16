@@ -56,6 +56,8 @@ Use the following instructions to add a new label that can then be added to an A
 5. To make your new label available to users: From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new label, select **Add or remove labels**, select the label from the **Policy: Add or remove labels blade**, select **OK**, and then select **Save**.
     
     For more information about adding labels, see [How to add or remove a label](configure-policy-add-remove-label.md).
+    
+    Your changes are automatically available to users and services. There's no longer a separate publish option.
 
 6. If you want this new label name and description to display in different languages for users: Follow the procedures in [How to configure labels for different languages](configure-policy-languages.md). 
 

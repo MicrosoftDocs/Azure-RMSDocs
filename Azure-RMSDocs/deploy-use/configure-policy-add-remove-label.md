@@ -60,6 +60,8 @@ If you need to create a scoped policy so that the label applies to a subset of u
     - To remove a label, clear its checkbox.
   
 5. To save your changes, click **Save**.
+   
+    Your changes are automatically available to users and services. There's no longer a separate publish option.
 
 
 ## Next steps
