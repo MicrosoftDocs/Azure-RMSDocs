@@ -29,7 +29,7 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-You can change or refine any of the labels that users see on the Information Protection bar or from the **Protect** button, by configuring the labels in the Azure portal.
+You can change or refine any of the labels that users see on the Information Protection bar or from the **Protect** button on the Office ribbon, by configuring the labels in the Azure portal.
 
 For example, you can change a label or sublabel name, tooltip, color, and order. You can change whether the label applies visual markings such as a footer or watermark. You can also change whether the label applies protection, and recommended or automatic classification.
 

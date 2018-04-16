@@ -121,7 +121,7 @@ For the general availability version of the Azure Information Protection client 
     
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
-When you clicked **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
+When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ## Next steps
 

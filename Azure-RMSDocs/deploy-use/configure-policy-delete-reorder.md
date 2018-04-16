@@ -49,7 +49,7 @@ For more information about managing protection templates, see [Configuring and m
 
 Before you delete a label, instead, consider disabling it or removing it from the policy:
     
-- When you disable a label that has been applied to documents and emails, the applied label is not removed from these documents and emails. The label remains in the policy but no longer displays as a label that users can select on the Information Protection bar. Disabling a label lets you keep the original configuration for when you might want users in the same policy to select the label at a later time, when you simply re-enable it.
+- When you disable a label that has been applied to documents and emails, the applied label is not removed from these documents and emails. The label remains in the policy but no longer displays as a label that users can select on the Information Protection bar. Disabling a label lets you keep the original configuration for when you might want users in the same policy to select the label at a later time, when you simply re-enable the label.
 
 - When you remove a label from a policy, the applied label is also not removed from these documents and emails. But when you remove the label from the policy, it becomes available to be added to other policies. For more information, see [Add or remove a label to or from an Azure Information Protection policy](configure-policy-add-remove-label.md).
 
