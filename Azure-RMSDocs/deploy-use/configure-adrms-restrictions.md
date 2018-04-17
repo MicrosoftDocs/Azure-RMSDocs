@@ -6,7 +6,7 @@ description: Overview of HYOK (AD RMS) protection with Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -107,8 +107,6 @@ In addition to not supporting the listed benefits that you get when you use clou
 
 - Many Exchange Online services and supporting applications will not be able to decrypt HYOK-protected emails to inspect the contents and take action on them. This limitation also applies when you configure Exchange on-premises to use the Rights Management connector and protect emails with HYOK. This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
 
-- If you configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using cloud-based protection rather than HYOK protection. This limitation does not apply to the current preview version of the client.
-
 - If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies cloud-based protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies HYOK protection.
@@ -158,6 +156,8 @@ An AD RMS deployment must meet the following requirements to provide HYOK protec
     - Configured rights templates.
     
     - Not configured for Exchange IRM.
+    
+    - For mobile devices and Mac computers: The [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) is installed and configured.
 
 - Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use HYOK protection are configured for single sign-on.
 
