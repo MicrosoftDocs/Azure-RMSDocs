@@ -190,24 +190,20 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-
-## Set a different default label for Outlook
-
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
+## Remove "Not now" for documents when you use mandatory labeling
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, Outlook doesn't apply the default label that is configured in the Azure Information Protection policy for the setting **Select the default label**. Instead, Outlook can apply a different default label, or no label.
+When you use the [policy setting](../deploy-use/configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
 
-To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
-
-So that Outlook doesn't apply the default label, specify **None**.
+When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
 
 To configure this advanced setting, enter the following strings:
 
-- Key: **OutlookDefaultLabel**
+- Key: **PostponeMandatoryBeforeSave**
 
-- Value: \<**label ID**> or **None**
+- Value: **False**
+
 
 ## Turn off classification running continuously in the background
 
