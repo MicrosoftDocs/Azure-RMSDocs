@@ -51,7 +51,7 @@ Before you delete a label, instead, consider disabling it or removing it from th
     
 - When you disable a label that has been applied to documents and emails, the applied label is not removed from these documents and emails. The label remains in the policy but no longer displays as a label that users can select on the Information Protection bar. Disabling a label lets you keep the original configuration for when you might want users in the same policy to select the label at a later time, when you simply re-enable the label.
 
-- When you remove a label from a policy, the applied label is also not removed from these documents and emails. But when you remove the label from the policy, it becomes available to be added to other policies. For more information, see [Add or remove a label to or from an Azure Information Protection policy](configure-policy-add-remove-label.md).
+- When you remove a label from a policy, the applied label is also not removed from these documents and emails. But when you remove the label from the policy, it becomes available for you to add this label to another policy. For more information, see [Add or remove a label to or from an Azure Information Protection policy](configure-policy-add-remove-label.md).
 
 Order the labels so that users see them in a logical progression in the Information Protection bar. For example, order the labels in increasing sensitivity so that users see the least sensitive label first and the most sensitive label last. The [default policy](configure-policy-default.md) uses this configuration and reflects the increasing sensitivity in the label names.
 
