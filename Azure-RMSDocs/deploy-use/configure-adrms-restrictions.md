@@ -203,6 +203,7 @@ You can find the template GUID and licensing URL values from the Active Director
     
     If you have an extranet licensing value as well as an intranet licensing value, and they are different: Specify the extranet value only if you will share protected documents or emails with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection).
 
+
 ## Next steps
 
 To configure a label for HYOK protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 

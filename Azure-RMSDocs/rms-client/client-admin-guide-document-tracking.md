@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,18 +25,23 @@ ms.suite: ems
 
 ---
 
-
 # Admin Guide: Configuring and using document tracking for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 If you have a [subscription that supports document tracking](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), the document tracking site is enabled by default for all users in your organization. Document tracking provides information for users and administrators about when a protected document was accessed and if necessary, a tracked document can be revoked.
 
-## Privacy controls for your document tracking site
+## Using PowerShell to manage the document tracking site
+
+The following sections contain information about how you can manage the document tracking site by using PowerShell. For installation instructions for the PowerShell module, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+
+For more information about each of the cmdlets, use the links provided.
+
+### Privacy controls for your document tracking site
 
 If displaying all document tracking information is prohibited in your organization because of privacy requirements, you can disable document tracking by using the [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) cmdlet. 
 
-This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. You can re-enable document tracking any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), and you can check whether document tracking is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). To run these cmdlets, you must have at least version **2.3.0.0** of the Azure Rights Management (AADRM) module for PowerShell. 
+This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. You can re-enable document tracking any time, by using the [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), and you can check whether document tracking is currently enabled or disabled by using [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). To run these cmdlets, you must have at least version **2.3.0.0** of the AADRM module for PowerShell. 
 
 When the document tracking site is enabled, by default, it shows information such as the email addresses of the people who attempted to access the protected documents, when these people tried to access them, and their location. This level of information can be helpful to determine how the shared documents are used and whether they should be revoked if suspicious activity is seen. However, for privacy reasons, you might need to disable this user information for some or all users. 
 
@@ -48,11 +53,19 @@ When you use this configuration, all users can still use the document tracking s
 
 This setting affects end users only. Administrators for Azure Information Protection can always track activities of all users, even when those users are specified by using Set-AadrmDoNotTrackUserGroup. For more information about how administrators can track documents for users, see the [Tracking and revoking documents for users](#tracking-and-revoking-documents-for-users) section.
 
-You can use the [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) if you no longer need this option. Or to selectively remove users, remove them from the group, but be aware of [group caching](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). You can check whether this option is currently in use by using [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). To run the cmdlets for this group configuration, you must have at least version **2.10.0.0** of the Azure Rights Management (AADRM) module for PowerShell.
 
-For more information about each of these cmdlets, use the links provided. For installation instructions for the PowerShell module, see [Installing the AADRM PowerShell module](../deploy-use/install-powershell.md). If you have previously downloaded and installed the module, check the version number by running: `(Get-Module aadrm –ListAvailable).Version`
+### Logging information from the document tracking site
 
+When you have a minimum version of **2.13.0.0** for the AADRM module, you can use the following cmdlets to download logging information from the document tracking site:
 
+- [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
+    
+    This cmdlet returns tracking information about protected documents for a specified user who protected documents (the Rights Management issuer) or who accessed protected documents. Use this cmdlet to help answer the question "Which protected documents did a specified user track or access?"
+
+- [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
+    
+    This cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Use this cmdlet to help answer the question "How are documents protected for a specified user?"
+ 
 ## Destination URLs used by the document tracking site
 
 The following URLs are used for document tracking and must be allowed on all devices and services between the clients that run the Azure Information Protection client and the Internet. For example, add these URLs to firewalls, or to your Trusted Sites if you're using Internet Explorer with Enhanced Security.
