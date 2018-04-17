@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -158,8 +158,6 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
 
-> [!IMPORTANT]
-> Unless you use the current preview version of the client, do not set this option to **False** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 ## Permanently hide the Azure Information Protection bar
 
@@ -178,9 +176,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Enable recommended classification in Outlook
 
-This configuration option is currently in preview and is subject to change.
-
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
 
@@ -189,6 +185,23 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookRecommendationEnabled**
 
 - Value: **True**
+
+
+## Set a different default label for Outlook
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, Outlook doesn't apply the default label that is configured in the Azure Information Protection policy for the setting **Select the default label**. Instead, Outlook can apply a different default label, or no label.
+
+To apply a different label, you must specify the label ID. The label ID value is displayed on the **Label** blade, when you view or configure the Azure Information Protection policy in the Azure portal. For files that have labels applied, you can also run the [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell cmdlet to identify the label ID (MainLabelId or SubLabelId). When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
+
+So that Outlook doesn't apply the default label, specify **None**.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **OutlookDefaultLabel**
+
+- Value: \<**label ID**> or **None**
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
@@ -204,20 +217,31 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **False**
 
+## Turn on classification to run continuously in the background
 
-## Turn off classification running continuously in the background
-
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
+This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-When you configure this setting, the preview version of the Azure Information Protection client doesn't periodically check documents for the condition rules that you specify. Instead, automatic and recommended labels are applied in the [same way as the general availability version of the Azure Information Protection client](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). This setting might be needed for performance reasons.
+When you configure this setting, it changes the [default behavior](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels as follows:
+
+- Automatic classification applies to Word, Excel, PowerPoint, and Outlook. For documents, automatic classification runs continuously in the background. For Outlook, automatic classification runs when emails are sent. 
+    
+    You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
+
+- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs continuously in the background. You cannot use recommended classification for Outlook.
+    
+    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
+
+When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
+
+The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **RunPolicyInBackground**
 
-- Value: **False**
+- Value: **True**
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
@@ -299,8 +323,6 @@ The advanced client setting:
 
 
 ## Label an Office document by using an existing custom property
-
-This configuration option is currently in preview and is subject to change.
 
 > [!NOTE]
 > If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 
