@@ -6,7 +6,7 @@ description: Instructions to view and use a protected document that requires you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -77,9 +77,9 @@ If your organization does not have a cloud-based account for you to use (for Off
     
     For more detailed information about the permissions and the usage rights that each contains, see [Rights included in permissions levels](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. To edit the file, click **Save As**, which lets you save the file without protection to its original file name extension. You can then edit the file by using the application that's associated with that file type.
+4. To edit the file, click **Save As**, which lets you save the file without the label and with no protection to its original file name extension. You can then edit the file by using the application that's associated with that file type. 
     
-    If you later use File Explorer to right-click this newly saved file and try to protect it again, you will not be able to do so. This known issue is addressed in the current preview version of the Azure Information client. For the preview client, choosing **Save As** removes the label in addition to the protection. When you then right-click the file, you can reapply the label, which in turn reapplies protection.
+    When you have finished editing the file, in File Explorer,  right-click the file to reapply the label, which in turn reapplies protection.
 
 5. If you have additional protected files to open, you can browse directly to them from the viewer, by using the **Open** option. Your selected file replaces the original file in the viewer. 
 
