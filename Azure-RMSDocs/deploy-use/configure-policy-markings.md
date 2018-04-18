@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -99,8 +99,6 @@ Example: If you specify the string `Document: ${item.name}  Classification: ${it
 
 ## Setting different visual markings for Word, Excel, PowerPoint, and Outlook
 
-This setting is currently in preview and requires the preview version of the Azure Information Protection client.
-
 By default, the visual markings that you specify are applied across Word, Excel, PowerPoint, and Outlook. However, you can specify visual markings per Office application type when you use an "If.App" variable statement in the text string, and identify the application type by using the values **Word**, **Excel**, **PowerPoint**, or **Outlook**. You can also abbreviate these values, and abbreiwhich is necessary if you want to specify more than one in the same If.App statement.
 
 Use the following syntax:
@@ -131,11 +129,9 @@ Examples:
 
 ### Setting the font name
 
-This setting is currently in preview.
+Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markers. 
 
-Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markers. Otherwise, the font that will be used is non-deterministic. 
-
-If you have the preview version of the Azure Information Protection client, and the font specified is not available, the client falls back to using the Calibri font.
+If the font specified is not available, the client falls back to using the Calibri font.
 
 ### Setting the font color
 
