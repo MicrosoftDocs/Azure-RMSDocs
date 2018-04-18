@@ -33,9 +33,9 @@ You can delete or reorder the Azure Information Protection labels that users see
 
 ![Delete or reorder labels in the Azure Information Protection policy](../media/info-protect-contextmenu.png)
 
-When you delete a label that has been applied to documents and emails, that label is automatically removed from these documents or emails when they are next opened by the Azure Information Protection client.
+When you delete a label that has been applied to documents and emails, users see **Not set** for the label status when these documents and emails are next opened by the Azure Information Protection client. However, the label information remains in the metadata and it can still be read by services that look for this label information.
 
-However, if the label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates** section. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
+In addition, if the deleted label applied protection, that protection is not removed. The protection settings from the label remain and display in the **Protection templates** section. This template can now be converted to a new label or linked to a label. While this template remains, you cannot create a new label with the same name as the label that you deleted. If you want to do that, you have the following options:
 
 - Convert the template to a label. 
     
