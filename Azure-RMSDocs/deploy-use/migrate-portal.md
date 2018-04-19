@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection

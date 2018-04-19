@@ -6,7 +6,7 @@ description: Add or remove an Azure Information Protection label to or from the 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,6 +28,9 @@ ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 # Add or remove a label to or from an Azure Information Protection policy
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.  
 
 After you create an Azure Information Protection label, you can then add it to a policy so that it is available for users. If the label is for all users, add the label to the global policy. If the label is for a subset of users, add the label to a scoped policy. Currently, a label can be added to only one policy. To add a sublabel, its parent label must be in the same policy, or in the global policy.
 

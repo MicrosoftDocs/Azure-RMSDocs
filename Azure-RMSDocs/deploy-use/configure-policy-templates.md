@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -103,6 +103,9 @@ Before you edit these templates or convert them to labels, make sure that you ar
 
 ## To configure the templates in the Azure Information Protection policy
 
+>[!NOTE]
+> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
+
 1. If you haven't already done so, open a new browser window and [sign in to the Azure portal](configure-policy.md#signing-in-to-the-azure-portal). Then navigate to the **Azure Information Protection - Labels** blade.
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
@@ -141,6 +144,9 @@ When you convert a template to a label:
 - The original template is no longer displayed in **Protection templates** and cannot be selected as a predefined template when you configure protection for a label. To edit this template in the Azure portal, you now edit the label that was created when you converted the template. The template remains available for the Azure Rights Management service, and can still be managed by using [PowerShell commands](administer-powershell.md).  
 
 ## To create a new template
+
+>[!NOTE]
+> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
 
 When you create a new label with the protection setting of **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 

@@ -6,7 +6,7 @@ description: You can delete or reorder the Azure Information Protection labels t
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,6 +28,9 @@ ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 # How to delete or reorder a label for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
 
 You can delete or reorder the Azure Information Protection labels that users see in their Office applications by selecting these actions for the labels.
 

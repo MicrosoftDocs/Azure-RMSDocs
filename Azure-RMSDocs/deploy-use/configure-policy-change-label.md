@@ -6,7 +6,7 @@ description: You can change or refine any of the labels that users see on the In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,6 +29,9 @@ ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
+ 
 You can change or refine any of the labels that users see on the Information Protection bar or from the **Protect** button on the Office ribbon, by configuring the labels in the Azure portal.
 
 For example, you can change a label or sublabel name, tooltip, color, and order. You can change whether the label applies visual markings such as a footer or watermark. You can also change whether the label applies protection, and recommended or automatic classification.

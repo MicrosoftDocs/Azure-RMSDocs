@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,6 +28,9 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 # Step 2: Configure the Azure Information Protection policy
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> This step of the tutorial reflects the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this step of the tutorial in a couple of days when your tenant is updated for the latest changes.
 
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 

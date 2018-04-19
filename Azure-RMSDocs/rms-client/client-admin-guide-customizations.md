@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,6 +34,9 @@ Use the following information for advanced configurations that you might need fo
 Some of these settings require editing the registry and some use advanced settings that you must configure in the Azure portal, and then publish for clients to download.  
 
 ### How to configure advanced client configuration settings in the portal
+
+>[!NOTE]
+> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
 
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
