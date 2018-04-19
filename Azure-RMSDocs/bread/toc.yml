@@ -62,6 +62,6 @@
               - name: Structures
                 tocHref: /azure/information-protection/sdk/2.1/api/win/structures/
                 topicHref: /azure/information-protection/sdk/2.1/api/win/structures
-        - name: Microsoft Information Protection SDK
-          tocHref: /azure/information-protection/develop/mip/
-          topicHref: /azure/information-protection/develop/mip
+  - name: Microsoft Information Protection SDK
+    tocHref: /azure/information-protection/develop/mip/
+    topicHref: /azure/information-protection/develop/mip
