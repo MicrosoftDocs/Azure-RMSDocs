@@ -58,7 +58,8 @@ Use the following instructions to add a new label that can then be added to an A
 
 5. To make your new label available to users: From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new label, select **Add or remove labels**, select the label from the **Policy: Add or remove labels blade**, select **OK**, and then select **Save**.
     
-    Tip: For new labels, consider adding them first to a scoped policy that you use for testing. When you are satisfied with the results, remove the label from this testing scope, and then add the label to a policy that you use in production.     
+    >[!TIP]
+    >For new labels, consider adding them first to a scoped policy that you use for testing. When you are satisfied with the results, remove the label from this testing scope, and then add the label to a policy that you use in production.     
     
     For more information about adding labels, see [How to add or remove a label](configure-policy-add-remove-label.md).
     
