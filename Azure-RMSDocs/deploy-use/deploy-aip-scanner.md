@@ -51,7 +51,7 @@ Specific to the preview version of the scanner:
 
 - By default, only Office documents are protected rather than all file types. The full list of file types is listed in the [admin guide](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection), in the **File types supported by Office** table. 
     
-    To change this default behavior, for example, to generically protect files, you must manually edit the registry. For instructions, see [File API configuration](..develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+    To change this default behavior, for example, to generically protect files, you must manually edit the registry. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
 
 You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
 
