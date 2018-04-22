@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 04/17/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -71,6 +71,8 @@ Users must have client devices (computer or mobile device) that run an operating
 The following devices support the Azure Information Protection client, which lets users classify and label their documents and emails:
 
 - Windows 10 (x86, x64)
+    
+    - No support for handwriting in the Windows 10 RS4 build for Insiders. 
 
 - Windows 8.1 (x86, x64)
 
