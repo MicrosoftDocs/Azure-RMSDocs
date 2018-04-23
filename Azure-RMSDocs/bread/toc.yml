@@ -1,67 +1,67 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
   - name: Enterprise Mobility + Security
-    href: /enterprise-mobility-security/
-    homepage: /enterprise-mobility-security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security
     items:
     - name: Azure Information Protection
-      href: /azure/information-protection/
-      homepage: /azure/information-protection
+      tocHref: /azure/information-protection/
+      topicHref: /azure/information-protection
       items:
         - name: Understand & Explore
-          href: /azure/information-protection/understand-explore/
-          homepage: /azure/information-protection/understand-explore/what-is-azure-rights-management
+          tocHref: /azure/information-protection/understand-explore/
+          topicHref: /azure/information-protection/understand-explore/what-is-azure-rights-management
         - name: Get Started
-          href: /azure/information-protection/get-started/
-          homepage: /azure/information-protection/get-started/requirements-for-azure-rights-management
+          tocHref: /azure/information-protection/get-started/
+          topicHref: /azure/information-protection/get-started/requirements-for-azure-rights-management
         - name: Plan & Design
-          href: /azure/information-protection/plan-design/
-          homepage: /azure/information-protection/plan-design/deployment-roadmap
+          tocHref: /azure/information-protection/plan-design/
+          topicHref: /azure/information-protection/plan-design/deployment-roadmap
         - name: Deploy & Use the Service
-          href: /azure/information-protection/deploy-use/
-          homepage: /azure/information-protection/deploy-use/activate-service
+          tocHref: /azure/information-protection/deploy-use/
+          topicHref: /azure/information-protection/deploy-use/activate-service
         - name: Deploy & Use the Client
-          href: /azure/information-protection/rms-client/
-          homepage: /azure/information-protection/rms-client/use-client
+          tocHref: /azure/information-protection/rms-client/
+          topicHref: /azure/information-protection/rms-client/use-client
         - name: Develop & Customize Apps
-          href: /azure/information-protection/develop/
-          homepage: /azure/information-protection/develop/developers-guide
+          tocHref: /azure/information-protection/develop/
+          topicHref: /azure/information-protection/develop/developers-guide
           items:
           - name: SDK 4.2
-            href: /azure/information-protection/sdk/4.2/api/
-            homepage: /azure/information-protection/develop/api-reference-4-2
+            tocHref: /azure/information-protection/sdk/4.2/api/
+            topicHref: /azure/information-protection/develop/api-reference-4-2
             items:
             - name: Android
-              href: /azure/information-protection/sdk/4.2/api/android/
-              homepage: /azure/information-protection/develop/android-namespaces
+              tocHref: /azure/information-protection/sdk/4.2/api/android/
+              topicHref: /azure/information-protection/develop/android-namespaces
             - name: iOS
-              href: /azure/information-protection/sdk/4.2/api/iOS/
-              homepage: /azure/information-protection/sdk/4.2/api/iOS/iOS
+              tocHref: /azure/information-protection/sdk/4.2/api/iOS/
+              topicHref: /azure/information-protection/sdk/4.2/api/iOS/iOS
             - name: WinRT
-              href: /azure/information-protection/sdk/4.2/api/winrt/
-              homepage: /azure/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement
+              tocHref: /azure/information-protection/sdk/4.2/api/winrt/
+              topicHref: /azure/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement
           - name: SDK 2.1
-            href: /azure/information-protection/sdk/2.1/api/
-            homepage: /azure/information-protection/develop/api-reference-2-1
+            tocHref: /azure/information-protection/sdk/2.1/api/
+            topicHref: /azure/information-protection/develop/api-reference-2-1
             items:
             - name: Win
-              href: /azure/information-protection/sdk/2.1/api/win/
-              homepage: /azure/information-protection/develop/api-reference-2-1
+              tocHref: /azure/information-protection/sdk/2.1/api/win/
+              topicHref: /azure/information-protection/develop/api-reference-2-1
               items:
               - name: Constants
-                href: /azure/information-protection/sdk/2.1/api/win/constants/
-                homepage: /azure/information-protection/sdk/2.1/api/win/constants
+                tocHref: /azure/information-protection/sdk/2.1/api/win/constants/
+                topicHref: /azure/information-protection/sdk/2.1/api/win/constants
               - name: Data Types
-                href: /azure/information-protection/sdk/2.1/api/win/data%20types/
-                homepage: /azure/information-protection/sdk/2.1/api/win/data%20types
+                tocHref: /azure/information-protection/sdk/2.1/api/win/data%20types/
+                topicHref: /azure/information-protection/sdk/2.1/api/win/data%20types
               - name: Functions
-                href: /azure/information-protection/sdk/2.1/api/win/functions/
-                homepage: /azure/information-protection/sdk/2.1/api/win/functions
+                tocHref: /azure/information-protection/sdk/2.1/api/win/functions/
+                topicHref: /azure/information-protection/sdk/2.1/api/win/functions
               - name: Structures
-                href: /azure/information-protection/sdk/2.1/api/win/structures/
-                homepage: /azure/information-protection/sdk/2.1/api/win/structures
-          - name: Microsoft Information Protection SDK
-            href: /azure/information-protection/develop/mip/
-            homepage: /azure/information-protection/develop/mip
+                tocHref: /azure/information-protection/sdk/2.1/api/win/structures/
+                topicHref: /azure/information-protection/sdk/2.1/api/win/structures
+  - name: Microsoft Information Protection SDK
+    tocHref: /azure/information-protection/develop/mip/
+    topicHref: /azure/information-protection/develop/mip
