@@ -55,7 +55,7 @@ Specific to the preview version of the scanner:
 
 - You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). 
 
-You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. For the preview version only, you can also run the scanner to discover files that contain sensitive information types, without configuring labels for them.
+You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. For the preview version only, you can also run the scanner to discover files that contain sensitive information types, without configuring labels for conditions that apply automatic classification.
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
