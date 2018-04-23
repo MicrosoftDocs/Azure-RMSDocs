@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,19 +35,22 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
+>[!NOTE]
+> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
+
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. On the initial  Azure Information Protection blade, select **Scoped policies**.
+2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
 
-3. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
     You can configure advanced settings for the Global policy, as well as for scoped policies.
 
 4. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
 
-5. Click **Publish**, and make sure that users for this policy restart any Office applications that they had open.
+5. Make sure that users for this policy restart any Office applications that they had open.
 
-6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**, and republish the modified policy.
+6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
@@ -202,6 +205,20 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Remove "Not now" for documents when you use mandatory labeling
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you use the [policy setting](../deploy-use/configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
+
+When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **PostponeMandatoryBeforeSave**
+
+- Value: **False**
 
 ## Turn on classification to run continuously in the background
 
