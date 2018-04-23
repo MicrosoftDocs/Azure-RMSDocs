@@ -197,7 +197,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
-5. Click **OK** on the **Protection** blade, and then publish your changes.
+5. Click **OK** on the **Protection** blade.
 
 
 ### Example 2: Label that restricts read-only permission to all users in another organization, and that supports immediate revocation
@@ -218,7 +218,7 @@ This label is not suitable for emails.
 
 6. Back on the **Protection** blade, for **Allow offline access setting**, select **Never**.
 
-7. Click **OK** on the **Protection** blade, and then publish your changes.
+7. Click **OK** on the **Protection** blade.
 
 
 ### Example 3: Add external users to an existing label
@@ -237,7 +237,7 @@ The new users that you add will be able open documents and emails that have alre
 
 6. Repeat steps 4 and 5 for each user (or group) that you want to add to this label. Then click **OK**.
 
-7. Click **OK** on the **Protection** blade, and then publish your changes.
+7. On the **Protection** blade, click **OK**.
 
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
@@ -266,9 +266,9 @@ When your users specify the email addresses in the **To** box, the addresses mus
 
 5. To specify additional users who should have different permissions, repeat steps 3 and 4.
 
-6. Click **OK** on the **Add permissions** blade. 
+6. Click **OK** on the **Add permissions** blade.
 
-7. Click **OK** on the **Protection** blade, and then publish your changes.
+7. On the **Protection** blade, click **OK**.
 
 ## Next steps
 
