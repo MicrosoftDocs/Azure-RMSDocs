@@ -49,11 +49,13 @@ The scanner can inspect any files that Windows can index, by using iFilters that
 
 Specific to the preview version of the scanner:
 
-- By default, only Office documents are protected rather than all file types. The full list of file types is listed in the [admin guide](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection), in the **File types supported by Office** table. 
+- By default, only Office documents are protected rather than all file types. The full list of Office file types supported is listed in the [admin guide](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection), in the **File types supported by Office** table. 
     
-    To change this default behavior, for example, to generically protect files, you must manually edit the registry. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
+    To change this default behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
 
-You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels.
+- You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). 
+
+You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. For the preview version only, you can also run the scanner to discover files that contain sensitive information types, without configuring labels for them.
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
@@ -217,7 +219,16 @@ Finally, for the remaining file types, the scanner applies the default label in 
 
 Note that when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
 
-For more information about the different levels of protection for different file types, and how to control the protection behavior, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
+For more information about the different levels of protection for different file types, and how to control the protection behavior by editing the registry, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
+
+For the general availability version of the scanner:
+
+- By default, all file types are protected.
+
+
+For the preview version of the scanner:
+
+- By default, only Office file types are protected.
 
 
 ## When files are rescanned by the Azure Information Protection scanner
