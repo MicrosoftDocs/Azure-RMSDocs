@@ -16,6 +16,7 @@
 ### [The default policy](configure-policy-default.md)
 ### [Configure the policy settings](configure-policy-settings.md)
 ### [Create a new label](configure-policy-new-label.md)
+### [Add or remove a label](configure-policy-add-remove-label.md)
 ### [Delete or reorder a label](configure-policy-delete-reorder.md)
 ### [Change a label](configure-policy-change-label.md)
 ### [Configure protection](configure-policy-protection.md)
