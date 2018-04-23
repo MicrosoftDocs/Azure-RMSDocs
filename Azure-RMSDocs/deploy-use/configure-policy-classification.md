@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,6 +28,9 @@ ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 # How to configure conditions for automatic and recommended classification for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
 
 When you configure conditions for a label, you can automatically assign a label to a document or email. Or, you can prompt users to select the label that you recommend. 
 
@@ -73,15 +76,11 @@ You can change this behavior so that the Azure Information Protection client per
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the label that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
-    
-    If the label that you want to configure is in a [scoped policy](configure-policy-scope.md) so that it applies to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label to configure.
 
-3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, select the label to configure. 
+3. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
 
-4. On the **Label** blade, in the **Configure conditions for automatically applying this label** section, click **Add a new condition**.
-
-5. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
+4. On the **Condition** blade, select **Information Types** if you want to use a predefined condition, or **Custom** if you want to specify your own:
     - For **Information Types**: Select from the list of available conditions, and then select the minimum number of occurrences and whether the occurrence should have a unique value to be included in the occurrence count.
         
         The information types use the Office 365 data loss prevention (DLP) sensitivity information types and pattern detection. You can choose from many common sensitive information types, some of which are specific for different regions. For more information, see [What the sensitive information types look for](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) from the Office documentation.
@@ -94,17 +93,17 @@ You can change this behavior so that the Azure Information Protection client per
         
         The regular expressions use the Office 365 regex patterns. For more information, see [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) from the Office documentation. In addition, you might find it useful to reference [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) from Boost.
         
-6. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
+5. Decide whether you need to change the **Minimum number of occurrences** and the **Count occurrence with unique value only**, and then select **Save**. 
     
     Example of the occurrences options: You select the information type for the social security number, set the minimum number of occurrences as 2, and a document has the same social security number listed twice: If you set the **Count occurrences with unique value only** to **On**, the condition is not met. If you set this option to **Off**, the condition is met.
 
-7. Back on the **Label** blade, configure the following, and then click **Save**:
+6. Back on the **Label** blade, configure the following, and then click **Save**:
     
     - Choose automatic or recommended classification: For **Select how this label is applied: automatically or recommended to user**, select **Automatic** or **Recommended**.
     
     - Specify the text for the user prompt or policy tip: Keep the default text or specify your own string.
 
-8. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
+When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ## Next steps
 

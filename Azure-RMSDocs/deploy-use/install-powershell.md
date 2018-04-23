@@ -6,7 +6,7 @@ description: Instructions to install Windows PowerShell for the Azure Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,10 +58,11 @@ If you're new to the PowerShell Gallery, see [Get Started with the PowerShell Ga
 
 To see details about the AADRM module on the PowerShell Gallery, visit the [AADRM page](https://www.powershellgallery.com/packages/AADRM).
 
-To install the AADRM module, start a PowerShell session and type:
+To install the AADRM module, start a PowerShell session with the **Run as Administrator** option, and type:
 
 	Install-Module -Name AADRM
 
+If you are warned about installing from an untrusted repository, you can press Y to confirm. Or, press N and configure the PowerShell Gallery as a trusted repository by using the command `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` and then rerun the command to install the AADRM module.  
 
 If you have a previous version of the AADRM module installed from the Gallery, update it to the latest by typing:
 

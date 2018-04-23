@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -25,20 +25,23 @@ ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 
 ---
 
-# Step 2: Configure and publish the Azure Information Protection policy
+# Step 2: Configure the Azure Information Protection policy
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> This step of the tutorial reflects the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this step of the tutorial in a couple of days when your tenant is updated for the latest changes.
+
 Although Azure Information Protection comes with a default policy that you can use without configuration, we're going to have a look at that policy and make some changes.
 
-1. Continuing from [step 1](infoprotect-tutorial-step1.md) and still in the Azure portal, select **Global policy** to open the **Policy: Global** blade. This blade automatically opens for subsequent connections to the service and it displays the default Information Protection policy that's created for your tenant.
+1. Continuing from [step 1](infoprotect-tutorial-step1.md) and still in the Azure portal, select **CLASSIFICATIONS** > **Policies** > **Global** to open the **Policy: Global** blade. This blade displays the default Azure Information Protection policy that's created for your tenant.
 
 2. Spend a few minutes familiarizing yourself with the labels that are displayed:
     
-    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sub-labels, which provide examples of how a classification can have subcategories:
+    - Labels for classification: **Personal**, **Public**, **General**, **Confidential**, and **Highly Confidential**. The last two labels expand to show sublabels, which provide examples of how a classification can have subcategories:
     
        > [!NOTE]
-       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sub-labels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
+       > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sublabels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
        > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
     
@@ -66,7 +69,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
-We'll now create a new sub-label for **Confidential**.
+We'll now create a new sublabel for **Confidential**.
 
 1. Right-click the **Confidential** label, and select **Add a sub-label**.
     
@@ -136,7 +139,7 @@ We'll now create a new sub-label for **Confidential**.
 
 13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
     
-    You now see your new sub-label, which is configured for visual markings and protection. For example:
+    You now see your new sublabel, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
@@ -144,10 +147,6 @@ We'll now create a new sub-label for **Confidential**.
     
     ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
     
-14. Now that we've made our changes and saved them, we want to make them available to users, so click **Publish**, and click **Yes** to confirm.
-
-    ![Azure Information Protection quick start tutorial step 3 - publish the configured policy](../media/info-protect-publish.png)
-
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
 Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
