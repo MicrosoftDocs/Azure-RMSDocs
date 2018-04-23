@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -205,6 +205,20 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Remove "Not now" for documents when you use mandatory labeling
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you use the [policy setting](../deploy-use/configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
+
+When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **PostponeMandatoryBeforeSave**
+
+- Value: **False**
 
 ## Turn on classification to run continuously in the background
 
