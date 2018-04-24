@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -117,7 +117,7 @@ Give users the following instructions so that they can configure their OneDrive 
 
 3. Select the **Settings** icon. In the **Settings** pane, if the **Ribbon** is set to **Off**, select this setting to turn the ribbon on.
 
-4. To configure all OneDrive for Business files to be protected, select the **LIBRARY** tab from the ribbon, and then select **Library Settings**. To select all files in a specific folder to be protected, first select that folder.
+4. To configure all OneDrive for Business files to be protected, select the **LIBRARY** tab from the ribbon, and then select **Library Settings**.
 
 5. On the **Documents > Settings** page, in the **Permissions and Management** section, select **Information Rights Management**.
 
