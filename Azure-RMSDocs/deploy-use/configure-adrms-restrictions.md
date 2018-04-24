@@ -119,7 +119,7 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - If you share documents or emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2016 Pro Plus or Office 2013 Pro Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
+- Users have a version of Office that is Office 2016 Professional Plus or Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
     
     - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
