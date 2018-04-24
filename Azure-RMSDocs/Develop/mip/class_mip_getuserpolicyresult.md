@@ -5,7 +5,7 @@ Describes the results of a user policy acquisition request.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 public GetUserPolicyResultStatus GetResultStatus()  |  Gets the status of the policy acquisition request.
-public std::shared_ptr<std::string> GetReferrer()  |  Gets the refererrer address of the policy.
+public std::shared_ptr<std::string> GetReferrer()  |  Gets the referrer address of the policy.
 public std::shared_ptr<UserPolicy> GetPolicy()  |  Gets a [UserPolicy](#classmip_1_1_user_policy) instance.
   
 ## Members
@@ -17,14 +17,14 @@ Gets the status of the policy acquisition request.
 Status of the policy acquisition request
   
 ### GetReferrer
-Gets the refererrer address of the policy.
+Gets the referrer address of the policy.
   
 #### Returns
-Referrerer address of the policy
+Referrer address of the policy
 The referrer is a URI that can be displayed to the user upon failed policy acquisition that contains information on how that user can gain permission to access the content.
   
 ### UserPolicy
 Gets a [UserPolicy](#classmip_1_1_user_policy) instance.
   
 #### Returns
-[UserPolicy](#classmip_1_1_user_policy) instance if acquisition was successful, else nullptr
+[UserPolicy](#classmip_1_1_user_policy) instance if acquisition was successful, else `nullptr`.

@@ -4,19 +4,19 @@ An instance of this class with the approprieted parameters should be provide to 
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public inline Settings(const std::string& id, const std::string& clientData, const std::string& locale)  |  Construct an instance with the given parameters. Use this to create [Settings](#classmip_1_1_policy_engine_1_1_settings) to call LoadEngineAsync to load an existing engine.
-public inline Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Use this to create [Settings](#classmip_1_1_policy_engine_1_1_settings) to call AddEngineAsync to add a new engine.
-public inline const std::string& GetId() const  |  Get the engine id.
-public inline void SetId(const std::string& id)  |  Set the engine id.
-public inline const Identity& GetIdentity() const  |  Get the Identity object.
-public inline void SetIdentity(const Identity& identity)  |  Set the Identity object.
-public inline const std::string& GetClientData() const  |  Get the Client Data set in the settings.
-public inline void SetClientData(const std::string& clientData)  |  Set the Client Data string.
-public inline const std::string& GetLocale() const  |  Get the Locale set in the settings.
-public inline void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& customSettings)  |  Set the custom settings, used for feature gating and testing.
-public inline const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Set the custom settings, used for feature gating and testing.
-public inline void SetSessionId(const std::string& sessionId)  |  Set the session id, used for client defined telementry.
-public inline const std::string& GetSessionId() const  |  Get the session id, a unique identifier.
+`public inline Settings(const std::string& id, const std::string& clientData, const std::string& locale)`  |  Construct an instance with the given parameters. Use this to create [Settings](#classmip_1_1_policy_engine_1_1_settings) to call LoadEngineAsync to load an existing engine.
+`public inline Settings(const Identity& identity, const std::string& clientData, const std::string& locale)`  |  Use this to create [Settings](#classmip_1_1_policy_engine_1_1_settings) to call AddEngineAsync to add a new engine.
+`public inline const std::string& GetId() const`  |  Get the engine ID.
+`public inline void SetId(const std::string& id)`  |  Set the engine ID.
+`public inline const Identity& GetIdentity() const`  |  Get the Identity object.
+`public inline void SetIdentity(const Identity& identity)`  |  Set the Identity object.
+`public inline const std::string& GetClientData() const`  |  Get the Client Data set in the settings.
+`public inline void SetClientData(const std::string& clientData)`  |  Set the Client Data string.
+`public inline const std::string& GetLocale() const`  |  Get the Locale set in the settings.
+`public inline void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& customSettings)`  |  Set the custom settings, used for feature gating and testing.
+`public inline const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const`  |  Set the custom settings, used for feature gating and testing.
+`public inline void SetSessionId(const std::string& sessionId)`  |  Set the session id, used for client defined telemetry.
+`public inline const std::string& GetSessionId() const`  |  Get the session id, a unique identifier.
   
 ## Members
   
@@ -34,25 +34,25 @@ Use this to create [Settings](#classmip_1_1_policy_engine_1_1_settings) to call 
 #### Parameters
 * identity unique identifier of the user for whom the engine needs to be added. 
 * clientData customizable client data that can be stored with the engine when unloaded, can be retrieve from a loaded engine. 
-* locale engine localizable output will be provided in this locale, default "en-US".
+* locale engine localizable output will be provided in this locale, default `en-US`.
   
 ### GetId
-Get the engine id.
+Get the engine ID.
   
 #### Returns
 a unique string identifying the engine.
   
 ### SetId
-Set the engine id.
+Set the engine ID.
   
 #### Parameters
-* id engine id.
+* id engine ID.
   
 ### GetIdentity
 Get the Identity object.
   
 #### Returns
-a refrence to the identity in the settings object. 
+a reference to the identity in the settings object. 
 **See also**: mip::Identity
   
 ### SetIdentity
@@ -93,7 +93,7 @@ Set the custom settings, used for feature gating and testing.
 * List of name/value pairs.
   
 ### SetSessionId
-Set the session id, used for client defined telementry.
+Set the session id, used for client defined telemetry.
   
 #### Parameters
 * sessionId a unique string that connects telemetry events.
@@ -102,4 +102,4 @@ Set the session id, used for client defined telementry.
 Get the session id, a unique identifier.
   
 #### Returns
-the session id.
+the session ID.
