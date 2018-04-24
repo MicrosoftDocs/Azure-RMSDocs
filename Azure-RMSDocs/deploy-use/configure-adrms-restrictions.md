@@ -46,19 +46,19 @@ When you protect your most sensitive documents and emails by using Azure Informa
 
 A cloud-based key protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
-The information that you protect with this cloud-based key is not sent to the cloud during the protection process. Documents and emails that you protect could be stored in the cloud or on-premises. For more information about how the protection process works for this cloud-based key, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
+Documents and emails that you protect could be stored in the cloud or on-premises. For more information about how the protection process works for this cloud-based key, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
 
-Other cloud-based services and applications for your tenant can integrate with Azure Information Protection so that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
+Office 365 services and cloud-based applications for your tenant can integrate with Azure Information Protection so that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
-However, a few organizations might have a small subset of extremely sensitive content that should remain encrypted at all times. This restriction might be a requirement for highly regulated industries, or because of strict company policies for data handling. Or it might be required for very specific compliance reasons. For these scenarios, the content must be encrypted by a key that is isolated from the cloud, and the content cannot be decrypted by Azure Information Protection or reasoned over by other services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
+However, for regulatory requirements, a few organizations might be required to encrypt content with a key that is isolated from the cloud. This isolation means that the encrypted content can be read only by on-premises applications and on-premises services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
 
 ## HYOK guidance and best practices
 
-Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Integrating services and applications cannot reason over HYOK-protected data.
+Use HYOK protection only when you have to, and for just the documents and emails that require it. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Cloud-based services and applications cannot reason over HYOK-protected data.
 
 > [!NOTE]
 > 
-> Even for the organizations that use HYOK protection, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
+> Even for the organizations that use HYOK protection, it is typically suitable for a small number of documents that needs to be protected. As guidance, use it only for documents and when they match all the following criteria:
 > 
 > **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
 > 
@@ -66,13 +66,13 @@ Use HYOK protection only when you have to, and for just the documents and emails
 > 
 > **The content is only consumed on the internal network**
 
-Users are not aware when a label uses HYOK protection rather than cloud-based protection. Because of the restrictions and limitations that come with HYOK protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply HYOK protection. 
+Because HYOK protection is an administrator configuration option for a label, user workflows remain the same, irrespective of which key management option you use.
 
 [Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply HYOK protection see labels that are configured for HYOK protection. 
 
 ## Supported scenarios for HYOK
 
-To apply HYOK protection, you must use Azure Information Protection labels. For example, HYOK protection is not supported by directly applying Rights Management templates.
+To apply HYOK protection, use Azure Information Protection labels. 
 
 The following table lists the supported scenarios for protecting content by using labels that are configured for HYOK, and opening (consuming) content that's protected by HYOK.
 
@@ -105,11 +105,8 @@ In addition to not supporting the listed benefits that you get when you use clou
 
 - Does not support Office 2010 or Office 2007.
 
-- Many Exchange Online services and supporting applications will not be able to decrypt HYOK-protected emails to inspect the contents and take action on them. This limitation also applies when you configure Exchange on-premises to use the Rights Management connector and protect emails with HYOK. This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
+- Office 365 services and other online services will not be able to decrypt HYOK-protected documents and emails to inspect the content and take action on them. This limitation extends to HYOK-protected documents and emails that have been protected with the Rights Management connector. This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
 
-- If users choose a label in Outlook that applies HYOK protection, and then change their minds before sending the email and select a label that applies cloud-based protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
-    
-    The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies HYOK protection.
 
 ## Implementing HYOK
 
