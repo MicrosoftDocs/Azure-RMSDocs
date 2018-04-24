@@ -54,7 +54,7 @@ However, for regulatory requirements, a few organizations might be required to e
 
 ## HYOK guidance and best practices
 
-Use HYOK protection only when you have to, and for just the documents and emails that require the encryption key to be isolated from the cloud. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Cloud-based services and applications cannot reason over HYOK-protected data.
+Use HYOK protection just for the documents and emails that require the encryption key to be isolated from the cloud. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Cloud-based services and applications cannot reason over HYOK-protected data.
 
 Even for the organizations that use HYOK protection, it is typically suitable for a small number of documents that need to be protected. As guidance, use it only for documents and when they match all the following criteria:
 
