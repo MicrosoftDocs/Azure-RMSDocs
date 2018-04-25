@@ -50,7 +50,7 @@ The client logs user activity to the local Windows event log **Applications and 
 
 - Date, client version, policy ID
 
-- Signed in user name, computer name
+- IP address of the signed in user, computer name
 
 - File name and location
 
