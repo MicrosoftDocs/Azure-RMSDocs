@@ -32,7 +32,9 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 >[!NOTE]
 > This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
 
-You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook. 
+You can protect your most sensitive documents and emails by using a Rights Management service. This service uses encryption, identity, and authorization policies to help prevent data loss. The protection is applied with a label that is configured to use Rights Management protection for documents and emails, and users can also select the **Do not forward** button in Outlook.
+
+When your label is configured with the protection setting of **Azure (cloud key)**, under the covers, this action creates and configures a protection template that can then be accessed by services and applications that integrate with Rights Management templates. For example, Exchange Online and mail flow rules, and Outlook on the web. 
 
 ## How the protection works
 
