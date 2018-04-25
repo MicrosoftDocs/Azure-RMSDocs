@@ -64,7 +64,7 @@ Even for the organizations that use HYOK protection, it is typically suitable fo
 
 - The content is only consumed on the internal network
 
-Because HYOK protection is an administrator configuration option for a label, user workflows remain the same, irrespective of which key management option you use.
+Because HYOK protection is an administrator configuration option for a label, user workflows remain the same, irrespective of whether the protection uses a cloud-based key or HYOK.
 
 [Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply HYOK protection see labels that are configured for HYOK protection. 
 
