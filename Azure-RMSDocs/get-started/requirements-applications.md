@@ -86,7 +86,9 @@ If the email application cannot render the message because the Exchange ActiveSy
 
 Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). 
 
-#### Windows computers
+See also: [Office Applications Service Description](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+
+#### Windows computers for Information Rights Management (IRM)
 
 The following Office client suites support protecting files and emails on Windows computers by using Azure RMS:
 
@@ -112,15 +114,13 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 
 - Does not support overriding template protection with custom permissions that a user selects with the Azure Information Protection client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
-#### Mac computers
+#### Mac computers for Information Rights Management (IRM)
 
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
 - Office 365 ProPlus: Office 2016
 
 - Office Standard 2016 for Mac
-
-See also: [Office Applications Service Description](https://technet.microsoft.com/library/office-applications-service-description.aspx)
 
 To get started with protecting documents by using Office for Mac, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 
