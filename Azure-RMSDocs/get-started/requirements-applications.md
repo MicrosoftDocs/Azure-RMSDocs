@@ -161,7 +161,7 @@ For more information, see the following resources:
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
-Download the viewer for Mac computers and for Windows Phone using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
+Download the viewer for Mac computers and for Windows Phone by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
 ### More information about other applications that support Azure Information Protection
