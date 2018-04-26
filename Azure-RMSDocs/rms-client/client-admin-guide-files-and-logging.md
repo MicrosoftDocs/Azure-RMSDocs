@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -91,9 +91,10 @@ The client logs user activity to the local Windows event log **Applications and 
 - Protection before and after action​
     
 - User justification (when applicable)
-    
 
-For information about usage logging for the Azure Rights Management service, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md)
+- Custom permissions (when applicable) that includes the [usage rights by their encoding name](..deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) with the specified users, groups, or organizations
+    
+For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md)
 
 
 
