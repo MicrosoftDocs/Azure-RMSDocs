@@ -6,7 +6,7 @@ description: Identify the Azure AD requirements to use Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -29,17 +29,13 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-You must have an Azure AD directory to use Azure Information Protection. You use your organization account for this directory to sign in to the Azure portal, where, for example, you can configure and manage Rights Management templates.
+You must have an Azure AD directory to use Azure Information Protection. You use an account from this directory to sign in to the Azure portal, where, for example, you can configure and manage Azure Information Protection labels and Azure Rights Management templates.
 
-If you do not already have an Azure subscription for your organization, you can get one by signing up for a free trial. Go to the [Azure Get started](https://account.windowsazure.com/organization) page and follow the instructions.
+If you have a subscription that includes Azure Information Protection or Azure Rights Management, your Azure AD directory is automatically created for you if needed.  
 
-For more information, see the following resources in the Azure Active Directory documentation:
+For more information about Azure AD, see [What is Azure AD Directory?](/active-directory/active-directory-whatis)
 
--   [What is Azure AD Directory?](/active-directory/active-directory-whatis)
-
--   [How Azure subscriptions are associated with Azure Active Directory](/active-directory/active-directory-how-subscriptions-associated-directory)
-
-If you want to integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
+To integrate your Azure AD directory with your on-premises AD forests, see [Integrating your on-premises identities with Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 ### Scenarios that have specific requirements 
 
