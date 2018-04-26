@@ -92,7 +92,7 @@ The client logs user activity to the local Windows event log **Applications and 
     
 - User justification (when applicable)
 
-- Custom permissions (when applicable) that includes the [usage rights by their encoding name](..deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) with the specified users, groups, or organizations
+- Custom permissions (when applicable) that includes the [usage rights by their encoding name](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) with the specified users, groups, or organizations
     
 For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md)
 
