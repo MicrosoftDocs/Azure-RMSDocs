@@ -122,7 +122,7 @@ The following Office client suites support protecting files and emails on macOS 
 
 - Office Standard 2016 for Mac
 
-To get started with protecting documents by using Office for Mac, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
+Tip: To get started with protecting documents by using Office for Mac, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 
 ### More information about the Azure Information Protection app for iOS and Android
 
