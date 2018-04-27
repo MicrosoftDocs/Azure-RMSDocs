@@ -34,7 +34,7 @@ ms.suite: ems
 
 When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement these for specific users, by having different settings and labels, you must create a **scoped policy** that's configured for those users.
 
-All users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. 
+For applications that support the Azure Information Protection client, all users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. 
 
 Scoped policies, just like labels, are ordered in the Azure portal. If a user is configured for multiple scopes, an effective policy is computed for that user before it is downloaded. According to the order of the polices, the last policy setting is applied. The labels that the user sees are from the global policy and any additional labels from scoped policies that the user belongs to. 
 
