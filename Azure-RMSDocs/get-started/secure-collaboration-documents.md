@@ -31,7 +31,20 @@ ms.suite: ems
 
 When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. These users might be internal to your organization, external users in another organization, or users with a personal email address.
 
-When you protect documents for your own users, 
+The majority of documents that users need to collaborate on will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
+
+These permissions are called usage rights, and include permissions such as view, edit, print. You can define individual usage rights when a document is protected, or you can define a grouping of usage rights, called permission levels. Permission levels make it easier to select usage rights that are typically used together, for example, Reviewer and Co-Author. For more information about usage rights and permission levels, see [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
+
+When you configure these permissions, you also specify which users or groups they are for:
+
+- For users in your own organization or another organization that uses Azure Active Directory: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
+
+- For users who do not have an Azure Active Directory account: Send them an invitation to create an account in your Azure Active Directory, which uses their personal email as their identity. When these users accept the invitation, this action creates a Microsoft account in your Azure Active Directory. You can now include this account in your own groups. 
+
+
+
+
+
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
