@@ -17,7 +17,7 @@
 ### [Step 3: Install the client](infoprotect-tutorial-step3.md)
 ### [Step 4: See it in action - labeling, classification, protection](infoprotect-tutorial-step4.md)
 ### [Step 5: See it in action - share protected and tracking](infoprotect-tutorial-step5.md)
-## {Secure collaboration](secure-collaboration-documents.md)
+## [Secure collaboration](secure-collaboration-documents.md)
 # [Plan & Design](/information-protection/plan-design/deployment-roadmap)
 # [Deploy & Use the Service](/information-protection/deploy-use/activate-service)
 # [Deploy & Use the Client](/information-protection/rms-client/use-client)
