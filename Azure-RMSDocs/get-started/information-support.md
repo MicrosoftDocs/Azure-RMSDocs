@@ -6,7 +6,7 @@ description: Resources for administrators, which includes information about new 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 04/23/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -27,13 +27,13 @@ ms.suite: ems
 
 # Information and support for Azure Information Protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following resources to help you learn about, deploy, and support Azure Information Protection for your organization.
 
 |To do this ...|...do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages:<br /><br /> - [Get started with the Azure Information Protection app for iOS and Android](../rms-client/mobile-app-get-started.md)<br /> - [Activating Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md)<br />- [Activate Azure Rights Management from the Office 365 admin center](../deploy-use/activate-office365.md)|
+|See the most frequently used documentation|Read the top five pages:<br /><br /> - [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)<br /> - [Frequently asked questions for Azure Information Protection](../get-started/faqs.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [User Voice](https://msip.uservoice.com) site for Azure Information Protection.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|

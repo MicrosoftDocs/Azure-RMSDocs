@@ -6,7 +6,7 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 # Hold your own key (HYOK) requirements and restrictions for AD RMS protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 When you protect your most sensitive documents and emails, you typically do this by applying Azure Rights Management (Azure RMS) protection to benefit from the following:
 
@@ -79,8 +79,6 @@ In addition to not supporting the listed benefits that you get when you use Azur
     
     When users select **Do Not Forward** from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to select for their email message. If AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages
 
-- If you configure user defined permissions for Word, Excel, PowerPoint, and File Explorer: In File Explorer, the protection is always applied by using Azure RMS rather than HYOK (AD RMS) protection. This limitation does not apply to the current preview version of the client.
-
 - If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
     
     The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies AD RMS protection.
@@ -121,7 +119,10 @@ Check that your AD RMS deployment meets the following requirements to provide AD
 
 - If you share documents or emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
-- Users have a version of Office that is Office 2013 Pro Plus with Service Pack 1 or Office 2016 Pro Plus, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
+- Users have a version of Office that is Office 2016 Professional Plus or Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
+    
+    
+    - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 

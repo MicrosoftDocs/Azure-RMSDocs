@@ -1,17 +1,17 @@
 ---
 # required metadata
 
-title: Azure Information Protection client&colon; Version release history and support policy
+title: Azure Information Protection client - Version release history and support policy
 description: See what's new or changed in a release of the Azure Information Protection client for Windows, and understand the lifecycle policy for support. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid:  6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
+ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 
 # optional metadata
 
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Information Protection client: Version release history and support policy
 
->*Applies to: Azure Information Protection*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
@@ -48,11 +48,9 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.10.56.0
+## Version 1.26.6.0
 
-If you have a version of the client that is later than 1.10.56.0, it is a preview build for testing and evaluation purposes.
-
-The current preview version is **1.21.203.0** and has the following changes since the current GA version of the client.
+**Released**: 04/17/2018
 
 This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
@@ -60,11 +58,11 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - The Azure Information Protection scanner: The PowerShell module that is included with the client has new cmdlets to install and configure the scanner so that you can discover, classify, and protect files on your on-premises data stores. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md). 
 
-- For Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
-
 - You can now set different visual markings for Word, Excel, PowerPoint, and Outlook by using an "If.App" variable statement in the text string, and identify the application type. [More information](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Support for the [policy setting](../deploy-use/configure-policy-settings.md), **Display the Information Protection bar in Office apps**. When this setting is off, users select labels from the **Protect** button on the ribbon.
+
+- A new advanced client setting (still in preview) to turn on classification to run continuously in the background. When this setting is enabled, for Office apps, automatic and recommended classification runs continuously in the background, instead of running when documents are saved. With this change in behavior, you can now apply automatic and recommended classification to documents that are stored in SharePoint Online. [More information](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
 - A new advanced client setting so that Outlook doesn't apply the default label that is configured in the Azure Information Protection policy. Instead, Outlook can apply a different default label, or no label. [More information](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 
@@ -83,14 +81,21 @@ Fixes for stability and for specific scenarios that include:
 
 - When two organization using Azure Information Protection share labeled documents and emails, their own labels are retained and not replaced by the other organization's labels.
 
-- Support for cells in Excel that contain cross-references, which previously caused text corruption in that cell.
+- For Excel:
+        
+    - Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
+        
+    - Support for cells that contain cross-references, which previously caused text corruption in that cell.
+    
+    - Support for typing Japanese, Chinese, or Korean characters, which previously closed a window so these characters couldn't be selected.
+    
+    - Support for comments, which previously closed the comment while it was being typed.
 
-- Support for changing Office themes or Windows themes, which previously caused Excel to not display any data after the theme was changed.
+- For PowerPoint: Support for coauthoring, which previously could cause data loss.
 
 - Files that have a .xml file name extension can now be inspected for recommended or automatic classification.
 
 - The viewer can now open protected text-based files (.ptxt and .pxml) larger than 20 MB. 
-
 - Prevent Outlook hanging when Outlook reminders are used.
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.

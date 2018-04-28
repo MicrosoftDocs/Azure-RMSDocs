@@ -28,7 +28,7 @@ ms.suite: ems
 
 # How to activate Azure Rights Management from the Azure portal
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Use these instructions if you want to activate the Azure Rights Management service (Azure RMS) from the Azure portal.
 

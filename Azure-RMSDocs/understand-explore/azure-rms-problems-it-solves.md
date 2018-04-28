@@ -28,7 +28,7 @@ ms.suite: ems
 
 # What problems does Azure RMS solve?
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following table to identify business requirements or problems that your organization might have for protecting documents and emails, and how the Azure Rights Management (Azure RMS) technology can address these.
 

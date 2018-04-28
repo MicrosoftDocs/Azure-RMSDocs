@@ -6,7 +6,7 @@ description: Information about the client files and usage logging for the Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Admin Guide: Azure Information Protection client files and client usage logging
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 After you have installed the Azure Information Protection client, you might need to know where files are located and monitor how the client is being used.
 
@@ -48,9 +48,9 @@ Client logs files and currently installed policy file:
 
 The client logs user activity to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**. The events include the following information:
 
-- Date, client version, policy ID
+- Client version, policy ID
 
-- Signed in user name, computer name
+- IP addresses of the signed in user
 
 - File name and location
 
@@ -85,18 +85,16 @@ The client logs user activity to the local Windows event log **Applications and 
     - System (for sign in and download policy)
     
     - Default
-        
-        This **Default** source action is for the preview client only, and refers to the label that is set by using the **Select the default label** in the Azure Information Protection policy.
-
     
 - Label before and after action ​
     
 - Protection before and after action​
     
 - User justification (when applicable)
-    
 
-For information about usage logging for the Azure Rights Management service, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md)
+- Custom permissions (when applicable) that includes the [usage rights by their encoding name](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) for the specified users, groups, or organizations
+    
+For information about usage logging for the protection service, see [Logging and analyzing usage of the Azure Rights Management service](../deploy-use/log-analyze-usage.md)
 
 
 

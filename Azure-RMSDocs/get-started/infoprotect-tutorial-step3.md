@@ -27,7 +27,7 @@ ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 
 # Step 3: Install the client
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 In this step, you'll install the Azure Information Protection client so that the policy you've just configured will download to a Windows PC, and display the labels in Office applications.
 

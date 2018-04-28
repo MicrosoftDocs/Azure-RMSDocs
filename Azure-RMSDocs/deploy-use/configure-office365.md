@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Office 365: Configuration for clients and online services to use the Azure Rights Management service
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Because Office 365 natively supports the Azure Rights Management service from Azure Information Protection, no client computer configuration is required to support the information rights management (IRM) features for applications such as Word, Excel, PowerPoint, Outlook, and Outlook on the web. All users have to do, is sign in to their Office applications with their [!INCLUDE[o365_1](../includes/o365_1_md.md)] credentials. Then, they can protect files and emails, and use files and emails that have been protected by others.
 
@@ -87,7 +87,7 @@ For information about how SharePoint Online IRM works with the Azure Rights Mana
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 
 > [!NOTE]
-> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe). For more information, see [Enable users to sync IRM-protected files with the OneDrive sync client](https://support.office.com/en-us/article/6778d4de-b5f8-423c-af43-a1b2449e9b99).
+> IRM-protected libraries for SharePoint and OneDrive for Business require the latest version of the new OneDrive sync client (OneDrive.exe). For more information, see [Deploy the new OneDrive sync client in an enterprise environment](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
 To enable the information rights management (IRM) service for SharePoint Online, see the following instructions from the Office website:
 
@@ -103,25 +103,29 @@ After you have enabled the IRM service for SharePoint, site owners can IRM-prote
 This configuration is done by the SharePoint site administrator.
 
 ### Configuring IRM for OneDrive for Business
-After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library can then be configured for Rights Management protection.  Users can configure this for themselves by using the **Settings** icon in their OneDrive. Although administrators cannot configure Rights Management for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell.
+After you have enabled the IRM service for SharePoint Online, users' OneDrive for Business document library or individual folders can then be configured for Rights Management protection. Users can configure this for themselves by using their OneDrive website. Although administrators cannot configure this protection for them by using the SharePoint admin center, you can do this by using Windows PowerShell.
 
 > [!NOTE]
 > For more information about configuring OneDrive for Business, see the Office documentation, [Set up OneDrive for Business in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
 
 #### Configuration for users
-Give users these instructions so that they can configure their OneDrive for Business and IRM-protect their business files.
+Give users the following instructions so that they can configure their OneDrive for Business to protect their business files.
 
-1.  In OneDrive, click the **Settings** icon, to open the Settings menu, and then click **Site Contents**.
+1. Sign in to Office 365 with your work or school account and go to the [OneDrive website](https://portal.office.com/onedrive).
 
-2.  Hover on the **Documents** tile, choose the ellipses (**...**), and then click **SETTINGS.**
+2. In the navigation pane, at the bottom, select **Return to classic OneDrive**.
 
-3.  On the **Settings** page, in the **Permissions and Management** section, click **Information Rights Management**.
+3. Select the **Settings** icon. In the **Settings** pane, if the **Ribbon** is set to **Off**, select this setting to turn the ribbon on.
 
-4.  On the **Information Rights Management Settings** page, select **Restrict permissions on this library on download** check box, specify your choice of  name and a description for the permissions, and optionally, click **SHOW OPTIONS** to configure optional configurations, and then click **OK**.
+4. To configure all OneDrive for Business files to be protected, select the **LIBRARY** tab from the ribbon, and then select **Library Settings**.
+
+5. On the **Documents > Settings** page, in the **Permissions and Management** section, select **Information Rights Management**.
+
+6. On the **Information Rights Management Settings** page, select **Restrict permissions on this library on download** check box. Specify your choice of  name and a description for the permissions, and optionally, click **SHOW OPTIONS** to configure optional configurations, and then click **OK**.
 
     For more information about the configuration options, see the instructions in [Apply Information Rights Management to a list or library](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) from the Office documentation.
 
-Because this configuration relies on users rather than an administrator to IRM-protect their OneDrive for Business library, educate users about the  benefits of protecting their files and how to do this. For example, explain that when they share a document from OneDrive for Business, only people they authorize can access it with any restrictions that they configure, even if the file is renamed and copied somewhere else.
+Because this configuration relies on users rather than an administrator to IRM-protect their OneDrive for Business files, educate users about the  benefits of protecting their files and how to do this. For example, explain that when they share a document from OneDrive for Business, only people they authorize can access it with any restrictions that they configure, even if the file is renamed and copied somewhere else.
 
 #### Configuration for administrators
 Although you cannot configure IRM for users' OneDrive for Business by using the SharePoint admin center, you can do this by using Windows PowerShell. To enable IRM for these libraries, follow these steps:

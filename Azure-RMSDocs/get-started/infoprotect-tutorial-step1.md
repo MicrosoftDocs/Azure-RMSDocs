@@ -6,7 +6,7 @@ description: Step 1 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,16 +27,16 @@ ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 
 # Step 1: Activate protection
  
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
->Even if the Azure Rights Management service is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you're ready for step 2.
+>Even if protection is activated for your tenant, complete this step to confirm the activation status. The instructions include signing in to the Azure portal and creating the Azure Information Protection blade, so that you're ready for step 2.
 
-When the Azure Rights Management service is activated, you can protect your organization's most sensitive documents and emails. You can also track how these protected documents are used when you share them with others. 
+When protection is activated for Azure Information Protection, you can protect your organization's most sensitive documents and emails. You can also track how these protected documents are used when you share them with others. 
 
 There are different ways that you can activate protection. You can use PowerShell and the admin portals. But for this tutorial, we use the Azure portal, which is where you also configure labels for users. 
 
-## To activate the Azure Rights Management service
+## To activate protection
 
 1. Sign in to the [Azure portal](https://portal.azure.com) by using the global admin account for your tenant. 
     
@@ -51,19 +51,19 @@ There are different ways that you can activate protection. You can use PowerShel
     > [!TIP] 
     > Select **Pin to dashboard** to create an **Azure Information Protection** tile on your dashboard, so that you can skip browsing to the service the next time you sign in to the portal.
 
-4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **Protection activation**. 
+4. Note the information on the **Quick start** page that automatically opens the first time you connect to the service. You can come back to this later. For this tutorial, select **MANAGE** > **Protection activation**. 
 
-5. You now see whether the Azure Rights Management service is activated for your tenant. 
+5. You now see whether protection is activated for your tenant. 
     
-    - If the service is activated, you see the following confirmation:
+    - If protection is activated, you see the following confirmation:
         
         ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - If the service is not activated, you see this reflected in the status information, and the option to activate:
+    - If protection is not activated, you see this reflected in the status information, and the option to activate:
         
         ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-6. If the service isn't activated, select **Activate**. 
+6. If protection isn't activated, select **Activate**. 
 
     When activation is complete, the information bar displays **Activation finished successfully**.
 
@@ -71,7 +71,7 @@ That's all you need to do for this first step to complete this tutorial. You're 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating Rights Management|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|About activating protection|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
 
 
 >[!div class="step-by-step"]

@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Admin Guide: Custom configurations for the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection client.
 
@@ -35,19 +35,22 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
+>[!NOTE]
+> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
+
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
-2. On the initial  Azure Information Protection blade, select **Scoped policies**.
+2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
 
-3. On the **Azure Information Protection - Scoped policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
+3. On the **Azure Information Protection - Policies** blade, select the context menu (**...**) next to the policy to contain the advanced settings. Then select **Advanced settings**.
     
     You can configure advanced settings for the Global policy, as well as for scoped policies.
 
 4. On the **Advanced settings** blade, type the advanced setting name and value, and then select **Save and close**.
 
-5. Click **Publish**, and make sure that users for this policy restart any Office applications that they had open.
+5. Make sure that users for this policy restart any Office applications that they had open.
 
-6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**, and republish the modified policy.
+6. If you no longer need the setting and want to revert to the default behavior: On the **Advanced settings** blade, select the context menu (**...**) next to the setting you no longer need, and then select **Delete**. Then click **Save and close**.
 
 ## Prevent sign-in prompts for AD RMS only computers
 
@@ -158,8 +161,6 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
 
-> [!IMPORTANT]
-> Unless you use the current preview version of the client, do not set this option to **False** if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
 
 ## Permanently hide the Azure Information Protection bar
 
@@ -178,9 +179,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Enable recommended classification in Outlook
 
-This configuration option is currently in preview and is subject to change.
-
-This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal.
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. This setting is in preview and might change.
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
 
@@ -192,8 +191,6 @@ To configure this advanced setting, enter the following strings:
 
 
 ## Set a different default label for Outlook
-
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
@@ -208,6 +205,46 @@ To configure this advanced setting, enter the following strings:
 - Key: **OutlookDefaultLabel**
 
 - Value: \<**label ID**> or **None**
+
+## Remove "Not now" for documents when you use mandatory labeling
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you use the [policy setting](../deploy-use/configure-policy-settings.md) of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. For documents, users can select **Not now** to temporarily dismiss the prompt to select a label and return to the document. However, they cannot close the saved document without labeling it. 
+
+When you configure this setting, it removes the **Not now** option so that users must select a label when the document is first saved.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **PostponeMandatoryBeforeSave**
+
+- Value: **False**
+
+## Turn on classification to run continuously in the background
+
+This configuration option is currently in preview and is subject to change.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+When you configure this setting, it changes the [default behavior](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) of how the Azure Information Protection client applies automatic and recommended labels as follows:
+
+- Automatic classification applies to Word, Excel, PowerPoint, and Outlook. For documents, automatic classification runs continuously in the background. For Outlook, automatic classification runs when emails are sent. 
+    
+    You cannot use automatic classification for documents that were previously manually labeled, or previously automatically labeled with a higher classification. The exception to this behavior is if you use the Azure Information Protection scanner with the OverrideLabel parameter set to on.
+
+- Recommended classification applies to Word, Excel, and PowerPoint. For these documents, recommended classification runs continuously in the background. You cannot use recommended classification for Outlook.
+    
+    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
+
+When the Azure Information Protection client periodically checks documents for the condition rules that you specify, this behavior enables automatic and recommended classification and protection for documents that are stored in SharePoint Online. Large files also save more quickly because the condition rules have already run. 
+
+The condition rules do not run in real time as a user types. Instead, they run periodically as a background task if the document is modified.
+
+To configure this advanced setting, enter the following strings:
+
+- Key: **RunPolicyInBackground**
+
+- Value: **True**
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
@@ -289,8 +326,6 @@ The advanced client setting:
 
 
 ## Label an Office document by using an existing custom property
-
-This configuration option is currently in preview and is subject to change.
 
 > [!NOTE]
 > If you use this configuration and the configuration from the previous section to migrate from another labeling solution, the labeling migration setting takes precedence. 

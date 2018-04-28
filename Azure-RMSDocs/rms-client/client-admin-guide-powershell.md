@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Admin Guide: Using PowerShell with the Azure Information Protection client
 
->*Applies to: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
@@ -248,9 +248,11 @@ When you use a service principal account to protect files and download templates
 
 1. Run the Get-AadrmConfiguration cmdlet again, and make a note of the values for **CertificationExtranetDistributionPointUrl** and **LicensingExtranetDistributionPointUrl**.
 
-2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor, and navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. On each computer where you will run the AzureInformationProtection cmdlets, open the registry editor.
 
-3. If you do not see a **ServiceLocation** key, create it, so that your registry path shows **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. Navigate to the following path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
+    
+    If you do not see the **MSIPC** key or **ServiceLocation** key, create them.
 
 4. For the **ServiceLocation** key, create two keys if they do not exist, named **EnterpriseCertification** and **EnterprisePublishing**. 
     
@@ -371,7 +373,7 @@ In addition to the prerequisites for installing the AzureInformationProtection m
 
 8. Add your account name. If other AD RMS administrators or service accounts will also use these cmdlets to protect and unprotect files, add those accounts as well. 
     
-    To protect or unprotect files non-interactively, add the relevant computer account or accounts. For example, add the computer account of the Windows Server computer that is configured for File Classification Infrastructure and will use a PowerShell script to protect files. This scenario requires the current preview version of the Azure Information Protection client.
+    To protect or unprotect files non-interactively, add the relevant computer account or accounts. For example, add the computer account of the Windows Server computer that is configured for File Classification Infrastructure and will use a PowerShell script to protect files.
 
 9. In the **Allow** column, make sure that the **Read and Execute**, and the **Read** checkboxes are selected.
 
@@ -539,9 +541,6 @@ Run this command in the context of the account that will label and protect the d
 When you run this command for the first time, you are prompted to sign in, which creates and securely stores the access token for your account in %localappdata%\Microsoft\MSIP. After this initial sign-in, you can label and protect files non-interactively on the computer. However, if you use a service account to label and protect files, and this service account cannot sign in interactively, use the instructions in the following section so that the service account can authenticate by using a token.
 
 ### Specify and use the Token parameter for Set-AIPAuthentication
-
-> [!NOTE]
-> This option requires the general availability (GA) version of the Azure Information Protection scanner, or the current preview version of the Azure Information Protection client.
 
 Use the following additional steps and instructions to avoid the initial interactive sign-in for an account that labels and protects files. Typically, these additional steps are required only if this account cannot be granted the **Log on locally** right but is granted the **Log on as a batch job** right. For example, this might be the case for your service account that runs the Azure Information Protection scanner.
 

@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,10 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 
 # How to configure the policy settings for Azure Information Protection
 
->*Applies to: Azure Information Protection*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
 
 In addition to the Information Protection bar title and tooltip, there are some settings in the Azure Information Protection policy that you can configure independently from the labels:
 
@@ -41,11 +44,11 @@ To configure these settings:
     
     For example, on the hub menu, click **All services** and start typing **Information** in the Filter box. Select **Azure Information Protection**.
 
-2. If the settings that you want to configure will apply to all users, stay on the **Azure Information Protection - Global policy** blade.
+2. From the **CLASSIFICATIONS** > **Policies** menu option: On the **Azure Information Protection - Policies** blade, select **Global** if the settings that you want to configure will apply to all users.
     
-    If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, from the **POLICIES** menu selection, select **Scoped policies**. Then select your scoped policy from the **Azure Information Protection - Scoped polices** blade.
+    If the settings that you want to configure are in a [scoped policy](configure-policy-scope.md) so that they apply to selected users only, select your scoped policy instead.
 
-3. From the **Azure Information Protection - Global policy** blade, or the **Policy:\<name>** blade, configure the settings:
+3. On the **Policy** blade, configure the settings:
     
     - **Select the default label**: When you set this option, select the label to assign to documents and emails that do not have a label. You cannot set a label as the default if it has sub-labels. 
     
@@ -59,14 +62,11 @@ To configure these settings:
         
         ![Azure Information Protection prompt if new classification is lower](../media/info-protect-lower-justification.png)
         
-        This option is not applicable for sub-labels.
+        This option is not applicable for sublabels.
         
     - **For email messages with attachments, apply a label that matches the highest classification of those attachments**: When you set this option to **Recommended**, users are prompted to apply a label to their email message. The label is dynamically chosen, based on the classification labels that are applied to the attachments, and the highest classification label is selected. The attachment must be a physical file, and cannot be a link to a file (for example, a link to a file on SharePoint or OneDrive for Business). Users can accept the recommendation or dismiss it. When you set this option to **On**, the label is automatically applied but users can remove the label or select a different label before sending the email.  
     
     - **Display the Information Protection bar in Office apps**: When this setting is off, users cannot select labels from a bar in Word, Excel, PowerPoint, and Outlook. Instead, users must select labels from the **Protect** button on the ribbon. When this setting is on, users can select labels from either the bar or the button.
-        
-        > [!IMPORTANT]
-        > This setting is in preview and requires the current preview version of the Azure Information Protection client.
         
         When this setting is on, it can be used in conjunction with an advanced client setting so that users can [permanently hide the Azure Information Protection bar](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) if they choose not to show the bar. They can do this by clearing the **Show Bar** option from the **Protect** button.
     
@@ -75,9 +75,6 @@ To configure these settings:
         This policy setting can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
     - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. When this setting is off, the custom permissions options are not available for users to select.
-        
-        > [!IMPORTANT]
-        > Unless you use the current preview version of the client, do not use the  **Off** setting if you have labels that are configured for user defined permissions for Word, Excel, PowerPoint, and File Explorer. If you do, when the label is applied, users are not prompted to configure the custom permissions. The result is that the document is labeled but it is not protected as you intended.
         
         Note that this policy setting has no effect on custom permissions that users can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
         
@@ -91,9 +88,9 @@ To configure these settings:
         
         As an example, for your help desk, you might enter the Microsoft documentation page that includes information about installing and using the client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) or release version information (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternatively, you might publish your own webpage that includes information for users to contact your help desk, or a video that steps users through how to use the labels that you have configured.
 
-3. To save your changes, click **Save**.
+3. To save your changes and make them available to users, click **Save**.
 
-4. To make your changes available to users, on the initial **Azure Information Protection** blade, click **Publish**.
+When you click **Save**, your changes are automatically available to users and services. There's no longer a separate publish option.
 
 ## Next steps
 

@@ -6,7 +6,7 @@ description: Identify the applications that use RMS APIs to natively support the
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Applications that support Azure Rights Management data protection
 
->*Applies to: Azure Information Protection, Office 365*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Use the following tables to identify the applications and solutions that natively support the Azure Rights Management service (Azure RMS), which provides the data protection for Azure Information Protection.
@@ -53,8 +53,8 @@ Information about the table columns:
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (viewing protected documents) [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection client for Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS sharing app|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4) |Azure Information Protection client for Windows: Text, images, pfile<br /><br />RMS sharing application for Windows: Text, images, pfile<br /><br />SealPath RMS plugin for AutoCAD: .dwg|
-|**iOS**|Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app (viewing protected email)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (viewing and editing protected documents) <br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
+|**iOS**|Office Mobile (viewing and editing protected documents)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS Docs<br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents)<br /><br /> Foxit Reader<br /><br />TITUS Docs|Azure Information Protection app (viewing protected email)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for iPad and iPhone [[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protecting text and images)<br /><br />TITUS Docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (viewing and editing protected documents) <br /><br />Web browser [[2]](#footnote-2)|Azure Information Protection app (viewing protected documents) <br /><br />GigaTrust App for Android<br /><br />Foxit Reader|9Folders [[4]](#footnote-4)<br /><br />Azure Information Protection app (viewing protected emails)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook for Android [[4]](#footnote-4)<br /><br />Samsung Email (S3 and later) [[4]](#footnote-4)<br /><br />TITUS Classification for Mobile <br /><br />Web browser [[3]](#footnote-3)|Azure Information Protection app (viewing protected text and images)|
 |**macOS**|Office 2011 (AD RMS only)<br /><br />Office 2016 for Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Foxit Reader<br /><br />RMS sharing app (viewing protected documents)|Outlook 2011 (AD RMS only)<br /><br />Outlook 2016 for Mac<br /><br />Outlook for Mac <br /><br />Web browser [[3]](#footnote-3)|RMS sharing app (viewing protected text, images, generically protected files)|
 |**Windows 10 Mobile**|Office Mobile apps (viewing protected documents using Azure RMS) <br /><br />Web browser [[2]](#footnote-2)|Not supported|Citrix WorxMail <br /><br />Outlook Mail (viewing protected emails) <br /><br />Web browser [[3]](#footnote-3)|Not supported|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Web browser [[2]](#footnote-2)|Not supported|Outlook 2013 RT<br /><br />Mail app for Windows<br /><br />Web browser [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: JT files|
@@ -86,9 +86,15 @@ If the email application cannot render the message because the Exchange ActiveSy
 
 Azure RMS is tightly integrated into the Word, Excel, PowerPoint, and Outlook apps, where this functionality is often referred to as Information Rights Management (IRM). 
 
+See also: [Office Applications Service Description](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+
+#### Windows computers for Information Rights Management (IRM)
+
 The following Office client suites support protecting files and emails on Windows computers by using Azure RMS:
 
 - Office 365 ProPlus: Office 2016 and Office 2013
+    
+    These editions of Office are included with most but not all Office 365 subscriptions that include data protection from Azure Information Protection. Check your subscription information to see if Office 365 ProPlus is included. You'll also find this information in the [Azure Information Protection datasheet](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -108,17 +114,19 @@ Azure RMS with Office Professional Plus 2010 with Service Pack 2 or Office Profe
 
 - Does not support overriding template protection with custom permissions that a user selects with the Azure Information Protection client. In this scenario, the original protection must first be removed before custom permissions can be applied.
 
+#### Mac computers for Information Rights Management (IRM)
+
 The following Office client suites support protecting files and emails on macOS by using Azure RMS:
 
 - Office 365 ProPlus: Office 2016
 
 - Office Standard 2016 for Mac
 
-See also: [Office Applications Service Description](https://technet.microsoft.com/library/office-applications-service-description.aspx)
+Tip: To get started with protecting documents by using Office for Mac, you might find the following FAQ useful: [How do I configure a Mac computer to protect and track documents?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 
 ### More information about the Azure Information Protection app for iOS and Android
 
-The Azure Information Protection app for iOS and Android replaces the RMS sharing app for these devices. It provides the same functionality and in addition, supports rights-protected email messages and rights-protected PDF files on SharePoint Online.
+The Azure Information Protection viewer app for iOS and Android replaces the RMS sharing app for these devices. It provides the same functionality and in addition, supports rights-protected email messages and rights-protected PDF files on SharePoint Online.
 
 If your iOS and Android devices are enrolled by Microsoft Intune, you can deploy and manage this app by using a policy managed app. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2 from this Intune documentation, use the instructions to publish a policy managed app.
 
@@ -141,7 +149,9 @@ Download the relevant app by using the links on the [Microsoft Azure Information
 
 ### More information about the Rights Management sharing application
 
-This application is being replaced by the Azure Information Protection client. It is still required for Mac computers and Windows Phone mobile devices.
+This application is being replaced by the Azure Information Protection client. It is still required for Windows Phone mobile devices to view protected files. 
+
+For Mac computers, it offers a viewer for protected PDF files (.ppdf), protected text images, and generically protected files. The RMS sharing app for Mac can also protect image files, but not other files. To protect Office files, use Office for Mac. 
 
 For more information, see the following resources:
 
@@ -151,7 +161,7 @@ For more information, see the following resources:
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
-Download the app for Mac computers and for Windows Phone using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
+Download the viewer for Mac computers and for Windows Phone by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 
 ### More information about other applications that support Azure Information Protection
