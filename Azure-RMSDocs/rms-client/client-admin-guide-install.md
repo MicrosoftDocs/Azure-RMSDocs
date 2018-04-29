@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -79,20 +79,6 @@ Then check the additional prerequisites that might be needed for the Azure Infor
     Even if you haven't configured this **List of managed add-ins** group policy setting, you might need to configure it if you get reports that the Microsoft Azure Information Protection add-in is getting disabled. When this add-in is disabled, users do not see the Azure Information Protection bar in the Office application.
     
     For more information about this group policy setting, see [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
-
-- For Office versions 16.0.8628.2010 and later (Click-to-Run): Enable legacy support for monitors
-    
-    Note: This prerequiste is not required for the current preview version of the Azure Information Protection client. 
-    
-    To prevent the Azure Information Protection bar displaying outside Office applications for these Office versions, you might need to enable legacy support for monitors. When the bar doesn't display correctly in this scenario, you might see it displayed as **AdxTaskPane**. 
-    
-    To configure the Office applications for this requirement: **File** > **Options** > **General** > **User Interface options**:
-    
-    - If you see the option **When using multiple displays** is set to **Optimize for best appearance**, select **Optimize for compatibility (application restart required)** instead. 
-        
-    - If you see that the option **Use best settings for my display** is selected, remove this selection.
-    
-    - If you see neither of these options, no additional configuration is required.
 
 > [!IMPORTANT]
 > Installation of the Azure Information Protection client requires local administrative permissions.
@@ -219,16 +205,9 @@ If you use Intune for your software deployment method, use these instructions to
 
 ## How to install the Azure Information Protection scanner
 
-Currently, the general availability (GA) version of the Azure Information Protection scanner is a separate download named **AzInfoProtectionScanner.exe** on the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Subsequent releases of the scanner will be included in the Azure Information Protection client.
+The PowerShell module that is included with the Azure Information Protection client has cmdlets to install and configure the scanner. However, to use the scanner, you must install the full version of the client and cannot install just the PowerShell module.
 
-The current preview version of the Azure Information Protection client also includes the Azure Information Protection scanner. 
-
-The PowerShell module that is included with the scanner and preview client has cmdlets to install and configure the scanner.
-
-To install the client for the scanner, follow the same instructions in the preceding sections. Note that if you do not need all the components of the client, such as the Office add-in and viewer, you can install just the PowerShell module. For example, you can run the executable with `PowerShellOnly=true /quiet`.
-
-After you have installed the client, you're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md).
-
+To install the client for the scanner, follow the same instructions in the preceding sections. You're then ready to install the scanner. For instructions, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-aip-scanner.md).
 
 ## Next steps
 Now that you've installed the Azure Information Protection client, see the following for additional information that you might need to support this client:
