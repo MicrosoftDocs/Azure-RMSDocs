@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -57,7 +57,7 @@ In this example, the user can click **Change now** to apply the recommended labe
 
 - Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook.
     
-    You can use recommended classification for documents that were previously labeled, with or without a higher classification. 
+    You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
 You can change this behavior so that the Azure Information Protection client periodically checks documents for the condition rules that you specify. This configuration requires an [advanced client setting](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) that is currently in preview.
 
