@@ -50,11 +50,11 @@ Documents and emails that you protect could be stored in the cloud or on-premise
 
 Office 365 services and cloud-based applications for your tenant can integrate with Azure Information Protection so that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
-However, for regulatory requirements, a few organizations might be required to encrypt content with a key that is isolated from the cloud. This isolation means that the encrypted content can be read only by on-premises applications and on-premises services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. 
+However, for regulatory requirements, a few organizations might be required to encrypt content with a key that is isolated from the cloud. This isolation means that the encrypted content can be read only by on-premises applications and on-premises services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. When you use Azure Information Protection with HYOK, your tenant has both a cloud-based key and an on-premises key.
 
 ## HYOK guidance and best practices
 
-Use HYOK protection just for the documents and emails that require the encryption key to be isolated from the cloud. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that not all applications and services will be able to open HYOK-protected data that they would be able to open if that data had been protected by a cloud-based key. Cloud-based services and applications cannot reason over HYOK-protected data.
+Use HYOK protection just for the documents and emails that require the encryption key to be isolated from the cloud. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that only on-premises applications and services will be able to open HYOK-protected data; cloud-based services and applications cannot reason over HYOK-protected data.
 
 Even for the organizations that use HYOK protection, it is typically suitable for a small number of documents that need to be protected. As guidance, use it only for documents and when they match all the following criteria:
 
@@ -99,7 +99,7 @@ The following table lists the supported scenarios for protecting content by usin
 
 ## Additional limitations when using HYOK
 
-In addition to not supporting the listed benefits that you get when you use cloud-based protection, using HYOK protection with Azure Information Protection labels has the following limitations:
+Additionally, using HYOK protection with Azure Information Protection labels has the following limitations:
 
 - Does not support Office 2010 or Office 2007.
 
