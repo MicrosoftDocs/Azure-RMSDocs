@@ -43,7 +43,7 @@ The following picture shows how this service offers a protection solution for Of
 
 ![How Azure RMS works](../media/AzRMS_elements.png)
 
-You can use this protection with multiple cloud subscriptions and it supports multiple features. You can find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) site.
+You can use this protection with Office 365 subscriptions as well as with subscriptions for Azure Information Protection. You can find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) site.
 
 ## Next steps
 
