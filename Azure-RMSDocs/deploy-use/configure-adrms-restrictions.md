@@ -2,11 +2,11 @@
 # required metadata
 
 title: HYOK protection for Azure Information Protection
-description: Identify the limitations, prerequisites, and recommendations if you select HYOK (AD RMS) protection with Azure Information Protection.
+description: Overview of HYOK (AD RMS) protection with Azure Information Protection, its supported scenarios, limitations, prerequisites, and recommendations.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/24/2018
+ms.date: 05/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -26,66 +26,102 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 
 ---
 
-# Hold your own key (HYOK) requirements and restrictions for AD RMS protection
+# Hold your own key (HYOK) protection for Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-When you protect your most sensitive documents and emails, you typically do this by applying Azure Rights Management (Azure RMS) protection to benefit from the following:
+Use the following information to understand what hold your own key (HYOK) protection is for Azure Information Protection, and how it is different from the default cloud-based protection. Before you use HYOK protection, make sure that you understand when it's appropriate, the supported scenarios, the limitations, and requirements. 
+
+## Cloud-based protection vs. HYOK
+
+When you protect your most sensitive documents and emails by using Azure Information Protection, you typically do this by applying a cloud-based key that uses Azure Rights Management (Azure RMS) protection to benefit from the following:
 
 - No server infrastructure required, which makes the solution quicker and more cost effective to deploy and maintain than an on-premises solution.
 
 - Easier sharing with partners and users from other organizations by using cloud-based authentication.
 
-- Tight integration with Office 365 services, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
+- Tight integration with other Azure and Office 365 services, such as search, web viewers, pivoted views, anti-malware, eDiscovery, and Delve.
 
 - Document tracking, revocation, and email notification for sensitive documents that you have shared.
 
-Azure RMS protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). The information that you protect with Azure RMS is never sent to the cloud; the protected documents and emails are not stored in Azure unless you explicitly store them there or use another cloud service that stores them in Azure. For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md). 
+A cloud-based key protects your organization's documents and emails by using a private key for the organization that is managed by Microsoft (the default), or managed by you (the "bring your own key" or BYOK scenario). For more information about the tenant key options, see [Planning and implementing your Azure Information Protection tenant key](../plan-design/plan-implement-tenant-key.md).
 
-However, a few organizations might need to protect a small subset of documents and emails with a key that is hosted on-premises. For example, this might be required for regulatory and compliance reasons.  
+Documents and emails that you protect could be stored in the cloud or on-premises. For more information about how the protection process works for this cloud-based key, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md )
 
-This configuration is sometimes referred to as "hold your own key" (HYOK) and it is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section.
+Office 365 services and cloud-based applications for your tenant can integrate with Azure Information Protection so that important business functions, such as search, indexing, archiving, and anti-malware services continue to work seamlessly for content that's protected by Azure Information Protection. This ability to read the encrypted content for these scenarios is often referred to as "reasoning over data". For example, it's this ability that lets Exchange Online decrypt emails for malware scanning and to run data loss prevention (DLP) rules on encrypted emails.
 
-In this HYOK scenario, the rights policies and the organization's private key that protects these policies are managed and kept on-premises while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. As with Azure RMS protection, information that you protect with AD RMS is never sent to the cloud.
+However, for regulatory requirements, a few organizations might be required to encrypt content with a key that is isolated from the cloud. This isolation means that the encrypted content can be read only by on-premises applications and on-premises services. This key management option is supported by Azure Information Protection, and it is referred to as "hold your own key" or HYOK. When you use Azure Information Protection with HYOK, your tenant has both a cloud-based key and an on-premises key.
 
-> [!NOTE]
-> Use this configuration only when you have to, and for just the documents and emails that require it. AD RMS protection doesn't provide the listed benefits that you get when you use Azure RMS protection, and its purpose is "data opacity at all costs."
->
-> Even for the organizations that use this configuration, it is typically suitable for less than 10% of all the content that needs to be protected. As guidance, use it only for documents or emails that match all the following criteria:
-> 
-> **The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people**
-> 
-> **The content is never shared outside the organization**
-> 
-> **The content is only consumed on the internal network**
-> 
-> **The content does not need to be consumed on Mac computers or mobile device**
+## HYOK guidance and best practices
 
-Users are not aware when a label uses AD RMS protection rather than Azure RMS protection. Because of the restrictions and limitations that come with AD RMS protection, make sure that you provide clear guidance about the exceptions for when users should select labels that apply AD RMS protection. 
+Use HYOK protection just for the documents and emails that require the encryption key to be isolated from the cloud. HYOK protection doesn't provide the listed benefits that you get when you use cloud-based key protection, and it often comes at the cost of "data opacity". This phrase means that only on-premises applications and services will be able to open HYOK-protected data; cloud-based services and applications cannot reason over HYOK-protected data.
 
-[Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply AD RMS protection see labels that are configured for AD RMS protection. 
+Even for the organizations that use HYOK protection, it is typically suitable for a small number of documents that need to be protected. As guidance, use it only for documents and when they match all the following criteria:
+
+- The content has the highest classification in your organization ("Top Secret") and access is restricted to just a few people
+
+- The content is not shared outside the organization
+
+- The content is only consumed on the internal network
+
+Because HYOK protection is an administrator configuration option for a label, user workflows remain the same, irrespective of whether the protection uses a cloud-based key or HYOK.
+
+[Scoped policies](configure-policy-scope.md) are a good way to ensure that only the users who need to apply HYOK protection see labels that are configured for HYOK protection. 
+
+## Supported scenarios for HYOK
+
+To apply HYOK protection, use Azure Information Protection labels. 
+
+The following table lists the supported scenarios for protecting content by using labels that are configured for HYOK, and opening (consuming) content that's protected by HYOK.
+
+|Platform|Application|Supported|
+|----------------------|----------|-----------|
+|Windows|Azure Information Protection client with Office 2016 and Office 2013 <br /><br />- Word, Excel, PowerPoint|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with Office 2016 and Office 2013 <br /><br />- Outlook|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with File Explorer|Protection: Yes <br /><br />Consumption: Yes|
+|Windows|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection client with PowerShell labeling cmdlets|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Azure Information Protection scanner|Protection: Yes<br /><br />Consumption: Yes|
+|Windows|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Office for Mac <br /><br /> - Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Office for Mac<br /><br />- Outlook|Protection: No<br /><br />Consumption: Yes|
+|MacOS|Rights Management sharing app|Protection: No<br /><br />Consumption: Yes|
+|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|iOS|Office Mobile <br /><br />-Outlook|Protection: No<br /><br />Consumption: No|
+|iOS|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: Yes|
+|Android|Office Mobile <br /><br />- Outlook|Protection: No<br /><br />Consumption: No|
+|Android|Azure Information Protection Viewer|Protection: Not applicable<br /><br />Consumption: Yes|
+|Web|Outlook on the web|Protection: No<br /><br />Consumption: No|
+|Web|Office Online<br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: No|
+|Universal|Office Universal apps<br /><br />- Word, Excel, PowerPoint|Protection: No<br /><br />Consumption: No|
+
 
 ## Additional limitations when using HYOK
 
-In addition to not supporting the listed benefits that you get when you use Azure RMS protection, using AD RMS protection with Azure Information Protection has the following limitations:
+Additionally, using HYOK protection with Azure Information Protection labels has the following limitations:
 
 - Does not support Office 2010 or Office 2007.
 
-- Instruct users not to select **Do Not Forward** in Outlook, or provide specific guidance. 
-
-    Although you can configure a label for **Do Not Forward** to use HYOK or the Azure Rights Management service, users can also select Do Not Forward themselves. They can select this option by using the **Do Not Forward** button on the **Message** tab of the Office ribbon, or by using Outlook menu options. The **Do Not Forward** menu options are located in **File** > **Permissions**, and from the **Permissions** button from the **Options** tab on the ribbon. 
+- Office 365 services and other online services will not be able to decrypt HYOK-protected documents and emails to inspect the content and take action on them. This limitation extends to HYOK-protected documents and emails that have been protected with the Rights Management connector. 
     
-    The Azure Information Protection client always uses Azure RMS when users select the **Do Not Forward** button in Outlook. If you do not want this behavior, you can hide this button by setting the [policy setting](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** to **Off**. 
-    
-    When users select **Do Not Forward** from an Outlook menu option, they can choose from Azure RMS or AD RMS, but they might not know which option to select for their email message. If AD RMS is used when Azure RMS should be used, people that you share with externally cannot open these email messages
+    This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync. In addition, users won't understand why some devices cannot open their HYOK-protected emails, and this can result in calls to your help desk. Because of these many limitations, we do not recommend that you use HYOK protection for emails.
 
-- If users choose a label in Outlook that applies AD RMS protection, and then change their minds before sending the email and select a label that applies Azure RMS protection, the newly selected label fails to apply. Users see the following error message: **Azure Information Protection cannot apply this label. You don't have permission to perform this action.**
-    
-    The only workaround is to close the email message and start again. The same limitation applies if similarly, users first choose a label that applies Azure RMS protection and then change the label to one that applies AD RMS protection.
+## Implementing HYOK
 
-## Requirements for HYOK
+HYOK is supported by Azure Information Protection when you have a working Active Directory Rights Management Services (AD RMS) deployment with the requirements that are documented in the next section. In this scenario, the usage rights policies and the organization's private key that protects these policies are managed and kept on-premises, while the Azure Information Protection policy for labeling and classification remains managed and stored in Azure. 
 
-Check that your AD RMS deployment meets the following requirements to provide AD RMS protection for Azure Information Protection.
+Do not confuse HYOK and Azure Information Protection with using a full deployment of AD RMS and Azure Information Protection, or as an alternative to migrating AD RMS to Azure Information Protection. HYOK is only supported by applying labels, does not offer feature parity with AD RMS, and does not support all AD RMS deployment configurations:
+
+- For more information about the scenarios that HYOK supports for protecting content and consuming protected content, see the [Supported scenarios for HYOK](#supported-scenarios-for-hyok) section.
+
+- For migration instructions from AD RMS, see [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+- For more information about the AD RMS deployment requirements, see the next section.
+
+### Requirements for AD RMS to support HYOK
+
+An AD RMS deployment must meet the following requirements to provide HYOK protection for Azure Information Protection labels.
 
 - AD RMS configuration:
     
@@ -114,24 +150,28 @@ Check that your AD RMS deployment meets the following requirements to provide AD
     - The AD RMS servers are configured to use SSL/TLS with a valid x.509 certificate that is trusted by the connecting clients: Required for production environments but not required for testing or evaluation purposes.
     
     - Configured rights templates.
+    
+    - Not configured for Exchange IRM.
+    
+    - For mobile devices and Mac computers: The [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) is installed and configured.
 
-- Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use AD RMS protection are configured for single sign-on.
+- Directory synchronization is configured between your on-premises Active Directory and Azure Active Directory, and users who will use HYOK protection are configured for single sign-on.
 
-- If you share documents or emails that are protected by AD RMS with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
+- If you share documents or emails that are protected by HYOK with others outside your organization: AD RMS is configured for explicitly defined trusts in a direct point-to-point relationship with the other organizations by using either trusted user domains (TUDs) or federated trusts that are created by using Active Directory Federation Services (AD FS).
 
 - Users have a version of Office that is Office 2016 Professional Plus or Office 2013 Professional Plus with Service Pack 1, running on Windows 7 Service Pack 1 or later. Note that Office 2010 and Office 2007 are not supported for this scenario.
     
     - For Office 2016, Microsoft Installer (.msi)-based edition: You have installed [update 4018295 for Microsoft Office 2016 that was released on March 6, 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
-> To fulfill the high assurance that this scenario offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only well-managed computers (for example, not mobile devices or workgroup computers). 
+> To fulfill the high assurance that HYOK protection offers, we recommend that your AD RMS servers are not located in your DMZ, and that they are used by only managed devices. 
 > 
 > We also recommend that your AD RMS cluster uses a hardware security module (HSM), so that the private key for your Server Licensor Certificate (SLC) cannot be exposed or stolen if your AD RMS deployment should ever be breached or compromised. 
 
 For deployment information and instructions for AD RMS, see [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in the Windows Server library. 
 
 
-## Configuring AD RMS servers to locate the certification URL
+### Configuring AD RMS servers to locate the certification URL
 
 1. On each AD RMS server in the cluster, create the following registry entry:
 
@@ -149,7 +189,7 @@ For deployment information and instructions for AD RMS, see [Active Directory Ri
 
 2. Restart IIS.
 
-## Locating the information to specify AD RMS protection with an Azure Information Protection label
+### Locating the information to specify AD RMS protection with an Azure Information Protection label
 
 When you configure a label for **HYOK (AD RMS)** protection, you must specify the licensing URL of your AD RMS cluster. In addition, you must specify either a template that you've configured for the permissions to grant users, or let users define the permissions and users. 
 
@@ -161,10 +201,9 @@ You can find the template GUID and licensing URL values from the Active Director
     
     If you have an extranet licensing value as well as an intranet licensing value, and they are different: Specify the extranet value only if you will share protected documents or emails with partners that you have defined with explicit point-to-point trusts. Otherwise, use the intranet value and make sure that all your client computers that use AD RMS protection with Azure Information Protection connect by using an intranet connection (for example, remote computers use a VPN connection).
 
+
 ## Next steps
 
-To read more information about this feature and guidance for when to use it, see the blog post announcement, [Azure Information Protection with HYOK (Hold Your Own Key)](https://cloudblogs.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/).
-
-To configure a label for AD RMS protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 
+To configure a label for HYOK protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
