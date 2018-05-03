@@ -366,7 +366,7 @@ This configuration uses an [advanced client setting](#how-to-configure-advanced-
 
 When the service account that runs the scanner has only the rights documented in the [scanner prerequisites](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), this setting is not necessary and is not recommended because it negatively affects performance. However, if you run the scanner with an account that has privileged rights (such as a local administrator account), you can use the following advanced client setting to help protect the computer running the scanner. The setting forces the Azure Information Protection scanner to run with a low integrity level, which provides higher security isolation but at the cost of performance.
 
-For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx ).
+For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)
 
 To configure this advanced setting, enter the following strings:
 
