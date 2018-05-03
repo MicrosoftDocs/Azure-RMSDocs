@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -16,7 +16,7 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 # optional metadata
 
 #ROBOTS:
-#audience:
+#audience:git
 #ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
@@ -47,6 +47,35 @@ Use the following information to see what’s new or changed for a supported rel
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Versions later than 1.26.6.0
+
+If you have a version of the client that is later than 1.26.6.0, it is a preview build for testing and evaluation purposes. 
+ 
+**Released**: 05/15/2018 
+
+The current preview version is **1.27.39.0 ** and has the following changes since the current GA version of the client.  
+
+
+**New features**: 
+
+- For the Azure Information Protection scanner
+    
+    - You can specify a file types list to include or exclude from scanning.
+    
+    - You can label files without inspecting the contents by applying a default label.
+    
+    - You can discover files with known sensitive information types without configuring labels for automatic classification.
+    
+    - By default, only Office document types are protected. Other file types can be protected by editing the registry.
+    
+- For Get-AIPFileStatus, the Rights Management issuer and the date that the content was protected is now included in the output.
+ 
+**Additional changes**:
+
+- Remove the "Congratulations!" page and "What's new in Azure Information Protection" page for first-time use.
+ 
+- For the scanner: The ScanMode parameter from Set-AIPScannerConfiguration is renamed to **Enforce**, with values of Off and On.
 
 ## Version 1.26.6.0
 
