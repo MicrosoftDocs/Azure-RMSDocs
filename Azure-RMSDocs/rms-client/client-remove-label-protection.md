@@ -6,7 +6,7 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 05/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,6 +54,8 @@ If the **Delete Label** icon is not immediately available, first click the **Edi
 
 > [!NOTE]
 > If you don't see this Information Protection bar in your Office apps:
+>
+> - If you see a **Protect** button on the ribbon: Select **Protect**, and then select **Show Bar**.
 > 
 > - You might not have the Azure Information Protection client [installed](install-client-app.md), or the client is running in [protection-only mode](client-protection-only-mode.md).
 

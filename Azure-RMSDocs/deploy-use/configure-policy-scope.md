@@ -6,7 +6,7 @@ description: To configure different settings and labels for specific users, you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -29,12 +29,11 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
->[!NOTE]
-> This article reflects the latest updates to the Azure portal, which let you create a label independently from the global policy or a scoped policy. The option to publish policies is also removed. If your tenant is not yet updated for these changes—for example, you still see a **Publish** option for Azure Information Protection and do not see the **CLASSIFICATIONS** menu option—please wait a few days and then return to these instructions.
-
 When the Azure Information Protection policy downloads to computers that have installed the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), all users get the settings and labels from the default policy or the changes that you configured for the global policy. If you want to supplement these for specific users, by having different settings and labels, you must create a **scoped policy** that's configured for those users.
 
-All users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. 
+For applications that support the Azure Information Protection client, all users receive the global policy, which contains the Information Protection bar title and tooltip, global settings, and global labels. If you have configured scoped policies for specific users, those users then receive those additional settings and labels. 
+
+Note that in addition to the Office desktop applications that support the Azure Information Protection client, labels are also supported with PowerShell, and the Azure Information Protection scanner. This means that you can create and configure scoped policies for accounts that run Powershell commands, or the scanner. 
 
 Scoped policies, just like labels, are ordered in the Azure portal. If a user is configured for multiple scopes, an effective policy is computed for that user before it is downloaded. According to the order of the polices, the last policy setting is applied. The labels that the user sees are from the global policy and any additional labels from scoped policies that the user belongs to. 
 

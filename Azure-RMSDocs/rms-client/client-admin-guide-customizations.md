@@ -35,9 +35,6 @@ Some of these settings require editing the registry and some use advanced settin
 
 ### How to configure advanced client configuration settings in the portal
 
->[!NOTE]
-> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
-
 1. If you haven't already done so, in a new browser window, [sign in to the Azure portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal), and then navigate to the **Azure Information Protection** blade.
 
 2. From the **CLASSIFICATIONS** > **Labels** menu option: Select **Policies**.
