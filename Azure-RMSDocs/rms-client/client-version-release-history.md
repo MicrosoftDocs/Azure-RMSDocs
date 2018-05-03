@@ -69,6 +69,8 @@ The current preview version is **1.27.39.0 ** and has the following changes sinc
     
     - By default, only Office document types are protected. Other file types can be protected when you define them in the registry. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
     
+    - A new advanced client setting to run the scanner with a low integrity level if you run the scanner with an account that has privileged rights. [More information](../rms-client/client-admin-guide-customizations.md#run-the-scanner-with-a-low-integrity-level ) 
+    
 - For [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus), the Rights Management issuer and the date that the content was protected is now included in the output.
  
 **Additional changes**:
