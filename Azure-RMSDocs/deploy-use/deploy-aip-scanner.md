@@ -59,7 +59,7 @@ Specific to the preview version of the scanner:
 
 - You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
 
-- You can configure the scanner to inspect files for all sensitive information types, or apply a default label without any file inspection. [More information](#using-the-scanner-without-automatic-classification)
+- You can configure the scanner to inspect files for all sensitive information types, or apply a default label without any file inspection. [More information](#using-the-scanner-with-alternative-configurations)
 
 ## Prerequisites for the Azure Information Protection scanner
 Before you install the Azure Information Protection scanner, make sure that the following requirements are in place.
@@ -248,18 +248,22 @@ In addition, all files are inspected when the scanner downloads an Azure Informa
 
 If the scanner downloaded a policy that had no automatic conditions configured, the copy of the policy file in the scanner folder does not update. In this scenario, you must delete the policy file, **Policy.msip** from both **%LocalAppData%\Microsoft\MSIP\Policy.msip** and **%LocalAppData%\Microsoft\MSIP\Scanner** before the scanner can use a newly downloaded policy file that has labels correctly figured for automatic conditions.
 
-## Using the scanner without automatic classification
+## Using the scanner with alternative configurations
 
-When you use the preview version of the scanner, there are two scenarios that support using the scanner without the configuration of automatic classification:
+When you use the preview version of the scanner, there are two alternative scenarios that the scanner supports where labels do not need to be configured for any conditions: 
 
 - Apply a default label to all files in a data repository.
     
-    For this configuration, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)cmdlet, and set the *MatchPolicy* parameter to **Off**. The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository (with the *SetDefaultLabel* parameter) or if this is not specify, the default label that is specified as a policy setting.
-
-- Identify all known sensitive information types.
+    For this configuration, use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) cmdlet, and set the *MatchPolicy* parameter to **Off**. 
     
-    For this configuration, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet, and set the *DiscoverInformationTypes* parameter to **All**. 
+    The contents of the files are not inspected and all files in the data repository are labeled according to the default label that you specify for the data repository (with the *SetDefaultLabel* parameter) or if this is not specify, the default label that is specified as a policy setting for the scanner account.
+    
 
+- Identify all custom conditions and known sensitive information types.
+    
+    For this configuration, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet, and set the *DiscoverInformationTypes* parameter to **All**.
+    
+    The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. 
 
 ## Optimizing the performance of the Azure Information Protection scanner
 
