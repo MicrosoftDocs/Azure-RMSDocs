@@ -61,15 +61,15 @@ The current preview version is **1.27.39.0 ** and has the following changes sinc
 
 - For the Azure Information Protection scanner
     
-    - You can specify a file types list to include or exclude from scanning.
+    - You can specify a file types list to include or exclude from scanning. To specify this list, use [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType), and remove a file type from the list by using [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
     
-    - You can label files without inspecting the contents by applying a default label.
+    - You can label files without inspecting the contents by applying a default label. Use the [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)cmdlet, and set the *MatchPolicy* parameter to **Off**. 
     
-    - You can discover files with known sensitive information types without configuring labels for automatic classification.
+    - You can discover files with known sensitive information types without configuring labels for automatic classification. use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet, and set the *DiscoverInformationTypes* parameter to **All**
     
-    - By default, only Office document types are protected. Other file types can be protected by editing the registry.
+    - By default, only Office document types are protected. Other file types can be protected when you define them in the registry. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
     
-- For Get-AIPFileStatus, the Rights Management issuer and the date that the content was protected is now included in the output.
+- For [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus), the Rights Management issuer and the date that the content was protected is now included in the output.
  
 **Additional changes**:
 
@@ -77,7 +77,7 @@ The current preview version is **1.27.39.0 ** and has the following changes sinc
  
 - For the scanner: 
     
-    - The ScanMode parameter from Set-AIPScannerConfiguration is renamed to **Enforce**, with values of Off and On.
+    - The *ScanMode* parameter from [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) is renamed to **Enforce**, with values of Off and On.
     
     - To use a default label, you no longer need to configure a default label as a policy setting and instead, just specify this default label with the repository configuration. 
 
