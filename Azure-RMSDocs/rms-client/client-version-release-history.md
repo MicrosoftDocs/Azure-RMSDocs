@@ -56,10 +56,9 @@ If you have a version of the client that is later than 1.26.6.0, it is a preview
 
 The current preview version is **1.27.39.0 ** and has the following changes since the current GA version of the client.  
 
-
 **New features**: 
 
-- For the Azure Information Protection scanner
+- For the Azure Information Protection scanner:
     
     - You can specify a file types list to include or exclude from scanning. To specify this list, use [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType), and remove a file type from the list by using [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
     
@@ -81,7 +80,7 @@ The current preview version is **1.27.39.0 ** and has the following changes sinc
     
     - The *ScanMode* parameter from [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) is renamed to **Enforce**, with values of Off and On.
     
-    - To use a default label, you no longer need to configure a default label as a policy setting and instead, just specify this default label with the repository configuration. 
+    - To use a default label, you no longer need to configure a default label as a policy setting. Instead, just specify this default label with the repository configuration. 
 
 ## Version 1.26.6.0
 
