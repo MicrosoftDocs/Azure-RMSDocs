@@ -75,7 +75,11 @@ The current preview version is **1.27.39.0 ** and has the following changes sinc
 
 - Remove the "Congratulations!" page and "What's new in Azure Information Protection" page for first-time use.
  
-- For the scanner: The ScanMode parameter from Set-AIPScannerConfiguration is renamed to **Enforce**, with values of Off and On.
+- For the scanner: 
+    
+    - The ScanMode parameter from Set-AIPScannerConfiguration is renamed to **Enforce**, with values of Off and On.
+    
+    - To use a default label, you no longer need to configure a default label as a policy setting and instead, just specify this default label with the repository configuration. 
 
 ## Version 1.26.6.0
 
