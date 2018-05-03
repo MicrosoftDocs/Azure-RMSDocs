@@ -6,3 +6,4 @@ Rights that apply to email.
 --------------------------------|---------------------------------------------
   
 ## Members
+_Not documented yet._

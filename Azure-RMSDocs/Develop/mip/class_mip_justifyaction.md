@@ -1,16 +1,16 @@
 # class mip::JustifyAction 
-Justify [Action](#classmip_1_1_action) requires providing a justfication to a label downgrade and setting the response in the execution state.
-**See also**: [mip::ExecutionState::IsDowngradeJustified](#classmip_1_1_execution_state_1ac087c175ea61e5c1b8845f195d7e8cb9)
+Justify [Action](class_mip_action.md) requires providing a justfication to a label downgrade and setting the response in the execution state.
+**See also**: [mip::ExecutionState::IsDowngradeJustified](class_mip_executionstate.md#isdowngradejustified)
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Get the type of [Action](#classmip_1_1_action).
+ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
 ### ActionType
-Get the type of [Action](#classmip_1_1_action).
+Get the type of [Action](class_mip_action.md).
+
   
-#### Returns
-ActionType The type of derived action this base class can be cast to.
+**Returns**: ActionType The type of derived action this base class can be cast to.
