@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,6 +67,16 @@ Locate the following value name, and set the value data to **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
 
+
+## Suppress the "What's new in Azure Information Protection?" page
+
+When the Azure Information Protection client is first installed or upgraded on a computer, and the Azure Information Protection bar is first displayed in Word, Excel, PowerPoint, or Outlook, a **What's new in Azure Information Protection?** page displays to inform users about custom permissions and track usage. You can suppress this page by editing the registry.
+
+If the following registry key does not exist, create it:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
+
+Create a new string value (REG-SZ) named **WhatsNewVersion** and set the value to **1.4**.
 
 ## Sign in as a different user
 
