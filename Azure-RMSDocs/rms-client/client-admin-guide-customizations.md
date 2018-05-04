@@ -67,7 +67,7 @@ When the Azure Information Protection client is first installed on a computer an
     
     **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-2. If a DWORD (32-bit) value (REG-DWORD) named **EnableWelcomeExperience** does not exist, create it and set the value to **0**:
+2. If a DWORD (32-bit) value (REG-DWORD) named **EnableWelcomeExperience** does not exist, create it and set the data value to **0**:
 
 ## Suppress the "What's new in Azure Information Protection?" page
 
@@ -77,7 +77,7 @@ When the Azure Information Protection client is first installed or upgraded on a
     
     **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-2.  If a string value (REG-SZ) named **WhatsNewVersion** does not exist, create it and set the value to **1.4**.
+2.  If a string value (REG-SZ) named **WhatsNewVersion** does not exist, create it and set the data value to **1.4**.
 
 ## Sign in as a different user
 
