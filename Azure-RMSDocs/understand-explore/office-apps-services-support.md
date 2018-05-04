@@ -6,7 +6,7 @@ description: How end-user Office applications such as Word and Outlook, and Offi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -46,7 +46,7 @@ If you are ready to configure Office apps and the Azure Information Protection c
 - To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](../deploy-use/configure-client.md).
 
 ## Exchange Online and Exchange Server
-When you use Exchange Online or Exchange Server, you can configure  information rights management (IRM) options that support Azure Rights Management. This configuration lets Exchange provide the following protection solutions:
+When you use Exchange Online or Exchange Server, you can configure information rights management (IRM) options that support Azure Rights Management. This configuration lets Exchange provide the following protection solutions:
 
 -   **Exchange ActiveSync IRM** so that mobile devices can protect and consume protected email messages.
 
@@ -54,7 +54,7 @@ When you use Exchange Online or Exchange Server, you can configure  information 
 
 -   **Protection rules** for Outlook clients that an administrator configures to automatically apply protection templates to email messages for specified recipients. For example, when internal emails are sent to your legal department, they can only be read by members of the legal department and cannot be forwarded. Users see the protection applied to the email message before sending it, and by default, they can remove this protection if they decide it is not necessary. Emails are encrypted before they are sent. For more information, see [Outlook Protection Rules](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) and [Create an Outlook Protection Rule](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) in the Exchange library.
 
--   **Transport rules** that an administrator configures to automatically apply protection templates to email messages. These rules are based on properties such as sender, recipient, message subject, and content. These rules are similar in concept to protection rules but do not let users remove the protection. The rules can be applied to Outlook on the web and to emails that are sent by mobile devices. In addition, these rules do not encrypt email messages before they are sent from the client. For more information, see [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx) in the Exchange library.
+-   **Mail flow rules** that an administrator configures to automatically apply protection templates to email messages. These rules are based on properties such as sender, recipient, message subject, and content. These rules are similar in concept to protection rules but do not let users remove the protection. The rules can be applied to Outlook on the web and to emails that are sent by mobile devices. In addition, these rules do not encrypt email messages before they are sent from the client. For more information, see [Create a Transport Protection Rule](https://technet.microsoft.com/library/dd302432.aspx) in the Exchange library.
 
 -   **Data loss prevention (DLP) policies** that contain sets of conditions to filter email messages, and take actions to help prevent data loss for confidential or sensitive content. Examples of confidential or sensitive content include personal information or credit card information. Policy Tips can be used when sensitive data is detected, to alert users that they might need to apply protection. For more information, see [Data loss prevention](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) in the Exchange library.
 
@@ -71,7 +71,7 @@ If you are ready to configure Exchange for IRM:
 
 ## SharePoint Online and SharePoint Server
 
-When you use SharePoint Online or SharePoint Server, you can protect documents by using the SharePoint information rights management (IRM) feature. This feature lets administrators protect lists or libraries so that when a user checks-out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
+When you use SharePoint Online or SharePoint Server, you can protect documents by using the SharePoint information rights management (IRM) feature. This feature lets administrators protect lists or libraries so that when a user checks out a document, the downloaded file is protected so that only authorized people can view and use the file according to the information protection policies that you specify. For example, the file might be read-only, disable the copying of text, prevent saving a local copy, and prevent printing the file.
 
 Word, PowerPoint, Excel, and PDF documents support this SharePoint IRM protection. By default, the protection is restricted to the person who downloads the document. You can change this default with a configuration option that extends the protection to all users who have access to the document on SharePoint, or to a group that you specify.
 
@@ -86,11 +86,11 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > [!NOTE]
 > Currently, there are some limitations when you use SharePoint IRM:
 > 
-> - You cannot use the default or custom templates that you manage in the Azure portal. 
+> - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
-> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension and that have been natively protected by Rights Management are supported when you use a PDF reader that natively supports Rights Management.
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension are supported and when downloaded, can be opened by a PDF application that natively supports Rights Management. For example, the Azure Information Protection client for Windows includes a viewer for these protected PDF files. Alternative PDF viewers are listed in the [RMS-enlightened applications table](../get-started/requirements-applications.md#rms-enlightened-applications).
 > 
-> - Co-authoring is not supported. Because you must check out and download a document in an IRM-protected library, one person can edit it at a time.
+> - Co-authoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit it in your Office application. Consequently, only one person can edit the document at a time.
 
 For libraries that are not IRM-protected, if you protect a file that you then upload to SharePoint or OneDrive, the following do not work with this file: Co-authoring, Office Online, search, document preview, thumbnail, eDiscovery, and data loss prevention (DLP).
 
