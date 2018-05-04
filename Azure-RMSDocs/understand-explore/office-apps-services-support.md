@@ -88,7 +88,7 @@ If you use SharePoint Server, you can use this IRM protection by deploying the A
 > 
 > - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
-> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension are supported and can be opened by a PDF reader that natively supports Rights Management. One example is the Azure Information Protection client for Windows. Alternative PDF viewers are listed in the [RMS-enlightened applications table](../get-started/requirements-applications.md#rms-enlightened-applications).
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension are supported and when downloaded, can be opened by a PDF application that natively supports Rights Management. For example, the Azure Information Protection client for Windows includes a viewer for these protected PDF files. Alternative PDF viewers are listed in the [RMS-enlightened applications table](../get-started/requirements-applications.md#rms-enlightened-applications).
 > 
 > - Co-authoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit in Word. Consequently, only one person can edit the document at a time.
 
