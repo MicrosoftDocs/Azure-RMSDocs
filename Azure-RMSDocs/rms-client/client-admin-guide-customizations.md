@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -63,10 +63,21 @@ Regardless of this setting, the Azure Information Protection client follows the 
 
 When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint, or Outlook, a **Congratulations!** page displays with short instructions how to use the new Information Protection bar to select labels. You can suppress this page by editing the registry.
 
-Locate the following value name, and set the value data to **0**:
+1. If the following registry key does not exist, create it:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+2. If a DWORD (32-bit) value (REG-DWORD) named **EnableWelcomeExperience** does not exist, create it and set the data value to **0**:
 
+## Suppress the "What's new in Azure Information Protection?" page
+
+When the Azure Information Protection client is first installed or upgraded on a computer, and the Azure Information Protection bar is displayed in Word, Excel, PowerPoint, or Outlook, a **What's new in Azure Information Protection?** page displays to inform users about custom permissions and track usage. You can suppress this page by editing the registry.
+
+1. If the following registry key does not exist, create it:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
+
+2.  If a string value (REG-SZ) named **WhatsNewVersion** does not exist, create it and set the data value to **1.4**.
 
 ## Sign in as a different user
 
