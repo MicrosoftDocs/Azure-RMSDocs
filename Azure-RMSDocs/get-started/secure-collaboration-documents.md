@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Scenarios for document collaboration using Azure Information Protection
-description: End-to-end workflows for collaborating on documents that are protected by Azure Information Protection.
+title: Example scenario for document collaboration using Azure Information Protection
+description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Scenarios for secure collaboration by using Azure Information Protection
+# Example scenario for secure collaboration by using Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -42,6 +42,10 @@ When you configure these permissions, you also specify which users they are for:
 - For users who do not have an Azure Active Directory account: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
     Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses a social account for the email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
+
+As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following section provides an example walkthrough for this configuration.
+
+However, there are other ways to apply the same protection settings, which include users specifying the users and permissions, and using PowerShell to create or modify protection templates that can then be applied by other services, such as DLP solutions. 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
