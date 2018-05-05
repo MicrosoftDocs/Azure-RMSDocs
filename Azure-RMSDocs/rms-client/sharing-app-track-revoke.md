@@ -31,7 +31,7 @@ ms.suite: ems
 
 After you have protected your documents by using the RMS sharing application, if your organization is using Azure Information Protection rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
-When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. However, in rare cases, the location reported might not be accurate. For example, when a user opening a protected document is using a VPN connection.
+When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. However, in rare cases, the location reported might not be accurate. For example, when a user opening a protected document is using a VPN connection, or their computer has an IPv6 address.
 
 Actions you can take in the document tracking site:
 
@@ -99,7 +99,7 @@ In addition to tracking your documents on Windows computers by using Office appl
 
 - In an email message, in the **Message** tab, in the  **RMS** group, click **Share Protected**, and then click **Track Usage**:
 
-    ![Select Track Usage from Outlook when using the RMS sharing applicatio](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
+    ![Select Track Usage from Outlook when using the RMS sharing application](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:
