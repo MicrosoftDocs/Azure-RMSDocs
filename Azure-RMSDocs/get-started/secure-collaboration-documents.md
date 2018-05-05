@@ -65,7 +65,7 @@ This example walks through configuring an existing label to apply protection so 
     
     - For the user who wants to use their personal email address: Still on the **Enter details** tab, type the email address. For example, azureaip505@gmail.com. 
 
-4. To grant the same permissions to all these users for **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
+4. To grant the same permissions to all these users: For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
 
 5. Click **OK** on the **Add permissions** blade.
 
@@ -83,7 +83,7 @@ Now that this label is configured, it can be applied to documents in a number of
 
 - You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell: See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
 
-Now that the document is protected, use your normal sharing mechanisms so that the users that you have specified can collaborate on it. Other users will not be able to open it.   
+Now that the document is protected, use your normal sharing mechanisms so that the users that you have specified can collaborate on this document. Other users will not be able to open it.   
 
 ## Opening and editing the protected document
 
