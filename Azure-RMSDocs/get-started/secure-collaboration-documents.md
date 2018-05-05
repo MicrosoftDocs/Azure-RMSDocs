@@ -41,13 +41,13 @@ When you configure these permissions, you also specify which users they are for:
 
 - For users who do not have an Azure Active Directory account: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
-    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encrytion, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses a social account for the email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents wiyh a Microsoft account.
+    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses a social account for the email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
 This example walks through configuring an existing label to apply protection so that a group of users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address. 
 
-1. Select your lable, and on the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+1. Select your label, and on the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
