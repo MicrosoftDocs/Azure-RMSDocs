@@ -71,7 +71,7 @@ This example walks through configuring an existing label to apply protection so 
 
 6. On the **Protection** blade, click **OK**. 
 
-## Applying the label that supports secured collaboration
+## Applying the label that supports secure collaboration
 
 Now that this label is configured, it can be applied to documents in a number of ways that include the following:
 
