@@ -75,19 +75,21 @@ This example walks through configuring an existing label to apply protection so 
 
 Now that this label is configured, it can be applied to documents in a number of ways that include the following:
 
-- A user manually selects the label when the document is created in their Office application: Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar. 
+- A user manually selects the label when the document is created in their Office application.
+    
+    More information: Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar. 
 
 - Users are prompted to select a label when a new document is saved.
     
-    You have configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label**.
+    More information: You have configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label**.
 
 - An administrator applies the label to the document by using PowerShell.
     
-    Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.
+    More information: Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.
 
 - You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.
     
-    See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
+    More information: See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
 
 Now that the document is protected, use your normal sharing mechanisms so that the users that you have specified can collaborate on this document. Other users will not be able to open it.   
 
