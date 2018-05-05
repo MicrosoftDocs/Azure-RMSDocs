@@ -77,17 +77,23 @@ Now that this label is configured, it can be applied to documents in a number of
 
 - A user manually selects the label when the document is created in their Office application: Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar. 
 
-- Users are prompted to select a label when a new document is saved: You have configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label**.
+- Users are prompted to select a label when a new document is saved.
+    
+    You have configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label**.
 
-- An administrator applies the label to the document by using PowerShell: Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.
+- An administrator applies the label to the document by using PowerShell.
+    
+    Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.
 
-- You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell: See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
+- You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.
+    
+    See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
 
 Now that the document is protected, use your normal sharing mechanisms so that the users that you have specified can collaborate on this document. Other users will not be able to open it.   
 
 ## Opening and editing the protected document
 
-When one of the users that you authorized tries to open the document for editing, one of the following flows happens. Then the document opens with an information banner that informs them that permissions are restricted.
+When users that you authorized tries to open the document for editing, one of the following flows happens. Then the document opens with an information banner that informs them that permissions are restricted.
 
 **For your internal group**: Users are authenticated by your Azure AD. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified. 
 
@@ -105,7 +111,7 @@ When one of the users that you authorized tries to open the document for editing
 
 ### Summary of supported scenarios for opening protected documents:
 
-|Platforms for opening documents: Word, Excel, PowerPoint|Authenticated by Azure AD|Authenticated by Microsoft account|Authenticated by social providers|
+|Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|Authentication by social providers|
 |---------------|----------|-----------|-----------|
 |Windows|Yes (user accounts, email-enabled groups, all members)|Yes for Office 2016 Click to Run|No|
 |iOS|Yes (user accounts, email-enabled groups, all members)|No|No|
