@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Example scenario for document collaboration using Azure Information Protection
+title: Example scenario for secure document collaboration using Azure Information Protection
 description: End-to-end workflow for collaborating on documents that are protected by Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Example scenario for secure collaboration by using Azure Information Protection
+# Example scenario for secure document collaboration by using Azure Information Protection
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -37,9 +37,9 @@ These permissions are called usage rights, and include permissions such as view,
 
 When you configure these permissions, you also specify which users they are for:
 
-- For users in your own organization or another organization that uses Azure Active Directory: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
+- **For users in your own organization or another organization that uses Azure Active Directory**: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
 
-- For users who do not have an Azure Active Directory account: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
+- **For users who do not have an Azure Active Directory account**: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
     Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses a social account for the email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
@@ -57,13 +57,13 @@ This example walks through configuring an existing label to apply protection so 
 
 3. On the **Add permissions** blade: 
     
-    For your internal group: Select **Browse directory** to select the group, which must be email-enabled.
+    - For your internal group: Select **Browse directory** to select the group, which must be email-enabled.
     
-    For all users in the first organization: Select **Enter details** and type the name of a domain in the organization's tenant. For example, fabrikam.com.
+    - For all users in the first organization: Select **Enter details** and type the name of a domain in the organization's tenant. For example, fabrikam.com.
     
-    For the group in the second organization: Still on the **Enter details** tab, type the email address of the group in the organization's tenant. For example, sales@contoso.com.
+    - For the group in the second organization: Still on the **Enter details** tab, type the email address of the group in the organization's tenant. For example, sales@contoso.com.
     
-    For the user who wants to use their personal email address: Still on the **Enter details** tab, type the email address. For example, azureaip505@gmail.com. 
+    - For the user who wants to use their personal email address: Still on the **Enter details** tab, type the email address. For example, azureaip505@gmail.com. 
 
 4. To grant the same permissions to all these users for **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
 
