@@ -45,7 +45,7 @@ When you configure these permissions, you also specify which users they are for:
 
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following section provides an example walkthrough for this configuration.
 
-However, there are other ways to apply the same protection settings, which include users specifying the users and permissions, and using PowerShell to create or modify protection templates that can then be applied by other services, such as DLP solutions. 
+However, there are other ways to apply the same protection settings, which include users specifying the users and permissions, and using PowerShell to create or modify protection templates. 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
@@ -70,6 +70,8 @@ This example walks through configuring an existing label to apply protection so 
 5. Click **OK** on the **Add permissions** blade.
 
 6. On the **Protection** blade, click **OK**. 
+
+In addition to configuring the label, under the covers, this configuration also creates a protection template by the same name. Protection templates can be applied by applications and services that integrate with protection from Azure Information Protection. For example, DLP solutions, Exchange Online mail flow rules, Windows Server FCI.
 
 ## Applying the label that supports secure collaboration
 
@@ -111,7 +113,9 @@ When users that you authorized tries to open the document for editing, one of th
     
     When the Microsoft account is created, the user can then open the document by specifying the password for this Microsoft account.
 
-### Summary of supported scenarios for opening protected documents:
+### Supported scenarios for opening protected documents:
+
+The following table summaries the different authentication methods that are supported for opening protected documents.
 
 |Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|Authentication by social providers|
 |---------------|----------|-----------|-----------|
