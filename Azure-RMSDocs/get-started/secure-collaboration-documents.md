@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/04/2018
+ms.date: 05/07/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -71,7 +71,7 @@ This example walks through configuring an existing label to apply protection so 
 
 6. On the **Protection** blade, click **OK**. 
 
-In addition to configuring the label, under the covers, this configuration also creates a protection template by the same name. Protection templates can be applied by applications and services that integrate with protection from Azure Information Protection. For example, DLP solutions, Exchange Online mail flow rules, Windows Server FCI.
+In addition to configuring the label, under the covers, this configuration also creates a protection template by the same name. Protection templates can be applied by applications and services that integrate with protection from Azure Information Protection. For example, DLP solutions, Exchange Online mail flow rules,  and Windows Server FCI.
 
 ## Applying the label that supports secure collaboration
 
@@ -97,11 +97,13 @@ Now that the document is protected, use your normal sharing mechanisms so that t
 
 ## Opening and editing the protected document
 
-When users that you authorized tries to open the document for editing, one of the following flows happens. Then the document opens with an information banner that informs them that permissions are restricted.
+When users that you authorized try to open the document for editing, one of the following authentication flows happen. Then the document opens with an information banner that informs them that permissions are restricted:
+
+[picture of information banner]
 
 **For your internal group**: Users are authenticated by your Azure AD. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified. 
 
-**For all users in the first organization**: The domain name is used to identify which Azure AD tenant owns that domain. When the tenant is identified, all users from that tenant are authorized to open the document with the permissions that you specified.
+**For all users in the first organization**: The domain name is used to identify which Azure AD tenant owns that domain. When the tenant is identified, all users from that tenant are authorized to open the document with the permissions that you specified. 
     
 **For the group in the second organization**: Users are authenticated by their Azure AD tenant. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified.
     
