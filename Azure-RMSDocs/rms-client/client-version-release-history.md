@@ -74,13 +74,13 @@ The current preview version is **1.27.44.0** and has the following changes since
  
 **Additional changes**:
 
-- Remove the "Congratulations!" page and "What's new in Azure Information Protection" page for first-time use.
- 
-- For the scanner: 
+- For the Azure Information Protection scanner: 
     
     - The *ScanMode* parameter from [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) and [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) is renamed to **Enforce**, with values of Off and On.
     
     - To use a default label, you no longer need to configure a default label as a policy setting. Instead, just specify this default label with the repository configuration. 
+
+- Remove the "Congratulations!" page and "What's new in Azure Information Protection" page for first-time use.
 
 ## Version 1.26.6.0
 
