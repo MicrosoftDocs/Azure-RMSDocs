@@ -78,7 +78,7 @@ The current preview version is **1.27.44.0** and has the following changes since
  
 - For the scanner: 
     
-    - The *ScanMode* parameter from [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) is renamed to **Enforce**, with values of Off and On.
+    - The *ScanMode* parameter from [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) and [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) is renamed to **Enforce**, with values of Off and On.
     
     - To use a default label, you no longer need to configure a default label as a policy setting. Instead, just specify this default label with the repository configuration. 
 
