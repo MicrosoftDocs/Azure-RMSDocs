@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,6 +56,8 @@ For documents, the visual markings are applied as follows:
 - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
 
 - When a document is labeled by using File Explorer or PowerShell, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
+    
+    The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office 2016: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](../rms-client/client-admin-guide-customizations#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background. 
 
 ## To configure visual markings for a label
 
