@@ -54,7 +54,7 @@ If you have a version of the client that is later than 1.26.6.0, it is a preview
  
 **Released**: 05/15/2018 
 
-The current preview version is **1.27.39.0 ** and has the following changes since the current GA version of the client.  
+The current preview version is **1.27.39.0** and has the following changes since the current GA version of the client.  
 
 **New features**: 
 
