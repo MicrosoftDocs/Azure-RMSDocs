@@ -65,6 +65,10 @@ This example walks through configuring an existing label to apply protection so 
     - For the user who wants to use their personal email address: Still on the **Enter details** tab, type the email address. For example, azureaip505@gmail.com. 
 
 4. To grant the same permissions to all these users: For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
+    
+    For example, your configured permissions might look similar to the following:
+    
+    ![Configuring Azure Information Protection permissions secure document collaboration](../media/example-permisisons-document-collaboration.png)
 
 5. Click **OK** on the **Add permissions** blade.
 
