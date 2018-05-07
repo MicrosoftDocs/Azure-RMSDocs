@@ -39,7 +39,7 @@ When you configure these permissions, you also specify which users they are for:
 
 - **For users in your own organization or another organization that uses Azure Active Directory**: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
 
-- **For users who do not have an Azure Active Directory account**: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
+- **For users who do not have an Azure Active Directory account**: Specify an email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
     Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an exisiting email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
