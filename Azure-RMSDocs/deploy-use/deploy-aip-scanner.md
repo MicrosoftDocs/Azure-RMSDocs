@@ -307,6 +307,15 @@ Other factors that affect the scanner performance:
     
     - Large files obviously take longer to scan than small files.
 
+- For the preview version of the scanner:
+    
+    - Confirm that the service account that runs the scanner has only the rights documented in the [scanner prerequisites](#prerequisites-for-the-azure-information-protection-scanner) section, and then configure the [advanced client property](../rms-client/client-admin-guide-customizations.md#run-the-scanner-with-a-low-integrity-level) to run with a medium integrity level.
+    
+    - The scanner runs more quickly when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to apply a default label to all files because the scanner does not inspect the file contents.
+    
+    - The scanner runs more slowing when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.
+    
+
 ## List of cmdlets for the Azure Information Protection scanner 
 
 Other cmdlets for the scanner let you change the service account and database for the scanner, get the current settings for the scanner, and uninstall the scanner service. The scanner uses the following cmdlets:
