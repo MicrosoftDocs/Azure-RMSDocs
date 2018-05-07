@@ -70,29 +70,17 @@ This example walks through configuring an existing label to apply protection so 
 
 6. On the **Protection** blade, click **OK**. 
 
-In addition to configuring the label, under the covers, this configuration also creates a protection template by the same name. Protection templates can be applied by applications and services that integrate with protection from Azure Information Protection. For example, DLP solutions, Exchange Online mail flow rules,  and Windows Server FCI.
-
 ## Applying the label that supports secure collaboration
 
 Now that this label is configured, it can be applied to documents in a number of ways that include the following:
 
-- A user manually selects the label when the document is created in their Office application.
-    
-    More information: Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar. 
+|How the label is applied|More information|
+|---------------|----------|
+|A user manually selects the label when the document is created in their Office application.|Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar.|
+|Users are prompted to select a label when a new document is saved.|You've configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) named **All documents and emails must have a label**.|
+|An administrator applies the label to the document by using PowerShell.|Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.|
+|You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.|See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).|
 
-- Users are prompted to select a label when a new document is saved.
-    
-    More information: You have configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label**.
-
-- An administrator applies the label to the document by using PowerShell.
-    
-    More information: Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.
-
-- You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.
-    
-    More information: See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).
-
-Now that the document is protected, use your normal sharing mechanisms so that the users that you have specified can collaborate on this document. Other users will not be able to open it.   
 
 ## Opening and editing the protected document
 
@@ -102,9 +90,9 @@ When users that you authorized try to open the document for editing, one of the 
 
 **For your internal group**: Users are authenticated by your Azure AD. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified. 
 
-**For all users in the first organization**: The domain name is used to identify which Azure AD tenant owns that domain. When the tenant is identified, all users from that tenant are authorized to open the document with the permissions that you specified. 
+**For all users in the first external organization**: The domain name is used to identify which Azure AD tenant owns that domain. When the tenant is identified, all users from that tenant are authorized to open the document with the permissions that you specified. 
     
-**For the group in the second organization**: Users are authenticated by their Azure AD tenant. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified.
+**For the group in the second external organization**: Users are authenticated by their Azure AD tenant. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified.
     
 **For the user who wants to use their personal email address**: If the user is not already signed in with a Microsoft account that uses the same personal email address, they are prompted to specify the password for that email address:
 
@@ -120,10 +108,10 @@ The following table summaries the different authentication methods that are supp
 
 |Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|Authentication by social providers|
 |---------------|----------|-----------|-----------|
-|Windows|Yes (user accounts, email-enabled groups, all members)|Yes for Office 2016 Click to Run|No|
-|iOS|Yes (user accounts, email-enabled groups, all members)|No|No|
-|Android|Yes (user accounts, email-enabled groups, all members)|No |No|
-|MacOs|Yes (user accounts, email-enabled groups, all members)|No|No|
+|Windows|Yes (user accounts, email-enabled groups, all members)|Yes for Office 2016 Click to Run|
+|iOS|Yes (user accounts, email-enabled groups, all members)|No|
+|Android|Yes (user accounts, email-enabled groups, all members)|No |
+|MacOs|Yes (user accounts, email-enabled groups, all members)|No|
 
 In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
 
@@ -131,6 +119,7 @@ In addition, the Azure Information Protection viewer for iOS and Android can ope
 
 For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
+This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, you can configure them to apply this template. For example, DLP solutions, Exchange Online mail flow rules, and Windows Server FCI.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
