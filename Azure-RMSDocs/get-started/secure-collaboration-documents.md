@@ -88,19 +88,13 @@ When users that you authorized try to open the document for editing, one of the 
 
 [picture of information banner]
 
-**For your internal group**: Users are authenticated by your Azure AD. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified. 
+For users who have an Azure AD account, they use their Azure AD credentials to be authenticated by  Azure AD. 
 
-**For all users in the first external organization**: The domain name is used to identify which Azure AD tenant owns that domain. When the tenant is identified, all users from that tenant are authorized to open the document with the permissions that you specified. 
-    
-**For the group in the second external organization**: Users are authenticated by their Azure AD tenant. Group membership for the account is checked and when the user is confirmed to be a member of the group, they are authorized to open the document with the permissions that you specified.
-    
-**For the user who wants to use their personal email address**: If the user is not already signed in with a Microsoft account that uses the same personal email address, they are prompted to specify the password for that email address:
+For the user who doesn't have an Azure AD account, if they are already signed in to Office with an Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document, with a button to **Add Account**. When they select that button, they can select **Add Account** from the **Accounts** page to create a new Microsoft account with the email address that you specified:
 
-- If they already have a Microsoft account that uses the same email address, they enter the password and they are then authenticated and authorized to open the document with the permissions that you specified.
+[picture of Accounts page]
 
-- If they do not have a Microsoft account that uses the same email address, specifying the password for their personal email address will not work. Instead, they can click the link to create a Microsoft account: 
-    
-    When the Microsoft account is created, the user can then open the document by specifying the password for this Microsoft account.
+When the new Microsoft account is created, the user can then open the document by specifying the password for this new Microsoft account.
 
 ### Supported scenarios for opening protected documents:
 
