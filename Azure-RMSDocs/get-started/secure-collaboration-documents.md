@@ -100,7 +100,7 @@ When the new Microsoft account is created, the user can then open the document b
 
 The following table summaries the different authentication methods that are supported for opening protected documents.
 
-|Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|Authentication by social providers|
+|Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes (user accounts, email-enabled groups, all members)|Yes for Office 2016 Click to Run|
 |iOS|Yes (user accounts, email-enabled groups, all members)|No|
