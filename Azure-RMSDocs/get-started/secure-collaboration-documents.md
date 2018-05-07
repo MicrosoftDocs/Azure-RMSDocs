@@ -29,7 +29,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. These users might be internal to your organization, external users in another organization, or users with a personal email address.
+When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. These users might be internal to your organization, external users in another organization that use Azure AD, or users with a personal email address.
 
 The majority of documents that users need to collaborate on will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
 
@@ -41,11 +41,10 @@ When you configure these permissions, you also specify which users they are for:
 
 - **For users who do not have an Azure Active Directory account**: Specify a personal email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
-    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses a social account for the email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
+    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an exisiting email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following section provides an example walkthrough for this configuration.
 
-However, there are other ways to apply the same protection settings, which include users specifying the users and permissions, and using PowerShell to create or modify protection templates. 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
@@ -59,9 +58,9 @@ This example walks through configuring an existing label to apply protection so 
     
     - For your internal group: Select **Browse directory** to select the group, which must be email-enabled.
     
-    - For all users in the first organization: Select **Enter details** and type the name of a domain in the organization's tenant. For example, fabrikam.com.
+    - For all users in the first external organization: Select **Enter details** and type the name of a domain in the organization's tenant. For example, fabrikam.com.
     
-    - For the group in the second organization: Still on the **Enter details** tab, type the email address of the group in the organization's tenant. For example, sales@contoso.com.
+    - For the group in the second external organization: Still on the **Enter details** tab, type the email address of the group in the organization's tenant. For example, sales@contoso.com.
     
     - For the user who wants to use their personal email address: Still on the **Enter details** tab, type the email address. For example, azureaip505@gmail.com. 
 
