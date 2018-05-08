@@ -41,7 +41,7 @@ When you configure these permissions, you also specify which users they are for:
 
 - **For users who do not have an Azure Active Directory account**: Specify an email address that will be used with a Microsoft account. This account can already exist, or the users can create it at the time they open the protected content. 
     
-    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an exisiting email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
+    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an existing email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following section provides an example walkthrough for this configuration.
 
@@ -97,7 +97,7 @@ When users that you authorized try to open the document for editing, one of the 
 
 For users who have an Azure AD account, they use their Azure AD credentials to be authenticated by  Azure AD. 
 
-For the user who doesn't have an Azure AD account, if they are already signed in to Office with an Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
+For the user who doesn't have an Azure AD account, if they are already signed in to Office with a Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
 
 ![Azure Information Protection permissions for Microsoft account](../media/add-account-word-popup.png)
 
