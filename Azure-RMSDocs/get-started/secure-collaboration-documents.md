@@ -85,7 +85,11 @@ Now that this label is configured, it can be applied to documents in a number of
 |An administrator applies the label to the document by using PowerShell.|Use the [Set-AIPFile​Label](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet to apply the label to a specific document or all documents in a folder.|
 |You have additionally configured the label to apply automatic classification that can now be applied by using the Azure Information Protection scanner, or PowerShell.|See [How to configure conditions for automatic and recommended classification for Azure Information Protection](../deploy-use/configure-policy-classification.md).|
 
-To complete this walkthrough, manually apply the label: On a client computer, if you already have Word open, first close it and reopen to get the latest policy changes that include your newly configured label. Apply the label to a document, and save it.
+To complete this walkthrough, manually apply the label: 
+
+1. On a client computer, if you already have Word open, first close it and reopen to get the latest policy changes that include your newly configured label. 
+
+2. Apply the label to a document, and save it.
 
 Share the protected document. For example, attach it to an email and send it. Or, save it to your OneDrive and share the link.
 
