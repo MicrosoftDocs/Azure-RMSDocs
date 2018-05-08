@@ -113,7 +113,7 @@ When users see this message:
     
     ![Creating a Microsoft account to open protected document](../media/add-account-msa.png)
     
-    When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
+When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
 
 ### Supported scenarios for opening protected documents:
 
