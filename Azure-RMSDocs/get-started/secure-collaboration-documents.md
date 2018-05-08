@@ -41,7 +41,7 @@ When you configure these permissions, you also specify which users they are for:
     
     Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an existing email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
-As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following section provides an example walkthrough for this configuration.
+As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
