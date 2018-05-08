@@ -95,11 +95,13 @@ When users that you authorized try to open the document for editing, one of the 
 
 ![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
-For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
+- For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
-For the user who doesn't have an Azure AD account, if they are already signed in to Office with a Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
+- For the user who doesn't have an Azure AD account, if they are already signed in to Office with a Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
+    
+    ![Azure Information Protection permissions for Microsoft account](../media/add-account-word-popup.png)
 
-![Azure Information Protection permissions for Microsoft account](../media/add-account-word-popup.png)
+When users see this message:
 
 1. In this Microsoft Word dialog box, click **Add Account**. 
 
