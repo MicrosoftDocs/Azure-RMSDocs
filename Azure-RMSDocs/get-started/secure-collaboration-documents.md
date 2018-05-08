@@ -46,7 +46,7 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
-This example walks through configuring an existing label to apply protection so that a group of users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address. 
+This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address. 
 
 1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
@@ -121,10 +121,17 @@ The following table summaries the different authentication methods that are supp
 
 |Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|
 |---------------|----------|-----------|-----------|
-|Windows|Yes (user accounts, email-enabled groups, all members)|Yes for Office 2016 Click to Run|
-|iOS|Yes (user accounts, email-enabled groups, all members)|No|
-|Android|Yes (user accounts, email-enabled groups, all members)|No |
-|MacOs|Yes (user accounts, email-enabled groups, all members)|No|
+|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
+|iOS|Yes [[1]](#footnote-1)|No|
+|Android|Yes [[1]](#footnote-1)|No |
+|MacOS|Yes [[1]](#footnote-1)|No|
+
+###### Footnote 1
+Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
+
+###### Footnote 2
+Currently supported by Office 2016 Click-to-Run only.
+
 
 In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
 
