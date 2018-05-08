@@ -112,8 +112,8 @@ When users see this message:
 2. On the **Accounts** page, select **Add Account** to create a new Microsoft account with the email address that was used to grant the permissions:
     
     ![Creating a Microsoft account to open protected document](../media/add-account-msa.png)
-
-When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
+    
+    When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
 
 ### Supported scenarios for opening protected documents:
 
