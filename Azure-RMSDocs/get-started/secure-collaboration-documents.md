@@ -78,7 +78,7 @@ This example walks through configuring an existing label to apply protection so 
 
 Now that this label is configured, it can be applied to documents in a number of ways that include the following:
 
-|How to apply the label|More information|
+|Different ways to apply the label|More information|
 |---------------|----------|
 |A user manually selects the label when the document is created in their Office application.|Users select the label from the **Protect** button on the Office ribbon, or from the Azure Information Protection bar.|
 |Users are prompted to select a label when a new document is saved.|You've configured the Azure Information Protection [policy setting](../deploy-use/configure-policy-settings.md) named **All documents and emails must have a label**.|
