@@ -132,7 +132,7 @@ In addition, the Azure Information Protection viewer for iOS and Android can ope
 
 For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, you can configure them to apply this template. For example, DLP solutions, Exchange Online mail flow rules, and Windows Server FCI.
+This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection (for example, DLP solutions), you can configure them to apply this template. 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
