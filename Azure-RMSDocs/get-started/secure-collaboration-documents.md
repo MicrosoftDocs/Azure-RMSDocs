@@ -29,9 +29,7 @@ ms.suite: ems
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. These users might be internal to your organization, external users in another organization that use Azure AD, or users with a personal email address.
-
-The majority of documents that users need to collaborate on will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
+When you use Azure Information Protection, you can protect your documents without sacrificing collaboration for authorized users. The majority of documents that users need to collaborate on will be Office documents from Word, Excel, and PowerPoint. These documents support native protection, which means that in addition to the protection features of authorization and encryption, they also support restricted permission for more fine-grained control. 
 
 These permissions are called usage rights, and include permissions such as view, edit, print. You can define individual usage rights when a document is protected, or you can define a grouping of usage rights, called permission levels. Permission levels make it easier to select usage rights that are typically used together, for example, Reviewer and Co-Author. For more information about usage rights and permission levels, see [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
@@ -68,7 +66,7 @@ This example walks through configuring an existing label to apply protection so 
     
     For example, your configured permissions might look similar to the following:
         
-    ![Configuring Azure Information Protection permissions secure document collaboration](../media/permissions-document-collaboration.png)
+    ![Configuring Azure Information Protection permissions secure document collaboration](../media/collaboration-permissions.png)
 
 5. Click **OK** on the **Add permissions** blade.
 
