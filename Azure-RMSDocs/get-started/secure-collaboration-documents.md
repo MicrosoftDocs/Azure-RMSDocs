@@ -50,7 +50,7 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 This example walks through configuring an existing label to apply protection so that a group of users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address. 
 
-1. Select your label, and on the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
