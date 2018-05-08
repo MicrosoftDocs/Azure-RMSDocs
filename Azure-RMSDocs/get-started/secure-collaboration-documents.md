@@ -66,7 +66,9 @@ This example walks through configuring an existing label to apply protection so 
     
     For example, your configured permissions might look similar to the following:
         
-    ![Configuring Azure Information Protection permissions secure document collaboration](../media/collaboration-permissions.png)
+    ![Configuring permissions for secure collaboration](../media/collaboration-permissions.png)
+
+
 
 5. Click **OK** on the **Add permissions** blade.
 
