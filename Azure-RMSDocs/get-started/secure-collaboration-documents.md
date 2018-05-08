@@ -67,8 +67,8 @@ This example walks through configuring an existing label to apply protection so 
 4. To grant the same permissions to all these users: For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
     
     For example, your configured permissions might look similar to the following:
-    
-![Configuring Azure Information Protection permissions secure document collaboration](../media/example-permisisons-document-collaboration.png)
+        
+    ![Configuring Azure Information Protection permissions secure document collaboration](../media/example-permissions-document-collaboration.png)
 
 5. Click **OK** on the **Add permissions** blade.
 
@@ -95,7 +95,7 @@ When users that you authorized try to open the document for editing, one of the 
 
 ![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
-For users who have an Azure AD account, they use their Azure AD credentials to be authenticated by  Azure AD. 
+For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
 For the user who doesn't have an Azure AD account, if they are already signed in to Office with a Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
 
