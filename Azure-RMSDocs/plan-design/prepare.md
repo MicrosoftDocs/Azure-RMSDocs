@@ -6,7 +6,7 @@ description: Check that you have the user and group accounts that you need to st
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -48,24 +48,6 @@ When you create users and groups by using the first three methods from this list
 ## How users and groups are used by Azure Information Protection
 
 There are three scenarios for using users and groups with Azure Information Protection:
-
-- **For assigning labels to users** when you use labeling and classification. Only administrators select these groups:
-    
-    - The default Azure Information Protection policy is automatically assigned to all users in your tenant's Azure AD. However, you can also assign additional labels to specified users or groups by using scoped policies.
-
-- **For assigning usage rights and access controls** when you use the Azure Rights Management service to protect documents and emails. Administrators and users can select these users and groups:
-
-    - Usage rights determine whether a user can open a document or email and how they can use it. For example, whether they can only read it, or read and print it, or read and edit it.
-
-    - Access controls include an expiry date and whether a connection to the Internet is required for access.
-
-- **For configuring the Azure Rights Management service** to support specific scenarios, and therefore only administrators select these groups. Examples include configuring the following:
-
-    - Super users, so that designated services or people can open encrypted content if required for eDiscovery or data recovery.
-
-    - Delegated administration of the Azure Rights Management service.
-
-    - Onboarding controls to support a phased deployment.
 
 **For assigning labels to users** when you configure the Azure Information Protection policy so that labels can be applied to documents and emails. Only administrators can select these users and groups:
 
