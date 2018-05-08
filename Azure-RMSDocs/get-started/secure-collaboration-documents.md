@@ -87,7 +87,7 @@ Now that this label is configured, it can be applied to documents in a number of
 
 To complete this walkthrough, manually apply the label: 
 
-1. On a client computer, if you already have Word open, first close it and reopen to get the latest policy changes that include your newly configured label. 
+1. On a client computer, if you already have Word open, first close and reopen it to get the latest policy changes that include your newly configured label. 
 
 2. Apply the label to a document, and save it.
 
