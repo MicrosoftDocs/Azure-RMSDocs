@@ -62,13 +62,13 @@ This example walks through configuring an existing label to apply protection so 
     
     - For the group in the second external organization: Still on the **Enter details** tab, type the email address of the group in the organization's tenant. For example, sales@contoso.com.
     
-    - For the user who doesn't have an Azure AD account: Still on the **Enter details** tab, type the user's email address . For example, bengi.turan@gmail.com. 
+    - For the user who doesn't have an Azure AD account: Still on the **Enter details** tab, type the user's email address. For example, bengi.turan@gmail.com. 
 
 4. To grant the same permissions to all these users: For **Choose permissions from preset**, select **Co-Owner**, **Co-Author**, **Reviewer**, or **Custom** to select the permissions that you want to grant.
     
     For example, your configured permissions might look similar to the following:
     
-    ![Configuring Azure Information Protection permissions secure document collaboration](../media/example-permisisons-document-collaboration.png)
+![Configuring Azure Information Protection permissions secure document collaboration](../media/example-permisisons-document-collaboration.png)
 
 5. Click **OK** on the **Add permissions** blade.
 
@@ -91,9 +91,9 @@ Share the protected document. For example, attach it to an email and send it. Or
 
 ## Opening and editing the protected document
 
-When users that you authorized try to open the document for editing, one of the following authentication flows happen. Then the document opens with an information banner that informs them that permissions are restricted:
+When users that you authorized try to open the document for editing, one of the following authentication flows happen. Then the document opens with an information banner that informs them that permissions are restricted. For example:
 
-[picture of information banner]
+![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
 For users who have an Azure AD account, they use their Azure AD credentials to be authenticated by  Azure AD. 
 
