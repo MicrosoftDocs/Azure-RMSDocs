@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/08/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -119,6 +119,8 @@ When the new Microsoft account is created, the local account switches to this ne
 
 The following table summaries the different authentication methods that are supported for opening protected documents.
 
+In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
+
 |Platforms for opening documents: Word, Excel, PowerPoint|Authentication by Azure AD|Authentication by Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
@@ -132,8 +134,6 @@ Supports user accounts, email-enabled groups, all members. User accounts and ema
 ###### Footnote 2
 Currently supported by Office 2016 Click-to-Run only.
 
-
-In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
 
 ## Next steps
 
