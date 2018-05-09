@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 05/09/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -111,7 +111,7 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 3.  On the **Your shared documents** page, you’ll see the document name that you shared. At this point, it’s the only file displayed but as you share additional protected documents, the list will grow.
 
-    From this page, you’ll see when you shared the document (when you sent the email with the protected attachment), the date of the last activity, and the name of the recipient you sent the email to. Click the document name for additional details.
+    From this page, you’ll see when you shared the document (when you sent the email with the protected attachment), its current status (active, revoked, or expired), and the name of the recipient you sent the email to. Click the document name for additional details.
 
 4.  On the new page, which has the name of the file that you clicked, you’ll see summary details for that document only, and a list of other options that are available for the document (**List**, **Timeline**, **Map**, **Settings**).
 
