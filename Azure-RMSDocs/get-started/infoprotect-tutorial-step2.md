@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,7 +68,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 We'll now create a new sublabel for **Confidential**.
 
-1. Right-click the **Confidential** label, and select **Add a sub-label**.
+1. From the **CLASSIFICATIONS** > **Labels** menu option: Right-click the **Confidential** label, and select **Add a sub-label**.
     
     If you do not have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
@@ -134,9 +134,15 @@ We'll now create a new sublabel for **Confidential**.
 
 12. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
 
-13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
+13. Click **Save** on this **Sub-label** blade. The new label is created and saved, but not yet added to a policy.
+
+14. From the **CLASSIFICATIONS** > **Policies** menu option: Select **Global** again, and then select **Add or remove labels**.
+
+15. From the **Policy: Add or remove labels** blade, select the label that you have just created, the sublabel named **Finance**, and click **OK**.
+
+16. On the **Policy: Global** blade, click **Save** again.
     
-    You now see your new sublabel, which is configured for visual markings and protection. For example:
+    You now see your new sublabel in your global policy, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
