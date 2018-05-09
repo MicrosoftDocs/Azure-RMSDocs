@@ -151,7 +151,7 @@ We'll now create a new sublabel for **Confidential**.
     ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
     
 
-17. Click **Save** on this **Policy: Global** blade, and if prompted to confirm, click **OK**.
+17. Click **Save** on this **Policy: Global** blade. If you are prompted to confirm this action, click **OK**.
 
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
