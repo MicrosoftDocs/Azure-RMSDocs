@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -112,7 +112,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** to add all users from your organization or browse the directory.
+    - Choose **Select from the list** to add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, or browse the directory.
         
         The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
