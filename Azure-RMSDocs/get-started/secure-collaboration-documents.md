@@ -117,6 +117,7 @@ When users that you authorized try to open the document for editing, one of the 
     
     When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
 
+
 ### Supported scenarios for opening protected documents:
 
 The following table summaries the different authentication methods that are supported for opening protected documents.
