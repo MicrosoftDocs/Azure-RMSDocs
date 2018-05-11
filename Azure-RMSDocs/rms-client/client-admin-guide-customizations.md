@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -374,9 +374,13 @@ To achieve this solution:
 
 2. Create an Exchange mail flow rule for each label: Apply the rule when the message properties include the classification that you configured, and modify the message properties to set a message header. 
 
-    For the message header, you find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
+     For the message header, you find the information to specify by inspecting the Internet headers of an email that you sent and classified by using your Azure Information Protection label. Look for the header **msip_labels** and the string that immediately follows, up to and including the semicolon. Using the previous example:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    For a sublabel, you need to specify the parent label before the sublabel, using the same format. For example:
+        
+    **msip_labels: MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;msip_labels: MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;**
     
     Then, for the message header in the rule, specify **msip_labels** for the header, and the remainder of this string for the header value. For example:
     
