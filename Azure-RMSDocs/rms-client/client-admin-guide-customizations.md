@@ -368,7 +368,7 @@ To label an Office document with one of these classification values, set **SyncP
 
 Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Confidential** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
 
-## Run the scanner with a medium integrity level
+## Disable the low integrity level for the scanner
 
 This configuration option is currently in preview and is subject to change. It also requires the current preview version of the Azure Information Protection client.
 
@@ -380,7 +380,7 @@ However, when the service account that runs the scanner has only the rights docu
 
 For more information about the Windows integrity levels, see [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx)
 
-To configure this advanced setting so that the scanner runs with a medium integrity level rather than a low integrity level, enter the following strings:
+To configure this advanced setting so that the scanner runs with an integrity level that's automatically assigned by Windows (a standard user account runs with a medium integrity level), enter the following strings:
 
 - Key: **ProcessUsingLowIntegrity**
 
