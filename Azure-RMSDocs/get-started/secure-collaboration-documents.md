@@ -37,9 +37,9 @@ When you configure these permissions, you also specify which users they are for:
 
 - **For users in your own organization or another organization that uses Azure Active Directory**: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
 
-- **For users who do not have an Azure Active Directory account**: Specify an email address that will be used with a Microsoft account. This account can already exist, or users can create it at the time they open the protected content. 
+- **For users who do not have an Azure Active Directory account**: Specify an email address that will be used with a Microsoft account. This account can already exist, or users can create it at the time they open the protected document. 
     
-    Note that unlike sending protected emails with the new capabilities from Office 365 Message Encryption, for protected documents, you cannot use social identities such as a Gmail account or Hotmail account. However, you can use a Microsoft account that uses an existing email address. To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
+    To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
 
@@ -91,7 +91,7 @@ To complete this walkthrough, manually apply the label:
 
 2. Apply the label to a document, and save it.
 
-Share the protected document. For example, attach it to an email and send it. Or, save it to your OneDrive and share the link.
+Share the protected document. For example, attach it to an email and send it. 
 
 ## Opening and editing the protected document
 
@@ -101,19 +101,21 @@ When users that you authorized try to open the document for editing, one of the 
 
 - For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
-- For the user who doesn't have an Azure AD account, if they are already signed in to Office with a Microsoft account that uses the same email address that you specified, their existing credentials are used and the document opens. If not, they see a message that they are not signed in to Office with an account that has permissions to open the document:
+- For the user who doesn't have an Azure AD account, if they are not signed in to Office with an account that has permissions to open the document, they might see the following message:
     
     ![Azure Information Protection permissions for Microsoft account](../media/add-account-word-popup.png)
 
-When users see this message:
-
-1. In this Microsoft Word dialog box, click **Add Account**. 
-
-2. On the **Accounts** page, select **Add Account** to create a new Microsoft account with the email address that was used to grant the permissions:
+    If users see this message, click **Add Account** to display the **Accounts** page. 
     
-    ![Creating a Microsoft account to open protected document](../media/add-account-msa.png)
+   On the **Accounts** page, select **Add Account**:
+   
+    ![Adding an Microsoft account to open protected document](../media/add-account-msa.png)
+
+   On the **Sign in** page, select **Create one!** and follow the prompts to create a new Microsoft account with the email address that was used to grant the permissions:
     
-When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
+    ![Creating a Microsoft account to open protected document](../media/create-account-msa.png)
+    
+    When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
 
 ### Supported scenarios for opening protected documents:
 
@@ -121,7 +123,7 @@ The following table summaries the different authentication methods that are supp
 
 In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
 
-|Platforms for opening documents: <br /><br />Word, Excel, PowerPoint|Authentication method:<br /><br /> Azure AD|Authentication method:<br /><br /> Microsoft account|
+|Platforms for editing documents: <br /><br />Word, Excel, PowerPoint|Authentication method:<br /><br /> Azure AD|Authentication method:<br /><br /> Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
 |iOS|Yes [[1]](#footnote-1)|No|
