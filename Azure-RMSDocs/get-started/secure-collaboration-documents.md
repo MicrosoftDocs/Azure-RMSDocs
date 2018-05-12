@@ -125,7 +125,7 @@ The following table summaries the different authentication methods that are supp
 
 In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
 
-|Platforms for editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />icrosoft account|
+|Platforms for editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
 |iOS|Yes [[1]](#footnote-1)|No|
