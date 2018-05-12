@@ -143,7 +143,7 @@ Currently supported by Office 2016 Click-to-Run only.
 
 For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection (for example, DLP solutions), you can configure them to apply this template. 
+This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
