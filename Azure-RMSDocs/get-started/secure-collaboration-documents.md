@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/08/2018
+ms.date: 05/13/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
