@@ -102,11 +102,7 @@ When users that you authorized try to open the document for editing, one of the 
 
 - For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
-- For the user who doesn't have an Azure AD account, if they are not signed in to Office with an account that has permissions to open the document, they might see the following message:
-    
-    ![Azure Information Protection permissions for Microsoft account](../media/add-account-word-popup.png)
-
-    If users see this message, click **Add Account** to display the **Accounts** page. 
+- For the user who doesn't have an Azure AD account, if they are not signed in to Office with an account that has permissions to open the document, they see the **Accounts** page. 
     
    On the **Accounts** page, select **Add Account**:
    
