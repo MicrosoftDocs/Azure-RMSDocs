@@ -6,3 +6,4 @@ Rights that apply to editable documents.
 --------------------------------|---------------------------------------------
   
 ## Members
+_Not documented yet._

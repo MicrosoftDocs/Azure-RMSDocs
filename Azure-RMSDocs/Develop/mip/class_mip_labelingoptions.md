@@ -4,20 +4,29 @@ Interface for configuring labeling options for the SetLabel method.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public inline LabelingOptions(AssignmentMethod method, const std::string& justificationMessage)  |  
-public inline const std::string& GetJustificationMessage() const  |  
-public inline AssignmentMethod GetAssignmentMethod() const  |  
-public inline void SetJustificationMessage(const std::string& justificationMessage)  |  
-public inline void SetMethod(AssignmentMethod method)  |  
+ public LabelingOptions(AssignmentMethod method, const std::string& justificationMessage)  | _Not yet documented._
+ public const std::string& GetJustificationMessage() const  | _Not yet documented._
+ public AssignmentMethod GetAssignmentMethod() const  | _Not yet documented._
+ public void SetJustificationMessage(const std::string& justificationMessage)  | _Not yet documented._
+ public void SetMethod(AssignmentMethod method)  | _Not yet documented._
   
 ## Members
   
 ### LabelingOptions
+_Not documented yet._
+
   
 ### GetJustificationMessage
+_Not documented yet._
+
   
 ### GetAssignmentMethod
+_Not documented yet._
+
   
 ### SetJustificationMessage
+_Not documented yet._
+
   
 ### SetMethod
+_Not documented yet._
