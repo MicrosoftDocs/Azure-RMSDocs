@@ -4,12 +4,12 @@ An action class which specifies removing protection from the document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Get the type of [Action](#classmip_1_1_action).
+ public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
 ### ActionType
-Get the type of [Action](#classmip_1_1_action).
+Get the type of [Action](class_mip_action.md).
+
   
-#### Returns
-ActionType The type of derived action this base class can be cast to.
+**Returns**: ActionType The type of derived action this base class can be cast to.

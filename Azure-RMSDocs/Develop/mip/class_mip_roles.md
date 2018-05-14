@@ -6,3 +6,4 @@ Defines roles for protecting data.
 --------------------------------|---------------------------------------------
   
 ## Members
+_Not documented yet._
