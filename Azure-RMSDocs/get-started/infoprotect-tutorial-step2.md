@@ -6,7 +6,7 @@ description: Step 2 of an introduction tutorial to quickly try out Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -64,11 +64,13 @@ For our tutorial, we'll change a couple of those policy settings so that you can
     
     You might not need to change this setting because the default depends on when you obtained your subscription. We will use custom permissions later in the tutorial to share a protected document with a user that you specify when you right-click the file from File Explorer.
 
+4. Select **Save** on this **Policy: Global** blade, and if you are prompted to confirm your action, select **OK**. Close this blade.
+
 ## Creating a new label for protection, visual markers, and a condition to prompt for classification
 
 We'll now create a new sublabel for **Confidential**.
 
-1. Right-click the **Confidential** label, and select **Add a sub-label**.
+1. From the **CLASSIFICATIONS** > **Labels** menu option: Right-click the **Confidential** label, and select **Add a sub-label**.
     
     If you do not have a label named **Confidential**, you can select another label or you can create a new label instead and still follow the tutorial with minor differences.
 
@@ -134,9 +136,13 @@ We'll now create a new sublabel for **Confidential**.
 
 12. In the **Enter notes for internal housekeeping** box, type **For testing purposes only**.
 
-13. Click **Save** on this **Sub-label** blade. Then, on the **Policy: Global** blade, click **Save** again.
-    
-    You now see your new sublabel, which is configured for visual markings and protection. For example:
+13. Click **Save** on this **Sub-label** blade. If you are prompted to confirm, click **OK**. The new label is created and saved, but not yet added to a policy.
+
+14. From the **CLASSIFICATIONS** > **Policies** menu option: Select **Global** again, and then select the **Add or remove labels** link after the labels.
+
+15. From the **Policy: Add or remove labels** blade, select the label that you have just created, the sublabel named **Finance**, and click **OK**.
+
+16. On the **Policy: Global** blade, you now see your new sublabel in your global policy, which is configured for visual markings and protection. For example:
 
     ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
     
@@ -144,6 +150,9 @@ We'll now create a new sublabel for **Confidential**.
     
     ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
     
+
+17. Click **Save** on this **Policy: Global** blade. If you are prompted to confirm this action, click **OK**.
+
 You can either close the Azure portal, or leave it open to try additional configuration options after you have finished this tutorial.
 
 Now that you've had a look at the default policy and made some changes, the next step is to install the Azure Information Protection client.
