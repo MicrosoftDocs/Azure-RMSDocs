@@ -6,41 +6,45 @@ Interface for all file handling functions.
 --------------------------------|---------------------------------------------
 public void GetLabelAsync(const std::shared_ptr<void>& context)  |  Starts retrieving the sensitivity label from the file.
 public void GetProtectionAsync(const std::shared_ptr<void>& context)  |  Starts retrieving the protection policy from the file.
-public void SetLabel(const std::string& labelId, const LabelingOptions& labelingOptions)  |  Sets the sensitivity label to the file.
-public void DeleteLabel(AssignmentMethod method, const std::string& justificationMessage)  |  Deletes the sensitivity label from the file.
+ public void SetLabel(const std::string& labelId, const LabelingOptions& labelingOptions)  |  Sets the sensitivity label to the file.
+ public void DeleteLabel(AssignmentMethod method, const std::string& justificationMessage)  |  Deletes the sensitivity label from the file.
 public void SetCustomPermissions(const std::shared_ptr<PolicyDescriptor>& policyDescriptor)  |  Sets custom permissions to the file.
-public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
+ public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr<void>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr<Stream>& outputStream, const std::shared_ptr<void>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
-public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
-public inline virtual ~FileHandler()  |  
-protected inline FileHandler()  |  
+ public std::string GetOutputFileName()  |  Calculates the output file name and extension based on the original file name and the accumulated changes.
+ public virtual ~FileHandler()  | _Not yet documented._
+ protected FileHandler()  | _Not yet documented._
   
 ## Members
   
 ### GetLabelAsync
 Starts retrieving the sensitivity label from the file.
-[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) will be called upon success or failure.
-  
-#### Parameters
-* context Client context that will be opaquely passed back to the observer.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
+
+Parameters:  
+* **context**: Client context that will be opaquely passed back to the observer.
+
+
   
 ### GetProtectionAsync
 Starts retrieving the protection policy from the file.
-[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) will be called upon success or failure.
-  
-#### Parameters
-* context Client context that will be opaquely passed back to the observer.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
+
+Parameters:  
+* **context**: Client context that will be opaquely passed back to the observer.
+
+
   
 ### SetLabel
 Sets the sensitivity label to the file.
 Changes will not be written to the file until CommitAsync will be called.
-Throws [JustificationRequiredError](#classmip_1_1_justification_required_error) when setting the label requires a justification and no justification message was provided via the labelingOptions parameter.
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires a justification and no justification message was provided via the labelingOptions parameter.
   
 ### DeleteLabel
 Deletes the sensitivity label from the file.
 Changes will not be written to the file until CommitAsync will be called. Privilegd and Auto method allows the API to override any existing label 
-Throws [JustificationRequiredError](#classmip_1_1_justification_required_error) when setting the label requires a justification and no justification message was provided via the justificationMessage parameter.
+Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires a justification and no justification message was provided via the justificationMessage parameter.
   
 ### SetCustomPermissions
 Sets custom permissions to the file.
@@ -52,15 +56,18 @@ Changes will not be written to the file until CommitAsync will be called.
   
 ### CommitAsync
 Writes the changes to the file specified by the |outputFilePath| parameter.
-[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### CommitAsync
 Writes the changes to the stream specified by the |outputStream| parameter.
-[FileHandler::Observer](#classmip_1_1_file_handler_1_1_observer) will be called upon success or failure.
+[FileHandler::Observer](class_mip_filehandler_observer.md) will be called upon success or failure.
   
 ### GetOutputFileName
 Calculates the output file name and extension based on the original file name and the accumulated changes.
   
 ### ~FileHandler
+_Not documented yet._
+
   
 ### FileHandler
+_Not documented yet._
