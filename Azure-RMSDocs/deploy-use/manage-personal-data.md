@@ -227,6 +227,6 @@ When you use the AADRM PowerShell cmdlets, the personal data is made available f
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
 
 ## Auditing and reporting
-For search and export, all cmdlets must be run as a Global Administrator. These operations are recorded in the administrator log – which is also available for the administrator to download.
+For search and export, all cmdlets must be run as a Global Administrator. These operations are recorded in the administrator log that is available for the administrator to download.
 
 For delete, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the AADRM PowerShell cmdlets.
