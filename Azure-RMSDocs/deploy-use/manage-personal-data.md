@@ -221,7 +221,7 @@ Microsoft will verify that your request to delete one or more logs is legitimate
 Microsoft Customer Support Services (CSS) will send you a confirmation email that the data has been deleted. 
 
 ## Exporting personal data
-When you use the AADRM PowerShell cmdlets, the personal data is made available for search and export as a PowerShell object. The PowerShell object can be converted into JSON and saved by using the `ConvertTo-Json` commandlet.-->
+When you use the AADRM PowerShell cmdlets, the personal data is made available for search and export as a PowerShell object. The PowerShell object can be converted into JSON and saved by using the `ConvertTo-Json` cmdlet.
 
 ## Restricting the use of personal data for profiling or marketing without consent
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
