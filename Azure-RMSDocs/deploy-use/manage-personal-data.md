@@ -45,7 +45,7 @@ When you use and configure Azure Information Protection, email addresses and IP 
 
 ## Viewing personal data that Azure Information Protection uses
 
-When an Azure Information Protection label is configured to apply protection, you can use the Azure portal to view email addresses that an administrator has specified. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection).
+When an Azure Information Protection label is configured to apply protection, you can use the Azure portal to view email addresses that an administrator has specified. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
 
 The same information can be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
 
@@ -187,7 +187,7 @@ There is no search by ObjectID. However, you are not restricted by the `-UserEma
 Personal data stored within the Azure Information Protection service is accessible only to Global Administrators and Security Administrators. These roles can be assigned in Azure Active Directory.
 
 ## Updating personal data
-Personal data in the Azure Information Protection policy can be updated by using the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection).
+Personal data in the Azure Information Protection policy can be updated by using the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
   
 The same information can be updated in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
 
@@ -197,7 +197,7 @@ Run the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplatepr
 
 
 ## Deleting personal data
-Personal data in the Azure Information Protection policy can be deleted by using the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection).
+Personal data in the Azure Information Protection policy can be deleted by using the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
   
 The same information can be deleted in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
 
