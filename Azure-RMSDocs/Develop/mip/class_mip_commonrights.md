@@ -6,3 +6,4 @@ Universally supported rights.
 --------------------------------|---------------------------------------------
   
 ## Members
+_Not documented yet._
