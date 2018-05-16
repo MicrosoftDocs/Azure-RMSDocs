@@ -100,6 +100,10 @@ When users that you authorized try to open the document for editing, one of the 
 
 ![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
+If they select the **View Permission** button, they see the permissions that they have. For example:
+
+![Azure Information Protection permissions example dialog box](../media/example-permisisons-popup.png)
+
 - For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
 - For the user who doesn't have an Azure AD account, if they are not signed in to Office with an account that has permissions to open the document, they see the **Accounts** page. 
