@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -96,7 +96,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     - **Set permissions**: To define new protection settings in this portal.
     
-    - **Set user defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    - **Set user-defined permissions (Preview)**: To let users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only, or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
         
         If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
         
@@ -112,7 +112,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** to add all users from your organization or browse the directory.
+    - Choose **Select from the list** to add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, or browse the directory.
         
         The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
@@ -155,7 +155,7 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     For instructions to specify a template GUID and your licensing URL, see [Locating the information to specify AD RMS protection with an Azure Information Protection label](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
-    The user defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
+    The user-defined permissions option lets users specify who should be granted permissions and what those permissions are. You can then refine this option and choose Outlook only (the default), or Word, Excel, PowerPoint, and File Explorer. This option is not supported, and does not work, when a label is configured for [automatic classification](configure-policy-classification.md).
     
     If you choose the option for Outlook: The label is displayed in Outlook and the resulting behavior when users apply the label is the same as the Do Not Forward option.
     
@@ -190,7 +190,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
-2. Select **Set user defined permissions (Preview)**.
+2. Select **Set user-defined permissions (Preview)**.
 
 3. Make sure that the following option is selected: **In Outlook apply Do Not Forward**.
 
@@ -253,7 +253,7 @@ When your users specify the email addresses in the **To** box, the addresses mus
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
-3. On the **Add permissions** blade: To grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant, or select **Browse directory** to select a specific group. To grant permissions to external users or if you prefer to type the email address, select **Enter details** and type the email address of the user, or Azure AD group, or a domain name.
+3. On the **Add permissions** blade: To grant permissions to users in your organization, select **Add \<organization name> - All members** to select all users in your tenant. This setting excludes guest accounts. Or, select **Browse directory** to select a specific group. To grant permissions to external users or if you prefer to type the email address, select **Enter details** and type the email address of the user, or Azure AD group, or a domain name.
     
     Repeat this step to specify additional users who should have the same permissions.
 

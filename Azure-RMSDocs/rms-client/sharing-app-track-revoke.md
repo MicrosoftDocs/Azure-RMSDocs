@@ -6,7 +6,7 @@ description: After you have protected your documents by using the RMS sharing ap
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2017
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,31 +31,29 @@ ms.suite: ems
 
 After you have protected your documents by using the RMS sharing application, if your organization is using Azure Information Protection rather than Active Directory Rights Management Services, you can track how people are using your protected documents. If necessary, you can also revoke access to these documents when you want to stop sharing them. To do this, you use the **document tracking site**, which you can access from Windows computers, Mac computers, and even from tablets and phones.
 
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
-</div>
+When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. However, in rare cases, the location reported might not be accurate. For example, when a user opening a protected document is using a VPN connection, or their computer has an IPv6 address.
 
-When you access this site, sign in to track your documents. Providing your organization has a [subscription that supports document tracking and revocation](https://www.microsoft.com/cloud-platform/azure-information-protection-features) and you are assigned a license for this subscription, you can then see who tried to open the files that you protected and whether they were successful (they were successfully authenticated) or not. Each time they tried to access the document, and their location at the time. In addition:
+Actions you can take in the document tracking site:
 
--   If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
+- If you need to stop sharing a document: Click **Revoke access**, note the period of time that the document will continue to be available, and decide whether to let people know that you’re revoking access to the document you previously shared, and provide a customized message. When you revoke a document, it doesn't delete the document that you shared but authorized users will no longer be able to open it.
 
--   If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs.
+- If you want to export to Excel: Click **Export to CSV**, so that you can then modify the data, and create your own views and graphs.
 
--   If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
+- If you want to configure email notifications: Click **Settings** and select how and whether to be emailed when the document is accessed.
 
 - If you want to track and revoke shared documents for others: Administrators for Azure Information Protection can track and revoke documents for others by clicking the Admin icon. Only administrators see this icon.
     
     Note: If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
--   If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
+- If you have questions or want to provide feedback about the document tracking site: Click the Help icon to access the [FAQ for Document Tracking](http://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## Using Office to access the document tracking site
 
--   For the Office applications, Word, Excel, and PowerPoint: On the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Track Usage**.
+- For the Office applications, Word, Excel, and PowerPoint: On the **Home** tab, in the **RMS** group, click **Share Protected**, and then click **Track Usage**.
 
     ![Track usage from Office applications when using the RMS sharing application ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
--   For Outlook: On the **Home** tab, in the  **RMS** group, click **Track Usage**:
+- For Outlook: On the **Home** tab, in the  **RMS** group, click **Track Usage**:
 
     ![Select Track Usage from Outlook when using the RMS sharing application ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
@@ -77,7 +75,7 @@ In addition to tracking your documents on Windows computers by using Office appl
 
 #### Using a web browser to access the doc tracking site
 
--   Using a supported browser, go to the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Using a supported browser, go to the [document tracking site](http://go.microsoft.com/fwlink/?LinkId=529562).
 
     Supported browsers: We recommend using Internet Explorer that is at least version 10, but you can use any of following browsers to use the document tracking site:
 
@@ -93,15 +91,15 @@ In addition to tracking your documents on Windows computers by using Office appl
 
 #### Using File Explorer to access the doc tracking site
 
--   Right-click the file, select **Protect with RMS**, and then select **Track Usage**:
+- Right-click the file, select **Protect with RMS**, and then select **Track Usage**:
 
     ![Select Track Usage from Explorer when using the RMS sharing application](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
 #### Using an Outlook email message to access the doc tracking site
 
--   In an email message, in the **Message** tab, in the  **RMS** group, click **Share Protected**, and then click **Track Usage**:
+- In an email message, in the **Message** tab, in the  **RMS** group, click **Share Protected**, and then click **Track Usage**:
 
-    ![Select Track Usage from Outlook when using the RMS sharing applicatio](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
+    ![Select Track Usage from Outlook when using the RMS sharing application](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
 ## Examples and other instructions
 For examples for how you might use the Rights Management sharing application, and how-to instructions, see the following sections from the Rights Management sharing application user guide:

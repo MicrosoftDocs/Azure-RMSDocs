@@ -4,40 +4,44 @@ RMS stream exception.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public inline RMSStreamException(const std::string& message)  |  [RMSStreamException](#classmip_1_1_r_m_s_stream_exception) constructor.
-public inline RMSStreamException(const char*const& message)  |  [RMSStreamException](#classmip_1_1_r_m_s_stream_exception) constructor.
-public inline virtual const char* what() const  |  Gets exception message.
-public inline virtual ExceptionTypes type() const  |  Gets exception type.
-public inline virtual int error() const  |  Gets error code.
+ public RMSStreamException(const std::string& message)  |  [RMSStreamException](class_mip_rmsstream_exception.md) constructor.
+ public RMSStreamException(const char*const& message)  |  [RMSStreamException](class_mip_rmsstream_exception.md) constructor.
+ public virtual const char* what() const  |  Gets exception message.
+ public virtual ExceptionTypes type() const  |  Gets exception type.
+ public virtual int error() const  |  Gets error code.
   
 ## Members
   
 ### RMSStreamException
-[RMSStreamException](#classmip_1_1_r_m_s_stream_exception) constructor.
-  
-#### Parameters
-* message Exception message
+[RMSStreamException](class_mip_rmsstream_exception.md) constructor.
+
+Parameters:  
+* **message**: Exception message
+
+
   
 ### RMSStreamException
-[RMSStreamException](#classmip_1_1_r_m_s_stream_exception) constructor.
-  
-#### Parameters
-* message Exception message
+[RMSStreamException](class_mip_rmsstream_exception.md) constructor.
+
+Parameters:  
+* **message**: Exception message
+
+
   
 ### what
 Gets exception message.
+
   
-#### Returns
-Exception message
+**Returns**: Exception message
   
 ### ExceptionTypes
 Gets exception type.
+
   
-#### Returns
-Exception type
+**Returns**: Exception type
   
 ### error
 Gets error code.
+
   
-#### Returns
-[Error](#classmip_1_1_error) code
+**Returns**: [Error](class_mip_error.md) code
