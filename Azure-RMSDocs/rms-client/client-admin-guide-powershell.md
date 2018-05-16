@@ -48,7 +48,7 @@ For a list of all the cmdlets and their corresponding help, see [AzureInformatio
 
 This module installs in **\ProgramFiles (x86)\Microsoft Azure Information Protection** and adds this folder to the **PSModulePath** system variable. The .dll for this module is named **AIP.dll**.
 
-Currently, if you install the module as one user and run the cmdlets on the same computer as another user, you must first run the `Import-Modle AzureInformationProtection` command. In this scenario, the module doesn't autoload when you first run a cmdlet.
+Currently, if you install the module as one user and run the cmdlets on the same computer as another user, you must first run the `Import-Module AzureInformationProtection` command. In this scenario, the module doesn't autoload when you first run a cmdlet.
 
 The current release of the AzureInformationProtection module has the following limitations:
 
