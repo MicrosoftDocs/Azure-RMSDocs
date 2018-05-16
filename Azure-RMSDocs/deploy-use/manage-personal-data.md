@@ -40,7 +40,7 @@ When you use and configure Azure Information Protection, email addresses and IP 
 - Document tracking logs  
 
 
-!INCLUDE(../includes/gdpr-intro-sentence.md)
+[!INCLUDE(../includes/gdpr-intro-sentence.md)]
 
 
 ## Viewing personal data that Azure Information Protection uses
@@ -194,7 +194,7 @@ The same information can be updated in protection templates, by using PowerShell
 
 ### Protection templates
 
-Run the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet to update the protection template. Becuase the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AadrmTemplateProperty` cmdlet.
+Run the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AadrmTemplateProperty` cmdlet.
 
 
 ## Deleting personal data
@@ -231,3 +231,5 @@ Azure Information Protection follows Microsoft's [privacy terms](https://privacy
 For search and export, all cmdlets must be run as a Global Administrator. These operations are recorded in the administrator log that is available for the administrator to download.
 
 For delete, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the AADRM PowerShell cmdlets.
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
