@@ -6,7 +6,7 @@ description: Information and instructions how to use usage logging with Azure Ri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -54,7 +54,7 @@ In addition to this usage logging, you also have the following logging options:
 |Admin log|Logs administrative tasks for the Azure Rights Management service. For example, if the service is deactivated, when the super user feature is enabled, and when users are delegated admin permissions to the service. <br /><br />For more information, see the PowerShell cmdlet, [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
 |Document tracking|Lets users track and revoke their documents that they have tracked with the Azure Information Protection client or the RMS sharing app. Global administrators can also track these documents on behalf of users. <br /><br />For more information, see [Configuring and using document tracking for Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Client event logs|Usage activity for the Azure Information Protection client, logged in the local Windows **Applications and Services** event log, **Azure Information Protection**. <br /><br />For more information, see [Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Client log files|Troubleshooting logs f or the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
+|Client log files|Troubleshooting logs for the Azure Information Protection client, located in **%localappdata%\Microsoft\MSIP**. <br /><br />These files are designed for Microsoft Support.|
 
 
 Use the following sections for more information about the usage logging for the Azure Rights Management service. 
