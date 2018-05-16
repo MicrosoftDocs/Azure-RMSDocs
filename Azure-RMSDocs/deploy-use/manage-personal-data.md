@@ -181,13 +181,14 @@ Successful           : False
 IsHiddenInfo         : False
 ```
 
-There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email adddress provided is stored anywhere in the document tracking logs, the docg the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).ument tracking entry is returned in the cmdlet output.
+There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email address provided is stored anywhere in the document tracking logs, the document tracking entry is returned in the cmdlet output.
 
 ## Securing and controlling access to personal information
 Personal data stored within the Azure Information Protection service is accessible only to Global Administrators and Security Administrators. These roles can be assigned in Azure Active Directory.
 
 ## Updating personal data
-Personal data in the Azure Information Protection policy can be updated by usin
+
+Personal data in the Azure Information Protection policy can be updated by using the Azure portal to view email addresses that an administrator has specified. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
   
 The same information can be updated in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
 
