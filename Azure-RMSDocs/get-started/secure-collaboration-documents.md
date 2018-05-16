@@ -96,13 +96,16 @@ Share the protected document by attaching it to an email, and send it to the peo
 
 ## Opening and editing the protected document
 
-When users that you authorized try to open the document for editing, one of the following authentication flows happen. Then the document opens with an information banner that informs them that permissions are restricted. For example:
+When users that you authorized open the document for editing, the document opens with an information banner that informs them that permissions are restricted. For example:
 
 ![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
 If they select the **View Permission** button, they see the permissions that they have. For example:
 
 ![Azure Information Protection permissions example dialog box](../media/example-permisisons-popup.png)
+
+
+Before the document opens, one of the following authentication flows happen:
 
 - For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
