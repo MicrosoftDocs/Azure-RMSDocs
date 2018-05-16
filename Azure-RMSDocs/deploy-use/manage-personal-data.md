@@ -40,7 +40,7 @@ When you use and configure Azure Information Protection, email addresses and IP 
 - Document tracking logs  
 
 
-[!INCLUDE(../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-intro-sentence.md)]
 
 
 ## Viewing personal data that Azure Information Protection uses
