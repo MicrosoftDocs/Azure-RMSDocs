@@ -45,7 +45,7 @@ You can then use these Azure Rights Management service logs to support the foll
 
 -   **Perform forensic analysis**
 
-    If you have an information leak, you are likely to be asked who recently accessed specific documents and what information did a suspected person access recently. You can answer these type of questions when you use this logging because people who use protected content must always get a Rights Management license to open documents and pictures that are protected by the Azure Rights Management service, even if these files are moved by email or copied to USB drives or other storage devices. This means that you can use these logs as a definitive source of information for forensic analysis when you protect your data by using the Azure Rights Management service.
+    If you have an information leak, you are likely to be asked who recently accessed specific documents and what information did a suspected person access recently. You can answer these types of questions when you use this logging because people who use protected content must always get a Rights Management license to open documents and pictures that are protected by the Azure Rights Management service, even if these files are moved by email or copied to USB drives or other storage devices. This means that you can use these logs as a definitive source of information for forensic analysis when you protect your data by using the Azure Rights Management service.
 
 In addition to this usage logging, you also have the following logging options:
 
@@ -183,7 +183,7 @@ There are many request types for the Azure Rights Management service but the fol
 
 |Request type|Description|
 |----------------|---------------|
-|AcquireLicense|A client from a Windows based machine is requesting a license for RMS-protected content.|
+|AcquireLicense|A client from a Windows-based computer is requesting a license for RMS-protected content.|
 |AcquirePreLicense|A client, on behalf of the user, is requesting for a license for RMS-protected content.|
 |AcquireTemplates|A call was made to acquires templates based on template IDs|
 |AcquireTemplateInformation|A call was made to get the IDs of the template from the service.|
