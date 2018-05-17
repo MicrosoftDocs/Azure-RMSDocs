@@ -193,7 +193,7 @@ IsHiddenInfo         : False
 
 There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email address provided is stored anywhere in the document tracking logs, the document tracking entry is returned in the cmdlet output.
 
-## Usage logs for the Azure Information Protection client and RMS client
+### Usage logs for the Azure Information Protection client and RMS client
 
 When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
 
