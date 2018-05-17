@@ -253,7 +253,7 @@ To delete email addresses for super users and delegated administrators, remove t
 
 To delete personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
 
-To delete personal data stored locally on computers, use any standard Windows tools. 
+To delete personal data stored locally on computers, use any standard Windows tools to delete the files or personal data within the files. 
 
 ### To delete personal data with Microsoft Support
 
