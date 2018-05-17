@@ -18,7 +18,7 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: esaggese
+ms.reviewer: aashishr
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -195,7 +195,7 @@ There is no search by ObjectID. However, you are not restricted by the `-UserEma
 
 ## Usage logs for the Azure Information Protection client and RMS client
 
-When labels and protection is applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
+When labels and protection are applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
 
 - For the Azure Information Protection client: %localappdata%\Microsoft\MSIP\Logs
 
