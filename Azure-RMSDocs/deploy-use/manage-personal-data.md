@@ -210,11 +210,11 @@ When the Azure Information Protection client runs the scanner, personal data is 
 ## Securing and controlling access to personal information
 Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Information Protection Administrator**
+- **Information Protection Administrator**
 
-    - **Security Administrator**
+- **Security Administrator**
 
-    - **Global Administrator / Company Administrator**
+- **Global Administrator / Company Administrator**
 
 Personal data that you view and specify by using the AADRM module is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
 
