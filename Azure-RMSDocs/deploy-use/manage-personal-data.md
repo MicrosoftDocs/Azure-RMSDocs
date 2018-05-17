@@ -33,11 +33,15 @@ When you use and configure Azure Information Protection, email addresses and IP 
 
 - Protection templates for the Azure Rights Management service
 
+- Information about super users and delegated administrators for the Azure Rights Management service 
+
 - Admin logs for the Azure Rights Management service
 
-- User logs for the Azure Rights Management service
+- Usage logs for the Azure Rights Management service
 
-- Document tracking logs  
+- Document tracking logs
+
+- Usage logs for the Azure Information Protection client and RMS client 
 
 
 [!INCLUDE [GDPR-related guidance](../includes/gdpr-intro-sentence.md)]
@@ -45,11 +49,12 @@ When you use and configure Azure Information Protection, email addresses and IP 
 
 ## Viewing personal data that Azure Information Protection uses
 
-When an Azure Information Protection label is configured to apply protection, you can use the Azure portal to view email addresses that an administrator has specified. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
+Using the Azure portal, an administrator can specify email addresses for scoped policies and for protection settings within a label configuration. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](../deploy-use/configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-The same information can be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+For labels that are configured to apply protection from the Azure Rights Management service, email address can also be found in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm). This PowerShell module also lets an administrator specify users by email address to be a [super user](../deploy-use/configure-super-users.md), or an administrator for the Azure Rights Management service. 
 
-When the service is used, these email addresses and the users' IP addresses might be saved in log files. 
+When Azure Information Protection is used to classify and protect documents and emails, email addresses and the users' IP addresses might be saved in log files.
+
 
 ### Protection templates
 
@@ -83,6 +88,11 @@ EnableInLegacyApps      : False
 LabelId                 :
 ```
 
+### Super users and delegated administrators for the Azure Rights Management service
+
+Run the [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperuser) cmdlet and [Get-AadrmRoleBasedAdministrator](/powershell/module/aadrm/get-aadrmrolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
+
+
 ### Admin logs for the Azure Rights Management service
 
 Run the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
@@ -93,7 +103,7 @@ PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -T
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
 ```
 
-### User logs for the Azure Rights Management service
+### Usage logs for the Azure Rights Management service
 Run the [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) cmdlet to retrieve a log of end-user actions that use the Azure Rights Management service. This service protects data for Azure Information Protection. The log could include personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
 For example:
@@ -183,26 +193,67 @@ IsHiddenInfo         : False
 
 There is no search by ObjectID. However, you are not restricted by the `-UserEmail` parameter and the email address you provide doesn't need to be part of your tenant. If the email address provided is stored anywhere in the document tracking logs, the document tracking entry is returned in the cmdlet output.
 
+## Usage logs for the Azure Information Protection client and RMS client
+
+When labels and protection is applied to documents and emails, email addresses and IP addresses can be stored in log files on a user's computer in the following locations:
+
+- For the Azure Information Protection client: %localappdata%\Microsoft\MSIP\Logs
+
+- For the RMS client: %localappdata%\Microsoft\MSIPC\msip\Logs
+
+In addition, the Azure Information Protection client logs this personal data to the local Windows event log **Applications and Services Logs** > **Azure Information Protection**.
+
+When the Azure Information Protection client runs the scanner, personal data is saved to %localappdata%\Microsoft\MSIP\Scanner\Reports.
+
+[!INCLUDE [GDPR-related guidance](../includes/gdpr-hybrid-note.md)]
+
 ## Securing and controlling access to personal information
-Personal data stored within the Azure Information Protection service is accessible only to Global Administrators and Security Administrators. These roles can be assigned in Azure Active Directory.
+Personal data that you view and specify in the Azure portal is accessible only to users who have been assigned one of the following [administrator roles from Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+    
+    - **Information Protection Administrator**
+
+    - **Security Administrator**
+
+    - **Global Administrator / Company Administrator**
+
+Personal data that you view and specify by using the AADRM module is accessible only to users who have been assigned the **Information Protection Administrator** role or **Global Administrator / Company Administrator** roles from Azure Active Directory, or the global administrator role for the Azure Rights Management service.  
 
 ## Updating personal data
 
-Personal data in the Azure Information Protection policy can be updated by using the Azure portal to view email addresses that an administrator has specified. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
-  
-The same information can be updated in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+You can update email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](../deploy-use/configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
+
+For the protection settings, you can update the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+
+You cannot update email addresses for the super users and delegated administrators. Instead, remove the specified user account, and add the user account with the updated email address. 
 
 ### Protection templates
 
 Run the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) cmdlet to update the protection template. Because the personal data is within the `RightsDefinitions` property, you will also need to use the [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlet to create a RightsDefinitions object with the updated information, and use the RightsDefinitions object with the `Set-AadrmTemplateProperty` cmdlet.
 
+### Super users and delegated administrators for the Azure Rights Management service
+
+When you need update an email address for a super user:
+
+1. Use [Remove-AadrmSuperUser](/powershell/module/aadrm/Remove-AadrmSuperUser) to remove the user and old email address.
+
+2. Use [Add-AadrmSuperUser](/powershell/module/aadrm/Add-AadrmSuperUser) to add the user and new email address.
+
+When you need update an email address for a delegated administrator:
+
+1. Use [Remove-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Remove-AadrmRoleBasedAdministrator) to remove the user and old email address.
+
+2. Use [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Add-AadrmRoleBasedAdministrator) to add the user and new email address.
 
 ## Deleting personal data
-Personal data in the Azure Information Protection policy can be deleted by using the Azure portal. For more information, see [How to configure a label for Rights Management protection](configure-policy-protection.md).
-  
-The same information can be deleted in protection templates, by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+You can delete email addresses for scoped policies and protection settings in the Azure Information Protection policy. For more information, see [How to configure the Azure Information Protection policy for specific users by using scoped policies](../deploy-use/configure-policy-scope.md) and [How to configure a label for Rights Management protection](configure-policy-protection.md). 
 
-Personal data in document tracking logs, admin logs, or user logs can be deleted by raising a request with Microsoft Support.
+For the protection settings, you can delete the same information by using PowerShell cmdlets from the [AADRM module](/powershell/module/aadrm).
+
+To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AadrmSuperUser](/powershell/module/aadrm/Remove-AadrmSuperUser) cmdlet and [Remove-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Remove-AadrmRoleBasedAdministrator). 
+
+To delete personal data in document tracking logs, admin logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
+
+To delete personal data stored locally on computers, use any standard Windows tools. 
 
 ### Steps to delete personal data with Microsoft Support
 
@@ -228,8 +279,8 @@ When you use the AADRM PowerShell cmdlets, the personal data is made available f
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
 
 ## Auditing and reporting
-For search and export, all cmdlets must be run as a Global Administrator. These operations are recorded in the administrator log that is available for the administrator to download.
+Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AADRM module for search and export of personal data. These operations are recorded in the admin log that can be downloaded.
 
-For delete, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the AADRM PowerShell cmdlets.
+For delete, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AADRM module.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
