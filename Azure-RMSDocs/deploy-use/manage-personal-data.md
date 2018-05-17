@@ -27,13 +27,13 @@ ms.suite: ems
 
 # Manage personal data for Azure Information Protection
 
-When you use and configure Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
+When you configure and use Azure Information Protection, email addresses and IP addresses are stored and used by the Azure Information Protection service. This personal data can be found in the following items:
 
 - The Azure Information Protection policy
 
 - Protection templates for the Azure Rights Management service
 
-- Information about super users and delegated administrators for the Azure Rights Management service 
+- Super users and delegated administrators for the Azure Rights Management service 
 
 - Admin logs for the Azure Rights Management service
 
