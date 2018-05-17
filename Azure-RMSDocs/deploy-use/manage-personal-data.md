@@ -35,7 +35,7 @@ When you configure and use Azure Information Protection, email addresses and IP 
 
 - Super users and delegated administrators for the Azure Rights Management service 
 
-- Admin logs for the Azure Rights Management service
+- Administration logs for the Azure Rights Management service
 
 - Usage logs for the Azure Rights Management service
 
@@ -93,7 +93,7 @@ LabelId                 :
 Run the [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperuser) cmdlet and [Get-AadrmRoleBasedAdministrator](/powershell/module/aadrm/get-aadrmrolebasedadministrator) cmdlet to see which users have been assigned the super user role or global administrator role for the Azure Rights Management service. For users who have been assigned either of these roles, their email addresses are displayed.
 
 
-### Admin logs for the Azure Rights Management service
+### Administration logs for the Azure Rights Management service
 
 Run the [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) cmdlet to get a log of admin actions for the Azure Rights Management service, which protects data for Azure Information Protection. This log includes personal data in the form of email addresses and IP addresses. The log is in plaintext and after it is downloaded, the details of a specific administrator can be searched offline.
 
@@ -251,7 +251,7 @@ For the protection settings, you can delete the same information by using PowerS
 
 To delete email addresses for super users and delegated administrators, remove these users by using the [Remove-AadrmSuperUser](/powershell/module/aadrm/Remove-AadrmSuperUser) cmdlet and [Remove-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Remove-AadrmRoleBasedAdministrator). 
 
-To delete personal data in document tracking logs, admin logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
+To delete personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service, use the following section to raise a request with Microsoft Support.
 
 To delete personal data stored locally on computers, use any standard Windows tools. 
 
@@ -260,9 +260,9 @@ To delete personal data stored locally on computers, use any standard Windows to
 **Step 1: Initiate delete request**
 [Contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an Azure Information Protection support case with a request for deleting data from your tenant. You must prove that you are an administrator for your Azure Information Protection tenant and understand that this process takes several days to confirm. While submitting your request, you will need to provide additional information, depending on the data that needs to be deleted.
 
-- To delete the admin log, you need to provide the **end date**. All admin logs until that end date will be deleted.
-- To delete the user logs, you need to provide the **end date**. All user logs until that end date will be deleted.
-- To delete the document tracking logs, you  need to provide the **UserEmail**. All document tracking information relating to the UserEmail will be deleted.
+- To delete the administration log, provide the **end date**. All admin logs until that end date will be deleted.
+- To delete the usage logs, provide the **end date**. All usage logs until that end date will be deleted.
+- To delete the document tracking logs, provide the **UserEmail**. All document tracking information relating to the UserEmail will be deleted.
 
 Deleting this data is a permanent action. There is no means to recover the data after a delete request has been processed. It is recommended that administrators export the required data before submitting a delete request.
 
@@ -279,8 +279,8 @@ When you use the AADRM PowerShell cmdlets, the personal data is made available f
 Azure Information Protection follows Microsoft's [privacy terms](https://privacy.microsoft.com/privacystatement) for profiling or marketing based on personal data.
 
 ## Auditing and reporting
-Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AADRM module for search and export of personal data. These operations are recorded in the admin log that can be downloaded.
+Only users who have been assigned [administrator permissions](#securing-and-controlling-access-to-personal-information) can use the AADRM module for search and export of personal data. These operations are recorded in the administration  log that can be downloaded.
 
-For delete, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AADRM module.
+For delete actions, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AADRM module.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
