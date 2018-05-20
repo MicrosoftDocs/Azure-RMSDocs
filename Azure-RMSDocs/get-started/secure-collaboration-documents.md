@@ -122,7 +122,7 @@ Before the document opens, one of the following authentication flows happen:
     When the new Microsoft account is created, the local account switches to this new Microsoft account and the user can then open the document.
 
 
-### Supported scenarios for opening protected documents:
+### Supported scenarios for opening protected documents
 
 The following table summaries the different authentication methods that are supported for opening protected documents.
 
@@ -144,7 +144,7 @@ Currently supported by Office 2016 Click-to-Run only.
 
 ## Next steps
 
-For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md).
+For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md). This article includes some other [example configurations](../deploy-use/configure-policy.md#example-configurations) for configuring labels to apply protection for common scenarios.
 
 This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
 
