@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2018
+ms.date: 05/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -144,9 +144,11 @@ Currently supported by Office 2016 Click-to-Run only.
 
 ## Next steps
 
-For more information about the options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md). This article includes some other [example configurations](../deploy-use/configure-policy.md#example-configurations) for configuring labels to apply protection for common scenarios.
+See other [example configurations](../deploy-use/configure-policy-protection.md#example-configurations) for labels to apply protection for common scenarios. This article also contains more details about the protection settings.
 
-This label configuration also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
+For more information about the other options and settings that you can configure for your label, see [Configuring Azure Information Protection policy](../deploy-use/configure-policy.md). 
+
+The label that was configured in this article also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
