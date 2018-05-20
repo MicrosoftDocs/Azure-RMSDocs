@@ -60,7 +60,9 @@ However, if you don't want to wait, you can use the following instructions to se
 
 ## What credentials should I use to sign in to this app?
 
-If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free [Microsoft account](https://signup.live.com).
+If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, use your work credentials to sign in. 
+
+If your personal email address was used to protect the file, use credentials from a free [Microsoft account](https://signup.live.com) to sign in.
 
 ## Can I sign up for the free account with my personal email address, such as a Hotmail or Gmail account?
 
