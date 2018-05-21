@@ -52,7 +52,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 If you have a version of the client that is later than 1.26.6.0, it is a preview build for testing and evaluation purposes. 
  
-**Released**: 05/15/2018 
+**Released**: 05/21/2018 
 
 The current preview version is **1.27.48.0** and has the following changes since the current GA version of the client.  
 
