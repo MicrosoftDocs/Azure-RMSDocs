@@ -100,7 +100,7 @@ When users that you authorized open the document for editing, the document opens
 
 ![Azure Information Protection permissions example information banner](../media/example-restricted-access-banner.png)
 
-If they select the **View Permission** button, they see the permissions that they have. For example:
+If they select the **View Permission** button, they see the permissions that they have. In the following example, the user can view and edit the document:
 
 ![Azure Information Protection permissions example dialog box](../media/example-permisisons-popup.png)
 
@@ -124,11 +124,11 @@ Before the document opens, one of the following authentication flows happen:
 
 ### Supported scenarios for opening protected documents
 
-The following table summaries the different authentication methods that are supported for opening protected documents.
+The following table summaries the different authentication methods that are supported for opening and editing protected documents.
 
-In addition, the Azure Information Protection viewer for iOS and Android can open files by using a Microsoft account.
+In addition, the Azure Information Protection viewer for iOS and Android can open files for viewing by using a Microsoft account.
 
-|Platforms for editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
+|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
 |iOS|Yes [[1]](#footnote-1)|No|

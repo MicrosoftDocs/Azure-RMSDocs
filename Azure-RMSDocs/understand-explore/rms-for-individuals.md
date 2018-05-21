@@ -35,7 +35,7 @@ RMS for individuals uses Azure Active Directory self-service signup. If users ha
 
 
 > [!NOTE]
-> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). This email solution works for all email addresses on all devices and is the recommended way to safely share information and view Office documents by email with people outside your organization.
+> This free subscription is one option to help ensure that authorized people outside your organization can always read files that your organization protects. Another option is to email documents by using [Office 365 Message Encryption with new capabilities](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). This email solution works for all email addresses on all devices and is the recommended way to safely share information and view Office documents in a browser with people outside your organization.
 > 
 > Another option is to use Microsoft accounts. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
 
