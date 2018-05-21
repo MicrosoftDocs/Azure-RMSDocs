@@ -48,13 +48,12 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.26.6.0
 
-If you have a version of the client that is later than 1.26.6.0, it is a preview build for testing and evaluation purposes. 
- 
-**Released**: 05/21/2018 
+## Version 1.27.48.0
 
-The current preview version is **1.27.48.0** and has the following changes since the current GA version of the client.  
+**Released**: 06/01/2018
+
+This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 **New features**: 
 
