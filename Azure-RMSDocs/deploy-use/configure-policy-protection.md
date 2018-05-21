@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -240,9 +240,14 @@ The new users that you add will be able open documents and emails that have alre
 
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
-This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment.
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or save and edit an attachment.
 
-If you specify external users who do not have an account in Azure AD, be sure to instruct your users not to use this label for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+If you specify external users who do not have an account in Azure AD:
+
+- The label is suitable for email when Exchange Online is using the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+ 
+- For Office attachments that are automatically protected, these documents are available to view in the browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
 
 > [!NOTE]
 > Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, you can use this example to configure a label with the same set of usage rights.

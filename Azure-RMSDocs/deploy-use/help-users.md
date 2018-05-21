@@ -6,7 +6,7 @@ description: Information to help you provide guidance for users, administrators,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -56,7 +56,7 @@ After you have deployed and configured Azure Information Protection for your org
     
     - **Sign in help**
         
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. The required credentials are not for a Microsoft account (formerly Microsoft Live ID) or their personal email account, because these accounts are not currently supported by the Azure Rights Management service. 
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they have applications that use the Azure Rights Management service.
         
@@ -64,7 +64,7 @@ After you have deployed and configured Azure Information Protection for your org
         
         Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
         
-        Authentication and authorization rely on accounts and groups in Azure Active Directory. To confirm that a specific user or group can be authorized to consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
+        To confirm that a specific user or group can be authorized by Azure Active Directory to protect or consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
         
         If users report that they can open protected content but they don't have the rights that they need, the problem might be that the user is not in the correct group that's configured for a Rights Management template. Or, the problem might be that the [template needs reconfiguring](configure-policy-templates.md) for the user or group. 
         
