@@ -6,7 +6,7 @@ description: Some frequently asked questions about the data protection service, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -113,11 +113,15 @@ By default, the Azure Rights Management service uses an Azure Active Directory a
 
 The authentication method for these accounts can vary, depending on how the administrator in the other organization has configured the Azure Active Directory accounts. For example, they could use passwords that were created for these accounts, multi-factor authentication (MFA), federation, or passwords that were created in Active Directory Domain Services and then synchronized to Azure Active Directory.
 
-If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
+Other authentication methods:
+
+- If you protect an email with an Office document attachment to a user who doesn't have an account in Azure AD, the authentication method changes. The Azure Rights Management service is federated with some popular social identity providers, such as Gmail. If the user's email provider is supported, the user can sign in to that service and their email provider is responsible for authenticating them. If the user's email provider is not supported, or as a preference, the user can apply for a one-time passcode that authenticates them and displays the email with the protected document in a web browser.
+
+- Azure Information Protection can use Microsoft accounts for supported applications. Currently, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## Can I add external users (people from outside my company) to custom templates?
 
-Yes. The [protection settings](../deploy-use/configure-policy-protection.md) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. Unless the template will be used exclusively for sending email using the [new capabilities from Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), do not add accounts from social identities (such as Gmail and Microsoft) or other accounts that are not in Azure AD.
+Yes. The [protection settings](../deploy-use/configure-policy-protection.md) that you can configure in the Azure portal let you add permissions to users and groups from outside your organization, and even all users in another organization. You might find it useful to reference the step-by-step example, [Secure document collaboration by using Azure Information Protection](secure-collaboration-documents.md). 
 
 Note that if you have Azure Information Protection labels, you must first convert your custom template to a label before you can configure these protection settings in the Azure portal. For more information, see [Configuring and managing templates for Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
