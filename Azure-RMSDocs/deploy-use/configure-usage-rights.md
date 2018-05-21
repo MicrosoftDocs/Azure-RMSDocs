@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -175,7 +175,7 @@ The default use license validity period for a tenant is 30 days and you can conf
 
 - When you configure a label or template in the Azure portal, the use license validity period takes its value from the **Allow offline access setting**. 
     
-    For more information and guidance to configure this setting in the Azure portal, see the table in step 9 from [How to configure a label for Rights Management protection](configure-policy-protection.md).
+    For more information and guidance to configure this setting in the Azure portal, see the [Information about the protection settings](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings table from the instructions how to configure a label for Rights Management protection.
 
 - When you configure a template by using PowerShell, the use license validity period takes its value from the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate) cmdlets.
     
