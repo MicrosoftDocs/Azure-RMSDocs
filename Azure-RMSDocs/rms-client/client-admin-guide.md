@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -171,11 +171,13 @@ For these languages, menu options, dialog boxes, and messages from the Azure Inf
 
 However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
 
-### Upgrading the Azure Information Protection client
+### Upgrading and maintaining the Azure Information Protection client
 
-If you installed the client by using the executable or Windows installer file, you must manually install new releases of the client. When you install the client by using Windows Update, new releases automatically become available for download in the catalog a few weeks after the release. 
+The Azure Information Protection team regularly updates the Azure Information Protection client for new functionality and fixes. Announcements are posted to the team's [Yammer site](https://www.yammer.com/AskIPTeam).
 
-Use the [version history](../rms-client/client-version-release-history.md) to see what's new and changed for new releases. 
+If you installed the client by using the executable or Windows installer file, you must manually download new releases from the Microsoft Download Center to install updates for the client. When you install the client by using Windows Update, new releases automatically become available for download in the catalog a few weeks after the release. 
+
+Use the [Version release history and support policy](../rms-client/client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
 
 ## Uninstalling the Azure Information Protection client
 
