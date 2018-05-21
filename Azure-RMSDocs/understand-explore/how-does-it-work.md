@@ -6,7 +6,7 @@ description: Breaking down how Azure RMS works, the cryptographic controls that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -164,6 +164,8 @@ The preceding walkthroughs cover the standard scenarios but there are some varia
 - **Generic protection (.pfile)**: When the Azure Rights Management service generically protects a file, the flow is basically the same for content protection except that the RMS client creates a policy that grants all rights. When the file is consumed, it is decrypted before it is passed to the target application. This scenario lets you protect all files, even if they don’t natively support RMS.
 
 - **Protected PDF (.ppdf)**: When the Azure Rights Management service natively protects an Office file, it also creates a copy of that file and protects it in the same way. The only difference is that the file copy is in PPDF file format, which the Azure Information Protection client viewer and the RMS sharing application knows how to open for viewing only. This scenario lets you send protected attachments via email, knowing that the recipient on a mobile device can always read them even if the mobile device doesn’t have an app that natively supports protected Office files.
+
+- **Microsoft accounts**: Azure Information Protection can authorize email addresses for consumption when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
 ## Next steps
 

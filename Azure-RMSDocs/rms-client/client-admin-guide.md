@@ -171,7 +171,7 @@ For these languages, menu options, dialog boxes, and messages from the Azure Inf
 
 However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
 
-### Upgrading and maintaining the Azure Information Protection client
+## Upgrading and maintaining the Azure Information Protection client
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for new functionality and fixes. Announcements are posted to the team's [Yammer site](https://www.yammer.com/AskIPTeam).
 
