@@ -344,7 +344,7 @@ Additional cmdlets in the preview version of the scanner:
 
 - [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType)
 
-- [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType)
+- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
 
 
 ## Event log IDs and descriptions

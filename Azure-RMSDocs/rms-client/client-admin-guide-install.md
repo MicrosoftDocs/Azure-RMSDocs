@@ -38,11 +38,13 @@ Then check the additional prerequisites that might be needed for the Azure Infor
 
 - Microsoft .NET Framework 4.6.2
     
-    The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite with a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
+    The full installation of the Azure Information Protection client by default, requires a minimum version of Microsoft .NET Framework 4.6.2 and if this is missing, the setup wizard from the executable installer tries to download and install this prerequisite. When this prerequisite is installed as part of the client installation, the computer must be restarted. Although not recommended, you can bypass this prerequisite when you use the setup wizard by using a [custom installation parameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter).
+    
+    This prerequisite is not automatically installed when you install the client silently by using the executable installer, Windows Update, or Windows installer. For these scenarios, you must install this prerequisite separately if it is needed, or the install fails. You can download the Microsoft .NET Framework 4.6.2 (Offline Installer) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344).
 
 - Microsoft .NET Framework 4.5.2
     
-    If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the installer does not download or install it.
+    If the Azure Information Protection Viewer is installed separately, this requires a minimum version of Microsoft .NET Framework 4.5.2 and if this is missing, the executable installer does not download or install it.
 
 - Windows PowerShell version 4.0
     
@@ -175,7 +177,7 @@ Example to install the client silently for Office 2010 and Azure RMS: `AzInfoPro
 
 #### More information about the DowngradeDotNetRequirement installation parameter
 
-To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, the installation checks for this version and tries to install it if it is missing. The installation then requires the computer to restart.
+To support automatic upgrades by using Windows Update, and for reliable integration with Office applications, the Azure Information Protection client uses Microsoft .NET Framework version 4.6.2. By default, an interactive installation by using the executable checks for this version and tries to install it if it is missing. The installation then requires the computer to restart.
 
 If installing this later version of the Microsoft .NET Framework is not practical, you can install the client with the **DowngradeDotNetRequirement=True** parameter and value, which bypasses this requirement if Microsoft .NET Framework version 4.5.1 is installed.
 
