@@ -24,7 +24,7 @@ The MIP SDK for C++ includes the following classes:
 [mip::EmailRights](class_mip_emailrights.md) | Rights that apply to email.
 [mip::Error](class_mip_error.md) | Base class for all errors that will be reported (thrown or returned) from MIP SDK.
 [mip::ExecutionState](class_mip_executionstate.md) | Interface for all the state needed to execute the engine.
-[mip::EileEngine](class_mip_fileengine.md) | Interface for all engine functions.
+[mip::FileEngine](class_mip_fileengine.md) | Interface for all engine functions.
 [mip::FileEngine::Settings](class_mip_fileengine_settings.md) | 
 [mip::FileHandler](class_mip_filehandler.md) | Interface for all file handling functions.
 [mip::FileHandler::Observer](class_mip_filehandler_observer.md) | Observer interface for clients to get notifications for file handler related events.
@@ -44,8 +44,8 @@ The MIP SDK for C++ includes the following classes:
 [mip::NotSupportedError](class_mip_notsupportederror.md) | Operation not supported error.
 [mip::PolicyDescriptor](class_mip_policydescriptor.md) | Represents an ad-hoc policy associated with protected content.
 [mip::PolicyEngine](class_mip_policyengine.md) | This class provides an interface for all engine functions.
-[mip::PolicyEngine::Settings](class_mip_policyengine_settings.md) | An instance of this class with the approprieted parameters should be provide to initiate an engine.
-[mip::PrivilegedRequiredError](class_mip_privilegedrequirederror.md) | Current label was set by privilidge assignment method cannot override.
+[mip::PolicyEngine::Settings](class_mip_policyengine_settings.md) | An instance of this class with the appropriate parameters should be provide to initiate an engine.
+[mip::PrivilegedRequiredError](class_mip_privilegedrequirederror.md) | Current label was set by privilege assignment method cannot override.
 [mip::Profile](class_mip_profile.md) | Root class for Microsoft Information Protection operations.
 [mip::Profile::Observer](class_mip_profile_observer.md) | Interface used to receive notifications for profile related event notifications.
 [mip::Profile::Settings](class_mip_profile_settings.md) | Configures profile settings.
@@ -71,7 +71,7 @@ The MIP SDK for C++ includes the following classes:
 [mip::RMSRightsException](class_mip_rmsrightsexception.md) | RMS rights exception.
 [mip::RMSStreamException](class_mip_rmsstreamexception.md) | RMS stream exception.
 [mip::Roles](class_mip_roles.md) | Defines roles for protecting data.
-[mip::Stream](class_mip_stream.md) | A class that defines the interface between the mip sdk and stream based content.
+[mip::Stream](class_mip_stream.md) | A class that defines the interface between the MIP SDK and stream based content.
 [mip::TemplateDescriptor](class_mip_templatedescriptor.md) | Describes an RMS template.
 [mip::UserPolicy](class_mip_userpolicy.md) | Represents the policy associated with protected content.
 [mip::UserRights](class_mip_userrights.md) | Represents a group of users and the rights associated with them.

@@ -7,7 +7,7 @@ keywords: Some frequently asked questions to help you use the Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -57,13 +57,18 @@ If you have these versions or higher, you can install the app to run on your mob
 After you've installed the app, you don't need to do anything more at that point. Wait until you get a protected email or file that you want to view, and then choose the **AIP Viewer** to open it. You will then be asked to sign in with your work or school account, or prompted to select a certificate. After these credentials are authenticated, you can then read the contents.
 
 However, if you don't want to wait, you can use the following instructions to send yourself a protected email or file to view: [Get started with the Microsoft Azure Information Protection app for iOS and Android](mobile-app-get-started.md) 
+
 ## What credentials should I use to sign in to this app?
 
-If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, you can use your credentials to sign in. If not, you can sign up for a free new account by using the [Azure Information Protection page](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+If your organization already has AD RMS on-premises (with the mobile device extension) or uses the Azure Rights Management service, use your work credentials to sign in. 
+
+If your personal email address was used to protect the file, use credentials from a free [Microsoft account](https://signup.live.com) to sign in.
 
 ## Can I sign up for the free account with my personal email address, such as a Hotmail or Gmail account?
 
-Not yet. Today, you can sign up only with your business email address (work or school account). We’re working on support for personal email addresses and will update this entry when it’s available.
+Yes, when you apply for a Microsoft account, you can specify your Hotmail or Gmail email address, or any other email address that you own. 
+
+However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## Which file extensions can I open with this app?
 
