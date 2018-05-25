@@ -106,7 +106,7 @@ If they select the **View Permission** button, they see the permissions that the
 
 If the document is opened by external users who are also using Azure Information Protection, the Office application does not display your classification label for the document, although any visual markings from the label remain. Instead, external users can apply their own label in line with their organization's classification taxonomy. If these external users then send back the edited document to you, Office displays your own classification label when you reopen the document.
 
-Before the document opens, one of the following authentication flows happen:
+Before the protected document opens, one of the following authentication flows happen:
 
 - For the users who have an Azure AD account, they use their Azure AD credentials to be authenticated by Azure AD, and the document opens. 
 
