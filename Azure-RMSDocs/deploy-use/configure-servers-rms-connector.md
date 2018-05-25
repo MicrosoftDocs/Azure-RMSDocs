@@ -6,7 +6,7 @@ description: Information to help you configure your on-premises servers that wil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/16/2017
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configuring servers for the Azure Rights Management connector
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Use the following information to help you configure your on-premises servers that will use the Azure Rights Management (RMS) connector. These procedures cover step 5 from [Deploying the Azure Rights Management connector](deploy-rms-connector.md).
@@ -231,15 +231,17 @@ Servers running SharePoint 2010 must have installed a version of the MSDRM clien
 ## Configuring a file server for File Classification Infrastructure to use the connector
 To use the RMS connector and File Classification Infrastructure to protect Office documents, the file server must be running one of the following operating systems:
 
--   Windows Server 2012 R2
+- Windows Server 2016
 
--   Windows Server 2012
+- Windows Server 2012 R2
+
+- Windows Server 2012
 
 ### To configure file servers to use the connector
 
-1.  Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that your file servers can use the RMS connector.
+1. Make sure that the file servers are authorized to use the RMS connector, by using the RMS connector administration tool and the information from the [Authorizing servers to use the RMS connector](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) section. This configuration is required so that your file servers can use the RMS connector.
 
-2.  On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
+2. On the file servers configured for File Classification Infrastructure and that will communicate with the RMS connector, do one of the following:
 
     -   Run the server configuration tool for Microsoft RMS connector. For more information, see [How to use the server configuration tool for Microsoft RMS connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in this article.
 
@@ -251,7 +253,7 @@ To use the RMS connector and File Classification Infrastructure to protect Offic
 
     - Make manual registry edits by using the information in [Registry settings for the RMS connector](rms-connector-registry-settings.md) to manually add registry settings on the servers. 
 
-3.  Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
+3. Create classification rules and file management tasks to protect documents with RMS Encryption, and then specify an RMS template to automatically apply RMS policies. For more information, see [File Server Resource Manager Overview](http://technet.microsoft.com/library/hh831701.aspx) in the Windows Server documentation library.
 
 ## Next steps
 Now that the RMS connector is installed and configured, and your servers are configured to use it, IT administrators and users can protect and consume email messages and documents by using the Azure Rights Management service. To make this easy for users, deploy the Azure Information Protection client, which installs an add-on for Office and adds new right-click options to File Explorer. For more information, see the [Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md).

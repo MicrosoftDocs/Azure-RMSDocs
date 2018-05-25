@@ -41,6 +41,7 @@
 ## [Operations for your tenant key](operations-tenant-key.md)
 ### [Microsoft-managed](operations-microsoft-managed-tenant-key.md)
 ### [Customer-managed](operations-customer-managed-tenant-key.md)
+## [Manage personal data for Azure Information Protection](manage-personal-data.md)
 ## [Decommissioning and deactivating](decommission-deactivate.md)
 ## [Administering with PowerShell](administer-powershell.md)
 ### [Installing the AADRM PowerShell module](install-powershell.md)

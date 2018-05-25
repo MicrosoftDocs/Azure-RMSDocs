@@ -6,7 +6,7 @@ description: If you know or have previously deployed Active Directory Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -35,7 +35,7 @@ Some of the main differences for Azure Information Protection:
 
 - **No server infrastructure required**: Azure Information Protection doesn't require the additional servers and PKI certificates that AD RMS needs, because Microsoft Azure takes care of those for you. That makes this cloud solution quicker to deploy and easier to maintain.
 
-- **Cloud-based authentication**: Azure Information Protection uses Azure AD for authentication - for both internal users and users from other organizations. That means your mobile users can be authenticated even when they are not connected to your internal network and it is easier to share protected content with users from other organizations. Many organizations already have user accounts in Azure AD because they are running Azure services or have Office 365. But if not, RMS for individuals lets users create a free account. To share AD RMS protected content with another organization requires you to configure explicit trusts with each organization.
+- **Cloud-based authentication**: Azure Information Protection uses Azure AD for authentication - for both internal users and users from other organizations. That means your mobile users can be authenticated even when they are not connected to your internal network and it is easier to share protected content with users from other organizations. Many organizations already have user accounts in Azure AD because they are running Azure services or have Office 365. But if not, RMS for individuals lets users create a free account, or a Microsoft account can be used for [applications that support this authentication for Azure Information Protection](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). To share AD RMS protected content with another organization requires you to configure explicit trusts with each organization.
 
 - **Built-in support for mobile devices**: No deployment changes are needed for Azure RMS to support mobile devices and Mac computers. To support these devices with AD RMS, you must install the mobile device extension, configure AD FS for federation, and create additional records for your public DNS service.
 
