@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Rights Management Services SDK 2.1 | Azure RMS
