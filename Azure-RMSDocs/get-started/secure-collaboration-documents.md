@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/25/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -126,7 +126,7 @@ Before the document opens, one of the following authentication flows happen:
 
 The following table summaries the different authentication methods that are supported for opening and editing protected documents.
 
-In addition, the Azure Information Protection viewer for iOS and Android can open files for viewing by using a Microsoft account.
+In addition, the Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account.
 
 |Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
