@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -145,14 +145,11 @@ When you convert a template to a label:
 
 ## To create a new template
 
->[!NOTE]
-> These instructions reflect the latest updates to the Azure portal. If you do not see a **CLASSIFICATIONS** menu option, and still see a **Publish** option, the navigation instructions will not exactly match what you see. If that's the case, consider returning to this procedure in a couple of days when your tenant is updated for the latest changes.
-
 When you create a new label with the protection setting of **Azure (cloud key)**, under the covers, this action creates a new custom template that can then be accessed by services and applications that integrate with Rights Management templates.
 
 1. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select **Add a new label**.
 
-2. On the **Label** blade, keep the default of **Enabled**: **On** to publish this new template, or change this setting to **Off** to create the template as archived. Then enter a label name and description for the template name and description.
+2. On the **Label** blade, keep the default of **Enabled**: **On**, then enter a label name and description for the template name and description.
 
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
@@ -163,19 +160,10 @@ When you create a new label with the protection setting of **Azure (cloud key)**
     Click **OK** to keep your changes, and on the **Label** blade, click **Save**.
     
     On the **Azure Information Protection - Labels** blade, you now see your new label displayed with the **PROTECTION** column to indicate that it contains protection settings. These protection settings display as templates to applications and services that support the Azure Rights Management service.
+    
+    Although the label is enabled, by default, the template is archived. So that applications and services can use the template to protect documents and emails, complete the final step to publish the template.
 
-5. If the newly created template should not be available to all users, you must add the newly created label to a policy other than the Global policy:
-    
-    a. From the **CLASSIFICATIONS** > **Policies** menu option, select **Policies**.
-    
-    b. Select **Add a new policy** and then, on the **Policy** blade, specify a name for the scope of users, and a description. Then use the following option to select the subset of users: **Select which users or groups get this policy. Groups must be email-enabled.**
-    
-    Alternatively, if a policy already exists for your subset of users, select that policy instead from the **Policy** blade.
-    
-    c. From the **Policy** blade, select **Add or remove labels**. Then, on the **Policy: Add or remove labels** blade, select the newly created label that contains your protection settings, and click **OK**.
-    
-    d. Back on the **Policy** blade, click **Save**.  
-
+5. From the **CLASSIFICATIONS** > **Policies** menu option, select the policy to contain the new protection settings. Then select **Add or remove labels**. From the **Policy: Add or remove labels** blade, select the newly created label that contains your protection settings, select **OK**, and then select **Save**.
 
 ## Next steps
 
