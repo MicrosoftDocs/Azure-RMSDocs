@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,11 +47,11 @@ When you have configured your [Azure Information Protection policy](configure-po
 
 The scanner can inspect any files that Windows can index, by using iFilters that are installed on the computer. Then, to determine if the files need labeling, the scanner uses the Office 365 built-in data loss prevention (DLP) sensitivity information types and pattern detection, or Office 365 regex patterns. Because the scanner uses the Azure Information Protection client, it can classify and protect the same [file types](../rms-client/client-admin-guide-file-types.md).
 
-You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. For the preview version only, you can also run the scanner to discover files that contain sensitive information types, without configuring labels for conditions that apply automatic classification.
+You can run the scanner in discovery mode only, where you use the reports to check what would happen if the files were labeled. Or, you can run the scanner to automatically apply the labels. You can also run the scanner to discover files that contain sensitive information types, without configuring labels for conditions that apply automatic classification.
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
-Specific to the preview version of the scanner:
+Specific to the current general availability version of the scanner:
 
 - By default, only Office documents are protected rather than all file types. The full list of Office file types supported is listed in the [admin guide](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection), in the **File types supported by Office** table. 
     
@@ -187,7 +187,7 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), such as executables and system files.
 
-For the preview version, you can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType), and remove a file type from the list by using [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
+You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType), and remove a file type from the list by using [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
 
 Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
 
@@ -219,18 +219,17 @@ Finally, for the remaining file types, the scanner applies the default label in 
 |DigitalNegative|.dng|
 |Pfile|.pfile|
 
-Note that when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
+When the scanner applies a label with protection, by default, only Office file types are protected. when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. If you do not want this behavior, you can prevent files that have a specific file type from being protected. For example, prevent a PDF file from becoming a protected PDF (.ppdf) file, and prevent a .txt file from becoming a protected text (.ptxt) file.
 
 For more information about the different levels of protection for different file types, and how to control the protection behavior by editing the registry, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
 
-For the general availability version of the scanner:
-
-- By default, all file types are protected.
-
-
-For the preview version of the scanner:
+For the current general availability version of the scanner:
 
 - By default, only Office file types are protected.
+
+For the previous general availability version of the scanner:
+
+- By default, all file types are protected.
 
 
 ## When files are rescanned by the Azure Information Protection scanner
@@ -250,7 +249,7 @@ If the scanner downloaded a policy that had no automatic conditions configured, 
 
 ## Using the scanner with alternative configurations
 
-When you use the preview version of the scanner, there are two alternative scenarios that the scanner supports where labels do not need to be configured for any conditions: 
+When you use the current general availability version of the scanner, there are two alternative scenarios that the scanner supports where labels do not need to be configured for any conditions: 
 
 - Apply a default label to all files in a data repository.
     
@@ -307,7 +306,7 @@ Other factors that affect the scanner performance:
     
     - Large files obviously take longer to scan than small files.
 
-- For the preview version of the scanner:
+- For the current general availability version of the scanner:
     
     - Confirm that the service account that runs the scanner has only the rights documented in the [scanner prerequisites](#prerequisites-for-the-azure-information-protection-scanner) section, and then configure the [advanced client property](../rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) to disable the low integrity level for the scanner.
     
@@ -320,6 +319,8 @@ Other factors that affect the scanner performance:
 
 Other cmdlets for the scanner let you change the service account and database for the scanner, get the current settings for the scanner, and uninstall the scanner service. The scanner uses the following cmdlets:
 
+- [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType)
+
 - [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
@@ -330,21 +331,17 @@ Other cmdlets for the scanner let you change the service account and database fo
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
 
+- [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
-- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
-
-Additional cmdlets in the preview version of the scanner:
-
-- [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType)
-
-- [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType)
-
 - [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
+
+- [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
 ## Event log IDs and descriptions
