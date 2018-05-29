@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -38,6 +38,8 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 - UNC paths for network shares that use the Server Message Block (SMB) protocol.
 
 - Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013.
+
+To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
 ## Overview of the Azure Information Protection scanner
 
@@ -367,38 +369,9 @@ Information **911**
 
 This event is logged when the scanner has finished its one-time scan since the server started, or the scanner has finished a cycle for a continuous schedule.
 
-----
-
-Information **913**
-
-**Scanner is stopped because scanner is set to Never.**
-
-This event is logged when the scanner is configured to run one time rather than continuously, and the Azure Information Protection scanner service has been manually restarted since the computer started.  
-
-To scan the files again, you must set the schedule to **OneTime** or **Continuous**, and then manually restart the service. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
+If the scanner was configured to run one time rather than continuously, to scan the files again, you must set the schedule to **OneTime** or **Continuous**, and then manually restart the service. To change the schedule, use the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet and the **Schedule** parameter.
 
 ----
-
-Error **912**
-
-**Unknown error has occurred.**
-
-More information is logged in the detailed report that is stored in %localappdata%\Microsoft\MSIP\Scanner\Reports\DetailedReport_YYYY_MM_DD_HH_MM.csv.
-
-Contact [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) if this event continues to be logged. 
-
-----
-
-Error **914**
-
-**Service was automatically stopped due to bad configuration: policy file is missing or corrupted.**
-
-This event is logged when the Azure Information Protection client does not have a valid policy file for the scanner to run.
-
-The Azure Information Protection policy is stored in %localappdata%\Microsoft\MSIP and it must be configured with labels that have conditions to apply automatic classification. Or, the policy must be configured for a default label.
-
-Make sure that firewalls are not blocking the required connectivity to the Internet. For more information, see the [Firewalls and network infrastructure](../get-started/requirements.md#firewalls-and-network-infrastructure) requirements for Azure Information Protection. If Internet connectivity is not possible, follow the instructions for supporting [disconnected computers](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).
-
 
 ## Next steps
 
