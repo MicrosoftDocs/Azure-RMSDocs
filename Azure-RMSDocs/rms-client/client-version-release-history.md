@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -81,6 +81,8 @@ The current preview version is **1.27.48.0** and has the following changes since
     - To use a default label, you no longer need to configure a default label as a policy setting. Instead, just specify this default label with the repository configuration. 
 
 - Removed the "Congratulations!" welcome page and "What's new in Azure Information Protection" page, which displayed for first-time use in Office applications.
+
+- For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
 
 ## Version 1.26.6.0
 
