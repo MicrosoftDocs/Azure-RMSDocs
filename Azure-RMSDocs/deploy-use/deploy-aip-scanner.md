@@ -53,11 +53,7 @@ You can run the scanner in discovery mode only, where you use the reports to che
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
-By default, only Office documents are protected rather than all file types. The full list of Office file types supported is listed in the [admin guide](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection), in the **File types supported by Office** table. 
-    
-    To change this default behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile".
-
-You can also specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
+You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
 
 
 ## Prerequisites for the Azure Information Protection scanner
@@ -213,8 +209,7 @@ Finally, for the remaining file types, the scanner applies the default label in 
 
 When the scanner applies a label with protection, by default, only Office file types are protected. You can change this behavior so that additional file types are protected. However, when a label applies generic protection to documents, the file name extension changes to .pfile. In addition, the file becomes read-only until it is opened by an authorized user and saved in its native format. Text and images files can also change their file name extension and become read-only. 
 
-For more information about the different levels of protection for different file types, and how add different file types to be protected  by editing the registry, see the [File types supported for protection](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section in the admin guide.
-
+To change this default behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile"
 
 ## When files are rescanned by the Azure Information Protection scanner
 
