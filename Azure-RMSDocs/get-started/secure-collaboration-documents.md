@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2018
+ms.date: 05/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -104,7 +104,7 @@ If they select the **View Permission** button, they see the permissions that the
 
 ![Azure Information Protection permissions example dialog box](../media/example-permisisons-popup.png)
 
-If the document is opened by external users who are also using Azure Information Protection, the Office application does not display your classification label for the document, although any visual markings from the label remain. Instead, external users can apply their own label in line with their organization's classification taxonomy. If these external users then send back the edited document to you, Office displays your original classification label when you reopen the document.
+Note: If the document is opened by external users who are also using Azure Information Protection, the Office application does not display your classification label for the document, although any visual markings from the label remain. Instead, external users can apply their own label in line with their organization's classification taxonomy. If these external users then send back the edited document to you, Office displays your original classification label when you reopen the document.
 
 Before the protected document opens, one of the following authentication flows happen:
 
