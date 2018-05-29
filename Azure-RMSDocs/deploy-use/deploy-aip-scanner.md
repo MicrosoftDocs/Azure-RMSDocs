@@ -39,6 +39,8 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 - Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013.
 
+To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
+
 ## Overview of the Azure Information Protection scanner
 
 When you have configured your [Azure Information Protection policy](configure-policy.md) for labels that apply automatic classification, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection:
