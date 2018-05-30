@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -146,6 +146,9 @@ Fixes for stability and for specific scenarios that include:
 
 - For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
+**Additional changes**:
+
+- For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
 
 ## Version 1.10.56.0
 
