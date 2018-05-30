@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/29/2018
+ms.date: 05/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,8 +82,6 @@ The current preview version is **1.27.48.0** and has the following changes since
 
 - Removed the "Congratulations!" welcome page and "What's new in Azure Information Protection" page, which displayed for first-time use in Office applications.
 
-- For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
-
 ## Version 1.26.6.0
 
 **Released**: 04/17/2018
@@ -148,6 +146,9 @@ Fixes for stability and for specific scenarios that include:
 
 - For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
+**Additional changes**:
+
+- For [client usage logging](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Event ID 102 and ID 103 are replaced with event ID 101.
 
 ## Version 1.10.56.0
 
