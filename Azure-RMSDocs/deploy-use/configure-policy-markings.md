@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/31/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -31,7 +31,7 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 
 When you assign a label to a document or email message, you can select several options to make the chosen classification easily visible. These visual markings are a header, a footer, and a watermark.
 
-Additional information about these visual markers:
+Additional information about these visual markings:
 
 - Headers and footers apply to Word, Excel, PowerPoint, and Outlook.
 
@@ -39,13 +39,13 @@ Additional information about these visual markers:
 
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
     
-	- PowerPoint: Watermarks are applied to the master slide, as a background image.
+	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
     
 	- Multiple lines of text are supported.
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
-- Visual markers support one language only.
+- Visual markings support one language only.
 
 ## When visual markings are applied
 
@@ -69,7 +69,7 @@ Use the following instructions to configure visual markings for a label.
 
 2. From the **CLASSIFICATIONS** > **Labels** menu option: On the **Azure Information Protection - Labels** blade, select the label that contains the visual markings you want to add or change.
 
-3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markers that you want, and then click **Save**:
+3. On the **Label** blade, in the **Set visual marking (such as header or footer)** section, configure the settings for the visual markings that you want, and then click **Save**:
     
     - To configure a header: For **Documents with this label have a header**, select **On** if you want a header, and **Off** if you do not. If you select **On**, then specify the header text, size, [font](#setting-the-font-name), [color](#setting-the-font-color), and alignment for the header.
     
@@ -130,7 +130,7 @@ Examples:
 
 ### Setting the font name
 
-Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markers. 
+Calibri is the default font for headers, footers, and watermark text. If you specify an alternative font name, make sure that it is available on the client devices that will apply the visual markings. 
 
 If the font specified is not available, the client falls back to using the Calibri font.
 

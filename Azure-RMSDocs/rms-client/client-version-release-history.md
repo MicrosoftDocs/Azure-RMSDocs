@@ -31,7 +31,7 @@ ms.suite: ems
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for fixes and new functionality. 
 
-You can download the latest GA release version and the current preview version from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). These versions are also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can deploy the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
+You can download the latest general availability release version and the current preview version (if available) from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). These versions are also included in the Microsoft Update Catalog (category: **Azure Information Protection**), so that you can deploy the client by using WSUS or Configuration Manager, or other software deployment mechanisms that use Microsoft Update.
 
 ### Servicing information and timelines
 
@@ -135,7 +135,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
 
-- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- You can now configure a label for user-defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
 
@@ -143,7 +143,7 @@ Fixes for stability and for specific scenarios that include:
 
 - For Office apps, improve performance and memory consumption.
 
-- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+- When you configure a label for user-defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
 
 - For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
