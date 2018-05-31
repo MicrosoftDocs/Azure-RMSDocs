@@ -135,7 +135,7 @@ Fixes for stability and for specific scenarios that include:
 
 - Bootstrap succeeds in Office 64-bit, so that you can protect documents and emails.
 
-- You can now configure a label for user defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- You can now configure a label for user-defined permissions for Word, Excel, PowerPoint, and File Explorer and also use the advanced client setting to hide the custom permissions options. [More information](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - Fall back to the Calibri font if visual markers in the Azure Information Protection policy are configured for a font name that is not installed on the client.
 
@@ -143,7 +143,7 @@ Fixes for stability and for specific scenarios that include:
 
 - For Office apps, improve performance and memory consumption.
 
-- When you configure a label for user defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
+- When you configure a label for user-defined permissions and HYOK (AD RMS) protection, the protection no longer incorrectly uses the Azure Rights Management service.
 
 - For a more consistent management experience, sublabels no longer inherit visual markings and protection settings from their parent label.
 
