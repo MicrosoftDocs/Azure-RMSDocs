@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/31/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,7 +39,7 @@ Additional information about these visual markers:
 
     - Excel: Watermarks are visible only in Page layout and Print preview modes, and when printed.
     
-	- PowerPoint: Watermarks are applied to the master slide, as a background image.
+	- PowerPoint: Watermarks are applied to the master slide, as a background image. On the **View** tab, **Slide Master**, make sure that the **Hide Background Graphics** check box is not selected.
     
 	- Multiple lines of text are supported.
 
