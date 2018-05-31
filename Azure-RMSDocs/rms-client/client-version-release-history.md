@@ -58,7 +58,7 @@ If you have a version of the client that is later than 1.27.48.0, it is a previe
 
 - Visual markings now replace a previously applied header or footer.
 
-- When an Excel file is already labeled and the label applies visual markings, a new sheet now has the label's visual marking applied.
+- When an Excel file is already labeled and the label applies visual markings, a new sheet now also has the label's visual markings applied.
 
 - When you use the advanced client setting to [label an Office document by using an existing custom property](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), automatic labeling doesn't override manual labeling.
 
