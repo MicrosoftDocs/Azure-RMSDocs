@@ -33,7 +33,7 @@ Important guidance if you are already using Active Directory Rights Management S
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
 
-- [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to activate-protection-when-you-configure-azure-information-protection)
+- [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection)
 
 ## Your subscription was purchased during or after February 2018
 
@@ -69,7 +69,7 @@ You should now see **Rights Management is not activated** and the option to acti
     
     If you haven't accessed the Azure Information Protection blade before, see the one-time [additional steps](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) to add this blade to the portal.
 
-2. On the initial **Azure Information Protection** blade, select **Protection activation**. 
+2. Select **Protection activation** from the menu options. 
 
 3.  On the **Azure Information Protection - Protection activation** blade, select **Deactivate**. Select **Yes** to confirm your choice.
 
