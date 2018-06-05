@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 07/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -43,9 +43,11 @@ When the Azure Rights Management service for Azure Information Protection is act
 
 When you have a service plan that includes Azure Rights Management, you might not have to activate the service:
 
-- If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of **February 2018** or later, the service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
+- **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of **February 2018** or later:** The service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
-- If your subscription was obtained before this month, you must activate the service yourself. 
+- **If you have an Office 365 E3 subscription and it was obtained before February 2018:** Starting July 1, 2018, the service is activated for you unless your tenant  is opted out from the automatic service update. The opt-out can be manual, and an administrator runs `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. Or the opt-out can be automatic because Microsoft knows from support tickets that you are running Active Directory Rights Management Services. 
+
+- If neither of the subsequent scenarios apply to you, you must manually activate the protection service.  
 
 When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
@@ -60,7 +62,7 @@ To use this data protection solution, your organization must have a service plan
 
 - An [Office 365 plan that includes Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-When the Azure Rights Management service is activated, all users in your organization can apply information protection to their files, and all users can open (consume) files that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
+When the Azure Rights Management service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
 ## Choosing your activation method
 
