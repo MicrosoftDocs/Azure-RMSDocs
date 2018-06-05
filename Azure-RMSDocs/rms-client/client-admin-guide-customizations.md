@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 05/30/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -58,30 +58,6 @@ Locate the following value name, and then set the value data to **0**:
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Regardless of this setting, the Azure Information Protection client follows the standard [RMS service discovery process](../rms-client/client-deployment-notes.md#rms-service-discovery) to find its AD RMS cluster.
-
-## Suppress the initial "Congratulations!" welcome page
-
-The preview client no longer displays this "Congratulations!" welcome page.
-
-When the Azure Information Protection client is first installed on a computer and a user opens Word, Excel, PowerPoint, or Outlook, a **Congratulations!** page displays with short instructions how to use the new Information Protection bar to select labels. You can suppress this page by editing the registry.
-
-1. If the following registry key does not exist, create it:
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. If a DWORD (32-bit) value (REG-DWORD) named **EnableWelcomeExperience** does not exist, create it and set the data value to **0**:
-
-## Suppress the "What's new in Azure Information Protection?" page
-
-The preview client no longer displays this "What's new in Azure Information Protection?" page.
-
-When the Azure Information Protection client is first installed or upgraded on a computer, and the Azure Information Protection bar is displayed in Word, Excel, PowerPoint, or Outlook, a **What's new in Azure Information Protection?** page displays to inform users about custom permissions and track usage. You can suppress this page by editing the registry.
-
-1. If the following registry key does not exist, create it:
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. If a string value (REG-SZ) named **WhatsNewVersion** does not exist, create it and set the data value to **1.4**.
 
 ## Sign in as a different user
 
@@ -370,11 +346,9 @@ Now, when a user opens and saves one of these Office documents, it is labeled  *
 
 ## Disable the low integrity level for the scanner
 
-This configuration option is currently in preview and is subject to change. It also requires the current preview version of the Azure Information Protection client.
-
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-By default, the preview version of the Azure Information Protection scanner runs with a low integrity level. This setting provides higher security isolation but at the cost of performance. A low integrity level is suitable if you run the scanner with an account that has privileged rights (such as a local administrator account) because this setting helps to protect the computer running the scanner.
+By default, the Azure Information Protection scanner runs with a low integrity level. This setting provides higher security isolation but at the cost of performance. A low integrity level is suitable if you run the scanner with an account that has privileged rights (such as a local administrator account) because this setting helps to protect the computer running the scanner.
 
 However, when the service account that runs the scanner has only the rights documented in the [scanner prerequisites](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), the low integrity level is not necessary and is not recommended because it negatively affects performance. 
 
