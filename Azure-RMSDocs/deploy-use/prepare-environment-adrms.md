@@ -93,7 +93,7 @@ The information bar displays **Deactivation finished successfully** and **Deacti
 
 ### Step 2: Start planning for migration
 
-See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## You have an Office 365 subscription that includes Azure Rights Management and it was purchased before or during February 2018
@@ -104,11 +104,11 @@ If the service is automatically activated for you and you are also using AD RMS,
 
 ### Step 1: Opt out from the automatic service update
 
-Use the following [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
+Use the following [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false` 
 
 ### Step 2: Start planning for migration
 
-See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## You see an option to activate protection when you configure Azure Information Protection
@@ -123,7 +123,7 @@ From the **Azure Information Protection - Labels** blade, view and configure the
 
 ### Step 2: Start planning for migration
 
-See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 ### Step 3: Configure labels for protection
 
