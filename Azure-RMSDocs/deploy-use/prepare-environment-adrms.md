@@ -38,13 +38,9 @@ When you are ready to move computers from AD RMS to the Azure Rights Management 
 
 **To check whether you have deployed AD RMS:**
 
-1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. 
-    
-    Use ADSI Edit to see whether you have an SCP published in Active Directory: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
+1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. Use ADSI Edit to see whether you have an SCP published in Active Directory: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
 
-2. If you are not using an SCP, Windows computers that connect to an AD RMS cluster will be configured for client-side service discovery by using the Windows registry: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation` 
-    
-    For more information about this registry configuration, see [Enabling client-side service discovery by using the Windows registry](../rms-client/client-deployment-notes.md#enabling-client-side service-discovery-by-using-the-windows-registry).
+2. If you are not using an SCP, Windows computers that connect to an AD RMS cluster will be configured for [client-side service discovery]((../rms-client/client-deployment-notes.md#enabling-client-side service-discovery-by-using-the-windows-registry)) by using the Windows registry: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation` 
 
 If you have AD RMS, use the following guidance for different scenarios:
 
