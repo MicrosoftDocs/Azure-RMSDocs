@@ -46,7 +46,7 @@ When you are ready to move computers from AD RMS to the Azure Rights Management 
     
     For more information about this registry configuration, see [Enabling client-side service discovery by using the Windows registry](../rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry).   
 
-If you have AD RMS, use the following guidance for different scenarios:
+If you have AD RMS, follow the steps for the scenario that applies to you:
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018)
 
