@@ -29,11 +29,11 @@ ms.suite: ems
 
 >*Applies to: [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Important guidance if you are using Active Directory Rights Management Services (AD RMS):
+**Important guidance if you are using Active Directory Rights Management Services (AD RMS)**
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
-When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. During the migration, you activate the Azure Rights Management service, but you do this step after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
+When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. During the migration, you activate the Azure Rights Management service only after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
 
 To check whether you have deployed AD RMS:
 
