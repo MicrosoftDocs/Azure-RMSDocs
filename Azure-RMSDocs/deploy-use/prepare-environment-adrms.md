@@ -98,9 +98,9 @@ Microsoft is starting to activate the Azure Rights Management service for Office
 
 If the service is automatically activated for you and you are also using AD RMS, this combination isn't compatible so it's important that you opt out from the automatic service update. 
 
-### Step 1: Opt out from the automatic service update.
+### Step 1: Opt out from the automatic service update
 
-Use the following Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
+Use the [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
 
 ### Step 2: Start planning for migration
 
