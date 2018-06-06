@@ -45,7 +45,7 @@ When you have a service plan that includes Azure Rights Management, you might no
 
 - **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of February 2018 or later:** The service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
-- **If you have an Office 365 E3 or Office 365 E5 subscription and it was obtained before or during February 2018:** Starting July 1, 2018, the service is activated for you unless your tenant is opted out from the automatic service update. The opt-out can be manual when an administrator runs `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. Or the opt-out can be automatic because Microsoft knows from support tickets that you are running Active Directory Rights Management Services. 
+- **If you have an Office 365 subscription that includes Azure Rights Management and it was obtained before or during February 2018:** Microsoft is starting to activate the Azure Rights Management service for these Office subscriptions. For example, Office 365 E3 and Office 365 E5. For these subscriptions, automatic activation is starting to roll out July 1, 2018, and the service will be activated for you unless you run `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
 
 - If neither of the subsequent scenarios apply to you, you must manually activate the protection service.  
 
