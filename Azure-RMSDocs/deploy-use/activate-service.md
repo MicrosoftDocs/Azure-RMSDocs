@@ -47,9 +47,9 @@ When you have a service plan that includes Azure Rights Management, you might no
 
 - **If you have an Office 365 subscription that includes Azure Rights Management and it was obtained before or during February 2018:** Microsoft is starting to activate the Azure Rights Management service for these Office subscriptions. For example, Office 365 E3 and Office 365 E5. For these subscriptions, automatic activation is starting to roll out July 1, 2018, and the service will be activated for you unless you run `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
 
-- If neither of the subsequent scenarios apply to you, you must manually activate the protection service.  
+If neither of the subsequent scenarios apply to you, you must manually activate the protection service. 
 
-When the Azure Rights Management service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
+When the service is activated, all users in your organization can apply information protection to their documents and emails, and all users can open (consume) documents and emails that have been protected by the Azure Rights Management service. However, if you prefer, you can restrict who can apply information protection, by using onboarding controls for a phased deployment. For more information, see the [Configuring onboarding controls for a phased deployment](#configuring-onboarding-controls-for-a-phased-deployment) section in this article.
 
 ## How to activate or confirm the status of the Azure Rights Management service 
 
