@@ -29,7 +29,8 @@ ms.suite: ems
 
 >*Applies to: [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-**Important guidance if you are using Active Directory Rights Management Services (AD RMS)**
+> [!IMPORTANT]
+> Guidance if you are using Active Directory Rights Management Services (AD RMS)
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
