@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2018
+ms.date: 06/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
