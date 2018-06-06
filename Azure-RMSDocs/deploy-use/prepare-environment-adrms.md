@@ -33,7 +33,7 @@ Important guidance if you are already using Active Directory Rights Management S
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
 
-- [You have an Office 365 E3 subscription that was purchased before or during February 2018](#you-have-an-office-365-e3-subscription-that-was-purchased-before-or-during-february-2018)
+- [You have an Office 365 E3 or Office E5 subscription that was purchased before or during February 2018](#you-have-an-office-365-e3-or-office-365-e5-subscription-that-was-purchased-before-or-during-february-2018)
 
 - [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection)
 
@@ -82,7 +82,7 @@ The information bar displays **Deactivation finished successfully** and **Deacti
 See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 
-## You have an Office 365 E3 subscription that was purchased before or during February 2018
+## You have an Office 365 E3 or Office 365 E5 subscription that was purchased before or during February 2018
 
 Starting July 1, 2018, the Azure Rights Management service is activated for you unless your tenant is opted out from the automatic service update. The opt-out can be manual, and an administrator runs `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. Or the opt-out can be automatic because Microsoft knows from support tickets that you are running Active Directory Rights Management Services (AD RMS).
 
