@@ -35,17 +35,17 @@ If the Azure Rights Management service is activated and you are also using AD RM
 
 When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. During the migration, you activate the Azure Rights Management service only after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
 
-To check whether you have deployed AD RMS:
+**To check whether you have deployed AD RMS:**
 
-1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. To check whether the SCP is published in Active Directory, use ADSI Edit to see whether you have an SCP: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
+1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. 
+    
+    Use ADSI Edit to see whether you have an SCP published in Active Directory: `CN=Configuration [server name], CN=Services, CN=RightsManagementServices, CN=SCP`
 
 2. If you are not using an SCP, Windows computers that connect to an AD RMS cluster will be configured for client-side service discovery by using the Windows registry: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\ServiceLocation` 
     
     For more information about this registry configuration, see [Enabling client-side service discovery by using the Windows registry](../rms-client/client-deployment-notes.md#enabling-client-side service-discovery-by-using-the-windows-registry).
 
-If you don't have an SCP registered in Active Directory and Windows computers aren't configured for AD RMS in the registry, Windows computers cannot find AD RMS.
-
-If you have AD RMS: Steps to take for different scenarios:
+If you have AD RMS, use the following guidance for different scenarios:
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
 
