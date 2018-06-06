@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Preparing the environment for Azure Rights Management when you also have Active Directory Rights Management Services (AD RMS)
 
->*Applies to: [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Guidance if you are using Active Directory Rights Management Services (AD RMS)
@@ -44,7 +44,7 @@ When you are ready to move computers from AD RMS to the Azure Rights Management 
 
 If you have AD RMS, use the following guidance for different scenarios:
 
-- [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018).
+- [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018)
 
 - [You have an Office 365 subscription that includes Azure Rights Management and it was purchased before or during February 2018](#you-have-an-office-365-subscription-that-includes-azure-rights-management-and-it-was-purchased-before-or-during-february-2018)
 
@@ -100,7 +100,7 @@ If the service is automatically activated for you and you are also using AD RMS,
 
 ### Step 1: Opt out from the automatic service update
 
-Use the [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
+Use the following [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
 
 ### Step 2: Start planning for migration
 
