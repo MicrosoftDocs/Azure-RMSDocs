@@ -108,13 +108,24 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display if you are editing a label that previously used the **Set permissions** option.
+    
+    To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
+
 7. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** to add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, or browse the directory.
+    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you select **Add any authenticated users (Preview)**, or browse the directory.
         
-        The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        When you choose all members or browse the directory, the users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        
+        More information about **Add any authenticated users**: This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). Some typical scenarios for this setting:
+            - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
+            - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.
+            - You have a requirement that the content must be encrypted but it doesn't require access controls.     
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
