@@ -127,7 +127,7 @@ The main differences between these two solutions:
 |--------------------------------|-------------------------------------|
 |Supported data stores: <br /><br />- Local folders on Windows Server|Supported data stores: <br /><br />- Local folders on Windows Server<br /><br />- Windows file shares and network-attached storage<br /><br />- SharePoint Server 2016 and SharePoint Server 2013|
 |Operational mode: <br /><br />- Real time|Operational mode: <br /><br />- Systematically crawls the data stores and this cycle can run once, or repeatedly|
-|Support for file types: <br /><br />- All file types are protected by default. Specific file types can be excluded from protection by editing the registry.|Support for file types: <br /><br />- Office file types are protected by defaul. Specific file types can be included for protection by editing the registry|
+|Support for file types: <br /><br />- All file types are protected by default <br /><br />- Specific file types can be excluded from protection by editing the registry|Support for file types: <br /><br />- Office file types are protected by default <br /><br />- Specific file types can be included for protection by editing the registry|
 
 Currently, there is a difference in setting the [Rights Management owner](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) for files that are protected on a local folder or network share. By default, for both solutions, the Rights Management owner is set to the account that protects the file but you can override this setting:
 
