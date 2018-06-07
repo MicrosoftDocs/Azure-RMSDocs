@@ -127,7 +127,7 @@ Exchange does not have to be configured for Azure Information Protection before 
         Some typical scenarios for this setting:
             - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
             - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.
-            - You have a requirement that the content must be encrypted but it doesn't require access controls.     
+            - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.     
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
