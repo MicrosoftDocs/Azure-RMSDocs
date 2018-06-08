@@ -96,9 +96,9 @@ The information bar displays **Deactivation finished successfully** and **Deacti
 See the migration guidance: [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)
 
 
-## You have an Office 365 subscription that includes Azure Rights Management and it was purchased before or during February 2018
+## Your subscription was purchased before or during February 2018 and you have Exchange Online
 
-Microsoft is starting to activate the Azure Rights Management service for Office subscriptions that include Azure Rights Management. For example, Office 365 E3 and Office 365 E5. For these subscriptions, automatic activation is starting to roll out July 1, 2018.
+Microsoft is starting to activate the Azure Rights Management service for subscriptions that include Azure Rights Management or Azure Information Protection, and the tenants are using Exchange Online. For these tenants, automatic activation is starting to roll out July 1, 2018.
 
 If the service is automatically activated for you and you are also using AD RMS, this combination isn't compatible so it's important that you opt out from the automatic service update. 
 
