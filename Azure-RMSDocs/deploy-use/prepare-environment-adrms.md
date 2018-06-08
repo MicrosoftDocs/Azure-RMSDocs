@@ -6,7 +6,7 @@ description: Guidance if you have Azure Rights Management with AD RMS deployed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
