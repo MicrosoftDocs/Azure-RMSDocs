@@ -50,7 +50,7 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
-Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can access-it).  
+Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](../deploy-use/configure-policy-protection#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can access-it).  
 
 1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
@@ -71,8 +71,6 @@ Because the scenario restricts access to specific people, it does not include th
     For example, your configured permissions might look similar to the following:
         
     ![Configuring permissions for secure collaboration](../media/collaboration-permissions.png)
-
-
 
 5. Click **OK** on the **Add permissions** blade.
 
@@ -133,12 +131,12 @@ The following table summaries the different authentication methods that are supp
 
 In addition, the Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account.
 
-|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
+|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|Authentication method:<br />Federated social providers and one-time passcodes|
 |---------------|----------|-----------|-----------|
-|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
-|iOS|Yes [[1]](#footnote-1)|No|
-|Android|Yes [[1]](#footnote-1)|No |
-|MacOS|Yes [[1]](#footnote-1)|No|
+|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|No|
+|iOS|Yes [[1]](#footnote-1)|No|No|
+|Android|Yes [[1]](#footnote-1)|No|No|
+|MacOS|Yes [[1]](#footnote-1)|No|No|
 
 ###### Footnote 1
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
