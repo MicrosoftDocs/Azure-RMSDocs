@@ -52,7 +52,7 @@ This example walks through configuring an existing label to apply protection so 
 
 Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](../deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
@@ -74,7 +74,9 @@ Because the scenario restricts access to specific people, it does not include th
 
 5. Click **OK** on the **Add permissions** blade.
 
-6. On the **Protection** blade, click **OK**. 
+6. On the **Protection** blade, click **OK**.
+
+7. On the **Label** blade, select **Save**. 
 
 ## Applying the label that supports secure collaboration
 
@@ -131,7 +133,7 @@ The following table summaries the different authentication methods that are supp
 
 In addition, the Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account.
 
-|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|Authentication method:<br />Federated social providers and one-time passcodes|
+|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|Authentication method:<br />Social providers and one-time passcode|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|No|
 |iOS|Yes [[1]](#footnote-1)|No|No|
