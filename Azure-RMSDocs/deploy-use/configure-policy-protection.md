@@ -122,7 +122,8 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         When you choose all members or browse the directory, the users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
         
-        More information about **Add any authenticated users**: This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). However, the application opening the protected content must be able to support the authentication being used. For this reason, federated social providers such as Google, and onetime passcode authentication should be used for email only, and only when you use Exchange Online and the new capabilities from Office 365 Message Encryption. Microsoft accounts can be used with the Azure Information Protection viewer and Office 2016 Click-to-Run.
+        ###### More information about **Add any authenticated users** 
+        This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). However, the application opening the protected content must be able to support the authentication being used. For this reason, federated social providers such as Google, and onetime passcode authentication should be used for email only, and only when you use Exchange Online and the new capabilities from Office 365 Message Encryption. Microsoft accounts can be used with the Azure Information Protection viewer and Office 2016 Click-to-Run.
         
         Some typical scenarios for this setting:
             - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
@@ -286,6 +287,24 @@ When your users specify the email addresses in the **To** box, the addresses mus
 6. Click **OK** on the **Add permissions** blade.
 
 7. On the **Protection** blade, click **OK**.
+
+
+### Example 5: Label that encrypts content but doesn't restrict who can access it
+
+This configuration has the advantage that you don't need to specify users, groups, or domains to protect an email or document. The content will still be encrypted and you can still specify usage rights, an expiry date, and offline access. Use this configuration only when you do not need to restrict who can open the protected document or email. [More information about this setting](#more-information-about-add-any-authenticated-users)
+
+1. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+    
+2. Confirm that **Set permissions** is selected, and then select **Add permissions**.
+
+3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users (Preview)**.
+
+4. Select the permissions you want, and click **OK**.
+
+5. Back on the **Protection** blade, configure settings for **Content expiration** and **Allow offline access**, if needed, and then click **OK**.
+
+6. On the **Label** blade, select **Save**.
+
 
 ## Next steps
 
