@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/05/2018
+ms.date: 06/11/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -131,14 +131,19 @@ Before the protected document opens, one of the following authentication flows h
 
 The following table summaries the different authentication methods that are supported for opening and editing protected documents.
 
-In addition, the Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account.
+In addition:
 
-|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|Authentication method:<br />Social providers and one-time passcode|
+- The Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account. You cannot edit these files in the viewer.
+
+- Although federated social providers and one-time passcodes are supported authentication methods when you use Exchange Online and the new capabilities from Office 365 Message Encryption, protected attachments can be viewed in the browser but cannot be edited in an Office application. 
+
+
+|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
-|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|No|
-|iOS|Yes [[1]](#footnote-1)|No|No|
-|Android|Yes [[1]](#footnote-1)|No|No|
-|MacOS|Yes [[1]](#footnote-1)|No|No|
+|Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
+|iOS|Yes [[1]](#footnote-1)|No|
+|Android|Yes [[1]](#footnote-1)|No|
+|MacOS|Yes [[1]](#footnote-1)|No|
 
 ###### Footnote 1
 Supports user accounts, email-enabled groups, all members. User accounts and email-enabled groups can include guest accounts. All members exclude guest accounts.
