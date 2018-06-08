@@ -41,7 +41,7 @@ When you configure these permissions, you can specify which users they are for:
     
     To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
-- **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. However, for the last two scenarios, Office doesn't currently support this authentication so an email attachment that uses this authentication can only be viewed in the browser. 
+- **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. 
 
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
 
@@ -50,7 +50,7 @@ As an administrator, you can configure an Azure Information Protection label to 
 
 This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
-Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](example-5-label-that-encrypts-content-but-doesnt-restrict-who-can access-it).  
+Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can access-it).  
 
 1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
     
