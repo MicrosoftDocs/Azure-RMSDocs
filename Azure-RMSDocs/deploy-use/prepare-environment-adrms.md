@@ -34,7 +34,7 @@ ms.suite: ems
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
-When you are ready to move computers from AD RMS to the Azure Rights Management service, you can start the migration process. During the migration, you activate the Azure Rights Management service only after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
+When you are ready to move computers from AD RMS to the cloud, you can start the migration process. During the migration, you activate the Azure Rights Management service only after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
 
 **To check whether you have deployed AD RMS:**
 
@@ -50,7 +50,7 @@ If you have AD RMS, follow the steps for the scenario that applies to you:
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018)
 
-- [You have an Office 365 subscription that includes Azure Rights Management and it was purchased before or during February 2018](#you-have-an-office-365-subscription-that-includes-azure-rights-management-and-it-was-purchased-before-or-during-february-2018)
+- [Your subscription was purchased before or during February 2018 and you have Exchange Online](#your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online)
 
 - [You see an option to activate protection when you configure your Azure Information Protection policy in the Azure portal](#you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection)
 
