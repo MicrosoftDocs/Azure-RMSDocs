@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2018
+ms.date: 06/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -47,6 +47,20 @@ Use the following information to see what’s new or changed for a supported rel
 > Minor fixes are not listed so if you experience a problem with the Azure Information Protection client, we recommend that you check whether it is fixed with the latest GA release. If the problem remains, check the current preview version.
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
+
+## Versions later than 1.27.48.0
+
+If you have a version of the client that is later than 1.27.48.0, it is a preview build for testing and evaluation purposes.
+
+**Fixes**:
+
+- For Outlook versions 16.0.9324.1000 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside the Outlook application.
+
+- Visual markings that you configure [per Office application type](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) now replace a previously applied header or footer.
+
+- When an Excel file is already labeled and the label applies visual markings, a new sheet now also has the label's visual markings applied.
+
+- When you use the advanced client setting to [label an Office document by using an existing custom property](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), automatic labeling doesn't override manual labeling.
 
 
 ## Version 1.27.48.0
