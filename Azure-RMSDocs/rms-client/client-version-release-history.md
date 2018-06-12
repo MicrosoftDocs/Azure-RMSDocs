@@ -50,7 +50,7 @@ Use the following information to see what’s new or changed for a supported rel
 
 ## Version 1.29.5.0 
 
-**Released**: 06/25/2018
+**Released**: 06/26/2018
 
 This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
