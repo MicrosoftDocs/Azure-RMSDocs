@@ -129,15 +129,15 @@ Before the protected document opens, one of the following authentication flows h
 
 ### Supported scenarios for opening protected documents
 
-The following table summaries the different authentication methods that are supported for opening and editing protected documents.
+The following table summaries the different authentication methods that are supported for viewing and editing protected documents.
 
-In addition, the following scenarios support viewing only:
+In addition, the following scenarios support viewing documents:
 
 - The Azure Information Protection viewer for Windows, and for iOS and Android can open files by using a Microsoft account. 
 
 - A browser can open protected attachments when social providers and one-time passcodes are used for authentication with Exchange Online and the new capabilities from Office 365 Message Encryption. 
 
-|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
+|Platforms for viewing and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
 |iOS|Yes [[1]](#footnote-1)|No|
