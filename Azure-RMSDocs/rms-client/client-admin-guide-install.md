@@ -6,7 +6,7 @@ description: Instructions and information for admins to deploy the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
