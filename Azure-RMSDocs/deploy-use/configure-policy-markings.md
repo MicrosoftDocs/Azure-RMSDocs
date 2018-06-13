@@ -6,7 +6,7 @@ description: When you assign a label to a document or email message, you can sel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -135,6 +135,8 @@ Calibri is the default font for headers, footers, and watermark text. If you spe
 If the font specified is not available, the client falls back to using the Calibri font.
 
 ### Setting the font color
+
+Word, PowerPoint, and Outlook support visual markings in different colors. Visual markings that are configured for colors always display as black in Excel. 
 
 You can choose from the list of available colors or specify a custom color by entering a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. 
 
