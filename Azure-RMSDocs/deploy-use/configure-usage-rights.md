@@ -6,7 +6,7 @@ description: Understand and identify the specific rights that are used when you 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/11/2018
+ms.date: 06/13/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -131,7 +131,9 @@ This option is being deployed to tenants who use Exchange Online, initially just
 
 When this option is selected, the email is encrypted and recipients must be authenticated. Then, the recipients have all usage rights except **Save As, Export** and **Full Control**. This combination of usage rights means that the recipients have no restrictions except that they cannot remove the protection. For example, a recipient can copy from the email, print it, and forward it. 
 
-Similarly, unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email inherit the same permissions. These documents are automatically protected and they can can be saved, edited, copied, and printed by the recipients. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file.
+Similarly, by default, unprotected [Office documents](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) that are attached to the email inherit the same permissions. These documents are automatically protected and when they are downloaded, they can can be saved, edited, copied, and printed from Office applications by the recipients. When the document is saved by a recipient, it can be saved to a new name and even a different format. However, only file formats that support protection are available so that the document cannot be saved without the original protection. If you want different usage rights for an attachment, or your attachment is not an Office document that supports this inherited protection, protect the file before you attach it to the email. You can then assign the specific usage rights that you need for the file.
+
+Alternatively, you can change this encryption inheritance of documents for recipients who view the document in their browser. Consider using this configuration when you don't need to retain the original protection for the document after the user is authenticated. To make this change, use the Exchange Online PowerShell command: `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Then, when these recipients download the document, the protection is removed. For more information, see the Office blog post, [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). If you do need the document to retain the original protection after it is downloaded, see [Secure document collaboration by using Azure Information Protection](../get-started/secure-collaboration-documents.md).      
 
 ## Rights Management issuer and Rights Management owner
 
