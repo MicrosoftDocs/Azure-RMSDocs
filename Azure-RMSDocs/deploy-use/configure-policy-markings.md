@@ -45,6 +45,8 @@ Additional information about these visual markings:
 
 - You can specify just a text string, or use [variables](#using-variables-in-the-text-string) to dynamically create the text string when the header, footer, or watermark is applied.
 
+- Word, PowerPoint, and Outlook support visual markings in different colors. Visual markings that are configured for colors always display as black in Excel.
+
 - Visual markings support one language only.
 
 ## When visual markings are applied
@@ -135,8 +137,6 @@ Calibri is the default font for headers, footers, and watermark text. If you spe
 If the font specified is not available, the client falls back to using the Calibri font.
 
 ### Setting the font color
-
-Word, PowerPoint, and Outlook support visual markings in different colors. Visual markings that are configured for colors always display as black in Excel. 
 
 You can choose from the list of available colors or specify a custom color by entering a hex triplet code for the red, green, and blue (RGB) components of the color. For example, **#DAA520**. 
 
