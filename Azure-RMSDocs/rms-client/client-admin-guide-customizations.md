@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -388,7 +388,7 @@ Before you test this configuration, remember that there is often a delay when yo
 
 - The Exchange rule detects the Exchange classification and accordingly modifies the message header to add the Azure Information Protection classification.
 
-- When recipients view the email in Outlook and they have the Azure Information Protection client installed, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
+- When internal recipients view the email in Outlook and they have the Azure Information Protection client installed, they see the Azure Information Protection label assigned and any corresponding email header, footer, or watermark. 
 
 If your Azure Information Protection labels apply protection, add this protection to the rule configuration: Selecting the option to modify the message security, apply rights protection, and then select the RMS template or Do Not Forward option.
 
