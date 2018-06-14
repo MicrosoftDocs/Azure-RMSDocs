@@ -42,7 +42,7 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
 
 > [!TIP]
-> To use cmdlets with path lengths greater than 260 characters, use the following group policy setting that is available with the Windows 10 Anniversary Update: **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **NTFS** > **Enable Win32 long paths** [More information](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)
+> To use cmdlets with path lengths greater than 260 characters, use the following [group policy setting](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) that is available with the Windows 10 Anniversary Update:<br /> **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **NTFS** > **Enable Win32 long paths** 
 
 
 In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
