@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -40,6 +40,9 @@ The cmdlets are installed with the PowerShell module **AzureInformationProtectio
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|For a shared folder, inspect the file contents and then automatically label unlabeled files, according to the conditions that you have specified.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|For a shared folder, apply a specified label to all files that do not have a label.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Label files non-interactively, for example by using a script that runs on a schedule.|
+
+> [!TIP]
+> If you are using these cmdlets with path lengths greater than 260 characters, use the following group policy setting that is available with the Windows 10 Anniversary Update: **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **All Settings** > **NTFS** > **Enable Win32 long paths** [More information](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/)
 
 
 In addition, the [Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md) uses cmdlets to install and configure a service on Windows Server. This scanner then lets you discover, classify, and protect files on data stores.
