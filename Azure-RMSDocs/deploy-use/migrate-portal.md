@@ -6,7 +6,7 @@ description: At-a-glance admin tasks in the Azure portal that you used to do in 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -39,9 +39,6 @@ For more information about the classic portal retirement, see the blog post anno
 ## How to do your familiar admin tasks
 
 Use the following information to help you quickly transition to the current portal.
-
-However, customers who have a subscription for Office 365 US Government (Government Community Cloud) currently cannot use the Azure portal and instead, must use [PowerShell](configure-templates-with-powershell.md) to manage their templates.
-
 
 |Azure classic portal|How to do this task in the Azure portal
 |-----------|--------------------|
