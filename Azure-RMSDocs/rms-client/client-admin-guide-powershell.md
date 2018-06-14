@@ -32,7 +32,7 @@ ms.suite: ems
 
 When you install the Azure Information Protection client, PowerShell commands are automatically installed. This lets you manage the client by running commands that you can put into scripts for automation.
 
-The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also new cmdlets that use the Azure Information Protection (AIP) service for labeling. For example:
+The cmdlets are installed with the PowerShell module **AzureInformationProtection**. This module includes all the Rights Management cmdlets from the RMS Protection Tool (no longer supported). There are also cmdlets that use Azure Information Protection for labeling. For example:
 
 |Labeling cmdlet|Example usage|
 |----------------|---------------|
