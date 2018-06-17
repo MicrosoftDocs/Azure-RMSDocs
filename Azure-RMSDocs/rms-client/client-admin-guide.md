@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2018
+ms.date: 06/18/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -175,11 +175,11 @@ However, label names and descriptions that you specify are not automatically tra
 
 The Azure Information Protection team regularly updates the Azure Information Protection client for new functionality and fixes. Announcements are posted to the team's [Yammer site](https://www.yammer.com/AskIPTeam):
 
-- If you installed the client by using the executable or Windows installer file: Manually download the new release from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and install this new version to upgrade the client.  
+- If you installed the client by using the executable (.exe) or Windows installer file (.msi): Manually download the new release from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) and install this new version to upgrade the client.  
 
 - If you installed the client by using Windows Update: New releases automatically become available for download in the catalog a few weeks after the release.
 
-Uninstall the previous version first only if you're changing the installation method (for example, from the executable (.exe) version of the client to the Windows installer (.msi) version of the client). Or, if you need to install a previous version of the client (for example, you have the current preview version installed for testing and now need to revert to the current general availability version.
+Uninstall the previous version first only if you're changing the installation method. For example, you change  from the executable (.exe) version of the client to the Windows installer (.msi) version of the client. Or, if you need to install a previous version of the client. For example, you have the current preview version installed for testing and now need to revert to the current general availability version.
 
 Use the [Version release history and support policy](../rms-client/client-version-release-history.md) to understand the support policy for the Azure Information Protection client, which versions are currently supported, and what's new and changed for the supported releases. 
 
