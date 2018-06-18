@@ -80,7 +80,7 @@ In this example, the **General** label that the rule identities has a GUID of 0e
 6. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
-    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/exo-rule-ex1.png)
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/aip-exo-rule-ex1.png)
 
 7. Select **Save** 
 
@@ -105,7 +105,7 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
 7. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
-    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/exo-rule-ex2.png)
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/aip-exo-rule-ex2.png)
 
 8. Select **Save** 
 
