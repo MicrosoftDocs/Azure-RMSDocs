@@ -75,8 +75,10 @@ In this example, the **General** label that the rule identities has a GUID of 0e
  
 4. For **and**: Select **A message header**, and then select **includes any of these words**:
      
-    a. Select **Enter text**, and enter **msip_labels**. 
+    a. Select **Enter text**, and enter **msip_labels**.
+     
     b. Select **Enter words**, and enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
     c. Select **+**, and then select **OK**.
 
 5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
@@ -100,9 +102,12 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
  
 4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**:
      
-    a. Select **+** > **Specify a custom attachment property**.
+    a. Select **+** > **Specify a custom attachment property**. 
+    
     b. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**.
+    
     c. For **Value**, enter **True**
+    
     d. Select **Save**, and then select **OK**.
 
 5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
