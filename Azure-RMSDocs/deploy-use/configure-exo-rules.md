@@ -100,9 +100,12 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
 
 5. For **select attachment properties**: Select **+** > **Specify a custom attachment property**.
 
-6. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**. For **Value**, enter **True**, and then select **Save**.
+6. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**. For **Value**, enter **True**, select **Save**, and then select **OK**.
 
 7. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
+    
+    Your rule configuration should now look similar to the following:
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/exo-rule-ex2.png)
 
 8. Select **Save** 
 
