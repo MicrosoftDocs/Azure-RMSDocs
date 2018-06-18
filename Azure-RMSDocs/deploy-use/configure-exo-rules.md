@@ -67,7 +67,7 @@ In the following examples, create a new mail flow rule by using the following st
 
 In this example, the **General** label that the rule identities has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. 
 
-1. In **Name**, type a name for the rule, such as **Apply Do Do Forward for General emails sent externally**.
+1. In **Name**, type a name for the rule, such as `Apply Do Do Forward for General emails sent externally`.
  
 2. For **Apply this rule if**: Select **The recipient is located**, select **Outside the organization**, and then select **OK**.
 
@@ -75,9 +75,9 @@ In this example, the **General** label that the rule identities has a GUID of 0e
  
 4. For **and**: Select **A message header**, and then select **includes any of these words**:
      
-    a. Select **Enter text**, and enter **msip_labels**.
+    a. Select **Enter text**, and enter `msip_labels`.
      
-    b. Select **Enter words**, and enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    b. Select **Enter words**, and enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;`
     
     c. Select **+**, and then select **OK**.
 
@@ -94,7 +94,7 @@ For more information about the Do Not Forward option, see [Do Not Forward option
 
 In this example, the **Confidential \ All Employees** sublabel that the rule identities has a GUID of 5ab1c8a1-8241-72bc-3f22-304a0558362a. 
 
-1. In **Name**, type a name for the rule, such as **Apply Encrypt to emails sent externally if protected attachments**.
+1. In **Name**, type a name for the rule, such as `Apply Encrypt to emails sent externally if protected attachments`.
  
 2. For **Apply this rule if**: Select **The recipient is located**, select **Outside the organization**, and then select **OK**.
 
@@ -104,9 +104,9 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
      
     a. Select **+** > **Specify a custom attachment property**. 
     
-    b. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**.
+    b. For **Property**, enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled`.
     
-    c. For **Value**, enter **True**
+    c. For **Value**, enter `True`
     
     d. Select **Save**, and then select **OK**.
 
