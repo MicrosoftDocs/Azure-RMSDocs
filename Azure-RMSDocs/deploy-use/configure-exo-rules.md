@@ -33,8 +33,9 @@ Use the following information to help you configure mail flow rules in Exchange 
 
 - Your default label is **General**, which does not apply protection. For emails with this label that are sent externally, apply the additional Do Not Forward protection action.
 
-- If an attachment with the **Confidential \ All Employees** label is emailed to people outside the organization, apply the additional Encrypt protection action.
- 
+- If an attachment with the **Confidential \ All Employees** label is emailed to people outside the organization and the email is not protected, apply the additional Encrypt protection action.
+
+Mail flow rules that apply protection as an action are ignored if the email is already protected. For example, you cannot change an email message that has been protected with Do Not Forward to use the Encrypt option instead.  
 
 For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
 
@@ -65,7 +66,7 @@ In the following examples, create a new mail flow rule by using the following st
 
 ### Example 1: Rule that applies the Do Not Forward option to emails that are labeled **General** when they are sent outside the organization
 
-In this example, the **General** label that the rule identities has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. 
+In this example, the **General** label has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 and has been configured as the default label. This label applies the classification of **General** and no protection. 
 
 1. In **Name**, type a name for the rule, such as `Apply Do Do Forward for General emails sent externally`.
  
@@ -90,9 +91,9 @@ In this example, the **General** label that the rule identities has a GUID of 0e
 
 For more information about the Do Not Forward option, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### Example 2: Rule that applies the Encrypt-Only option to emails with attachments that are labeled **Confidential \ All Employees** when they are sent outside the organization
+### Example 2: Rule that applies the Encrypt-Only option to emails when they have attachments that are labeled **Confidential \ All Employees** and these emails are sent outside the organization
 
-In this example, the **Confidential \ All Employees** sublabel that the rule identities has a GUID of 5ab1c8a1-8241-72bc-3f22-304a0558362a. 
+In this example, the **Confidential \ All Employees** sublabel has a GUID of 5ab1c8a1-8241-72bc-3f22-304a0558362a.   
 
 1. In **Name**, type a name for the rule, such as `Apply Encrypt to emails sent externally if protected attachments`.
  
