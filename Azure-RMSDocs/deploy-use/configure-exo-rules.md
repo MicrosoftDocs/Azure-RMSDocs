@@ -63,7 +63,7 @@ In the following examples, create a new mail flow rule by using the following st
 4. In the Exchange admin center: **mail flow** > **rules** > **+** > **Create a new rule**. 
 
 
-### Example 1: Rule that applies the Do Not Forward option to emails that are labeled General when they are sent outside the organization
+### Example 1: Rule that applies the Do Not Forward option to emails that are labeled **General** when they are sent outside the organization
 
 In this example, the **General** label that the rule identities has a GUID of 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. 
 
@@ -73,11 +73,12 @@ In this example, the **General** label that the rule identities has a GUID of 0e
 
 3. Select **More options**, and then select **add condition**.
  
-4. For **and**: Select **A message header**, and then select **includes any of these words**. 
+4. For **and**: Select **A message header**, and then select **includes any of these words**: 
+    a. Select **Enter text**, and enter **msip_labels**. 
+    b. Select **Enter words**, and enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    c. Select **+**, and then select **OK**.
 
-5. For **Enter text**, enter **msip_labels**. For **specify words or phrases**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;** select **+**, and then select **OK**.
-
-6. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
+5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
     ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/aip-exo-rule-ex1.png)
@@ -86,7 +87,7 @@ In this example, the **General** label that the rule identities has a GUID of 0e
 
 For more information about the Do Not Forward option, see [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### Example 2: Rule that applies the Encrypt-Only option to emails with attachments that are labeled Confidential \ All Employees when they are sent outside the organization
+### Example 2: Rule that applies the Encrypt-Only option to emails with attachments that are labeled **Confidential \ All Employees** when they are sent outside the organization
 
 In this example, the **Confidential \ All Employees** sublabel that the rule identities has a GUID of 5ab1c8a1-8241-72bc-3f22-304a0558362a. 
 
@@ -96,18 +97,18 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
 
 3. Select **More options**, and then select **add condition**.
  
-4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**. 
+4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**: 
+    a. Select **+** > **Specify a custom attachment property**.
+    b. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**.
+    c. For **Value**, enter **True**
+    d. Select **Save**, and then select **OK**.
 
-5. For **select attachment properties**: Select **+** > **Specify a custom attachment property**.
-
-6. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**. For **Value**, enter **True**, select **Save**, and then select **OK**.
-
-7. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
+5. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
     
     Your rule configuration should now look similar to the following:
     ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/aip-exo-rule-ex2.png)
 
-8. Select **Save** 
+6. Select **Save** 
 
 For more information about the Encrypt option, see [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
