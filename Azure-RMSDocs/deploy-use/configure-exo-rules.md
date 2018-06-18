@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configuring Exchange Online mail flow rules for Azure Information Protection labels
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
+>*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Use the following information to help you configure mail flow rules in Exchange Online to use Azure Information Protection labels, and to apply additional protection for specific scenarios. For example:
 
@@ -58,9 +58,9 @@ In the following examples, create a new mail flow rule by using the following st
 
 2. Choose the **Admin** tile.
 
-3.In the Office 365 admin center, choose **Admin centers** > **Exchange**.
+3. In the Office 365 admin center, choose **Admin centers** > **Exchange**.
 
-4. In the Exchange admin center: **mail flow** > **rules** > **+** (New) > **Create a new rule**. 
+4. In the Exchange admin center: **mail flow** > **rules** > **+** > **Create a new rule**. 
 
 
 ### Example 1: Rule that applies the Do Not Forward option to emails that are labeled General when they are sent outside the organization
@@ -75,7 +75,7 @@ In this example, the **General** label that the rule identities has a GUID of 0e
  
 4. For **and**: Select **A message header**, and then select **includes any of these words**. 
 
-5. For **Enter text**, enter **msip_labels**. For specify words or phrases, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;** select **+**, and then select **OK**.
+5. For **Enter text**, enter **msip_labels**. For **specify words or phrases**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;** select **+**, and then select **OK**.
 
 6. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
 
@@ -93,11 +93,11 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
 
 3. Select **More options**, and then select **add condition**.
  
-4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words** 
+4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**. 
 
 5. For **select attachment properties**: Select **+** > **Specify a custom attachment property**.
 
-6. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**. For **Value**, enter **True**. Select **Save**.
+6. For **Property**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled**. For **Value**, enter **True**, and then select **Save**.
 
 7. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Encrypt**, and then select **OK**.
 
@@ -106,8 +106,6 @@ In this example, the **Confidential \ All Employees** sublabel that the rule ide
 For more information about the Encrypt option, see [Encrypt-Only option for emails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
-
-Scenario 3: No label is set on the email and sent to a specific domain (partner), set a label named "Product launch".  
 
 
 
