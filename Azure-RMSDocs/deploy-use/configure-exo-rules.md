@@ -78,6 +78,9 @@ In this example, the **General** label that the rule identities has a GUID of 0e
 5. For **Enter text**, enter **msip_labels**. For **specify words or phrases**, enter **MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;** select **+**, and then select **OK**.
 
 6. For **Do the following**: Select **Modify the message security** > **Apply Office 365 Message Encryption and rights protection** > **Do Not Forward**, and then select **OK**.
+    
+    Your rule configuration should now look similar to the following:
+    ![Exchange Online mail flow rule configured for an Azure Information Protection label - example1](../media/exo-rule-ex1.png)
 
 7. Select **Save** 
 
