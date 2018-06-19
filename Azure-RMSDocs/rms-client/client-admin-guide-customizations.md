@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -338,11 +338,11 @@ To configure this advanced setting, enter the following strings:
 
 Use these keys and corresponding values for only one custom property.
 
-As an example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Confidential \ Finance**. Documents are stored in SharePoint and have **Public**, **General**, or **Confidential Finance** as values set for the Classification property.
+As an example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Highly Confidential \ All Employees**. Documents are stored in SharePoint and have **Public**, **General**, or **Highly Confidential All Employees** as values set for the Classification property.
 
 To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
 
-Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Confidential \ Finance** if you have labels with these names in your Azure Information Protection policy. Note that values with a space are mapped to a sublabel. If you do not have labels with these names, the document remains unlabeled.
+Now, when a user opens and saves one of these Office documents, it is labeled  **Public**, **General**, or **Highly Confidential \ All Employees** if you have labels with these names in your Azure Information Protection policy. If you do not have labels with these names, the document remains unlabeled.
 
 ## Disable the low integrity level for the scanner
 
