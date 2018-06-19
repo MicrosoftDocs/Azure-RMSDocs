@@ -103,7 +103,9 @@ In this example, the **Confidential \ All Employees** sublabel has a GUID of 5ab
  
 4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**:
      
-    a. Select **+** > **Specify a custom attachment property**. 
+    a. Select **+** > **Specify a custom attachment property**.
+    
+        Tip: If you cannot select this option, try a different browser. 
     
     b. For **Property**, enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled`.
     
