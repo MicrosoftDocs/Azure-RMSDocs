@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/19/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -338,7 +338,7 @@ To configure this advanced setting, enter the following strings:
 
 Use these keys and corresponding values for only one custom property.
 
-As an example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Highly Confidential \ All Employees**. Documents are stored in SharePoint and have **Public**, **General**, or **Highly Confidential All Employees** as values set for the Classification property.
+As an example, you have a SharePoint column named **Classification** that has possible values of **Public**, **General**, and **Highly Confidential All Employees**. Documents are stored in SharePoint and have **Public**, **General**, or **Highly Confidential All Employees** as values set for the Classification property.
 
 To label an Office document with one of these classification values, set **SyncPropertyName** to **Classification**, and **SyncPropertyState** to **OneWay**. 
 
