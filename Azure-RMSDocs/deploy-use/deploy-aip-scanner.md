@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/18/2018
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -67,6 +67,25 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |The Azure Information Protection client is installed on the Windows Server computer|You must install the full client for the scanner. Do not install the client with just the PowerShell module.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md). If you have previously installed the scanner and now need to upgrade it to a later version, see [Upgrading the Azure Information Protection scanner](../rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions in the Azure Information Protection policy, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](configure-policy-protection.md).<br /><br />These labels can be in the global policy, or one or more [scoped policies](configure-policy-scope.md).<br /><br />Note: Although you can run the scanner even if you haven't configured labels that apply automatic classification, this scenario is not covered with these instructions. [More information](#using-the-scanner-with-alternative-configurations)| 
 
+### Deploying the scanner with alternative configurations
+
+We recommend that the server running the scanner has Internet connectivity, and that the service account for the scanner uses an Active Directory account that is synchronized to Azure Active Directory. This is the simplest configuration for deploying the scanner, and lets the scanner service account automatically download the latest Azure Information Protection policy, activate protection if that step is needed, and apply or remove protection by using your tenant's cloud-based key.
+
+However, if this configuration is not possible because your organization policies do not allow the server to have Internet connectivity or do not allow service accounts to be synchronized to Azure Active Directory, you can use the following alternative configurations:
+
+#### The scanner service account cannot be synchronized to Azure Active Directory
+
+You can have one account to run the scanner service and another account to authenticate to Azure Active Directory from a different computer:
+
+- For the scanner service account, you can use a local Windows account or an Active Directory account.
+
+- For the Azure Active Directory account, use the Set-AIPAuthentication command to specify this account to download the Azure Information Protection policy and activate protection.
+
+#### The server cannot have Internet connectivity
+
+Follow the instructions for a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). 
+
+Note that in this configuration, the scanner cannot apply protection (or remove protection) by using a cloud-based key.
 
 ## Install the Azure Information Protection scanner
 
