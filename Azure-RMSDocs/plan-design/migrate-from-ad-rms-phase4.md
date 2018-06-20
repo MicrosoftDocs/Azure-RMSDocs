@@ -128,14 +128,11 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 #### Registry edits for Exchange
 
-For all Exchange servers, add additional registry values to LicenseServerRedirection:
+For all Exchange servers, add the following registry values to LicenseServerRedirection, depending on your versions of Exchange.
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+---
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
-
-For Exchange 2013 and Exchange 2016 - registry edit 1:
+##### For Exchange 2013 and Exchange 2016 - registry edit 1:
 
 
 **Registry path:**
@@ -157,7 +154,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ---
 
-For Exchange 2013 - registry edit 2:
+##### For Exchange 2013 - registry edit 2:
 
 **Registry path:**
 
@@ -177,7 +174,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ---
 
-For Exchange 2010 - registry edit 1:
+##### For Exchange 2010 - registry edit 1:
 
 
 **Registry path:**
@@ -199,7 +196,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ---
 
-For Exchange 2010 - registry edit 2:
+##### For Exchange 2010 - registry edit 2:
 
 
 **Registry path:**
