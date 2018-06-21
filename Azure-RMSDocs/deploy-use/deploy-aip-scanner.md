@@ -69,7 +69,7 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 ### Deploying the scanner with alternative configurations
 
-The prerequisites listed in the table are the default requirements for the scanner and recommended because they are the simplest configuration for the scanner deployment. They should be suitable for initial testing, so that you can check the capabilities of the scanner. However, in a product environment, your organization policies might prohibit one or more of the default configuration requirements because of one or more of the following restrictions:
+The prerequisites listed in the table are the default requirements for the scanner and recommended because they are the simplest configuration for the scanner deployment. They should be suitable for initial testing, so that you can check the capabilities of the scanner. However, in a product environment, your organization policies might prohibit these default requirements because of one or more of the following restrictions:
 
 - Servers are not allowed Internet connectivity
 
