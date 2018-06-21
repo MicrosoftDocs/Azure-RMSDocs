@@ -71,16 +71,16 @@ Before you install the Azure Information Protection scanner, make sure that the 
 
 The prerequisites listed in the table are the default requirements for the scanner and recommended because they are the simplest configuration for the scanner deployment. They should be suitable for initial testing, so that you can check the capabilities of the scanner. However, in a product environment, your organization policies might prohibit one or more of the default configuration requirements:
 
-- The server cannot have Internet connectivity
+- Servers are not allowed Internet connectivity
 
-- The service account for the scanner cannot be granted the **Log on locally** right
+- Service accounts cannot be granted the **Log on locally** right
 
-- The service account cannot be synchronized to Azure Active Directory but the server has Internet connectivity
+- Service accounts cannot be synchronized to Azure Active Directory but servers have Internet connectivity
 
 The scanner can accommodate these restrictions but they require additional configuration.
 
 
-#### The server cannot have Internet connectivity
+#### The scanner server cannot have Internet connectivity
 
 Follow the instructions for a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). 
 
