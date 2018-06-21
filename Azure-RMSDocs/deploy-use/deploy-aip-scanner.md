@@ -80,18 +80,18 @@ The prerequisites listed in the table are the default requirements for the scann
 The scanner can accommodate these restrictions but they require additional configuration.
 
 
-#### The scanner server cannot have Internet connectivity
+#### Restriction: The scanner server cannot have Internet connectivity
 
 Follow the instructions for a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). 
 
 Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is restricted to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
 
 
-#### The service account for the scanner cannot be granted the **Log on locally** right
+#### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
 If your organization policies prohibit the **Log on locally** right for service accounts but allow the **Log on as a batch job** right, follow the instructions for  [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
 
-#### The scanner service account cannot be synchronized to Azure Active Directory but the server has Internet connectivity
+#### Restriction: The scanner service account cannot be synchronized to Azure Active Directory but the server has Internet connectivity
 
 You can have one account to run the scanner service and use another account to authenticate to Azure Active Directory:
 
