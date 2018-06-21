@@ -84,7 +84,7 @@ The scanner can accommodate these restrictions but they require additional confi
 
 Follow the instructions for a [disconnected computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). 
 
-Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is restricted to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
+Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
 
 
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
