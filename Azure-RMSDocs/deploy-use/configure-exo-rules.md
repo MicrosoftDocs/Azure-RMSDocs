@@ -37,6 +37,8 @@ Use the following information to help you configure mail flow rules in Exchange 
 
 Mail flow rules that apply protection as an action are ignored if the email is already protected. For example, you cannot change an email message that has been protected with Do Not Forward to use the Encrypt option instead.  
 
+You can extend these examples as well as modify them. For example, add more conditions. For more information about configuring mail flow rules, see [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx) from the Exchange Online documentation.
+
 For more information about configuring mail flow rules to encrypt email messages, see [Define mail flow rules to encrypt email messages in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) from the Office documentation. 
 
 ## Where labels are stored in emails and documents
@@ -62,6 +64,9 @@ In the following examples, create a new mail flow rule by using the following st
 3. In the Office 365 admin center, choose **Admin centers** > **Exchange**.
 
 4. In the Exchange admin center: **mail flow** > **rules** > **+** > **Create a new rule**. 
+
+> [!TIP]
+> If you have problems with the user interface when you configure your rules, try a different browser, such as Internet Explorer.
 
 
 ### Example 1: Rule that applies the Do Not Forward option to emails that are labeled **General** when they are sent outside the organization
@@ -104,9 +109,7 @@ In this example, the **Confidential \ All Employees** sublabel has a GUID of 5ab
 4. For **and**: Select **Any attachment**, and then select **has these properties, including any of these words**:
      
     a. Select **+** > **Specify a custom attachment property**.
-    
-        Tip: If you cannot select this option, try a different browser. 
-    
+  
     b. For **Property**, enter `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled`.
     
     c. For **Value**, enter `True`
