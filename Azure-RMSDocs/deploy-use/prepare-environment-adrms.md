@@ -6,7 +6,7 @@ description: Guidance if you have Azure Rights Management with AD RMS deployed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -34,8 +34,6 @@ ms.suite: ems
 
 If the Azure Rights Management service is activated and you are also using AD RMS, this combination isn't compatible. Without additional steps, some computers might automatically start using the Azure Rights Management service and also connect to your AD RMS cluster. This scenario isn't supported and has unreliable results, so it's important that you take additional steps. 
 
-When you are ready to move computers from AD RMS to the cloud, you can start the migration process. During the migration, you activate the Azure Rights Management service only after you have exported configuration information from AD RMS to the Azure Rights Management service. This order ensures that documents and emails that were protected by AD RMS can still be opened.
-
 **To check whether you have deployed AD RMS:**
 
 1. Although optional, most AD RMS deployments publish the service connection point (SCP) to Active Directory so that domain computers can discover the AD RMS cluster. 
@@ -46,7 +44,11 @@ When you are ready to move computers from AD RMS to the cloud, you can start the
     
     For more information about these registry configurations, see [Enabling client-side service discovery by using the Windows registry](../rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) and [Redirecting licensing server traffic](../rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-If you have AD RMS, follow the steps for the scenario that applies to you:
+If AD RMS is deployed for your organization, consider whether you can migrate to Azure Information Protection. Azure Information Protection has many advantages over AD RMS. For example, better support for mobile devices and integration with Office 365 services as well as with Exchange Server and SharePoint Server. For more information, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-on-premise.md).
+
+When you migrate to Azure Information Protection, you won't lose access to previously protected content and you don't have to unprotect or reprotect your content. Documents and emails that were protected by AD RMS can still be opened even after you have deprovisioned AD RMS.
+
+Whether you decide to migrate to Azure Information Protection or you decide to accept the limitations in using your current AD RMS deployment, you must first ensure that the Azure Rights Management service is deactivated. For instructions, follow the steps for the scenario that applies to you:
 
 - [Your subscription that includes Azure Rights Management was purchased during or after February 2018](#your-subscription-was-purchased-during-or-after-february-2018)
 
