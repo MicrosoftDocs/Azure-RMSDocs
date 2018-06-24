@@ -6,7 +6,7 @@ description: Instructions and examples to configure Exchange Online mail flow ru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -55,7 +55,7 @@ Before you configure your mail flow rules, make sure that you know the GUID of t
 
 ## Example configurations
 
-In the following examples, create a new mail flow rule by using the following steps:
+For the following examples, create a new mail flow rule by using the following steps:
 
 1. In a web browser, using a work or school account that has been granted global administrator permissions, sign in to Office 365. 
 
@@ -67,6 +67,8 @@ In the following examples, create a new mail flow rule by using the following st
 
 > [!TIP]
 > If you have problems with the user interface when you configure your rules, try a different browser, such as Internet Explorer.
+
+The examples have a single condition that applies protection when an email is sent outside the organization. For more information about other conditions that you can select, see [Mail flow rule conditions and exceptions (predicates) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
 
 
 ### Example 1: Rule that applies the Do Not Forward option to emails that are labeled **General** when they are sent outside the organization
