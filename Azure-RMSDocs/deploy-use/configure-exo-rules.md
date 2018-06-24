@@ -77,7 +77,7 @@ In this example, the **General** label has a GUID of 0e421e6d-ea17-4fdb-8f01-93a
 
 In the Azure Information Protection policy, this label has been configured as the default label to classify emails as **General** and the label does not apply protection. 
 
-1. In **Name**, type a name for the rule, such as `Apply Do Do Forward for General emails sent externally`.
+1. In **Name**, type a name for the rule, such as `Apply Do Not Forward for General emails sent externally`.
  
 2. For **Apply this rule if**: Select **The recipient is located**, select **Outside the organization**, and then select **OK**.
 
