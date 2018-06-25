@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,7 +82,9 @@ These URLs are standard for the Azure Rights Management service, with the except
 
 ## Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an administrator for Azure Information Protection (global admin), you can click the Admin icon, which switches to Administrator mode. This mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application:
+When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an Azure AD global administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
+
+The Administrator mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application:
 
 ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
