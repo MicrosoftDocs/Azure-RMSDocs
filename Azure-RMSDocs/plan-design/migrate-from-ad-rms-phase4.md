@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -128,12 +128,9 @@ Use the instructions in the [Deploying the Azure Rights Management connector](..
 
 #### Registry edits for Exchange
 
-For all Exchange servers, remove the registry values that you added for LicenseServerRedirection during the preparation phase. These values were added to the following paths:
+For all Exchange servers, add the following registry values to LicenseServerRedirection, depending on your versions of Exchange:
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
+---
 
 For Exchange 2013 and Exchange 2016 - registry edit 1:
 
@@ -157,7 +154,7 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ---
 
-For Exchange 2013 - registry edit 2:
+Exchange 2013 - registry edit 2:
 
 **Registry path:**
 
