@@ -8,7 +8,7 @@ public void GetLabelAsync(const std::shared_ptr<void>& context)  |  Starts retri
 public void GetProtectionAsync(const std::shared_ptr<void>& context)  |  Starts retrieving the protection policy from the file.
  public void SetLabel(const std::string& labelId, const LabelingOptions& labelingOptions)  |  Sets the sensitivity label to the file.
  public void DeleteLabel(AssignmentMethod method, const std::string& justificationMessage)  |  Deletes the sensitivity label from the file.
-public void SetCustomPermissions(const std::shared_ptr<PolicyDescriptor>& policyDescriptor)  |  Sets custom permissions to the file.
+public void SetProtection(const std::shared_ptr<ProtectionDescriptor>& protectionDescriptor)  |  Sets either custom or template based permissions (according to protectionDescriptor->GetProtectionType) to the file.
  public void RemoveProtection()  |  Removes protection from the file. If the file is labeled, the label will be lost.
 public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr<void>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  parameter.
 public void CommitAsync(const std::shared_ptr<Stream>& outputStream, const std::shared_ptr<void>& context) | Writes the changes to the stream specified by the \|outputStream\ |  parameter.
@@ -43,11 +43,11 @@ Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) whe
   
 ### DeleteLabel
 Deletes the sensitivity label from the file.
-Changes will not be written to the file until CommitAsync will be called. Privilegd and Auto method allows the API to override any existing label 
+Changes will not be written to the file until CommitAsync will be called. Privileged and Auto method allows the API to override any existing label 
 Throws [JustificationRequiredError](class_mip_justificationrequirederror.md) when setting the label requires a justification and no justification message was provided via the justificationMessage parameter.
   
-### SetCustomPermissions
-Sets custom permissions to the file.
+### SetProtection
+Sets either custom or template based permissions (according to protectionDescriptor->GetProtectionType) to the file.
 Changes will not be written to the file until CommitAsync will be called.
   
 ### RemoveProtection

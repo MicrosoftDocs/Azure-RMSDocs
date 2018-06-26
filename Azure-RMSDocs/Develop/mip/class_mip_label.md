@@ -8,7 +8,7 @@ Abstraction for a single Microsoft Information Protection label.
  public const std::string& GetName() const  |  Get the label name.
  public const std::string& GetDescription() const  |  Get the label description.
  public const std::string& GetColor() const  |  Get the color the label should be displayed.
- public const std::string& GetOrder() const  |  Get the Order of the label.
+ public int GetSensitivity() const  |  Get the Sensitivity of the label.
  public const std::string& GetTooltip() const  |  Get the tooltip description of the label.
  public bool IsActive() const  |  Gets a boolean signaling if the label is active.
 public std::weak_ptr<Label> GetParent() const  |  Get the parent label.
@@ -40,11 +40,11 @@ Get the color the label should be displayed.
   
 **Returns**: Color value the string format. "#RRGGBB" where each of RR, GG, BB is a hexadecimal 0-f.
   
-### GetOrder
-Get the Order of the label.
+### GetSensitivity
+Get the Sensitivity of the label.
 
   
-**Returns**: A numerical value ascribed as a string.
+**Returns**: A numerical value. Higher value defines higher Sensitivity.
   
 ### GetTooltip
 Get the tooltip description of the label.
