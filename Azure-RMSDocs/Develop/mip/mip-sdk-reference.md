@@ -32,7 +32,7 @@ The MIP SDK for C++ includes:
 [mip::FileIOError](class_mip_fileioerror.md)  |  File IO error.
 [mip::FileProfile](class_mip_fileprofile.md)  |  [FileProfile](class_mip_fileprofile.md) class is the root class for using the Microsoft Information Protection operations.
 [mip::FileProfile::Observer](class_mip_fileprofile_observer.md)  |  [Observer](class_mip_fileprofile_observer.md) interface for clients to get notifications for profile related events.
-[mip::FileProfile::Settings](class_mip_class_mip_fileprofile_settings.md)  |  [Settings](class_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
+[mip::FileProfile::Settings](class_mip_fileprofile_settings.md)  |  [Settings](class_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
 [mip::InternalError](class_mip_internalerror.md)  |  Internal error. This error is thrown when something unexpected happens during execution.
 [mip::JustificationRequiredError](class_mip_justificationrequirederror.md)  | _Not yet documented._
 [mip::JustifyAction](class_mip_justifyaction.md)  |  Justify [Action](class_mip_action.md) requires providing a justification to a label downgrade and setting the response in the execution state.

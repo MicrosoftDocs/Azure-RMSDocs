@@ -31,7 +31,7 @@ Parameters:
 Starts adding a new protection engine to the profile.
 
 Parameters:  
-* **settings**: the [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) objet that specifies the engine's parameters. 
+* **settings**: the [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) object that specifies the engine's parameters. 
 
 
 * **context**: a parameter that will be passed into the observer functions. 
