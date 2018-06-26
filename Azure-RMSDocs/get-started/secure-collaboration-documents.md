@@ -6,7 +6,7 @@ description: End-to-end workflow for collaborating on documents that are protect
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/05/2018
+ms.date: 06/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ When you use Azure Information Protection, you can protect your documents withou
 
 These permissions are called usage rights, and include permissions such as view, edit, print. You can define individual usage rights when a document is protected, or you can define a grouping of usage rights, called permission levels. Permission levels make it easier to select usage rights that are typically used together, for example, Reviewer and Co-Author. For more information about usage rights and permission levels, see [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
-When you configure these permissions, you also specify which users they are for:
+When you configure these permissions, you can specify which users they are for:
 
 - **For users in your own organization or another organization that uses Azure Active Directory**: You can specify Azure AD user accounts, Azure AD groups, or all users in that organization. 
 
@@ -41,14 +41,18 @@ When you configure these permissions, you also specify which users they are for:
     
     To open documents with a Microsoft account, users must use Office 2016 Click-to-Run. Other Office editions and versions do not yet support opening Office protected documents with a Microsoft account.
 
+- **For any authenticated user**: This option is suitable for when you don't need to control who accesses the protected document, providing the user can be authenticated. The authentication can be by Azure AD, by using a Microsoft account, or even a federated social provider or one-time passcode when the content is protected by the new capabilities of Office 365 Message Encryption. 
+
 As an administrator, you can configure an Azure Information Protection label to apply the permissions and authorized users. This configuration makes it very easy for users and other administrators to apply the correct protection settings, because they simply apply the label without having to specify any details. The following sections provide an example walkthrough to protect a document that supports secure collaboration with internal and external users.
 
 
 ## Example configuration for a label to apply protection to support internal and external collaboration
 
-This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address. 
+This example walks through configuring an existing label to apply protection so that users from your organization can collaborate on documents with all users from another organization that has Office 365 or Azure AD, a group from a different organization that has Office 365 or Azure AD, and a user who doesn't have an account in Azure AD and instead will use their Gmail email address.
 
-1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure that **Azure (cloud key)** is selected.
+Because the scenario restricts access to specific people, it does not include the setting for any authenticated users. For an example of how you can configure a label with this setting, see [Example 5: Label that encrypts content but doesn't restrict who can access it](../deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+
+1. Select your label that's already in the global policy or a scoped policy. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
     
 2. Make sure **Set permissions** is selected, and select **Add permissions**.
 
@@ -68,11 +72,11 @@ This example walks through configuring an existing label to apply protection so 
         
     ![Configuring permissions for secure collaboration](../media/collaboration-permissions.png)
 
-
-
 5. Click **OK** on the **Add permissions** blade.
 
-6. On the **Protection** blade, click **OK**. 
+6. On the **Protection** blade, click **OK**.
+
+7. On the **Label** blade, select **Save**. 
 
 ## Applying the label that supports secure collaboration
 
@@ -125,15 +129,19 @@ Before the protected document opens, one of the following authentication flows h
 
 ### Supported scenarios for opening protected documents
 
-The following table summaries the different authentication methods that are supported for opening and editing protected documents.
+The following table summaries the different authentication methods that are supported for viewing and editing protected documents.
 
-In addition, the Azure Information Protection viewer for Windows, and for iOS and Android can open files for viewing by using a Microsoft account.
+In addition, the following scenarios support viewing documents:
 
-|Platforms for opening and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
+- The Azure Information Protection viewer for Windows, and for iOS and Android can open files by using a Microsoft account. 
+
+- A browser can open protected attachments when social providers and one-time passcodes are used for authentication with Exchange Online and the new capabilities from Office 365 Message Encryption. 
+
+|Platforms for viewing and editing documents: <br />Word, Excel, PowerPoint|Authentication method:<br />Azure AD|Authentication method:<br />Microsoft account|
 |---------------|----------|-----------|-----------|
 |Windows|Yes [[1]](#footnote-1)|Yes [[2]](#footnote-2)|
 |iOS|Yes [[1]](#footnote-1)|No|
-|Android|Yes [[1]](#footnote-1)|No |
+|Android|Yes [[1]](#footnote-1)|No|
 |MacOS|Yes [[1]](#footnote-1)|No|
 
 ###### Footnote 1
@@ -141,6 +149,8 @@ Supports user accounts, email-enabled groups, all members. User accounts and ema
 
 ###### Footnote 2
 Currently supported by Office 2016 Click-to-Run only.
+
+
 
 
 ## Next steps
