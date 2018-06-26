@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -260,11 +260,11 @@ If you specify external users who do not have an account in Azure AD:
 
 - The label is suitable for email when Exchange Online is using the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- For Office attachments that are automatically protected, these documents are available to view in the browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
-> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, you can use this example to configure a label with the same set of usage rights.
+> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
 
@@ -308,6 +308,8 @@ This configuration has the advantage that you don't need to specify users, group
 
 ## Next steps
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section. 
+
+Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
