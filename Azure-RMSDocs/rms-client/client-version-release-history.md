@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/19/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -50,9 +50,11 @@ Use the following information to see what’s new or changed for a supported rel
 >  
 > For technical support, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) information. We also invite you to engage with the Azure Information Protection team, on their [Yammer site](https://www.yammer.com/askipteam/).
 
-## Versions later than 1.27.48.0
+## Version 1.29.5.0 
 
-If you have a version of the client that is later than 1.27.48.0, it is a preview build for testing and evaluation purposes.
+**Released**: 06/26/2018
+
+This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 **Fixes**:
 
