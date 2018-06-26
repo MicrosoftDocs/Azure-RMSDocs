@@ -1,10 +1,10 @@
 # class mip::FileProfile::Settings 
-[Settings](class_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
+[Settings](class_mip_fileprofile_settings.md) used by [FileProfile](class_mip_fileprofile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, bool isLicenseCachingEnabled, std::shared_ptr<AuthDelegate> authDelegate, std::shared_ptr<ConsentDelegate> consentDelegate, std::shared_ptr<Observer> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_fileprofile_settings.md) constructor.
+public Settings(const std::string& path, bool useInMemoryStorage, bool isLicenseCachingEnabled, std::shared_ptr<AuthDelegate> authDelegate, std::shared_ptr<ConsentDelegate> consentDelegate, std::shared_ptr<Observer> observer, const ApplicationInfo& applicationInfo)  |  [FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
  public const std::string& GetPath() const  |  Gets the path under which logging, telemetry, and other persistent state is stored.
  public bool GetUseInMemoryStorage() const  |  Gets whether or not all state should be stored in memory (as opposed to on disk)
  public bool IsLicenseCachingEnabled() const  |  Get whether or caching of licenses is enabled.
@@ -24,7 +24,7 @@ public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDeleg
 ## Members
   
 ### Settings
-[FileProfile::Settings](class_fileprofile_settings.md) constructor.
+[FileProfile::Settings](class_mip_fileprofile_settings.md) constructor.
 
 Parameters:  
 * **path**: File path under which logging, telemetry, and other persistent state is stored 

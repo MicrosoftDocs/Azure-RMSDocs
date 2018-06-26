@@ -23,10 +23,10 @@ Parameters:
 * **profile**: A reference to the newly-created [ProtectionProfile](class_mip_protectionprofile.md)
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#getversion)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (e.g. std::promise, std::function, etc.) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#getversion) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
+An application can pass any type of context (e.g. std::promise, std::function, etc.) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
 ### OnLoadFailure
 Called when loading a profile caused an error.
@@ -35,10 +35,10 @@ Parameters:
 * **error**: [Error](class_mip_error.md) that occurred while loading 
 
 
-* **context**: The same context that was passed to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#getversion)
+* **context**: The same context that was passed to ProtectionProfile::LoadAsync
 
 
-An application can pass any type of context (e.g. std::promise, std::function, etc.) to [ProtectionProfile::LoadAsync](class_mip_protectionprofile.md#getversion) and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
+An application can pass any type of context (e.g. std::promise, std::function, etc.) to ProtectionProfile::LoadAsync and that same context will be forwarded as-is to [ProtectionProfile::Observer::OnLoadSuccess](class_mip_protectionprofile_observer.md#onloadsuccess) or [ProtectionProfile::Observer::OnLoadFailure](class_mip_protectionprofile_observer.md#onloadfailure)
   
 ### OnListEnginesSuccess
 Called when list of engines was generated successfully.
