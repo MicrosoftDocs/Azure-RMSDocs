@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
