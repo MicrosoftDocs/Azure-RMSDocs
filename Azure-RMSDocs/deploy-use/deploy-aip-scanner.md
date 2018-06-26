@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -73,7 +73,7 @@ The prerequisites listed in the table are the default requirements for the scann
 
 - Servers are not allowed Internet connectivity
 
-- SQL Server databases must be created and configured manually
+- You cannot be granted Sysadmin or databases must be created and configured manually
 
 - Service accounts cannot be granted the **Log on locally** right
 
@@ -90,20 +90,17 @@ Note that in this configuration, the scanner cannot apply protection (or remove 
 
 #### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
 
-Alternatives:
+If you can be granted the Sysadmin role temporarily to install the scanner, you can remove this role when the scanner installation is complete. When you use this configuration, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. However, the user account that configures the scanner requires the db_owner role for the AzInfoProtectionScanner database, and you must manually grant this role to the user account.
 
-- If you can be granted the Sysadmin role temporarily to install the scanner, you can remove this role when the scanner installation is complete. When you use this configuration, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. However, the user account that configures the scanner requires the db_owner role for the AzInfoProtectionScanner database, and you must manually grant this role to the user account.
-
-- If you cannot be granted the Sysadmin role even temporarily, you must manually create a database named AzInfoProtectionScanner before you install the scanner. When you use this configuration, assign the following roles:
+If you cannot be granted the Sysadmin role even temporarily, you must manually create a database named AzInfoProtectionScanner before you install the scanner. When you use this configuration, assign the following roles:
     
-    |Account|Database-level role|
-    |--------------------------------|---------------------|
-    |Service account for the scanner|db_owner|
-    |User account for scanner installation|db_owner|
-    |User account for scanner configuration |db_owner|
-    
-    Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the AzInfoProtectionScanner database.
+|Account|Database-level role|
+|--------------------------------|---------------------|
+|Service account for the scanner|db_owner|
+|User account for scanner installation|db_owner|
+|User account for scanner configuration |db_owner|
 
+Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the AzInfoProtectionScanner database.
 
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
