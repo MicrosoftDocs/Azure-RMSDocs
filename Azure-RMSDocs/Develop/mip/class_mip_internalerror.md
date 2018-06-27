@@ -1,5 +1,5 @@
 # class mip::InternalError 
-Internal sdk error. Somthing unexpected happen.
+Internal error. This error is thrown when something unexpected happens during execution.
   
 ## Summary
  Members                        | Descriptions                                

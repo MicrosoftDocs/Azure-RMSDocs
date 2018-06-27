@@ -1,5 +1,5 @@
 # class mip::NotSupportedError 
-Operation not supported error.
+The operation requested by the application is not supported by the sdk.
   
 ## Summary
  Members                        | Descriptions                                

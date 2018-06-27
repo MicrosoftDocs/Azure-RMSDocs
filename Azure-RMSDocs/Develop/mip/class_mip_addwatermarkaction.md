@@ -6,10 +6,10 @@ An action class that specifies adding watermark.
 --------------------------------|---------------------------------------------
  public const std::string& GetUIElementName()  |  An API used to mark the watermark element.
  public WatermarkLayout GetLayout() const  |  An API used to get the water mark layout.
- public const std::string& GetText() const  |  Get the text thats meant to go into the content header.
- public const std::string& GetFontName() const  |  Get the font name, used to display the content header.
- public int GetFontSize() const  |  Get the font size, used to display the content header.
- public const std::string& GetFontColor() const  |  Get the font color, used to display the content header.
+ public const std::string& GetText() const  |  Get the text that is meant to go into the watermark.
+ public const std::string& GetFontName() const  |  Get the font name used to display the watermark.
+ public int GetFontSize() const  |  Get the font size used to display the watermark.
+ public const std::string& GetFontColor() const  |  Get the font color used to display the watermark.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
@@ -27,25 +27,25 @@ An API used to get the water mark layout.
 **Returns**: WatermarkLayout the watermarking layout in th form of an enum HORIZONTAL|DIAGONAL. ,
   
 ### GetText
-Get the text thats meant to go into the content header.
+Get the text that is meant to go into the watermark.
 
   
 **Returns**: Content header text.
   
 ### GetFontName
-Get the font name, used to display the content header.
+Get the font name used to display the watermark.
 
   
-**Returns**: Font name, default value if not set by policy Calibri.
+**Returns**: Font name. Default value is Calibri if nothing is set by the policy.
   
 ### GetFontSize
-Get the font size, used to display the content header.
+Get the font size used to display the watermark.
 
   
 **Returns**: Font size as an integer.
   
 ### GetFontColor
-Get the font color, used to display the content header.
+Get the font color used to display the watermark.
 
   
 **Returns**: Font color as a string (e.g."#000000").
