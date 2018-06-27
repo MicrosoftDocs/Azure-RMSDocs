@@ -6,7 +6,7 @@ description: When you configure conditions for a label, you can automatically as
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,7 +52,7 @@ In this example, the user can click **Change now** to apply the recommended labe
     
     You cannot use automatic classification for documents and emails that were previously manually labeled, or previously automatically labeled with a higher classification. 
 
-- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook.
+- Recommended classification applies to Word, Excel, and PowerPoint when documents are saved. You cannot use recommended classification for Outlook unless you configure an [advanced client setting](../rms-client/client-admin-guide-customizations#enable-recommended-classification-in-outlook) that is currently in preview.
     
     You cannot use recommended classification for documents that were previously labeled with a higher classification. 
 
