@@ -5,7 +5,7 @@ A class that defines the interface between the mip sdk and stream based content.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
  public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Read into a buffer from the stream.
- public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Write ino the stream from a buffer.
+ public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Write into the stream from a buffer.
  public bool Flush()  |  flush the stream.
  public void Seek(uint64_t position)  |  Seek specific position within the stream.
  public bool CanRead() const  |  A check if stream is readable.
@@ -13,7 +13,6 @@ A class that defines the interface between the mip sdk and stream based content.
  public uint64_t Position()  |  Get the current position within the stream.
  public uint64_t Size()  |  Get the size of the content within the stream.
  public void Size(uint64_t value)  |  Set the stream size.
-public std::shared_ptr<Stream> Clone()  |  Clone the stream.
   
 ## Members
   
@@ -32,7 +31,7 @@ Parameters:
 **Returns**: Number of bytes actually read.
   
 ### Write
-Write ino the stream from a buffer.
+Write into the stream from a buffer.
 
 Parameters:  
 * **buffer**: pointer to a buffer 
@@ -43,7 +42,7 @@ Parameters:
 
 
   
-**Returns**: Number of bytes actually read.
+**Returns**: Number of bytes actually written.
   
 ### Flush
 flush the stream.
@@ -89,10 +88,3 @@ Set the stream size.
 Parameters:  
 * **stream**: size.
 
-
-  
-### Stream
-Clone the stream.
-
-  
-**Returns**: New stream.
