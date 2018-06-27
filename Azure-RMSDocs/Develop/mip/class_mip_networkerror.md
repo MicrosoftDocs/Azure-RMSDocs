@@ -1,5 +1,5 @@
 # class mip::NetworkError 
-Networking error.
+Networking error. Caused by unexpected behavior when making network calls to service endpoints.
   
 ## Summary
  Members                        | Descriptions                                

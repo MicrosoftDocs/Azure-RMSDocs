@@ -1,5 +1,5 @@
-# class mip::Error 
-Base class for all errors that will be reported (thrown or returned) from MIP SDK.
+# class mip::AccessDeniedError 
+The user could not get access to the content. e.g. no permissions, content revoked etc.
   
 ## Summary
  Members                        | Descriptions                                
