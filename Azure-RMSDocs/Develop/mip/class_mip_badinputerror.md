@@ -1,5 +1,5 @@
 # class mip::BadInputError 
-Bad input error, input to the sdk api was invalid.
+Bad input error, thrown when the input to an sdk api is invalid.
   
 ## Summary
  Members                        | Descriptions                                

@@ -4,14 +4,16 @@ An action class which specifies adding protection by template to the document.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public const std::string& GetTemplateId() const  | _Not yet documented._
+ public const std::string& GetTemplateId() const  |  Get the protection template id associated with the action.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
 ### GetTemplateId
-_Not documented yet._
+Get the protection template id associated with the action.
 
+  
+**Returns**: A string containing the protection template id.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).

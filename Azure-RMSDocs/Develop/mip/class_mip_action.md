@@ -1,5 +1,5 @@
 # class mip::Action 
-Interface for an action.
+Interface for an action. Each action translates to a step that needs to be taken by the application to apply the label (as defined in the policy)
   
 ## Summary
  Members                        | Descriptions                                

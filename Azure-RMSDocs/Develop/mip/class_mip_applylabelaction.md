@@ -1,19 +1,19 @@
-# class mip::RemoveContentHeaderAction 
-An action class which specifies removing the content header from the document.
+# class mip::ApplyLabelAction 
+Apply label actions requires the calling application to apply a specific label.
   
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-public const std::vector<std::string>& GetUIElementNames()  |  Gets a list of names that should be used to find the UI elements that should be removed.
+ public const std::string& GetLabelId() const  |  Get the label ID required.
  public ActionType GetType() const  |  Get the type of [Action](class_mip_action.md).
   
 ## Members
   
-### GetUIElementNames
-Gets a list of names that should be used to find the UI elements that should be removed.
+### GetLabelId
+Get the label ID required.
 
   
-**Returns**: A list of ui element names.
+**Returns**: The label Id.
   
 ### ActionType
 Get the type of [Action](class_mip_action.md).
