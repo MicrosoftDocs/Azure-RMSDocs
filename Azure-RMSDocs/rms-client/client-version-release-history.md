@@ -6,7 +6,7 @@ description: See what's new or changed in a release of the Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,7 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - For Outlook versions 16.0.9324.1000 and later (Click-to-Run), the Azure Information Protection bar supports the latest monitor display options that previously might result in the bar displaying outside the Outlook application.
 
-- Visual markings that you configure [per Office application type](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) now replace a previously applied header or footer.
+- Visual markings that you configure [per Office application type](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) now replace a header or footer that was previously applied by an Azure Information Protection label.
 
 - When an Excel file is already labeled and the label applies visual markings, a new sheet now also has the label's visual markings applied.
 
