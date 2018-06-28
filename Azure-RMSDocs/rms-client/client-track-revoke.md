@@ -6,7 +6,7 @@ description: After you have protected your documents, you can track how people a
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/04/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -70,7 +70,7 @@ To track a document that you have protected, you must use your Windows computer 
 
 ## Using Office to track or revoke the document
 
-For the Office applications, Word, Excel, PowerPoint, and Outlook: 
+For the Office applications, Word, Excel, and PowerPoint: 
 
 1. Open the protected document that you want to track or revoke.
 
