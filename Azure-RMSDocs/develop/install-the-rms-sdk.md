@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Install the SDK | Azure RMS

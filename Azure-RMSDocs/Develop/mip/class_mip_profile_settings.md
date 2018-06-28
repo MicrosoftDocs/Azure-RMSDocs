@@ -1,4 +1,5 @@
 # class mip::Profile::Settings 
+[Settings](class_mip_profile_settings.md) used by [Profile](class_mip_profile.md) during its creation and throughout its lifetime.
   
 ## Summary
  Members                        | Descriptions                                
@@ -9,6 +10,10 @@ public Settings(const std::string& path, bool useInMemoryStorage, const std::sha
 public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  Get the Auth Delegate.
 public const std::shared_ptr<Profile::Observer>& GetObserver() const  |  Get the event observer.
  public const ApplicationInfo GetApplicationInfo() const  |  Get the application info.
+public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Get the logger delegate (if any) provided by the application.
+public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Use external logger implementation.
+ public void OptOutTelemetry()  |  Opts out of all telemetry gathering.
+ public bool IsTelemetryOptedOut() const  |  Gets whether or not telemetry gathering should be disabled.
   
 ## Members
   
@@ -22,7 +27,7 @@ Parameters:
 * **useInMemoryStorage**: A flag indicating whether or not state should be stored on disk. 
 
 
-* **authDelegate**: The authentication delegate used by the SDK to acquire authenitication tokens. 
+* **authDelegate**: The authentication delegate used by the SDK to acquire authentication tokens. 
 
 
 * **observer**: A class implementing the [Profile::Observer](class_mip_profile_observer.md) interface. Can be nullptr. 
@@ -61,3 +66,22 @@ Get the application info.
 
   
 **Returns**: The application info.
+  
+### LoggerDelegate
+Get the logger delegate (if any) provided by the application.
+
+  
+**Returns**: Logger delegate to be used for logging
+  
+### SetLoggerDelegate
+Use external logger implementation.
+This should be called by client applications if they want to use their own logger implementation
+  
+### OptOutTelemetry
+Opts out of all telemetry gathering.
+  
+### IsTelemetryOptedOut
+Gets whether or not telemetry gathering should be disabled.
+
+  
+**Returns**: Whether or not telemetry gathering should be disabled

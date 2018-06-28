@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/10/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -108,13 +108,27 @@ Exchange does not have to be configured for Azure Information Protection before 
     
     Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
 
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display if you are editing a label that previously used the **Set permissions** option.
+    
+    To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
+
 7. If you selected **Set permissions** for **Azure (cloud key)**, this option lets you configure the same settings that you can configure in a template. 
     
     Select **Add permissions**, and on the **Add permissions** blade, select the first set of users and groups who will have rights to use the content that will be protected by the selected label:
     
-    - Choose **Select from the list** to add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, or browse the directory.
+    - Choose **Select from the list** where you can then add all users from your organization by selecting **Add \<organization name> - All members**. This setting excludes guest accounts. Or, you can select **Add any authenticated users (Preview)**, or browse the directory.
         
-        The users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        When you choose all members or browse the directory, the users or groups must have an email address. In a production environment, users and groups nearly always have an email address, but in a simple testing environment, you might need to add email addresses to user accounts or groups.
+        
+        ###### More information about **Add any authenticated users** 
+        This setting doesn't restrict who can access the content that the label protects, while still encrypting the content and providing you with options to restrict how the content can be used (permissions), and accessed (expiry and offline access). However, the application opening the protected content must be able to support the authentication being used. For this reason, federated social providers such as Google, and onetime passcode authentication should be used for email only, and only when you use Exchange Online and the new capabilities from Office 365 Message Encryption. Microsoft accounts can be used with the Azure Information Protection viewer and Office 2016 Click-to-Run. 
+        
+        Some typical scenarios for the any authenticated users setting:
+            - You don't mind who views the content, but you want to restrict how it is used. For example, you do not want the content to be edited, copied, or printed.
+            - You don't need to restrict who accesses the content, but you want to be able to track who opens it and potentially, revoke it.
+            - You have a requirement that the content must be encrypted at rest and in transit, but it doesn't require access controls.     
         
     - Choose **Enter details** to manually specify email addresses for individual users or groups (internal or external). Or, use this option to specify all users in another organization by entering any domain name from that organization. You can also use this option for social providers, by entering their domain name such as **gmail.com**, **hotmail.com**, or **outlook.com**.
         
@@ -196,7 +210,7 @@ Your users type the Gmail email address in the **To** box.  Then, they select th
 
 4. If selected, clear the following option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions**.
 
-5. Click **OK** on the **Protection** blade.
+5. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
 
 
 ### Example 2: Label that restricts read-only permission to all users in another organization, and that supports immediate revocation
@@ -217,7 +231,7 @@ This label is not suitable for emails.
 
 6. Back on the **Protection** blade, for **Allow offline access setting**, select **Never**.
 
-7. Click **OK** on the **Protection** blade.
+7. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
 
 
 ### Example 3: Add external users to an existing label
@@ -236,16 +250,21 @@ The new users that you add will be able open documents and emails that have alre
 
 6. Repeat steps 4 and 5 for each user (or group) that you want to add to this label. Then click **OK**.
 
-7. On the **Protection** blade, click **OK**.
+7. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
 
 ### Example 4: Label for protected email that supports less restrictive permissions than Do Not Forward
 
-This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or print and save an attachment.
+This label cannot be restricted to Outlook but does provide less restrictive controls than using Do Not Forward. For example, you want the recipients to be able to copy from the email or an attachment, or save and edit an attachment.
 
-If you specify external users who do not have an account in Azure AD, be sure to instruct your users not to use this label for documents, only email. In addition, to support these external users, Exchange Online must be configured for the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+If you specify external users who do not have an account in Azure AD:
+
+- The label is suitable for email when Exchange Online is using the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+ 
+- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
 
 > [!NOTE]
-> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, you can use this example to configure a label with the same set of usage rights.
+> Exchange Online is rolling out a new option, [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). This option is not available for label configuration. However, when you know who the recipients will be, you can use this example to configure a label with the same set of usage rights. 
 
 When your users specify the email addresses in the **To** box, the addresses must be for the same users that you specify for this label configuration. Because users can belong to groups and have more than one email address, the email address that they specify does not have to match the email address that you specify for the permissions. However, specifying the same email address is the easiest way to ensure that the recipient will be successfully authorized. For more information about how users are authorized for permissions, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). 
 
@@ -267,10 +286,30 @@ When your users specify the email addresses in the **To** box, the addresses mus
 
 6. Click **OK** on the **Add permissions** blade.
 
-7. On the **Protection** blade, click **OK**.
+7. Click **OK** on the **Protection** blade, and then click **Save** on the **Label** blade.
+
+
+### Example 5: Label that encrypts content but doesn't restrict who can access it
+
+This configuration has the advantage that you don't need to specify users, groups, or domains to protect an email or document. The content will still be encrypted and you can still specify usage rights, an expiry date, and offline access. Use this configuration only when you do not need to restrict who can open the protected document or email. [More information about this setting](#more-information-about-add-any-authenticated-users)
+
+1. On the **Protection** blade, make sure **Azure (cloud key)** is selected.
+    
+2. Make sure **Set permissions** is selected, and then select **Add permissions**.
+
+3. On the **Add permissions** blade, on the **Select from the list** tab, select **Add any authenticated users (Preview)**.
+
+4. Select the permissions you want, and click **OK**.
+
+5. Back on the **Protection** blade, configure settings for **Content expiration** and **Allow offline access**, if needed, and then click **OK**.
+
+6. On the **Label** blade, select **Save**.
+
 
 ## Next steps
 
-For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
+For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section. 
+
+Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

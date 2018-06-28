@@ -6,7 +6,7 @@ description: Identify the prerequisites to deploy Azure Information Protection f
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 06/27/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -90,6 +90,8 @@ For the listed server versions, the Azure Information Protection client is suppo
 
 When the Azure Information Protection client protects the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
 
+The Azure Information Protection client has [additional prerequisites](../rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) that are listed in the admin guide.
+
 ## Applications
 
 The Azure Information Protection client can label and protect documents and emails by using the Office applications **Word**, **Excel**, **PowerPoint**, and **Outlook** from any of the following Office editions:
@@ -146,11 +148,12 @@ For information about the additional requirements for this scenario, see [On-pre
 
 ### Coexistence of AD RMS with Azure RMS
 
-The following deployment scenario is not supported unless you are using AD RMS protection with Azure Information Protection (the "hold your own key" or HYOK configuration):
+The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](../deploy-use/configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
 
 - Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
