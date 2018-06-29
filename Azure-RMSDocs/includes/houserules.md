@@ -1,2 +1,2 @@
-> [TIP!]
+> [!TIP]
 > Before you provide feedback for this documentation, review our [House rules](../house-rules.md) for guidance and options.
