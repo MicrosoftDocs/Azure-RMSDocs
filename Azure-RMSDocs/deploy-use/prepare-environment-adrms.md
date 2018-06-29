@@ -100,7 +100,7 @@ See the migration guidance: [Migrating from AD RMS to Azure Information Protecti
 
 ## Your subscription was purchased before or during February 2018 and you have Exchange Online
 
-Microsoft is starting to activate the Azure Rights Management service for subscriptions that include Azure Rights Management or Azure Information Protection, and the tenants are using Exchange Online. For these tenants, automatic activation is starting to roll out July 31, 2018.
+Microsoft is starting to activate the Azure Rights Management service for subscriptions that include Azure Rights Management or Azure Information Protection, and the tenants are using Exchange Online. For these tenants, automatic activation is starting to roll out August 1, 2018.
 
 If the service is automatically activated for you and you are also using AD RMS, this combination isn't compatible so it's important that your tenant is opted out from the automatic service update. 
 
