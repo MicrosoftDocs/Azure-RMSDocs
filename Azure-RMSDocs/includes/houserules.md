@@ -1,1 +1,1 @@
-> Before you provide feedback for this documentation, review our [House rules](../house-rules.md) for guidance and different options.
+##### Before you provide feedback for this documentation, review our [House rules](../house-rules.md) for guidance and options.
