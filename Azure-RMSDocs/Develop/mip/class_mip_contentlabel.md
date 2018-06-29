@@ -22,6 +22,7 @@ Get the assignment method of the label.
 
   
 **Returns**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
+  
 **See also**: mip::AssignmentMethod
   
 ### Label
@@ -29,4 +30,5 @@ Get the actual label object applied on the content.
 
   
 **Returns**: The label object applied on the content. 
+  
 **See also**: [mip::Label](class_mip_label.md)

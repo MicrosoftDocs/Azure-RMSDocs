@@ -43,7 +43,7 @@ Parameters:
 Starts adding a new policy engine to the profile.
 
 Parameters:  
-* **settings**: the [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md) objet that specifies the engines parameters. 
+* **settings**: the [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md) object that specifies the engines parameters. 
 
 
 * **context**: a parameter that will be passed into the observer functions. 
