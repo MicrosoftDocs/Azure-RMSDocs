@@ -49,14 +49,18 @@ If you're looking for a specific option that you're used to selecting with the R
 
 |Option in the RMS sharing app|Information
 |-----------|--------------------|
-|**Share Protected**|This option is no longer available from the Office ribbon. Instead of sharing directly from within your Office application, use File Explorer's right-click option, **Classify and protect** to protect a copy of the document with custom permissions, and then share the file using your choice of email client, or sharing location. <br /><br /> You can also attach an unprotected document to an email that you protect, and the document is automatically protected with the same restrictions. However, you cannot track and revoke this document.
+|**Share Protected**|This option is no longer available from the Office ribbon. Instead of sharing directly from within your Office application, use File Explorer's right-click option, **Classify and protect** to protect a copy of the document with custom permissions, and then share the file using your choice of email client, or sharing location. <br /><br /> You can also attach an unprotected Office document to an email that you protect, and the document is automatically protected with the same restrictions. However, you cannot track and revoke this document.
 |**Email me when somebody tries to open these documents**|Use the document tracking site to configure your preferred email notification setting: Locate the protected document that you shared > **Settings** > **Email notifications**
-|**Allow me to instantly revoke access to these documents**|This option is no longer available. Configure templates that do not allow offline access. Additionally, consider whether you need to reduce the use license validity period for your tenant, by running [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**Allow me to instantly revoke access to these documents**|This option is no longer available. Use administrator-defined protection settings that do not allow offline access. Additionally, an administrator can reduce the use license validity period for your tenant, by running [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**Track Usage** in Outlook|The ability to access the document tracking site from Outlook is no longer available. Instead, use the **Track and revoke** option from Word, PowerPoint, Excel, or File Explorer. Or, using a browser, you can go directly to the [document tracking site](https://go.microsoft.com/fwlink/?LinkId=529562).
 
+## Next steps
+More how-to instructions from the Azure Information Protection user guide:
 
+- [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
-
-
+## Additional information for administrators    
+See [Azure Information Protection client administrator guide](client-admin-guide.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
