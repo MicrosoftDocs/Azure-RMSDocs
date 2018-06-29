@@ -6,7 +6,7 @@ description: Instructions for users who have upgraded from the RMS sharing appli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -60,7 +60,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Azure Information Protection client administrator guide](client-admin-guide.md).
+See the [Azure Information Protection client administrator guide](client-admin-guide.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
