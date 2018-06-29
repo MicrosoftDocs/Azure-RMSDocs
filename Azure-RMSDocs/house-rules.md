@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: House rules for customer comments - AIP
-description: Scope and intent for Livefyre comments and sidebars for the Azure Information Protection documentation.
+title: House rules for customer feedback - AIP
+description: Options and guidance for providing feedback for the Azure Information Protection documentation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
