@@ -6,7 +6,7 @@ description: Guidance if you have Azure Rights Management with AD RMS deployed.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -100,13 +100,15 @@ See the migration guidance: [Migrating from AD RMS to Azure Information Protecti
 
 ## Your subscription was purchased before or during February 2018 and you have Exchange Online
 
-Microsoft is starting to activate the Azure Rights Management service for subscriptions that include Azure Rights Management or Azure Information Protection, and the tenants are using Exchange Online. For these tenants, automatic activation is starting to roll out July 1, 2018.
+Microsoft is starting to activate the Azure Rights Management service for subscriptions that include Azure Rights Management or Azure Information Protection, and the tenants are using Exchange Online. For these tenants, automatic activation is starting to roll out July 31, 2018.
 
-If the service is automatically activated for you and you are also using AD RMS, this combination isn't compatible so it's important that you opt out from the automatic service update. 
+If the service is automatically activated for you and you are also using AD RMS, this combination isn't compatible so it's important that your tenant is opted out from the automatic service update. 
 
 ### Step 1: Opt out from the automatic service update
 
-Use the following [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false` 
+Use the following [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) Exchange Online PowerShell command:`Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`
+
+[More information](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
 ### Step 2: Start planning for migration
 
