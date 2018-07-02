@@ -1,2 +1,3 @@
-> [!TIP]
-> Before you provide feedback for this documentation, review our [House rules](../house-rules.md) for guidance and options.
+## Comments
+
+Before commenting, we ask that you review our [House rules](../house-rules.md).

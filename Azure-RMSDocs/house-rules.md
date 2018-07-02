@@ -6,7 +6,7 @@ description: Options and guidance for providing feedback for the Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 
 If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information that is documented, you want to report an inaccuracy in the documentation, or you can’t find the information that you need. 
 
-To do that, in the **Feedback** section of the relevant page, select **Sign in to give documentation feedback** to sign in with a GitHub account to use GitHub Issues. If you are already singed in, you see **Content feedback** instead. 
+To do that, in the **Feedback** section of the relevant page, select **Sign in to give documentation feedback** to sign in with a GitHub account to use GitHub Issues. If you are already signed in, you see **Content feedback** instead. 
 
 However, if your feedback isn't about the documentation itself, select **Product feedback**, or use the following resources:
  
