@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: House rules for customer comments - AIP
-description: Scope and intent for Livefyre comments and sidebars for the Azure Information Protection documentation.
+title: House rules for customer feedback - AIP
+description: Options and guidance for providing feedback for the Azure Information Protection documentation.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-# House rules for comments on the Azure Information Protection documentation
+# House rules for feedback on the Azure Information Protection documentation
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -43,7 +43,7 @@ However, if your feedback isn't about the documentation itself, select **Product
 
 - **Roadmap information**. For example, when a new release will be available or additional functionality is planned. For this information, visit the [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) or ask about it on the Azure Information Protection [Yammer site](https://www.yammer.com/AskIPTeam). You can also check the [UserVoice site](https://msip.uservoice.com) for Azure Information Protection and use this resource to request new features.
 
-- **Documentation design feedback**. For example, you want to report a problem or request a new feature for all documentation pages on the docs.microsoft.com site. Instead, visit the documentation [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
+- **Documentation design feedback**. For example, you want to report a problem or request a new feature for all documentation pages on the docs.microsoft.com site. For this feedback, visit the documentation [feedback site](https://msdocs.uservoice.com/forums/364242-general-site-feedback) to post your suggestion or vote on other suggestions. You might also find it useful to read [Introducing docs.microsoft.com](/teamblog/introducing-docs-microsoft-com/) to learn more about the site design and new features.
 
 You’ll find additional resources in [Information and support for Azure Information Protection](./get-started/information-support.md). 
 
