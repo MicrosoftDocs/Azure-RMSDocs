@@ -6,7 +6,7 @@ description: Scope and intent for Livefyre comments and sidebars for the Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -33,9 +33,9 @@ ms.suite: ems
 
 If you have feedback about the documentation you've just read for Azure Information Protection, we would love to hear from you. For example, if you have a clarifying question about the information that is documented, you want to report an inaccuracy in the documentation, or you can’t find the information that you need. 
 
-Before you post your comment, make sure that it's relevant to the page where you are posting. These posts are public and visible to everybody. If your post is not relevant to the page, or it is outside the scope of our house rules (see the following list), expect it to be deleted.
- 
-Do not use Livefyre comments and sidenotes for the following:
+To do that, in the **Feedback** section of the relevant page, select **Sign in to give documentation feedback** to sign in with a GitHub account to use GitHub Issues. If you are already signed in, you see **Content feedback** instead. 
+
+However, if your feedback isn't about the documentation itself, select **Product feedback**, or use the following resources:
  
 - **Subscription questions for your organization**. For example, whether your existing subscriptions support a feature that you want to use, or you have questions about whether users need specific licenses and you have checked the [subscription requirements for Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection). Instead, contact your Microsoft Account Manager or [Microsoft Support](./get-started/information-support.md#to-contact-microsoft-support).
     
