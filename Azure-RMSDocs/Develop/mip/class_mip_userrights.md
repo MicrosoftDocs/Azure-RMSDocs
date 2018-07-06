@@ -4,9 +4,9 @@ Represents a group of users and the rights associated with them.
 ## Summary
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
- public UserRights(const UserList& users, const RightList& rights)  |  [UserRights](class_mip_userrights.md) constructor.
- public const UserList& Users() const  |  Gets users associated with a set of rights.
- public const RightList& Rights() const  |  Gets rights associated with a group of users.
+public UserRights(const std::vector<std::string>& users, const std::vector<std::string>& rights)  |  [UserRights](class_mip_userrights.md) constructor.
+public const std::vector<std::string>& Users() const  |  Gets users associated with a set of rights.
+public const std::vector<std::string>& Rights() const  |  Gets rights associated with a group of users.
   
 ## Members
   
@@ -21,13 +21,13 @@ Parameters:
 
 
   
-### UserList
+### Users
 Gets users associated with a set of rights.
 
   
 **Returns**: Users associated with a set of rights
   
-### RightList
+### Rights
 Gets rights associated with a group of users.
 
   

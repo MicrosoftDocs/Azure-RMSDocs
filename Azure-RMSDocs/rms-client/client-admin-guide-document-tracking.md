@@ -6,7 +6,7 @@ description: Instructions and information for admins to configure and use docume
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -82,12 +82,14 @@ These URLs are standard for the Azure Rights Management service, with the except
 
 ## Tracking and revoking documents for users
 
-When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an administrator for Azure Information Protection (global admin), you can click the Admin icon, which switches to Administrator mode. This mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application:
+When users sign in to the document tracking site, they can track and revoke documents that they have protected by using the Azure Information Protection client or shared by using the Rights Management sharing application. When you sign in as an Azure AD global administrator for your tenant, you can click the Admin icon, which switches to Administrator mode. Other administrator roles do not support this mode for the document tracking site. 
 
 ![Admin icon in the document tracking site](../media/tracking-site-admin-icon.png)
 
+The Administrator mode lets you see the documents that users in your organization have selected to track by using the Azure Information Protection client, or shared by using the Rights Management sharing application.
+
 > [!NOTE] 
-> If you do not see this icon, despite being a global admin, it's because you haven't yet shared any documents yourself. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
+> If you do not see this icon, despite being a global administrator, it's because you haven't yet shared any documents yourself. In this case, use the following URL to access the document tracking site: https://portal.azurerms.com/#/admin
 
 Actions that you take in Administrator mode are audited and logged in the usage log files, and you must confirm to continue. For more information about this logging, see the next section.
 
