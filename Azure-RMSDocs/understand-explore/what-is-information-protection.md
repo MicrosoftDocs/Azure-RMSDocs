@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/18/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -112,13 +112,11 @@ When you attach Office documents to these emails, these documents are automatica
 
 Ideally, documents and emails are labeled when they are first created. But you undoubtedly have many existing documents in data stores that you also want to classify, and optionally, protect. These data stores could be on-premises or in the cloud.
 
-For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
+For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server and uses the same Azure Information Protection policy. When you run the scanner, you can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
 
-For more information about deploying the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
+For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
 
-For your cloud data stores, use Microsoft Cloud App Security to apply the same labels to documents in Box, SharePoint Online, and OneDrive for Business. These labels can then be used with governance policies. As an example, when credit card numbers are detected in a document that's stored in SharePoint Online, that document can be labeled as **Confidential** and Cloud App Security can automatically remove external links from the document and quarantine it until you’ve had time to investigate.
-
-For more information about using Azure Information Protection labels with Cloud App Security, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
+For your cloud data stores, use Microsoft Cloud App Security to apply your labels to documents in Box, SharePoint Online, and OneDrive for Business. For more information, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
 
 
 ## Resources for Azure Information Protection
