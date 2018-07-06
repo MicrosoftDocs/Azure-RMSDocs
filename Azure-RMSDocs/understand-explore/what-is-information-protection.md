@@ -39,9 +39,9 @@ After your content is classified (and optionally protected), you can then track 
 
 ## How labels apply classification
 
-You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable regardless of where the data is stored or with whom it’s shared. The labels include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text. The clear text ensures that other services, such as data loss prevention solutions, can identify the classification and take appropriate action. 
+You use Azure Information Protection labels to apply classification to documents and emails. When you do this, the classification is identifiable regardless of where the data is stored or with whom it’s shared. The labels can include visual markings such as a header, footer, or watermark. Metadata is added to files and email headers in clear text. The clear text ensures that other services, such as data loss prevention solutions, can identify the classification and take appropriate action. 
 
-For example, the following email message has been classified as "General". This label is added as a footer to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is also embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
+For example, the following email message has been classified as "General". The label has added a footer of "Sensitivity: General" to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
 ![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
 
@@ -110,9 +110,9 @@ When you attach Office documents to these emails, these documents are automatica
 
 ## Classifying and protecting existing documents
 
-Ideally, documents and emails are labeled when they are first created. But you undoubtedly have many existing documents in data stores that you also want to classify, and optionally, protect. These data stores could be on-premises or in the cloud.
+Ideally, documents and emails are labeled when they are first created. But you probably have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
 
-For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server and uses the same Azure Information Protection policy. When you run the scanner, you can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
+For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
 
 For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
 
