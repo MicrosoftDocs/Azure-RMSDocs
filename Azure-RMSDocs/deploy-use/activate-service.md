@@ -6,7 +6,7 @@ description: The Azure Rights Management service must be activated before your o
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ When you have a service plan that includes Azure Rights Management, you might no
 
 - **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained towards the end of February 2018 or later:** The service is automatically activated for you. You do not have to activate the service unless you or another global administrator for your organization deactivated Azure Rights Management.
 
-- **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained before or during February 2018:** Microsoft is starting to activate the Azure Rights Management service for these subscriptions if your tenant is using Exchange Online. For these subscriptions, automatic activation is starting to roll out July 1, 2018 and the service will be activated for you unless you run `Set-IRMConfiguration -AutomaticServiceUpdateEnabled $false`. 
+- **If your subscription that includes Azure Rights Management or Azure Information Protection was obtained before or during February 2018:** Microsoft is starting to activate the Azure Rights Management service for these subscriptions if your tenant is using Exchange Online. For these subscriptions, automatic activation is starting to roll out August 1, 2018 when the service will be activated for you unless you see **AutomaticServiceUpdateEnabled** is set to **false** when you run [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
 
 If neither of the subsequent scenarios apply to you, you must manually activate the protection service. 
 
@@ -112,7 +112,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
 For more information about this cmdlet and additional examples, see the [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy) help.
 
-When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office clients the default templates that are automatically published when the Azure Rights Management service is activated, or custom templates that you might configure. Server-side applications, such as Exchange, can implement their own per-user controls for Rights Management integration to achieve the same result.
+When you use these onboarding controls, all users in the organization can always consume protected content that has been protected by your subset of users, but they won’t be able to apply information protection themselves from client applications. For example, they won’t see in their Office apps the default templates that are automatically published when the Azure Rights Management service is activated, or custom templates that you might configure. Server-side applications, such as Exchange, can implement their own per-user controls for Rights Management integration to achieve the same result. For example, to prevent users from protecting emails in Outlook on the web, use [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) to set the *IRMEnabled* parameter to *$false*.
 
 
 ## Next steps

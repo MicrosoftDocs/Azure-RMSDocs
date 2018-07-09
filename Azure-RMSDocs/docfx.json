@@ -31,6 +31,9 @@
     "dest": "Azure-RMSDocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/azure-rmsdocs",
+      "feedback_product_url": "https://msip.uservoice.com/", 
       "layout": "Conceptual",
       "breadcrumb_path": "/azure/information-protection/bread/toc.json",
       "searchScope": ["Information Protection"]

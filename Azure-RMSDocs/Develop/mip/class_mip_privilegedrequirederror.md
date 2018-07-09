@@ -1,5 +1,5 @@
 # class mip::PrivilegedRequiredError 
-Current label was set by privilidge assignment method cannot override.
+Current label was assigned as a privileged operation (The equivalent to an administrator operation), therefore it can't be overriden.
   
 ## Summary
  Members                        | Descriptions                                

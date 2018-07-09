@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2018
+ms.date: 07/03/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -53,7 +53,7 @@ You can run the scanner in discovery mode only, where you use the reports to che
 
 Note that the scanner does not discover and label in real time. It systematically crawls through files on data stores that you specify, and you can configure this cycle to run once, or repeatedly.
 
-You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
+You can specify which file types to scan, or exclude from scanning. To restrict which files the scanner inspects, define a file types list by using [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes).
 
 
 ## Prerequisites for the Azure Information Protection scanner
@@ -62,16 +62,22 @@ Before you install the Azure Information Protection scanner, make sure that the 
 |Requirement|More information|
 |---------------|--------------------|
 |Windows Server computer to run the scanner service:<br /><br />- 4 core processors<br /><br />- 4 GB of RAM<br /><br />- 10 GB free space (average) for temporary files|Windows Server 2016 or Windows Server 2012 R2. <br /><br />Note: For testing or evaluation purposes in a non-production environment, you can use a Windows client operating system that is [supported by the Azure Information Protection client](../get-started/requirements.md#client-devices).<br /><br />This computer can be a physical or virtual computer that has a fast and reliable network connection to the data stores to be scanned.<br /><br /> The scanner requires sufficient disk space to create temporary files for each file that it scans, four files per core. The recommended disk space of 10 GB allows for 4 core processors scanning 16 files that each have a file size of 625 MB. <br /><br />Make sure that this computer has the [Internet connectivity](../get-started/requirements.md#firewalls-and-network-infrastructure) that it needs for Azure Information Protection. If Internet connectivity is not possible because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.|
-|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance<br /><br />- Sysadmin role to install the scanner|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />The account that installs the scanner requires permissions to write to the master database (must be a member of the db_datawriter role). The installation process grants the db-owner role to the service account that runs the scanner. Alternately, you can manually create the AzInfoProtectionScanner database before you install the scanner, and assign the db-owner role to the scanner service account.|
+|SQL Server to store the scanner configuration:<br /><br />- Local or remote instance<br /><br />- Sysadmin role to install the scanner|SQL Server 2012 is the minimum version for the following editions:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />When you install the scanner and your account has the Sysadmin role, the installation process automatically creates the AzInfoProtectionScanner database and grants the required db_owner role to the service account that runs the scanner.  If you cannot be granted the Sysadmin role or your organization policies require databases to be created and configured manually, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.|
 |Service account to run the scanner service|In addition to running the scanner service, this account authenticates to Azure AD and downloads the Azure Information Protection policy. This account must be an Active Directory account and synchronized to Azure AD. If you cannot synchronize this account because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.<br /><br />This service account has the following requirements:<br /><br />- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You must grant this right to the service account but you can remove this right after you have confirmed that the scanner can discover, classify, and protect files. If granting this right even for a short period of time is not possible because of your organization policies, see the [Deploying the scanner with alternative configurations](#deploying-the-scanner-with-alternative-configurations) section.<br /><br />- **Log on as a service** right. This right is automatically granted to the service account during the scanner installation and this right is required for the installation, configuration, and operation of the scanner. <br /><br />- Permissions to the data repositories: You must grant **Read** and **Write** permissions for scanning the files and then applying classification and protection to the files that meet the conditions in the Azure Information Protection policy. To run the scanner in discovery mode only, **Read** permission is sufficient.<br /><br />- For labels that reprotect or remove protection: To ensure that the scanner always has access to protected files, make this account a [super user](configure-super-users.md) for the Azure Rights Management service, and ensure that the super user feature is enabled. For more information about the account requirements for applying protection, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md). In addition, if you have implemented [onboarding controls](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) for a phased deployment, make sure that this account is included in your onboarding controls you've configured.|
 |The Azure Information Protection client is installed on the Windows Server computer|You must install the full client for the scanner. Do not install the client with just the PowerShell module.<br /><br />For client installation instructions, see the [admin guide](../rms-client/client-admin-guide.md). If you have previously installed the scanner and now need to upgrade it to a later version, see [Upgrading the Azure Information Protection scanner](../rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Configured labels that apply automatic classification, and optionally, protection|For more information about how to configure the conditions in the Azure Information Protection policy, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](configure-policy-classification.md).<br /><br />For more information about how to configure labels to apply protection to files, see [How to configure a label for Rights Management protection](configure-policy-protection.md).<br /><br />These labels can be in the global policy, or one or more [scoped policies](configure-policy-scope.md).<br /><br />Note: Although you can run the scanner even if you haven't configured labels that apply automatic classification, this scenario is not covered with these instructions. [More information](#using-the-scanner-with-alternative-configurations)| 
+
+If you can't meet all the requirements in the table because they are prohibited by your organization policies, see the next section for alternatives.
+
+If all the requirements are met, go straight to the [installation section](#install-the-azure-information-protection-scanner).
 
 ### Deploying the scanner with alternative configurations
 
 The prerequisites listed in the table are the default requirements for the scanner and recommended because they are the simplest configuration for the scanner deployment. They should be suitable for initial testing, so that you can check the capabilities of the scanner. However, in a product environment, your organization policies might prohibit these default requirements because of one or more of the following restrictions:
 
 - Servers are not allowed Internet connectivity
+
+- You cannot be granted Sysadmin or databases must be created and configured manually
 
 - Service accounts cannot be granted the **Log on locally** right
 
@@ -86,6 +92,19 @@ Follow the instructions for a [disconnected computer](../rms-client/client-admin
 
 Note that in this configuration, the scanner cannot apply protection (or remove protection) by using your organization's cloud-based key. Instead, the scanner is limited to using labels that apply classification only, or protection that uses [HYOK](configure-adrms-restrictions.md). 
 
+#### Restriction: You cannot be granted Sysadmin or databases must be created and configured manually
+
+If you can be granted the Sysadmin role temporarily to install the scanner, you can remove this role when the scanner installation is complete. When you use this configuration, the database is automatically created for you and the service account for the scanner is automatically granted the required permissions. However, the user account that configures the scanner requires the db_owner role for the AzInfoProtectionScanner database, and you must manually grant this role to the user account.
+
+If you cannot be granted the Sysadmin role even temporarily, you must manually create a database named AzInfoProtectionScanner before you install the scanner. When you use this configuration, assign the following roles:
+    
+|Account|Database-level role|
+|--------------------------------|---------------------|
+|Service account for the scanner|db_owner|
+|User account for scanner installation|db_owner|
+|User account for scanner configuration |db_owner|
+
+Typically, you will use the same user account to install and configure the scanner. But if you use different accounts, they both require the db_owner role for the AzInfoProtectionScanner database.
 
 #### Restriction: The service account for the scanner cannot be granted the **Log on locally** right
 
@@ -207,7 +226,7 @@ Because we configured the schedule to run continuously, when the scanner has wor
 
 The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), such as executables and system files.
 
-You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType), and remove a file type from the list by using [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
+You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
 Then the scanner uses Windows iFilter to scan the following file types. For these file types, the document will be labeled by using the conditions that you specified for your labels.
 
