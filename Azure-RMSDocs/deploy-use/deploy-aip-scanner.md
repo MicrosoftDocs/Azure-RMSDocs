@@ -6,7 +6,7 @@ description: Instructions to install, configure, and run the Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/03/2018
+ms.date: 07/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -119,7 +119,7 @@ You can have one account to run the scanner service and use another account to a
 - For the Azure Active Directory account, follow the instructions for [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
 
 
-## Install the Azure Information Protection scanner
+## Install the scanner
 
 1. Sign in to the Windows Server computer that will run the scanner. Use an account that has local administrator rights and that has permissions to write to the SQL Server master database.
 
@@ -149,7 +149,9 @@ You can have one account to run the scanner service and use another account to a
 
 Now that you have installed the scanner, you need to get an Azure AD token for the scanner service account to authenticate so that it can run unattended. 
 
-## Get an Azure AD token for the scanner service account to authenticate to the Azure Information Protection service
+## Get an Azure AD token for the scanner
+
+The Azure AD token lets the scanner service account authenticate to the Azure Information Protection service.
 
 1. From the same Windows Server computer, or from your desktop, sign in to the Azure portal to create two Azure AD applications that are needed to specify an access token for authentication. After an initial interactive sign-in, this token lets the scanner run non-interactively.
     
@@ -169,7 +171,7 @@ The scanner now has a token to authenticate to Azure AD, which is valid for one 
 
 You're now ready to specify the data stores to scan. 
 
-## Specify data stores for the Azure Information Protection scanner
+## Specify data stores for the scanner
 
 Use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
@@ -191,7 +193,7 @@ Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 
 
 With the scanner's default configuration, you're now ready to run your first scan in discovery mode.
 
-## Run a discovery cycle and view reports for the Azure Information Protection scanner
+## Run a discovery cycle and view reports for the scanner
 
 1. Using **Administrative Tools** > **Services**, start the **Azure Information Protection Scanner** service.
 
@@ -205,7 +207,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
 
-## Configure the Azure Information Protection scanner to apply classification and protection to discovered files
+## Configure the scanner to apply classification and protection
 
 In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
 
@@ -222,9 +224,9 @@ In its default setting, the scanner runs one time and in the reporting-only mode
 Because we configured the schedule to run continuously, when the scanner has worked its way through all the files, it starts a new cycle so that new and changed files are discovered.
 
 
-## How files are scanned by the Azure Information Protection scanner
+## How files are scanned
 
-The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), such as executables and system files.
+The scanner automatically skips files that are [excluded from classification and protection](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection), such as executables and system files.
 
 You can change this behavior by defining a list of file types to scan, or exclude from scanning. When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. To specify this list, use [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). After you have specified your file types list, you can add a new file type to the list by using [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes), and remove a file type from the list by using [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
@@ -262,7 +264,7 @@ When the scanner applies a label with protection, by default, only Office file t
 
 To change the default scanner behavior, for example, to generically protect other file types, you must manually edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile"
 
-## When files are rescanned by the Azure Information Protection scanner
+## When files are rescanned
 
 For the first scan cycle, the scanner inspects all files in the configured data stores and then for subsequent scans, only new or modified files are inspected. 
 
@@ -279,7 +281,7 @@ If the scanner downloaded a policy that had no automatic conditions configured, 
 
 ## Using the scanner with alternative configurations
 
-There are two alternative scenarios that the scanner supports where labels do not need to be configured for any conditions: 
+There are two alternative scenarios that the Azure Information Protection scanner supports where labels do not need to be configured for any conditions: 
 
 - Apply a default label to all files in a data repository.
     
@@ -294,7 +296,7 @@ There are two alternative scenarios that the scanner supports where labels do no
     
     The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. 
 
-## Optimizing the performance of the Azure Information Protection scanner
+## Optimizing the performance of the scanner
 
 To maximize the scanner performance:
 
@@ -345,7 +347,7 @@ Other factors that affect the scanner performance:
     - The scanner runs more slowing when you use the [alternative configuration](#using-the-scanner-with-alternative-configurations) to identify all custom conditions and known sensitive information types.
     
 
-## List of cmdlets for the Azure Information Protection scanner 
+## List of cmdlets for the scanner 
 
 Other cmdlets for the scanner let you change the service account and database for the scanner, get the current settings for the scanner, and uninstall the scanner service. The scanner uses the following cmdlets:
 
@@ -374,7 +376,7 @@ Other cmdlets for the scanner let you change the service account and database fo
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
-## Event log IDs and descriptions
+## Event log IDs and descriptions for the scanner
 
 Use the following sections to identify the possible event IDs and descriptions for the scanner. These events are logged on the server that runs the scanner service, in the Windows **Applications and Services** event log, **Azure Information Protection**.
 
