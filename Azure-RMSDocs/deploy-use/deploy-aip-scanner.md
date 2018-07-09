@@ -207,7 +207,7 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
 
-## Configure the scanner to apply classification and protection to discovered files
+## Configure the scanner to apply classification and protection
 
 In its default setting, the scanner runs one time and in the reporting-only mode. To change these settings, run the [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) cmdlet.
 
