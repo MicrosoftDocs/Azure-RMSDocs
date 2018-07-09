@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2018
+ms.date: 07/09/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -188,9 +188,9 @@ You can make similar registry edits for other scenarios by changing the value of
 
 For more information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". 
 
-## File types that are excluded from classification and protection by the Azure Information Protection client
+## File types that are excluded from classification and protection
 
-To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files, they see a message that they are excluded.
+To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection client, they see a message that they are excluded.
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
 
@@ -199,6 +199,18 @@ To help prevent users from changing files that are critical for computer operati
     - Program Files (\Program Files and \Program Files (x86))
     - \ProgramData 
     - \AppData (for all users)
+
+### File types that are excluded from classification and protection by the Azure Information Protection scanner
+
+By default, the scanner also excludes the same file types as the Azure Information Protection client. However, you can change this behavior for the scanner by using the following PowerShell cmdlets:
+
+- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
+
+- [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
+
+- [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
+
+By default, the scanner protects only Office file types. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
 
 ### Files that cannot be protected by default
 
