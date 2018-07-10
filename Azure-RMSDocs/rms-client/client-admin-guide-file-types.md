@@ -188,9 +188,9 @@ You can make similar registry edits for other scenarios by changing the value of
 
 For more information, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance. In this documentation for developers, generic protection is referred to as "PFile". 
 
-## File types that are excluded from classification and protection by the Azure Information Protection client
+## File types that are excluded from classification and protection
 
-To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files, they see a message that they are excluded.
+To help prevent users from changing files that are critical for computer operations, some file types and folders are automatically excluded from classification and protection. If users try to classify or protect these files by using the Azure Information Protection client, they see a message that they are excluded.
 
 - **Excluded file types**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msp, .msi, .pdb, .jar
 
