@@ -49,7 +49,7 @@ You must have the following software on your development system:
 
 Read the [What's new](release-notes.md) topic for information on API updates, device and environment information, release notes and frequently asked questions (FAQ).
 
-Review the information in the [Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) guide at the Windows Phone Dev Center.
+Review the information in the [Windows Phone development](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) guide at the Windows Phone Dev Center.
 
 ## Configuring your development environment
 
@@ -81,7 +81,7 @@ You are now ready to create your own new Windows Phone apps.
 
 [Core concepts](core-concepts.md)
 
-[Windows Phone development](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
+[Windows Phone development](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx)
 
 [Windows API Reference](https://msdn.microsoft.com/library/dn891914.aspx)
 
