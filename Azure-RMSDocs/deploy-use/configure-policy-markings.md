@@ -57,7 +57,7 @@ For documents, the visual markings are applied as follows:
 
 - In an Office app, the visual markings from a label are applied when the label is applied. Visual markings are also applied when a labeled document is opened and the document is first saved.  
 
-- When a document is labeled by using File Explorer, PowerShell, or the Azure Information Protection scanner, visual markings are not immediately applied but are applied when that document is opened in an Office app and the document is first saved.
+- When a document is labeled by using File Explorer, PowerShell, or the Azure Information Protection scanner: Visual markings are not immediately applied but are applied by the Azure Information Protection client when that document is opened in an Office app and the document is first saved.
     
     The exception is when you use [AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) with Office 2016 for files that are saved in SharePoint Online, OneDrive, or OneDrive for Business: When AutoSave is on, visual markings are not applied unless you configure the [advanced client setting](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) to turn on classification to run continuously in the background. 
 
