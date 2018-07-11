@@ -66,25 +66,25 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
     
     - New cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instructs the scanner to start a one time scan cycle when the schedule is set to manual.
     
-    - For [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
-        - Values for the *Schedule* parameter are no longer **OneTime**, **Continuous**, and **Never**, but now **Manual** and **Always**.
-        - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration).
-        
-     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
-    
-    - Scanner reports include "Last modified by" for Office documents.  
-
 **Fixes**
 
 - For the Azure Information Protection scanner:
     
-    - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint editor is now used as the default value instead of the SharePoint author.
+    - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
     
     - Scanner reports include "Last modified by" for Office documents. 
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
 - Browsing between emails by using the quick menu shows the correct label for each email. 
+
+**Additional changes**:
+   
+- For [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
+    
+    - Values for the *Schedule* parameter are no longer **OneTime**, **Continuous**, and **Never**, but now **Manual** and **Always**.
+        
+    - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration).
 
 
 ## Version 1.29.5.0 
