@@ -59,19 +59,27 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 **New features**: 
 
 - For the Azure Information Protection scanner:
+
     - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading to from 1.29.5.0 and earlier versions.
+    
     - New cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Gets the current status of the service for the scanner.  
+    
     - New cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instructs the scanner to start a one time scan cycle when the schedule is set to manual.
+    
     - For [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
         - Values for the *Schedule* parameter are no longer **OneTime**, **Continuous**, and **Never**, but now **Manual** and **Always**.
         - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration).
-     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint editor is now used as the default value instead of the SharePoint author.
-     - Scanner reports include "Last modified by" for Office documents.  
+        
+     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint Editor value is now used as the default value instead of the Author value.
+    
+    - Scanner reports include "Last modified by" for Office documents.  
 
 **Fixes**
 
 - For the Azure Information Protection scanner:
+    
     - For documents that are protected in SharePoint libraries, if the *DefaultOwner* parameter is not used for the data repository, the SharePoint editor is now used as the default value instead of the SharePoint author.
+    
     - Scanner reports include "Last modified by" for Office documents. 
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
