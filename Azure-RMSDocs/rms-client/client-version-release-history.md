@@ -76,7 +76,11 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
-- Browsing between emails by using the quick menu shows the correct label for each email. 
+- Browsing between emails by using the quick menu shows the correct label for each email.
+
+- Custom permissions supports recipient email addresses that contain an apostrophe.
+
+- The computer environment will successfully initialize (bootstrap) when this action is initiated by opening a protected document in SharePoint Online. 
 
 **Additional changes**:
    
@@ -85,6 +89,10 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
     - Values for the *Schedule* parameter are no longer **OneTime**, **Continuous**, and **Never**, but now **Manual** and **Always**.
         
     - The *Type* parameter is removed, so it is also removed from the output when you run [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration).
+    
+- For the scanner, the default exclusion list now includes .rtf files. [More information](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+
+- The policy version is changed to 1.4. Identifying the version number is required for [configuring disconnected computers](client-admin-guide-customizations.md#support-for-disconnected-computers). 
 
 
 ## Version 1.29.5.0 
