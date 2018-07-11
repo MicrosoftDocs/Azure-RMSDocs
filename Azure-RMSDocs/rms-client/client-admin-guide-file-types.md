@@ -213,7 +213,7 @@ You can change the file types included or excluded for file inspection by the sc
 - [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
 
 > [!NOTE]
-> If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files have been reported as problematic for the scanner in that the file inspection for these files never completes. 
+> If you include .rtf files for scanning, carefully monitor the scanner. Some .rtf files cannot be successfully inspected by the scanner and for these files, the inspection doesn't complete and the service must be restarted. 
 
 By default, the scanner protects only Office file types. To change this behavior for the scanner, edit the registry and specify the additional file types that you want to be protected. For instructions, see [File API configuration](../develop/file-api-configuration.md) from the developer guidance.
 
