@@ -236,7 +236,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
-This configuration option is currently in preview and is subject to change. In addition, this configuration option requires the preview version of the client or the Azure Information Protection scanner.
+This configuration option is currently in preview and is subject to change.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
