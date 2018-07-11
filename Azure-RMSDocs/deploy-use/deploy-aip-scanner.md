@@ -203,13 +203,13 @@ With the scanner's default configuration, you're now ready to run your first sca
 
 3. Review the reports that are stored in %*localappdata*%\Microsoft\MSIP\Scanner\Reports and that have a .csv file format. With the default configuration of the scanner, only files that meet the conditions for automatic classification are included in these reports.
     
-    If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. For the current GA version of the scanner: Each time you repeat these steps, first run the following PowerShell command on the Windows Server computer:
+    If the results are not as you expect, you might need to fine-tune the conditions that you specified in your Azure Information Protection policy. If that's the case, repeat steps 1 through 3 until you are ready to change the configuration to apply the classification and optionally, protection. 
     
-    For the current GA version of the scanner:
-    
+    For the current GA version of the scanner: Each time you repeat these steps, first run the following PowerShell command on the Windows Server computer:
+  
     	Set-AIPScannerConfiguration -Schedule OneTime
     
-    If you have the current preview version of the scanner, there's no need to run the Set-AIPScannerConfiguration command.
+    If you have the current preview version of the scanner, do not run the Set-AIPScannerConfiguration command.
   
 When you're ready to automatically label the files that the scanner discovers, continue to the next procedure. 
 
