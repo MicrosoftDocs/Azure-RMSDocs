@@ -6,7 +6,7 @@ description: Phase 5 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/11/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
