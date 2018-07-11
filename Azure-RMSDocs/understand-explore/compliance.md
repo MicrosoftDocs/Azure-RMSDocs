@@ -67,9 +67,9 @@ For in-depth technical information about how the protection technology works, se
 
 - [SLA for Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-- [SLA for Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
+- [SLA for Azure Active Directory](https://azure.microsoft.com/support/legal/sla/active-directory/v1_0/)
 
-- [SLA for Azure Key Vault](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
+- [SLA for Azure Key Vault](https://azure.microsoft.com/support/legal/sla/key-vault/v1_0/)
 
 ## Documentation
 
