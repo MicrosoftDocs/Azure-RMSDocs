@@ -6,7 +6,7 @@ description: Instructions how to classify and protect your documents and emails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -95,7 +95,7 @@ If allowed by your administrator, you can specify your own protection settings f
 
     ![Custom Permisisons option](../media/custom-permissions-callout.png)
     
-    If you cannot select **Custom Permissions**, your administrator does not allow you to use this option.
+    If you do not see **Custom Permissions**, your administrator does not allow you to use this option.
     
     Note that any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
 
@@ -152,9 +152,9 @@ The admin guide contains a full list of the file types supported and the files a
     
     ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
     
-3. If allowed by your adminsitrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
+3. If allowed by your administrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
     
-    If you cannot select **Protect with custom permissions**, your administrator does not allow you to use this option.
+    If you do not see **Protect with custom permissions**, your administrator does not allow you to use this option.
     
     Any custom permissions that you specify replace rather than supplement protection settings that your administrator might have defined for your chosen label.  
 
@@ -187,6 +187,8 @@ More how-to instructions from the Azure Information Protection user guide:
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+
+Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
