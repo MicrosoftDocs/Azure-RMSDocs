@@ -6,7 +6,7 @@ description: Instructions to remove classification labels and protection from fi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/01/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -63,13 +63,17 @@ If the **Delete Label** icon is not immediately available, first click the **Edi
 
 When you use File Explorer, you can quickly remove labels and protection from a single file, multiple files, or a folder. When you select a folder, all the files in that folder and any subfolders it has are automatically selected. 
 
-1.  In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**.
+1. In File Explorer, select your file, multiple files, or a folder. Right-click, and select **Classify and protect**.
 
 2. To remove a label: In the **Classify and protect - Azure Information Protection** dialog box, click **Delete Label**. If the label was configured to apply protection, that protection is automatically removed.
 
-3. To remove custom protection from a single file: In the **Classify and protect - Azure Information Protection** dialog box, clear the **Protect with custom permissions** option.
+3. To remove custom protection from a single file: In the **Classify and protect - Azure Information Protection** dialog box, clear the **Protect with custom permissions** option. 
+    
+    If you cannot select **Protect with custom permissions**, your administrator does not allow you to use this option.
     
 4. To remove custom protection from multiple files: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove custom permissions**.
+    
+    If you cannot select this option, your administrator does not allow you to use this option.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
@@ -78,6 +82,11 @@ When you use File Explorer, you can quickly remove labels and protection from a 
 More how-to instructions from the Azure Information Protection user guide:
 
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
+
+## Additional information for administrators    
+For information about the policy setting that enables custom permissions for users, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+
+Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

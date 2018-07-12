@@ -152,7 +152,7 @@ The admin guide contains a full list of the file types supported and the files a
     
     ![No labels in the Classify and protect - Azure Information Protection** dialog box](../media/info-protect-dialog-labels-protection-only.png)
     
-3. If allowed by your adminsitrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
+3. If allowed by your administrator, you can specify your own protection settings rather than use the protection settings that your administrator might have included with your selected label. To do this, select **Protect with custom permissions**.
     
     If you cannot select **Protect with custom permissions**, your administrator does not allow you to use this option.
     
@@ -187,6 +187,8 @@ More how-to instructions from the Azure Information Protection user guide:
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-See [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
+For information about the policy setting that enables custom permissions for users, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+
+Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
