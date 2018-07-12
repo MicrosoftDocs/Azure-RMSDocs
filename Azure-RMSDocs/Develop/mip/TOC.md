@@ -1,7 +1,6 @@
 # [Azure Information Protection documentation](/azure/information-protection/)
 # Microsoft Information Protection SDK
 ## [Developer's Info](https://aka.ms/mipdevelopers)
-## [Examples](https://aka.ms/mipexamples)
 ## [SDK reference](mip-sdk-reference.md)
 ### [Enums and structs](mip-enums-and-structs.md)
 ### [Functions](mip-functions.md)
