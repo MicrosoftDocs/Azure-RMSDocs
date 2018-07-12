@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -120,7 +120,8 @@ When you export the policy, this action downloads a zipped file with multiple ve
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |version 1.2|
     |Policy1.2.msip |version 1.3 - 1.7|
-    |Policy1.3.msip |version 1.8 and later|
+    |Policy1.3.msip |version 1.8 - 1.29|
+    |Policy1.4.msip |version 1.32 and later|
     
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure information protection client installed. 
 

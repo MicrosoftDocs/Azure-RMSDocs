@@ -58,6 +58,8 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 **New features**: 
 
+- Labeling support for Strict Open XML format in Word, Excel, and PowerPoint files. For more information about the Open XML formats, see the Office blog post, [New file format options in the new Office](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
+
 - For the Azure Information Protection scanner:
 
     - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading to from 1.29.5.0 and earlier versions.
