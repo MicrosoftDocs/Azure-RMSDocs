@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -141,13 +141,13 @@ To configure this advanced setting, enter the following strings:
 
 The recommended method to configure this option is by using the [policy setting](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users**. However, you can also configure this option by using an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you configure in the Azure portal. 
 
-When you configure this setting and publish the policy for users, the custom permissions options become available for users to select their own protection settings, or unavailable so that users can't select their own protection settings unless prompted.
+When you configure this setting and publish the policy for users, the custom permissions options become visible for users to select their own protection settings, or they are hidden so that users can't select their own protection settings unless prompted.
 
 To configure this advanced setting, enter the following strings:
 
 - Key: **EnableCustomPermissions**
 
-- Value: **True** to make the custom permissions option available, or **False** to make this option unavailable
+- Value: **True** to make the custom permissions option visible, or **False** to hide this option
 
 
 ## Permanently hide the Azure Information Protection bar
