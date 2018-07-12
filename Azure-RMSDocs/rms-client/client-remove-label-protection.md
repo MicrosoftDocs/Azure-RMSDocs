@@ -36,7 +36,7 @@ When the label that you remove is configured to apply protection, this action al
 > [!IMPORTANT]
 > You must be the owner of the file to remove protection, or been granted permissions to remove protection (the Rights Management Extract or Full Control permission).
 
-If you want to choose a different label or a different set of protection settings, you do not need to remove the label or protection. Instead, choose a new label and if necessary, you can define custom permissions. 
+If you want to choose a different label or a different set of protection settings, you do not need to remove the label or protection. Instead, choose a new label and if necessary, you can define custom permissions if your administrator allows this configuration. 
 
 You can remove labels and protection from Office documents and emails when you are creating or editing them from within your Office desktop apps: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
@@ -69,11 +69,11 @@ When you use File Explorer, you can quickly remove labels and protection from a 
 
 3. To remove custom protection from a single file: In the **Classify and protect - Azure Information Protection** dialog box, clear the **Protect with custom permissions** option. 
     
-    If you cannot select **Protect with custom permissions**, your administrator does not allow you to use this option.
+    If you do not see this option **Protect with custom permissions**, your administrator does not allow you to use this option.
     
 4. To remove custom protection from multiple files: In the **Classify and protect - Azure Information Protection** dialog box, click **Remove custom permissions**.
     
-    If you cannot select this option, your administrator does not allow you to use this option.
+    If you do not see this option, your administrator does not allow you to use this option.
 
 5. Click **Apply** and wait for the **Work finished** message to see the results. Then click **Close**.
 
@@ -84,7 +84,7 @@ More how-to instructions from the Azure Information Protection user guide:
 - [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
 ## Additional information for administrators    
-For information about the policy setting that enables custom permissions for users, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
+For configuration instructions to enable the policy setting **Make the custom permissions option available to users**, see [Configuring the Azure Information Protection policy settings](../deploy-use/configure-policy-settings.md).
 
 Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 

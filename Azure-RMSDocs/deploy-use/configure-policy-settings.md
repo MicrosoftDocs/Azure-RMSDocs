@@ -6,7 +6,7 @@ description: Configure settings in the Azure Information Protection policy that 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -71,7 +71,7 @@ To configure these settings:
     
         This policy setting can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
-    - **Make the custom permissions option available to users**: When this setting is on, users can set their own protection settings and override any protection settings that you might have included with a label configuration. When this setting is off, the custom permissions options are not available for users to select.
+    - **Make the custom permissions option available to users**: When this setting is on, users see options to set their own protection settings that can override any protection settings that you might have included with a label configuration. Users can also see an option to remove protection. When this setting is off, users do not see these options.
         
         Note that this policy setting has no effect on custom permissions that users can configure from Office menu options. However, it can also be configured with an advanced client setting as a [client customization](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users).
         
