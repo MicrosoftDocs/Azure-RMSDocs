@@ -37,7 +37,7 @@ This scanner runs as a service on Windows Server and lets you discover, classify
 
 - UNC paths for network shares that use the Server Message Block (SMB) protocol.
 
-- Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013.
+- Sites and libraries for SharePoint Server 2016 and SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 To scan and label files on cloud repositories, use [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
@@ -175,7 +175,7 @@ You're now ready to specify the data stores to scan.
 
 Use the [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) cmdlet to specify the data stores to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
-Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013.
+Supported versions for SharePoint: SharePoint Server 2016 and SharePoint Server 2013. SharePoint 2010 is also supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. From the same Windows Server computer, in your PowerShell session, add your first data store by running the following command:
     
