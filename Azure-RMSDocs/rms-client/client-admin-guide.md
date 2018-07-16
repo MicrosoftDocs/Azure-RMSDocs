@@ -185,9 +185,15 @@ Use the [Version release history and support policy](../rms-client/client-versio
 
 ### Upgrading the Azure Information Protection scanner
 
-To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client.
+To upgrade the Azure Information Protection scanner, install the latest version of the Azure Information Protection client. Then do one of the following one-time actions:
 
-For the current preview version: If your previously installed version of the client was 1.26.6.0 or earlier, run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after installing the client. This is a one-time action that's required to update the database schema for the scanner. Your configuration settings for the scanner and repositories will be retained. Until you run this update cmdlet, the scanner does not run.
+**For the current GA version**: 
+
+- If your previously installed version of the client was 1.26.6.0 or earlier, rerun the scanner installation command with [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Your configuration settings for the scanner and repositories will be retained. Reinstalling the scanner grants the scanner service account delete permissions for the scanner database, which will be required for reports.
+
+**For the current preview version**: 
+
+- If your previously installed version of the client was 1.26.6.0 or earlier, run [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) after installing the client. Your configuration settings for the scanner and repositories will be retained. Running this cmdlet is required to update the database schema for the scanner and if required, the scanner service account is also granted delete permissions for the scanner database. Until you run this update cmdlet, the scanner does not run.
 
 ## Uninstalling the Azure Information Protection client
 

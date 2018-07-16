@@ -62,7 +62,7 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 - For the Azure Information Protection scanner:
 
-    - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading to from 1.29.5.0 and earlier versions.
+    - New cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Required to run once after upgrading from version 1.26.6.0 or earlier.
     
     - New cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Gets the current status of the service for the scanner.  
     
