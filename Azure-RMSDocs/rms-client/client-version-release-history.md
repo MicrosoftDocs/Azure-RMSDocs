@@ -68,6 +68,8 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
     
     - New cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Instructs the scanner to start a one time scan cycle when the schedule is set to manual.
     
+    - SharePoint Server 2010 is supported for customers who have [extended support for this version of SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+    
 **Fixes**
 
 - For the Azure Information Protection scanner:
