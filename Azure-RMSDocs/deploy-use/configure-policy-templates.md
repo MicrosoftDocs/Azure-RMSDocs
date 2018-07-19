@@ -6,7 +6,7 @@ description: Configure and manage rights management templates from the Azure por
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -83,7 +83,7 @@ Templates that are archived display as unavailable in the **Azure Information Pr
 
 Before you edit these templates or convert them to labels, make sure that you are aware of the following changes and considerations. Because of implementation changes, the following list is especially important if you previously managed templates in the Azure classic portal.
 
-- After you edit or convert a template and save the Azure Information Protection policy, the following changes are made to the original [usage rights](configure-usage-rights.md). If required, you can add or remove individual usage rights by using the Azure portal. Or, use PowerShell with the [New-​Aadrm​Rights​Definition](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Set-​Aadrm​Template​Property](/powershell/module/aadrm/new-aadrmrightsdefinition) cmdlets.
+- After you edit or convert a template and save the Azure Information Protection policy, the following changes are made to the original [usage rights](configure-usage-rights.md). If required, you can add or remove individual usage rights by using the Azure portal. Or, use PowerShell with the [New-​Aadrm​Rights​Definition](/powershell/module/aadrm/set-aadrmtemplateproperty) and [Set-​Aadrm​Template​Property](/powershell/module/aadrm/set-​aadrm​template​property) cmdlets.
     
     - **Allow Macros** (common name) is automatically added. This usage right is required for the Azure Information Protection bar in Office apps.
 

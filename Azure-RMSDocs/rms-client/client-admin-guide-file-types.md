@@ -60,7 +60,9 @@ The following file types can be classified even when they are not protected.
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: File types in the following table:
+- **Microsoft Office**: File types in the following table.
+    
+    Supported file formats for these file types: Minimum of Office 97-2003 documents and Open Office XML
     
     |Office file type|Office file type|
     |----------------------------------|----------------------------------|
@@ -130,14 +132,13 @@ These file types are identified separately because when they are natively protec
 |.jt|.pjt|
 
 
-The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. 
+The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats are those that are a minimum of Office 97-2003 documents, and Open Office XML. 
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
 |File types supported by Office|File types supported by Office|
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-
 
 ### Changing the default protection level of files
 You can change how the Azure Information Protection client protects files by editing the registry. For example, you can force files that support native protection to be generically protected by the Azure Information Protection client.
