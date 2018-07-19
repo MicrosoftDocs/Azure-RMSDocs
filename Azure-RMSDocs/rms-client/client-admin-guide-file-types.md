@@ -6,7 +6,7 @@ description: Technical details about supported file types, file name extensions,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/09/2018
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -65,6 +65,8 @@ The following file types can be classified even when they are not protected.
     |Office file type|Office file type|
     |----------------------------------|----------------------------------|
     |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd|.vsdm<br /><br /> .vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
+    
+    Supported file formats for Office: Minimum of Office 97-2003 documents and Open Office XML
 
 Additional file types support classification when they are also protected. For these file types, see the [Supported file types for classification and protection](#supported-file-types-for-classification-and-protection) section.
 
@@ -138,6 +140,7 @@ For these files, the file name extension remains the same after the file is prot
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
+**Supported file formats for Office**: Minimum of Office 97-2003 documents and Open Office XML
 
 ### Changing the default protection level of files
 You can change how the Azure Information Protection client protects files by editing the registry. For example, you can force files that support native protection to be generically protected by the Azure Information Protection client.
