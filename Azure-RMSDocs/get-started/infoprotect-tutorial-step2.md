@@ -52,7 +52,7 @@ Although Azure Information Protection comes with a default policy that you can u
 
 ## Changing the settings for a default label and prompt for justification
 
-For our tutorial, we'll change a couple of those policy settings so that you can see how they work:
+For this tutorial, we'll change a couple of those policy settings so that you can see how they work:
 
 1. For **Select the default label**, select **General**. 
 
@@ -60,7 +60,7 @@ For our tutorial, we'll change a couple of those policy settings so that you can
 
 2. For **Users must provide justification to set a lower classification label, remove a label, or remove protection**, set this option to **On**.
 
-3. In addition, locate the setting **Make the custom permissions option available to users**. If it is set to **Off**, change this to **On**.
+3. In addition, locate the setting **Make the custom permissions option available to users**. If this setting is **Off**, change it to **On**.
     
     You might not need to change this setting because the default depends on when you obtained your subscription. We will use custom permissions later in the tutorial to share a protected document with a user that you specify when you right-click the file from File Explorer.
 
@@ -82,7 +82,7 @@ We'll now create a new sublabel for **Confidential**.
     
     ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
     
-4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Make sure that **Set Permissions** is also selected. Then select **Add permissions**.
+4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
@@ -100,7 +100,7 @@ We'll now create a new sublabel for **Confidential**.
     
      ![Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
     
-    If you select **Add permissions**, this opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
+    If you select **Add permissions**, this action opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
 8. Review and keep the defaults for content expiration and offline access, and then click **OK** to save and close this **Protection** blade.
 
