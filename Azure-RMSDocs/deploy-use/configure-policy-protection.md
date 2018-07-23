@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -102,12 +102,6 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display if you are editing a label that previously used the **Set permissions** option.
-    
-    To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Tip: If you are used to creating and editing custom templates, you might find it useful to reference [Tasks that you used to do with the Azure classic portal](migrate-portal.md).
-
     - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display if you are editing a label that previously used the **Set permissions** option.
     
     To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
