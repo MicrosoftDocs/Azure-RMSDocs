@@ -122,7 +122,7 @@ When you export the policy, this action downloads a zipped file with multiple ve
     |Policy1.2.msip |version 1.3 - 1.7|
     |Policy1.3.msip |version 1.8 and later|
     
-2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure information protection client installed. 
+2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure Information Protection client installed. 
 
 
 ## Hide or show the Do Not Forward button in Outlook
