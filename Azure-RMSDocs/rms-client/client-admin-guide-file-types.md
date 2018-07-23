@@ -102,9 +102,7 @@ There are maximum file sizes that the Azure Information Protection client suppor
 
 - **For all other files**: 
     
-    - To protect these files: The maximum file size is limited only by available disk space and memory.
-    
-    - To open these files in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
+    - To protect other file types, and to open these file types in the Azure Information Protection viewer: The maximum file size is limited only by available disk space and memory.
     
     - To unprotect files by using the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet: The maximum file size supported for .pst files is 5 GB. Other file types are limited only by available disk space and memory.
 
