@@ -80,7 +80,7 @@ This version includes the MSIPC version 1.0.3557.524 of the RMS client.
 
 - When you classify and protect by using PowerShell or the scanner, the Office document metadata is not removed or encrypted.
 
-- Browsing between emails by using the quick menu shows the correct label for each email.
+- Viewing emails by using the Next Item and Previous Item arrow icons on the Quick Access toolbar shows the correct label for each email.
 
 - Custom permissions supports recipient email addresses that contain an apostrophe.
 
