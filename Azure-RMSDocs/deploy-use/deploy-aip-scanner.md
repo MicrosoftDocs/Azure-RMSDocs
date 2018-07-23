@@ -251,7 +251,6 @@ Then the scanner uses Windows iFilter to scan the following file types. For thes
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|Project|.mpp; .mpt|
 |PDF|.pdf|
 |Text|.txt; .xml; .csv|
 
