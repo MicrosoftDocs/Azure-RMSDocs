@@ -6,7 +6,7 @@ description: An overview of the Azure Information Protection service.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/06/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -122,6 +122,8 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 ## Resources for Azure Information Protection
 
 - Free trial: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+
+- Subscription options and pricing: [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection)
 
 - Download the client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
