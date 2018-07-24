@@ -254,7 +254,7 @@ As a result of this registry edit, the following scenarios are supported:
 
 - File Explorer and PowerShell can unprotect these files, or reprotect them with Azure Information Protection.
 
-- File Explore, PowerShell, and the Azure Information Protection scanner can label these files.
+- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files.
 
 - The Azure Information Protection scanner can inspect these files for sensitive information.
 
