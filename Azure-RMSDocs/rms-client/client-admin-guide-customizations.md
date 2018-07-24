@@ -250,13 +250,13 @@ Add the following DWORD value of **EnableIQPFormats** to the following registry 
 
 As a result of this registry edit, the following scenarios are supported:
 
-- You can use the Azure Information Protection viewer to open these protected files.
+- The Azure Information Protection viewer can open these protected files.
 
-- You can use File Explorer and PowerShell to unprotect these files or reprotect them with Azure Information Protection.
+- File Explorer and PowerShell can unprotect these files, or reprotect them with Azure Information Protection.
 
-- You can use File Explore, PowerShell, and the Azure Information Protection scanner to label these files.
+- File Explore, PowerShell, and the Azure Information Protection scanner can label these files.
 
-- You can use the Azure Information Protection scanner to discover and inspect these files.
+- The Azure Information Protection scanner can discover and inspect these files for sensitive information.
 
 - You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to convert the Secure Islands label on these protected files to an Azure Information Protection label.
 
