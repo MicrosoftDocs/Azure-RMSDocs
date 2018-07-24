@@ -235,6 +235,31 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Support for files protected by Secure Islands
+
+This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client, the Azure Information Protection scanner, or the Azure Information Protection viewer.
+
+If you used Secure Islands to protect documents, you might have text and picture files, and generically protected files (.pfile file name extension) as a result of this protection. When you edit the registry as follows, Azure Information Protection can decrypt these files:
+
+
+Add the following DWORD value of **EnableIQPFormats** to the following registry path, and set the value data to **1**:
+
+- For a 64-bit version of Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP
+
+- For a 32-bit version of Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP
+
+As a result of this registry edit, the following scenarios are supported:
+
+- You can use the Azure Information Protection viewer to open these protected files.
+
+- You can use File Explorer and PowerShell to unprotect these files or reprotect them with Azure Information Protection.
+
+- You can use File Explore, PowerShell, and the Azure Information Protection scanner to label these files.
+
+- You can use the Azure Information Protection scanner to discover and inspect these files.
+
+- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to convert the Secure Islands label on these protected files to an Azure Information Protection label.
+
 ## Migrate labels from Secure Islands and other labeling solutions
 
 This configuration option is currently in preview and is subject to change.
@@ -242,6 +267,9 @@ This configuration option is currently in preview and is subject to change.
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
+
+> [!NOTE]
+> If you have files other than PDF and Office documents that are protected by Secure Islands, these can be relabeled after you edit the registry as described in the [preceding section](#support-for-files-protected-by-secure-islands). 
 
 As a result of this configuration option, the new Azure Information Protection label is applied by the Azure Information Protection client as follows:
 
