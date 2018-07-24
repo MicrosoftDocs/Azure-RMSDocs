@@ -235,6 +235,24 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Protect PDF files by using 
+
+This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard x, 
+
+To configure this advanced setting, enter the following string:
+
+- Key: **EnablePDFv2Protection**
+
+- Value: **True**
+
+As a result of this configuration option, protecting a PDF file results in a protected PDF that can be opened with the preview version of the Azure Information Protection client for Windows, and the Azure Information Protection app for iOS and Android.
+
+Known issue with the current preview: In the document properties, the protected PDF displays an incorrect value for the Author.
+
 ## Support for files protected by Secure Islands
 
 This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client, the Azure Information Protection scanner, or the Azure Information Protection viewer.
