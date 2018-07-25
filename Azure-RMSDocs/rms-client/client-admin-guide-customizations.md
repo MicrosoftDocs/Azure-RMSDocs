@@ -237,7 +237,7 @@ To configure this advanced setting, enter the following strings:
 
 ## Protect PDF files by using the ISO standard for PDF encryption
 
-This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client.
+This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
