@@ -235,13 +235,13 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
-## Protect PDF files by using 
+## Protect PDF files by using the ISO standard for PDF encryption
 
 This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client.
 
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
-By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard x, 
+By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section [7.6 Encryption](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) from the document that is derived from ISO 32000-1 and published by Adobe Systems Incorporated.  
 
 To configure this advanced setting, enter the following string:
 
