@@ -173,7 +173,7 @@ However, label names and descriptions that you specify are not automatically tra
 
 ## Post installation tasks
 
-After you have installed the Azure Information Protection client, make sure that you provide users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
+After you have installed the Azure Information Protection client, make sure that you give users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
 
 - Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
 

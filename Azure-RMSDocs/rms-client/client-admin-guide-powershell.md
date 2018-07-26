@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/15/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -126,17 +126,17 @@ To automatically get the values and run Set-RMSServerAuthentication:
 ````
 # Make sure that you have the AADRM and MSOnline modules installed
 
-$newServicePrincipalName="<new service principal name>"
+$ServicePrincipalName="<new service principal name>"
 Connect-AadrmService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
 Disconnect-AadrmService
 Connect-MsolService
-New-MsolServicePrincipal -DisplayName $servicePrincipalName
+New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
 # Copy the value of the generated symmetric key
 
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
-$appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $servicePrincipalName }).AppPrincipalId
+$appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
 
 ````
