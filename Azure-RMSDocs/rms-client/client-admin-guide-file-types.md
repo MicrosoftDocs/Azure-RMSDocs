@@ -62,7 +62,7 @@ The following file types can be classified even when they are not protected.
 
 - **Microsoft Office**: File types in the following table.
     
-    Supported file formats for these file types: Office 97-2003 documents and Open Office XML
+    The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint. 
     
     |Office file type|Office file type|
     |----------------------------------|----------------------------------|
@@ -132,7 +132,7 @@ These file types are identified separately because when they are natively protec
 |.jt|.pjt|
 
 
-The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats are those that are Office 97-2003 documents, and Open Office XML. 
+The next table lists the remaining file types that support native protection by the Azure Information Protection client, and that can also be classified. You will recognize these as file types for Microsoft Office apps. The supported file formats for these file types are the 97-2003 file formats and Office Open XML formats for the following Office programs: Word, Excel, and PowerPoint
 
 For these files, the file name extension remains the same after the file is protected by a Rights Management service.
 
