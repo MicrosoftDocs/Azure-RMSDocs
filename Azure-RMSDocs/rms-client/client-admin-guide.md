@@ -185,11 +185,11 @@ If you have Excel spreadsheets that contain macros, edit the macros as follows t
 
 1. At the beginning of the macro, add:
 
-		Application .EnableEvents = False
+		Application.EnableEvents = False
 
 2. At the end of the macro, add:
 
-		Application .EnableEvents = True
+		Application.EnableEvents = True
 
 For more information, see [Application.EnableEvents Property (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
