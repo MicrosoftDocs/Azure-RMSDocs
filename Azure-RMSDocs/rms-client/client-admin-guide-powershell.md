@@ -6,7 +6,7 @@ description: Instructions and information for admins to manage the Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/15/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -126,7 +126,7 @@ To automatically get the values and run Set-RMSServerAuthentication:
 ````
 # Make sure that you have the AADRM and MSOnline modules installed
 
-$newServicePrincipalName="<new service principal name>"
+$servicePrincipalName="<new service principal name>"
 Connect-AadrmService
 $bposTenantID=(Get-AadrmConfiguration).BPOSId
 Disconnect-AadrmService
