@@ -249,7 +249,7 @@ To configure this advanced setting, enter the following string:
 
 - Value: **True**
 
-As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the preview version of the Azure Information Protection client for Windows, the Azure Information Protection app for iOS and Android, and other PDF readers that support the ISO standard for PDF encryption.
+As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the preview version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
 
 Known issue with the current preview: In the document properties, the protected PDF displays an incorrect value for the Author.
 
