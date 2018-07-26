@@ -121,8 +121,6 @@ This version includes the MSIPC version 1.0.3403.1224 of the RMS client.
 
 - When you use the advanced client setting to [label an Office document by using an existing custom property](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), automatic labeling doesn't override manual labeling.
 
-- A new advanced client setting to protect PDF files such that the protected file retains the original file name extension and adheres to  .... [More information]( )
-
 ## Version 1.27.48.0
 
 **Released**: 05/30/2018
