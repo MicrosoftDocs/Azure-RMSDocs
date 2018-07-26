@@ -6,7 +6,7 @@ description: Instructions and information for admins on an enterprise network wh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/19/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -170,6 +170,28 @@ The Azure Information Protection client supports the same languages that Office 
 For these languages, menu options, dialog boxes, and messages from the Azure Information Protection client display in the user's language. There is a single installer that detects the language, so no additional configuration is required to install the Azure Information Protection client for different languages. 
 
 However, label names and descriptions that you specify are not automatically translated when you configure labels in the Azure Information Protection policy. Beginning with August 30, 2017, the current [default policy](../deploy-use/configure-policy-default.md) includes support for some languages. For users to see labels in their preferred language, provide your own translations and configure the Azure Information Protection policy to use these translations. For more information, see [How to configure labels for different languages in Azure Information Protection](../deploy-use/configure-policy-languages.md). Visual markings are not translated and do not support more than one language.
+
+## Post installation tasks
+
+After you have installed the Azure Information Protection client, make sure that you provide users instructions for how to label their documents and emails, and guidance for which labels to choose for specific scenarios. For example:
+
+- Online user instructions: [Azure Information Protection user guide](client-user-guide.md)
+
+- Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
+### Update macros in Excel spreadsheets
+
+If you have Excel spreadsheets that contain macros, edit the macros as follows to ensure that they continue to work as expected after the Azure Information Protection client is installed:
+
+1. At the beginning of the macro, add:
+
+		Application.EnableEvents = False
+
+2. At the end of the macro, add:
+
+		Application.EnableEvents = True
+
+For more information, see [Application.EnableEvents Property (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
 ## Upgrading and maintaining the Azure Information Protection client
 
