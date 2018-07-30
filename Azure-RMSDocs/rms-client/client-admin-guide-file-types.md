@@ -230,13 +230,13 @@ Additionally, the general availability (GA) version of the Azure Information Pro
 
 - A protected PDF file that has a .pdf file name extension.
     
-    The general availability (GA) version of the Azure Information Protection client can protect an unprotected PDF file, and it can unprotect and reprotect a protected PDF file when it has a .ppdf file name extension.
+    The Azure Information Protection client can protect an unprotected PDF file, and it can unprotect and reprotect a protected PDF file when it has a .ppdf file name extension.
 
 As a workaround to protect these files, you could generically protect them by following the instructions in the [Changing the default protection level of files](#changing-the-default-protection-level-of-files) section. However, this method changes the protection level for all files that have a .pdf file name extension, at the computer level. You cannot define generic protection for only the files that meet the listed criteria.
 
-If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again. Or, use the current preview version of the Azure Information Protection client.
+If protecting these files are important, you could temporarily copy them to another computer to generically protect them, and then copy them back again. Or, use the preview version of the Azure Information Protection client.
 
-When the preview version of the Azure Information Protection client is configured to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), can natively protect and unprotect PDF files in both of the following circumstances:
+When you use the preview version of the Azure Information Protection client and it is configured to [protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), you can natively protect and unprotect PDF files in both of the following circumstances:
 
 - A PDF file that is form-based.
 
