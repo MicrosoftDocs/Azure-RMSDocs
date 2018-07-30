@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2018
+ms.date: 07/30/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -53,6 +53,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |HYOK|See *hold your own key*.|
 |hold your own key|Frequently abbreviated to *HYOK*.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory or compliance reasons.|
 |key object|In the context of the tenant key, an entity that contains metadata that is required by the Azure Rights Management service for cryptographic operations.|
+|label|An item that applies a classification value to documents and emails, and can optionally protect them. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.|
 |information protection|Sometimes abbreviated to *IP*.<br /><br />An industry-standard, generic term that refers to protecting data and files from unauthorized access, even after the data and files leave the organizational boundaries by using email or document sharing. Microsoft Azure Information Protection is an example of an information protection (IP) solution.|
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
@@ -64,6 +65,8 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |.ppdf|The file name extension that a rights management service creates when it automatically creates a PDF copy of a file (Word, Excel, PowerPoint, or PDF) that you share by email, so that the file can be read (but not edited) on all devices.|
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
+|publish|To protect a file in order to safeguard it from unauthorized access and use.|
+|protection template|A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. Also known as rights policy templates, and RMS templates.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
