@@ -166,5 +166,3 @@ The client simply needs to open a browser with the appropriate URL. The RMS Docu
 * [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 * [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

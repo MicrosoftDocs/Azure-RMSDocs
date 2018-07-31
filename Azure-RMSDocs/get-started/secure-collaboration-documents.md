@@ -162,6 +162,5 @@ For more information about the other options and settings that you can configure
 The label that was configured in this article also creates a protection template by the same name. If you have applications and services that integrate with protection templates from Azure Information Protection, they can apply this template. For example, DLP solutions and mail flow rules. Outlook on the web automatically displays protection templates from the Azure Information Protection global policy. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

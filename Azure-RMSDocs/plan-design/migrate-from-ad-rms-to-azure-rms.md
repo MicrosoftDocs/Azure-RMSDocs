@@ -225,4 +225,3 @@ The migration steps can be divided into five phases that can be done at differen
 ## Next steps
 To start the migration, go to [Phase 1 - preparation](migrate-from-ad-rms-phase1.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

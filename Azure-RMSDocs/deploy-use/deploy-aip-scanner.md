@@ -440,4 +440,3 @@ You might be wondering: [What’s the difference between Windows Server FCI and 
 You can also use PowerShell to interactively classify and protect files from your desktop computer. For more information about this and other scenarios that use PowerShell, see [Using PowerShell with the Azure Information Protection client](../rms-client/client-admin-guide-powershell.md).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

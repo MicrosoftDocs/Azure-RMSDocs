@@ -249,6 +249,5 @@ If you have logs in your own Azure storage from before the Azure Rights Manageme
 
 For more information about using Windows PowerShell for the Azure Rights Management service, see [Administering the Azure Rights Management service by Using Windows PowerShell](administer-powershell.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

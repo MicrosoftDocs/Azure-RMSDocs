@@ -67,5 +67,3 @@ You’re now ready to see Azure Information Protection in action.
 >[!div class="step-by-step"]
 [&#171; Step 2](infoprotect-tutorial-step2.md)
 [Step 4 &#187;](infoprotect-tutorial-step4.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

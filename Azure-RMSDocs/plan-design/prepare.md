@@ -221,4 +221,3 @@ When you have confirmed that your users and groups can be used with Azure Inform
 
 For more information, which includes checking the activation status, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

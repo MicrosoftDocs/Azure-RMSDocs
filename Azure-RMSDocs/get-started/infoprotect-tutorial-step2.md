@@ -169,5 +169,3 @@ Now that you've had a look at the default policy and made some changes, the next
 >[!div class="step-by-step"]
 [&#171; Step 1](infoprotect-tutorial-step1.md)
 [Step 3 &#187;](infoprotect-tutorial-step3.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

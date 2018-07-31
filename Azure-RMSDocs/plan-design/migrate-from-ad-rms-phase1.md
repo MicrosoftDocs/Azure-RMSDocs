@@ -158,4 +158,3 @@ After running these commands for Exchange Online or Exchange on-premises, if you
 ## Next steps
 Go to [phase 2 - server-side configuration](migrate-from-ad-rms-phase2.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

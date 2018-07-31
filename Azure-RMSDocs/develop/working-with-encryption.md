@@ -102,5 +102,3 @@ This sample also shows the new way of supporting *deprecated algorithms*.
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

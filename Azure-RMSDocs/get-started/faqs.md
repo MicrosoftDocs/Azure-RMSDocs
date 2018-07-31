@@ -179,5 +179,4 @@ In addition, there are FAQs designed for end users:
 - [FAQ for Rights Management Sharing Application for Windows](https://technet.microsoft.com/dn467883)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

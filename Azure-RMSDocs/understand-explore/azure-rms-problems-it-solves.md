@@ -77,5 +77,3 @@ For more information about these external certifications, see the [Azure Trust C
 ## Next steps
 
 For more technical information about how the Azure Rights Management service works, see [How does Azure RMS work?](how-does-it-work.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

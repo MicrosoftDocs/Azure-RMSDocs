@@ -112,5 +112,3 @@ If you have Office 365, you might be interested in reviewing [File Protection So
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
 If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

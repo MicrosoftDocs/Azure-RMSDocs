@@ -169,5 +169,3 @@ The File API component of SDK has been extended and offers the following feature
     3 - The first available language specified in the Rights Management Server (RMS) template.
 
 If no name and description can be retrieved, an error is returned. There can be only one name and description for a specific LCID.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

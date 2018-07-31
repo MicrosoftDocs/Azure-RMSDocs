@@ -94,4 +94,3 @@ We recommend the [Yammer site for Azure Information Protection](https://www.yamm
 
 If you don't have access to this site, try the [Tech Community space for Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection), or the [TechNet forum for Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

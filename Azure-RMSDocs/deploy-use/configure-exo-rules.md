@@ -139,4 +139,3 @@ For information about creating and configuring the labels to use with Exchange O
 In addition, to help classify email messages that contain attachments, consider using the following Azure Information Protection [policy setting](configure-policy-settings.md): **For email messages with attachments, apply a label that matches the highest classification of those attachments**.
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

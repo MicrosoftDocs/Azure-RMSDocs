@@ -37,5 +37,3 @@ The following topics show you how to setup you your development environment to w
 |[Windows Phone](windows-phone-apps.md)|Windows Phone applications can use the MS RMS SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).|
 |[Windows Store](winrt-sdk.md)|Windows Store applications can use the MS RMS SDK 4.2 to enable integrated information protection in their application by using the Azure Active Directory Rights Management (AAD RM).|
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

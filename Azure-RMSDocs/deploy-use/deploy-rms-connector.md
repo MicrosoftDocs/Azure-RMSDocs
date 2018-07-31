@@ -100,5 +100,3 @@ The connector does not automatically check all the [prerequisites](deploy-rms-co
 ## Next steps
 
 Go to Step 1: [Installing and configuring the Azure Rights Management connector](install-configure-rms-connector.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

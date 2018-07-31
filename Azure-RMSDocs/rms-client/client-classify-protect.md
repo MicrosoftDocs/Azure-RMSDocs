@@ -191,4 +191,3 @@ For configuration instructions to enable the policy setting **Make the custom pe
 
 Other configuration instructions: [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

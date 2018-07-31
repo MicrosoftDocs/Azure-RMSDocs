@@ -55,5 +55,3 @@ If the desired experience is to not provide the IT administrator of *ABC* with a
 ## Flow 2: *ABC* IT Administrator provides the key to the *CoolApp* team
 
 Once *ABC's* IT Administrator creates the service principal, as shown in **Figure 1**, *ABC* provides the information to the *CoolApp* team. The *CoolApp* team then proceeds to embed the information in the *CoolApp* application for use in *ABC's* tenant.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

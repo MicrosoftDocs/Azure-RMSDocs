@@ -458,4 +458,3 @@ Now that you've customized the Azure Information Protection client, see the foll
 - [PowerShell commands](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
