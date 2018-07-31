@@ -71,5 +71,4 @@ After you’ve configured your applications to support the Azure Rights Manageme
 
 - [Operations for your Azure Information Protection tenant key](operations-tenant-key.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -55,5 +55,3 @@ To view these files in the Azure Information Protection viewer app, tap the emai
 For questions or feedback about this app that are not addressed in the [FAQs](mobile-app-faq.md), visit our [Yammer site](https://www.yammer.com/AskIPTeam).
 
 If the app isn't working as described, see the resources listed in our [House rules](../house-rules.md) page.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -93,5 +93,3 @@ More how-to instructions from the Azure Information Protection user guide:
 
 -   [What do you want to do?](client-user-guide.md#what-do-you-want-to-do)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

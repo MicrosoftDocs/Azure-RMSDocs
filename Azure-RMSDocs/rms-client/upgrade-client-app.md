@@ -62,5 +62,4 @@ More how-to instructions from the Azure Information Protection user guide:
 ## Additional information for administrators    
 See the [Azure Information Protection client administrator guide](client-admin-guide.md).
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

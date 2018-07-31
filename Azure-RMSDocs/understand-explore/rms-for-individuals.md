@@ -70,4 +70,3 @@ Now your account is created, if you're prompted to sign in to read protected fil
 ## Next steps
 RMS for individuals is an example of using self-service signup that is supported by Azure Active Directory. For more information about how this works, see [What is Self-Service Signup for Azure?](/active-directory/active-directory-self-service-signup) in the Azure Active Directory documentation.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

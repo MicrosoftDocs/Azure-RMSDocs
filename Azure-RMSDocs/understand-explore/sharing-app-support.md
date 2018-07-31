@@ -65,4 +65,3 @@ The RMS sharing application for mobile devices supports the most commonly used m
 ## Next steps
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

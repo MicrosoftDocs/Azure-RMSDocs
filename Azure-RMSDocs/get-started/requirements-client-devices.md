@@ -60,4 +60,3 @@ The following mobile device operating systems support the Azure Rights Managem
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

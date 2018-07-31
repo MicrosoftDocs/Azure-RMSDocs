@@ -41,5 +41,3 @@ This topic identifies the Rights Management Services SDK 2.1 supported clien
 
 **Note**  Use of the templates feature is supported beginning with Windows Server 2008.
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

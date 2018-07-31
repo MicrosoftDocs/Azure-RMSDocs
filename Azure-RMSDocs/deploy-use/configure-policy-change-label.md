@@ -56,6 +56,5 @@ To change a label, use the following instructions:
 
 For more information about configuring the options that you can make for a label, and other settings for your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

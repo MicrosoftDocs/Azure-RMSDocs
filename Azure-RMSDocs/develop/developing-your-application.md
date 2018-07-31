@@ -236,4 +236,3 @@ Once you get everything built and executing, the outputs of the application shou
 6. Finally, you enter some policy metadata: policy name, description, and issuer (Azure AD Tenant) display name
 ![app output - step 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

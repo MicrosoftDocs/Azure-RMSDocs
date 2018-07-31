@@ -44,5 +44,3 @@ The Azure Information Protection SDK 4.2 supports several operating systems. Fo
 ## Related topics
 
 * [Get started](get-started.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

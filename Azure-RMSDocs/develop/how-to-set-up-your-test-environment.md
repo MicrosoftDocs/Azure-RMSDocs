@@ -54,4 +54,3 @@ This guidance is not comprehensive. To learn how to configure the RMS Client 2.1
 * [Install the SDK](install-the-rms-sdk.md)
 * [RMS Client 2.1 Deployment Notes](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

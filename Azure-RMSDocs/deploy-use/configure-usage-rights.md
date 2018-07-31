@@ -188,5 +188,4 @@ The default use license validity period for a tenant is 30 days and you can conf
 
 [Configuring super users for Azure Rights Management and discovery services or data recovery](configure-super-users.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

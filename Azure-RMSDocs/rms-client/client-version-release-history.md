@@ -286,4 +286,3 @@ For more information about installing and using the client:
 - For admins: [Azure Information Protection client administrator guide](client-admin-guide.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
