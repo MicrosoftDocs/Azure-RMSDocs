@@ -1,0 +1,61 @@
+- name: Microsoft Information Protection Documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: About Microsoft Information Protection
+    href: concepts/overview.md
+- name: Quickstarts
+  items:
+  - name: Simple authentication - C++
+    href: /information-protection/authentication/simple-authentication
+  - name: Simple authentication - Node.js
+    href: /information-protection/authentication/node
+  - name: Simple authentication - Python
+    href: /information-protection/authentication/python
+  - name: Authentication delegate - C++
+    href: /information-protection/authentication/auth-delegate
+  - name: Apply label - C++
+  - name: List labels - C++
+  - name: Read label - C++
+- name: Tutorials
+  items:
+  - name: Mint an authentication token
+    href: key-vault-whatis.md
+  - name: Create an authentication delegate
+    href: /information-protection/authentication/auth-delegate
+  - name: Initialize a FileProfile
+    href: key-vault-ovw-soft-delete.md
+  - name: Add an engine and list labels
+    href: key-vault-ovw-storage-keys.md
+- name: Samples
+  items:
+  - name: Mint an authentication token
+  - name: Create an authentication delegate
+  - name: Initialize a FileProfile
+  - name: Add an engine and list labels
+- name: Concepts
+  items:
+  - name: The APIs
+  - name: Async
+  - name: Authentication
+  - name: Engine      
+  - name: Handler 
+  - name: Labels 
+  - name: Profile
+  - name: Use cases 
+- name: How-to guides
+  items: TBD
+- name: Reference
+  items:
+  - name: C++
+    href: /powershell/module/azurerm.keyvault
+- name: Resources
+  items:
+  - name: Developer blog
+    href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/bg-p/InformationProtectionDevelopers
+  - name: Forums 
+    href: https://stackoverflow.com/questions/tagged/microsoft-information-protection
+  - name: SDK (public preview)
+    href: http://aka.ms/mipsdk
+  - name: Supported platforms 
+   

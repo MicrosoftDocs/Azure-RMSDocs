@@ -1,0 +1,73 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Microsoft Information Protection Documentation
+metadata:
+  title: Microsoft Information Protection Documentation - Tutorials, API Reference 
+  meta.description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
+  services: information-protection
+  author: BryanLa
+  manager: mbaldwin
+  layout: LandingPage
+  ms.assetid: 
+  ms.service: information-protection
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 07/31/18
+  ms.author: bryanla
+abstract:
+  description: Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Microsoft Information Protection—no matter where it’s stored or who it’s shared with.
+sections:
+- title: 5-Minute Quickstarts
+  items:
+  - type: table
+    style: dataMatrix
+    columns:
+      - image:
+          src: /media/index/logo_Cplusplus.svg
+      - image:
+          src: /media/index/logo_python.svg
+      - image:
+          src: /media/index/logo_nodejs.svg
+    rows:
+      - title: Simple authentication
+        values: 
+        - href: /information-protection/authentication/simple-authentication
+        - href: /information-protection/authentication/node
+        - href: /information-protection/authentication/python
+      - title: Authentication delegate
+        values: 
+        - href: /information-protection/authentication/auth-delegate
+      - title: List labels
+        values: 
+        - href: /information-protection/authentication/simple-authentication
+        - href: /information-protection/authentication/node
+        - href: /information-protection/authentication/python
+      - title: Apply label
+        values: 
+        - href: /information-protection/authentication/simple-authentication
+        - href: /information-protection/authentication/node
+        - href: /information-protection/authentication/python
+      - title: Read label
+        values: 
+        - href: /information-protection/authentication/simple-authentication
+        - href: /information-protection/authentication/node
+        - href: /information-protection/authentication/python                
+- title: Step-by-Step Tutorials
+  items:
+  - type: list
+    style: ordered
+    items:
+    - html: <a href="/information-protection/authentication/simple-authentication">Modify a label</a>
+    - html: <a href="/information-protection/authentication/simple-authentication">Remove a label</a>
+    - html: <a href="/information-protection/authentication/simple-authentication">Enumerate label actions using the policy API</a>
+- title: Reference
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Command-Line
+    - title: Languages
+      html: <p><a href="/reference">C++</a></p>
+    - title: REST
