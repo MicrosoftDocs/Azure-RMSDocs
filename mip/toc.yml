@@ -44,7 +44,8 @@
   - name: Profile
   - name: Use cases 
 - name: How-to guides
-  items: TBD
+  items: 
+  - name: TBD
 - name: Reference
   items:
   - name: C++
