@@ -243,4 +243,3 @@ If you've already installed the client, see the following for additional informa
 - [PowerShell commands](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

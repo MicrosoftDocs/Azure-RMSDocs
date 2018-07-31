@@ -115,5 +115,3 @@ The following two rights are added to these users:
 - [Developer notes](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -107,4 +107,3 @@ More how-to instructions from the Azure Information Protection user guide:
 ## Additional information for administrators    
 See [Configuring the Azure Information Protection policy](../deploy-use/configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

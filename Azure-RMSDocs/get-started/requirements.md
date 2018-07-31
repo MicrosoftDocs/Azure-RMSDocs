@@ -155,6 +155,5 @@ The following deployment scenario is not supported unless you are using AD RMS f
 There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

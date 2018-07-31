@@ -84,5 +84,3 @@ In the app, go to **Settings** > **Send feedback**.
 ## My question has not been answered—what should I do?
 
 Post your question on our [Yammer site](https://www.yammer.com/AskIPTeam).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

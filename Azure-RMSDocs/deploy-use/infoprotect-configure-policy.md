@@ -30,4 +30,3 @@ ms.assetid: 38ecc425-9bab-4e70-9436-eccbef0e3113
 
 >*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

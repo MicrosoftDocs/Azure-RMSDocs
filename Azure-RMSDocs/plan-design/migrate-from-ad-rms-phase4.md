@@ -220,5 +220,3 @@ One of the following, depending on whether you are using HTTP or HTTPS from your
 
 ## Next steps
 To continue the migration, go to [phase 5 -post migration tasks](migrate-from-ad-rms-phase5.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

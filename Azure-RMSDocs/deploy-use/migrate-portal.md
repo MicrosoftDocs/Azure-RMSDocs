@@ -71,4 +71,3 @@ The PowerShell cmdlets to create and manage templates, and to activate or deacti
 ## See also
 For more detailed information, see [Configuring and managing templates in the Azure Information Protection policy](../deploy-use/configure-policy-templates.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

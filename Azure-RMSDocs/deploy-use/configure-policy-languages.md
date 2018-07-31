@@ -109,6 +109,5 @@ In the following scenarios, localized label (and sublabel) names are not used. F
 
 For more information about configuring the options that you can make for a label, and other settings for your Azure Information Protection policies, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

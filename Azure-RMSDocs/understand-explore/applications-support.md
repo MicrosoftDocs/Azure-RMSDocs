@@ -62,4 +62,3 @@ Learn more about how each of the following applications and services support the
 
 -   [Other applications that support the RMS APIs](api-support.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

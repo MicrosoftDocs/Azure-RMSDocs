@@ -79,5 +79,4 @@ More how-to instructions from the Azure Information Protection user guide:
 ## Additional information for administrators    
 See [Install the Azure Information Protection client for users](client-admin-guide-install.md) from the [admin guide](client-admin-guide.md).
  
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

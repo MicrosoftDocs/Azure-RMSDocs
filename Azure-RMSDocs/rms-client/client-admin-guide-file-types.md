@@ -261,4 +261,3 @@ Now that you've identified the file types supported by the Azure Information Pro
 
 - [PowerShell commands](client-admin-guide-powershell.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

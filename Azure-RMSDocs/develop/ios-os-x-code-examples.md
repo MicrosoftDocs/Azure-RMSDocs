@@ -283,5 +283,3 @@ This scenario begins with getting a list of templates, [MSTemplateDescriptor](ht
 
             }];
           }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -139,4 +139,3 @@ Each of the following topics presents specific guidance for an aspect of impleme
 - [Developer terminology](terms.md)
 - [Terminology for Azure Information Protection - ITPro](../get-started/terminology.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

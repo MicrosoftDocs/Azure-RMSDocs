@@ -82,5 +82,3 @@ Similarly, "Active Directory Rights Management Services" (AD RMS) remains a curr
 ## How to evaluate or purchase the latest version
 
 For more information about how you can purchase or evaluate Azure Information Protection, and the different features that are available for the subscription plans, see the [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) site.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

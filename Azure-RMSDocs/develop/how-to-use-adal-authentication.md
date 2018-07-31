@@ -128,5 +128,3 @@ Use this code as an example of how to manage your own authentication tokens.
 - [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
 - [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
 - [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

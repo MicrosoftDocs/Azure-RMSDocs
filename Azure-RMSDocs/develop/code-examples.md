@@ -41,5 +41,3 @@ These topics will introduce you to important code elements for the associated ve
 - [Android code examples](android-code.md)
 - [Linux code examples](linux-c-code-examples.md)
 - [iOS/OS X code examples](ios-os-x-code-examples.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

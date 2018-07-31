@@ -91,5 +91,3 @@ API allows a user to either decrypt information or not; the information does not
 - Any rights that are abstracted by inclusion in new rights implemented by an application need to be mapped to the new terminology. For example, a new right called MANAGER might include as abstracted rights the PRINT, COPY, and EDIT rights.
 Recommended standard	None at this time.
 Preferred standard	None at this time.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

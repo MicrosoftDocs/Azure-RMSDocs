@@ -252,4 +252,3 @@ If you haven’t already downloaded these files, you can do so from the [Microso
 ## Next steps
 Now that the RMS connector is installed and configured, you are ready to configure your on-premises servers to use it. Go to [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
