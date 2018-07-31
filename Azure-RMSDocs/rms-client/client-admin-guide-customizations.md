@@ -6,7 +6,7 @@ description: Information about customizing the Azure Information Protection clie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -120,7 +120,8 @@ When you export the policy, this action downloads a zipped file with multiple ve
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |version 1.2|
     |Policy1.2.msip |version 1.3 - 1.7|
-    |Policy1.3.msip |version 1.8 and later|
+    |Policy1.3.msip |version 1.8 - 1.29|
+    |Policy1.4.msip |version 1.32 and later|
     
 2. Rename the identified file to **Policy.msip**, and then copy it to the **%LocalAppData%\Microsoft\MSIP** folder on computers that have the Azure Information Protection client installed. 
 
@@ -234,6 +235,51 @@ To configure this advanced setting, enter the following strings:
 
 - Value: **True**
 
+## Protect PDF files by using the ISO standard for PDF encryption
+
+This configuration option is currently in preview and is subject to change. It also requires the preview version of the Azure Information Protection client.
+
+This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
+
+By default, when the Azure Information Protection client protects a PDF file, the resulting file has a .ppdf file name extension. You can change this behavior so that the file name extension remains as .pdf and adheres to the ISO standard for PDF encryption. For more information about this standard, see section **7.6 Encryption** from the [document that is derived from ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) and published by Adobe Systems Incorporated.  
+
+To configure this advanced setting, enter the following string:
+
+- Key: **EnablePDFv2Protection**
+
+- Value: **True**
+
+As a result of this configuration option, when the Azure Information Protection client protects a PDF file, this action creates a protected PDF document that can be opened with the preview version of the Azure Information Protection client for Windows, and other PDF readers that support the ISO standard for PDF encryption. The Azure Information Protection app for iOS and Android does not currently support the ISO standard for PDF encryption.
+
+For the Azure Information Protection scanner to use the new setting, the scanner service must be restarted.
+
+Known issue with the current preview: In the document properties, the protected PDF displays an incorrect value for the Author.
+
+## Support for files protected by Secure Islands
+
+This configuration option is currently in preview and is subject to change. It also requires the preview versions of the Azure Information Protection client, the Azure Information Protection scanner, or the Azure Information Protection viewer.
+
+If you used Secure Islands to protect documents, you might have protected text and picture files, and generically protected files as a result of this protection. For example, files that have a file name extension of .ptxt, .pjpeg, or .pfile. When you edit the registry as follows, Azure Information Protection can decrypt these files:
+
+
+Add the following DWORD value of **EnableIQPFormats** to the following registry path, and set the value data to **1**:
+
+- For a 64-bit version of Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP
+
+- For a 32-bit version of Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP
+
+As a result of this registry edit, the following scenarios are supported:
+
+- The Azure Information Protection viewer can open these protected files.
+
+- File Explorer and PowerShell can unprotect these files, or reprotect them with Azure Information Protection.
+
+- File Explorer, PowerShell, and the Azure Information Protection scanner can label these files.
+
+- The Azure Information Protection scanner can inspect these files for sensitive information.
+
+- You can use the [labeling migration client customization](#migrate-labels-from-secure-islands-and-other-labeling-solutions) to convert the Secure Islands label on these protected files to an Azure Information Protection label.
+
 ## Migrate labels from Secure Islands and other labeling solutions
 
 This configuration option is currently in preview and is subject to change.
@@ -241,6 +287,9 @@ This configuration option is currently in preview and is subject to change.
 This configuration uses an [advanced client setting](#how-to-configure-advanced-client-configuration-settings-in-the-portal) that you must configure in the Azure portal. 
 
 For Office documents and PDF documents that are labeled by Secure Islands, you can relabel these documents with an Azure Information Protection label by using a mapping that you define. You also use this method to reuse labels from other solutions when their labels are on Office documents. 
+
+> [!NOTE]
+> If you have files other than PDF and Office documents that are protected by Secure Islands, these can be relabeled after you edit the registry as described in the [preceding section](#support-for-files-protected-by-secure-islands). 
 
 As a result of this configuration option, the new Azure Information Protection label is applied by the Azure Information Protection client as follows:
 
