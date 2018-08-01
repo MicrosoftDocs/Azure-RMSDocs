@@ -24,11 +24,11 @@ sections:
     style: dataMatrix
     columns:
       - image:
-          src: ./media/index/logo_Cplusplus.svg
+          src: media/index/logo_Cplusplus.svg
       - image:
-          src: ./media/index/logo_python.svg
+          src: media/index/logo_python.svg
       - image:
-          src: ./media/index/logo_nodejs.svg
+          src: media/index/logo_nodejs.svg
     rows:
       - title: Simple authentication
         values: 
@@ -52,9 +52,10 @@ sections:
   - type: list
     style: ordered
     items:
-    - html: <a href="authentication/simple-authentication">Modify a label</a>
-    - html: <a href="authentication/simple-authentication">Remove a label</a>
-    - html: <a href="authentication/simple-authentication">Enumerate label actions using the policy API</a>
+    - html: <a href="authentication/simple-authentication">Mint an authentication token</a>
+    - html: <a href="authentication/simple-authentication">Create an authentication delegate</a>
+    - html: <a href="authentication/simple-authentication">Initialize a FileProfile</a>
+    - html: <a href="authentication/simple-authentication">Add an engine and list labels</a>    
 - title: Reference
   items:
   - type: list
