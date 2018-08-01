@@ -58,7 +58,7 @@ These protection settings can be part of your label configuration, so that users
 
 ### Rights Management templates
 
-As soon the Azure Rights Management service is activated, two default templates are available for you that restricts data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own protection settings that apply more restrictive controls.
+As soon as the Azure Rights Management service is activated, two default templates are available for you that restrict data access to users within your organization. You can use these templates to immediately help prevent data leaking from your organization. You can also supplement these default templates by configuring your own protection settings that apply more restrictive controls.
 
 When you create a label for Azure Information Protection that includes protection settings, under the covers, this action creates a corresponding Rights Management template. You can then additionally use that template with applications and services that support Azure Rights Management.
 
@@ -66,7 +66,7 @@ For example, from the Exchange admin center, you can configure Exchange Online m
 
 ![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
 
-For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
+For more information about Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
 ## Integration with end-user workflows for documents and emails
 
@@ -92,15 +92,15 @@ After a document has been protected, users and administrators can use a document
 
 When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
 
-For example, users need to send sensitive information to personal email accounts that uses **Gmail**, **Hotmail**, or a **Microsoft** account. Or, to users who don't have an account for Office 365 or in Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
+For example, users need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or a **Microsoft** account, or to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
 This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
-For example a Gmail user sees the following in an email message:
+For example, a Gmail user sees the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](../media/ome-message.png)
 
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon or this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
 
 ![Selecting a label configured for Do Not Forward](../media/recipients-only-label.png)
 
@@ -110,9 +110,9 @@ When you attach Office documents to these emails, these documents are automatica
 
 ## Classifying and protecting existing documents
 
-Ideally, documents and emails are labeled when they are first created. But you probably have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
+Ideally, documents and emails are labeled when they are first created, but you likely have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
 
-For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
+For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
 
 For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
 
@@ -134,7 +134,7 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
 
-In addition, **Microsoft Ignite 2017** has many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+In addition, **Microsoft Ignite 2017** had many sessions for Azure Information Protection that are available on demand. For a summary of announcements that were made at this conference, see [What’s new in Azure Information Protection @ Ignite 2017](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
 You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522) the sessions that are tagged for Azure Information Protection on the Ignite website. However, we recommend that you start with the following sessions:
 
@@ -153,7 +153,7 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md), or if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
 
 Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
 
