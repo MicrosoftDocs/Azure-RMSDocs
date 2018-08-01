@@ -107,6 +107,9 @@ When you click **Save**, your changes are automatically available to users and s
 
 ### Sensitive information types that require a minimum version of the client
 
+> [!NOTE]
+> The following sensitivity information types are now rolling out to tenants but might not yet be displayed for you to select. However, if you configure the Azure Information Protection scanner to [identify all custom conditions and known sensitive information types](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), the preview version of the scanner can detect these new information types even if you can't select them in the Azure portal.
+
 The following sensitive information types currently require the preview version of the Azure Information Protection client:
 
 - **EU Phone Number**
@@ -121,8 +124,6 @@ The following sensitive information types currently require the preview version 
 - **Turkish National Identification number**
 - **Japanese Residence Card Number**
 
-> [!NOTE]
-> These new sensitivity types are now rolling out to tenants but might not yet be displayed for you to select. However, if you configure the Azure Information Protection scanner to [identify all custom conditions and known sensitive information types](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), the preview version of the scanner can detect these new sensitivity types even if you can't select them in the Azure portal. 
 
 ## Next steps
 
