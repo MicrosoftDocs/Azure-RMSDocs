@@ -26,10 +26,10 @@
   - name: Add an engine and list labels
 - name: Samples
   items:
-  - name: Mint an authentication token
-  - name: Create an authentication delegate
-  - name: Initialize a FileProfile
-  - name: Add an engine and list labels
+  - name: C# UWP thing
+  - name: Commandline cross-platform file API
+  - name: Commandline cross-platform UPE API
+  - name: Commandline cross-platform protection API
 - name: Concepts
   items:
   - name: The APIs

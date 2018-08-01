@@ -64,5 +64,5 @@ sections:
     items:
     - title: Command-Line
     - title: Languages
-      html: <p><a href="reference">C++</a></p>
+      html: <p><a href="reference/mip-sdk-reference">C++</a></p>
     - title: REST
