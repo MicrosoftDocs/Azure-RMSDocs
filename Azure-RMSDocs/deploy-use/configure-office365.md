@@ -6,7 +6,7 @@ description: Information and instructions for admins to configure Office 365 to 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/24/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -68,7 +68,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     
     - If AzureRMSLicensingEnabled is set to **True**, Exchange Online is already enabled for the Azure Rights Management service. 
     
-    - If AzureRMSLicensingEnabled is set **False**, run the commands in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+    - If AzureRMSLicensingEnabled is set **False**, run the follow command to enable Exchange Online for the Azure Rights Management service: `Set-IRMConfiguration -AzureRMSLicensingEnabled $true`
 
 5. To test that Exchange Online is configured successfully, run the following command:
     ```
