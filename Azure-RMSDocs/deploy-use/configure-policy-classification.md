@@ -122,7 +122,8 @@ The following sensitive information types currently require the preview version 
 - **Japanese Residence Card Number**
 
 > [!NOTE]
->These new sensitivity types are now rolling out to tenants but might not yet be displayed for you to select. However, if you configure the Azure Information Protection scanner to [identify all custom conditions and known sensitive information types](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), the preview version of the scanner can detect these new sensitivity types even if you can't select them in the Azure portal. 
+> These new sensitivity types are now rolling out to tenants but might not yet be displayed for you to select. However, if you configure the Azure Information Protection scanner to [identify all custom conditions and known sensitive information types](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations), the preview version of the scanner can detect these new sensitivity types even if you can't select them in the Azure portal. 
+
 ## Next steps
 
 Consider deploying the [Azure Information Protection scanner](deploy-aip-scanner.md), which can use your automatic classification rules to discover, classify, and protect files on network shares and on-premises file stores.  
