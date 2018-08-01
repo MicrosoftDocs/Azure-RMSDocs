@@ -31,7 +31,7 @@ ms.suite: ems
 
 Use the following information to help you install the Windows PowerShell module for the Azure Rights Management service from Azure Information Protection. The name of this module is AADRM.
 
-You can use this PowerShell module to administer the Azure Rights Management service from the command line by using any computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
+You can use this PowerShell module to administer the Azure Rights Management service from the command line by using any computer that has an Internet connection and that meets the prerequisites listed in the next section. Windows PowerShell for Azure Rights Management supports scripting for automation or might be necessary for advanced configuration scenarios. For more information about the administration tasks and configurations that the module supports, see [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md).
 
 ## Prerequisites
 This table lists the prerequisites to install and use the AADRM PowerShell module for the Azure Rights Management service from Azure Information Protection.
@@ -96,7 +96,7 @@ For more information:
 
 -   List of main configuration scenarios that support  PowerShell: [Administering Azure Rights Management by Using Windows PowerShell](administer-powershell.md)
 
-Before you can run any commands that configure the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] service, you must connect to the service by using the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet. 
+Before you can run any commands that configure the Azure Rights Management service, you must connect to the service by using the [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) cmdlet. 
 When you have finished running your configuration commands, as a best practice, disconnect from the service by using the [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) cmdlet. If you do not disconnect, the connection is automatically disconnected after a period of inactivity. Because of the automatic disconnection behavior, you might find that you need to occasionally reconnect in a PowerShell session. 
 
 > [!NOTE]
