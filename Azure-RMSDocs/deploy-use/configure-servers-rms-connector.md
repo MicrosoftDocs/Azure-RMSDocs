@@ -260,6 +260,6 @@ Now that the RMS connector is installed and configured, and your servers are con
 
 Note that if you configure departmental templates that you want to use with Exchange transport rules or Windows Server FCI, the scope configuration must include the application compatibility option such that the **Show this template to all users when the applications do not support user identity** check box is selected.
 
-You can use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] to users and administrators.
+You can use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might want to do before you roll out Azure Rights Management to users and administrators.
 
 To monitor the RMS connector, see [Monitor the Azure Rights Management connector](monitor-rms-connector.md). 
