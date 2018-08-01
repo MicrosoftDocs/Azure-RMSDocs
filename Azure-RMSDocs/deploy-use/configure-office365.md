@@ -68,7 +68,7 @@ Exchange Online might already be enabled to use the Azure Rights Management serv
     
     - If AzureRMSLicensingEnabled is set to **True**, Exchange Online is already enabled for the Azure Rights Management service. 
     
-    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true`. 
+    - If AzureRMSLicensingEnabled is set **False**, run the follow command to enable Exchange Online for the Azure Rights Management service: `Set-IRMConfiguration -AzureRMSLicensingEnabled $true`
 
 5. To test that Exchange Online is configured successfully, run the following command:
     ```
