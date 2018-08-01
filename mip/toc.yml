@@ -20,13 +20,10 @@
 - name: Tutorials
   items:
   - name: Mint an authentication token
-    href: key-vault-whatis.md
   - name: Create an authentication delegate
     href: /information-protection/authentication/auth-delegate
   - name: Initialize a FileProfile
-    href: key-vault-ovw-soft-delete.md
   - name: Add an engine and list labels
-    href: key-vault-ovw-storage-keys.md
 - name: Samples
   items:
   - name: Mint an authentication token
@@ -48,8 +45,8 @@
   - name: TBD
 - name: Reference
   items:
-  - name: C++
-    href: /powershell/module/azurerm.keyvault
+  - name: C++ library
+    href: /reference
 - name: Resources
   items:
   - name: Developer blog
