@@ -52,7 +52,7 @@ Independently from the Azure Information Protection tenant key topology that you
     
     - If AzureRMSLicensingEnabled is set to **True**, no further configuration is needed for this step. 
     
-    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` and then use the verification steps from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to confirm that Exchange Online is now ready to use the Azure Rights Management service for email protection. 
+    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` and then use the verification steps from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to confirm that Exchange Online is now ready to use the Azure Rights Management service. 
 
 ## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
 
