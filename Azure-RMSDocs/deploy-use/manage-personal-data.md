@@ -285,4 +285,3 @@ Only users who have been assigned [administrator permissions](#securing-and-cont
 
 For delete actions, the support request acts as the auditing and reporting trail for the actions performed by Microsoft. After deletion, the deleted data will not be available for search and export, and the administrator can verify this using the Get cmdlets from the AADRM module.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

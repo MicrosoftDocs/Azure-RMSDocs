@@ -77,4 +77,3 @@ For in-depth technical information about how the protection technology works, se
 
 - Office 365 Library: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

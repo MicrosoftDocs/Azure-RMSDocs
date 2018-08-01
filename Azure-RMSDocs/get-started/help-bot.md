@@ -38,4 +38,3 @@ Try the **Azure Information Protection help bot**, currently in beta:
 <iframe width="560" height="475" src="https://webchat.botframework.com/embed/AIPformalBOT?s=SwZOTnCyj6w.cwA.zYE.Wdf87z08R7NHjtaev84v0nLC0urEfQJ2_5bUgvtIR9Q"></iframe>
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

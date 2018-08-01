@@ -88,5 +88,4 @@ If you have a breach, the best action that you or Microsoft can take depends on 
 |Vulnerability discovered in the current-generation HSM technology.|Microsoft must update the HSMs. If there is reason to believe that the vulnerability exposed keys, Microsoft will instruct all customers to rekey their tenant keys.|
 |Vulnerability discovered in the RSA algorithm, or key length, or brute-force attacks become computationally feasible.|Microsoft must update Azure Key Vault or Azure Information Protection to support new algorithms and longer key lengths that are resilient, and instruct all customers to rekey their tenant key.|
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

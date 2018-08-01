@@ -56,5 +56,3 @@ Of the many web services installed, the following are important for application 
 * [Activating a Computer](https://msdn.microsoft.com/library/Cc530377)
 * [Activating a User](https://msdn.microsoft.com/library/Cc530378)
 * [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

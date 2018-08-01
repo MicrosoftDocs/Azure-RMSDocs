@@ -225,4 +225,3 @@ Now that you've installed the Azure Information Protection client, see the follo
 - [PowerShell commands](client-admin-guide-powershell.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -43,4 +43,3 @@ Administrators can set registry keys to configure whether and how files should b
 * [Developer notes](developer-notes.md)
 * [File API configuration](file-api-configuration.md)
  
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

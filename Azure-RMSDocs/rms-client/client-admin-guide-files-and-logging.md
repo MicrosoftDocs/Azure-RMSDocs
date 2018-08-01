@@ -109,4 +109,3 @@ Now that you've identified all the log files associated with the Azure Informati
 
 - [PowerShell commands](client-admin-guide-powershell.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

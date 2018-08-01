@@ -57,5 +57,3 @@ Chose policy type; template or ad-hoc:
 -   Finally, call the platform registration method for document tracking
   - Android - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) or [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx)
   - iOS - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

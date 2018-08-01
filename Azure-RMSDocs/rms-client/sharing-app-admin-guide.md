@@ -412,4 +412,3 @@ If you do not make this registry change, users might not be able to consume cont
 ## Next steps
 For additional technical information that includes explaining the difference between the levels of protections (native and generic), the supported file types and file name extensions, and how to change the default protection level, see [Technical overview for the Rights Management sharing application](sharing-app-admin-guide-technical.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

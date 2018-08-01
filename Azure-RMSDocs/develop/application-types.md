@@ -64,5 +64,3 @@ For more information on protecting your application, see [Understanding usage re
 - [Developing your application](developing-your-application.md)
 - [Setting the API security mode](setting-the-api-security-mode-api-mode.md)
 - [Understanding usage restrictions](understanding-usage-restrictions.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

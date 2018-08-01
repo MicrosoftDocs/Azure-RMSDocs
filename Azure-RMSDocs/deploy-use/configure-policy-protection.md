@@ -305,5 +305,3 @@ This configuration has the advantage that you don't need to specify users, group
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section. 
 
 Exchange mail flow rules can also apply protection, based on your labels. For more information and examples, see [Configuring Exchange Online mail flow rules for Azure Information Protection labels](configure-exo-rules.md).  
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

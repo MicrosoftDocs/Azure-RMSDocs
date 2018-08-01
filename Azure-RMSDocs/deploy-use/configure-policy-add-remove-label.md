@@ -68,4 +68,3 @@ If you need to create a scoped policy so that the label applies to a subset of u
 
 For more information about configuring your Azure Information Protection policy, use the links in the [Configuring your organization's policy](configure-policy.md#configuring-your-organizations-policy) section.  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -198,4 +198,3 @@ If you need more detailed logging for diagnosis purposes, you can use [Debugview
 
 5.  When you have captured the traces that you need, revert the line in step 3, and stop and start IIS again.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

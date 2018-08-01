@@ -62,4 +62,3 @@ The cmdlets that support creating and managing protection templates:
 ## See Also
 [Configuring and managing templates for Azure Information Protection](configure-policy-templates.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

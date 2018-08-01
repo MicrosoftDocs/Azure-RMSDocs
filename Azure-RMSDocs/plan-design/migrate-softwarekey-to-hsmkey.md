@@ -174,5 +174,4 @@ If you later need to confirm which key your Azure Information Protection tenant 
 
 You’re now ready to go to [Step 5. Activate the Azure Rights Management service](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
