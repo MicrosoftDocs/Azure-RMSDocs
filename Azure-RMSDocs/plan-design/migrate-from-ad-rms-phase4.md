@@ -6,7 +6,7 @@ description: Phase 4 of migrating from AD RMS to Azure Information Protection, c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -52,7 +52,7 @@ Independently from the Azure Information Protection tenant key topology that you
     
     - If AzureRMSLicensingEnabled is set to **True**, no further configuration is needed for this step. 
     
-    - If AzureRMSLicensingEnabled is set **False**, run the commands in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
+    - If AzureRMSLicensingEnabled is set **False**, run `Set-IRMConfiguration -AzureRMSLicensingEnabled $true' and then use the verification steps from [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) to confirm that Exchange Online is now ready to use the Azure Rights Management service for email protection. 
 
 ## Step 9. Configure IRM integration for Exchange Server and SharePoint Server
 
