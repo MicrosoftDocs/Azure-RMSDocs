@@ -96,7 +96,7 @@ If you are using the Azure Rights Management service and have not installed the 
 3. Choose a template to quickly apply the appropriate usage rights, or select **Restrict Access** and select the usage rights yourself.
 
     > [!NOTE]
-    > If you have not previously used Rights Management on your computer, the **Restrict Access** option connects to the [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] service and you are prompted for credentials to configure the Office IRM client. You can then choose a template or usage rights.
+    > If you have not previously used Rights Management on your computer, the **Restrict Access** option connects to the Azure Rights Management service and you are prompted for credentials to configure the Office IRM client. You can then choose a template or usage rights.
 
 3.  Save the document.
 

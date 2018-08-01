@@ -52,7 +52,7 @@ If you need to manually enable the super user feature, use the PowerShell cmdlet
 Although using a group for your super users is easier to manage, be aware that for performance reasons, Azure Rights Management [caches the group membership](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). So if you need to assign a new user to be a super user to decrypt content immediately, add that user by using Add-AadrmSuperUser, rather than adding the user to an existing group that you have configured by using Set-AadrmSuperUserGroup.
 
 > [!NOTE]
-> If you have not yet installed the Windows PowerShell module for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)], see [Installing the AADRM PowerShell module](install-powershell.md).
+> If you have not yet installed the Windows PowerShell module for Azure Rights Management, see [Installing the AADRM PowerShell module](install-powershell.md).
 
 It doesn't matter when you enable the super user feature or when you add users as super users. For example, if you enable the feature on Thursday and then add a user on Friday, that user can immediately open content that was protected at the very beginning of the week.
 
@@ -79,7 +79,7 @@ In this example, the administrator for Contoso Ltd confirms that the super user 
 `2015-08-01T19:01:45	admin@contoso.com	SetSuperUserFeatureState -state Enabled	Passed	True`
 
 ## Scripting options for super users
-Often, somebody who is assigned a super user for [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet, and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) cmdlet as required. 
+Often, somebody who is assigned a super user for Azure Rights Management will need to remove protection from multiple files, in multiple locations. While it’s possible to do this manually, it’s more efficient (and often more reliable) to script this. To do so, you can use the [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) cmdlet, and [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) cmdlet as required. 
 
 If you are using classification and protection, you can also use the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) to apply a new label that doesn't apply protection, or remove the label that applied protection. 
 
