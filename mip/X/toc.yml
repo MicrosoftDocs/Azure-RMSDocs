@@ -13,7 +13,7 @@
   - name: Simple authentication - Python
     href: authentication/python.md
   - name: Authentication delegate - C++
-    href: authentication/auth-delegate.md
+    href: authentication/authdelegate.md
   - name: Apply label - C++
   - name: List labels - C++
   - name: Read label - C++
@@ -21,7 +21,7 @@
   items:
   - name: Mint an authentication token
   - name: Create an authentication delegate
-    href: authentication/auth-delegate.md
+    href: authentication/authdelegate.md
   - name: Initialize a FileProfile
   - name: Add an engine and list labels
 - name: Samples
