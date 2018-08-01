@@ -205,5 +205,3 @@ You can find the template GUID and licensing URL values from the Active Director
 ## Next steps
 
 To configure a label for HYOK protection, see [How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md). 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

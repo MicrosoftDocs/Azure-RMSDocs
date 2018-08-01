@@ -69,5 +69,3 @@ For example, the following command will enable the MSIPC event log and set the l
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
 **Note**  In the Windows Event Viewer on the **View** menu, select **Show Analytic and Debug Logs** to make the MSIPC Debug log visible.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

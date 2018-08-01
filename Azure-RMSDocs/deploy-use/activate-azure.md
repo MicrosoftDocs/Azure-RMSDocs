@@ -50,5 +50,3 @@ When activation is complete, the information bar displays **Activation finished 
 ## Next steps
 Resume reading [Activating Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

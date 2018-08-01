@@ -204,5 +204,3 @@ Now that you've planned for and if necessary, created and configured your tenant
 3.  Manage your tenant key.
     
     For more information about the life cycle operations for your tenant key, see [Operations for your Azure Information Protection tenant key](../deploy-use/operations-tenant-key.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

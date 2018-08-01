@@ -56,5 +56,4 @@ Let's get started.
 >[!div class="step-by-step"]
 [&#187; Step 1](infoprotect-tutorial-step1.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

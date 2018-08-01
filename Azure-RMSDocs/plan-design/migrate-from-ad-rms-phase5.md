@@ -131,4 +131,3 @@ For more information about managing your Azure Information Protection tenant key
 
 Now that you have completed the migration, review the [deployment roadmap](deployment-roadmap.md) to identify any other deployment tasks that you might need to do.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

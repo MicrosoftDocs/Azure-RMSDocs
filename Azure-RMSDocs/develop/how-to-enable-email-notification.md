@@ -66,5 +66,3 @@ The following table contains the application data fields, property name and valu
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
 - [IPC\_NAME\_VALUE\_LIST](https://msdn.microsoft.com/library/hh535277.aspx).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

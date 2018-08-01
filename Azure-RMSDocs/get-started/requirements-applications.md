@@ -219,4 +219,3 @@ For more information about how the most commonly used applications support Azure
 
 For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -44,5 +44,3 @@ The Rights Management Services section on the Connect site is where you can find
 >-   Click **Directory** on the command bar
 >-   Search for "Rights Management Services"
 >-   Click **Join** to register
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -632,4 +632,3 @@ See the following for additional information that you might need to support the 
 - [File types supported](client-admin-guide-file-types.md)
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

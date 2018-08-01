@@ -85,4 +85,3 @@ For configuration steps, see [Integrate Exchange message classification with Azu
 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

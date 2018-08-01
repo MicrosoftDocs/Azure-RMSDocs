@@ -49,4 +49,3 @@ The Rights Management sharing application for Windows (also known as just “the
 ## See Also
 [FAQ for Rights Management Sharing Application for Windows](http://technet.microsoft.com/dn467883)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

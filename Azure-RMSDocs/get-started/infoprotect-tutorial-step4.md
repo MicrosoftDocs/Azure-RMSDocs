@@ -94,5 +94,3 @@ Now that you've seen classification, labeling, and protection in action, let's s
 >[!div class="step-by-step"]
 [&#171; Step 3](infoprotect-tutorial-step3.md)
 [Step 5 &#187;](infoprotect-tutorial-step5.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

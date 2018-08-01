@@ -118,9 +118,8 @@ When you use these onboarding controls, all users in the organization can always
 ## Next steps
 When the Azure Rights Management service is activated for your organization, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) to check whether there are other configuration steps that you might need to do before you roll out Azure Information Protection to users and administrators. 
 
-For example, you might want to use [templates](configure-policy-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](../rms-client/aip-client.md) that supports protecting all file types on all devices. 
+For example, you might want to use [templates](configure-policy-templates.md) to make it easier for users to apply information protection to files, connect your on-premises servers to use [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1.md)] by installing the [Rights Management connector](deploy-rms-connector.md), and deploy the [Azure Information Protection client](../rms-client/aip-client.md) that supports protecting all file types on all devices. 
 
 Office services, such as Exchange Online and SharePoint Online require additional configuration before you can use their Information Rights Management (IRM) features. For information about how your applications work with the Rights Management service, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

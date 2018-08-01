@@ -146,5 +146,3 @@ When you cannot migrate all your Windows clients at once, run the following proc
 
 ## Next steps
 To continue the migration, go to [phase 4 -supporting services configuration](migrate-from-ad-rms-phase4.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

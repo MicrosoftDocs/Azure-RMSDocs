@@ -60,5 +60,3 @@ The remaining topics in this section cover the RMS Architecture and its implemen
 * [RMS Concepts](application-types.md)
 * [Get started](getting-started-with-ad-rms-2-0.md)
 * [IT Pro documentation for AD RMS](https://technet.microsoft.com/library/cc771234.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
