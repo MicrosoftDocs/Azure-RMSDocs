@@ -1,0 +1,11 @@
+- name: Microsoft Information Protection Documentation
+  href: index.yml
+- name: Understand and explore
+- name: Get started
+- name: Plan and design
+- name: Deploy and use the Service
+- name: Deploy and use the client
+- name: Develop and customize apps
+  items:
+  - name: MIP SDK
+    href: develop/
