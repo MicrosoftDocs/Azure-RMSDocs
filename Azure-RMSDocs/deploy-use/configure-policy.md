@@ -99,27 +99,30 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 
 3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
-    An Azure Information Protection policy contains the following elements that you can configure:
-    
-    - Which labels are included that let administrators and users classify documents and emails.
-    
-    - Title and tooltip for the Information Protection bar that users see in their Office applications.
-    
-    - The option to set a default label as a starting point for classifying documents and emails.
-     
-    - The option to enforce classification when users save documents and send emails.
-    
-    - The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
-    
-    - The option to automatically label an email message, based on its attachments.
 
-    - The option to control whether the the Information Protection bar is displayed in Office applications.
+### Overview of the Azure Information Protection policy
 
-    - The option to control whether the Do Not Forward button is displayed in Outlook.
+An Azure Information Protection policy contains the following elements that you can configure:
     
-    - The option to let users specify their own permissions for documents.
-    
-    - The option to provide a custom help link for users.
+- Which labels are included that let administrators and users classify (and optionally, protect) documents and emails.
+
+- Title and tooltip for the Information Protection bar that users see in their Office applications.
+
+- The option to set a default label as a starting point for classifying documents and emails.
+
+- The option to enforce classification when users save documents and send emails.
+
+- The option to prompt users to provide a reason when they select a label that has a lower sensitivity level than the original.
+
+- The option to automatically label an email message, based on its attachments.
+
+- The option to control whether the the Information Protection bar is displayed in Office applications.
+
+- The option to control whether the Do Not Forward button is displayed in Outlook.
+
+- The option to let users specify their own permissions for documents.
+
+- The option to provide a custom help link for users.
 
 Azure Information Protection comes with a [default policy](configure-policy-default.md), which contains five main labels. Two of these labels contain sublabels to provide subcategories, when needed. When a label is configured for sublabels, users cannot select the main label but must select one of the sublabels.
 
