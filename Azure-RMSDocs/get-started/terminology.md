@@ -6,7 +6,7 @@ description: Confused by a word, phrase, or acronym that's related to Microsoft 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2018
+ms.date: 08/02/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: information-protection
@@ -38,6 +38,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
 |Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
+|Azure Information Protection label|An item that applies a classification value to documents and emails, and can optionally protect them. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.|
 |Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings. Example policy settings include a default label, whether all documents and emails must have a label, and whether the Azure Information Protection bar is displayed in Office apps.|
 |Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
@@ -55,7 +56,6 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |HYOK|See *hold your own key*.|
 |hold your own key|Frequently abbreviated to *HYOK*.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory or compliance reasons.|
 |key object|In the context of the tenant key, an entity that contains metadata that is required by the Azure Rights Management service for cryptographic operations.|
-|label|An item that applies a classification value to documents and emails, and can optionally protect them. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.|
 |information protection|Sometimes abbreviated to *IP*.<br /><br />An industry-standard, generic term that refers to protecting data and files from unauthorized access, even after the data and files leave the organizational boundaries by using email or document sharing. Microsoft Azure Information Protection is an example of an information protection (IP) solution.|
 |Information Rights Management|Frequently abbreviated to *IRM*.<br /><br />A term used in conjunction with Office services, such as Exchange Server, Word, and SharePoint Online, to describe the ability to support the Microsoft Rights Management services.|
 |IRM|See *Information Rights Management*.|
