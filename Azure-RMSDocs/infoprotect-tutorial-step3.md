@@ -48,7 +48,7 @@ If this is the first time that you've installed the client, you'll see a **Congr
 
 When the document loads, you should see two new things:
 
-![Azure Information Protection quick start tutorial step 3 - client installed](../media/word2016-calloutsv2.png)
+![Azure Information Protection quick start tutorial step 3 - client installed](./media/word2016-calloutsv2.png)
 
 - On the **Home** tab, a new **Protection** group, with a button named **Protect**.
     
@@ -60,8 +60,8 @@ You’re now ready to see Azure Information Protection in action.
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About installing the Azure Information Protection client|[Download and install the Azure Information Protection client](../rms-client/install-client-app.md)|
-|Admin instructions for the Azure Information Protection client|[Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md)|
+|About installing the Azure Information Protection client|[Download and install the Azure Information Protection client](./rms-client/install-client-app.md)|
+|Admin instructions for the Azure Information Protection client|[Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)|
 
 
 >[!div class="step-by-step"]

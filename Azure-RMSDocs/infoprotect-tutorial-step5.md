@@ -39,7 +39,7 @@ You’re then ready to safely share this document by email.
 
 1. In File Explorer, right-click your document and select **Classify and protect**. The **Classify and protect - Azure Information Protection** dialog box opens:
 
-    ![Azure Information Protection quick start tutorial step 5 - right-click classify and protect](../media/classify-protect-dialog.png)
+    ![Azure Information Protection quick start tutorial step 5 - right-click classify and protect](./media/classify-protect-dialog.png)
 
 2. Select **Protect with custom permissions**, which displays additional options.
 
@@ -53,7 +53,7 @@ You’re then ready to safely share this document by email.
 
     Alternatively, click the **Select users, groups, or organization** icon to select a co-worker's email address:
 
-    ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](../media/protect-custom-permissions.png)  
+    ![Azure Information Protection quick start tutorial step 5 - protect with custom permissions](./media/protect-custom-permissions.png)  
     
     After specifying the addresses, copy them to the clipboard because we'll use them in a later step.
 
@@ -69,7 +69,7 @@ You’re then ready to safely share this document by email.
 
     **I've protected this file with Microsoft Azure Information Protection. For first time use, see these instructions: https://aka.ms/rms-signup.** 
 
-    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](../media/share-protected-emailv2.png)
+    ![Azure Information Protection quick start tutorial step 5 - share protected document by email](./media/share-protected-emailv2.png)
 
     Click **Send**.
 
@@ -99,11 +99,11 @@ Now that the recipient has opened the attachment and optionally, forwarded it to
 
 1.  Open the document that you protected and shared. The information banner confirms the custom protection settings that you specified:
 
-    ![Information banner for custom protection](../media/information-banner-custom-protection.png)
+    ![Information banner for custom protection](./media/information-banner-custom-protection.png)
 
 2.  On the **Home** tab, click **Protect** > **Track and Revoke**:
 
-    ![Track usage option](../media/track-usage-calloutv3.png)
+    ![Track usage option](./media/track-usage-calloutv3.png)
 
     This takes you to the document tracking site.
 
@@ -123,9 +123,9 @@ You can return to this site to track further activity for your protected documen
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for protecting files that you can then safely share|[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
-|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](../rms-for-individuals.md)|
-|About using the document tracking site|[Track and revoke your documents](../rms-client/client-track-revoke.md)
+|Full instructions for protecting files that you can then safely share|[Classify and protect a file or email](./rms-client/client-classify-protect.md)|
+|About the free account for others users to sign up|[RMS for individuals and Azure Rights Managmenet](./rms-for-individuals.md)|
+|About using the document tracking site|[Track and revoke your documents](./rms-client/client-track-revoke.md)
 
 
 ## Next Steps
@@ -134,4 +134,4 @@ Now you've seen the default Azure Information Protection policy and how to custo
 
 Try sharing more documents and track how they are being used, and confirm how document revocation works.
 
-You might then find it useful to return to the **Quick start** page in the Azure portal, read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md). 
+You might then find it useful to return to the **Quick start** page in the Azure portal, read some of the [frequently asked questions](faqs.md) for Azure Information Protection, and explore some of the other documentation articles. But if you're ready to start deploying Azure Information Protection for your organization, your next stop should be the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md). 

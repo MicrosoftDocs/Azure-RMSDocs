@@ -40,15 +40,15 @@ Although Azure Information Protection comes with a default policy that you can u
        > [!NOTE]
        > Your default policy might look slightly different from one in this tutorial. For example, you have a label named **Internal** rather than **General**, and **Secret** rather than **Highly Confidential**. Maybe you do not have the sublabels named **Recipients Only**, or you don't have any labels at all. These changes are because there are different versions of the default policy, depending on when it was created for your tenant. Or, you might have edited it yourself, before you started the tutorial.
        > 
-       > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md).
+       > If your default policy looks different, you can still use this tutorial, but be aware of these changes when you use the instructions and pictures that follow. If you want to modify your default policy so that it matches the current default policy, see [The default Azure Information Protection policy](./deploy-use/configure-policy-default.md).
     
     - With the default configuration, some labels do not have visual markings configured. The visual markers are a footer, header, and watermark. Depending on your default policy, some labels might also have protection set. For example: 
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-labelsv2.png)
+    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-labelsv2.png)
     
 3. After the labels, in the **Configure settings to display and apply on Information Protection end users** section, you also see some policy settings. For example, there is no default label set, documents and emails are not required to have a label, and users do not have to provide justification when they change labels:
     
-    ![Azure Information Protection quick start tutorial step 3 - default policy](../media/info-protect-policy-default-settings.png)
+    ![Azure Information Protection quick start tutorial step 3 - default policy](./media/info-protect-policy-default-settings.png)
 
 ## Changing the settings for a default label and prompt for justification
 
@@ -80,25 +80,25 @@ We'll now create a new sublabel for **Confidential**.
 
 3. For **Set permissions for documents and emails containing this label**, select **Protect**, and then select **Protection**:
     
-    ![Protection configured for an Azure Information Protection label](../media/info-protect-protection-bar-configured.png) 
+    ![Protection configured for an Azure Information Protection label](./media/info-protect-protection-bar-configured.png) 
     
 4. On the **Protection** blade, make sure that **Azure (cloud key)** is selected. This option uses the Azure Rights Management service to protect documents and emails. Also make sure that the **Set Permissions** option is selected. Then select **Add permissions**.
 
 5. On the **Add permissions** blade, select **Add \<organization name> - All members**. For example, if your organization name is VanArsdel Ltd, you see the following option to select:
     
-    ![Granting all members protection permissions for an Azure Information Protection label](../media/info-protect-protection-all-members.png) 
+    ![Granting all members protection permissions for an Azure Information Protection label](./media/info-protect-protection-all-members.png) 
     
     This option automatically selects all the users in your organization who can be granted permissions. However, you can see from the other options that you could browse and search for groups or users from your tenant. Or, when you select the **Enter details** option, you can specify individual email addresses or even all users from another organization.
 
 6. For the permissions, select **Reviewer** from the preset options. You see how this permission level automatically grants some permissions listed but not all permissions:
     
-    ![Granting Co-Author protection permissions for an Azure Information Protection label](../media/info-protect-protection-reviewer.png)
+    ![Granting Co-Author protection permissions for an Azure Information Protection label](./media/info-protect-protection-reviewer.png)
     
     You can select different permission levels or specify individual usage rights by using the **Custom** option. But for this tutorial, keep the **Reviewer** option. You can experiment with different permissions later and read how they restrict what the specified users can do with the protected document or email.
 
 7. Click **OK** to close this **Add permissions** blade, and you see how the **Protection** blade is updated to reflect your configuration. For example:
     
-     ![Protection blade showing the permissions configuration for an Azure Information Protection label](../media/info-protect-protection-configured.png)
+     ![Protection blade showing the permissions configuration for an Azure Information Protection label](./media/info-protect-protection-configured.png)
     
     If you select **Add permissions**, this action opens the **Add permissions** blade again, so that you can add more users and grant them different permissions. For example, grant just view access for a specific group. But for this tutorial, we'll keep with one set of permissions for all users.
 
@@ -124,13 +124,13 @@ We'll now create a new sublabel for **Confidential**.
     
     d. **Count occurrences with unique values only**: Keep the default of **Off**.
     
-    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-configure-condition.png)
+    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](./media/step2-configure-condition.png)
     
     Click **Save** to return to the **Sub-label** blade.
 
 10. On the **Sub-label** blade, you see that **Credit Card Number** is displayed as the **CONDITION NAME**, with **1** **OCCURRENCES**:
     
-    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](../media/step2-see-condition.png)
+    ![Azure Information Protection quick start tutorial step 3 - configure credit card condition](./media/step2-see-condition.png)
 
 11. For **Select how this label is applied**: Keep the default of **Recommended**, and do not change the default policy tip. 
 
@@ -144,11 +144,11 @@ We'll now create a new sublabel for **Confidential**.
 
 16. On the **Policy: Global** blade, you now see your new sublabel in your global policy, which is configured for visual markings and protection. For example:
 
-    ![Azure Information Protection quick start tutorial step 3 - default policy configured](../media/info-protect-policy-configuredv2.png)
+    ![Azure Information Protection quick start tutorial step 3 - default policy configured](./media/info-protect-policy-configuredv2.png)
     
     You also see that the settings are configured with your changes for the default label and justification:
     
-    ![Azure Information Protection quick start tutorial step 3 - settings configured](../media/info-protect-settings-configuredv2.png)
+    ![Azure Information Protection quick start tutorial step 3 - settings configured](./media/info-protect-settings-configuredv2.png)
     
 
 17. Click **Save** on this **Policy: Global** blade. If you are prompted to confirm this action, click **OK**.
@@ -159,10 +159,10 @@ Now that you've had a look at the default policy and made some changes, the next
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About the default policy and different versions|[The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
-|About configuring the policy|[Configuring Azure Information Protection policy](../deploy-use/configure-policy.md)|
-|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](../deploy-use/configure-policy-protection.md)|
-|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md)|
+|About the default policy and different versions|[The default Azure Information Protection policy](./deploy-use/configure-policy-default.md)|
+|About configuring the policy|[Configuring Azure Information Protection policy](./deploy-use/configure-policy.md)|
+|Detailed instructions for configuring a label for protection|[How to configure a label for Rights Management protection](./deploy-use/configure-policy-protection.md)|
+|Detailed information about the permissions|[Configuring usage rights for Azure Rights Management](./deploy-use/configure-usage-rights.md)|
 
 
 

@@ -35,7 +35,7 @@ Azure Information Protection (sometimes abbreviated to AIP) has evolved from a l
 The following sections list some of these names.
 
 > [!TIP]
-> You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](./get-started/terminology.md).
+> You'll find many of these product and service names, and their related terms in [Terminology for Azure Information Protection](./terminology.md).
 
 ## Cloud-based solutions
 
