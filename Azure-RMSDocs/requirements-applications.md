@@ -49,7 +49,7 @@ Information about the table columns:
     
     Tip: For email clients that don't support protecting emails, consider using [Exchange Online mail flow rules to apply this protection](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8).
 
--   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, and .jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](../rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
+-   **Other file types**: Text and image files include files that have a file name extension such as .txt, .xml, .jpg, and .jpeg. These files change their file name extension after they are natively protected by Rights Management, and become read-only. Files that cannot be natively protected have a .pfile file name extension after they are generically protected by Rights Management. For more information, see the [File types supported](./rms-client/client-admin-guide-file-types.md) from the Azure Information Protection client admin guide.
 
 
 |**Device operating system**|Word, Excel, PowerPoint|Protected PDF|Email|Other file types|
@@ -132,7 +132,7 @@ The Azure Information Protection viewer app for iOS and Android replaces the RMS
 
 If your iOS and Android devices are enrolled by Microsoft Intune, you can deploy and manage this app by using a policy managed app. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2 from this Intune documentation, use the instructions to publish a policy managed app.
 
-For more information, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md).
+For more information, see the [FAQ for Microsoft Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md).
 
 
 ### More information about the Azure Information Protection client for Windows
@@ -141,11 +141,11 @@ This client now replaces the Rights Management sharing application for Windows.
 
 For more information, see the following resources:
 
-- [Azure Information Protection client administrator guide](../rms-client/client-admin-guide.md)
+- [Azure Information Protection client administrator guide](./rms-client/client-admin-guide.md)
 
-- [Azure Information Protection client user guide](../rms-client/client-user-guide.md)
+- [Azure Information Protection client user guide](./rms-client/client-user-guide.md)
 
-- [FAQs for Azure Information Protection app for iOS and Android](../rms-client/mobile-app-faq.md)
+- [FAQs for Azure Information Protection app for iOS and Android](./rms-client/mobile-app-faq.md)
 
 Download the relevant app by using the links on the [Microsoft Azure Information Protection page](http://go.microsoft.com/fwlink/?LinkId=303970).
 
@@ -157,9 +157,9 @@ For Mac computers, it offers a viewer for protected PDF files (.ppdf), protected
 
 For more information, see the following resources:
 
--   [Rights Management sharing application administrator guide](../rms-client/sharing-app-admin-guide.md)
+-   [Rights Management sharing application administrator guide](./rms-client/sharing-app-admin-guide.md)
 
--   [Rights Management sharing application user guide](../rms-client/sharing-app-user-guide.md)
+-   [Rights Management sharing application user guide](./rms-client/sharing-app-user-guide.md)
 
 -   [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](https://technet.microsoft.com/dn451248)
 
@@ -174,7 +174,7 @@ In addition to the applications in the table, any application that supports the 
 
 - Applications from software vendors that are written by using the RMS SDKs.
 
-For more information, see the [Azure Information Protection Developer's Guide](../develop/developers-guide.md).
+For more information, see the [Azure Information Protection Developer's Guide](./develop/developers-guide.md).
 
 ### Applications that are not supported by Azure RMS
 
@@ -194,7 +194,7 @@ In addition, the RMS sharing application and the Azure Information Protection cl
 
 The following table displays RMS-enlightened solutions from software vendors.
 
-If you are a software vendor and have a solution for this table that is not listed, register your application with Azure AD. For more information, see [How to register and RMS enable your app with Azure AD](../develop/authentication-integration.md).
+If you are a software vendor and have a solution for this table that is not listed, register your application with Azure AD. For more information, see [How to register and RMS enable your app with Azure AD](./develop/authentication-integration.md).
 
 
 |Product|Vendor|Description|
@@ -215,7 +215,7 @@ If you are a software vendor and have a solution for this table that is not list
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 
-For more information about how the most commonly used applications support Azure RMS, see [How applications support the Azure Rights Management service](../applications-support.md).
+For more information about how the most commonly used applications support Azure RMS, see [How applications support the Azure Rights Management service](./applications-support.md).
 
-For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](../deploy-use/configure-applications.md).
+For information about how to configure the most commonly used  applications for Azure RMS, see [Configuring applications for Azure Rights Management](./deploy-use/configure-applications.md).
 
