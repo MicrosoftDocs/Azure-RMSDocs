@@ -37,15 +37,17 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |activate|To enable the Azure Rights Management service so that an organization can protect their documents and email. This action also enables Rights Management features in Exchange Online and SharePoint Online.|
 |Active Directory Rights Management Services|Frequently abbreviated to *AD RMS*.<br /><br />A Windows Server role that that provides rights management protection by using encryption and policy to help secure documents, files, and email.|
 |AD RMS|See *Active Directory Rights Management Services*.|
-|Azure Information Protection|A cloud-based service that uses classification, labeling, and protection to help secure documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
+|Azure Information Protection|A cloud-based service that uses labels to classify and protect documents and emails. Azure Rights Management provides the protection by using encryption, identity, and authorization policies.|
+|Azure Information Protection policy|Administrator-defined configuration for clients and services that use Azure Information Protection labels and policy settings. Example policy settings include a default label, whether all documents and emails must have a label, and whether the Azure Information Protection bar is displayed in Office apps.|
+|Azure Information Protection scanner|A service that runs on Windows Server and lets you discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries.|
 |Azure Rights Management|Frequently abbreviated to *Azure RMS*.<br /><br />An Azure service used by Azure Information Protection that uses encryption and policy to help secure documents, files, and email.  Also known as *Azure Rights Management service*. Previous names have included:<br /><br />- *Windows Azure Active Directory Rights Management*: Frequently abbreviated to Windows Azure AD Rights Management Service.<br /><br />- *RMS Online*: The original, proposed name, which you might sometimes see in error messages and log file entries.|
 |Azure RMS|See *Azure Rights Management*.|
 |BYOK|See *bring your own key*.|
 |bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
 |content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
-|consume|To unlock a file to read or use it when that file has been protected by Rights Management.|
+|consume|To open a document or email to read or use it when that content has been protected by Rights Management. For a document, consuming includes editing and adding new content to a protected document. For an email message, consuming includes replying to a protected message.|
 |deactivate|To disable the Rights Management service so that the organization can no longer use Azure Information Protection.|
-|departmental template|A rights policy template that you create (a custom template) and is configured to be visible for selected users rather than all users in your organization.|
+|departmental template|A protection template that you create (a custom template) and that is configured to be visible for selected users rather than all users in your organization. Also known as a *scoped template*.|
 |enlightened applications|Applications that natively support Rights Management, which includes Office applications, such as Word and Excel. Independent software vendors (ISVs) and developers can also write applications that natively support Rights Management.|
 |enterprise rights management|An industry-standard, generic term that is often used to describe products and solutions that help organizations protect sensitive or valuable information by using a combination of encryption and policy authorization tools. Azure Information Protection is an example of an enterprise rights management (ERM) solution.|
 |ERM|See *enterprise rights management*.|
@@ -66,7 +68,7 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |permissions level|A logical grouping of usage rights that make it easier for end-users and administrators to choose configuration options that are role-based. For example, Reviewer and Co-Author.|
 |protect|Apply rights management controls to files or email messages by using encryption, identity, and access control policies to help secure your data.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
-|protection template|A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. Also known as rights policy templates, and RMS templates.|
+|protection template|A group of protection settings that are managed by an administrator and that include the defined usage rights for authorized users, and access controls for expiry and offline access. Also known as a *rights policy template*, *Rights Management template*, and *RMS template*.|
 |publish|To protect a file in order to safeguard it from unauthorized access and use.|
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
