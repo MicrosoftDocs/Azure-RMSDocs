@@ -33,7 +33,7 @@ To configure classification, labeling, and protection, you must configure the Az
 
 The policy contains labels and settings:
 
-- Labels apply a classification value to documents and emails, and can optionally protect them. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.
+- Labels apply a classification value to documents and emails, and can optionally protect this content. The Azure Information Protection client displays these labels for your users in Office apps and when users right-click from File Explorer. These labels can also be applied by using PowerShell and the Azure Information Protection scanner.
 
 - The settings change the default behavior of the Azure Information Protection client. For example, you can select a default label, whether all documents and emails must have a label, and whether the Azure Information Protection bar is displayed in Office apps.
 
