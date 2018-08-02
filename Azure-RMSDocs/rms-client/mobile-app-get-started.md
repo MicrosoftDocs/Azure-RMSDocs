@@ -42,7 +42,7 @@ To use the following instructions, you need access from your mobile device to on
 
 - **A .rpmsg file**: This is a rights-protected email message that displays as an attachment in an email message when your email app on your mobile device does not natively support rights management data protection. 
     
-    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](../get-started/requirements-applications.md) page.
+    Use another device to send yourself a rights-protected email message that you can access from your mobile device. For example, use Outlook from a Windows computer. For a list of email clients that natively support rights management, see the EMAIL column from the [Applications that support Azure Rights Management data protection](./requirements-applications.md) page.
 
 - **A rights-protected PDF file**: From a Windows computer, use the Azure Information Protection client to [protect a PDF file](client-classify-protect.md) and then send yourself this rights-protected PDF file as an attachment in email. Alternatively, upload a PDF file to a SharePoint protected library and then share it, using your email address.
 

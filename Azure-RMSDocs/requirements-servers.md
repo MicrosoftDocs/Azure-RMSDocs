@@ -68,4 +68,4 @@ The Rights Management connector is supported on Windows Server 2016, Windows Ser
 For more information about how to configure the Rights Management connector for these on-premises servers, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Rights Management](requirements.md).

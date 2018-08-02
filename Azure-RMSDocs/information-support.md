@@ -80,7 +80,7 @@ Troubleshooting:
 
 - If you have a question about how something works: Check whether your question is already answered on the [Frequently asked questions](faqs.md) page.
 
-- If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements-azure-rms.md) information, which is regularly updated.
+- If you have a question about a support statement for Azure Information Protection: See the [Requirements](requirements.md) information, which is regularly updated.
 
 - For information to support your end users, help desk, and administrators who are configuring services and applications that use Azure Information Protection: See [Helping users to protect files](./deploy-use/help-users.md).
 

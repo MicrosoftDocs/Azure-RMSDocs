@@ -68,7 +68,7 @@ You can export your Azure Information Protection configuration and tenant key by
 
 ### Step 1: Initiate export
 
-- [Contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
+- [Contact Microsoft Support](./information-support.md#to-contact-microsoft-support) to open an **Azure Information Protection support case with a request for an Azure Information Protection key export**. You must prove you are an administrator for your Azure Information Protection tenant, and understand that this process takes several days to confirm. Standard support charges apply; exporting your tenant key is not a free-of-charge support service.
 
 ### Step 2: Wait for verification
 

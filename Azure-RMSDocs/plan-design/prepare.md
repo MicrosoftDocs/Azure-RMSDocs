@@ -93,7 +93,7 @@ In addition to using the Azure AD proxyAddresses and Azure AD userPrincipalName 
 
 Other authorization methods:
 
-- For email addresses that are not in Azure AD, Azure Information Protection can authorize these when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- For email addresses that are not in Azure AD, Azure Information Protection can authorize these when they are authenticated with a Microsoft account. However, not all applications can open protected content when a Microsoft account is used for authentication. [More information](./secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - When an email is sent by using Office 365 Message Encryption with new capabilities to a user who doesn't have an account in Azure AD, the user is first authenticated by using federation with a social identity provider or by using a one-time passcode. Then the email address specified in the protected email is used to authorize the user.
 

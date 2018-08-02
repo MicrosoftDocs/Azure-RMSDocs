@@ -101,5 +101,5 @@ The Rights Management connector and the Azure Information Protection scanner do 
 - The service account that runs the scanner.
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
 

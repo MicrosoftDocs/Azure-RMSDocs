@@ -38,7 +38,7 @@ For instructions to complete this testing, see the information in [Helping users
 If your testing is unsuccessful, review the configuration steps in [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
 
 > [!TIP]
-> If you need additional help, see the [Support options and community resources](../get-started/information-support.md#support-options-and-community-resources) section in the [Information and support for Azure Information Protection](../get-started/information-support.md) article.
+> If you need additional help, see the [Support options and community resources](./information-support.md#support-options-and-community-resources) section in the [Information and support for Azure Information Protection](./information-support.md) article.
 
 ## Next steps
 

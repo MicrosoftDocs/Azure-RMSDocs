@@ -213,7 +213,7 @@ If you are a software vendor and have a solution for this table that is not list
 |Symantec DLP|Symantec |Detection and monitoring for protected files.
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
 
 For more information about how the most commonly used applications support Azure RMS, see [How applications support the Azure Rights Management service](./applications-support.md).
 

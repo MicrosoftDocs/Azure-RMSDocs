@@ -12,7 +12,7 @@
 ### [Other applications that support the RMS APIs](api-support.md)
 ## [Comparing Azure Information Protection and AD RMS](compare-on-premise.md)
 ## [Compliance and supporting information](compliance.md)
-# [Get Started](requirements-azure-rms.md)
+# [Get Started](requirements.md)
 ## [Requirements](requirements.md)
 ### [Azure Active Directory requirements](requirements-azure-ad.md)
 ### [Client device support for data protection](requirements-client-devices.md)

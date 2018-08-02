@@ -55,7 +55,7 @@ If your organization has a mix of subscriptions, it is your responsibility to ma
 
 - **When your organization has a subscription for Azure Information Protection but some users have only a license for Office 365 that includes the Azure Rights Management service**: For the users who do not have a license for Azure Information Protection, edit the registry on their computers so they do not download the Azure Information Protection policy. For instructions, see the admin guide for the following customization: [Enforce protection-only mode when your organization has a mix of licenses](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
-For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
+For more information about the subscriptions, see [What subscription do I need for Azure Information Protection and what features are included?](./faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
 ## Signing in to the Azure portal
 
@@ -178,5 +178,5 @@ Use the following information to help you configure the Azure Information Protec
 
 ## Next steps
 
-For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+For an example of how to customize the default policy, and see the resulting behavior in an Office application, try the [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
 

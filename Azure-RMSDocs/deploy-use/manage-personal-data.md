@@ -260,7 +260,7 @@ To delete personal data in the client log files and scanner logs that are stored
 Use the following three steps to request that Microsoft deletes personal data in document tracking logs, administration logs, or usage logs for the Azure Rights Management service. 
 
 **Step 1: Initiate delete request**
-[Contact Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) to open an Azure Information Protection support case with a request for deleting data from your tenant. You must prove that you are an administrator for your Azure Information Protection tenant and understand that this process takes several days to confirm. While submitting your request, you will need to provide additional information, depending on the data that needs to be deleted.
+[Contact Microsoft Support](./information-support.md#to-contact-microsoft-support) to open an Azure Information Protection support case with a request for deleting data from your tenant. You must prove that you are an administrator for your Azure Information Protection tenant and understand that this process takes several days to confirm. While submitting your request, you will need to provide additional information, depending on the data that needs to be deleted.
 
 - To delete the administration log, provide the **end date**. All admin logs until that end date will be deleted.
 - To delete the usage logs, provide the **end date**. All usage logs until that end date will be deleted.
