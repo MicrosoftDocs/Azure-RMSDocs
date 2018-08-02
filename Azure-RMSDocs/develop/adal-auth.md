@@ -109,4 +109,3 @@ After signing up for Microsoft Azure:
 
 ![Select SAVE](../media/SaveApplication.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

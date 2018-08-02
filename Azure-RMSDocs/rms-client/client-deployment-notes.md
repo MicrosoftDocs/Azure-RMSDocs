@@ -268,4 +268,3 @@ In some cases, you might need to redirect traffic during service discovery, for 
 
 6.  Close Registry Editor.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

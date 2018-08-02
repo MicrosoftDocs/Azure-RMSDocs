@@ -62,7 +62,7 @@ Whether you decide to migrate to Azure Information Protection or you decide to a
 Towards the end of February 2018, new subscriptions that include Azure Information Protection now activate the Azure Rights Management service by default. If this service is automatically activated for you and you are also using Active Directory Rights Management Services (AD RMS), this combination isn't compatible so it's important that you deactivate the Azure Rights Management service as soon as possible. 
 
 ### Step 1: Deactivate Azure Rights Management
-Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+Use one of the following procedures to deactivate Azure Rights Management.
 
 > [!TIP]
 > You can also use the Windows PowerShell cmdlet, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), to deactivate the Azure Rights Management service.
@@ -133,5 +133,4 @@ See the migration guidance: [Migrating from AD RMS to Azure Information Protecti
 
 After you have activated the Azure Rights Management service as part of the migration process, you can configure labels for data protection. However, if you migrate users in batches, make sure that labels that apply protection are scoped to migrated users only.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

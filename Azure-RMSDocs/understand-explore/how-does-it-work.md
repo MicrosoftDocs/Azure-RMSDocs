@@ -177,5 +177,3 @@ If you’re ready to start deploying data protection for your organization, use 
 
 > [!TIP]
 > For additional information and help, use the resources and links in [Information and support for Azure Information Protection](../get-started/information-support.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

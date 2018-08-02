@@ -102,5 +102,3 @@ Get current logging control flag setting
 **Note** - The Windows code snips above are in C++. For C\#, update the syntax with ‘.’ in place of ‘::’.
 
 **Linux / C++** - This SDK has some basic logging that is not as extensive as that of the other platforms. For more information see the **Troubleshooting** section of the "README.md" at [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

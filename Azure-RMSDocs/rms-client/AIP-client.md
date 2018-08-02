@@ -43,4 +43,3 @@ The Azure Information Protection client for Windows is a free, downloadable clie
 > For Mac computers and Windows Phones: Use the RMS sharing app for mobile devices and read the [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](http://technet.microsoft.com/dn451248).
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

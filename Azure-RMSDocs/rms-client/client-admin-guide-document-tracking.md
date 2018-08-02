@@ -129,4 +129,3 @@ Now that you've configured the document tracking site for the Azure Information 
 
 - [PowerShell commands](client-admin-guide-powershell.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -103,4 +103,3 @@ The Rights Management connector and the Azure Information Protection scanner do 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

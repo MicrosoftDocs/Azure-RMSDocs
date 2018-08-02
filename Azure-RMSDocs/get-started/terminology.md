@@ -42,14 +42,14 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Azure RMS|See *Azure Rights Management*.|
 |BYOK|See *bring your own key*.|
 |bring your own key|Frequently abbreviated to *BYOK*.<br /><br />A configuration and topology option chosen by an organization that wants to generate and manage their own tenant key for Azure Information Protection.|
-|content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] and that helps to limit the risk of information disclosure.|
-|consume|To unlock a file to read or use it when that file has been protected by [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
+|content key|A unique key that is created by RMS-enlightened applications for each document or email that is protected by using Rights Management and that helps to limit the risk of information disclosure.|
+|consume|To unlock a file to read or use it when that file has been protected by Rights Management.|
 |deactivate|To disable the Rights Management service so that the organization can no longer use Azure Information Protection.|
 |departmental template|A rights policy template that you create (a custom template) and is configured to be visible for selected users rather than all users in your organization.|
-|enlightened applications|Applications that natively support Rights Management, which includes Office applications, such as Word and Excel. Independent software vendors (ISVs) and developers can also write applications that natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
+|enlightened applications|Applications that natively support Rights Management, which includes Office applications, such as Word and Excel. Independent software vendors (ISVs) and developers can also write applications that natively support Rights Management.|
 |enterprise rights management|An industry-standard, generic term that is often used to describe products and solutions that help organizations protect sensitive or valuable information by using a combination of encryption and policy authorization tools. Azure Information Protection is an example of an enterprise rights management (ERM) solution.|
 |ERM|See *enterprise rights management*.|
-|generic protection|A level of protection that encrypts any file type and prevents unauthorized people from opening the file. After the file is opened, the file is now unencrypted and usable in an application that doesn’t natively support [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].|
+|generic protection|A level of protection that encrypts any file type and prevents unauthorized people from opening the file. After the file is opened, the file is now unencrypted and usable in an application that doesn’t natively support Rights Management.|
 |HYOK|See *hold your own key*.|
 |hold your own key|Frequently abbreviated to *HYOK*.<br /><br />A configuration and topology option for an organization that wants to generate and store their own key on-premises, typically for regulatory or compliance reasons.|
 |key object|In the context of the tenant key, an entity that contains metadata that is required by the Azure Rights Management service for cryptographic operations.|
@@ -71,16 +71,15 @@ Confused by a word, phrase, or acronym that's related to Microsoft Azure Informa
 |Rights Management connector|An outbound proxy relay that you can deploy for on-premises services such as Exchange Server and SharePoint, to protect data by using the Azure Rights Management service.|
 |Rights Management issuer|The account that protected a document or email.|
 |Rights Management owner|The account that retains full control of a protected document or email by being automatically granted the Rights Management Full Control usage right and is exempt from any expiry date or offline setting.|
-|Rights Management services|The generic term that applies to both the cloud version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) and the on-premises version of [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
+|Rights Management services|The generic term that applies to both the cloud version of Rights Management (Azure Rights Management) and the on-premises version of Rights Management (AD RMS).|
 |Rights Management sharing application|Now replaced by the Azure Information Protection client, an optional application for Windows and most popular mobile devices, which supports safely sharing files in-place and by email.|
 |RMS|See *Rights Management services*.|
 |RMS connector|See *Rights Management connector*.|
-|RMS for individuals|A free subscription for a user to use [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] when their organization does not have a subscription to Office 365 or Azure Active Directory.|
+|RMS for individuals|A free subscription for a user to use Rights Management when their organization does not have a subscription to Office 365 or Azure Active Directory.|
 |RMS sharing app|See *Rights Management sharing application*.|
 |protection-only mode|An operational mode for the Azure Information Protection client when there is no Azure Information Protection policy to apply labels. In this mode, classification labels are not displayed but users can still apply Rights Management protection.|
 |super user|A group of highly trusted administrators who can decrypt and access files that the organization has protected by using a rights management service. Typically, this level of access is required for legal eDiscovery and by auditing teams.|
-|tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] cryptographic functions that chain to this tenant key.|
+|tenant key|Also known as the server licensor certificate (SLC) key.<br /><br />The key that is unique to an organization and ultimately secures all Rights Management cryptographic functions that chain to this tenant key.|
 |unprotect|Remove rights management controls from files or email messages, which used encryption, identity, and access control policies to help secure your data.|
 |use license|A per-document certificate that is granted to a user who opens a file or email message that has been protected by a rights management service. This certificate contains that user’s rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document’s policy.|
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -157,4 +157,3 @@ Configure and see Azure Information Protection for yourself, with our 5-step [Qu
 
 Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

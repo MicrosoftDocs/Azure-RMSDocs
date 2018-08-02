@@ -153,5 +153,3 @@ HKEY_LOCAL_MACHINE
 
 - [Developer notes](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

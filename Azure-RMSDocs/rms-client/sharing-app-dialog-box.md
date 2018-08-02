@@ -82,4 +82,3 @@ For examples for how you might use the Rights Management sharing application, an
 ## See Also
 [Rights Management sharing application user guide](sharing-app-user-guide.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

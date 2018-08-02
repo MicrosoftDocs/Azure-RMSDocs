@@ -47,6 +47,5 @@ To install the Azure Information Protection client for these popular mobile plat
 
 **If you have Microsoft Intune**: Because the Azure Information Protection app includes the Microsoft Intune App Software Development Kit, when iOS and Android devices are enrolled by Intune, you can deploy and manage the Azure Information Protection Viewer for these devices. For more information, see [Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) from the Intune documentation. For Step 2, use the instructions to publish a policy managed app.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

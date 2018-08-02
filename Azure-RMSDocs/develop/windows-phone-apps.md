@@ -88,5 +88,3 @@ You are now ready to create your own new Windows Phone apps.
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Windows Phone SDK](http://dev.windowsphone.com/en-us/downloadsdk)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -69,5 +69,3 @@ For more information about how to configure the Rights Management connector for 
 
 ## Next steps
 To check for other requirements, see [Requirements for Azure Rights Management](requirements-azure-rms.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

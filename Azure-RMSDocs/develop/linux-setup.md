@@ -42,5 +42,3 @@ Libraries and samples have been successfully compiled on Windows and OSX as well
 - [Get started](get-started.md)
 - [What's new](release-notes.md)
 - [Developer terms and concepts](core-concepts.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

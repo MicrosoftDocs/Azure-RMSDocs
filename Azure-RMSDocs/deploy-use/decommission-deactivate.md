@@ -59,10 +59,10 @@ For more information about the procedures in this table, see the following resou
 When you are ready to deactivate the Azure Rights Management service for your organization, use the following instructions.
 
 ## Deactivating Rights Management
-Use one of the following procedures to deactivate [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+Use one of the following procedures to deactivate Azure Rights Management.
 
 > [!TIP]
-> You can also use the Windows PowerShell cmdlet, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), to deactivate [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+> You can also use the Windows PowerShell cmdlet, [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm), to deactivate Rights Management.
 
 #### To deactivate Rights Management from the Office 365 admin center
 
@@ -89,6 +89,5 @@ You should now see **Rights Management is not activated** and the option to acti
 The information bar displays **Deactivation finished successfully** and **Deactivate** is now replaced with **Activate**. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

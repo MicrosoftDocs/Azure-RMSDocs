@@ -54,5 +54,3 @@ All you need is a computer that runs at least Windows 7 with Service Pack 1. 
 > [!NOTE]
 > If you are an administrator who is responsible for the Azure Information Protection client on an enterprise network, see the [Azure Information Protection client administrator guide](client-admin-guide.md) for additional technical information. 
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

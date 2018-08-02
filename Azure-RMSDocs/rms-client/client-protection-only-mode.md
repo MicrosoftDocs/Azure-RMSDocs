@@ -71,5 +71,4 @@ Protection-only mode runs in the following scenarios:
 - View protected files by using the Azure Information Protection Viewer.
 
 - Access the document tracking site from your Office apps. However, you must have a valid subscription to track and revoke documents from this site.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
+  

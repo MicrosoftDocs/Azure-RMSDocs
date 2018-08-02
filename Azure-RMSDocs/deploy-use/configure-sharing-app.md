@@ -46,6 +46,5 @@ You can download and install the RMS sharing app for Mac computers and Windows P
 You can no longer download the RMS sharing app for iOS and Android from this page; links for these mobile devices now download the Azure Information Protection client. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
