@@ -37,13 +37,13 @@ These applications natively support Azure Rights Management and let users apply 
 
 For example, users can configure a Word document so that it can be accessed only by people in your organization. Or, control whether an Excel spreadsheet can be edited, or restricted to read-only, or prevent it from being printed. For time-sensitive files, an expiration time can be configured for when the file can no longer be accessed. This configuration can be made directly by users or by applying a template. For Outlook, users can also choose the **Do Not Forward** option to help prevent data leakage.
 
-In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client](../rms-client/aip-client.md). This bar displays labels that makes it easier for users to automatically apply protection to documents and emails that contain sensitive data.
+In addition to native Office support for Azure Rights Management, these applications also support the Azure Information Protection bar that is installed with the [Azure Information Protection client](./rms-client/aip-client.md). This bar displays labels that makes it easier for users to automatically apply protection to documents and emails that contain sensitive data.
 
 If you are ready to configure Office apps and the Azure Information Protection client:
 
-- To configure Office apps, see [Office apps: Configuration for clients](../deploy-use/configure-office-apps.md).
+- To configure Office apps, see [Office apps: Configuration for clients](./deploy-use/configure-office-apps.md).
 
-- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](../deploy-use/configure-client.md).
+- To install and configure the Azure Information Protection client, see [Azure Information Protection client: Installation and configuration for clients](./deploy-use/configure-client.md).
 
 ## Exchange Online and Exchange Server
 When you use Exchange Online or Exchange Server, you can configure information rights management (IRM) options that support Azure Rights Management. This configuration lets Exchange provide the following protection solutions:
@@ -64,9 +64,9 @@ If you use Exchange on-premises, you can use the IRM features with the Azure Rig
 
 If you are ready to configure Exchange for IRM:
 
-- For Exchange Online, see [Exchange Online: IRM Configuration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+- For Exchange Online, see [Exchange Online: IRM Configuration](./deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
-- For Exchange on-premises, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+- For Exchange on-premises, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
 
 
 ## SharePoint Online and SharePoint Server
@@ -81,14 +81,14 @@ For more fine-grained control, you can configure a list or library in the site t
 
 The IRM service must first be enabled for SharePoint. Then, you specify IRM permissions for a library. For SharePoint Online and OneDrive for Business, users can also specify IRM permissions for their OneDrive for Business library. SharePoint does not use rights policy templates, although there are SharePoint configuration settings that you can select that match some settings that you can specify in the templates.
 
-If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+If you use SharePoint Server, you can use this IRM protection by deploying the Azure Rights Management connector. This connector acts as a relay between your on-premises servers and the Rights Management cloud service. For more information, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
 > Currently, there are some limitations when you use SharePoint IRM:
 > 
 > - You cannot use the default or custom protection templates that you manage in the Azure portal. 
 > 
-> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension are supported and when downloaded, can be opened by a PDF application that natively supports Rights Management. For example, the Azure Information Protection client for Windows includes a viewer for these protected PDF files. Alternative PDF viewers are listed in the [RMS-enlightened applications table](../get-started/requirements-applications.md#rms-enlightened-applications).
+> - Files that have a .ppdf file name extension for protected PDF files are not supported. Files that have .pdf file name extension are supported and when downloaded, can be opened by a PDF application that natively supports Rights Management. For example, the Azure Information Protection client for Windows includes a viewer for these protected PDF files. Alternative PDF viewers are listed in the [RMS-enlightened applications table](./requirements-applications.md#rms-enlightened-applications).
 > 
 > - Co-authoring, when more than one person edits a document at the same time, is not supported. To edit a document in an IRM-protected library, you must first check out the document and download it, and then edit it in your Office application. Consequently, only one person can edit the document at a time.
 
@@ -100,9 +100,9 @@ Although no longer new, the following post from the Office 365 blog has some add
 
 If you are ready to configure SharePoint for IRM:
 
-- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+- For SharePoint Online, see [SharePoint Online and OneDrive for Business: IRM Configuration](./deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
 
-- For Sharepoint Server, see [Deploying the Azure Rights Management connector](../deploy-use/deploy-rms-connector.md).
+- For Sharepoint Server, see [Deploying the Azure Rights Management connector](./deploy-use/deploy-rms-connector.md).
 
 
 ## Next steps
@@ -111,4 +111,4 @@ If you have Office 365, you might be interested in reviewing [File Protection So
 
 To see how other applications and services support the Azure Rights Management service from Azure Information Protection, see [How applications support the Azure Rights Management service](applications-support.md).
 
-If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
+If you are ready to start deployment, which includes configuring these applications and services, see the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md).
