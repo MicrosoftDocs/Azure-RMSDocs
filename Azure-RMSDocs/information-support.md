@@ -38,7 +38,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|
 |Check subscription information and what features are supported|Use the subscription information and feature list from the [Azure Information Protection Pricing](https://azure.microsoft.com/pricing/details/information-protection) page.|
-|Find out what a specific Azure Information Protection term means|Search for the term or abbreviation on the [terminology page](terminology.md).|
+|Understand a specific Azure Information Protection term|Search for the term or abbreviation on the [terminology page](terminology.md).|
 
 
 ## Information about new releases and updates
