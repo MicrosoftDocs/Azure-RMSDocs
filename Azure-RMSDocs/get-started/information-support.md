@@ -33,7 +33,7 @@ Use the following resources to help you learn about, deploy, and support Azure I
 
 |To do this ...|...do this:|
 |----------------|---------------|
-|See the most frequently used documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](../rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
+|See the most frequently used documentation|Read the top five pages:<br /><br /> - [What is Azure Information Protection?](../what-is-information-protection.md)<br /> - [Install the Azure Information Protection client for users](../rms-client/client-admin-guide-install.md)<br />- [Requirements for Azure Information Protection](requirements.md) <br />- [Deploy the Azure Information Protection scanner](../deploy-use/deploy-aip-scanner.md)<br />- [The default Azure Information Protection policy](../deploy-use/configure-policy-default.md)|
 |Engage with the product team and your peers|Visit the [Yammer site](https://www.yammer.com/AskIPTeam) for Azure Information Protection.|
 |Request a new feature or change of functionality|Visit the [UserVoice](https://msip.uservoice.com) site for Azure Information Protection, and use your company email address to sign in.|
 |Receive tweets from the product group|Follow [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) on Twitter.|

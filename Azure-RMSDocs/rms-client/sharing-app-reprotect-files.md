@@ -76,7 +76,7 @@ If you want to completely remove all permissions so that the file is no longer p
 > -   To apply for this account, click the link to apply for [RMS for individuals](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     When you sign up, use your company email address rather than a personal email address. If you are signing up because you were emailed a protected attachment, use the same email address that was used to send you the email message.
-> -   For more information, see [RMS for individuals and Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   For more information, see [RMS for individuals and Azure Rights Management](../rms-for-individuals.md).
 
 ## To re-protect a file that you have emailed
 

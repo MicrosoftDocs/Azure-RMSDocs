@@ -44,7 +44,7 @@ After you have deployed and configured Azure Information Protection for your org
     
     Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. 
     
-    For more information, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
+    For more information, see [How applications support the Azure Rights Management service](../applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
     
 -   **Help desk information**
     

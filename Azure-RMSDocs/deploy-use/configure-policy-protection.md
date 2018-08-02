@@ -45,7 +45,7 @@ When a document or email is protected by a Rights Management service, it is encr
 
 - The current price list that is sent to business partners cannot be opened after a specified date.
 
-For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
