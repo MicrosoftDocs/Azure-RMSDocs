@@ -1,5 +1,3 @@
-- name: MIP SDK
-  href: index.yml
 - name: Overview
   items:
   - name: About Microsoft Information Protection SDK
