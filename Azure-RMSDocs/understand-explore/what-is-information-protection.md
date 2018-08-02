@@ -92,7 +92,7 @@ After a document has been protected, users and administrators can use a document
 
 When you use Azure Information Protection with Exchange Online, you get an additional benefit: The ability to send protected emails to any user, with the assurance that they can read it on any device.
 
-For example, users need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or a **Microsoft** account, or to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
+For example, users need to send sensitive information to personal email addresses that use a **Gmail**, **Hotmail**, or a **Microsoft** account. Or, to users who don't have an account in Office 365 or Azure AD. These emails should be encrypted at rest and in transit, and be read only by the original recipients.
 
 This scenario requires the [new capabilities from Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). If the recipients cannot open the protected email in their native email client, they can use a one-time passcode to read the sensitive information in a browser.
 
@@ -100,7 +100,7 @@ For example, a Gmail user sees the following in an email message:
 
 ![Gmail recipient experience for OME and AIP](../media/ome-message.png)
 
-For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon or this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
+For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
 
 ![Selecting a label configured for Do Not Forward](../media/recipients-only-label.png)
 
@@ -110,9 +110,9 @@ When you attach Office documents to these emails, these documents are automatica
 
 ## Classifying and protecting existing documents
 
-Ideally, documents and emails are labeled when they are first created, but you likely have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
+Ideally, documents and emails are labeled when they are first created. But you likely have many existing documents in data stores and want to classify and protect these documents as well. These data stores could be on-premises or in the cloud.
 
-For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
+For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
 
 For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
 
