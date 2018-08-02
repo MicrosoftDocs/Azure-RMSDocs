@@ -6,6 +6,8 @@
     tocHref: /enterprise-mobility-security/
     topicHref: /enterprise-mobility-security
     items:
-
+    - name: Microsoft Information Protection
+      tocHref: /informationprotection/
+      topicHref: /informationprotection
 
 
