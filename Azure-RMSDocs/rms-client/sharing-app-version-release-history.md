@@ -87,7 +87,7 @@ Versions before January 1, 2015 are not listed.
 
 -   Support for multi-factor authentication (MFA) for Azure RMS, which also removes the dependency on the Microsoft Sign-in Assistant for applications that use modern authentication.
 
-    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../requirements-servers.md#multi-factor-authentication-mfa-and-azure-information-protection) section from  [Azure Active Directory requirements for Azure Information Protection](../requirements-servers.md).
+    For more information, see the [Multi-factor authentication (MFA) and Azure RMS](../requirements-servers.md) section from  [Azure Active Directory requirements for Azure Information Protection](../requirements-servers.md).
 
 ## Version 1.0.1784.0
 **Released**: 7/30/2015
