@@ -52,7 +52,7 @@ sections:
     - href: https://channel9.msdn.com/Shows/Internet-of-Things-Show/Part-18-Contoso-HVACs-Digital-transformation-through-Internet-of-Things-solutions/player
       html: <p>TODO</p>
       image: 
-        src: media/index/i_video.png
+        src: media/index/i_video.svg
       title: Introduction
 
 - title: Reference

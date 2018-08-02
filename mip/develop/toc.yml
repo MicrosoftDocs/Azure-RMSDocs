@@ -1,8 +1,8 @@
-- name: Microsoft Information Protection SDK Documentation
+- name: MIP SDK Documentation
   href: index.yml
 - name: Overview
   items:
-  - name: About Microsoft Information Protection
+  - name: About Microsoft Information Protection SDK
     href: concepts/overview.md
 - name: Quickstarts
   items:
