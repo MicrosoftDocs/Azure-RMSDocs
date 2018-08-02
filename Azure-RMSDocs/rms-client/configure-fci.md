@@ -299,5 +299,5 @@ Now all you need to do is create a new file management task that uses the same s
 
 ## Next steps
 
-You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../get-started/faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
+You might be wondering: [What’s the difference between Windows Server FCI and the Azure Information Protection scanner?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
 

@@ -35,9 +35,9 @@ After the migration, your AD RMS servers are no longer in use but users still ha
 
 Not sure whether this AD RMS migration is right for your organization?
 
-- For an introduction to Azure Information Protection, see [What is Azure Information Protection?](../understand-explore/what-is-information-protection.md)
+- For an introduction to Azure Information Protection, see [What is Azure Information Protection?](../what-is-information-protection.md)
 
-- For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
+- For a comparison of Azure Information Protection with AD RMS, see [Comparing Azure Information Protection and AD RMS](../compare-on-premise.md).
 
 ## Recommended reading before you migrate to Azure Information Protection
 
@@ -49,7 +49,7 @@ Although not required, you might find it useful to read the following documentat
 
 - [Overview of the Microsoft Rights Management connector](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): This section from the RMS connector documentation explains how your on-premises servers can connect to the Azure Rights Management service to protect documents and emails.
 
-In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](../understand-explore/how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
+In addition, if you are familiar with how AD RMS works, you might find it useful to read [How does Azure RMS work? Under the hood](../how-does-it-work.md) to help you identify which technology processes are the same or different for the cloud version.
 
 ## Prerequisites for migrating AD RMS to Azure Information Protection
 
@@ -79,7 +79,7 @@ Before you start the migration to Azure Information Protection, make sure that t
 
 - **All requirements to run Azure Information Protection, including a subscription for Azure Information Protection (the Azure Rights Management service is not activated):**
 
-	See [Requirements for Azure Information Protection](../get-started/requirements-azure-rms.md).
+	See [Requirements for Azure Information Protection](../requirements.md).
 
     Note that if you have computers that run Office 2010, you must install the Azure Information Protection client, because this client provides the ability to authenticate users to cloud services. For later versions of Office, the Azure Information Protection client is required for classification and labeling, and is optional but recommended if you want to only protect data. For more information, see the [Azure Information Protection client admin guide](../rms-client/client-admin-guide.md).
 
@@ -119,11 +119,11 @@ To confirm the AD RMS cryptographic mode:
 
 ### Migration limitations
 
-- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
+- If you have software and clients that are not supported by the Rights Management service that is used by Azure Information Protection, they will not be able to protect or consume content that is protected by Azure Rights Management. Be sure to check the supported applications and clients sections from [Requirements for Azure Rights Management](../requirements.md).
 
 - If your AD RMS deployment is configured to collaborate with external partners (for example, by using trusted user domains or federation), they must also migrate to Azure Information Protection either at the same time as your migration, or as soon as possible afterwards. To continue to access content that your organization previously protected by using Azure Information Protection, they must make client configuration changes that are similar to those that you make, and included in this document.
     
-    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](../get-started/information-support.md#support-options-and-community-resources).
+    Because of the possible configuration variations that your partners might have, exact instructions for this reconfiguration are out of scope for this document. However, see the next section for planning guidance and for additional help, [contact Microsoft Support](../information-support.md#support-options-and-community-resources).
 
 ## Migration planning if you collaborate with external partners
 

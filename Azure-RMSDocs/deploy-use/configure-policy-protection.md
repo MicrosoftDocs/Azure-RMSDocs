@@ -6,7 +6,7 @@ description: You can protect your most sensitive documents and emails when you c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 08/02/2018
 ms.topic: article
 ms.prod:
 ms.service: information-protection
@@ -45,7 +45,7 @@ When a document or email is protected by a Rights Management service, it is encr
 
 - The current price list that is sent to business partners cannot be opened after a specified date.
 
-For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../understand-explore/what-is-azure-rms.md)
+For more information about the Azure Rights Management protection and how it works, see [What is Azure Rights Management?](../what-is-azure-rms.md)
 
 > [!IMPORTANT]
 > To configure a label to apply this protection, the Azure Rights Management service must be activated for your organization. For more information, see [Activating Azure Rights Management](../deploy-use/activate-service.md).
@@ -102,7 +102,7 @@ Exchange does not have to be configured for Azure Information Protection before 
         
         If you choose the option for Word, Excel, PowerPoint, and File Explorer: When this option is set, the label is displayed in these applications. The resulting behavior when users apply the label is to display the dialog box for users to select custom permissions. In this dialog box, users must specify the permissions, the users or groups, and any expiry date. Make sure that users have instructions and guidance how to supply these values.
     
-    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display if you are editing a label that previously used the **Set permissions** option.
+    - **Select a predefined template**: To use one of the default templates or a custom template that you've configured. Note that this option does not display for new labels, or if you are editing a label that previously used the **Set permissions** option.
     
     To select a predefined template, the template must be published (not archived) and must not be linked already to another label. When you select this option, you can use an **Edit Template** button to [convert the template into a label](configure-policy-templates.md#to-convert-templates-to-labels).
     
@@ -254,7 +254,7 @@ If you specify external users who do not have an account in Azure AD:
 
 - The label is suitable for email when Exchange Online is using the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
