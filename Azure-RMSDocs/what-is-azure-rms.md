@@ -41,7 +41,7 @@ But very importantly, authorized people and services (such as search and indexin
 The following picture shows how this service offers a protection solution for Office 365, as well as for on-premises servers and services. You also see that protection is supported by the popular end-user devices that run Windows, Mac OS, iOS, Android, and Windows Phone.
 
 
-![How Azure RMS works](../media/AzRMS_elements.png)
+![How Azure RMS works](./media/AzRMS_elements.png)
 
 You can use this protection with Office 365 subscriptions as well as with subscriptions for Azure Information Protection. You can find more information about the available subscriptions and which features they support on the [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) site.
 
@@ -55,9 +55,9 @@ To learn more about this data protection service from Azure Information Protecti
 
 - [How does Azure RMS work? Under the hood](how-does-it-work.md)
 
-If you want to dive in and try protecting documents for yourself by using Azure Information Protection labels, try the [Quick start tutorial for Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). This tutorial includes prompting you to protect a document when sensitive data is detected. It also includes protecting a document that you share by email, which you can then track to see how it's being used and if necessary, revoke access to it.
+If you want to dive in and try protecting documents for yourself by using Azure Information Protection labels, try the [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md). This tutorial includes prompting you to protect a document when sensitive data is detected. It also includes protecting a document that you share by email, which you can then track to see how it's being used and if necessary, revoke access to it.
 
-However, if you’re ready to start deploying Azure Information Protection for your organization so that administrators and users can start protecting documents and emails, use the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
+However, if you’re ready to start deploying Azure Information Protection for your organization so that administrators and users can start protecting documents and emails, use the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md) for your deployment steps and links for how-to instructions.
 
 > [!TIP]
-> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](../get-started/information-support.md).
+> For additional information and help, use the resources and links in [Information and support for Azure Information Protection](information-support.md).

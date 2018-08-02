@@ -62,7 +62,7 @@ Conditional access is supported in preview for documents protected by Azure Info
 
 For more information about authentication requirements, see [Azure Active Directory requirements for Azure Information Protection](requirements-azure-ad.md). 
 
-For more information about the requirements for user and group accounts for authorization, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
+For more information about the requirements for user and group accounts for authorization, see [Preparing users and groups for Azure Information Protection](./plan-design/prepare.md).
 
 ## Client devices
 
@@ -90,7 +90,7 @@ For the listed server versions, the Azure Information Protection client is suppo
 
 When the Azure Information Protection client protects the data by using the Azure Rights Management service, the data can be consumed by the [same devices](requirements-client-devices.md) that support the Azure Rights Management service.
 
-The Azure Information Protection client has [additional prerequisites](../rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) that are listed in the admin guide.
+The Azure Information Protection client has [additional prerequisites](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) that are listed in the admin guide.
 
 ## Applications
 
@@ -132,7 +132,7 @@ In addition to the information in the Office article, specific to Azure Informat
     
         Don't worry about what the browser window displays. Instead, click the padlock in the address bar to view the site information. The site information lets you see the issuing certification authority (CA). If the certificate is not issued by a Microsoft CA, it is very likely your secure client-to-service connection is being terminated and needs reconfiguration on your firewall. The following picture shows an example of a Microsoft issuing CA. If you see an internal CA issued the certificate, this configuration is not compatible with Azure Information Protection.
         
-        ![Checking the issued certificate for Azure Information Protection connections](../media/certificate-checking.png)
+        ![Checking the issued certificate for Azure Information Protection connections](./media/certificate-checking.png)
 
 ### On-premises servers
 
@@ -148,11 +148,11 @@ For information about the additional requirements for this scenario, see [On-pre
 
 ### Coexistence of AD RMS with Azure RMS
 
-The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](../deploy-use/configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
+The following deployment scenario is not supported unless you are using AD RMS for [HYOK protection](./deploy-use/configure-adrms-restrictions.md) with Azure Information Protection (the "hold your own key" configuration):
 
-- Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+- Running AD RMS and Azure RMS side by side in the same organization, except during migration, as described in [Migrating from AD RMS to Azure Information Protection](./plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](../deploy-use/decommission-deactivate.md).
+There is a supported migration path [from AD RMS to Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx), and from [Azure Information Protection to AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). If you deploy Azure Information Protection and then decide that you no longer want to use this cloud service, see [Decommissioning and deactivating Azure Information Protection](./deploy-use/decommission-deactivate.md).
 
 
 

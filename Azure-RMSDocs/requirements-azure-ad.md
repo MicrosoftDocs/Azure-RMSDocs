@@ -41,7 +41,7 @@ To integrate your Azure AD directory with your on-premises AD forests, see [Inte
 
 Computers running Office 2010: 
 
-- These computers require the [Azure Information Protection client](../rms-client/aip-client.md) (recommended) or the [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
+- These computers require the [Azure Information Protection client](./rms-client/aip-client.md) (recommended) or the [Rights Management sharing application for Windows](./rms-client/sharing-app-windows.md) to authenticate to Azure Information Protection and its data protection service, Azure Rights Management.
 
 - If your user accounts are federated (for example, you use AD FS), they must use Windows Integrated Authentication. Forms-based authentication in this scenario fails to authenticate users for Azure Information Protection.
 
@@ -53,7 +53,7 @@ Users' UPN value doesn't match their email address:
 
 - This is not a recommended configuration. If you cannot change the UPN value, configure alternate login ID for users, and instruct them how to sign in to Office by using this alternate login. For more information, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) and [Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
-    When the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD proxyAddresses attribute. This lets the user be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. For more information about this and how user accounts are authorized, see [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
+    When the domain name in the UPN value is a domain that is verified for your tenant, add the user's UPN value as another email address to the Azure AD proxyAddresses attribute. This lets the user be authorized for Azure Rights Management if their UPN value is specified at the time the usage rights are granted. For more information about this and how user accounts are authorized, see [Preparing users and groups for Azure Information Protection](./plan-design/prepare.md).
 
 Mobile devices or Mac computers that authenticate on-premises by using AD FS or an equivalent authentication provider:
 
@@ -68,11 +68,11 @@ To use multi-factor authentication (MFA) with Azure Information Protection requi
 
 - Azure Information Protection client:
 
-    - The [Azure Information Protection client](../rms-client/aip-client.md) for Windows and for iOS and Android has always supported MFA; no minimum version is required. 
+    - The [Azure Information Protection client](./rms-client/aip-client.md) for Windows and for iOS and Android has always supported MFA; no minimum version is required. 
 
 -   Rights Management sharing application for Windows:
 
-    - You must have installed the minimum version of 1.0.1908.0, which you can confirm by using Control Panel > Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](../rms-client/sharing-app-windows.md).
+    - You must have installed the minimum version of 1.0.1908.0, which you can confirm by using Control Panel > Programs and Features. Note that the Rights Management Sharing application is now replaced by the Azure Information Protection client. For more information about the sharing application, see [Rights Management sharing application for Windows](./rms-client/sharing-app-windows.md).
 
 -   Rights Management sharing app for mobile devices and Mac computers:
 
@@ -101,5 +101,5 @@ The Rights Management connector and the Azure Information Protection scanner do 
 - The service account that runs the scanner.
 
 ## Next steps
-To check for other requirements, see [Requirements for Azure Information Protection](requirements-azure-rms.md).
+To check for other requirements, see [Requirements for Azure Information Protection](requirements.md).
 

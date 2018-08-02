@@ -44,7 +44,7 @@ After you have deployed and configured Azure Information Protection for your org
     
     Some applications automatically apply information protection, by using policies and settings that administrators configure. For these applications, you might need to provide instructions for other administrators who manage these applications and services. 
     
-    For more information, see [How applications support the Azure Rights Management service](../understand-explore/applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
+    For more information, see [How applications support the Azure Rights Management service](../applications-support.md) and [Configuring applications for the Azure Rights Management service](configure-applications.md).
     
 -   **Help desk information**
     
@@ -56,13 +56,13 @@ After you have deployed and configured Azure Information Protection for your org
     
     - **Sign in help**
         
-        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Users might be prompted for credentials when the Azure Rights Management service needs to authenticate a user and cannot use cached credentials. The required credentials are usually for the user’s work or school account and password that is associated with your Office 365 tenant or Azure Active Directory tenant. Although the Azure Rights Management service can authenticate Azure AD accounts, some applications can also open protected content when a Microsoft account is used for authentication. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Provide users and your help desk with instructions about which account to use when users are prompted for credentials when they have applications that use the Azure Rights Management service.
         
     - **Problems protecting or consuming content**
         
-        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../get-started/requirements-azure-rms.md).
+        Make sure that users have the appropriate instructions for the applications that they use, and that they use applications and devices that are supported by the Azure Rights Management service. For more information about supported applications and devices, see [Requirements for Azure Rights Management](../requirements.md).
         
         To confirm that a specific user or group can be authorized by Azure Active Directory to protect or consume protected content, use the verification checks in [Preparing users and groups for Azure Information Protection](../plan-design/prepare.md).
         

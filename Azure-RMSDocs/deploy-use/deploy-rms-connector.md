@@ -47,7 +47,7 @@ The RMS connector supports the following on-premises servers: Exchange Server, S
 > [!NOTE]
 > If you want to protect multiple file types (not just Office documents) by using File Classification Infrastructure, do not use the RMS connector, but instead, use the [AzureInformationProtection cmdlets](/powershell/azureinformationprotection/vlatest/aip).
 
-For the versions of these on-premises servers that are supported by the RMS connector, see [On-premises servers that support Azure RMS](..\get-started\requirements-servers.md).
+For the versions of these on-premises servers that are supported by the RMS connector, see [On-premises servers that support Azure RMS](../requirements-servers.md).
 
 
 ### Support for hybrid scenarios

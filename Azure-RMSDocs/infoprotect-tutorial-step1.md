@@ -57,11 +57,11 @@ There are different ways that you can activate protection. You can use PowerShel
     
     - If protection is activated, you see the following confirmation:
         
-        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-activated.png)
+        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-activated.png)
         
     - If protection is not activated, you see this reflected in the status information, and the option to activate:
         
-        ![Azure Information Protection status for Azure RMS](../media/info-protect-azurerms-deactivated.png)
+        ![Azure Information Protection status for Azure RMS](./media/info-protect-azurerms-deactivated.png)
 
 6. If protection isn't activated, select **Activate**. 
 
@@ -71,7 +71,7 @@ That's all you need to do for this first step to complete this tutorial. You're 
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|About activating protection|[Activating Azure Rights Management](../deploy-use/activate-service.md)|
+|About activating protection|[Activating Azure Rights Management](./deploy-use/activate-service.md)|
 
 
 >[!div class="step-by-step"]

@@ -68,7 +68,7 @@ If your personal email address was used to protect the file, use credentials fro
 
 Yes, when you apply for a Microsoft account, you can specify your Hotmail or Gmail email address, or any other email address that you own. 
 
-However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+However, although this viewer can open protected files with this account, not all applications can open protected content when a Microsoft account is used for authentication. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## Which file extensions can I open with this app?
 

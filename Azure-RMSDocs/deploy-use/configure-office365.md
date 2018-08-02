@@ -34,7 +34,7 @@ Because Office 365 natively supports the Azure Rights Management service from A
 However, we recommend that you supplement these applications with the Azure Information Protection client, so that users get the benefit of the Office add-in and support for additional file types. For more information, see [Azure Information Protection client: Installation and configuration for clients](configure-client.md).
 
 ## Exchange Online: IRM Configuration
-For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
+For information about how Exchange Online IRM works with the Azure Rights Management service, see [Exchange Online and Exchange Server](../office-apps-services-support.md#exchange-online-and-exchange-server) from the **Understand & Explore** section.
 
 Exchange Online might already be enabled to use the Azure Rights Management service. To check, run the following commands:
 
@@ -82,7 +82,7 @@ When Exchange Online is enabled to use the Azure Rights Management service, you 
 
 ## SharePoint Online and OneDrive for Business: IRM Configuration
 
-For information about how SharePoint Online IRM works with the Azure Rights Management service, see [SharePoint Online and SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) from the **Understand & Explore** section.
+For information about how SharePoint Online IRM works with the Azure Rights Management service, see [SharePoint Online and SharePoint Server](../office-apps-services-support.md#sharepoint-online-and-sharepoint-server) from the **Understand & Explore** section.
 
 To configure SharePoint Online and OneDrive for Business to support the Azure Rights Management service, you must first enable the information rights management (IRM) service for SharePoint Online by using the SharePoint admin center. Then, site owners can  IRM-protect their SharePoint lists and document libraries, and users can IRM-protect their OneDrive for Business library so that documents that are saved there, and shared with others, are automatically protected by the Azure Rights Management service.
 

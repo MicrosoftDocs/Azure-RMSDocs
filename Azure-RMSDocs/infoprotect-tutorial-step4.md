@@ -37,21 +37,21 @@ Classification and protection happen when you save the document, but before we d
 
 On the Information Protection bar, select the last label and you see how sub-labels display:
 
-![Azure Information Protection quick start tutorial step 4 - choose a sub-label](../media/info-protect-sub-labelsv2.png)
+![Azure Information Protection quick start tutorial step 4 - choose a sub-label](./media/info-protect-sub-labelsv2.png)
 
 Select one of these sub-labels, and you see how the other labels no longer display on the bar now that you've selected a label for this document. The **Sensitivity** value changes to show the label and sub-label name, with a corresponding change in label color. For example:
 
-![Azure Information Protection quick start tutorial step 4 - sub-label selected](../media/info-protect-sub-label-selectedv2.png)
+![Azure Information Protection quick start tutorial step 4 - sub-label selected](./media/info-protect-sub-label-selectedv2.png)
 
 On the Information Protection bar, click the **Edit Label** icon next to the currently selected label value:
 
-![Azure Information Protection quick start tutorial step 4 - Edit Label icon](../media/info-protect-edit-label-selectedv2.png)
+![Azure Information Protection quick start tutorial step 4 - Edit Label icon](./media/info-protect-edit-label-selectedv2.png)
 
 This displays the available labels again.
 
 Now select the first label, **Personal**. Because you have selected a label that's a lower classification than the previously selected label for this document, you are prompted to justify why you are lowering the classification level:
 
-![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](../media/info-protect-lower-justification.png)
+![Azure Information Protection quick start tutorial step 4 - prompt to confirm why lowering](./media/info-protect-lower-justification.png)
 
 Select **The previous label no longer applies**, and click **Confirm**. The **Sensitivity** value changes to **Personal** and the other labels are hidden again.
 
@@ -59,7 +59,7 @@ Select **The previous label no longer applies**, and click **Confirm**. The **Se
 
 On the Information Protection bar, click the **Edit Label** icon again. But instead of choosing one of the labels, click the **Delete Label** icon:
 
-![Azure Information Protection quick start tutorial step 4 - Delete Icon](../media/delete-icon-from-personalv2.png)
+![Azure Information Protection quick start tutorial step 4 - Delete Icon](./media/delete-icon-from-personalv2.png)
 
 This time when you are prompted, type "This document doesn't need classifying" and click **Confirm**.  
 
@@ -73,7 +73,7 @@ You see the **Sensitivity** value display **Not set**, which is what users see i
 
 3. You now see a prompt to apply the label that you configured for protection when credit card numbers are detected. If we didn't agree with the recommendation, our policy setting lets us reject it, by selecting **Dismiss**. Giving a recommendation but letting a user override it helps to reduce false positives when you're using automatic classification. For this tutorial, click **Change now**.
 
-    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](../media/change-nowv2.png)
+    ![Azure Information Protection quick start tutorial step 4 - recommend prompt](./media/change-nowv2.png)
 
     In addition to the document now showing that our configured label is applied (for example, **Confidential \ Finance**), you immediately see the watermark of your organization name across the page, and the footer of **Classified as Confidential** is also applied. 
 
@@ -87,8 +87,8 @@ Now that you've seen classification, labeling, and protection in action, let's s
 
 |If you want more information|Additional information|
 |--------------------------------|--------------------------|
-|Full instructions for labeling and protecting files |[Classify and protect a file or email](../rms-client/client-classify-protect.md)|
-|Where the labeling activity is logging |[Usage logging for the Azure Information Protection client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
+|Full instructions for labeling and protecting files |[Classify and protect a file or email](./rms-client/client-classify-protect.md)|
+|Where the labeling activity is logging |[Usage logging for the Azure Information Protection client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
 
 
 >[!div class="step-by-step"]

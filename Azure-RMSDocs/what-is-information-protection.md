@@ -33,7 +33,7 @@ Azure Information Protection (sometimes referred to as AIP) is a cloud-based sol
 
 The following picture shows an example of Azure Information Protection in action on a user's computer. The administrator has configured a label with rules that detect sensitive data and in our example, this is credit card information. When a user saves a Word document that contains a credit card number, she sees a custom tooltip that recommends the label that the administrator has configured. This label classifies the document and protects it. 
 
-![Example of recommended classification for Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
+![Example of recommended classification for Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
 After your content is classified (and optionally protected), you can then track and control how it is used. You can analyze data flows to gain insight into your business, detect risky behaviors and take corrective measures, track access to documents, prevent data leakage or misuse, and so on.
 
@@ -43,7 +43,7 @@ You use Azure Information Protection labels to apply classification to documents
 
 For example, the following email message has been classified as "General". The label has added a footer of "Sensitivity: General" to the email message. This footer is a visual indicator for all recipients that it's intended for general business data that should not be sent outside the organization. The label is embedded in the email headers so that email services can inspect this value and could create an audit entry or prevent it from being sent outside the organization.
 
-![Example email footer and headers showing Azure Information Protection classification](../media/example-email-footerv2.png)
+![Example email footer and headers showing Azure Information Protection classification](./media/example-email-footerv2.png)
 
 
 ## How data is protected
@@ -64,7 +64,7 @@ When you create a label for Azure Information Protection that includes protectio
 
 For example, from the Exchange admin center, you can configure Exchange Online mail flow rules to use these templates:
 
-![Example of selecting templates for Exchange Online](../media/templates-exchangeonline-callouts.png)
+![Example of selecting templates for Exchange Online](./media/templates-exchangeonline-callouts.png)
 
 For more information about the Azure Rights Management protection, see [What is Azure Rights Management?](what-is-azure-rms.md)
 
@@ -72,13 +72,13 @@ For more information about the Azure Rights Management protection, see [What is 
 
 Azure Information Protection integrates with end users' existing workflows when the Azure Information Protection client is installed. This client installs the Information Protection bar to Office applications, which we saw in the first picture that showed this bar in Word. The same Information Protection bar is added to Excel, PowerPoint, and Outlook. For example:
 
-![Example of the Azure Information Protection bar in Excel](../media/excel2016-infoprotect-barv2.png)
+![Example of the Azure Information Protection bar in Excel](./media/excel2016-infoprotect-barv2.png)
 
 This Information Protection bar makes it easy for end users to select labels for the correct classification. If required, labels can also be applied automatically to remove the guesswork for users, or to comply with your organization's policies.
 
 To classify and protect additional file types, and to support multiple files at once, users can right-click files or a folder from Windows File Explorer:
 
-![File Explorer right-click Classify and protect using Azure Information Protection](../media/right-click-classify-protect-folder.png)
+![File Explorer right-click Classify and protect using Azure Information Protection](./media/right-click-classify-protect-folder.png)
 
 When users select the **Classify and protect** menu option from File Explorer, they can then select a label similarly to how they use the Information Protection bar in their Office desktop apps. They can also set their own custom permissions, if required.
 
@@ -86,7 +86,7 @@ Power users (and administrators) might find using PowerShell commands more effic
 
 After a document has been protected, users and administrators can use a document tracking site to monitor who is accessing these documents and when. If they suspect misuse, they can also revoke access to these documents:
 
-![Revoke access icon in the document tracking site](../media/tracking-site-revoke-access-icon.png)
+![Revoke access icon in the document tracking site](./media/tracking-site-revoke-access-icon.png)
 
 ### Additional integration for email
 
@@ -98,11 +98,11 @@ This scenario requires the [new capabilities from Office 365 Message Encryption]
 
 For example a Gmail user sees the following in an email message:
 
-![Gmail recipient experience for OME and AIP](../media/ome-message.png)
+![Gmail recipient experience for OME and AIP](./media/ome-message.png)
 
 For the users sending the email, their workflow is no different from sending a protected email to a user in their own organization. For example, they can select the **Do Not Forward** button that the Azure Information Protection client can add to the Outlook ribbon. Or, this Do Not Forward functionality can be integrated into a label that users select, so that the email is classified as well as protected:
 
-![Selecting a label configured for Do Not Forward](../media/recipients-only-label.png)
+![Selecting a label configured for Do Not Forward](./media/recipients-only-label.png)
 
 Alternatively, you can automatically provide the protection for users, by using mail flow rules that apply rights protection. 
 
@@ -114,7 +114,7 @@ Ideally, documents and emails are labeled when they are first created. But you p
 
 For your on-premises data stores, use the Azure Information Protection scanner to  discover, classify, and protect documents on local folders, network shares, and SharePoint Server sites and libraries. The scanner runs as a service on Windows Server. You can use the same rules in the policy to detect sensitive information and apply specific labels to documents. Or you can apply a default label to all documents in a data repository without inspecting the file contents. You can also use the scanner in reporting mode only, to help you discover sensitive information that you might not know you had. 
 
-For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](../deploy-use/deploy-rms-connector.md).
+For more information about deploying and using the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](./deploy-use/deploy-rms-connector.md).
 
 For your cloud data stores, use Microsoft Cloud App Security to apply your labels to documents in Box, SharePoint Online, and OneDrive for Business. For more information, see [Automatically apply Azure Information Protection classification labels](/cloud-app-security/use-case-information-protection) and [Azure Information Protection integration](/cloud-app-security/azip-integration).
 
@@ -129,7 +129,7 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- FAQs: [Frequently asked questions for Azure Information Protection](../get-started/faqs.md)
+- FAQs: [Frequently asked questions for Azure Information Protection](faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
@@ -153,7 +153,7 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../get-started/infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](../plan-design/deployment-roadmap.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md).
 
-Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](azure-rms-aka.md).
+Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](aka.md).
 

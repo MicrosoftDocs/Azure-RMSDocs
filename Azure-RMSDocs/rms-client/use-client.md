@@ -53,4 +53,4 @@ Note that the Rights Management sharing application for Windows and the RMS Prot
 
 
 ## See also
-[Comparing Azure Information Protection and AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
+[Comparing Azure Information Protection and AD RMS](../compare-on-premise.md)
