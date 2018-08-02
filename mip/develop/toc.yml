@@ -1,4 +1,4 @@
-- name: Microsoft Information Protection Documentation
+- name: Microsoft Information Protection SDK Documentation
   href: index.yml
 - name: Overview
   items:
