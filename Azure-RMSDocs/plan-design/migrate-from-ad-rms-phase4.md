@@ -61,7 +61,7 @@ If you have used the Information Rights Management (IRM) functionality of Exchan
 This step covers installing and configuring the connector, disabling IRM for Exchange and SharePoint, and configuring these servers to use the connector. Finally, if you have imported AD RMS data configuration files (.xml) into Azure Information Protection that were used to protect email messages, you must manually edit the registry on the Exchange Server computers to redirect all trusted publishing domain URLs to the RMS connector.
 
 > [!NOTE]
-> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](./requirements-servers.md).
+> Before you start, check the versions of the on-premises servers that the Azure Rights Management service supports, from [On-premises servers that support Azure RMS](../requirements-servers.md).
 
 ### Install and configure the RMS connector
 

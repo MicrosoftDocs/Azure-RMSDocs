@@ -129,7 +129,7 @@ For your cloud data stores, use Microsoft Cloud App Security to apply your label
 
 - Download a customizable user guide: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
-- FAQs: [Frequently asked questions for Azure Information Protection](./faqs.md)
+- FAQs: [Frequently asked questions for Azure Information Protection](../faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
@@ -153,7 +153,7 @@ You can [search and find](https://myignite.microsoft.com/videos?q=%2522azure%252
 
 Read the blog post, [Azure Information Protection: Ready, set, protect!](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/)
 
-Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](./infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md).
+Configure and see Azure Information Protection for yourself, with our 5-step [Quick start tutorial](../infoprotect-quick-start-tutorial.md). Or, if you're ready to deploy this service for your organization, see the [Azure Information Protection deployment roadmap](./plan-design/deployment-roadmap.md).
 
 Perhaps you know Azure Information Protection by another name? See our [list of alternative terms for the service](aka.md).
 

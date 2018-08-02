@@ -31,10 +31,10 @@ ms.suite: ems
 
 Use the following steps as recommendations to help you prepare for, implement, and manage Azure Information Protection for your organization.
 
-However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](./infoprotect-quick-start-tutorial.md).
+However, if you just want to quickly try Azure Information Protection for yourself, rather than roll it out in a production environment, see [Quick start tutorial for Azure Information Protection](../infoprotect-quick-start-tutorial.md).
 
 > [!IMPORTANT]
-> Before you do the following steps, make sure that you have reviewed [Requirements for Azure Information Protection](./requirements.md).
+> Before you do the following steps, make sure that you have reviewed [Requirements for Azure Information Protection](../requirements.md).
 
 Choose the deployment roadmap that's applicable for your organization and that matches the [subscription functionality and features](https://azure.microsoft.com/pricing/details/information-protection/) that you need:
 

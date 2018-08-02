@@ -254,7 +254,7 @@ If you specify external users who do not have an account in Azure AD:
 
 - The label is suitable for email when Exchange Online is using the [new capabilities in Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](./secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- For Office attachments that are automatically protected, these documents are available to view in a browser. To edit these documents, download and edit them with Office 2016 Click-to-Run, and a Microsoft account that uses the same email address. [More information](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
