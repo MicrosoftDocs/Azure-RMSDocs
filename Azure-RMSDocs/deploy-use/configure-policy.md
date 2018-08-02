@@ -100,7 +100,7 @@ Next time you access the **Azure Information Protection** blade, it automaticall
 3. To view and edit the policies, select **Policies** from the menu options. To view and edit the policy that all users get, select the **Global** policy. To create a custom policy for selected users, select **Add a new policy**.
     
 
-### Overview of the Azure Information Protection policy
+### Overview of the policy
 
 An Azure Information Protection policy contains the following elements that you can configure:
     
@@ -148,7 +148,7 @@ The Azure Information Protection client checks for any changes whenever a suppor
 >[!NOTE]
 >When the client downloads the policy, be prepared to wait a few minutes before it's fully operational. The actual time varies, according to factors such as the size and complexity of the policy configuration, and the network connectivity. If the resulting action of your labels does not match your latest changes, allow up to 15 minutes and then try again.
 
-### Configuring your organization's Azure Information Protection policy
+### Configuring your organization's policy
 
 Use the following information to help you configure the Azure Information Protection policy:
 
